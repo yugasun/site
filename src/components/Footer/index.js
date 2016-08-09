@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react"
 import Svg from "react-svg-inline"
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
+import twitterSvg from "../../assets/icons/iconmonstr-twitter-1.svg"
+import gitHubSvg from "../../assets/icons/iconmonstr-github-1.svg"
 import styles from "./index.css"
 
 export default class Footer extends Component {

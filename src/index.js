@@ -1,12 +1,13 @@
+/**
+ * Index pass through component for all routes
+ */
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
-
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 // Import global CSS before other components and their styles
 import "./index.global.css"
 import styles from "./index.css"
-
-import Header from "../Header"
-import Footer from "../Footer"
 
 export default class Layout extends Component {
 
