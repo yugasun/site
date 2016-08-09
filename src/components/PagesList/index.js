@@ -1,23 +1,23 @@
-import React, { PropTypes } from "react"
+import React, { PropTypes } from 'react'
 
-import PagePreview from "../PagePreview"
+import PagePreview from '../PagePreview'
 
 const PagesList = ({ pages }) => {
+  let renderer = 'No posts yet'
+  if (pages.length) {
+    renderer = (
+      <ul>
+      {pages.map((page) => (
+        <li key={page.title}>
+          <PagePreview {...page} />
+        </li>
+        ))}
+      </ul>
+    )
+  }
   return (
     <div>
-    {
-      pages.length
-      ? (
-        <ul>
-        {
-          pages.map((page) => (
-            <li key={ page.title }><PagePreview { ...page } /></li>
-          ))
-        }
-        </ul>
-      )
-      : "No posts yet."
-    }
+     {renderer}
     </div>
   )
 }

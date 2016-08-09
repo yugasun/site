@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from "react"
-import styles from "./index.css"
+import React, { Component, PropTypes } from 'react'
+import styles from './index.css'
 
 export default class PageError extends Component {
 
@@ -10,33 +10,31 @@ export default class PageError extends Component {
 
   static defaultProps = {
     error: 404,
-    errorText: "Page Not Found",
+    errorText: 'Page Not Found',
   };
 
-  render() {
+  render () {
     const {
       error,
       errorText,
     } = this.props
 
     return (
-      <div className={ styles.container }>
-        <div className={ styles.oops }>{ "😱 Oooops!" }</div>
-        <div className={ styles.text }>
-          <p className={ styles.title }>
-            <strong>{ error }</strong>
-            { " " }
-            { errorText }
+      <div className={styles.container}>
+        <div className={styles.oops}>{"Oooops!"}</div>
+        <div className={styles.text}>
+          <p className={styles.title}>
+            <strong>{error}</strong>
+            {" "}
+            {errorText}
           </p>
-          {
-            error === 404 &&
+          {error === 404 &&
             <div>
-              { "It seems you found a broken link. " }
-              { "Sorry about that. " }
+              {"It seems you found a broken link. "}
+              {"Sorry about that. "}
               <br />
-              { "Do not hesitate to report this page 😁." }
-            </div>
-          }
+              {"Do not hesitate to report this page 😁."}
+            </div>}
         </div>
       </div>
     )

@@ -1,17 +1,17 @@
-import React, { Component } from "react"
-import Helmet from "react-helmet"
-import styles from "./index.css"
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
+import styles from './index.css'
 
 export default class PageLoading extends Component {
 
-  render() {
+  render () {
     return (
       <div>
         <Helmet
-          title={ "Loading..." }
+          title={"Loading..."}
         />
-        <div className={ styles.loader }>
-          <div className={ styles.spinner }></div>
+        <div className={styles.loader}>
+          <div className={styles.spinner}></div>
         </div>
       </div>
     )

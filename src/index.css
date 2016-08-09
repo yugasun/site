@@ -7,3 +7,9 @@
   margin: auto;
   padding: 1rem 0.75rem;
 }
+
+.oswald {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
+}

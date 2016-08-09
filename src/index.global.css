@@ -1,5 +1,11 @@
 /* Using global sytles is not recommended, prefer local styles via CSS Modules */
 
+/**
+ * Typography
+ */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,300,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
 /*
  * box model like it should be
  *
@@ -28,6 +34,14 @@ body {
 html {
   min-height: 100%;
   background: color(#deecf1 a(0.4));
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 body {
