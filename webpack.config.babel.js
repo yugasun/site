@@ -9,6 +9,7 @@ import pkg from "./package.json"
 // see the end of the file if you want to export a default config
 // (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
+  console.log(config)
   return {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
@@ -135,6 +136,11 @@ export const makeConfig = (config = {}) => {
           { compress: { warnings: false } }
         ),
       ],
+      new webpack.DefinePlugin({
+       'process.env': {
+         'NODE_ENV': '"production"'
+       }
+     }),
     ],
 
     output: {

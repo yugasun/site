@@ -5,31 +5,32 @@
 .header {
   color: #eee;
   background: #111;
-  font-family: Oswald,sans-serif;
+  composes: oswald from '../../index.css';
 }
 
 .bumper {
-  height: 60px;
+  height: 76px;
 }
 
 .navFixed {
   background: #111;
   position: fixed;
   left: 0;
-  right:0;
-  top: 0px;
+  right: 0;
+  top: 0;
   z-index: 1030;
-  height: 60px;
+  height: 76px;
 }
+
 .nav {
   display: flex;
   flex-direction: row;
   align-items: space-between;
   justify-content: space-between;
   left: 0;
-  right:0;
-  top: 0px;
-  height: 60px;
+  right: 0;
+  height: 76px;
+  composes: content from '../../index.css';
 }
 
 .navPart1,
@@ -50,6 +51,12 @@
   font-style: italic;
   text-transform: uppercase;
   font-weight: 200;
+  cursor: pointer;
+  transition: color 0.2s linear;
+  &:hover {
+    color: #fff;
+    background: 0 0;
+  }
 }
 
 .logo {

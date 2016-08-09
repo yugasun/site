@@ -25,8 +25,6 @@ export default class Layout extends Component {
     } = this.context.metadata
     const dynamicContent = this.props.children
 
-    console.log('dynamicContent', dynamicContent)
-
     return (
       <div className={styles.layout}>
         <Helmet

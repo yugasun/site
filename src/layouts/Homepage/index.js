@@ -13,7 +13,7 @@ export default class Homepage extends Component {
             <h1 className={styles.heading}>The Serverless Application </h1>
             <h2 className={styles.subHeading}>
               Framework
-              <span className='yellow oswald-light' style={{ fontSize: '30px' }}>
+              <span className={styles.ampersand}>
                 &
               </span>
                 Ecosystem
