@@ -4,7 +4,7 @@
 
 .header {
   color: #eee;
-  background: #111;
+  background: $black1;
   composes: oswald from '../../index.css';
 }
 
@@ -13,7 +13,7 @@
 }
 
 .navFixed {
-  background: #111;
+  background: $black1;
   position: fixed;
   left: 0;
   right: 0;

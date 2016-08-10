@@ -1,0 +1,7 @@
+.page {
+  composes: content from "../../index.css";
+}
+
+.fullWidth {
+  width: 100%;
+}

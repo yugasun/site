@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import Page from '../Page'
 import styles from './Homepage.css'
 
@@ -7,7 +6,7 @@ export default class Homepage extends Component {
 
   render () {
     return (
-      <Page {...this.props}>
+      <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.tagline}>
             <h1 className={styles.heading}>The Serverless Application </h1>
@@ -26,7 +25,6 @@ export default class Homepage extends Component {
               Your browser does not support the video tag.
           </video>
 
-          <Link to='/resource/lolololololo'>Resource link</Link>
         </div>
       </Page>
     )

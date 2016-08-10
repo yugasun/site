@@ -1,6 +1,6 @@
 .wrapper {
   height: 100vh;
-  background: #141414;
+  background: $black1;
 }
 
 .tagline {

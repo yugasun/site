@@ -5,6 +5,7 @@ import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import invariant from 'invariant'
 import { BodyContainer, joinUri } from 'phenomic'
+import styles from './Page.css'
 
 class Page extends Component {
   render () {
@@ -21,6 +22,7 @@ class Page extends Component {
       body,
       header,
       footer,
+      fullWidth
     } = props
 
     invariant(
@@ -45,15 +47,24 @@ class Page extends Component {
       { name: 'description', content: head.description },
     ]
 
+    /* Markdown content will display if it exists */
+    const markdownContent = (
+      <BodyContainer>
+        {body}
+      </BodyContainer>
+    )
+
+    const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
+
     return (
       <div>
-        <Helmet
-          title={metaTitle}
-          meta={meta}
-        />
-        {header}
-        <BodyContainer>{body}</BodyContainer>
-        {props.children}
+        <Helmet title={metaTitle} meta={meta} />
+
+        <div className={contentWrapperClass}>
+          {header}
+          {markdownContent}
+          {props.children}
+        </div>
         {footer}
       </div>
     )
@@ -68,6 +79,8 @@ Page.propTypes = {
   body: PropTypes.string.isRequired,
   header: PropTypes.element,
   footer: PropTypes.element,
+  /** if true, page will be full width */
+  fullWidth: PropTypes.bool,
 }
 
 Page.contextTypes = {
