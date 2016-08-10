@@ -8,9 +8,9 @@ import Footer from './components/Footer'
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
+import segmentIO from './assets/segment'
 
 export default class Layout extends Component {
-
   static propTypes = {
     children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   };
@@ -29,10 +29,6 @@ export default class Layout extends Component {
       <div className={styles.layout}>
         <Helmet
           meta={[
-            {
-              name: 'generator', content: `${
-              process.env.PHENOMIC_NAME} ${process.env.PHENOMIC_VERSION}`,
-            },
             { property: 'og:site_name', content: pkg.name },
             { name: 'twitter:site', content: `@${pkg.twitter}` },
           ]}
@@ -41,13 +37,16 @@ export default class Layout extends Component {
           ]}
         />
 
-        {}
         <Helmet
-          meta={[ {
-            name: 'viewport', content: 'width=device-width, initial-scale=1',
-          } ]}
+          meta={[{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]}
+          script={[{
+            'type': 'text/javascript',
+            'innerHTML': segmentIO
+          }]}
         />
-        <style>{"@-ms-viewport { width: device-width; }"}</style>
+        <style>
+          {"@-ms-viewport { width: device-width; }"}
+        </style>
 
         <Header />
 

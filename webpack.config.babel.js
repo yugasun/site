@@ -147,7 +147,7 @@ export const makeConfig = (config = {}) => {
       ],
       new webpack.DefinePlugin({
        'process.env': {
-         'NODE_ENV': '"production"'
+         'NODE_ENV': (config.production) ? '"production"' : '"development"'
        }
      }),
     ],
