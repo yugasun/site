@@ -1,6 +1,9 @@
 .wrapper {
-  height: 100vh;
   background: $black1;
+}
+
+.content {
+  composes: content from '../../index.css';
 }
 
 .tagline {
