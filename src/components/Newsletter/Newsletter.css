@@ -1,0 +1,67 @@
+$height: 50px;
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  composes: oswald from '../../index.css';
+}
+
+:global {
+  .sl-email {
+    min-height: 120px;
+    padding-top: 35px;
+    color: #fff;
+  }
+  .email-ask {
+    margin: 10px 0;
+    font-size: 23px;
+    margin-right: 20px;
+    min-width: 275px;
+  }
+  .form-group {
+   display: inline-block;
+   margin-bottom: 0;
+   vertical-align: middle;
+  }
+  .form-control {
+    width: 220px;
+    text-align: center;
+    border-radius: 2px 0 0 2px;
+    background: 0 0;
+    border: 1px solid #ffe400;
+    height: $height;
+    font-family: Oswald,sans-serif;
+    font-size: 18px;
+    color: #fff;
+    &:focus {
+      outline: 0!important;
+    }
+  }
+  .btn-action {
+    outline: 0!important;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: 0 0 0 -5px;
+    padding: 0 25px;
+    border-radius: 0 2px 2px 0;
+    height: $height;
+    font-style: italic;
+    text-transform: uppercase;
+    font-family: Oswald,sans-serif;
+  }
+  .btn-action {
+    color: rgba(0,0,0,.7);
+    background-color: #ffe400;
+    min-width: 142px;
+  }
+}
