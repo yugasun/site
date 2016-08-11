@@ -120,9 +120,9 @@ export const makeConfig = (config = {}) => {
     },
 
     postcss: () => [
-      require("stylelint")(),
+      // require("stylelint")(),
       require("postcss-cssnext")({ browsers: "last 2 versions" }),
-      require("postcss-reporter")(),
+      // require("postcss-reporter")(),
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
@@ -132,6 +132,8 @@ export const makeConfig = (config = {}) => {
           node.warn(result, 'Unknown variable ' + name)
         }
       }),
+      /* enable nested css selectors like Sass/Less */
+      require('postcss-nested'),
       ...config.production ? [
         require("postcss-browser-reporter")(),
       ] : [],
