@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Page from '../Page'
+import Newsletter from '../../components/Newsletter/Newsletter'
 import styles from './Homepage.css'
 
 export default class Homepage extends Component {
@@ -24,10 +25,12 @@ export default class Homepage extends Component {
               />
             Your browser does not support the video tag.
           </video>
+
+          <Newsletter />
         </div>
 
         <section className={styles.content}>
-          <h3 className='oswald-normal center'>Overview</h3>
+          <h3 className={styles.center}>Overview</h3>
           <p>
             The <a href='https://www.github.com/serverless/serverless' target='_blank'>Serverless Framework</a> is an application framework for building web, mobile
             and IoT applications powered by <a href='https://aws.amazon.com/lambda/' target='_blank'>AWS Lambda,</a>
@@ -50,9 +53,13 @@ export default class Homepage extends Component {
           <p>
             To get started, view our Documentation:
           </p>
-          <p className='center'>
-            <a href='http://docs.serverless.com' className='btn btn-black btn-lg'>View The Documentation</a>
-            <a href='https://www.github.com/serverless/serverless' className='btn btn-black btn-lg'>View on Github</a>
+          <p className={styles.center}>
+            <a href='http://docs.serverless.com' className={styles.btn}>
+              View The Documentation
+            </a>
+            <a href='https://www.github.com/serverless/serverless' className={styles.btn}>
+              View on Github
+            </a>
           </p>
         </section>
 

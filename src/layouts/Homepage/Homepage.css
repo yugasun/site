@@ -6,6 +6,10 @@
   composes: content from '../../index.css';
 }
 
+.center {
+  text-align: center;
+}
+
 .tagline {
   padding: 0 0 20px;
   color: #fff;
@@ -41,4 +45,29 @@
   margin: 0 auto;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  outline: 0!important;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 3px;
+  background-color: #141414;
+  color: #ddd !important;
+  font-weight: 200 !important;
+  margin: 5px;
+  text-transform: uppercase;
+  font-family: Oswald;
+  font-size: 20px;
+  padding: 25px 35px;
+  font-size: 22px;
+  text-decoration: none;
 }
