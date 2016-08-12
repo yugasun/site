@@ -1,5 +1,6 @@
 .wrapper {
   background: $black1;
+  height: calc(100vh - $navHeight);
 }
 
 .content {
@@ -10,6 +11,7 @@
     cursor: pointer;
     text-decoration: none;
   }
+  padding-bottom: 100px;
 }
 
 .center {
@@ -84,5 +86,8 @@
   .subHeading {
     font-size: 27px;
     margin-top: 10px;
+  }
+  .email-ask {
+    text-align: center;
   }
 }
