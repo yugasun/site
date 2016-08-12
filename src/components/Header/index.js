@@ -19,6 +19,7 @@ export default class Header extends Component {
   render () {
     const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
+    const openClass = (sideNavOpen) ? styles.animate : ''
     return (
       <header className={styles.header}>
         <div className={styles.bumper} />
@@ -29,9 +30,11 @@ export default class Header extends Component {
                 <img alt='Serverless logo' className={styles.logo} src={Logo} />
               </Link>
             </div>
-            <label htmlFor='id-show-menu' onClick={this.handleClick} className={styles.toggle}>
-
-            </label>
+            <div htmlFor='id-show-menu' onClick={this.handleClick} className={styles.toggle}>
+              <div className={styles.ham}>
+                <div className={styles.bar + ' ' + openClass}></div>
+              </div>
+            </div>
             <div className={styles.navPart2 + ' ' + mobileNav}>
               <a href='http://blog.serverless.com/' className={styles.link}>
                 BLOG
