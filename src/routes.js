@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router'
-/* Root pass through components */
-import LayoutContainer from './index.js'
 import PhenomicPageContainer from 'phenomic/lib/PageContainer'
+import { Route } from 'react-router'
+import IndexComponent from './IndexComponent' /* Root pass through components */
 /* layouts */
 import Page from './layouts/Page'
 import PageError from './layouts/PageError'
@@ -11,6 +10,7 @@ import Homepage from './layouts/Homepage'
 import Community from './layouts/Community'
 import Post from './layouts/Post'
 import Resource from './layouts/Resource'
+/* end layouts */
 
 class PageContainer extends Component {
   render () {
@@ -32,7 +32,7 @@ class PageContainer extends Component {
 }
 
 export default (
-  <Route component={LayoutContainer}>
+  <Route component={IndexComponent}>
     <Route path='/resource/:id' component={Resource} />
     <Route path='*' component={PageContainer} />
   </Route>

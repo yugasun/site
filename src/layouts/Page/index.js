@@ -66,6 +66,7 @@ class Page extends Component {
           {props.children}
         </div>
         {footer}
+        <div dangerouslySetInnerHTML={{__html: props.head.script}} />
       </div>
     )
   }

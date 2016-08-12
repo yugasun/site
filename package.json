@@ -18,6 +18,7 @@
     "start": "phenomic start",
     "prebuildz": "cp -rf node_modules/serverless/docs content/framework/test",
     "build": "phenomic build",
+    "static": "cd dist && http-server",
     "pretest": "npm run lint",
     "test": "npm run build"
   },

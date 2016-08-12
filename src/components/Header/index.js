@@ -51,9 +51,9 @@ export default class Header extends Component {
               <a href='http://forum.serverless.com/' className={styles.link}>
                 FORUM
               </a>
-              <a href='http://serverless.com/hiring.html' className={`${styles.link} ${styles.hiring}`}>
+              <Link to='company/jobs' className={`${styles.link} ${styles.hiring}`}>
                 WE'RE HIRING
-              </a>
+              </Link>
             </div>
           </div>
         </nav>

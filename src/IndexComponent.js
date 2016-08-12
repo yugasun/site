@@ -5,12 +5,12 @@ import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import segmentIO from './assets/segment'
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
-import segmentIO from './assets/segment'
 
-export default class Layout extends Component {
+export default class IndexComponent extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   };
@@ -27,32 +27,22 @@ export default class Layout extends Component {
 
     return (
       <div className={styles.layout}>
+        <style>{"@-ms-viewport { width: device-width; }"}</style>
         <Helmet
           meta={[
             { property: 'og:site_name', content: pkg.name },
             { name: 'twitter:site', content: `@${pkg.twitter}` },
-          ]}
-          script={[
-            { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
           ]}
         />
-
-        <Helmet
-          meta={[{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]}
-          script={[{
-            'type': 'text/javascript',
-            'innerHTML': segmentIO
-          }]}
-        />
-        <style>
-          {"@-ms-viewport { width: device-width; }"}
-        </style>
 
         <Header />
-
         {dynamicContent}
-
         <Footer />
+        <div
+          id='footerScripts'
+          dangerouslySetInnerHTML={{__html: segmentIO}}
+        />
       </div>
     )
   }
