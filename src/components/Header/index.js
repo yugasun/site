@@ -16,18 +16,24 @@ export default class Header extends Component {
               </Link>
             </div>
             <div className={styles.navPart2}>
-              <Link
-                className={styles.link}
-                to='/guide'
-              >
-                {"Learn"}
-              </Link>
-              <Link
-                className={styles.link}
-                to='/community'
-              >
-                {"Community"}
-              </Link>
+              <a href='http://blog.serverless.com/' className={styles.link}>
+                BLOG
+              </a>
+              <a href='https://www.github.com/serverless/serverless' className={styles.link}>
+                Github
+              </a>
+              <a href='https://github.com/serverless/serverless/tree/master/docs' className={styles.link}>
+                DOCUMENTATION
+              </a>
+              <a href='https://gitter.im/serverless/serverless' className={styles.link}>
+                GITTER
+              </a>
+              <a href='http://forum.serverless.com/' className={styles.link}>
+                FORUM
+              </a>
+              <a href='http://serverless.com/hiring.html' className={`${styles.link} ${styles.hiring}`}>
+                WE'RE HIRING
+              </a>
             </div>
           </div>
         </nav>

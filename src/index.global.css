@@ -33,7 +33,7 @@ body {
  */
 html {
   min-height: 100%;
-  background: color(#deecf1 a(0.4));
+  background: #fff;
 }
 
 audio,
@@ -47,7 +47,6 @@ video {
 body {
   font-size: 1rem;
   line-height: 1.5rem;
-  background: #fff;
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: 'Open Sans',sans-serif;
 }

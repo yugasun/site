@@ -4,6 +4,12 @@
 
 .content {
   composes: content from '../../index.css';
+  a {
+    color: #222;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 
 .center {
@@ -11,7 +17,7 @@
 }
 
 .tagline {
-  padding: 0 0 20px;
+  padding: 10px 0 10px;
   color: #fff;
   text-align: center;
   composes: oswald from "../../index.css";
