@@ -4,7 +4,21 @@ import Logo from '../../assets/images/serverless_logo.gif'
 import styles from './Header.css'
 
 export default class Header extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.state = {
+      sideNavOpen: false
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick () {
+    this.setState({
+      sideNavOpen: !this.state.sideNavOpen
+    })
+  }
   render () {
+    const { sideNavOpen } = this.state
+    const mobileNav = (sideNavOpen) ? styles.open : ''
     return (
       <header className={styles.header}>
         <div className={styles.bumper} />
@@ -15,7 +29,10 @@ export default class Header extends Component {
                 <img alt='Serverless logo' className={styles.logo} src={Logo} />
               </Link>
             </div>
-            <div className={styles.navPart2}>
+            <label htmlFor='id-show-menu' onClick={this.handleClick} className={styles.toggle}>
+
+            </label>
+            <div className={styles.navPart2 + ' ' + mobileNav}>
               <a href='http://blog.serverless.com/' className={styles.link}>
                 BLOG
               </a>
