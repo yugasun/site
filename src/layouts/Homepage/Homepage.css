@@ -1,6 +1,6 @@
 .wrapper {
   background: $black1;
-  height: calc(100vh - $navHeight);
+  min-height: calc(100vh - $navHeight);
 }
 
 .content {
