@@ -1,5 +1,5 @@
 ---
-title: "Use cases of serverless"
+title: Serverless Overview
 description: "Overview of Serverless Architectures"
 layout: Page
 ---

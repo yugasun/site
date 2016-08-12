@@ -54,4 +54,3 @@ Simply put, serverless computing changes the way developers think about writing,
 # The Serverless industry and the future
 
 # Community
-
