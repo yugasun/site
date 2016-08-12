@@ -77,3 +77,12 @@
   font-size: 22px;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .heading {
+    font-size: 19px;
+  }
+  .subHeading {
+    font-size: 27px;
+    margin-top: 10px;
+  }
+}
