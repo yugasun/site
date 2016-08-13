@@ -112,6 +112,7 @@
   },
   "dependencies": {
     "axios": "^0.13.1",
-    "phenomic": "^0.15.0"
+    "phenomic": "^0.15.0",
+    "react-google-analytics": "^0.2.0"
   }
 }
