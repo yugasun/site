@@ -152,28 +152,26 @@ $lineHeight: 4px;
 }
 
 
-.open {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: black;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  a {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-}
+
 @media (max-width: 768px) {
   .navPart2 {
-    opacity: 0;
+    display: none;
   }
   .toggle {
     display: block;
   }
   .open {
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    a {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

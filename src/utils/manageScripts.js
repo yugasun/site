@@ -6,9 +6,9 @@ if (typeof window !== 'undefined') {
   window.loadedScripts = {}
 }
 
-export function addScript (scriptSrc) {
+export function addScript (scriptSrc, cb) {
   if (window.loadedScripts[`'${scriptSrc}'`]) {
-    console.log('Already loaded')
+    /* script already loaded */
     return false
   }
   const s = document.getElementsByTagName('script')[0]
@@ -17,14 +17,17 @@ export function addScript (scriptSrc) {
   el.async = true
   el.src = scriptSrc
   el.id = scriptSrc
-  console.log('add', scriptSrc)
-  window.loadedScripts[`'${scriptSrc}'`] = true
+  el.addEventListener('load', function (e) {
+    window.loadedScripts[`'${scriptSrc}'`] = true
+    if (cb) {
+      cb(null, e)
+    }
+  }, false)
   return s.parentNode.insertBefore(el, s)
 }
 
 export function removeScript (scriptSrc) {
-  console.log('remove script')
-  var script = document.getElementById(scriptSrc)
+  const script = document.getElementById(scriptSrc)
   script.parentElement.removeChild(script)
   delete window.loadedScripts[`'${scriptSrc}'`]
 }

@@ -8,17 +8,12 @@ export default class JobPage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
   }
-  componentWillMount () {
-    if (isClient) {
-      addScript('//www.workable.com/assets/embed.js')
-    }
-  }
   componentDidMount () {
-    setTimeout(() => {
-      if (isClient && window.whr_embed !== 'undefined') {
+    if (isClient) {
+      addScript('//www.workable.com/assets/embed.js', () => {
         whr_embed(94463, {detail: 'titles', base: 'jobs', zoom: 'country', grouping: 'none'}) // eslint-disable-line
-      }
-    }, 100)
+      })
+    }
   }
   componentWillUnmount () {
     if (isClient) {

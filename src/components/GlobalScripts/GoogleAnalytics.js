@@ -37,10 +37,7 @@ class GoogleAnalyticsTracker extends Component {
 
   render () {
     return (
-      <div>
-        {this.props.children}
-        <InjectGoogleAnalytics />
-      </div>
+      <InjectGoogleAnalytics />
     )
   }
 }
