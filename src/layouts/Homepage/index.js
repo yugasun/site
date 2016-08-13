@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+// import { Link } from 'react-router'
 import Page from '../Page'
 import Newsletter from '../../components/Newsletter/Newsletter'
 import styles from './Homepage.css'
@@ -32,7 +32,6 @@ export default class Homepage extends Component {
 
         <section className={styles.content}>
           <h3 className={styles.center}>Overview</h3>
-          <Link to='/community'>Community</Link>
           <p>
             The <a href='https://www.github.com/serverless/serverless' target='_blank'>Serverless Framework</a> is an application framework for building web, mobile
             and IoT applications powered by <a href='https://aws.amazon.com/lambda/' target='_blank'>AWS Lambda,</a>
