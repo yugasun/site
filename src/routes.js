@@ -8,6 +8,7 @@ import PageError from './layouts/PageError'
 import PageLoading from './layouts/PageLoading'
 import Homepage from './layouts/Homepage'
 import Community from './layouts/Community'
+import Jobs from './layouts/Jobs'
 import Post from './layouts/Post'
 import Resource from './layouts/Resource'
 /* end layouts */
@@ -25,6 +26,7 @@ class PageContainer extends Component {
           Homepage,
           Community,
           Post,
+          Jobs,
         }}
       />
     )

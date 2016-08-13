@@ -1,11 +1,6 @@
 ---
 title: Jobs
-layout: Page
-script: >
-  <script src='https://www.workable.com/assets/embed.js' type='text/javascript'></script>
-  <script type='text/javascript' charset='utf-8'>
-      whr_embed(94463, {detail: 'titles', base: 'jobs', zoom: 'country', grouping: 'none'});
-  </script>
+layout: Jobs
 yo: lsllslslssl
 ---
 
@@ -40,5 +35,3 @@ We want everyone to have a clear understanding of the state of the company and t
 *   Top-tier investment firms
 *   Sponsored speaking at conferences
 *   Unlimited paid vacation with 20 minimum vacation days everyone has to take to be productive
-
-<div id="whr_embed_hook"></div>
