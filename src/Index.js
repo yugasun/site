@@ -1,11 +1,9 @@
-/**
- * Index pass through component for all routes
- */
+/* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
-import HeadTag from './components/HeadTag/HeadTag'
+import HeadTag from './components/HeadTag'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import GlobalScripts from './components/GlobalScripts/GlobalScripts'
+import GlobalScripts from './components/GlobalScripts'
 import segmentIO from './assets/segment'
 // Import global CSS before other components and their styles
 import './index.global.css'

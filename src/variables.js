@@ -1,3 +1,4 @@
+/* Global CSS variables for use in CSS and JS */
 module.exports = {
   /* Colors */
   yellow: '#ffe400',
