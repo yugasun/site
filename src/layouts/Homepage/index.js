@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 // import { Link } from 'react-router'
 import Page from '../Page'
 import Newsletter from '../../components/Newsletter/Newsletter'
+import Terminal from '../../components/TerminalCommands/TerminalCommands'
+import terminalCommands from './terminalCommands'
 import styles from './Homepage.css'
 
 export default class Homepage extends Component {
@@ -10,22 +12,26 @@ export default class Homepage extends Component {
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
-          <div className={styles.tagline}>
-            <h1 className={styles.heading}>The Serverless Application </h1>
-            <h2 className={styles.subHeading}>
-              Framework
-              <span className={styles.ampersand}>
-                &
-              </span>
-              Ecosystem
-            </h2>
+
+          <div className={styles.hero} >
+            <div className={styles.heroLeft}>
+
+              <div className={styles.copy}>
+                <h2 className={styles.tagline}>Build More, Manage Less</h2>
+                <h1 className={styles.heading}>The Serverless Application </h1>
+                <h2 className={styles.subHeading}>
+                  Framework
+                  <span className={styles.ampersand}>
+                    &
+                  </span>
+                  Ecosystem
+                </h2>
+              </div>
+            </div>
+            <div className={styles.heroRight}>
+              <Terminal commands={terminalCommands} />
+            </div>
           </div>
-          <video className={styles.video} autoPlay loop poster='http://serverless.com/images/video_poster.png'>
-            <source
-              src='http://serverless.com/video/serverless_framework_intro_v2.mp4' type='video/mp4'
-              />
-            Your browser does not support the video tag.
-          </video>
 
           <Newsletter />
         </div>

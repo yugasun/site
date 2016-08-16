@@ -13,16 +13,33 @@
   }
   padding-bottom: 100px;
 }
-
+.hero {
+  max-width: 70rem;
+  margin: auto;
+  padding: 1rem 0.75rem;
+  display:flex;
+  margin-bottom: 70px;
+}
+.heroLeft {
+  width: 40%;
+}
+.heroRight {
+  grow: 1;
+  width: 60%;
+}
 .center {
   text-align: center;
 }
 
-.tagline {
+.copy {
   padding: 10px 0 10px;
   color: #fff;
   text-align: center;
   composes: oswald from "../../index.css";
+}
+
+.tagline {
+  font-size: 35px;
 }
 
 .heading {
@@ -32,7 +49,7 @@
 }
 
 .subHeading {
-  font-size: 35px;
+  font-size: 21px;
   font-weight: 400;
   margin-top: 15px;
 }
@@ -43,16 +60,6 @@
   font-size: 30px;
   display: inline-block;
   margin: 0 10px;
-}
-
-.video {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  max-height: 378px;
-  margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn {
@@ -79,9 +86,24 @@
   font-size: 22px;
   text-decoration: none;
 }
+@media (max-width: 1060px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .heroLeft, .heroRight {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .heading {
     font-size: 19px;
+  }
+  .tagline {
+    font-size: 30px;
+  }
+  .hero {
+    margin-bottom: 0px;
   }
   .subHeading {
     font-size: 27px;
