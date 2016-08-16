@@ -104,6 +104,9 @@
    .wrapper {
      font-size: 15px;
    }
+   .terminal {
+     min-height: 260px;
+   }
 }
 @media (max-width: 440px) {
    .wrapper {

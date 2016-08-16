@@ -48,3 +48,16 @@
 .wrapper:nth-child(2n - 1) .image {
   margin: 0 0 2em 3em;
 }
+@media (max-width: 768px) {
+  .wrapper .inner {
+    width: 100%;
+    flex-direction: column !important;
+  }
+  .image {
+    width: 50%;
+    margin: 0 !important;
+  }
+  .content {
+    width: 95%;
+  }
+}

@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
 }
 .cta {
   flex-grow: 1;
@@ -15,6 +16,7 @@
 }
 .content {
   composes: content from '../../index.css';
+
   a {
     color: #222;
     font-weight: 700;
@@ -25,6 +27,7 @@
 }
 .hero {
   composes: content from '../../index.css';
+    width: 100%;
   margin: auto;
   padding: 0;
   display:flex;
@@ -113,6 +116,9 @@ margin: 48px 0px;
     flex-direction: column;
     align-items: center;
   }
+  .heroLeft .copy {
+    text-align:center;
+  }
   .heroLeft, .heroRight {
     width: 100%;
   }
@@ -121,8 +127,17 @@ margin: 48px 0px;
   .heading {
     font-size: 19px;
   }
+  .hero {
+    padding-top: 0px;
+  }
   .tagline {
     font-size: 30px;
+    display: inline-block;
+    margin: 0;
+    &:last-of-type {
+      margin-left:5px;
+      margin-bottom: 15px;
+    }
   }
   .hero {
     margin-bottom: 0px;
