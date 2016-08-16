@@ -1,7 +1,7 @@
 
 .wrapper {
   font-family: "Monaco", Inconsolata, monospace;
-  font-size: 17px;
+  font-size: 16px;
   color: #f8f8f8;
   width: 100%;
   height: 100%;
@@ -15,20 +15,20 @@
   max-width: 600px;
   height: 40%;
   min-height: 350px;
-  background: $black1;
-  border-radius: 7px 7px;
+  background: #212121;/*$black1;*/
+  border-radius: 0px;
   transition: box-shadow .3s linear;
   backdrop-filter: blur(6px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.5);
 }
 .terminal:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
 .terminalHead {
   width: 100%;
   height: 25px;
-  background: #191919;
-  border-radius: 7px 7px 0 0;
+  background: #171616;
+  border-radius: 0px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -38,22 +38,35 @@
   line-height: 1.5;
   :global(.command) {
     display: block;
+    color: $yellow;
     &:before {
       content: '$ ';
       color: $yellow;
     }
   }
-  :global(.comment) {
-    color: #b1afaf !important;
-    &:before {
-      content: '# ';
+  :global {
+    .empty {
+      min-height: 30px;
+    }
+    .comment {
       color: #b1afaf !important;
+      &:before {
+        content: '# ';
+        color: #b1afaf !important;
+      }
+    }
+    .cta {
+      color: #fff !important;
+      &:before {
+        content: '-> ';
+        color: #b1afaf !important;
+      }
     }
   }
 }
 .terminalText a {
-  color: $yellow;
-  text-decoration: none;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .circle {
@@ -70,15 +83,21 @@
   background: #ff5c5c;
   border: 1px solid #e33e41;
   margin-left: 7px;
+  background: #959595;
+  border-color: #959595;
 }
 .turn {
   background: #ffbd4c;
   border: 1px solid #e09e3e;
+  background: #cbcbcb;
+  border-color: #cbcbcb;
 }
 
 .expand {
   background: #00ca56;
   border: 1px solid #14ae46;
+  background: #b1b1b1;
+  border: 1px solid #b1b1b1;
 }
 
 @media (max-width: 768px) {

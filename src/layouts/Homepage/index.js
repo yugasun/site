@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Page from '../Page'
 import Newsletter from '../../components/Newsletter/Newsletter'
 import Terminal from '../../components/TerminalCommands/TerminalCommands'
+import ContentBlock from '../../components/ContentBlock/ContentBlock'
+import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import styles from './Homepage.css'
 
@@ -17,8 +19,9 @@ export default class Homepage extends Component {
             <div className={styles.heroLeft}>
 
               <div className={styles.copy}>
-                <h2 className={styles.tagline}>Build More, Manage Less</h2>
-                <h1 className={styles.heading}>The Serverless Application </h1>
+                <h3 className={styles.tagline}>Build More,</h3>
+                <h3 className={styles.tagline}>Manage Less</h3>
+                <h1 className={styles.heading}>With The Serverless Application </h1>
                 <h2 className={styles.subHeading}>
                   Framework
                   <span className={styles.ampersand}>
@@ -27,15 +30,26 @@ export default class Homepage extends Component {
                   Ecosystem
                 </h2>
               </div>
+
             </div>
             <div className={styles.heroRight}>
               <Terminal commands={terminalCommands} />
             </div>
           </div>
-
-          <Newsletter />
+          <div className={styles.cta}>
+            <Newsletter />
+          </div>
         </div>
-
+        <ContentBlock color='black' title='The Serverless Framework'>
+           An open-source command line tool that makes it easy to develop and deploy serverless architectures to AWS Lambda, Azure Functions, Google Cloud Functions and more. Hundreds of companies, from small to startups to Fortune 100 enterprises, use the Serverless Framework to move fast, build more, and manage less.
+        </ContentBlock>
+        <ContentBlock color='black' title='The Serverless Platform'>
+          <p>Serverless architectures, or function-as-a-service, are having a major impact on how software is built. AWS Lambda and others are empowering teams to build and ship event-driven applications faster than ever with minimal operational overhead. At Serverless we’re building the next generation of developer tooling for event-driven applications, sign up below to get beta access.</p>
+          <Button>Join the beta waitlist</Button>
+        </ContentBlock>
+        <ContentBlock color='black' title='The Serverless Community'>
+          Over 1,000 people are in our chatroom and on our forum everyday discussing the Serverless Framework and serverless architecitures in general. Come and join us!
+        </ContentBlock>
         <section className={styles.content}>
           <h3 className={styles.center}>Overview</h3>
           <p>

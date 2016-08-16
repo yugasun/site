@@ -1,0 +1,50 @@
+
+.wrapper {
+  position: relative;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: $black1;
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  padding: 3em 0 3em 0;
+  margin: 0 auto;
+  width: 60em;
+}
+
+.content {
+  width: 100%;
+  -ms-flex: 2;
+}
+
+.image {
+  border-radius: 100%;
+  margin: 0 3em 2em 0;
+  width: 22em;
+  overflow: hidden;
+  img {
+    border-radius: 100%;
+    width: 100%;
+  }
+}
+
+.wrapper:nth-child(2n - 1) .inner {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.wrapper:nth-child(2n - 1) .image {
+  margin: 0 0 2em 3em;
+}

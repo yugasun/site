@@ -41,8 +41,13 @@ module.exports = [
     skip: true
   },
   {
+    text: '',
+    type: 'empty',
+    skip: true
+  },
+  {
     text: 'read the <a href="#">docs</a> or connect with the <a href="#">community</a>',
-    type: 'comment',
+    type: 'cta',
     skip: true
   },
 ]
