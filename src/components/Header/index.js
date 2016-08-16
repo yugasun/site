@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Logo from '../../assets/images/serverless_logo.gif'
+import handleClickAway from '../../utils/handleClickAway'
+import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
 export default class Header extends Component {
@@ -10,6 +11,19 @@ export default class Header extends Component {
       sideNavOpen: false
     }
     this.handleClick = this.handleClick.bind(this)
+    this.closeNav = this.closeNav.bind(this)
+  }
+  componentDidMount () {
+    document.body.addEventListener('click', this.closeNav)
+  }
+  closeNav (e) {
+    const toggleNode = this.refs.toggle
+    const isOutsideClick = handleClickAway(toggleNode, e)
+    if (isOutsideClick) {
+      this.setState({
+        sideNavOpen: false
+      })
+    }
   }
   handleClick () {
     this.setState({
@@ -30,7 +44,7 @@ export default class Header extends Component {
                 <img alt='Serverless logo' className={styles.logo} src={Logo} />
               </Link>
             </div>
-            <div htmlFor='id-show-menu' onClick={this.handleClick} className={styles.toggle}>
+            <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
               <div className={styles.ham}>
                 <div className={styles.bar + ' ' + openClass}></div>
               </div>
