@@ -41,6 +41,11 @@ module.exports = [
     skip: true
   },
   {
+    text: 'http://api.amazon.com/users/update live',
+    type: 'command',
+    skip: true
+  },
+  {
     text: '',
     type: 'empty',
     skip: true

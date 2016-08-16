@@ -46,7 +46,7 @@
   }
   :global {
     .empty {
-      min-height: 30px;
+      min-height: 20px;
     }
     .comment {
       color: #b1afaf !important;
