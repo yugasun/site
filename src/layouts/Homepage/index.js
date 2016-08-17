@@ -13,10 +13,14 @@ export default class Homepage extends Component {
   constructor (props, context) {
     super(props, context)
     this.handleDoubleClick = this.handleDoubleClick.bind(this)
+    this.space = false
   }
   handleDoubleClick (e) {
     e.preventDefault()
-    new Space().main()
+    if (!this.space) {
+      new Space().main()
+      this.space = true
+    }
   }
   render () {
     return (
@@ -38,7 +42,7 @@ export default class Homepage extends Component {
                   Ecosystem
                 </h2>
               </div>
-
+              <div className={styles.providers} />
             </div>
             <div className={styles.heroRight} onDoubleClick={this.handleDoubleClick}>
               <Terminal commands={terminalCommands} />

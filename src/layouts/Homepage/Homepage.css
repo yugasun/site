@@ -46,6 +46,14 @@
 .heroLeft {
   width: 40%;
 }
+.providers {
+  display: block;
+  /* width: 179px; */
+  height: 36px;
+  background: url(../../assets/images/providers.png) no-repeat 0 0;
+  text-indent: -4000px;
+  background-size: 350px;
+}
 .heroRight {
   width: 60%;
 }
