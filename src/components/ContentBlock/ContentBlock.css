@@ -48,7 +48,7 @@
 .wrapper:nth-child(2n - 1) .image {
   margin: 0 0 2em 3em;
 }
-@media (max-width: 768px) {
+@media (max-width: 1060px) {
   .wrapper .inner {
     width: 100%;
     flex-direction: column !important;

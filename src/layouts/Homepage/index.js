@@ -6,15 +6,23 @@ import Terminal from '../../components/TerminalCommands/TerminalCommands'
 import ContentBlock from '../../components/ContentBlock/ContentBlock'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
+import space from './space'
 import styles from './Homepage.css'
 
 export default class Homepage extends Component {
-
+  constructor (props, context) {
+    super(props, context)
+    this.handleDoubleClick = this.handleDoubleClick.bind(this)
+  }
+  handleDoubleClick (e) {
+    e.preventDefault()
+    new space().main()
+  }
   render () {
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
-
+          <canvas className={styles.canvas} id='demo'></canvas>
           <div className={styles.hero} >
             <div className={styles.heroLeft}>
 
@@ -32,7 +40,7 @@ export default class Homepage extends Component {
               </div>
 
             </div>
-            <div className={styles.heroRight}>
+            <div className={styles.heroRight} onDoubleClick={this.handleDoubleClick}>
               <Terminal commands={terminalCommands} />
             </div>
           </div>
