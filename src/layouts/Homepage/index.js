@@ -6,7 +6,7 @@ import Terminal from '../../components/TerminalCommands/TerminalCommands'
 import ContentBlock from '../../components/ContentBlock/ContentBlock'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
-import space from './space'
+import Space from './space'
 import styles from './Homepage.css'
 
 export default class Homepage extends Component {
@@ -16,7 +16,7 @@ export default class Homepage extends Component {
   }
   handleDoubleClick (e) {
     e.preventDefault()
-    new space().main()
+    new Space().main()
   }
   render () {
     return (
