@@ -191,6 +191,16 @@
   .hero {
     margin-bottom: 0px;
   }
+  .providers {
+    display: inline-block;
+    width: 300px;
+    height: 36px;
+    background: url(../../assets/images/providers_white.png) no-repeat 0 0;
+    text-indent: -4000px;
+    background-size: 300px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
   .subHeading {
     font-size: 27px;
     margin-top: 10px;
