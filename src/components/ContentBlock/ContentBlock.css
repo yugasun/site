@@ -30,12 +30,10 @@
 }
 
 .image {
-  border-radius: 100%;
   margin: 0 3em 2em 0;
-  width: 22em;
+  width: 35em;
   overflow: hidden;
   img {
-    border-radius: 100%;
     width: 100%;
   }
 }
@@ -59,5 +57,11 @@
   }
   .content {
     width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .image {
+    width: 70%;
+    margin: 0 !important;
   }
 }

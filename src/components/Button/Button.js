@@ -5,12 +5,19 @@ const propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string,
   children: PropTypes.any,
+  kind: PropTypes.oneOf(['dark', 'black']),
+  style: PropTypes.object,
 }
 
-export default function Button ({onClick, label, children}) {
+const defaultProps = {
+  kind: 'dark',
+}
+
+export default function Button ({onClick, label, children, kind, style}) {
   const text = label || children
+  const kindStyle = styles[kind]
   return (
-    <button className={styles.btn + ' ' + styles.dark} onClick={onClick}>
+    <button className={styles.btn + ' ' + kindStyle} onClick={onClick} style={style}>
       <span className={styles.background}></span>
       {text}
     </button>
@@ -18,3 +25,4 @@ export default function Button ({onClick, label, children}) {
 }
 
 Button.propTypes = propTypes
+Button.defaultProps = defaultProps

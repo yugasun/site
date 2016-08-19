@@ -7,7 +7,7 @@ $buttonPadding: 12px;
   color: inherit;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
+
   display: inline-block;
   letter-spacing: 1px;
   font-weight: 700;
@@ -23,6 +23,7 @@ $buttonPadding: 12px;
 }
 
 .dark {
+  padding: 25px 80px;
   color: #fff;
   background: transparent;
   border: 2px solid $borderColor;
@@ -30,6 +31,23 @@ $buttonPadding: 12px;
   overflow: hidden;
   &:hover {
     border: 2px solid $yellow;
+    .background {
+       transform-origin: 0 0;
+       right: 0;
+    }
+  }
+  .background {
+    top: 0px;
+    right: -50%;
+    position: absolute;
+    transition: all 0.3s;
+    width: 75px;
+    background: #202020;
+    height: 400%;
+    margin: -5px 0 0 -5px;
+    transform-origin: 0 0;
+    transform: rotate(-10deg);
+    z-index: 2;
   }
   &:hover:after {
     width: 120%;
@@ -65,21 +83,8 @@ $buttonPadding: 12px;
   }
 }
 
-.background {
-  top: 0px;
-  right: -50%;
-  position: absolute;
-  transition: all 0.3s;
-  width: 75px;
-  background: #202020;
-  height: 400%;
-  margin: -5px 0 0 -5px;
-  transform-origin: 0 0;
-  transform: rotate(-10deg);
-  z-index: 2;
-}
-
-.dark:hover .background {
-   transform-origin: 0 0;
-   right: 0;
+.black {
+  background: #000;
+  color: #fff;
+  padding: 20px 30px;
 }
