@@ -12,10 +12,10 @@ import styles from './Homepage.css'
 export default class Homepage extends Component {
   constructor (props, context) {
     super(props, context)
-    this.handleDoubleClick = this.handleDoubleClick.bind(this)
+    this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
     this.space = false
   }
-  handleDoubleClick (e) {
+  triggerEasterEgg (e) {
     e.preventDefault()
     if (!this.space) {
       new Space().main()
@@ -44,7 +44,7 @@ export default class Homepage extends Component {
               </div>
               <div className={styles.providers} />
             </div>
-            <div className={styles.heroRight} onDoubleClick={this.handleDoubleClick}>
+            <div className={styles.heroRight} onDoubleClick={this.triggerEasterEgg}>
               <Terminal commands={terminalCommands} />
             </div>
           </div>
@@ -66,7 +66,7 @@ export default class Homepage extends Component {
           <h3 className={styles.center}>Overview</h3>
           <p>
             The <a href='https://www.github.com/serverless/serverless' target='_blank'>Serverless Framework</a> is an application framework for building web, mobile
-            and IoT applications powered by <a href='https://aws.amazon.com/lambda/' target='_blank'>AWS Lambda,</a>
+            and IoT applications powered by <a href='https://aws.amazon.com/lambda/' target='_blank'>AWS Lambda, </a>
             <a href='https://aws.amazon.com/api-gateway/' target='_blank'>
               AWS API Gateway
             </a> and in the future other Function as a Service providers.
