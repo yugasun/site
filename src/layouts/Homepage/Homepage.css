@@ -194,5 +194,7 @@
   }
   .bg:before {
     width: 140vw;
+    transform: rotate(0deg);
+    top: 0px;
   }
 }
