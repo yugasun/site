@@ -40,34 +40,34 @@ export default class Homepage extends Component {
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
-        <div className={styles.top}>
-          <canvas className={styles.canvas} id='demo'></canvas>
-          <div className={styles.bg}>
-          <div className={styles.hero} >
-            <div className={styles.heroLeft}>
+          <div className={styles.top}>
+            <canvas className={styles.canvas} id='demo'></canvas>
+            <div className={styles.bg}>
+              <div className={styles.hero} >
+                <div className={styles.heroLeft}>
 
-              <div className={styles.copy}>
-                <h3 className={styles.tagline}>Build More,</h3>
-                <h3 className={styles.tagline}>Manage Less</h3>
-                <h1 className={styles.heading}>With The Serverless Framework </h1>
-                <Button kind='black' style={{margin: '20px 0px'}}>
-                   <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '25px'}}>
-                    <Svg svg={gitHubSvg} fill='white' />
-                    <div style={{marginLeft: 10, height: '100%'}}>VIEW THE FRAMEWORK</div>
-                   </span>
-                </Button>
+                  <div className={styles.copy}>
+                    <h3 className={styles.tagline}>Build More,</h3>
+                    <h3 className={styles.tagline}>Manage Less</h3>
+                    <h1 className={styles.heading}>With The Serverless Framework </h1>
+                    <Button kind='black' style={{margin: '20px 0px'}}>
+                      <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '25px'}}>
+                        <Svg svg={gitHubSvg} fill='white' />
+                        <div style={{marginLeft: 10, height: '100%'}}>VIEW THE FRAMEWORK</div>
+                      </span>
+                    </Button>
+                  </div>
+                  <div className={styles.providers} />
+                </div>
+                <div className={styles.heroRight} onDoubleClick={this.triggerEasterEgg}>
+                  <Terminal commands={terminalCommands} />
+                </div>
               </div>
-              <div className={styles.providers} />
             </div>
-            <div className={styles.heroRight} onDoubleClick={this.triggerEasterEgg}>
-              <Terminal commands={terminalCommands} />
+            <div className={styles.cta}>
+              <Newsletter />
             </div>
           </div>
-          </div>
-          <div className={styles.cta}>
-            <Newsletter />
-          </div>
-        </div>
         </div>
         <ContentBlock color='black' title='The Serverless Architecture' image={architectureGif}>
           <p>Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically.</p>
