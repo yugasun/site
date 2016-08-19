@@ -6,6 +6,7 @@
 }
 .top {
   min-height: calc(100vh - $navHeight);
+  position: relative;
 }
 .cta {
   flex-grow: 1;
@@ -165,6 +166,7 @@
   }
   .cta {
     position: relative;
+    bottom:auto;
   }
 }
 @media (max-width: 768px) {
@@ -198,6 +200,7 @@
   }
   .bg:before {
     width: 140vw;
+    height: calc(100vh - $navHeight);
     transform: rotate(0deg);
     top: 0px;
   }
