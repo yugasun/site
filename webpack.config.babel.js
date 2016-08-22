@@ -1,15 +1,28 @@
 import path from "path"
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
-
+import dotenv from 'dotenv'
 import pkg from "./package.json"
+const dotEnvVars = dotenv.config()
 
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
 // see the end of the file if you want to export a default config
 // (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
-  console.log(config)
+  console.log('site config', config)
+  const globalVariables = Object.keys(dotEnvVars)
+    .reduce((memo, key) => {
+      const val = JSON.stringify(dotEnvVars[key])
+      memo[`__${key.toUpperCase()}__`] = val
+      return memo
+    }, {
+      'process.env': {
+        'NODE_ENV': (config.production) ? '"production"' : '"development"',
+        'BROWSER': (config.production) ? JSON.stringify(false) : JSON.stringify(true)
+      }
+    })
+
   return {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
@@ -147,11 +160,7 @@ export const makeConfig = (config = {}) => {
           { compress: { warnings: false } }
         ),
       ],
-      new webpack.DefinePlugin({
-       'process.env': {
-         'NODE_ENV': (config.production) ? '"production"' : '"development"'
-       }
-     }),
+      new webpack.DefinePlugin(globalVariables),
     ],
 
     output: {

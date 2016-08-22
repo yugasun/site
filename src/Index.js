@@ -19,12 +19,18 @@ export default class IndexComponent extends Component {
   static contextTypes = {
     metadata: PropTypes.object.isRequired,
   };
-
   render () {
     /**
      * this.props.children references /layouts/index or a dynamic route from routes.js
      */
-
+    // console.log(this.props.route.auth)
+    /* provide auth prop to all children?
+    if (this.props.children) {
+      children = React.cloneElement(this.props.children, {
+        auth: this.props.route.auth //sends auth instance to children
+      })
+    }
+    */
     return (
       <div className={styles.layout}>
         <HeadTag />

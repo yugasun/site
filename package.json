@@ -19,8 +19,7 @@
     "prebuildz": "cp -rf node_modules/serverless/docs content/framework/test",
     "build": "phenomic build",
     "static": "cd dist && http-server",
-    "pretest": "npm run lint",
-    "test": "npm run build"
+    "pretest": "npm run lint"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
@@ -35,6 +34,7 @@
     "classnames": "^2.2.3",
     "color": "^0.11.1",
     "css-loader": "^0.23.0",
+    "dotenv": "^2.0.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-config-standard": "^5.3.1",
@@ -58,6 +58,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-reporter": "^1.3.0",
     "postcss-simple-vars": "^3.0.0",
+    "prepend-file": "^1.3.0",
     "raw-loader": "^0.5.1",
     "react": "^15.0.0-rc.1",
     "react-dom": "^15.0.0-rc.1",
@@ -111,7 +112,9 @@
     }
   },
   "dependencies": {
+    "auth0-lock": "^10.2.1",
     "axios": "^0.13.1",
+    "jwt-decode": "^2.1.0",
     "phenomic": "^0.15.0",
     "react-google-analytics": "^0.2.0"
   }
