@@ -7,19 +7,20 @@ $buttonPadding: 12px;
   color: inherit;
   background: none;
   cursor: pointer;
-
   display: inline-block;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 400;
   outline: none;
   position: relative;
   transition: all 0.3s;
-}
-.btn:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s;
+  text-decoration: none;
+  font-style: normal;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s;
+  }
 }
 
 .dark {

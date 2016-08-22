@@ -4,6 +4,7 @@ import Page from '../Page'
 import Newsletter from '../../components/Newsletter/Newsletter'
 import Terminal from '../../components/TerminalCommands/TerminalCommands'
 import ContentBlock from '../../components/ContentBlock/ContentBlock'
+import Modal from '../../components/Modal/Modal'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
@@ -18,6 +19,9 @@ export default class Homepage extends Component {
   constructor (props, context) {
     super(props, context)
     this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
+    this.state = {
+      active: false
+    }
     this.space = false
   }
   triggerEasterEgg (e) {
@@ -26,6 +30,9 @@ export default class Homepage extends Component {
       new Space().main()
       this.space = true
     }
+  }
+  handleToggle = () => {
+    this.setState({active: !this.state.active})
   }
   render () {
     /*
@@ -50,10 +57,16 @@ export default class Homepage extends Component {
                     <h3 className={styles.tagline}>Build More,</h3>
                     <h3 className={styles.tagline}>Manage Less</h3>
                     <h1 className={styles.heading}>With The Serverless Framework </h1>
-                    <Button kind='black' style={{margin: '20px 0px'}}>
+                    <Button
+                      kind='black'
+                      style={{margin: '20px 0px'}}
+                      href='https://github.com/serverless/serverless'
+                    >
                       <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '25px'}}>
                         <Svg svg={gitHubSvg} fill='white' />
-                        <div style={{marginLeft: 10, height: '100%'}}>VIEW THE FRAMEWORK</div>
+                        <div style={{marginLeft: 10, height: '100%'}}>
+                          VIEW THE OPEN SOURCE FRAMEWORK
+                        </div>
                       </span>
                     </Button>
                   </div>
@@ -75,7 +88,7 @@ export default class Homepage extends Component {
         </ContentBlock>
         <ContentBlock color='black' title='The Serverless Framework' image={yamlGif}>
           <p>The open-source command line tool and standard syntax to easily build serverless architectures on AWS Lambda, Azure Functions, Google Cloud Functions & more. Startups to Fortune 100 companies are using the Framework to build sophisticated event-driven systems.</p>
-          <Button>Join the beta waitlist</Button>
+          <Button onClick={this.handleToggle}>Join the beta waitlist</Button>
         </ContentBlock>
         <ContentBlock color='black' title='The Serverless Community' image={communityJpg}>
           <p>Over 1,500 people are in our chatroom and on our forum every day discussing the Serverless Framework and serverless architecitures. Come join us!</p>
@@ -113,7 +126,14 @@ export default class Homepage extends Component {
             </a>
           </p>
         </section>
-
+        <Modal
+          active={this.state.active}
+          onEscKeyDown={this.handleToggle}
+          onOverlayClick={this.handleToggle}
+          title='My awesome dialog'
+        >
+          <p>Lorum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae mauris arcu, eu pretium nisi. Praesent fringilla ornare ullamcorper. Pellentesque diam orci, sodales in blandit ut, placerat quis felis. Vestibulum at sem massa, in tempus nisi. Vivamus ut fermentum odio. Etiam porttitor faucibus volutpat. Vivamus vitae mi ligula, non hendrerit urna. Suspendisse potenti. Quisque eget massa a massa semper mollis.</p>
+        </Modal>
       </Page>
     )
   }

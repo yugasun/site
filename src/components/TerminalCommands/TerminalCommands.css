@@ -18,12 +18,9 @@
   background: #212121;/*$black1;*/
   border-radius: 0px;
   transition: box-shadow .3s linear;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
-.terminal:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
-}
+
 .terminalHead {
   width: 100%;
   height: 25px;
@@ -83,30 +80,15 @@
   border: 1px solid #959595;
   margin-left: 7px;
   background: #959595;
-  &:hover {
-    cursor: pointer;
-    background: #ff5c5c;
-    border: 1px solid #e33e41;
-  }
 }
 .turn {
   border: 1px solid #cbcbcb;
   background: #cbcbcb;
-  &:hover {
-    cursor: pointer;
-    background: #ffbd4c;
-    border: 1px solid #e09e3e;
-  }
 }
 
 .expand {
   background: #b1b1b1;
   border: 1px solid #b1b1b1;
-  &:hover {
-    cursor: pointer;
-    background: #00ca56;
-    border: 1px solid #14ae46;
-  }
 }
 
 @media (max-width: 768px) {

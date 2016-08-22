@@ -1,9 +1,14 @@
 import path from "path"
+import fs from "fs"
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
 import dotenv from 'dotenv'
 import pkg from "./package.json"
-let dotEnvVars = dotenv.config()
+let dotEnvVars
+// We sync-check since this is startup code
+if (fs.existsSync('.env')) {
+  dotEnvVars = dotenv.config()
+}
 
 if (!dotEnvVars) {
  // set this from CI
@@ -147,7 +152,9 @@ export const makeConfig = (config = {}) => {
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
-          return require('./src/variables')
+          var vars = require('./src/variables')
+          // console.log('global css vars', vars)
+          return vars
         },
         unknown: function unknown (node, name, result) {
           node.warn(result, 'Unknown variable ' + name)

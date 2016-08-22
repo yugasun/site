@@ -33,6 +33,7 @@ export default class AuthService extends EventEmitter {
   }
 
   _doAuthentication (authResult) {
+    console.log('authResult', authResult)
     // Saves the user token
     this.setToken(authResult.idToken)
     // Async loads the user profile data
