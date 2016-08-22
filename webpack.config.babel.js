@@ -3,7 +3,15 @@ import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
 import dotenv from 'dotenv'
 import pkg from "./package.json"
-const dotEnvVars = dotenv.config()
+let dotEnvVars = dotenv.config()
+
+if (!dotEnvVars) {
+ // set this from CI
+  dotEnvVars = {
+    AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
+    AUTH0_DOMAIN: process.env.AUTH0_DOMAIN
+  }
+}
 console.log('dotEnvVars!!!!', dotEnvVars)
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
