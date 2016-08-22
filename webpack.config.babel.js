@@ -4,7 +4,7 @@ import ExtractTextPlugin from "extract-text-webpack-plugin"
 import dotenv from 'dotenv'
 import pkg from "./package.json"
 const dotEnvVars = dotenv.config()
-
+console.log('dotEnvVars!!!!', dotEnvVars)
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
 // see the end of the file if you want to export a default config
