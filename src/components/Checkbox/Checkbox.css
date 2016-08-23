@@ -15,6 +15,7 @@ $checkboxColor: $yellow;
   height: $height;
   width: $height;
   opacity: 0;
+  margin: 0;
 }
 
 .checkbox label {
@@ -28,6 +29,7 @@ $checkboxColor: $yellow;
   cursor: pointer;
   flex-grow: 1;
   margin-left: 15px;
+  padding-top: 3px; /*Font face hack */
 }
 
 .checkbox:hover label{
