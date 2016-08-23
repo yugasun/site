@@ -16,6 +16,9 @@ import Space from './space'
 import styles from './Homepage.css'
 
 export default class Homepage extends Component {
+  static contextTypes = {
+    auth: React.PropTypes.object.isRequired,
+  };
   constructor (props, context) {
     super(props, context)
     this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
@@ -23,6 +26,9 @@ export default class Homepage extends Component {
       active: false
     }
     this.space = false
+    const auth = this.context.auth
+    this.login = auth.login.bind(this)
+    this.logout = auth.logout.bind(this)
   }
   triggerEasterEgg (e) {
     e.preventDefault()
@@ -35,6 +41,7 @@ export default class Homepage extends Component {
     this.setState({active: !this.state.active})
   }
   render () {
+    console.log('homepage', this.context.auth)
     /*
     <h2 className={styles.subHeading}>
       Framework
@@ -78,7 +85,12 @@ export default class Homepage extends Component {
               </div>
             </div>
             <div className={styles.cta}>
-              <Newsletter />
+              <h2 className={styles.ctaCopy}>
+                Get early access to our platform
+              </h2>
+              <Button onClick={this.login}>
+                Join the beta waitlist
+              </Button>
             </div>
           </div>
         </div>
@@ -90,10 +102,16 @@ export default class Homepage extends Component {
           <p>The open-source command line tool and standard syntax to easily build serverless architectures on AWS Lambda, Azure Functions, Google Cloud Functions & more. Startups to Fortune 100 companies are using the Framework to build sophisticated event-driven systems.</p>
           <Button onClick={this.handleToggle}>Join the beta waitlist</Button>
         </ContentBlock>
+
         <ContentBlock color='black' title='The Serverless Community' image={communityJpg}>
           <p>Over 1,500 people are in our chatroom and on our forum every day discussing the Serverless Framework and serverless architecitures. Come join us!</p>
         </ContentBlock>
+
+        <div className={styles.newsletter}>
+          <Newsletter />
+        </div>
         <section className={styles.content}>
+
           <h3 className={styles.center}>Overview</h3>
           <p>
             The <a href='https://www.github.com/serverless/serverless' target='_blank'>Serverless Framework</a> is an application framework for building web, mobile

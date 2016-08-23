@@ -27,11 +27,11 @@ $buttonPadding: 12px;
   padding: 25px 80px;
   color: #fff;
   background: transparent;
-  border: 2px solid $borderColor;
+  border: 2px solid $yellow;
   padding: $buttonPadding 100px $buttonPadding 60px;
   overflow: hidden;
   &:hover {
-    border: 2px solid $yellow;
+    border: 2px solid #fff;
     .background {
        transform-origin: 0 0;
        right: 0;

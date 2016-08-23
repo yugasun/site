@@ -19,6 +19,11 @@
   margin-top: 93px;
   bottom: 30px;
   z-index: 6;
+  flex-direction: column;
+}
+.ctaCopy {
+  composes: oswald from "../../index.css";
+  color: #fff;
 }
 .canvas {
   position: absolute;
@@ -149,6 +154,9 @@
   padding: 25px 35px;
   font-size: 22px;
   text-decoration: none;
+}
+.newsletter {
+  background: $black1;
 }
 @media (max-width: 1060px) {
   .hero {
