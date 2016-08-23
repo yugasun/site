@@ -22,13 +22,32 @@ export default class Homepage extends Component {
   constructor (props, context) {
     super(props, context)
     this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
+    const auth = this.context.auth
+    const loggedIn = auth.loggedIn()
     this.state = {
-      active: false
+      active: false,
+      showModal: false,
+      isLoggedIn: loggedIn,
     }
     this.space = false
-    const auth = this.context.auth
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
+    this.handleOnLogin = this.handleOnLogin.bind(this)
+  }
+  componentDidMount () {
+    const auth = this.context.auth
+    const loggedIn = auth.loggedIn()
+    console.log('componentDidMount loggedIn', loggedIn)
+    // in mulesoft application XYZ
+    window.addEventListener('serverlessLogin', this.handleOnLogin, false)
+  }
+  componentDidUpdate () {
+    const auth = this.context.auth
+    const loggedIn = auth.loggedIn()
+    console.log('componentDidUpdate loggedIn', loggedIn)
+  }
+  handleToggle = () => {
+    this.setState({showModal: !this.state.showModal})
   }
   triggerEasterEgg (e) {
     e.preventDefault()
@@ -37,11 +56,32 @@ export default class Homepage extends Component {
       this.space = true
     }
   }
-  handleToggle = () => {
-    this.setState({active: !this.state.active})
+  handleOnLogin (e) {
+    console.log(e)
+    console.log(e.detail) // org ID
+    this.setState({
+      showModal: true
+    })
+  }
+  renderBetaButton () {
+    const { isLoggedIn } = this.state
+    if (isLoggedIn) {
+      return (
+        <p style={{color: '#fff'}}>'You got it dude!'</p>
+      )
+    } else {
+      return (
+        <Button onClick={this.login}>
+          Join the beta waitlist
+        </Button>
+      )
+    }
   }
   render () {
     console.log('homepage', this.context.auth)
+    const auth = this.context.auth
+    const loggedIn = auth.loggedIn()
+    console.log('render', loggedIn)
     /*
     <h2 className={styles.subHeading}>
       Framework
@@ -88,9 +128,7 @@ export default class Homepage extends Component {
               <h2 className={styles.ctaCopy}>
                 Get early access to our platform
               </h2>
-              <Button onClick={this.login}>
-                Join the beta waitlist
-              </Button>
+              {this.renderBetaButton()}
             </div>
           </div>
         </div>
@@ -145,12 +183,12 @@ export default class Homepage extends Component {
           </p>
         </section>
         <Modal
-          active={this.state.active}
+          active={this.state.showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
-          title='My awesome dialog'
+          title='Dope sauce'
         >
-          <p>Lorum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae mauris arcu, eu pretium nisi. Praesent fringilla ornare ullamcorper. Pellentesque diam orci, sodales in blandit ut, placerat quis felis. Vestibulum at sem massa, in tempus nisi. Vivamus ut fermentum odio. Etiam porttitor faucibus volutpat. Vivamus vitae mi ligula, non hendrerit urna. Suspendisse potenti. Quisque eget massa a massa semper mollis.</p>
+          <p>Thanks you are in the beta!</p>
         </Modal>
       </Page>
     )

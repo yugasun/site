@@ -8,6 +8,19 @@ if (isClient) {
   var Auth0Lock = require('auth0-lock').default
 }
 
+// temp hack until redux implmented
+function triggerLoginEvent (profile) {
+  var LoginEvent = new CustomEvent('serverlessLogin', { // eslint-disable-line
+    detail: {
+      profile: profile,
+    },
+    bubbles: false,
+    cancelable: false
+  })
+  // Trigger it!
+  window.dispatchEvent(LoginEvent)
+}
+
 export default class AuthService extends EventEmitter {
   constructor (clientId, domain) {
     super()
@@ -41,6 +54,7 @@ export default class AuthService extends EventEmitter {
       if (error) {
         console.log('Error loading the Profile', error)
       } else {
+        triggerLoginEvent(profile)
         this.setProfile(profile)
       }
     })
