@@ -60,7 +60,8 @@ export default class Homepage extends Component {
     console.log(e)
     console.log(e.detail) // org ID
     this.setState({
-      showModal: true
+      showModal: true,
+      isLoggedIn: true
     })
   }
   renderBetaButton () {
