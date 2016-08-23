@@ -42,7 +42,7 @@ export const makeConfig = (config = {}) => {
       devtool: '#cheap-module-eval-source-map',
     },
     module: {
-      noParse: /\.min\.js/,
+      noParse: [/\.min\.js/, /autoit.js/],
       loaders: [
 
         // *.md => consumed via phenomic special webpack loader
