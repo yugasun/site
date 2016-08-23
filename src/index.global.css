@@ -50,6 +50,27 @@ body {
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: 'Roboto Condensed', sans-serif;
 }
-.phenomic-HeadingAnchor {
+
+.phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {
   display: none;
+}
+.auth0-lock.auth0-lock .auth0-lock-header-logo {
+  width: 189px !important;
+  margin: 0px !important;
+}
+.auth0-lock.auth0-lock .auth0-lock-header-bg {
+  background: black !important;
+}
+.auth0-lock.auth0-lock .auth0-lock-header {
+  color: #fff !important;
+  background: black !important;
+}
+.auth0-lock-header-bg-blur {
+  display: none !important;
+}
+.auth0-lock.auth0-lock .auth0-lock-header-welcome {
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
