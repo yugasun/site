@@ -20,6 +20,7 @@
   bottom: 30px;
   z-index: 6;
   flex-direction: column;
+  padding-bottom:
 }
 .ctaCopy {
   composes: oswald from "../../index.css";
@@ -86,7 +87,29 @@
 .learnMore {
 
 }
-
+.textarea {
+  display: block;
+  border: 2px solid $gray1;
+  margin-left: 15px;
+  width: 80%;
+  min-height: 55px;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 10px;
+  &:focus {
+    outline: none;
+  }
+}
+.feedbackSubmit {
+  margin-left: 10px;
+  button {
+    font-weight: 500;
+  }
+  button:hover {
+    background: $yellow;
+    color: $black1;
+  }
+}
 
 .center {
   text-align: center;
@@ -132,7 +155,7 @@
 }
 
 .btn {
-  outline: 0!important;
+  outline: 0;
   display: inline-block;
   margin-bottom: 0;
   font-weight: 400;
@@ -145,14 +168,12 @@
   border: none;
   border-radius: 3px;
   background-color: #141414;
-  color: #ddd !important;
-  font-weight: 200 !important;
+  color: #ddd;
+  font-weight: 200;
   margin: 5px;
-  text-transform: uppercase;
-  font-family: Oswald;
   font-size: 20px;
-  padding: 25px 35px;
-  font-size: 22px;
+  padding: 10px 25px;
+  font-size: 18px;
   text-decoration: none;
 }
 .newsletter {

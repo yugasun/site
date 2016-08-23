@@ -13,7 +13,7 @@ export default class Check extends Component {
     const { name, label } = this.props
     return (
       <div className={styles.checkbox}>
-        <input type='checkbox' id={name} name='selector' />
+        <input type='checkbox' id={name} name={name} />
         <div className={styles.check}></div>
         <label htmlFor={name}>{label}</label>
       </div>

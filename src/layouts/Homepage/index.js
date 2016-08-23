@@ -15,6 +15,8 @@ import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import Space from './space'
 import styles from './Homepage.css'
+import AutoForm from 'react-auto-form'
+import submitFeatureData from '../../utils/SurveyService'
 
 export default class Homepage extends Component {
   static contextTypes = {
@@ -34,6 +36,7 @@ export default class Homepage extends Component {
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
     this.handleOnLogin = this.handleOnLogin.bind(this)
+    this.onFeedbackSubmit = this.onFeedbackSubmit.bind(this)
   }
   componentDidMount () {
     const auth = this.context.auth
@@ -63,6 +66,28 @@ export default class Homepage extends Component {
     this.setState({
       showModal: true,
       isLoggedIn: true
+    })
+  }
+  onFeedbackSubmit (event, data) {
+    event.preventDefault()
+    console.log(event)
+    console.log(data)
+    const other = data.other
+    delete data.other
+    const sendData = {
+      formData: data,
+      other: other,
+      userData: localStorage.getItem('profile') // eslint-disable-line
+    }
+    var that = this
+    submitFeatureData(sendData, function (err, data) {
+      if (err) {
+        console.log('err', err)
+        return false
+      }
+      that.setState({
+        showModal: false
+      })
     })
   }
   renderBetaButton () {
@@ -192,13 +217,18 @@ export default class Homepage extends Component {
         >
           <h3>What products are you interested in beta testing?</h3>
           <div>
-            <Checkbox name={'one'} label={'Lambda Monitoring Dashboard'} />
-            <Checkbox name={'two'} label={'Lambda Network Visualization'} />
-            <Checkbox name={'three'} label={'Secrets Manager for Lambda'} />
-            <Checkbox name={'four'} label={'Lambda on-premise'} />
-            <a href='http://docs.serverless.com' className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
-              Submit
-            </a>
+            <AutoForm onSubmit={this.onFeedbackSubmit} trimOnSubmit>
+              <Checkbox name={'monitoring'} label={'Lambda Monitoring Dashboard'} />
+              <Checkbox name={'visualization'} label={'Lambda Network Visualization'} />
+              <Checkbox name={'secret_manager'} label={'Secrets Manager for Lambda'} />
+              <Checkbox name={'on_premise'} label={'Lambda on-premise'} />
+              <textarea className={styles.textarea} name='other' placeholder='Interested in other serverless tooling? Let us know' />
+              <span className={styles.feedbackSubmit}>
+                <button className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
+                  Submit form
+                </button>
+              </span>
+            </AutoForm>
           </div>
         </Modal>
       </Page>
