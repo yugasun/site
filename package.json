@@ -116,7 +116,7 @@
     "axios": "^0.13.1",
     "classnames": "^2.2.5",
     "jwt-decode": "^2.1.0",
-    "phenomic": "^0.15.0",
+    "phenomic": "^0.16.2",
     "react-google-analytics": "^0.2.0"
   }
 }

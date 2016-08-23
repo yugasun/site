@@ -50,3 +50,6 @@ body {
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: 'Roboto Condensed', sans-serif;
 }
+.phenomic-HeadingAnchor {
+  display: none;
+}

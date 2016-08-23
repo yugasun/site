@@ -4,6 +4,7 @@ import Page from '../Page'
 import Newsletter from '../../components/Newsletter/Newsletter'
 import Terminal from '../../components/TerminalCommands/TerminalCommands'
 import ContentBlock from '../../components/ContentBlock/ContentBlock'
+import Checkbox from '../../components/Checkbox/Check'
 import Modal from '../../components/Modal/Modal'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
@@ -187,9 +188,18 @@ export default class Homepage extends Component {
           active={this.state.showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
-          title='Dope sauce'
+          title='Thanks for signing up for the Beta!'
         >
-          <p>Thanks you are in the beta!</p>
+          <h3>What products are you interested in beta testing?</h3>
+          <div>
+            <Checkbox name={'one'} label={'Lambda Monitoring Dashboard'} />
+            <Checkbox name={'two'} label={'Lambda Network Visualization'} />
+            <Checkbox name={'three'} label={'Secrets Manager for Lambda'} />
+            <Checkbox name={'four'} label={'Lambda on-premise'} />
+            <a href='http://docs.serverless.com' className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
+              Submit
+            </a>
+          </div>
         </Modal>
       </Page>
     )

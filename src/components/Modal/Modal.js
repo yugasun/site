@@ -21,7 +21,7 @@ const factory = (Overlay) => {
       >
         <div className={className}>
           <section role='dialog' className={styles.body}>
-            {props.title ? <h6 className={styles.title}>{props.title}</h6> : null}
+            {props.title ? <h2 className={styles.title}>{props.title}</h2> : null}
             {props.children}
           </section>
         </div>

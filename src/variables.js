@@ -8,7 +8,7 @@ module.exports = {
   red: '#e55934',
   gray1: '#aaa',
   gray2: '#202020',
-  black1: '#1c1c1c',
+  black1: '#1D1D1D',
   // -- Indexes
   zIndexHighest: 300,
   zIndexHigher: 200,

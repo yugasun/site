@@ -5,14 +5,15 @@ import Layouts from './layouts' // Page Layouts
 import Login from './components/Login/Login'
 import Resource from './layouts/Resource' // layout for dynamic route
 import AuthService from './utils/AuthService'
-
+const isClient = typeof window !== 'undefined'
 const auth = new AuthService(__AUTH0_CLIENT_ID__, __AUTH0_DOMAIN__) // eslint-disable-line
-
+let requireAuth = null
 // onEnter callback to validate authentication in private routes
-const requireAuth = (nextState, replace) => {
-  console.log(auth)
-  if (!auth.loggedIn()) {
-    replace({ pathname: '/login' })
+if (isClient) {
+  requireAuth = (nextState, replace) => {
+    if (!auth.loggedIn()) {
+      replace({ pathname: '/login' })
+    }
   }
 }
 
