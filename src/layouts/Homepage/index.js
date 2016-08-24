@@ -10,7 +10,7 @@ import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
 import yamlGif from '../../assets/images/serverlessyml.gif'
-import communityJpg from '../../assets/images/community.jpg'
+import communityJpg from '../../assets/images/community.png'
 import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import Space from './space'
@@ -100,7 +100,7 @@ export default class Homepage extends Component {
     } else {
       return (
         <Button onClick={this.login}>
-          Join the beta waitlist
+          Sign up for early access
         </Button>
       )
     }
@@ -110,15 +110,6 @@ export default class Homepage extends Component {
     const auth = this.context.auth
     const loggedIn = auth.loggedIn()
     console.log('render', loggedIn)
-    /*
-    <h2 className={styles.subHeading}>
-      Framework
-      <span className={styles.ampersand}>
-        &
-      </span>
-      Ecosystem
-    </h2>
-     */
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
@@ -154,7 +145,7 @@ export default class Homepage extends Component {
             </div>
             <div className={styles.cta}>
               <h2 className={styles.ctaCopy}>
-                Get early access to our platform
+                The Serverless platform is coming
               </h2>
               {this.renderBetaButton()}
             </div>

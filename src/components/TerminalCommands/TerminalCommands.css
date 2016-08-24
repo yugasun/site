@@ -18,7 +18,6 @@
   background: #212121;/*$black1;*/
   border-radius: 0px;
   transition: box-shadow .3s linear;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .terminalHead {
@@ -76,19 +75,19 @@
   font-weight: 700;
   border-radius: 10px;
 }
+$buttonColor: #3b3b3b;
 .close {
-  border: 1px solid #959595;
+  border: 1px solid $buttonColor;
   margin-left: 7px;
-  background: #959595;
+  background: $buttonColor;
 }
 .turn {
-  border: 1px solid #cbcbcb;
-  background: #cbcbcb;
+  border: 1px solid $buttonColor;
+  background: $buttonColor;
 }
-
 .expand {
-  background: #b1b1b1;
-  border: 1px solid #b1b1b1;
+  background: $buttonColor;
+  border: 1px solid $buttonColor;
 }
 
 @media (max-width: 768px) {

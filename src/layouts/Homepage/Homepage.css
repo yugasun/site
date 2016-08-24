@@ -20,7 +20,8 @@
   bottom: 30px;
   z-index: 6;
   flex-direction: column;
-  padding-bottom:
+  background: url(../../assets/images/platform.gif) no-repeat 0 0;
+  background-size: 300px;
 }
 .ctaCopy {
   composes: oswald from "../../index.css";
@@ -72,13 +73,14 @@
 .heroLeft {
   width: 40%;
 }
+$providerWidth: 370px;
 .providers {
   display: inline-block;
-  width: 350px;
+  width: $providerWidth;
   height: 36px;
-  background: url(../../assets/images/providers_white.png) no-repeat 0 0;
+  background: url(../../assets/images/providers_black.png) no-repeat 0 0;
   text-indent: -4000px;
-  background-size: 350px;
+  background-size: $providerWidth;
 }
 .heroRight {
   width: 60%;
