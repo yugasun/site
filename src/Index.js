@@ -45,14 +45,13 @@ export default class IndexComponent extends Component {
     return (
       <div className={styles.layout}>
         <HeadTag />
-        <GlobalScripts params={this.props.params}>
-          <Header />
-          {this.props.children}
-          <Footer />
-          <div id='footerScripts'
-            dangerouslySetInnerHTML={{__html: segmentIO}}
-          />
-        </GlobalScripts>
+        <GlobalScripts params={this.props.params} />
+        <Header />
+        {this.props.children}
+        <Footer />
+        <div id='footerScripts'
+          dangerouslySetInnerHTML={{__html: segmentIO}}
+        />
       </div>
     )
   }

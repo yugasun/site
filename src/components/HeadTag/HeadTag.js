@@ -9,7 +9,9 @@ export default class HeadTag extends Component {
     const { pkg } = this.context.metadata
     return (
       <div>
-        <style>{"@-ms-viewport { width: device-width; }"}</style>
+        <style>
+          {"@-ms-viewport { width: device-width; }"}
+        </style>
         <Helmet
           meta={[
             { property: 'og:site_name', content: pkg.name },

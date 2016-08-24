@@ -4,7 +4,6 @@ import GoogleAnalytics from './GoogleAnalytics'
 export default function GlobalScripts (props) {
   return (
     <div>
-      {props.children}
       <GoogleAnalytics {...props} />
     </div>
   )

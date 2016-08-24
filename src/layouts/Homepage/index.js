@@ -63,6 +63,7 @@ export default class Homepage extends Component {
   handleOnLogin (e) {
     console.log(e)
     console.log(e.detail) // org ID
+    // logins_count < 2
     this.setState({
       showModal: true,
       isLoggedIn: true

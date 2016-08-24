@@ -5,7 +5,7 @@ import routes from '../src/routes'
 import store from '../src/store'
 
 import phenomicClient from 'phenomic/lib/client'
-
+console.log('store', store.getState())
 phenomicClient({
   metadata,
   routes,

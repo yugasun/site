@@ -85,7 +85,7 @@ $buttonPadding: 12px;
 }
 
 .black {
-  background: #000;
+  background: $black1;
   color: #fff;
   padding: 20px 30px;
 }
