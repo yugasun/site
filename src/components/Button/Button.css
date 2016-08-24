@@ -88,4 +88,5 @@ $buttonPadding: 12px;
   background: $black1;
   color: #fff;
   padding: 20px 30px;
+  border-radius: 3px;
 }
