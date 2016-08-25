@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router'
 import App from './app' /* Main entry of all requests */
-import Layouts from './layouts.js' // Page Layouts
+import Layouts from './layout' // Page Layouts
 import Login from './components/Login/Login'
 import Resource from './layouts/Resource' // layout for dynamic route
 import AuthService from './utils/AuthService'
