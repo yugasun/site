@@ -5,7 +5,7 @@
   "googleAnalyticsUA": "UA-XXXX",
   "twitter": "goServerless",
   "github": "serverless",
-  "repository": "https://github.com/ServerlessInc/site.git",
+  "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
     "offline": false
