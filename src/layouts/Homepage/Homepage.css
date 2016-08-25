@@ -1,6 +1,6 @@
 
 .wrapper {
-  background: $black1;
+  background: $black2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,12 +20,22 @@
   bottom: 30px;
   z-index: 6;
   flex-direction: column;
-  background: url(../../assets/images/platform.gif) no-repeat 0 0;
-  background-size: 300px;
+
+}
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.yellowLink {
+  color:$yellow;
+  
 }
 .ctaCopy {
-  composes: oswald from "../../index.css";
   color: #fff;
+  margin-bottom: 40px;
+  font-size: 34px;
 }
 .canvas {
   position: absolute;
@@ -61,7 +71,7 @@
 }
 .bg:before {
   content: "";
-  height: 450px;
+  height: 480px;
   width: 120vw;
   position: absolute;
   background-image: linear-gradient(151.68343656401004deg, #fec83e 4.7%, #fdc63c 9.7%, #fec53c 9.7%, #fcba3b 40.2%, #fdb93b 40.2%, #fcb73a 45.6%, #fdb63a 45.6%, #fcb539 51.8%, #fdb43a 51.8%, #fcb23a 60.8%, #fdb13a 60.8%, #fcb039 65.5%, #fdaf3a 65.5%, #fca939 77.8%, #fca438 81.5%, #fda338 81.5%, #fc9d38 85.1%, #fc9437 92.7%, #fd9337 92.7%, #fc9236 94.5%, #fd9137 94.5%);
@@ -127,10 +137,10 @@ $providerWidth: 370px;
     margin-top: 25px;
 }
 .tagline {
-  font-size: 60px;
-  font-weight: 400;
-  padding: 0;
-  margin: 48px 0px;
+  font-size: 52px;
+      font-weight: 400;
+      padding: 0;
+      margin: 42px 0px;
 }
 .tagline:last-of-type {
   margin-bottom: 45px;
@@ -139,7 +149,9 @@ $providerWidth: 370px;
 .heading {
   font-size: 22px;
   margin: 0;
+  text-decoration: underline;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .subHeading {
@@ -156,30 +168,8 @@ $providerWidth: 370px;
   margin: 0 10px;
 }
 
-.btn {
-  outline: 0;
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  user-select: none;
-  border: none;
-  border-radius: 3px;
-  background-color: #141414;
-  color: #ddd;
-  font-weight: 200;
-  margin: 5px;
-  font-size: 20px;
-  padding: 10px 25px;
-  font-size: 18px;
-  text-decoration: none;
-}
 .newsletter {
-  background: $black1;
+  background: $black2;
 }
 @media (max-width: 1060px) {
   .hero {

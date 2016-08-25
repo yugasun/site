@@ -9,7 +9,7 @@ import Modal from '../../components/Modal/Modal'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
-import yamlGif from '../../assets/images/serverlessyml.gif'
+import frameworkGif from '../../assets/images/framework.gif'
 import communityJpg from '../../assets/images/community.png'
 import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
@@ -120,8 +120,8 @@ export default class Homepage extends Component {
                 <div className={styles.heroLeft}>
 
                   <div className={styles.copy}>
-                    <h3 className={styles.tagline}>Build More,</h3>
-                    <h3 className={styles.tagline}>Manage Less</h3>
+                    <h3 className={styles.tagline}>Build More</h3>
+                    <h3 className={styles.tagline} style={{marginLeft: '30px'}}>Manage Less.</h3>
                     <h1 className={styles.heading}>With The Serverless Framework </h1>
                     <Button
                       kind='black'
@@ -144,10 +144,12 @@ export default class Homepage extends Component {
               </div>
             </div>
             <div className={styles.cta}>
-              <h2 className={styles.ctaCopy}>
-                The Serverless platform is coming
-              </h2>
-              {this.renderBetaButton()}
+              <div className={styles.ctaInner}>
+                <h2 className={styles.ctaCopy}>
+                  The Serverless platform is coming
+                </h2>
+                {this.renderBetaButton()}
+              </div>
             </div>
           </div>
         </div>
@@ -155,9 +157,9 @@ export default class Homepage extends Component {
           <p>Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically.</p>
           <p>Build REST APIs, data pipelines, and devops automation rapidly, without the overhead of server administration.</p>
         </ContentBlock>
-        <ContentBlock color='black' title='The Serverless Framework' image={yamlGif}>
+        <ContentBlock color='black' title='The Serverless Framework' image={frameworkGif}>
           <p>The open-source command line tool and standard syntax to easily build serverless architectures on AWS Lambda, Azure Functions, Google Cloud Functions & more. Startups to Fortune 100 companies are using the Framework to build sophisticated event-driven systems.</p>
-          <Button onClick={this.handleToggle}>Join the beta waitlist</Button>
+          <a className={styles.yellowLink} onClick={this.handleToggle}>Join the beta waitlist</a>
         </ContentBlock>
 
         <ContentBlock color='black' title='The Serverless Community' image={communityJpg}>
@@ -167,58 +169,24 @@ export default class Homepage extends Component {
         <div className={styles.newsletter}>
           <Newsletter />
         </div>
-        <section className={styles.content}>
 
-          <h3 className={styles.center}>Overview</h3>
-          <p>
-            The <a href='https://www.github.com/serverless/serverless' target='_blank'>Serverless Framework</a> is an application framework for building web, mobile
-            and IoT applications powered by <a href='https://aws.amazon.com/lambda/' target='_blank'>AWS Lambda, </a>
-            <a href='https://aws.amazon.com/api-gateway/' target='_blank'>
-              AWS API Gateway
-            </a> and in the future other Function as a Service providers.
-          </p>
-          <p>
-            A Serverless application can be a single Lambda function that responds to an event, or an entire
-            REST API comprised of hundreds of Lambda functions and API Gateway endpoints. By plugging serverless functions into your infrastructure events you can even automate operations of your non function based infrastructure.
-          </p>
-          <p>
-            The Framework itself is completely extensible. Every operation it does is implemented through plugins and you can easily replace or extend every plugin. We want every team to have an easy time to get started with Serverless, but be able to extend it to fulfill all your future needs.
-          </p>
-          <p>
-            Serverless is built daily by a dedicated team backed by some of the most experienced Investors in the development tools space. Serverless also has a wonderful community building our open source tooling where everyone is welcome.  Join our
-            <a href='https://gitter.im/serverless/serverless' target='_bank'>Gitter channel</a>,
-            where we work on the project transparently, every day.
-          </p>
-          <p>
-            To get started, view our Documentation:
-          </p>
-          <p className={styles.center}>
-            <a href='http://docs.serverless.com' className={styles.btn}>
-              View The Documentation
-            </a>
-            <a href='https://www.github.com/serverless/serverless' className={styles.btn}>
-              View on Github
-            </a>
-          </p>
-        </section>
         <Modal
           active={this.state.showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
           title='Thanks for signing up for the Beta!'
         >
-          <h3>What products are you interested in beta testing?</h3>
+          <h3>Which products are you interested in?</h3>
           <div>
             <AutoForm onSubmit={this.onFeedbackSubmit} trimOnSubmit>
-              <Checkbox name={'monitoring'} label={'Lambda Monitoring Dashboard'} />
-              <Checkbox name={'visualization'} label={'Lambda Network Visualization'} />
-              <Checkbox name={'secret_manager'} label={'Secrets Manager for Lambda'} />
-              <Checkbox name={'on_premise'} label={'Lambda on-premise'} />
+              <Checkbox name={'monitoring'} label={'Serverless Application Monitoring'} />
+              <Checkbox name={'secret_manager'} label={'Serverless Secrets Manager'} />
+              <Checkbox name={'on_premise'} label={'Serverless On-premise'} />
               <textarea className={styles.textarea} name='other' placeholder='Interested in other serverless tooling? Let us know' />
               <span className={styles.feedbackSubmit}>
-                <button className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
+                <Button kind='black' className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
                   Submit form
-                </button>
+                </Button>
               </span>
             </AutoForm>
           </div>
