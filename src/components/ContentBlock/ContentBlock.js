@@ -17,11 +17,11 @@ export default class ContentBlock extends Component {
     return (
       <section style={style} className={styles.wrapper + ' ' + colorStyle}>
         <div className={styles.inner}>
-          <a href='' className={styles.image}>
+          <span className={styles.image}>
             <img src={imageSrc} alt='' />
-          </a>
+          </span>
           <div className={styles.content}>
-            <h2 className='major'>{title}</h2>
+            <h2 className={styles.title}>{title}</h2>
             {this.props.children}
           </div>
         </div>

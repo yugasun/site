@@ -95,7 +95,7 @@ export default class Homepage extends Component {
     const { isLoggedIn } = this.state
     if (isLoggedIn) {
       return (
-        <p style={{color: '#fff'}}>'You got it dude!'</p>
+        <p style={{color: '#fff'}}>You are registered for the beta!</p>
       )
     } else {
       return (
@@ -131,7 +131,7 @@ export default class Homepage extends Component {
                       <span style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '25px'}}>
                         <Svg svg={gitHubSvg} fill='white' />
                         <div style={{marginLeft: 10, height: '100%'}}>
-                          VIEW THE OPEN SOURCE FRAMEWORK
+                          VIEW THE FRAMEWORK
                         </div>
                       </span>
                     </Button>
@@ -159,7 +159,9 @@ export default class Homepage extends Component {
         </ContentBlock>
         <ContentBlock color='black' title='The Serverless Framework' image={frameworkGif}>
           <p>The open-source command line tool and standard syntax to easily build serverless architectures on AWS Lambda, Azure Functions, Google Cloud Functions & more. Startups to Fortune 100 companies are using the Framework to build sophisticated event-driven systems.</p>
-          <a className={styles.yellowLink} onClick={this.handleToggle}>Join the beta waitlist</a>
+          <a className={styles.yellowLink} href='http://github.com/serverless/serverless' target='_blank'>
+            View the framework on github
+          </a>
         </ContentBlock>
 
         <ContentBlock color='black' title='The Serverless Community' image={communityJpg}>

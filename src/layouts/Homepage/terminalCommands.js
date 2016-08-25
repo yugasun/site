@@ -51,7 +51,7 @@ module.exports = [
     skip: true
   },
   {
-    text: 'read the <a href="#">docs</a> or connect with the <a href="#">community</a>',
+    text: 'read the <a href="https://github.com/serverless/serverless/tree/master/docs">docs</a> or connect with the <a href="https://gitter.im/serverless/serverless">community</a>',
     type: 'cta',
     skip: true
   },

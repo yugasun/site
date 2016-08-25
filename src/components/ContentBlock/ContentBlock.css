@@ -28,7 +28,9 @@
   width: 100%;
   -ms-flex: 2;
 }
-
+.title {
+  font-weight: 300;
+}
 .image {
   margin: 0 3em 2em 0;
   width: 35em;

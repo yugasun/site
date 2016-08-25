@@ -89,4 +89,12 @@ $buttonPadding: 12px;
   color: #fff;
   padding: 20px 30px;
   border-radius: 3px;
+  transition: none;
+  &:hover {
+    background: #313131;
+    color: $fff;
+    svg {
+      fill: $fff !important;
+    }
+  }
 }

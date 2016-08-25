@@ -30,7 +30,8 @@
 }
 .yellowLink {
   color:$yellow;
-  
+  text-decoration: none;
+  font-size: 20px;
 }
 .ctaCopy {
   color: #fff;
@@ -212,7 +213,11 @@ $providerWidth: 370px;
   }
   .cta {
     margin-top: 0px;
-    background: $black1;
+
+    background: $black2;
+  }
+  .ctaCopy {
+        font-size: 20px;
   }
   .hero {
     margin-bottom: 0px;
