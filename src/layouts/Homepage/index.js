@@ -144,7 +144,7 @@ export default class Homepage extends Component {
                   <h2 className={styles.ctaCopy}>
                     The Serverless Platform is coming
                   </h2>
-                  <p className={styles.yellowLink} onClick={this.login}>
+                  <p className={styles.yellowLink} >
                     Sign up for early access
                   </p>
                 </div>
