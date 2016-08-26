@@ -9,6 +9,7 @@ secrets.json
 
 #IDE Stuff
 **/.idea
+.idea
 
 #OS STUFF
 .DS_Store
