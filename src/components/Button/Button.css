@@ -85,16 +85,19 @@ $buttonPadding: 12px;
 }
 
 .black {
-  background: $black1;
+  background: $black2;
   color: #fff;
-  padding: 20px 30px;
+  padding: 20px 45px 16px 45px;
   border-radius: 3px;
-  transition: none;
+  transition: 0.4s linear;
   &:hover {
-    background: #313131;
+    background: $black1;
     color: #fff;
     svg {
       fill: #fff !important;
     }
+  }
+  svg {
+    margin-right: 10px;
   }
 }

@@ -5,16 +5,7 @@ module.exports = [
     skip: true
   },
   {
-    text: 'npm install serverless -global',
-    type: 'command'
-  },
-  {
-    text: 'Create the project directory',
-    type: 'comment',
-    skip: true
-  },
-  {
-    text: 'mkdir my-first-service && cd my-first-service',
+    text: 'npm install serverless -g',
     type: 'command'
   },
   {
@@ -41,7 +32,7 @@ module.exports = [
     skip: true
   },
   {
-    text: 'http://api.amazon.com/users/update live',
+    text: 'http://api.amazon.com/users/update',
     type: 'command',
     skip: true
   },
@@ -51,7 +42,7 @@ module.exports = [
     skip: true
   },
   {
-    text: 'read the <a href="https://github.com/serverless/serverless/tree/master/docs">docs</a> or connect with the <a href="https://gitter.im/serverless/serverless">community</a>',
+    text: 'Read the <a href="https://github.com/serverless/serverless/tree/master/docs">docs</a> or connect with the <a href="https://gitter.im/serverless/serverless">community</a>',
     type: 'cta',
     skip: true
   },

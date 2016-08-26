@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 import { isTokenExpired } from './jwtHelper'
 
-import LogoImg from '../assets/images/serverless_logo.png'
+import LogoImg from '../assets/images/serverless_logo_gradient.png'
 const isClient = typeof window !== 'undefined'
 // https://github.com/reactjs/react-chartjs/issues/57#issuecomment-226790969
 if (isClient) {
