@@ -47,10 +47,6 @@ class Page extends Component {
       { name: 'description', content: head.description },
     ]
 
-    const link = [
-      {rel: 'stylesheet', href: '//fast.fonts.net/cssapi/8910c467-c1de-4614-8be3-d7c21abde84e.css'}
-    ]
-
     /* Markdown content will display if it exists */
     const markdownContent = (
       <BodyContainer>
@@ -62,7 +58,7 @@ class Page extends Component {
 
     return (
       <div>
-        <Helmet title={metaTitle} meta={meta} link={link} />
+        <Helmet title={metaTitle} meta={meta} />
 
         <div className={contentWrapperClass}>
           {header}
