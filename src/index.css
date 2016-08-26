@@ -8,9 +8,7 @@
   padding: 1rem 0.75rem;
 }
 
-.oswald {
-  font-family: Oswald, sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  text-transform: uppercase;
+.avenir {
+  font-family: 'Avenir Next W00', sans-serif;
+  font-weight: normal;
 }

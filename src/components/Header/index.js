@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import handleClickAway from '../../utils/handleClickAway'
-import Logo from '../../assets/images/serverless_logo_gradient.png'
+import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
 export default class Header extends Component {
@@ -41,7 +41,7 @@ export default class Header extends Component {
           <div className={styles.nav}>
             <div className={styles.navPart1}>
               <Link to='/'>
-                <img alt='Serverless logo' className={styles.logo} src={Logo} />
+                <img alt='Serverless logo' className={styles.logo} src={Logo} draggable='false' />
               </Link>
             </div>
             <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
@@ -51,22 +51,22 @@ export default class Header extends Component {
             </div>
             <div className={styles.navPart2 + ' ' + mobileNav}>
               <a href='http://blog.serverless.com/' className={styles.link}>
-                BLOG
+                Blog
               </a>
               <a href='https://www.github.com/serverless/serverless' className={styles.link}>
                 Github
               </a>
               <a href='https://github.com/serverless/serverless/tree/master/docs' className={styles.link}>
-                DOCUMENTATION
+                Documentation
               </a>
               <a href='https://gitter.im/serverless/serverless' target='_blank' className={styles.link}>
-                GITTER
+                Gitter
               </a>
               <a href='http://forum.serverless.com/' target='_blank' className={styles.link}>
-                FORUM
+                Forum
               </a>
               <Link to='/company/jobs' className={`${styles.link} ${styles.hiring}`}>
-                WE'RE HIRING
+                We're Hiring
               </Link>
             </div>
           </div>

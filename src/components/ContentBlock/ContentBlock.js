@@ -15,17 +15,19 @@ export default class ContentBlock extends Component {
     const imageSrc = image || 'http://www.fillmurray.com/200/200'
     const colorStyle = styles[color] || ''
     return (
-      <section style={style} className={styles.wrapper + ' ' + colorStyle}>
-        <div className={styles.inner}>
-          <span className={styles.image}>
-            <img src={imageSrc} alt='' />
-          </span>
-          <div className={styles.content}>
-            <h2 className={styles.title}>{title}</h2>
-            {this.props.children}
+      <div className={'contentBlocks'}>
+        <section style={style} className={styles.wrapper + ' ' + colorStyle}>
+          <div className={styles.inner}>
+            <span className={styles.image}>
+              <img src={imageSrc} alt='' draggable='false' />
+            </span>
+            <div className={styles.content}>
+              <h2 className={styles.title}>{title}</h2>
+              {this.props.children}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     )
   }
 }
