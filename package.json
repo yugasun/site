@@ -2,7 +2,7 @@
   "private": true,
   "name": "serverless-site",
   "homepage": "https://serverless.com",
-  "googleAnalyticsUA": "UA-XXXX",
+  "googleAnalyticsUA": "UA-79510184-1",
   "twitter": "goServerless",
   "github": "serverless",
   "repository": "https://github.com/serverless/site.git",
