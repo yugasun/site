@@ -194,7 +194,7 @@ export default class Homepage extends Component {
               <Checkbox name={'on_premise'} label={'Serverless On-premise'} />
               <textarea className={styles.textarea} name='other' placeholder='Interested in other serverless tooling? Let us know' />
               <span className={styles.feedbackSubmit}>
-                <Button kind='black' className={styles.btn} style={{display: 'inline-block', marginTop: 20}}>
+                <Button kind='black' className={styles.btn}>
                   Submit form
                 </Button>
               </span>

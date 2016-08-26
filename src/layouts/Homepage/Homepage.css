@@ -97,7 +97,6 @@
   width: 120vw;
   position: absolute;
   background: #ffd426;
-  /*background-image: linear-gradient(151.68343656401004deg, #ffd426 30%, #fca939 85%, #ff760d 95%);*/
   transform: rotate(-2deg);
   top: 20px;
   left: -114px;
@@ -128,7 +127,7 @@ $providerWidth: 370px;
   border: 2px solid $gray1;
   margin-left: 15px;
   width: 80%;
-  min-height: 55px;
+  min-height: 70px;
   font-size: 16px;
   padding: 5px;
   margin-top: 10px;
@@ -138,6 +137,8 @@ $providerWidth: 370px;
 }
 .feedbackSubmit {
   margin-left: 10px;
+  display: block;
+  margin-top: 25px;
   button {
     font-weight: 500;
   }
