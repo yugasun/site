@@ -115,7 +115,7 @@ export default class Homepage extends Component {
             <canvas className={styles.canvas} id='demo'></canvas>
             <div className={styles.bg}>
               <div className={styles.hero}>
-                <div className={styles.heroLeft + ' ' + styles.fadeIn + ' ' + styles.fadeInShort}>
+                <div className={styles.heroLeft + ' fadeIn fadeInShort'}>
 
                   <div className={styles.copy}>
                     <h3 className={styles.tagline}>Build more,</h3>
