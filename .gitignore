@@ -6,3 +6,11 @@ node_modules
 dist
 secrets.json
 .env
+
+#IDE Stuff
+**/.idea
+.idea
+
+#OS STUFF
+.DS_Store
+.tmp

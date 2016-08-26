@@ -2,7 +2,7 @@
 module.exports = {
   // -- Sizing
   unit: '1rem',
-  navHeight: '76px',
+  navHeight: '65px',
   // -- Colors
   yellow: '#ffd426',
   red: '#e55934',

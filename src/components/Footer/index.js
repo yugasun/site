@@ -17,7 +17,7 @@ export default class Footer extends Component {
       <footer className={styles.footer}>
         <a href={"http://serverless.com"} className={styles.link}>
           <span className={styles.reference}>
-            {"SERVERLESS, INC. © 2016"}
+            {"Serverless, Inc. © 2016"}
           </span>
         </a>
       </footer>

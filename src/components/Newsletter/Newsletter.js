@@ -68,35 +68,37 @@ export default class Newsletter extends Component {
   }
   render () {
     const { isFetching, error } = this.state
-    let buttonText = (isFetching) ? 'You got it!' : 'subscribe'
+    let buttonText = (isFetching) ? 'Success!' : 'Subscribe'
     let copy = 'We Move Fast. Stay Updated.'
 
     if (error) {
-      copy = 'Yikes network error!'
-      buttonText = 'try again'
+      copy = 'Yikes, network error!'
+      buttonText = 'Try Again'
     }
 
     return (
       <div className='sl-email'>
-        <div className={styles.row}>
-          <div className='col-sm-6 email-ask hidden-xs hidden-sm'>
-            <span className='pull-right oswald'>
-              {copy}
-            </span>
-          </div>
-          <div className='col-sm-6 email-form hidden-xs hidden-sm'>
-            <div className='form-group'>
-              <input
-                ref='email'
-                type='email'
-                className='form-control email'
-                name='EMAIL'
-                placeholder='Your Email'
-              />
+        <div className='sl-email-inner'>
+          <div className={styles.row}>
+            <div className='email-ask'>
+              <span className='avenir'>
+                {copy}
+              </span>
             </div>
-            <button onClick={this.handleSubmit} className='btn btn-action'>
-              {buttonText}
-            </button>
+            <div className='email-form'>
+              <div className='form-group'>
+                <input
+                  ref='email'
+                  type='email'
+                  className='form-control email'
+                  name='EMAIL'
+                  placeholder='Your Email'
+                />
+              </div>
+              <button onClick={this.handleSubmit} className='btn btn-action'>
+                {buttonText}
+              </button>
+            </div>
           </div>
         </div>
       </div>
