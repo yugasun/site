@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import handleClickAway from '../../utils/handleClickAway'
-import Logo from '../../assets/images/serverless_logo_gradient.png'
+import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
 export default class Header extends Component {
