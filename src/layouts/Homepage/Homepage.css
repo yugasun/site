@@ -86,7 +86,7 @@
   overflow: hidden;
 }
 .bg {
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: 50px;
 }
 .bg:before {
@@ -99,6 +99,7 @@
   top: 20px;
   left: -114px;
   z-index: 3;
+  overflow: auto;
 }
 .heroLeft {
   width: 40%;
@@ -204,7 +205,9 @@ $providerWidth: 370px;
   }
   .heroLeft, .heroRight {
     width: 100%;
+    overflow: auto;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
