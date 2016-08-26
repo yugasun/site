@@ -120,7 +120,7 @@ export default class Homepage extends Component {
                   <div className={styles.copy}>
                     <h3 className={styles.tagline}>Build more,</h3>
                     <h3 className={styles.tagline}>manage less</h3>
-                    <h1 className={styles.heading}>With The <span style={{fontWeight: '500'}}>Serverless Framework</span></h1>
+                    <h1 className={styles.heading}>With the <span style={{fontWeight: '500'}}>Serverless Framework</span></h1>
                     <Button
                       kind='black'
                       style={{margin: '10px 0px 15px 0px'}}
@@ -139,14 +139,14 @@ export default class Homepage extends Component {
             </div>
             <div className={styles.cta}>
               <div className={styles.ctaInner}>
-                <div className={styles.ctaColumnOne}></div>
-                <div className={styles.ctaColumnTwo}>
+                <div className={styles.ctaRowOne}></div>
+                <div className={styles.ctaRowTwo}>
                   <h2 className={styles.ctaCopy}>
                     The Serverless Platform is coming
                   </h2>
-                  <p className={styles.yellowLink} >
+                  <Button kind='yellow' className={styles.btn} style={{display: 'inline-block', marginTop: 20}} onClick={this.login}>
                     Sign up for early access
-                  </p>
+                  </Button>
                 </div>
               </div>
             </div>

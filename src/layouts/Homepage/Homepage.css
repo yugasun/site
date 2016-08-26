@@ -12,30 +12,32 @@
 }
 .cta {
   width: 60em;
-  margin: 0 auto 40px auto;
-  padding: 25px 0 60px 0;
+  margin: 0 auto 60px auto;
+  padding: 25px 0 80px 0;
   border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 .ctaInner {
   margin: auto;
   width: 100%;
   display: flex;
-  margin-top: 100px;
+  flex-direction: column;
+  margin-top: 65px;
   bottom: 30px;
   z-index: 6;
 }
-.ctaColumnOne {
-  width: 30%;
-  min-height:50px;
+.ctaRowOne {
+  width: 100%;
+  height: 175px;
   background: url(../../assets/images/platform_1.gif) no-repeat 0 0;
-  background-position: right;
-  background-size: 60%;
+  background-position: center;
+  background-size: auto 100%;
 }
-.ctaColumnTwo {
-  width: 70%;
+.ctaRowTwo {
+  width: 100%;
   padding-left: 10px;
   position: relative;
   z-index: 1;
+  text-align:center;
   p {
     margin: 0;
     padding: 15px 0;
@@ -54,7 +56,7 @@
 }
 .ctaCopy {
   color: #fff;
-  margin: 10px 0 5px 0;
+  margin: 10px 0 25px 0;
   font-size: 30px;
   font-weight: 400;
 }

@@ -83,13 +83,12 @@ $buttonPadding: 12px;
     transform: rotate(-10deg);
   }
 }
-
 .black {
   background: $black2;
   color: #fff;
   padding: 20px 45px 16px 45px;
   border-radius: 3px;
-  transition: 0.4s linear;
+  transition: color 0.4s linear;
   &:hover {
     background: $black1;
     color: #fff;
@@ -100,4 +99,25 @@ $buttonPadding: 12px;
   svg {
     margin-right: 10px;
   }
+}
+.yellow {
+  outline: 0!important;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 500;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  font-size: 20px;
+  margin: 0 0 0 -5px;
+  padding: 0 25px;
+  border-radius: 3px;
+  height: $height;
+  font-family: avenir, sans-serif;
+  color: rgba(0,0,0,.7);
+  background-color: $yellow;
+  min-width: 142px;
 }
