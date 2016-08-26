@@ -5,7 +5,7 @@ import reducers from './redux/widgets'
 // import Auth from './utils/AuthService'
 
 const profile = {}
-console.log('reducers', reducers)
+
 const additionalState = {key: {
   duckText: profile,
   isOpen: true
@@ -18,5 +18,5 @@ const store = createStore(
   }),
   combinedInitialStateObject
 )
-console.log('combinedStateObject', combinedInitialStateObject)
+// console.log('combinedStateObject', combinedInitialStateObject)
 export default store
