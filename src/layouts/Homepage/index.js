@@ -37,16 +37,16 @@ export default class Homepage extends Component {
     this.onFeedbackSubmit = this.onFeedbackSubmit.bind(this)
   }
   componentDidMount () {
-    const auth = this.context.auth
-    const loggedIn = auth.loggedIn()
+    // const auth = this.context.auth
+    // const loggedIn = auth.loggedIn()
     // console.log('componentDidMount loggedIn', loggedIn)
     // in mulesoft application XYZ
     window.addEventListener('serverlessLogin', this.handleOnLogin, false)
   }
   componentDidUpdate () {
-    const auth = this.context.auth
-    const loggedIn = auth.loggedIn()
-    // console.log('componentDidUpdate loggedIn', loggedIn)
+    // const auth = this.context.auth
+    // const loggedIn = auth.loggedIn()
+    // // console.log('componentDidUpdate loggedIn', loggedIn)
   }
   handleToggle = () => {
     this.setState({showModal: !this.state.showModal})
@@ -104,8 +104,8 @@ export default class Homepage extends Component {
     }
   }
   render () {
-    const auth = this.context.auth
-    const loggedIn = auth.loggedIn()
+    // const auth = this.context.auth
+    // const loggedIn = auth.loggedIn()
 
     return (
       <Page {...this.props} fullWidth>

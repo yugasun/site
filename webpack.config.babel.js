@@ -18,13 +18,13 @@ if (!dotEnvVars) {
     AUTH0_DOMAIN: process.env.AUTH0_DOMAIN
   }
 }
-console.log('dotEnvVars!!!!', dotEnvVars)
+
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
 // see the end of the file if you want to export a default config
 // (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
-  console.log('site config', config)
+  // console.log('site config', config)
   const globalVariables = Object.keys(dotEnvVars)
     .reduce((memo, key) => {
       const val = JSON.stringify(dotEnvVars[key])
