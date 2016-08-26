@@ -49,7 +49,7 @@ export default class Header extends Component {
                 <div className={styles.bar + ' ' + openClass}></div>
               </div>
             </div>
-            <div className={styles.navPart2 + ' ' + mobileNav + ' fadeIn fadeInLong'}>
+            <div className={styles.navPart2 + ' ' + mobileNav + ' fadeIn fadeInShort'}>
               <a href='http://blog.serverless.com/' className={styles.link}>
                 Blog
               </a>

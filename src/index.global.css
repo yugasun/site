@@ -97,17 +97,14 @@ body {
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 
+}
+.fadeInLong {
   -webkit-animation-duration:1s;
   -moz-animation-duration:1s;
   animation-duration:1s;
 }
-.fadeInLong {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
-}
 .fadeInShort{
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
 }
