@@ -53,7 +53,7 @@ export default class Header extends Component {
               <a href='http://blog.serverless.com/' className={styles.link}>
                 Blog
               </a>
-              <a href='https://www.github.com/serverless/serverless' className={styles.link}>
+              <a href='http://docs.serverless.com' className={styles.link}>
                 Github
               </a>
               <a href='https://github.com/serverless/serverless/tree/master/docs' className={styles.link}>
