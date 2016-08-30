@@ -12,7 +12,7 @@ export default class PageError extends Component {
     error: 404,
     errorText: 'Page Not Found',
   };
-
+  // Todo add 404 tracking
   render () {
     const {
       error,
@@ -21,7 +21,6 @@ export default class PageError extends Component {
 
     return (
       <div className={styles.container}>
-        <div className={styles.oops}>{"Oooops!"}</div>
         <div className={styles.text}>
           <p className={styles.title}>
             <strong>{error}</strong>
@@ -33,7 +32,7 @@ export default class PageError extends Component {
               {"It seems you found a broken link. "}
               {"Sorry about that. "}
               <br />
-              {"Do not hesitate to report this page 😁."}
+              {"Do not hesitate to report this page!"}
             </div>}
         </div>
       </div>
