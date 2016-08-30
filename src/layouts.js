@@ -2,21 +2,23 @@ import React from 'react'
 import PhenomicPageContainer from 'phenomic/lib/PageContainer'
 /* custom layouts */
 import Page from './layouts/Page'
-import PageError from './layouts/PageError'
 import PageLoading from './layouts/PageLoading'
-import Homepage from './layouts/Homepage'
 import Community from './layouts/Community'
-import Jobs from './layouts/Jobs'
 import Post from './layouts/Post'
+/* custom pages */
+import Jobs from './pages/Jobs'
+import FourOFour from './pages/404'
+import Homepage from './pages/Homepage'
 
 export default class Layouts extends React.Component {
   render () {
     return (
       <PhenomicPageContainer
         {...this.props}
+        className='hi'
         layouts={{
           Page,
-          PageError,
+          FourOFour,
           PageLoading,
           Homepage,
           Community,

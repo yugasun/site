@@ -1,6 +1,6 @@
 import React from 'react'
 import {addScript, removeScript} from '../../utils/manageScripts'
-import Page from '../Page'
+import Page from '../../layouts/Page'
 
 const isClient = typeof window !== 'undefined'
 

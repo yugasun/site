@@ -1,8 +1,11 @@
 .footer {
-  padding: 4rem;
   font-size: 0.75rem;
   text-align: center;
   background: $black1;
+  min-height: $footerHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {

@@ -17,8 +17,8 @@ var what = fs.readFileSync(test, 'utf8', function (err, contents) {
 })
 
 function injectListBetweenTags (previousContent, newContent) {
-  var tagToLookFor = '<!-- AUTO-GENERATED-CONTENT:'
-  var closingTag = '-->'
+  var tagToLookFor = '--- AUTO-GENERATED-CONTENT:'
+  var closingTag = '---'
   var startOfOpeningTagIndex = previousContent.indexOf(tagToLookFor + 'START')
   var endOfOpeningTagIndex = previousContent.indexOf(closingTag, startOfOpeningTagIndex)
   var startOfClosingTagIndex = previousContent.indexOf(tagToLookFor + 'END', endOfOpeningTagIndex)
@@ -44,7 +44,7 @@ function injectListBetweenTags (previousContent, newContent) {
   if( oldContent && oldContent.match(/KEEP-THIS/)) {
     console.log('KEEEP')
   }
-  // TODO check if oldContent has <!-- KEEP-THIS:START -->
+  // TODO check if oldContent has --- KEEP-THIS:START ---
 
   return previousContent.slice(0, endOfOpeningTagIndex + closingTag.length) +
       //newContent +

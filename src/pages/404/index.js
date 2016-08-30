@@ -1,3 +1,6 @@
+/**
+ * 404 page template
+ */
 import React, { Component, PropTypes } from 'react'
 import styles from './index.css'
 
