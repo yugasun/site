@@ -22,7 +22,7 @@ export default class Homepage extends Component {
   };
   constructor (props, context) {
     super(props, context)
-    this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
+
     const auth = this.context.auth
     const loggedIn = auth.loggedIn()
     this.state = {
@@ -35,6 +35,7 @@ export default class Homepage extends Component {
     this.logout = auth.logout.bind(this)
     this.handleOnLogin = this.handleOnLogin.bind(this)
     this.onFeedbackSubmit = this.onFeedbackSubmit.bind(this)
+    // this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
   }
   componentDidMount () {
     // const auth = this.context.auth
@@ -131,7 +132,7 @@ export default class Homepage extends Component {
                   </div>
                   <div className={styles.providers} />
                 </div>
-                <div className={styles.heroRight} onDoubleClick={this.triggerEasterEgg}>
+                <div className={styles.heroRight}>
                   <Terminal commands={terminalCommands} />
                 </div>
               </div>
