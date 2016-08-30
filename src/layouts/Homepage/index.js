@@ -171,7 +171,7 @@ export default class Homepage extends Component {
               Join the Chatroom
             </a>
             <br />
-            <a className={styles.yellowLink} href='forum.serverless.com' target='_blank'>
+            <a className={styles.yellowLink} href='http://forum.serverless.com' target='_blank'>
               Check out the Forum
             </a>
           </p>

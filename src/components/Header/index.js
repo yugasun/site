@@ -50,13 +50,13 @@ export default class Header extends Component {
               </div>
             </div>
             <div className={styles.navPart2 + ' ' + mobileNav}>
-              <a href='http://blog.serverless.com/' className={styles.link}>
+              <a href='http://blog.serverless.com/' target='_blank' className={styles.link}>
                 Blog
               </a>
-              <a href='https://www.github.com/serverless/serverless' className={styles.link}>
+              <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
                 Github
               </a>
-              <a href='https://github.com/serverless/serverless/tree/master/docs' className={styles.link}>
+              <a href='http://docs.serverless.com' target='_blank' className={styles.link}>
                 Documentation
               </a>
               <a href='https://gitter.im/serverless/serverless' target='_blank' className={styles.link}>
