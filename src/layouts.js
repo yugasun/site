@@ -6,6 +6,7 @@ import PageLoading from './layouts/PageLoading'
 import Post from './layouts/Post'
 /* custom pages */
 import Jobs from './pages/Jobs'
+import Blog from './pages/Blog'
 import FourOFour from './pages/404'
 import Homepage from './pages/Homepage'
 import Community from './pages/Community'
@@ -24,6 +25,7 @@ export default class Layouts extends React.Component {
           Community,
           Post,
           Jobs,
+          Blog
         }}
       />
     )

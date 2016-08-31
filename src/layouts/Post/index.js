@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Helmet from 'react-helmet'
 import Page from '../Page'
 
 class Post extends Component {
@@ -21,7 +22,9 @@ class Post extends Component {
       <Page
         {...props}
         header={header}
-      />
+      >
+
+      </Page>
     )
   }
 }
