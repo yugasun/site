@@ -68,9 +68,6 @@ export default class Header extends Component {
               <Link to='/company/jobs' className={`${styles.link} ${styles.hiring}`}>
                 We're Hiring
               </Link>
-              <Link to='/framework/docs/' className={`${styles.link} ${styles.hiring}`}>
-               link
-              </Link>
             </div>
           </div>
         </nav>
