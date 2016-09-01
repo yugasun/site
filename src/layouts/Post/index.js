@@ -23,7 +23,14 @@ class Post extends Component {
         {...props}
         header={header}
       >
-
+        <Helmet
+          script={[
+             {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
+          ]}
+          link={[
+             {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
+          ]}
+        />
       </Page>
     )
   }

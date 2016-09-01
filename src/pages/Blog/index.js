@@ -33,7 +33,7 @@ export default class BlogPage extends Component {
 
     return (
       <Page {...this.props}>
-        <h2>{"Blog resources"}</h2>
+        <h2>{"Blog"}</h2>
         <PagesList pages={latestPosts} />
       </Page>
     )
