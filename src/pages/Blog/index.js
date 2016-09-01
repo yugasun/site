@@ -24,13 +24,14 @@ export default class BlogPage extends Component {
   }
 
   render () {
+    console.log('collection', this.context.collection)
     const latestPosts = enhanceCollection(this.context.collection, {
       filter: { layout: 'Post' },
       sort: 'date',
       reverse: true,
     })
     .slice(0, numberOfLatestPosts)
-
+    console.log('latestPosts', latestPosts)
     return (
       <Page {...this.props}>
         <h2>{"Blog"}</h2>
