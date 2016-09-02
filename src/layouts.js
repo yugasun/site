@@ -7,7 +7,7 @@ import Post from './layouts/Post'
 /* custom pages */
 import Jobs from './pages/Jobs'
 import Blog from './pages/Blog'
-import FourOFour from './pages/404'
+import PageError from './pages/404'
 import Homepage from './pages/Homepage'
 import Community from './pages/Community'
 
@@ -16,10 +16,9 @@ export default class Layouts extends React.Component {
     return (
       <PhenomicPageContainer
         {...this.props}
-        className='hi'
         layouts={{
           Page,
-          FourOFour,
+          PageError,
           PageLoading,
           Homepage,
           Community,
