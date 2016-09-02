@@ -15,8 +15,10 @@
     "lint:js": "eslint --ignore-path .gitignore src",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint": "npm-run-all --parallel lint:*",
+    "prestart": "npm run sync",
     "start": "phenomic start",
-    "prebuildz": "cp -rf node_modules/serverless/docs content/framework/test",
+    "sync": "node scripts/processMarkdown.js && node scripts/copyBlogContent.js",
+    "prebuild": "npm run sync",
     "build": "phenomic build",
     "static": "cd dist && http-server",
     "pretest": "npm run lint"
