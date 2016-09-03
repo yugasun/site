@@ -1,0 +1,15 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+}
+.item {
+  display: inline-block;
+  margin-left: 10px;
+}
+.basePath {
+
+}
+.current {
+  color: red;
+  font-weight: bold;
+}

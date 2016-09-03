@@ -17,6 +17,8 @@
     "lint": "npm-run-all --parallel lint:*",
     "prestart": "npm run sync",
     "start": "phenomic start",
+    "refresh:blog": "rm -rf node_modules/serverless-blog && npm install git://github.com/serverless/blog.git",
+    "postrefresh:blog": "node scripts/copyBlogContent.js",
     "sync": "node scripts/processMarkdown.js && node scripts/copyBlogContent.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
