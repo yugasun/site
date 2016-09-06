@@ -8,6 +8,7 @@ import { BodyContainer, joinUri } from 'phenomic'
 import styles from './Page.css'
 
 class Page extends Component {
+
   render () {
     const { props, context } = this
 

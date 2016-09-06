@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  min-height: 70vh;
-  padding: 1rem 0;
+  min-height: calc(100vh - $navHeight - $footerHeight)
 }
 
 .oops {
@@ -15,8 +13,6 @@
 }
 
 .title {
-  margin: 4rem 0;
   font-size: 2rem;
-  line-height: 3rem;
   text-align: center;
 }

@@ -1,5 +1,6 @@
 .page {
   composes: content from "../../index.css";
+  min-height: calc(100vh - $navHeight - $footerHeight)
 }
 
 .fullWidth {

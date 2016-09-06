@@ -33,9 +33,7 @@ export default class PageError extends Component {
           {error === 404 &&
             <div>
               {"It seems you found a broken link. "}
-              {"Sorry about that. "}
-              <br />
-              {"Do not hesitate to report this page!"}
+              {"Do not hesitate to report this page! @goserverless"}
             </div>}
         </div>
       </div>
