@@ -18,6 +18,7 @@ async.waterfall([
   function (next) {
     copyFiles(config.oldBlogPath, config.newBlogPath, function (err) {
       if (err) return next(err)
+      console.log('copied Blog files successfully')
       next(null)
     })
   },
@@ -25,12 +26,14 @@ async.waterfall([
   function (next) {
     updateBlogFileContents(config.newBlogPath, function (err) {
       if (err) return next(err)
+      console.log('updated Blog content successfully')
       next(null, 'three')
     })
   },
   function (arg1, next) {
     renameFilesInDirectory(config.newBlogPath, replacePattern, function (err, files) {
       if (err) return next(err)
+      console.log('renamed Blog files successfully')
       next(null, 'done')
     })
   },

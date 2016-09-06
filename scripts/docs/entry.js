@@ -12,13 +12,13 @@ async.waterfall([
   function (next) {
     emptyDirectory(config.newDocsPath, function (err) {
       if (err) return next(err)
-      next(null, 'one', 'two')
+      next(null)
     })
   },
-  function (arg1, arg2, next) {
-    console.log('second ran')
+  function (next) {
     copyFiles(config.oldDocsPath, config.newDocsPath, function (err) {
       if (err) return next(err)
+      console.log('copied doc files successfully')
       next(null)
     })
   },
@@ -26,17 +26,22 @@ async.waterfall([
   function (next) {
     updateFileContents(config.newDocsPath, function (err) {
       if (err) return next(err)
-      next(null, 'three')
+      console.log('update doc files contents successfully')
+      next(null)
     })
   },
-  function (arg1, next) {
-    renameFilesInDirectory(config.newDocsPath, replacePattern, function () {
-      next(null, 'done')
+  function (next) {
+    renameFilesInDirectory(config.newDocsPath, replacePattern, function (err) {
+      if (err) return next(err)
+      console.log('renamed doc files successfully')
+      next(null)
     })
   },
-  function (arg1, next) {
-    removeDirectory(config.newDocsPath, replacePattern, function () {
-      next(null, 'done')
+  function (next) {
+    removeDirectory(config.newDocsPath, replacePattern, function (err) {
+      if (err) return next(err)
+      console.log('removed old doc files successfully')
+      next(null)
     })
   }
 ], function (err, result) {

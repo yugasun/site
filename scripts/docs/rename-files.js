@@ -4,7 +4,7 @@ var fs = require('fs-extra')
 module.exports = function renameFilesInDirectory (directoryPath, pattern, callBack) {
   dir.files(directoryPath, function (err, files) {
     if (err) {
-      throw err
+      return callBack(err)
     }
     files.forEach(function (name) {
       var newName = name.replace(pattern, '')

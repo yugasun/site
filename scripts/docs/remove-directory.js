@@ -4,7 +4,7 @@ var dir = require('node-dir')
 module.exports = function deleteDirectories (path, pattern, callBack) {
   dir.subdirs(path, function (err, subdirs) {
     if (err) {
-      throw err
+      return callBack && callBack(err)
     }
     subdirs.filter(function (x) {
       return x.match(/([0-9]{2})-/g)
