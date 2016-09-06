@@ -4,6 +4,7 @@ import PhenomicPageContainer from 'phenomic/lib/PageContainer'
 import Page from './layouts/Page'
 import PageLoading from './layouts/PageLoading'
 import Post from './layouts/Post'
+import Doc from './layouts/Doc'
 /* custom pages */
 import Jobs from './pages/Jobs'
 import Blog from './pages/Blog'
@@ -24,7 +25,8 @@ export default class Layouts extends React.Component {
           Community,
           Post,
           Jobs,
-          Blog
+          Blog,
+          Doc
         }}
       />
     )

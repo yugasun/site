@@ -17,15 +17,17 @@
     "lint": "npm-run-all --parallel lint:*",
     "prestart": "npm run sync",
     "start": "phenomic start",
+    "refresh:docs": "rm -rf node_modules/serverless && npm install git://github.com/serverless/serverless.git#docs-update",
     "refresh:blog": "rm -rf node_modules/serverless-blog && npm install git://github.com/serverless/blog.git",
     "postrefresh:blog": "node scripts/copyBlogContent.js",
-    "sync": "node scripts/processMarkdown.js && node scripts/copyBlogContent.js",
+    "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
     "static": "cd dist && http-server",
     "pretest": "npm run lint"
   },
   "devDependencies": {
+    "async": "^2.0.1",
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
     "babel-eslint": "^6.0.0-beta.0",
@@ -38,6 +40,7 @@
     "classnames": "^2.2.3",
     "color": "^0.11.1",
     "css-loader": "^0.23.0",
+    "directory-tree": "^1.1.0",
     "dotenv": "^2.0.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
@@ -88,7 +91,8 @@
     "stylelint": "^6.8.0",
     "stylelint-config-standard": "^10.0.0",
     "webpack": "^1.12.1",
-    "whatwg-fetch": "^0.11.0"
+    "whatwg-fetch": "^0.11.0",
+    "yamljs": "^0.2.8"
   },
   "babel": {
     "presets": [

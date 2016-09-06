@@ -1,8 +1,45 @@
 .page {
   composes: content from "../../index.css";
+  min-height: calc(100vh - $navHeight - $footerHeight)
 }
 
 .fullWidth {
   width: 100%;
   overflow: hidden;
+}
+
+.docWrapper {
+  display: flex;
+}
+.sidebar {
+  min-width: 220px;
+}
+.content {
+  flex-grow: 1;
+  position: relative;
+}
+.editLink {
+  position: absolute;
+  right: 0px;
+}
+.toc {
+  margin-top: 20px;
+  font-size: 12px;
+  a {
+    text-decoration: none;
+  }
+  > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    ul {
+      color: red;
+      margin-left: 5px;
+      padding-left: 0px;
+      list-style: none;
+    }
+  }
+}
+.subPages {
+  margin-top: 20px;
 }

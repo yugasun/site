@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 import invariant from 'invariant'
 import { BodyContainer, joinUri } from 'phenomic'
 import styles from './Page.css'
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
 
 class Page extends Component {
 
@@ -64,7 +63,6 @@ class Page extends Component {
 
         <div className={contentWrapperClass}>
           {header}
-          <Breadcrumbs pathRoot='home' path={__url} />
           {markdownContent}
           {props.children}
         </div>

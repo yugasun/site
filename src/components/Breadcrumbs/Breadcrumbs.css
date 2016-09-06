@@ -3,13 +3,28 @@
   padding: 0;
 }
 .item {
-  display: inline-block;
-  margin-left: 10px;
+  display: inline-flex;
+  position: relative;
+  a {
+    text-decoration: none;
+  }
+  &:after {
+    content: ' › ';
+    color: #a1a1a1;
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+  }
+  &:first-of-type {
+    margin-left: 0px;
+  }
+  &:last-of-type:after {
+    content: '';
+  }
 }
 .basePath {
 
 }
 .current {
-  color: red;
   font-weight: bold;
 }

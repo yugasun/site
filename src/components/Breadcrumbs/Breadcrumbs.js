@@ -3,6 +3,15 @@ import React, { Component } from 'react'
 import BreadcrumbItem from './item'
 import styles from './Breadcrumbs.css'
 
+/**
+<Breadcrumb
+  getUrlFromPathSegments={function getUrlFromPathSegments(pathSegments) {
+	      return 'https://github.com/TiuSh/react-simple-breadcrumb/tree/master/' + pathSegments.join('/');
+	    }}
+  path="example/src/example.jsx"
+/>
+*/
+
 export default class Breadcrumb extends Component {
   /**
    * Removes spaces and the given character from both sides of the string
@@ -93,5 +102,10 @@ Breadcrumb.propTypes = {
 
 Breadcrumb.defaultProps = {
   pathSeparator: '/',
-  getUrlFromPathSegments: pathSegments => `/${pathSegments.join('/')}`,
+  getUrlFromPathSegments: pathSegments => {
+    console.log(pathSegments)
+    const link = `/${pathSegments.join('/')}`
+    console.log(link)
+    return link
+  },
 }
