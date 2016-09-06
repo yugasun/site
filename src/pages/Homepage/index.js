@@ -165,7 +165,7 @@ export default class Homepage extends Component {
         </ContentBlock>
 
         <ContentBlock color='black' title='The Serverless Community' image={communityJpg}>
-          <p>Over 1,500 people are in our chatroom and on our forum every day discussing the Serverless Framework and serverless architecitures. Come join us!</p>
+          <p>Over 1,500 people are in our chatroom and on our forum every day discussing the Serverless Framework and serverless architectures. Come join us!</p>
           <p>
             <a className={styles.yellowLink} href='https://gitter.im/serverless/serverless' target='_blank'>
               Join the Chatroom
