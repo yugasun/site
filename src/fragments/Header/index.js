@@ -4,6 +4,15 @@ import handleClickAway from '../../utils/handleClickAway'
 import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
+/*
+<Link to='/blog' className={`${styles.link}`}>
+  Blog
+</Link>
+<Link to='/framework/docs' className={styles.link}>
+  Documentation
+</Link>
+*/
+
 export default class Header extends Component {
   constructor (props, context) {
     super(props, context)
@@ -50,16 +59,16 @@ export default class Header extends Component {
               </div>
             </div>
             <div className={styles.navPart2 + ' ' + mobileNav}>
-              <Link to='/blog' className={`${styles.link}`}>
+              <a href='http://blog.serverless.com/' className={styles.link}>
                 Blog
-              </Link>
+              </a>
               <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
                 Github
               </a>
-
-              <Link to='/framework/docs' className={styles.link}>
+              <a href='https://github.com/serverless/serverless/tree/master/docs' target='_blank' className={styles.link}>
                 Documentation
-              </Link>
+              </a>
+
               <a href='https://gitter.im/serverless/serverless' target='_blank' className={styles.link}>
                 Gitter
               </a>

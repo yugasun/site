@@ -71,7 +71,7 @@ function processChildren (obj) {
 function writeJSONMenuToDirectory (dest, contents) {
   // var finalDest = dest.replace('content/framework', 'dist/framework')
   var p = path.join(dest, 'menu.json')
-  console.log(p)
+  //console.log(p)
   fs.writeFileSync(p, contents, 'utf-8', function (err) {
     if (err) {
       return console.log(err)

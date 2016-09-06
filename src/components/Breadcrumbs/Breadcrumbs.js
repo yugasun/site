@@ -103,9 +103,7 @@ Breadcrumb.propTypes = {
 Breadcrumb.defaultProps = {
   pathSeparator: '/',
   getUrlFromPathSegments: pathSegments => {
-    console.log(pathSegments)
     const link = `/${pathSegments.join('/')}`
-    console.log(link)
     return link
   },
 }
