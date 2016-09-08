@@ -4,7 +4,7 @@ module.exports = {
   unit: '1rem',
   navHeight: '65px',
   // -- Colors
-  yellow: '#ffd426',
+  yellow: '#ffd544',
   red: '#e55934',
   gray1: '#aaa',
   gray2: '#202020',

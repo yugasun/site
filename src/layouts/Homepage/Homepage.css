@@ -99,7 +99,7 @@
   height: 480px;
   width: 120vw;
   position: absolute;
-  background: #ffd426;
+  background: $yellow;
   transform: rotate(-2deg);
   top: 20px;
   left: -114px;
