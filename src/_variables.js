@@ -1,4 +1,8 @@
 /* Global CSS variables for use in CSS and JS */
+var baseValue = 1
+var unit = 'rem'
+var baseFontSize = (baseValue * 1.6) + unit
+
 module.exports = {
   // -- Sizing
   unit: '1rem',
@@ -11,6 +15,22 @@ module.exports = {
   gray2: '#202020',
   black1: '#212121',
   black2: '#191919',
+  // -- Fonts
+  fontSize: baseFontSize,
+  fontSizeTiny: formatFont(1.2),
+  fontSizeSmall: formatFont(1.4),
+  fontSizeNormal: baseFontSize,
+  fontSizeBig: formatFont(1.8),
+  fontSizeH1: formatFont(3.0),
+  fontSizeH2: formatFont(2.15),
+  fontSizeH3: formatFont(1.7),
+  fontSizeH4: formatFont(1.25),
+  fontSizeH5: baseFontSize,
+  fontSizeH6: formatFont(0.85),
+  fontWeightThin: 300,
+  fontWeightNormal: 400,
+  fontWeightSemiBold: 500,
+  fontWeightBold: 700,
   // -- Indexes
   zIndexHighest: 300,
   zIndexHigher: 200,
@@ -36,4 +56,8 @@ module.exports = {
   animationCurveLinearOutSlowIn: 'cubic-bezier(0, 0, 0.2, 1)',
   animationCurveFastOutLinearIn: 'cubic-bezier(0.4, 0, 1, 1)',
   animationCurveDefault: 'cubic-bezier(0.4, 0, 0.2, 1)',
+}
+
+function formatFont (modifier) {
+  return (modifier * baseValue) + unit
 }

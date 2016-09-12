@@ -91,7 +91,7 @@ export const makeConfig = (config = {}) => {
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
-            [ `css-loader?modules&localIdentName=${
+            [ `css-loader?modules&importLoaders=1&localIdentName=${
                 config.production
                 ? '[hash:base64:5]'
                 : '[path][name]--[local]--[hash:base64:5]'
@@ -146,16 +146,25 @@ export const makeConfig = (config = {}) => {
       },
     },
 
-    postcss: () => [
+    postcss: (webpack) => [
       // require("stylelint")(),
       require('postcss-cssnext')({ browsers: 'last 2 versions' }),
+      // require('postcss-import')({
+      //   addDependencyTo: webpack
+      // }),
       // require("postcss-reporter")(),
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
-          var vars = require('./src/variables')
+          // var file = './src/_variables.js';
+          // delete require.cache[path.join(__dirname, file)];
+          // return require(file);
+          var vars = require('./src/_variables')
           // console.log('global css vars', vars)
           return vars
+        },
+        onVariables: function (variables) {
+          // console.log(variables)
         },
         unknown: function unknown (node, name, result) {
           node.warn(result, 'Unknown variable ' + name)
