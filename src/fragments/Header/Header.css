@@ -53,6 +53,7 @@
   cursor: pointer;
   transition: color 0.2s linear;
   letter-spacing: -0.5px;
+  border: none;
   &:hover {
     color: #fff;
     background: 0 0;

@@ -8,7 +8,11 @@ function validateEmail (value) {
 }
 
 const propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  buttonText: PropTypes.string
+}
+const defaultProps = {
+  buttonText: 'Subscribe'
 }
 export default class Newsletter extends Component {
   constructor (props, context) {
@@ -67,43 +71,31 @@ export default class Newsletter extends Component {
     })
   }
   render () {
+    const { buttonText } = this.props
     const { isFetching, error } = this.state
-    let buttonText = (isFetching) ? 'Success!' : 'Subscribe'
-    let copy = 'We Move Fast. Stay Updated.'
+    let text = (isFetching) ? 'Success!' : buttonText
 
     if (error) {
-      copy = 'Yikes, network error!'
-      buttonText = 'Try Again'
+      text = 'Try Again'
     }
 
     return (
-      <div className='sl-email'>
-        <div className='sl-email-inner'>
-          <div className={styles.row}>
-            <div className='email-ask'>
-              <span className='avenir'>
-                {copy}
-              </span>
-            </div>
-            <div className='email-form'>
-              <div className='form-group'>
-                <input
-                  ref='email'
-                  type='email'
-                  className='form-control email'
-                  name='EMAIL'
-                  placeholder='Your Email'
-                />
-              </div>
-              <button onClick={this.handleSubmit} className='btn btn-action'>
-                {buttonText}
-              </button>
-            </div>
-          </div>
+      <div className={styles.emailForm}>
+        <div className='form-group'>
+          <input
+            ref='email'
+            type='email'
+            className='form-control email'
+            name='EMAIL'
+            placeholder='Your Email'
+          />
         </div>
+        <button onClick={this.handleSubmit} className='btn btn-action'>
+          {text}
+        </button>
       </div>
     )
   }
 }
-
+Newsletter.defaultProps = defaultProps
 Newsletter.propTypes = propTypes
