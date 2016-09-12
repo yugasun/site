@@ -49,9 +49,10 @@ class Doc extends Component {
     let renderItems
     if (menu && menu.children) {
       renderItems = menu.children.map(function (item, i) {
+        const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
         // const title = (item.name && item.name.length > 35) ? item.name : null
         return (
-          <li key={i} className={styles.subPageLink}>
+          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
             <Link to={item.path} >
               {item.title}
             </Link>
@@ -77,9 +78,9 @@ class Doc extends Component {
     let renderItems
     if (menu && menu.children) {
       renderItems = menu.children.map(function (item, i) {
-        // const title = (item.name && item.name.length > 35) ? item.name : null
+        const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
         return (
-          <li key={i} className={styles.subPageLink}>
+          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
             <Link to={item.path}>
               {item.title}
             </Link>
