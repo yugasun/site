@@ -2,6 +2,7 @@
  * 404 page template
  */
 import React, { Component, PropTypes } from 'react'
+// import axios from 'axios'
 import styles from './index.css'
 
 export default class PageError extends Component {
@@ -15,6 +16,22 @@ export default class PageError extends Component {
     error: 404,
     errorText: 'Page Not Found',
   };
+  componentDidMount () {
+    var payload = {
+      url: window.location.href,
+      // user?
+    }
+    /*axios({
+      method: 'post',
+      url: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
+      data: payload,
+    }).then(function (response) {
+      console.log(response)
+      console.log(response.data)
+    }).catch(function (error) {
+      console.log(error)
+    })*/
+  }
   // Todo add 404 tracking
   render () {
     const {

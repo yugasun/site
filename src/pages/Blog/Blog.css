@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+}
+.postList {
+  width: 66.66666666666666%;
+  padding-right: 15px;
+}
+.post {
+  display: flex;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border: 1px solid #e3e5e7;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+.sidebar {
+  width: 33.33333333333333%;
+}
+.widget {
+  padding: 20px;
+  border: 1px solid rgba(227, 229, 231, 0.498039);
+  border-radius: 3px;
+}
+.content {
+  padding: 20px 10px;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: $black1;
+}
+.description {
+
+}
+$thumbnailContainer: 130px;
+$thumbnailSize: 100px;
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  min-width: $thumbnailContainer;
+  img {
+    border-radius: 50%;
+    width: $thumbnailSize;
+    height: $thumbnailSize;
+  }
+}
