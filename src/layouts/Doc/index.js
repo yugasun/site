@@ -62,7 +62,7 @@ class Doc extends Component {
     if (renderItems) {
       return (
         <div className={styles.subPages}>
-          Back to:
+          Jump to:
           <ul>
             {renderItems}
           </ul>

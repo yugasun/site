@@ -34,7 +34,9 @@ export default class IndexComponent extends Component {
       <div className={styles.layout}>
         <HeadTag />
         <Header />
-        {this.props.children}
+        <div className={styles.minHeight}>
+          {this.props.children}
+        </div>
         <Footer />
         <Scripts params={this.props.params} />
       </div>
