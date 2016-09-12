@@ -16,6 +16,8 @@ $checkboxColor: $yellow;
   width: $height;
   opacity: 0;
   margin: 0;
+  z-index: 10;
+  user-select: none;
 }
 
 .checkbox label {
@@ -29,6 +31,7 @@ $checkboxColor: $yellow;
   cursor: pointer;
   flex-grow: 1;
   margin-left: 15px;
+  user-select: none;
   padding-top: 3px; /*Font face hack */
 }
 

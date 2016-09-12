@@ -7,6 +7,7 @@
   position: relative;
   a {
     text-decoration: none;
+    border: none;
   }
   &:after {
     content: ' › ';
