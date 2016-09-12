@@ -178,7 +178,18 @@ export default class Homepage extends Component {
         </ContentBlock>
 
         <div className={styles.newsletter}>
-          <Newsletter />
+          <div className={styles.emailContainer}>
+            <div className={styles.emailContainerInner}>
+              <div className={styles.row}>
+                <div className={styles.emailAsk}>
+                  <span className='avenir'>
+                    We Move Fast. Stay Updated.
+                  </span>
+                </div>
+                <Newsletter />
+              </div>
+            </div>
+          </div>
         </div>
 
         <Modal

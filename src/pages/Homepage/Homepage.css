@@ -201,6 +201,32 @@ $providerWidth: 370px;
 .newsletter {
   background: $black2;
 }
+.emailContainer {
+  min-height: 120px;
+  padding: 35px 0 25px 0;
+  margin: 0;
+  color: #fff;
+}
+.emailContainerInner {
+  width: 60em;
+  margin: 0 auto;
+}
+.emailAsk {
+  margin: 10px 0;
+  font-size: 23px;
+  margin-right: 20px;
+  min-width: 275px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  composes: avenir from '../../index.css';
+  border-top: 1px solid rgba(255,255,255,0.03);
+  margin-top:0px;
+  padding: 80px 0;
+}
+
 @media (max-width: 1060px) {
   .hero {
     padding-top: 40px;
@@ -230,6 +256,9 @@ $providerWidth: 370px;
   }
 }
 @media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
   .heading {
     font-size: 19px;
   }
