@@ -7,104 +7,105 @@ import Helmet from 'react-helmet'
 import invariant from 'invariant'
 import { BodyContainer, joinUri } from 'phenomic'
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
+import { Link } from 'react-router'
+import generatedMenu from './generated-menu'
+import Svg from 'react-svg-inline'
+import debounce from 'lodash/debounce'
+import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import styles from './Doc.css'
-// import axios from 'axios'
-// const isClient = typeof window !== 'undefined'
-// (function () {
-//   window.smoothtocer = function ($toc_container, $content) {
-//     var $headingLevel, $link, $menuItem, $newSubmenu, $stepsUp, $targetNode, $thisHeadingLevel, $toc, heading, k$, _i, _len, _ref
-//     k$ = new Object()
-//     k$.$$ = function (el) {
-//       return document.querySelectorAll(el)
-//     }
-//     k$.$ = function (el) {
-//       return k$.$$(el)[0]
-//     }
-//     k$.slugify = function (str) {
-//       return str.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
-//     }
-//     if ($toc_container) {
-//       $toc = document.createElement('ul')
-//       $link = document.createElement('li')
-//       $link.innerHTML = '<a></a>'
-//       $headingLevel = 1
-//       $targetNode = $toc
-//       _ref = $content.querySelectorAll('h1, h2, h3, h4, h5, h6')
-//       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-//         heading = _ref[_i]
-//         if (!heading.classList.contains('toc-exempt')) {
-//           heading.id = k$.slugify(heading.innerHTML)
-//           $thisHeadingLevel = parseInt(heading.tagName.substr(1, 2))
-//           if ($thisHeadingLevel > $headingLevel) {
-//             $newSubmenu = document.createElement('ul')
-//             $targetNode.children[$targetNode.children.length - 1].appendChild($newSubmenu)
-//             $targetNode = $newSubmenu
-//             $headingLevel = $thisHeadingLevel
-//           }
-//           if ($thisHeadingLevel < $headingLevel) {
-//             $stepsUp = $headingLevel - $thisHeadingLevel
-//             while ($stepsUp > 0) {
-//               $targetNode = $targetNode.parentNode.parentNode
-//               $stepsUp--
-//             }
-//             $headingLevel = $thisHeadingLevel
-//           }
-//           $menuItem = $link.cloneNode(true)
-//           $menuItem.querySelector('a').href = '#' + heading.id
-//           $menuItem.querySelector('a').innerHTML = heading.innerHTML
-//           $targetNode.appendChild($menuItem)
-//         }
-//       }
-//       return $toc_container.appendChild($toc)
-//     } else {
-//       return console.error('Did not find a Table of Contents container. Found: ' + $toc_container)
-//     }
-//   }
-// }).call(this)
-
-// function getMenu () {
-//   if (isClient) {
-//     axios({
-//       method: 'get',
-//       url: window.location.href + 'menu.json',
-//     }).then(function (response) {
-//       console.log(response.data)
-//       // console.log(response.status);
-//       // console.log(response.statusText);
-//       // console.log(response.headers);
-//       // console.log(response.config);
-//     }).catch(function (error) {
-//       console.log(error)
-//     })
-//   }
-// }
 
 class Doc extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.handleScroll = this.handleScroll.bind(this)
+    this.sidebarNode = null
+    this.sidebarNodeOffset = null
+  }
   componentDidMount () {
-    // var content = document.querySelectorAll('.phenomic-BodyContainer')[0]
-    // var target = document.querySelectorAll('.toc')[0]
-    // smoothtocer(target, content)
-    // var test = getMenu()
-    // console.log(test)
+    window.addEventListener('scroll', debounce(this.handleScroll, 30))
+    window.addEventListener('resize', debounce(this.handleScroll, 30))
+    this.sidebarNode = this.refs.sidebar
+    this.sidebarNodeOffset = this.sidebarNode.offsetTop
+    this.handleScroll()
+  }
+  handleScroll (event) {
+    const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
+    if (offsetHeigh >= this.sidebarNodeOffset) {
+      if (this.sidebarNode.style.position !== 'fixed') {
+        this.sidebarNode.style.position = 'fixed'
+        this.sidebarNode.style.top = '10px'
+      }
+    } else {
+      this.sidebarNode.style.position = 'relative'
+    }
+  }
+  renderParentList () {
+    const { __url } = this.props
+    const trimmedURL = __url.replace(/\/$/, '')
+    const urlArray = trimmedURL.split('/')
+    urlArray.pop()
+    const correctURL = urlArray.join('/')
+    const menu = generatedMenu[correctURL] || generatedMenu[correctURL + '/']
+    let renderItems
+    if (menu && menu.children) {
+      renderItems = menu.children.map(function (item, i) {
+        // const title = (item.name && item.name.length > 35) ? item.name : null
+        return (
+          <li key={i} className={styles.subPageLink}>
+            <Link to={item.path} >
+              {item.title}
+            </Link>
+          </li>
+        )
+      })
+    }
+    if (renderItems) {
+      return (
+        <div className={styles.subPages}>
+          Back to:
+          <ul>
+            {renderItems}
+          </ul>
+        </div>
+      )
+    }
+  }
+  renderChildrenList () {
+    const { __url } = this.props
+    const trimmedURL = __url.replace(/\/$/, '')
+    const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
+    let renderItems
+    if (menu && menu.children) {
+      renderItems = menu.children.map(function (item, i) {
+        // const title = (item.name && item.name.length > 35) ? item.name : null
+        return (
+          <li key={i} className={styles.subPageLink}>
+            <Link to={item.path}>
+              {item.title}
+            </Link>
+          </li>
+        )
+      })
+    }
+    if (renderItems) {
+      return (
+        <div className={styles.subPages}>
+          Sections
+          <ul>
+            {renderItems}
+          </ul>
+        </div>
+      )
+    }
   }
   renderSidebar () {
+    const childrenItems = this.renderChildrenList()
+    const parentItems = this.renderParentList()
     return (
       <div className={styles.sidebar}>
-        <div className={styles.toc + ' toc'}>
-        </div>
-        <div className={styles.subPages}>
-          Sub page links
-          <ul>
-            <li>sub page link 1</li>
-            <li>sub page link 2</li>
-          </ul>
-        </div>
-        <div>
-          Level up links
-          <ul>
-            <li>parent link 1</li>
-            <li>parent link 2</li>
-          </ul>
+        <div ref='sidebar'>
+        {childrenItems}
+        {parentItems}
         </div>
       </div>
     )
@@ -158,20 +159,23 @@ class Doc extends Component {
     const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
     return (
-      <div>
+      <div className={styles.docContainer}>
         <Helmet title={metaTitle} meta={meta} />
 
         <div className={contentWrapperClass}>
           <Breadcrumbs path={__url} />
           {header}
           <div className={styles.docWrapper}>
-            {false && this.renderSidebar()}
+            {this.renderSidebar()}
             <div className={styles.content}>
-              <a
-                className={styles.editLink}
-                href={'https://github.com/serverless/serverless/edit/master' + head.gitLink}>
-                Edit on github
-              </a>
+              <span className={styles.editLink}>
+                <Svg svg={gitHubSvg} cleanup />
+                <a
+                  target='_blank'
+                  href={'https://github.com/serverless/serverless/edit/master' + head.gitLink}>
+                    Edit on github
+                </a>
+              </span>
               {markdownContent}
             </div>
           </div>
