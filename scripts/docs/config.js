@@ -5,5 +5,6 @@ var path = require('path')
 
 module.exports = {
   newDocsPath: path.join(__dirname, '..', '..', 'content/framework/docs/'),
-  oldDocsPath: path.join(__dirname, '..', '..', 'node_modules/serverless/docs/')
+  oldDocsPath: path.join(__dirname, '..', '..', 'node_modules/serverless/docs/'),
+  docsMenuPath: path.join(__dirname, '..', '..', 'src/layouts/Doc/'),
 }
