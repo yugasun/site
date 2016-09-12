@@ -21,7 +21,8 @@ export default class PageError extends Component {
       url: window.location.href,
       // user?
     }
-    /*axios({
+    console.log(payload)
+    /* axios({
       method: 'post',
       url: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
       data: payload,
