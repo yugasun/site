@@ -11,7 +11,6 @@ import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
 import frameworkGif from '../../assets/images/framework.gif'
 import communityJpg from '../../assets/images/community.png'
-import Space from './space'
 import styles from './Homepage.css'
 import AutoForm from 'react-auto-form'
 import submitFeatureData from '../../utils/SurveyService'
@@ -112,7 +111,6 @@ export default class Homepage extends Component {
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.top}>
-            <canvas className={styles.canvas} id='demo'></canvas>
             <div className={styles.bg}>
               <div className={styles.hero}>
                 <div className={styles.heroLeft + ' fadeIn fadeInShort'}>

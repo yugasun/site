@@ -63,12 +63,6 @@
   font-size: 30px;
   font-weight: 400;
 }
-.canvas {
-  position: absolute;
-  top: 0px;
-  height: 100vh;
-  width: 100%;
-}
 .content {
   composes: content from '../../index.css';
   padding-bottom: 100px;
