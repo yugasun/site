@@ -46,7 +46,7 @@
     padding: 15px 0;
   }
 }
-.yellowLink {
+a.yellowLink {
   color:$yellow;
   text-decoration: none;
   font-size: 22px;
