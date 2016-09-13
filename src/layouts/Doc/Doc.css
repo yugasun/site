@@ -49,17 +49,20 @@
   font-weight: bold;
 }
 .subPages {
-  /*background: #fff;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);*/
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
+  margin-bottom: 20px;
+}
+.subPageLinkHeading {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 .subPageLink {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 10px;
   line-height: 1.5;
   a {
@@ -80,8 +83,25 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar {
+  .editLink {
     display: none;
   }
-
+  .page, .sidebar {
+    max-width: 95%;
+    min-width: 95%;
+    margin: auto;
+  }
+  .docWrapper {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .content {
+    padding-bottom: 30px;
+  }
+  .subPages {
+    
+  }
+  .subPageLink, .subPageLinkHeading {
+    font-size: 16px;
+  }
 }

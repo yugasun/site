@@ -22,11 +22,13 @@ class Doc extends Component {
     this.sidebarNodeOffset = null
   }
   componentDidMount () {
-    window.addEventListener('scroll', debounce(this.handleScroll, 30))
-    window.addEventListener('resize', debounce(this.handleScroll, 30))
-    this.sidebarNode = this.refs.sidebar
-    this.sidebarNodeOffset = this.sidebarNode.offsetTop
-    this.handleScroll()
+    if (window.outerWidth > 600) {
+      window.addEventListener('scroll', debounce(this.handleScroll, 30))
+      window.addEventListener('resize', debounce(this.handleScroll, 30))
+      this.sidebarNode = this.refs.sidebar
+      this.sidebarNodeOffset = this.sidebarNode.offsetTop
+      this.handleScroll()
+    }
   }
   handleScroll (event) {
     const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
@@ -63,7 +65,7 @@ class Doc extends Component {
     if (renderItems) {
       return (
         <div className={styles.subPages}>
-          Jump to:
+          <span className={styles.subPageLinkHeading}>Jump to:</span>
           <ul>
             {renderItems}
           </ul>
@@ -91,7 +93,7 @@ class Doc extends Component {
     if (renderItems) {
       return (
         <div className={styles.subPages}>
-          Sections
+          <span className={styles.subPageLinkHeading}>Sections</span>
           <ul>
             {renderItems}
           </ul>
