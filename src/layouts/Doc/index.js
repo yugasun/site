@@ -11,7 +11,6 @@ import { Link } from 'react-router'
 import generatedMenu from './generated-menu'
 import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
-import Button from '../../components/Button/Button'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import styles from './Doc.css'
 
