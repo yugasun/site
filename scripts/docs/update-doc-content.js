@@ -11,7 +11,7 @@ module.exports = function updateFileContents (filePath, callBack) {
   }, function (err, content, filename, next) {
     if (err) throw err
 
-    var replace = fixCommentedYaml(content)
+    var replace = fixCommentedYaml(content, filename)
     // parse yaml frontmatter for title
     var item = matter(replace).data
     item.gitLink = filename.split('framework')[1]
@@ -47,9 +47,19 @@ ${what}---`
   )
 }
 
-function fixCommentedYaml (content) {
+function fixCommentedYaml (content, filename) {
   // fix links for website
   var fixLinks = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
-  // fix yaml frontmatter for website
+  // replace /README)
+  fixLinks = fixLinks.replace(/\/README\)/g, ')')
+  // fix paths of links that are not index.md
+  if (path.basename(filename) !== 'README.md') {
+    console.log('FIX LINKS')
+    // replace (.. with (../..
+    fixLinks = fixLinks.replace(/\(\.\./g, '(../..')
+    // replace (./ with (../
+    fixLinks = fixLinks.replace(/\(\.\//g, '(../')
+
+  }
   return fixLinks.replace('<!--', '---').replace('-->', '---')
 }
