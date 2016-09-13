@@ -53,10 +53,6 @@ export default class Homepage extends Component {
   }
   triggerEasterEgg (e) {
     e.preventDefault()
-    if (!this.space) {
-      new Space().main()
-      this.space = true
-    }
   }
   handleOnLogin (e) {
     console.log(e)
