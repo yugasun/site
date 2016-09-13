@@ -253,6 +253,9 @@ $providerWidth: 370px;
   .row {
     flex-direction: column;
   }
+  .emailContainerInner {
+    max-width: 100%;
+  }
   .heading {
     font-size: 19px;
   }

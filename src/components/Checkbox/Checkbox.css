@@ -25,14 +25,17 @@ $checkboxColor: $yellow;
   align-items: center;
   position: relative;
   font-weight: 300;
-  font-size: 1.35em;
+  font-size: 1.9rem;
   height: $height;
   z-index: 9;
   cursor: pointer;
   flex-grow: 1;
   margin-left: 15px;
   user-select: none;
-  padding-top: 3px; /*Font face hack */
+  padding-top: 1px; /*Font face hack */
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 }
 
 .checkbox:hover label{
