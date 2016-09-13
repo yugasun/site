@@ -25,7 +25,6 @@ $buttonPadding: 12px;
 
 .dark {
   padding: 25px 80px;
-  color: #fff;
   background: transparent;
   border: 2px solid $yellow;
   padding: $buttonPadding 100px $buttonPadding 60px;
@@ -95,6 +94,9 @@ $buttonPadding: 12px;
     svg {
       fill: #fff !important;
     }
+  }
+  span {
+    color: #fff;
   }
   svg {
     margin-right: 10px;

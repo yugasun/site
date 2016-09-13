@@ -25,7 +25,7 @@ export default function Button ({onClick, label, children, kind, style, href, ta
       <a className={styles.btn + ' ' + kindStyle} href={href} target={target}
         onClick={onClick} style={style}>
         <span className={styles.background}></span>
-        {text}
+        <span>{text}</span>
       </a>
     )
   } else {
