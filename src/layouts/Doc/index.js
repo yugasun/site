@@ -36,8 +36,8 @@ class Doc extends Component {
   }
   componentDidMount () {
     if (window.outerWidth > 600) {
-      window.addEventListener('scroll', debounce(this.handleScroll, 30))
-      window.addEventListener('resize', debounce(this.handleScroll, 30))
+      window.addEventListener('scroll', debounce(this.handleScroll, 10))
+      window.addEventListener('resize', debounce(this.handleScroll, 10))
       this.sidebarNode = this.refs.sidebar
       this.sidebarNodeOffset = this.sidebarNode.offsetTop
       this.handleScroll()
