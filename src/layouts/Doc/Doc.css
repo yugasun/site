@@ -1,3 +1,4 @@
+$sidebarWidth: 250px;
 .page {
   composes: content from "../../index.css";
   min-height: calc(100vh - $navHeight - $footerHeight)
@@ -15,10 +16,26 @@
   margin-top: 20px;
 }
 .sidebar {
-  min-width: 230px;
-  max-width: 230px;
+  min-width: $sidebarWidth;
+  max-width: $sidebarWidth;
   padding-right: 25px;
   background: white;
+}
+.cta {
+  min-width: 200px;
+  max-width: 200px;
+  font-size: 19px;
+  line-height: 2rem;
+  cursor: pointer;
+  padding: 14px 10px;
+  margin-left: -10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+.ctaText {
+  font-size: 13px;
+  margin-top: 10px;
 }
 .content {
   flex-grow: 1;

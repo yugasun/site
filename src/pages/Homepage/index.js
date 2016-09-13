@@ -29,12 +29,10 @@ export default class Homepage extends Component {
       showModal: false,
       isLoggedIn: loggedIn,
     }
-    this.space = false
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
     this.handleOnLogin = this.handleOnLogin.bind(this)
     this.onFeedbackSubmit = this.onFeedbackSubmit.bind(this)
-    // this.triggerEasterEgg = this.triggerEasterEgg.bind(this)
   }
   componentDidMount () {
     // const auth = this.context.auth
@@ -50,9 +48,6 @@ export default class Homepage extends Component {
   }
   handleToggle = () => {
     this.setState({showModal: !this.state.showModal})
-  }
-  triggerEasterEgg (e) {
-    e.preventDefault()
   }
   handleOnLogin (e) {
     console.log(e)

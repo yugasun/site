@@ -11,12 +11,26 @@ import { Link } from 'react-router'
 import generatedMenu from './generated-menu'
 import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
+import Button from '../../components/Button/Button'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import styles from './Doc.css'
 
 class Doc extends Component {
+  static contextTypes = {
+    auth: React.PropTypes.object.isRequired,
+  };
   constructor (props, context) {
     super(props, context)
+
+    const auth = this.context.auth
+    const loggedIn = auth.loggedIn()
+    this.state = {
+      active: false,
+      showModal: false,
+      isLoggedIn: loggedIn,
+    }
+    this.login = auth.login.bind(this)
+    this.logout = auth.logout.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
     this.sidebarNode = null
     this.sidebarNodeOffset = null
@@ -107,8 +121,12 @@ class Doc extends Component {
     return (
       <div className={styles.sidebar}>
         <div ref='sidebar'>
-        {childrenItems}
-        {parentItems}
+          {childrenItems}
+          {parentItems}
+          <div className={styles.cta} onClick={this.login}>
+            The Serverless Platform is coming
+            <div className={styles.ctaText}>Sign up for early access</div>
+          </div>
         </div>
       </div>
     )
@@ -206,6 +224,7 @@ Doc.propTypes = {
 
 Doc.contextTypes = {
   metadata: PropTypes.object.isRequired,
+  auth: React.PropTypes.object.isRequired,
 }
 
 export default Doc
