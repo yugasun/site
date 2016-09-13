@@ -11,21 +11,20 @@ module.exports = function updateFileContents (filePath, callBack) {
   }, function (err, content, filename, next) {
     if (err) throw err
 
-    var replace = fixCommentedYaml(content, filename)
+    var replace = fixYamlContent(content, filename)
     // parse yaml frontmatter for title
     var item = matter(replace).data
     item.gitLink = filename.split('framework')[1]
-    var what = jsonToYaml.stringify(item)
+    var updatedFrontmatter = jsonToYaml.stringify(item)
     // regex patterns to match frontmatter
     // ---(\s*?.*?)*?---
     // ^(---)(\s*?.*?)*?(---)
     // ^---(\s*?.*?)*?---
     var newYamlContent = `---
-${what}---`
+${updatedFrontmatter}---`
 
     var finalNewContent = replace.replace(/^---(\s*?.*?)*?---/, newYamlContent)
 
-    // writeBackToFile(filename, replace, next)
     fs.writeFileSync(filename, finalNewContent)
 
     if (path.basename(filename) === 'README.md') {
@@ -47,19 +46,19 @@ ${what}---`
   )
 }
 
-function fixCommentedYaml (content, filename) {
+function fixYamlContent (content, filename) {
   // fix links for website
-  var fixLinks = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
+  var fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
+  // fix Yaml frontmatter
+  fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
   // replace /README)
-  fixLinks = fixLinks.replace(/\/README\)/g, ')')
-  // fix paths of links that are not index.md
+  fixedContent = fixedContent.replace(/\/README\)/g, ')')
+  // fix paths of links that are not index.md('README.md')
   if (path.basename(filename) !== 'README.md') {
-    console.log('FIX LINKS')
     // replace (.. with (../..
-    fixLinks = fixLinks.replace(/\(\.\./g, '(../..')
+    fixedContent = fixedContent.replace(/\(\.\./g, '(../..')
     // replace (./ with (../
-    fixLinks = fixLinks.replace(/\(\.\//g, '(../')
-
+    fixedContent = fixedContent.replace(/\(\.\//g, '(../')
   }
-  return fixLinks.replace('<!--', '---').replace('-->', '---')
+  return fixedContent
 }

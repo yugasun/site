@@ -1,9 +1,19 @@
 import React, { Component, PropTypes } from 'react'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 import Page from '../Page'
 
-class Post extends Component {
+/**
+<Helmet
+   script={[
+      {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
+   ]}
+   link={[
+      {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
+   ]}
+ />
+ */
 
+class Post extends Component {
   // it's up to you to choose what to do with this layout ;)
 
   render () {
@@ -23,14 +33,6 @@ class Post extends Component {
         {...props}
         header={header}
       >
-        <Helmet
-          script={[
-             {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
-          ]}
-          link={[
-             {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
-          ]}
-        />
       </Page>
     )
   }
