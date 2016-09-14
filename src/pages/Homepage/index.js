@@ -1,103 +1,23 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router'
 import Page from '../../layouts/Page'
 import Newsletter from '../../fragments/Newsletter/Newsletter'
+import UserAuth from '../../components/UserAuth'
 import Terminal from '../../components/TerminalCommands/TerminalCommands'
 import ContentBlock from '../../components/ContentBlock/ContentBlock'
-import Checkbox from '../../components/Checkbox/Check'
-import Modal from '../../components/Modal/Modal'
 import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
 import frameworkGif from '../../assets/images/framework.gif'
 import communityJpg from '../../assets/images/community.png'
 import styles from './Homepage.css'
-import AutoForm from 'react-auto-form'
-import submitFeatureData from '../../utils/SurveyService'
+// import { Link } from 'react-router'
 
 export default class Homepage extends Component {
-  static contextTypes = {
-    auth: React.PropTypes.object.isRequired,
-  };
-  constructor (props, context) {
-    super(props, context)
 
-    const auth = this.context.auth
-    const loggedIn = auth.loggedIn()
-    this.state = {
-      active: false,
-      showModal: false,
-      isLoggedIn: loggedIn,
-    }
-    this.login = auth.login.bind(this)
-    this.logout = auth.logout.bind(this)
-    this.handleOnLogin = this.handleOnLogin.bind(this)
-    this.onFeedbackSubmit = this.onFeedbackSubmit.bind(this)
-  }
-  componentDidMount () {
-    // const auth = this.context.auth
-    // const loggedIn = auth.loggedIn()
-    // console.log('componentDidMount loggedIn', loggedIn)
-    // in mulesoft application XYZ
-    window.addEventListener('serverlessLogin', this.handleOnLogin, false)
-  }
-  componentDidUpdate () {
-    // const auth = this.context.auth
-    // const loggedIn = auth.loggedIn()
-    // // console.log('componentDidUpdate loggedIn', loggedIn)
-  }
-  handleToggle = () => {
-    this.setState({showModal: !this.state.showModal})
-  }
-  handleOnLogin (e) {
-    console.log(e)
-    console.log(e.detail) // org ID
-    // logins_count < 2
-    this.setState({
-      showModal: true,
-      isLoggedIn: true
-    })
-  }
-  onFeedbackSubmit (event, data) {
-    event.preventDefault()
-    console.log(event)
-    console.log(data)
-    const other = data.other
-    delete data.other
-    const sendData = {
-      formData: data,
-      other: other,
-      userData: localStorage.getItem('profile') // eslint-disable-line
-    }
-    var that = this
-    submitFeatureData(sendData, function (err, data) {
-      if (err) {
-        console.log('err', err)
-        return false
-      }
-      that.setState({
-        showModal: false
-      })
-    })
-  }
-  renderBetaButton () {
-    const { isLoggedIn } = this.state
-    if (isLoggedIn) {
-      return (
-        <p style={{color: '#fff'}}>You are registered for the beta!</p>
-      )
-    } else {
-      return (
-        <Button onClick={this.login}>
-          Sign up for early access
-        </Button>
-      )
-    }
-  }
   render () {
-    // const auth = this.context.auth
-    // const loggedIn = auth.loggedIn()
-
+    const loggedInComponent = (
+      <p style={{color: '#fff'}}>You are registered for the beta!</p>
+    )
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
@@ -133,9 +53,11 @@ export default class Homepage extends Component {
                   <h2 className={styles.ctaCopy}>
                     The Serverless Platform is coming
                   </h2>
-                  <Button kind='yellow' className={styles.btn} style={{display: 'inline-block', marginTop: 20}} onClick={this.login}>
-                    Sign up for early access
-                  </Button>
+                  <UserAuth loggedInComponent={loggedInComponent}>
+                    <Button kind='yellow' className={styles.btn} style={{display: 'inline-block', marginTop: 20}} onClick={this.login}>
+                      Sign up for early access
+                    </Button>
+                  </UserAuth>
                 </div>
               </div>
             </div>
@@ -180,28 +102,6 @@ export default class Homepage extends Component {
             </div>
           </div>
         </div>
-
-        <Modal
-          active={this.state.showModal}
-          onEscKeyDown={this.handleToggle}
-          onOverlayClick={this.handleToggle}
-          title='Thanks for signing up for the Beta!'
-        >
-          <h3>Which products are you interested in?</h3>
-          <div>
-            <AutoForm onSubmit={this.onFeedbackSubmit} trimOnSubmit>
-              <Checkbox name={'monitoring'} label={'Serverless Application Monitoring'} />
-              <Checkbox name={'secret_manager'} label={'Serverless Secrets Manager'} />
-              <Checkbox name={'on_premise'} label={'Serverless On-premise'} />
-              <textarea className={styles.textarea} name='other' placeholder='Interested in other serverless tooling? Let us know' />
-              <span className={styles.feedbackSubmit}>
-                <Button kind='black' className={styles.btn}>
-                  Submit form
-                </Button>
-              </span>
-            </AutoForm>
-          </div>
-        </Modal>
       </Page>
     )
   }
