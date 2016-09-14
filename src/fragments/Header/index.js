@@ -4,15 +4,6 @@ import handleClickAway from '../../utils/handleClickAway'
 import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
-/*
-<Link to='/blog' className={`${styles.link}`}>
-  Blog
-</Link>
-<Link to='/framework/docs' className={styles.link}>
-  Documentation
-</Link>
-*/
-
 export default class Header extends Component {
   constructor (props, context) {
     super(props, context)

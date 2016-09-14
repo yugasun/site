@@ -3,11 +3,11 @@ import enhanceCollection from 'phenomic/lib/enhance-collection'
 // import {addScript, removeScript} from '../../utils/manageScripts'
 import Page from '../../layouts/Page'
 import {Link} from 'react-router'
-import Block from '../../components/Block'
+import BetaCTA from '../../fragments/BetaCTA'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
 import dummyImg from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
-
+console.log('BetaCTA', BetaCTA)
 const numberOfLatestPosts = 10
 const isClient = typeof window !== 'undefined'
 
@@ -78,10 +78,7 @@ export default class BlogPage extends Component {
           ))}
           </div>
           <div className={styles.sidebar}>
-            <Block>
-              Hi
-            </Block>
-
+            <BetaCTA />
           </div>
         </div>
       </Page>

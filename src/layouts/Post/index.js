@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import Page from '../Page'
 import Block from '../../components/Block'
+import UserAuth from '../../components/UserAuth'
 import styles from './Post.css'
 import disqus from './disqus-script'
 
@@ -28,10 +29,6 @@ class Post extends Component {
       </BodyContainer>
     )
 
-    const disqusScript = (
-      <Helmet script={[{'type': 'text/javascript', 'innerHTML': disqus}]} />
-    )
-
     return (
       <Page {...props} className={styles.postPage} >
         <div className={styles.postWrapper}>
@@ -45,14 +42,15 @@ class Post extends Component {
             {markdownContent}
           </div>
           <div className={styles.sidebar}>
-             Post sidebar
-            <Block>
-            lol
-            </Block>
+            <UserAuth>
+              <Block>
+                The serverless platform is coming.
+              </Block>
+            </UserAuth>
           </div>
         </div>
         <div id='disqus_thread'></div>
-        {disqusScript}
+        <Helmet script={[{'type': 'text/javascript', 'innerHTML': disqus}]} />
       </Page>
     )
   }
