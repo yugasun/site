@@ -7,7 +7,7 @@ import invariant from 'invariant'
 import { BodyContainer, joinUri } from 'phenomic'
 import styles from './Page.css'
 
-class Page extends Component {
+class Shell extends Component {
 
   render () {
     const { props, context } = this
@@ -48,8 +48,15 @@ class Page extends Component {
       { name: 'description', content: head.description },
     ]
 
+    const linkTags = [
+      {
+        'rel': 'canonical',
+        'href': pkg.homepage + __url
+      },
+    ]
+
     /* Markdown content will display if it exists */
-    const markdownContent = (
+    const markdown = (
       <BodyContainer>
         {body}
       </BodyContainer>
@@ -57,23 +64,31 @@ class Page extends Component {
 
     const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
+    let customScript
+    if (props.head.script) {
+    // if script defined in markdown frontmatter include it
+      customScript = (
+        <Helmet script={[{'src': props.head.script, 'type': 'text/javascript'}]} />
+      )
+    }
+
     return (
-      <div>
-        <Helmet title={metaTitle} meta={meta} />
+      <div className={this.props.className}>
+        <Helmet title={metaTitle} meta={meta} link={linkTags} />
 
         <div className={contentWrapperClass}>
           {header}
-          {markdownContent}
-          {props.children}
+          {props.children || markdown}
+          {footer}
         </div>
-        {footer}
-        <div dangerouslySetInnerHTML={{__html: props.head.script}} />
+
+        {customScript}
       </div>
     )
   }
 }
 
-Page.propTypes = {
+Shell.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,
@@ -83,10 +98,11 @@ Page.propTypes = {
   footer: PropTypes.element,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
+  className: PropTypes.string
 }
 
-Page.contextTypes = {
+Shell.contextTypes = {
   metadata: PropTypes.object.isRequired,
 }
 
-export default Page
+export default Shell

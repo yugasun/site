@@ -1,6 +1,8 @@
 .page {
-  composes: content from "../../index.css";
-  min-height: calc(100vh - $navHeight - $footerHeight)
+  max-width: 96rem;
+  margin: auto;
+  min-height: calc(100vh - $navHeight - $footerHeight);
+  margin-top: 20px;
 }
 
 .fullWidth {
