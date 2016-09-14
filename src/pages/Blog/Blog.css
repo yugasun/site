@@ -15,11 +15,7 @@
 .sidebar {
   width: 33.33333333333333%;
 }
-.widget {
-  padding: 20px;
-  border: 1px solid rgba(227, 229, 231, 0.498039);
-  border-radius: 3px;
-}
+
 .content {
   padding: 20px 10px;
 }
@@ -46,4 +42,16 @@ $thumbnailSize: 100px;
     width: $thumbnailSize;
     height: $thumbnailSize;
   }
+}
+.postMeta {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.avatarImg {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  border-radius: 100%;
 }

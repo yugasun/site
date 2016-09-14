@@ -3,7 +3,8 @@ import enhanceCollection from 'phenomic/lib/enhance-collection'
 // import {addScript, removeScript} from '../../utils/manageScripts'
 import Page from '../../layouts/Page'
 import {Link} from 'react-router'
-import Newsletter from '../../fragments/Newsletter/Newsletter'
+import Block from '../../components/Block'
+// import Newsletter from '../../fragments/Newsletter/Newsletter'
 import dummyImg from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
 
@@ -25,10 +26,20 @@ export default class BlogPage extends Component {
       // delete window.jQuery
     }
   }
-  renderBlogPreview (page) {
-    console.log(page)
+  renderBlogPreview (page, i) {
+    let author = 'serverless'
+    let avatarURL = 'http://www.fillmurray.com/200/200'
+    if (page.author && page.author.name) {
+      author = page.author.name
+    }
+    if (page.author && page.author.avatar) {
+      avatarURL = page.author.avatar
+    }
+    const avatarImg = (
+      <img role='presentation' className={styles.avatarImg} src={avatarURL} />
+    )
     return (
-      <div key={page.title} className={styles.post}>
+      <div key={page.title + '-' + i} className={styles.post}>
         <div className={styles.thumbnail}>
           <img src={dummyImg} role='presentation' />
         </div>
@@ -39,8 +50,10 @@ export default class BlogPage extends Component {
           <div className={styles.description}>
             {page.description}
           </div>
-          <div>
-            written by
+          <div className={styles.postMeta}>
+            <span>written by</span>
+            {avatarImg}
+            <span>{author}</span>
           </div>
         </div>
       </div>
@@ -60,15 +73,15 @@ export default class BlogPage extends Component {
         <h2>{"Blog"}</h2>
         <div className={styles.wrapper}>
           <div className={styles.postList}>
-          {latestPosts.map((page) => (
-            this.renderBlogPreview(page)
+          {latestPosts.map((page, i) => (
+            this.renderBlogPreview(page, i)
           ))}
           </div>
           <div className={styles.sidebar}>
-            <div className={styles.widget}>
-              Write for us
-              <Newsletter buttonText={'🔥'} />
-            </div>
+            <Block>
+              Hi
+            </Block>
+
           </div>
         </div>
       </Page>

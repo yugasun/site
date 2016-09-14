@@ -1,26 +1,19 @@
 import React, { Component, PropTypes } from 'react'
-// import Helmet from 'react-helmet'
+import Helmet from 'react-helmet'
+import { BodyContainer } from 'phenomic'
 import Page from '../Page'
-
-/**
-<Helmet
-   script={[
-      {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
-   ]}
-   link={[
-      {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
-   ]}
- />
- */
+import Block from '../../components/Block'
+import styles from './Post.css'
+import disqus from './disqus-script'
 
 class Post extends Component {
-  // it's up to you to choose what to do with this layout ;)
 
   render () {
     const { props } = this
-    const { head } = props
+    const { head, body } = props
     const pageDate = head.date ? new Date(head.date) : null
-    const header = (
+
+    const postMeta = (
       <header>
         {pageDate &&
           <time key={pageDate.toISOString()}>
@@ -28,11 +21,39 @@ class Post extends Component {
           </time>}
       </header>
     )
+
+    const markdownContent = (
+      <BodyContainer>
+        {body}
+      </BodyContainer>
+    )
+
+    const disqusScript = (
+      <Helmet script={[{'type': 'text/javascript', 'innerHTML': disqus}]} />
+    )
+
     return (
-      <Page
-        {...props}
-        header={header}
-      />
+      <Page {...props} className={styles.postPage} >
+        <div className={styles.postWrapper}>
+          <div className={styles.content}>
+
+            <h1>{head.title}</h1>
+
+            <div className={styles.postMeta}>
+              {postMeta}
+            </div>
+            {markdownContent}
+          </div>
+          <div className={styles.sidebar}>
+             Post sidebar
+            <Block>
+            lol
+            </Block>
+          </div>
+        </div>
+        <div id='disqus_thread'></div>
+        {disqusScript}
+      </Page>
     )
   }
 }
