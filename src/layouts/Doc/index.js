@@ -1,16 +1,14 @@
 /**
  * Base Doc template
- * https://github.com/reactjs/react-router/blob/master/docs/API.md#withroutercomponent-options
  */
 import React, { Component, PropTypes } from 'react'
-import Helmet from 'react-helmet'
-import invariant from 'invariant'
-import { BodyContainer, joinUri } from 'phenomic'
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
+import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
-import generatedMenu from './generated-menu'
 import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
+import generatedMenu from './generated-menu'
+import Shell from '../Page'
+import Breadcrumbs from '../../components/Breadcrumbs'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import styles from './Doc.css'
 
@@ -65,7 +63,6 @@ class Doc extends Component {
     if (menu && menu.children) {
       renderItems = menu.children.map(function (item, i) {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
-        // const title = (item.name && item.name.length > 35) ? item.name : null
         return (
           <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
             <Link to={item.path} >
@@ -119,7 +116,7 @@ class Doc extends Component {
     const parentItems = this.renderParentList()
     return (
       <div className={styles.sidebar}>
-        <div ref='sidebar'>
+        <div ref='sidebar' className={styles.sidebarInner}>
           {childrenItems}
           {parentItems}
           <div className={styles.cta} onClick={this.login}>
@@ -131,87 +128,50 @@ class Doc extends Component {
     )
   }
   render () {
-    const { props, context } = this
-
     const {
-      pkg,
-    } = context.metadata
-
-    const {
-      __filename,
       __url,
       head,
       body,
-      header,
-      footer,
-      fullWidth
-    } = props
+    } = this.props
 
-    invariant(
-      typeof head.title === 'string',
-      `Your page '${__filename}' needs a title`
-    )
+    const githubURL = 'https://github.com/serverless/serverless/edit/master' + head.gitLink
 
-    const metaTitle = head.metaTitle ? head.metaTitle : head.title
-
-    const meta = [
-      { property: 'og:type', content: 'article' },
-      { property: 'og:title', content: metaTitle },
-      {
-        property: 'og:url',
-        content: joinUri(process.env.PHENOMIC_USER_URL, __url),
-      },
-      { property: 'og:description', content: head.description },
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:title', content: metaTitle },
-      { name: 'twitter:creator', content: `@${pkg.twitter}` },
-      { name: 'twitter:description', content: head.description },
-      { name: 'description', content: head.description },
-    ]
-
-    /* Markdown content will display if it exists */
     const markdownContent = (
       <BodyContainer>
         {body}
       </BodyContainer>
     )
 
-    const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
+    const breadcrumbs = (
+      <Breadcrumbs className={styles.breadCrumbContainer} path={__url} />
+    )
 
     return (
-      <div className={styles.docContainer}>
-        <Helmet title={metaTitle} meta={meta} />
-
-        <div className={contentWrapperClass}>
-          <Breadcrumbs path={__url} />
-          {header}
+      <Shell {...this.props} header={breadcrumbs}>
+        <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
+
             {this.renderSidebar()}
+
             <div className={styles.content}>
               <span className={styles.editLink}>
                 <Svg svg={gitHubSvg} cleanup />
-                <a
-                  target='_blank'
-                  href={'https://github.com/serverless/serverless/edit/master' + head.gitLink}>
-                    Edit on github
+                <a target='_blank' href={githubURL}>
+                  Edit on github
                 </a>
               </span>
+
               {markdownContent}
+
             </div>
           </div>
-
-          {props.children}
         </div>
-        {footer}
-        <div dangerouslySetInnerHTML={{__html: props.head.script}} />
-      </div>
+      </Shell>
     )
   }
 }
 
 Doc.propTypes = {
-  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,
   head: PropTypes.object.isRequired,
   body: PropTypes.string.isRequired,

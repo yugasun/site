@@ -1,14 +1,6 @@
 $sidebarWidth: 250px;
-.page {
-  composes: content from "../../index.css";
-  min-height: calc(100vh - $navHeight - $footerHeight)
-}
 
-.fullWidth {
-  width: 100%;
-  overflow: hidden;
-}
-.docContainer {
+.docContainer, .breadCrumbContainer {
   margin-top: 20px;
 }
 .docWrapper {
@@ -20,6 +12,9 @@ $sidebarWidth: 250px;
   max-width: $sidebarWidth;
   padding-right: 25px;
   background: white;
+}
+.sidebarInner {
+  background: #fff;
 }
 .cta {
   min-width: 200px;

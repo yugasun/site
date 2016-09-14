@@ -1,6 +1,8 @@
 /** Localized Styles for app.js **/
 .layout {
   /* placeholder */
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -17,7 +19,7 @@
   }
 }
 .minHeight > div  {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .avenir {
   font-family: 'Avenir Next W00', sans-serif;

@@ -39,3 +39,20 @@ We are using [netlify](http://netlify.com) to distribute the site. It pushes any
 So, whenever making changes to the site, it's important to do those on branches and submit a pull request for us to merge into master.
 
 Make sure `npm run build` works locally or the build in netlify's CI/CD will fail and the updates won't be visible on the site.
+
+
+## Adding Custom Scripts
+
+To add custom scripts to page templates you will need to use React Helmet
+
+```js
+import Helmet from 'react-helmet'
+<Helmet
+   script={[
+      {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
+   ]}
+   link={[
+      {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
+   ]}
+ />
+```
