@@ -23,6 +23,7 @@
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
+    "postbuild": "node scripts/sitemap.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint"
   },
@@ -37,6 +38,7 @@
     "babel-preset-react-hmre": "^1.0.1",
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-1": "^6.3.13",
+    "cheerio": "^0.22.0",
     "classnames": "^2.2.3",
     "color": "^0.11.1",
     "css-loader": "^0.23.0",
@@ -83,6 +85,7 @@
     "redux": "^3.0.0",
     "serverless": "git://github.com/serverless/serverless.git",
     "serverless-blog": "git://github.com/serverless/blog.git",
+    "sitemap": "^1.8.1",
     "style-loader": "^0.12.3",
     "stylelint": "^6.8.0",
     "stylelint-config-standard": "^10.0.0",
@@ -121,6 +124,8 @@
     }
   },
   "dependencies": {
+    "algolia-react-input": "^1.1.0",
+    "algoliasearch": "^3.18.1",
     "auth0-lock": "^10.2.1",
     "axios": "^0.13.1",
     "classnames": "^2.2.5",

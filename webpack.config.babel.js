@@ -2,9 +2,11 @@ import path from 'path'
 import fs from 'fs'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import serverlessPackageJSON from 'serverless/package.json'
 import dotenv from 'dotenv'
 import { phenomicLoader } from 'phenomic'
 import pkg from './package.json'
+
 let dotEnvVars
 // We sync-check since this is startup code
 if (fs.existsSync('.env')) {
@@ -33,7 +35,8 @@ export const makeConfig = (config = {}) => {
     }, {
       'process.env': {
         'NODE_ENV': (config.production) ? '"production"' : '"development"',
-        'BROWSER': (config.production) ? JSON.stringify(false) : JSON.stringify(true)
+        'BROWSER': (config.production) ? JSON.stringify(false) : JSON.stringify(true),
+        'DOCS_VERSION': JSON.stringify(serverlessPackageJSON.version)
       }
     })
 
