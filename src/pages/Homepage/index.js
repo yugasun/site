@@ -28,7 +28,7 @@ export default class Homepage extends Component {
 
                   <div className={styles.copy}>
                     <h3 className={styles.tagline}>Build more,</h3>
-                    <h3 className={styles.tagline}>manage less.</h3>
+                    <h3 className={styles.tagline}>manage less</h3>
                     <h1 className={styles.heading}>With the <span style={{fontWeight: '500'}}>Serverless Framework</span></h1>
                     <Button
                       kind='black'

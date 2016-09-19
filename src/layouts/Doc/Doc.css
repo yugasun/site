@@ -1,11 +1,15 @@
 $sidebarWidth: 250px;
 
-.docContainer, .breadCrumbContainer {
+.docContainer {
   margin-top: 20px;
 }
 .docWrapper {
   display: flex;
   margin-top: 20px;
+}
+.versionNumber {
+  margin-top: 20px;
+  font-size: 1.4rem;
 }
 .sidebar {
   min-width: $sidebarWidth;

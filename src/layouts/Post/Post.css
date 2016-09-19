@@ -8,6 +8,7 @@ $sidebarWidth: 250px;
 .content {
   width: 650px;
   max-width: 650px;
+  min-width: 650px;
   padding-right: 30px;
   img {
     max-width: 100%;
@@ -15,4 +16,10 @@ $sidebarWidth: 250px;
 }
 .sidebar {
   flex-grow: 1;
+}
+.sidebarBlock {
+  margin-bottom: 20px;
+}
+.sidebarLinks {
+  margin-bottom: 10px;
 }

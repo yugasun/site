@@ -13,6 +13,10 @@ import Breadcrumbs from '../../components/Breadcrumbs'
 import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
 import styles from './Doc.css'
 
+/*
+TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
+*/
+
 class Doc extends Component {
   constructor (props, context) {
     super(props, context)
@@ -123,6 +127,9 @@ class Doc extends Component {
               <div className={styles.ctaText}>Sign up for early access</div>
             </div>
           </UserAuth>
+          <div className={styles.versionNumber}>
+            Docs Version: {process.env.DOCS_VERSION}
+          </div>
         </div>
       </div>
     )

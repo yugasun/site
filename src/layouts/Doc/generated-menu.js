@@ -256,7 +256,7 @@ module.exports = {
       },
       {
         'path': '/framework/docs/providers/aws/events/dynamodb-streams',
-        'title': 'SNS Event config',
+        'title': 'DynamoDB Streams config',
         'order': 6
       }
     ]
@@ -329,7 +329,13 @@ module.exports = {
     'children': []
   },
   '/framework/docs/providers/aws/examples/using-external-libraries': {
-    'index': [],
+    'index': [
+      {
+        'path': '/framework/docs/providers/aws/examples/using-external-libraries/index',
+        'title': 'Using External Libraries',
+        'order': 2
+      }
+    ],
     'children': [
       {
         'path': '/framework/docs/providers/aws/examples/using-external-libraries/node',

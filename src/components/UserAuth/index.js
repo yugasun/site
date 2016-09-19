@@ -7,6 +7,8 @@ export class UserAuth extends React.Component {
 
   static propTypes = {
     children: PropTypes.any,
+    className: PropTypes.string,
+    style: PropTypes.object,
     loggedInComponent: PropTypes.any,
   }
   constructor (props, context) {
@@ -24,13 +26,13 @@ export class UserAuth extends React.Component {
   }
   render () {
     const { loggedIn } = this.state
-    const { children, loggedInComponent } = this.props
+    const { children, loggedInComponent, style, className } = this.props
     let renderedContent = children
     if (loggedIn && loggedInComponent) {
       renderedContent = loggedInComponent
     }
     return (
-      <div onClick={this.login}>
+      <div className={className} style={style} onClick={this.login}>
         {renderedContent}
       </div>
     )
