@@ -10,6 +10,7 @@ import Jobs from './pages/Jobs'
 import Blog from './pages/Blog'
 import PageError from './pages/404'
 import Homepage from './pages/Homepage'
+import Search from './pages/Search'
 import Community from './pages/Community'
 
 export default class Layouts extends React.Component {
@@ -23,6 +24,7 @@ export default class Layouts extends React.Component {
           PageLoading,
           Homepage,
           Community,
+          Search,
           Post,
           Jobs,
           Blog,

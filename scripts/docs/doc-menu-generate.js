@@ -96,13 +96,14 @@ function generateSubPaths (arr) {
 var level = 0
 
 function traverse (x) {
+  console.log('x', x)
   if (isArray(x)) {
-    console.log('x', x)
     processChildrenArray(x)
   } else if ((typeof x === 'object') && (x !== null)) {
     processChildren(x)
   } else {
     // nil
+    console.log('NIL', x)
   }
 }
 
@@ -127,13 +128,6 @@ function processChildren (obj) {
     level = level + 1
   }
 }
-// kick off menu creation
-traverse(filteredTree, 1)
-
-setTimeout(function () {
-  // save menu to file
-  writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
-}, 300)
 
 function writeJSONMenuToDirectory (dest, contents) {
   var p = path.join(dest, 'generated-menu.js')
@@ -145,3 +139,8 @@ function writeJSONMenuToDirectory (dest, contents) {
     console.log(dest + '/generated-menu.js Docs file generated')
   })
 }
+
+// kick off menu creation. sync process
+traverse(filteredTree, 1)
+// then write to file
+writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
