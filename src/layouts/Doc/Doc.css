@@ -1,5 +1,7 @@
 $sidebarWidth: 250px;
-
+.docPage {
+  margin-top: 10px;
+}
 .docContainer {
   margin-top: 20px;
 }
@@ -99,6 +101,9 @@ $sidebarWidth: 250px;
 }
 
 @media (max-width: 768px) {
+  .docPage {
+    padding: 0px 10px;
+  }
   .editLink {
     display: none;
   }
@@ -106,6 +111,9 @@ $sidebarWidth: 250px;
     max-width: 95%;
     min-width: 95%;
     margin: auto;
+  }
+  .sidebar {
+    margin-bottom: 40px;
   }
   .docWrapper {
     flex-direction: column;

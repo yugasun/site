@@ -5,7 +5,7 @@ import Page from '../../layouts/Page'
 import {Link} from 'react-router'
 import BetaCTA from '../../fragments/BetaCTA'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
-import dummyImg from '../../assets/images/platform_4.gif'
+import defaultThumbnail from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
 
 const numberOfLatestPosts = 10
@@ -29,11 +29,15 @@ export default class BlogPage extends Component {
   renderBlogPreview (page, i) {
     let author = 'serverless'
     let avatarURL = 'http://www.fillmurray.com/200/200'
+    let thumbnail = defaultThumbnail
     if (page.author && page.author.name) {
       author = page.author.name
     }
     if (page.author && page.author.avatar) {
       avatarURL = page.author.avatar
+    }
+    if (page.thumbnail) {
+      thumbnail = page.thumbnail
     }
     const avatarImg = (
       <img role='presentation' className={styles.avatarImg} src={avatarURL} />
@@ -41,7 +45,7 @@ export default class BlogPage extends Component {
     return (
       <div key={page.title + '-' + i} className={styles.post}>
         <div className={styles.thumbnail}>
-          <img src={dummyImg} role='presentation' />
+          <img src={thumbnail} role='presentation' />
         </div>
         <div className={styles.content}>
           <Link className={styles.title} to={page.__url}>
@@ -70,7 +74,7 @@ export default class BlogPage extends Component {
     console.log('latestPosts', latestPosts)
     return (
       <Page {...this.props}>
-        <h2>{"Blog"}</h2>
+        <h2 className={styles.pageTitle}>Serverless Blog</h2>
         <div className={styles.wrapper}>
           <div className={styles.postList}>
           {latestPosts.map((page, i) => (

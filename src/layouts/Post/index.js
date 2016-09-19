@@ -46,20 +46,30 @@ class Post extends Component {
             <Block className={styles.sidebarBlock}>
               <h2>Quick Links</h2>
               <div className={styles.sidebarLinks}>
-                <Link to='/framework/docs'>
-                  View the docs
+                <Link to='/framework/docs/guide'>
+                  Read the Serverless Guide
                 </Link>
               </div>
               <div className={styles.sidebarLinks}>
-                <Link to='/framework/docs/guide'>
-                  Guide to Serverless
+                <Link to='/framework/docs'>
+                  Serverless documentation
                 </Link>
+              </div>
+              <div className={styles.sidebarLinks}>
+                <a href='https://gitter.im/serverless/serverless'>
+                  Chat in Gitter
+                </a>
+              </div>
+              <div className={styles.sidebarLinks}>
+                <a href='http://forum.serverless.com'>
+                  Ask Questions on the Forum
+                </a>
               </div>
             </Block>
             <BetaCTA buttonText='Get early access' />
           </div>
         </div>
-        <div id='disqus_thread'></div>
+        <div className={styles.comments} id='disqus_thread'></div>
         <Helmet script={[{'type': 'text/javascript', 'innerHTML': disqus}]} />
       </Page>
     )

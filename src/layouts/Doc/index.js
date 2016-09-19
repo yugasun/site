@@ -154,7 +154,7 @@ class Doc extends Component {
     )
 
     return (
-      <Shell {...this.props} header={breadcrumbs}>
+      <Shell {...this.props} className={styles.docPage} header={breadcrumbs}>
         <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
 

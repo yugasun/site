@@ -4,6 +4,7 @@
 import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import invariant from 'invariant'
+import classnames from 'classnames'
 import { BodyContainer, joinUri } from 'phenomic'
 import styles from './Page.css'
 
@@ -71,12 +72,13 @@ class Shell extends Component {
         <Helmet script={[{'src': props.head.script, 'type': 'text/javascript'}]} />
       )
     }
+    const classes = classnames(contentWrapperClass, this.props.className)
 
     return (
-      <div className={this.props.className}>
+      <div>
         <Helmet title={metaTitle} meta={meta} link={linkTags} />
 
-        <div className={contentWrapperClass}>
+        <div className={classes}>
           {header}
           {props.children || markdown}
           {footer}

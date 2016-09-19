@@ -3,7 +3,7 @@
 }
 .postList {
   width: 66.66666666666666%;
-  padding-right: 15px;
+  padding-right: 35px;
 }
 .post {
   display: flex;
@@ -18,6 +18,8 @@
 
 .content {
   padding: 20px 10px;
+  padding-right: 30px;
+  padding-left: 20px;
 }
 .title {
   padding: 0;
@@ -35,7 +37,7 @@ $thumbnailSize: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 20px;
   min-width: $thumbnailContainer;
   img {
     border-radius: 50%;
@@ -54,4 +56,27 @@ $thumbnailSize: 100px;
   height: 25px;
   margin: 0 5px;
   border-radius: 100%;
+}
+@media (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .pageTitle {
+    padding: 0 10px;
+  }
+  .postList, .sidebar {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post {
+    flex-direction: column;
+  }
+  .thumbnail {
+    padding: 0px;
+    padding-top: 20px;
+  }
 }
