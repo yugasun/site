@@ -2,7 +2,7 @@
  * 404 page template
  */
 import React, { Component, PropTypes } from 'react'
-// import axios from 'axios'
+import axios from 'axios'
 import styles from './index.css'
 
 export default class PageError extends Component {
@@ -17,21 +17,23 @@ export default class PageError extends Component {
     errorText: 'Page Not Found',
   };
   componentDidMount () {
-    var payload = {
-      url: window.location.href,
-      // user?
+    const { error } = this.props
+    const url = window.location.href
+    if (error === 404 && !url.match(/localhost/)) {
+      axios({
+        method: 'post',
+        url: 'https://h413evrxuk.execute-api.us-west-2.amazonaws.com/dev/report',
+        data: {
+          url: url,
+        },
+      }).then(function (response) {
+        console.log('404 recorded')
+        console.log(response)
+        console.log(response.data)
+      }).catch(function (error) {
+        console.log(error)
+      })
     }
-    console.log(payload)
-    /* axios({
-      method: 'post',
-      url: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
-      data: payload,
-    }).then(function (response) {
-      console.log(response)
-      console.log(response.data)
-    }).catch(function (error) {
-      console.log(error)
-    })*/
   }
   // Todo add 404 tracking
   render () {
