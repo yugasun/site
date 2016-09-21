@@ -53,7 +53,10 @@ export default class PartnersPage extends React.Component {
     return (
       <Page {...this.props} >
         <h1>Serverless Partners Program</h1>
-
+        <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
+        <p>
+          If you are interested in learning more about our partners program send us an email <a href='mailto:partners@serverless.com'>partners@serverless.com</a>
+        </p>
         <section className={styles.tiles}>
           {this.listPartners()}
         </section>
