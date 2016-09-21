@@ -62,6 +62,7 @@ export default class PartnersPage extends React.Component {
         </section>
 
         <Modal
+          className={styles.modalWrapper}
           active={this.state.showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
@@ -73,6 +74,11 @@ export default class PartnersPage extends React.Component {
           <div>
             <div>
               {this.state.partner.description}
+            </div>
+            <div className={styles.siteLink}>
+              <a href={this.state.partner.website} target='_blank'>
+                Visit {this.state.partner.name}'s site
+              </a>
             </div>
           </div>
         </Modal>

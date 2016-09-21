@@ -105,7 +105,9 @@
     z-index: 2;
   }
 }
-
+.modalWrapper {
+  width: $breakpointLgTablet;
+}
 .modalLogoWrapper {
   display: flex;
   align-items: center;
@@ -114,4 +116,13 @@
 }
 .modalLogo {
   max-width: 100%;
+}
+.siteLink {
+  margin: 20px 0;
+  a {
+    padding: 20px;
+    background: $yellow;
+    text-decoration: none;
+    color: $black1;
+  }
 }
