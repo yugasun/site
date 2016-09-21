@@ -126,3 +126,23 @@
     color: $black1;
   }
 }
+
+
+@media (max-width: 1060px) {
+  .block {
+    width: calc(50% - 2.5em);
+  }
+  .tiles {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .block {
+    width: 100%;
+  }
+  .block:hover {
+    .image {
+      transform: scale(1.03);
+    }
+  }
+}

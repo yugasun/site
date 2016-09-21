@@ -9,3 +9,16 @@
   width: 100%;
   overflow: hidden;
 }
+
+@media (max-width: 960px) {
+  .page {
+    padding: 0 10px;
+  }
+  .fullWidth {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+
+}

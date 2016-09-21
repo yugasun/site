@@ -47,4 +47,7 @@ $sidebarWidth: 250px;
   .sidebar {
     margin-bottom: 30px;
   }
+  .postPage {
+    margin-top: 20px;
+  }
 }
