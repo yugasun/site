@@ -23,7 +23,7 @@
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
-    "postbuild": "node scripts/sitemap.js",
+    "postbuild": "node scripts/sitemap.js && node scripts/redirects.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint"
   },
