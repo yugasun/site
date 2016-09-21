@@ -19,12 +19,14 @@ export default class PageError extends Component {
   componentDidMount () {
     const { error } = this.props
     const url = window.location.href
+    // console.log(document.referrer || window.localStorage.getItem('sls_last_page'))
     if (error === 404 && !url.match(/localhost/)) {
       axios({
         method: 'post',
         url: 'https://h413evrxuk.execute-api.us-west-2.amazonaws.com/dev/report',
         data: {
           url: url,
+          // referrer: document.referrer || window.localStorage.getItem('sls_last_page')
         },
       }).then(function (response) {
         console.log('404 recorded')
