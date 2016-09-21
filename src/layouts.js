@@ -11,6 +11,7 @@ import Blog from './pages/Blog'
 import PageError from './pages/404'
 import Homepage from './pages/Homepage'
 import Search from './pages/Search'
+import Partners from './pages/Partners'
 import Community from './pages/Community'
 
 export default class Layouts extends React.Component {
@@ -28,6 +29,7 @@ export default class Layouts extends React.Component {
           Post,
           Jobs,
           Blog,
+          Partners,
           Doc
         }}
       />
