@@ -50,6 +50,7 @@ export default class PartnersPage extends React.Component {
     })
   }
   render () {
+    const { partner, showModal } = this.state
     return (
       <Page {...this.props} >
         <h1>Serverless Partners Program</h1>
@@ -63,21 +64,26 @@ export default class PartnersPage extends React.Component {
 
         <Modal
           className={styles.modalWrapper}
-          active={this.state.showModal}
+          active={showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
         >
           <div className={styles.modalLogoWrapper} >
-            <img className={styles.modalLogo} src={this.state.partner.logo} alt='' />
+            <img className={styles.modalLogo} src={partner.logo} alt='' />
           </div>
-          <h2>{this.state.partner.name}</h2>
+          <h2>{partner.name}</h2>
           <div>
             <div>
-              {this.state.partner.description}
+              {partner.description}
+            </div>
+            <div>
+              {partner.stories && partner.stories.map((link, i) => {
+                return <a href={link.url}>{link.title}</a>
+              })}
             </div>
             <div className={styles.siteLink}>
-              <a href={this.state.partner.website} target='_blank'>
-                Visit {this.state.partner.name}'s site
+              <a href={partner.website} target='_blank'>
+                Visit {partner.name}'s site
               </a>
             </div>
           </div>

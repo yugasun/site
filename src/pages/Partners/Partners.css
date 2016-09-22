@@ -124,6 +124,7 @@
     background: $yellow;
     text-decoration: none;
     color: $black1;
+    border: none;
   }
 }
 

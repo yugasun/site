@@ -18,6 +18,11 @@
     "logo": "https://parall.ax/parallax/img/logo@2x.png",
     "tagline": "Bring us an idea. We’ll bring it to life.",
     "description": "We’re a bunch of creatives based in Leeds. We make websites and apps. We also craft engaging content, build software, get friendly with search engines and turn our hands to all kinds of design, development and digital marketing. Bring us an idea. We’ll bring it to life.",
-    "website": "https://parall.ax/"
+    "website": "https://parall.ax/",
+    "stories": [{
+      "title": "Scaling to Millions With David Guetta",
+      "url":"/learn/scaling-to-millions-of-requests/"
+      }
+    ]
   }
 }
