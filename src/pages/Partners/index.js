@@ -33,7 +33,7 @@ export default class PartnersPage extends React.Component {
     var handler = this.openModal
     return Object.keys(partners).map(function (company, i) {
       return (
-        <div className={styles.block} >
+        <div className={styles.block}>
           <span className={styles.image}>
             <div className={styles.imageBG}>
               <img src={partners[company].logo} alt='' />
@@ -49,19 +49,39 @@ export default class PartnersPage extends React.Component {
       )
     })
   }
+  showCaseStudies () {
+    return Object.keys(partners).map(function (company, i) {
+      return (
+        <div className={styles.caseStudyItem}>
+          {partners[company].stories && partners[company].stories.map((link, i) => {
+            return (
+              <span className={styles.caseStudyLink}>
+                <a href={link.url}>
+                  {link.title} - <strong>{partners[company].name}</strong>
+                </a>
+              </span>
+            )
+          })}
+        </div>
+      )
+    })
+  }
   render () {
     const { partner, showModal } = this.state
     return (
       <Page {...this.props} >
         <h1>Serverless Partners Program</h1>
         <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
-        <p>
+        <p style={{position: 'relative', zIndex: 2}}>
           If you are interested in learning more about our partners program send us an email <a href='mailto:partners@serverless.com'>partners@serverless.com</a>
         </p>
         <section className={styles.tiles}>
           {this.listPartners()}
         </section>
-
+        <section className={styles.caseStudies}>
+          <h2>Partner Success Stories</h2>
+          {this.showCaseStudies()}
+        </section>
         <Modal
           className={styles.modalWrapper}
           active={showModal}

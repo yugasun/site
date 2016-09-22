@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin: -2.5em 0 0 -2.5em;
+  margin: -1.5em 0 30px -2.5em;
 }
 
 .block {
@@ -69,6 +69,12 @@
 .imageBG {
   height: 100%;
   width: 70%;
+}
+.caseStudies {
+
+}
+.caseStudyLink {
+  display: block;
 }
 .image {
   transition: transform 0.5s ease;
