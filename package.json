@@ -23,7 +23,7 @@
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
-    "postbuild": "node scripts/sitemap.js && node scripts/redirects.js",
+    "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint"
   },
@@ -59,7 +59,9 @@
     "fs-extra": "^0.30.0",
     "gray-matter": "^2.0.2",
     "history": "^2.0.0",
+    "htmlparser2": "^3.9.1",
     "invariant": "^2.1.1",
+    "jade": "^1.11.0",
     "json-loader": "^0.5.2",
     "mv": "^2.1.1",
     "node-dir": "^0.1.16",
@@ -88,6 +90,7 @@
     "style-loader": "^0.12.3",
     "stylelint": "^6.8.0",
     "stylelint-config-standard": "^10.0.0",
+    "svgo": "^0.7.0",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.11.0",
     "yamljs": "^0.2.8"
