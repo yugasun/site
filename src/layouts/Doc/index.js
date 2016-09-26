@@ -8,9 +8,10 @@ import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
 import Shell from '../Page'
+import auth from '../../utils/auth'
 import UserAuth from '../../components/UserAuth'
 import Breadcrumbs from '../../components/Breadcrumbs'
-import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
+import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Doc.css'
 
 /*
@@ -21,7 +22,6 @@ class Doc extends Component {
   constructor (props, context) {
     super(props, context)
 
-    const auth = this.context.auth
     const loggedIn = auth.loggedIn()
     this.state = {
       active: false,
@@ -190,7 +190,6 @@ Doc.propTypes = {
 
 Doc.contextTypes = {
   metadata: PropTypes.object.isRequired,
-  auth: React.PropTypes.object.isRequired,
 }
 
 export default Doc

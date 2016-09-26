@@ -19,16 +19,6 @@ export default class IndexComponent extends Component {
   static contextTypes = {
     metadata: PropTypes.object.isRequired,
   };
-  static childContextTypes = {
-    auth: PropTypes.object.isRequired,
-  };
-  // Add Auth object to this.context
-  getChildContext () {
-    return {
-      auth: this.props.route.auth
-    }
-  }
-
   render () {
     return (
       <div className={styles.layout}>
