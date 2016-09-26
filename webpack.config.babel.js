@@ -157,7 +157,7 @@ export const makeConfig = (config = {}) => {
       // }),
       // require("postcss-reporter")(),
       /* do math with resolve( ) */
-      require("postcss-math"),
+      require('postcss-math'),
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
