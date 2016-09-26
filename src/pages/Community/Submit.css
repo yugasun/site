@@ -1,0 +1,13 @@
+.background {
+  background: $black2;
+}
+.submitContent {
+  margin: auto;
+  padding-top: 30px;
+  width: 70%;
+  color: #fff;
+}
+.button {
+  width: 70%;
+  margin: auto;
+}
