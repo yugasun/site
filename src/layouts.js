@@ -6,11 +6,12 @@ import PageLoading from './layouts/PageLoading'
 import Post from './layouts/Post'
 import Doc from './layouts/Doc'
 /* custom pages */
+// import TestPage from './pages/TestPage'
 import Jobs from './pages/Jobs'
 import Blog from './pages/Blog'
 import PageError from './pages/404'
 import Homepage from './pages/Homepage'
-import Search from './pages/Search'
+// import Search from './pages/Search'
 import Partners from './pages/Partners'
 import Community from './pages/Community'
 
@@ -25,7 +26,6 @@ export default class Layouts extends React.Component {
           PageLoading,
           Homepage,
           Community,
-          Search,
           Post,
           Jobs,
           Blog,

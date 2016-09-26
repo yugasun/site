@@ -42,6 +42,7 @@ export default class BlogPage extends Component {
     const avatarImg = (
       <img role='presentation' className={styles.avatarImg} src={avatarURL} />
     )
+
     return (
       <div key={page.title + '-' + i} className={styles.post}>
         <div className={styles.thumbnail}>
@@ -64,14 +65,12 @@ export default class BlogPage extends Component {
     )
   }
   render () {
-    console.log('collection', this.context.collection)
     const latestPosts = enhanceCollection(this.context.collection, {
       filter: { layout: 'Post' },
       sort: 'date',
       reverse: true,
     })
     .slice(0, numberOfLatestPosts)
-    console.log('latestPosts', latestPosts)
     return (
       <Page {...this.props}>
         <h2 className={styles.pageTitle}>Serverless Blog</h2>

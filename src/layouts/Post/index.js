@@ -5,6 +5,8 @@ import { Link } from 'react-router'
 import Page from '../Page'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
+import Svg from 'react-svg-inline'
+import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
 
@@ -29,7 +31,7 @@ class Post extends Component {
         {body}
       </BodyContainer>
     )
-
+    const githubURL = 'https://github.com/serverless/blog/edit/master/posts' + head.gitLink
     return (
       <Page {...props} className={styles.postPage} >
         <div className={styles.postWrapper}>
@@ -66,7 +68,17 @@ class Post extends Component {
                 </a>
               </div>
             </Block>
+
             <BetaCTA buttonText='Get early access' />
+
+            <div className={styles.editLinkWrapper}>
+              <span className={styles.editLink}>
+                <Svg svg={gitHubSvg} cleanup />
+                <a target='_blank' href={githubURL}>
+                  Edit this post on github
+                </a>
+              </span>
+            </div>
           </div>
         </div>
         <div className={styles.comments} id='disqus_thread'></div>
