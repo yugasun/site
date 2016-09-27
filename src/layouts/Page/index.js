@@ -49,12 +49,13 @@ class Shell extends Component {
       { name: 'description', content: head.description },
     ]
 
-    const linkTags = [
+    /* const linkTags = [
       {
         'rel': 'canonical',
         'href': pkg.homepage + __url
       },
-    ]
+       link={linkTags}
+    ]*/
 
     /* Markdown content will display if it exists */
     const markdown = (
@@ -76,8 +77,7 @@ class Shell extends Component {
 
     return (
       <div>
-        <Helmet title={metaTitle} meta={meta} link={linkTags} />
-
+        <Helmet title={metaTitle} meta={meta} />
         <div className={classes}>
           {header}
           {props.children || markdown}
