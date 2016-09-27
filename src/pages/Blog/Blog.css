@@ -15,7 +15,9 @@
 .sidebar {
   width: 33.33333333333333%;
 }
-
+.guestPost {
+  margin-top: 20px;
+}
 .content {
   padding: 20px 10px;
   padding-right: 30px;

@@ -4,6 +4,7 @@ import enhanceCollection from 'phenomic/lib/enhance-collection'
 import Page from '../../layouts/Page'
 import {Link} from 'react-router'
 import BetaCTA from '../../fragments/BetaCTA'
+import Block from '../../components/Block'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
 import defaultThumbnail from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
@@ -82,6 +83,14 @@ export default class BlogPage extends Component {
           </div>
           <div className={styles.sidebar}>
             <BetaCTA buttonText='Get early access' />
+            <Block className={styles.guestPost}>
+              <h3>
+              Join the Serverless<br />Guest Author Program
+              </h3>
+              <p>Have an awesome serverless story, tip, or trick? Share it with us.
+              </p>
+              <Link to='/blog/contribute/'>Learn More</Link>
+            </Block>
           </div>
         </div>
       </Page>
