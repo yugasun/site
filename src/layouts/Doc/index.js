@@ -117,7 +117,7 @@ class Doc extends Component {
     const childrenItems = this.renderChildrenList()
     const parentItems = this.renderParentList()
     return (
-      <div className={styles.sidebar}>
+      <div className={styles.sidebar + ' docs-sidebar'}>
         <div ref='sidebar' className={styles.sidebarInner}>
           {childrenItems}
           {parentItems}
@@ -154,13 +154,13 @@ class Doc extends Component {
     )
 
     return (
-      <Shell {...this.props} className={styles.docPage} header={breadcrumbs}>
+      <Shell {...this.props} className={styles.docPage + ' docs-breadcrumbs'} header={breadcrumbs}>
         <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
 
             {this.renderSidebar()}
 
-            <div className={styles.content}>
+            <div className={styles.content + ' docs-content'}>
               <span className={styles.editLink}>
                 <Svg svg={gitHubSvg} cleanup />
                 <a target='_blank' href={githubURL}>
