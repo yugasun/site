@@ -85,7 +85,7 @@ export default class BlogPage extends Component {
             <BetaCTA buttonText='Get early access' />
             <Block className={styles.guestPost}>
               <h3>
-              Join the Serverless<br />Guest Author Program
+                Join the Serverless<br />Guest Author Program
               </h3>
               <p>Have an awesome serverless story, tip, or trick? Share it with us.
               </p>
