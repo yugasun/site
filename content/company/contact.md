@@ -1,8 +1,8 @@
 ---
 title: Contact Us
-layout: Homepage
+layout: Page
 ---
 
 ## Contact us
 
-form
+Email team@serverless.com
