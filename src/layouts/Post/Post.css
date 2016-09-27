@@ -19,7 +19,7 @@ $sidebarWidth: 250px;
 }
 .editLink {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: white;
   a {
@@ -41,10 +41,7 @@ $sidebarWidth: 250px;
   margin-bottom: 20px;
 }
 .sidebarLinks {
-  margin-bottom: 15px;
-  &:last-of-type {
-    margin-bottom:5px;
-  }
+  margin-bottom: 5px;
   a:hover {
     border-bottom: 1px dashed black;
   }

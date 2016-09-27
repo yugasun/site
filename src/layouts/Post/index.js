@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import Page from '../Page'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
+import AuthorCTA from '../../fragments/AuthorCTA'
 import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
@@ -45,6 +46,7 @@ class Post extends Component {
             {markdownContent}
           </div>
           <div className={styles.sidebar}>
+
             <Block className={styles.sidebarBlock}>
               <h2>Quick Links</h2>
               <div className={styles.sidebarLinks}>
@@ -68,9 +70,6 @@ class Post extends Component {
                 </a>
               </div>
             </Block>
-
-            <BetaCTA buttonText='Get early access' />
-
             <div className={styles.editLinkWrapper}>
               <span className={styles.editLink}>
                 <Svg svg={gitHubSvg} cleanup />
@@ -79,6 +78,9 @@ class Post extends Component {
                 </a>
               </span>
             </div>
+            <BetaCTA buttonText='Get early access' />
+
+            <AuthorCTA style={{marginTop: '20px'}} />
           </div>
         </div>
         <div className={styles.comments} id='disqus_thread'></div>
