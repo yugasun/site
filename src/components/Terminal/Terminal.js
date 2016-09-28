@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import styles from './TerminalCommands.css'
+import styles from './Terminal.css'
 
 const propTypes = {
   children: PropTypes.any,
