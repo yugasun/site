@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "0.0.1",
   "name": "serverless-site",
   "homepage": "https://serverless.com",
   "googleAnalyticsUA": "UA-79510184-1",
