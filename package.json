@@ -43,7 +43,6 @@
     "babel-preset-stage-1": "^6.3.13",
     "cheerio": "^0.22.0",
     "classnames": "^2.2.3",
-    "climb-lookup": "^1.0.0",
     "color": "^0.11.1",
     "css-loader": "^0.23.0",
     "directory-tree": "^1.1.0",
@@ -137,6 +136,7 @@
     "react-google-analytics": "^0.2.0",
     "react": "^15.0.0-rc.1",
     "react-dom": "^15.0.0-rc.1",
-    "react-helmet": "^3.0.0"
+    "react-helmet": "^3.0.0",
+    "climb-lookup": "^1.0.0"
   }
 }
