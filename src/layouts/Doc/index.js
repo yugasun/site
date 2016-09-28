@@ -13,6 +13,7 @@ import UserAuth from '../../components/UserAuth'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Doc.css'
+import Helmet from 'react-helmet'
 
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
@@ -42,6 +43,7 @@ class Doc extends Component {
       this.sidebarNodeOffset = this.sidebarNode.offsetTop
       this.handleScroll()
     }
+    initializeSearch()
   }
   handleScroll (event) {
     const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
@@ -119,6 +121,7 @@ class Doc extends Component {
     return (
       <div className={styles.sidebar + ' docs-sidebar'}>
         <div ref='sidebar' className={styles.sidebarInner}>
+
           {childrenItems}
           {parentItems}
           <UserAuth>
@@ -150,11 +153,29 @@ class Doc extends Component {
     )
 
     const breadcrumbs = (
-      <Breadcrumbs className={styles.breadCrumbContainer} path={__url} />
+      <div className={styles.breadCrumbContainer}>
+        <Breadcrumbs path={__url} />
+        <div className={styles.searchWrapper}>
+          <input className={styles.searchBox} id='algolia-search'
+            placeholder='&#9889; Search docs' type='text' />
+        </div>
+      </div>
     )
-
     return (
       <Shell {...this.props} className={styles.docPage + ' docs-breadcrumbs'} header={breadcrumbs}>
+        <Helmet
+          link={[
+            {
+              'rel': 'stylesheet',
+              'href': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+            }
+          ]}
+          script={[
+            {
+              'src': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', 'type': 'text/javascript'
+            }
+          ]}
+        />
         <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
 
@@ -175,6 +196,21 @@ class Doc extends Component {
         </div>
       </Shell>
     )
+  }
+}
+
+function initializeSearch () {
+  if (typeof docsearch !== 'undefined') {
+    docsearch({ // eslint-disable-line
+      apiKey: 'd5a39b712b86965d93534207ef5423df',
+      indexName: 'serverless',
+      inputSelector: '#algolia-search',
+      debug: false
+    })
+  } else {
+    setTimeout(function () {
+      initializeSearch()
+    }, 50)
   }
 }
 
