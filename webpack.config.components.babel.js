@@ -3,6 +3,7 @@ import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import packageInfo from './package.json'
+const outputPath = path.join(__dirname, 'node_modules', '@serverless', 'ui-components')
 const srcPath = path.join(__dirname, 'src')
 const componentsPath = path.join(__dirname, '/src/components')
 let componentExternals = []
@@ -29,7 +30,7 @@ const externals = []
 module.exports = {
   entry: entryPoints,
   output: {
-    path: path.resolve('lib'),
+    path: outputPath,
     filename: '[name]/index.js',
     publicPath: '/dist/',
     libraryTarget: 'commonjs2',
