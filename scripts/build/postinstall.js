@@ -6,7 +6,7 @@ var exec = require('child_process').exec
 if (cwd.indexOf('node_modules') > -1) {
   console.log('in node_modules context')
   // do stuff
-  var webpackPath = path.resolve(cwd, 'node_modules', '.bin', 'webpack')
+  var webpackPath = path.resolve('node_modules', '.bin', 'webpack')
   var command = webpackPath + ' --display-chunks --color --config webpack.config.components.babel.js'
   exec(command, {cwd: cwd}, function (error, stdout, stderr) {
     if (error) {
