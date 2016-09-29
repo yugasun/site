@@ -136,7 +136,6 @@
     "react-google-analytics": "^0.2.0",
     "react": "^15.0.0-rc.1",
     "react-dom": "^15.0.0-rc.1",
-    "react-helmet": "^3.0.0",
-    "climb-lookup": "^1.0.0"
+    "react-helmet": "^3.0.0"
   }
 }
