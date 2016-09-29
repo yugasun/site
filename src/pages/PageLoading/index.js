@@ -14,7 +14,14 @@ export default class PageLoading extends Component {
         />
         <Header />
         <div className={styles.loader}>
-          <div className={styles.spinner}></div>
+          <div className={styles.loadingWrapper}>
+            <div className={styles.spinnerWrapper}>
+              <div className={styles.spinner}></div>
+            </div>
+            <div className={styles.imageWrapper}>
+              <img className={styles.image} src='https://media.giphy.com/media/13d8QPvzSWH5O8/giphy.gif' role='presentation' />
+            </div>
+          </div>
         </div>
         <Footer />
       </div>
