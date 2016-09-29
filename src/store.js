@@ -14,5 +14,5 @@ const store = createStore(
   }),
   combinedInitialStateObject
 )
-console.log('intial state', store.getState())
+// console.log('intial state', store.getState())
 export default store
