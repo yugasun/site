@@ -6,13 +6,12 @@ import Scripts from './fragments/GlobalScripts'
 import './index.global.css'
 import styles from './index.css'
 
-export default class IndexComponent extends Component {
+export default class Root extends Component {
   static propTypes = {
     /** references /layouts.js or a dynamic route from routes.js **/
     children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
     /** React Router params **/
     params: PropTypes.object,
-    route: PropTypes.object,
     location: PropTypes.object,
   };
   render () {
