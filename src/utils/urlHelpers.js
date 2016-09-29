@@ -4,15 +4,13 @@ export default function getURLParams (url) {
   const pattern = /([^&=]+)=?([^&]*)/g
   let params
   var matches
-
   if (url) {
-    params = (url.split('?').length <= 2) ? url.split('?')[1] : ''
+    var p = url.match(/\?(.*)/) // query
+    params = (p && p[1]) ? p[1].split('#')[0] : ''
   } else {
     params = window.location.search.substring(1)
   }
-  if (!params) {
-    return false
-  }
+  if (!params) { return false }
   while (matches = pattern.exec(params)) { // eslint-disable-line
     if (matches[1].indexOf('[') == '-1') { // eslint-disable-line
       urlParams[decode(matches[1])] = decode(matches[2])
