@@ -3,16 +3,16 @@ import ga from 'react-google-analytics'
 const InjectGoogleAnalytics = ga.Initializer
 const isProduction = process.env.NODE_ENV === 'production'
 const isClient = typeof window !== 'undefined'
+const googleAnalyticsUA = process.env.GOOGLE_ANALYTICS_UA
 
 class GoogleAnalyticsTracker extends Component {
 
   componentWillMount () {
     if (isClient) {
-      const { pkg } = this.context.metadata
       if (isProduction) {
-        ga('create', pkg.googleAnalyticsUA, 'auto')
+        ga('create', googleAnalyticsUA, 'auto')
       } else {
-        console.info('ga.create', pkg.googleAnalyticsUA)
+        console.info('ga.create', googleAnalyticsUA)
       }
       this.logPageview()
     }
@@ -45,10 +45,6 @@ class GoogleAnalyticsTracker extends Component {
 GoogleAnalyticsTracker.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   params: PropTypes.object.isRequired,
-}
-
-GoogleAnalyticsTracker.contextTypes = {
-  metadata: PropTypes.object.isRequired,
 }
 
 export default GoogleAnalyticsTracker

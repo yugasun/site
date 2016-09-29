@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "name": "serverless-site",
   "homepage": "https://serverless.com",
-  "googleAnalyticsUA": "UA-79510184-1",
-  "twitter": "goServerless",
-  "github": "serverless",
   "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
@@ -46,7 +43,6 @@
     "color": "^0.11.1",
     "css-loader": "^0.23.0",
     "directory-tree": "^1.1.0",
-    "dotenv": "^2.0.0",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-config-standard": "^5.3.1",

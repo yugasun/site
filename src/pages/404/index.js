@@ -4,6 +4,7 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import styles from './index.css'
+const log404Endpoint = process.env.ERROR_ENDPOINT
 
 export default class PageError extends Component {
 
@@ -23,10 +24,10 @@ export default class PageError extends Component {
     if (error === 404 && !url.match(/localhost/)) {
       axios({
         method: 'post',
-        url: 'https://h413evrxuk.execute-api.us-west-2.amazonaws.com/dev/report',
+        url: log404Endpoint,
         data: {
           url: url,
-          // referrer: document.referrer || window.localStorage.getItem('sls_last_page')
+          referrer: document.referrer || window.localStorage.getItem('sls_last_page')
         },
       }).then(function (response) {
         console.log('404 recorded')
