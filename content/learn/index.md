@@ -1,7 +1,7 @@
 ---
 title: "Serverless Overview"
 description: "Overview of Serverless Architectures"
-layout: Page
+layout: Default
 ---
 
 Serverless architectures embody a massive shift happening in cloud computing.

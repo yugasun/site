@@ -1,4 +1,4 @@
 ---
 title: Compare
-layout: Page
+layout: Default
 ---

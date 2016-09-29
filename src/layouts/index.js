@@ -2,6 +2,6 @@
  * Usage ->
  * Layout: Page
  */
-export Page from './Default'
+export Default from './Default'
 export Post from './Post'
 export Doc from './Doc'

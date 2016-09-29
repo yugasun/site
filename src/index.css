@@ -1,9 +1,4 @@
 /** Localized Styles for app.js **/
-.layout {
-  /* placeholder */
-  display: flex;
-  flex-direction: column;
-}
 
 .content {
   max-width: 96rem;

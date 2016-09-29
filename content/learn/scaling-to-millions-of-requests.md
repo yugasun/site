@@ -1,7 +1,7 @@
 ---
 title: Parallax + David Guetta Customer Story
 description: "How Parallax used Serverless to build a campaign for David Guetta"
-layout: Page
+layout: Default
 ---
 
 # Scaling to Millions With David Guetta

@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-layout: Page
+layout: Default
 ---
 
 ## Contact us

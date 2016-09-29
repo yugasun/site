@@ -1,7 +1,7 @@
 ---
 title: Serverless Benefits
 description: "Overview of Serverless Benefits"
-layout: Page
+layout: Default
 ---
 
 # Benefits of Serverless Architectures

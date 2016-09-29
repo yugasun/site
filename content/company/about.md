@@ -1,6 +1,6 @@
 ---
 title: About Serverless Inc
-layout: Page
+layout: Default
 ---
 
 ## About us

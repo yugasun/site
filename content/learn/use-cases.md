@@ -1,7 +1,7 @@
 ---
 title: Use cases of serverless
 description: "Overview of Serverless Architectures"
-layout: Page
+layout: Default
 ---
 
 Content coming!

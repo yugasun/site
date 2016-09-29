@@ -1,7 +1,7 @@
 ---
 title: Serverless Overview
 description: "Overview of Serverless Architectures"
-layout: Page
+layout: Default
 ---
 
 Content coming!

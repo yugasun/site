@@ -7,18 +7,11 @@ import './index.global.css'
 import styles from './index.css'
 
 export default class Root extends Component {
-  static propTypes = {
-    /** references /layouts.js or a dynamic route from routes.js **/
-    children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-    /** React Router params **/
-    params: PropTypes.object,
-    location: PropTypes.object,
-  };
   render () {
     const { location, params } = this.props
     const currentQuery = location && location.query
     return (
-      <div className={styles.layout}>
+      <div>
         <HeadTag params={params} query={currentQuery} />
         <div className={styles.minHeight}>
           {this.props.children}
@@ -27,4 +20,12 @@ export default class Root extends Component {
       </div>
     )
   }
+}
+
+Root.propTypes = {
+  /** references /layouts.js or a dynamic route from routes.js **/
+  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  /** React Router params **/
+  params: PropTypes.object,
+  location: PropTypes.object,
 }
