@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
 // import {addScript, removeScript} from '../../utils/manageScripts'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import {Link} from 'react-router'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'

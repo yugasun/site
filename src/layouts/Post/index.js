@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
-import Page from '../Page'
+import Page from '../Default'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
@@ -39,7 +39,6 @@ class Post extends Component {
           <div className={styles.content}>
 
             <h1>{head.title}</h1>
-
             <div className={styles.postMeta}>
               {postMeta}
             </div>

@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render () {
     return (
       <footer className={styles.footer}>
-        <a href={"http://serverless.com"} className={styles.link}>
+        <a href={"https://serverless.com"} className={styles.link}>
           <span className={styles.reference}>
             {"Serverless, Inc. © 2016"}
           </span>

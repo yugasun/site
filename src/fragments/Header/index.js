@@ -56,7 +56,7 @@ export default class Header extends Component {
               <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
                 GitHub
               </a>
-              <Link to='/framework/docs' className={`${styles.link}`}>
+              <Link to='/framework/docs?lol=hi' className={`${styles.link}`}>
                 Documentation
               </Link>
               <a href='https://gitter.im/serverless/serverless' target='_blank' className={styles.link}>

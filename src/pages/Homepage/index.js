@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import Newsletter from '../../fragments/Newsletter/Newsletter'
 import UserAuth from '../../components/UserAuth'
 import Terminal from '../../components/Terminal'

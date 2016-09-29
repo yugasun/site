@@ -1,7 +1,7 @@
 import React from 'react'
 // import AutoForm from 'react-auto-form'
 import Modal from '../../components/Modal/Modal'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import partners from './partners.json'
 import styles from './Partners.css'
 

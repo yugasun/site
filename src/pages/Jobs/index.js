@@ -1,6 +1,6 @@
 import React from 'react'
 import {addScript, removeScript} from '../../utils/manageScripts'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 
 export default class JobPage extends React.Component {
   componentDidMount () {

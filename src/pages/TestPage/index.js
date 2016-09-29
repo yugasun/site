@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import Icon from '../../components/Icon'
 import TextInput from '../../components/TextInput'
 import addSVGintoDOM from '../../components/Icon/addSVGtoDOM'

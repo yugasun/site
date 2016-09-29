@@ -1,8 +1,6 @@
 /* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
 import HeadTag from './fragments/HeadTag'
-import Header from './fragments/Header'
-import Footer from './fragments/Footer'
 import Scripts from './fragments/GlobalScripts'
 // Import global CSS before other components and their styles
 import './index.global.css'
@@ -15,20 +13,18 @@ export default class IndexComponent extends Component {
     /** React Router params **/
     params: PropTypes.object,
     route: PropTypes.object,
-  };
-  static contextTypes = {
-    metadata: PropTypes.object.isRequired,
+    location: PropTypes.object,
   };
   render () {
+    const { location, params } = this.props
+    const currentQuery = location && location.query
     return (
       <div className={styles.layout}>
-        <HeadTag />
-        <Header />
+        <HeadTag params={params} query={currentQuery} />
         <div className={styles.minHeight}>
           {this.props.children}
         </div>
-        <Footer />
-        <Scripts params={this.props.params} />
+        <Scripts params={params} query={currentQuery} />
       </div>
     )
   }

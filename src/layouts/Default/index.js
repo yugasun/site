@@ -6,17 +6,19 @@ import Helmet from 'react-helmet'
 import invariant from 'invariant'
 import classnames from 'classnames'
 import { BodyContainer, joinUri } from 'phenomic'
-import styles from './Page.css'
+import getURLParams from '../../utils/urlHelpers'
+import Header from '../../fragments/Header'
+import Footer from '../../fragments/Footer'
+import styles from './Default.css'
 
-class Shell extends Component {
-
+class DefaultShell extends Component {
+  componentDidMount () {
+    const urlParams = getURLParams(window.location.href)
+    console.log('urlParams', urlParams)
+    // Set last page viewed for 404 tracker
+    window.localStorage.setItem('sls_last_page', window.location.href)
+  }
   render () {
-    const { props, context } = this
-
-    const {
-      pkg,
-    } = context.metadata
-
     const {
       __filename,
       __url,
@@ -24,15 +26,17 @@ class Shell extends Component {
       body,
       header,
       footer,
+      children,
+      className,
       fullWidth
-    } = props
+    } = this.props
 
     invariant(
       typeof head.title === 'string',
       `Your page '${__filename}' needs a title`
     )
 
-    const metaTitle = head.metaTitle ? head.metaTitle : head.title
+    const metaTitle = head.metaTitle || head.title
 
     const meta = [
       { property: 'og:type', content: 'article' },
@@ -44,7 +48,7 @@ class Shell extends Component {
       { property: 'og:description', content: head.description },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:title', content: metaTitle },
-      { name: 'twitter:creator', content: `@${pkg.twitter}` },
+      { name: 'twitter:creator', content: `@${process.env.TWITTER}` },
       { name: 'twitter:description', content: head.description },
       { name: 'description', content: head.description },
     ]
@@ -52,7 +56,7 @@ class Shell extends Component {
     /* const linkTags = [
       {
         'rel': 'canonical',
-        'href': pkg.homepage + __url
+        'href': joinUri(process.env.PHENOMIC_USER_URL, __url)
       },
        link={linkTags}
     ]*/
@@ -67,30 +71,31 @@ class Shell extends Component {
     const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
     let customScript
-    if (props.head.script) {
+    if (head.script) {
     // if script defined in markdown frontmatter include it
       customScript = (
-        <Helmet script={[{'src': props.head.script, 'type': 'text/javascript'}]} />
+        <Helmet script={[{'src': head.script, 'type': 'text/javascript'}]} />
       )
     }
-    const classes = classnames(contentWrapperClass, this.props.className)
+    const classes = classnames(contentWrapperClass, styles.test, className)
 
     return (
       <div>
         <Helmet title={metaTitle} meta={meta} />
+        <Header />
         <div className={classes}>
           {header}
-          {props.children || markdown}
+          {children || markdown}
           {footer}
         </div>
-
+        <Footer />
         {customScript}
       </div>
     )
   }
 }
 
-Shell.propTypes = {
+DefaultShell.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,
@@ -103,8 +108,4 @@ Shell.propTypes = {
   className: PropTypes.string
 }
 
-Shell.contextTypes = {
-  metadata: PropTypes.object.isRequired,
-}
-
-export default Shell
+export default DefaultShell

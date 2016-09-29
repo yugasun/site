@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
-import Shell from '../Page'
+import Shell from '../Default'
 import auth from '../../utils/auth'
 import UserAuth from '../../components/UserAuth'
 import Breadcrumbs from '../../components/Breadcrumbs'
@@ -222,10 +222,6 @@ Doc.propTypes = {
   footer: PropTypes.element,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
-}
-
-Doc.contextTypes = {
-  metadata: PropTypes.object.isRequired,
 }
 
 export default Doc

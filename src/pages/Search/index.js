@@ -2,7 +2,7 @@ import React from 'react'
 import { client as algoliaClient, indexName } from '../../utils/algolia'
 import AlgoliaInput from 'algolia-react-input'
 import SearchResult from '../../fragments/SearchResult'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import styles from './Search.css'
 
 export default class SearchPage extends React.Component {
