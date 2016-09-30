@@ -29,6 +29,7 @@ class GoogleAnalyticsTracker extends Component {
       if (isProduction) {
         ga('set', 'page', window.location.pathname)
         ga('send', 'pageview')
+        console.info('New pageview prod', window.location.pathname)
       } else {
         console.info('New pageview', window.location.href)
       }
