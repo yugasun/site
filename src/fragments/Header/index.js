@@ -16,10 +16,13 @@ export default class Header extends Component {
   componentDidMount () {
     document.body.addEventListener('click', this.closeNav)
   }
+  componentWillUnmount () {
+    document.body.removeEventListener('click', this.closeNav)
+  }
   closeNav (e) {
     const toggleNode = this.refs.toggle
     const isOutsideClick = handleClickAway(toggleNode, e)
-    if (isOutsideClick) {
+    if (toggleNode && isOutsideClick) {
       this.setState({
         sideNavOpen: false
       })

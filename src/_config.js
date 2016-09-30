@@ -1,6 +1,6 @@
 /**
  * Project config
- * NOTE: No private data should be stored here.
+ * NOTE: No private data/keys should be stored here.
  */
 module.exports = function siteConfig (isProduction) {
   return (

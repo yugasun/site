@@ -7,6 +7,9 @@ import phenomicStatic from 'phenomic/lib/static'
 module.exports = (options) =>
   phenomicStatic({
     ...options,
+    metadata: {
+      empty: 'hi',
+    },
     routes: routes,
     store: store,
   })

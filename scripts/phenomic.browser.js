@@ -6,6 +6,9 @@ import store from '../src/store'
 import phenomicClient from 'phenomic/lib/client'
 
 phenomicClient({
+  metadata: {
+    empty: 'hi',
+  },
   routes: routes,
   store: store,
 })

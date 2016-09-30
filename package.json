@@ -6,6 +6,7 @@
   "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
+    "cache": true,
     "offline": false
   },
   "scripts": {
@@ -65,6 +66,7 @@
     "mv": "^2.1.1",
     "node-dir": "^0.1.16",
     "npm-run-all": "^1.7.0",
+    "phenomic": "^0.17.2",
     "postcss-browser-reporter": "^0.4.0",
     "postcss-cssnext": "^2.4.0",
     "postcss-import": "^8.1.2",
