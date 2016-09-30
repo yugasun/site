@@ -54,6 +54,7 @@ class Doc extends Component {
       }
     } else {
       this.sidebarNode.style.position = 'relative'
+      this.sidebarNode.style.top = '0px'
     }
   }
   renderParentList () {
@@ -121,7 +122,10 @@ class Doc extends Component {
     return (
       <div className={styles.sidebar + ' docs-sidebar'}>
         <div ref='sidebar' className={styles.sidebarInner}>
-
+          <div className={styles.searchWrapper}>
+            <input className={styles.searchBox} id='algolia-search'
+              placeholder='&#9889;  Search docs' type='text' />
+          </div>
           {childrenItems}
           {parentItems}
           <UserAuth>
@@ -155,10 +159,6 @@ class Doc extends Component {
     const breadcrumbs = (
       <div className={styles.breadCrumbContainer}>
         <Breadcrumbs path={__url} />
-        <div className={styles.searchWrapper}>
-          <input className={styles.searchBox} id='algolia-search'
-            placeholder='&#9889; Search docs' type='text' />
-        </div>
       </div>
     )
     return (
