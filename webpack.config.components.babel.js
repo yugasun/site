@@ -3,7 +3,7 @@ import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import packageInfo from './package.json'
-const outputPath = path.join(__dirname, 'node_modules', '@serverless', 'ui-components')
+const outputPath = path.join(__dirname, 'lib')
 const srcPath = path.join(__dirname, 'src')
 const componentsPath = path.join(__dirname, '/src/components')
 let componentExternals = []
@@ -65,7 +65,7 @@ module.exports = {
       },
       { test: /\.css/, loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?localIdentName=[hash:base64:5]&what!postcss-loader', {
+          'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]!postcss-loader', {
             keepCSSFileReference: true
           })
       },

@@ -18,7 +18,8 @@ function updateFileContents (filePath, callBack) {
   },
     function (err, files) {
       if (err) {
-        callBack(err)
+        console.log(err)
+        callBack && callBack(err)
       }
       console.log('Components rdy to rock and roll')
       callBack && callBack(null, files)
