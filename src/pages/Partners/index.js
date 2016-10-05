@@ -1,7 +1,7 @@
 import React from 'react'
 // import AutoForm from 'react-auto-form'
 import Modal from '../../components/Modal/Modal'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import partners from './partners.json'
 import styles from './Partners.css'
 
@@ -33,7 +33,7 @@ export default class PartnersPage extends React.Component {
     var handler = this.openModal
     return Object.keys(partners).map(function (company, i) {
       return (
-        <div className={styles.block} >
+        <div className={styles.block}>
           <span className={styles.image}>
             <div className={styles.imageBG}>
               <img src={partners[company].logo} alt='' />
@@ -49,27 +49,62 @@ export default class PartnersPage extends React.Component {
       )
     })
   }
+  showCaseStudies () {
+    return Object.keys(partners).map(function (company, i) {
+      return (
+        <div className={styles.caseStudyItem}>
+          {partners[company].stories && partners[company].stories.map((link, i) => {
+            return (
+              <span className={styles.caseStudyLink}>
+                <a href={link.url}>
+                  {link.title} - <strong>{partners[company].name}</strong>
+                </a>
+              </span>
+            )
+          })}
+        </div>
+      )
+    })
+  }
   render () {
+    const { partner, showModal } = this.state
     return (
       <Page {...this.props} >
         <h1>Serverless Partners Program</h1>
-
+        <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
+        <p style={{position: 'relative', zIndex: 2}}>
+          If you are interested in learning more about our partners program send us an email <a href='mailto:partners@serverless.com'>partners@serverless.com</a>
+        </p>
         <section className={styles.tiles}>
           {this.listPartners()}
         </section>
-
+        <section className={styles.caseStudies}>
+          <h2>Partner Success Stories</h2>
+          {this.showCaseStudies()}
+        </section>
         <Modal
-          active={this.state.showModal}
+          className={styles.modalWrapper}
+          active={showModal}
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
         >
           <div className={styles.modalLogoWrapper} >
-            <img className={styles.modalLogo} src={this.state.partner.logo} alt='' />
+            <img className={styles.modalLogo} src={partner.logo} alt='' />
           </div>
-          <h2>{this.state.partner.name}</h2>
+          <h2>{partner.name}</h2>
           <div>
             <div>
-              {this.state.partner.description}
+              {partner.description}
+            </div>
+            <div>
+              {partner.stories && partner.stories.map((link, i) => {
+                return <a href={link.url}>{link.title}</a>
+              })}
+            </div>
+            <div className={styles.siteLink}>
+              <a href={partner.website} target='_blank'>
+                Visit {partner.name}'s site
+              </a>
             </div>
           </div>
         </Modal>

@@ -1,9 +1,4 @@
 /** Localized Styles for app.js **/
-.layout {
-  /* placeholder */
-  display: flex;
-  flex-direction: column;
-}
 
 .content {
   max-width: 96rem;
@@ -12,11 +7,6 @@
 
 .minHeight {
   min-height: calc(100vh - $navHeight - $footerHeight);
-  a {
-    color: $black2;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.5);
-  }
 }
 .minHeight > div  {
   min-height: 90vh;

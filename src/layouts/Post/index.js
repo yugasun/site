@@ -2,9 +2,12 @@ import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
-import Page from '../Page'
+import Page from '../Default'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
+import AuthorCTA from '../../fragments/AuthorCTA'
+import Svg from 'react-svg-inline'
+import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
 
@@ -29,20 +32,20 @@ class Post extends Component {
         {body}
       </BodyContainer>
     )
-
+    const githubURL = 'https://github.com/serverless/blog/edit/master/posts' + head.gitLink
     return (
       <Page {...props} className={styles.postPage} >
         <div className={styles.postWrapper}>
           <div className={styles.content}>
 
             <h1>{head.title}</h1>
-
             <div className={styles.postMeta}>
               {postMeta}
             </div>
             {markdownContent}
           </div>
           <div className={styles.sidebar}>
+
             <Block className={styles.sidebarBlock}>
               <h2>Quick Links</h2>
               <div className={styles.sidebarLinks}>
@@ -66,7 +69,17 @@ class Post extends Component {
                 </a>
               </div>
             </Block>
+            <div className={styles.editLinkWrapper}>
+              <span className={styles.editLink}>
+                <Svg svg={gitHubSvg} cleanup />
+                <a target='_blank' href={githubURL}>
+                  Edit this post on github
+                </a>
+              </span>
+            </div>
             <BetaCTA buttonText='Get early access' />
+
+            <AuthorCTA style={{marginTop: '20px'}} />
           </div>
         </div>
         <div className={styles.comments} id='disqus_thread'></div>

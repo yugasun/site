@@ -1,4 +1,4 @@
 ---
-title: Partners
+title: Serverless Partners
 layout: Partners
 ---

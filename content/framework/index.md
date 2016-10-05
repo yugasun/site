@@ -1,6 +1,6 @@
 ---
 title: Framework
-layout: Page
+layout: Default
 ---
 <br/>
 ## The Serverless Framework

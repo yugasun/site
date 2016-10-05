@@ -16,10 +16,13 @@ export default class Header extends Component {
   componentDidMount () {
     document.body.addEventListener('click', this.closeNav)
   }
+  componentWillUnmount () {
+    document.body.removeEventListener('click', this.closeNav)
+  }
   closeNav (e) {
     const toggleNode = this.refs.toggle
     const isOutsideClick = handleClickAway(toggleNode, e)
-    if (isOutsideClick) {
+    if (toggleNode && isOutsideClick) {
       this.setState({
         sideNavOpen: false
       })
@@ -54,7 +57,7 @@ export default class Header extends Component {
                 Blog
               </a>
               <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
-                Github
+                GitHub
               </a>
               <Link to='/framework/docs' className={`${styles.link}`}>
                 Documentation
@@ -65,6 +68,9 @@ export default class Header extends Component {
               <a href='http://forum.serverless.com/' target='_blank' className={styles.link}>
                 Forum
               </a>
+              <Link to='/partners' className={styles.link}>
+                Partners
+              </Link>
               <Link to='/company/jobs' className={`${styles.link} ${styles.hiring}`}>
                 We're Hiring
               </Link>

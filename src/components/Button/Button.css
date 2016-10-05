@@ -33,6 +33,7 @@ $buttonPadding: 12px;
   min-width: 100%;
   min-height: 60px;
   padding-right: 25%;
+  color: #fff;
   &:hover {
     border: 2px solid #fff;
     .background {

@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
 // import {addScript, removeScript} from '../../utils/manageScripts'
-import Page from '../../layouts/Page'
+import Page from '../../layouts/Default'
 import {Link} from 'react-router'
 import BetaCTA from '../../fragments/BetaCTA'
+import AuthorCTA from '../../fragments/AuthorCTA'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
 import defaultThumbnail from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
@@ -42,6 +43,7 @@ export default class BlogPage extends Component {
     const avatarImg = (
       <img role='presentation' className={styles.avatarImg} src={avatarURL} />
     )
+
     return (
       <div key={page.title + '-' + i} className={styles.post}>
         <div className={styles.thumbnail}>
@@ -64,14 +66,12 @@ export default class BlogPage extends Component {
     )
   }
   render () {
-    console.log('collection', this.context.collection)
     const latestPosts = enhanceCollection(this.context.collection, {
       filter: { layout: 'Post' },
       sort: 'date',
       reverse: true,
     })
     .slice(0, numberOfLatestPosts)
-    console.log('latestPosts', latestPosts)
     return (
       <Page {...this.props}>
         <h2 className={styles.pageTitle}>Serverless Blog</h2>
@@ -83,6 +83,7 @@ export default class BlogPage extends Component {
           </div>
           <div className={styles.sidebar}>
             <BetaCTA buttonText='Get early access' />
+            <AuthorCTA style={{marginTop: '20px'}} />
           </div>
         </div>
       </Page>

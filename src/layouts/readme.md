@@ -7,7 +7,7 @@ The layout is specified in the yaml frontmatter of markdown files
 ```
 ---
 title: Contact Us
-layout: Page
+layout: Default
 ---
 
 ## Contact us

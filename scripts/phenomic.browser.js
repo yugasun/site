@@ -1,15 +1,16 @@
 import 'whatwg-fetch'
 
-import metadata from '../src/metadata'
 import routes from '../src/routes'
 import store from '../src/store'
 
 import phenomicClient from 'phenomic/lib/client'
 
 phenomicClient({
-  metadata,
-  routes,
-  store,
+  metadata: {
+    empty: 'hi',
+  },
+  routes: routes,
+  store: store,
 })
 
 // hot loading

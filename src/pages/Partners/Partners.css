@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin: -2.5em 0 0 -2.5em;
+  margin: -1.5em 0 30px -2.5em;
 }
 
 .block {
@@ -70,6 +70,12 @@
   height: 100%;
   width: 70%;
 }
+.caseStudies {
+
+}
+.caseStudyLink {
+  display: block;
+}
 .image {
   transition: transform 0.5s ease;
   position: relative;
@@ -105,7 +111,9 @@
     z-index: 2;
   }
 }
-
+.modalWrapper {
+  width: $breakpointLgTablet;
+}
 .modalLogoWrapper {
   display: flex;
   align-items: center;
@@ -114,4 +122,34 @@
 }
 .modalLogo {
   max-width: 100%;
+}
+.siteLink {
+  margin: 20px 0;
+  a {
+    padding: 20px;
+    background: $yellow;
+    text-decoration: none;
+    color: $black1;
+    border: none;
+  }
+}
+
+
+@media (max-width: 1060px) {
+  .block {
+    width: calc(50% - 2.5em);
+  }
+  .tiles {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .block {
+    width: 100%;
+  }
+  .block:hover {
+    .image {
+      transform: scale(1.03);
+    }
+  }
 }

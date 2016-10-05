@@ -1,12 +1,8 @@
-import React, {Component, PropTypes} from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 
-export default class HeadTag extends Component {
-  static contextTypes = {
-    metadata: PropTypes.object.isRequired,
-  };
+export default class HeadTag extends React.Component {
   render () {
-    const { pkg } = this.context.metadata
     return (
       <div>
         <style>
@@ -14,8 +10,12 @@ export default class HeadTag extends Component {
         </style>
         <Helmet
           meta={[
-            { property: 'og:site_name', content: pkg.name },
-            { name: 'twitter:site', content: `@${pkg.twitter}` },
+            { property: 'og:site_name', content: process.env.SITENAME },
+            { name: 'twitter:site', content: `@${process.env.TWITTER}` },
+            {
+              name: 'google-site-verification',
+              content: '1HdFnJaYYEiONgCRl3fj7lQobYY4uXPe5L2-sTgNzKQ'
+            },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
           ]}
         />

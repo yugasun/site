@@ -7,11 +7,13 @@ import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
-import Shell from '../Page'
+import Shell from '../Default'
+import auth from '../../utils/auth'
 import UserAuth from '../../components/UserAuth'
 import Breadcrumbs from '../../components/Breadcrumbs'
-import gitHubSvg from '../../assets/icons/iconmonstr-github-1.svg'
+import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Doc.css'
+import Helmet from 'react-helmet'
 
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
@@ -21,7 +23,6 @@ class Doc extends Component {
   constructor (props, context) {
     super(props, context)
 
-    const auth = this.context.auth
     const loggedIn = auth.loggedIn()
     this.state = {
       active: false,
@@ -42,6 +43,7 @@ class Doc extends Component {
       this.sidebarNodeOffset = this.sidebarNode.offsetTop
       this.handleScroll()
     }
+    initializeSearch()
   }
   handleScroll (event) {
     const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
@@ -52,6 +54,7 @@ class Doc extends Component {
       }
     } else {
       this.sidebarNode.style.position = 'relative'
+      this.sidebarNode.style.top = '0px'
     }
   }
   renderParentList () {
@@ -117,8 +120,12 @@ class Doc extends Component {
     const childrenItems = this.renderChildrenList()
     const parentItems = this.renderParentList()
     return (
-      <div className={styles.sidebar}>
+      <div className={styles.sidebar + ' docs-sidebar'}>
         <div ref='sidebar' className={styles.sidebarInner}>
+          <div className={styles.searchWrapper}>
+            <input className={styles.searchBox} id='algolia-search'
+              placeholder='&#9889;  Search docs' type='text' />
+          </div>
           {childrenItems}
           {parentItems}
           <UserAuth>
@@ -150,17 +157,31 @@ class Doc extends Component {
     )
 
     const breadcrumbs = (
-      <Breadcrumbs className={styles.breadCrumbContainer} path={__url} />
+      <div className={styles.breadCrumbContainer}>
+        <Breadcrumbs path={__url} />
+      </div>
     )
-
     return (
-      <Shell {...this.props} className={styles.docPage} header={breadcrumbs}>
+      <Shell {...this.props} className={styles.docPage + ' docs-breadcrumbs'} header={breadcrumbs}>
+        <Helmet
+          link={[
+            {
+              'rel': 'stylesheet',
+              'href': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+            }
+          ]}
+          script={[
+            {
+              'src': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', 'type': 'text/javascript'
+            }
+          ]}
+        />
         <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
 
             {this.renderSidebar()}
 
-            <div className={styles.content}>
+            <div className={styles.content + ' docs-content'}>
               <span className={styles.editLink}>
                 <Svg svg={gitHubSvg} cleanup />
                 <a target='_blank' href={githubURL}>
@@ -178,6 +199,21 @@ class Doc extends Component {
   }
 }
 
+function initializeSearch () {
+  if (typeof docsearch !== 'undefined') {
+    docsearch({ // eslint-disable-line
+      apiKey: 'd5a39b712b86965d93534207ef5423df',
+      indexName: 'serverless',
+      inputSelector: '#algolia-search',
+      debug: false
+    })
+  } else {
+    setTimeout(function () {
+      initializeSearch()
+    }, 50)
+  }
+}
+
 Doc.propTypes = {
   __url: PropTypes.string.isRequired,
   head: PropTypes.object.isRequired,
@@ -186,11 +222,6 @@ Doc.propTypes = {
   footer: PropTypes.element,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
-}
-
-Doc.contextTypes = {
-  metadata: PropTypes.object.isRequired,
-  auth: React.PropTypes.object.isRequired,
 }
 
 export default Doc
