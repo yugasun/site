@@ -19,6 +19,8 @@ Parallax needed to figure out a way of creating a virtual recording studio to en
 
 The main challenge they faced was creating the background architecture to handle the voice recording. UEFA required a stable platform that also looked the part, so they needed a solution that would not only meet their initial brief, but would scale to handle what could potentially be very spikey traffic.
 
+<img src="http://blog.serverless.com/wp-content/uploads/2016/09/Social-4.jpg">
+
 They also had to build in the functionality to create and easily share custom content - namely, personalized album artwork featuring names and team flags. From an engagement point of view, this was absolutely essential. On top of that, the site had to work seamlessly on all devices, operate in twelve languages and incorporate embedded video content.
 
 ### Why Serverless
