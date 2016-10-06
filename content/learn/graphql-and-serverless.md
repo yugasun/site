@@ -29,17 +29,17 @@ The architecture in all cases relies on the <a href="https://s3.amazonaws.com/tr
 
 To allow for more iteration on content and more elegant handling of PlayBrain’s multilingual needs, Trek10 recommended leveraging a “Runtime Generation of Content (RGC),”  GraphQL API. Using a single endpoint, a GraphQL Serverless “Rendering Engine” sits in front of DynamoDB and renders cacheable HTML from the DynamoDB datastore. 
 
-<img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/DEKKI-infrastructure.png">
+<img width="700px" class="center" src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/DEKKI-infrastructure.png">
 
 ### Results
 
  The Serverless Framework played a key role in meeting the base requirements of creating a highly available and scalable application, while reducing both the development and ownership costs. In addition to streamlining the development process by enabling Trek10 to quickly scaffold the necessary endpoints, Serverless afforded PlayBrain a simple system for continuous deployment throughout the development process.
 
+<img width="600px" class="right" src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/DEKKIpost1.png">
+
 Serverless allowed Trek10 and PlayBrain to work in parallel on the frontend ReactJS based editors and backend API and rendering engine. Trek10 estimates that when compared to a project leveraging typical infrastructure (EC2 / Docker based), Serverless saves roughly 40%-60% of typical infrastructure development time, allowing the Trek10 team to focus on the core value.
 
 The operational cost estimates are roughly $1700/month to service approximately 40 million page requests, with the vast majority of that going towards CloudFront data transfer costs. At scale, Trek10 estimates the Lambda and DynamoDB costs to be less than $200/month!
-
-<img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/DEKKIpost1.png">
 
 One of the great wins of the Serverless framework on the Dekki project is that when Trek10 needed to add a data pipeline for pulling in and aggregating third party data, they didn’t need an entirely different tool. Scheduled Lambda functions replaced cron with a few simple lines in the Serverless configuration, and there was no need to worry about provisioning another server for data processes. All Trek10 needed to do was write concise functions and event pipelines that serviced exactly what they needed, and deploy them just like any other function. One tool, one platform, one great experience.
 
