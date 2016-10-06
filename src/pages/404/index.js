@@ -3,6 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
+import { twitterShare } from '../../utils/social/share'
 import styles from './index.css'
 const log404Endpoint = process.env.API.ERROR
 
@@ -20,7 +21,6 @@ export default class PageError extends Component {
   componentDidMount () {
     const { error } = this.props
     const url = window.location.href
-    // console.log(document.referrer || window.localStorage.getItem('sls_last_page'))
     if (error === 404 && !url.match(/localhost/)) {
       axios({
         method: 'post',
@@ -45,13 +45,14 @@ export default class PageError extends Component {
       errorText,
     } = this.props
     const currentUrl = (window !== 'undefined') ? window.location.href : 'localhost.com'
+    const tweet = twitterShare('Hi @goServerless, It looks like this page is missing ☞( ͡° ͜ʖ ͡°)☞', currentUrl, ['FYI'])
     let content = (
       <div className={styles.content}>
         <div className={styles.message}>
           It seems you found a broken link. Do not hesitate to report this page!
         </div>
         <div>
-          Tweet at <a target='_blank' href={`http://twitter.com/share?text=Hi%20@goServerless%20looks%20like%20this%20page%20is%20missing&url=${currentUrl}`}>@goServerless</a> or <a target='_blank' href='https://github.com/serverless/site/issues'>open a github issue</a>
+          Tweet at <a target='_blank' href={tweet}>@goServerless</a> or <a target='_blank' href='https://github.com/serverless/site/issues'>open a github issue</a>
         </div>
       </div>
     )
