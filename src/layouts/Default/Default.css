@@ -10,6 +10,9 @@
   margin: auto;
   min-height: calc(100vh - $navHeight - $footerHeight);
   margin-top: 20px;
+  img {
+    max-width: 100%;
+  }
 }
 
 .fullWidth {
