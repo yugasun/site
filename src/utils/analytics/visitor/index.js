@@ -1,6 +1,5 @@
 import md5 from '../utils/md5'
 import getVisitorData from './getVisitorData'
-
 const VISITOR_ID = 'sls_visitor_id'
 
 const generateVisitorID = (data) => {
@@ -27,3 +26,12 @@ export const initializeVisitorID = () => {
     setVisitorID()
   }
 }
+
+// import getIPs from './ipData'
+// var test = getIPs().then(function (rs) {
+//   console.log('yay', rs)
+//   return rs
+// 	/* do something with the result */
+// }).catch(function () {
+// 	/* error :( */
+// })

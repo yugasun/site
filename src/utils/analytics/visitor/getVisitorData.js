@@ -14,7 +14,7 @@ export default function getVisitorData () {
     browser: browserInfo(),
     plugins: pluginInfo(),
     screen: screenInfo(),
-    webgl: webglInfo()
+    webgl: webglInfo(),
   }
   return visitorData
 }
