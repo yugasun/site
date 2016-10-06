@@ -119,9 +119,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  padding: 30px;
+  background: $black1;
 }
 .modalLogo {
-  max-width: 100%;
+  max-width: 90%;
 }
 .siteLink {
   margin: 20px 0;
