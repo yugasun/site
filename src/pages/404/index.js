@@ -44,7 +44,7 @@ export default class PageError extends Component {
       error,
       errorText,
     } = this.props
-    const currentUrl = (window !== 'undefined') ? window.location.href : 'localhost.com'
+    const currentUrl = (typeof window !== 'undefined') ? window.location.href : 'localhost.com'
     const tweet = twitterShare('Hi @goServerless, It looks like this page is missing ☞( ͡° ͜ʖ ͡°)☞', currentUrl, ['FYI'])
     let content = (
       <div className={styles.content}>
