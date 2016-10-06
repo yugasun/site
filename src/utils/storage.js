@@ -1,8 +1,8 @@
 /**
 Cookie + localStorage Utils
 */
-const hasLS = hasLocalStorage()
-function hasLocalStorage () {
+
+function isLocalStorageSupported () {
   var supported
   if ('localStorage' in window) {
     try {
@@ -20,6 +20,57 @@ function hasLocalStorage () {
     }
   }
   return supported
+}
+const hasLocalStorage = isLocalStorageSupported()
+
+export const localStorageSupported = hasLocalStorage
+
+export function setItem (key, value) {
+  if (!hasLocalStorage) {
+    try {
+      createCookie(key, value)
+      return value
+    } catch (e) {
+      console.log('Local Storage not supported by this browser')
+    }
+  }
+  var saver = JSON.stringify(value)
+  window.localStorage.setItem(key, saver)
+  return parseResult(saver)
+}
+
+export function getItem (key) {
+  if (!hasLocalStorage) {
+    try {
+      return parseResult(readCookie(key))
+    } catch (e) {
+      return null
+    }
+  }
+  var item = window.localStorage.getItem(key)
+  return parseResult(item)
+}
+
+function parseResult (res) {
+  let ret
+  try {
+    ret = JSON.parse(res)
+    if (typeof ret === 'undefined') {
+      ret = res
+    }
+    if (ret === 'true') {
+      ret = true
+    }
+    if (ret === 'false') {
+      ret = false
+    }
+    if (parseFloat(ret) === ret && typeof ret !== 'object') {
+      ret = parseFloat(ret)
+    }
+  } catch (e) {
+    ret = res
+  }
+  return ret
 }
 
 export function createCookie (name, value, days) {
