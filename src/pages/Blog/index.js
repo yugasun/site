@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
-// import {addScript, removeScript} from '../../utils/manageScripts'
 import Page from '../../layouts/Default'
 import {Link} from 'react-router'
 import BetaCTA from '../../fragments/BetaCTA'
@@ -9,33 +8,20 @@ import AuthorCTA from '../../fragments/AuthorCTA'
 import defaultThumbnail from '../../assets/images/platform_4.gif'
 import styles from './Blog.css'
 
-const numberOfLatestPosts = 10
-const isClient = typeof window !== 'undefined'
+const numberOfLatestPosts = 15
+// const isClient = typeof window !== 'undefined'
 
 export default class BlogPage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
   }
-  componentWillMount () {
-    if (isClient) {
-      // addScript('//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js')
-    }
-  }
-  componentWillUnmount () {
-    if (isClient) {
-      // removeScript('//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js')
-      // delete window.jQuery
-    }
-  }
   renderBlogPreview (page, i) {
-    let author = 'serverless'
-    let avatarURL = 'http://www.fillmurray.com/200/200'
+    let author = 'Serverless'
+    let avatarURL = 'https://avatars3.githubusercontent.com/u/13742415?v=3&s=60'
     let thumbnail = defaultThumbnail
-    if (page.author && page.author.name) {
-      author = page.author.name
-    }
-    if (page.author && page.author.avatar) {
-      avatarURL = page.author.avatar
+
+    if (page.authors) {
+      console.log('page.authors', page.authors)
     }
     if (page.thumbnail) {
       thumbnail = page.thumbnail
