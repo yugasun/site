@@ -154,6 +154,15 @@ tfoot td {
   color: #8a97a0;
 }
 
+.right {
+  float: right;
+  margin-left: 35px;
+}
+.left {
+  float: left;
+  margin-right: 35px;
+}
+
 .phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {
   display: none;
 }
