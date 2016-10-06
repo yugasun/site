@@ -33,7 +33,7 @@ export default class PartnersPage extends React.Component {
     var handler = this.openModal
     return Object.keys(partners).map(function (company, i) {
       return (
-        <div className={styles.block}>
+        <div className={styles.block} key={i}>
           <span className={styles.image}>
             <div className={styles.imageBG}>
               <img src={partners[company].logo} alt='' />
@@ -52,10 +52,10 @@ export default class PartnersPage extends React.Component {
   showCaseStudies () {
     return Object.keys(partners).map(function (company, i) {
       return (
-        <div className={styles.caseStudyItem}>
+        <div className={styles.caseStudyItem} key={i}>
           {partners[company].stories && partners[company].stories.map((link, i) => {
             return (
-              <span className={styles.caseStudyLink}>
+              <span className={styles.caseStudyLink} key={i}>
                 <a href={link.url}>
                   {link.title} - <strong>{partners[company].name}</strong>
                 </a>
@@ -98,7 +98,7 @@ export default class PartnersPage extends React.Component {
             </div>
             <div>
               {partner.stories && partner.stories.map((link, i) => {
-                return <a href={link.url}>{link.title}</a>
+                return <a href={link.url} key={i}>{link.title}</a>
               })}
             </div>
             <div className={styles.siteLink}>
