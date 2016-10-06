@@ -12,6 +12,18 @@
   color: #ddd;
 }
 
+.content {
+  text-align: center;
+  a {
+    color: $black1;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+.message {
+  margin-bottom: 10px;
+}
+
 .title {
   font-size: 2rem;
   text-align: center;
