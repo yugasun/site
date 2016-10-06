@@ -4,7 +4,7 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import styles from './index.css'
-const log404Endpoint = process.env.ERROR_ENDPOINT
+const log404Endpoint = process.env.API.ERROR
 
 export default class PageError extends Component {
 

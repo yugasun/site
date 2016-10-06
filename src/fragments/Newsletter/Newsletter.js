@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 import axios from 'axios'
 import styles from './Newsletter.css'
+const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
 function validateEmail (value) {
   const test = /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
@@ -42,7 +43,7 @@ export default class Newsletter extends Component {
     var that = this
     axios({
       method: 'post',
-      url: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
+      url: newsletterSubscribeAPI,
       data: data,
     }).then(function (response) {
       console.log(response.data)
