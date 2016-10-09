@@ -1,0 +1,73 @@
+.loader {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: -$navHeight;
+}
+.loadingWrapper {
+  position: relative;
+  max-width: 390px;
+}
+.imageWrapper {
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 23%;
+    right: -23%;
+    background: white;
+    top: 0;
+  }
+}
+
+.spinnerWrapper {
+  height: 100%;
+  width: 100%;
+  min-width: 392px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+.spinner {
+  height: 100%;
+  z-index: 9;
+  height: 5vh;
+  min-height: 5rem;
+  width: 5vh;
+  min-width: 5rem;
+  border: 6px solid $yellow;
+  border-top-color: $black1;
+  border-radius: 100%;
+  animation: rotation 0.6s infinite linear 0.25s;
+  overflow: hidden;
+
+  /* the opacity is used to lazyload the spinner, see animation delay */
+  opacity: 0;
+}
+
+@keyframes rotation {
+  from {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(359deg);
+  }
+}
+@media (max-width: 768px) {
+
+  .spinnerWrapper, .loadingWrapper, .imageWrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+  .imageWrapper {
+    &:after {
+      display: none;
+    }
+  }
+}

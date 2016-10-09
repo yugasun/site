@@ -4,6 +4,7 @@ node_modules
 
 # phenomic build
 dist
+lib
 secrets.json
 .env
 
@@ -14,3 +15,8 @@ secrets.json
 #OS STUFF
 .DS_Store
 .tmp
+
+# Ignore stuff pull from serverless core repo
+content/framework/docs
+# Blog content gets pulled from https://github.com/serverless/blog
+content/blog

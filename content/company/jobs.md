@@ -1,7 +1,7 @@
 ---
 title: Jobs
 layout: Jobs
-yo: lsllslslssl
+script: http://davidwells.io/wp-content/themes/david-wells/js/prism.js
 ---
 
 # About Serverless
@@ -39,3 +39,7 @@ We want everyone to have a clear understanding of the state of the company and t
 *   Top-tier investment firms
 *   Sponsored speaking at conferences
 *   Unlimited paid vacation with 20 minimum vacation days everyone has to take to be productive
+
+# Current Job listings
+
+<div id='whr_embed_hook'></div>

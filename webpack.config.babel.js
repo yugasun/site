@@ -1,23 +1,10 @@
 import path from 'path'
-import fs from 'fs'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import dotenv from 'dotenv'
+import serverlessPackageJSON from 'serverless/package.json'
 import { phenomicLoader } from 'phenomic'
 import pkg from './package.json'
-let dotEnvVars
-// We sync-check since this is startup code
-if (fs.existsSync('.env')) {
-  dotEnvVars = dotenv.config()
-}
-
-if (!dotEnvVars) {
- // set this from CI
-  dotEnvVars = {
-    AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
-    AUTH0_DOMAIN: process.env.AUTH0_DOMAIN
-  }
-}
+import getSiteConfig from './src/_config'
 
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
@@ -25,18 +12,18 @@ if (!dotEnvVars) {
 // (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
   // console.log('site config', config)
-  const globalVariables = Object.keys(dotEnvVars)
+  const siteConfig = getSiteConfig(config.production)
+  console.log('siteConfig', siteConfig)
+  const processVars = Object.keys(siteConfig)
     .reduce((memo, key) => {
-      const val = JSON.stringify(dotEnvVars[key])
-      memo[`__${key.toUpperCase()}__`] = val
+      const val = JSON.stringify(siteConfig[key])
+      memo[key] = val
       return memo
     }, {
-      'process.env': {
-        'NODE_ENV': (config.production) ? '"production"' : '"development"',
-        'BROWSER': (config.production) ? JSON.stringify(false) : JSON.stringify(true)
-      }
+      'NODE_ENV': (config.production) ? '"production"' : '"development"',
+      'BROWSER': (config.production) ? '"false"' : '"true"',
+      'DOCS_VERSION': JSON.stringify(serverlessPackageJSON.version)
     })
-
   return {
     ...config.dev && {
       devtool: '#cheap-module-eval-source-map',
@@ -91,7 +78,7 @@ export const makeConfig = (config = {}) => {
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
-            [ `css-loader?modules&localIdentName=${
+            [ `css-loader?modules&importLoaders=1&localIdentName=${
                 config.production
                 ? '[hash:base64:5]'
                 : '[path][name]--[local]--[hash:base64:5]'
@@ -146,16 +133,27 @@ export const makeConfig = (config = {}) => {
       },
     },
 
-    postcss: () => [
+    postcss: (webpack) => [
       // require("stylelint")(),
       require('postcss-cssnext')({ browsers: 'last 2 versions' }),
+      // require('postcss-import')({
+      //   addDependencyTo: webpack
+      // }),
       // require("postcss-reporter")(),
+      /* do math with resolve( ) */
+      require('postcss-math'),
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
-          var vars = require('./src/variables')
+          // var file = './src/_variables.js';
+          // delete require.cache[path.join(__dirname, file)];
+          // return require(file);
+          var vars = require('./src/_variables')
           // console.log('global css vars', vars)
           return vars
+        },
+        onVariables: function (variables) {
+          // console.log(variables)
         },
         unknown: function unknown (node, name, result) {
           node.warn(result, 'Unknown variable ' + name)
@@ -176,7 +174,9 @@ export const makeConfig = (config = {}) => {
           { compress: { warnings: false } }
         ),
       ],
-      new webpack.DefinePlugin(globalVariables),
+      new webpack.DefinePlugin({
+        'process.env': processVars
+      }),
     ],
 
     output: {

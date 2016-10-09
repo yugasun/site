@@ -5,7 +5,7 @@ const propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string,
   children: PropTypes.any,
-  kind: PropTypes.oneOf(['dark', 'black']),
+  kind: PropTypes.oneOf(['dark', 'black', 'yellow']),
   style: PropTypes.object,
   /** if href provided to button, button will be a link */
   href: PropTypes.string,
@@ -25,14 +25,14 @@ export default function Button ({onClick, label, children, kind, style, href, ta
       <a className={styles.btn + ' ' + kindStyle} href={href} target={target}
         onClick={onClick} style={style}>
         <span className={styles.background}></span>
-        {text}
+        <span>{text}</span>
       </a>
     )
   } else {
     return (
       <button className={styles.btn + ' ' + kindStyle} onClick={onClick} style={style}>
         <span className={styles.background}></span>
-        {text}
+        <div>{text}</div>
       </button>
     )
   }

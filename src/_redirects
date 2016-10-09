@@ -1,0 +1,4 @@
+# Simple redirects from one path to another
+/hiring.html  /company/jobs/
+/docs /framework/docs/
+/framework/docs/guide/README.md /framework/docs/guide/#advanced-guides
