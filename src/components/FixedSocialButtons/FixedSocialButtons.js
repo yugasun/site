@@ -1,17 +1,22 @@
 import React, {PropTypes} from 'react'
+import Svg from 'react-svg-inline'
+import twitterSVG from '../../assets/icons/twitter.svg'
 import { twitterShare } from '../../utils/social/share'
 import styles from './FixedSocialButtons.css'
 
 const FixedSocialButtons = (props) => {
-  const twitterURL = twitterShare('tweet this', props.url, props.hashtags)
+  const twitterURL = twitterShare(props.title, props.url, props.hashtags)
   return (
     <div className={styles.social}>
-      <a href={twitterURL}>tw</a>
+      <a href={twitterURL} target='_blank'>
+        <Svg svg={twitterSVG} cleanup />
+      </a>
     </div>
   )
 }
 
 FixedSocialButtons.propTypes = {
+  title: PropTypes.string,
   url: PropTypes.string,
   hashtags: PropTypes.array,
 }

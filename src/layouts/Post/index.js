@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
 import Page from '../Default'
+import FixedSocialButtons from '../../components/FixedSocialButtons'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
@@ -35,6 +36,10 @@ class Post extends Component {
     const githubURL = 'https://github.com/serverless/blog/edit/master/posts' + head.gitLink
     return (
       <Page {...props} className={styles.postPage} >
+        <FixedSocialButtons
+          url={`https://serverless.com/${this.props.__url}`}
+          title={head.title}
+        />
         <div className={styles.postWrapper}>
           <div className={styles.content}>
 
@@ -44,8 +49,8 @@ class Post extends Component {
             </div>
             {markdownContent}
           </div>
-          <div className={styles.sidebar}>
 
+          <div className={styles.sidebar}>
             <Block className={styles.sidebarBlock}>
               <h2>Quick Links</h2>
               <div className={styles.sidebarLinks}>
@@ -91,6 +96,7 @@ class Post extends Component {
 
 Post.propTypes = {
   head: PropTypes.object.isRequired,
+  __url: PropTypes.string,
 }
 
 export default Post
