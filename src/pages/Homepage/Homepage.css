@@ -73,32 +73,62 @@ a.yellowLink {
     text-decoration: none;
   }
 }
-.hero {
-  composes: content from '../../index.css';
-  width: 100%;
-  margin: auto;
-  padding: 0;
-  display:flex;
-  padding-top: 70px;
-  position: relative;
-  z-index: 9;
-  overflow: hidden;
-}
 .bg {
   overflow: auto;
   margin-bottom: 50px;
 }
 .bg:before {
   content: "";
-  height: 480px;
-  width: 120vw;
+  height: 700px;
+  width: 130vw;
   position: absolute;
-  background: $yellow;
-  transform: rotate(-2deg);
-  top: 20px;
-  left: -114px;
+  background-image: url(../../assets/images/home_hero_lights1.png);
+  background-color: $yellow;
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+  transform: rotate(-6deg);
+  top: 10px;
+  left: -45px;
   z-index: 3;
   overflow: auto;
+}
+.hero {
+  composes: content from '../../index.css';
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding-top: 30px;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+}
+.heroFramework {
+  margin: 0 auto 10px auto;
+  height: 145px;
+  width: 85%;
+  background: url(../../assets/images/home_framework_v1_1.png) no-repeat center;
+  background-size: cover;
+}
+.tagline:first-of-type {
+  margin-top: 25px;
+}
+.tagline {
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height:14px;
+  padding: 0;
+  color:#191919;
+  letter-spacing: -0.35px;
+  text-align: center;
+}
+.tagline:last-of-type {
+  margin-bottom: 45px;
 }
 .heroLeft {
   width: 40%;
@@ -116,49 +146,26 @@ $providerWidth: 370px;
 .heroRight {
   width: 60%;
 }
-.learnMore {
-
-}
-
 .center {
   text-align: center;
 }
-
 .copy {
   padding: 20px 0 10px;
   color: #000;
   text-align: left;
   composes: avenir from "../../index.css";
 }
-.tagline:first-of-type {
-    margin-top: 25px;
-}
-.tagline {
-  font-size: 50px;
-  font-weight: 500;
-  line-height:14px;
-  padding: 0;
-  margin: 42px 0px;
-  color:#191919;
-  letter-spacing: -1.4px;
-}
-.tagline:last-of-type {
-  margin-bottom: 45px;
-}
-
 .heading {
   font-size: 22px;
   margin: 0;
   font-weight: 400;
   margin-bottom: 20px;
 }
-
 .subHeading {
  font-size: 31px;
  font-weight: 400;
  margin-top: 12px;
 }
-
 .ampersand {
   color: #fff;
   font-weight: 200;

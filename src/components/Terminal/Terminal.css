@@ -1,7 +1,7 @@
 
 .wrapper {
   font-family: "Monaco", Inconsolata, monospace;
-  font-size: 16px;
+  font-size: 15px;
   color: #f8f8f8;
   width: 100%;
   height: auto;
@@ -11,11 +11,11 @@
 }
 
 .terminal {
-  width: 90%;
-  max-width: 600px;
+  width: 82%;
+  max-width: 500px;
   height: 40%;
-  min-height: 350px;
-  background: #212121;/*$black1;*/
+  min-height: 330px;
+  background: #191919;/*$black1;*/
   transition: box-shadow .3s linear;
   border-radius: 3px;
 }

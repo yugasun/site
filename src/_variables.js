@@ -9,7 +9,7 @@ module.exports = {
   navHeight: '65px',
   footerHeight: '155px',
   // -- Colors
-  yellow: '#ffd544',
+  yellow: '#ffd426',
   red: '#e55934',
   gray1: '#aaa',
   gray2: '#202020',

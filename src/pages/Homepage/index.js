@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Page from '../../layouts/Default'
 import Newsletter from '../../fragments/Newsletter/Newsletter'
-import UserAuth from '../../components/UserAuth'
 import Terminal from '../../components/Terminal'
 import ContentBlock from '../../components/ContentBlock'
 import Button from '../../components/Button/Button'
@@ -15,49 +14,44 @@ import styles from './Homepage.css'
 export default class Homepage extends Component {
 
   render () {
-    const loggedInComponent = (
-      <p style={{color: '#fff'}}>You are registered for the beta!</p>
-    )
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
               <div className={styles.hero}>
+
+                <div className={styles.heroFramework}></div>
+
+                <div className={styles.tagline}>
+                  Auto-scaling, pay-per-execution, event-driven apps
+                </div>
+
                 <div className={styles.heroLeft + ' fadeIn fadeInShort'}>
 
                   <div className={styles.copy}>
-                    <h3 className={styles.tagline}>Build more,</h3>
-                    <h3 className={styles.tagline}>manage less</h3>
-                    <h1 className={styles.heading}>With the <span style={{fontWeight: '500'}}>Serverless Framework</span></h1>
                     <Button
                       kind='black'
-                      style={{margin: '10px 0px 15px 0px'}}
                       href='https://github.com/serverless/serverless'
                       target='_blank'
                     >
-                      VIEW THE FRAMEWORK
+                      WATCH THE VIDEO
                     </Button>
                   </div>
-                  <div className={styles.providers} />
+
+                  <div className={styles.copy}>
+                    <Button
+                      kind='black'
+                      href='https://github.com/serverless/serverless'
+                      target='_blank'
+                    >
+                      READ THE DOCS
+                    </Button>
+                  </div>
+
                 </div>
                 <div className={styles.heroRight}>
                   <Terminal commands={terminalCommands} />
-                </div>
-              </div>
-            </div>
-            <div className={styles.cta}>
-              <div className={styles.ctaInner}>
-                <div className={styles.ctaRowOne}></div>
-                <div className={styles.ctaRowTwo}>
-                  <h2 className={styles.ctaCopy}>
-                    The Serverless Platform is coming
-                  </h2>
-                  <UserAuth loggedInComponent={loggedInComponent}>
-                    <Button kind='yellow' className={styles.btn} style={{display: 'inline-block', marginTop: 20}} onClick={this.login}>
-                      Sign up for early access
-                    </Button>
-                  </UserAuth>
                 </div>
               </div>
             </div>
