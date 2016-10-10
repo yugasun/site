@@ -94,7 +94,7 @@ $buttonPadding: 12px;
 .black {
   background: $black2;
   color: #fff;
-  padding: 20px 45px 16px 45px;
+  padding: 15px 35px 10px 35px;
   border-radius: 3px;
   transition: color 0.4s linear;
   &:hover {
