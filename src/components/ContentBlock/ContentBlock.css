@@ -1,21 +1,20 @@
-
+.contentBlocks {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .wrapper {
   position: relative;
 }
-
 .yellow {
   background-color: $yellow;
 }
-
 .white {
   background-color: #fff;
 }
-
 .black {
   background-color: $black2;
   color: #fff;
 }
-
 .inner {
   display: flex;
   align-items: center;
@@ -23,23 +22,22 @@
   margin: 0 auto;
   width: 60em;
 }
-
 .content {
-  width: 70%;
+  width: 60%;
   -ms-flex: 2;
   padding-right: 10%;
   p {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 30px;
   }
 }
 .title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 28px;
 }
 .image {
   margin: 0 3em 2em 0;
-  width: 30%;
+  width: 40%;
   overflow: hidden;
   img {
     width: auto;
