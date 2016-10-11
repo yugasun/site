@@ -1,5 +1,7 @@
 import md5 from '../utils/md5'
+import { setItem, getItem } from '../../storage'
 import getVisitorData from './getVisitorData'
+
 const VISITOR_ID = 'sls_visitor_id'
 
 const generateVisitorID = (data) => {
@@ -14,11 +16,11 @@ const generateVisitorID = (data) => {
 const setVisitorID = () => {
   const data = getVisitorData()
   const VisitorID = generateVisitorID(data)
-  window.localStorage.setItem(VISITOR_ID, VisitorID)
+  setItem(VISITOR_ID, VisitorID)
 }
 
 export const getVisitorID = () => {
-  return window.localStorage.getItem(VISITOR_ID)
+  return getItem(VISITOR_ID)
 }
 
 export const initializeVisitorID = () => {
