@@ -1,3 +1,4 @@
+import { setItem, getItem } from './storage'
 
 const XSRF_TOKEN = 'xsrf_token'
 
@@ -7,11 +8,11 @@ const generateXsrfToken = () => (
 
 const setXsrfToken = () => {
   const newXsrfToken = generateXsrfToken()
-  window.localStorage.setItem(XSRF_TOKEN, newXsrfToken)
+  setItem(XSRF_TOKEN, newXsrfToken)
 }
 
 export const getXsrfToken = () => {
-  return window.localStorage.getItem(XSRF_TOKEN)
+  return getItem(XSRF_TOKEN)
 }
 
 export const initializeXsrfToken = () => {
