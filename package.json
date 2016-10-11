@@ -22,6 +22,7 @@
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
+    "buildprod": "npm run refresh && npm run sync && phenomic build",
     "postinstall": "node scripts/build/postinstall.js",
     "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
