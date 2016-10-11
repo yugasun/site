@@ -7,8 +7,11 @@
   import architectureGif from '../../assets/images/architecture.gif'
   import frameworkGif from '../../assets/images/framework.gif'
   import communityJpg from '../../assets/images/community.png'
+  import customerCoke from '../../assets/images/customer_coke.png'
   import styles from './Homepage.css'
-  // import { Link } from 'react-router'
+  import playSvg from '../../assets/icons/play.svg'
+  import docsSvg from '../../assets/icons/book2.svg'
+  import Svg from 'react-svg-inline'
 
   export default class Homepage extends Component {
 
@@ -20,61 +23,78 @@
               <div className={styles.bg}>
                 <div className={styles.hero}>
 
-                  <div className={styles.heroFramework}></div>
-
-                  <div className={styles.tagline}>
-                    Auto-scaling, pay-per-execution, event-driven apps
-                  </div>
-
                   <div className={styles.heroLeft + ' fadeIn fadeInShort'}>
 
-                    <div className={styles.copy}>
+                    <div className={styles.heroFramework}></div>
+
+                    <div className={styles.tagline}>
+                      Auto-scaling, pay-per-execution, event-driven apps
+                    </div>
+
+                    <div className={styles.cta}>
                       <Button
                         kind='black'
-                        href='https://github.com/serverless/serverless'
+                        href='https://serverless.com/framework'
                         target='_blank'
                       >
+                        <Svg svg={playSvg} cleanup />
                         WATCH THE VIDEO
                       </Button>
                     </div>
 
-                    <div className={styles.copy}>
+                    <div className={styles.cta}>
                       <Button
                         kind='black'
-                        href='https://github.com/serverless/serverless'
+                        href='https://serverless.com/framework'
                         target='_blank'
                       >
+                        <Svg svg={docsSvg} cleanup />
                         READ THE DOCS
                       </Button>
                     </div>
 
                   </div>
-                  <div className={styles.heroRight}>
+                  <div className={styles.heroRight + ' zoomIn zoomInLong'}>
                     <Terminal commands={terminalCommands} />
                   </div>
                 </div>
               </div>
             </div>
 
+            <div className={styles.testimonials}>
+              <div className={styles.testimonial}>
+                “The Serverless Framework is a core component of
+                The Coca-Cola Company's initiative to reduce
+                IT operational costs and deploy services faster.”
+              </div>
+              <div className={styles.customer}>
+                <img src={customerCoke} alt='coca cola logo serverless' />
+              </div>
+            </div>
+
             <ContentBlock title='The Serverless Architecture' image={architectureGif}>
-              <p>Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically. Build REST APIs, data pipelines, and devops automation rapidly, without the overhead of server administration.</p>
+              <p>
+                Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically.
+              </p>
             </ContentBlock>
 
             <ContentBlock title='The Serverless Framework' image={frameworkGif}>
-              <p>The open-source, command line tool and standard syntax to easily build serverless architectures on AWS Lambda, Azure Functions, Google Cloud Functions & more. Startups to Fortune 100 companies are using the Framework to build sophisticated event-driven systems.</p>
-              <a className={styles.yellowLink} href='http://github.com/serverless/serverless' target='_blank'>
-              View the framework on Github
-              </a>
+              <p>The open-source, application framework to easily build serverless architectures on AWS Lambda & more.  Startups and Fortune 500 companies are using it to build incredibly efficient applications.</p>
+              <p>
+                <a href='https://serverless.com/framework' target='_blank'>
+                  View the framework
+                </a>
+              </p>
             </ContentBlock>
 
             <ContentBlock title='The Serverless Community' image={communityJpg}>
-              <p>Over 1,500 people are in our chatroom and on our forum every day discussing the Serverless Framework and serverless architectures. Come join us!</p>
+              <p>Over 1,500 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
               <p>
-                <a className={styles.yellowLink} href='https://gitter.im/serverless/serverless' target='_blank'>
+                <a href='https://gitter.im/serverless/serverless' target='_blank'>
                 Join the Chatroom
                 </a>
                 <br />
-                <a className={styles.yellowLink} href='http://forum.serverless.com' target='_blank'>
+                <a href='http://forum.serverless.com' target='_blank'>
                 Check out the Forum
                 </a>
               </p>
