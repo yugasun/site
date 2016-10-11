@@ -1,10 +1,9 @@
 /**
 Cookie + localStorage Utils
 */
-
 function isLocalStorageSupported () {
   var supported
-  if ('localStorage' in window) {
+  if (typeof window !== 'undefined' && 'localStorage' in window) {
     try {
       if (typeof localStorage === 'undefined' ||
       typeof JSON === 'undefined') {
@@ -26,12 +25,16 @@ const hasLocalStorage = isLocalStorageSupported()
 export const localStorageSupported = hasLocalStorage
 
 export function setItem (key, value) {
+  if (typeof window === 'undefined') {
+    return false
+  }
   if (!hasLocalStorage) {
     try {
       createCookie(key, value)
       return value
     } catch (e) {
       console.log('Local Storage not supported by this browser')
+      // TODO: set window.var
     }
   }
   var saver = JSON.stringify(value)
@@ -40,6 +43,9 @@ export function setItem (key, value) {
 }
 
 export function getItem (key) {
+  if (typeof window === 'undefined') {
+    return false
+  }
   if (!hasLocalStorage) {
     try {
       return parseResult(readCookie(key))
@@ -74,6 +80,9 @@ function parseResult (res) {
 }
 
 export function createCookie (name, value, days) {
+  if (typeof window === 'undefined') {
+    return false
+  }
   let expires = ''
   if (days) {
     const date = new Date()
@@ -84,6 +93,9 @@ export function createCookie (name, value, days) {
 }
 
 export function readCookie (name) {
+  if (typeof window === 'undefined') {
+    return false
+  }
   const find = `${name}=`
   const allCookies = document.cookie.split(';')
   for (var i = 0; i < allCookies.length; i++) {
@@ -103,6 +115,9 @@ export function eraseCookie (name) {
 }
 
 export function listCookies () {
+  if (typeof window === 'undefined') {
+    return false
+  }
   let cookies = {}
   document.cookie && document.cookie.split(';').forEach((cookie) => {
     let c = cookie.split('=')
