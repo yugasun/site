@@ -4,7 +4,12 @@
     "logo": "https://www.trek10.com/assets/logo.svg",
     "tagline": "Trek10 builds, optimizes, and manages high-value, cloud-based solutions",
     "description": "Trek10 builds, optimizes, and manages high-value, cloud-based solutions with the absolute best DevOps tools and cloud services available. Their focus is on building container-based and event-driven architectures on AWS. Trek10’s engineers have contributed heavily to the Serverless Framework since the early JAWS days and is expert at paring Lambda and other AWS platform services with the Serverless Framework to build enterprise ready, massively scalable systems.",
-    "website": "https://www.trek10.com"
+    "website": "https://www.trek10.com",
+    "stories": [{
+      "title": "GraphQL and Rendering HTML with Serverless",
+      "url":"/learn/graphql-and-serverless/"
+      }
+    ]
   },
   "SC5": {
     "name": "SC5",
