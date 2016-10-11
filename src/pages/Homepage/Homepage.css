@@ -38,11 +38,18 @@ a.yellowLink {
   min-height:90vh;
   margin-bottom: 50px;
   background: #ffea93; /* Old browsers */
-  background: -moz-radial-gradient(top, ellipse cover,  #ffea93 0%, #ffd734 75%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(top, ellipse cover,  #ffea93 0%,#ffd734 75%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at top,  #ffea93 0%,#ffd734 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffea93', endColorstr='#ffd734',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   overflow: auto;
+}
+.buttons {
+  text-align: center;
+}
+.sparkle {
+  position: absolute;
+  right: 35px;
+  top: 3px;
+  width: 70px;
 }
 .hero {
   display: flex;
@@ -118,7 +125,6 @@ a.yellowLink {
   composes: avenir from "../../index.css";
 }
 .cta a {
-  display: flex;
   width: 300px;
   justify-content: center;
 }
