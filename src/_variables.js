@@ -13,7 +13,7 @@ module.exports = {
   red: '#e55934',
   gray1: '#aaa',
   gray2: '#202020',
-  black1: '#212121',
+  black1: '#191919',
   black2: '#191919',
   // -- Fonts
   fontSize: baseFontSize,
