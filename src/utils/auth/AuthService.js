@@ -47,12 +47,12 @@ export default class AuthService extends EventEmitter {
         params: {
           state: state,
           analytics: {
-            first_url: 'heheheh',
-            first_referrer: 'xyz',
-            last_referrer: 'blah',
-            last_url: 'xyz',
-            num_visits: 2,
-            source: 'Direct Traffic',
+            // first_url: 'heheheh',
+            // first_referrer: 'xyz',
+            // last_referrer: 'blah',
+            // last_url: 'xyz',
+            // num_visits: 2,
+            // source: 'Direct Traffic',
             uuid: getVisitorID(),
             // unique_conversion_events: 'hdhdhd'
           },
