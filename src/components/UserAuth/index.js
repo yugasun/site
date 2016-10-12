@@ -1,5 +1,7 @@
 import React, { PropTypes} from 'react'
+import { setItem } from '../../utils/storage'
 import auth from '../../utils/auth'
+const isClient = typeof window !== 'undefined'
 
 export class UserAuth extends React.Component {
 
@@ -14,10 +16,14 @@ export class UserAuth extends React.Component {
     super(props, context)
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
-
     this.state = {
       loggedIn: auth.loggedIn(),
     }
+  }
+
+  doLogin = () => {
+    isClient && setItem('auth_redirect', window.location.href)
+    this.login()
   }
 
   handleToggle = () => {
@@ -32,7 +38,7 @@ export class UserAuth extends React.Component {
       renderedContent = loggedInComponent
     }
     return (
-      <div className={className} style={style} onClick={this.login}>
+      <div className={className} style={style} onClick={this.doLogin}>
         {renderedContent}
       </div>
     )
