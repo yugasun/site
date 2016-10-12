@@ -10,22 +10,23 @@ export default class PartnersPage extends React.Component {
       <Page {...this.props} >
         <br />
         <div className={styles.header}>
-          <h1 className='center'>What is the Serverless Framework?</h1>
-          <p className='center'>Build applications comprised of microservices that run in response to events,
-          auto-scale for you, and only charge you when they run. This lowers the total cost of maintaining your
-          apps, enabling you to build more logic, faster. The Serverless Framework is the world’s leading
+          <h1 className='center' style={{marginBottom: '20px'}}>What is the Serverless Framework?</h1>
+          <p className='center'>Build applications comprised of microservices that run in response to events, auto-scale for you, and only charge you when they run. This lowers the total cost of maintaining your apps, enabling you to build more logic, faster. </p>
+          <p>The Serverless Framework is the world’s leading
           development framework for building serverless architectures.
           </p>
         </div>
-        <hr />
         <iframe className='center' src='https://player.vimeo.com/video/186516527?color=FFD734&byline=0&portrait=0' width='640' height='360'
           frameBorder='0' webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
         <div className={styles.button}>
-          <Button className={styles.button} kind='black' href='https://serverless.com/framework/docs/guide/' target='_blank'>Get Started
+          <Button className={styles.button}
+            kind='black' href='/framework/docs/guide/'>
+            Get Started
           </Button>
         </div>
-        <hr />
-        <h2 className={styles.header}>Why Use The Framework</h2>
+        <h2 className={styles.header} style={{marginBottom: '20px', marginTop: '50px'}}>
+          Why Use The Framework
+        </h2>
         <div className={styles.componentBox}>
           <div className={styles.component}>
             <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
@@ -67,9 +68,13 @@ export default class PartnersPage extends React.Component {
           </div>
         </div>
         <div className={styles.button}>
-          <Button kind='black' href='https://serverless.com/framework/docs/guide/' target='_blank'>Get Started
+          <Button kind='black' href='https://serverless.com/framework/docs/guide/'>
+          Get Started
           </Button>
         </div>
+        <br />
+        <br />
+        <br />
         <br />
       </Page>
     )

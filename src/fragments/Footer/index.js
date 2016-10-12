@@ -8,7 +8,7 @@ export default class Footer extends Component {
     let cta
     if (typeof window !== 'undefined') {
       const url = window.location.pathname
-      if (url === '/blog/' || url === '/' || url.match(/\/docs\//)) {
+      if (url === '/blog/' || url === '/' || url.match(/\/docs\//) || url.match(/\/framework\//)) {
         cta = <FooterBetaCTA />
       }
     }

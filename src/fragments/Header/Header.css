@@ -74,12 +74,17 @@
     background: 0 0;
   }
 }
-.link svg {
-  fill: currentColor;
-  opacity: 0.5;
-  margin-right: 0.5rem;
-  width: 1rem;
-  height: 1rem;
+.yellowLink {
+  color: $yellow;
+  &:hover {
+    color: #fff;
+    background: 0 0;
+  }
+}
+.link svg, .link :global(.SVGInline) {
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 .toggle {
   height: $navHeight;

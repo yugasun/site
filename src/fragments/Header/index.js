@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import UserAuth from '../../components/UserAuth'
 import handleClickAway from '../../utils/handleClickAway'
+import Svg from 'react-svg-inline'
+import gitHubSvg from '../../assets/icons/github.svg'
 import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 
@@ -60,18 +63,13 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link to='/blog' className={styles.link}>
-                    Blog
+                  <Link to='/framework/docs' className={styles.link}>
+                    Documentation
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
-                    GitHub
-                  </a>
-                </li>
-                <li className={styles.navItem}>
-                  <Link to='/framework/docs' className={styles.link}>
-                    Docs
+                  <Link to='/blog' className={styles.link}>
+                    Blog
                   </Link>
                 </li>
                 <li className={styles.navItem}>
@@ -83,6 +81,18 @@ export default class Header extends Component {
                   <Link to='/partners' className={styles.link}>
                     Partners
                   </Link>
+                </li>
+                <UserAuth>
+                  <li className={styles.navItem}>
+                    <a to='/partners' className={styles.link + ' ' + styles.yellowLink}>
+                      Beta
+                    </a>
+                  </li>
+                </UserAuth>
+                <li className={styles.navItem}>
+                  <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
+                    <Svg svg={gitHubSvg} cleanup />
+                  </a>
                 </li>
               </ul>
             </nav>
