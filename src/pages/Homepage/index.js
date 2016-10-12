@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
 import architectureGif from '../../assets/images/architecture.gif'
 import frameworkGif from '../../assets/images/framework.gif'
+import awsLogo from '../../assets/images/aws_logo.png'
 import communityJpg from '../../assets/images/community.png'
 import customerCoke from '../../assets/images/customer_coke.png'
 import sparkle from '../../assets/images/home_sparkle.png'
@@ -42,13 +43,12 @@ export default class Homepage extends Component {
           <div className={styles.top}>
             <div className={styles.bg}>
               <div className={styles.hero}>
-
                 <div className={styles.heroLeft + ' fadeIn fadeInShort'}>
 
                   <div className={styles.heroFramework}></div>
 
                   <div className={styles.tagline}>
-                    Auto-scaling, pay-per-execution, event-driven apps
+                    Build auto-scaling, pay-per-execution, event-driven apps on AWS Lambda
                   </div>
                   <div className={styles.buttons}>
                     <div className={styles.cta}>
@@ -56,8 +56,12 @@ export default class Homepage extends Component {
                         kind='black'
                         href='https://serverless.com/framework'
                       >
-                        <Svg svg={playSvg} cleanup />
-                        WATCH THE VIDEO
+                        <span className={styles.ctaInner}>
+                          <Svg svg={playSvg} cleanup />
+                          <span className={styles.ctaText}>
+                            WATCH THE VIDEO
+                          </span>
+                        </span>
                       </Button>
                     </div>
 
@@ -66,8 +70,12 @@ export default class Homepage extends Component {
                         kind='black'
                         href='https://serverless.com/framework'
                       >
-                        <Svg svg={docsSvg} cleanup />
-                        READ THE DOCS
+                        <span className={styles.ctaInner}>
+                          <Svg svg={docsSvg} cleanup />
+                          <span className={styles.ctaText}>
+                            READ THE DOCS
+                          </span>
+                        </span>
                       </Button>
                     </div>
                   </div>
@@ -77,7 +85,12 @@ export default class Homepage extends Component {
                   <Terminal commands={terminalCommands} />
                 </div>
               </div>
+              <div className={styles.poweredBy}>
+                <span>Powered by AWS Lambda</span>
+                <img className={styles.awsLogo} src={awsLogo} alt='aws Lambda' />
+              </div>
             </div>
+
           </div>
 
           <div className={styles.testimonials}>
@@ -118,7 +131,6 @@ export default class Homepage extends Component {
               </a>
             </p>
           </ContentBlock>
-
         </div>
       </Page>
     )

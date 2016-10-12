@@ -33,15 +33,29 @@ a.yellowLink {
   }
 }
 .bg {
-  display: flex;
-  overflow: auto;
-  min-height:90vh;
+  min-height: calc(100vh - $navHeight);
   margin-bottom: 50px;
   background: #ffea93; /* Old browsers */
   background: radial-gradient(ellipse at top,  #ffea93 0%,#ffd734 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffea93', endColorstr='#ffd734',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  overflow: auto;
 }
+.poweredBy {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  span {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .awsLogo {
+    margin-left: 20px;
+    max-width: 120px;
+  }
+}
+
 .buttons {
   text-align: center;
 }
@@ -58,8 +72,7 @@ a.yellowLink {
   composes: content from '../../index.css';
   width: 100%;
   margin: 0 auto;
-  padding-top: 5%;
-  -webkit-flex-flow: row wrap;
+  padding-top: 6%;
   flex-flow: row wrap;
   align-self: flex-start;
   overflow: hidden;
@@ -129,6 +142,19 @@ a.yellowLink {
   width: 300px;
   justify-content: center;
 }
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :global(.SVGInline) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.ctaText {
+
+}
 .cta a svg {
   width: 20px;
   height: 20px;
@@ -141,22 +167,7 @@ a.yellowLink {
 .newsletter {
   background: $black2;
 }
-.emailContainer {
-  min-height: 120px;
-  padding: 35px 0 25px 0;
-  margin: 0;
-  color: #fff;
-}
-.emailContainerInner {
-  width: 60em;
-  margin: 0 auto;
-}
-.emailAsk {
-  margin: 10px 0;
-  font-size: 23px;
-  margin-right: 20px;
-  min-width: 275px;
-}
+
 .row {
   display: flex;
   align-items: center;
@@ -199,10 +210,18 @@ a.yellowLink {
   }
 }
 @media (max-width: 768px) {
+  .sparkle {
+    right: 10px;
+    top: -22px;
+    width: 70px;
+  }
   .heroFramework {
     margin: 25px auto;
     height: 80px;
     width: 100%;
+  }
+  .testimonials .testimonial {
+    font-size: 20px;
   }
   .row {
     flex-direction: column;
@@ -234,10 +253,11 @@ a.yellowLink {
     line-height: 28px;
     display: inline-block;
     margin: 0 0 25px 0;
-  &:last-of-type {
-     margin-left:5px;
-     margin-bottom: 15px;
-   }
+    max-width: 80%;
+    &:last-of-type {
+      margin-left:5px;
+      margin-bottom: 15px;
+    }
   }
   .yellowLink {
     font-size: 18px;

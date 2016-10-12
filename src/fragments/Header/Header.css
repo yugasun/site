@@ -168,11 +168,19 @@ $lineHeight: 2px;
     left: 0px;
     top: 0px;
     z-index: 10;
-  padding:20px;
-    a {
+    padding:20px;
+    li, a {
       width: 100%;
       align-items: center;
       justify-content: center;
+      height: 50px;
     }
+  }
+  .navItems, .navItem, .navItem a {
+    width: 100%;
+  }
+  .navItems {
+    flex-direction: column;
+    height: auto;
   }
 }

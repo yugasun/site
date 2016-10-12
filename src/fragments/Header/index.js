@@ -55,31 +55,36 @@ export default class Header extends Component {
             <nav className={styles.navRight + ' ' + mobileNav}>
               <ul className={styles.navItems}>
                 <li className={styles.navItem}>
+                  <Link to='/framework' className={styles.link}>
+                    Framework
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
                   <Link to='/blog' className={styles.link}>
                     Blog
                   </Link>
                 </li>
-                <li>
+                <li className={styles.navItem}>
                   <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
                     GitHub
                   </a>
                 </li>
-                <li>
+                <li className={styles.navItem}>
                   <Link to='/framework/docs' className={styles.link}>
                     Docs
                   </Link>
                 </li>
-                <li>
+                <li className={styles.navItem}>
                   <Link to='https://gitter.im/serverless/serverless' className={styles.link}>
                     Gitter
                   </Link>
                 </li>
-                <li>
+                <li className={styles.navItem}>
                   <Link to='http://forum.serverless.com/' className={styles.link}>
                     Forum
                   </Link>
                 </li>
-                <li>
+                <li className={styles.navItem}>
                   <Link to='/partners' className={styles.link}>
                     Partners
                   </Link>
