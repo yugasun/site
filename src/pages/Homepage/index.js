@@ -55,7 +55,6 @@ export default class Homepage extends Component {
                       <Button
                         kind='black'
                         href='https://serverless.com/framework'
-                        target='_blank'
                       >
                         <Svg svg={playSvg} cleanup />
                         WATCH THE VIDEO
@@ -66,7 +65,6 @@ export default class Homepage extends Component {
                       <Button
                         kind='black'
                         href='https://serverless.com/framework'
-
                       >
                         <Svg svg={docsSvg} cleanup />
                         READ THE DOCS
