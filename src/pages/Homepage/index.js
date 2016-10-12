@@ -80,7 +80,7 @@ export default class Homepage extends Component {
                     </div>
                   </div>
                 </div>
-                <div ref='animDiv' className={styles.heroRight + ' zoomIn zoomInLong'}>
+                <div ref='animDiv' className={styles.heroRight + ' zoomxIn zoomInxLong'}>
                   <img ref='sparkle' className={styles.sparkle} src={sparkle} role='presentation' />
                   <Terminal commands={terminalCommands} />
                 </div>
