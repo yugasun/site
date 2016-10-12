@@ -163,6 +163,12 @@ tfoot td {
   margin-right: 35px;
 }
 
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+  }
+
 .phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {
   display: none;
 }
