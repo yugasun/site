@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getItem, createCookie, readCookie } from '../../utils/storage'
-import HelloBar from '../../components/HelloBar/Hellobar'
+import HelloBar from '../../components/HelloBar'
 import UserAuth from '../../components/UserAuth'
 import styles from './PlatformSignupFooter.css'
 
