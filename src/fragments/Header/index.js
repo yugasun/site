@@ -73,9 +73,9 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link to='http://forum.serverless.com/' className={styles.link}>
+                  <a href='http://forum.serverless.com/' target='_blank' className={styles.link}>
                     Forum
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.navItem}>
                   <Link to='/partners' className={styles.link}>
