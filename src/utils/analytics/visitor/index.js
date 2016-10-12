@@ -1,6 +1,10 @@
 import md5 from '../utils/md5'
+import uuid from '../utils/uuid'
+import { setItem, getItem } from '../../storage'
 import getVisitorData from './getVisitorData'
-const VISITOR_ID = 'sls_visitor_id'
+
+const VISITOR_UNIQUE_ID = 'uid'
+const VISITOR_UUID = 'uuid'
 
 const generateVisitorID = (data) => {
   return md5(data.canvas +
@@ -14,11 +18,17 @@ const generateVisitorID = (data) => {
 const setVisitorID = () => {
   const data = getVisitorData()
   const VisitorID = generateVisitorID(data)
-  window.localStorage.setItem(VISITOR_ID, VisitorID)
+  const VisitorUUID = uuid()
+  setItem(VISITOR_UNIQUE_ID, VisitorID)
+  setItem(VISITOR_UUID, VisitorUUID)
 }
 
 export const getVisitorID = () => {
-  return window.localStorage.getItem(VISITOR_ID)
+  return getItem(VISITOR_UNIQUE_ID)
+}
+
+export const getVisitorUUID = () => {
+  return getItem(VISITOR_UUID)
 }
 
 export const initializeVisitorID = () => {

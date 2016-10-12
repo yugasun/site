@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 import styles from './Button.css' // eslint-disable-line
 
 const propTypes = {
@@ -22,11 +23,14 @@ export default function Button ({onClick, label, children, kind, style, href, ta
   const kindStyle = styles[kind]
   if (href) {
     return (
-      <a className={styles.btn + ' ' + kindStyle} href={href} target={target}
+      <Link
+        className={styles.btn + ' ' + kindStyle}
+        to={href}
+        target={target}
         onClick={onClick} style={style}>
         <span className={styles.background}></span>
         <span>{text}</span>
-      </a>
+      </Link>
     )
   } else {
     return (

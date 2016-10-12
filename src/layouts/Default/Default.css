@@ -7,17 +7,14 @@
 }
 .page {
   max-width: 96rem;
-  margin: auto;
+  margin: 20px auto 0 auto;
   min-height: calc(100vh - $navHeight - $footerHeight);
-  margin-top: 20px;
   img {
     max-width: 100%;
   }
 }
-
 .fullWidth {
   width: 100%;
-  overflow: hidden;
 }
 
 @media (max-width: 960px) {

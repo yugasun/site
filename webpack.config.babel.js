@@ -188,6 +188,13 @@ export const makeConfig = (config = {}) => {
     resolve: {
       extensions: [ '.js', '.json', '' ],
       root: [ path.join(__dirname, 'node_modules') ],
+      // alias: {
+      //   'assets': 'src/assets',
+      //   'utils': 'src/utils',
+      //   'components': 'src/components',
+      //   'fragments': 'src/fragments',
+      //   'layouts': 'src/layouts',
+      // }
     },
     resolveLoader: { root: [ path.join(__dirname, 'node_modules') ] },
   }

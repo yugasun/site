@@ -14,8 +14,8 @@ export default class PartnersPage extends React.Component {
   }
   handleSubmit = (event, data) => {
     event.preventDefault()
-    console.log(event)
-    console.log(data)
+    // console.log(event)
+    // console.log(data)
     var that = this
     submitForm(data, function (err, data) {
       if (err) {

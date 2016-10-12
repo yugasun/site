@@ -1,6 +1,9 @@
 import { EventEmitter } from 'events'
+import { getItem } from '../storage'
 import { isTokenExpired } from './jwtHelper'
-import LogoImg from '../assets/images/serverless_logo.png'
+import { getXsrfToken } from './xsrfToken'
+import { getVisitorID } from '../analytics/visitor'
+import LogoImg from '../../assets/images/serverless_logo.png'
 const isClient = typeof window !== 'undefined'
 
 // https://github.com/reactjs/react-chartjs/issues/57#issuecomment-226790969
@@ -9,7 +12,7 @@ if (isClient) {
 }
 
 // temp hack until redux implmented
-function triggerLoginEvent (profile) {
+function triggerLoginEvent (authResult, profile) {
   var LoginEvent = new CustomEvent('serverlessLogin', { // eslint-disable-line
     detail: {
       profile: profile,
@@ -18,7 +21,15 @@ function triggerLoginEvent (profile) {
     cancelable: false
   })
   // Trigger it!
-  window.dispatchEvent(LoginEvent)
+  if (authResult.state && authResult.state.split('url=')) {
+    const redirect = getItem('auth_redirect')
+    if (window.location.href !== redirect) {
+      window.location.href = redirect
+    }
+    setTimeout(function () {
+      window.dispatchEvent(LoginEvent)
+    }, 300)
+  }
 }
 
 export default class AuthService extends EventEmitter {
@@ -27,8 +38,27 @@ export default class AuthService extends EventEmitter {
     if (!isClient) {
       return false
     }
+    const state = `token=${getXsrfToken()}%26url%3D${encodeURIComponent(window.location.href)}`
     // Configure Auth0
-    this.lock = new Auth0Lock(clientId, domain, { // eslint-disable-line
+    this.lock = new Auth0Lock(clientId, domain, {
+      auth: {
+        redirectUrl: `${window.location.origin}/loading/`,
+        responseType: 'token',
+        params: {
+          state: state,
+          analytics: {
+            first_url: 'heheheh',
+            first_referrer: 'xyz',
+            last_referrer: 'blah',
+            last_url: 'xyz',
+            num_visits: 2,
+            source: 'Direct Traffic',
+            uuid: getVisitorID(),
+            // unique_conversion_events: 'hdhdhd'
+          },
+          // scope: 'openid email_verified',
+        },
+      },
       theme: {
         logo: LogoImg,
         primaryColor: '#000'
@@ -46,7 +76,7 @@ export default class AuthService extends EventEmitter {
   }
 
   _doAuthentication (authResult) {
-    console.log('authResult', authResult)
+    // console.log('authResult', authResult)
     // Saves the user token
     this.setToken(authResult.idToken)
     // Async loads the user profile data
@@ -54,8 +84,9 @@ export default class AuthService extends EventEmitter {
       if (error) {
         console.log('Error loading the Profile', error)
       } else {
-        triggerLoginEvent(profile)
+        triggerLoginEvent(authResult, profile)
         this.setProfile(profile)
+        // redirect
       }
     })
   }

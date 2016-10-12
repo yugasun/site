@@ -24,8 +24,6 @@ export default class FeedbackModal extends Component {
   }
   onFeedbackSubmit = (event, data) => {
     event.preventDefault()
-    console.log(event)
-    console.log(data)
     const other = data.other
     delete data.other
     const sendData = {

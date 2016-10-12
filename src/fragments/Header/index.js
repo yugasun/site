@@ -40,11 +40,11 @@ export default class Header extends Component {
     return (
       <header className={styles.header}>
         <div className={styles.bumper} />
-        <nav className={styles.navFixed}>
-          <div className={styles.nav}>
-            <div className={styles.navPart1}>
-              <Link to='/'>
-                <img alt='Serverless logo' className={styles.logo} src={Logo} draggable='false' />
+        <div className={styles.navFixed}>
+          <div className={styles.navWrapper}>
+            <div className={styles.navLeft}>
+              <Link to='/' className={styles.logo}>
+                <img alt='Serverless logo' src={Logo} draggable='false' />
               </Link>
             </div>
             <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
@@ -52,31 +52,47 @@ export default class Header extends Component {
                 <div className={styles.bar + ' ' + openClass}></div>
               </div>
             </div>
-            <div className={styles.navPart2 + ' ' + mobileNav}>
-              <Link to='/blog' className={styles.link}>
-                Blog
-              </Link>
-              <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
-                GitHub
-              </a>
-              <Link to='/framework/docs' className={`${styles.link}`}>
-                Documentation
-              </Link>
-              <a href='https://gitter.im/serverless/serverless' target='_blank' className={styles.link}>
-                Gitter
-              </a>
-              <a href='http://forum.serverless.com/' target='_blank' className={styles.link}>
-                Forum
-              </a>
-              <Link to='/partners' className={styles.link}>
-                Partners
-              </Link>
-              <Link to='/company/jobs' className={`${styles.link} ${styles.hiring}`}>
-                We're Hiring
-              </Link>
-            </div>
+            <nav className={styles.navRight + ' ' + mobileNav}>
+              <ul className={styles.navItems}>
+                <li className={styles.navItem}>
+                  <Link to='/framework' className={styles.link}>
+                    Framework
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='/blog' className={styles.link}>
+                    Blog
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
+                    GitHub
+                  </a>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='/framework/docs' className={styles.link}>
+                    Docs
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='https://gitter.im/serverless/serverless' className={styles.link}>
+                    Gitter
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='http://forum.serverless.com/' className={styles.link}>
+                    Forum
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='/partners' className={styles.link}>
+                    Partners
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </nav>
+        </div>
       </header>
     )
   }
