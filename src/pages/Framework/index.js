@@ -11,16 +11,20 @@ export default class PartnersPage extends React.Component {
         <br />
         <div className={styles.header}>
           <h1 className='center' style={{marginBottom: '20px'}}>What is the Serverless Framework?</h1>
-          <p className='center'>Build applications comprised of microservices that run in response to events, auto-scale for you, and only charge you when they run. This lowers the total cost of maintaining your apps, enabling you to build more logic, faster. </p>
-          <p>The Serverless Framework is the world’s leading
-          development framework for building serverless architectures.
+          <p className='center' style={{marginBottom: '20px'}}>
+            Build applications comprised of microservices that run in response to events, auto-scale for you, and only charge you when they run. This lowers the total cost of maintaining your apps, enabling you to build more logic, faster.
           </p>
         </div>
         <iframe className='center' src='https://player.vimeo.com/video/186516527?color=FFD734&byline=0&portrait=0' width='640' height='360'
           frameBorder='0' webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
+        <p className='center' style={{marginTop: '20px', marginBottom: '10px'}}>
+          The Serverless Framework is the world’s leading development framework for building serverless architectures.
+        </p>
         <div className={styles.button}>
-          <Button className={styles.button}
-            kind='black' href='/framework/docs/guide/'>
+          <Button
+            className={styles.button}
+            kind='black'
+            href='/framework/docs/guide/'>
             Get Started
           </Button>
         </div>

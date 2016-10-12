@@ -1,11 +1,15 @@
 .header {
-  text-align: center;
   margin: 35px 0;
   max-width: 660px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  text-align: center;
+}
+
+.headerText {
+  text-align: center;
 }
 
 .componentBox {
@@ -21,5 +25,5 @@
 }
 .button {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
