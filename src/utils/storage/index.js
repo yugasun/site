@@ -19,7 +19,7 @@ if (!isServer && 'localStorage' in window) {
     hasLocalStorage = false
   }
 }
-
+export { createCookie, readCookie, eraseCookie } from './cookie'
 export function setItem (key, value) {
   if (isServer) return false
   if (!hasLocalStorage) {

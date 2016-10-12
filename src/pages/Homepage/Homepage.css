@@ -48,8 +48,9 @@ a.yellowLink {
 .sparkle {
   position: absolute;
   right: 35px;
-  top: 3px;
-  width: 70px;
+  top: -8px;
+  width: 90px;
+  display: none;
 }
 .hero {
   display: flex;

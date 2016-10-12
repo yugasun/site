@@ -1,72 +1,136 @@
-import React, {Component, PropTypes} from 'react'
-import classnames from 'classnames'
-import { addAnimationEvent, removeAnimationEvent } from '../../utils/animations'
-import styles from './HelloBar.css'
-
-const propTypes = {
-  children: PropTypes.any,
-  onClose: PropTypes.func,
-  className: PropTypes.string,
-  style: PropTypes.object,
-}
-
-export default class HelloBar extends Component {
-  constructor (props, context) {
-    super(props, context)
-    this.state = {
-      show: true
-    }
-    this.animationCallback = this.animationCallback.bind(this)
-  }
-  componentDidMount () {
-    addAnimationEvent(this.refs.hellobar, 'AnimationEnd', this.animationCallback)
-    // setTimeout(() => {
-    //   this.setState({
-    //     show: false
-    //   })
-    // }, 2000)
-  }
-  componentWillUnmount () {
-    removeAnimationEvent(this.refs.hellobar, 'AnimationEnd', this.animationCallback)
-  }
-  animationCallback (event) {
-    // console.log('animationName', event.animationName)
-    const node = this.refs.hellobar
-    if (event.target !== node) {
-      return false
-    }
-    if (event.animationName === 'flipInSimple') {
-      node.style.display = 'none'
-    }
-  }
-  handleClose = () => {
-    const { onClose } = this.props
-    if (onClose) {
-      onClose()
-    }
-    this.setState({
-      show: false
-    })
-  }
-  render () {
-    const { style, className } = this.props
-    const showOrHide = (this.state.show) ? styles.show : styles.hide
-    const classes = classnames(
-      styles.hellobar, // base class
-      styles.fullWidth, // size
-      styles.bounceFlip, // effect
-      className, // prop based class
-      showOrHide
-    )
+import React, { PropTypes } from 'react' // eslint-disable-line
+import ActivableRenderer from '../ActivableRenderer/ActivableRenderer'
+import InjectHelloBar from './HelloBar'
+/* DOESNT WORK Delete */
+const factory = (HelloBar) => {
+  const Bar = (props) => {
     return (
-      <div ref='hellobar' className={classes} style={style}>
-        <div className={styles.inner}>
-          {this.props.children}
-        </div>
-        <span className={styles.close} onClick={this.handleClose}></span>
-      </div>
+      <HelloBar
+        active={props.active}
+        position={props.position}
+      >
+        {props.children}
+      </HelloBar>
     )
   }
+  Bar.propTypes = {
+    active: PropTypes.bool,
+    children: PropTypes.any,
+    position: PropTypes.string,
+  }
+
+  Bar.defaultProps = {
+    active: false,
+  }
+
+  return ActivableRenderer()(Bar)
 }
 
-HelloBar.propTypes = propTypes
+const HelloBar = factory(InjectHelloBar)
+
+export default HelloBar
+
+/*
+import InjectOverlay from '../Overlay/Overlay'
+
+const factory = (Overlay) => {
+  const Modal = (props) => {
+    const className = classnames([styles.dialog, styles[props.type]], {
+      [styles.active]: props.active
+    }, props.className)
+
+    return (
+      <Overlay
+        active={props.active}
+        onClick={props.onOverlayClick}
+        onEscKeyDown={props.onEscKeyDown}
+        onMouseDown={props.onOverlayMouseDown}
+        onMouseMove={props.onOverlayMouseMove}
+        onMouseUp={props.onOverlayMouseUp}
+      >
+        <div className={className}>
+          <section role='dialog' className={styles.body}>
+            {props.title ? <h2 className={styles.title}>{props.title}</h2> : null}
+            {props.children}
+          </section>
+        </div>
+      </Overlay>
+    )
+  }
+
+  Modal.propTypes = {
+    active: PropTypes.bool,
+    children: PropTypes.node,
+    className: PropTypes.string,
+    onEscKeyDown: PropTypes.func,
+    onOverlayClick: PropTypes.func,
+    onOverlayMouseDown: PropTypes.func,
+    onOverlayMouseMove: PropTypes.func,
+    onOverlayMouseUp: PropTypes.func,
+    title: PropTypes.string,
+    type: PropTypes.string
+  }
+
+  Modal.defaultProps = {
+    active: false,
+    type: 'normal'
+  }
+
+  return ActivableRenderer()(Modal)
+}
+
+const Modal = factory(InjectOverlay)
+
+export default Modal
+
+const factory = (Overlay) => {
+  const Modal = (props) => {
+    const className = classnames([styles.dialog, styles[props.type]], {
+      [styles.active]: props.active
+    }, props.className)
+
+    return (
+      <Overlay
+        active={props.active}
+        onClick={props.onOverlayClick}
+        onEscKeyDown={props.onEscKeyDown}
+        onMouseDown={props.onOverlayMouseDown}
+        onMouseMove={props.onOverlayMouseMove}
+        onMouseUp={props.onOverlayMouseUp}
+      >
+        <div className={className}>
+          <section role='dialog' className={styles.body}>
+            {props.title ? <h2 className={styles.title}>{props.title}</h2> : null}
+            {props.children}
+          </section>
+        </div>
+      </Overlay>
+    )
+  }
+
+  Modal.propTypes = {
+    active: PropTypes.bool,
+    children: PropTypes.node,
+    className: PropTypes.string,
+    onEscKeyDown: PropTypes.func,
+    onOverlayClick: PropTypes.func,
+    onOverlayMouseDown: PropTypes.func,
+    onOverlayMouseMove: PropTypes.func,
+    onOverlayMouseUp: PropTypes.func,
+    title: PropTypes.string,
+    type: PropTypes.string
+  }
+
+  Modal.defaultProps = {
+    active: false,
+    type: 'normal'
+  }
+
+  return ActivableRenderer()(Modal)
+}
+
+const Modal = factory(InjectOverlay)
+
+export default Modal
+
+*/

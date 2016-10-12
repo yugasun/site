@@ -12,11 +12,28 @@ import sparkle from '../../assets/images/home_sparkle.png'
 import styles from './Homepage.css'
 import playSvg from '../../assets/icons/play.svg'
 import docsSvg from '../../assets/icons/book2.svg'
+import { addAnimationEvent, removeAnimationEvent } from '../../utils/animations'
 import Svg from 'react-svg-inline'
 
 export default class Homepage extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.state = {
+      show: true
+    }
+    this.animationCallback = this.animationCallback.bind(this)
+  }
   componentDidMount () {
-
+    addAnimationEvent(this.refs.animDiv, 'AnimationEnd', this.animationCallback)
+  }
+  componentWillUnmount () {
+    removeAnimationEvent(this.refs.animDiv, 'AnimationEnd', this.animationCallback)
+  }
+  animationCallback (event) {
+    const node = this.refs.sparkle
+    setTimeout(function () {
+      node.style.display = 'block'
+    }, 100)
   }
   render () {
     return (
@@ -57,8 +74,8 @@ export default class Homepage extends Component {
                     </div>
                   </div>
                 </div>
-                <div className={styles.heroRight + ' zoomIn zoomInLong'}>
-                  <img className={styles.sparkle} src={sparkle} role='presentation' />
+                <div ref='animDiv' className={styles.heroRight + ' zoomIn zoomInLong'}>
+                  <img ref='sparkle' className={styles.sparkle} src={sparkle} role='presentation' />
                   <Terminal commands={terminalCommands} />
                 </div>
               </div>
