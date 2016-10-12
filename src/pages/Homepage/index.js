@@ -54,7 +54,7 @@ export default class Homepage extends Component {
                     <div className={styles.cta}>
                       <Button
                         kind='black'
-                        href='https://serverless.com/framework'
+                        href='/framework'
                       >
                         <span className={styles.ctaInner}>
                           <Svg svg={playSvg} cleanup />
@@ -68,7 +68,7 @@ export default class Homepage extends Component {
                     <div className={styles.cta}>
                       <Button
                         kind='black'
-                        href='https://serverless.com/framework'
+                        href='/framework/docs'
                       >
                         <span className={styles.ctaInner}>
                           <Svg svg={docsSvg} cleanup />

@@ -5,4 +5,4 @@ layout: Default
 
 ## Contact us
 
-Email team@serverless.com
+Email david@serverless.com

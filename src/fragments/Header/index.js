@@ -75,11 +75,6 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link to='https://gitter.im/serverless/serverless' className={styles.link}>
-                    Gitter
-                  </Link>
-                </li>
-                <li className={styles.navItem}>
                   <Link to='http://forum.serverless.com/' className={styles.link}>
                     Forum
                   </Link>
