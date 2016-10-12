@@ -6,7 +6,7 @@ var baseFontSize = (baseValue * 1.6) + unit
 module.exports = {
   // -- Sizing
   unit: '1rem',
-  navHeight: '65px',
+  navHeight: '70px',
   footerHeight: '155px',
   // -- Colors
   yellow: '#ffd734',

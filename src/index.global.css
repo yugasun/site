@@ -169,7 +169,13 @@ tfoot td {
 .auth0-lock.auth0-lock .auth0-lock-header-logo {
   width: 189px !important;
   margin: 0px !important;
-  height:auto!important;
+  height: auto!important;
+}
+.auth0-lock.auth0-lock .auth0-lock-widget-container {
+  width: 100% !important;
+}
+.auth0-lock.auth0-lock.auth0-lock-opened .auth0-lock-widget {
+  box-shadow: none !important;
 }
 .auth0-lock.auth0-lock .auth0-lock-header-bg {
   background: $black1 !important;
@@ -188,11 +194,11 @@ tfoot td {
     align-items: center !important;
 }
 .auth0-lock-widget {
-  box-shadow: 0px 8px 0px 0px #000!important;
-  transition: none!important;
+  box-shadow: none;
+  transition: none !important;
 }
 .auth0-lock-overlay {
-  background: rgba(0,0,0,0.8)!important;
+  background: rgba(0,0,0,0.8) !important;
 }
 
 /* Animations */

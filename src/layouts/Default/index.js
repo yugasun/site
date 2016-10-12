@@ -16,7 +16,9 @@ class DefaultShell extends Component {
     const urlParams = getURLParams(window.location.href)
     console.log('urlParams', urlParams)
     // Set last page viewed for 404 tracker
+    const prev = window.localStorage.getItem('sls_last_page')
     window.localStorage.setItem('sls_last_page', window.location.href)
+    window.localStorage.setItem('auth_redirect', prev)
   }
   render () {
     const {
