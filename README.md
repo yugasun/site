@@ -4,31 +4,32 @@ Uses react, react-router, redux and [Phenomic](https://github.com/MoOx/phenomic)
 
 This site is 100% serverless! Wooooooo!
 
+- [See the site](https://serverless.com/)
+- [Contribute to the blog](https://github.com/serverless/blog)
+
 # Setup
 
-## Install dependencies
+**1. Install dependencies**
 
-```console
+```bash
 $ npm install
 ```
 
-Next you will need to change the `.env.sample` to `.env` and input the correct credentials.
+Next you will need to change the values in `src/_config.js` with your correct credentials, if you are setting up a different site.
 
-Serverless folks our credentials are in 1password secure note in Shared titled: 'Site .env settings'
+**2. Run development server locally**
 
-Once the .env file is configured with the correct API keys you can run the local site.
-
-## Run development server
-
-```console
+```bash
 $ npm start
 ```
 
-## Build for production
+**3. Build for production**
 
-```console
+```bash
 $ npm run build
 ```
+
+If your `npm run build` succeeds locally you can go ahead and push up to a branch. This will automatically publish a live subdomain preview of your changes.
 
 ---
 
