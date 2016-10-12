@@ -2,6 +2,7 @@
   text-align: center;
   background: $black1;
   z-index: 3;
+  position: relative;
 }
 .footerLinks {
   display: flex;

@@ -8,8 +8,6 @@ import Svg from 'react-svg-inline'
 import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
 import Shell from '../Default'
-import auth from '../../utils/auth'
-import UserAuth from '../../components/UserAuth'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Doc.css'
@@ -22,15 +20,6 @@ TODO: add previous release tag links https://developer.github.com/v3/repos/relea
 class Doc extends Component {
   constructor (props, context) {
     super(props, context)
-
-    const loggedIn = auth.loggedIn()
-    this.state = {
-      active: false,
-      showModal: false,
-      isLoggedIn: loggedIn,
-    }
-    this.login = auth.login.bind(this)
-    this.logout = auth.logout.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
     this.sidebarNode = null
     this.sidebarNodeOffset = null
@@ -126,14 +115,20 @@ class Doc extends Component {
             <input className={styles.searchBox} id='algolia-search'
               placeholder='&#9889;  Search docs' type='text' />
           </div>
+          <div className={styles.sidebarBlock}>
+            <div className={styles.sidebarLinks}>
+              <a href='https://gitter.im/serverless/serverless'>
+                Chat in Gitter
+              </a>
+            </div>
+            <div className={styles.sidebarLinks}>
+              <a href='http://forum.serverless.com'>
+                Ask Questions on the Forum
+              </a>
+            </div>
+          </div>
           {childrenItems}
           {parentItems}
-          <UserAuth>
-            <div className={styles.cta}>
-              The Serverless Platform is coming
-              <div className={styles.ctaText}>Sign up for early access</div>
-            </div>
-          </UserAuth>
           <div className={styles.versionNumber}>
             Docs Version: {process.env.DOCS_VERSION}
           </div>
