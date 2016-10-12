@@ -1,7 +1,5 @@
 $fontSize: 16px;
-.signUp {
-
-}
+.signUp {  }
 .inner {
   text-transform: uppercase;
   display: flex;
@@ -11,13 +9,17 @@ $fontSize: 16px;
   color: $yellow;
   font-size: $fontSize;
 }
+.inner .text {
+  letter-spacing: 1.5px;
+}
 .button {
   margin-left: 20px;
   border: 2px solid white;
   padding: 10px 30px;
-  border-radius: 5px;
+  border-radius: 3px;
   text-transform: uppercase;
   background: none;
+  letter-spacing: 1.2px;
   color: #fff;
   font-size: $fontSize;
   &:hover, &:focus {
