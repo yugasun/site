@@ -21,30 +21,6 @@ export default class PartnersPage extends React.Component {
         <iframe className='center' frameBorder='0' scrolling='no' marginHeight='0'
           marginWidth='0'
           width='780' height='443' type='text/html' src='https://www.youtube.com/embed/weOsx5rLWX0?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com'>
-          <div>
-            <small>
-              <a href='http://youtubeembedcode.com/en/'>Quickly embed a YouTube video onto your website or blog!
-              </a>
-            </small>
-          </div>
-          <div>
-            <small>
-              <a href='https://googlemapsgenerator.com'>Let your customers know where you are!
-              </a>
-            </small>
-          </div>
-          <div>
-            <small>
-              <a href='http://youtubeembedcode.com/en/'>Quickly embed a YouTube video onto your website or blog!
-              </a>
-            </small>
-          </div>
-          <div>
-            <small>
-              <a href='https://googlemapsgenerator.com/fr/'>Embed a map onto your site!
-              </a>
-            </small>
-          </div>
         </iframe>
         <div className={styles.button}>
           <Button className={styles.button} kind='black' href='https://serverless.com/framework/docs/guide/' target='_blank'>Get Started
