@@ -1,0 +1,22 @@
+.header {
+  text-align: center;
+  margin: 35px 0;
+}
+hr {
+  margin: 25px 0;
+}
+.componentBox {
+  display: flex;
+}
+.component {
+  margin: 20px;
+  width: 33%;
+  text-align: center;
+  img {
+    width: 50px;
+  }
+}
+.button {
+  text-align: center;
+  margin-top: 40px;
+}
