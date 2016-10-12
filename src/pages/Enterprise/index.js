@@ -45,7 +45,7 @@ export default class PartnersPage extends React.Component {
        )
     }
     return (
-      <Page {...this.props} >
+      <Page className={styles.enterprise} {...this.props} >
         <h1 className={styles.header}>Serverless For The Enterprise</h1>
         <i className={styles.subHeader}>Enabling enterprise development teams to take advantage of all of the benefits of serverless arcitectures.</i>
         <div className={styles.box}>
