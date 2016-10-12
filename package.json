@@ -16,7 +16,7 @@
     "prestart": "npm run sync",
     "start": "phenomic start",
     "refresh": "npm run refresh:docs && npm run refresh:blog",
-    "refresh:docs": "rm -rf node_modules/serverless && npm install git://github.com/serverless/serverless.git",
+    "refresh:docs": "rm -rf node_modules/serverless && npm install git://github.com/serverless/serverless.git#5406b63134918aa147513a217a436436a207d290",
     "refresh:blog": "rm -rf node_modules/serverless-blog && npm install git://github.com/serverless/blog.git",
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
