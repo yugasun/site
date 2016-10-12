@@ -18,10 +18,8 @@ export default class PartnersPage extends React.Component {
           <h1 className='center'>What is serverless?</h1>
           <p className='center'>Serverless is a cloud architectural design pattern that abstracts servers away to the point that developers have little to no direct interaction with them. Serverless providers (e.g. AWS Lambda) remove servers from the equation by providing an event-driven, pay-per-execution compute service.</p>
         </div>
-        <iframe className='center' frameBorder='0' scrolling='no' marginHeight='0'
-          marginWidth='0'
-          width='780' height='443' type='text/html' src='https://www.youtube.com/embed/weOsx5rLWX0?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com'>
-        </iframe>
+        <iframe className='center' src='https://player.vimeo.com/video/186516527?color=FFD734&byline=0&portrait=0' width='640' height='360'
+          frameBorder='0' webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
         <div className={styles.button}>
           <Button className={styles.button} kind='black' href='https://serverless.com/framework/docs/guide/' target='_blank'>Get Started
           </Button>
