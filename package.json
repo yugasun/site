@@ -18,9 +18,9 @@
     "start": "phenomic start",
     "refresh": "npm run refreshDocs && npm run refreshBlog",
     "prerefreshDocs": "rimraf node_modules/serverless && rimraf node_modules/serverless",
-    "refreshDocs": "npm install --only=production --no-bin-links --no-optional git://github.com/serverless/serverless.git#v1.0.0",
+    "refreshDocs": "npm install --only=dev --no-bin-links --no-optional git://github.com/serverless/serverless.git#v1.0.0",
     "prerefreshBlog": "rimraf node_modules/serverless-blog && rimraf node_modules/serverless-blog",
-    "refreshBlog": "npm install --only=production --no-bin-links --no-optional git://github.com/serverless/blog.git",
+    "refreshBlog": "npm install --only=prod --no-bin-links --no-optional git://github.com/serverless/blog.git",
     "sync": "node scripts/docs/entry.js && node scripts/blog/entry.js",
     "prebuild": "npm run sync",
     "build": "phenomic build",
@@ -126,9 +126,7 @@
     }
   },
   "dependencies": {
-    "algolia-react-input": "^1.1.0",
-    "algoliasearch": "^3.18.1",
-    "auth0-lock": "^10.2.1",
+    "auth0-lock": "10.2.1",
     "axios": "^0.13.1",
     "classnames": "^2.2.5",
     "jwt-decode": "^2.1.0",

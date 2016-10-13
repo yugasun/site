@@ -1,7 +1,7 @@
 /**
  * Init algolia client search
  */
-import algoliasearch from 'algoliasearch'
+// import algoliasearch from 'algoliasearch'
 const isClient = typeof window !== 'undefined'
 // TODO: move this out to config
 const algolia = {
@@ -11,7 +11,7 @@ const algolia = {
 }
 let algoliaClient
 if (isClient) {
-  algoliaClient = algoliasearch(algolia.appId, algolia.searchKey)
+  // algoliaClient = algoliasearch(algolia.appId, algolia.searchKey)
 }
 export const client = algoliaClient
 export const indexName = algolia.indexName
