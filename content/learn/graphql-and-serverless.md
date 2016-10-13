@@ -17,7 +17,7 @@ PlayBrain was born from a belief that the best communication for games comes fro
 
 Announced at the Tokyo Game Show in September, DEKKI, described as a cross between <a href="www.medium.com">Medium</a> and sites like <a href="www.mobafire.com">Mobafire</a> and <a href="www.hearthpwn.com">HearthPwn</a>, promises to bring together the industry’s favorite games and platforms to enable users to share strategies and opinions on the games they love. That said, conceiving of an intuitive, multi-lingual platform that is simple to use is one thing. Delivering a user experience that differentiates itself in the fast paced, ultra-competitive gaming industry is an entirely different story. 
 
-PlayBrain had identified AWS as the infrastructure of choice for DEKKI, but spent months building an Auto Scaling, auto-healing AWS environment that failed to produce the desired results. In order to deliver the performance required, PlayBrain soon discovered that it needed a partner with deep expertise leveraging AWS platform services to build serverless systems. The challenge put forward to Trek10 was simple, “Build an elegant system that is infinitely scalable… and low cost.”   
+PlayBrain had identified AWS as the infrastructure of choice for DEKKI, but in order to deliver the performance required, PlayBrain knew it needed a partner with deep expertise in leveraging AWS platform services to build serverless systems. The challenge put forward to Trek10 was simple, “Build an elegant system that is infinitely scalable… and low cost.
 
 ### Why Serverless
 
