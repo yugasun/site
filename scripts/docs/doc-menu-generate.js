@@ -140,7 +140,9 @@ function writeJSONMenuToDirectory (dest, contents) {
   })
 }
 
-// kick off menu creation. sync process
-traverse(filteredTree, 1)
-// then write to file
-writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
+module.exports = function generateDocMenu () {
+  // kick off menu creation. sync process
+  traverse(filteredTree, 1)
+  // then write to file
+  writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
+}

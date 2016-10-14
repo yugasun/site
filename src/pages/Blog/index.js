@@ -23,6 +23,9 @@ export default class BlogPage extends Component {
     if (page.authors) {
       // console.log('page.authors', page.authors)
     }
+    if (page.draft) {
+      return null
+    }
     if (page.thumbnail) {
       thumbnail = page.thumbnail
     }
