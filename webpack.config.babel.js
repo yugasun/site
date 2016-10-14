@@ -146,6 +146,7 @@ export const makeConfig = (config = {}) => {
           node.warn(result, 'Unknown variable ' + name)
         }
       }),
+      require('cssnano'),
       /* enable nested css selectors like Sass/Less */
       require('postcss-nested'),
       ...config.production ? [
@@ -163,7 +164,7 @@ export const makeConfig = (config = {}) => {
         feeds: {
           // here we define one feed, but you can generate multiple, based
           // on different filters
-          'feed.xml': {
+          'blog/feed.xml': {
             // here you can define options for the feed
             title: pkg.name + ': Latest Posts',
 
