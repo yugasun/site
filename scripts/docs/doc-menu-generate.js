@@ -96,14 +96,14 @@ function generateSubPaths (arr) {
 var level = 0
 
 function traverse (x) {
-  console.log('x', x)
+  // console.log('x', x)
   if (isArray(x)) {
     processChildrenArray(x)
   } else if ((typeof x === 'object') && (x !== null)) {
     processChildren(x)
   } else {
     // nil
-    console.log('NIL', x)
+    // console.log('NIL', x)
   }
 }
 

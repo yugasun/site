@@ -1,18 +1,24 @@
-import { combineReducers } from 'redux'
+import { combineReducers, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import createStore from 'phenomic/lib/redux/createStore'
 import * as phenomicReducers from 'phenomic/lib/redux/modules'
-import userReducer from './redux/user'
+const isClient = typeof window !== 'undefined'
+// import userReducer from './redux/user'
+// console.log('userReducer', userReducer)
 // import Auth from './utils/AuthService'
 
-const additionalState = {}
-const combinedInitialStateObject = { ...(typeof window !== 'undefined') && window.__INITIAL_STATE__, ...additionalState }
+const combinedInitialStateObject = {...(isClient) && window.__INITIAL_STATE__}
 
 const store = createStore(
   combineReducers({
     ...phenomicReducers,
-    user: userReducer,
+    //auth: userReducer,
   }),
-  combinedInitialStateObject
+  combinedInitialStateObject,
+  compose(
+   applyMiddleware(thunk),
+   // isClient && window.devToolsExtension ? window.devToolsExtension() : (f) => f
+  )
 )
 // console.log('intial state', store.getState())
 export default store
