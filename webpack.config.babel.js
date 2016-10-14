@@ -3,6 +3,7 @@ import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import serverlessPackageJSON from 'serverless/package.json'
 import { phenomicLoader } from 'phenomic'
+import PhenomicLoaderFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import pkg from './package.json'
 import getSiteConfig from './src/_config'
 
@@ -113,20 +114,6 @@ export const makeConfig = (config = {}) => {
 
     phenomic: {
       context: path.join(__dirname, config.source),
-      feedsOptions: {
-        title: pkg.name,
-        site_url: pkg.homepage,
-      },
-      feeds: {
-        'feed.xml': {
-          collectionOptions: {
-            filter: { layout: 'Post' },
-            sort: 'date',
-            reverse: true,
-            limit: 20,
-          },
-        },
-      },
       defaultHead: {
         layout: 'Post',
         comments: true,
@@ -159,6 +146,7 @@ export const makeConfig = (config = {}) => {
           node.warn(result, 'Unknown variable ' + name)
         }
       }),
+      require('cssnano'),
       /* enable nested css selectors like Sass/Less */
       require('postcss-nested'),
       ...config.production ? [
@@ -167,6 +155,29 @@ export const makeConfig = (config = {}) => {
     ],
 
     plugins: [
+      new PhenomicLoaderFeedWebpackPlugin({
+        // here you define generic metadata for your feed
+        feedsOptions: {
+          title: 'Serverless Blog',
+          site_url: pkg.homepage,
+        },
+        feeds: {
+          // here we define one feed, but you can generate multiple, based
+          // on different filters
+          'blog/feed.xml': {
+            // here you can define options for the feed
+            title: pkg.name + ': Latest Posts',
+
+            // this special key allows to filter the collection
+            collectionOptions: {
+              filter: { layout: 'Post' },
+              sort: 'date',
+              reverse: true,
+              limit: 20,
+            },
+          },
+        },
+      }),
       new ExtractTextPlugin('[name].[hash].css', { disable: config.dev }),
       ...config.production && [
         new webpack.optimize.DedupePlugin(),

@@ -120,7 +120,7 @@ export default class Homepage extends Component {
           </ContentBlock>
 
           <ContentBlock title='The Serverless Community' image={communityJpg}>
-            <p>Over 1,500 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
+            <p>Over 1,900 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
             <p>
               <a href='https://gitter.im/serverless/serverless' target='_blank'>
               Join the Chatroom

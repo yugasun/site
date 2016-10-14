@@ -118,12 +118,12 @@ class Doc extends Component {
           <div className={styles.sidebarBlock}>
             <div className={styles.sidebarLinks}>
               <a href='https://gitter.im/serverless/serverless'>
-                Chat in Gitter
+                Join chat on Gitter
               </a>
             </div>
             <div className={styles.sidebarLinks}>
               <a href='http://forum.serverless.com'>
-                Ask Questions on the Forum
+                Read Serverless Forum
               </a>
             </div>
           </div>

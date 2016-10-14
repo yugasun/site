@@ -35,6 +35,14 @@ function processChildrenArray (arr) {
   })
 }
 
+function fileExists(filePath) {
+  try {
+    return fs.statSync(filePath).isFile();
+  } catch (err) {
+    return false;
+  }
+}
+
 function processChildren (obj) {
   if (obj.hasOwnProperty('children')) {
     //console.log('level', level)
@@ -42,12 +50,13 @@ function processChildren (obj) {
     // console.log('path', filePath)
     var subPaths = []
     obj['children'].forEach(function (x, i) {
+      /* TODO: update check here */
       if (fs.lstatSync(x.path).isDirectory()) {
         var fullPath = x.path
         var url = fullPath.split('content')[1].replace('index', '').replace('.md', '')
         subPaths[i] = {
-            title: path.basename(x.path),
-            url: url
+          title: path.basename(x.path),
+          url: url
         }
       } else {
         var content = fs.readFileSync(x.path).toString()
@@ -61,7 +70,7 @@ function processChildren (obj) {
       }
     })
     writeJSONMenuToDirectory(filePath, JSON.stringify(subPaths))
-    //console.log(obj['children'])
+    // console.log(obj['children'])
     traverse(obj['children'], filePath)
     level = level + 1
   }

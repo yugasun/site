@@ -14,11 +14,7 @@ export default class PageLoading extends Component {
         />
         <Header />
         <div className={styles.loader}>
-          <div className={styles.loadingWrapper}>
-            <div className={styles.spinnerWrapper}>
-              <div className={styles.spinner}></div>
-            </div>
-          </div>
+          <div className={styles.spinner}></div>
         </div>
         <Footer />
       </div>
