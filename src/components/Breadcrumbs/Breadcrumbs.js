@@ -59,11 +59,13 @@ export default class Breadcrumb extends Component {
             key='root'
             className={styles.item + ' ' + styles.basePath}
           >
-            <BreadcrumbItem
-              label={this.props.pathRoot}
-              pathSegments={[]}
-              {...{ getUrlFromPathSegments, onClick }}
-            />
+            <span className={styles.itemInner}>
+              <BreadcrumbItem
+                label={this.props.pathRoot}
+                pathSegments={[]}
+                {...{ getUrlFromPathSegments, onClick }}
+              />
+            </span>
           </li>
           ) : null}
 
@@ -75,11 +77,13 @@ export default class Breadcrumb extends Component {
               key={id}
               className={styles.item + ' ' + active}
             >
-              <BreadcrumbItem
-                label={segment}
-                pathSegments={pathSegments}
-                {...{ getUrlFromPathSegments, onClick }}
-              />
+              <span className={styles.itemInner}>
+                <BreadcrumbItem
+                  label={segment}
+                  pathSegments={pathSegments}
+                  {...{ getUrlFromPathSegments, onClick }}
+                />
+              </span>
             </li>
             )
         })}
