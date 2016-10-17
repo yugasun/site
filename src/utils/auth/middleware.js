@@ -5,6 +5,7 @@ import { getXsrfToken } from './xsrfToken'
 import lockInstance from './lockInstance'
 
 function handleAuthRedirect (url) {
+  console.log('Handler Redirect')
   var redirect = new CustomEvent('reactRouterRedirect', { // eslint-disable-line
     detail: {
       url: url,
@@ -37,7 +38,8 @@ const authMiddleware = createOneShot((dispatch) => {
         dispatch(someAction(event.value));
     });
   */
-  if (!lockInstance) {
+  console.log('One shot ran ')
+  if (typeof window === 'undefined') {
     return false
   }
   // register lock callback once
