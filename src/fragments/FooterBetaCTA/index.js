@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 import Button from '../../components/Button'
-import UserAuth from '../../components/UserAuth'
+import NewAuth from '../../components/NewAuth'
 import styles from './index.css'
 
 const propTypes = {
@@ -16,7 +16,7 @@ export default class FooterBetaCTA extends Component {
             <h2 className={styles.ctaBottomCopy}>
               The Serverless Platform is coming
             </h2>
-            <UserAuth>
+            <NewAuth>
               <Button
                 kind='yellow'
                 className={styles.btn}
@@ -24,7 +24,7 @@ export default class FooterBetaCTA extends Component {
                 onClick={this.login}>
                 Sign up for early access
               </Button>
-            </UserAuth>
+            </NewAuth>
           </div>
         </div>
       </div>
