@@ -8,7 +8,6 @@ const initialState = { ...(typeof window !== 'undefined') && window.__INITIAL_ST
 const store = configureStore(initialState)
 
 // dispatch to attach auth0 handler
-store.dispatch({type: 'APP_INIT'})
 
 phenomicClient({
   metadata: {
@@ -17,7 +16,7 @@ phenomicClient({
   routes: routes,
   store: store,
 })
-
+store.dispatch({type: 'APP_INIT'})
 // hot loading
 // md files → JSON && generate collection + hot loading for dev
 let mdContext = require.context('../content', true, /\.md$/)
