@@ -8,7 +8,7 @@ import styles from './BetaCTA.css'
 const BetaCTA = (props) => {
   const loggedIn = (
     <Block className={styles.container}>
-      <h1 className={styles.title}>Your in!</h1>
+      <h1 className={styles.title}>Thanks!</h1>
     </Block>
   )
   return (

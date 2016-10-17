@@ -38,14 +38,14 @@ const authMiddleware = createOneShot((dispatch) => {
         dispatch(someAction(event.value));
     });
   */
-  console.log('One shot ran ')
+
   if (typeof window === 'undefined') {
     return false
   }
-  console.log('authCB added', lockInstance)
+  console.log('authCB added')
   // register lock callback once
   lockInstance.on('authenticated', function (authResult) {
-    console.log('auth callback triggered') // eslint-disable-line
+    // console.log('auth callback triggered') // eslint-disable-line
     console.log('authResult', authResult)
     // Check xrsf token
     const stateValues = getURLParams('http://dummy.com?' + authResult.state)
@@ -65,7 +65,6 @@ const authMiddleware = createOneShot((dispatch) => {
     }
     // Async loads the user profile data
     lockInstance.getProfile(authResult.idToken, (error, profile) => {
-      console.log('middleware prof', profile)
       setItem('profile', profile)
       if (error) {
         console.log('Error loading the Profile', error)
