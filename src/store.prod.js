@@ -6,7 +6,6 @@ import authMiddleware from './utils/auth/middleware'
 import userReducer from './redux/user'
 
 const extraMiddlewares = [ thunk, authMiddleware ]
-console.log('prod store configuted')
 
 export default function configureStore (preloadedState) {
   return createStore(
