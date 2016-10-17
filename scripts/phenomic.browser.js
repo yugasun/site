@@ -1,9 +1,11 @@
 import 'whatwg-fetch'
 
 import routes from '../src/routes'
-import store from '../src/store'
-
+import configureStore from '../src/store'
 import phenomicClient from 'phenomic/lib/client'
+// const isClient = typeof window !== 'undefined'
+const initialState = { ...(typeof window !== 'undefined') && window.__INITIAL_STATE__ }
+const store = configureStore(initialState)
 
 phenomicClient({
   metadata: {
