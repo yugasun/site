@@ -76,6 +76,7 @@ const initialState = {
   loading: false,
   error: ''
 }
+console.log('initialState', initialState)
 export default function authReducer (state = initialState, action) {
   console.log(action.type)
   switch (action.type) {
