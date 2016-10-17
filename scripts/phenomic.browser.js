@@ -9,10 +9,11 @@ const authState = {
 }
 const initialState = {
   ...windowState,
-  ...authState
+  ...authState // hydrate auth state
 }
 const store = configureStore(initialState)
 
+// dispatch to attach auth0 middleware handler
 store.dispatch({
   type: 'APP_INIT'
 })

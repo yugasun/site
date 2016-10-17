@@ -12,12 +12,7 @@ import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // e
 export default class Root extends Component {
   componentDidMount () {
     initializeVisitorID()
-    const id = getVisitorID()
-    // dispatch to attach auth0 handler
-    // this.props.dispatch({
-    //   type: 'APP_INIT'
-    // })
-    console.log('uuid', id)
+    // const id = getVisitorID()
     window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
   }
   componentWillUnmount () {
