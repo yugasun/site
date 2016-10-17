@@ -2,12 +2,11 @@ import { combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import createStore from 'phenomic/lib/redux/createStore'
 import * as phenomicReducers from 'phenomic/lib/redux/modules'
-import userReducer from './redux/user'
-import { loginSuccess, loginError } from '../../redux/user'
-import getURLParams from '../urlHelpers'
-import { setItem } from '../storage'
-import { getXsrfToken } from './xsrfToken'
-import lockInstance from './lockInstance'
+import userReducer, { loginSuccess, loginError } from './redux/user'
+import getURLParams from './utils/urlHelpers'
+import { setItem } from './utils/storage'
+import { getXsrfToken } from './utils/auth/xsrfToken'
+import lockInstance from './utils/auth/lockInstance'
 
 function handleAuthRedirect (url) {
   console.log('Handler Redirect')
