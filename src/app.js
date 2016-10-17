@@ -1,6 +1,5 @@
 /* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
 import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
 import PlatformSignupFooter from './fragments/PlatformSignupFooter'
@@ -9,13 +8,10 @@ import './index.global.css'
 import styles from './index.css'
 import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
 
-class Root extends Component {
+export default class Root extends Component {
   componentDidMount () {
     initializeVisitorID()
     const id = getVisitorID()
-    this.props.dispatch({
-      type: 'appInit'
-    })
     console.log('uuid', id)
     window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
   }
@@ -52,5 +48,3 @@ Root.propTypes = {
   history: PropTypes.object,
   dispatch: PropTypes.func,
 }
-
-export default connect()(Root)

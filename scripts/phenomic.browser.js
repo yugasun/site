@@ -7,6 +7,9 @@ import phenomicClient from 'phenomic/lib/client'
 const initialState = { ...(typeof window !== 'undefined') && window.__INITIAL_STATE__ }
 const store = configureStore(initialState)
 
+// dispatch to attach auth0 handler
+store.dispatch({type: 'APP_INIT'})
+
 phenomicClient({
   metadata: {
     empty: 'hi',
