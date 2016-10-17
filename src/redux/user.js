@@ -77,6 +77,7 @@ const initialState = {
   error: ''
 }
 export default function authReducer (state = initialState, action) {
+  console.log(action.type)
   switch (action.type) {
     case LOGIN_STARTED:
       return {

@@ -52,8 +52,8 @@ AuthComponent.propTypes = {
 }
 
 function mapStateToProps (state) {
-  console.log('state', state)
   const { auth } = state
+  console.log('auth', auth)
   const { isAuthenticated, profile, loading } = auth
   return {
     isAuthenticated,
