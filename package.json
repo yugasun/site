@@ -29,10 +29,12 @@
     "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint",
-    "build-components": "webpack --config webpack.config.components.babel.js && node scripts/components/post-build.js"
+    "build-components": "webpack --config webpack.config.components.babel.js && node scripts/components/post-build.js",
+    "dll": "webpack --display-chunks --color --config webpack.DLL.babel.js"
   },
   "devDependencies": {
     "async": "^2.0.1",
+    "auth0-lock": "10.2.1",
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
     "babel-eslint": "^6.0.0-beta.0",
@@ -137,5 +139,8 @@
     "react-google-analytics": "^0.2.0",
     "react-helmet": "^3.0.0",
     "redux-thunk": "^2.1.0"
+  },
+  "dllPlugin": {
+    "path": "node_modules/@dummy-dll-folder"
   }
 }
