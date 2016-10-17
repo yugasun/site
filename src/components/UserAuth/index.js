@@ -1,3 +1,4 @@
+/* Depricated */
 import React, { PropTypes} from 'react'
 import { setItem } from '../../utils/storage'
 import auth from '../../utils/auth'
@@ -17,7 +18,7 @@ export class UserAuth extends React.Component {
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
     this.state = {
-      loggedIn: auth.loggedIn(),
+      loggedIn: true,
     }
   }
 
