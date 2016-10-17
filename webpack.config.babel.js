@@ -197,10 +197,10 @@ export const makeConfig = (config = {}) => {
         // 'window.Auth0Lock': 'Auth0Lock'
       }),
     ],
-    externals: {
-       // Use external version of React
-      'Auth0Lock': 'Auth0Lock',
-    },
+    // externals: {
+    //    // Use external version of React
+    //   'Auth0Lock': 'Auth0Lock',
+    // },
     output: {
       path: path.join(__dirname, config.destination),
       publicPath: config.baseUrl.pathname,
