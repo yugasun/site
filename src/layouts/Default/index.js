@@ -14,7 +14,9 @@ import styles from './Default.css'
 class DefaultShell extends Component {
   componentDidMount () {
     const urlParams = getURLParams(window.location.href)
-    console.log('urlParams', urlParams)
+    if (urlParams) {
+      console.log('urlParams', urlParams)
+    }
     // Set last page viewed for 404 tracker
     window.localStorage.setItem('sls_last_page', window.location.href)
   }
