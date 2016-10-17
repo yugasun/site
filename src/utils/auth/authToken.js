@@ -5,6 +5,7 @@ const TOKEN_KEY = 'id_token'
 
 function getTokenExpirationDate (token) {
   const decoded = decode(token)
+  console.log('decoded', decoded)
   if (!decoded.exp) {
     return null
   }
@@ -17,6 +18,7 @@ function getTokenExpirationDate (token) {
 
 export function isTokenExpired (token) {
   const date = getTokenExpirationDate(token)
+  console.log('token date', date)
   const offsetSeconds = 0
   if (date === null) {
     return false
@@ -38,5 +40,6 @@ export function clearAuthToken () {
 
 export function isAuthenticated () {
   const token = getAuthToken()
+  console.log('tokentoken', token)
   return !!token && !isTokenExpired(token)
 }
