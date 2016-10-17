@@ -1,7 +1,7 @@
 $sidebarWidth: 280px;
 $ctaWidth: 220px;
 .docPage {
-  margin-top: 10px;
+  margin-top: 20px;
   padding-bottom: 60px;
 }
 .docContainer {
@@ -14,6 +14,14 @@ $ctaWidth: 220px;
 .breadCrumbContainer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 15px;
+  a {
+
+  }
+  a:hover {
+    opacity: 0.6;
+  }
 }
 .versionNumber {
   margin-top: 20px;

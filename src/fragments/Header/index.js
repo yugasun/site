@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import UserAuth from '../../components/UserAuth'
 import handleClickAway from '../../utils/handleClickAway'
 import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/github.svg'
 import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
+import NewAuth from '../../components/NewAuth/NewAuth'
+// import ProfileIcon from '../../components/ProfileIcon'
+
+/*
+<NewAuth logoutOnClick={true} loggedInComponent={<ProfileIcon />}>
+  Login
+</NewAuth>
+*/
 
 export default class Header extends Component {
   constructor (props, context) {
@@ -87,18 +94,19 @@ export default class Header extends Component {
                     Enterprise
                   </Link>
                 </li>
-                <UserAuth>
+                <NewAuth loggedInComponent={<span></span>}>
                   <li className={styles.navItem}>
-                    <a to='/partners' className={styles.link + ' ' + styles.yellowLink}>
+                    <span className={styles.link + ' ' + styles.yellowLink}>
                       Join Beta
-                    </a>
+                    </span>
                   </li>
-                </UserAuth>
+                </NewAuth>
                 <li className={styles.navItem}>
                   <a href='https://www.github.com/serverless/serverless' target='_blank' className={styles.link}>
                     <Svg svg={gitHubSvg} cleanup />
                   </a>
                 </li>
+
               </ul>
             </nav>
           </div>

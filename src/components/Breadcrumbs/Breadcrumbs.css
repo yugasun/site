@@ -13,6 +13,7 @@
     content: ' › ';
     color: #a1a1a1;
     width: 20px;
+    margin: 0 2px;
     display: inline-flex;
     justify-content: center;
   }
@@ -22,6 +23,9 @@
   &:last-of-type:after {
     content: '';
   }
+}
+.itemInner {
+  
 }
 .basePath {
 

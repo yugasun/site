@@ -1,4 +1,5 @@
 /*eslint-disable*/
+/* TODO: remove in favor of redux auth */
 import AuthService from './AuthService'
 import { initializeXsrfToken } from './xsrfToken'
 

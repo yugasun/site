@@ -1,8 +1,8 @@
 var config = require('./config')
 var fs = require('fs-extra')
 var async = require('async')
-var emptyDirectory = require('../docs/empty-directory')
-var copyFiles = require('../docs/copy-files')
+var emptyDirectory = require('../utils/empty-directory')
+var copyFiles = require('../utils/copy-files')
 var renameFilesInDirectory = require('./rename-blog-posts')
 var updateBlogFileContents = require('./update-blog-yaml')
 

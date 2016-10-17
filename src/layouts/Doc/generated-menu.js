@@ -29,8 +29,13 @@ module.exports = {
         'order': 4
       },
       {
-        'path': '/framework/docs/usage-tracking',
-        'title': 'Usage Tracking',
+        'path': '/framework/docs/framework-statistics',
+        'title': 'Framework statistics',
+        'order': 5
+      },
+      {
+        'path': '/framework/docs/v0-v1-comparison',
+        'title': 'Comparison between 0.x and 1.x',
         'order': 5
       }
     ]
@@ -50,34 +55,39 @@ module.exports = {
         'order': 1
       },
       {
+        'path': '/framework/docs/cli-reference/install',
+        'title': 'Install',
+        'order': 2
+      },
+      {
         'path': '/framework/docs/cli-reference/deploy',
         'title': 'Deploy',
-        'order': 2
+        'order': 3
       },
       {
         'path': '/framework/docs/cli-reference/invoke',
         'title': 'Invoke',
-        'order': 3
+        'order': 4
       },
       {
         'path': '/framework/docs/cli-reference/logs',
         'title': 'Logs',
-        'order': 4
+        'order': 5
       },
       {
         'path': '/framework/docs/cli-reference/info',
         'title': 'Info',
-        'order': 5
+        'order': 6
       },
       {
         'path': '/framework/docs/cli-reference/remove',
         'title': 'Remove',
-        'order': 6
+        'order': 7
       },
       {
-        'path': '/framework/docs/cli-reference/tracking',
-        'title': 'Tracking',
-        'order': 7
+        'path': '/framework/docs/cli-reference/slstats',
+        'title': 'Stats',
+        'order': 8
       }
     ]
   },
@@ -160,6 +170,16 @@ module.exports = {
         'path': '/framework/docs/guide/packaging',
         'title': 'Packaging Services',
         'order': 10
+      },
+      {
+        'path': '/framework/docs/guide/environment-variable-handling',
+        'title': 'Packaging Services',
+        'order': 11
+      },
+      {
+        'path': '/framework/docs/guide/serverless-yml-reference',
+        'title': 'Serverless.yml reference',
+        'order': 12
       }
     ]
   },
@@ -250,14 +270,9 @@ module.exports = {
         'order': 4
       },
       {
-        'path': '/framework/docs/providers/aws/events/kinesis-streams',
-        'title': 'Kinesis Streams Event config',
+        'path': '/framework/docs/providers/aws/events/streams',
+        'title': 'DynamoDB / Kinesis Streams config',
         'order': 5
-      },
-      {
-        'path': '/framework/docs/providers/aws/events/dynamodb-streams',
-        'title': 'DynamoDB Streams config',
-        'order': 6
       }
     ]
   },
@@ -271,6 +286,11 @@ module.exports = {
     ],
     'children': [
       {
+        'path': '/framework/docs/providers/aws/examples/cron',
+        'title': 'Cron',
+        'order': 0
+      },
+      {
         'path': '/framework/docs/providers/aws/examples/hello-world',
         'title': 'Hello world',
         'order': 0
@@ -281,11 +301,37 @@ module.exports = {
         'order': 0
       },
       {
-        'path': '/framework/docs/providers/aws/examples/web-api',
-        'title': 'Web api',
+        'path': '/framework/docs/providers/aws/examples/web-serving-html',
+        'title': 'Web serving html',
         'order': 0
       }
     ]
+  },
+  '/framework/docs/providers/aws/examples/cron': {
+    'index': [
+      {
+        'path': '/framework/docs/providers/aws/examples/cron/index',
+        'title': 'Scheduled Cron Example',
+        'order': 2
+      }
+    ],
+    'children': [
+      {
+        'path': '/framework/docs/providers/aws/examples/cron/node',
+        'title': 'Node',
+        'order': 0
+      }
+    ]
+  },
+  '/framework/docs/providers/aws/examples/cron/node': {
+    'index': [
+      {
+        'path': '/framework/docs/providers/aws/examples/cron/node/index',
+        'title': 'Scheduled Cron Example',
+        'order': 2
+      }
+    ],
+    'children': []
   },
   '/framework/docs/providers/aws/examples/hello-world': {
     'index': [
@@ -348,33 +394,33 @@ module.exports = {
     'index': [
       {
         'path': '/framework/docs/providers/aws/examples/using-external-libraries/node/index',
-        'title': 'Hello World Node Example',
+        'title': 'External libraries in Node.js service',
         'order': 2
       }
     ],
     'children': []
   },
-  '/framework/docs/providers/aws/examples/web-api': {
+  '/framework/docs/providers/aws/examples/web-serving-html': {
     'index': [
       {
-        'path': '/framework/docs/providers/aws/examples/web-api/index',
-        'title': 'AWS Lambda Web API Example',
+        'path': '/framework/docs/providers/aws/examples/web-serving-html/index',
+        'title': 'Serving HTML',
         'order': 2
       }
     ],
     'children': [
       {
-        'path': '/framework/docs/providers/aws/examples/web-api/node',
+        'path': '/framework/docs/providers/aws/examples/web-serving-html/node',
         'title': 'Node',
         'order': 0
       }
     ]
   },
-  '/framework/docs/providers/aws/examples/web-api/node': {
+  '/framework/docs/providers/aws/examples/web-serving-html/node': {
     'index': [
       {
-        'path': '/framework/docs/providers/aws/examples/web-api/node/index',
-        'title': 'Web API AWS Lambda Node Example',
+        'path': '/framework/docs/providers/aws/examples/web-serving-html/node/index',
+        'title': 'Serving Static HTML',
         'order': 2
       }
     ],

@@ -96,14 +96,14 @@ function generateSubPaths (arr) {
 var level = 0
 
 function traverse (x) {
-  console.log('x', x)
+  // console.log('x', x)
   if (isArray(x)) {
     processChildrenArray(x)
   } else if ((typeof x === 'object') && (x !== null)) {
     processChildren(x)
   } else {
     // nil
-    console.log('NIL', x)
+    // console.log('NIL', x)
   }
 }
 
@@ -140,7 +140,9 @@ function writeJSONMenuToDirectory (dest, contents) {
   })
 }
 
-// kick off menu creation. sync process
-traverse(filteredTree, 1)
-// then write to file
-writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
+module.exports = function generateDocMenu () {
+  // kick off menu creation. sync process
+  traverse(filteredTree, 1)
+  // then write to file
+  writeJSONMenuToDirectory(config.docsMenuPath, menuObject)
+}

@@ -17,9 +17,13 @@ export default class TerminalCommands extends Component {
       text: ' ',
       obj: {}
     }
+    this.delay = null
   }
   componentDidMount () {
     this.writeText()
+  }
+  componentWillUnmount () {
+    window.clearTimeout(this.delay)
   }
   writeText () {
     const {commands} = this.props
@@ -54,13 +58,13 @@ export default class TerminalCommands extends Component {
       this.lineIndex++
       if (this.lineIndex !== commands.length) {
         this.currentLineLength = commands[this.lineIndex].text.length
-        setTimeout(() => {
+        this.delay = setTimeout(() => {
           this.writeText()
         }, 200)
       }
     } else {
       const timeout = (commands[this.lineIndex].skip) ? 0 : this.typeSpeed
-      setTimeout(() => {
+      this.delay = setTimeout(() => {
         this.writeText()
       }, timeout)
     }

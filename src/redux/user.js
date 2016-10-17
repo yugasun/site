@@ -1,57 +1,112 @@
-import auth from '../utils/auth'
+import { getItem, removeItem } from '../utils/storage'
+import { getXsrfToken } from '../utils/auth/xsrfToken'
+import { isAuthenticated } from '../utils/auth/authToken'
+import lock from '../utils/auth'
+const isClient = typeof window !== 'undefined'
 
 /* Constants */
-const AUTHENTICATE_START = 'AUTHENTICATE_START'
-const AUTHENTICATE_COMPLETE = 'AUTHENTICATE_COMPLETE'
-const AUTHENTICATE_ERROR = 'AUTHENTICATE_ERROR'
+const LOGIN_STARTED = 'LOGIN_STARTED'
+const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+const LOGIN_ERROR = 'LOGIN_ERROR'
+const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 
 /* Actions */
-export function authenticateStart () {
+function loginStarted (profile) {
   return {
-    type: AUTHENTICATE_START
+    type: LOGIN_STARTED,
   }
 }
-export function authenticateComplete (user) {
+
+export function loginSuccess (profile) {
   return {
-    type: AUTHENTICATE_COMPLETE,
-    user
+    type: LOGIN_SUCCESS,
+    profile
   }
 }
-export function authenticateError (errors) {
+
+export function loginError (error) {
   return {
-    type: AUTHENTICATE_ERROR,
-    errors
+    type: LOGIN_ERROR,
+    error
   }
+}
+
+export function login () {
+  const redirectURL = isClient && encodeURIComponent(window.location.href)
+  // pass xsrf token through with state
+  const state = `token=${getXsrfToken()}&url=${redirectURL}`
+  var options = {
+    auth: {
+      params: {
+        state: state,
+        customValues: 'value1',
+      },
+    }
+  }
+  return dispatch => {
+    isClient && lock.login(options)
+    return dispatch(loginStarted())
+    // login finishes via custom middleware
+  }
+}
+
+function logoutSuccess (profile) {
+  return {
+    type: LOGOUT_SUCCESS
+  }
+}
+
+export function logout () {
+  return dispatch => {
+    // remove auth0 localStorage items
+    removeItem('id_token')
+    removeItem('profile')
+    return dispatch(logoutSuccess())
+  }
+}
+
+function getProfile () {
+  return getItem('profile')
 }
 
 /* Reducer */
 const initialState = {
+  isAuthenticated: isAuthenticated(),
+  profile: getProfile(),
   loading: false,
-  valid: false,
-  errors: null,
-  profile: auth.getProfile()
+  error: ''
 }
-export default function userReducer (state = initialState, action) {
+export default function authReducer (state = initialState, action) {
   switch (action.type) {
-    case AUTHENTICATE_START :
+    case LOGIN_STARTED:
       return {
         ...state,
         loading: true,
       }
-    case AUTHENTICATE_ERROR :
+    case LOGIN_SUCCESS:
       return {
         ...state,
-        errors: action.errors,
+        isAuthenticated: true,
+        profile: action.profile,
         loading: false,
+        error: ''
       }
-    case AUTHENTICATE_COMPLETE :
+    case LOGIN_ERROR:
       return {
         ...state,
-        valid: true,
+        isAuthenticated: false,
+        profile: null,
         loading: false,
-        profile: action.user
+        error: action.error
       }
-    default :
+    case LOGOUT_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: false,
+        loading: false,
+        profile: null
+      }
+    default:
       return state
   }
 }

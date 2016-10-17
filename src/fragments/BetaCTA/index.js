@@ -1,19 +1,28 @@
 import React, {PropTypes} from 'react'
-import UserAuth from '../../components/UserAuth'
+import NewAuth from '../../components/NewAuth'
 import platformImage from '../../assets/images/platform_4.gif'
 import Block from '../../components/Block'
 import Button from '../../components/Button'
 import styles from './BetaCTA.css'
 
 const BetaCTA = (props) => {
+  const loggedIn = (
+    <Block className={styles.container}>
+      <h1 className={styles.title}>Your in!</h1>
+    </Block>
+  )
   return (
-    <UserAuth className={props.className} style={props.style}>
+    <NewAuth
+      className={props.className}
+      style={props.style}
+      loggedInComponent={loggedIn}
+    >
       <Block className={styles.container}>
         <h1 className={styles.title}>The Serverless platform is coming</h1>
         <img src={platformImage} className={styles.image} role='presentation' />
         <Button>{props.buttonText}</Button>
       </Block>
-    </UserAuth>
+    </NewAuth>
   )
 }
 BetaCTA.defaultProps = {

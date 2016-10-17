@@ -9,6 +9,7 @@ import getSiteConfig from './src/_config'
 
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
+
 // see the end of the file if you want to export a default config
 // (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
@@ -146,7 +147,7 @@ export const makeConfig = (config = {}) => {
           node.warn(result, 'Unknown variable ' + name)
         }
       }),
-      require('cssnano'),
+      // require('cssnano'),
       /* enable nested css selectors like Sass/Less */
       require('postcss-nested'),
       ...config.production ? [
@@ -155,6 +156,11 @@ export const makeConfig = (config = {}) => {
     ],
 
     plugins: [
+      // possible perf upgrade for local dev
+      // new webpack.DllReferencePlugin({
+      //    context: process.cwd(),
+      //    manifest: require(path.resolve(pkg.dllPlugin.path, 'vendorPackages.json'))
+      // }),
       new PhenomicLoaderFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {
@@ -186,16 +192,20 @@ export const makeConfig = (config = {}) => {
         ),
       ],
       new webpack.DefinePlugin({
-        'process.env': processVars
+        'process.env': processVars,
+        // Auth0Lock: 'Auth0Lock',
+        // 'window.Auth0Lock': 'Auth0Lock'
       }),
     ],
-
+    externals: {
+       // Use external version of React
+      'Auth0Lock': 'Auth0Lock',
+    },
     output: {
       path: path.join(__dirname, config.destination),
       publicPath: config.baseUrl.pathname,
       filename: '[name].[hash].js',
     },
-
     resolve: {
       extensions: [ '.js', '.json', '' ],
       root: [ path.join(__dirname, 'node_modules') ],

@@ -43,11 +43,10 @@ export default class HelloBar extends Component {
   }
   handleClose = () => {
     const { onClose } = this.props
-    if (onClose) {
-      onClose()
-    }
     this.setState({
       active: false
+    }, () => {
+      onClose && onClose()
     })
   }
   render () {

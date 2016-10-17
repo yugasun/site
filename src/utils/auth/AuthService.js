@@ -1,15 +1,9 @@
+/* Depricated EvenetEmitter Auth0 setup */
 import { EventEmitter } from 'events'
 import { getItem } from '../storage'
-import { isTokenExpired } from './jwtHelper'
-import { getXsrfToken } from './xsrfToken'
-import { getVisitorID } from '../analytics/visitor'
-import LogoImg from '../../assets/images/serverless_logo.png'
+import { isTokenExpired } from './authToken'
+import lockInstance from './lockInstance'
 const isClient = typeof window !== 'undefined'
-
-// https://github.com/reactjs/react-chartjs/issues/57#issuecomment-226790969
-if (isClient) {
-  var Auth0Lock = require('auth0-lock').default
-}
 
 // temp hack until redux implmented
 function triggerLoginEvent (authResult, profile) {
@@ -24,8 +18,10 @@ function triggerLoginEvent (authResult, profile) {
   if (authResult.state && authResult.state.split('url=')) {
     const redirect = getItem('auth_redirect')
     if (window.location.href !== redirect) {
-      window.location.href = redirect
+      // TODO: make react router history.push
+      // window.location.href = redirect
     }
+    // alert('Authed!') // eslint-disable-line
     setTimeout(function () {
       window.dispatchEvent(LoginEvent)
     }, 300)
@@ -38,37 +34,10 @@ export default class AuthService extends EventEmitter {
     if (!isClient) {
       return false
     }
-    const state = `token=${getXsrfToken()}%26url%3D${encodeURIComponent(window.location.href)}`
     // Configure Auth0
-    this.lock = new Auth0Lock(clientId, domain, {
-      auth: {
-        redirectUrl: `${window.location.origin}/loading/`,
-        responseType: 'token',
-        params: {
-          state: state,
-          analytics: {
-            // first_url: 'heheheh',
-            // first_referrer: 'xyz',
-            // last_referrer: 'blah',
-            // last_url: 'xyz',
-            // num_visits: 2,
-            // source: 'Direct Traffic',
-            uuid: getVisitorID(),
-            // unique_conversion_events: 'hdhdhd'
-          },
-          // scope: 'openid email_verified',
-        },
-      },
-      theme: {
-        logo: LogoImg,
-        primaryColor: '#000'
-      },
-      languageDictionary: {
-        title: 'Serverless'
-      }
-    })
+    this.lock = lockInstance
     // Add callback for lock `authenticated` event
-    this.lock.on('authenticated', this._doAuthentication.bind(this))
+    // this.lock.on('authenticated', this._doAuthentication.bind(this))
     // Add callback for lock `authorization_error` event
     this.lock.on('authorization_error', this._authorizationError.bind(this))
     // binds login functions to keep this context
@@ -76,7 +45,6 @@ export default class AuthService extends EventEmitter {
   }
 
   _doAuthentication (authResult) {
-    // console.log('authResult', authResult)
     // Saves the user token
     this.setToken(authResult.idToken)
     // Async loads the user profile data
@@ -84,6 +52,7 @@ export default class AuthService extends EventEmitter {
       if (error) {
         console.log('Error loading the Profile', error)
       } else {
+        alert('this shouldnt run') // eslint-disable-line
         triggerLoginEvent(authResult, profile)
         this.setProfile(profile)
         // redirect
@@ -96,9 +65,11 @@ export default class AuthService extends EventEmitter {
     console.log('Authentication Error', error)
   }
 
-  login () {
+  login (options) {
     // Call the show method to display the widget.
-    this.lock.show()
+    this.lock.show(options, function () {
+      console.log('auth login cb')
+    })
   }
 
   loggedIn () {

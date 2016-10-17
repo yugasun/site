@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UserAuth from '../../components/UserAuth'
+import NewAuth from '../../components/NewAuth'
 import TextInput from '../../components/TextInput'
 import Button from '../../components/Button'
 import getURLParams from '../../utils/urlHelpers'
@@ -48,9 +48,9 @@ export default class SubmitResource extends Component {
   render () {
     const test = this.renderForm()
     return (
-      <UserAuth loggedInComponent={test}>
+      <NewAuth loggedInComponent={test}>
         you need to log in bro
-      </UserAuth>
+      </NewAuth>
     )
   }
 }

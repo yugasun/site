@@ -87,7 +87,6 @@ $textColor: #fff;
 	transform: translate(-50%,-50%) rotate(-45deg);
 }
 
-
 /* Animations */
 @keyframes :global(flipUp) {
   0% { transform: perspective(600px) rotateX(90deg);}

@@ -6,6 +6,7 @@ import PlatformSignupFooter from './fragments/PlatformSignupFooter'
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
+
 import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
 
 export default class Root extends Component {
@@ -13,6 +14,15 @@ export default class Root extends Component {
     initializeVisitorID()
     const id = getVisitorID()
     console.log('uuid', id)
+    window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
+  }
+  componentWillUnmount () {
+    window.removeEventListener('reactRouterRedirect', this.handleAuthRedirect)
+  }
+  handleAuthRedirect = (e) => {
+    const redirectURL = e.detail.url
+    // alert('Do redirect') // eslint-disable-line
+    this.props.history.push(redirectURL)
   }
   render () {
     const { location, params } = this.props
@@ -36,4 +46,5 @@ Root.propTypes = {
   /** React Router params **/
   params: PropTypes.object,
   location: PropTypes.object,
+  history: PropTypes.object,
 }

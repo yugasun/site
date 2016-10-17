@@ -1,6 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+/*
+script={[
+  {'src': 'https://cdn.auth0.com/js/lock/10.4/lock.min.js', 'type': 'text/javascript'},
+]}
+ */
+
 export default class HeadTag extends React.Component {
   render () {
     return (
@@ -17,6 +23,9 @@ export default class HeadTag extends React.Component {
               content: '1HdFnJaYYEiONgCRl3fj7lQobYY4uXPe5L2-sTgNzKQ'
             },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+          ]}
+          script={[
+            {'src': 'https://cdn.auth0.com/js/lock/10.4/lock.min.js', 'type': 'text/javascript'},
           ]}
         />
       </div>
