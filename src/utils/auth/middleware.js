@@ -18,7 +18,6 @@ function handleAuthRedirect (url) {
 
 const createOneShot = (middleware) => {
   let hasBeenTriggered = false
-  console.log('hasBeenTriggered', hasBeenTriggered)
   return (store) => (next) => (action) => {
     next(action)
 

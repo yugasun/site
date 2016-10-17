@@ -3,8 +3,7 @@ import routes from '../src/routes'
 import configureStore from '../src/store'
 import phenomicClient from 'phenomic/lib/client'
 import { initialAuthState } from '../src/redux/user'
-const isClient = typeof window !== 'undefined'
-const windowState = (isClient) ? window.__INITIAL_STATE__ : {}
+const windowState = (typeof window !== 'undefined') ? window.__INITIAL_STATE__ : {}
 const authState = {
   auth: initialAuthState
 }
@@ -12,8 +11,11 @@ const initialState = {
   ...windowState,
   ...authState
 }
-
 const store = configureStore(initialState)
+
+store.dispatch({
+  type: 'APP_INIT'
+})
 
 phenomicClient({
   metadata: {
