@@ -42,6 +42,7 @@ const authMiddleware = createOneShot((dispatch) => {
   if (typeof window === 'undefined') {
     return false
   }
+  console.log('authCB added')
   // register lock callback once
   lockInstance.on('authenticated', function (authResult) {
     console.log('auth callback triggered') // eslint-disable-line
