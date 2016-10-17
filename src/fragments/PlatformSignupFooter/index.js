@@ -15,7 +15,7 @@ export default class PlatformSignupFooter extends Component {
   }
   componentDidMount () {
     window.addEventListener('serverlessLogin', this.handleToggle, false)
-    this.showBar(2000)
+    this.showBar(10000)
   }
   componentWillUnmount () {
     window.clearTimeout(this.delay)
