@@ -7,8 +7,6 @@ import phenomicClient from 'phenomic/lib/client'
 const initialState = { ...(typeof window !== 'undefined') && window.__INITIAL_STATE__ }
 const store = configureStore(initialState)
 
-// dispatch to attach auth0 handler
-
 phenomicClient({
   metadata: {
     empty: 'hi',
@@ -16,10 +14,7 @@ phenomicClient({
   routes: routes,
   store: store,
 })
-store.dispatch({
-  type: 'APP_INIT',
-  state: store.getState()
-})
+
 // hot loading
 // md files → JSON && generate collection + hot loading for dev
 let mdContext = require.context('../content', true, /\.md$/)
