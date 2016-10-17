@@ -8,12 +8,12 @@ import styles from './BetaCTA.css'
 
 const BetaCTA = (props) => {
   const url = 'https://serverless.com/framework/'
-  const tweet = twitterShare('Just joined the @goServerless beta', url, ['serverless'])
+  const tweet = twitterShare('Just joined the serverless revolution! Checkout the @goServerless beta here: ', url, ['serverless', 'AWS'])
   const loggedIn = (
     <Block className={styles.container}>
       <h1 className={styles.title}>Thanks for signing up for Beta</h1>
       <img src={platformImage} className={styles.image} role='presentation' />
-      <Button href={tweet}>Share the beta</Button>
+      <Button target='_blank' href={tweet}>Share the beta</Button>
     </Block>
   )
   return (
