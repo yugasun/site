@@ -42,8 +42,8 @@ const authMiddleware = createOneShot((dispatch) => {
   }
   // register lock callback once
   lockInstance.on('authenticated', function (authResult) {
-     alert('auth callback triggered') // eslint-disable-line
-    console.log('middleware auth', authResult)
+    console.log('auth callback triggered') // eslint-disable-line
+    console.log('authResult', authResult)
     // Check xrsf token
     const stateValues = getURLParams('http://dummy.com?' + authResult.state)
     // if (!authResult.idTokenPayload.email_verified) {
