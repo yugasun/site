@@ -24,9 +24,6 @@ export default class HeadTag extends React.Component {
             },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
           ]}
-          script={[
-            {'src': 'https://cdn.auth0.com/js/lock/10.4/lock.min.js', 'type': 'text/javascript'},
-          ]}
         />
       </div>
     )

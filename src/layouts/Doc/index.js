@@ -57,14 +57,21 @@ class Doc extends Component {
     if (menu && menu.children) {
       renderItems = menu.children.map(function (item, i) {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
+        let link
         if (item.path === trimmedURL) {
-          return null
-        }
-        return (
-          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
+          link = (
+            <span>{item.title}</span>
+          )
+        } else {
+          link = (
             <Link to={item.path} >
               {item.title}
             </Link>
+          )
+        }
+        return (
+          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
+            {link}
           </li>
         )
       })
