@@ -6,7 +6,6 @@ import PlatformSignupFooter from './fragments/PlatformSignupFooter'
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
-
 import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
 
 export default class Root extends Component {
