@@ -76,7 +76,7 @@ let initialState = {
   loading: false,
   error: ''
 }
-if (process.env.node_env === 'production') {
+if (process.env.NODE_ENV === 'production') {
   initialState = {}
 }
 
