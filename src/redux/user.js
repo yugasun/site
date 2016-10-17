@@ -78,7 +78,7 @@ const initialState = {
 }
 console.log('initialState', initialState)
 export default function authReducer (state = initialState, action) {
-  console.log(action.type)
+  console.log(action.type, state)
   console.log(action)
   switch (action.type) {
     case LOGIN_STARTED:

@@ -7,7 +7,7 @@ import userReducer from './redux/user'
 
 const extraMiddlewares = [ thunk, authMiddleware ]
 console.log('prod store configuted')
-console.log(extraMiddlewares)
+
 export default function configureStore (preloadedState) {
   return createStore(
     combineReducers({
