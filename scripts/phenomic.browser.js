@@ -16,7 +16,10 @@ phenomicClient({
   routes: routes,
   store: store,
 })
-store.dispatch({type: 'APP_INIT'})
+store.dispatch({
+  type: 'APP_INIT',
+  state: store.getState()
+})
 // hot loading
 // md files → JSON && generate collection + hot loading for dev
 let mdContext = require.context('../content', true, /\.md$/)
