@@ -9,14 +9,14 @@ const propTypes = {
 export default class FooterBetaCTA extends Component {
   render () {
     return (
-      <div className={styles.ctaBottom}>
-        <div className={styles.ctaBottomInner}>
-          <div className={styles.ctaBottomRowOne}></div>
-          <div className={styles.ctaBottomRowTwo}>
-            <h2 className={styles.ctaBottomCopy}>
-              The Serverless Platform is coming
-            </h2>
-            <NewAuth>
+      <NewAuth loggedInComponent={<span></span>}>
+        <div className={styles.ctaBottom}>
+          <div className={styles.ctaBottomInner}>
+            <div className={styles.ctaBottomRowOne}></div>
+            <div className={styles.ctaBottomRowTwo}>
+              <h2 className={styles.ctaBottomCopy}>
+                The Serverless Platform is coming
+              </h2>
               <Button
                 kind='yellow'
                 className={styles.btn}
@@ -24,10 +24,10 @@ export default class FooterBetaCTA extends Component {
                 onClick={this.login}>
                 Sign up for early access
               </Button>
-            </NewAuth>
+            </div>
           </div>
         </div>
-      </div>
+      </NewAuth>
     )
   }
 }

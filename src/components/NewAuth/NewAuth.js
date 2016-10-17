@@ -25,8 +25,11 @@ const AuthComponent = (props) => {
       profile: profile,
       handleLogout: logout
     }
-    if (typeof loggedInComponent === 'object') {
-      // if component jsx. Clone it
+    if (typeof loggedInComponent.type === 'string') {
+      // if is normal DOM node
+      renderedContent = loggedInComponent
+    } else if (typeof loggedInComponent === 'object') {
+      // if custom component. Clone it
       renderedContent = React.cloneElement(loggedInComponent, childProps)
     } else if (typeof loggedInComponent === 'function') {
       // if component class. Make it

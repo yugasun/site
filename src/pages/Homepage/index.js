@@ -10,6 +10,7 @@ import awsLogo from '../../assets/images/aws_logo.png'
 import communityJpg from '../../assets/images/community.png'
 import customerCoke from '../../assets/images/customer_coke.png'
 import sparkle from '../../assets/images/home_sparkle.png'
+import { Link } from 'react-router'
 import styles from './Homepage.css'
 import playSvg from '../../assets/icons/play.svg'
 import docsSvg from '../../assets/icons/book2.svg'
@@ -113,9 +114,9 @@ export default class Homepage extends Component {
           <ContentBlock title='The Serverless Framework' image={frameworkGif}>
             <p>The open-source, application framework to easily build serverless architectures on AWS Lambda & more.  Startups and Fortune 500 companies are using it to build incredibly efficient applications.</p>
             <p>
-              <a href='https://serverless.com/framework' target='_blank'>
+              <Link to='/framework'>
                 View the framework
-              </a>
+              </Link>
             </p>
           </ContentBlock>
 
