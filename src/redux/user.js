@@ -70,12 +70,16 @@ function getProfile () {
 }
 
 /* Reducer */
-const initialState = {
+let initialState = {
   isAuthenticated: isAuthenticated(),
   profile: getProfile(),
   loading: false,
   error: ''
 }
+if (process.env.node_env === 'production') {
+  initialState = {}
+}
+
 console.log('initialState', initialState)
 export default function authReducer (state = initialState, action) {
   console.log(action.type, state)
