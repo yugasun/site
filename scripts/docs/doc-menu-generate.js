@@ -141,7 +141,6 @@ function writeJSONMenuToDirectory (dest, contents) {
 }
 
 module.exports = function generateDocMenu () {
-  console.log('BUILD DOC MENU', config.docsMenuPath)
   // kick off menu creation. sync process
   traverse(filteredTree, 1)
   // then write to file
