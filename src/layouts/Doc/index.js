@@ -117,7 +117,7 @@ class Doc extends Component {
   }
   renderSidebar () {
     const childrenItems = this.renderChildrenList()
-    // const parentItems = this.renderParentList()
+    const parentItems = this.renderParentList()
     return (
       <div className={styles.sidebar + ' docs-sidebar'}>
         <div ref='sidebar' className={styles.sidebarInner}>
@@ -138,6 +138,7 @@ class Doc extends Component {
             </div>
           </div>
           {childrenItems}
+          {parentItems}
           <div className={styles.versionNumber}>
             Docs Version: {process.env.DOCS_VERSION}
           </div>

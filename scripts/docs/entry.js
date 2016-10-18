@@ -52,5 +52,5 @@ async.waterfall([
   }
   console.log('Finished processing Docs')
   buildMenus()
-  // generateDocMenu()
+  generateDocMenu()
 })
