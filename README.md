@@ -9,7 +9,7 @@ This site is 100% serverless! Wooooooo!
 
 # Setup
 
-**1. Install dependencies**
+**1. Install dependencies* *
 
 ```bash
 $ npm install
