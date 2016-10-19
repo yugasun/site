@@ -8,5 +8,5 @@ module.exports = {
   newDocsPath: path.join(__dirname, '..', '..', 'content/framework/docs/'),
   oldDocsPath: path.join(__dirname, '..', '..', 'node_modules/serverless/docs/'),
   docsMenuPath: path.join(__dirname, '..', '..', 'src/layouts/Doc/'),
-  downloadLink: 'https://github.com/serverless/serverless/archive/master/.zip'
+  downloadLink: 'https://github.com/serverless/serverless/archive/improve-docs/.zip'
 }
