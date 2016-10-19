@@ -10,8 +10,10 @@ import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
 import Shell from '../Default'
 import Breadcrumbs from '../../components/Breadcrumbs'
-import styles from './Doc.css'
 import Helmet from 'react-helmet'
+import styles from './Doc.css'
+// Global styles are used to style html classes from github markdown files
+import globalStyles from './Doc.global.css' // eslint-disable-line
 
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
