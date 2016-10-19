@@ -26,7 +26,8 @@ var folderList = fs.readdirSync(config.oldDocsPath).filter(function (x) {
 
 function getPageData (filePath) {
   var pageData
-  if (fs.lstatSync(filePath).isDirectory()) {
+  // console.log('filePath', filePath)
+  if (fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory()) {
     var name = path.basename(filePath)
     pageData = {
       title: name,
