@@ -12,7 +12,7 @@ export default class HeadTag extends React.Component {
     return (
       <div>
         <style>
-          {"@-ms-viewport { width: device-width; }"}
+          {'@-ms-viewport { width: device-width; }'}
         </style>
         <Helmet
           meta={[
@@ -23,6 +23,13 @@ export default class HeadTag extends React.Component {
               content: '1HdFnJaYYEiONgCRl3fj7lQobYY4uXPe5L2-sTgNzKQ'
             },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+          ]}
+          script={[
+            {
+              'src': 'https://cdn.ravenjs.com/3.7.0/raven.min.js',
+              'type': 'text/javascript',
+              'crossorigin': 'anonymous'
+            },
           ]}
         />
       </div>
