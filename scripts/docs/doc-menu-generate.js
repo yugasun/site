@@ -10,16 +10,18 @@ var menuObject = {} // menu generated
 
 // Make map of top level directories to order them
 var folderLookup = {}
-// var folderList = fs.readdirSync(config.oldDocsPath).filter(function (x) {
-//   return x !== '.DS_Store' && !x.match(/\.md/)
-// }).map(function (folder, i) {
-//   var order = folder.match(/([0-9]{2})/g)
-//   var orderNumber = order.length
-//   if (order && order.length) {
-//     orderNumber = parseInt(order[order.length - 1])
-//   }
-//   folderLookup[folder.replace(/([0-9]{2})-/g, '')] = orderNumber
-// })
+var folderList = fs.readdirSync(config.oldDocsPath).filter(function (x) {
+  return x !== '.DS_Store' && !x.match(/\.md/)
+}).map(function (folder, i) {
+  var order = folder.match(/([0-9]{2})/g)
+  if (order) {
+    var orderNumber = order.length
+    if (order && order.length) {
+      orderNumber = parseInt(order[order.length - 1])
+    }
+    folderLookup[folder.replace(/([0-9]{2})-/g, '')] = orderNumber
+  }
+})
 // end make map
 
 function getPageData (filePath) {
@@ -38,10 +40,13 @@ function getPageData (filePath) {
     // get order of original file
     var originalLink = yamlInfo.gitLink
     var order = originalLink.match(/([0-9]{2})/g)
-    //  var orderNumber = folderList.length + 1 // set none order md to last
+    var orderNumber = folderList.length + 1 // set none order md to last
     if (order && order.length) {
       orderNumber = parseInt(order[order.length - 1])
     }
+
+    //var o = (yamlInfo.menuOrder) ? yamlInfo.menuOrder : orderNumber
+
     pageData = {
       title: yamlInfo.menuText || yamlInfo.title,
       order: yamlInfo.menuOrder // previously orderNumber

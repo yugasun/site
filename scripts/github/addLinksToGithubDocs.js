@@ -25,14 +25,14 @@ dir.readFiles(localdocsPath, {
   if (err) throw err
   var removeLinkRegex = /<!--.*DOCS-SITE-LINK:START((.|\n)*?END.*-->)/g
   var removeExisting = content.replace(removeLinkRegex, '')
-  // console.log(filename)
-  var sitePath = filename.split('/serverless/docs/')[1].replace('.md', '')
-  // console.log(sitePath)
-  var test = link('/docs' + sitePath)
-  var addLink = removeExisting.replace(/(<!--.*(.|\n)*?.*-->)/, '$1' + '\n' + test)
-
-  console.log('replace', addLink)
-  // fs.writeFileSync(filename, addLink)
+  var blankLineRegex = /^\s*\n/gm
+  var replaceBlankLines = removeExisting.replace(blankLineRegex, '\n')
+  var sitePath = filename.split('/serverless/docs/')[1].replace('.md', '').replace('README', '')
+  var siteDocLink = link('/docs/' + sitePath)
+  var addLink = replaceBlankLines.replace(/(<!--.*(.|\n)*?.*-->)/, '$1' + '\n' + siteDocLink)
+  console.log('/docs/' + sitePath + ' updated with link')
+  // console.log('replace', addLink)
+  fs.writeFileSync(filename, addLink)
 
   next()
 },

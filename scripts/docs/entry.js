@@ -6,7 +6,7 @@ var removeDirectory = require('./remove-directory')
 
 var renameFilesInDirectory = require('./rename-files')
 var updateFileContents = require('./update-doc-content')
-var buildMenus = require('./build-menus')
+var buildJSONDataMenus = require('./build-menus')
 var generateDocMenu = require('./doc-menu-generate')
 var replacePattern = /([0-9]{2})-/g
 
@@ -51,6 +51,6 @@ async.waterfall([
     console.log('err', err)
   }
   console.log('Finished processing Docs')
-  buildMenus()
+  // buildJSONDataMenus()
   generateDocMenu()
 })
