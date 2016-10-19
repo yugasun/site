@@ -25,7 +25,7 @@
     "prebuild": "npm run prepContent",
     "build": "phenomic build",
     "buildprod": "npm run remoteSync && npm run prepContent && phenomic build",
-    "postinstall": "node scripts/build/postinstall.js && npm run remoteSync",
+    "postinstall": "node scripts/build/postinstall.js",
     "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint",
