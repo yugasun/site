@@ -9,7 +9,14 @@ const slsNodeModuleDocs = config.oldDocsPath
 const localdocsPath = path.join(__dirname, '..', '..', '..', '/serverless/docs/')
 
 emptyDirectory(slsNodeModuleDocs, function () {
-  copyFiles(localdocsPath, slsNodeModuleDocs, function () {
-    console.log('local docs sync done. please restart site')
+  copyFiles(localdocsPath, slsNodeModuleDocs, function (error) {
+    if (error) {
+      console.log(error)
+      console.log(`Docs not found at ${localdocsPath}`)
+      console.log(`Please git clone ${config.repoURL} into parent directory`)
+      return false
+    }
+    console.log('Local docs sync done.')
+    console.log('Stop and restart site')
   })
 })
