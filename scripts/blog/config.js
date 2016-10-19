@@ -9,3 +9,4 @@ module.exports = {
   oldBlogPath: path.join(__dirname, '..', '..', 'node_modules/serverless-blog/posts/'),
   downloadLink: 'https://github.com/serverless/blog/archive/master/.zip'
 }
+ 
