@@ -10,7 +10,7 @@ export default class PageLoading extends Component {
     return (
       <div style={{height: '100vh'}}>
         <Helmet
-          title={"Loading..."}
+          title={'Loading...'}
         />
         <Header />
         <div className={styles.loader}>
