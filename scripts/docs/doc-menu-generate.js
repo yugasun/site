@@ -36,7 +36,7 @@ function getPageData (filePath) {
     var content = fs.readFileSync(filePath).toString()
     // parse yaml frontmatter for title
     var yamlInfo = matter(content).data
-    console.log('yamlInfo', yamlInfo)
+    // console.log('yamlInfo', yamlInfo)
     // get order of original file
     var originalLink = yamlInfo.gitLink
     var order = originalLink.match(/([0-9]{2})/g)
