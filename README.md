@@ -10,13 +10,20 @@ This site is 100% serverless! Wooooooo!
 
 # Quick Start
 
-**1. Install dependencies**
+**1. Clone down the site**
+Clone down the site:
+
+```bash
+git clone git@github.com:serverless/site.git
+```
+
+**2. Install site dependencies**
 
 ```bash
 npm install
 ```
 
-**2. Run site locally**
+**3. Run site on your local computer**
 
 ```bash
 npm start
@@ -24,17 +31,19 @@ npm start
 
 Open your browser to http://localhost:3333
 
-**3. Making edits**
+**4. Making edits**
 
-To make edits to blog posts, edit the files in `./serverless-blog/posts`
+When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
 
-To make edits to framework docs, edit the files in `./serverless/docs`
+**Blog edits:** To make edits to blog posts, edit the files in `./serverless-blog/posts`
 
-To make edits to other pages, edit the markdown in `./content` (except for `./content/blog`, and `./content/framework/docs`)
+**Doc edits:** To make edits to framework docs, edit the files in `./serverless/docs`
+
+To make edits to other pages, edit the markdown in `./content`
+
+**Custom Page edits:**
 
 Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
-
-The `npm start` command also watches for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
 
 # Building
 
