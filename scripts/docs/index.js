@@ -2,11 +2,12 @@ const config = require('./config')
 const asyncLib = require('async')
 const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
-const removeDirectory = require('./remove-directory')
-const renameFilesInDirectory = require('./rename-files')
+const deleteMatchingDirectories = require('../utils/delete-matching-directories')
+const renameFilesInDirectory = require('../utils/rename-files-in-directory')
 const updateFileContents = require('./update-doc-content')
-// var buildJSONDataMenus = require('./build-json-menus')
+// var buildJSONDataMenus = require('./zbuild-json-menus')
 const generateDocMenu = require('./generate-docs-menu')
+// replace numbers in 00-name-of-dir
 const replacePattern = /([0-9]{2})-/g
 
 asyncLib.waterfall([
@@ -39,7 +40,7 @@ asyncLib.waterfall([
     })
   },
   function (next) {
-    removeDirectory(config.newDocsPath, replacePattern, (err) => {
+    deleteMatchingDirectories(config.newDocsPath, replacePattern, (err) => {
       if (err) return next(err)
       console.log('removed old doc files successfully')
       next(null)

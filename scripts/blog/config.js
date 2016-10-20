@@ -7,8 +7,8 @@ const projectRoot = path.join(__dirname, '..', '..')
 
 module.exports = {
   repoURL: repoURL,
+  downloadLink: `${repoURL}/archive/master/.zip`,
   blogRepoPath: path.join(projectRoot, 'content-external/serverless-blog'),
   blogRepoPostPath: path.join(projectRoot, 'content-external/serverless-blog/posts/'),
   siteBlogPath: path.join(projectRoot, 'content/blog/'),
-  downloadLink: `${repoURL}/archive/master/.zip`
 }
