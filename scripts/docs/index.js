@@ -1,3 +1,6 @@
+/**
+ * Docs build pipeline
+ */
 const config = require('./config')
 const asyncLib = require('async')
 const emptyDirectory = require('../utils/empty-directory')
@@ -20,7 +23,7 @@ asyncLib.waterfall([
   function (next) {
     copyFiles(config.serverlessDocsPath, config.newDocsPath, (err) => {
       if (err) return next(err)
-      console.log('copied doc files successfully')
+      console.log('Copied doc files successfully')
       next(null)
     })
   },
@@ -28,21 +31,21 @@ asyncLib.waterfall([
   function (next) {
     updateFileContents(config.newDocsPath, (err) => {
       if (err) return next(err)
-      console.log('update doc files contents successfully')
+      console.log('Update doc files contents successfully')
       next(null)
     })
   },
   function (next) {
     renameFilesInDirectory(config.newDocsPath, replacePattern, (err) => {
       if (err) return next(err)
-      console.log('renamed doc files successfully')
+      console.log('Renamed doc files successfully')
       next(null)
     })
   },
   function (next) {
     deleteMatchingDirectories(config.newDocsPath, replacePattern, (err) => {
       if (err) return next(err)
-      console.log('removed old doc files successfully')
+      console.log('Removed old doc files successfully')
       next(null)
     })
   }

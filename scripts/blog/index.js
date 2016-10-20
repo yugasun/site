@@ -1,3 +1,6 @@
+/**
+ * Blog build pipeline
+ */
 const config = require('./config')
 // const fs = require('fs-extra')
 const asyncLib = require('async')
@@ -16,7 +19,7 @@ asyncLib.waterfall([
   function (next) {
     copyFiles(config.blogRepoPostPath, config.siteBlogPath, (err) => {
       if (err) return next(err)
-      console.log('copied Blog files successfully')
+      console.log('Copied blog files successfully')
       next(null)
     })
   },
@@ -24,14 +27,14 @@ asyncLib.waterfall([
   function (next) {
     updateBlogFileContents(config.siteBlogPath, (err) => {
       if (err) return next(err)
-      console.log('updated Blog content successfully')
+      console.log('Updated Blog content successfully')
       next(null, 'three')
     })
   },
   function (arg1, next) {
     removeDateFromFileName(config.siteBlogPath, (err, files) => {
       if (err) return next(err)
-      console.log('renamed Blog files successfully')
+      console.log('Renamed Blog files successfully')
       next(null, 'done')
     })
   },
