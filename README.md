@@ -49,19 +49,24 @@ To make edits to other pages, edit the markdown in `./content`
 
 Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
 
-# Building
+# Publishing Site Updates
 
-**3. Build for production**
+**1. Test the build command locally**
 
 ```bash
 $ npm run buildprod
 ```
----
 
-## Publishing Updates to Serverless.com
+**2. If build command succeeds, push up your changes to a new branch**
 
 We are using [netlify](http://netlify.com) to distribute the site.
 
-When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain.
+When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://updatedocssetup--serverless.netlify.com` (https://[BRANCHNAME]--serverless.netlify.com)
 
-The `master` branch is the live site. **Never push directly to the master branch!**
+Note: The `master` branch is the live site. **Never push directly to the master branch!**
+
+**3. Review your live site changes**
+
+If everything looks good on your unique netlify subdomain, you can go ahead and merge your branch to master on github.
+
+Merging branches into master will trigger a site rebuild and `serverless.com` will be updated
