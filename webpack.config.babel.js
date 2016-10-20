@@ -3,6 +3,7 @@ import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import serverlessPackageJSON from './temp/serverless/package.json'
 import { phenomicLoader } from 'phenomic'
+import CopyWebpackPlugin from "copy-webpack-plugin"
 import PhenomicLoaderFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import pkg from './package.json'
 import getSiteConfig from './src/_config'
@@ -196,6 +197,12 @@ export const makeConfig = (config = {}) => {
         // Auth0Lock: 'Auth0Lock',
         // 'window.Auth0Lock': 'Auth0Lock'
       }),
+      new CopyWebpackPlugin([
+        {
+           from: 'admin',
+           to: 'admin'
+        },
+      ]),
     ],
     // externals: {
     //    // Use external version of React
