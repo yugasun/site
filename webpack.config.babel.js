@@ -1,7 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import serverlessPackageJSON from 'serverless/package.json'
+import serverlessPackageJSON from 'temp/serverless/package.json'
 import { phenomicLoader } from 'phenomic'
 import PhenomicLoaderFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import pkg from './package.json'
