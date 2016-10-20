@@ -6,41 +6,49 @@ This site is 100% serverless! Wooooooo!
 
 - [See the site](https://serverless.com/)
 - [Contribute to the blog](https://github.com/serverless/blog)
+- [Contribute to the docs](https://github.com/serverless/serverless)
 
-# Setup
+# Quick Start
 
-**1. Install dependencies* *
-
-```bash
-$ npm install
-```
-
-Next you will need to change the values in `src/_config.js` with your correct credentials, if you are setting up a different site.
-
-**2. Run development server locally**
+**1. Install dependencies**
 
 ```bash
-$ npm start
+npm install
 ```
+
+**2. Run site locally**
+
+```bash
+npm start
+```
+
+Open your browser to http://localhost:3333
+
+**3. Making edits**
+
+To make edits to blog posts, edit the files in `./serverless-blog/posts`
+
+To make edits to framework docs, edit the files in `./serverless/docs`
+
+To make edits to other pages, edit the markdown in `./content` (except for `./content/blog`, and `./content/framework/docs`)
+
+Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
+
+The `npm start` command also watches for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
+
+# Building
 
 **3. Build for production**
 
 ```bash
 $ npm run buildprod
 ```
-
 ---
-
-## Working with content
-
-The site content lives in the `/content` and the `src/layouts` or `src/pages` folders.
-
-For live editing the blog or docs, you will want to edit those files in the `serverless` and `serverless-blog` directory
 
 ## Publishing Updates to Serverless.com
 
-We are using [netlify](http://netlify.com) to distribute the site. It pushes any changes made to the `master` branch to the live serverless.com site.
+We are using [netlify](http://netlify.com) to distribute the site.
 
-So, whenever making changes to the site, it's important to do those on branches and submit a pull request for us to merge into master.
+When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain.
 
-Make sure `npm run build` works locally or the build in netlify's CI/CD will fail and the updates won't be visible on the site.
+The `master` branch is the live site. Never push directly to the master branch!
