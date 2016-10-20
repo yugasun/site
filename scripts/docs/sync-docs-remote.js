@@ -1,9 +1,11 @@
 const download = require('../utils/download')
+const rimraf = require('rimraf')
 const config = require('./config')
 const emptyDirectory = require('../utils/empty-directory')
 
-emptyDirectory(config.serverlessRepoPath, function () {
+rimraf(config.serverlessRepoPath, function () {
   console.log('empty serverless docs directory')
+  console.log('REMVOED', config.serverlessRepoPath)
   download(config.downloadLink, config.serverlessRepoPath, function (error) {
     if (error) {
       console.log(error)

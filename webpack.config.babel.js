@@ -5,7 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import PhenomicFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import { phenomicLoader } from 'phenomic'
 import pkg from './package.json'
-import serverlessPkg from './content-external/serverless/package.json'
+import serverlessPkg from './serverless/package.json'
 import getSiteConfig from './src/_config'
 
 export const makeConfig = (config = {}) => {

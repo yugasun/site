@@ -1,7 +1,7 @@
 var config = require('./config')
 var dirTree = require('directory-tree')
 // var breakWord = 'serverless'
-var filteredTree = dirTree(config.newDocsPath, ['.md'])
+var filteredTree = dirTree(config.siteDocsPath, ['.md'])
 var breakWord = 'content'
 var path = require('path')
 var fs = require('fs-extra')
@@ -24,10 +24,19 @@ var folderList = fs.readdirSync(config.serverlessDocsPath).filter(function (x) {
 })
 // end make map
 
+function fileOrDirExists (filePath) {
+  try {
+    fs.statSync(filePath)
+    return true
+  } catch (err) {
+    return false
+  }
+}
+
 function getPageData (filePath) {
   var pageData
   // console.log('filePath', filePath)
-  if (fs.existsSync(filePath) && fs.lstatSync(filePath).isDirectory()) {
+  if (fileOrDirExists(filePath) && fs.lstatSync(filePath).isDirectory()) {
     var name = path.basename(filePath)
     pageData = {
       title: name,

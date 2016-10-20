@@ -3,8 +3,9 @@ const config = require('./config')
 const emptyDirectory = require('../utils/empty-directory')
 const blogRepoPath = config.blogRepoPath
 const downloadLink = config.downloadLink
+const rimraf = require('rimraf')
 
-emptyDirectory(blogRepoPath, function () {
+rimraf(blogRepoPath, function () {
   console.log('empty local blog directory')
   download(downloadLink, blogRepoPath, function (error) {
     if (error) {

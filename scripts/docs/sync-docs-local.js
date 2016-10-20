@@ -1,4 +1,5 @@
 /**
+ * TODO: depricate in favor of local github repo in here
  * Utility for syncing docs on local machine for debugging etc
  */
 var config = require('./config')

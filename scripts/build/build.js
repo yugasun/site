@@ -3,9 +3,11 @@ var cwd = process.cwd()
 var path = require('path')
 var exec = require('child_process').exec
 
-if (process.env.NETLIFY_ENV) {
+if (process.env.IS_NETLIFY_ENV) {
   console.log('in NETLIFY_ENV context')
   // do stuff
+} else {
+  console.log('local context do normal build. clone repo is folder doesnt exist')
   // var webpackPath = path.resolve('node_modules', '.bin', 'phenomic')
   // var command = webpackPath + ' build'
   // var child = exec(command, {cwd: cwd}, function (error, stdout, stderr) {
@@ -24,6 +26,4 @@ if (process.env.NETLIFY_ENV) {
   // child.on('close', function (code) {
   //   console.log('closing code: ' + code)
   // })
-} else {
-  console.log('local context do normal build')
 }
