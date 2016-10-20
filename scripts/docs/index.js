@@ -9,6 +9,7 @@ const renameFilesInDirectory = require('../utils/rename-files-in-directory')
 const updateFileContents = require('./update-doc-content')
 // var buildJSONDataMenus = require('./zbuild-json-menus')
 const generateDocMenu = require('./generate-docs-menu')
+const notice = require('./notice')
 const config = require('./config')
 const siteDocsPath = config.siteDocsPath
 // replace numbers in 00-name-of-dir
@@ -58,6 +59,6 @@ asyncLib.waterfall([
   // buildJSONDataMenus()
   setTimeout(() => {
     generateDocMenu()
+    notice()
   }, 100)
-
 })

@@ -14,7 +14,7 @@ watch.createMonitor(serverlessDocs, function (monitor) {
     // Handle file changes
     console.log('changed file', f)
 
-    var command = 'npm run prepContent'
+    var command = 'npm run prepareContent'
     var child = exec(command, {cwd: cwd}, function (error, stdout, stderr) {
       if (error) {
         console.warn(error)

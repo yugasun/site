@@ -2,12 +2,14 @@
  * Blog build pipeline
  */
 const config = require('./config')
-// const fs = require('fs-extra')
+const fs = require('fs-extra')
+const path = require('path')
 const asyncLib = require('async')
 const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
 const removeDateFromFileName = require('./remove-date-from-filename')
 const updateBlogFileContents = require('./update-blog-yaml')
+const userNotice = require('./notice')
 
 asyncLib.waterfall([
   function (next) {
@@ -42,5 +44,6 @@ asyncLib.waterfall([
   if (err) {
     console.log('err', err)
   }
+  userNotice()
   console.log('Finished processing Blog posts')
 })
