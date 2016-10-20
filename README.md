@@ -31,17 +31,21 @@ npm start
 
 Open your browser to http://localhost:3333
 
-**4. Making edits**
+# Editing Site Content
 
 When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
 
-**Blog edits:** To make edits to blog posts, edit the files in `./serverless-blog/posts`
+### **Blog edits:**
 
-**Doc edits:** To make edits to framework docs, edit the files in `./serverless/docs`
+To make edits to blog posts, edit the files in `./serverless-blog/posts` (this directory is added on `npm i`)
+
+### **Doc edits:**
+
+To make edits to framework docs, edit the files in `./serverless/docs` (this directory is added on `npm i`)
+
+### Editing other pages
 
 To make edits to other pages, edit the markdown in `./content`
-
-**Custom Page edits:**
 
 Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
 
@@ -60,4 +64,4 @@ We are using [netlify](http://netlify.com) to distribute the site.
 
 When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain.
 
-The `master` branch is the live site. Never push directly to the master branch!
+The `master` branch is the live site. **Never push directly to the master branch!**
