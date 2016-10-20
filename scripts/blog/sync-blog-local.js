@@ -5,11 +5,11 @@ var config = require('./config')
 var path = require('path')
 const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
-const blogNodeModulesPath = config.blogNodeModulesPath
+const blogRepoPath = config.blogRepoPath
 const localBlogRepoPath = path.join(__dirname, '..', '..', '..', 'blog')
 
-emptyDirectory(blogNodeModulesPath, function () {
-  copyFiles(localBlogRepoPath, blogNodeModulesPath, function (error) {
+emptyDirectory(blogRepoPath, function () {
+  copyFiles(localBlogRepoPath, blogRepoPath, function (error) {
     if (error) {
       console.log(error)
       console.log(`Blog not found at ${localBlogRepoPath}`)
@@ -17,5 +17,6 @@ emptyDirectory(blogNodeModulesPath, function () {
       return false
     }
     console.log('Local blog sync done. please restart site')
+    console.log(blogRepoPath)
   })
 })

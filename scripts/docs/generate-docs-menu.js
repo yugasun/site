@@ -10,7 +10,7 @@ var menuObject = {} // menu generated
 
 // Make map of top level directories to order them
 var folderLookup = {}
-var folderList = fs.readdirSync(config.oldDocsPath).filter(function (x) {
+var folderList = fs.readdirSync(config.serverlessDocsPath).filter(function (x) {
   return x !== '.DS_Store' && !x.match(/\.md/)
 }).map(function (folder, i) {
   var order = folder.match(/([0-9]{2})/g)

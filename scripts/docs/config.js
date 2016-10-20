@@ -3,11 +3,13 @@
 */
 var path = require('path')
 const repoURL = 'https://github.com/serverless/serverless'
+const projectRoot = path.join(__dirname, '..', '..')
+
 module.exports = {
   repoURL: repoURL,
-  slsPath: path.join(__dirname, '..', '..', 'temp/serverless'),
-  newDocsPath: path.join(__dirname, '..', '..', 'content/framework/docs/'),
-  oldDocsPath: path.join(__dirname, '..', '..', 'temp/serverless/docs/'),
-  docsMenuPath: path.join(__dirname, '..', '..', 'src/layouts/Doc/'),
+  serverlessRepoPath: path.join(projectRoot, 'content-external/serverless'), // was slsPath
+  serverlessDocsPath: path.join(projectRoot, 'content-external/serverless/docs/'),
+  newDocsPath: path.join(projectRoot, 'content/framework/docs/'),
+  docsMenuPath: path.join(projectRoot, 'src/layouts/Doc/'),
   downloadLink: `${repoURL}/archive/improve-docs/.zip`
 }

@@ -1,7 +1,7 @@
 {
   "create": {
     "create": {
-      "usage": "Create new Serverless service",
+      "usage": "Create new Serverless Service.",
       "lifecycleEvents": [
         "create"
       ],
@@ -14,32 +14,13 @@
         "path": {
           "usage": "The path where the service should be created (e.g. --path my-service)",
           "shortcut": "p"
-        },
-        "name": {
-          "usage": "Name for the service. Overwrites the default name of the created service.",
-          "shortcut": "n"
-        }
-      }
-    }
-  },
-  "install": {
-    "install": {
-      "usage": "Install a Serverless service from GitHub",
-      "lifecycleEvents": [
-        "install"
-      ],
-      "options": {
-        "url": {
-          "usage": "URL of the Serverless service on GitHub",
-          "required": true,
-          "shortcut": "u"
         }
       }
     }
   },
   "deploy": {
     "deploy": {
-      "usage": "Deploy a Serverless service",
+      "usage": "Deploy Service.",
       "lifecycleEvents": [
         "cleanup",
         "initialize",
@@ -69,7 +50,7 @@
       },
       "commands": {
         "function": {
-          "usage": "Deploy a single function from the service",
+          "usage": "Deploys a single function from the service",
           "lifecycleEvents": [
             "deploy"
           ],
@@ -94,7 +75,7 @@
   },
   "invoke": {
     "invoke": {
-      "usage": "Invoke a deployed function",
+      "usage": "Invokes a deployed function.",
       "lifecycleEvents": [
         "invoke"
       ],
@@ -129,7 +110,7 @@
   },
   "info": {
     "info": {
-      "usage": "Display information about the service",
+      "usage": "Displays information about the service.",
       "lifecycleEvents": [
         "info"
       ],
@@ -141,17 +122,13 @@
         "region": {
           "usage": "Region of the service",
           "shortcut": "r"
-        },
-        "verbose": {
-          "usage": "Display Stack output",
-          "shortcut": "v"
         }
       }
     }
   },
   "logs": {
     "logs": {
-      "usage": "Output the logs of a deployed function",
+      "usage": "Outputs the logs of a deployed function.",
       "lifecycleEvents": [
         "logs"
       ],
@@ -188,7 +165,7 @@
   },
   "remove": {
     "remove": {
-      "usage": "Remove Serverless service and all resources",
+      "usage": "Remove resources.",
       "lifecycleEvents": [
         "remove"
       ],
@@ -208,19 +185,19 @@
       }
     }
   },
-  "slstats": {
-    "slstats": {
-      "usage": "Enable or disable stats",
+  "tracking": {
+    "tracking": {
+      "usage": "Enable or disable usage tracking.",
       "lifecycleEvents": [
-        "slstats"
+        "tracking"
       ],
       "options": {
         "enable": {
-          "usage": "Enable stats (\"--enable\")",
+          "usage": "Enable tracking (\"--enable\")",
           "shortcut": "e"
         },
         "disable": {
-          "usage": "Disable stats (\"--disable\")",
+          "usage": "Disable tracking (\"--disable\")",
           "shortcut": "d"
         }
       }

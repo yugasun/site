@@ -1,6 +1,6 @@
 const fs = require('fs-extra')
 const path = require('path')
-const slsPath = require('../docs/config').slsPath
+const slsPath = require('../docs/config').serverlessRepoPath
 const hasCommandsRegex = /this\.commands.*({(.|\n)*?}.*);/g
 const allCommands = {}
 const pluginsPath = path.join(slsPath, 'lib', 'plugins')

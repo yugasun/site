@@ -1,7 +1,9 @@
 # node / npm
-temp
 node_modules
 *.log
+
+# third party external content
+content-external
 
 # phenomic build
 dist

@@ -1,6 +1,7 @@
 var dir = require('node-dir')
 var fs = require('fs-extra')
 var path = require('path')
+console.log('destPath', destPath)
 var destPath = path.join(__dirname, '..', 'content')
 
 getAllSiteUrls(destPath, function (filePaths) {

@@ -1,15 +1,18 @@
 const download = require('../utils/download')
 const config = require('./config')
 const emptyDirectory = require('../utils/empty-directory')
+const blogRepoPath = config.blogRepoPath
+const downloadLink = config.downloadLink
 
-emptyDirectory(config.blogNodeModulesPath, function () {
+emptyDirectory(blogRepoPath, function () {
   console.log('empty local blog directory')
-  download(config.downloadLink, config.blogNodeModulesPath, function (error) {
+  download(downloadLink, blogRepoPath, function (error) {
     if (error) {
       console.log(error)
       console.log('DOWNLOAD ERROR')
       return false
     }
     console.log('Finished downloading latest blog')
+    console.log(blogRepoPath)
   })
 })

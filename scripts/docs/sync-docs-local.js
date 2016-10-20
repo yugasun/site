@@ -5,11 +5,11 @@ var config = require('./config')
 var path = require('path')
 const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
-const slsNodeModuleDocs = config.oldDocsPath
+const serverlessDocsPath = config.serverlessDocsPath
 const localdocsPath = path.join(__dirname, '..', '..', '..', '/serverless/docs/')
 
-emptyDirectory(slsNodeModuleDocs, function () {
-  copyFiles(localdocsPath, slsNodeModuleDocs, function (error) {
+emptyDirectory(serverlessDocsPath, function () {
+  copyFiles(localdocsPath, serverlessDocsPath, function (error) {
     if (error) {
       console.log(error)
       console.log(`Docs not found at ${localdocsPath}`)
@@ -17,6 +17,7 @@ emptyDirectory(slsNodeModuleDocs, function () {
       return false
     }
     console.log('Local docs sync done.')
+    console.log(serverlessDocsPath)
     console.log('Stop and restart site')
   })
 })
