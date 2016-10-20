@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
+import Sentry from '../GlobalScripts/Sentry'
 /*
 script={[
   {'src': 'https://cdn.auth0.com/js/lock/10.4/lock.min.js', 'type': 'text/javascript'},
@@ -26,10 +26,14 @@ export default class HeadTag extends React.Component {
           ]}
           script={[
             {
-              'src': 'https://cdn.ravenjs.com/3.7.0/raven.min.js',
-              'type': 'text/javascript',
-              'crossorigin': 'anonymous'
+              src: 'https://cdn.ravenjs.com/3.7.0/raven.min.js',
+              type: 'text/javascript',
+              crossorigin: 'anonymous'
             },
+            {
+              type: 'text/javascript',
+              innerHTML: `${Sentry}`
+            }
           ]}
         />
       </div>

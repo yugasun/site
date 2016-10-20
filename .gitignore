@@ -1,5 +1,7 @@
 # node / npm
 node_modules
+serverless
+serverless-blog
 *.log
 
 # third party external content
