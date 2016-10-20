@@ -61,7 +61,9 @@ $ npm run buildprod
 
 We are using [netlify](http://netlify.com) to distribute the site.
 
-When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://updatedocssetup--serverless.netlify.com` (https://[BRANCHNAME]--serverless.netlify.com)
+When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://[LowerCaseBranchName]--serverless.netlify.com`
+
+For example the branch `updateDocsSetup` published to `https://updatedocssetup--serverless.netlify.com`
 
 Note: The `master` branch is the live site. **Never push directly to the master branch!**
 
