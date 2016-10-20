@@ -4,7 +4,7 @@ const exec = require('child_process').exec
 const cwd = process.cwd()
 // const execSync = require('child_process').execSync
 // var child = execSync('ls', { encoding: 'utf-8' }).trim();
-const serverlessDocs = path.join(__dirname, '..', 'serverless', 'docs')
+const serverlessDocs = path.join(__dirname, '..', '..', 'serverless-blog', 'posts')
 
 watch.createMonitor(serverlessDocs, function (monitor) {
   monitor.on('created', function (f, stat) {
