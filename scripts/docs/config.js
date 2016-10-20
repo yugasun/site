@@ -9,5 +9,5 @@ module.exports = {
   newDocsPath: path.join(__dirname, '..', '..', 'content/framework/docs/'),
   oldDocsPath: path.join(__dirname, '..', '..', 'temp/serverless/docs/'),
   docsMenuPath: path.join(__dirname, '..', '..', 'src/layouts/Doc/'),
-  downloadLink: `${repoURL}/archive/master/.zip`
+  downloadLink: `${repoURL}/archive/improve-docs/.zip`
 }
