@@ -8,39 +8,52 @@ const docsConfig = require('../docs/config')
 const blogConfig = require('../blog/config')
 const docsRepoPath = docsConfig.serverlessRepoPath
 const blogRepoPath = blogConfig.blogRepoPath
+const seperator = '--------------------------'
 
 if (process.env.IS_NETLIFY_ENV) {
-  console.log('in CI context, dont clone stuff just download it')
+  console.log('in NETLIFY CI context, don\'t clone stuff just download it')
 } else {
-  console.log('in normal project site. check for serverless and serverless-blog folder')
+  // in normal project site. check for serverless and serverless-blog folder
+  console.log('Installing external content')
+  console.log(seperator)
   var blogExists = fileOrDirExists(blogRepoPath)
   var isBlogGitRepo = fileOrDirExists(path.join(blogRepoPath, '.git'))
   if (!blogExists) {
     // check for git  path.join(blogRepoPath, '.git')
-    console.log('no serverless blog repo found. git clone it')
+    console.log('No serverless blog repo found. Clone it from github')
     cloneRepo('git@github.com:serverless/blog.git', blogConfig.repoBranch, 'serverless-blog')
   }
   if (blogExists && !isBlogGitRepo) {
-    console.log('folder exists but isnt git rep')
+    console.log('Blog folder exists but isnt github repo')
     rimraf(blogRepoPath, function () {
-      console.log('empty serverless blog directory and clone repo')
+      console.log('Empty ./serverless-blog directory and clone repo')
       cloneRepo('git@github.com:serverless/blog.git', blogConfig.repoBranch, 'serverless-blog')
     })
+  } else {
+    console.log(`Local Blog Repo found ${blogRepoPath}`)
+    console.log('To update the blog repo contents git pull from inside ./serverless-blog')
+    console.log(seperator)
   }
   var docsExists = fileOrDirExists(docsRepoPath)
   var docsIsGitRepo = fileOrDirExists(path.join(docsRepoPath, '.git'))
   if (!docsExists) {
     // check for git  path.join(blogRepoPath, '.git')
-    console.log('No serverless local docs repo found. git clone it')
+    console.log('No serverless docs repo found. Clone it from github')
+    console.log(seperator)
     console.log('NOTE: serverless docs repo is big. Might take a minute to download')
+    console.log(seperator)
     cloneRepo('git@github.com:serverless/serverless.git', docsConfig.repoBranch, 'serverless')
   }
   if (docsExists && !docsIsGitRepo) {
-    console.log('folder exists but isnt git rep')
+    console.log('Docs folder exists but isn\'t github repo')
     rimraf(docsRepoPath, function () {
-      console.log('empty serverless docs directory and clone repo')
+      console.log('Empty ./serverless directory and clone repo')
       cloneRepo('git@github.com:serverless/serverless.git', docsConfig.repoBranch, 'serverless')
     })
+  } else {
+    console.log(`Local Docs Repo found ${docsRepoPath}`)
+    console.log('To update the docs repo contents git pull from inside ./serverless')
+    console.log(seperator)
   }
 }
 
@@ -61,11 +74,12 @@ function cloneRepo (repo, branch, path) {
   })
   child.on('close', function (code) {
     console.log(`${repo} successfully cloned`)
+    console.log(seperator)
   })
 }
 
 function fileOrDirExists (filePath) {
-  console.log(filePath)
+  // console.log(filePath)
   try {
     fs.statSync(filePath)
     return true
