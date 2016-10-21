@@ -14,8 +14,10 @@ if (process.env.IS_NETLIFY_ENV) {
   console.log('in NETLIFY CI context, don\'t clone stuff just download it')
 } else {
   // in normal project site. check for serverless and serverless-blog folder
+  console.log(seperator)
   console.log('Installing external content')
   console.log(seperator)
+    // Handle blog folder
   var blogExists = fileOrDirExists(blogRepoPath)
   var isBlogGitRepo = fileOrDirExists(path.join(blogRepoPath, '.git'))
   if (!blogExists) {
@@ -30,10 +32,16 @@ if (process.env.IS_NETLIFY_ENV) {
       cloneRepo('git@github.com:serverless/blog.git', blogConfig.repoBranch, 'serverless-blog')
     })
   } else {
-    console.log(`Local Blog Repo found ${blogRepoPath}`)
-    console.log('To update the blog repo contents git pull from inside ./serverless-blog')
-    console.log(seperator)
+    // console.log(`Local Blog Repo found`)
+    // updateRepo(blogRepoPath)
+    // console.log(seperator)
   }
+  if (isBlogGitRepo) {
+    console.log(`Local Blog Repo found`)
+    updateRepo(blogRepoPath)
+  }
+
+  // Handle docs folder
   var docsExists = fileOrDirExists(docsRepoPath)
   var docsIsGitRepo = fileOrDirExists(path.join(docsRepoPath, '.git'))
   if (!docsExists) {
@@ -41,7 +49,6 @@ if (process.env.IS_NETLIFY_ENV) {
     console.log('No serverless docs repo found. Clone it from github')
     console.log(seperator)
     console.log('NOTE: serverless docs repo is big. Might take a minute to download')
-    console.log(seperator)
     cloneRepo('git@github.com:serverless/serverless.git', docsConfig.repoBranch, 'serverless')
   }
   if (docsExists && !docsIsGitRepo) {
@@ -51,20 +58,25 @@ if (process.env.IS_NETLIFY_ENV) {
       cloneRepo('git@github.com:serverless/serverless.git', docsConfig.repoBranch, 'serverless')
     })
   } else {
-    console.log(`Local Docs Repo found ${docsRepoPath}`)
-    console.log('To update the docs repo contents git pull from inside ./serverless')
-    console.log(seperator)
+    // console.log(`Local Docs Repo found`)
+    // updateRepo(docsRepoPath)
+    // console.log(seperator)
+  }
+  if (docsIsGitRepo) {
+    console.log(`Local Docs Repo found`)
+    updateRepo(docsRepoPath)
   }
 }
 
 function cloneRepo (repo, branch, path) {
+  console.log(seperator)
+  console.log(`Cloning repo down ${branch} branch of ${repo} to ./${path}`)
   const finalPath = (path) ? ` ${path}` : ''
   var command = `git clone -b ${branch} ${repo}${finalPath}`
   var child = exec(command, {cwd: cwd}, function (error, stdout, stderr) {
     if (error) {
       console.warn(error)
     }
-    console.log(stdout)
   })
   child.stdout.on('data', function (data) {
     console.log(data)
@@ -74,6 +86,28 @@ function cloneRepo (repo, branch, path) {
   })
   child.on('close', function (code) {
     console.log(`${repo} successfully cloned`)
+    console.log(seperator)
+  })
+}
+
+function updateRepo (filePath) {
+  const name = path.basename(filePath)
+  console.log(`Run git pull on ./${name}`)
+  var command = 'git pull'
+  var child = exec(command, {cwd: filePath}, function (error, stdout, stderr) {
+    if (error) {
+      console.warn(error)
+    }
+    // console.log(stdout)
+  })
+  child.stdout.on('data', function (data) {
+    console.log(data)
+    console.log(`./${name} repo updated`)
+  })
+  child.stderr.on('data', function (data) {
+    console.log(data)
+  })
+  child.on('close', function (code) {
     console.log(seperator)
   })
 }
