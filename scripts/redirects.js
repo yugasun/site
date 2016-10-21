@@ -1,6 +1,5 @@
 /**
  * Handle site redirects
- * 
  */
 var path = require('path')
 var copyFiles = require('./utils/copy-files')
