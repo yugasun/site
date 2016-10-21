@@ -1,3 +1,6 @@
+/**
+ * Phenomic component that renders the correct layout + markdown based on current route
+ */
 import React from 'react'
 import { PageContainer } from 'phenomic'
 import * as layouts from './layouts/index' // Page Layouts

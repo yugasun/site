@@ -1,5 +1,5 @@
 /* Available page templates
- * Usage ->
+ * Usage in markdown ->
  * Layout: Page
  */
 export Default from './Default'
