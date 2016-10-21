@@ -65,6 +65,8 @@ When pushing up to a new branch, netlify will automatically publish that change 
 
 For example the branch `updateDocsSetup` published to `https://updatedocssetup--serverless.netlify.com`
 
+Successful deploys are published to the [notifications slack channel](https://serverlessteam.slack.com/archives/notifications)
+
 Note: The `master` branch is the live site. **Never push directly to the master branch!**
 
 **3. Review your live site changes**
