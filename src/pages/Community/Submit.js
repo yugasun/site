@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AutoForm from 'react-auto-form'
 import NewAuth from '../../components/NewAuth'
 import TextInput from '../../components/TextInput'
 import Button from '../../components/Button'
@@ -6,50 +7,59 @@ import getURLParams from '../../utils/urlHelpers'
 import styles from './Submit.css'
 
 export default class SubmitResource extends Component {
-  constructor (props, context) {
-    super(props, context)
-    this.state = {
-      url: '',
-      title: '',
-    }
-  }
   componentDidMount () {
-    const test = getURLParams()
-    this.setState({
-      title: decodeURI(test.title),
-      url: test.url
-    })
+    const params = getURLParams()
+    // grab ref and input of that ref
+    this.refs.title.refs.input.value = decodeURI(params.title)
+    this.refs.url.refs.input.value = params.url
   }
-  handleInputChange = (value, event) => {
-    this.setState({
-      [`${event.target.id}`]: value
-    })
+  handleSubmit = (event, data) => {
+    event.preventDefault()
+    console.log(data)
+    // handle data
   }
   renderForm () {
     return (
       <div className={styles.background}>
         <div className={styles.submitContent}>
           <h1>Submit Resource</h1>
-          <div>
-            <TextInput id='title' value={this.state.title} onChange={this.handleInputChange} />
-          </div>
-          <div>
-            <TextInput id='url' value={this.state.url} onChange={this.handleInputChange} />
-          </div>
-          <div className={styles.button}>
-            <Button>
-              Submit Resource
-            </Button>
-          </div>
+          <AutoForm onSubmit={this.handleSubmit} trimOnSubmit>
+            <TextInput
+              ref='title'
+              name='title'
+              placeholder='Resouce Title'
+              required
+            />
+            <TextInput
+              ref='url'
+              name='url'
+              validation={'isURL'}
+              placeholder='Enter the Resource URL'
+              errorMessageClassName={styles.errorMessage}
+              required
+              />
+            <div className={styles.button}>
+              <Button>
+                Submit Resource
+              </Button>
+            </div>
+          </AutoForm>
         </div>
       </div>
     )
   }
   render () {
-    const test = this.renderForm()
+    const loggedInContent = this.renderForm()
     return (
-      <NewAuth loggedInComponent={test}>
-        you need to log in bro
+      <NewAuth loggedInComponent={loggedInContent}>
+        <div className={styles.login}>
+          <div>
+            <div>Please login to submit a resource</div>
+            <Button>
+              Login
+            </Button>
+          </div>
+        </div>
       </NewAuth>
     )
   }
