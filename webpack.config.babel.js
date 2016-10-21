@@ -1,31 +1,27 @@
 import path from 'path'
 import webpack from 'webpack'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import serverlessPackageJSON from 'serverless/package.json'
+import PhenomicFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import { phenomicLoader } from 'phenomic'
-import PhenomicLoaderFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import pkg from './package.json'
+import serverlessPkg from './serverless/package.json'
 import getSiteConfig from './src/_config'
 
-// note that this webpack file is exporting a "makeConfig" function
-// which is used for phenomic to build dynamic configuration based on your needs
-
-// see the end of the file if you want to export a default config
-// (eg: if you share your config for phenomic and other stuff)
 export const makeConfig = (config = {}) => {
-  // console.log('site config', config)
-  const siteConfig = getSiteConfig(config.production)
-  console.log('siteConfig', siteConfig)
-  const processVars = Object.keys(siteConfig)
-    .reduce((memo, key) => {
-      const val = JSON.stringify(siteConfig[key])
-      memo[key] = val
-      return memo
-    }, {
-      'NODE_ENV': (config.production) ? '"production"' : '"development"',
-      'BROWSER': (config.production) ? '"false"' : '"true"',
-      'DOCS_VERSION': JSON.stringify(serverlessPackageJSON.version)
-    })
+  // console.log('phenomic config', config)
+  const isProd = config.production
+  const siteConfig = getSiteConfig(isProd)
+  const dynamicEnvVariables = {
+    'NODE_ENV': (isProd) ? '"production"' : '"development"',
+    'BROWSER': (isProd) ? '"false"' : '"true"',
+    'DOCS_VERSION': JSON.stringify(serverlessPkg.version)
+  }
+  const processEnvVariables = Object.keys(siteConfig).reduce((memo, key) => {
+    const val = JSON.stringify(siteConfig[key])
+    memo[key] = val
+    return memo
+  }, dynamicEnvVariables)
   return {
     ...config.dev && {
       devtool: '#cheap-module-eval-source-map',
@@ -33,33 +29,21 @@ export const makeConfig = (config = {}) => {
     module: {
       noParse: [/\.min\.js/, /autoit.js/],
       loaders: [
-
-        // *.md => consumed via phenomic special webpack loader
-        // allow to generate collection and rss feed.
         {
-          // phenomic requirement
-          test: /\.md$/,
+          test: /\.md$/, // phenomic requirement for loading markdown
           loader: phenomicLoader,
-          // config is in phenomic.contentLoader section below
-          // so you can use functions (and not just JSON) due to a restriction
-          // of webpack that serialize/deserialize loader `query` option.
         },
-
-        // *.json => like in node, return json
-        // (not handled by webpack by default)
         {
           test: /\.json$/,
           loader: 'json-loader',
         },
-
-        // *.js => babel + eslint
         {
           test: /\.js$/,
           loaders: [
             `babel-loader${
               config.dev
-              ? '?cacheDirectory=true&presets[]=babel-preset-react-hmre'
-              : '?cacheDirectory=true'
+              ? '?cacheDirectory=true&presets[]=babel-preset-react-hmre' // dev
+              : '?cacheDirectory=true' // prod
             }`,
             'eslint-loader?fix',
           ],
@@ -68,30 +52,23 @@ export const makeConfig = (config = {}) => {
             path.resolve(__dirname, 'src'),
           ],
         },
-
-        // ! \\
-        // by default *.css files are considered as CSS Modules
-        // And *.global.css are considered as global (normal) CSS
-
-        // *.css => CSS Modules
         {
-          test: /\.css$/,
+          test: /\.css$/,  // *.css => CSS Modules
           exclude: /\.global\.css$/,
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
             [ `css-loader?modules&importLoaders=1&localIdentName=${
                 config.production
-                ? '[hash:base64:5]'
-                : '[path][name]--[local]--[hash:base64:5]'
+                ? '[hash:base64:5]' // prod
+                : '[path][name]--[local]--[hash:base64:5]' // dev
               }`,
               'postcss-loader',
             ].join('!'),
           ),
         },
-        // *.global.css => global (normal) css
         {
-          test: /\.global\.css$/,
+          test: /\.global\.css$/, // *.global.css => global (normal) css
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
@@ -105,14 +82,13 @@ export const makeConfig = (config = {}) => {
             '?name=[path][name].[hash].[ext]&context=' +
             path.join(__dirname, config.source),
         },
-        // svg as raw string to be inlined
         {
           test: /\.svg$/,
           loader: 'raw-loader',
         },
       ],
     },
-
+    // Phenomic options
     phenomic: {
       context: path.join(__dirname, config.source),
       defaultHead: {
@@ -133,12 +109,7 @@ export const makeConfig = (config = {}) => {
       /* require global variables */
       require('postcss-simple-vars')({
         variables: function variables () {
-          // var file = './src/_variables.js';
-          // delete require.cache[path.join(__dirname, file)];
-          // return require(file);
-          var vars = require('./src/_variables')
-          // console.log('global css vars', vars)
-          return vars
+          return require('./src/_variables')
         },
         onVariables: function (variables) {
           // console.log(variables)
@@ -147,12 +118,12 @@ export const makeConfig = (config = {}) => {
           node.warn(result, 'Unknown variable ' + name)
         }
       }),
-      // require('cssnano'),
+      // require('cssnano'), breaks keyframes
       /* enable nested css selectors like Sass/Less */
       require('postcss-nested'),
       ...config.production ? [
-        require('postcss-browser-reporter')(),
-      ] : [],
+        require('postcss-browser-reporter')(), // dev
+      ] : [], // prod
     ],
 
     plugins: [
@@ -161,7 +132,7 @@ export const makeConfig = (config = {}) => {
       //    context: process.cwd(),
       //    manifest: require(path.resolve(pkg.dllPlugin.path, 'vendorPackages.json'))
       // }),
-      new PhenomicLoaderFeedWebpackPlugin({
+      new PhenomicFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {
           title: 'Serverless Blog',
@@ -192,13 +163,21 @@ export const makeConfig = (config = {}) => {
         ),
       ],
       new webpack.DefinePlugin({
-        'process.env': processVars,
+        // set 'process.env.[vars]'
+        'process.env': processEnvVariables,
         // Auth0Lock: 'Auth0Lock',
         // 'window.Auth0Lock': 'Auth0Lock'
       }),
+      // Copy external files to /dist
+      new CopyWebpackPlugin([
+        {
+          from: 'admin',
+          to: 'admin'
+        },
+      ]),
     ],
     // externals: {
-    //    // Use external version of React
+    //   // Use external version of React
     //   'Auth0Lock': 'Auth0Lock',
     // },
     output: {
@@ -217,9 +196,8 @@ export const makeConfig = (config = {}) => {
       //   'layouts': 'src/layouts',
       // }
     },
-    resolveLoader: { root: [ path.join(__dirname, 'node_modules') ] },
+    resolveLoader: {
+      root: [ path.join(__dirname, 'node_modules') ]
+    },
   }
 }
-
-// you might want to export a default config for another usage ?
-// export default makeConfig()

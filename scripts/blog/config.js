@@ -2,11 +2,21 @@
   Constants used for blog processing scripts
 */
 var path = require('path')
+const projectRoot = path.join(__dirname, '..', '..')
+const repoURL = 'https://github.com/serverless/blog'
+var repoBranch = 'master'
+/* uncomment out the line below to work locally with different blog branch
+repoBranch = 'your-custom-repo-branch-here'
+/**/
 
 module.exports = {
-  blogNodeModulesPath: path.join(__dirname, '..', '..', 'node_modules/serverless-blog'),
-  newBlogPath: path.join(__dirname, '..', '..', 'content/blog/'),
-  oldBlogPath: path.join(__dirname, '..', '..', 'node_modules/serverless-blog/posts/'),
-  downloadLink: 'https://github.com/serverless/blog/archive/master/.zip'
+  repoURL: repoURL,
+  repoBranch: repoBranch,
+  downloadLink: `${repoURL}/archive/${repoBranch}/.zip`,
+  // blogRepoPath: path.join(projectRoot, 'content-external/serverless-blog'),
+  // blogRepoPostPath: path.join(projectRoot, 'content-external/serverless-blog/posts/'),
+  blogRepoPath: path.join(projectRoot, 'serverless-blog'),
+  blogRepoPostPath: path.join(projectRoot, 'serverless-blog/posts/'),
+  siteBlogPath: path.join(projectRoot, 'content/blog/'),
 }
  

@@ -1,4 +1,5 @@
-
+/* possibly better solution: https://regex101.com/r/jH7sC7/1 */
+// (.+)(\?)(.+)
 export default function getURLParams (url) {
   const urlParams = {}
   const pattern = /([^&=]+)=?([^&]*)/g

@@ -23,7 +23,11 @@ module.exports = function updateFileContents (filePath, callBack) {
     var newYamlContent = `---
 ${updatedFrontmatter}---`
 
-    var finalNewContent = replace.replace(/^---(\s*?.*?)*?---/, newYamlContent)
+    var docLinkRegex = /<!--.*DOCS-SITE-LINK:START((.|\n)*?END.*-->)/g
+    var blankLineRegex = /^\s*\n/gm
+    var stripGithubSpecificContent = replace.replace(docLinkRegex, '')
+    var replaceBlankLines = stripGithubSpecificContent.replace(blankLineRegex, '\n')
+    var finalNewContent = replaceBlankLines.replace(/^---(\s*?.*?)*?---/, newYamlContent)
 
     fs.writeFileSync(filename, finalNewContent)
 

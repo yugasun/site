@@ -19,6 +19,7 @@ class TextInput extends Component {
       PropTypes.object
     ]),
     errorMessage: PropTypes.string,
+    errorMessageClassName: PropTypes.string,
     placeholder: PropTypes.string,
     label: PropTypes.string,
     maxLength: PropTypes.number,
@@ -50,6 +51,23 @@ class TextInput extends Component {
       blurRanOnce: false,
       tid: void 0, // Timeout ID
     }
+  }
+  componentDidMount () {
+    setTimeout(() => {
+      // sometimes value is set via the DOM. This updates initial state
+      if (!this.state.value) {
+        const value = this.refs.input.value
+        if (value) {
+          const isValid = this.doValidation(value).isValid
+          console.log(`isValid ${value}`, isValid)
+          this.setState({
+            isValid: this.doValidation(value).isValid,
+            value: value
+          })
+          console.log('VALUE', value)
+        }
+      }
+    }, 0)
   }
   shouldComponentUpdate (nextProps, nextState) {
     const keys = Object.keys(nextProps)
@@ -86,7 +104,9 @@ class TextInput extends Component {
   doValidation (value) {
     const { validation, errorMessage } = this.props
     const defaultMessage = 'Invalid Value'
+    // console.log('validation', validation)
     // console.log('do validation', value)
+    // console.log('formValidation', formValidation)
     if (typeof validation === 'string' && formValidation[validation]) {
       // check pattern in validations formValidation obj
       return {
@@ -189,12 +209,15 @@ class TextInput extends Component {
   }
   showValidation () {
     const { isValid, errorMessage } = this.state
-    console.log('show or hide validation')
+    const { errorMessageClassName } = this.props
     if (isValid) {
       return null
     } else if (this.state.blurRanOnce) {
+      const classes = cx(styles.validation, errorMessageClassName)
       return (
-        <div className={styles.validation}>{errorMessage}</div>
+        <div className={classes}>
+          {errorMessage}
+        </div>
       )
     }
   }
@@ -212,6 +235,7 @@ class TextInput extends Component {
       disabled,
       required,
       validation, // eslint-disable-line
+      errorMessageClassName, // eslint-disable-line
       debounce, // eslint-disable-line
       type,
       value,
@@ -225,14 +249,14 @@ class TextInput extends Component {
       onFocus: this.handleFocus,
       ref: 'input',
       role: 'input',
-      name: others.name || others.id || formatName(others.placeholder),
+      name: others.name || others.id || others.ref || formatName(others.placeholder),
       disabled: disabled,
       required: required,
       type: type,
       value: value,
       className: cx(className, styles.input),
     }
-
+    console.log('props', props)
     return (
       <div className={styles.inputWrapper}>
         {this.showValidation()}

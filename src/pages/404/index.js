@@ -61,7 +61,7 @@ export default class PageError extends Component {
         <div className={styles.text}>
           <p className={styles.title}>
             <strong>{error}</strong>
-            {" "}
+            {' '}
             {errorText}
           </p>
           {error === 404 && content}

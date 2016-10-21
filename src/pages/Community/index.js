@@ -34,7 +34,7 @@ export default class CommunityPage extends Component {
 
     return (
       <Page {...this.props}>
-        <h2>{"Latest resources"}</h2>
+        <h2>{'Latest resources'}</h2>
         <PagesList pages={latestPosts} />
       </Page>
     )

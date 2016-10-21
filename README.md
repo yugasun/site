@@ -6,54 +6,71 @@ This site is 100% serverless! Wooooooo!
 
 - [See the site](https://serverless.com/)
 - [Contribute to the blog](https://github.com/serverless/blog)
+- [Contribute to the docs](https://github.com/serverless/serverless)
 
-# Setup
+# Quick Start
 
-**1. Install dependencies**
-
-```bash
-$ npm install
-```
-
-Next you will need to change the values in `src/_config.js` with your correct credentials, if you are setting up a different site.
-
-**2. Run development server locally**
+**1. Clone down the site**
+Clone down the site:
 
 ```bash
-$ npm start
+git clone git@github.com:serverless/site.git
 ```
 
-**3. Build for production**
+**2. Install site dependencies**
 
 ```bash
-$ npm run build
+npm install
 ```
 
-If your `npm run build` succeeds locally you can go ahead and push up to a branch. This will automatically publish a live subdomain preview of your changes.
+**3. Run site on your local computer**
 
----
-
-## Publishing Updates to Serverless.com
-
-We are using [netlify](http://netlify.com) to distribute the site. It pushes any changes made to the `master` branch to the live serverless.com site.
-
-So, whenever making changes to the site, it's important to do those on branches and submit a pull request for us to merge into master.
-
-Make sure `npm run build` works locally or the build in netlify's CI/CD will fail and the updates won't be visible on the site.
-
-
-## Adding Custom Scripts
-
-To add custom scripts to page templates you will need to use React Helmet
-
-```js
-import Helmet from 'react-helmet'
-<Helmet
-   script={[
-      {'src': 'http://davidwells.io/wp-content/themes/david-wells/js/prism.js', 'type': 'text/javascript'}
-   ]}
-   link={[
-      {'rel': 'stylesheet', 'href': 'http://davidwells.io/wp-content/themes/david-wells/css/prism.css'},
-   ]}
- />
+```bash
+npm start
 ```
+
+Open your browser to http://localhost:3333
+
+# Editing Site Content
+
+When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
+
+### **Blog edits:**
+
+To make edits to blog posts, edit the files in `./serverless-blog/posts` (this directory is added on `npm i`)
+
+### **Doc edits:**
+
+To make edits to framework docs, edit the files in `./serverless/docs` (this directory is added on `npm i`)
+
+### Editing other pages
+
+To make edits to other pages, edit the markdown in `./content`
+
+Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
+
+# Publishing Site Updates
+
+**1. Test the build command locally**
+
+```bash
+$ npm run buildprod
+```
+
+**2. If build command succeeds, push up your changes to a new branch**
+
+We are using [netlify](http://netlify.com) to distribute the site.
+
+When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://[LowerCaseBranchName]--serverless.netlify.com`
+
+For example the branch `updateDocsSetup` published to `https://updatedocssetup--serverless.netlify.com`
+
+Successful deploys are published to the [notifications slack channel](https://serverlessteam.slack.com/archives/notifications)
+
+Note: The `master` branch is the live site. **Never push directly to the master branch!**
+
+**3. Review your live site changes**
+
+If everything looks good on your unique netlify subdomain, you can go ahead and merge your branch to master on github.
+
+Merging branches into master will trigger a site rebuild and `serverless.com` will be updated

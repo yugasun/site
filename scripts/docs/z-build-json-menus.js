@@ -1,6 +1,6 @@
 var config = require('./config')
 var dirTree = require('directory-tree')
-var filteredTree = dirTree(config.newDocsPath, ['.md'])
+var filteredTree = dirTree(config.siteDocsPath, ['.md'])
 var path = require('path')
 var fs = require('fs-extra')
 var matter = require('gray-matter')

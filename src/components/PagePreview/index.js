@@ -11,7 +11,7 @@ const PagePreview = ({ __url, title, date }) => {
       </Link>
       {pageDate &&
         <small>
-          {" "}
+          {' '}
           <time key={pageDate.toISOString()}>
             {pageDate.toDateString()}
           </time>

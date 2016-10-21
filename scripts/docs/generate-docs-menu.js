@@ -1,7 +1,7 @@
 var config = require('./config')
 var dirTree = require('directory-tree')
 // var breakWord = 'serverless'
-var filteredTree = dirTree(config.newDocsPath, ['.md'])
+
 var breakWord = 'content'
 var path = require('path')
 var fs = require('fs-extra')
@@ -10,30 +10,43 @@ var menuObject = {} // menu generated
 
 // Make map of top level directories to order them
 var folderLookup = {}
-var folderList = fs.readdirSync(config.oldDocsPath).filter(function (x) {
+var folderList = fs.readdirSync(config.serverlessDocsPath).filter(function (x) {
   return x !== '.DS_Store' && !x.match(/\.md/)
 }).map(function (folder, i) {
   var order = folder.match(/([0-9]{2})/g)
-  var orderNumber = order.length
-  if (order && order.length) {
-    orderNumber = parseInt(order[order.length - 1])
+  if (order) {
+    var orderNumber = order.length
+    if (order && order.length) {
+      orderNumber = parseInt(order[order.length - 1])
+    }
+    folderLookup[folder.replace(/([0-9]{2})-/g, '')] = orderNumber
   }
-  folderLookup[folder.replace(/([0-9]{2})-/g, '')] = orderNumber
 })
 // end make map
 
+function fileOrDirExists (filePath) {
+  try {
+    fs.statSync(filePath)
+    return true
+  } catch (err) {
+    return false
+  }
+}
+
 function getPageData (filePath) {
   var pageData
-  if (fs.lstatSync(filePath).isDirectory()) {
+  // console.log('filePath', filePath)
+  if (fileOrDirExists(filePath) && fs.lstatSync(filePath).isDirectory()) {
     var name = path.basename(filePath)
     pageData = {
       title: name,
-      order: folderLookup[name] || 0
+      order: 0
     }
   } else {
     var content = fs.readFileSync(filePath).toString()
     // parse yaml frontmatter for title
     var yamlInfo = matter(content).data
+    // console.log('yamlInfo', yamlInfo)
     // get order of original file
     var originalLink = yamlInfo.gitLink
     var order = originalLink.match(/([0-9]{2})/g)
@@ -41,9 +54,12 @@ function getPageData (filePath) {
     if (order && order.length) {
       orderNumber = parseInt(order[order.length - 1])
     }
+
+    //var o = (yamlInfo.menuOrder) ? yamlInfo.menuOrder : orderNumber
+
     pageData = {
       title: yamlInfo.menuText || yamlInfo.title,
-      order: orderNumber
+      order: yamlInfo.menuOrder // previously orderNumber
     }
   }
   return pageData
@@ -141,6 +157,8 @@ function writeJSONMenuToDirectory (dest, contents) {
 }
 
 module.exports = function generateDocMenu () {
+  var filteredTree = dirTree(config.siteDocsPath, ['.md'])
+  console.log('filteredTree', filteredTree)
   // kick off menu creation. sync process
   traverse(filteredTree, 1)
   // then write to file

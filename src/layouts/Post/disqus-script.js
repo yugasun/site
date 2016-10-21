@@ -2,7 +2,6 @@
  * Segment.io script in head
  */
 
-
 const segment = `
         var disqus_shortname = 'serverless-inc';
         (function() {

@@ -6,9 +6,7 @@ export default function GlobalScripts (props) {
   return (
     <div>
       <GoogleAnalytics {...props} />
-      <div id='footerScripts'
-        dangerouslySetInnerHTML={{__html: SegmentIO}}
-      />
+      <div dangerouslySetInnerHTML={{__html: SegmentIO}} />
     </div>
   )
 }
