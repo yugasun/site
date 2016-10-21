@@ -4,7 +4,10 @@
 var path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
 const repoURL = 'https://github.com/serverless/blog'
-const repoBranch = 'master'
+var repoBranch = 'master'
+/* uncomment out the line below to work locally with different blog branch
+repoBranch = 'your-custom-repo-branch-here'
+/**/
 
 module.exports = {
   repoURL: repoURL,
