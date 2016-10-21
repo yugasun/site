@@ -5,7 +5,8 @@ var path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
 const repoURL = 'https://github.com/serverless/serverless'
 // set branch of docs you want to see
-const repoBranch = 'improve-docs'
+var repoBranch = 'master'
+// repoBranch = 'improve-docs'
 
 module.exports = {
   repoURL: repoURL,
