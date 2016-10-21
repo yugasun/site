@@ -1,7 +1,7 @@
 var config = require('./config')
 var dirTree = require('directory-tree')
 // var breakWord = 'serverless'
-var filteredTree = dirTree(config.siteDocsPath, ['.md'])
+
 var breakWord = 'content'
 var path = require('path')
 var fs = require('fs-extra')
@@ -157,6 +157,8 @@ function writeJSONMenuToDirectory (dest, contents) {
 }
 
 module.exports = function generateDocMenu () {
+  var filteredTree = dirTree(config.siteDocsPath, ['.md'])
+  console.log('filteredTree', filteredTree)
   // kick off menu creation. sync process
   traverse(filteredTree, 1)
   // then write to file
