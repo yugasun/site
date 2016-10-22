@@ -9,7 +9,7 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Create an AWS Lamdba function in Node.js',
+    text: 'Create an AWS Lambda function in Node.js',
     type: 'comment',
     skip: true
   },
