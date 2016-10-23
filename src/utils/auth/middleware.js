@@ -4,10 +4,10 @@ import { setItem } from '../storage'
 import { getXsrfToken } from './xsrfToken'
 import lockInstance from './lockInstance'
 
-function handleAuthRedirect (url) {
+function handleAuthRedirect(url) {
   const redirect = new CustomEvent('reactRouterRedirect', { // eslint-disable-line
     detail: {
-      url: url,
+      url,
     },
     bubbles: false,
     cancelable: false
@@ -35,7 +35,7 @@ const createOneShot = (middleware) => {
       dispatch(someAction(event.value));
   });
 */
-const authMiddleware = createOneShot((dispatch) => {
+const authMiddleware = createOneShot((dispatch) => { // eslint-disable-line
   if (typeof window === 'undefined') {
     return false
   }
@@ -43,14 +43,12 @@ const authMiddleware = createOneShot((dispatch) => {
     console.log('authListener middleware added')
   }
   // register lock callback once
-  lockInstance.on('authenticated', function (authResult) {
+  lockInstance.on('authenticated', (authResult) => { // eslint-disable-line
     if (process.env.NODE_ENV === 'development') {
       console.log('authResult', authResult)
     }
-
     // Check xrsf token
-    const stateValues = getURLParams('http://dummy.com?' + authResult.state)
-
+    const stateValues = getURLParams(`http://dummy.com?${authResult.state}`)
     // if (!authResult.idTokenPayload.email_verified) {
     //   dispatch(loginError('email-not-verified'))
     //   return false
@@ -66,18 +64,16 @@ const authMiddleware = createOneShot((dispatch) => {
       return false
     }
     // Async loads the user profile data
-    lockInstance.getProfile(authResult.idToken, (error, profile) => {
-      setItem('profile', profile)
+    lockInstance.getProfile(authResult.idToken, (error, profile) => { // eslint-disable-line
       if (error) {
         console.log('Error loading the Profile', error)
         return dispatch(loginError(error))
-      } else {
-        // set tokens
-        setItem('profile', profile)
-        dispatch(loginSuccess(profile))
-        // redirect
-        handleAuthRedirect(stateValues.url)
       }
+      // set tokens
+      setItem('profile', profile)
+      dispatch(loginSuccess(profile))
+      // redirect
+      handleAuthRedirect(stateValues.url)
     })
   })
 })

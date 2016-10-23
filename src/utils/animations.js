@@ -4,14 +4,20 @@ Animation Utils
 
 const prefix = ['webkit', 'moz', 'MS', 'o', '']
 export const addAnimationEvent = (element, type, callback) => {
-  for (var p = 0; p < prefix.length; p++) {
-    if (!prefix[p]) type = type.toLowerCase()
-    element.addEventListener(prefix[p] + type, callback, false)
+  let animationType = type
+  for (let p = 0; p < prefix.length; p++) {
+    if (!prefix[p]) {
+      animationType = type.toLowerCase()
+    }
+    element.addEventListener(prefix[p] + animationType, callback, false)
   }
 }
 export const removeAnimationEvent = (element, type, callback) => {
-  for (var p = 0; p < prefix.length; p++) {
-    if (!prefix[p]) type = type.toLowerCase()
-    element.removeEventListener(prefix[p] + type, callback, false)
+  let animationType = type
+  for (let p = 0; p < prefix.length; p++) {
+    if (!prefix[p]) {
+      animationType = type.toLowerCase()
+    }
+    element.removeEventListener(prefix[p] + animationType, callback, false)
   }
 }

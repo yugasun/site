@@ -1,5 +1,5 @@
 /* Get browser Info */
-export default function browserInfo () {
+export default function browserInfo() {
   return {
     userAgent: navigator.userAgent,
     cookies: navigator.cookieEnabled,

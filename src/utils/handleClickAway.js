@@ -1,8 +1,8 @@
 
-export default function handleClickOutside (elem, event) {
-  event = window.event || event
+export default function handleClickOutside(elem, event) {
+  const e = window.event || event
 
-  let el = eventTarget(event)
+  let el = eventTarget(e)
   while (el !== null) {
     if (el === elem) {
       return false
@@ -12,8 +12,8 @@ export default function handleClickOutside (elem, event) {
   return true
 }
 
-function eventTarget (event) {
-  var targ = event.target ? event.target : event.srcElement
+function eventTarget(event) {
+  let targ = event.target ? event.target : event.srcElement
   if (targ !== null) {
     if (targ.nodeType === 3) {
       targ = targ.parentNode

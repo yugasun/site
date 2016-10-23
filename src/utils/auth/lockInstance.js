@@ -5,17 +5,18 @@ import { initializeXsrfToken, getXsrfToken } from './xsrfToken'
 import { getVisitorID } from '../analytics/visitor'
 import LogoImg from '../../assets/images/serverless_logo.png'
 const isClient = typeof window !== 'undefined'
-
+let Auth0Lock
 if (!process.env.AUTH0_CLIENT_ID) {
   throw new Error('AUTH_CLIENT_ID is not defined in /src/_config.js file')
 }
 if (!process.env.AUTH0_DOMAIN) {
   throw new Error('AUTH_DOMAIN is not defined in /src/_config.js file')
 }
+console.log('isClient', isClient)
 if (isClient) {
-  var Auth0Lock = require('auth0-lock').default
+  Auth0Lock = require('auth0-lock').default // eslint-disable-line
 }
-
+console.log('Auth0Lock', Auth0Lock)
 // init token
 initializeXsrfToken()
 
@@ -30,7 +31,7 @@ const lockInstance = isClient && new Auth0Lock( // eslint-disable-line
       redirectUrl: redirectURL,
       responseType: 'token',
       params: {
-        state: state,
+        state,
         analytics: {
           uuid: getVisitorID(),
           // first_url: 'heheheh',

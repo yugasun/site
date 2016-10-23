@@ -1,3 +1,4 @@
+/*eslint-disable */
 // md5 implementation (https://github.com/satazor/SparkMD5), modified for size
 let add32 = function (a, b) {
   return (a + b) & 0xFFFFFFFF
@@ -99,7 +100,7 @@ const md5cycle = function (x, k) {
 }
 
 const md5blk = function (s) {
-  let md5blks = []
+  const md5blks = []
   let i
 
   for (i = 0; i < 64; i += 4) {
@@ -109,7 +110,7 @@ const md5blk = function (s) {
 }
 
 const md5blkArray = function (a) {
-  let md5blks = []
+  const md5blks = []
   let i
 
   for (i = 0; i < 64; i += 4) {
@@ -119,8 +120,8 @@ const md5blkArray = function (a) {
 }
 
 const md51 = function (s) {
-  let n = s.length
-  let state = [1732584193, -271733879, -1732584194, 271733878]
+  const n = s.length
+  const state = [1732584193, -271733879, -1732584194, 271733878]
   let i
   let length
   let tail
@@ -159,8 +160,8 @@ const md51 = function (s) {
 }
 
 const md51_array = function (a) { // eslint-disable-line
-  let n = a.length
-  let state = [1732584193, -271733879, -1732584194, 271733878]
+  const n = a.length
+  const state = [1732584193, -271733879, -1732584194, 271733878]
   let i
   let length
   let tail
@@ -232,8 +233,8 @@ const md5 = function (s) {
 // In some cases the fast add32 function cannot be used..
 if (md5('hello') !== '5d41402abc4b2a76b9719d911017c592') {
   add32 = function (x, y) {
-    let lsw = (x & 0xFFFF) + (y & 0xFFFF)
-    let msw = (x >> 16) + (y >> 16) + (lsw >> 16)
+    const lsw = (x & 0xFFFF) + (y & 0xFFFF)
+    const msw = (x >> 16) + (y >> 16) + (lsw >> 16)
     return (msw << 16) | (lsw & 0xFFFF)
   }
 }
@@ -247,13 +248,13 @@ if (md5('hello') !== '5d41402abc4b2a76b9719d911017c592') {
  *
  * @return {String|Array} The result
  */
-function MD5 (str, raw) {
+function MD5(str, raw) {
     // converts the string to utf8 bytes if necessary
   if (/[\u0080-\uFFFF]/.test(str)) {
     str = unescape(encodeURIComponent(str))
   }
 
-  var hash = md51(str)
+  const hash = md51(str)
 
   return !!raw ? hash : hex(hash) // eslint-disable-line
 }

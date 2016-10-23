@@ -1,5 +1,9 @@
 
-export function twitterShare (text, url, hashtags) {
+function fixedEncodeURI(str) {
+  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']')
+}
+
+export function twitterShare(text, url, hashtags) {
   let hash = ''
   const base = `http://twitter.com/share?text=${fixedEncodeURI(text)}`
   const link = (url) ? `&url=${url}` : ''
@@ -13,7 +17,7 @@ export function twitterShare (text, url, hashtags) {
   return `${base}${link}${hash}`
 }
 
-export function facebookShare (text, url, hashtags) {
+export function facebookShare(text, url) {
   const base = 'https://www.facebook.com/sharer/sharer.php?'
   const link = (url) ? `u=${url}` : ''
   const txt = (text) ? fixedEncodeURI(text) : ''
@@ -24,6 +28,3 @@ export function facebookShare (text, url, hashtags) {
 
 https://www.linkedin.com/shareArticle?summary=&title=What%20does%20Unsplash%20cost%3F&mini=true&url=https://crew.co/backstage/dispatch/what-does-unsplash-cost&source=
 */
-function fixedEncodeURI (str) {
-  return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']')
-}

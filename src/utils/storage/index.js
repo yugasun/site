@@ -2,27 +2,13 @@
 localStorage + Cookie utils
 */
 import { createCookie, readCookie, eraseCookie } from './cookie'
-const isServer = typeof window === 'undefined'
 
-let hasLocalStorage
-if (!isServer && 'localStorage' in window) {
-  try {
-    if (typeof localStorage === 'undefined' || typeof JSON === 'undefined') {
-      hasLocalStorage = false
-    } else {
-      hasLocalStorage = true
-    }
-    // test for safari private
-    window.localStorage.setItem('CHECK_PRIVATE_SAFARI', '1')
-    window.localStorage.removeItem('CHECK_PRIVATE_SAFARI')
-  } catch (err) {
-    hasLocalStorage = false
-  }
-}
-export { createCookie, readCookie, eraseCookie } from './cookie'
-export function setItem (key, value) {
+const isServer = typeof window === 'undefined'
+const supported = hasLocalStorage()
+
+export function setItem(key, value) {
   if (isServer) return false
-  if (!hasLocalStorage) {
+  if (!supported) {
     try {
       createCookie(key, value)
       return value
@@ -31,27 +17,27 @@ export function setItem (key, value) {
       // TODO: set window.var
     }
   }
-  var saver = JSON.stringify(value)
+  const saver = JSON.stringify(value)
   window.localStorage.setItem(key, saver)
   return parseResult(saver)
 }
 
-export function getItem (key) {
+export function getItem(key) {
   if (typeof window === 'undefined') return false
-  if (!hasLocalStorage) {
+  if (!supported) {
     try {
       return parseResult(readCookie(key))
     } catch (e) {
       return null
     }
   }
-  var item = window.localStorage.getItem(key)
+  const item = window.localStorage.getItem(key)
   return parseResult(item)
 }
 
-export function removeItem (key) {
+export function removeItem(key) {
   if (isServer) return false
-  if (!hasLocalStorage) {
+  if (!supported) {
     try {
       return eraseCookie(key)
     } catch (e) {
@@ -59,9 +45,11 @@ export function removeItem (key) {
     }
   }
   window.localStorage.removeItem(key)
+  return null
 }
 
-function parseResult (result) {
+
+function parseResult(result) {
   let value
   try {
     value = JSON.parse(result)
@@ -82,3 +70,24 @@ function parseResult (result) {
   }
   return value
 }
+
+function hasLocalStorage() {
+  let localStorageSupported
+  if (!isServer && 'localStorage' in window) {
+    try {
+      if (typeof localStorage === 'undefined' || typeof JSON === 'undefined') {
+        localStorageSupported = false
+      } else {
+        localStorageSupported = true
+      }
+      // test for safari private
+      window.localStorage.setItem('CHECK_PRIVATE_SAFARI', '1')
+      window.localStorage.removeItem('CHECK_PRIVATE_SAFARI')
+    } catch (err) {
+      localStorageSupported = false
+    }
+  }
+  return localStorageSupported
+}
+
+export { createCookie, readCookie, eraseCookie } from './cookie'

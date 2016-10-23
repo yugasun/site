@@ -1,20 +1,21 @@
 /* Get Canvas Info */
 import crc32 from '../utils/crc32'
+
 let canvasCache
 
-export default function canvasInfo () {
+export default function canvasInfo() {
   if (canvasCache !== undefined) {
     return canvasCache
   }
 
-  let canvas = document.createElement('canvas')
+  const canvas = document.createElement('canvas')
   canvas.width = 280
   canvas.height = 60
   canvas.dir = 'ltr'
   canvas.style.display = 'none'
 
   document.body.appendChild(canvas)
-  let c = canvas.getContext('2d')
+  const c = canvas.getContext('2d')
   const text = 'Visitor is watching you'
   c.fillStyle = 'rgb(178, 214, 232)'
   c.fillRect(10, 20, 60, 80)

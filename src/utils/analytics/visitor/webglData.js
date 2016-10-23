@@ -1,8 +1,8 @@
 /* Get webglInfo Info */
-export default function webglInfo () {
+export default function webglInfo() {
   const canvas = document.createElement('canvas')
   const gl = getGlContext(canvas)
-  let output = {}
+  const output = {}
 
   if (gl === null) {
     return null
@@ -33,7 +33,7 @@ export default function webglInfo () {
   ]
   output.parameters = {}
 
-  webglParameters.forEach(function (param) {
+  webglParameters.forEach((param) => {
     if (gl[param.toUpperCase()] !== 'undefined') {
       output.parameters[param.toLowerCase()] = gl.getParameter(gl[param.toUpperCase()])
     }
@@ -45,11 +45,11 @@ export default function webglInfo () {
   return output
 }
 
-function getGlContext (canvas) {
+function getGlContext(canvas) {
   if (!window.WebGLRenderingContext) {
     return null
   }
-  var context = null
+  let context = null
   try {
     context = canvas.getContext('webgl') ||
     canvas.getContext('moz-webgl') ||

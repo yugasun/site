@@ -3,22 +3,22 @@
  */
 const isServer = typeof window === 'undefined'
 
-export function createCookie (name, value, days) {
+export function createCookie(name, value, days) {
   if (isServer) return false
   let expires = ''
   if (days) {
     const date = new Date()
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
-    expires = '; expires=' + date.toGMTString()
+    expires = `; expires=${date.toGMTString()}`
   }
   document.cookie = `${name}=${value}${expires}; path=/`
 }
 
-export function readCookie (name) {
+export function readCookie(name) {
   if (isServer) return false
   const find = `${name}=`
   const allCookies = document.cookie.split(';')
-  for (var i = 0; i < allCookies.length; i++) {
+  for (let i = 0; i < allCookies.length; i++) {
     let cookie = allCookies[i]
     while (cookie.charAt(0) === ' ') {
       cookie = cookie.substring(1, cookie.length)
@@ -30,15 +30,15 @@ export function readCookie (name) {
   return null
 }
 
-export function eraseCookie (name) {
+export function eraseCookie(name) {
   createCookie(name, '', -1)
 }
 
-export function listCookies () {
+export function listCookies() {
   if (isServer) return false
-  let cookies = {}
+  const cookies = {}
   document.cookie.split(';').forEach((cookie) => {
-    let c = cookie.split('=')
+    const c = cookie.split('=')
     cookies[decodeURIComponent(c[0].replace(/^ /, ''))] = decodeURIComponent(c[1])
   })
   return cookies

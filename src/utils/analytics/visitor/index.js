@@ -7,12 +7,12 @@ const VISITOR_UNIQUE_ID = 'uid'
 const VISITOR_UUID = 'uuid'
 
 const generateVisitorID = (data) => {
-  return md5(data.canvas +
-    ':' + md5(data.fonts.join(':')) +
-    ':' + JSON.stringify(data.screen) +
-    ':' + JSON.stringify(data.browser) +
-    ':' + JSON.stringify(data.webgl) +
-    ':' + JSON.stringify(data.plugins))
+  return md5(`${data.canvas
+    }:${md5(data.fonts.join(':'))
+    }:${JSON.stringify(data.screen)
+    }:${JSON.stringify(data.browser)
+    }:${JSON.stringify(data.webgl)
+    }:${JSON.stringify(data.plugins)}`)
 }
 
 const setVisitorID = () => {
@@ -41,7 +41,7 @@ export const initializeVisitorID = () => {
 // var test = getIPs().then(function (rs) {
 //   console.log('yay', rs)
 //   return rs
-// 	/* do something with the result */
+// // do something with the result
 // }).catch(function () {
-// 	/* error :( */
+// /* error :( */
 // })

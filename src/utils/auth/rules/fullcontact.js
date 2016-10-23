@@ -1,7 +1,8 @@
+/* eslint-disable */
 /*
 Full contact data enrichment Function used in Auth0
 */
-function (user, context, callback) { // eslint-disable-line
+function removeThisFunctionNameInsideAuth0(user, context, callback) { // eslint-disable-line
   var FULLCONTACT_KEY = 'YOUR_KEY_HERE';
 
   // skip if no email
