@@ -6,6 +6,21 @@ script={[
 ]}
  */
 
+/*
+debug sentyr
+script={[
+  {
+    src: 'https://cdn.ravenjs.com/3.7.0/raven.min.js',
+    type: 'text/javascript',
+    crossorigin: 'anonymous'
+  },
+  {
+    type: 'text/javascript',
+    innerHTML: `${Sentry}`
+  }
+]}
+*/
+
 export default class HeadTag extends React.Component {
   render () {
     return (
