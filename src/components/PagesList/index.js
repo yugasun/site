@@ -7,17 +7,17 @@ const PagesList = ({ pages }) => {
   if (pages.length) {
     renderer = (
       <ul>
-      {pages.map((page) => (
-        <li key={page.title}>
-          <PagePreview {...page} />
-        </li>
+        {pages.map((page) => (
+          <li key={page.title}>
+            <PagePreview {...page} />
+          </li>
         ))}
       </ul>
     )
   }
   return (
     <div>
-     {renderer}
+      {renderer}
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 // import classnames from 'classnames'
-import Check from './Checkbox.js'
+import CheckComponent from './Checkbox'
 
 const factory = (Check) => {
   class Checkbox extends Component {
@@ -31,15 +31,15 @@ const factory = (Check) => {
       }
     };
 
-    blur () {
+    blur() {
       this.refs.input.blur()
     }
 
-    focus () {
+    focus() {
       this.refs.input.focus()
     }
 
-    render () {
+    render() {
       const { onChange, name, label, className, ...others } = this.props // eslint-disable-line no-unused-vars
       return (
         <div className={className}>
@@ -57,5 +57,5 @@ const factory = (Check) => {
   return Checkbox
 }
 
-const Checkbox = factory(Check)
+const Checkbox = factory(CheckComponent)
 export default Checkbox

@@ -1,10 +1,10 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component, PropTypes } from 'react'
 
 const propTypes = {
   profile: PropTypes.object
 }
 export default class ProfileIcon extends Component {
-  render () {
+  render() {
     const { profile } = this.props
     return (
       <div>

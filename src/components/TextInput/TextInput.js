@@ -40,7 +40,7 @@ class TextInput extends Component {
     debounce: 750
   };
 
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.handleChange = this.handleChange.bind(this)
     this.emitDelayedChange = this.emitDelayedChange.bind(this)
@@ -49,10 +49,11 @@ class TextInput extends Component {
     this.state = {
       isValid: this.doValidation(props.value).isValid,
       blurRanOnce: false,
-      tid: void 0, // Timeout ID
+      // Timeout ID
+      tid: void 0, // eslint-disable-line
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     setTimeout(() => {
       // sometimes value is set via the DOM. This updates initial state
       if (!this.state.value) {
@@ -62,14 +63,14 @@ class TextInput extends Component {
           console.log(`isValid ${value}`, isValid)
           this.setState({
             isValid: this.doValidation(value).isValid,
-            value: value
+            value
           })
           console.log('VALUE', value)
         }
       }
     }, 0)
   }
-  shouldComponentUpdate (nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
     const keys = Object.keys(nextProps)
     const { value, isValid } = this.state
 
@@ -97,11 +98,11 @@ class TextInput extends Component {
 
     return false
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     const { tid } = this.state
     window.clearTimeout(tid)
   }
-  doValidation (value) {
+  doValidation(value) {
     const { validation, errorMessage } = this.props
     const defaultMessage = 'Invalid Value'
     // console.log('validation', validation)
@@ -138,7 +139,7 @@ class TextInput extends Component {
       errorMessage: ''
     }
   }
-  handleChange (event) {
+  handleChange(event) {
     const { tid } = this.state
 
     if (tid) {
@@ -150,14 +151,14 @@ class TextInput extends Component {
       tid: setTimeout(this.emitDelayedChange, 800),
     })
   }
-  emitDelayedChange () {
+  emitDelayedChange() {
     const { value } = this.state
     const { onChange } = this.props
 
     const inputData = this.doValidation(value)
 
     this.setState({
-      tid: void 0,
+      tid: void 0,  // eslint-disable-line
       isValid: inputData.isValid,
       errorMessage: inputData.errorMessage
     }, this.doVisibleValidation(inputData.isValid))
@@ -169,7 +170,7 @@ class TextInput extends Component {
       onChange(fakeEvent, value, inputData.isValid)
     }
   }
-  doVisibleValidation (isInputValid) {
+  doVisibleValidation(isInputValid) {
     const { validation } = this.props
     if (validation && !isInputValid) {
       // has validation and is not valid!
@@ -179,7 +180,7 @@ class TextInput extends Component {
       this.refs.input.style.border = '1px solid green'
     }
   }
-  handleFocus (event) {
+  handleFocus(event) {
     const { onFocus } = this.props
     const { isValid } = this.state
 
@@ -188,7 +189,7 @@ class TextInput extends Component {
       onFocus(event, event.target.value, isValid)
     }
   }
-  handleBlur (event) {
+  handleBlur(event) {
     const { onBlur } = this.props
     const { isValid } = this.state
     if (onBlur) {
@@ -204,10 +205,12 @@ class TextInput extends Component {
         blurRanOnce: true
       }, this.captureFocusWhenInvalid())
     } }
-  captureFocusWhenInvalid () {
-    !this.state.isValid && this.focus()
+  captureFocusWhenInvalid() {
+    if (!this.state.isValid) {
+      this.focus()
+    }
   }
-  showValidation () {
+  showValidation() {
     const { isValid, errorMessage } = this.state
     const { errorMessageClassName } = this.props
     if (isValid) {
@@ -221,15 +224,15 @@ class TextInput extends Component {
       )
     }
   }
-  blur () {
+  blur() {
     this.refs.input.blur()
   }
 
-  focus () {
+  focus() {
     this.refs.input.focus()
   }
 
-  render () {
+  render() {
     const {
       className,
       disabled,
@@ -250,10 +253,10 @@ class TextInput extends Component {
       ref: 'input',
       role: 'input',
       name: others.name || others.id || others.ref || formatName(others.placeholder),
-      disabled: disabled,
-      required: required,
-      type: type,
-      value: value,
+      disabled,
+      required,
+      type,
+      value,
       className: cx(className, styles.input),
     }
     console.log('props', props)
@@ -266,7 +269,7 @@ class TextInput extends Component {
   }
 }
 
-function formatName (name) {
+function formatName(name) {
   return name.replace(/\s|-/g, '_')
 }
 

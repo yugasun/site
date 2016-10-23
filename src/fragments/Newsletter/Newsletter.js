@@ -1,9 +1,9 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import styles from './Newsletter.css'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
-function validateEmail (value) {
+function validateEmail(value) {
   const test = /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
   return test
 }
@@ -16,7 +16,7 @@ const defaultProps = {
   buttonText: 'Subscribe'
 }
 export default class Newsletter extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.state = {
       isSubscribed: false,
@@ -24,7 +24,7 @@ export default class Newsletter extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-  handleSubmit (e) {
+  handleSubmit(e) {
     e.preventDefault()
     const emailNode = this.refs.email
     const email = emailNode.value
@@ -36,16 +36,16 @@ export default class Newsletter extends Component {
       isFetching: true,
       error: false
     })
-    var data = {
-      'email': email,
-      'name': ''
+    const data = {
+      email,
+      name: ''
     }
-    var that = this
+    const that = this
     axios({
       method: 'post',
       url: newsletterSubscribeAPI,
-      data: data,
-    }).then(function (response) {
+      data,
+    }).then((response) => {
       console.log(response.data)
       // console.log(response.status);
       // console.log(response.statusText);
@@ -64,14 +64,14 @@ export default class Newsletter extends Component {
           error: 'alreadyEntered'
         })
       }
-    }).catch(function (error) {
+    }).catch((error) => {
       console.log(error)
       that.setState({
         error: 'serviceDown'
       })
     })
   }
-  render () {
+  render() {
     const { buttonText } = this.props
     const { isFetching, error } = this.state
     let text = (isFetching) ? 'Success!' : buttonText

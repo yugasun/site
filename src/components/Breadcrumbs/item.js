@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 
 export default class BreadcrumbItem extends Component {
-  render () {
+  render() {
     return (
       <Link to={this.props.getUrlFromPathSegments(this.props.pathSegments)}>
         {this.props.label}

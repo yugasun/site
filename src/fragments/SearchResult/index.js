@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react'
+import SVG from 'react-svg-inline'
 import styles from './SearchResult.css'
 import AlgoliaLogo from '../../assets/images/algolia.svg'
-import SVG from 'react-svg-inline'
 
 export default class SearchResult extends Component {
   static propTypes = {
     hits: PropTypes.array.isRequired,
   };
 
-  render () {
+  render() {
     const hits = this.props.hits
 
     return (
@@ -26,7 +26,7 @@ export default class SearchResult extends Component {
             }
 
             return (
-              <div>
+              <div key={key}>
                 search
                 {data.name}
               </div>

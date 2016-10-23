@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import styles from './Icon.css'
 
 const Icon = (props) => {
@@ -18,7 +18,7 @@ const Icon = (props) => {
 
   return (
     <span className={styles.wrapper}>
-      <svg style={customSize} className={className + ' ' + styles.icon}>
+      <svg style={customSize} className={`${className} ${styles.icon}`}>
         {iconContents}
       </svg>
     </span>

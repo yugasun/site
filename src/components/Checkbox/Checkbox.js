@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component, PropTypes } from 'react'
 import styles from './Checkbox.css'
 // http://codepen.io/DavidWells/pen/PzvEWa
 const propTypes = {
@@ -9,12 +9,12 @@ const propTypes = {
 }
 export default class Check extends Component {
 
-  render () {
+  render() {
     const { name, label } = this.props
     return (
       <div className={styles.checkbox}>
         <input type='checkbox' id={name} name={name} />
-        <div className={styles.check}></div>
+        <div className={styles.check} />
         <label htmlFor={name}>{label}</label>
       </div>
     )

@@ -7,32 +7,29 @@ import Button from '../../components/Button/Button'
 import styles from './FeedbackModal.css'
 
 export default class FeedbackModal extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.state = {
       showModal: false,
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('serverlessLogin', this.handleToggle, false)
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('serverlessLogin', this.handleToggle)
-  }
-  handleToggle = () => {
-    this.setState({showModal: !this.state.showModal})
   }
   onFeedbackSubmit = (event, data) => {
     event.preventDefault()
     const other = data.other
-    delete data.other
+    delete data.other // eslint-disable-line
     const sendData = {
       formData: data,
-      other: other,
+      other,
       userData: localStorage.getItem('profile') // eslint-disable-line
     }
-    var that = this
-    submitFeatureData(sendData, function (err, data) {
+    const that = this
+    submitFeatureData(sendData, (err, _response) => {
       if (err) {
         console.log('err', err)
         return false
@@ -42,7 +39,10 @@ export default class FeedbackModal extends Component {
       })
     })
   }
-  render () {
+  handleToggle = () => {
+    this.setState({ showModal: !this.state.showModal })
+  }
+  render() {
     return (
       <Modal
         active={this.state.showModal}

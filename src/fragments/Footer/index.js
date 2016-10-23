@@ -4,7 +4,7 @@ import FooterBetaCTA from '../../fragments/FooterBetaCTA'
 import styles from './index.css'
 
 export default class Footer extends Component {
-  render () {
+  render() {
     let cta
     if (typeof window !== 'undefined') {
       const url = window.location.pathname
