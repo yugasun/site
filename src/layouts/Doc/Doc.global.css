@@ -7,18 +7,26 @@
   flex-flow:row wrap;
 }
 
+.docsSection {
+  width: 25%;
+}
+
 .docsSectionHeader {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .docsSectionHeader a {
   text-decoration: none;
   border-bottom: 0px;
+  &:before {
+    visibility: hidden !important;
+  }
 }
 
 .docsSectionHeader img {
-  height: auto;
-  max-width: 130px;
+  width: 90%;
   border-radius: 6px;
 }
 
@@ -28,4 +36,12 @@
 
 .docsSection ul li {
   padding-bottom:3px;
+}
+@media (max-width: 768px) {
+  .docsSection {
+    width: 100%;
+  }
+  .docsSectionHeader img {
+    width: 100%;
+  }
 }
