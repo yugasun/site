@@ -1,27 +1,27 @@
 /**
  * Generates sitemap
  */
-var fs = require('fs-extra')
-var dir = require('node-dir')
-var sm = require('sitemap')
-var path = require('path')
-var packageInfo = require('../package.json')
-var distPath = path.join(__dirname, '..', 'dist')
-var sitemapPath = path.join(__dirname, '..', 'dist', 'sitemap.xml')
+const fs = require('fs-extra')
+const dir = require('node-dir')
+const sm = require('sitemap')
+const path = require('path')
+const packageInfo = require('../package.json')
+const distPath = path.join(__dirname, '..', 'dist')
+const sitemapPath = path.join(__dirname, '..', 'dist', 'sitemap.xml')
 
-function getAllUrls (filePath, callBack) {
+function getAllUrls(filePath, callBack) {
   dir.readFiles(filePath, {
     match: /.html$/,
     //exclude: /^\./
-  }, function (err, content, filename, next) {
+  }, (err, content, filename, next) => {
     if (err) throw err
     next()
   },
-    function (err, files) {
+    (err, files) => {
       if (err) {
         callBack(err)
       }
-      var urls = files.map(function (file, i) {
+      const urls = files.map((file, i) => {
         return {
           url: path.dirname(file.split('dist')[1]),
           changefreq: 'weekly',
@@ -35,28 +35,28 @@ function getAllUrls (filePath, callBack) {
   )
 }
 
-getAllUrls(distPath, function (err, urls) {
+getAllUrls(distPath, (err, urls) => {
   if (err) {
     console.log(err)
     return false
   }
-  var options = {
-    hostname: packageInfo.homepage + '/',
+  const options = {
+    hostname: `${packageInfo.homepage}/`,
     cacheTime: 600000,  // 600 sec cache period
-    urls: urls
+    urls
   }
   // Creates a sitemap object given the input configuration with URLs
-  var sitemap = sm.createSitemap(options)
+  const sitemap = sm.createSitemap(options)
   // Generates XML with a callback function
-  sitemap.toXML(function (err, xml) {
+  sitemap.toXML((err, xml) => {
     if (!err) {
       // console.log(xml)
     }
   })
   // Gives you a string containing the XML data
-  var xml = sitemap.toString()
+  const xml = sitemap.toString()
   // write sitemap to file
-  fs.writeFileSync(sitemapPath, xml, 'utf-8', function (err) {
+  fs.writeFileSync(sitemapPath, xml, 'utf-8', (err) => {
     if (err) {
       return console.log(err)
     }

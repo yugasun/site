@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
-import {addScript, removeScript} from '../../utils/manageScripts'
+import { addScript, removeScript } from '../../utils/manageScripts'
 import Page from '../../layouts/Default'
 import PagesList from '../../components/PagesList'
 
@@ -11,12 +11,12 @@ export default class CommunityPage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
   }
-  componentWillMount () {
+  componentWillMount() {
     if (isClient) {
       addScript('//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js')
     }
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     console.log('unmount called on community')
     if (isClient) {
       removeScript('//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js')
@@ -24,7 +24,7 @@ export default class CommunityPage extends Component {
     }
   }
 
-  render () {
+  render() {
     const latestPosts = enhanceCollection(this.context.collection, {
       filter: { layout: 'Post' },
       sort: 'date',

@@ -2,48 +2,67 @@ import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
+import Svg from 'react-svg-inline'
 import Page from '../Default'
+import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
-import Svg from 'react-svg-inline'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
 
+
 class Post extends Component {
-
-  render () {
+  static hasLoadingState = true
+  render() {
     const { props } = this
-    const { head, body } = props
-    const pageDate = head.date ? new Date(head.date) : null
+    const { head, body, isLoading, loadingData } = props
+    let pageDate
+    let postMeta
+    let githubURL
+    let title = (head) ? head.title : 'Default Loading Title'
 
-    const postMeta = (
-      <header>
-        {pageDate &&
-          <time key={pageDate.toISOString()}>
-            {pageDate.toDateString()}
-          </time>}
-      </header>
-    )
+    if (loadingData && loadingData.title) {
+      title = loadingData.title
+    }
 
-    const markdownContent = (
+    if (!isLoading) {
+      pageDate = head.date ? new Date(head.date) : null
+      postMeta = (
+        <header>
+          {pageDate &&
+            <time key={pageDate.toISOString()}>
+              {pageDate.toDateString()}
+            </time>}
+        </header>
+      )
+      githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
+      title = head.title
+    }
+
+    let markdownContent = (
       <BodyContainer>
         {body}
       </BodyContainer>
     )
-    const githubURL = 'https://github.com/serverless/blog/edit/master/posts' + head.gitLink
+
+    if (isLoading) {
+      markdownContent = <ContentLoading numberOfLines={30} />
+    }
+
     return (
       <Page {...props} className={styles.postPage} >
         <FixedSocialButtons
           url={`https://serverless.com/${this.props.__url}`}
-          title={head.title}
+          title={title}
         />
         <div className={styles.postWrapper}>
           <div className={styles.content}>
 
-            <h1>{head.title}</h1>
+            <h1>{title}</h1>
+
             <div className={styles.postMeta}>
               {postMeta}
             </div>
@@ -77,18 +96,18 @@ class Post extends Component {
             <div className={styles.editLinkWrapper}>
               <span className={styles.editLink}>
                 <Svg svg={gitHubSvg} cleanup />
-                <a target='_blank' href={githubURL}>
+                <a target='_blank' rel='noopener noreferrer' href={githubURL}>
                   Edit this post on github
                 </a>
               </span>
             </div>
             <BetaCTA buttonText='Get early access' />
 
-            <AuthorCTA style={{marginTop: '20px'}} />
+            <AuthorCTA style={{ marginTop: '20px' }} />
           </div>
         </div>
-        <div className={styles.comments} id='disqus_thread'></div>
-        <Helmet script={[{'type': 'text/javascript', 'innerHTML': disqus}]} />
+        <div className={styles.comments} id='disqus_thread' />
+        <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
       </Page>
     )
   }
@@ -97,6 +116,7 @@ class Post extends Component {
 Post.propTypes = {
   head: PropTypes.object.isRequired,
   __url: PropTypes.string,
+  phenomicLoading: PropTypes.bool,
 }
 
 export default Post

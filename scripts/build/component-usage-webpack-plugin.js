@@ -1,14 +1,14 @@
-var lookup = require('climb-lookup')
-var packageJSONPath = lookup.lookupSync('package.json')
-var packageInfo = require(packageJSONPath)
+const lookup = require('climb-lookup')
+const packageJSONPath = lookup.lookupSync('package.json')
+const packageInfo = require(packageJSONPath)
 
-function ComponentUsagePlugin (output, options) {
+function ComponentUsagePlugin(output, options) {
   this.options = options
 }
 
-ComponentUsagePlugin.prototype.apply = function apply (compiler) {
-  compiler.plugin('done', function (stats) {
-    var data = stats.toJson()
+ComponentUsagePlugin.prototype.apply = function apply(compiler) {
+  compiler.plugin('done', (stats) => {
+    const data = stats.toJson()
     // data has all files being used in project
     console.log(data)
 

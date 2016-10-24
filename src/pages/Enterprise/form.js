@@ -1,15 +1,17 @@
 import axios from 'axios'
 
-export default function submitFeatureData (data, callback) {
+export default function submitFeatureData(data, callback) {
   if (!data) {
-    callback && callback('Error no user data found')
+    if (callback) {
+      callback('Error no user data found')
+    }
     return false
   }
   const airTableData = {
-    'fields': {
-      'Name': data.name,
-      'Email': data.email,
-      'Company': data.company,
+    fields: {
+      Name: data.name,
+      Email: data.email,
+      Company: data.company,
       'Date Added': new Date()
     }
   }
@@ -18,13 +20,17 @@ export default function submitFeatureData (data, callback) {
     url: 'https://api.airtable.com/v0/appyZzQmAS6nvzZ5r/Table%201',
     data: airTableData,
     headers: {
-      'Authorization': 'Bearer keynoipW7vgeiBMuZ',
+      Authorization: 'Bearer keynoipW7vgeiBMuZ',
     },
   })
-  .then(function (response) {
-    callback && callback(null, response)
+  .then((response) => {
+    if (callback) {
+      callback(null, response)
+    }
   })
-  .catch(function (err) {
-    callback && callback(err)
+  .catch((err) => {
+    if (callback) {
+      callback(err)
+    }
   })
 }

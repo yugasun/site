@@ -1,14 +1,14 @@
 /**
  * Script to generate the sprite of icons included in project
  */
-var fs = require('fs')
-var path = require('path')
+const fs = require('fs')
+const path = require('path')
 
-module.exports = function makeIconList (icons, destinationFolder) {
-  var list = {}
-  for (var i = 0; i < icons.length; i++) {
-    var icon = icons[i]
-    var name = icon.replace('.svg', '')
+module.exports = function makeIconList(icons, destinationFolder) {
+  const list = {}
+  for (let i = 0; i < icons.length; i++) {
+    const icon = icons[i]
+    const name = icon.replace('.svg', '')
     console.log('name', name)
     list[name] = {
       filename: icon,
@@ -16,9 +16,9 @@ module.exports = function makeIconList (icons, destinationFolder) {
     }
   }
 
-  var iconExports = 'module.exports = ' + JSON.stringify(list, null, 2)
+  const iconExports = `module.exports = ${JSON.stringify(list, null, 2)}`
 
-  fs.writeFile(destinationFolder + '/icon-list.js', iconExports, function (err) {
+  fs.writeFile(`${destinationFolder}/icon-list.js`, iconExports, (err) => {
     if (err) {
       return console.log(err)
     }

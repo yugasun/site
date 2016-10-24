@@ -17,14 +17,14 @@ module.exports = {
     '-moz-osx-font-smoothing': 'grayscale',
   },
   // Function example
-  image: function (mixin, path) {
+  image(mixin, path) {
     return {
       '&': {
-        background: 'url(' + path + ')'
+        background: `url(${path})`
       },
       '@media (min-resolution: 120dpi)': {
         '&': {
-          background: 'url(' + path + '@2x)'
+          background: `url(${path}@2x)`
         }
       }
     }

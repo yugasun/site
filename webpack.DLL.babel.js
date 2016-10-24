@@ -1,11 +1,11 @@
 /**
  * Webpack config to generate DLL for faster dev flow
  */
-var path = require('path')
-var webpack = require('webpack')
-var pkg = require('./package')
-var outputPath = path.join(__dirname, pkg.dllPlugin.path)
-var deps = Object.keys(pkg.dependencies)
+const path = require('path')
+const webpack = require('webpack')
+const pkg = require('./package')
+const outputPath = path.join(__dirname, pkg.dllPlugin.path)
+const deps = Object.keys(pkg.dependencies)
 const wrap = JSON.stringify
 
 module.exports = {

@@ -40,7 +40,7 @@ asyncLib.waterfall([
       next(null, 'done')
     })
   },
-], function (err, result) {
+], (err, result) => {
   if (err) {
     console.log('err', err)
   }

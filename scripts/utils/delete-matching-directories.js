@@ -1,18 +1,18 @@
 /*
 Remove all directories that match a specific regex pattern
 */
-var fs = require('fs-extra')
-var dir = require('node-dir')
+const fs = require('fs-extra')
+const dir = require('node-dir')
 
-module.exports = function deleteMatchingDirectories (path, pattern, callBack) {
-  dir.subdirs(path, function (err, subdirs) {
+module.exports = function deleteMatchingDirectories(path, pattern, callBack) {
+  dir.subdirs(path, (err, subdirs) => {
     if (err) {
       return callBack && callBack(err)
     }
-    subdirs.filter(function (x) {
+    subdirs.filter((x) => {
       return x.match(pattern)
-    }).forEach(function (dir) {
-      fs.removeSync(dir, function (err) {
+    }).forEach((dir) => {
+      fs.removeSync(dir, (err) => {
         if (err) {
           return callBack && callBack(err)
         }

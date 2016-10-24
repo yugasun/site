@@ -1,47 +1,48 @@
-var fs = require('fs-extra')
-var path = require('path')
-var dir = require('node-dir')
-var matter = require('gray-matter')
-var jsonToYaml = require('yamljs')
+const fs = require('fs-extra')
+const path = require('path')
+const dir = require('node-dir')
+const matter = require('gray-matter')
+const jsonToYaml = require('yamljs')
 
-module.exports = function updateFileContents (filePath, callBack) {
+module.exports = function updateFileContents(filePath, callBack) {
   dir.readFiles(filePath, {
     match: /.md$/,
     //exclude: /^\./
-  }, function (err, content, filename, next) {
+  }, (err, content, filename, next) => {
     if (err) throw err
 
-    var replace = fixYamlContent(content, filename)
+    const replace = fixYamlContent(content, filename)
     // parse yaml frontmatter for title
-    var item = matter(replace).data
+    const item = matter(replace).data
     item.gitLink = filename.split('framework')[1]
-    var updatedFrontmatter = jsonToYaml.stringify(item)
+    const updatedFrontmatter = jsonToYaml.stringify(item)
     // regex patterns to match frontmatter
     // ---(\s*?.*?)*?---
     // ^(---)(\s*?.*?)*?(---)
     // ^---(\s*?.*?)*?---
-    var newYamlContent = `---
+    const newYamlContent = `---
 ${updatedFrontmatter}---`
 
-    var docLinkRegex = /<!--.*DOCS-SITE-LINK:START((.|\n)*?END.*-->)/g
-    var blankLineRegex = /^\s*\n/gm
-    var stripGithubSpecificContent = replace.replace(docLinkRegex, '')
-    var replaceBlankLines = stripGithubSpecificContent.replace(blankLineRegex, '\n')
-    var finalNewContent = replaceBlankLines.replace(/^---(\s*?.*?)*?---/, newYamlContent)
-
+    const docLinkRegex = /<!--.*DOCS-SITE-LINK:START((.|\n)*?END.*-->)/g
+    const blankLineRegex = /^\s*\n/gm
+    const stripGithubSpecificContent = replace.replace(docLinkRegex, '')
+    const replaceBlankLines = stripGithubSpecificContent.replace(blankLineRegex, '\n')
+    const updatedYamlContent = replaceBlankLines.replace(/^---(\s*?.*?)*?---/, newYamlContent)
+    // replace .md links
+    const finalNewContent = updatedYamlContent.replace(/\.md">/gm, '">')
     fs.writeFileSync(filename, finalNewContent)
 
     if (path.basename(filename) === 'README.md') {
-      var newName = path.join(path.dirname(filename), 'index.md')
-      fs.renameSync(filename, newName, function (err) {
-        if (err) {
-          callBack(err)
+      const newName = path.join(path.dirname(filename), 'index.md')
+      fs.renameSync(filename, newName, (error) => {
+        if (error) {
+          callBack(error)
         }
       })
     }
     next()
   },
-    function (err, files) {
+    (err, files) => {
       if (err) {
         callBack(err)
       }
@@ -50,9 +51,9 @@ ${updatedFrontmatter}---`
   )
 }
 
-function fixYamlContent (content, filename) {
+function fixYamlContent(content, filename) {
   // fix links for website
-  var fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
+  let fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
   // fix Yaml frontmatter
   fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
   // replace /README)

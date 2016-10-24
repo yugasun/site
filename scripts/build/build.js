@@ -1,7 +1,7 @@
 // Post install to build components
-var cwd = process.cwd()
-var path = require('path')
-var exec = require('child_process').exec
+const cwd = process.cwd()
+const path = require('path')
+const exec = require('child_process').exec
 
 if (process.env.IS_NETLIFY_ENV) {
   console.log('in NETLIFY_ENV context')

@@ -1,7 +1,7 @@
 import 'whatwg-fetch'
+import phenomicClient from 'phenomic/lib/client'
 import routes from '../src/routes'
 import configureStore from '../src/store'
-import phenomicClient from 'phenomic/lib/client'
 import { initialAuthState } from '../src/redux/user'
 const windowState = (typeof window !== 'undefined') ? window.__INITIAL_STATE__ : {}
 const authState = {
@@ -22,8 +22,8 @@ phenomicClient({
   metadata: {
     empty: 'hi',
   },
-  routes: routes,
-  store: store,
+  routes,
+  store,
 })
 
 // hot loading
@@ -31,7 +31,7 @@ phenomicClient({
 let mdContext = require.context('../content', true, /\.md$/)
 mdContext.keys().forEach(mdContext)
 if (module.hot) {
-  const mdHotUpdater = require('phenomic/lib/client/hot-md').default
+  const mdHotUpdater = require('phenomic/lib/client/hot-md').default // eslint-disable-line
   module.hot.accept(mdContext.id, () => {
     mdContext = require.context('../content', true, /\.md$/)
     const requireUpdate = mdHotUpdater(mdContext, window.__COLLECTION__, store)

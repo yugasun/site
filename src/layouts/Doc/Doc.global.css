@@ -1,1 +1,31 @@
 /* Using global styles for docs */
+
+.docsSections {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-flow:row wrap;
+}
+
+.docsSectionHeader {
+  padding: 10px;
+}
+
+.docsSectionHeader a {
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+.docsSectionHeader img {
+  height: auto;
+  max-width: 130px;
+  border-radius: 6px;
+}
+
+.docsSection ul {
+  padding-left: 30px;
+}
+
+.docsSection ul li {
+  padding-bottom:3px;
+}

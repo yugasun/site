@@ -1,21 +1,20 @@
 /* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
-// import { connect } from 'react-redux'
 import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
 import PlatformSignupFooter from './fragments/PlatformSignupFooter'
+import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
-import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
 
 export default class Root extends Component {
-  componentDidMount () {
+  componentDidMount() {
     initializeVisitorID()
     // const id = getVisitorID()
     window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('reactRouterRedirect', this.handleAuthRedirect)
   }
   handleAuthRedirect = (e) => {
@@ -23,7 +22,7 @@ export default class Root extends Component {
     // alert('Do redirect') // eslint-disable-line
     this.props.history.push(redirectURL)
   }
-  render () {
+  render() {
     const { location, params } = this.props
     const currentQuery = location && location.query
     return (
@@ -41,12 +40,10 @@ export default class Root extends Component {
 
 Root.propTypes = {
   /** references /layouts.js or a dynamic route from routes.js **/
-  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   /** React Router params **/
   params: PropTypes.object,
   location: PropTypes.object,
   history: PropTypes.object,
   dispatch: PropTypes.func,
 }
-
-// export default connect()(Root)

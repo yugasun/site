@@ -6,7 +6,7 @@ export default class Resource extends React.Component {
     params: React.PropTypes.object,
   };
 
-  render () {
+  render() {
     const params = this.props.params
     return (
       <div className={styles.page}>

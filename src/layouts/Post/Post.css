@@ -60,6 +60,9 @@ $sidebarWidth: 250px;
 }
 
 @media (max-width: 768px) {
+  .postPage {
+    font-size: 1.5rem;
+  }
   .sidebar {
     margin-bottom: 30px;
   }

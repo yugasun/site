@@ -1,22 +1,22 @@
-var fs = require('fs-extra')
-var path = require('path')
-var dir = require('node-dir')
-var componentsDir = path.join(__dirname, '..', '..', 'lib')
+const fs = require('fs-extra')
+const path = require('path')
+const dir = require('node-dir')
+const componentsDir = path.join(__dirname, '..', '..', 'lib')
 
-function updateFileContents (filePath, callBack) {
+function updateFileContents(filePath, callBack) {
   dir.readFiles(filePath, {
     match: /.js$/,
     //exclude: /^\./
-  }, function (err, content, filename, next) {
+  }, (err, content, filename, next) => {
     if (err) throw err
     console.log(filename)
 
-    var replace = content.replace(/\/\/ignoremodule.exports/g, 'module.exports')
+    const replace = content.replace(/\/\/ignoremodule.exports/g, 'module.exports')
     fs.writeFileSync(filename, replace)
 
     next()
   },
-    function (err, files) {
+    (err, files) => {
       if (err) {
         console.log(err)
         callBack && callBack(err)

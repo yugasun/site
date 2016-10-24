@@ -7,37 +7,37 @@ import getURLParams from '../../utils/urlHelpers'
 import styles from './Submit.css'
 
 export default class SubmitResource extends Component {
-  componentDidMount () {
+  componentDidMount() {
     const params = getURLParams()
     // grab ref and input of that ref
-    this.refs.title.refs.input.value = decodeURI(params.title)
-    this.refs.url.refs.input.value = params.url
+    this.title.refs.input.value = decodeURI(params.title)
+    this.url.refs.input.value = params.url
   }
   handleSubmit = (event, data) => {
     event.preventDefault()
     console.log(data)
     // handle data
   }
-  renderForm () {
+  renderForm() {
     return (
       <div className={styles.background}>
         <div className={styles.submitContent}>
           <h1>Submit Resource</h1>
           <AutoForm onSubmit={this.handleSubmit} trimOnSubmit>
             <TextInput
-              ref='title'
+              ref={(c) => { this.title = c }}
               name='title'
               placeholder='Resouce Title'
               required
             />
             <TextInput
-              ref='url'
+              ref={(c) => { this.url = c }}
               name='url'
               validation={'isURL'}
               placeholder='Enter the Resource URL'
               errorMessageClassName={styles.errorMessage}
               required
-              />
+            />
             <div className={styles.button}>
               <Button>
                 Submit Resource
@@ -48,7 +48,7 @@ export default class SubmitResource extends Component {
       </div>
     )
   }
-  render () {
+  render() {
     const loggedInContent = this.renderForm()
     return (
       <NewAuth loggedInComponent={loggedInContent}>

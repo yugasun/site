@@ -5,28 +5,27 @@ import React, { Component, PropTypes } from 'react'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
+import Helmet from 'react-helmet'
+import debounce from 'lodash.debounce'
 import gitHubSvg from '../../assets/icons/github.svg'
-import debounce from 'lodash/debounce'
 import generatedMenu from './generated-menu'
 import Shell from '../Default'
 import Breadcrumbs from '../../components/Breadcrumbs'
-import Helmet from 'react-helmet'
-import styles from './Doc.css'
 // Global styles are used to style html classes from github markdown files
 import globalStyles from './Doc.global.css' // eslint-disable-line
+import styles from './Doc.css'
 
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
 */
 
 class Doc extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
-    this.handleScroll = this.handleScroll.bind(this)
     this.sidebarNode = null
     this.sidebarNodeOffset = null
   }
-  componentDidMount () {
+  componentDidMount() {
     if (window.outerWidth > 600) {
       window.addEventListener('scroll', debounce(this.handleScroll, 10))
       window.addEventListener('resize', debounce(this.handleScroll, 10))
@@ -36,28 +35,34 @@ class Doc extends Component {
     }
     initializeSearch()
   }
-  handleScroll (event) {
+  handleScroll = (_event) => {
+    /* TODO: make editLink fixed */
     const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
-    if (offsetHeigh >= this.sidebarNodeOffset) {
+    const stickyNavHeight = 70
+    const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
+    if (offsetHeigh >= cachedOffset) {
       if (this.sidebarNode.style.position !== 'fixed') {
         this.sidebarNode.style.position = 'fixed'
-        this.sidebarNode.style.top = '10px'
+        this.sidebarNode.style.top = `${stickyNavHeight}px`
+        // this.sidebarNode.style.background = 'red'
       }
     } else {
       this.sidebarNode.style.position = 'relative'
       this.sidebarNode.style.top = '0px'
+
+      // this.sidebarNode.style.background = 'white'
     }
   }
-  renderParentList () {
+  renderParentList() {
     const { __url } = this.props
     const trimmedURL = __url.replace(/\/$/, '')
     const urlArray = trimmedURL.split('/')
     urlArray.pop()
     const correctURL = urlArray.join('/')
-    const menu = generatedMenu[correctURL] || generatedMenu[correctURL + '/']
+    const menu = generatedMenu[correctURL] || generatedMenu[`${correctURL}/`]
     let renderItems
     if (menu && menu.children) {
-      renderItems = menu.children.map(function (item, i) {
+      renderItems = menu.children.map((item, i) => {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
         let link
         if (item.path === trimmedURL) {
@@ -72,7 +77,7 @@ class Doc extends Component {
           )
         }
         return (
-          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
+          <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
             {link}
           </li>
         )
@@ -89,16 +94,16 @@ class Doc extends Component {
       )
     }
   }
-  renderChildrenList () {
+  renderChildrenList() {
     const { __url } = this.props
     const trimmedURL = __url.replace(/\/$/, '')
     const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
     let renderItems
     if (menu && menu.children) {
-      renderItems = menu.children.map(function (item, i) {
+      renderItems = menu.children.map((item, i) => {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
         return (
-          <li key={i} className={styles.subPageLink + ' ' + currentStyle}>
+          <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
             <Link to={item.path}>
               {item.title}
             </Link>
@@ -117,15 +122,21 @@ class Doc extends Component {
       )
     }
   }
-  renderSidebar () {
+  renderSidebar() {
     const childrenItems = this.renderChildrenList()
     const parentItems = this.renderParentList()
     return (
-      <div className={styles.sidebar + ' docs-sidebar'}>
-        <div ref='sidebar' className={styles.sidebarInner}>
-          <div className={styles.searchWrapper}>
-            <input className={styles.searchBox} id='algolia-search'
-              placeholder='&#9889;  Search docs' type='text' />
+      <div className={`${styles.sidebar} docs-sidebar`}>
+        <div className={styles.sidebarInner}>
+          <div className={styles.searchBumper}>
+            <div ref='sidebar' className={styles.searchWrapper}>
+              <input
+                className={styles.searchBox}
+                id='algolia-search'
+                placeholder='&#9889;  Search docs'
+                type='text'
+              />
+            </div>
           </div>
           <div className={styles.sidebarBlock}>
             <div className={styles.sidebarLinks}>
@@ -148,14 +159,63 @@ class Doc extends Component {
       </div>
     )
   }
-  render () {
+  renderList() {
+    const { __url } = this.props
+    const trimmedURL = __url.replace(/\/$/, '')
+    const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
+    let items = ''
+    if (menu) {
+      items = menu.map((item, i) => {
+        const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
+        return (
+          <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
+            <Link to={item.path}>
+              {item.title}
+            </Link>
+          </li>
+        )
+      })
+    }
+    return items
+  }
+  renderNewSidebar() {
+    const items = this.renderList()
+    return (
+      <div className={styles.sidebar}>
+        <div className={styles.sidebarInner}>
+          <div className={styles.searchBumper}>
+            <div ref='sidebar' className={styles.searchWrapper}>
+              <input
+                className={styles.searchBox}
+                id='algolia-search'
+                placeholder='&#9889;  Search docs'
+                type='text'
+              />
+            </div>
+          </div>
+
+          <div className={styles.subPages}>
+            <ul>
+              {items}
+            </ul>
+          </div>
+
+
+          <div className={styles.versionNumber}>
+            Docs Version: {process.env.DOCS_VERSION}
+          </div>
+        </div>
+      </div>
+    )
+  }
+  render() {
     const {
       __url,
       head,
       body,
     } = this.props
 
-    const githubURL = 'https://github.com/serverless/serverless/edit/master' + head.gitLink
+    const githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
 
     const markdownContent = (
       <BodyContainer>
@@ -166,35 +226,35 @@ class Doc extends Component {
     const breadcrumbs = (
       <div className={styles.breadCrumbContainer}>
         <Breadcrumbs path={__url} />
+        <span ref='editLink' className={styles.editLink}>
+          <Svg svg={gitHubSvg} cleanup />
+          <a target='_blank' rel='noopener noreferrer' href={githubURL}>
+            Edit on github
+          </a>
+        </span>
       </div>
     )
     return (
-      <Shell {...this.props} className={styles.docPage + ' docs-breadcrumbs'} header={breadcrumbs}>
+      <Shell {...this.props} className={`${styles.docPage} docs-breadcrumbs`} header={breadcrumbs}>
         <Helmet
           link={[
             {
-              'rel': 'stylesheet',
-              'href': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+              rel: 'stylesheet',
+              href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
             }
           ]}
           script={[
             {
-              'src': 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', 'type': 'text/javascript'
+              src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', type: 'text/javascript'
             }
           ]}
         />
         <div className={styles.docContainer}>
           <div className={styles.docWrapper}>
 
-            {this.renderSidebar()}
+            {this.renderNewSidebar()}
 
-            <div className={styles.content + ' docs-content'}>
-              <span className={styles.editLink}>
-                <Svg svg={gitHubSvg} cleanup />
-                <a target='_blank' href={githubURL}>
-                  Edit on github
-                </a>
-              </span>
+            <div className={`${styles.content} docs-content`}>
 
               {markdownContent}
 
@@ -206,7 +266,7 @@ class Doc extends Component {
   }
 }
 
-function initializeSearch () {
+function initializeSearch() {
   if (typeof docsearch !== 'undefined') {
     docsearch({ // eslint-disable-line
       apiKey: 'd5a39b712b86965d93534207ef5423df',
@@ -215,7 +275,7 @@ function initializeSearch () {
       debug: false
     })
   } else {
-    setTimeout(function () {
+    setTimeout(() => {
       initializeSearch()
     }, 50)
   }

@@ -13,15 +13,16 @@ export const makeConfig = (config = {}) => {
   const isProd = config.production
   const siteConfig = getSiteConfig(isProd)
   const dynamicEnvVariables = {
-    'NODE_ENV': (isProd) ? '"production"' : '"development"',
-    'BROWSER': (isProd) ? '"false"' : '"true"',
-    'DOCS_VERSION': JSON.stringify(serverlessPkg.version)
+    NODE_ENV: (isProd) ? '"production"' : '"development"',
+    BROWSER: (isProd) ? '"false"' : '"true"',
+    DOCS_VERSION: JSON.stringify(serverlessPkg.version)
   }
   const processEnvVariables = Object.keys(siteConfig).reduce((memo, key) => {
     const val = JSON.stringify(siteConfig[key])
     memo[key] = val
     return memo
   }, dynamicEnvVariables)
+  console.log('processEnvVariables', processEnvVariables)
   return {
     ...config.dev && {
       devtool: '#cheap-module-eval-source-map',
@@ -58,7 +59,7 @@ export const makeConfig = (config = {}) => {
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
-            [ `css-loader?modules&importLoaders=1&localIdentName=${
+            [`css-loader?modules&importLoaders=1&localIdentName=${
                 config.production
                 ? '[hash:base64:5]' // prod
                 : '[path][name]--[local]--[hash:base64:5]' // dev
@@ -72,15 +73,15 @@ export const makeConfig = (config = {}) => {
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
-            [ 'css-loader', 'postcss-loader' ].join('!'),
+            ['css-loader', 'postcss-loader'].join('!'),
           ),
         },
         // copy assets and return generated path in js
         {
           test: /\.(html|ico|jpe?g|png|gif)$/,
-          loader: 'file-loader' +
-            '?name=[path][name].[hash].[ext]&context=' +
-            path.join(__dirname, config.source),
+          loader: `${'file-loader' +
+            '?name=[path][name].[hash].[ext]&context='}${
+            path.join(__dirname, config.source)}`,
         },
         {
           test: /\.svg$/,
@@ -104,20 +105,20 @@ export const makeConfig = (config = {}) => {
       //   addDependencyTo: webpack
       // }),
       // require("postcss-reporter")(),
-      /* do math with resolve( ) */
-      require('postcss-math'),
       /* require global variables */
       require('postcss-simple-vars')({
-        variables: function variables () {
+        variables: function variables() {
           return require('./src/_variables')
         },
-        onVariables: function (variables) {
+        onVariables(variables) {
           // console.log(variables)
         },
-        unknown: function unknown (node, name, result) {
-          node.warn(result, 'Unknown variable ' + name)
+        unknown: function unknown(node, name, result) {
+          node.warn(result, `Unknown variable ${name}`)
         }
       }),
+      /* do math with resolve( ) */
+      require('postcss-math'),
       // require('cssnano'), breaks keyframes
       /* enable nested css selectors like Sass/Less */
       require('postcss-nested'),
@@ -143,7 +144,7 @@ export const makeConfig = (config = {}) => {
           // on different filters
           'blog/feed.xml': {
             // here you can define options for the feed
-            title: pkg.name + ': Latest Posts',
+            title: `${pkg.name}: Latest Posts`,
 
             // this special key allows to filter the collection
             collectionOptions: {
@@ -186,8 +187,8 @@ export const makeConfig = (config = {}) => {
       filename: '[name].[hash].js',
     },
     resolve: {
-      extensions: [ '.js', '.json', '' ],
-      root: [ path.join(__dirname, 'node_modules') ],
+      extensions: ['.js', '.json', ''],
+      root: [path.join(__dirname, 'node_modules')],
       // alias: {
       //   'assets': 'src/assets',
       //   'utils': 'src/utils',
@@ -197,7 +198,7 @@ export const makeConfig = (config = {}) => {
       // }
     },
     resolveLoader: {
-      root: [ path.join(__dirname, 'node_modules') ]
+      root: [path.join(__dirname, 'node_modules')]
     },
   }
 }

@@ -3,39 +3,40 @@ import Page from '../../layouts/Default'
 import Icon from '../../components/Icon'
 import TextInput from '../../components/TextInput'
 import addSVGintoDOM from '../../components/Icon/addSVGtoDOM'
-import sprite from '../../assets/icons/sprite.js'
+import sprite from '../../assets/icons/sprite'
 import Form from '../../components/Form'
 import styles from './TestPage.css'
 
 export default class Homepage extends Component {
-  componentDidMount () {
+  componentDidMount() {
     addSVGintoDOM(null, sprite)
   }
-  handleInput (event, value, isValid) {
+  handleInput = (event, value, isValid) => {
     console.log('event=', event)
     console.log('value====', value)
     console.log('isValid', isValid)
   }
-  handleForm (event, name, data, change) {
-    console.log('event', event),
+  handleForm = (event, name, data, change) => {
+    console.log('event', event)
     console.log('name', name)
     console.log('data', data)
     console.log('change', change)
   }
-  handleSubmit (event, data) {
+  handleSubmit = (event, data) => {
     event.preventDefault()
     console.log('event', event)
     console.log('data', data)
   }
-  render () {
+  render() {
     return (
       <Page {...this.props} fullWidth>
         <div className={styles.test}>
           <Icon name='sls-icon-facebook' />
           <Icon name='sls-icon-pencil' />
           <Form
-            onChange={this.handleForm.bind(this)}
-            onSubmit={this.handleSubmit.bind(this)}>
+            onChange={this.handleForm}
+            onSubmit={this.handleSubmit}
+          >
             <TextInput
               validation={'isEmail'}
               name='what'
@@ -50,7 +51,7 @@ export default class Homepage extends Component {
             <TextInput
               validation={'isFullName'}
               name='fullname'
-              onChange={this.handleInput.bind(this)}
+              onChange={this.handleInput}
               placeholder='Full name'
             />
             <button type='submit' name='teccccc' >

@@ -1,7 +1,7 @@
 /* Global CSS variables for use in CSS and JS */
-var baseValue = 1
-var unit = 'rem'
-var baseFontSize = (baseValue * 1.6) + unit
+const baseValue = 1
+const unit = 'rem'
+const baseFontSize = (baseValue * 1.6) + unit
 
 module.exports = {
   // -- Sizing
@@ -58,6 +58,6 @@ module.exports = {
   animationCurveDefault: 'cubic-bezier(0.4, 0, 0.2, 1)',
 }
 
-function formatFont (modifier) {
+function formatFont(modifier) {
   return (modifier * baseValue) + unit
 }
