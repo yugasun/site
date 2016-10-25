@@ -2,7 +2,7 @@
 /*
 Function used in Auth0
 */
-function removeThisFunctionNameInsideAuth0(user, context, callback) {
+function (user, context, callback) {
   console.log(context)
   var loginCount = context.stats.loginCount;
   var analytics = context.request.query.analytics
