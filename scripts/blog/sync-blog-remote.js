@@ -5,9 +5,9 @@ const blogRepoPath = config.blogRepoPath
 const downloadLink = config.downloadLink
 const rimraf = require('rimraf')
 
-rimraf(blogRepoPath, function () {
+rimraf(blogRepoPath, () => {
   console.log('empty local blog directory')
-  download(downloadLink, blogRepoPath, function (error) {
+  download(downloadLink, blogRepoPath, (error) => {
     if (error) {
       console.log(error)
       console.log('DOWNLOAD ERROR')

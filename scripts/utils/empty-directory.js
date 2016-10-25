@@ -1,9 +1,9 @@
-var fs = require('fs-extra')
+const fs = require('fs-extra')
 
-module.exports = function emptyDirectory (path, callBack) {
-  fs.emptyDir(path, function (error) {
+module.exports = function emptyDirectory(path, callBack) {
+  fs.emptyDir(path, (error) => {
     if (error) {
-      console.log('emptyDirectory fail! ' + path)
+      console.log(`emptyDirectory fail! ${path}`)
       callBack(error)
     }
     callBack && callBack(null)

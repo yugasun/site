@@ -74,3 +74,11 @@ Note: The `master` branch is the live site. **Never push directly to the master 
 If everything looks good on your unique netlify subdomain, you can go ahead and merge your branch to master on github.
 
 Merging branches into master will trigger a site rebuild and `serverless.com` will be updated
+
+# Phenomic
+
+ "transpile": "babel --ignore __tests__ --copy-files src --out-dir ../site/node_modules/phenomic/lib",
+
+
+# ESLint ref
+https://github.com/airbnb/javascript/blob/8468ed842314a5d66816927ba6c35f018035cffc/packages/eslint-config-airbnb/rules/react.js#L22-L33

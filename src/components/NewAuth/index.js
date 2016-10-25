@@ -1,2 +1,1 @@
-import NewAuth from './NewAuth'
-export default NewAuth
+export { default } from './NewAuth'

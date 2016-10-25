@@ -6,17 +6,17 @@ import packageInfo from './package.json'
 const outputPath = path.join(__dirname, 'lib')
 const srcPath = path.join(__dirname, 'src')
 const componentsPath = path.join(__dirname, '/src/components')
-let componentExternals = []
-let entryPoints = {}
+const componentExternals = []
+const entryPoints = {}
 
 // Assign entry points and externals
-fs.readdirSync(componentsPath).filter(function (x) {
+fs.readdirSync(componentsPath).filter((x) => {
   return x !== '.DS_Store' && x !== 'index.js' && !x.match(/\.md/)
 }).forEach((component, index) => {
   /* define component entry points  */
-  entryPoints[component] = ['./src/components/' + component]
+  entryPoints[component] = [`./src/components/${component}`]
   /* extern individual Components for smaller code */
-  componentExternals.push('../' + component)
+  componentExternals.push(`../${component}`)
 })
 
 console.log('processing', componentExternals)
@@ -42,7 +42,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
 
-  externals: externals,
+  externals,
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
@@ -52,7 +52,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"production"'
+        NODE_ENV: '"production"'
       }
     }),
   ],
@@ -93,19 +93,19 @@ module.exports = {
     require('postcss-math'),
     /* require global variables */
     require('postcss-simple-vars')({
-      variables: function variables () {
+      variables: function variables() {
         // var file = './src/_variables.js';
         // delete require.cache[path.join(__dirname, file)];
         // return require(file);
-        var vars = require('./src/_variables')
+        const vars = require('./src/_variables')
         // console.log('global css vars', vars)
         return vars
       },
-      onVariables: function (variables) {
+      onVariables(variables) {
         // console.log(variables)
       },
-      unknown: function unknown (node, name, result) {
-        node.warn(result, 'Unknown variable ' + name)
+      unknown: function unknown(node, name, result) {
+        node.warn(result, `Unknown variable ${name}`)
       }
     }),
     /* enable nested css selectors like Sass/Less */

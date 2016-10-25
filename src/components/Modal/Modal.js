@@ -47,7 +47,7 @@ const factory = (Overlay) => {
     type: 'normal'
   }
 
-  return ActivableRenderer()(Modal)
+  return ActivableRenderer()(Modal) // eslint-disable-line
 }
 
 const Modal = factory(InjectOverlay)

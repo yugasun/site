@@ -1,7 +1,7 @@
-var download = require('download')
+const download = require('download')
 
 // if datatime > x redownload
-module.exports = function downloadDocs (downloadUrl, outputPath, callBack) {
+module.exports = function downloadDocs(downloadUrl, outputPath, callBack) {
   const downloadOptions = {
     timeout: 30000,
     extract: true,
@@ -11,7 +11,7 @@ module.exports = function downloadDocs (downloadUrl, outputPath, callBack) {
   download(downloadUrl, outputPath, downloadOptions).then(() => {
     console.log(`${downloadUrl} downloaded, placed in ${outputPath}`)
     callBack && callBack(null)
-  }).catch(function (error) {
+  }).catch((error) => {
     if (error) {
       console.log(`download fail! ${downloadUrl}`)
       console.log(error)

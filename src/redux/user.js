@@ -2,6 +2,7 @@ import { getItem, removeItem } from '../utils/storage'
 import { getXsrfToken } from '../utils/auth/xsrfToken'
 import { isAuthenticated } from '../utils/auth/authToken'
 import lock from '../utils/auth'
+
 const isClient = typeof window !== 'undefined'
 
 /* Constants */
@@ -11,52 +12,54 @@ const LOGIN_ERROR = 'LOGIN_ERROR'
 const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 
 /* Actions */
-function loginStarted (profile) {
+function loginStarted() {
   return {
     type: LOGIN_STARTED,
   }
 }
 
-export function loginSuccess (profile) {
+export function loginSuccess(profile) {
   return {
     type: LOGIN_SUCCESS,
     profile
   }
 }
 
-export function loginError (error) {
+export function loginError(error) {
   return {
     type: LOGIN_ERROR,
     error
   }
 }
 
-export function login () {
+export function login() {
   const redirectURL = isClient && encodeURIComponent(window.location.href)
   // pass xsrf token through with state
   const state = `token=${getXsrfToken()}&url=${redirectURL}`
-  var options = {
+  const options = {
     auth: {
       params: {
-        state: state,
+        state,
         customValues: 'value1',
       },
     }
   }
   return dispatch => {
-    isClient && lock.login(options)
+    if (isClient) {
+      lock.show(options)
+    }
     return dispatch(loginStarted())
     // login finishes via custom middleware
   }
 }
 
-function logoutSuccess (profile) {
+function logoutSuccess() {
   return {
     type: LOGOUT_SUCCESS
   }
 }
 
-export function logout () {
+export function logout() {
   return dispatch => {
     // remove auth0 localStorage items
     removeItem('id_token')
@@ -65,7 +68,7 @@ export function logout () {
   }
 }
 
-function getProfile () {
+function getProfile() {
   return getItem('profile')
 }
 
@@ -77,7 +80,7 @@ export const initialAuthState = {
   error: ''
 }
 
-export default function authReducer (state = initialAuthState, action) {
+export default function authReducer(state = initialAuthState, action) {
   switch (action.type) {
     case LOGIN_STARTED:
       return {

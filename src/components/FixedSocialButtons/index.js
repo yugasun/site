@@ -1,2 +1,1 @@
-import FixedSocialButtons from './FixedSocialButtons'
-export default FixedSocialButtons
+export { default } from './FixedSocialButtons'

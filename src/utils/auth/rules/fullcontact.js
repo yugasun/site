@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
 Full contact data enrichment Function used in Auth0
 */

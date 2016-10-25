@@ -2,15 +2,15 @@
  * TODO: depricate in favor of local github repo in here
  * Utility for syncing docs on local machine for debugging etc
  */
-var config = require('./config')
-var path = require('path')
+const config = require('./config')
+const path = require('path')
 const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
 const serverlessDocsPath = config.serverlessDocsPath
 const localdocsPath = path.join(__dirname, '..', '..', '..', '/serverless/docs/')
 
-emptyDirectory(serverlessDocsPath, function () {
-  copyFiles(localdocsPath, serverlessDocsPath, function (error) {
+emptyDirectory(serverlessDocsPath, () => {
+  copyFiles(localdocsPath, serverlessDocsPath, (error) => {
     if (error) {
       console.log(error)
       console.log(`Docs not found at ${localdocsPath}`)

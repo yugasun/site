@@ -6,7 +6,7 @@ import fontsInfo from './fontData'
 import webglInfo from './webglData'
 
 let visitorData // cache
-export default function getVisitorData () {
+export default function getVisitorData() {
   if (visitorData) return visitorData
   visitorData = {
     canvas: canvasInfo(),

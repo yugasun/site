@@ -18,28 +18,29 @@ const defaultProps = {
   kind: 'dark',
 }
 
-export default function Button ({onClick, label, children, kind, style, href, target}) {
+export default function Button({ onClick, label, children, kind, style, href, target }) {
   const text = label || children
   const kindStyle = styles[kind]
   if (href) {
     return (
       <Link
-        className={styles.btn + ' ' + kindStyle}
+        className={`${styles.btn} ${kindStyle}`}
         to={href}
         target={target}
-        onClick={onClick} style={style}>
-        <span className={styles.background}></span>
+        onClick={onClick} style={style}
+      >
+        <span className={styles.background} />
         <span>{text}</span>
       </Link>
     )
-  } else {
-    return (
-      <button className={styles.btn + ' ' + kindStyle} onClick={onClick} style={style}>
-        <span className={styles.background}></span>
-        <div>{text}</div>
-      </button>
-    )
   }
+
+  return (
+    <button className={`${styles.btn} ${kindStyle}`} onClick={onClick} style={style}>
+      <span className={styles.background} />
+      <div>{text}</div>
+    </button>
+  )
 }
 
 Button.propTypes = propTypes

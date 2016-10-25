@@ -1,6 +1,6 @@
 /* Font detection */
 let fontCache
-export default function fontsInfo (customFonts) {
+export default function fontsInfo(customFonts) {
   if (fontCache !== undefined) {
     return fontCache
   }
@@ -23,34 +23,34 @@ export default function fontsInfo (customFonts) {
     fonts = customFonts
   }
 
-  var STRING = 'wwzrllTNMLllllliiimmqßmmmmiiill❗️🔻llplö😄©_~ñ'
+  const STRING = 'wwzrllTNMLllllliiimmqßmmmmiiill❗️🔻llplö😄©_~ñ'
 
   // Set up default font information
-  var defaults = [
-    {name: 'serif'},
-    {name: 'sans-serif'},
-    {name: 'monospace'}
+  const defaults = [
+    { name: 'serif' },
+    { name: 'sans-serif' },
+    { name: 'monospace' }
   ]
 
-  var span = document.createElement('span')
+  const span = document.createElement('span')
   span.innerHTML = STRING
   span.style.fontSize = '86px'
 
-  defaults.forEach(function (font) {
+  defaults.forEach((font) => {
     span.style.fontFamily = font.name
     document.body.appendChild(span)
-    font.width = span.offsetWidth
-    font.height = span.offsetHeight
+    font.width = span.offsetWidth // eslint-disable-line
+    font.height = span.offsetHeight // eslint-disable-line
     document.body.removeChild(span)
   })
   // Search for fonts
-  var foundFonts = []
+  const foundFonts = []
 
-  fonts.forEach(function (font) {
-    var found = false
+  fonts.forEach((font) => {
+    let found = false
 
-    defaults.forEach(function (defaultFont) {
-      span.style.fontFamily = font + ',' + defaultFont.name
+    defaults.forEach((defaultFont) => {
+      span.style.fontFamily = `${font},${defaultFont.name}`
       document.body.appendChild(span)
       if (span.offsetWidth !== defaultFont.width || span.offsetHeight !== defaultFont.height) {
         found = true

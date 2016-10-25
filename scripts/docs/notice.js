@@ -18,8 +18,8 @@ Then you can push up those changes to the ${config.repoURL} repo
 
 `
 
-module.exports = function blogNotice () {
-  fs.writeFile(path.join(config.siteDocsPath, warningFile), contents, function (err) {
+module.exports = function blogNotice() {
+  fs.writeFile(path.join(config.siteDocsPath, warningFile), contents, (err) => {
     if (err) {
       console.log(err)
     }

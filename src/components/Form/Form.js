@@ -1,8 +1,7 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import AutoForm from 'react-auto-form'
 
-const Form = (props) => {
-  const {onSubmit, onChange, children} = props
+const Form = ({ onSubmit, onChange, children }) => {
   return (
     <AutoForm onChange={onChange} onSubmit={onSubmit}>
       {children}

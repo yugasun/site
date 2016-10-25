@@ -1,25 +1,25 @@
-var fs = require('fs-extra')
-var path = require('path')
+const fs = require('fs-extra')
+const path = require('path')
 
-module.exports = function renameSVGClasses (filePath, callBack) {
-  var files = fs.readdirSync(filePath)
+module.exports = function renameSVGClasses(filePath, callBack) {
+  const files = fs.readdirSync(filePath)
   files.map((file, i) => {
-    var p = path.join(filePath, file)
-    var name = path.basename(p, '.svg')
-    fs.readFile(p, 'utf8', function (err, contents) {
+    const p = path.join(filePath, file)
+    const name = path.basename(p, '.svg')
+    fs.readFile(p, 'utf8', (err, contents) => {
       if (err) {
         console.log(err)
       }
 
-      var matches = contents.match(/class="(.?)"/g)
+      const matches = contents.match(/class="(.?)"/g)
       if (matches) {
-        for (var n = 0; n < matches.length; n++) {
-          var className = matches[n].replace('class=', '').replace(/"/g, '')
-          var find = 'class="'+className+'"'
-          var replace = 'class="' + name + '-' + className + '"'
+        for (let n = 0; n < matches.length; n++) {
+          const className = matches[n].replace('class=', '').replace(/"/g, '')
+          const find = `class="${className}"`
+          const replace = `class="${name}-${className}"`
           contents = contents.replace(find, replace)
-          var findStyle = '.' + className
-          var replaceStyle = '.' + name + '-' + className
+          const findStyle = `.${className}`
+          const replaceStyle = `.${name}-${className}`
           contents = contents.replace(findStyle, replaceStyle)
         }
       }

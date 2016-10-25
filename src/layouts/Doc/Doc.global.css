@@ -1,1 +1,47 @@
 /* Using global styles for docs */
+
+.docsSections {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-flow:row wrap;
+}
+
+.docsSection {
+  width: 25%;
+}
+
+.docsSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docsSectionHeader a {
+  text-decoration: none;
+  border-bottom: 0px;
+  &:before {
+    visibility: hidden !important;
+  }
+}
+
+.docsSectionHeader img {
+  width: 90%;
+  border-radius: 6px;
+}
+
+.docsSection ul {
+  padding-left: 30px;
+}
+
+.docsSection ul li {
+  padding-bottom:3px;
+}
+@media (max-width: 768px) {
+  .docsSection {
+    width: 100%;
+  }
+  .docsSectionHeader img {
+    width: 100%;
+  }
+}

@@ -1,3 +1,7 @@
+
+.partnerPage {
+  padding-bottom: 140px;
+}
 .tiles {
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +130,7 @@
   max-width: 90%;
 }
 .siteLink {
-  margin: 20px 0;
+  margin: 30px 0;
   a {
     padding: 20px;
     background: $yellow;
@@ -146,6 +150,9 @@
   }
 }
 @media (max-width: 768px) {
+  .modalLogoWrapper {
+    display: none;
+  }
   .block {
     width: 100%;
   }

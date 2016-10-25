@@ -1,10 +1,9 @@
 /*
- Render and unrender higher order component
- from https://github.com/react-toolbox/
+ Render and unrender higher order component from https://github.com/react-toolbox/
 */
 import React, { Component, PropTypes } from 'react'
 
-const ActivableRendererFactory = (options = {delay: 500}) => (ActivableComponent) => {
+const ActivableRendererFactory = (options = { delay: 500 }) => (ActivableComponent) => {
   return class ActivableRenderer extends Component {
     static propTypes = {
       active: PropTypes.bool.isRequired,
@@ -21,19 +20,19 @@ const ActivableRendererFactory = (options = {delay: 500}) => (ActivableComponent
       rendered: this.props.active
     };
 
-    componentWillReceiveProps (nextProps) {
+    componentWillReceiveProps(nextProps) {
       if (nextProps.active && !this.props.active) this.renderAndActivate()
       if (!nextProps.active && this.props.active) this.deactivateAndUnrender()
     }
 
-    renderAndActivate () {
+    renderAndActivate() {
       if (this.unrenderTimeout) clearTimeout(this.unrenderTimeout)
       this.setState({ rendered: true, active: false }, () => {
         setTimeout(() => this.setState({ active: true }), 20)
       })
     }
 
-    deactivateAndUnrender () {
+    deactivateAndUnrender() {
       this.setState({ rendered: true, active: false }, () => {
         this.unrenderTimeout = setTimeout(() => {
           this.setState({ rendered: false })
@@ -42,7 +41,7 @@ const ActivableRendererFactory = (options = {delay: 500}) => (ActivableComponent
       })
     }
 
-    render () {
+    render() {
       const { delay, ...others } = this.props // eslint-disable-line no-unused-vars
       const { active, rendered } = this.state
       return rendered

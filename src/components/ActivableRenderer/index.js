@@ -1,2 +1,1 @@
-import ActivableRenderer from './ActivableRenderer'
-export default ActivableRenderer
+export { default } from './ActivableRenderer'

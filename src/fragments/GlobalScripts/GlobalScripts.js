@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import GoogleAnalytics from './GoogleAnalytics'
 import SegmentIO from './SegmentIO'
 
-export default function GlobalScripts (props) {
+export default function GlobalScripts(props) {
   return (
     <div>
       <GoogleAnalytics {...props} />
-      <div dangerouslySetInnerHTML={{__html: SegmentIO}} />
+      <div dangerouslySetInnerHTML={{ __html: SegmentIO }} />
     </div>
   )
 }

@@ -17,7 +17,7 @@ export default class Overlay extends Component {
     invisible: false
   };
 
-  componentDidMount () {
+  componentDidMount() {
     if (this.props.active) {
       this.escKeyListener = document.body.addEventListener('keydown', this.handleEscKey.bind(this))
       this.disableScroll()
@@ -25,7 +25,7 @@ export default class Overlay extends Component {
     }
   }
 
-  componentWillUpdate (nextProps) {
+  componentWillUpdate(nextProps) {
     if (nextProps.active && !this.props.active) {
       // document.body.style.overflow = 'hidden'
       this.disableScroll()
@@ -36,13 +36,13 @@ export default class Overlay extends Component {
     }
   }
 
-  componentDidUpdate () {
+  componentDidUpdate() {
     if (this.props.active && !this.escKeyListener) {
       this.escKeyListener = document.body.addEventListener('keydown', this.handleEscKey.bind(this))
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     // document.body.style.overflow = null
     this.enableScroll()
     if (this.escKeyListener) {
@@ -50,14 +50,14 @@ export default class Overlay extends Component {
       this.escKeyListener = null
     }
   }
-  preventDefault (e) {
-    e = e || window.event
-    if (e.preventDefault) {
-      e.preventDefault()
+  preventDefault = (e) => {
+    const event = e || window.event
+    if (event.preventDefault) {
+      event.preventDefault()
     }
-    e.returnValue = false
+    event.returnValue = false
   }
-  disableScroll () {
+  disableScroll() {
     if (window.addEventListener) {
       // older FF
       window.addEventListener('DOMMouseScroll', this.preventDefault, false)
@@ -67,14 +67,14 @@ export default class Overlay extends Component {
     window.ontouchmove = this.preventDefault // mobile
     document.onkeydown = this.preventDefaultForScrollKeys
   }
-  preventDefaultForScrollKeys (e) {
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1}
+  preventDefaultForScrollKeys(e) {
+    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 }
     if (keys[e.keyCode]) {
       this.preventDefault(e)
       return false
     }
   }
-  enableScroll () {
+  enableScroll() {
     if (window.removeEventListener) {
       window.removeEventListener('DOMMouseScroll', this.preventDefault, false)
     }
@@ -83,13 +83,13 @@ export default class Overlay extends Component {
     window.ontouchmove = null
     document.onkeydown = null
   }
-  handleEscKey (e) {
+  handleEscKey(e) {
     if (this.props.active && this.props.onEscKeyDown && e.which === 27) {
       this.props.onEscKeyDown(e)
     }
   }
 
-  render () {
+  render() {
     const { active, className, children, invisible, onClick } = this.props
     const _className = classnames(styles.overlay, {
       [styles.active]: active,

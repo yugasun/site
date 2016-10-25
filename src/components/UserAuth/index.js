@@ -1,8 +1,7 @@
 /* Depricated */
-import React, { PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import { setItem } from '../../utils/storage'
 import auth from '../../utils/auth'
-const isClient = typeof window !== 'undefined'
 
 export class UserAuth extends React.Component {
 
@@ -13,7 +12,7 @@ export class UserAuth extends React.Component {
     loggedInComponent: PropTypes.any,
   }
 
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.login = auth.login.bind(this)
     this.logout = auth.logout.bind(this)
@@ -23,15 +22,15 @@ export class UserAuth extends React.Component {
   }
 
   doLogin = () => {
-    isClient && setItem('auth_redirect', window.location.href)
+    setItem('auth_redirect', window.location.href)
     this.login()
   }
 
   handleToggle = () => {
-    this.setState({active: !this.state.active})
+    this.setState({ active: !this.state.active })
   }
 
-  render () {
+  render() {
     const { loggedIn } = this.state
     const { children, loggedInComponent, style, className } = this.props
     let renderedContent = children

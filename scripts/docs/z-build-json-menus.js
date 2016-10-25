@@ -1,18 +1,18 @@
-var config = require('./config')
-var dirTree = require('directory-tree')
-var filteredTree = dirTree(config.siteDocsPath, ['.md'])
-var path = require('path')
-var fs = require('fs-extra')
-var matter = require('gray-matter')
+const config = require('./config')
+const dirTree = require('directory-tree')
+const filteredTree = dirTree(config.siteDocsPath, ['.md'])
+const path = require('path')
+const fs = require('fs-extra')
+const matter = require('gray-matter')
 
-var count = 1
-var level = 1
-//console.log('filteredTree', filteredTree)
-module.exports = function buildMenus () {
+let count = 1
+let level = 1
+// console.log('filteredTree', filteredTree)
+module.exports = function buildMenus() {
   traverse(filteredTree, 1)
 }
 
-function traverse (x) {
+function traverse(x) {
   if (isArray(x)) {
     processChildrenArray(x)
   } else if ((typeof x === 'object') && (x !== null)) {
@@ -22,14 +22,14 @@ function traverse (x) {
   }
 }
 
-function isArray (o) {
+function isArray(o) {
   return Object.prototype.toString.call(o) === '[object Array]'
 }
 
-function processChildrenArray (arr) {
-  //console.log(level + '<array>')
-  arr.forEach(function (x) {
-    //console.log(x.path)
+function processChildrenArray(arr) {
+  // console.log(level + '<array>')
+  arr.forEach((x) => {
+    // console.log(x.path)
     count = count + 1
     traverse(x)
   })
@@ -37,32 +37,32 @@ function processChildrenArray (arr) {
 
 function fileExists(filePath) {
   try {
-    return fs.statSync(filePath).isFile();
+    return fs.statSync(filePath).isFile()
   } catch (err) {
-    return false;
+    return false
   }
 }
 
-function processChildren (obj) {
+function processChildren(obj) {
   if (obj.hasOwnProperty('children')) {
-    //console.log('level', level)
-    var filePath = obj['path']
+    // console.log('level', level)
+    const filePath = obj.path
     // console.log('path', filePath)
-    var subPaths = []
-    obj['children'].forEach(function (x, i) {
+    const subPaths = []
+    obj.children.forEach((x, i) => {
       /* TODO: update check here */
       if (fs.lstatSync(x.path).isDirectory()) {
-        var fullPath = x.path
-        var url = fullPath.split('content')[1].replace('index', '').replace('.md', '')
+        const fullPath = x.path
+        const url = fullPath.split('content')[1].replace('index', '').replace('.md', '')
         subPaths[i] = {
           title: path.basename(x.path),
-          url: url
+          url
         }
       } else {
-        var content = fs.readFileSync(x.path).toString()
+        const content = fs.readFileSync(x.path).toString()
         // parse yaml frontmatter for title
-        var yamlInfo = matter(content).data
-        var arrayItem = {
+        const yamlInfo = matter(content).data
+        const arrayItem = {
           title: yamlInfo.title,
           url: x.path
         }
@@ -71,20 +71,20 @@ function processChildren (obj) {
     })
     writeJSONMenuToDirectory(filePath, JSON.stringify(subPaths))
     // console.log(obj['children'])
-    traverse(obj['children'], filePath)
+    traverse(obj.children, filePath)
     level = level + 1
   }
 }
 
 
-function writeJSONMenuToDirectory (dest, contents) {
+function writeJSONMenuToDirectory(dest, contents) {
   // var finalDest = dest.replace('content/framework', 'dist/framework')
-  var p = path.join(dest, 'menu.json')
-  //console.log(p)
-  fs.writeFileSync(p, contents, 'utf-8', function (err) {
+  const p = path.join(dest, 'menu.json')
+  // console.log(p)
+  fs.writeFileSync(p, contents, 'utf-8', (err) => {
     if (err) {
       return console.log(err)
     }
-    console.log(dest + '/menu.js file generated')
+    console.log(`${dest}/menu.js file generated`)
   })
 }

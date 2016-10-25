@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { PropTypes, Component } from 'react'
+import { Link } from 'react-router'
+import Svg from 'react-svg-inline'
 import Page from '../../layouts/Default'
 import Terminal from '../../components/Terminal'
 import ContentBlock from '../../components/ContentBlock'
@@ -8,45 +10,31 @@ import architectureGif from '../../assets/images/architecture.gif'
 import frameworkGif from '../../assets/images/framework.gif'
 import awsLogo from '../../assets/images/aws_logo.png'
 import communityJpg from '../../assets/images/community.png'
-import customerCoke from '../../assets/images/customer_coke.png'
-import sparkle from '../../assets/images/home_sparkle.png'
-import { Link } from 'react-router'
 import styles from './Homepage.css'
 import playSvg from '../../assets/icons/play.svg'
 import docsSvg from '../../assets/icons/book2.svg'
-import { addAnimationEvent, removeAnimationEvent } from '../../utils/animations'
-import Svg from 'react-svg-inline'
 
 export default class Homepage extends Component {
-  constructor (props, context) {
+  static propTypes = {
+    phenomicLoading: PropTypes.bool
+  }
+  static loadingState = true
+  constructor(props, context) {
     super(props, context)
     this.state = {
       show: true
     }
-    this.animationCallback = this.animationCallback.bind(this)
   }
-  componentDidMount () {
-    addAnimationEvent(this.refs.animDiv, 'AnimationEnd', this.animationCallback)
-  }
-  componentWillUnmount () {
-    removeAnimationEvent(this.refs.animDiv, 'AnimationEnd', this.animationCallback)
-  }
-  animationCallback (event) {
-    const node = this.refs.sparkle
-    setTimeout(function () {
-      node.style.display = 'block'
-    }, 100)
-  }
-  render () {
+  render() {
     return (
-      <Page {...this.props} fullWidth>
+      <Page {...this.props} phenomicLoading={this.props.phenomicLoading} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
               <div className={styles.hero}>
-                <div className={styles.heroLeft + ' fadeIn fadeInShort'}>
+                <div className={`${styles.heroLeft} fadeIn fadeInShort`}>
 
-                  <div className={styles.heroFramework}></div>
+                  <div className={styles.heroFramework} />
 
                   <div className={styles.tagline}>
                     Build auto-scaling, pay-per-execution, event-driven apps on AWS Lambda
@@ -81,8 +69,7 @@ export default class Homepage extends Component {
                     </div>
                   </div>
                 </div>
-                <div ref='animDiv' className={styles.heroRight + ' zoomxIn zoomInxLong'}>
-                  <img ref='sparkle' className={styles.sparkle} src={sparkle} role='presentation' />
+                <div ref='animDiv' className={`${styles.heroRight} zoomxIn zoomInxLong`}>
                   <Terminal commands={terminalCommands} />
                 </div>
               </div>
@@ -101,7 +88,7 @@ export default class Homepage extends Component {
               IT operational costs and deploy services faster.”
             </div>
             <div className={styles.customer}>
-              <img src={customerCoke} alt='coca cola logo serverless' />
+             - Patrick Brandt, Solutions Architect at The Coca-Cola Company
             </div>
           </div>
 
@@ -123,11 +110,11 @@ export default class Homepage extends Component {
           <ContentBlock title='The Serverless Community' image={communityJpg}>
             <p>Over 1,900 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
             <p>
-              <a href='https://gitter.im/serverless/serverless' target='_blank'>
+              <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
               Join the Chatroom
               </a>
               <br />
-              <a href='http://forum.serverless.com' target='_blank'>
+              <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
               Check out the Forum
               </a>
             </p>

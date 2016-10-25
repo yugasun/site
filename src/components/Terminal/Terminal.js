@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component, PropTypes } from 'react'
 import styles from './Terminal.css'
 
 const propTypes = {
@@ -7,7 +7,7 @@ const propTypes = {
 }
 
 export default class TerminalCommands extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.typeSpeed = 50
     this.lineIndex = 0
@@ -19,14 +19,14 @@ export default class TerminalCommands extends Component {
     }
     this.delay = null
   }
-  componentDidMount () {
+  componentDidMount() {
     this.writeText()
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.clearTimeout(this.delay)
   }
-  writeText () {
-    const {commands} = this.props
+  writeText() {
+    const { commands } = this.props
     let contents
     if (commands[this.lineIndex].skip) {
       contents = commands[this.lineIndex].text
@@ -34,7 +34,7 @@ export default class TerminalCommands extends Component {
         obj: {
           ...this.state.obj,
           [this.lineIndex]: {
-            contents: contents,
+            contents,
             className: commands[this.lineIndex].type
           }
         }
@@ -46,7 +46,7 @@ export default class TerminalCommands extends Component {
         obj: {
           ...this.state.obj,
           [this.lineIndex]: {
-            contents: contents,
+            contents,
             className: commands[this.lineIndex].type
           }
         }
@@ -69,21 +69,21 @@ export default class TerminalCommands extends Component {
       }, timeout)
     }
   }
-  renderLines () {
-    const {obj} = this.state
-    var output = Object.keys(obj).map(function (key, i) {
+  renderLines() {
+    const { obj } = this.state
+    const output = Object.keys(obj).map((key, i) => {
       const classes = obj[i].className
       return (
         <div
           key={i}
           className={classes}
-          dangerouslySetInnerHTML={{__html: obj[i].contents}}
+          dangerouslySetInnerHTML={{ __html: obj[i].contents }}
         />
       )
     })
     return output
   }
-  render () {
+  render() {
     const terminalOutput = this.renderLines()
 
     return (
@@ -91,9 +91,9 @@ export default class TerminalCommands extends Component {
 
         <div className={styles.terminal}>
           <div className={styles.terminalHead}>
-            <div className={styles.circle + ' ' + styles.close}></div>
-            <div className={styles.circle + ' ' + styles.turn}></div>
-            <div className={styles.circle + ' ' + styles.expand}></div>
+            <div className={`${styles.circle} ${styles.close}`} />
+            <div className={`${styles.circle} ${styles.turn}`} />
+            <div className={`${styles.circle} ${styles.expand}`} />
           </div>
           <div className={styles.terminalText}>
             {terminalOutput}

@@ -1,21 +1,21 @@
-var async = require('async')
-var fs = require('fs-extra')
-var path = require('path')
-var optimizeSVG = require('./optimize-svg')
-var fixSpriteClassNames = require('./update-svg-contents')
-var generateSprite = require('./generate-sprite')
-var generateList = require('./generate-list')
-var svgs = path.join(__dirname, '..', '..', 'src', 'assets', 'icons')
-var dest = path.join(__dirname, '..', '..', 'dist', 'icons')
+const async = require('async')
+const fs = require('fs-extra')
+const path = require('path')
+const optimizeSVG = require('./optimize-svg')
+const fixSpriteClassNames = require('./update-svg-contents')
+const generateSprite = require('./generate-sprite')
+const generateList = require('./generate-list')
+const svgs = path.join(__dirname, '..', '..', 'src', 'assets', 'icons')
+const dest = path.join(__dirname, '..', '..', 'dist', 'icons')
 
-var iconsInProject = fs.readdirSync(svgs).filter(function (x) {
+const iconsInProject = fs.readdirSync(svgs).filter((x) => {
   return x.match(/\.svg$/) && !x.match(/sprite/)
 })
 
 async.waterfall([
   function (next) {
     // empty tmp svg folder
-    fs.emptyDir(dest, function (error) {
+    fs.emptyDir(dest, (error) => {
       if (error) {
         next(error)
       }
@@ -24,15 +24,15 @@ async.waterfall([
   },
   function (next) {
     // optimize all SVGs
-    for (var i = 0; i < iconsInProject.length; i++) {
-      var svg = path.join(svgs, iconsInProject[i])
-      var cb = (iconsInProject.length === (i + 1)) ? next : null
+    for (let i = 0; i < iconsInProject.length; i++) {
+      const svg = path.join(svgs, iconsInProject[i])
+      const cb = (iconsInProject.length === (i + 1)) ? next : null
       optimizeSVG(svg, dest, cb)
     }
   },
   // Update svg content to fix className clashes
   function (next) {
-    fixSpriteClassNames(dest, function (err, files) {
+    fixSpriteClassNames(dest, (err, files) => {
       if (err) {
         next(err)
       }
@@ -43,7 +43,7 @@ async.waterfall([
     // make sprite file
     generateSprite(dest, files, next)
   },
-], function (err, result) {
+], (err, result) => {
   if (err) {
     console.log('error', err)
   }

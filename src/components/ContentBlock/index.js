@@ -1,2 +1,1 @@
-import ContentBlock from './ContentBlock'
-export default ContentBlock
+export { default } from './ContentBlock'

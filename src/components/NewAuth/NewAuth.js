@@ -1,11 +1,11 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { login, logout } from '../../redux/user'
 
 const AuthComponent = (props) => {
   const {
-    login,
-    logout,
+    login, // eslint-disable-line
+    logout, // eslint-disable-line
     isAuthenticated,
     logoutOnClick,
     profile,
@@ -22,7 +22,7 @@ const AuthComponent = (props) => {
 
   if (isAuthenticated && loggedInComponent) {
     const childProps = {
-      profile: profile,
+      profile,
       handleLogout: logout
     }
     if (typeof loggedInComponent.type === 'string') {
@@ -38,7 +38,7 @@ const AuthComponent = (props) => {
   }
   return (
     <div onClick={handleClick}>
-     {renderedContent}
+      {renderedContent}
     </div>
   )
 }
@@ -54,7 +54,7 @@ AuthComponent.propTypes = {
   logoutOnClick: PropTypes.bool,
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   const { auth } = state
   const { isAuthenticated, profile, loading } = auth
   return {

@@ -1,2 +1,1 @@
-import InteractiveTerminal from './Terminal'
-export default InteractiveTerminal
+export { default } from './Terminal'

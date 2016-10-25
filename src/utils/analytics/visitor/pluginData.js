@@ -1,6 +1,6 @@
 /* Get plugin Info */
 
-export default function pluginInfo () {
+export default function pluginInfo() {
   if (!navigator.plugins) {
     return null
   }
@@ -31,7 +31,7 @@ export default function pluginInfo () {
     'Wacom Tablet Plug-In',
     'WebKit-integrierte PDF'
   ]
-  return pluginLookup.filter(function (plugin) {
+  return pluginLookup.filter((plugin) => {
     if (navigator.plugins[plugin] !== undefined) {
       return true
     }

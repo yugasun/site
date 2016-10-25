@@ -58,13 +58,7 @@ a.yellowLink {
 .buttons {
   text-align: center;
 }
-.sparkle {
-  position: absolute;
-  right: 35px;
-  top: -8px;
-  width: 90px;
-  display: none;
-}
+
 .hero {
   display: flex;
   position: inherit;
@@ -121,11 +115,12 @@ a.yellowLink {
   text-align: center;
   width: 75%;
   margin: 40px auto;
+  margin-bottom: 20px;
 }
 .testimonials .customer {
-  height: auto;
   width: 100%;
-  max-width: 250px;
+  text-align: center;
+  color: #636363;
 }
 .testimonials .customer img {
   width: 100%;
@@ -209,11 +204,6 @@ a.yellowLink {
   }
 }
 @media (max-width: 768px) {
-  .sparkle {
-    right: 10px;
-    top: -22px;
-    width: 70px;
-  }
   .poweredBy {
     margin-top: 20px;
   }

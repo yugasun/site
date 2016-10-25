@@ -1,7 +1,8 @@
+/* eslint-disable */
 /*
 Function used in Auth0
 */
-function (user, context, callback) { // eslint-disable-line
+function (user, context, callback) {
   console.log(context)
   var loginCount = context.stats.loginCount;
   var analytics = context.request.query.analytics
@@ -17,5 +18,4 @@ function (user, context, callback) { // eslint-disable-line
 
   auth0.users.updateUserMetadata(user.user_id, user.user_metadata);
   return callback(null, user, context);
-
 }

@@ -7,7 +7,7 @@ const propTypes = {
   className: PropTypes.string,
 }
 
-export default function Block ({children, ...props}) {
+export default function Block({ children, ...props }) {
   const classes = classnames(styles.cta, props.className)
   return (
     <div {...props} className={classes}>

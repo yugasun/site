@@ -1,14 +1,14 @@
 module.exports = {
-  "facebook": {
-    "filename": "facebook.svg"
+  facebook: {
+    filename: 'facebook.svg'
   },
-  "github": {
-    "filename": "github.svg"
+  github: {
+    filename: 'github.svg'
   },
-  "pencil": {
-    "filename": "pencil.svg"
+  pencil: {
+    filename: 'pencil.svg'
   },
-  "twitter": {
-    "filename": "twitter.svg"
+  twitter: {
+    filename: 'twitter.svg'
   }
 }

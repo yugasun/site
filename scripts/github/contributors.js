@@ -2,49 +2,49 @@
  * https://github.com/putaindecode/putaindecode.io/blob/master/scripts/contributors.js
  */
 
-import fs from "fs"
-import path from "path"
+import fs from 'fs'
+import path from 'path'
 
-import color from "chalk"
-import { denodeify as asyncify } from "promise"
+import color from 'chalk'
+import { denodeify as asyncify } from 'promise'
 
-import GithubApi from "github"
+import GithubApi from 'github'
 
-import logger from "nano-logger"
+import logger from 'nano-logger'
 
-const exec = asyncify(require("child_process").exec)
-const glob = asyncify(require("glob"))
+const exec = asyncify(require('child_process').exec)
+const glob = asyncify(require('glob'))
 const readFile = asyncify(fs.readFile)
 const writeFile = asyncify(fs.writeFile)
 
 const topContribMonths = 6
-const authorsFiles = "content/authors/*.json"
-const contributorsFile = "contributors.json"
+const authorsFiles = 'content/authors/*.json'
+const contributorsFile = 'contributors.json'
 
 const githubApi = new GithubApi({
-  version: "3.0.0",
+  version: '3.0.0',
   headers: {
-    "user-agent": "putaindecode",
+    'user-agent': 'putaindecode',
   },
 })
 
 // @todo get user/repo from git origin
 const repoMetas = {
-  user: "putaindecode",
-  repo: "putaindecode.io",
+  user: 'putaindecode',
+  repo: 'putaindecode.io',
 }
 
 const commitsRE = /^(\d+)/
 const emailRE = /<(.+)>$/
 
-const log = logger("contributors")
+const log = logger('contributors')
 
 let githubIsDown = false
 function isGithubDown(err) {
-  if (err.toString().indexOf("getaddrinfo ENOTFOUND") > -1) {
+  if (err.toString().indexOf('getaddrinfo ENOTFOUND') > -1) {
     if (!githubIsDown) {
       githubIsDown = true
-      log(color.red("⚠︎ Cannot reach GitHub API. Are you offline?"))
+      log(color.red('⚠︎ Cannot reach GitHub API. Are you offline?'))
     }
   }
   else {
@@ -57,7 +57,7 @@ function sortObjectByKeys(obj) {
   const newObj = {}
   const keys = Object.keys(obj)
   keys.sort()
-  keys.forEach(function(key) {
+  keys.forEach((key) => {
     newObj[key] = obj[key]
   })
 
@@ -76,9 +76,9 @@ async function getContributorFromGitHub(user) {
       avatar_url: githubUser.avatar_url,
       url:
         githubUser.blog
-        ? githubUser.blog.indexOf("http") === 0
+        ? githubUser.blog.indexOf('http') === 0
           ? githubUser.blog
-          : "http://" + githubUser.blog
+          : `http://${githubUser.blog}`
         : undefined,
       location: githubUser.location,
       hireable: githubUser.hireable,
@@ -97,14 +97,14 @@ async function contributorsMap() {
   const loginCache = {}
 
   const files = await glob(authorsFiles)
-  log("✓ Authors json parsed")
+  log('✓ Authors json parsed')
   await Promise.all(files.map(async (jsonAuthorFile) => {
-    const author = path.basename(jsonAuthorFile, ".json")
+    const author = path.basename(jsonAuthorFile, '.json')
 
     // get author right now if not in cache
     // even if they didn't commit anything yet
     if (!results.map[author]) {
-      log("- Author not cached", author)
+      log('- Author not cached', author)
       results.map[author] = await getContributorFromGitHub(author)
     }
 
@@ -113,22 +113,22 @@ async function contributorsMap() {
       login: author,
       name: author,
       ...results.map[author],
-      ...require("../" + jsonAuthorFile),
+      ...require(`../${jsonAuthorFile}`),
     }
     loginCache[author] = results.map[author]
   }))
 
-  const stdout = await exec("git log --pretty=format:%ae::%an | sort | uniq")
-  log("- Git log done")
+  const stdout = await exec('git log --pretty=format:%ae::%an | sort | uniq')
+  log('- Git log done')
 
   const newUsers = []
 
   // update contributorsMap
   stdout
-    .trim("\n")
-    .split("\n")
+    .trim('\n')
+    .split('\n')
     .forEach((line) => {
-      const author = line.split("::")
+      const author = line.split('::')
       if (!results.mapByEmail[author[0]]) {
         newUsers.push({
           email: author[0],
@@ -145,13 +145,13 @@ async function contributorsMap() {
 
   // get new contributors
   if (newUsers.length > 0) {
-    log(`- ${ newUsers.length } new users`)
+    log(`- ${newUsers.length} new users`)
 
     await Promise.all(newUsers.map(async (author) => {
       const email = author.email
-      log("Request user information from GitHub for", email)
+      log('Request user information from GitHub for', email)
       const out = await exec(
-        "git log --max-count=1 --pretty=format:%H --author=" + email
+        `git log --max-count=1 --pretty=format:%H --author=${email}`
       )
       // log("- New contibutor update in progress", email)
       let contributor
@@ -165,7 +165,7 @@ async function contributorsMap() {
           if (loginCache[contributorCommit.author.login]) {
             contributor = loginCache[contributorCommit.author.login]
             log(
-              "Contributor already in cache",
+              'Contributor already in cache',
               contributorCommit.author.login
             )
           }
@@ -173,14 +173,14 @@ async function contributorsMap() {
             contributor =
               await getContributorFromGitHub(contributorCommit.author.login)
             loginCache[contributorCommit.author.login] = contributor
-            log("Contributor added to cache", contributorCommit.author.login)
+            log('Contributor added to cache', contributorCommit.author.login)
           }
         }
         else {
           log(
-            "✗ Unable to get contributor information for " +
-            author.name + " <" + author.email +
-            `> (no commit in ${ repoMetas.user }/${ repoMetas.repo })`
+            `✗ Unable to get contributor information for ${
+            author.name} <${author.email
+            }> (no commit in ${repoMetas.user}/${repoMetas.repo})`
           )
         }
 
@@ -195,13 +195,13 @@ async function contributorsMap() {
             if (!results.map[contributor.login]) {
               results.map[contributor.login] = contributor
             }
-            log("New contributor added in map", contributor.login)
+            log('New contributor added in map', contributor.login)
           }
         }
       }
       catch (err) {
-        if (err.toString().indexOf("\Not Found\"") > -1) {
-          log(color.red("⚠︎ Cannot connect to GitHub for " + email))
+        if (err.toString().indexOf('\Not Found"') > -1) {
+          log(color.red(`⚠︎ Cannot connect to GitHub for ${email}`))
         }
         else {
           setTimeout(() => {
@@ -211,7 +211,7 @@ async function contributorsMap() {
       }
     }))
 
-    log("✓ Parallel updates done")
+    log('✓ Parallel updates done')
   }
 
   // sort
@@ -223,17 +223,17 @@ async function totalContributions() {
   results.contributions = {}
 
   // Get the first commit sha
-  const sha = await exec("git log --reverse --pretty=format:%H|head -1")
+  const sha = await exec('git log --reverse --pretty=format:%H|head -1')
   // Get all contributor since first commit
   const stdout = await exec(
-    `git shortlog --no-merges --summary --numbered --email ` +
+    'git shortlog --no-merges --summary --numbered --email ' +
     `${sha.trim()}..HEAD`
   )
 
   stdout
-    .trim("\n")
-    .split("\n")
-    .forEach(function(line) {
+    .trim('\n')
+    .split('\n')
+    .forEach((line) => {
       line = line.trim()
       const login = results.mapByEmail[line.match(emailRE)[1]]
       const contributions = parseInt(line.match(commitsRE)[1], 10)
@@ -255,17 +255,17 @@ async function recentContributions() {
   const since = new Date()
   since.setMonth(since.getMonth() - topContribMonths)
 
-  const command = `git shortlog --no-merges --summary --numbered --email ` +
-    `--since "${ since.toISOString() }"` +
+  const command = 'git shortlog --no-merges --summary --numbered --email ' +
+    `--since "${since.toISOString()}"` +
     // http://stackoverflow.com/questions/15564185/#15566068
-    ` < /dev/tty`
+    ' < /dev/tty'
 
   const stdout = await exec(command)
 
   stdout
-    .trim("\n")
-    .split("\n")
-    .forEach(function(line) {
+    .trim('\n')
+    .split('\n')
+    .forEach((line) => {
       line = line.trim()
       const login = results.mapByEmail[line.match(emailRE)[1]]
       const contributions = parseInt(line.match(commitsRE)[1], 10)
@@ -283,19 +283,19 @@ async function recentContributions() {
 async function filesContributions() {
   // files contributions
   results.files = {}
-  const files = await glob("content/**/*")
+  const files = await glob('content/**/*')
 
   await Promise.all(files.map(async (file) => {
     const stdout = await exec(
-      "git log --pretty=short --follow " + file +
-        " | git shortlog --summary --numbered --no-merges --email"
+      `git log --pretty=short --follow ${file
+        } | git shortlog --summary --numbered --no-merges --email`
     )
 
     if (stdout) {
       results.files[file] = {}
       stdout
-        .trim("\n")
-        .split("\n")
+        .trim('\n')
+        .split('\n')
         .forEach((line) => {
           line = line.trim()
           const login = results.mapByEmail[line.match(emailRE)[1]]
@@ -305,21 +305,21 @@ async function filesContributions() {
   }))
 }
 
-(async function() {
+(async function () {
   if (Object.keys(results) > 1) {
-    log("✓ Contributors list already generated")
+    log('✓ Contributors list already generated')
   }
   else {
     try {
       const contributors = await readFile(
         contributorsFile,
-        { encoding: "utf-8" }
+        { encoding: 'utf-8' }
       )
       results = JSON.parse(contributors)
-      log("✓ contributors.json parsed")
+      log('✓ contributors.json parsed')
     }
     catch (err) {
-      log(color.red("⚠︎ No contributors.json or malformed content"))
+      log(color.red('⚠︎ No contributors.json or malformed content'))
       log(color.red(err.toString()))
       results.map = {}
       results.mapByEmail = {}
@@ -328,43 +328,43 @@ async function filesContributions() {
     const githubToken = process.env.GITHUB_TOKEN || process.env.GH_TOKEN
     if (!githubToken && Object.keys(results.map).length === 0) {
       log(color.yellow(
-        "In order to generate a new `contributors.json` map, " +
-        "you will need a GitHub token available as an environement variable. "
+        'In order to generate a new `contributors.json` map, ' +
+        'you will need a GitHub token available as an environement variable. '
       ))
       log(color.yellow(
-        "Please be sure to get one in GITHUB_TOKEN or GH_TOKEN variables. " +
-        "\nThis will be require to get full features of the website that " +
-        "concern contributors."
+        'Please be sure to get one in GITHUB_TOKEN or GH_TOKEN variables. ' +
+        '\nThis will be require to get full features of the website that ' +
+        'concern contributors.'
       ))
       log(color.yellow(
-        "Visit https://github.com/settings/tokens/new to generate a token, " +
-        "then you can put it in a file in your home and source it like this: "
+        'Visit https://github.com/settings/tokens/new to generate a token, ' +
+        'then you can put it in a file in your home and source it like this: '
       ))
       log(color.yellow(
-        "if [[ -f $HOME/.github_token ]]\n" +
-        "then\n" +
-        "  export GITHUB_TOKEN=$(cat $HOME/.github_token)\n" +
-        "fi\n"
+        'if [[ -f $HOME/.github_token ]]\n' +
+        'then\n' +
+        '  export GITHUB_TOKEN=$(cat $HOME/.github_token)\n' +
+        'fi\n'
       ))
     }
 
     if (githubToken) {
       githubApi.authenticate({
-        type: "oauth",
+        type: 'oauth',
         token: process.env.GITHUB_TOKEN || process.env.GH_TOKEN,
       })
 
       await contributorsMap()
-      log("✓ Contributors cache updated")
+      log('✓ Contributors cache updated')
 
       await totalContributions()
-      log("✓ Total contributions done")
+      log('✓ Total contributions done')
 
       await recentContributions()
-      log("✓ Recent contributions done")
+      log('✓ Recent contributions done')
 
       await filesContributions()
-      log("✓ Contributions per files done")
+      log('✓ Contributions per files done')
     }
 
     if (!githubIsDown) {
@@ -373,5 +373,5 @@ async function filesContributions() {
   }
 
   return results
-})()
+}())
 .catch(console.log)

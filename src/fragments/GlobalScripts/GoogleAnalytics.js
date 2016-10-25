@@ -7,43 +7,43 @@ const googleAnalyticsUA = process.env.GOOGLE_ANALYTICS_UA
 
 class GoogleAnalyticsTracker extends Component {
 
-  componentWillMount () {
+  componentWillMount() {
     if (isClient) {
       if (isProduction) {
         ga('create', googleAnalyticsUA, 'auto')
       } else {
         console.info('ga.create', googleAnalyticsUA)
       }
-      this.logPageview()
+      logPageview()
     }
   }
 
-  componentWillReceiveProps (props) {
+  componentWillReceiveProps(props) {
     if (props.params.splat !== this.props.params.splat) {
-      this.logPageview()
+      logPageview()
     }
   }
 
-  logPageview () {
-    if (isClient) {
-      if (isProduction) {
-        ga('set', 'page', window.location.pathname)
-        ga('send', 'pageview')
-      } else {
-        console.info('New pageview', window.location.href)
-      }
-    }
-  }
-
-  render () {
+  render() {
     return (
       <InjectGoogleAnalytics />
     )
   }
 }
 
+const logPageview = () => {
+  if (isClient) {
+    if (isProduction) {
+      ga('set', 'page', window.location.pathname)
+      ga('send', 'pageview')
+    } else {
+      console.info('New pageview', window.location.href)
+    }
+  }
+}
+
 GoogleAnalyticsTracker.propTypes = {
-  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   params: PropTypes.object.isRequired,
 }
 

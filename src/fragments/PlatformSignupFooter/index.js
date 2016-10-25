@@ -7,17 +7,17 @@ import styles from './PlatformSignupFooter.css'
 const DISMISS = 'dismissSignup'
 
 export default class PlatformSignupFooter extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.state = {
       showHelloBar: false,
     }
   }
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('serverlessLogin', this.handleToggle, false)
     this.showBar(10000)
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.clearTimeout(this.delay)
     window.removeEventListener('serverlessLogin', this.handleToggle)
   }
@@ -41,7 +41,7 @@ export default class PlatformSignupFooter extends Component {
   setCookie = () => {
     createCookie(DISMISS, true, 2)
   }
-  render () {
+  render() {
     let renderElement = null
     if (this.state.showHelloBar) {
       renderElement = (
@@ -50,7 +50,7 @@ export default class PlatformSignupFooter extends Component {
           active={this.state.showHelloBar}
           position={'bottom'}
           className={styles.signUp}
-          >
+        >
           <div className={styles.inner}>
             <div className={styles.text}>
               The Serverless Platform is coming

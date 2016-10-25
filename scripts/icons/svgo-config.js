@@ -1,4 +1,4 @@
-module.exports = function svgoConfig (className) {
+module.exports = function svgoConfig(className) {
   return {
     plugins: [{
       cleanupAttrs: true,
@@ -21,45 +21,45 @@ module.exports = function svgoConfig (className) {
     }, {
       removeEmptyAttrs: true,
     }, {
-    removeHiddenElems: true,
-  }, {
-    removeEmptyText: true,
-  }, {
-    removeEmptyContainers: true,
-  }, {
-    removeViewBox: false,
-  }, {
-    cleanUpEnableBackground: true,
-  }, {
-    convertStyleToAttrs: true,
-  }, {
-    convertColors: true,
-  }, {
+      removeHiddenElems: true,
+    }, {
+      removeEmptyText: true,
+    }, {
+      removeEmptyContainers: true,
+    }, {
+      removeViewBox: false,
+    }, {
+      cleanUpEnableBackground: true,
+    }, {
+      convertStyleToAttrs: true,
+    }, {
+      convertColors: true,
+    }, {
     /* https://github.com/svg/svgo/blob/master/plugins/convertPathData.js#L9-L26 */
     // convertPathData: false,
-    convertPathData: {
-      applyTransforms: true,
-      applyTransformsStroked: true,
-      makeArcs: {
-        threshold: 2.5, // coefficient of rounding error
-        tolerance: 0.5  // percentage of radius
+      convertPathData: {
+        applyTransforms: true,
+        applyTransformsStroked: true,
+        makeArcs: {
+          threshold: 2.5, // coefficient of rounding error
+          tolerance: 0.5  // percentage of radius
+        },
+        straightCurves: true,
+        lineShorthands: true,
+        curveSmoothShorthands: true,
+        floatPrecision: 3.35,
+        transformPrecision: 3,
+        removeUseless: true,
+        collapseRepeated: true,
+        utilizeAbsolute: true,
+        leadingZero: true,
+        negativeExtraSpace: true
       },
-      straightCurves: true,
-      lineShorthands: true,
-      curveSmoothShorthands: true,
-      floatPrecision: 3.35,
-      transformPrecision: 3,
-      removeUseless: true,
-      collapseRepeated: true,
-      utilizeAbsolute: true,
-      leadingZero: true,
-      negativeExtraSpace: true
-    },
-  }, {
-    convertTransform: true,
-  }, {
-    removeUnknownsAndDefaults: true,
-  }, {
+    }, {
+      convertTransform: true,
+    }, {
+      removeUnknownsAndDefaults: true,
+    }, {
     removeNonInheritableGroupAttrs: true,
   }, {
     removeUselessStrokeAndFill: true,
@@ -89,7 +89,7 @@ module.exports = function svgoConfig (className) {
     removeDimensions: true,
   },
     {
-      addClassesToSVGElement: {className: className}
+      addClassesToSVGElement: { className }
     }
   // {
   //   removeAttrs: {attrs: '(stroke|fill)'},

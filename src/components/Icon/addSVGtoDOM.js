@@ -1,6 +1,6 @@
 
-export default function addSVGtoDOM (target, sprite) {
-  var svg = target || document.getElementById('svg-sprite')
+export default function addSVGtoDOM(target, sprite) {
+  let svg = target || document.getElementById('svg-sprite')
   if (!svg) {
     svg = document.createElementNS(null, 'svg')
     svg.setAttribute('width', '0')
@@ -11,9 +11,9 @@ export default function addSVGtoDOM (target, sprite) {
     svg.setAttribute('id', 'svg-sprite')
     document.body.appendChild(svg)
 
-    var receptacle = document.createElement('div')
-    var svgfragment = `<svg>${sprite}</svg>`
-    receptacle.innerHTML = '' + svgfragment
+    const receptacle = document.createElement('div')
+    const svgfragment = `<svg>${sprite}</svg>`
+    receptacle.innerHTML = `${svgfragment}`
     Array.prototype.slice.call(receptacle.childNodes[0].childNodes).forEach((el) => {
       svg.appendChild(el)
     })

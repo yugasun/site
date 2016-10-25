@@ -2,10 +2,10 @@ import React from 'react'
 import AutoForm from 'react-auto-form'
 import Page from '../../layouts/Default'
 import styles from './Enterprise.css'
-import submitForm from './form.js'
+import submitForm from './form'
 
 export default class PartnersPage extends React.Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.state = {
       error: false,
@@ -16,8 +16,8 @@ export default class PartnersPage extends React.Component {
     event.preventDefault()
     // console.log(event)
     // console.log(data)
-    var that = this
-    submitForm(data, function (err, data) {
+    const that = this
+    submitForm(data, (err, _response) => {
       if (err) {
         console.log('err', err)
         that.setState({
@@ -31,7 +31,7 @@ export default class PartnersPage extends React.Component {
     })
   }
 
-  render () {
+  render() {
     let errorDiv
     if (this.state.error) {
       errorDiv = (

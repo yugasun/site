@@ -1,12 +1,12 @@
-var fs = require('fs-extra')
-var path = require('path')
-var parse = require('htmlparser2')
-var jade = require('jade')
-var spriteTemplate = path.join(__dirname, 'templates', 'layout.jade')
-var _ = require('lodash')
+const fs = require('fs-extra')
+const path = require('path')
+const parse = require('htmlparser2')
+const jade = require('jade')
+const spriteTemplate = path.join(__dirname, 'templates', 'layout.jade')
+const _ = require('lodash')
 
-module.exports = function buildSprite (filePath, files, cb) {
-  var data = {
+module.exports = function buildSprite(filePath, files, cb) {
+  const data = {
     svg: {
       xmlns: 'http://www.w3.org/2000/svg',
       'xmlns:xlink': 'http://www.w3.org/1999/xlink',
@@ -16,13 +16,13 @@ module.exports = function buildSprite (filePath, files, cb) {
     symbols: []
   }
   // each over files
-  files.forEach(function (file) {
-    var fpath = path.join(filePath, file)
+  files.forEach((file) => {
+    const fpath = path.join(filePath, file)
     // load and minify
-    var buffer = fs.readFileSync(fpath, 'utf8')
+    const buffer = fs.readFileSync(fpath, 'utf8')
     // get filename for id generation
-    var filename = path.basename(fpath, '.svg')
-    var handler = new parse.DomHandler(function (error, dom) {
+    const filename = path.basename(fpath, '.svg')
+    const handler = new parse.DomHandler((error, dom) => {
       if (error) {
         console.log(error)
       }
@@ -30,25 +30,25 @@ module.exports = function buildSprite (filePath, files, cb) {
     })
 
     // lets create parser instance
-    var Parser = new parse.Parser(handler, {
+    const Parser = new parse.Parser(handler, {
       xmlMode: true
     })
     Parser.write(buffer)
     Parser.end()
   })
   // console.log('Final', data)
-  var spriteContents = _createSprite(data)
+  const spriteContents = _createSprite(data)
 
   // TODO expose this as option
-  var svgs = path.join(__dirname, '..', '..', 'src', 'assets', 'icons')
-  var spriteDestinationPath = path.join(svgs, 'sprite.svg')
-  var jsDestinationPath = path.join(svgs, 'sprite.js')
-  fs.writeFile(spriteDestinationPath, spriteContents, 'utf8', function () {
+  const svgs = path.join(__dirname, '..', '..', 'src', 'assets', 'icons')
+  const spriteDestinationPath = path.join(svgs, 'sprite.svg')
+  const jsDestinationPath = path.join(svgs, 'sprite.js')
+  fs.writeFile(spriteDestinationPath, spriteContents, 'utf8', () => {
     console.log('sprite.svg Build DONE')
-    var prefix = 'module.exports =  \`'
-    var postfix = '\`;\n'
+    const prefix = 'module.exports =  \`'
+    const postfix = '\`;\n'
     const combinedCode = prefix + spriteContents + postfix
-    fs.writeFile(jsDestinationPath, combinedCode, function (err) {
+    fs.writeFile(jsDestinationPath, combinedCode, (err) => {
       if (err) {
         return console.log(err)
       }
@@ -58,12 +58,12 @@ module.exports = function buildSprite (filePath, files, cb) {
   })
 }
 
-var _createSprite = function (data) {
+let _createSprite = function (data) {
   return jade.renderFile(spriteTemplate, data)
 }
 
-var _parseDomObject = function (data, filename, dom, prefix) {
-  var id = _convertFilenameToId(filename)
+let _parseDomObject = function (data, filename, dom, prefix) {
+  const id = _convertFilenameToId(filename)
   if (dom && dom[0]) {
     _defs(id, dom[0], data.defs)
     _symbols(id, dom[0], data.symbols, prefix)
@@ -72,23 +72,23 @@ var _parseDomObject = function (data, filename, dom, prefix) {
   return data
 }
 
-var _convertFilenameToId = function (filename) {
-  var _name = filename
-  var dotPos = filename.indexOf('.')
+let _convertFilenameToId = function (filename) {
+  let _name = filename
+  const dotPos = filename.indexOf('.')
   if (dotPos > -1) {
     _name = filename.substring(0, dotPos)
   }
   return _name
 }
 
-var _defs = function (id, dom, data) {
+let _defs = function (id, dom, data) {
   // lets find defs into dom
-  var defs = _.filter(dom.children, { name: 'defs' })
+  const defs = _.filter(dom.children, { name: 'defs' })
   // check childrens
-  defs.forEach(function (item) {
+  defs.forEach((item) => {
     if (item.children && item.children.length > 0) {
       // mutable attribute
-      item.children.forEach(function (_data) {
+      item.children.forEach((_data) => {
         _data.attribs.id = [id, _data.attribs.id || 'icon-id'].join('-')
         data.push(_data)
       })
@@ -98,9 +98,9 @@ var _defs = function (id, dom, data) {
   return data
 }
 
-var _symbols = function (id, dom, data, prefix) {
+let _symbols = function (id, dom, data, prefix) {
   // create symbol object
-  var symbol = {
+  const symbol = {
     type: 'tag',
     name: 'symbol',
     attribs: {
@@ -114,7 +114,7 @@ var _symbols = function (id, dom, data, prefix) {
   }
 
   // add dom children without defs and titles
-  symbol.children = _.filter(dom.children, function (obj) {
+  symbol.children = _.filter(dom.children, (obj) => {
     return obj.name !== 'defs' && obj.name !== 'title'
   })
 
@@ -127,9 +127,9 @@ var _symbols = function (id, dom, data, prefix) {
   return data
 }
 
-var _parseSVG = function (arr, id) {
-  var data = []
-  arr.forEach(function (obj, i) {
+let _parseSVG = function (arr, id) {
+  const data = []
+  arr.forEach((obj, i) => {
     if (obj) {
       // console.log('obj', obj)
       // add unic ids to urls
@@ -149,40 +149,40 @@ var _parseSVG = function (arr, id) {
   return data
 }
 
-var _addPathClasses = function (obj, id, i) {
-  var hasClass = (obj.attribs['class']) ? obj.attribs['class'] + ' ' : ''
+let _addPathClasses = function (obj, id, i) {
+  var hasClass = (obj.attribs.class) ? `${obj.attribs.class} ` : ''
   if (obj.name === 'path') {
-    obj.attribs['class'] = hasClass + id + '-path-' + i
+    obj.attribs.class = `${hasClass + id}-path-${i}`
   }
   if (obj.name === 'circle') {
-    var hasClass = (obj.attribs['class']) ? obj.attribs['class'] + ' ' : ''
-    obj.attribs['class'] = hasClass + id + '-circle-' + i
+    var hasClass = (obj.attribs.class) ? `${obj.attribs.class} ` : ''
+    obj.attribs.class = `${hasClass + id}-circle-${i}`
   }
 }
 
-var _fixUrls = function (obj, id) {
-  var key
-  var match
-  var json = obj.attribs
+let _fixUrls = function (obj, id) {
+  let key
+  let match
+  const json = obj.attribs
   if (json) {
     for (key in json) {
       if (json.hasOwnProperty(key)) {
         match = /url\(\s*#([^ ]+?)\s*\)/g.exec(json[key])
         if (key && match) {
-          json[key] = 'url(#' + id + '-' + match[1] + ')'
+          json[key] = `url(#${id}-${match[1]})`
         }
       }
     }
   }
 }
 
-var _fixIds = function (obj, id) {
+let _fixIds = function (obj, id) {
   // add id
   if (obj.attribs && obj.attribs.id) {
     obj.attribs.id = [id, obj.attribs.id].join('-')
   }
   // add id to use tag
   if (obj.name === 'use') {
-    obj.attribs['xlink:href'] = ['#' + id, obj.attribs['xlink:href'].replace('#', '')].join('-')
+    obj.attribs['xlink:href'] = [`#${id}`, obj.attribs['xlink:href'].replace('#', '')].join('-')
   }
 }
