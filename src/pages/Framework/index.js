@@ -77,7 +77,7 @@ export default class PartnersPage extends React.Component {
           </div>
         </div>
         <div className={styles.button}>
-          <Button kind='black' href='https://serverless.com/framework/docs/guide/'>
+          <Button kind='black' href='/framework/docs/'>
           Get Started
           </Button>
         </div>
