@@ -3,15 +3,22 @@ import React, { Component, PropTypes } from 'react'
 import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
 import PlatformSignupFooter from './fragments/PlatformSignupFooter'
-import {initializeVisitorID, getVisitorID} from './utils/analytics/visitor' // eslint-disable-line
+import { initializeVisitorID } from './utils/analytics/visitor'
 // Import global CSS before other components and their styles
 import './index.global.css'
 import styles from './index.css'
 
-export default class Root extends Component {
+const propTypes = {
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  /** React Router params **/
+  params: PropTypes.object,
+  location: PropTypes.object,
+  history: PropTypes.object,
+}
+
+export default class App extends Component {
   componentDidMount() {
     initializeVisitorID()
-    // const id = getVisitorID()
     window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
   }
   componentWillUnmount() {
@@ -19,7 +26,6 @@ export default class Root extends Component {
   }
   handleAuthRedirect = (e) => {
     const redirectURL = e.detail.url
-    // alert('Do redirect') // eslint-disable-line
     this.props.history.push(redirectURL)
   }
   render() {
@@ -38,12 +44,4 @@ export default class Root extends Component {
   }
 }
 
-Root.propTypes = {
-  /** references /layouts.js or a dynamic route from routes.js **/
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  /** React Router params **/
-  params: PropTypes.object,
-  location: PropTypes.object,
-  history: PropTypes.object,
-  dispatch: PropTypes.func,
-}
+App.propTypes = propTypes

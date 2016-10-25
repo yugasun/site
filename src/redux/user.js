@@ -46,7 +46,7 @@ export function login() {
   }
   return dispatch => {
     if (isClient) {
-      lock.login(options)
+      lock.show(options)
     }
     return dispatch(loginStarted())
     // login finishes via custom middleware

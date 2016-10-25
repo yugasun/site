@@ -1,46 +1,16 @@
-import { loginSuccess, loginError } from '../../redux/user'
-import getURLParams from '../urlHelpers'
-import { setItem } from '../storage'
-import { getXsrfToken } from './xsrfToken'
-import lockInstance from './index'
+import { loginSuccess, loginError } from './user'
+import runMiddlewareOnce from './utils/runMiddlewareOnce'
+import getURLParams from '../utils/urlHelpers'
+import { setItem } from '../utils/storage'
+import { getXsrfToken } from '../utils/auth/xsrfToken'
+import lockInstance from '../utils/auth'
 
-function handleAuthRedirect(url) {
-  const redirect = new CustomEvent('reactRouterRedirect', { // eslint-disable-line
-    detail: {
-      url,
-    },
-    bubbles: false,
-    cancelable: false
-  })
-  window.dispatchEvent(redirect)
-}
-
-const createOneShot = (middleware) => {
-  let hasBeenTriggered = false
-  return (store) => (next) => (action) => {
-    next(action)
-
-    if (!hasBeenTriggered) {
-      hasBeenTriggered = true
-      middleware(store.dispatch)
-    }
-  }
-}
-
-/*
-  This function is called exactly once as soon as the first action
-  runs through redux. Perfect moment to glue things together!
-
-  someEventEmitter.addEventListener('change', (event) => {
-      dispatch(someAction(event.value));
-  });
-*/
-const authMiddleware = createOneShot((dispatch) => { // eslint-disable-line
+const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
   if (typeof window === 'undefined') {
     return false
   }
   if (process.env.NODE_ENV === 'development') {
-    console.log('authListener middleware added')
+    console.log('axuthListener middleware added')
   }
   // register lock callback once
   lockInstance.on('authenticated', (authResult) => { // eslint-disable-line
@@ -77,5 +47,16 @@ const authMiddleware = createOneShot((dispatch) => { // eslint-disable-line
     })
   })
 })
+
+function handleAuthRedirect(url) {
+  const redirect = new CustomEvent('reactRouterRedirect', { // eslint-disable-line
+    detail: {
+      url,
+    },
+    bubbles: false,
+    cancelable: false
+  })
+  window.dispatchEvent(redirect)
+}
 
 export default authMiddleware

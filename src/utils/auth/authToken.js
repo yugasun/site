@@ -9,8 +9,7 @@ function getTokenExpirationDate(token) {
     return null
   }
 
-  // The 0 here is the key, which sets the date to the epoch
-  const date = new Date(0)
+  const date = new Date(0) // The 0 here is the key, which sets the date to the epoch
   date.setUTCSeconds(decoded.exp)
   return date
 }

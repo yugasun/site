@@ -20,6 +20,7 @@ TODO: add previous release tag links https://developer.github.com/v3/repos/relea
 */
 
 class Doc extends Component {
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.sidebarNode = null
@@ -49,115 +50,8 @@ class Doc extends Component {
     } else {
       this.sidebarNode.style.position = 'relative'
       this.sidebarNode.style.top = '0px'
-
       // this.sidebarNode.style.background = 'white'
     }
-  }
-  renderParentList() {
-    const { __url } = this.props
-    const trimmedURL = __url.replace(/\/$/, '')
-    const urlArray = trimmedURL.split('/')
-    urlArray.pop()
-    const correctURL = urlArray.join('/')
-    const menu = generatedMenu[correctURL] || generatedMenu[`${correctURL}/`]
-    let renderItems
-    if (menu && menu.children) {
-      renderItems = menu.children.map((item, i) => {
-        const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
-        let link
-        if (item.path === trimmedURL) {
-          link = (
-            <span>{item.title}</span>
-          )
-        } else {
-          link = (
-            <Link to={item.path} >
-              {item.title}
-            </Link>
-          )
-        }
-        return (
-          <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
-            {link}
-          </li>
-        )
-      })
-    }
-    if (renderItems) {
-      return (
-        <div className={styles.subPages}>
-          <span className={styles.subPageLinkHeading}>Jump to:</span>
-          <ul>
-            {renderItems}
-          </ul>
-        </div>
-      )
-    }
-  }
-  renderChildrenList() {
-    const { __url } = this.props
-    const trimmedURL = __url.replace(/\/$/, '')
-    const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
-    let renderItems
-    if (menu && menu.children) {
-      renderItems = menu.children.map((item, i) => {
-        const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
-        return (
-          <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
-            <Link to={item.path}>
-              {item.title}
-            </Link>
-          </li>
-        )
-      })
-    }
-    if (renderItems) {
-      return (
-        <div className={styles.subPages}>
-          <span className={styles.subPageLinkHeading}>Sections</span>
-          <ul>
-            {renderItems}
-          </ul>
-        </div>
-      )
-    }
-  }
-  renderSidebar() {
-    const childrenItems = this.renderChildrenList()
-    const parentItems = this.renderParentList()
-    return (
-      <div className={`${styles.sidebar} docs-sidebar`}>
-        <div className={styles.sidebarInner}>
-          <div className={styles.searchBumper}>
-            <div ref='sidebar' className={styles.searchWrapper}>
-              <input
-                className={styles.searchBox}
-                id='algolia-search'
-                placeholder='&#9889;  Search docs'
-                type='text'
-              />
-            </div>
-          </div>
-          <div className={styles.sidebarBlock}>
-            <div className={styles.sidebarLinks}>
-              <a href='https://gitter.im/serverless/serverless'>
-                Join chat on Gitter
-              </a>
-            </div>
-            <div className={styles.sidebarLinks}>
-              <a href='http://forum.serverless.com'>
-                Read Serverless Forum
-              </a>
-            </div>
-          </div>
-          {childrenItems}
-          {parentItems}
-          <div className={styles.versionNumber}>
-            Docs Version: {process.env.DOCS_VERSION}
-          </div>
-        </div>
-      </div>
-    )
   }
   renderList() {
     const { __url } = this.props
@@ -181,10 +75,17 @@ class Doc extends Component {
   renderNewSidebar() {
     const { __url } = this.props
     const items = this.renderList()
+    console.log('__url', __url)
     const trimmedURL = __url.replace(/\/$/, '')
     const parent = trimmedURL.split('/')
     const parentName = parent[parent.length - 2]
-    const parentDisplay = (parentName !== 'framework') ? parentName : 'Framework Docs'
+    let parentDisplay = parentName
+
+    if (parentName === 'aws') {
+      parentDisplay = 'AWS'
+    } else if (parentName === 'framework') {
+      parentDisplay = 'Framework Docs'
+    }
     return (
       <div className={styles.sidebar}>
         <div className={styles.sidebarInner}>
@@ -202,6 +103,7 @@ class Doc extends Component {
           <div className={styles.pageContext}>
             {parentDisplay}
           </div>
+
           <div className={styles.subPages}>
             <ul>
               {items}
@@ -221,9 +123,14 @@ class Doc extends Component {
       __url,
       head,
       body,
+      isLoading,
     } = this.props
-
-    const githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
+    let githubURL
+    if (isLoading) {
+      githubURL = ''
+    } else {
+      githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
+    }
 
     const markdownContent = (
       <BodyContainer>
