@@ -5,14 +5,14 @@ const fs = require('fs-extra')
 const path = require('path')
 const dir = require('node-dir')
 
-const localdocsPath = path.join(__dirname, '..', '..', '..', '/serverless/docs/')
+const localdocsPath = path.join(__dirname, '..', '..', '/serverless/docs/')
 console.log('localdocsPath', localdocsPath)
 // const pathToSLSRepo = path.join()
 
 const link = (location) => {
   return `
 <!-- DOCS-SITE-LINK:START automatically generated  -->
-### [Read this on the main serverless docs site](https://www.serverless.com${location})
+### [Read this on the main serverless docs site](https://www.serverless.com/framework${location})
 <!-- DOCS-SITE-LINK:END -->`
 }
 
