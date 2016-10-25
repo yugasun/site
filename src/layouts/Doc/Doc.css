@@ -109,7 +109,6 @@ $sidebarRadius: 6px;
   max-width: $sidebarWidth;
   padding: 0px;
   border-radius: $sidebarRadius;
-  overflow: hidden;
   background: #f6f6f6;
 }
 .cta {
