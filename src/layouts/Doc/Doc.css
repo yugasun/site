@@ -27,6 +27,7 @@ $backgroundColor: #f6f6f6;
   }
 }
 .versionNumber {
+  border-top: 1px solid rgba(0,0,0,.05);
   padding: 15px;
   margin: 0px 12px;
   font-size: 1.4rem;
@@ -55,7 +56,7 @@ $backgroundColor: #f6f6f6;
   }
 }
 .searchBumper {
-  min-height: 53px;
+  min-height: 47px;
   background: $backgroundColor;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
@@ -66,7 +67,6 @@ $backgroundColor: #f6f6f6;
   max-width: $sidebarWidth;
   z-index: 6;
   padding: 15px;
-  padding-bottom: 0px;
   border-bottom-left-radius: $sidebarRadius;
   border-bottom-right-radius: $sidebarRadius;
   /*&:before {
@@ -85,7 +85,7 @@ $backgroundColor: #f6f6f6;
   font-size: 1.6rem;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 0px;
   background: #fff;
   color: #676767;
@@ -211,13 +211,18 @@ $sidebarRadius: 6px;
   }
 }
 .pageContext {
-  padding-left: 25px;
   text-transform: capitalize;
   font-weight: bold;
+  padding: 0;
+  margin: 0px 20px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  padding-bottom: 0px;
+  padding-top: 0;
 }
 .subPages {
   padding: 10px;
-  margin: 0 12px;
+  margin: 0 10px;
   margin-top: 0px;
   padding-top: 0;
   padding-left: 15px;
