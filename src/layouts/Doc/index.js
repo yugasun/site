@@ -20,7 +20,7 @@ TODO: add previous release tag links https://developer.github.com/v3/repos/relea
 */
 
 class Doc extends Component {
-  static hasLoadingState = true
+  // static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.sidebarNode = null
@@ -75,7 +75,6 @@ class Doc extends Component {
   renderNewSidebar() {
     const { __url } = this.props
     const items = this.renderList()
-    console.log('__url', __url)
     const trimmedURL = __url.replace(/\/$/, '')
     const parent = trimmedURL.split('/')
     const parentName = parent[parent.length - 2]
@@ -123,14 +122,9 @@ class Doc extends Component {
       __url,
       head,
       body,
-      isLoading,
     } = this.props
-    let githubURL
-    if (isLoading) {
-      githubURL = ''
-    } else {
-      githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
-    }
+
+    const githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
 
     const markdownContent = (
       <BodyContainer>
