@@ -133,7 +133,7 @@ class Doc extends Component {
     )
 
     const breadcrumbs = (
-      <div className={styles.breadCrumbContainer}>
+      <div className={`${styles.breadCrumbContainer}  docs-breadcrumbs`}>
         <Breadcrumbs path={__url} />
         <span ref='editLink' className={styles.editLink}>
           <Svg svg={gitHubSvg} cleanup />
@@ -144,7 +144,7 @@ class Doc extends Component {
       </div>
     )
     return (
-      <Shell {...this.props} className={`${styles.docPage} docs-breadcrumbs`} header={breadcrumbs}>
+      <Shell {...this.props} className={`${styles.docPage}`} header={breadcrumbs}>
         <Helmet
           link={[
             {
