@@ -1,5 +1,7 @@
 /* Using global styles for docs */
-
+.algolia-autocomplete {
+  width: 100%;
+}
 .docsSections {
   display: flex;
   flex-direction: row;

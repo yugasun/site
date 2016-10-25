@@ -22,26 +22,4 @@ const HeadTag = (_props) => {
   )
 }
 
-// import Sentry from '../GlobalScripts/Sentry'
-/*
-script={[
-  {'src': 'https://cdn.auth0.com/js/lock/10.4/lock.min.js', 'type': 'text/javascript'},
-]}
- */
-
-/*
-debug sentyr
-script={[
-  {
-    src: 'https://cdn.ravenjs.com/3.7.0/raven.min.js',
-    type: 'text/javascript',
-    crossorigin: 'anonymous'
-  },
-  {
-    type: 'text/javascript',
-    innerHTML: `${Sentry}`
-  }
-]}
-*/
-
 export default HeadTag

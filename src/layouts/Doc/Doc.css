@@ -1,6 +1,7 @@
 $sidebarWidth: 250px;
 $ctaWidth: 220px;
 $backgroundColor: #f6f6f6;
+$sidebarRadius: 6px;
 .docPage {
   margin-top: 20px;
   padding-bottom: 60px;
@@ -61,7 +62,7 @@ $backgroundColor: #f6f6f6;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
 }
-$sidebarRadius: 6px;
+
 .searchWrapper {
   background: $backgroundColor;
   min-width: $sidebarWidth;
@@ -70,15 +71,6 @@ $sidebarRadius: 6px;
   padding: 15px;
   border-bottom-left-radius: $sidebarRadius;
   border-bottom-right-radius: $sidebarRadius;
-  /*&:before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    margin-top: -20px;
-    height: 100%;
-    background: #fff;
-    width: 40px;
-  }*/
 }
 .searchBox {
   min-width: $ctaWidth;
@@ -97,12 +89,7 @@ $sidebarRadius: 6px;
     outline: none;
   }
 }
-:global {
-  .algolia-autocomplete {
-    width: 100%;
-  }
-}
-$sidebarRadius: 6px;
+
 .sidebarInner {
   background: #fff;
   min-width: $sidebarWidth;
