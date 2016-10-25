@@ -27,6 +27,7 @@
     "prebuild": "npm run prepareContent",
     "build": "phenomic build",
     "buildprod": "npm run syncProd && npm run prepareContent && phenomic build",
+    "postbuildprod": "node scripts/redirects.js",
     "postinstall": "node scripts/build/postinstall.js",
     "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
