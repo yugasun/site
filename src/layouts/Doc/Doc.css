@@ -61,6 +61,7 @@ $backgroundColor: #f6f6f6;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
 }
+$sidebarRadius: 6px;
 .searchWrapper {
   background: $backgroundColor;
   min-width: $sidebarWidth;
