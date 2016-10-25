@@ -179,7 +179,12 @@ class Doc extends Component {
     return items
   }
   renderNewSidebar() {
+    const { __url } = this.props
     const items = this.renderList()
+    const trimmedURL = __url.replace(/\/$/, '')
+    const parent = trimmedURL.split('/')
+    const parentName = parent[parent.length - 2]
+    const parentDisplay = (parentName !== 'framework') ? parentName : 'Framework Docs'
     return (
       <div className={styles.sidebar}>
         <div className={styles.sidebarInner}>
@@ -194,6 +199,9 @@ class Doc extends Component {
             </div>
           </div>
 
+          <div className={styles.pageContext}>
+            {parentDisplay}
+          </div>
           <div className={styles.subPages}>
             <ul>
               {items}

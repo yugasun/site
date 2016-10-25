@@ -12,11 +12,11 @@ if (!process.env.AUTH0_CLIENT_ID) {
 if (!process.env.AUTH0_DOMAIN) {
   throw new Error('AUTH_DOMAIN is not defined in /src/_config.js file')
 }
-console.log('isClient', isClient)
+
 if (isClient) {
   Auth0Lock = require('auth0-lock').default // eslint-disable-line
 }
-console.log('Auth0Lock', Auth0Lock)
+
 // init token
 initializeXsrfToken()
 
