@@ -28,7 +28,7 @@ export default class PartnersPage extends React.Component {
           <Button
             className={styles.button}
             kind='black'
-            href='/framework/docs/guide/'
+            href='/framework/docs/'
           >
             Get Started
           </Button>
