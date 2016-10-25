@@ -50,7 +50,7 @@ export default class PageError extends Component {
           It seems you found a broken link. Do not hesitate to report this page!
         </div>
         <div>
-          Tweet at <a target='_blank' rel='noopener noreferrer' href={tweet}>@goServerless</a> or
+          Tweet at <a target='_blank' rel='noopener noreferrer' href={tweet}>@goServerless</a> or&nbsp;
           <a
             href='https://github.com/serverless/site/issues'
             target='_blank'
