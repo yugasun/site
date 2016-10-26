@@ -97,12 +97,12 @@ class Post extends Component {
                 </Link>
               </div>
               <div className={styles.sidebarLinks}>
-                <a href='https://gitter.im/serverless/serverless'>
+                <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
                   Chat in Gitter
                 </a>
               </div>
               <div className={styles.sidebarLinks}>
-                <a href='http://forum.serverless.com'>
+                <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
                   Ask Questions on the Forum
                 </a>
               </div>
@@ -110,9 +110,9 @@ class Post extends Component {
 
             <BetaCTA buttonText='Get early access' />
 
-            <AuthorCTA style={{ marginTop: '20px' }} />
-
             <NewsletterCTA style={{ marginTop: '20px' }} />
+
+            <AuthorCTA style={{ marginTop: '20px' }} />
 
           </div>
         </div>

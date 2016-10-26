@@ -16,14 +16,12 @@ $sidebarWidth: 250px;
   .title {
     margin-bottom: 0px;
   }
-  .publishMeta {
-    font-size: 12px;
-  }
   .postMeta {
     font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-height: 22px;
   }
   .postContent {
     margin-top: 25px;
