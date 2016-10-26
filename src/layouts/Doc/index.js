@@ -11,6 +11,7 @@ import gitHubSvg from '../../assets/icons/github.svg'
 import generatedMenu from './generated-menu'
 import Shell from '../Default'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import ContentLoading from '../../components/ContentLoading/Paragraph'
 // Global styles are used to style html classes from github markdown files
 import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
@@ -19,8 +20,18 @@ import styles from './Doc.css'
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
 */
 
+function currentUrl(url) {
+  if (url) {
+    return url
+  }
+  if (typeof window !== 'undefined') {
+    return window.location.pathname
+  }
+  return 'fakeURL'
+}
+
 class Doc extends Component {
-  // static hasLoadingState = true
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.sidebarNode = null
@@ -55,7 +66,8 @@ class Doc extends Component {
   }
   renderList() {
     const { __url } = this.props
-    const trimmedURL = __url.replace(/\/$/, '')
+    const url = currentUrl(__url)
+    const trimmedURL = url.replace(/\/$/, '')
     const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
     let items = ''
     if (menu) {
@@ -75,7 +87,8 @@ class Doc extends Component {
   renderNewSidebar() {
     const { __url } = this.props
     const items = this.renderList()
-    const trimmedURL = __url.replace(/\/$/, '')
+    const url = currentUrl(__url)
+    const trimmedURL = url.replace(/\/$/, '')
     const parent = trimmedURL.split('/')
     const parentName = parent[parent.length - 2]
     let parentDisplay = parentName
@@ -122,19 +135,26 @@ class Doc extends Component {
       __url,
       head,
       body,
+      isLoading,
     } = this.props
+    const url = currentUrl(__url)
+    let githubURL
 
-    const githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
-
-    const markdownContent = (
+    let markdownContent = (
       <BodyContainer>
         {body}
       </BodyContainer>
     )
 
+    if (isLoading) {
+      markdownContent = <ContentLoading numberOfLines={30} />
+    } else {
+      githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
+    }
+
     const breadcrumbs = (
       <div className={`${styles.breadCrumbContainer}  docs-breadcrumbs`}>
-        <Breadcrumbs path={__url} />
+        <Breadcrumbs path={url} />
         <span ref='editLink' className={styles.editLink}>
           <Svg svg={gitHubSvg} cleanup />
           <a target='_blank' rel='noopener noreferrer' href={githubURL}>
@@ -143,6 +163,7 @@ class Doc extends Component {
         </span>
       </div>
     )
+
     return (
       <Shell {...this.props} className={`${styles.docPage}`} header={breadcrumbs}>
         <Helmet
@@ -164,9 +185,7 @@ class Doc extends Component {
             {this.renderNewSidebar()}
 
             <div className={`${styles.content} docs-content`}>
-
               {markdownContent}
-
             </div>
           </div>
         </div>
@@ -198,6 +217,8 @@ Doc.propTypes = {
   footer: PropTypes.element,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
+  /** set loading set **/
+  isLoading: PropTypes.bool,
 }
 
 export default Doc
