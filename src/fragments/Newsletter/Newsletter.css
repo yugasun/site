@@ -19,8 +19,8 @@ $height: 50px;
     border-bottom-right-radius: 0px;
     height: $height;
     font-family: avenir, sans-serif;
-    font-size: 18px;
-    color: #fff;
+    font-size: 14px;
+    color: $black2;
     &:focus {
       outline: 0!important;
     }
@@ -35,7 +35,7 @@ $height: 50px;
     cursor: pointer;
     user-select: none;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 25px;
     padding-right: 30px;
     border-radius: 3px;
