@@ -210,9 +210,9 @@ function initializeSearch() {
 }
 
 Doc.propTypes = {
-  __url: PropTypes.string.isRequired,
-  head: PropTypes.object.isRequired,
-  body: PropTypes.string.isRequired,
+  __url: PropTypes.string,
+  head: PropTypes.object,
+  body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
   /** if true, page will be full width */
