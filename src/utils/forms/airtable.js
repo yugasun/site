@@ -20,7 +20,7 @@ export default function airtablePost(endpoint, airTableData, token) {
     const e = { ...error }
     if (e.response.status === 422) {
       console.warn(e.response.statusText)
-      console.log('These object keys dont match airtable columns', airTableData.fields)
+      console.log('These object keys dont match airtable columns', airTableData.fields) // eslint-disable-line
     }
     throw error
   })
