@@ -3,7 +3,6 @@
  */
 import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
-// import invariant from 'invariant'
 import classnames from 'classnames'
 import { BodyContainer, joinUri } from 'phenomic'
 import { setItem } from '../../utils/storage'
@@ -14,10 +13,10 @@ import styles from './Default.css'
 
 const propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  __filename: PropTypes.string.isRequired,
-  __url: PropTypes.string.isRequired,
-  head: PropTypes.object.isRequired,
-  body: PropTypes.string.isRequired,
+  __filename: PropTypes.string,
+  __url: PropTypes.string,
+  head: PropTypes.object,
+  body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
   /** if true, page will be full width */
@@ -26,7 +25,7 @@ const propTypes = {
   className: PropTypes.string
 }
 
-class DefaultShell extends Component {
+class Default extends Component {
   componentDidMount() {
     const urlParams = getURLParams(window.location.href)
     if (urlParams) {
@@ -51,14 +50,8 @@ class DefaultShell extends Component {
     let metaTitle
     let meta
 
-    if (!isLoading) {
-      // invariant(
-      //   typeof head.title === 'string',
-      //   `Your page '${__filename}' needs a title`
-      // )
-
+    if (!isLoading && head) {
       metaTitle = head.metaTitle || head.title
-
       meta = [
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: metaTitle },
@@ -74,7 +67,6 @@ class DefaultShell extends Component {
       { name: 'description', content: head.description },
       ]
     }
-
     /* const linkTags = [
       {
         'rel': 'canonical',
@@ -82,11 +74,12 @@ class DefaultShell extends Component {
       },
        link={linkTags}
     ]*/
-
+    // reset for loading state
+    const bodyContent = body || ''
     /* Markdown content will display if it exists */
     const markdown = (
       <BodyContainer>
-        {body}
+        {bodyContent}
       </BodyContainer>
     )
 
@@ -116,5 +109,5 @@ class DefaultShell extends Component {
   }
 }
 
-DefaultShell.propTypes = propTypes
-export default DefaultShell
+Default.propTypes = propTypes
+export default Default

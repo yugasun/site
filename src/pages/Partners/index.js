@@ -1,7 +1,7 @@
 import React from 'react'
 // import AutoForm from 'react-auto-form'
 import Modal from '../../components/Modal/Modal'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import partners from './partners.json'
 import styles from './Partners.css'
 
@@ -69,7 +69,7 @@ export default class PartnersPage extends React.Component {
   render() {
     const { partner, showModal } = this.state
     return (
-      <Page {...this.props} className={styles.partnerPage}>
+      <Default {...this.props} className={styles.partnerPage}>
         <h1>Serverless Partners Program</h1>
         <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
         <p style={{ position: 'relative', zIndex: 2 }}>
@@ -106,7 +106,7 @@ export default class PartnersPage extends React.Component {
             </div>
           </div>
         </Modal>
-      </Page>
+      </Default>
     )
   }
 }

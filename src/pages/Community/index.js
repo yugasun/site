@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
 import { addScript, removeScript } from '../../utils/manageScripts'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import PagesList from '../../components/PagesList'
 
 const numberOfLatestPosts = 6
@@ -33,10 +33,10 @@ export default class CommunityPage extends Component {
     .slice(0, numberOfLatestPosts)
 
     return (
-      <Page {...this.props}>
+      <Default {...this.props}>
         <h2>{'Latest resources'}</h2>
         <PagesList pages={latestPosts} />
-      </Page>
+      </Default>
     )
   }
 }

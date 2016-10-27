@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
-import Page from '../Default'
+import Default from '../Default'
 import authorData from '../../pages/Blog/generated-authors.json'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
@@ -106,7 +106,7 @@ class Post extends Component {
     }
 
     return (
-      <Page {...props} className={styles.postPage} >
+      <Default {...props} className={styles.postPage} >
         <FixedSocialButtons
           url={`https://serverless.com/${this.props.__url}`}
           title={title}
@@ -155,7 +155,7 @@ class Post extends Component {
         </div>
         <div className={styles.comments} id='disqus_thread' />
         <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
-      </Page>
+      </Default>
     )
   }
 }

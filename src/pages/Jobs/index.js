@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { addScript, removeScript } from '../../utils/manageScripts'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 
 export default class JobPage extends React.Component {
   static propTypes = {
@@ -17,7 +17,7 @@ export default class JobPage extends React.Component {
   }
   render() {
     return (
-      <Page {...this.props} />
+      <Default {...this.props} />
     )
   }
 }
