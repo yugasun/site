@@ -9,6 +9,7 @@ const emptyDirectory = require('../utils/empty-directory')
 const copyFiles = require('../utils/copy-files')
 const removeDateFromFileName = require('./remove-date-from-filename')
 const updateBlogFileContents = require('./update-blog-yaml')
+const generateAuthorData = require('./generate-author-data')
 const userNotice = require('./notice')
 
 asyncLib.waterfall([
@@ -44,6 +45,7 @@ asyncLib.waterfall([
   if (err) {
     console.log('err', err)
   }
+  generateAuthorData()
   userNotice()
   console.log('Finished processing Blog posts')
 })

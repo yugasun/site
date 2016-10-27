@@ -5,7 +5,7 @@ $sidebarWidth: 250px;
 .postWrapper {
   display: flex;
 }
-.content {
+.contentWrapper {
   width: 650px;
   max-width: 650px;
   min-width: 650px;
@@ -13,10 +13,25 @@ $sidebarWidth: 250px;
   img, iframe {
     max-width: 100%;
   }
+  .title {
+    margin-bottom: 0px;
+  }
+  .postMeta {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 22px;
+  }
+  .postContent {
+    margin-top: 25px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
 }
-.editLinkWrapper {
-  margin: 30px 0;
-}
+
 .editLink {
   display: flex;
   justify-content: flex-start;
@@ -25,12 +40,13 @@ $sidebarWidth: 250px;
   a {
     border: none;
     display: inline-block;
-    font-size: 18px;
+    font-size: 13px;
     margin-left: 5px;
   }
   svg, :global(.SVGInline) {
-    width: 25px;
-    height: 25px;
+    display: block;
+    width: 15px;
+    height: 15px;
   }
 }
 .sidebar {
@@ -52,7 +68,7 @@ $sidebarWidth: 250px;
     flex-direction: column;
     padding: 10px;
   }
-  .content, .sidebar {
+  .contentWrapper, .sidebar {
     width: 100%;
     min-width: 100%;
     padding: 0px;

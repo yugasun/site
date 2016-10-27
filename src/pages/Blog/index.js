@@ -3,6 +3,7 @@ import enhanceCollection from 'phenomic/lib/enhance-collection'
 import Page from '../../layouts/Default'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
+import NewsletterCTA from '../../fragments/NewsletterCTA'
 import BlogPreview from './BlogPreview'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
 import styles from './Blog.css'
@@ -50,6 +51,7 @@ export default class BlogPage extends Component {
           {renderContent}
           <div className={styles.sidebar}>
             <BetaCTA buttonText='Get early access' />
+            <NewsletterCTA style={{ marginTop: '20px' }} />
             <AuthorCTA style={{ marginTop: '20px' }} />
           </div>
         </div>

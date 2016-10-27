@@ -1,7 +1,10 @@
+const path = require('path')
 const fs = require('fs-extra')
 const dir = require('node-dir')
 const matter = require('gray-matter')
 const jsonToYaml = require('yamljs')
+const config = require('./config')
+const blogRepoPath = config.blogRepoPath
 const grabDateRegex = /[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/g
 
 module.exports = function updateFileContents(filePath, callBack) {
@@ -14,6 +17,21 @@ module.exports = function updateFileContents(filePath, callBack) {
     // parse yaml frontmatter for title
     const item = matter(content).data
 
+    // Add author data to yaml
+    // if (item.authors && Array.isArray(item.authors)) {
+    //   // read author data and add to frontmatter
+    //   const authors = item.authors
+    //   const authorsData = {}
+    //   for (var i = 0; i < authors.length; i++) {
+    //     console.log(authors[i])
+    //     const c = fs.readFileSync(path.join(blogRepoPath, 'authors', authors[i] + '.json')).toString()
+    //     var d = JSON.parse(c)
+    //     console.log('d', d)
+    //     authorsData[authors[i]] = d
+    //   }
+    //   item.authorsData = authorsData
+    // }
+
     item.gitLink = filename.split('blog')[1]
     if (item.date) {
       item.date = formatDate(item.date)
@@ -24,7 +42,9 @@ module.exports = function updateFileContents(filePath, callBack) {
         item.date = date[0]
       }
     }
+
     const yaml = jsonToYaml.stringify(item)
+
     // regex patterns to match frontmatter
     // ---(\s*?.*?)*?---
     // ^(---)(\s*?.*?)*?(---)
@@ -38,7 +58,7 @@ ${yaml}---`
 
     next()
   },
-    (err, files) => {
+    (err, _files) => {
       if (err) {
         callBack(err)
       }
