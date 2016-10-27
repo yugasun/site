@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import Clipboard from 'clipboard'
+/* include non SSR compatible library */
+const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 
 const propTypes = {
   children: PropTypes.any,
