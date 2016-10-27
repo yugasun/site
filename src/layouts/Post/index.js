@@ -4,6 +4,7 @@ import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Page from '../Default'
+import blogAuthors from '../../pages/Blog/generated-authors.json'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
 import NewsletterCTA from '../../fragments/NewsletterCTA'
@@ -57,6 +58,16 @@ class Post extends Component {
       )
 
       title = head.title
+
+      if (head.authors && Array.isArray(head.authors)) {
+        const authorData = head.authors.map((a) => {
+          return blogAuthors[a]
+        })
+        const authorNames = authorData.map((author) => {
+          return author.name
+        })
+        console.log('authorNames', authorNames)
+      }
     }
 
     let markdownContent = (
