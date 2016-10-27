@@ -35,9 +35,9 @@ export default class BlogPage extends Component {
     let nextLink = <Link to={'/blog/page/1'}>Next</Link>
     let previousLink
     if (params && params.page) {
-      const prevNum = ((pageNumber - 1) === 0) ? '' : pageNumber - 1
+      const prevNum = ((pageNumber - 1) === 0) ? '' : `page/${pageNumber - 1}`
       nextLink = <Link to={`/blog/page/${pageNumber + 1}`}>Next</Link>
-      previousLink = <Link to={`/blog/page/${prevNum}`}>Previous</Link>
+      previousLink = <Link to={`/blog/${prevNum}`}>Previous</Link>
     }
     let renderContent = (
       <div className={styles.postList}>

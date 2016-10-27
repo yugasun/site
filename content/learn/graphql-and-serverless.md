@@ -8,14 +8,14 @@ layout: Default
 
 ### Background
 <img width="400px" class="right" src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/playbrain.png">
-<a href="http://playbrain.jp/">PlayBrain</a>, a Tokyo based creative agency for the Games Industry, works with developers and publishers to establish and promote their games by combining a deep understanding of how passion drives user loyalty and engagement with extensive advertising experience in Japan and around the world. Their clients include Riot Games, Blizzard Entertainment, Electronic Arts, Supercell, Twitch, and more. 
+<a href="http://playbrain.jp/">PlayBrain</a>, a Tokyo based creative agency for the Games Industry, works with developers and publishers to establish and promote their games by combining a deep understanding of how passion drives user loyalty and engagement with extensive advertising experience in Japan and around the world. Their clients include Riot Games, Blizzard Entertainment, Electronic Arts, Supercell, Twitch, and more.
 
 
 PlayBrain was born from a belief that the best communication for games comes from gaming knowledge and advertising knowhow. Building on that belief, and a mission to spread love for games, when PlayBrain set out to develop a new community platform, <a HREF="http://dekki.com/">DEKKI</a>, Trek10 was called on to design and build a massively scalable backend infrastructure to support it.
 
 ### The Challenge
 
-Announced at the Tokyo Game Show in September, DEKKI, described as a cross between <a href="www.medium.com">Medium</a> and sites like <a href="www.mobafire.com">Mobafire</a> and <a href="www.hearthpwn.com">HearthPwn</a>, promises to bring together the industry’s favorite games and platforms to enable users to share strategies and opinions on the games they love. That said, conceiving of an intuitive, multi-lingual platform that is simple to use is one thing. Delivering a user experience that differentiates itself in the fast paced, ultra-competitive gaming industry is an entirely different story. 
+Announced at the Tokyo Game Show in September, DEKKI, described as a cross between <a href="http://www.medium.com">Medium</a> and sites like <a href="http://www.mobafire.com">Mobafire</a> and <a href="http://www.hearthpwn.com">HearthPwn</a>, promises to bring together the industry’s favorite games and platforms to enable users to share strategies and opinions on the games they love. That said, conceiving of an intuitive, multi-lingual platform that is simple to use is one thing. Delivering a user experience that differentiates itself in the fast paced, ultra-competitive gaming industry is an entirely different story.
 
 PlayBrain had identified AWS as the infrastructure of choice for DEKKI, but in order to deliver the performance required, PlayBrain knew it needed a partner with deep expertise in leveraging AWS platform services to build serverless systems. The challenge put forward to Trek10 was simple, “Build an elegant system that is infinitely scalable… and low cost.
 
