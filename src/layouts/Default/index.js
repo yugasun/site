@@ -86,10 +86,34 @@ class Default extends Component {
     const contentWrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
     let customScript
-    if (head && head.script) {
-    // if script defined in markdown frontmatter include it
-      customScript = (
-        <Helmet script={[{ src: head.script, type: 'text/javascript' }]} />
+    let inlineScripts
+    let inlineCSS
+    /* if scripts field defined, inject it */
+    if (head && head.scripts) {
+      if (typeof head.scripts === 'string') {
+        // add single script
+        customScript = (
+          <Helmet script={[{ src: head.scripts, type: 'text/javascript' }]} />
+        )
+      }
+      if (typeof head.scripts === 'object') {
+        // add multiple
+      }
+    }
+    /* if inlineJS defined, inject it */
+    if (head && head.inlineJS) {
+      inlineScripts = (
+        <Helmet script={[{ type: 'text/javascript', innerHTML: head.inlineJS }]} />
+      )
+    }
+    /* if inlineCSS defined, inject it */
+    if (head && head.inlineCSS) {
+      inlineCSS = (
+        <Helmet
+          style={[{
+            cssText: head.inlineCSS
+          }]}
+        />
       )
     }
     const classes = classnames(contentWrapperClass, className)
@@ -104,6 +128,8 @@ class Default extends Component {
         </div>
         <Footer />
         {customScript}
+        {inlineScripts}
+        {inlineCSS}
       </div>
     )
   }
