@@ -8,7 +8,7 @@ import SubmitResource from './pages/Community/Submit'
 
 export default (
   <Route component={App}>
-    <Route path='/blog/:page' component={Blog} />
+    <Route path='/blog/page/:page' component={Blog} />
     <Route path='/community/resource/:id' component={Resource} />
     <Route path='/community/submit' component={SubmitResource} />
     <Route path='access_token=:token' component={App} />
