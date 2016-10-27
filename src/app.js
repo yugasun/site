@@ -4,7 +4,7 @@ import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
 import PlatformSignupFooter from './fragments/PlatformSignupFooter'
 import { initializeVisitorID } from './utils/analytics/visitor'
-// Import global CSS before other components and their styles
+/* Import global CSS before other components and their styles */
 import './index.global.css'
 import styles from './index.css'
 

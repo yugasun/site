@@ -9,7 +9,7 @@ import Helmet from 'react-helmet'
 import debounce from 'lodash.debounce'
 import gitHubSvg from '../../assets/icons/github.svg'
 import generatedMenu from './generated-menu'
-import Shell from '../Default'
+import Default from '../Default'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 // Global styles are used to style html classes from github markdown files
@@ -165,7 +165,7 @@ class Doc extends Component {
     )
 
     return (
-      <Shell {...this.props} className={`${styles.docPage}`} header={breadcrumbs}>
+      <Default {...this.props} className={`${styles.docPage}`} header={breadcrumbs}>
         <Helmet
           link={[
             {
@@ -189,7 +189,7 @@ class Doc extends Component {
             </div>
           </div>
         </div>
-      </Shell>
+      </Default>
     )
   }
 }
@@ -210,9 +210,9 @@ function initializeSearch() {
 }
 
 Doc.propTypes = {
-  __url: PropTypes.string.isRequired,
-  head: PropTypes.object.isRequired,
-  body: PropTypes.string.isRequired,
+  __url: PropTypes.string,
+  head: PropTypes.object,
+  body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
   /** if true, page will be full width */

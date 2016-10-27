@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import Icon from '../../components/Icon'
 import TextInput from '../../components/TextInput'
 import addSVGintoDOM from '../../components/Icon/addSVGtoDOM'
@@ -29,7 +29,7 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Page {...this.props} fullWidth>
+      <Default {...this.props} fullWidth>
         <div className={styles.test}>
           <Icon name='sls-icon-facebook' />
           <Icon name='sls-icon-pencil' />
@@ -59,7 +59,7 @@ export default class Homepage extends Component {
             </button>
           </Form>
         </div>
-      </Page>
+      </Default>
     )
   }
 }

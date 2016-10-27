@@ -1,8 +1,8 @@
 import React from 'react'
 import AutoForm from 'react-auto-form'
-import Page from '../../layouts/Default'
+import airtablePost from '../../utils/forms/airtable'
+import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
-import submitForm from './form'
 
 export default class PartnersPage extends React.Component {
   constructor(props, context) {
@@ -14,23 +14,27 @@ export default class PartnersPage extends React.Component {
   }
   handleSubmit = (event, data) => {
     event.preventDefault()
-    // console.log(event)
-    // console.log(data)
-    const that = this
-    submitForm(data, (err, _response) => {
-      if (err) {
-        console.log('err', err)
-        that.setState({
-          error: true
-        })
-        return false
+    const token = 'keynoipW7vgeiBMuZ'
+    const url = 'https://api.airtable.com/v0/appyZzQmAS6nvzZ5r/Table%201'
+    const airTableData = {
+      fields: {
+        Name: data.name,
+        Email: data.email,
+        Company: data.company,
+        'Date Added': new Date()
       }
-      that.setState({
-        success: true
+    }
+    airtablePost(url, airTableData, token).then((_response) => {
+      this.setState({
+        success: true,
+      })
+    })
+    .catch((err) => {
+      this.setState({
+        error: err
       })
     })
   }
-
   render() {
     let errorDiv
     if (this.state.error) {
@@ -45,7 +49,7 @@ export default class PartnersPage extends React.Component {
        )
     }
     return (
-      <Page className={styles.enterprise} {...this.props} >
+      <Default className={styles.enterprise} {...this.props} >
         <h1 className={styles.header}>Serverless For The Enterprise</h1>
         <i className={styles.subHeader}>Enabling enterprise development teams to take advantage of all of the benefits of serverless arcitectures.</i>
         <div className={styles.box}>
@@ -86,7 +90,7 @@ export default class PartnersPage extends React.Component {
             </button>
           </span>
         </AutoForm>
-      </Page>
+      </Default>
     )
   }
 }

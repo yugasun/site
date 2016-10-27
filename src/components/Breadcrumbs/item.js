@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 
-export default class BreadcrumbItem extends Component {
-  render() {
-    return (
-      <Link to={this.props.getUrlFromPathSegments(this.props.pathSegments)}>
-        {this.props.label}
-      </Link>
-    )
-  }
+export default function BreadcrumbItem({ getUrlFromPathSegments, pathSegments, label }) {
+  return (
+    <Link to={getUrlFromPathSegments(pathSegments)}>
+      {label}
+    </Link>
+  )
 }
 
 BreadcrumbItem.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  pathSegments: React.PropTypes.array.isRequired,
-  getUrlFromPathSegments: React.PropTypes.func,
+  label: PropTypes.string.isRequired,
+  pathSegments: PropTypes.array.isRequired,
+  getUrlFromPathSegments: PropTypes.func,
 }

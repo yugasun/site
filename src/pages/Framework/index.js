@@ -1,5 +1,5 @@
 import React from 'react'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import styles from './Framework.css'
 import Button from '../../components/Button/Button'
 
@@ -7,7 +7,7 @@ export default class PartnersPage extends React.Component {
 
   render() {
     return (
-      <Page {...this.props} >
+      <Default {...this.props} >
         <br />
         <div className={styles.header}>
           <h1 className='center' style={{ marginBottom: '20px' }}>What is the Serverless Framework?</h1>
@@ -85,7 +85,7 @@ export default class PartnersPage extends React.Component {
         <br />
         <br />
         <br />
-      </Page>
+      </Default>
     )
   }
 }

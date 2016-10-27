@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import Terminal from '../../components/Terminal'
 import ContentBlock from '../../components/ContentBlock'
 import Button from '../../components/Button/Button'
@@ -27,7 +27,7 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Page {...this.props} phenomicLoading={this.props.phenomicLoading} fullWidth>
+      <Default {...this.props} phenomicLoading={this.props.phenomicLoading} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
@@ -120,7 +120,7 @@ export default class Homepage extends Component {
             </p>
           </ContentBlock>
         </div>
-      </Page>
+      </Default>
     )
   }
 }
