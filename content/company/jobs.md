@@ -1,7 +1,6 @@
 ---
 title: Jobs
 layout: Jobs
-script: http://davidwells.io/wp-content/themes/david-wells/js/prism.js
 ---
 
 # About Serverless
