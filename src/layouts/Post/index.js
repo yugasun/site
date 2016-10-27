@@ -4,7 +4,7 @@ import { BodyContainer } from 'phenomic'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Page from '../Default'
-import blogAuthors from '../../pages/Blog/generated-authors.json'
+import authorData from '../../pages/Blog/generated-authors.json'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
 import NewsletterCTA from '../../fragments/NewsletterCTA'
@@ -24,6 +24,9 @@ class Post extends Component {
     let pageDate
     let postMeta
     let githubURL
+    let author
+    let authorBio
+    let avatarURL
     let title = (head) ? head.title : 'Default Loading Title'
 
     if (loadingData && loadingData.title) {
@@ -60,13 +63,21 @@ class Post extends Component {
       title = head.title
 
       if (head.authors && Array.isArray(head.authors)) {
-        const authorData = head.authors.map((a) => {
-          return blogAuthors[a]
+        // console.log('page.authors', page.authors)
+        const authorInfo = head.authors.map((a) => {
+          return authorData[a]
         })
-        const authorNames = authorData.map((author) => {
-          return author.name
+        const authorNames = authorInfo.map((auth) => {
+          return auth.name
         })
-        console.log('authorNames', authorNames)
+        // console.log('authorInfo', authorInfo)
+        if (authorNames.length < 2) {
+          // single author
+          author = authorNames[0]
+          // console.log('authorInfo[0].avatar', authorInfo[0].avatar)
+          avatarURL = (authorInfo[0].avatar) ? authorInfo[0].avatar : false
+          authorBio = (authorInfo[0].bio && authorInfo[0].bio.long) ? authorInfo[0].bio.long : false
+        }
       }
     }
 
@@ -75,6 +86,20 @@ class Post extends Component {
         {body}
       </BodyContainer>
     )
+    let authorBox
+    if (author) {
+      authorBox = (
+        <div className={styles.authorBox}>
+          <div className={styles.authorImage}>
+            <img src={avatarURL} role='presentation' />
+          </div>
+          <div className={styles.authorDetails}>
+            <h3>About {author}</h3>
+            <div className={styles.authorBio}>{authorBio}</div>
+          </div>
+        </div>
+      )
+    }
 
     if (isLoading) {
       markdownContent = <ContentLoading numberOfLines={30} />
@@ -96,6 +121,7 @@ class Post extends Component {
             </div>
             <div className={styles.postContent}>
               {markdownContent}
+              {authorBox}
             </div>
           </div>
 

@@ -36,11 +36,12 @@ export default class BlogPage extends Component {
       </div>
     )
     if (isLoading) {
+      const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae mauris arcu, eu pretium nisi. Praesent fringilla ornare ullamcorper. Pellentesque diam orci, sodales in blandit ut, placerat quis felis.'
       renderContent = (
         <div className={styles.postList}>
-          <BlogPreview page={{ title: 'loading...', description: 'olololo' }} isLoading />
-          <BlogPreview page={{ title: 'loading....', description: 'olololo' }} isLoading />
-          <BlogPreview page={{ title: 'loading...', description: 'olololo' }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading....', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
         </div>
       )
     }

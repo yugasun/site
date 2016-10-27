@@ -13,20 +13,20 @@ const BlogPreview = ({ page }) => {
   const defaultAvatar = 'https://avatars3.githubusercontent.com/u/13742415?v=3&s=60'
   let avatarURL = defaultAvatar
   let thumbnail = defaultThumbnail
-  console.log(authorData)
+  // console.log(authorData)
   if (page.authors) {
-    console.log('page.authors', page.authors)
+    // console.log('page.authors', page.authors)
     const authorInfo = page.authors.map((a) => {
       return authorData[a]
     })
     const authorNames = authorInfo.map((auth) => {
       return auth.name
     })
-    console.log('authorInfo', authorInfo)
+    // console.log('authorInfo', authorInfo)
     if (authorNames.length < 2) {
       // single author
       author = authorNames[0]
-      console.log('authorInfo[0].avatar', authorInfo[0].avatar)
+      // console.log('authorInfo[0].avatar', authorInfo[0].avatar)
       avatarURL = (authorInfo[0].avatar) ? authorInfo[0].avatar : defaultAvatar
     }
   }

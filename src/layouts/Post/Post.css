@@ -25,6 +25,7 @@ $sidebarWidth: 250px;
   }
   .postContent {
     margin-top: 25px;
+    margin-bottom: 60px;
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
@@ -48,6 +49,25 @@ $sidebarWidth: 250px;
     width: 15px;
     height: 15px;
   }
+}
+
+.authorBox {
+  margin-top: 30px;
+  display: flex;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+  padding: 20px;
+}
+.authorImage {
+  width: 90px;
+  min-width: 90px;
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.comments {
+  margin-bottom: 40px;
 }
 .sidebar {
   flex-grow: 1;
