@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import authorData from './generated-authors.json'
 import defaultThumbnail from '../../assets/images/platform_4.gif'
-import styles from './Blog.css'
+import styles from './BlogPreview.css'
 
 const propTypes = {
   page: PropTypes.object

@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
 import enhanceCollection from 'phenomic/lib/enhance-collection'
-import Page from '../../layouts/Default'
+import Default from '../../layouts/Default'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
 import NewsletterCTA from '../../fragments/NewsletterCTA'
@@ -21,18 +22,32 @@ export default class BlogPage extends Component {
   }
 
   render() {
-    const { isLoading } = this.props
+    const { isLoading, params } = this.props
+    const pageNumber = (params && params.page) ? parseInt(params.page, 10) : 0
+    const pagination = numberOfLatestPosts * pageNumber
+    const offset = pagination + numberOfLatestPosts
     const latestPosts = enhanceCollection(this.context.collection, {
       filter: { layout: 'Post' },
       sort: 'date',
       reverse: true,
     })
-    .slice(0, numberOfLatestPosts)
+    .slice(pagination, offset)
+    let nextLink = <Link to={'/blog/1'}>Next</Link>
+    let previousLink
+    if (params && params.page) {
+      const prevNum = ((pageNumber - 1) === 0) ? '' : pageNumber - 1
+      nextLink = <Link to={`/blog/${pageNumber + 1}`}>Next</Link>
+      previousLink = <Link to={`/blog/${prevNum}`}>Previous</Link>
+    }
     let renderContent = (
       <div className={styles.postList}>
         {latestPosts.map((page, i) => (
           <BlogPreview key={i} page={page} />
         ))}
+        <div className={styles.pageination}>
+          {previousLink}
+          {nextLink}
+        </div>
       </div>
     )
     if (isLoading) {
@@ -46,7 +61,7 @@ export default class BlogPage extends Component {
       )
     }
     return (
-      <Page {...this.props}>
+      <Default {...this.props}>
         <h2 className={styles.pageTitle}>Serverless Blog</h2>
         <div className={styles.wrapper}>
           {renderContent}
@@ -56,7 +71,7 @@ export default class BlogPage extends Component {
             <AuthorCTA style={{ marginTop: '20px' }} />
           </div>
         </div>
-      </Page>
+      </Default>
     )
   }
 }
