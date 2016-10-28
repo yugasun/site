@@ -1,12 +1,14 @@
-# Serverless Site
+# [Serverless Site](https://serverless.com/)
 
 Uses react, react-router, redux and [Phenomic](https://github.com/MoOx/phenomic) under the hood.
 
 This site is 100% serverless! Wooooooo!
 
-- [See the site](https://serverless.com/)
-- [Contribute to the blog](https://github.com/serverless/blog)
-- [Contribute to the docs](https://github.com/serverless/serverless)
+All of the site content is hosted on github, so if you see a typo or correct. Feel free to contribute back!
+
+- [See the site](https://serverless.com/) :point_right: [View the src Luke](hhttps://github.com/serverless/site)
+- [Check out the blog](https://serverless.com/blog) :point_right: [Contribute to the blog](https://github.com/serverless/blog)
+- [Read the docs](https://serverless.com/framework/docs) :point_right: [Contribute to the docs](https://github.com/serverless/serverless)
 
 # Quick Start
 
