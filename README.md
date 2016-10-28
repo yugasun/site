@@ -8,7 +8,7 @@ The [site content](https://github.com/serverless/site/tree/master/content), [doc
 
 API calls are made with the [serverless framework](https://github.com/serverless/serverless/tree/master/docs) pinging AWS lambda functions. User Authentication is handled via [Auth0](auth0.com). Site search handled by [Algolia](https://community.algolia.com/docsearch/).
 
-- [See the site](https://serverless.com/) :point_right: [View the SRC Luke](hhttps://github.com/serverless/site)
+- [See the site](https://serverless.com/) :point_right: [View the SRC Luke](https://github.com/serverless/site/tree/master/src)
 - [Check out the blog](https://serverless.com/blog) :point_right: [Contribute to the blog](https://github.com/serverless/blog)
 - [Read the docs](https://serverless.com/framework/docs) :point_right: [Contribute to the docs](https://github.com/serverless/serverless)
 
