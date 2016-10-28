@@ -59,26 +59,26 @@ Some pages have custom designs/layouts and the html might need to be altered. Th
 **1. Test the build command locally**
 
 ```bash
-$ npm run buildprod
+npm run build
 ```
 
 **2. If build command succeeds, push up your changes to a new branch**
 
 We are using [netlify](http://netlify.com) to distribute the site.
 
-When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://[LowerCaseBranchName]--serverless.netlify.com`
+When pushing up to a new branch, netlify will automatically publish that change to a unique subdomain, like: `https://[lowercase-branch-name]--serverless.netlify.com`
 
 For example the branch `updateDocsSetup` published to `https://updatedocssetup--serverless.netlify.com`
 
 Successful deploys are published to the [notifications slack channel](https://serverlessteam.slack.com/archives/notifications)
 
-Note: The `master` branch is the live site. **Never push directly to the master branch!**
+**Note: The `master` branch is the live site. Never push directly to the master branch!**
 
 **3. Review your live site changes**
 
 If everything looks good on your unique netlify subdomain, you can go ahead and merge your branch to master on github.
 
-Merging branches into master will trigger a site rebuild and `serverless.com` will be updated
+Merging branches into master will trigger a site rebuild and `serverless.com` will be updated.
 
 # Making Phenomic changes while working on the site
 
