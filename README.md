@@ -85,6 +85,3 @@ Merging branches into master will trigger a site rebuild and `serverless.com` wi
 If you want to work on [phenomic](https://phenomic.io/) src code while working on the site, change the [transpile path in phenomic's package.json](https://github.com/MoOx/phenomic/blob/master/package.json#L149) to point to the the sites node_module path. `../site/node_modules/phenomic/lib`
 
 Then inside of the phenomic src directory you can run `npm run transpile -- --watch` to work on phenomic src code and see the live changes effect the serverless site.
-
-# ESLint ref
-https://github.com/airbnb/javascript/blob/8468ed842314a5d66816927ba6c35f018035cffc/packages/eslint-config-airbnb/rules/react.js#L22-L33
