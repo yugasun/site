@@ -139,7 +139,7 @@ class Doc extends Component {
     } = this.props
     const url = currentUrl(__url)
     let githubURL
-    
+
     let markdownContent = (
       <BodyContainer>
         {body}
