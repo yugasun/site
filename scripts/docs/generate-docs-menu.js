@@ -5,6 +5,9 @@ const path = require('path')
 const fs = require('fs-extra')
 const matter = require('gray-matter')
 
+function trimContent(content) {
+  return content.replace(/^\s+|\s+$/g, '')
+}
 // Creates menus for files amidst other files in a directory
 function generateFileMenus(d) {
   const tempMenus = []
@@ -16,15 +19,24 @@ function generateFileMenus(d) {
 
     const stats = fs.statSync(rootPath)
     if (stats.isFile() && rootPath.indexOf('index.md') == -1) {
- 		// Read file
+ 		  // Read file
       const content = fs.readFileSync(path.join(d, file)).toString()
- 		//  Remove .md
+ 		  //  Remove .md
       file = file.indexOf('.md') > -1 ? file.split('.md')[0] : file
 			// parse yaml frontmatter for title
-      const yamlInfo = matter(content).data
+      const yamlInfo = matter(trimContent(content)).data
+      let title
+      if (yamlInfo.menuText) {
+        title = yamlInfo.menuText
+      } else {
+        title = path.basename(file, '.md').replace(/_/g, ' ')
+        console.log(`MISSING TITLE ON ${file}`)
+        console.log(`Using this instead: ${title}`)
+      }
+
       tempMenus.push({
         path: `${d.split(breakWord)[1]}/${file}`,
-        title: yamlInfo.menuText || 'Missing Title',
+        title,
         order: yamlInfo.menuOrder
       })
 			// Sort by menu order
