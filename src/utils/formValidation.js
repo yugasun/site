@@ -1,3 +1,4 @@
+/*eslint-disable */
  /**
   * Form validations
   * ref: https://github.com/regexhq
