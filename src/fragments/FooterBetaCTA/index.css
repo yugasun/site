@@ -43,3 +43,8 @@
     padding: 15px 0;
   }
 }
+@media (max-width: 768px) {
+  .ctaBottomCopy {
+    font-size: 23px;
+  }
+}

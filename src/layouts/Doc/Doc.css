@@ -273,6 +273,12 @@ a.editLinkWrapper {
   .sidebarInner {
     min-width: 100%;
   }
+  pre code:global(.hljs) {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .breadCrumbContainer {
     flex-direction: column;
   }
@@ -282,6 +288,12 @@ a.editLinkWrapper {
   .searchWrapper {
     margin-top: 10px;
     width: 50%;
+    border-top: none;
+  }
+  a.editLinkWrapper {
+    position: initial;
+    padding: 0px;
+    margin-bottom: 15px;
   }
   .versionNumber {
     display: none;
@@ -301,8 +313,9 @@ a.editLinkWrapper {
     padding-bottom: 30px;
     padding-left: 13px;
     padding-right: 0px;
+    padding-top: 15px;
     h1 {
-      font-size: 24px;
+      font-size: 22px;
     }
     h1, h2, h3, h4, h5, h6, p {
       padding-right: 13px;
