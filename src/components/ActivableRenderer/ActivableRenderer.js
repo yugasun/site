@@ -26,7 +26,9 @@ const ActivableRendererFactory = (options = { delay: 500 }) => (ActivableCompone
     }
 
     renderAndActivate() {
-      if (this.unrenderTimeout) clearTimeout(this.unrenderTimeout)
+      if (this.unrenderTimeout) {
+        clearTimeout(this.unrenderTimeout)
+      }
       this.setState({ rendered: true, active: false }, () => {
         setTimeout(() => this.setState({ active: true }), 20)
       })

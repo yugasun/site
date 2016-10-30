@@ -100,9 +100,9 @@ class Doc extends Component {
     }
     return (
       <div className={styles.sidebar}>
-        <div className={styles.sidebarInner}>
+        <div ref='sidebar' className={styles.sidebarInner}>
           <div className={styles.searchBumper}>
-            <div ref='sidebar' className={styles.searchWrapper}>
+            <div className={styles.searchWrapper}>
               <input
                 className={styles.searchBox}
                 id='algolia-search'
@@ -155,17 +155,11 @@ class Doc extends Component {
     const breadcrumbs = (
       <div className={`${styles.breadCrumbContainer}  docs-breadcrumbs`}>
         <Breadcrumbs path={url} />
-        <span ref='editLink' className={styles.editLink}>
-          <Svg svg={gitHubSvg} cleanup />
-          <a target='_blank' rel='noopener noreferrer' href={githubURL}>
-            Edit on github
-          </a>
-        </span>
       </div>
     )
 
     return (
-      <Default {...this.props} className={`${styles.docPage}`} header={breadcrumbs}>
+      <Default {...this.props} fullWidth className={`${styles.docPage}`} header={breadcrumbs}>
         <Helmet
           link={[
             {
@@ -185,6 +179,12 @@ class Doc extends Component {
             {this.renderNewSidebar()}
 
             <div className={`${styles.content} docs-content`}>
+              <a title='Edit this page on github' className={styles.editLinkWrapper} target='_blank' rel='noopener noreferrer' href={githubURL}>
+                <span ref='editLink' className={styles.editLink}>
+                  <Svg svg={gitHubSvg} cleanup />
+                  <span className={styles.text}>Edit on github</span>
+                </span>
+              </a>
               {markdownContent}
             </div>
           </div>

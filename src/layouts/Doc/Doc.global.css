@@ -7,6 +7,7 @@
   flex-direction: row;
   align-items: flex-start;
   flex-flow:row wrap;
+  max-width: 90%;
 }
 
 .docsSection {
@@ -40,8 +41,12 @@
   padding-bottom:3px;
 }
 @media (max-width: 768px) {
-  .docsSection {
+  .docsSections {
     width: 100%;
+    max-width: 100%;
+  }
+  .docsSection {
+    width: 95%;
   }
   .docsSectionHeader img {
     width: 100%;

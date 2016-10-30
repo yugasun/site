@@ -10,11 +10,16 @@
     text-decoration: none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     font-weight: 400;
-
   }
 }
 .fullWidth {
   width: 100%;
+  a {
+    color: $black2;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 960px) {
