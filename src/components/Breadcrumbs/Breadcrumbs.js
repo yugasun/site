@@ -54,7 +54,7 @@ const Breadcrumbs = ({
               />
             </span>
           </li>
-          )
+        )
       })}
     </ul>
   )
