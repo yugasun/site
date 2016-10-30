@@ -2,24 +2,27 @@ $sidebarWidth: 250px;
 $ctaWidth: 220px;
 $backgroundColor: #f6f6f6;
 $sidebarRadius: 6px;
+$contentLeftPadding: 70px;
 .docPage {
-  margin-top: 20px;
-  padding-bottom: 60px;
-  margin-bottom: 100px;
+  margin-top: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .docContainer {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .docWrapper {
   display: flex;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .breadCrumbContainer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  padding: 10px 10px;
   font-size: 15px;
+  padding-left: 20px;
+  background: $backgroundColor;
   a {
 
   }
@@ -30,16 +33,19 @@ $sidebarRadius: 6px;
 .versionNumber {
   border-top: 1px solid rgba(0,0,0,.05);
   padding: 15px;
-  margin: 0px 12px;
   font-size: 1.4rem;
   color: rgba(0,0,0,0.5);
+  position: fixed;
+  bottom: 0;
+  min-width: $sidebarWidth;
+  max-width: $sidebarWidth;
+  background: $backgroundColor;
 }
 .sidebar {
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
-  margin-right: 30px;
-  background: white;
   z-index: 2;
+  background: $backgroundColor;
 }
 .sidebarBlock {
   margin-left: -10px;
@@ -69,8 +75,9 @@ $sidebarRadius: 6px;
   max-width: $sidebarWidth;
   z-index: 6;
   padding: 15px;
-  border-bottom-left-radius: $sidebarRadius;
-  border-bottom-right-radius: $sidebarRadius;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  border-top: 1px solid #dddddd;
 }
 .searchBox {
   min-width: $ctaWidth;
@@ -95,33 +102,27 @@ $sidebarRadius: 6px;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
   padding: 0px;
-  border-radius: $sidebarRadius;
   background: #f6f6f6;
-}
-.cta {
-  min-width: $ctaWidth;
-  max-width: $ctaWidth;
-  font-size: 19px;
-  line-height: 2rem;
-  cursor: pointer;
-  padding: 15px 10px;
-  margin-left: -10px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
-}
-.ctaText {
-  font-size: 13px;
-  margin-top: 10px;
 }
 
 /* Docs Content */
 .content {
   flex-grow: 1;
   position: relative;
+  padding-top: 3rem;
   max-width: 100%;
   padding-bottom: $footerHeight;
   overflow: hidden;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding-left: $contentLeftPadding;
+  padding-bottom: 560px;
+  pre code:global(.hljs) {
+    margin-left: -$contentLeftPadding !important;
+    padding-left: $contentLeftPadding !important;
+    border-left: none;
+    background: #f8f8f8 !important;
+  }
   a {
     position: relative;
     &:hover:before {
@@ -141,9 +142,8 @@ $sidebarRadius: 6px;
       background-color: rgba(0,0,0,0.5);
     }
   }
-  h1, h2, h3, h4, h5, h6 {
-    margin: 45px 0 15px 0;
-    font-weight: 400;
+  h1, h2, h3, h4, h5, h6, p {
+    max-width: 650px;
   }
   h1 {
     font-size: 32px;
@@ -161,27 +161,35 @@ $sidebarRadius: 6px;
     font-size: 18px;
   }
 }
-
-.editLink-b {
-  margin-top: -15px;
-  font-size: 14px;
-  color: #555;
+a.editLinkWrapper {
+  border: none;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+  /* padding-top: 1px; */
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  &:before {
+    display:none;
+  }
 }
 .editLink {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
-  font-size: 14px;
+  font-size: 13px;
   color: #555;
-  a {
-    border: none;
-    display: inline-block;
-    font-size: 13px;
+  cursor: pointer;
+  :global(.SVGInline) {
+    display: flex;
+    height: 100%;
+  }
+  .text {
     margin-left: 5px;
     padding-top: 1px;
   }
-  svg, :global(.SVGInline) {
+  svg {
     width: 17px;
     height: 17px;
   }
@@ -248,6 +256,19 @@ $sidebarRadius: 6px;
 
 }
 
+@media (max-width: 1000px) {
+  .content {
+    padding-left: 30px;
+    padding-bottom: 560px;
+    pre code:global(.hljs) {
+      margin-left: -30px !important;
+      padding-left: 30px !important;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+      padding-right: 25px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .sidebarInner {
     min-width: 100%;
@@ -255,23 +276,22 @@ $sidebarRadius: 6px;
   .breadCrumbContainer {
     flex-direction: column;
   }
+  .breadCrumbContainer li:first-of-type {
+    display: none;
+  }
   .searchWrapper {
     margin-top: 10px;
     width: 50%;
   }
-  .docPage {
-    padding: 0px 10px;
-  }
-  .editLink {
+  .versionNumber {
     display: none;
   }
-  .page, .sidebar {
-    max-width: 95%;
-    min-width: 95%;
-    margin: auto;
+  .page, .sidebar, .searchBumper, .searchWrapper {
+    max-width: 100%;
+    min-width: 100%;
   }
   .sidebar {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .docWrapper {
     flex-direction: column;
@@ -279,7 +299,16 @@ $sidebarRadius: 6px;
   }
   .content {
     padding-bottom: 30px;
+    padding-left: 13px;
+    padding-right: 0px;
+    h1 {
+      font-size: 24px;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+      padding-right: 13px;
+    }
   }
+
   .subPageLink, .subPageLinkHeading {
     font-size: 16px;
   }

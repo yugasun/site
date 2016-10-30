@@ -94,17 +94,18 @@ blockquote {
  }
 }
 code {
-  border-radius: 1px;
-  font-size: 1.4rem;
-  padding: 3px 6px;
-  color: #333333;
-  background: rgba(0, 0, 0, 0.07);
+  font-size: 95%;
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align: baseline;
+  color: #e91e63;
 }
 
 $tableGray1: #828282;
 table {
   max-width: 960px;
-  margin: 10px auto;
+  margin: 10px 0;
 }
 
 caption {
@@ -270,4 +271,19 @@ pre code.hljs {
   font-size: 1.3rem;
   line-height: 1.5;
   letter-spacing: -.02rem;
+  position: relative;
+}
+.hljs:before {
+  position: absolute;
+  right:0;
+  top:5px;
+  padding: 0 0.5em;
+  color: rgba(0, 0, 0, 0.32);
+  font-size: 0.9em;
+}
+.hljs.language-yml:before {
+  content: 'YAML';
+}
+.hljs.language-javascript:before {
+  content: 'JavaScript';
 }
