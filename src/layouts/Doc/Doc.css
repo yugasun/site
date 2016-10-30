@@ -273,12 +273,6 @@ a.editLinkWrapper {
   .sidebarInner {
     min-width: 100%;
   }
-  pre code:global(.hljs) {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
   .breadCrumbContainer {
     flex-direction: column;
   }
@@ -314,6 +308,12 @@ a.editLinkWrapper {
     padding-left: 13px;
     padding-right: 0px;
     padding-top: 15px;
+    pre code:global(.hljs) {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
     h1 {
       font-size: 22px;
     }
