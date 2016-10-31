@@ -211,8 +211,8 @@ $contentLeftPadding: 70px;
     &:before {
       display: block;
       content: " ";
-      margin-top: -$navHeight;
-      height: $navHeight;
+      margin-top: -80px;
+      height: 80px;
       visibility: hidden;
     }
     /*&:hover :global(.phenomic-HeadingAnchor) {
