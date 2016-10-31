@@ -1,3 +1,4 @@
+/*eslint-disable */
 import path from 'path'
 import webpack from 'webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
@@ -18,8 +19,7 @@ export const makeConfig = (config = {}) => {
     DOCS_VERSION: JSON.stringify(serverlessPkg.version)
   }
   const processEnvVariables = Object.keys(siteConfig).reduce((memo, key) => {
-    const val = JSON.stringify(siteConfig[key])
-    memo[key] = val
+    memo[key] = JSON.stringify(siteConfig[key])
     return memo
   }, dynamicEnvVariables)
   console.log('processEnvVariables', processEnvVariables)
