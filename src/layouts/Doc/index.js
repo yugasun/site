@@ -16,16 +16,19 @@ import ContentLoading from '../../components/ContentLoading/Paragraph'
 import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
 
+const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
 */
-
+const preventDefault = function (e) {
+  e.preventDefault()
+}
 function currentUrl(url) {
   if (url) {
     return url
   }
   if (typeof window !== 'undefined') {
-    return window.location.pathname
+   return window.location.pathname
   }
   return 'fakeURL'
 }
@@ -38,6 +41,7 @@ class Doc extends Component {
     this.sidebarNodeOffset = null
   }
   componentDidMount() {
+    const { origin, pathname } = window.location
     if (window.outerWidth > 600) {
       window.addEventListener('scroll', debounce(this.handleScroll, 10))
       window.addEventListener('resize', debounce(this.handleScroll, 10))
@@ -45,7 +49,39 @@ class Doc extends Component {
       this.sidebarNodeOffset = this.sidebarNode.offsetTop
       this.handleScroll()
     }
+    // disable anchor tags until they are removed
+    this.attachHandlers()
+    this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
+      text(trigger) { // eslint-disable-line
+        return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
+      }
+    })
     initializeSearch()
+  }
+  componentDidUpdate(previousProps, _prevState) {
+    if (previousProps.__url !== this.props.__url) {
+      this.dettachHandlers()
+      setTimeout(() => {
+        this.attachHandlers()
+      }, 0)
+    }
+  }
+  componentWillUnmount() {
+    this.clipboardInstance.destroy()
+    // disable anchor tags until they are removed
+    this.dettachHandlers()
+  }
+  attachHandlers = () => {
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', preventDefault, false)
+    }
+  }
+  dettachHandlers = () => {
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeEventListener('click', preventDefault, false)
+    }
   }
   handleScroll = (_event) => {
     /* TODO: make editLink fixed */

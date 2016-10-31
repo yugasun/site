@@ -168,8 +168,21 @@ tfoot td {
   display: block;
   margin: auto;
   text-align: center;
-  }
-
+}
+/*
+.phenomic-HeadingAnchor {
+  display: inline-block;
+  text-align: center;
+  margin-left: -1.8rem;
+  margin-right: .4rem;
+  width: 1.4rem;
+  line-height: 1.4rem;
+  text-decoration: none;
+  opacity: .1;
+  transition: opacity .2s;
+  border-bottom: none !important;
+}
+*/
 .phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {
   display: none;
 }

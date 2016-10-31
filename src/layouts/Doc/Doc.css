@@ -123,6 +123,69 @@ $contentLeftPadding: 70px;
     border-left: none;
     background: #f8f8f8 !important;
   }
+  $copyWidth: 45px;
+  :global(.phenomic-HeadingAnchor) {
+    display: inline-block;
+    position: absolute !important;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 130px;
+    margin-left: -50px;
+    /* line-height: 1.4rem; */
+    text-decoration: none;
+    z-index: 7;
+    opacity: .1;
+    line-height: inherit;
+    color: transparent;
+    transition: opacity .2s;
+    border-bottom: none !important;
+    &:before {
+      content: "#";
+      transform: none;
+      position: absolute;
+      top: 0px;
+      left: 30px;
+      background-color: transparent;
+      height: auto;
+      color: $black2;
+      visibility: visible;
+    }
+    &:after {
+      opacity: .4;
+      visibility: hidden;
+      position: absolute;
+      content: "copy link";
+      text-align: center;
+      height: 20px;
+      transform: none;
+      width: 55px;
+      font-size: 11px;
+      padding: 3px 5px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      color: white;
+      background-color: #191919;
+      top: -20px;
+      left: 8px;
+      border-radius: 3px;
+      transition: .25s ease-in-out 0s;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:active:after {
+      content: "copied!" !important;
+      background-color: #787878;
+    }
+    &:hover:after {
+      visibility: visible;
+    }
+  }
   a {
     position: relative;
     &:hover:before {
@@ -144,11 +207,25 @@ $contentLeftPadding: 70px;
   }
   h1, h2, h3, h4, h5, h6, p {
     max-width: 650px;
+    position: relative;
+    &:before {
+      display: block;
+      content: " ";
+      margin-top: -$navHeight;
+      height: $navHeight;
+      visibility: hidden;
+    }
+    /*&:hover :global(.phenomic-HeadingAnchor) {
+      opacity: .3;
+    }*/
   }
   h1 {
     font-size: 32px;
     &:first-of-type {
       margin-top: 0px;
+      :global(.phenomic-HeadingAnchor) {
+        display:none;
+      }
     }
   }
   h2 {
@@ -313,6 +390,9 @@ a.editLinkWrapper {
       line-height: 1.4;
       padding-top: 10px;
       padding-bottom: 10px;
+    }
+    :global(.phenomic-HeadingAnchor) {
+      display: none;
     }
     h1 {
       font-size: 22px;
