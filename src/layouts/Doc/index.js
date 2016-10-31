@@ -28,7 +28,7 @@ function currentUrl(url) {
     return url
   }
   if (typeof window !== 'undefined') {
-   return window.location.pathname
+    return window.location.pathname
   }
   return 'fakeURL'
 }
