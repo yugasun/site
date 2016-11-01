@@ -2,7 +2,8 @@
   color: #eee;
   background: $black2;
   /*  background: transparent;*/
-  composes: avenir from '../../index.css';
+  font-family: 'Avenir Next W00', sans-serif;
+  font-weight: normal;
 }
 
 .bumper {
@@ -33,7 +34,12 @@
   composes: content from '../../index.css';
   position: relative;
   padding: 0 1rem 0 1rem;
+  &.fullWidth {
+    max-width: 100%;
+    width: 100%;
+  }
 }
+
 
 .navLeft,
 .navRight,

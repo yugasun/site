@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import handleClickAway from '../../utils/handleClickAway'
@@ -6,13 +6,10 @@ import gitHubSvg from '../../assets/icons/github.svg'
 import Logo from '../../assets/images/serverless_logo.png'
 import styles from './Header.css'
 import NewAuth from '../../components/NewAuth/NewAuth'
-// import ProfileIcon from '../../components/ProfileIcon'
 
-/*
-<NewAuth logoutOnClick={true} loggedInComponent={<ProfileIcon />}>
-  Login
-</NewAuth>
-*/
+const propTypes = {
+  fullWidth: PropTypes.bool
+}
 
 export default class Header extends Component {
   constructor(props, context) {
@@ -44,14 +41,16 @@ export default class Header extends Component {
     })
   }
   render() {
+    const { fullWidth } = this.props
     const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
+    const containerStyle = (fullWidth) ? styles.fullWidth : ''
     return (
       <header className={styles.header}>
         <div className={styles.bumper} />
         <div className={styles.navFixed}>
-          <div className={styles.navWrapper}>
+          <div className={`${styles.navWrapper} ${containerStyle}`}>
             <div className={styles.navLeft}>
               <Link to='/' className={styles.logo}>
                 <img alt='Serverless logo' src={Logo} draggable='false' />
@@ -154,3 +153,5 @@ export default class Header extends Component {
     )
   }
 }
+
+Header.propTypes = propTypes

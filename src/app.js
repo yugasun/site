@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react'
 import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
-import PlatformSignupFooter from './fragments/PlatformSignupFooter'
+import SubscribeModal from './fragments/SubscribeModal'
 import { initializeVisitorID } from './utils/analytics/visitor'
 /* Import global CSS before other components and their styles */
 import './index.global.css'
@@ -37,7 +37,7 @@ export default class App extends Component {
         <div className={styles.minHeight}>
           {this.props.children}
         </div>
-        <PlatformSignupFooter />
+        <SubscribeModal />
         <Scripts params={params} query={currentQuery} />
       </div>
     )
