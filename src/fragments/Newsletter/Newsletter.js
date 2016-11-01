@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
+import { getItem } from '../../utils/storage'
 import styles from './Newsletter.css'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
@@ -23,6 +24,12 @@ export default class Newsletter extends Component {
       isFetching: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+  componentDidMount() {
+    const user = getItem('profile')
+    if (user) {
+      this.refs.email.value = user.email
+    }
   }
   handleSubmit(e) {
     e.preventDefault()
