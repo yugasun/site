@@ -208,6 +208,15 @@ $contentLeftPadding: 70px;
   h1, h2, h3, h4, h5, h6, p {
     max-width: 650px;
     position: relative;
+    /*&:hover :global(.phenomic-HeadingAnchor) {
+      opacity: .3;
+    }*/
+  }
+  p {
+    z-index: 3;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    z-index: 1;
     &:before {
       display: block;
       content: " ";
@@ -215,9 +224,6 @@ $contentLeftPadding: 70px;
       height: 80px;
       visibility: hidden;
     }
-    /*&:hover :global(.phenomic-HeadingAnchor) {
-      opacity: .3;
-    }*/
   }
   h1 {
     font-size: 32px;
@@ -399,6 +405,16 @@ a.editLinkWrapper {
     }
     h1, h2, h3, h4, h5, h6, p {
       padding-right: 13px;
+
+    }
+    h1, h2, h3, h4, h5, h6 {
+      &:before {
+        display: block;
+        content: " ";
+        margin-top: -80px;
+        height: 80px;
+        visibility: hidden;
+      }
     }
   }
 
