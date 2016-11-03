@@ -16,7 +16,7 @@ const Paragraph = ({ numberOfLines, marginBottom, lineHeight, className }) => {
     }
 
     lines.push(
-      <TextLinePlaceholder width={width} marginBottom={setLineHeight} />
+      <TextLinePlaceholder key={i} width={width} marginBottom={setLineHeight} />
     )
   }
   const wrapperClass = styles.loadingParagraph

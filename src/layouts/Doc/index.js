@@ -176,16 +176,21 @@ class Doc extends Component {
     const url = currentUrl(__url)
     let githubURL
 
-    let markdownContent = (
-      <BodyContainer>
-        {body}
-      </BodyContainer>
-    )
+    let markdownContent
 
     if (isLoading) {
-      markdownContent = <ContentLoading numberOfLines={30} />
+      markdownContent = (
+        <div style={{ maxWidth: '650px' }}>
+          <ContentLoading numberOfLines={30} />
+        </div>
+      )
     } else {
       githubURL = `https://github.com/serverless/serverless/edit/master${head.gitLink}`
+      markdownContent = (
+        <BodyContainer>
+          {body}
+        </BodyContainer>
+      )
     }
 
     const breadcrumbs = (
