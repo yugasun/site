@@ -119,7 +119,7 @@
     "clipboard": "^1.5.15",
     "jwt-decode": "^2.1.0",
     "lodash.debounce": "^4.0.8",
-    "phenomic": "0.17.10",
+    "phenomic": "0.18.0",
     "react": "^15.0.0-rc.1",
     "react-auto-form": "^1.3.0",
     "react-dom": "^15.0.0-rc.1",
