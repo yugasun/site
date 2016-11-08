@@ -170,10 +170,11 @@ $contentLeftPadding: 70px;
       justify-content: center;
       color: white;
       background-color: #191919;
-      top: -20px;
+      top: 85%;
       left: 8px;
       border-radius: 3px;
       transition: .25s ease-in-out 0s;
+      z-index: 11;
     }
     &:hover {
       opacity: 1;
@@ -212,7 +213,7 @@ $contentLeftPadding: 70px;
       opacity: .3;
     }*/
   }
-  p {
+  p, pre, code {
     z-index: 3;
   }
   h1, h2, h3, h4, h5, h6 {
