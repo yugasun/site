@@ -10,8 +10,11 @@ const docsRepoPath = docsConfig.serverlessRepoPath
 const blogRepoPath = blogConfig.blogRepoPath
 const seperator = '--------------------------'
 
+console.log('cwd', cwd)
 if (process.env.IS_NETLIFY_ENV) {
   console.log('in NETLIFY CI context, don\'t clone stuff just download it')
+} else if (cwd.indexOf('node_modules') > -1) {
+  console.log('in node_module context, don\'t clone/download extra stuff')
 } else {
   // in normal project site. check for serverless and serverless-blog folder
   console.log(seperator)
