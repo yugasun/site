@@ -36,7 +36,7 @@ class Default extends Component {
   }
   render() {
     const {
-      __filename,
+      // __filename,
       __url,
       head,
       body,
