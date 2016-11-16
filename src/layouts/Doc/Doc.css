@@ -213,8 +213,9 @@ $contentLeftPadding: 70px;
       opacity: .3;
     }*/
   }
-  p, pre, code {
+  p, pre, code, ul, li {
     z-index: 3;
+    position: relative;
   }
   h1, h2, h3, h4, h5, h6 {
     z-index: 1;
