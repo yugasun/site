@@ -20,6 +20,9 @@
     border-bottom: 1px solid rgba(0,0,0,0.2);
     font-weight: 400;
   }
+  strong a {
+    font-weight: bold;
+  }
 }
 
 @media (max-width: 960px) {
