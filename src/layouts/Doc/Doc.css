@@ -217,6 +217,10 @@ $contentLeftPadding: 70px;
     z-index: 3;
     position: relative;
   }
+  ul {
+    padding-left: 25px;
+    padding-right: 80px;
+  }
   h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     &:before {
@@ -420,6 +424,9 @@ a.editLinkWrapper {
         height: 80px;
         visibility: hidden;
       }
+    }
+    ul {
+      padding-right: 10px;
     }
   }
 
