@@ -44,7 +44,7 @@ $contentLeftPadding: 70px;
 .sidebar {
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
-  z-index: 2;
+  z-index: 5;
   background: $backgroundColor;
 }
 .sidebarBlock {

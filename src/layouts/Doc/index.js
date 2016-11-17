@@ -241,7 +241,7 @@ function initializeSearch() {
       apiKey: 'd5a39b712b86965d93534207ef5423df',
       indexName: 'serverless',
       inputSelector: '#algolia-search',
-      debug: false
+      debug: false // set to true to style search box
     })
   } else {
     setTimeout(() => {
