@@ -322,10 +322,13 @@ a.editLinkWrapper {
 .subPageLink {
   font-size: 14px;
   line-height: 2.3;
+  cursor: pointer;
   a {
     text-decoration: none;
     border: none;
     position: relative;
+    width: 100%;
+    display: block;
     &:hover {
       color: #000;
     }
