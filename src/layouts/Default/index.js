@@ -95,9 +95,13 @@ class Default extends Component {
         customScript = (
           <Helmet script={[{ src: head.scripts, type: 'text/javascript' }]} />
         )
-      }
-      if (typeof head.scripts === 'object') {
+      } else if (typeof head.scripts === 'object') {
         // add multiple
+        customScript = head.scripts.map((script, i) => {
+          return (
+            <Helmet key={i} script={[{ src: script, type: 'text/javascript' }]} />
+          )
+        })
       }
     }
     /* if inlineJS defined, inject it */
