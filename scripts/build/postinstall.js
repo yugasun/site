@@ -70,7 +70,7 @@ if (process.env.IS_NETLIFY_ENV) {
     updateRepo(docsRepoPath)
   }
 }
-
+// TODO: replace clone with https://github.com/tunnckoCore/gitclone
 function cloneRepo(repo, branch, path) {
   console.log(seperator)
   console.log(`Cloning repo down ${branch} branch of ${repo} to ./${path}`)

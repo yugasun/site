@@ -5,7 +5,7 @@ function fixedEncodeURI(str) {
 
 export function twitterShare(text, url, hashtags) {
   let hash = ''
-  const base = `http://twitter.com/share?text=${fixedEncodeURI(text)}`
+  const base = `http://twitter.com/share?text=${encodeURIComponent(text)}`
   const link = (url) ? `&url=${url}` : ''
   if (hashtags) {
     if (typeof hashtags === 'string') {
