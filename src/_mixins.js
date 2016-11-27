@@ -1,4 +1,5 @@
 /* Global Mixins for use in CSS and JS */
+// media queries http://codepen.io/davidgilbertson/pen/aBpJzO
 module.exports = {
   /* Disable selectable text */
   noSelect: {
