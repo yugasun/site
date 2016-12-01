@@ -51,7 +51,7 @@ export default class PartnersPage extends React.Component {
     return (
       <Default className={styles.enterprise} {...this.props} >
         <h1 className={styles.header}>Serverless For The Enterprise</h1>
-        <i className={styles.subHeader}>Enabling enterprise development teams to take advantage of all of the benefits of serverless arcitectures.</i>
+        <i className={styles.subHeader}>Enabling enterprise development teams to take advantage of all of the benefits of serverless architectures.</i>
         <div className={styles.box}>
           <div className={styles.component}>
             <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
