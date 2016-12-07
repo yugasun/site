@@ -105,4 +105,17 @@ $sidebarWidth: 250px;
   .postPage {
     margin-top: 20px;
   }
+  h1 {
+    font-size: 2.2rem;
+  }
+  img[align="right"] {
+    float: none;
+    clear: both;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .authorBox {
+    flex-direction: column;
+  }
 }

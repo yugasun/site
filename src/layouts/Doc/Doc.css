@@ -121,6 +121,7 @@ $contentLeftPadding: 70px;
     margin-left: -$contentLeftPadding !important;
     padding-left: $contentLeftPadding !important;
     border-left: none;
+    border-right: none;
     background: #f8f8f8 !important;
   }
   $copyWidth: 45px;
