@@ -60,6 +60,11 @@ export default class PageError extends Component {
           open a github issue
           </a>
         </div>
+        <div className={styles.otherLinks}>
+          <a href='/' title='Go to serverless homepage'>
+            Visit homepage
+          </a>
+        </div>
       </div>
     )
     return (
