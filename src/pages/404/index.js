@@ -3,6 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
+import Logo from '../../assets/images/serverless_logo.png'
 import { twitterShare } from '../../utils/social/share'
 import styles from './index.css'
 
@@ -63,6 +64,9 @@ export default class PageError extends Component {
     )
     return (
       <div className={styles.container}>
+        <a href='/' title='Go to serverless homepage'>
+          <img alt='Serverless logo' src={Logo} draggable='false' />
+        </a>
         <div className={styles.text}>
           <p className={styles.title}>
             <strong>{error}</strong>

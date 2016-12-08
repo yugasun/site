@@ -3,7 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - $navHeight - $footerHeight)
+  min-height: 100vh !important;
+  background: $black1;
+  color: #fff;
+  padding-bottom: 90px;
 }
 
 .oops {
@@ -14,8 +17,9 @@
 
 .content {
   text-align: center;
+  color: #fff;
   a {
-    color: $black1;
+    color: #979fe1;
     font-weight: bold;
     text-decoration: none;
   }
