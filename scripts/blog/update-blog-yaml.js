@@ -32,7 +32,7 @@ module.exports = function updateFileContents(filePath, callBack) {
     //   item.authorsData = authorsData
     // }
 
-    item.gitLink = filename.split('blog')[1]
+    item.gitLink = `/${path.parse(filename).base}`
     if (item.date) {
       item.date = formatDate(item.date)
     } else {
