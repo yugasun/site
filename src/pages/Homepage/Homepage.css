@@ -78,14 +78,14 @@ a.yellowLink {
   width: 60%;
   padding: 40px 10px 18px 10px;
   align-items: flex-start;
-  background: url(../../assets/images/terminal_shadow.png) no-repeat bottom;
+  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/terminal_shadow.png) no-repeat bottom;
   background-size: contain;
 }
 .heroFramework {
   margin: 0 auto;
   height: 145px;
   width: 100%;
-  background: url(../../assets/images/home_framework_v1_1.png) no-repeat center;
+  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/home_framework_v1_1.png) no-repeat center;
   background-size: contain;
 }
 .tagline {

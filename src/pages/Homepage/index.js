@@ -1,15 +1,11 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
+import Button from '@serverless/ui-components/Button'
 import Default from '../../layouts/Default'
 import Terminal from '../../components/Terminal'
 import ContentBlock from '../../components/ContentBlock'
-import Button from '../../components/Button/Button'
 import terminalCommands from './terminalCommands'
-import architectureGif from '../../assets/images/architecture.gif'
-import frameworkGif from '../../assets/images/framework.gif'
-import awsLogo from '../../assets/images/aws_logo.png'
-import communityJpg from '../../assets/images/community.png'
 import styles from './Homepage.css'
 import playSvg from '../../assets/icons/play.svg'
 import docsSvg from '../../assets/icons/book2.svg'
@@ -75,7 +71,7 @@ export default class Homepage extends Component {
               </div>
               <div className={styles.poweredBy}>
                 <span>Powered by AWS Lambda</span>
-                <img className={styles.awsLogo} src={awsLogo} alt='aws Lambda' />
+                <img className={styles.awsLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/aws_logo.png'} alt='aws Lambda' />
               </div>
             </div>
 
@@ -92,13 +88,13 @@ export default class Homepage extends Component {
             </div>
           </div>
 
-          <ContentBlock title='The Serverless Architecture' image={architectureGif}>
+          <ContentBlock title='The Serverless Architecture' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/architecture.gif'}>
             <p>
               Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically.
             </p>
           </ContentBlock>
 
-          <ContentBlock title='The Serverless Framework' image={frameworkGif}>
+          <ContentBlock title='The Serverless Framework' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/framework.gif'}>
             <p>The open-source, application framework to easily build serverless architectures on AWS Lambda & more.  Startups and Fortune 500 companies are using it to build incredibly efficient applications.</p>
             <p>
               <Link to='/framework'>
@@ -107,7 +103,7 @@ export default class Homepage extends Component {
             </p>
           </ContentBlock>
 
-          <ContentBlock title='The Serverless Community' image={communityJpg}>
+          <ContentBlock title='The Serverless Community' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/community.png'}>
             <p>Over 1,900 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
             <p>
               <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
