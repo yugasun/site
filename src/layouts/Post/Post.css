@@ -105,10 +105,16 @@ $sidebarWidth: 250px;
   .postPage {
     margin-top: 20px;
   }
-  h1 {
+  .postPage h1 {
     font-size: 2.2rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    letter-spacing: -.025rem;
   }
-  img[align="right"] {
+  .postPage .title {
+    margin-bottom: 10px;
+  }
+  .postPage img[align="right"] {
     float: none;
     clear: both;
     display: block;
