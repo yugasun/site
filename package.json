@@ -6,8 +6,8 @@
   "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
-    "cache": true,
-    "offline": false
+    "offline": true,
+    "cache": true
   },
   "scripts": {
     "lintfix": "eslint --ignore-path .gitignore --fix ./src",
@@ -17,6 +17,7 @@
     "watch:blog": "node scripts/blog/watch.js",
     "watch:docs": "node scripts/docs/watch.js",
     "watch": "npm-run-all --parallel watch:*",
+    "components": "npm run transpile -- --watch",
     "prepareContent": "node scripts/docs && node scripts/blog",
     "dev": "npm run prepareContent && phenomic start",
     "start": "npm-run-all --parallel dev watch",
@@ -36,6 +37,7 @@
     "dll": "webpack --display-chunks --color --config webpack.DLL.babel.js"
   },
   "devDependencies": {
+    "@serverless/ui-components": "0.0.6",
     "async": "^2.0.1",
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
@@ -114,6 +116,7 @@
     }
   },
   "dependencies": {
+    "@serverless/ui-components": "0.0.5",
     "auth0-lock": "10.2.1",
     "axios": "^0.13.1",
     "classnames": "^2.2.5",
