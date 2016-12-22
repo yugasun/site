@@ -3,6 +3,7 @@
 /docs /framework/docs/
 /framework/docs/guide/README.md /framework/docs/guide/#advanced-guides
 /docs /framework/docs/
+/framework/docs/docs/commands-overview /framework/docs/providers/aws/
 /framework/docs/docs/backstory /framework/
 /framework/docs/guide/ /framework/docs/providers/aws/guide/
 /framework/docs/guide/installing-serverless/ /framework/docs/providers/aws/guide/installation
