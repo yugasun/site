@@ -9,8 +9,8 @@ import initUAClasses from './utils/brower-detect'
 import './index.global.css'
 import styles from './index.css'
 
-// expose React for app scripts
 if (typeof window !== 'undefined') {
+  // expose React for app scripts
   window.React = React
 }
 
