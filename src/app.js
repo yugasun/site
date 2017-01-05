@@ -10,7 +10,9 @@ import './index.global.css'
 import styles from './index.css'
 
 // expose React for app scripts
-window.React = React
+if (typeof window !== 'undefined') {
+  window.React = React
+}
 
 const propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
