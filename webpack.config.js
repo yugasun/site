@@ -22,6 +22,26 @@ export const makeConfig = (config = {}) => {
     memo[key] = JSON.stringify(siteConfig[key])
     return memo
   }, dynamicEnvVariables)
+
+  //const varsFile = require("./src/_variables.js")
+  // const varsFile = (webpackInstance) => {
+  //   webpackInstance.addDependency(varsFilePath)
+  //   delete require.cache[varsFilePath]
+  //   return require(varsFilePath)()
+  // }
+  const postcssPluginFile = require.resolve("./postcss.config.js")
+  const postcssPlugins = (webpackInstance) => {
+    const varFile = require.resolve("./src/_variables.js")
+    const varFileContents = () => {
+      webpackInstance.addDependency(varFile)
+      delete require.cache[varFile]
+      return require(varFile)()
+    }
+    webpackInstance.addDependency(postcssPluginFile)
+    delete require.cache[postcssPluginFile]
+    return require(postcssPluginFile)(config, varFileContents())
+  }
+
   console.log('processEnvVariables', processEnvVariables)
   return {
     ...config.dev && {
@@ -31,7 +51,8 @@ export const makeConfig = (config = {}) => {
       noParse: [/\.min\.js/, /autoit.js/],
       loaders: [
         {
-          test: /\.md$/, // phenomic requirement for loading markdown
+          // phenomic requirement for loading markdown
+          test: /\.md$/,
           loader: phenomicLoader,
         },
         {
@@ -54,8 +75,16 @@ export const makeConfig = (config = {}) => {
           ],
         },
         {
-          test: /\.css$/,  // *.css => CSS Modules
-          exclude: /\.global\.css$/,
+          test: /@serverless\/ui-components.*.css$/,
+          loader: ExtractTextPlugin.extract(
+            'style-loader',
+            ['css-loader?modules&importLoaders=1&localIdentName=[local]', 'postcss-loader'].join('!'),
+          ),
+        },
+        {
+          // *.css => CSS Modules
+          test: /\.css$/,
+          exclude: [/\.global\.css$/, path.join(__dirname, 'node_modules')],
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
@@ -69,14 +98,14 @@ export const makeConfig = (config = {}) => {
           ),
         },
         {
-          test: /\.global\.css$/, // *.global.css => global (normal) css
+          // *.global.css => global (normal) css
+          test: /\.global\.css$/,
           include: path.resolve(__dirname, 'src'),
           loader: ExtractTextPlugin.extract(
             'style-loader',
             ['css-loader', 'postcss-loader'].join('!'),
           ),
         },
-        // copy assets and return generated path in js
         {
           test: /\.(html|ico|jpe?g|png|gif)$/,
           loader: `${'file-loader' +
@@ -98,34 +127,7 @@ export const makeConfig = (config = {}) => {
       },
     },
 
-    postcss: (webpack) => [
-      // require("stylelint")(),
-      require('postcss-cssnext')({ browsers: 'last 2 versions' }),
-      // require('postcss-import')({
-      //   addDependencyTo: webpack
-      // }),
-      // require("postcss-reporter")(),
-      /* require global variables */
-      require('postcss-simple-vars')({
-        variables: function variables() {
-          return require('./src/_variables')
-        },
-        onVariables(variables) {
-          // console.log(variables)
-        },
-        unknown: function unknown(node, name, result) {
-          node.warn(result, `Unknown variable ${name}`)
-        }
-      }),
-      /* do math with resolve( ) */
-      require('postcss-math'),
-      // require('cssnano'), breaks keyframes
-      /* enable nested css selectors like Sass/Less */
-      require('postcss-nested'),
-      ...config.production ? [
-        require('postcss-browser-reporter')(), // dev
-      ] : [], // prod
-    ],
+    postcss: postcssPlugins,
 
     plugins: [
       // possible perf upgrade for local dev
