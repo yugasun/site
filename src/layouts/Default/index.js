@@ -122,9 +122,10 @@ class Default extends Component {
         />
       )
     }
+    const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
     const classes = classnames(contentWrapperClass, className)
     return (
-      <div>
+      <div id='base' className={pageClass}>
         <Helmet title={metaTitle} meta={meta} />
         <Header />
         <div className={classes}>
