@@ -13,7 +13,7 @@ export default class Footer extends Component {
       }
     }
     return (
-      <footer className={styles.footer}>
+      <footer id='footer' className={styles.footer}>
         <div>
           {cta}
         </div>
