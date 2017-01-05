@@ -20,9 +20,8 @@ const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 /*
 TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
 */
-const preventDefault = function (e) {
-  e.preventDefault()
-}
+const preventDefault = (e) => e.preventDefault()
+
 function currentUrl(url) {
   if (url) {
     return url
@@ -51,11 +50,18 @@ class Doc extends Component {
     }
     // disable anchor tags until they are removed
     this.attachHandlers()
-    this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
-      text(trigger) { // eslint-disable-line
-        return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
-      }
-    })
+    setTimeout(() => {
+      this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
+        text(trigger) { // eslint-disable-line
+          return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
+        }
+      })
+      this.clipboardInstance.on('error', (e) => {
+        // log error in safari
+        console.log(e) // eslint-disable-line
+      })
+    }, 10)
+
     initializeSearch()
   }
   componentDidUpdate(previousProps, _prevState) {
@@ -72,12 +78,19 @@ class Doc extends Component {
     this.dettachHandlers()
   }
   attachHandlers = () => {
+    if (document.documentElement.indexOf('safari') > -1) {
+      // clipboard doesnt work in safari
+      return false
+    }
     const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener('click', preventDefault, false)
     }
   }
   dettachHandlers = () => {
+    if (document.documentElement.indexOf('safari') > -1) {
+      return false
+    }
     const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
     for (let i = 0; i < elements.length; i++) {
       elements[i].removeEventListener('click', preventDefault, false)
