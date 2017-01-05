@@ -1,5 +1,6 @@
 /* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
+import ReactDOM from 'react-dom' // eslint-disable-line
 import HeadTag from './fragments/HeadTag'
 import Scripts from './fragments/GlobalScripts'
 import SubscribeModal from './fragments/SubscribeModal'
@@ -12,6 +13,7 @@ import styles from './index.css'
 if (typeof window !== 'undefined') {
   // expose React for app scripts
   window.React = React
+  window.ReactDOM = ReactDOM
 }
 
 const propTypes = {
