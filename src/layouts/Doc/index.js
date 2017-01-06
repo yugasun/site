@@ -78,7 +78,8 @@ class Doc extends Component {
     this.dettachHandlers()
   }
   attachHandlers = () => {
-    if (document.documentElement && document.documentElement.className.indexOf('safari') > -1) {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
       // clipboard doesnt work in safari
       return false
     }
@@ -88,7 +89,8 @@ class Doc extends Component {
     }
   }
   dettachHandlers = () => {
-    if (document.documentElement && document.documentElement.className.indexOf('safari') > -1) {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
       return false
     }
     const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
