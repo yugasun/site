@@ -172,12 +172,12 @@ export const makeConfig = (config = {}) => {
         // 'window.Auth0Lock': 'Auth0Lock'
       }),
       // Copy external files to /dist
-      new CopyWebpackPlugin([
-        {
-          from: 'admin',
-          to: 'admin'
-        },
-      ]),
+      // new CopyWebpackPlugin([
+      //   {
+      //     from: 'admin',
+      //     to: 'admin'
+      //   },
+      // ]),
     ],
     // externals: {
     //   // Use external version of React
