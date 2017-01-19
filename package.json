@@ -33,7 +33,6 @@
     "postbuild": "node scripts/redirects.js",
     "static": "cd dist && http-server",
     "pretest": "npm run lint",
-    "build-components": "webpack --config webpack.config.components.babel.js && node scripts/components/post-build.js",
     "dll": "webpack --display-chunks --color --config webpack.DLL.babel.js"
   },
   "devDependencies": {
