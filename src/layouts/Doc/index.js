@@ -17,8 +17,8 @@ import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
 
 const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
-/*
-TODO: add previous release tag links https://developer.github.com/v3/repos/releases/
+/* TO DO:
+add previous release tag links https://developer.github.com/v3/repos/releases/
 */
 const preventDefault = (e) => e.preventDefault()
 
@@ -99,7 +99,6 @@ class Doc extends Component {
     }
   }
   handleScroll = (_event) => {
-    /* TODO: make editLink fixed */
     const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
     const stickyNavHeight = 70
     const cachedOffset = this.sidebarNodeOffset - stickyNavHeight

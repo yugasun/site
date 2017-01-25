@@ -53,26 +53,26 @@ export default class Newsletter extends Component {
       url: newsletterSubscribeAPI,
       data,
     }).then((response) => {
-      console.log(response.data)
+      // console.log(response.data)
       // console.log(response.status);
       // console.log(response.statusText);
       // console.log(response.headers);
       // console.log(response.config);
       if (response && response.data && response.data.created) {
-        console.log('creation succeed')
+        console.log('creation succeed') // eslint-disable-line
         that.setState({
           isSubscribed: true,
           isFetching: false
         })
         emailNode.value = ''
       } else {
-        console.log('failed creation')
+        console.log('failed creation') // eslint-disable-line
         that.setState({
           error: 'alreadyEntered'
         })
       }
     }).catch((error) => {
-      console.log(error)
+      console.log(error) // eslint-disable-line
       that.setState({
         error: 'serviceDown'
       })

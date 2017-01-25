@@ -30,11 +30,9 @@ export default class PageError extends Component {
           referrer: document.referrer || window.localStorage.getItem('sls_last_page')
         },
       }).then((response) => {
-        console.log('404 recorded')
-        console.log(response)
-        console.log(response.data)
+        console.log('404 recorded') // eslint-disable-line
       }).catch((err) => {
-        console.log(err)
+        console.log(err) // eslint-disable-line
       })
     }
   }

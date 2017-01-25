@@ -13,8 +13,8 @@ export function setItem(key, value) {
       createCookie(key, value)
       return value
     } catch (e) {
-      console.log('Local Storage not supported by this browser')
-      // TODO: set window.var
+      console.log('Local Storage not supported by this browser') // eslint-disable-line
+      // TO DO: set window.var
     }
   }
   const saver = JSON.stringify(value)

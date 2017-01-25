@@ -60,12 +60,12 @@ class TextInput extends Component {
         const value = this.refs.input.value
         if (value) {
           const isValid = this.doValidation(value).isValid
-          console.log(`isValid ${value}`, isValid)
+          console.log(`isValid ${value}`, isValid) // eslint-disable-line
           this.setState({
             isValid: this.doValidation(value).isValid,
             value
           })
-          console.log('VALUE', value)
+          console.log('VALUE', value) // eslint-disable-line
         }
       }
     }, 0)
@@ -195,9 +195,9 @@ class TextInput extends Component {
     if (onBlur) {
       onBlur(event, event.target.value, isValid)
     }
-    console.log('this.state.', this.state)
-    console.log('this.state.blurRanOnce', this.state.blurRanOnce)
-    console.log('event.target.value', event.target.value)
+    // console.log('this.state.', this.state)
+    // console.log('this.state.blurRanOnce', this.state.blurRanOnce)
+    // console.log('event.target.value', event.target.value)
     // Set blur state to show validations
     if (!this.state.blurRanOnce && event.target.value) {
       // capture focus if input wrong
@@ -259,7 +259,6 @@ class TextInput extends Component {
       value,
       className: cx(className, styles.input),
     }
-    console.log('props', props)
     return (
       <div className={styles.inputWrapper}>
         {this.showValidation()}

@@ -10,12 +10,12 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
     return false
   }
   if (process.env.NODE_ENV === 'development') {
-    console.log('axuthListener middleware added')
+    console.log('authListener middleware added') // eslint-disable-line
   }
   // register lock callback once
   lockInstance.on('authenticated', (authResult) => { // eslint-disable-line
     if (process.env.NODE_ENV === 'development') {
-      console.log('authResult', authResult)
+      console.log('authResult', authResult) // eslint-disable-line
     }
     // Check xrsf token
     const stateValues = getURLParams(`http://dummy.com?${authResult.state}`)
@@ -29,14 +29,14 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       // return { authenticated: true }
     } else {
       dispatch(loginError('invalid-token'))
-      alert('Error your authentication token is wrong. try logging in again') // eslint-disable-line
+      alert('Error your authentication token is wrong. Try logging in again') // eslint-disable-line
       handleAuthRedirect(stateValues.url)
       return false
     }
     // Async loads the user profile data
     lockInstance.getProfile(authResult.idToken, (error, profile) => { // eslint-disable-line
       if (error) {
-        console.log('Error loading the Profile', error)
+        console.log('Error loading the Profile', error) // eslint-disable-line
         return dispatch(loginError(error))
       }
       // set tokens

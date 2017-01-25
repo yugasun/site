@@ -15,7 +15,7 @@ export default class SubmitResource extends Component {
   }
   handleSubmit = (event, data) => {
     event.preventDefault()
-    console.log(data)
+    console.log(data) // eslint-disable-line
     // handle data
   }
   renderForm() {
