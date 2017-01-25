@@ -2,7 +2,7 @@
   Get referral data
 */
 const isExternalReferrer = () => {
-  if (document.referrer) {
+  if (typeof document !== 'undefined' && document.referrer) {
     const port = window.document.location.port
     let ref = document.referrer.split('/')[2]
     if (port) {

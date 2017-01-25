@@ -26,6 +26,7 @@ const propTypes = {
 }
 
 /* eslint-disable */
+if(typeof window !== 'undefined') {
 ;(function(history){
     var pushState = history.pushState
     history.pushState = function(state) {
@@ -36,7 +37,8 @@ const propTypes = {
         // maybe call onhashchange e.handler
         return pushState.apply(history, arguments)
     }
-})(window.history);
+})(window.history)
+}
 
 function handleRouteChange(e) {
   const previousURL = window.location.href

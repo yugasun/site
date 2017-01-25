@@ -27,6 +27,7 @@ class Post extends Component {
     let author
     let authorBio
     let avatarURL
+    let markdownContent
     let title = (head) ? head.title : 'Default Loading Title'
 
     if (loadingData && loadingData.title) {
@@ -47,6 +48,11 @@ class Post extends Component {
           </span>
         )
       }
+      markdownContent = (
+        <BodyContainer>
+          {body}
+        </BodyContainer>
+      )
       // &nbsp;by Jim
       githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
       postMeta = (
@@ -82,11 +88,6 @@ class Post extends Component {
       }
     }
 
-    let markdownContent = (
-      <BodyContainer>
-        {body}
-      </BodyContainer>
-    )
     let authorBox
     if (author) {
       authorBox = (

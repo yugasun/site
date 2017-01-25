@@ -29,7 +29,7 @@ class Default extends Component {
   componentDidMount() {
     const urlParams = getURLParams(window.location.href)
     if (urlParams) {
-      console.log('urlParams', urlParams)
+      console.log('urlParams', urlParams) // eslint-disable-line
     }
     // Set last page viewed for 404 tracker
     setItem('sls_last_page', window.location.href)
