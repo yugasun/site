@@ -10,4 +10,4 @@ inlineCSS: "
 "
 ---
 
-<div id="status"></div>
+<div id="status-board"></div>
