@@ -4,6 +4,7 @@ const breakWord = 'content'
 const path = require('path')
 const fs = require('fs-extra')
 const matter = require('gray-matter')
+const pathExists = require('path-exists');
 
 function trimContent(content) {
   return content.replace(/^\s+|\s+$/g, '')
@@ -55,11 +56,14 @@ function generateFileMenus(d) {
   return tempMenus
 }
 
+/*
+  TODO: Must refactor this hardcoded menu!
+*/
 // Generates menus from all docs, with some overrides
 function createMenus() {
   const menus = {}
 
-  const defaults = [{
+  const awsDefaults = [{
     path: '/framework/docs/providers/aws/guide',
     title: 'AWS - Guide',
     order: 1
@@ -77,25 +81,62 @@ function createMenus() {
     order: 4
   }]
 
-  menus['/framework/docs'] = defaults
-  menus['/framework/docs/providers'] = defaults
-  menus['/framework/docs/providers/aws'] = defaults
+  const openwhiskDefaults = [{
+    path: '/framework/docs/providers/openwhisk/guide',
+    title: 'Openwhisk - Guide',
+    order: 1
+  }, {
+    path: '/framework/docs/providers/openwhisk/cli-reference',
+    title: 'Openwhisk - CLI Reference',
+    order: 2
+  }, {
+    path: '/framework/docs/providers/openwhisk/events',
+    title: 'Openwhisk - Events',
+    order: 3
+  }, {
+    path: '/framework/docs/providers/openwhisk/examples',
+    title: 'Openwhisk - Examples',
+    order: 4
+  }]
+  /*
+    TODO: Remove this logic after openwhisk launched
+  */
+  const openWhiskDocsExist = pathExists.sync(path.join(config.siteDocsPath, 'providers/openwhisk/guide'))
+  if (openWhiskDocsExist) {
+    menus['/framework/docs'] = awsDefaults.concat(openwhiskDefaults)
+    menus['/framework/docs/providers'] = awsDefaults.concat(openwhiskDefaults)
+  } else {
+    menus['/framework/docs'] = awsDefaults
+    menus['/framework/docs/providers'] = awsDefaults
+  }
+  menus['/framework/docs/providers/aws'] = awsDefaults
+  menus['/framework/docs/providers/openwhisk'] = openwhiskDefaults
 
   const dirs = [
     path.join(config.siteDocsPath, 'providers/aws/guide'),
     path.join(config.siteDocsPath, 'providers/aws/cli-reference'),
     path.join(config.siteDocsPath, 'providers/aws/events'),
     path.join(config.siteDocsPath, 'providers/aws/examples'),
+    path.join(config.siteDocsPath, 'providers/openwhisk/guide'),
+    path.join(config.siteDocsPath, 'providers/openwhisk/cli-reference'),
+    path.join(config.siteDocsPath, 'providers/openwhisk/events'),
+    path.join(config.siteDocsPath, 'providers/openwhisk/examples'),
   ]
   dirs.forEach(d => {
-    const arr = generateFileMenus(d)
+    /*
+      TODO: Remove this logic after openwhisk launched
+    */
+    const exists = pathExists.sync(d)
+    if (exists) {
+      const arr = generateFileMenus(d)
 
-    arr.forEach(m => {
-      menus[m.path] = arr
-    })
+      arr.forEach(m => {
+        menus[m.path] = arr
+      })
 
-    // Don't forget to add menus for the dirs above
-    menus[d.split(breakWord)[1]] = arr
+      // Don't forget to add menus for the dirs above
+      menus[d.split(breakWord)[1]] = arr
+    }
   })
   return menus
 }
