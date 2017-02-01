@@ -1,6 +1,6 @@
 import { loginSuccess, loginError } from './user'
 import runMiddlewareOnce from './utils/runMiddlewareOnce'
-import getURLParams from '../utils/urlHelpers'
+import getURLParams from '../utils/analytics/source/urlParams'
 import { setItem } from '../utils/storage'
 import { getXsrfToken } from '../utils/auth/xsrfToken'
 import lockInstance from '../utils/auth'
@@ -49,7 +49,7 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
 })
 
 function handleAuthRedirect(url) {
-  const redirect = new CustomEvent('reactRouterRedirect', { // eslint-disable-line
+  const redirect = new CustomEvent('routerRedirect', { // eslint-disable-line
     detail: {
       url,
     },

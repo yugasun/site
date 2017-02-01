@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import AutoForm from 'react-auto-form'
-import NewAuth from '../../components/NewAuth'
+import Auth from '../../components/Auth'
 import TextInput from '../../components/TextInput'
 import Button from '../../components/Button'
-import getURLParams from '../../utils/urlHelpers'
+import getURLParams from '../../utils/analytics/source/urlParams'
 import styles from './Submit.css'
 
 export default class SubmitResource extends Component {
@@ -51,7 +51,7 @@ export default class SubmitResource extends Component {
   render() {
     const loggedInContent = this.renderForm()
     return (
-      <NewAuth loggedInComponent={loggedInContent}>
+      <Auth loggedInComponent={loggedInContent}>
         <div className={styles.login}>
           <div>
             <div>Please login to submit a resource</div>
@@ -60,7 +60,7 @@ export default class SubmitResource extends Component {
             </Button>
           </div>
         </div>
-      </NewAuth>
+      </Auth>
     )
   }
 }

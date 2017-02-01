@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getItem, createCookie, readCookie } from '../../utils/storage'
 import HelloBar from '../../components/HelloBar'
-import NewAuth from '../../components/NewAuth'
+import Auth from '../../components/Auth'
 import styles from './PlatformSignupFooter.css'
 
 const DISMISS = 'dismissSignup'
@@ -55,9 +55,9 @@ export default class PlatformSignupFooter extends Component {
             <div className={styles.text}>
               The Serverless Platform is coming
             </div>
-            <NewAuth>
+            <Auth>
               <button className={styles.button}>Register for the Beta</button>
-            </NewAuth>
+            </Auth>
           </div>
         </HelloBar>
       )

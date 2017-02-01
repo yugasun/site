@@ -61,7 +61,7 @@ export default class App extends Component {
     initializeVisitorID()
     const urlParams = getURLParams(window.location.href)
     console.log('urlParams', urlParams) // eslint-disable-line
-    window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
+    window.addEventListener('routerRedirect', this.handleAuthRedirect, false)
     // add browser based classes
     initUAClasses()
     window.onpopstate = history.onpushstate = handleRouteChange
@@ -72,7 +72,7 @@ export default class App extends Component {
     }
   }
   componentWillUnmount() {
-    window.removeEventListener('reactRouterRedirect', this.handleAuthRedirect)
+    window.removeEventListener('routerRedirect', this.handleAuthRedirect)
   }
   handleAuthRedirect = (e) => {
     const redirectURL = e.detail.url

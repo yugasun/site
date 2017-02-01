@@ -2,7 +2,6 @@
 /* Browser detection */
 import classnames from 'classnames'
 
-
 module.exports = function initUAClasses() {
   if (typeof window === 'undefined') {
     return false

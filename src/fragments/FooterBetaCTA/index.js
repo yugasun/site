@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Button from '../../components/Button'
-import NewAuth from '../../components/NewAuth'
+import Auth from '../../components/Auth'
 import styles from './index.css'
 
 const propTypes = {
@@ -9,7 +9,7 @@ const propTypes = {
 export default class FooterBetaCTA extends Component {
   render() {
     return (
-      <NewAuth loggedInComponent={<span />}>
+      <Auth loggedInComponent={<span />}>
         <div className={styles.ctaBottom}>
           <div className={styles.ctaBottomInner}>
             <div className={styles.ctaBottomRowOne} />
@@ -28,7 +28,7 @@ export default class FooterBetaCTA extends Component {
             </div>
           </div>
         </div>
-      </NewAuth>
+      </Auth>
     )
   }
 }

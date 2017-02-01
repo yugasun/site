@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import NewAuth from '../../components/NewAuth'
+import Auth from '../../components/Auth'
 import { twitterShare } from '../../utils/social/share'
 import platformImage from '../../assets/images/platform_4.gif'
 import Block from '../../components/Block'
@@ -17,7 +17,7 @@ const BetaCTA = (props) => {
     </Block>
   )
   return (
-    <NewAuth
+    <Auth
       className={props.className}
       style={props.style}
       loggedInComponent={loggedIn}
@@ -27,7 +27,7 @@ const BetaCTA = (props) => {
         <img src={platformImage} className={styles.image} role='presentation' />
         <Button>{props.buttonText}</Button>
       </Block>
-    </NewAuth>
+    </Auth>
   )
 }
 BetaCTA.defaultProps = {

@@ -181,15 +181,9 @@ class Doc extends Component {
     )
   }
   render() {
-    const {
-      __url,
-      head,
-      body,
-      isLoading,
-    } = this.props
+    const { __url, head, body, isLoading } = this.props
     const url = currentUrl(__url)
     let githubURL
-
     let markdownContent
 
     if (isLoading) {
@@ -265,15 +259,15 @@ function initializeSearch() {
 }
 
 Doc.propTypes = {
-  __url: PropTypes.string,
-  head: PropTypes.object,
-  body: PropTypes.string,
-  header: PropTypes.element,
-  footer: PropTypes.element,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
   /** set loading set **/
   isLoading: PropTypes.bool,
+  __url: PropTypes.string,
+  head: PropTypes.object,
+  body: PropTypes.string,
+  header: PropTypes.element,
+  footer: PropTypes.element
 }
 
 export default Doc
