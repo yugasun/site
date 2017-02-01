@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React, { Component, PropTypes } from 'react'
 import ga from 'react-google-analytics'
+import removeUTM from '../../utils/analytics/source/removeUTM'
 const InjectGoogleAnalytics = ga.Initializer
 const isProduction = process.env.NODE_ENV === 'production'
 const isClient = typeof window !== 'undefined'
@@ -36,9 +37,10 @@ const logPageview = () => {
   if (isClient) {
     if (isProduction) {
       ga('set', 'page', window.location.pathname)
-      ga('send', 'pageview')
+      ga('send', 'pageview', { hitCallback: removeUTM })
     } else {
       console.info('New pageview', window.location.href)
+      removeUTM()
     }
   }
 }
