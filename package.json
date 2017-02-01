@@ -6,7 +6,7 @@
   "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
-    "offline": true,
+    "offline": false,
     "cache": true
   },
   "scripts": {

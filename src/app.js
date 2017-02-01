@@ -7,6 +7,8 @@ import SubscribeModal from './fragments/SubscribeModal'
 import { initializeVisitorID } from './utils/analytics/visitor'
 import initUAClasses from './utils/brower-detect'
 import isExternalReferrer from './utils/analytics/source/referrer'
+import { setItem } from './utils/storage'
+import getURLParams from './utils/analytics/source/urlParams'
 /* Import global CSS before other components and their styles */
 import './index.global.css'
 import styles from './index.css'
@@ -28,15 +30,16 @@ const propTypes = {
 /* eslint-disable */
 if(typeof window !== 'undefined') {
   ;(function(history){
-      var pushState = history.pushState
-      history.pushState = function(state) {
-          if (typeof history.onpushstate === "function") {
-              history.onpushstate({state: state})
-          }
-          // whatever else you want to do
-          // maybe call onhashchange e.handler
-          return pushState.apply(history, arguments)
+    var pushState = history.pushState
+    history.pushState = function(state) {
+      if (typeof history.onpushstate === 'function') {
+        history.onpushstate({state: state})
       }
+      console.log('CHANGE') // eslint-disable-line
+      // whatever else you want to do
+      // maybe call onhashchange e.handler
+      return pushState.apply(history, arguments)
+    }
   })(window.history)
 }
 
@@ -44,8 +47,11 @@ function handleRouteChange(e) {
   const previousURL = window.location.href
   setTimeout(() => {
     const newURL = window.location.href
-    // console.log('previousURL', previousURL)
-    // console.log('newURL', newURL)
+    console.log('previousURL', previousURL)
+    console.log('newURL', newURL)
+    // Set last page viewed for 404 tracker
+    setItem('sls_last_page', previousURL)
+    setItem('sls_current_page', newURL)
   }, 0)
 }
 /* eslint-enable */
@@ -53,6 +59,8 @@ function handleRouteChange(e) {
 export default class App extends Component {
   componentDidMount() {
     initializeVisitorID()
+    const urlParams = getURLParams(window.location.href)
+    console.log('urlParams', urlParams) // eslint-disable-line
     window.addEventListener('reactRouterRedirect', this.handleAuthRedirect, false)
     // add browser based classes
     initUAClasses()
