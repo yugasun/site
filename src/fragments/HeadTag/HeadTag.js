@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-const HeadTag = (_props) => {
+const HeadTag = (props) => {
   return (
     <div>
       <style>
@@ -11,8 +11,7 @@ const HeadTag = (_props) => {
         meta={[
           { property: 'og:site_name', content: process.env.SITENAME },
           { name: 'twitter:site', content: `@${process.env.TWITTER}` },
-          {
-            name: 'google-site-verification',
+          { name: 'google-site-verification',
             content: '1HdFnJaYYEiONgCRl3fj7lQobYY4uXPe5L2-sTgNzKQ'
           },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' }
