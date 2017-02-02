@@ -11,6 +11,7 @@ const Footer = (props) => {
       cta = <FooterBetaCTA />
     }
   }
+  const year = new Date().getFullYear()
   return (
     <footer id='footer' className={styles.footer}>
       <div>
@@ -19,7 +20,7 @@ const Footer = (props) => {
       <div className={styles.footerLinks}>
         <a href={'https://serverless.com'} className={styles.link}>
           <span className={styles.reference}>
-            {'Serverless, Inc. © 2016'}
+            {`Serverless, Inc. © ${year}`}
           </span>
         </a>
       </div>
