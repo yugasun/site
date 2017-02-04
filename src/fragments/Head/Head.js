@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-const HeadTag = (props) => {
+const Head = (props) => {
   return (
     <div>
       <style>
@@ -21,4 +21,4 @@ const HeadTag = (props) => {
   )
 }
 
-export default HeadTag
+export default Head
