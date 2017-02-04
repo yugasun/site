@@ -3,18 +3,19 @@
  */
 
 const disqusScript = `
-  var disqus_shortname = 'serverless-inc';
-  (function() {
-      var id = 'disqus-script'
-      if (!document.getElementById(id)) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        dsq.id = 'disqus-script';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      } else {
-        setTimeout(function() {
+var disqus_shortname = 'serverless-inc';
+(function() {
+    var id = 'disqus-script'
+    if (!document.getElementById(id)) {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.id = 'disqus-script';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    } else {
+      setTimeout(function() {
+        if (window.DISQUS) {
           DISQUS.reset({
             reload: true,
             config: function () {
@@ -23,9 +24,10 @@ const disqusScript = `
               this.language = 'en';
             }
           });
-        }, 20);
-      }
-  })();
+        }
+      }, 20);
+    }
+})();
 `
 
 module.exports = disqusScript
