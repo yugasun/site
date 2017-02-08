@@ -1,0 +1,18 @@
+
+export default function initializeRouteListener() {
+  /* eslint-disable */
+  if (typeof window !== 'undefined') {
+    ;(function(history){
+      var pushState = history.pushState
+      history.pushState = function(state) {
+        if (typeof history.onpushstate === 'function') {
+          history.onpushstate({state: state})
+        }
+        console.log('CHANGE') // eslint-disable-line
+        // whatever else you want to do
+        // maybe call onhashchange e.handler
+        return pushState.apply(history, arguments)
+      }
+    })(window.history)
+  }
+}

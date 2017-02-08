@@ -1,14 +1,13 @@
 /* Main entry of all requests */
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom' // eslint-disable-line
-import HeadTag from './fragments/HeadTag'
+import Head from './fragments/Head'
 import Scripts from './fragments/GlobalScripts'
 import SubscribeModal from './fragments/SubscribeModal'
-import { initializeVisitorID } from './utils/analytics/visitor'
+import initializeAnalytics from './utils/analytics/init'
 import initUAClasses from './utils/brower-detect'
-import isExternalReferrer from './utils/analytics/source/referrer'
-import { setItem } from './utils/storage'
-import getURLParams from './utils/analytics/source/urlParams'
+import { setItem, getItem } from './utils/storage' // eslint-disable-line
+import initializeRouteListener from './utils/routerUtils'
 /* Import global CSS before other components and their styles */
 import './index.global.css'
 import styles from './index.css'
@@ -17,6 +16,8 @@ if (typeof window !== 'undefined') {
   // expose React for app scripts
   window.React = React
   window.ReactDOM = ReactDOM
+  // enable listerers on route changes without react-router-redux
+  initializeRouteListener()
 }
 
 const propTypes = {
@@ -27,49 +28,38 @@ const propTypes = {
   history: PropTypes.object,
 }
 
+const LAST_PAGE_SEEN = 'last_page_seen'
 /* eslint-disable */
-if(typeof window !== 'undefined') {
-  ;(function(history){
-    var pushState = history.pushState
-    history.pushState = function(state) {
-      if (typeof history.onpushstate === 'function') {
-        history.onpushstate({state: state})
-      }
-      console.log('CHANGE') // eslint-disable-line
-      // whatever else you want to do
-      // maybe call onhashchange e.handler
-      return pushState.apply(history, arguments)
-    }
-  })(window.history)
-}
-
 function handleRouteChange(e) {
   const previousURL = window.location.href
   setTimeout(() => {
     const newURL = window.location.href
+    const loading = window.location.origin + '/loading/'
+    if (newURL === previousURL) {
+      return false
+    }
+    if (newURL === loading || previousURL === loading) {
+      console.log('exit early')
+      return false
+    }
     console.log('previousURL', previousURL)
     console.log('newURL', newURL)
     // Set last page viewed for 404 tracker
-    setItem('sls_last_page', previousURL)
-    setItem('sls_current_page', newURL)
+    setItem(LAST_PAGE_SEEN, previousURL, function(){
+      console.log('done')
+    })
   }, 0)
 }
 /* eslint-enable */
 
 export default class App extends Component {
+  // Initial App mount. Happens once
   componentDidMount() {
-    initializeVisitorID()
-    const urlParams = getURLParams(window.location.href)
-    console.log('urlParams', urlParams) // eslint-disable-line
+    initializeAnalytics()
     window.addEventListener('routerRedirect', this.handleAuthRedirect, false)
     // add browser based classes
     initUAClasses()
     window.onpopstate = history.onpushstate = handleRouteChange
-    const externalReferrer = isExternalReferrer()
-    if (externalReferrer) {
-      console.log('Referring site', document.referrer) // eslint-disable-line
-      // console.log(document.referrer.split('/')[2])
-    }
   }
   componentWillUnmount() {
     window.removeEventListener('routerRedirect', this.handleAuthRedirect)
@@ -82,9 +72,9 @@ export default class App extends Component {
     const { location, params } = this.props
     const currentQuery = location && location.query
     return (
-      <div>
-        <HeadTag params={params} query={currentQuery} />
-        <div className={styles.minHeight}>
+      <div className={styles.app}>
+        <Head />
+        <div className={styles.content}>
           {this.props.children}
         </div>
         <SubscribeModal />

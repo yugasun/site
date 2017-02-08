@@ -40,7 +40,10 @@ const logPageview = () => {
       ga('send', 'pageview', { hitCallback: removeUTM })
     } else {
       console.info('New pageview', window.location.href)
-      removeUTM()
+      setTimeout(() => {
+        // timeout for param parser
+        removeUTM()
+      }, 0)
     }
   }
 }

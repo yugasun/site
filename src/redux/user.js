@@ -1,6 +1,8 @@
-import { getItem, removeItem } from '../utils/storage'
+import { getItemSync, removeItemSync } from '../utils/storage'
 import { getXsrfToken } from '../utils/auth/xsrfToken'
 import { isAuthenticated } from '../utils/auth/authToken'
+import { getUniqueID, getVisitorUUID } from '../utils/analytics/visitor'
+import { getBrowserData } from '../utils/brower-detect'
 import lock from '../utils/auth'
 
 const isClient = typeof window !== 'undefined'
@@ -36,20 +38,55 @@ export function login() {
   const redirectURL = isClient && encodeURIComponent(window.location.href)
   // pass xsrf token through with state
   const state = `token=${getXsrfToken()}&url=${redirectURL}`
+  const profile = getProfile()
+  if (profile) {
+    console.log(profile.user_metadata) // eslint-disable-line
+  }
   const options = {
     auth: {
       params: {
         state,
+        analytics: {
+          // info about visitor
+          visitor: {
+            uaId: getUniqueID(),
+            uuId: getVisitorUUID(),
+            browser: getBrowserData(),
+            userAgent: navigator.userAgent,
+          },
+          firstPageSeen: 'lol',
+          firstReferringSite: 'ladlakslk'
+          /*
+          'firstPageSeen', string
+          'firstReferringSite', string
+          'firstConversionEvent', { timestamp, name, }
+          'lastPageSeen', string
+          'lastReferringSite', string
+          'lastConversionEvent' { timestamp, name, }
+          //'Number of event completions',
+          //'Number of Pageviews',
+          //'Number of Visits',
+          'OriginalSourceData 1',
+          'Original Source Data 2',
+          'Original Source Type',
+          'TimeOfFirstVisit',
+          'TimeOfLastVisit',
+          'conversionEvents', []
+          'formSubmissions', []
+
+          */
+        },
         customValues: 'value1',
       },
     }
   }
   return dispatch => {
     if (isClient) {
+      // collect data and then lock
       lock.show(options)
     }
     return dispatch(loginStarted())
-    // login finishes via custom middleware
+    // login finishes via custom middleware user-middleware.js
   }
 }
 
@@ -62,14 +99,14 @@ function logoutSuccess() {
 export function logout() {
   return dispatch => {
     // remove auth0 localStorage items
-    removeItem('id_token')
-    removeItem('profile')
+    removeItemSync('id_token')
+    removeItemSync('profile')
     return dispatch(logoutSuccess())
   }
 }
 
 function getProfile() {
-  return getItem('profile')
+  return getItemSync('profile')
 }
 
 /* Reducer */
@@ -79,6 +116,8 @@ export const initialAuthState = {
   loading: false,
   error: ''
 }
+
+// console.log('initialAuthState', initialAuthState)
 
 export default function authReducer(state = initialAuthState, action) {
   switch (action.type) {

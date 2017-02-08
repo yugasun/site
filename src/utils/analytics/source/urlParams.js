@@ -1,5 +1,11 @@
+/* get URL parameters as object */
+import { setItem, getItem } from '../../storage'
+import constants from '../constants'
 
-export default function getURLParams(url) {
+const FIRST_CAMPAIGN_SOURCE = constants.FIRST_CAMPAIGN_SOURCE
+const LAST_CAMPAIGN_SOURCE = constants.LAST_CAMPAIGN_SOURCE
+
+export function getParams(url) {
   const urlParams = {}
   const pattern = /([^&=]+)=?([^&]*)/g
   let params
@@ -10,7 +16,7 @@ export default function getURLParams(url) {
   } else {
     params = window.location.search.substring(1)
   }
-  if (!params) { return false }
+  if (!params) return false
   while (matches = pattern.exec(params)) { // eslint-disable-line
     if (matches[1].indexOf('[') == '-1') { // eslint-disable-line
       urlParams[decode(matches[1])] = decode(matches[2])
@@ -36,4 +42,23 @@ export default function getURLParams(url) {
 
 function decode(s) {
   return decodeURIComponent(s).replace(/\+/g, ' ')
+}
+
+const getFirstCampaign = () => {
+  return getItem(FIRST_CAMPAIGN_SOURCE)
+}
+
+export default function initializeParamData() {
+  const urlParams = getParams(window.location.href)
+  if (urlParams) {
+    getFirstCampaign().then((campaign) => {
+      if (!campaign) {
+        setItem(FIRST_CAMPAIGN_SOURCE, urlParams)
+      }
+      setItem(LAST_CAMPAIGN_SOURCE, urlParams)
+    })
+    console.log('urlParams', urlParams) // eslint-disable-line
+  } else {
+    // console.log('no params')
+  }
 }

@@ -6,9 +6,9 @@ import { createCookie, readCookie, eraseCookie } from './cookie'
 const isServer = typeof window === 'undefined'
 const localStorageSupport = localStorageSupported()
 const localForageSupport = storageSupported()
+
 localforage.config({
   name: 'site',
-  driver: localforage.LOCALSTORAGE,
 })
 
 export function setItem(key, value, callback) {

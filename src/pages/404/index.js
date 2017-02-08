@@ -3,6 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
+import { getItem } from '../../utils/storage'
 import Logo from '../../assets/images/serverless_logo.png'
 import { twitterShare } from '../../utils/social/share'
 import styles from './index.css'
@@ -22,17 +23,19 @@ export default class PageError extends Component {
     const { error } = this.props
     const url = window.location.href
     if (error === 404 && !url.match(/localhost/)) {
-      axios({
-        method: 'post',
-        url: log404Endpoint,
-        data: {
-          url,
-          referrer: document.referrer || window.localStorage.getItem('sls_last_page')
-        },
-      }).then((response) => {
-        console.log('404 recorded') // eslint-disable-line
-      }).catch((err) => {
-        console.log(err) // eslint-disable-line
+      getItem('last_page_seen').then((lastPage) => {
+        axios({
+          method: 'post',
+          url: log404Endpoint,
+          data: {
+            url,
+            referrer: document.referrer || lastPage
+          },
+        }).then((response) => {
+          console.log('404 recorded') // eslint-disable-line
+        }).catch((err) => {
+          console.log(err) // eslint-disable-line
+        })
       })
     }
   }
