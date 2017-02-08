@@ -42,11 +42,15 @@ function handleRouteChange(e) {
       console.log('exit early')
       return false
     }
-    console.log('previousURL', previousURL)
-    console.log('newURL', newURL)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('previousURL', previousURL)
+      console.log('newURL', newURL)
+    }
     // Set last page viewed for 404 tracker
     setItem(LAST_PAGE_SEEN, previousURL, function(){
-      console.log('done')
+      if (process.env.NODE_ENV === 'development') {
+        console.log('done')
+      }
     })
   }, 0)
 }

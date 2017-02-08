@@ -8,7 +8,6 @@ export default function initializeRouteListener() {
         if (typeof history.onpushstate === 'function') {
           history.onpushstate({state: state})
         }
-        console.log('CHANGE') // eslint-disable-line
         // whatever else you want to do
         // maybe call onhashchange e.handler
         return pushState.apply(history, arguments)

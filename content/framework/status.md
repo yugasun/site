@@ -26,6 +26,11 @@ inlineCSS: "
     font-weight: bold;
     cursor:pointer;
   }
+  @media (max-width: 768px) {
+    #github-cta {
+      display: none;
+    }
+  }
 "
 ---
 
