@@ -79,6 +79,11 @@ export default class Header extends Component {
                       </Link>
                     </li>
                     <li>
+                      <Link to='/framework/status' className={styles.link}>
+                        Status
+                      </Link>
+                    </li>
+                    <li>
                       <a href='https://github.com/serverless/serverless' className={styles.link}>
                         GitHub
                       </a>
