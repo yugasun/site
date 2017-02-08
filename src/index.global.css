@@ -31,19 +31,6 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-/*
- * Set default height to viewport to avoid jumpy UI
- */
-#phenomic {
-  min-height: 100vh;
-  > div {
-    min-height: calc(100vh - $navHeight - $footerHeight);
-  }
-}
-
-body {
-  font-size: 14px;
-}
 
 /*
  * page styles
@@ -51,6 +38,17 @@ body {
 html {
   min-height: 100%;
   background: #fff;
+}
+
+body {
+  font-size: 14px;
+}
+
+/*
+ * Set default height to viewport to avoid jumpy UI
+ */
+#phenomic {
+  min-height: 100vh;
 }
 
 audio,
@@ -64,7 +62,6 @@ video {
 body {
   font-size: $fontSize;
   line-height: 1.9;
-  /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: 'Avenir Next W00', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -89,26 +86,16 @@ img[align="right"] {
 blockquote {
   display: block;
   background: #fff;
-  padding: 15px 20px 15px 55px;
+  padding: 15px 20px 15px 25px;
   margin: 0 0 20px;
   position: relative;
   font-size: 1.8rem;
   color: #666;
-  box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 8px rgba(204, 204, 204, 0.51);
   border-left-style: solid;
-  border-left-width: 15px;
+  border-left-width: 8px;
   border-right-style: solid;
   border-right-width: 2px;
-  &:before {
-   content: "\201C";
-   font-family: Georgia, serif;
-   font-size: 8.0rem;
-   font-weight: bold;
-   color: #999;
-   position: absolute;
-   left: 10px;
-   top: -2.6rem;
- }
 }
 code {
   font-size: 95%;
@@ -186,20 +173,6 @@ tfoot td {
   margin: auto;
   text-align: center;
 }
-/*
-.phenomic-HeadingAnchor {
-  display: inline-block;
-  text-align: center;
-  margin-left: -1.8rem;
-  margin-right: .4rem;
-  width: 1.4rem;
-  line-height: 1.4rem;
-  text-decoration: none;
-  opacity: .1;
-  transition: opacity .2s;
-  border-bottom: none !important;
-}
-*/
 .phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {
   display: none;
 }
