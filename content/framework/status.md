@@ -42,7 +42,7 @@ inlineCSS: "
     <a
       id="github-cta-link"
       target="_blank"
-      href="https://github.com/serverless/status-board">
+      href="https://github.com/serverless/scope">
       ⚡️ Fork the repo
     </a>
   </div>
