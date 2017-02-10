@@ -5,6 +5,7 @@ import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 
 export default class PartnersPage extends React.Component {
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.state = {
@@ -36,25 +37,34 @@ export default class PartnersPage extends React.Component {
     })
   }
   render() {
+    const svgSize = { height: '50px', width: '50px' }
     let errorDiv
     if (this.state.error) {
       errorDiv = (
-        <div className={styles.error}>Oops! Please fill out all the fields.</div>
+        <div className={styles.error}>
+          Oops! Please fill out all the fields.
+        </div>
        )
     }
     let successDiv
     if (this.state.success) {
       successDiv = (
-        <div className={styles.success}>Thanks! Someone will be in touch shortly.</div>
+        <div className={styles.success}>
+          Thanks! Someone will be in touch shortly.
+        </div>
        )
     }
     return (
-      <Default className={styles.enterprise} {...this.props} >
-        <h1 className={styles.header}>Serverless For The Enterprise</h1>
-        <i className={styles.subHeader}>Enabling enterprise development teams to take advantage of all of the benefits of serverless architectures.</i>
+      <Default className={styles.enterprise} {...this.props}>
+        <h1 className={styles.header}>
+          Serverless For The Enterprise
+        </h1>
+        <i className={styles.subHeader}>
+          Enabling enterprise development teams to take advantage of all of the benefits of serverless architectures.
+        </i>
         <div className={styles.box}>
           <div className={styles.component}>
-            <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
+            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
             <div className={styles.copy}>
               <h3>Serverless Architecture</h3>
               <p>Empower your development team to focus more time on solving business problems, less on operations, and to deploy faster than ever.</p>
@@ -62,7 +72,7 @@ export default class PartnersPage extends React.Component {
           </div>
 
           <div className={`${styles.component} ${styles.componentRight}`}>
-            <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/network.svg' />
+            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/network.svg' />
             <div className={styles.copy}>
               <h3>Event Driven Microservices</h3>
               <p>Keep units of deployment small, dramatically improve service discoverablity, and easily react to any event in your system.</p>
@@ -70,7 +80,7 @@ export default class PartnersPage extends React.Component {
           </div>
 
           <div className={styles.component}>
-            <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/controls.svg' />
+            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/controls.svg' />
             <div className={styles.copy}>
               <h3>Infinite Scalability</h3>
               <p>Sleep well at night knowing your serverless services can to scale to meet any demands that are placed on them.</p>

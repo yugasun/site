@@ -20,7 +20,6 @@ export default class BlogPage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
   }
-
   render() {
     const { isLoading, params } = this.props
     const pageNumber = (params && params.page) ? parseInt(params.page, 10) : 0

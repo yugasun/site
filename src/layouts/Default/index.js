@@ -58,6 +58,12 @@ const DefaultLayout = (props) => {
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
   }
 
+  // Remove jumpy footer with loading state
+  let footerRender
+  if (!isLoading) {
+    footerRender = <Footer />
+  }
+
   /* Markdown content will display if it exists */
   const bodyContent = body || '' // reset for loading state
   const markdown = (
@@ -67,7 +73,7 @@ const DefaultLayout = (props) => {
   )
 
   const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
-  const classes = classnames(wrapperClass, className)
+  const classes = classnames(styles.base, wrapperClass, className)
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
@@ -78,11 +84,12 @@ const DefaultLayout = (props) => {
         {children || markdown}
         {footer}
       </div>
-      <Footer />
+      {footerRender}
       {customScripts}
     </div>
   )
 }
 
+DefaultLayout.hasLoadingState = true
 DefaultLayout.propTypes = propTypes
 export default DefaultLayout

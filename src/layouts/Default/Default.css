@@ -1,7 +1,9 @@
+.base {
+  min-height: calc(100vh - $navHeight);
+}
 .page {
   max-width: 96rem;
   margin: 20px auto 0 auto;
-  min-height: calc(100vh - $navHeight - $footerHeight);
   img {
     max-width: 100%;
   }
