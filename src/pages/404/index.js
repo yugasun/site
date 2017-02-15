@@ -3,8 +3,8 @@
  */
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
+import Splash from '../Splash'
 import { getItem } from '../../utils/storage'
-import Logo from '../../assets/images/serverless_logo.png'
 import { twitterShare } from '../../utils/social/share'
 import styles from './index.css'
 
@@ -69,11 +69,8 @@ export default class PageError extends Component {
       </div>
     )
     return (
-      <div className={styles.container}>
-        <a href='/' title='Go to serverless homepage'>
-          <img alt='Serverless logo' src={Logo} draggable='false' />
-        </a>
-        <div className={styles.text}>
+      <Splash>
+        <div>
           <p className={styles.title}>
             <strong>{error}</strong>
             {' '}
@@ -81,7 +78,7 @@ export default class PageError extends Component {
           </p>
           {error === 404 && content}
         </div>
-      </div>
+      </Splash>
     )
   }
 }
