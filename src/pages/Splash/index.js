@@ -17,7 +17,6 @@ export default class Splash extends Component { // eslint-disable-line
   }
   render() {
     const { head, body, children } = this.props
-    const { params } = this.state
     /* Markdown content will display if it exists */
     const bodyContent = body || '' // reset for loading state
     const markdown = (
@@ -25,11 +24,12 @@ export default class Splash extends Component { // eslint-disable-line
         {bodyContent}
       </BodyContainer>
     )
+    const params = (this.state) ? this.state.params : null
     const msg = (params) ? params.msg : null
-
+    const title = (head) ? head.title : null
     return (
       <div className={styles.container}>
-        <Helmet title={head.title} />
+        <Helmet title={title} />
         <a href='/' title='Go to serverless homepage'>
           <img alt='Serverless logo' src={Logo} draggable='false' />
         </a>
