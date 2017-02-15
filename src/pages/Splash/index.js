@@ -9,8 +9,15 @@ import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
 export default class Splash extends Component { // eslint-disable-line
+  componentDidMount() {
+    const params = getParams()
+    this.setState({ // eslint-disable-line
+      params: params
+    })
+  }
   render() {
     const { head, body, children } = this.props
+    const { params } = this.state
     /* Markdown content will display if it exists */
     const bodyContent = body || '' // reset for loading state
     const markdown = (
@@ -18,7 +25,6 @@ export default class Splash extends Component { // eslint-disable-line
         {bodyContent}
       </BodyContainer>
     )
-    const params = getParams()
     const msg = (params) ? params.msg : null
 
     return (
