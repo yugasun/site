@@ -90,7 +90,7 @@ export default class PartnersPage extends React.Component {
         <h2 className={styles.header}>Want To Learn More?</h2>
         {errorDiv}
         {successDiv}
-        <AutoForm onSubmit={this.handleSubmit} trimOnSubmit>
+        <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit>
           <input required='true' name='name' placeholder='Name' />
           <input required='true' type='email' name='email' placeholder='Email' />
           <input name='company' placeholder='Company' />
