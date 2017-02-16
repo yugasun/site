@@ -38,6 +38,8 @@ Run `npm run syncProd` or `npm run syncLocal` to pull in the blog and docs repos
 
 # Editing Site Content
 
+Fork the site and submit a pull request!
+
 When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
 
 ### **Blog edits:**
