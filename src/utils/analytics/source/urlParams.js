@@ -57,7 +57,7 @@ export default function initializeParamData() {
       }
       setItem(LAST_CAMPAIGN_SOURCE, urlParams)
     })
-    console.log('urlParams', urlParams) // eslint-disable-line
+    // console.log('urlParams', urlParams) // eslint-disable-line
   } else {
     // console.log('no params')
   }
