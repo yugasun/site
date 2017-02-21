@@ -45,6 +45,16 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       if (process.env.NODE_ENV === 'development') {
         console.log('profile', profile) // eslint-disable-line
       }
+      // send event to GA
+      if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
+        console.log('Event triggered')
+        ga('send', { // eslint-disable-line
+          hitType: 'event',
+          eventCategory: 'user',
+          eventAction: 'sign_up',
+          eventLabel: 'Beta Signup'
+        })
+      }
       // set tokens
       setItemSync('profile', profile)
       dispatch(loginSuccess(profile))

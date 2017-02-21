@@ -81,15 +81,6 @@ export function login() {
     }
   }
 
-  if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
-    ga('send', { // eslint-disable-line
-      hitType: 'event',
-      eventCategory: 'user',
-      eventAction: 'sign_up',
-      eventLabel: 'Beta Signup'
-    })
-  }
-
   return dispatch => {
     if (isClient) {
       // collect data and then lock
