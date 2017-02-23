@@ -49,8 +49,14 @@
   flex-direction: row;
   align-items: center;
 }
+
 .logo, .logo img {
   max-height: 35px;
+}
+.hiring {
+  color: $black1 !important;
+  background: $yellow !important;
+  font-weight: bold !important;
 }
 
 .navItems {
