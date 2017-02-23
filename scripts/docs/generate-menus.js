@@ -18,10 +18,10 @@ function getMarkdownFiles(dir) {
 }
 
 function buildMenuObject() {
-  return getDirectories().then((dirs) => {
+  return getDirectories().then((directories) => {
     const flatMenu = {}
     const menuData = {}
-    dirs.forEach((dir) => {
+    directories.forEach((dir) => {
       const files = fs.readdirSync(dir).filter((f) => {
         return f.match(/\.md/) || f.indexOf('.') === -1
       }).map((f) => {
@@ -58,6 +58,8 @@ function buildMenuObject() {
   }).then((mData) => {
     // console.log(JSON.stringify(m, null, 2))
     return mData
+  }).catch((e) => {
+    console.log(e)
   })
 }
 function getMarkdownData(file) {
@@ -120,6 +122,8 @@ function generateDocMenu() {
       }
       console.log(`${config.docsMenuPath}${fileName} Docs file generated`)
     })
+  }).catch((e) => {
+    console.log(e)
   })
 }
 
