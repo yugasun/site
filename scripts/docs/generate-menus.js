@@ -94,11 +94,18 @@ function getMarkdownData(file) {
 }
 
 function cleanPathName(p) {
-  return p.split('serverless/site/content')[1].replace('.md', '')
+  const pathSplit = p.split('serverless/site/content')
+  if (pathSplit && pathSplit[1]) {
+    return p.split('serverless/site/content')[1].replace('.md', '')
+  }
+  return p
 }
 
 function trimContent(content) {
-  return content.replace(/^\s+|\s+$/g, '')
+  if (content) {
+    return content.replace(/^\s+|\s+$/g, '')
+  }
+  return content
 }
 
 function generateDocMenu() {
