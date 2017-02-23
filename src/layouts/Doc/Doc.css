@@ -381,8 +381,8 @@ a.editLinkWrapper {
   }
   .searchBumper {
     min-height: inherit;
-    margin-bottom: 0px;
-    margin-top: 5px;
+    margin-bottom: 3px;
+    margin-top: 8px;
   }
   .searchWrapper {
     margin-top: 0px;
@@ -390,8 +390,8 @@ a.editLinkWrapper {
     padding: 0px;
   }
   .searchBox {
-    width: 85%;
-    font-size: 14px;
+    width: 90%;
+    box-shadow: none;
   }
   a.editLinkWrapper {
     bottom: 0px;
