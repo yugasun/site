@@ -96,7 +96,7 @@ function getMarkdownData(file) {
 }
 
 function cleanPathName(p) {
-  const pathSplit = p.split('serverless/site/content')
+  const pathSplit = p.split('content')
   if (pathSplit && pathSplit[1]) {
     return p.split('content')[1].replace('.md', '')
   }
