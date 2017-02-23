@@ -17,6 +17,8 @@ import ContentLoading from '../../components/ContentLoading/Paragraph'
 import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
 
+console.log('generatedMenu', generatedMenu)
+
 const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 /* TO DO:
 add previous release tag links https://developer.github.com/v3/repos/releases/
