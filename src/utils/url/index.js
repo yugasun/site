@@ -13,3 +13,18 @@ export function cleanURL(url) {
   const portString = port ? `:${port}` : ''
   return `${protocol}//${hostname}${portString}${pathname}`
 }
+
+export function getParentUrl(url) {
+  const arr = url.split('/')
+  arr.pop()
+  return arr.join('/')
+}
+
+export function getCurrentUrl(url) {
+  if (url) return url
+  if (typeof window !== 'undefined') {
+    return window.location.pathname
+  }
+  // for SSR
+  return 'fakeURL'
+}
