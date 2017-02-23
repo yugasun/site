@@ -9,7 +9,7 @@ content-external
 
 # phenomic build
 dist
-lib
+backend/post-scheduler
 secrets.json
 .env
 
@@ -25,3 +25,5 @@ secrets.json
 content/framework/docs
 # Blog content gets pulled from https://github.com/serverless/blog
 content/blog
+
+generated-menu-items.js
