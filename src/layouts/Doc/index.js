@@ -7,8 +7,9 @@ import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Helmet from 'react-helmet'
 import debounce from 'lodash.debounce'
+import { getParentUrl, getCurrentUrl } from '../../utils/url'
 import gitHubSvg from '../../assets/icons/github.svg'
-import generatedMenu from './generated-menu'
+import generatedMenu from './generated-menu-items'
 import Default from '../Default'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
@@ -21,16 +22,6 @@ const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 add previous release tag links https://developer.github.com/v3/repos/releases/
 */
 const preventDefault = (e) => e.preventDefault()
-
-function currentUrl(url) {
-  if (url) {
-    return url
-  }
-  if (typeof window !== 'undefined') {
-    return window.location.pathname
-  }
-  return 'fakeURL'
-}
 
 class Doc extends Component {
   static hasLoadingState = true
@@ -55,10 +46,6 @@ class Doc extends Component {
         text(trigger) { // eslint-disable-line
           return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
         }
-      })
-      this.clipboardInstance.on('error', (e) => {
-        // log error in safari
-        console.log(e) // eslint-disable-line
       })
     }, 10)
 
@@ -115,18 +102,40 @@ class Doc extends Component {
     }
   }
   renderList() {
-    const { __url } = this.props
-    const url = currentUrl(__url)
+    const { __url, head } = this.props
+    const url = getCurrentUrl(__url)
     const trimmedURL = url.replace(/\/$/, '')
-    const menu = generatedMenu[__url] || generatedMenu[trimmedURL]
-    let items = ''
-    if (menu) {
+
+    let menu = []
+    // Check for custom items in head yaml
+    if (head && head.menuItems) {
+      menu = menu.concat(head.menuItems)
+    }
+
+    // Check for items in generated nav menu
+    const currentPageMenu = generatedMenu[__url] || generatedMenu[trimmedURL]
+    if (currentPageMenu) {
+      menu = menu.concat(currentPageMenu.children)
+    }
+
+    // Check for items in generated nav menu of parent
+    if (menu.length === 0) {
+      const parentMenu = generatedMenu[getParentUrl(trimmedURL)]
+      if (parentMenu) {
+        menu = menu.concat(parentMenu.children)
+      }
+    }
+
+    // DO sort here
+
+    let items
+    if (menu && menu.length > 0) {
       items = menu.map((item, i) => {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
         return (
           <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
             <Link to={item.path}>
-              {item.title}
+              {item.title || item.menuText}
             </Link>
           </li>
         )
@@ -137,10 +146,10 @@ class Doc extends Component {
   renderNewSidebar() {
     const { __url } = this.props
     const items = this.renderList()
-    const url = currentUrl(__url)
+    const url = getCurrentUrl(__url)
     const trimmedURL = url.replace(/\/$/, '')
     const parent = trimmedURL.split('/')
-    const parentName = parent[parent.length - 2]
+    const parentName = parent[parent.length - 1]
     let parentDisplay = parentName
 
     if (parentName === 'aws') {
@@ -148,6 +157,16 @@ class Doc extends Component {
     } else if (parentName === 'framework') {
       parentDisplay = 'Framework Docs'
     }
+
+    let menu = generatedMenu[__url] || generatedMenu[trimmedURL]
+    if (!menu) {
+      menu = generatedMenu[getParentUrl(trimmedURL)]
+    }
+
+    if (menu && menu.index) {
+      parentDisplay = menu.index[0].title
+    }
+
     return (
       <div className={styles.sidebar}>
         <div ref='sidebar' className={styles.sidebarInner}>
@@ -182,7 +201,7 @@ class Doc extends Component {
   }
   render() {
     const { __url, head, body, isLoading } = this.props
-    const url = currentUrl(__url)
+    const url = getCurrentUrl(__url)
     let githubURL
     let markdownContent
 
