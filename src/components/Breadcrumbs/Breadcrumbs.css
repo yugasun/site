@@ -7,7 +7,6 @@
   position: relative;
   a {
     text-decoration: none;
-    text-transform: capitalize;
     border: none !important;
   }
   &:after {
