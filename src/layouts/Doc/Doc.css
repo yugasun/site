@@ -364,6 +364,9 @@ a.editLinkWrapper {
   }
 }
 @media (max-width: 768px) {
+  .sidebar {
+    z-index: 9;
+  }
   .sidebarInner {
     min-width: 100%;
   }
