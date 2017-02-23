@@ -17,8 +17,6 @@ import ContentLoading from '../../components/ContentLoading/Paragraph'
 import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
 
-console.log('generatedMenu', generatedMenu)
-
 const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 /* TO DO:
 add previous release tag links https://developer.github.com/v3/repos/releases/
@@ -145,6 +143,20 @@ class Doc extends Component {
     }
     return items
   }
+  renderSearchBox() { // eslint-disable-line
+    return (
+      <div className={styles.searchBumper}>
+        <div className={styles.searchWrapper}>
+          <input
+            className={styles.searchBox}
+            id='algolia-search'
+            placeholder='&#9889;  Search docs'
+            type='text'
+          />
+        </div>
+      </div>
+    )
+  }
   renderNewSidebar() {
     const { __url } = this.props
     const items = this.renderList()
@@ -169,19 +181,17 @@ class Doc extends Component {
       parentDisplay = menu.index[0].title
     }
 
+    let searchBox
+
+    if (typeof window !== 'undefined' && window.outerWidth > 600) {
+      searchBox = this.renderSearchBox()
+    }
+
     return (
       <div className={styles.sidebar}>
         <div ref='sidebar' className={styles.sidebarInner}>
-          <div className={styles.searchBumper}>
-            <div className={styles.searchWrapper}>
-              <input
-                className={styles.searchBox}
-                id='algolia-search'
-                placeholder='&#9889;  Search docs'
-                type='text'
-              />
-            </div>
-          </div>
+
+          {searchBox}
 
           <div className={styles.pageContext}>
             {parentDisplay}
@@ -222,9 +232,14 @@ class Doc extends Component {
       )
     }
 
+    let searchBox
+    if (typeof window !== 'undefined' && window.outerWidth < 600) {
+      searchBox = this.renderSearchBox()
+    }
     const breadcrumbs = (
       <div className={`${styles.breadCrumbContainer}  docs-breadcrumbs`}>
         <Breadcrumbs path={url} />
+        {searchBox}
       </div>
     )
 

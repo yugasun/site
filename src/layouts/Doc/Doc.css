@@ -369,22 +369,38 @@ a.editLinkWrapper {
   }
   .sidebarInner {
     min-width: 100%;
+    padding-top: 10px;
+    background: #fff;
   }
   .breadCrumbContainer {
     flex-direction: column;
+    font-size: 14px;
   }
   .breadCrumbContainer li:first-of-type {
     display: none;
   }
+  .searchBumper {
+    min-height: inherit;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
   .searchWrapper {
-    margin-top: 10px;
-    width: 50%;
+    margin-top: 0px;
     border-top: none;
+    padding: 0px;
+  }
+  .searchBox {
+    width: 85%;
+    font-size: 14px;
   }
   a.editLinkWrapper {
-    position: initial;
+    bottom: 0px;
+    left: 15px;
     padding: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    top: inherit;
+    right: inherit;
+    display: none;
   }
   .versionNumber {
     display: none;
@@ -394,14 +410,14 @@ a.editLinkWrapper {
     min-width: 100%;
   }
   .sidebar {
-    margin-bottom: 0px;
+    margin-bottom: 35px;
   }
   .docWrapper {
     flex-direction: column;
     flex-flow: column-reverse;
   }
   .content {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     padding-left: 13px;
     padding-right: 0px;
     padding-top: 15px;
