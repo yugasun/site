@@ -84,6 +84,9 @@ class Post extends Component {
           // console.log('authorInfo[0].avatar', authorInfo[0].avatar)
           avatarURL = (authorInfo[0].avatar) ? authorInfo[0].avatar : false
           authorBio = (authorInfo[0].bio && authorInfo[0].bio.long) ? authorInfo[0].bio.long : false
+          if (!authorBio) {
+            authorBio = (authorInfo[0].bio && authorInfo[0].bio.short) ? authorInfo[0].bio.short : false
+          }
         }
       }
     }
