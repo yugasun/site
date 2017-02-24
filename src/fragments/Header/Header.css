@@ -280,6 +280,7 @@ $lineHeight: 2px;
     li, a {
       width: 100%;
       display: block;
+      position: inherit;
     }
   }
   .navItems, .navItem, .navItem a {
@@ -313,6 +314,9 @@ $lineHeight: 2px;
       display: none;
     }
   }
+  .link {
+    padding: 7px 9px 0px 9px;
+  }
   .subNavItems {
     position: initial;
     top: initial;
@@ -321,6 +325,10 @@ $lineHeight: 2px;
       display: none;
     }
     .link {
+      padding: 5px;
+      padding-left: 15px;
+      margin-top: 0px;
+      position: inherit;
       display: block;
       &:hover {
         background: #ffd426;
