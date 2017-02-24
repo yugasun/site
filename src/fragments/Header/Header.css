@@ -261,6 +261,9 @@ $lineHeight: 2px;
   .noMobile {
     display: none !important;
   }
+  .auth {
+    width: 100%;
+  }
   .navRight {
     display: none;
   }
@@ -292,7 +295,7 @@ $lineHeight: 2px;
   .navItems {
     margin-top: 70px;
     flex-direction: column;
-    height: 100vh;
+    height: 103vh;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 105%;

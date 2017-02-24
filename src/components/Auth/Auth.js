@@ -10,6 +10,7 @@ const AuthComponent = (props) => {
     logoutOnClick,
     profile,
     loggedInComponent,
+    className,
     children
   } = props
   let renderedContent = children
@@ -37,7 +38,7 @@ const AuthComponent = (props) => {
     }
   }
   return (
-    <div onClick={handleClick}>
+    <div className={className} onClick={handleClick}>
       {renderedContent}
     </div>
   )

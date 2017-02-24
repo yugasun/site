@@ -150,14 +150,14 @@ export default class Header extends Component {
                     Blog
                   </Link>
                 </li>
-                <Auth loggedInComponent={<span />}>
+                <Auth className={styles.auth} loggedInComponent={<span />}>
                   <li className={styles.navItem}>
                     <span className={`${styles.link} ${styles.yellowLink}`}>
                       Join Beta
                     </span>
                   </li>
                 </Auth>
-                <li className={styles.navItem}>
+                <li className={`${styles.navItem} ${styles.noMobile}`}>
                   <a href='https://www.github.com/serverless/serverless' target='_blank' rel='noopener noreferrer' className={styles.link}>
                     <Svg svg={gitHubSvg} cleanup />
                   </a>
