@@ -12,7 +12,7 @@ layout: Default
 
 
 <a href="http://www.abstract.ai" target="_blank">AbstractAI</a> (Abstract), based in Los Angeles, develops software and services to enable users to get the <b>results</b> they need <b>faster</b>.<br>  Conversational Interfaces (CI)
-are among the the types of software that Abstract develops with less emphasis on conversation and more emphasis on CI's inherent light weight and cross platform abilities.
+are among the the types of software that Abstract develops with less emphasis on conversation and more emphasis on CI's inherent light.
 
 Abstract partnered with <a href="http://brainitch.com/" target="_blank">Brainitch</a>, a Los Angeles-based startup that offers personalized, 1-to-1 marketing to artists on Facebook Messenger and related platforms.  Brainitch’s client in this case was <a href="https://www.facebook.com/OfficialLaidbackluke/" target="_blank">Laidback Luke</a> (LBL), an electronic music artist based in the Netherlands. AbstractAI and Brainitch were collaborating to offer a bot for LBL's birthday bash, which he was throwing in NYC and Amsterdam. LBL wanted to build a bot that would ask recipients trivia questions, and if the user got enough questions right, the user could attend the party.
 <br>
@@ -26,7 +26,7 @@ Laidback Luke has almost <i>2 million fans</i> on Facebook!
 
 Simply changing LBL's profile picture with a QR code linking to the bot caused a huge spike in traffic. Because of the myriad of APIs (a database, NLP, etc.) the bot had to call, it was clear the legacy architecture would not scale.
 
-In response, AbstractAI engineers deployed additional Dynos to maintain an acceptable response time.  All and All, the legacy architecture that supported the LBL bot would cost nearly $100/month to maintain.
+In response, AbstractAI engineers deployed additional Dynos to maintain an acceptable response time.  
 
 <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/15241180_10155018659806564_434315781857504498_n.jpg?oh=52595ac03a4afd91bd3efbee6caa4bf3&oe=5916BC77">
 ### Why Serverless
@@ -36,7 +36,7 @@ In short, Abstract chose the Serverless Framework because it abstracts Amazon La
 Using the Serverless Framework, Abstract <b>reduced the recurring costs associated with Laidback Luke's bank-end services nearly 95%</b>. When there are large spikes in users, the architecture
 will provide the needed network resources, but the user will not be charged otherwise.  In short, leveraging Amazon Lambda, Serverless Framework requires payment only when network resources are used.
 
-Unlike some frameworks, developing proficiency with Serverless Framework took only a week.  There are resources available within the Serverless Framework which taught the Abstract team how to create RESTfull API's in less than ten minutes.
+Unlike some frameworks, developing proficiency with Serverless Framework took only a week.  There are resources available within the Serverless Framework community which taught the Abstract team how to create RESTful API's in less than ten minutes.
 
 Finally, by providing a theoretically infinitely scalable bot at a reduced cost Abstract, developed peace of mind.
 ### Results
@@ -55,4 +55,4 @@ Abstract's clients are interested in products that leverage both artificial inte
 
 At AbstractAI, the Serverless Framework is the backbone of proprietary methodology for developing rest API's and chatbots.  In the words of Abstract's client on this engagement:
 
-<blockquote>Laidback Luke’s Messenger (bot) experience was a success and Luke’s birthday bash guest lists are filled up with super fans who deserve a free show! <br/><b>Todd T.</b> - <i>CEO of Brainitch, Inc.</i></blockquote>
+<blockquote>Laidback Luke’s Messenger (bot) experience was a success and Luke’s birthday bash guest lists are filled up with super fans who deserve a free show! <br/><b>Todd T.</b> - <i>CEO of Brainitch, LLC</i></blockquote>
