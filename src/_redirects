@@ -31,3 +31,4 @@
 /framework/docs/cli-reference/info/ /framework/docs/providers/aws/cli-reference/info
 /framework/docs/cli-reference/remove/ /framework/docs/providers/aws/cli-reference/remove
 /framework/docs/cli-reference/slstats/ /framework/docs/providers/aws/cli-reference/slstats
+/testing/* https://dkrldao3ic.execute-api.us-east-1.amazonaws.com/dev/posts/:splat 200
