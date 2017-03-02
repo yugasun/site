@@ -91,21 +91,23 @@ export default class PartnersPage extends React.Component {
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
         >
-          <div className={styles.modalLogoWrapper} >
+          <div className={styles.modalLogoWrapper}>
             <img className={styles.modalLogo} src={partner.logo} alt='' />
           </div>
-          <h2>{partner.name}</h2>
-          <div>
-            <div dangerouslySetInnerHTML={{ __html: partner.description }} />
+          <div className={styles.modalContent}>
+            <h2>{partner.name}</h2>
             <div>
-              {partner.stories && partner.stories.map((link, i) => {
-                return <a href={link.url} key={i}>{link.title}</a>
-              })}
-            </div>
-            <div className={styles.siteLink}>
-              <a href={partner.website} target='_blank' rel='noopener noreferrer'>
-                Visit {`${partner.name}'s`} site
-              </a>
+              <div dangerouslySetInnerHTML={{ __html: partner.description }} />
+              <div>
+                {partner.stories && partner.stories.map((link, i) => {
+                  return <a href={link.url} key={i}>{link.title}</a>
+                })}
+              </div>
+              <div className={styles.siteLink}>
+                <a href={partner.website} target='_blank' rel='noopener noreferrer'>
+                  Visit {`${partner.name}'s`} site
+                </a>
+              </div>
             </div>
           </div>
         </Modal>

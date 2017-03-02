@@ -121,6 +121,12 @@
 }
 .modalWrapper {
   width: $breakpointLgTablet;
+  > section {
+    padding: 0px;
+  }
+}
+.modalContent {
+  padding: 20px 30px;
 }
 .modalLogoWrapper {
   display: flex;
