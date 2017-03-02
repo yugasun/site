@@ -70,17 +70,20 @@ export default class PartnersPage extends React.Component {
     const { partner, showModal } = this.state
     return (
       <Default {...this.props} className={styles.partnerPage}>
-        <h1>Serverless Partners Program</h1>
-        <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
-        <p style={{ position: 'relative', zIndex: 2 }}>
-          If you are interested in learning more about our partners program send us an email <a href='mailto:partners@serverless.com'>partners@serverless.com</a>
-        </p>
+        <h1>Serverless Partners</h1>
         <section className={styles.tiles}>
           {this.listPartners()}
         </section>
         <section className={styles.caseStudies}>
           <h2>Partner Success Stories</h2>
           {this.showCaseStudies()}
+        </section>
+        <section style={{ marginTop: '20px' }}className={styles.caseStudies}>
+          <h2>Serverless Partners Program</h2>
+          <p>Serverless Partners are consultants and agencies who are verified experts in serverless application development with the Serverless Framework</p>
+          <p style={{ position: 'relative', zIndex: 2 }}>
+            If you are interested in learning more about our partners program send us an email <a href='mailto:partners@serverless.com'>partners@serverless.com</a>
+          </p>
         </section>
         <Modal
           className={styles.modalWrapper}

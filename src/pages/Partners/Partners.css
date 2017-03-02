@@ -6,14 +6,15 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin: -1.5em 0 30px -2.5em;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .block {
   transition: transform 0.5s ease, opacity 0.5s ease;
   position: relative;
-  width: calc(33.33333% - 2.5em);
-  margin: 2.5em 0 0 2.5em;
+  width: calc(25.33333% - 1.5em);
+  margin-bottom: 20px;
 }
 
 .block:hover {
@@ -55,6 +56,9 @@
 
 .content, .content p {
   pointer-events: none;
+}
+.content p {
+  font-size: 14px;
 }
 .content {
   transition: max-height 0.5s ease, opacity 0.5s ease;
