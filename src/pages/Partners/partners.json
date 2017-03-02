@@ -30,7 +30,6 @@
       }
     ]
   },
-
   "AbstractAI": {
     "name": "AbstractAI",
     "logo": "http://www.abstractsoftwaredesign.com/images/logo.png",
@@ -39,7 +38,7 @@
     "website": "https://www.abstract.ai",
     "stories": [{
       "title": "Two Million Fans, One Chatbot",
-      "url":"/learn/abstract-serverless/"
+      "url":"/learn/reducing-backend-costs/"
       }
     ]
   }
