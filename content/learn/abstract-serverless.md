@@ -12,7 +12,7 @@ layout: Default
 
 
 <a href="http://www.abstract.ai" target="_blank">AbstractAI</a> (Abstract), based in Los Angeles, develops software and services to enable users to get the <b>results</b> they need <b>faster</b>.<br>  Conversational Interfaces (CI)
-are among the the types of software that Abstract develops with less emphasis on conversation and more emphasis on CI's inherent light.
+are among the the types of software that Abstract develops with less emphasis on conversation and more emphasis on CI's inherent light weight platform.
 
 Abstract partnered with <a href="http://brainitch.com/" target="_blank">Brainitch</a>, a Los Angeles-based startup that offers personalized, 1-to-1 marketing to artists on Facebook Messenger and related platforms.  Brainitch’s client in this case was <a href="https://www.facebook.com/OfficialLaidbackluke/" target="_blank">Laidback Luke</a> (LBL), an electronic music artist based in the Netherlands. AbstractAI and Brainitch were collaborating to offer a bot for LBL's birthday bash, which he was throwing in NYC and Amsterdam. LBL wanted to build a bot that would ask recipients trivia questions, and if the user got enough questions right, the user could attend the party.
 <br>
