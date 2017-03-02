@@ -47,7 +47,7 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       }
       // send event to GA
       if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
-        console.log('Event triggered')
+        console.log('Event triggered') // eslint-disable-line
         ga('send', { // eslint-disable-line
           hitType: 'event',
           eventCategory: 'user',
@@ -58,6 +58,11 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       // set tokens
       setItemSync('profile', profile)
       dispatch(loginSuccess(profile))
+
+      if (profile && profile.user_metadata && profile.user_metadata.hasNextAccess) {
+        window.location.href = 'https://next.serverless.com'
+        return false
+      }
       // redirect
       handleAuthRedirect(stateValues.url)
     })
