@@ -47,13 +47,17 @@ a.yellowLink {
   text-align: center;
   span {
     margin: 0;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 400;
   }
-  .awsLogo {
-    margin-left: 15px;
-    max-width: 110px;
-  }
+}
+.logoWrapper {
+  margin: auto;
+  text-align: center;
+}
+.providerLogos {
+  margin: auto;
+  max-width: 500px;
 }
 
 .buttons {
@@ -206,6 +210,9 @@ a.yellowLink {
   }
 }
 @media (max-width: 768px) {
+  .providerLogos {
+    max-width: 100%;
+  }
   .poweredBy {
     margin-top: 20px;
   }

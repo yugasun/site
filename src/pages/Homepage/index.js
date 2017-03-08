@@ -71,8 +71,10 @@ export default class Homepage extends Component {
                 </div>
               </div>
               <div className={styles.poweredBy}>
-                <span>Powered by AWS Lambda</span>
-                <img className={styles.awsLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/aws_logo.png'} alt='aws Lambda' />
+                <span>Powered by</span>
+              </div>
+              <div className={styles.logoWrapper}>
+                <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
               </div>
             </div>
 
