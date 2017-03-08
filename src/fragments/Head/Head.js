@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import favicon from '../../assets/images/favicon.ico'
+
 const Head = (props) => {
   return (
     <div>
@@ -15,6 +17,9 @@ const Head = (props) => {
             content: '1HdFnJaYYEiONgCRl3fj7lQobYY4uXPe5L2-sTgNzKQ'
           },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+        ]}
+        link={[
+          { rel: 'icon', href: favicon }
         ]}
       />
     </div>
