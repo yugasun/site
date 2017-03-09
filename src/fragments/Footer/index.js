@@ -7,8 +7,12 @@ const Footer = (props) => {
   let cta
   if (typeof window !== 'undefined') {
     const url = window.location.pathname
-    if (url === '/blog/' || url === '/' || url.match(/\/docs\//) || url.match(/\/framework\//)) {
+    if (url === '/blog/' || url === '/' || url.match(/\/framework\//)) {
       cta = <FooterBetaCTA />
+    }
+    if (url.match(/\/docs\//)) {
+      cta = null
+      return null
     }
   }
   const year = new Date().getFullYear()
