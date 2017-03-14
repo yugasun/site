@@ -70,7 +70,20 @@ export default class App extends Component {
   }
   handleAuthRedirect = (e) => {
     const redirectURL = e.detail.url
+    // handle redirect
     this.props.history.push(redirectURL)
+    // handle analytics save
+    if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
+      console.log('Event triggered') // eslint-disable-line
+      if (e.detail.profile && e.detail.profile.login_count === 1) {
+        ga('send', { // eslint-disable-line
+          hitType: 'event',
+          eventCategory: 'user',
+          eventAction: 'sign_up',
+          eventLabel: 'Beta Signup'
+        })
+      }
+    }
   }
   render() {
     const { location, params } = this.props
