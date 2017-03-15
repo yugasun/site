@@ -49,8 +49,8 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       setItemSync('profile', profile)
       dispatch(loginSuccess(profile))
 
-      if (profile && profile.user_metadata && profile.user_metadata.hasNextAccess) {
-        window.location.href = 'https://next.serverless.com'
+      if (profile && profile.user_metadata && profile.user_metadata.hasAlphaAccess) {
+        window.location.href = 'https://alpha.serverless.com'
         return false
       }
       // redirect
