@@ -16,7 +16,12 @@
     "logo": "https://sc5.io/wp-content/themes/sc5/dist/images/sc5logo-fill-red.svg",
     "tagline": "We are 80 designers and hackers that build cloud native digital services",
     "description": "We are 80 designers and hackers that build cloud native digital services that your customers love. We shift development investments from IT infrastructure to user experience by leveraging the full potential of managed cloud services.",
-    "website": "https://sc5.io"
+    "website": "https://sc5.io",
+    "stories": [{
+      "title": "Bootstrapping the Platform for a Billion Dollar Business Opportunity",
+      "url": "/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"
+      }
+    ]
   },
   "Parallax": {
     "name": "Parallax",

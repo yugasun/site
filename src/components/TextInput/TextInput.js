@@ -204,7 +204,8 @@ class TextInput extends Component {
       this.setState({
         blurRanOnce: true
       }, this.captureFocusWhenInvalid())
-    } }
+    }
+  }
   captureFocusWhenInvalid() {
     if (!this.state.isValid) {
       this.focus()
