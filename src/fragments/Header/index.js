@@ -133,9 +133,9 @@ export default class Header extends Component {
                       </Link>
                     </li>
                     <li>
-                      <a href='https://jobs.lever.co/serverless' target='_blank' rel='noopener noreferrer' className={`${styles.link}`}>
+                      <Link to='/company/jobs' className={styles.link}>
                         We are hiring
-                      </a>
+                      </Link>
                     </li>
                     {/* <li>
                       <Link to='/company/contact' className={styles.link}>
