@@ -40,15 +40,15 @@
   },
   {
     "name": "Nick Gottlieb",
-    "title": "Head of Customer Development",
+    "title": "Head of Growth",
     "github": "worldsoup",
     "twitter": "worldsoup",
     "linkedin": "nicholasgottlieb",
     "site": "http://serverless.com",
-    "avatar": "https://avatars1.githubusercontent.com/u/1475986?v=3&s=260",
+    "avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/team-nick-gottlieb-serverless.jpg",
     "location": "San Francisco",
     "bio": {
-      "short": "Head of Customer Development and global man of mystery",
+      "short": "Head of Growth and global man of mystery",
       "long":
         "Nick is passionate about understanding and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
     }
