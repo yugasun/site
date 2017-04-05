@@ -24,6 +24,11 @@ class GoogleAnalyticsTracker extends Component {
     if (props.params.splat !== this.props.params.splat) {
       logPageview()
       if (isClient && isProduction && typeof _cio !== 'undefined') {
+        const loading = `${window.location.origin}/loading`
+        if (window.location.href.indexOf(loading) > -1) {
+          console.log('loading screen exit early')
+          return false
+        }
         // trigger customer io
         const pageData = {
           width: window.innerWidth,
