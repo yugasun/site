@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import GoogleAnalytics from './GoogleAnalytics'
-import SegmentIO from './SegmentIO'
+import CustomerIO from './CustomerIO'
 
 export default function GlobalScripts(props) {
   let hubspotScript
@@ -19,7 +19,7 @@ export default function GlobalScripts(props) {
     <div>
       <GoogleAnalytics {...props} />
       {hubspotScript}
-      <div dangerouslySetInnerHTML={{ __html: SegmentIO }} />
+      <div dangerouslySetInnerHTML={{ __html: CustomerIO }} />
     </div>
   )
 }
