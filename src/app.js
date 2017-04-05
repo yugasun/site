@@ -107,6 +107,18 @@ export default class App extends Component {
          //  first_name: 'John',       // Add any attributes you'd like to use in the email subject or body.
          //  last_name: 'Smith',       // First name and last name are shown on people pages.
         })
+        setTimeout(() => {
+          console.log('send correct page', document.location.href)
+          // trigger customer io
+          const pageData = {
+            width: window.innerWidth,
+            height: window.innerHeight
+          }
+          if (document.referrer && document.referrer !== '') {
+            pageData.referrer = document.referrer
+          }
+          _cio.page(document.location.href, pageData) // eslint-disable-line
+        }, 0)
       }
     }
   }
