@@ -60,6 +60,9 @@ export default class Newsletter extends Component {
       // console.log(response.config);
       if (response && response.data && response.data.created) {
         console.log('creation succeed') // eslint-disable-line
+        // Customer.io
+        // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
+        _cio.track("newsletter_subscribed"); // eslint-disable-line
         that.setState({
           isSubscribed: true,
           isFetching: false
