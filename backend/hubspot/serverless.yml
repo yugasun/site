@@ -1,0 +1,17 @@
+service: hubspot
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  region: ${file(./config.json):region}
+  environment:
+    HUBSPOT_API_KEY: ${file(./config.json):HUBSPOT_API_KEY}
+
+functions:
+  addContact:
+    handler: handler.addContact
+    events:
+      - http:
+          path: hubspot/add
+          method: get
+          cors: true

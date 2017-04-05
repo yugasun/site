@@ -4,6 +4,10 @@ serverless
 serverless-blog
 *.log
 
+# serverless backend
+config.json
+githubUser.json
+
 # third party external content
 content-external
 
