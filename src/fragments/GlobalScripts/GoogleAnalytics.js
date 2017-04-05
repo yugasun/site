@@ -2,7 +2,6 @@
 import React, { Component, PropTypes } from 'react'
 import ga from 'react-google-analytics'
 import removeUTM from '../../utils/analytics/source/removeUTM'
-import { readCookie } from '../../utils/storage/cookie'
 const InjectGoogleAnalytics = ga.Initializer
 const isProduction = process.env.NODE_ENV === 'production'
 const isClient = typeof window !== 'undefined'
@@ -26,8 +25,6 @@ class GoogleAnalyticsTracker extends Component {
       logPageview()
       if (isClient && isProduction && typeof _cio !== 'undefined') {
         // trigger customer io
-        const id = readCookie('_cioid')
-        console.log('customerio', id)
         const pageData = {
           width: window.innerWidth,
           height: window.innerHeight
