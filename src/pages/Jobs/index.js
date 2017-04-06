@@ -103,27 +103,27 @@ export default class JobsPage extends React.Component {
           </h1>
           <div className={styles.perks}>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-1.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-1.svg' />
               Competitive salary and equity in well-funded high-growth company
             </div>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-2.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-2.svg' />
               Generous healthcare, vision, and family leave policies
             </div>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-3.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-3.svg' />
               Unlimited paid time off with a minimum requirement of unplugging for at least 20 days/ year
             </div>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-4.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-4.svg' />
               Biannual team retreats (past retreats include Austria, Northern California, and Thailand)
             </div>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-5.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-5.svg' />
               Remote friendly and flexible work schedule
             </div>
             <div>
-              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/perks-icon-6.svg' />
+              <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-6.svg' />
               Culture of empowerment (our entire company, from processes to values, live in a Github repo that anyone can propose changes to)
             </div>
           </div>

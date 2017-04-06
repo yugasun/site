@@ -1,6 +1,6 @@
 .cover {
   padding: 100px 0;
-  background: #ffea93 url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/jobs_heading.jpg');
+  background: #191919 url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/images/jobs_heading.jpg');
   background-size: cover;
   background-position: center top;
   text-align: center;
@@ -96,7 +96,7 @@
 
 .teamPhotos {
   margin-top: 50px;
-  background: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/jobs_images.jpg');
+  background: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/images/jobs_images.jpg');
   background-size: cover;
   background-position: center center;
   height: 200px;
