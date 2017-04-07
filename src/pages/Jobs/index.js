@@ -52,7 +52,7 @@ export default class JobsPage extends React.Component {
           <div className={styles.content}>
             <h1>Working at Serverless</h1>
             <h3>
-              Build more and manage less. Join us in simplifying the way software is built.
+              Build more and manage less.<br />Join us in simplifying the way software is built.
             </h3>
           </div>
         </div>
