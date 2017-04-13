@@ -54,6 +54,10 @@ const logPageview = () => {
     if (isProduction) {
       ga('set', 'page', window.location.pathname)
       ga('send', 'pageview', { hitCallback: removeUTM })
+      if (typeof _hsq !== 'undefined') {
+        // track hubspot page view
+        _hsq.push(['trackPageView']) // eslint-disable-line
+      }
     } else {
       console.info('New pageview', window.location.href)
       setTimeout(() => {
