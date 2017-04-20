@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import GoogleAnalytics from './GoogleAnalytics'
 import CustomerIO from './CustomerIO'
 
 export default function GlobalScripts(props) {
-  let hubspotScript
+  let HubSpotScript
   if (process.env.NODE_ENV === 'production') {
-    hubspotScript = (
+    HubSpotScript = (
       <Helmet
         script={[{
           src: 'https://js.hs-scripts.com/2901603.js',
@@ -18,11 +18,8 @@ export default function GlobalScripts(props) {
   return (
     <div>
       <GoogleAnalytics {...props} />
-      {hubspotScript}
+      {HubSpotScript}
       <div dangerouslySetInnerHTML={{ __html: CustomerIO }} />
     </div>
   )
-}
-GlobalScripts.propTypes = {
-  children: PropTypes.any
 }
