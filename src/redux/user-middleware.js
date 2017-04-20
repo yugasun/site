@@ -32,7 +32,7 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       // return { authenticated: true }
     } else {
       dispatch(loginError('invalid-token'))
-      alert('Error your authentication token is wrong. Try logging in again') // eslint-disable-line
+      alert('Error your authentication token is invalid. Try logging in again') // eslint-disable-line
       handleAuthRedirect(stateValues.url)
       return false
     }
@@ -48,11 +48,6 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
       // set tokens
       setItemSync('profile', profile)
       dispatch(loginSuccess(profile))
-
-      if (profile && profile.user_metadata && profile.user_metadata.hasAlphaAccess) {
-        window.location.href = 'https://alpha.serverless.com'
-        return false
-      }
       // redirect
       handleAuthRedirect({
         url: stateValues.url,
