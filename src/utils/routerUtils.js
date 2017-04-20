@@ -1,5 +1,6 @@
+import { setItem, getItem } from './storage' // eslint-disable-line
 
-export default function initializeRouteListener() {
+export function initializeRouteListener() { // eslint-disable-line
   /* eslint-disable */
   if (typeof window !== 'undefined') {
     ;(function(history){
@@ -14,4 +15,32 @@ export default function initializeRouteListener() {
       }
     })(window.history)
   }
+}
+
+
+const LAST_PAGE_SEEN = 'last_page_seen'
+/* eslint-disable */
+export function handleRouteChange(e) {
+  const previousURL = window.location.href
+  setTimeout(() => {
+    const newURL = window.location.href
+    const loading = window.location.origin + '/loading/'
+    if (newURL === previousURL) {
+      return false
+    }
+    if (newURL === loading || previousURL === loading) {
+      console.log('exit early')
+      return false
+    }
+    if (process.env.NODE_ENV === 'development') {
+      console.log('previousURL', previousURL)
+      console.log('newURL', newURL)
+    }
+    // Set last page viewed for 404 tracker
+    setItem(LAST_PAGE_SEEN, previousURL, function(){
+      if (process.env.NODE_ENV === 'development') {
+        console.log('done')
+      }
+    })
+  }, 0)
 }
