@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
 import React, { Component, PropTypes } from 'react'
 import ga from 'react-google-analytics'
-import removeUTM from '../../utils/analytics/source/removeUTM'
+import pageView from '../../utils/analytics/page'
 const InjectGoogleAnalytics = ga.Initializer
-const isProduction = process.env.NODE_ENV === 'production'
 const isClient = typeof window !== 'undefined'
 const googleAnalyticsUA = process.env.GOOGLE_ANALYTICS_UA
 
@@ -11,34 +10,18 @@ class GoogleAnalyticsTracker extends Component {
 
   componentWillMount() {
     if (isClient) {
-      if (isProduction) {
+      if (process.env.NODE_ENV === 'production') {
         ga('create', googleAnalyticsUA, 'auto')
       } else {
         console.info('ga.create', googleAnalyticsUA)
       }
-      logPageview()
+      pageView()
     }
   }
 
   componentWillReceiveProps(props) {
     if (props.params.splat !== this.props.params.splat) {
-      logPageview()
-      if (isClient && isProduction && typeof _cio !== 'undefined') {
-        const loading = `${window.location.origin}/loading`
-        if (window.location.href.indexOf(loading) > -1) {
-          console.log('loading screen exit early')
-          return false
-        }
-        // trigger customer io
-        const pageData = {
-          width: window.innerWidth,
-          height: window.innerHeight
-        }
-        if (document.referrer && document.referrer !== '') {
-          pageData.referrer = document.referrer
-        }
-        _cio.page(document.location.href, pageData) // eslint-disable-line
-      }
+      pageView()
     }
   }
 
@@ -46,25 +29,6 @@ class GoogleAnalyticsTracker extends Component {
     return (
       <InjectGoogleAnalytics />
     )
-  }
-}
-
-const logPageview = () => {
-  if (isClient) {
-    if (isProduction) {
-      ga('set', 'page', window.location.pathname)
-      ga('send', 'pageview', { hitCallback: removeUTM })
-      if (typeof _hsq !== 'undefined') {
-        // track hubspot page view
-        _hsq.push(['trackPageView']) // eslint-disable-line
-      }
-    } else {
-      console.info('New pageview', window.location.href)
-      setTimeout(() => {
-        // timeout for param parser
-        removeUTM()
-      }, 0)
-    }
   }
 }
 

@@ -24,7 +24,6 @@ const getFirstRef = () => {
   return getItem(FIRST_REFERRING_SITE)
 }
 
-
 export default function initializeReferralData() {
   if (isExternalReferrer()) {
     if (process.env.NODE_ENV === 'development') {
