@@ -31,7 +31,7 @@ function customerIO(eventName, payload) {
     console.log('Customer.io Event triggered') // eslint-disable-line
     const debugCustomerIO = `Customer.io Event > [${eventName}] [payload: ${JSON.stringify(payload, null, 2)}]`
     if (isProduction) {
-      // console.log(debugCustomerIO)
+      console.log(debugCustomerIO) // eslint-disable-line
       _cio.track(eventName, payload) // eslint-disable-line
     }
   }
@@ -58,6 +58,7 @@ function googleAnalytics(eventName, payload) {
     }
 
     if (isProduction) {
+      console.log(debugGA) // eslint-disable-line
       ga('send', { // eslint-disable-line
         // 'pageview', 'screenview', 'event', 'transaction', 'item', 'social', 'exception', 'timing'
         hitType: 'event',
@@ -67,7 +68,7 @@ function googleAnalytics(eventName, payload) {
         eventValue: value
       }, nonInteraction)
     } else {
-      console.log(debugGA)
+      console.log(debugGA) // eslint-disable-line
     }
   }
 }

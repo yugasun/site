@@ -7,22 +7,14 @@ import SubscribeModal from './fragments/SubscribeModal'
 import initializeAnalytics from './utils/analytics/init'
 import initUAClasses from './utils/brower-detect'
 import { setItem, getItem } from './utils/storage' // eslint-disable-line
-import initializeRouteListener from './utils/routerUtils'
-/* Import global CSS before other components and their styles */
+import { initializeRouteListener, handleRouteChange } from './utils/routerUtils'
+import deleteServiceWorkers from './utils/deleteServiceWorkers'
+import track from './utils/analytics/track'
 import './index.global.css'
 import styles from './index.css'
 
-if (typeof navigator !== 'undefined' && navigator.serviceWorker) {
-  navigator.serviceWorker.getRegistrations().then((registrations) => {
-    for (let registration of registrations) { // eslint-disable-line
-      registration.unregister()
-    }
-  }).then(() => {
-    console.log('sw deleted') // eslint-disable-line
-  })
-}
-
 if (typeof window !== 'undefined') {
+  deleteServiceWorkers()
   // expose React for app scripts
   window.React = React
   window.ReactDOM = ReactDOM
@@ -38,41 +30,12 @@ const propTypes = {
   history: PropTypes.object,
 }
 
-const LAST_PAGE_SEEN = 'last_page_seen'
-/* eslint-disable */
-function handleRouteChange(e) {
-  const previousURL = window.location.href
-  setTimeout(() => {
-    const newURL = window.location.href
-    const loading = window.location.origin + '/loading/'
-    if (newURL === previousURL) {
-      return false
-    }
-    if (newURL === loading || previousURL === loading) {
-      console.log('exit early')
-      return false
-    }
-    if (process.env.NODE_ENV === 'development') {
-      console.log('previousURL', previousURL)
-      console.log('newURL', newURL)
-    }
-    // Set last page viewed for 404 tracker
-    setItem(LAST_PAGE_SEEN, previousURL, function(){
-      if (process.env.NODE_ENV === 'development') {
-        console.log('done')
-      }
-    })
-  }, 0)
-}
-/* eslint-enable */
-
 export default class App extends Component {
   // Initial App mount. Happens once
   componentDidMount() {
     initializeAnalytics()
+    initUAClasses()  // add browser based classes
     window.addEventListener('routerRedirect', this.handleAuthRedirect, false)
-    // add browser based classes
-    initUAClasses()
     window.onpopstate = history.onpushstate = handleRouteChange
   }
   componentWillUnmount() {
@@ -87,11 +50,10 @@ export default class App extends Component {
     if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
       console.log('Event triggered') // eslint-disable-line
       if (profile && profile.login_count === 1) {
-        ga('send', { // eslint-disable-line
-          hitType: 'event',
-          eventCategory: 'user',
-          eventAction: 'sign_up',
-          eventLabel: 'Beta Signup'
+        track('sign_up', {
+          category: 'user',
+          action: 'sign_up', // legacy event name
+          label: 'Beta Signup'
         })
       }
     }
@@ -108,7 +70,7 @@ export default class App extends Component {
          //  last_name: 'Smith',       // First name and last name are shown on people pages.
         })
         setTimeout(() => {
-          console.log('send correct page', document.location.href)
+          console.log('send correct page', document.location.href) // eslint-disable-line
           // trigger customer io
           const pageData = {
             width: window.innerWidth,
