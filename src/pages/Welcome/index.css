@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh !important;
+}
+.inner {
+  width: 980px;
+  max-width: 980px;
+  margin-top: 70px;
+}
+.hero {
+  text-align: center;
+  .description {
+    margin-bottom: 10px;
+  }
+}
+.inputWrapper {
+  margin-top: 20px;
+}
+.input {
+  text-align: center;
+  max-width: 330px;
+  font-size: 20px;
+  padding: 10px;
+  color: #069bfa;
+}
+.nextSteps {
+  text-align: center;
+  margin-top: 60px;
+}
+.boxWrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+.box {
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+  margin-right: 20px;
+  padding: 14px 40px;
+  width: 33%;
+  &:hover {
+    background: #f5f7f9;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+.stepNumber {
+  font-size: 32px;
+}
+.stepTitle {
+  color: #333;
+  font-size: 20px;
+}
+.stepDescription {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0,0,0,.54);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 5%;
+    margin: auto;
+  }
+  .container img {
+    width: 100%;
+    min-width: 100%;
+  }
+}
