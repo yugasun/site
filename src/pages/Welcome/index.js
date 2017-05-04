@@ -1,8 +1,8 @@
 /**
  * 404 page template
  */
-import React, { Component, PropTypes } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react'
+import axios from 'axios' // eslint-disable-line
 import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
 import { getParams } from '../../utils/analytics/source/urlParams'
@@ -12,30 +12,39 @@ export default class Welcome extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      code: ''
+      code: '',
     }
   }
   componentDidMount() {
     const params = getParams()
-    if (!params && !params.code) {
+    if (!params) {
+      // no verification code found. Send to homepage
       console.log('redirect') // eslint-disable-line
+      window.location.href = 'https://serverless.com/'
       return false
     }
-    console.log('hi', params) // eslint-disable-line
-    this.setState({ // eslint-disable-line
-      code: params.code
-    }, () => {
-      console.log(this.refs)
-      this.refs.code.refs.input.select()
-    })
+
+    if (params.code) {
+      this.setState({ // eslint-disable-line
+        code: params.code,
+      }, () => {
+        // set framework ID
+        if (params.state) {
+          console.log('id', params.state)
+        }
+        this.refs.code.refs.input.select()
+      })
+    }
   }
   handleClick = (e) => {
     e.target.select()
   }
   render() {
+    const { code } = this.state
+    const show = (code) ? 'block' : 'none'
     return (
       <div className={styles.container}>
-        <div className={styles.inner}>
+        <div className={styles.inner} style={{ display: show }}>
           <div className={styles.hero}>
             <h1>Welcome to Serverless</h1>
             <div className={styles.description}>
