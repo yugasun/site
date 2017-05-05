@@ -5,6 +5,8 @@ import React, { Component } from 'react'
 import axios from 'axios' // eslint-disable-line
 import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
+import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
+import constants from '../../utils/analytics/constants'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
@@ -30,7 +32,9 @@ export default class Welcome extends Component {
       }, () => {
         // set framework ID
         if (params.state) {
-          console.log('id', params.state)
+          setItem(constants.FRAMEWORK_ID, params.state, () => {
+            console.log('id set', params.state) // eslint-disable-line
+          })
         }
         this.refs.code.refs.input.select()
       })
