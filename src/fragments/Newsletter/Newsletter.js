@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import { getItemSync } from '../../utils/storage'
+import track from '../../utils/analytics/track'
 import styles from './Newsletter.css'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
@@ -62,7 +63,10 @@ export default class Newsletter extends Component {
         console.log('creation succeed') // eslint-disable-line
         // Customer.io
         // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
-        _cio.track("newsletter_subscribed"); // eslint-disable-line
+        track('site:newsletter_subscribed', {
+          label: 'Newsletter Subscription',
+          value: window.location.href
+        })
         that.setState({
           isSubscribed: true,
           isFetching: false

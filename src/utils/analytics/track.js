@@ -1,22 +1,15 @@
-/*
-Naming conventions: https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
+/**
+ * Naming conventions:
+ * Pattern: `Product => Object => Action`
+ * Format: `productName:objectName_actionName`
+ * Casing: `camelCase:camelCase_camelCase`
 
-Product => Object => Action ---->
-- registry_function_downloaded, registry_function_uploaded, registry_function_deleted
-- platform_account_created, platform_account_deleted, platform_account_updated
-- site_documentation_viewed, site_searced, site_account_created
-- platform_stripe_integration_enabled, platform_stripe_integration_disabled
-
-Conventions
-
-1. prefix with product name
-1. Use lowercase letters
-3. Separate_words_with_underscores
-4. Don’t abbreviate unnecessarilly
-5. Don’t programmatically create event names;
-6. For page loads, use “view”, not “visit”, “load”, etc.
-
+ examples:
+  - `site:newsletter_subscribed`
+  - `registry:function_uploaded`
+  - `platform:frameworkIntegration_disabled`
 */
+
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default function track(eventName, payload) {
@@ -39,7 +32,14 @@ function customerIO(eventName, payload) {
 
 function googleAnalytics(eventName, payload) {
   if (typeof ga !== 'undefined') {
-    const category = (payload && payload.category) ? payload.category : eventName.split('_')[0]
+    const objectName = eventName.match(/:(.*)_/)
+    let parsedEventName
+    if (objectName && objectName[1]) {
+      parsedEventName = objectName[1]
+    } else {
+      console.warn(`Incorrect Event format: ${eventName}`)
+    }
+    const category = (payload && payload.category) ? payload.category : parsedEventName
     const label = (payload && payload.label) ? payload.label : undefined
     const value = (payload && payload.value) ? payload.value : undefined
     const nonInteraction = (payload && payload.nonInteraction) ? payload.nonInteraction : undefined
@@ -58,13 +58,18 @@ function googleAnalytics(eventName, payload) {
     }
 
     if (isProduction) {
+      // productName:objectName_actionName
       console.log(debugGA) // eslint-disable-line
       ga('send', { // eslint-disable-line
         // 'pageview', 'screenview', 'event', 'transaction', 'item', 'social', 'exception', 'timing'
         hitType: 'event',
+        //
         eventCategory: category,
+        // what did the user just do? Click a button? Submit a form?
         eventAction: eventName,
+        // what form is this? If this is part of an A/B test, what variation?
         eventLabel: label,
+        //  how much is this action worth?
         eventValue: value
       }, nonInteraction)
     } else {

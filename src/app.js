@@ -10,6 +10,7 @@ import { setItem, getItem } from './utils/storage' // eslint-disable-line
 import { initializeRouteListener, handleRouteChange } from './utils/routerUtils'
 import deleteServiceWorkers from './utils/deleteServiceWorkers'
 import track from './utils/analytics/track'
+import identify from './utils/analytics/identify'
 import './index.global.css'
 import styles from './index.css'
 
@@ -50,27 +51,18 @@ export default class App extends Component {
     if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
       console.log('Event triggered') // eslint-disable-line
       if (profile && profile.login_count === 1) {
-        track('sign_up', {
-          category: 'user',
-          action: 'sign_up', // legacy event name
-          label: 'Beta Signup'
+        track('site:account_created', {
+          label: 'Account Signup'
         })
       }
     }
     if (typeof _cio !== 'undefined' && process.env.NODE_ENV === 'production') {
       console.log('Customer.io Event triggered') // eslint-disable-line
       if (profile && profile.user_id) {
-        _cio.identify({ // eslint-disable-line
-          // Required attributes
-          id: profile.user_id,
-          email: profile.email, // Email of the currently signed in user.
-          created_at: Math.round(+new Date(profile.created_at) / 1000),
-         // Example attributes (you can name attributes what you wish)
-         //  first_name: 'John',       // Add any attributes you'd like to use in the email subject or body.
-         //  last_name: 'Smith',       // First name and last name are shown on people pages.
-        })
+        // ID user
+        identify(profile.user_id, profile)
+
         setTimeout(() => {
-          console.log('send correct page', document.location.href) // eslint-disable-line
           // trigger customer io
           const pageData = {
             width: window.innerWidth,
