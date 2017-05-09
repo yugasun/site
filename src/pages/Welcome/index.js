@@ -30,8 +30,8 @@ export default class Welcome extends Component {
       this.setState({ // eslint-disable-line
         code: params.code,
       }, () => {
-        // set framework ID
         if (params.state) {
+          // set framework ID
           setItem(constants.FRAMEWORK_ID, params.state, () => {
             console.log('id set', params.state) // eslint-disable-line
           })
