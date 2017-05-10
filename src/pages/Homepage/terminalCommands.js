@@ -9,16 +9,16 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Create an AWS Lambda function in Node.js',
+    text: 'Create a serverless function',
     type: 'comment',
     skip: true
   },
   {
-    text: 'serverless create --template aws-nodejs',
+    text: 'serverless create --template hello-world',
     type: 'command'
   },
   {
-    text: 'Deploy to live AWS account',
+    text: 'Deploy to cloud provider',
     type: 'comment',
     skip: true
   },
@@ -27,12 +27,13 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Function deployed!',
+    text: 'Function deployed! Trigger with live url',
     type: 'comment',
     skip: true
   },
   {
-    text: 'http://api.amazon.com/users/update',
+    // efi4rjb098.execute-api.us-east-1.amazonaws.com
+    text: 'http://xyz.amazonaws.com/hello-world',
     type: 'command',
     skip: true
   },
