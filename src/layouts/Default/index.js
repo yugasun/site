@@ -38,7 +38,7 @@ const DefaultLayout = (props) => {
   } = props
 
   let metaTitle
-  let meta
+  let meta = []
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
   if (!isLoading && head) {
@@ -55,6 +55,10 @@ const DefaultLayout = (props) => {
     { name: 'twitter:description', content: head.description },
     { name: 'description', content: head.description },
     ]
+
+    if (head.thumbnail) {
+      meta.push({ property: 'og:image', content: head.thumbnail })
+    }
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
   }
 
