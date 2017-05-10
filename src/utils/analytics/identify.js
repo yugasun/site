@@ -46,8 +46,9 @@ function getCompanyName(profile) {
   if (!profile) {
     return null
   }
-  if (profile.company) {
-    return profile.company.trim()
+  if (profile.company && typeof profile.company === 'string') {
+    const company = profile.company.trim().replace(/^@/, '')
+    return company
   }
   const meta = profile.user_metadata
   if (meta && meta.fullcontact && meta.fullcontact.organizations) {
