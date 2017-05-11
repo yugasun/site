@@ -127,11 +127,18 @@ class Doc extends Component {
     }
 
     // DO sort here
+    console.log('menu', menu)
 
     let items
+    const alreadyLinked = {}
     if (menu && menu.length > 0) {
       items = menu.map((item, i) => {
         const currentStyle = (item.path === trimmedURL) ? styles.currentURL : ''
+        // check if already linked
+        if (alreadyLinked && alreadyLinked[item.path]) {
+          return null
+        }
+        alreadyLinked[item.path.replace(/\/$/, '')] = true
         return (
           <li key={i} className={`${styles.subPageLink} ${currentStyle}`}>
             <Link to={item.path}>
