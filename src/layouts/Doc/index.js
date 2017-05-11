@@ -127,8 +127,6 @@ class Doc extends Component {
     }
 
     // DO sort here
-    console.log('menu', menu)
-
     let items
     const alreadyLinked = {}
     if (menu && menu.length > 0) {
