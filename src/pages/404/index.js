@@ -49,7 +49,7 @@ export default class PageError extends Component {
     const content = (
       <div className={styles.content}>
         <div className={styles.message}>
-          It seems you found a broken link. Do not hesitate to report this page!
+          Refresh this page to try again<br /><br />If you are still seeing a 404 please report this page!
         </div>
         <div>
           Tweet at <a target='_blank' rel='noopener noreferrer' href={tweet}>@goServerless</a> or&nbsp;
@@ -63,7 +63,7 @@ export default class PageError extends Component {
         </div>
         <div className={styles.otherLinks}>
           <a href='/' title='Go to serverless homepage'>
-            Visit homepage
+            Go back to homepage
           </a>
         </div>
       </div>

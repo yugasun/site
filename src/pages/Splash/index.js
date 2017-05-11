@@ -31,7 +31,7 @@ export default class Splash extends Component { // eslint-disable-line
       <div className={styles.container}>
         <Helmet title={title} />
         <a href='/' title='Go to serverless homepage'>
-          <img alt='Serverless logo' src={Logo} draggable='false' />
+          <img alt='Serverless logo' src={Logo} className={styles.logo} draggable='false' />
         </a>
         <div className={styles.text}>
           {children || msg || markdown}
