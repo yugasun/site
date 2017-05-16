@@ -52,10 +52,10 @@ export default class Welcome extends Component {
           <div className={styles.hero}>
             <h1>Welcome to Serverless</h1>
             <div className={styles.description}>
-              Copy the verification code below and paste it back into the CLI prompt
+              Copy the verification code and insert it back into the command line prompt
             </div>
             <div className={styles.inputWrapper}>
-              <strong>verification code:</strong>
+              <strong>Verification Code:</strong>
               <TextInput
                 ref={'code'}
                 value={this.state.code}
@@ -63,10 +63,13 @@ export default class Welcome extends Component {
                 onClick={this.handleClick}
                 className={styles.input}
               />
+              <span className={styles.text}>
+                After adding the verification code, you will be logged in on your machine
+              </span>
             </div>
           </div>
           <div className={styles.nextSteps}>
-            <h2>Next Steps</h2>
+            <h3>Once you are verified & logged in</h3>
             <div className={styles.boxWrapper}>
               <div className={styles.box}>
                 <a href='/framework/docs/'>
