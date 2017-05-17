@@ -8,7 +8,9 @@ export default function deleteServiceWorkers() {
         registration.unregister()
       }
     }).then(() => {
-      console.log('sw deleted') // eslint-disable-line
+      if (process.env.NODE_ENV !== 'production') {
+        console.log('sw deleted') // eslint-disable-line
+      }
     })
   }
 }

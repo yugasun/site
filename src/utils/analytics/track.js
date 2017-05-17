@@ -13,6 +13,9 @@
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default function track(eventName, payload) {
+  /* if (offline) {
+    // buffer analytics to indexDB
+  } */
   // Handle Google Analytics
   googleAnalytics(eventName, payload)
   // Handle Customer.io
