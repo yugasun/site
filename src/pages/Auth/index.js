@@ -7,6 +7,7 @@ import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
 import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
 import constants from '../../utils/analytics/constants'
+import removeURLParams from '../../utils/analytics/source/removeURLParams'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
@@ -24,6 +25,9 @@ export default class Auth extends Component {
       window.location.href = 'https://serverless.com/'
       return false
     }
+
+    // clean URL
+    removeURLParams()
 
     if (params.code) {
       this.setState({ // eslint-disable-line
