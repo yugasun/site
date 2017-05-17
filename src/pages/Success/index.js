@@ -7,6 +7,8 @@ import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
 import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
 import constants from '../../utils/analytics/constants'
+import identify from '../../utils/analytics/identify'
+import track from '../../utils/analytics/track'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
@@ -31,11 +33,24 @@ export default class Welcome extends Component {
       params,
     })
     // set framework ID
-    if (params.e && params.sub) {
-      const e = window.atob(params.e)
-      const sub = window.atob(params.sub)
-      console.log('e', e)
-      console.log('sub', sub)
+    if (params.e && params.u) {
+      const email = window.atob(params.e)
+      const userID = window.atob(params.u)
+      const name = window.atob(params.n)
+      console.log('email', email)
+      console.log('userID', userID)
+
+      // ID call
+      identify(userID, {
+        created_at: params.d,
+        email: email,
+        name: name,
+        login_count: params.c
+      })
+      // Track Login Success
+      track('site:cli_loginCompleted', {
+        label: 'Framework Login Completed'
+      })
     }
   }
   render() {

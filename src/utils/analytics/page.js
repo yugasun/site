@@ -2,6 +2,7 @@
 import removeUTM from './source/removeUTM'
 const isProduction = process.env.NODE_ENV === 'production'
 let singlePageAppLoaded = false
+
 // called in /src/fragments/GlobalScripts/GoogleAnalytics.js
 export default function page(opts) {
   if (typeof window === 'undefined') {
@@ -16,6 +17,7 @@ export default function page(opts) {
   // Trigger google analytics page view
   gaPageView(pageData)
 
+  // place analytics page tracking that auto tracks the first page view below
   if (singlePageAppLoaded) {
     // Trigger customer.io page view
     customerIOPageView(pageData)
