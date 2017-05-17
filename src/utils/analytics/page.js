@@ -7,8 +7,8 @@ export default function page(opts) {
   if (typeof window === 'undefined') {
     return false
   }
+  // loading screen exit early
   if (window.location.href.indexOf(`${window.location.origin}/loading`) > -1) {
-    // loading screen exit early
     return false
   }
 
