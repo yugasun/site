@@ -23,10 +23,12 @@ function customerIO(eventName, payload) {
   if (typeof _cio !== 'undefined') {
     console.log('Customer.io Event triggered') // eslint-disable-line
     const debugCustomerIO = `Customer.io Event > [${eventName}] [payload: ${JSON.stringify(payload, null, 2)}]`
-    if (isProduction) {
+    if (!isProduction) {
       console.log(debugCustomerIO) // eslint-disable-line
-      _cio.track(eventName, payload) // eslint-disable-line
+      return false
     }
+    console.log(`Prod>` + debugCustomerIO) // eslint-disable-line
+    _cio.track(eventName, payload) // eslint-disable-line
   }
 }
 
@@ -56,24 +58,24 @@ function googleAnalytics(eventName, payload) {
     if (typeof nonInteraction !== 'undefined') {
       debugGA += ` [nonInteraction: ${nonInteraction}]`
     }
-
-    if (isProduction) {
-      // productName:objectName_actionName
+    if (!isProduction) {
+      // exit early
       console.log(debugGA) // eslint-disable-line
-      ga('send', { // eslint-disable-line
-        // 'pageview', 'screenview', 'event', 'transaction', 'item', 'social', 'exception', 'timing'
-        hitType: 'event',
-        //
-        eventCategory: category,
-        // what did the user just do? Click a button? Submit a form?
-        eventAction: eventName,
-        // what form is this? If this is part of an A/B test, what variation?
-        eventLabel: label,
-        //  how much is this action worth?
-        eventValue: value
-      }, nonInteraction)
-    } else {
-      console.log(debugGA) // eslint-disable-line
+      return false
     }
+    // productName:objectName_actionName
+    console.log(`Prod>` + debugGA) // eslint-disable-line
+    ga('send', { // eslint-disable-line
+      // 'pageview', 'screenview', 'event', 'transaction', 'item', 'social', 'exception', 'timing'
+      hitType: 'event',
+      //
+      eventCategory: category,
+      // what did the user just do? Click a button? Submit a form?
+      eventAction: eventName,
+      // what form is this? If this is part of an A/B test, what variation?
+      eventLabel: label,
+      //  how much is this action worth?
+      eventValue: value
+    }, nonInteraction)
   }
 }

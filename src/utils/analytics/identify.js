@@ -1,35 +1,51 @@
+import addHubspotContact from '../forms/hubspot'
+
 export default function identify(id, profile) {
-  // Customer.io
-  if (typeof _cio !== 'undefined' && process.env.NODE_ENV === 'production') {
-    let data = { // eslint-disable-line
-      id: id,
-      email: profile.email, // Email of the currently signed in user.
-      created_at: Math.round(+new Date(profile.created_at) / 1000),
-      // set name
-      ...getNameData(profile),
-    }
-    // limits https://learn.customer.io/api/#api-documentationlimits
-    if (profile) {
-      // set picture
-      if (profile.picture) {
-        data.picture = profile.picture
-      }
-      // set company
-      const companyName = getCompanyName(profile)
-      if (companyName) {
-        data.company = companyName
-      }
-      // set location
-      if (profile.location) {
-        data.location = profile.location
-      }
-      // set login_count
-      if (profile.login_count) {
-        data.login_count = profile.login_count
-      }
-    }
+  if (!profile) {
+    return false
+  }
+  const data = {
+    // auth0 id
+    id: id,
+    // Email of the currently signed in user.
+    email: profile.email,
+    // unix timestamp
+    created_at: Math.round(+new Date(profile.created_at) / 1000),
+    // set name
+    ...getNameData(profile),
+    // set company data
+    ...getCompanyName(profile)
+  }
+  // set picture
+  if (profile.picture) {
+    data.picture = profile.picture
+  }
+  // set location
+  if (profile.location) {
+    data.location = profile.location
+  }
+  // set login_count
+  if (profile.login_count) {
+    data.login_count = profile.login_count
+  }
+
+
+  if (process.env.NODE_ENV !== 'production') {
     console.log('identify', data) // eslint-disable-line
+    return false
+  }
+
+  // Send data to Customer.io . imits https://learn.customer.io/api/#api-documentationlimits
+  if (typeof _cio !== 'undefined') {
      _cio.identify(data) // eslint-disable-line
+  }
+
+  // Send data to hubspot
+  if (process.env.API && process.env.API.ADD_CONTACT) {
+    addHubspotContact(data).then((hsResponse) => {
+      // get hubspot data
+      // console.log('hsResponse', hsResponse)
+    })
   }
 }
 
@@ -70,11 +86,13 @@ function getNameData(profile) {
 
 function getCompanyName(profile) {
   if (!profile) {
-    return null
+    return {}
   }
   if (profile.company && typeof profile.company === 'string') {
     const company = profile.company.trim().replace(/^@/, '')
-    return company
+    return {
+      company
+    }
   }
   const meta = profile.user_metadata
   if (meta && meta.fullcontact && meta.fullcontact.organizations) {
@@ -85,7 +103,9 @@ function getCompanyName(profile) {
     })
 
     if (companyInfo && companyInfo[0] && companyInfo[0].name) {
-      return companyInfo[0].name.trim()
+      return {
+        company: companyInfo[0].name.trim()
+      }
     }
   }
 }

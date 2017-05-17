@@ -17,7 +17,8 @@ module.exports = function siteConfig(isProduction) {
       /* Serverless API Gateway Endpoints */
       API: {
         ERROR: 'https://h413evrxuk.execute-api.us-west-2.amazonaws.com/dev/report',
-        NEWSLETTER: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe'
+        NEWSLETTER: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
+        ADD_CONTACT: 'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add'
       }
     }
   )

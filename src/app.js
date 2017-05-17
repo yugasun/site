@@ -48,22 +48,17 @@ export default class App extends Component {
     // handle redirect
     this.props.history.push(redirectURL)
     // handle analytics save
-    if (typeof ga !== 'undefined' && process.env.NODE_ENV === 'production') {
-      console.log('Event triggered') // eslint-disable-line
-      if (profile && profile.login_count === 1) {
-        track('site:account_created', {
-          label: 'Account Signup'
-        })
-      }
+    if (profile && profile.login_count === 1) {
+      track('site:account_created', {
+        label: 'Account Signup'
+      })
     }
-    if (typeof _cio !== 'undefined' && process.env.NODE_ENV === 'production') {
-      console.log('Customer.io Event triggered') // eslint-disable-line
-      if (profile && profile.user_id) {
-        // ID user
-        identify(profile.user_id, profile)
-
+    // handle user identification
+    if (profile && profile.user_id) {
+      identify(profile.user_id, profile)
+      // trigger customer.io pageview
+      if (typeof _cio !== 'undefined') {
         setTimeout(() => {
-          // trigger customer io
           const pageData = {
             width: window.innerWidth,
             height: window.innerHeight
