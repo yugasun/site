@@ -1,9 +1,10 @@
-service: hubspot
+service: hubspot-service
 
 provider:
   name: aws
-  runtime: nodejs4.3
+  runtime: nodejs6.10
   region: ${file(./config.json):region}
+  stage: prod
   environment:
     HUBSPOT_API_KEY: ${file(./config.json):HUBSPOT_API_KEY}
 
@@ -13,5 +14,5 @@ functions:
     events:
       - http:
           path: hubspot/add
-          method: get
+          method: post
           cors: true
