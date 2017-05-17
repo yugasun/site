@@ -14,62 +14,42 @@ export default class Welcome extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      code: '',
+      params: {},
     }
   }
   componentDidMount() {
     const params = getParams()
+
+
     if (!params) {
       // no verification code found. Send to homepage
-      console.log('redirect') // eslint-disable-line
       window.location.href = 'https://serverless.com/'
       return false
     }
-
-    if (params.code) {
-      this.setState({ // eslint-disable-line
-        code: params.code,
-      }, () => {
-        if (params.state) {
-          // set framework ID
-          setItem(constants.FRAMEWORK_ID, params.state, () => {
-            console.log('id set', params.state) // eslint-disable-line
-          })
-        }
-        this.refs.code.refs.input.select()
-      })
+    console.log('params', params)
+    this.setState({ // eslint-disable-line
+      params,
+    })
+    // set framework ID
+    if (params.e && params.sub) {
+      const e = window.atob(params.e)
+      const sub = window.atob(params.sub)
+      console.log('e', e)
+      console.log('sub', sub)
     }
   }
-  handleClick = (e) => {
-    e.target.select()
-  }
   render() {
-    const { code } = this.state
-    const show = (code) ? 'block' : 'none'
     return (
       <div className={styles.container}>
-        <div className={styles.inner} style={{ display: show }}>
+        <div className={styles.inner} >
           <div className={styles.hero}>
-            <h1>Welcome to Serverless</h1>
-            <div className={styles.description}>
-              Copy the verification code and insert it back into the command line prompt
-            </div>
-            <div className={styles.inputWrapper}>
-              <strong>Verification Code:</strong>
-              <TextInput
-                ref={'code'}
-                value={this.state.code}
-                readOnly
-                onClick={this.handleClick}
-                className={styles.input}
-              />
-              <span className={styles.text}>
-                After adding the verification code, you will be logged in on your machine
-              </span>
+            <h1>Login Successful</h1>
+            <div className={styles.description} style={{ display: 'none' }}>
+              You can now use the CLI and connect with the serverless platform
             </div>
           </div>
           <div className={styles.nextSteps}>
-            <h3>Once you are verified & logged in</h3>
+            <h3>New to serverless? Here are next Steps</h3>
             <div className={styles.boxWrapper}>
               <div className={styles.box}>
                 <a href='/framework/docs/'>

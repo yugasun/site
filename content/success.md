@@ -1,4 +1,4 @@
 ---
 title: Thank You
-layout: Welcome
+layout: Success
 ---

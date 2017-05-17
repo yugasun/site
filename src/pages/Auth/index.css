@@ -37,42 +37,6 @@
     font-size: 12px;
   }
 }
-.nextSteps {
-  text-align: center;
-  margin-top: 60px;
-  align-self: flex-end;
-}
-.boxWrapper {
-  align-items: flex-start;
-  display: flex;
-  justify-content: center;
-}
-.box {
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
-  margin-right: 20px;
-  padding: 14px 40px;
-  width: 33%;
-  &:hover {
-    background: #f5f7f9;
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-}
-.stepNumber {
-  font-size: 32px;
-}
-.stepTitle {
-  color: #333;
-  font-size: 20px;
-}
-.stepDescription {
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(0,0,0,.54);
-}
 
 @media (max-width: 768px) {
   .container {
