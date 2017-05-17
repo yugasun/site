@@ -29,7 +29,6 @@ export default function identify(id, profile) {
     data.login_count = profile.login_count
   }
 
-
   if (process.env.NODE_ENV !== 'production') {
     console.log('identify', data) // eslint-disable-line
     return false

@@ -17,7 +17,6 @@ export function initializeRouteListener() { // eslint-disable-line
   }
 }
 
-
 const LAST_PAGE_SEEN = 'last_page_seen'
 /* eslint-disable */
 export function handleRouteChange(e) {
@@ -39,7 +38,7 @@ export function handleRouteChange(e) {
     // Set last page viewed for 404 tracker
     setItem(LAST_PAGE_SEEN, previousURL, function(){
       if (process.env.NODE_ENV === 'development') {
-        console.log('done')
+        console.log('set LAST_PAGE_SEEN', previousURL)
       }
     })
   }, 0)

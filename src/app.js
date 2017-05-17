@@ -11,6 +11,7 @@ import { initializeRouteListener, handleRouteChange } from './utils/routerUtils'
 import deleteServiceWorkers from './utils/deleteServiceWorkers'
 import track from './utils/analytics/track'
 import identify from './utils/analytics/identify'
+import { customerIOPageView } from './utils/analytics/page'
 import './index.global.css'
 import styles from './index.css'
 
@@ -59,14 +60,7 @@ export default class App extends Component {
       // trigger customer.io pageview
       if (typeof _cio !== 'undefined') {
         setTimeout(() => {
-          const pageData = {
-            width: window.innerWidth,
-            height: window.innerHeight
-          }
-          if (document.referrer && document.referrer !== '') {
-            pageData.referrer = document.referrer
-          }
-          _cio.page(document.location.href, pageData) // eslint-disable-line
+          customerIOPageView()
         }, 0)
       }
     }

@@ -20,6 +20,7 @@ class GoogleAnalyticsTracker extends Component {
   }
 
   componentWillReceiveProps(props) {
+    // if route is new, log pageview
     if (props.params.splat !== this.props.params.splat) {
       pageView()
     }

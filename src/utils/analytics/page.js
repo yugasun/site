@@ -2,8 +2,8 @@
 import removeUTM from './source/removeUTM'
 const isProduction = process.env.NODE_ENV === 'production'
 
+// called in /src/fragments/GlobalScripts/GoogleAnalytics.js
 export default function page(opts) {
-  const options = opts || {}
   if (typeof window === 'undefined') {
     return false
   }
@@ -12,40 +12,63 @@ export default function page(opts) {
     return false
   }
 
+  const pageData = getPageData(opts)
+  // Trigger google analytics page view
+  gaPageView(pageData)
+  // Trigger customer.io page view
+  customerIOPageView(pageData)
+  // Trigger hubspot page view
+  hubspotPageView(pageData)
+}
+
+/* Analytics Providers Specific Page view calls */
+export function gaPageView(pageData) {
+  const data = pageData || getPageData()
+  if (!isProduction) {
+    console.info(`DEV: GA Pageview > ${window.location.href}`)
+    return setTimeout(removeUTM, 0)
+  }
+  if (typeof ga !== 'undefined') {
+    console.info(`GA Pageview > ${window.location.href}`)
+    ga('set', 'page', data.path) // eslint-disable-line
+    ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
+  }
+}
+
+export function customerIOPageView(pageData) {
+  const data = pageData || getPageData()
+  if (!isProduction) {
+    return console.info(`DEV: Customer.io Pageview > ${window.location.href}`)
+  }
+  if (typeof _cio !== 'undefined') {
+    console.info(`Customer.io Pageview > ${window.location.href}`)
+    _cio.page(document.location.href, data) // eslint-disable-line
+  }
+}
+
+export function hubspotPageView(pageData) {
+  if (!isProduction) {
+    return console.info(`DEV: Hubspot Pageview > ${window.location.href}`)
+  }
+  if (typeof _hsq !== 'undefined') {
+    console.info(`Hubspot Pageview > ${window.location.href}`)
+    _hsq.push(['trackPageView']) // eslint-disable-line
+  }
+}
+
+function getPageData(opts) {
+  if (typeof window === 'undefined') {
+    return false
+  }
+  const options = opts || {}
   const pageData = {
     width: options.width || window.innerWidth,
     height: options.height || window.innerHeight,
     path: options.path || window.location.pathname,
     url: options.url || window.location.href
   }
-
   if (document.referrer && document.referrer !== '') {
     pageData.referrer = document.referrer
   }
-
-  // Trigger google analytics
-  if (typeof ga !== 'undefined') {
-    if (isProduction) {
-      console.info(`GA Pageview > ${window.location.href}`)
-      ga('set', 'page', pageData.path) // eslint-disable-line
-      ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
-    } else {
-      console.info(`GA Pageview > ${window.location.href}`)
-      setTimeout(removeUTM, 0)
-    }
-  }
-  // Trigger customer io
-  if (typeof _cio !== 'undefined') {
-    if (isProduction) {
-      console.info(`Customer.io Pageview > ${window.location.href}`)
-      _cio.page(document.location.href, pageData) // eslint-disable-line
-    } else {
-      console.info(`Customer.io Pageview > ${window.location.href}`)
-    }
-  }
-  // Trigger hubspot page view
-  if (typeof _hsq !== 'undefined') {
-    console.info(`Hubspot Pageview > ${window.location.href}`)
-    _hsq.push(['trackPageView']) // eslint-disable-line
-  }
+  return pageData
 }
