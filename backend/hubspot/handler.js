@@ -64,6 +64,13 @@ module.exports.addContact = function (event, context, callback) {
     })
   }
 
+  if(body.frameworkId) {
+    data.properties.push({
+      "property": "frameworkid",
+      "value": body.frameworkId
+    })
+  }
+
   console.log('lead', data)
 
   client.contacts.createOrUpdate(email, data, function(err, data) {
