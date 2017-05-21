@@ -1,7 +1,6 @@
 /*eslint-disable */
 import path from 'path'
 import webpack from 'webpack'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import PhenomicFeedWebpackPlugin from 'phenomic/lib/loader-feed-webpack-plugin'
 import { phenomicLoader } from 'phenomic'
@@ -9,7 +8,9 @@ import pkg from './package.json'
 import serverlessPkg from './serverless/package.json'
 import getSiteConfig from './src/_config'
 
-export const makeConfig = (config = {}) => {
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+
+export default (config = {}) => {
   // console.log('phenomic config', config)
   const isProd = config.production
   const siteConfig = getSiteConfig(isProd)
@@ -23,12 +24,6 @@ export const makeConfig = (config = {}) => {
     return memo
   }, dynamicEnvVariables)
 
-  //const varsFile = require("./src/_variables.js")
-  // const varsFile = (webpackInstance) => {
-  //   webpackInstance.addDependency(varsFilePath)
-  //   delete require.cache[varsFilePath]
-  //   return require(varsFilePath)()
-  // }
   const postcssPluginFile = require.resolve("./postcss.config.js")
   const postcssPlugins = (webpackInstance) => {
     const varFile = require.resolve("./src/_variables.js")
@@ -42,6 +37,9 @@ export const makeConfig = (config = {}) => {
     return require(postcssPluginFile)(config, varFileContents())
   }
 
+  console.log(process.env.NODE_ENV)
+  console.log(process.env.BABEL_ENV)
+
   console.log('processEnvVariables', processEnvVariables)
   return {
     ...config.dev && {
@@ -49,11 +47,18 @@ export const makeConfig = (config = {}) => {
     },
     module: {
       noParse: [/\.min\.js/, /autoit.js/, /node_modules\/localforage\/dist\/localforage.js/],
-      loaders: [
+      rules: [
         {
           // phenomic requirement for loading markdown
-          test: /\.md$/,
+          test: /\.(md|markdown)$/,
           loader: phenomicLoader,
+          query: {
+            context: path.join(__dirname, config.source),
+            // plugins: [
+            //   ...require("phenomic/lib/loader-preset-markdown").default
+            // ]
+            // see https://phenomic.io/docs/usage/plugins/
+          },
         },
         {
           test: /\.json$/,
@@ -61,56 +66,71 @@ export const makeConfig = (config = {}) => {
         },
         {
           test: /\.js$/,
-          loaders: [
-            `babel-loader${
-              config.dev
-              ? '?cacheDirectory=true&presets[]=babel-preset-react-hmre' // dev
-              : '?cacheDirectory=true' // prod
-            }`,
-            'eslint-loader?fix',
-          ],
           include: [
             path.resolve(__dirname, 'scripts'),
             path.resolve(__dirname, 'src'),
           ],
+          loaders: [
+            "babel-loader?cacheDirectory",
+            // "eslint-loader?fix",
+          ],
         },
-        {
-          test: /@serverless\/ui-components.*.css$/,
-          loader: ExtractTextPlugin.extract(
-            'style-loader',
-            ['css-loader?modules&importLoaders=1&localIdentName=[local]', 'postcss-loader'].join('!'),
-          ),
-        },
+
         {
           // *.css => CSS Modules
           test: /\.css$/,
           exclude: [/\.global\.css$/, path.join(__dirname, 'node_modules')],
           include: path.resolve(__dirname, 'src'),
-          loader: ExtractTextPlugin.extract(
-            'style-loader',
-            [`css-loader?modules&importLoaders=1&localIdentName=${
-                config.production
-                ? '[hash:base64:5]' // prod
-                : '[path][name]--[local]--[hash:base64:5]' // dev
-              }`,
-              'postcss-loader',
-            ].join('!'),
-          ),
+          loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: "css-loader",
+                query: {
+                  importLoaders: 1,
+                  modules: true,
+                  localIdentName: (
+                    config.production
+                    ? "[hash:base64:5]"
+                    : "[path][name]--[local]--[hash:base64:5]"
+                  ),
+                },
+              },
+              {
+                loader: "postcss-loader",
+                // query for postcss can't be used right now
+                // https://github.com/postcss/postcss-loader/issues/99
+                // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
+                // query: { plugins: postcssPlugins },
+              },
+            ],
+          }),
         },
         {
           // *.global.css => global (normal) css
           test: /\.global\.css$/,
           include: path.resolve(__dirname, 'src'),
-          loader: ExtractTextPlugin.extract(
-            'style-loader',
-            ['css-loader', 'postcss-loader'].join('!'),
-          ),
+          loader: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              "css-loader",
+              {
+                loader: "postcss-loader",
+                // query for postcss can't be used right now
+                // https://github.com/postcss/postcss-loader/issues/99
+                // meanwhile, see webpack.LoaderOptionsPlugin in plugins list
+                // query: { plugins: postcssPlugins },
+              },
+            ],
+          }),
         },
         {
-          test: /\.(html|ico|jpe?g|png|gif)$/,
-          loader: `${'file-loader' +
-            '?name=[path][name].[hash].[ext]&context='}${
-            path.join(__dirname, config.source)}`,
+          test: /\.(html|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff|woff2)$/,
+          loader: "file-loader",
+           query: {
+             name: "[path][name].[hash].[ext]",
+             context: path.join(__dirname, config.source),
+           },
         },
         {
           test: /\.svg$/,
@@ -118,16 +138,6 @@ export const makeConfig = (config = {}) => {
         },
       ],
     },
-    // Phenomic options
-    phenomic: {
-      context: path.join(__dirname, config.source),
-      defaultHead: {
-        layout: 'Post',
-        comments: true,
-      },
-    },
-
-    postcss: postcssPlugins,
 
     plugins: [
       // possible perf upgrade for local dev
@@ -135,6 +145,18 @@ export const makeConfig = (config = {}) => {
       //    context: process.cwd(),
       //    manifest: require(path.resolve(pkg.dllPlugin.path, 'vendorPackages.json'))
       // }),
+      new webpack.LoaderOptionsPlugin({
+        test: /\.css$/,
+        options: {
+          postcss: postcssPlugins,
+          // required to avoid issue css-loader?modules
+          // this is normally the default value, but when we use
+          // LoaderOptionsPlugin, we must specify it again, otherwise,
+          // context is missing (and css modules names can be broken)!
+          context: __dirname,
+        },
+      }),
+
       new PhenomicFeedWebpackPlugin({
         // here you define generic metadata for your feed
         feedsOptions: {
@@ -158,26 +180,24 @@ export const makeConfig = (config = {}) => {
           },
         },
       }),
-      new ExtractTextPlugin('[name].[hash].css', { disable: config.dev }),
+
+      new ExtractTextPlugin({
+       filename: "[name].[hash].css",
+       disable: config.dev,
+      }),
+
       ...config.production && [
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin(
           { compress: { warnings: false } }
         ),
       ],
+
       new webpack.DefinePlugin({
         // set 'process.env.[vars]'
         'process.env': processEnvVariables,
         // Auth0Lock: 'Auth0Lock',
         // 'window.Auth0Lock': 'Auth0Lock'
       }),
-      // Copy external files to /dist
-      // new CopyWebpackPlugin([
-      //   {
-      //     from: 'admin',
-      //     to: 'admin'
-      //   },
-      // ]),
     ],
     // externals: {
     //   // Use external version of React
@@ -188,19 +208,6 @@ export const makeConfig = (config = {}) => {
       publicPath: config.baseUrl.pathname,
       filename: '[name].[hash].js',
     },
-    resolve: {
-      extensions: ['.js', '.json', ''],
-      root: [path.join(__dirname, 'node_modules')],
-      // alias: {
-      //   'assets': 'src/assets',
-      //   'utils': 'src/utils',
-      //   'components': 'src/components',
-      //   'fragments': 'src/fragments',
-      //   'layouts': 'src/layouts',
-      // }
-    },
-    resolveLoader: {
-      root: [path.join(__dirname, 'node_modules')]
-    },
+    resolve: { extensions: [ ".js", ".json" ] },
   }
 }

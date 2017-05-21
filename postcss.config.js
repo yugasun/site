@@ -1,3 +1,4 @@
+
 module.exports = (config, hotLoadedVariables) => [
   // require("stylelint")(),
   require('postcss-cssnext')({ browsers: 'last 2 versions' }),
@@ -18,7 +19,7 @@ module.exports = (config, hotLoadedVariables) => [
     }
   }),
   /* do math with resolve( ) */
-  require('postcss-math'),
+  // require('postcss-math'),
   // require('cssnano'), breaks keyframes
   /* enable nested css selectors like Sass/Less */
   require('postcss-nested'),

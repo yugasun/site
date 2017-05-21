@@ -2,6 +2,9 @@
  * Usage in markdown ->
  * Layout: Page
  */
-export Default from './Default'
-export Post from './Post'
-export Doc from './Doc'
+import Default from './Default'
+export { Default }
+import Post from './Post'
+export { Post }
+import Doc from './Doc'
+export { Doc }
