@@ -2,7 +2,7 @@
 import 'react-hot-loader/patch'
 import 'whatwg-fetch'
 
-import phenomicClient from 'phenomic/lib/client'
+import phenomicClient from 'phenomic-serverless/lib/client'
 import metadata from './metadata.js'
 import routes from '../src/routes.js'
 import configureStore from '../src/store.js'

@@ -3,7 +3,7 @@
  * layout and markdown based on current URL route
  */
 import React from 'react'
-import { PageContainer } from 'phenomic'
+import { PageContainer } from 'phenomic-serverless'
 import * as layouts from './layouts/index' // Page Layouts
 import * as templates from './pages' // Page Layouts
 

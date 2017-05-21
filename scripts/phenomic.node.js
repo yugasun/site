@@ -1,4 +1,4 @@
-import phenomicStatic from 'phenomic/lib/static'
+import phenomicStatic from 'phenomic-serverless/lib/static'
 import metadata from './metadata'
 import routes from '../src/routes'
 import configureStore from '../src/store'

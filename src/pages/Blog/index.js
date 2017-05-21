@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import enhanceCollection from 'phenomic/lib/enhance-collection'
+import enhanceCollection from 'phenomic-serverless/lib/enhance-collection'
 import Default from '../../layouts/Default'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
