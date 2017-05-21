@@ -6,8 +6,9 @@
   "repository": "https://github.com/serverless/site.git",
   "phenomic": {
     "CNAME": true,
-    "offline": false,
-    "cache": true
+    "offline": true,
+    "cache": true,
+    "disableServiceWorkerReload": true
   },
   "scripts": {
     "lintfix": "eslint --ignore-path .gitignore --fix ./src",
@@ -44,7 +45,7 @@
     "jwt-decode": "^2.1.0",
     "localforage": "^1.4.3",
     "lodash.debounce": "^4.0.8",
-    "phenomic": "^0.21.1",
+    "phenomic": "git://github.com/serverless/phenomic.git#updateSW",
     "prop-types": "^15.5.10",
     "react": "^15.0.0",
     "react-auto-form": "^1.3.0",
