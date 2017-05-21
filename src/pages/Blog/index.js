@@ -61,7 +61,7 @@ export default class BlogPage extends Component {
     }
     return (
       <Default {...this.props}>
-        <h2 className={styles.pageTitle}>The Serverless Blog</h2>
+        <h2 className={styles.pageTitle}>Serverless Blog</h2>
         <div className={styles.wrapper}>
           {renderContent}
           <div className={styles.sidebar}>
