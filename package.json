@@ -28,7 +28,6 @@
     "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
     "prebuild": "npm run prepareContent",
     "build": "phenomic build",
-    "prebuildprod": "cd node_modules/phenomic && npm install && npm run transpile && cd ..",
     "buildprod": "npm run syncProd && npm run prepareContent && phenomic build",
     "postbuildprod": "node scripts/redirects.js",
     "postinstall": "node scripts/build/postinstall.js",
@@ -176,7 +175,7 @@
     }
   },
   "stylelint": {
-    "extends": "./node_modules/phenomic/lib/stylelint-config-recommended/index.js",
+    "extends": "./node_modules/phenomic-serverless/lib/stylelint-config-recommended/index.js",
     "rules": {
       "block-no-empty": null
     }
