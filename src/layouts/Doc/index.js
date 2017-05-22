@@ -2,7 +2,7 @@
  * Base Doc template
  */
 import React, { Component, PropTypes } from 'react'
-import { BodyContainer } from 'phenomic'
+import { BodyContainer } from 'phenomic-serverless'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Helmet from 'react-helmet'
@@ -170,6 +170,7 @@ class Doc extends Component {
     const parent = trimmedURL.split('/')
     const parentName = parent[parent.length - 1]
     let parentDisplay = parentName
+    let parentURL
 
     if (parentName === 'aws') {
       parentDisplay = 'AWS'
@@ -179,11 +180,17 @@ class Doc extends Component {
 
     let menu = generatedMenu[__url] || generatedMenu[trimmedURL]
     if (!menu) {
-      menu = generatedMenu[getParentUrl(trimmedURL)]
+      parentURL = getParentUrl(trimmedURL)
+      menu = generatedMenu[parentURL]
     }
 
     if (menu && menu.index) {
       parentDisplay = menu.index[0].title
+      // if (parentURL) {
+      //   parentDisplay = (
+      //     <Link to={parentURL}>{menu.index[0].title}</Link>
+      //   )
+      // }
     }
 
     let searchBox

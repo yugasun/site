@@ -3,7 +3,7 @@
  */
 import Helmet from 'react-helmet'
 import React, { Component } from 'react'
-import { BodyContainer } from 'phenomic'
+import { BodyContainer } from 'phenomic-serverless'
 import Logo from '../../assets/images/serverless_logo.png'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'

@@ -8,7 +8,7 @@ import initializeAnalytics from './utils/analytics/init'
 import initUAClasses from './utils/brower-detect'
 import { setItem, getItem } from './utils/storage' // eslint-disable-line
 import { initializeRouteListener, handleRouteChange } from './utils/routerUtils'
-import deleteServiceWorkers from './utils/deleteServiceWorkers'
+// import deleteServiceWorkers from './utils/deleteServiceWorkers'
 import track from './utils/analytics/track'
 import identify from './utils/analytics/identify'
 import { customerIOPageView } from './utils/analytics/page'
@@ -16,7 +16,7 @@ import './index.global.css'
 import styles from './index.css'
 
 if (typeof window !== 'undefined') {
-  deleteServiceWorkers()
+  // deleteServiceWorkers()
   // expose React for app scripts
   window.React = React
   window.ReactDOM = ReactDOM
@@ -56,13 +56,14 @@ export default class App extends Component {
     }
     // handle user identification
     if (profile && profile.user_id) {
-      identify(profile.user_id, profile)
-      // trigger customer.io pageview
-      if (typeof _cio !== 'undefined') {
-        setTimeout(() => {
-          customerIOPageView()
-        }, 0)
-      }
+      // check for mergeInProgress
+      const id = profile.original_user_id || profile.user_id
+      // ID user
+      identify(id, profile)
+
+      setTimeout(() => {
+        customerIOPageView()
+      }, 0)
     }
   }
   render() {

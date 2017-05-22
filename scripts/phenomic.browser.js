@@ -1,8 +1,13 @@
+// Hot loading HRM Patch
+import 'react-hot-loader/patch'
 import 'whatwg-fetch'
-import phenomicClient from 'phenomic/lib/client'
-import routes from '../src/routes'
-import configureStore from '../src/store'
+
+import phenomicClient from 'phenomic-serverless/lib/client'
+import metadata from './metadata.js'
+import routes from '../src/routes.js'
+import configureStore from '../src/store.js'
 import { initialAuthState } from '../src/redux/user'
+
 const windowState = (typeof window !== 'undefined') ? window.__INITIAL_STATE__ : {}
 const authState = {
   auth: initialAuthState
@@ -19,22 +24,28 @@ store.dispatch({
 })
 
 phenomicClient({
-  metadata: {
-    empty: 'hi',
-  },
+  metadata,
   routes,
   store,
 })
 
-// hot loading
-// md files → JSON && generate collection + hot loading for dev
-let mdContext = require.context('../content', true, /\.md$/)
+// md files processed via phenomic-loader to JSON & generate collection
+let mdContext = require.context('../content', true, /\.(md|markdown)$/)
 mdContext.keys().forEach(mdContext)
+
+// hot loading
 if (module.hot) {
-  const mdHotUpdater = require('phenomic/lib/client/hot-md').default // eslint-disable-line
+  // hot load md
   module.hot.accept(mdContext.id, () => {
-    mdContext = require.context('../content', true, /\.md$/)
+    mdContext = require.context("../content", true, /\.(md|markdown)$/)
+    const mdHotUpdater = require('phenomic/lib/client/hot-md').default
     const requireUpdate = mdHotUpdater(mdContext, window.__COLLECTION__, store)
     mdContext.keys().forEach(requireUpdate)
   })
+
+  // hot load app
+  module.hot.accept(
+    [ "./metadata.js", "../src/routes.js", "../src/store.js" ],
+    () => phenomicClient({ metadata, routes, store })
+  )
 }

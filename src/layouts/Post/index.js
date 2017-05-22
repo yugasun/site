@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
-import { BodyContainer } from 'phenomic'
+import { BodyContainer } from 'phenomic-serverless'
 import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Default from '../Default'

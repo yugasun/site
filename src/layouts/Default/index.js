@@ -2,7 +2,7 @@
  * Base Page template
  */
 import React, { PropTypes } from 'react'
-import { BodyContainer, joinUri } from 'phenomic'
+import { BodyContainer, joinUri } from 'phenomic-serverless'
 import Helmet from 'react-helmet'
 import classnames from 'classnames'
 import getCustomScripts from '../../fragments/CustomScripts'
