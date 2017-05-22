@@ -56,13 +56,14 @@ export default class App extends Component {
     }
     // handle user identification
     if (profile && profile.user_id) {
-      identify(profile.user_id, profile)
-      // trigger customer.io pageview
-      if (typeof _cio !== 'undefined') {
-        setTimeout(() => {
-          customerIOPageView()
-        }, 0)
-      }
+      // check for mergeInProgress
+      const id = profile.original_user_id || profile.user_id
+      // ID user
+      identify(id, profile)
+
+      setTimeout(() => {
+        customerIOPageView()
+      }, 0)
     }
   }
   render() {
