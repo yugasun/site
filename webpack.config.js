@@ -8,8 +8,6 @@ import pkg from './package.json'
 import serverlessPkg from './serverless/package.json'
 import getSiteConfig from './src/_config'
 
-console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-
 export default (config = {}) => {
   // console.log('phenomic config', config)
   const isProd = config.production
@@ -36,9 +34,6 @@ export default (config = {}) => {
     delete require.cache[postcssPluginFile]
     return require(postcssPluginFile)(config, varFileContents())
   }
-
-  console.log(process.env.NODE_ENV)
-  console.log(process.env.BABEL_ENV)
 
   console.log('processEnvVariables', processEnvVariables)
   return {
