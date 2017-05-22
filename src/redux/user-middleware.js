@@ -5,11 +5,13 @@ import { setItemSync } from '../utils/storage'
 import { getXsrfToken } from '../utils/auth/xsrfToken'
 import lockInstance from '../utils/auth'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
   if (typeof window === 'undefined') {
     return false
   }
-  if (process.env.NODE_ENV === 'development') {
+  if (isDev) {
     console.log('authListener middleware added') // eslint-disable-line
   }
   // register lock callback once
@@ -42,7 +44,7 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
         console.log('Error loading the Profile', error) // eslint-disable-line
         return dispatch(loginError(error))
       }
-      if (process.env.NODE_ENV === 'development') {
+      if (isDev) {
         console.log('profile', profile) // eslint-disable-line
       }
       // set tokens
