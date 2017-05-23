@@ -36,7 +36,7 @@ export function gaPageView(pageData) {
     return setTimeout(removeUTM, 0)
   }
   if (typeof ga !== 'undefined') {
-    console.info(`GA Pageview > ${window.location.href}`)
+    // console.info(`GA Pageview > ${window.location.href}`)
     ga('set', 'page', data.path) // eslint-disable-line
     ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
   }
@@ -48,7 +48,7 @@ export function customerIOPageView(pageData) {
     return console.info(`DEV: Customer.io Pageview > ${window.location.href}`)
   }
   if (typeof _cio !== 'undefined') {
-    console.info(`Customer.io Pageview > ${window.location.href}`)
+    // console.info(`Customer.io Pageview > ${window.location.href}`)
     _cio.page(document.location.href, data) // eslint-disable-line
   }
 }
@@ -58,7 +58,7 @@ export function hubspotPageView(pageData) {
     return console.info(`DEV: Hubspot Pageview > ${window.location.href}`)
   }
   if (typeof _hsq !== 'undefined') {
-    console.info(`Hubspot Pageview > ${window.location.href}`)
+    // console.info(`Hubspot Pageview > ${window.location.href}`)
     _hsq.push(['trackPageView']) // eslint-disable-line
   }
 }

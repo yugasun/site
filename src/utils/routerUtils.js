@@ -28,12 +28,7 @@ export function handleRouteChange(e) {
       return false
     }
     if (newURL === loading || previousURL === loading) {
-      console.log('exit early')
       return false
-    }
-    if (process.env.NODE_ENV === 'development') {
-      console.log('previousURL', previousURL)
-      console.log('newURL', newURL)
     }
     // Set last page viewed for 404 tracker
     setItem(LAST_PAGE_SEEN, previousURL, function(){
