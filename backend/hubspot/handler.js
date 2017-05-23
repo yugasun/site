@@ -22,7 +22,7 @@ module.exports.addContact = function (event, context, callback) {
     })
   }
 
-  if(body.lastname){
+  if(body.last_name){
     data.properties.push({
       "property": "lastname",
       "value": body.last_name
