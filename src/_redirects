@@ -32,3 +32,5 @@
 /framework/docs/cli-reference/remove/ /framework/docs/providers/aws/cli-reference/remove
 /framework/docs/cli-reference/slstats/ /framework/docs/providers/aws/cli-reference/slstats
 /dynamic/* https://dkrldao3ic.execute-api.us-east-1.amazonaws.com/dev/posts/:splat 200
+/api/framework/track https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/track 200
+/api/framework/identify https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/identify 200
