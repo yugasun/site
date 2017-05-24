@@ -3,21 +3,21 @@
 /api/framework/track https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/track 200
 /api/framework/identify https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/identify 200
 # Simple redirects from one path to another
-/hiring https://jobs.lever.co/serverless
-/docs /framework/docs/
-/framework/docs/guide/README.md /framework/docs/guide/#advanced-guides
-/docs /framework/docs/
-/framework/docs/docs/commands-overview /framework/docs/providers/aws/
-/framework/docs/docs/backstory /framework/
-/framework/docs/guide/ /framework/docs/providers/aws/guide/
-/framework/docs/guide/installing-serverless/ /framework/docs/providers/aws/guide/installation
-/framework/docs/guide/creating-services/ /framework/docs/providers/aws/guide/services
-/framework/docs/guide/deploying-services/ /framework/docs/providers/aws/guide/deploying
-/framework/docs/guide/environment-variable-handling/ /framework/docs/providers/aws/guide/packaging
-/framework/docs/guide/event-sources/ /framework/docs/providers/aws/guide/events
-/framework/docs/guide/installing-plugins/ /framework/docs/providers/aws/guide/plugins
-/framework/docs/guide/custom-provider-resources/ /framework/docs/providers/aws/guide/resources
-/framework/docs/guide/invoking-functions/ /framework/docs/providers/aws/guide/functions
+/hiring https://jobs.lever.co/serverless 301
+/docs /framework/docs/ 301
+/framework/docs/guide/README.md /framework/docs/guide/#advanced-guides 301
+/docs /framework/docs/ 301
+/framework/docs/docs/commands-overview /framework/docs/providers/aws/ 301
+/framework/docs/docs/backstory /framework/ 301
+/framework/docs/guide/ /framework/docs/providers/aws/guide/ 301
+/framework/docs/guide/installing-serverless/ /framework/docs/providers/aws/guide/installation 301
+/framework/docs/guide/creating-services/ /framework/docs/providers/aws/guide/services 301
+/framework/docs/guide/deploying-services/ /framework/docs/providers/aws/guide/deploying 301
+/framework/docs/guide/environment-variable-handling/ /framework/docs/providers/aws/guide/packaging 301
+/framework/docs/guide/event-sources/ /framework/docs/providers/aws/guide/events 301
+/framework/docs/guide/installing-plugins/ /framework/docs/providers/aws/guide/plugins 301
+/framework/docs/guide/custom-provider-resources/ /framework/docs/providers/aws/guide/resources 301
+/framework/docs/guide/invoking-functions/ /framework/docs/providers/aws/guide/functions 301
 /framework/docs/guide/packaging/ /framework/docs/providers/aws/guide/packaging
 /framework/docs/guide/removing-services/ /framework/docs/providers/aws/guide/services
 /framework/docs/guide/serverless-variables/ /framework/docs/providers/aws/guide/variables
