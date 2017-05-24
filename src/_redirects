@@ -2,7 +2,7 @@
 /dynamic/* https://dkrldao3ic.execute-api.us-east-1.amazonaws.com/dev/posts/:splat 200
 /api/framework/track https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/track 200
 /api/framework/identify https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/identify 200
-# Simple redirects from one path to another
+# Simple 301 redirects from one path to another
 /hiring https://jobs.lever.co/serverless 301
 /docs /framework/docs/ 301
 /framework/docs/guide/README.md /framework/docs/guide/#advanced-guides 301
@@ -18,20 +18,20 @@
 /framework/docs/guide/installing-plugins/ /framework/docs/providers/aws/guide/plugins 301
 /framework/docs/guide/custom-provider-resources/ /framework/docs/providers/aws/guide/resources 301
 /framework/docs/guide/invoking-functions/ /framework/docs/providers/aws/guide/functions 301
-/framework/docs/guide/packaging/ /framework/docs/providers/aws/guide/packaging
-/framework/docs/guide/removing-services/ /framework/docs/providers/aws/guide/services
-/framework/docs/guide/serverless-variables/ /framework/docs/providers/aws/guide/variables
-/framework/docs/guide/serverless-yml-reference/ /framework/docs/
-/framework/docs/extending-serverless/ /framework/docs/providers/aws/guide/plugins
-/framework/docs/extending-serverless/creating-provider-plugins /framework/docs/providers/aws/guide/plugins
-/framework/docs/framework-statistics/ /framework/docs/providers/aws/cli-reference/slstats/
-/framework/docs/v0-v1-comparison/ /framework/docs/providers/aws/guide/v0_to_v1/
-/framework/docs/cli-reference/ /framework/docs/providers/aws/cli-reference/
-/framework/docs/cli-reference/create/ /framework/docs/providers/aws/cli-reference/create
-/framework/docs/cli-reference/install/ /framework/docs/providers/aws/cli-reference/install
-/framework/docs/cli-reference/deploy/ /framework/docs/providers/aws/cli-reference/deploy
-/framework/docs/cli-reference/invoke/ /framework/docs/providers/aws/cli-reference/invoke
-/framework/docs/cli-reference/logs/ /framework/docs/providers/aws/cli-reference/logs
-/framework/docs/cli-reference/info/ /framework/docs/providers/aws/cli-reference/info
-/framework/docs/cli-reference/remove/ /framework/docs/providers/aws/cli-reference/remove
-/framework/docs/cli-reference/slstats/ /framework/docs/providers/aws/cli-reference/slstats
+/framework/docs/guide/packaging/ /framework/docs/providers/aws/guide/packaging 301
+/framework/docs/guide/removing-services/ /framework/docs/providers/aws/guide/services 301
+/framework/docs/guide/serverless-variables/ /framework/docs/providers/aws/guide/variables 301
+/framework/docs/guide/serverless-yml-reference/ /framework/docs/ 301
+/framework/docs/extending-serverless/ /framework/docs/providers/aws/guide/plugins 301
+/framework/docs/extending-serverless/creating-provider-plugins /framework/docs/providers/aws/guide/plugins 301
+/framework/docs/framework-statistics/ /framework/docs/providers/aws/cli-reference/slstats/ 301
+/framework/docs/v0-v1-comparison/ /framework/docs/providers/aws/guide/v0_to_v1/ 301
+/framework/docs/cli-reference/ /framework/docs/providers/aws/cli-reference/ 301
+/framework/docs/cli-reference/create/ /framework/docs/providers/aws/cli-reference/create 301
+/framework/docs/cli-reference/install/ /framework/docs/providers/aws/cli-reference/install 301
+/framework/docs/cli-reference/deploy/ /framework/docs/providers/aws/cli-reference/deploy 301
+/framework/docs/cli-reference/invoke/ /framework/docs/providers/aws/cli-reference/invoke 301
+/framework/docs/cli-reference/logs/ /framework/docs/providers/aws/cli-reference/logs 301
+/framework/docs/cli-reference/info/ /framework/docs/providers/aws/cli-reference/info 301
+/framework/docs/cli-reference/remove/ /framework/docs/providers/aws/cli-reference/remove 301
+/framework/docs/cli-reference/slstats/ /framework/docs/providers/aws/cli-reference/slstats 301

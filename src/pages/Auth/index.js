@@ -2,6 +2,7 @@
  * 404 page template
  */
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import axios from 'axios' // eslint-disable-line
 import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
@@ -65,6 +66,7 @@ export default class Auth extends Component {
     const show = (code) ? 'block' : 'none'
     return (
       <div className={styles.container}>
+        <Helmet title={'Serverless Login'} />
         <div className={styles.inner} style={{ display: show }}>
           <div className={styles.hero}>
             <h1>Welcome to Serverless</h1>

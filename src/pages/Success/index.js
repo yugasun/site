@@ -2,6 +2,7 @@
  * 404 page template
  */
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import axios from 'axios' // eslint-disable-line
 import { Link } from 'react-router' // eslint-disable-line
 import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
@@ -55,6 +56,7 @@ export default class Welcome extends Component {
   render() {
     return (
       <div className={styles.container}>
+        <Helmet title={'Serverless Login Successful'} />
         <div className={styles.inner} >
           <div className={styles.hero}>
             <h1>Login Successful</h1>
