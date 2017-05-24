@@ -7,6 +7,7 @@ import { Link } from 'react-router' // eslint-disable-line
 import TextInput from '../../components/TextInput'
 import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
 import constants from '../../utils/analytics/constants'
+import track from '../../utils/analytics/track'
 import removeURLParams from '../../utils/analytics/source/removeURLParams'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
@@ -38,6 +39,11 @@ export default class Auth extends Component {
           console.log('state', state)
           // set framework ID
           if (state.id) {
+            // Track Login Started
+            track('site:cli_loginStarted', {
+              label: 'Framework Login Started'
+            })
+
             setItem(constants.FRAMEWORK_ID, state.id, () => {
               console.log('id set', params.state) // eslint-disable-line
             })
