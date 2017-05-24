@@ -28,6 +28,11 @@ module.exports.identify = function (event, context, callback) {
     data.email = body.email
   }
 
+  if (body.created_at) {
+    // must be unix timestamp
+
+  }
+
   if (body.company){
     data.company = body.company
   }
@@ -45,7 +50,7 @@ module.exports.identify = function (event, context, callback) {
   }
 
   cio.identify(body.id, data).then((d) => {
-    console.log('Identify Event!')
+    console.log(`[Identify]: ${body.id}`, data)
     return callback(null, {
       statusCode: 200,
       headers: {
@@ -85,7 +90,7 @@ module.exports.track = function (event, context, callback) {
   }
 
   cio.track(body.id, customerIOData).then((d) => {
-    console.log('Tracked Event!')
+    console.log(`[${body.id}]: ${body.event}`, body.data)
     return callback(null, {
       statusCode: 200,
       headers: {
