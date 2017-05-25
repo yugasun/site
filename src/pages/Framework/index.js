@@ -3,7 +3,7 @@ import Default from '../../layouts/Default'
 import styles from './Framework.css'
 import Button from '../../components/Button/Button'
 
-const PartnersPage = (props) => {
+const FrameworkPage = (props) => {
   return (
     <Default {...props}>
       <br />
@@ -86,5 +86,6 @@ const PartnersPage = (props) => {
     </Default>
   )
 }
+FrameworkPage.hasLoadingState = true
 
-export default PartnersPage
+export default FrameworkPage

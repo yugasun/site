@@ -20,7 +20,6 @@ const propTypes = {
   body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
-  phenomicLoading: PropTypes.bool,
   __url: PropTypes.string,
 }
 

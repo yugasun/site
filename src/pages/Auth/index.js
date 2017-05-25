@@ -14,6 +14,7 @@ import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
 export default class Auth extends Component {
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.state = {

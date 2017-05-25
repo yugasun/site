@@ -4,6 +4,7 @@ import teamMembers from './team.json'
 import styles from './Team.css'
 
 export default class TeamPage extends React.Component {
+  static hasLoadingState = true
   listTeamMembers = () => {
     return teamMembers.map((person, i) => {
       return (

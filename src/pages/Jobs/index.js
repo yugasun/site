@@ -33,6 +33,7 @@ const Positions = ({ jobs, team }) => (
 )
 
 export default class JobsPage extends React.Component {
+  static hasLoadingState = true
   constructor(props) {
     super(props)
     this.state = {

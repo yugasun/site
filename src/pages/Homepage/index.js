@@ -15,7 +15,7 @@ export default class Homepage extends Component {
   static propTypes = {
     phenomicLoading: PropTypes.bool
   }
-  static loadingState = true
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.state = {
@@ -24,7 +24,7 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Default {...this.props} phenomicLoading={this.props.phenomicLoading} fullWidth>
+      <Default {...this.props} fullWidth>
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
