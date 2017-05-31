@@ -16,7 +16,7 @@ import './index.global.css'
 import styles from './index.css'
 
 if (typeof window !== 'undefined') {
-  deleteServiceWorkers()
+  // deleteServiceWorkers()
   // expose React for app scripts
   window.React = React
   window.ReactDOM = ReactDOM
