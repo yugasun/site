@@ -5,7 +5,6 @@ fullWidth: true
 scripts: https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/apps/status-board/status-board-loader.js
 inlineJS: "
 if (typeof window.loadStatusBoard !== 'undefined') {
-  console.log('loadStatusBoard from app');
   window.loadStatusBoard();
 }
 "
