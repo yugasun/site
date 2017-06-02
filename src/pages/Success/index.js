@@ -66,7 +66,7 @@ export default class Welcome extends Component {
             </div>
           </div>
           <div className={styles.nextSteps}>
-            <h3>New to serverless? Here are next Steps</h3>
+            <h3>New to Serverless? Here are the next steps...</h3>
             <div className={styles.boxWrapper}>
               <div className={styles.box}>
                 <a href='/framework/docs/'>
