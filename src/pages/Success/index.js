@@ -27,7 +27,7 @@ export default class Welcome extends Component {
       window.location.href = 'https://serverless.com/'
       return false
     }
-    console.log('params', params)
+
     this.setState({ // eslint-disable-line
       params,
     })
