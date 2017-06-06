@@ -137,5 +137,19 @@
       "long":
         "Maciej Winnicki is a passionate software engineer focused on building distributed systems, designing easy-to-use APIs and creating tools for making developer's life easier. He has been working for different-sized companies, from a SV startup to the largest e-commerce site in Eastern Europe. These days you can find him actively contributing to and maintaining the open source projects."
     }
+  },
+  {
+    "name": "Rupak Ganguly",
+    "title": "Enterprise Advocate",
+    "github": "rupakg",
+    "twitter": "rupakg",
+    "linkedin": "rupakg",
+    "avatar": "https://avatars1.githubusercontent.com/u/8188?v=3&s=460",
+    "location": "Atlanta, Georgia",
+    "bio": {
+      "short": "Technology Evangelist who loves to code, mentor and share the knowledge.",
+      "long":
+        "Rupak Ganguly is a technologist with an eye for simple design, big picture, clear goals and strong foundations rooted in diversity."
+    }
   }
 ]
