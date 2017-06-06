@@ -54,21 +54,6 @@
     }
   },
   {
-    "name": "Stefanie Monge",
-    "title": "Content Strategy & Events",
-    "github": "Stefmonge",
-    "twitter": "stefaniemonge",
-    "linkedin": "stefaniemonge",
-    "site": "http://serverless.com",
-    "avatar": "https://avatars1.githubusercontent.com/u/20538501?v=3&s=260",
-    "location": "San Francisco",
-    "bio": {
-      "short": "Content Strategy & Events and social entrepreneur",
-      "long":
-        "Nick is passionate about understanding and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
-    }
-  },
-  {
     "name": "Philipp Müns",
     "title": "Senior Core Developer",
     "github": "pmuens",
@@ -95,20 +80,6 @@
       "short": "Frontend Developer and triathlete",
       "long":
         "Nick is passionate about understanding and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
-    }
-  },
-  {
-    "name": "Danny King",
-    "title": "Designer",
-    "github": "dannykingme",
-    "twitter": "dannykingme",
-    "site": "http://dannyking.me/",
-    "avatar": "https://avatars2.githubusercontent.com/u/2594189?v=3&s=260",
-    "location": "San Francisco",
-    "bio": {
-      "short": "Designer and bio pending (Danny's girlfriend has to write it).",
-      "long":
-        "I design/develop tools for other designers/developers. Previously, I made prototyping simpler at Precursor and made search simpler at Google."
     }
   },
   {
