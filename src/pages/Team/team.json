@@ -122,5 +122,19 @@
       "long":
         "Rupak Ganguly is a technologist with an eye for simple design, big picture, clear goals and strong foundations rooted in diversity."
     }
+  },
+  {
+    "name": "Brian Neisler",
+    "title": "Product Manager",
+    "github": "brianneisler",
+    "twitter": "brianneisler",
+    "linkedin": "brianneisler",
+    "avatar": "https://avatars3.githubusercontent.com/u/1471972?v=3&s=460",
+    "location": "San Francisco, CA",
+    "bio": {
+      "short": "Technology entrepreneur, product manager, software architect.",
+      "long":
+        "I firmly believe I must have passion for what I do. It keeps me energized and inspires me to give everything I have to give. I believe in doing whatever I can to enrich the lives of those around me and that I have much to learn from anyone I may interact with. I have been lucky to be surrounded by great people, all of which have had a measurable impact on my life."
+    }
   }
 ]
