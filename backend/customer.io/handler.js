@@ -6,12 +6,14 @@ const cio = new CIO(siteId, apiKey);
 module.exports.identify = function (event, context, callback) {
   const body = JSON.parse(event.body)
 
+  console.log('identify body', body)
+
   if (!body.id) {
-    callback(new Error('[400] No id supplied'));
+    return callback(new Error('[400] No id supplied'));
   }
 
   if (!body.email) {
-    callback(new Error('[400] No email supplied'));
+    return callback(new Error('[400] No email supplied'));
   }
 
   let data = {}
@@ -30,7 +32,11 @@ module.exports.identify = function (event, context, callback) {
 
   if (body.created_at) {
     // must be unix timestamp
+    data.created_at = body.created_at
+  }
 
+  if (body.trackingDisabled === true || body.trackingDisabled === false) {
+    data.trackingDisabled = body.trackingDisabled
   }
 
   if (body.company){
@@ -50,7 +56,8 @@ module.exports.identify = function (event, context, callback) {
   }
 
   cio.identify(body.id, data).then((d) => {
-    console.log(`[Identify]: ${body.id}`, data)
+    console.log('[Identify]', body.id)
+    console.log(data)
     return callback(null, {
       statusCode: 200,
       headers: {
@@ -69,16 +76,18 @@ module.exports.track = function (event, context, callback) {
   const body = JSON.parse(event.body)
   const email = body.email
 
+  console.log('track body', body)
+
   if (!body.id) {
-    callback(new Error('[400] No id supplied'));
+    return callback(new Error('[400] No id supplied'));
   }
 
   if (!body.email) {
-    callback(new Error('[400] No email supplied'));
+    return callback(new Error('[400] No email supplied'));
   }
 
   if (!body.event) {
-    callback(new Error('[400] No event supplied'));
+    return callback(new Error('[400] No event supplied'));
   }
 
   let customerIOData = {
