@@ -36,6 +36,7 @@ function customerIO(eventName, payload) {
 }
 
 function googleAnalytics(eventName, payload) {
+  console.log('TRIGGER GA')
   if (typeof ga !== 'undefined') {
     const objectName = eventName.match(/:(.*)_/)
     let parsedEventName
@@ -67,7 +68,7 @@ function googleAnalytics(eventName, payload) {
       return false
     }
     // productName:objectName_actionName
-    console.log(`Prod>` + debugGA) // eslint-disable-line
+    console.log(`GA Prod>` + debugGA) // eslint-disable-line
     ga('send', { // eslint-disable-line
       // 'pageview', 'screenview', 'event', 'transaction', 'item', 'social', 'exception', 'timing'
       hitType: 'event',
