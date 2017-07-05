@@ -9,6 +9,7 @@
 /docs /framework/docs/ 301
 /framework/docs/docs/commands-overview /framework/docs/providers/aws/ 301
 /framework/docs/docs/backstory /framework/ 301
+/framework/docs/docs/installing-serverless /framework/docs/getting-started/ 301
 /framework/docs/guide/ /framework/docs/providers/aws/guide/ 301
 /framework/docs/guide/installing-serverless/ /framework/docs/providers/aws/guide/installation 301
 /framework/docs/guide/creating-services/ /framework/docs/providers/aws/guide/services 301
