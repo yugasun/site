@@ -132,12 +132,12 @@ export default class Header extends Component {
                         Meet the team
                       </Link>
                     </li>
-                    <li>
+                    {/*<li>
                       <Link to='/company/jobs' className={styles.link}>
                         We are hiring
                       </Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link to='/company/contact' className={styles.link}>
                         Contact
                       </Link>
