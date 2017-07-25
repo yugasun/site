@@ -13,7 +13,7 @@ const EmitCTA = (props) => {
           August 17: the conference on event-driven architectures.
         </span>
         <a className={styles.link} href='http://www.emitconference.com/' target='_blank'>
-          Grab your ticket
+          Learn more
         </a>
       </div>
     </div>
