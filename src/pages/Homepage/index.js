@@ -4,6 +4,7 @@ import Svg from 'react-svg-inline'
 import Button from '../../components/Button'
 // import Button from '@serverless/components/Button'
 import Default from '../../layouts/Default'
+import EmitCTA from '../../fragments/EmitCTA'
 import Terminal from '../../components/Terminal'
 import ContentBlock from '../../components/ContentBlock'
 import terminalCommands from './terminalCommands'
@@ -25,6 +26,7 @@ export default class Homepage extends Component {
   render() {
     return (
       <Default {...this.props} fullWidth>
+        <EmitCTA />
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
