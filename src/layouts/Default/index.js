@@ -7,6 +7,7 @@ import Helmet from 'react-helmet'
 import classnames from 'classnames'
 import getCustomScripts from '../../fragments/CustomScripts'
 import Header from '../../fragments/Header'
+import EmitCTA from '../../fragments/EmitCTA'
 import Footer from '../../fragments/Footer'
 import styles from './Default.css'
 
@@ -82,6 +83,7 @@ const DefaultLayout = (props) => {
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} />
       <Header />
+      <EmitCTA />
       <div className={classes}>
         {header}
         {children || markdown}

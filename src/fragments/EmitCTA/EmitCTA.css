@@ -1,0 +1,19 @@
+.banner {
+  position: relative;
+  width: 100%;
+
+  &.fullWidth {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.wrapper {
+  margin: auto;
+  padding: 1rem;
+  max-width: 96rem;
+}
+.logo {
+  max-width: 15rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
