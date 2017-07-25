@@ -87,7 +87,7 @@ export default class Homepage extends Component {
               IT operational costs and deploy services faster.”
             </div>
             <div className={styles.customer}>
-             - Patrick Brandt, Solutions Architect at <img src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/coke-logo.png'} alt='coke' />
+             - Patrick Brandt, Solutions Architect at The Coca-Cola Company
             </div>
           </div>
 
