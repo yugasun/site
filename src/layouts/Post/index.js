@@ -14,7 +14,7 @@ import AuthorCTA from '../../fragments/AuthorCTA'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
-
+import EmitCTA from '../../fragments/EmitCTA'
 
 class Post extends Component {
   static hasLoadingState = true
@@ -111,7 +111,8 @@ class Post extends Component {
     }
 
     return (
-      <Default {...props} className={styles.postPage} >
+      <Default {...props} className={styles.postPage}>
+        <EmitCTA style={{marginTop: '-15px', marginBottom: '25px'}} />
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
