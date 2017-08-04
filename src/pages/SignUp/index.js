@@ -36,7 +36,10 @@ export default class SignUp extends Component {
       }
       showLogin()
     } else {
-      window.location.href = '/'
+      document.getElementById('message').innerHTML = 'Looks like you are already a user! Redirecting you to the serverless homepage'
+      setTimeout(() => {
+         window.location.href = '/'
+      }, 4000)
     }
   }
   render() {
@@ -46,6 +49,7 @@ export default class SignUp extends Component {
         <div className={styles.inner} >
           <div className={styles.hero}>
             <h1>Signup for Serverless Platform</h1>
+            <span id='message'></span>
           </div>
         </div>
       </div>
