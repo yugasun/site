@@ -28,3 +28,5 @@ import Jobs from './Jobs'
 export { Jobs }
 import Blog from './Blog'
 export { Blog }
+import SignUp from './SignUp'
+export { SignUp }
