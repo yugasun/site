@@ -5,12 +5,14 @@ import Button from '../../components/Button/Button'
 
 const FrameworkPage = (props) => {
   return (
-    <Default {...props}>
-      <br />
+    <Default className={styles.page} {...props}>
       <div className={styles.header}>
-        <h1 className='center' style={{ marginBottom: '20px' }}>What is the Serverless Framework?</h1>
-        <p className='center' style={{ marginBottom: '20px' }}>
-          Build applications comprised of microservices that run in response to events, auto-scale for you, and only charge you when they run. This lowers the total cost of maintaining your apps, enabling you to build more logic, faster.
+        <h1 style={{ marginBottom: '10px' }}>What is the Serverless Framework?</h1>
+        <p style={{ marginBottom: '0px' }}>
+          The open source framework is a tool built to help developers <strong>build, manage and deploy</strong> their functions into the cloud provider of their choice (AWS, Azure, IBM, Google).
+        </p>
+        <p style={{ marginBottom: '20px' }}>
+          Get started by running <code>npm install serverless -g</code> in your terminal, then login with the <code>serverless login</code> command.
         </p>
       </div>
       <iframe
@@ -19,21 +21,27 @@ const FrameworkPage = (props) => {
         frameBorder='0'
         allowFullScreen='true'
       />
-      <p className='center' style={{ marginTop: '20px', marginBottom: '10px' }}>
-        The Serverless Framework is the world’s leading development framework for building serverless architectures.
-      </p>
-      <div className={styles.button}>
+
+      <div className={styles.buttons}>
         <Button
           className={styles.button}
           kind='black'
           href='/framework/docs/'
         >
+          Read the docs
+        </Button>
+        <Button
+          className={styles.button + ' ' + styles.yellow}
+          kind='black'
+          href='/framework/docs/getting-started/'
+        >
           Get Started
         </Button>
       </div>
-      <h2 className={styles.header} style={{ marginBottom: '20px', marginTop: '50px' }}>
-        Why Use The Framework
-      </h2>
+      <h2 className={styles.headerText}>What can you do with the framework?</h2>
+      <p className='center' style={{ marginTop: '10px', marginBottom: '30px' }}>
+        Build applications comprised of microservices that run in response to events, that will auto-scale for you, and only charge you when they run.
+      </p>
       <div className={styles.componentBox}>
         <div className={styles.component}>
           <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
@@ -74,15 +82,6 @@ const FrameworkPage = (props) => {
           </p>
         </div>
       </div>
-      <div className={styles.button}>
-        <Button kind='black' href='/framework/docs/'>
-        Get Started
-        </Button>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
     </Default>
   )
 }

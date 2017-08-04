@@ -12,19 +12,21 @@ const propTypes = {
   href: PropTypes.string,
   /** target of href */
   target: PropTypes.string,
+  className: PropTypes.string,
 }
 
 const defaultProps = {
   kind: 'dark',
 }
 
-export default function Button({ onClick, label, children, kind, style, href, target }) {
+export default function Button({ onClick, label, children, kind, style, href, target, className }) {
   const text = label || children
   const kindStyle = styles[kind]
+  const classes = className || ''
   if (href) {
     return (
       <Link
-        className={`${styles.btn} ${kindStyle}`}
+        className={`${styles.btn} ${kindStyle} ${classes}`}
         to={href}
         target={target}
         onClick={onClick} style={style}
