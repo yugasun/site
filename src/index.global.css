@@ -66,7 +66,7 @@ video {
 body {
   font-size: $fontSize;
   line-height: 1.9;
-  font-family: 'Avenir Next W00', sans-serif;
+  font-family: Gibson, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
    margin-top: 0;
