@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import handleClickAway from '../../utils/handleClickAway'
 import gitHubSvg from '../../assets/icons/github.svg'
-import Logo from '../../assets/images/serverless_logo.png'
+import Logo from '../../assets/images/serverless-logo.svg'
 import styles from './Header.css'
 import Auth from '../../components/Auth/Auth'
 
@@ -52,9 +52,7 @@ export default class Header extends Component {
         <div className={styles.navFixed}>
           <div className={`${styles.navWrapper} ${containerStyle}`}>
             <div className={styles.navLeft}>
-              <Link to='/' className={styles.logo}>
-                <img alt='Serverless logo' src={Logo} draggable='false' />
-              </Link>
+              <Link to='/' className={styles.logo}><Svg svg={Logo} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
             </div>
             <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
               <div className={styles.ham}>
@@ -64,103 +62,36 @@ export default class Header extends Component {
             <nav className={`${styles.navRight} ${mobileNav}`}>
               <ul className={styles.navItems}>
                 <li className={styles.navItem}>
-                  <Link to='/framework/docs' className={styles.link}>
-                    Documentation
-                  </Link>
-                </li>
-                <li className={styles.navItem}>
                   <Link to='/framework' className={styles.link}>
-                    Framework <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
+                    Toolkit <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
                   </Link>
                   <ul className={styles.subNavItems}>
                     <li>
                       <Link to='/framework' className={`${styles.link} ${styles.noMobile}`}>
-                        About Serverless
+                        Framework
                       </Link>
                     </li>
                     <li>
                       <Link to='/framework/docs' className={styles.link}>
-                        Framework docs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/framework/status' className={styles.link}>
-                        Project Status
+                        Event Gateway
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li className={styles.navItem}>
-                  <span className={styles.link}>
-                    Community <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
-                  </span>
-                  <ul className={styles.subNavItems}>
-                    <li>
-                      <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer' className={styles.link}>
-                        Chat on Gitter
-                      </a>
-                    </li>
-                    <li>
-                      <a href='http://forum.serverless.com/' target='_blank' rel='noopener noreferrer' className={styles.link}>
-                        Discuss on the Forums
-                      </a>
-                    </li>
-                    <li>
-                      <Link to='/community/meetups' className={`${styles.link} ${styles.noMobile}`}>
-                        Join a Meetup
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/partners' className={styles.link}>
-                        Partners
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/enterprise' className={styles.link}>
-                        Enterprise
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={styles.navItem}>
-                  <span className={styles.link}>
-                    Company <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
-                  </span>
-                  <ul className={styles.subNavItems}>
-                    <li>
-                      <Link to='/company/team' className={styles.link}>
-                        Meet the team
-                      </Link>
-                    </li>
-                    {/*<li>
-                      <Link to='/company/jobs' className={styles.link}>
-                        We are hiring
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/company/contact' className={styles.link}>
-                        Contact
-                      </Link>
-                    </li>
-                     */}
-                  </ul>
+                  <Link to='/company/' className={styles.link}>
+                    Company
+                  </Link>
                 </li>
                 <li className={styles.navItem}>
                   <Link to='/blog' className={styles.link}>
                     Blog
                   </Link>
                 </li>
-                <Auth className={styles.auth} loggedInComponent={<span />}>
-                  <li className={styles.navItem}>
-                    <span className={`${styles.link} ${styles.yellowLink}`}>
-                      Join Beta
-                    </span>
-                  </li>
-                </Auth>
-                <li className={`${styles.navItem} ${styles.noMobile}`}>
-                  <a href='https://www.github.com/serverless/serverless' target='_blank' rel='noopener noreferrer' className={styles.link}>
-                    <Svg svg={gitHubSvg} cleanup />
-                  </a>
+                <li className={styles.navItem}>
+                  <Link to='/enterprise' className={`${styles.link} ${styles.linkSpecial}`}>
+                    Enterprise
+                  </Link>
                 </li>
 
               </ul>

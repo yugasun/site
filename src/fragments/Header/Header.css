@@ -1,9 +1,4 @@
 .header {
-  color: #eee;
-  background: $black2;
-  /*  background: transparent;*/
-  font-family: 'Avenir Next W00', sans-serif;
-  font-weight: normal;
 }
 
 .bumper {
@@ -25,19 +20,23 @@
 }
 
 .navWrapper {
-  font-family: "Avenir Next W00", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   left: 0;
   right: 0;
-  max-width: 96rem;
+  max-width: 140rem;
   margin: auto;
   position: relative;
   padding: 0 1rem 0 1rem;
+  color: #fff;
   &.fullWidth {
     max-width: 100%;
     width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -50,10 +49,21 @@
   align-items: center;
 }
 
-.logo, .logo img {
-  max-height: 35px;
-  position: relative;
-  z-index: 12;
+.logo {
+  color: inherit;
+  font-family: Serverless, monospace;
+  font-size: 2.6rem;
+  text-decoration: none;
+  min-width: 22rem;
+}
+.logoIcon {
+  vertical-align: top;
+  margin-left: 1rem;
+}
+.logoText {
+  font-size: 2.2rem;
+  vertical-align: top;
+  margin-left: 1rem;
 }
 .hiring {
   color: $black1 !important;
@@ -65,7 +75,7 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
-  li, a {
+  li {
     position: relative;
     display: flex;
     align-items: center;
@@ -73,23 +83,15 @@
   }
 }
 .link {
-  display: flex;
-  align-items: center;
-  padding: 7px 9px 12px 9px;
-  color: inherit;
+  display: block;
+  font-size: 1.4rem;
   text-decoration: none;
-  color: #888;
-  font-size: 15px;
-  font-weight: 200;
-  cursor: pointer;
-  transition: color 0.2s linear;
-  letter-spacing: -0.5px;
-  border: none;
-  &:hover {
-    color: #fff;
-    background: 0 0;
-  }
-
+  padding: 0.5rem 3rem;
+  width: 12rem;
+}
+.linkSpecial {
+  border: 1px solid;
+  border-radius: 3px;
 }
 .caret {
   width: 8px !important;
@@ -105,52 +107,15 @@
   padding: 0;
   position: absolute;
   top: 54px;
-  left: -50%;
+  left: 10%;
   background: #fff;
-  width: 185px;
-  border: 1px solid rgba(0, 0, 0, 0.0980392);
-  box-shadow: 0 2px 7px rgba(0, 0, 0, .05);
-  border-radius: 0px;
-  /*&:before {
-    background-color: rgb(255, 255, 255);
-    content: "";
-    opacity: 0;
-    transform: rotate(45deg);
-    visibility: hidden;
-    width: 12px;
-    display: inline-block;
-    height: 12px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.0980392);
-    border-image: initial;
-    transition: visibility 0s 0.2s, opacity 0.2s;
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s;
-  }*/
-  &:after {
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    border-width: 16px;
-    margin-left: -16px;
-    left: 50%;
-    border-bottom-color: #fff;
-    bottom: 100%;
-    margin-bottom: -10px;
-    z-index: 0;
-  }
+  width: 13.2rem;
+  border-radius: 2px;
   .link {
     width: 100%;
     margin-top: -1px;
     justify-content: flex-start;
-    padding: 7px;
-    padding-left: 15px;
+    padding: 7px 7px 7px 15px;
     color: rgba(0,0,0,.64);
     transition: color 0s linear;
     position: relative;
@@ -162,6 +127,9 @@
   }
 }
 
+.navItem {
+  display: inline-block;
+}
 .navItem:hover {
   .subNavItems {
     display: block;
@@ -169,6 +137,8 @@
   > .link {
     color: #fff;
     background: 0 0;
+    font-weight: 600;
+    padding: 0.5rem calc(3rem - 2px);
   }
   .caret {
     opacity: 1;
