@@ -48,7 +48,6 @@ export default class Header extends Component {
     const containerStyle = (fullWidth) ? styles.fullWidth : ''
     return (
       <header className={styles.header}>
-        <div className={styles.bumper} />
         <div className={styles.navFixed}>
           <div className={`${styles.navWrapper} ${containerStyle}`}>
             <div className={styles.navLeft}>
