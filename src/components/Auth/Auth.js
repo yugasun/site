@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { login, logout } from '../../redux/user'
+import track from '../../utils/analytics/track'
+import { getItemSync } from '../../utils/storage'
 
 const AuthComponent = (props) => {
   const {
@@ -14,7 +16,17 @@ const AuthComponent = (props) => {
     children
   } = props
   let renderedContent = children
-  let handleClick = (isAuthenticated) ? null : login
+
+  const doLogin = () => {
+    const user = getItemSync('profile')
+    if (!user) {
+      track('site:account_modalOpened', {
+        label: 'Begin Account Signup'
+      })
+    }
+    login()
+  }
+  let handleClick = (isAuthenticated) ? null : doLogin
 
   if (logoutOnClick && isAuthenticated) {
     // if logoutOnClick add logout clickhandler to wrapper

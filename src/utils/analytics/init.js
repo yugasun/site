@@ -10,6 +10,6 @@ export default function InitializeAnalytics() {
   initializeParamData()
   // Set IDs
   initializeVisitorID()
-  // Set Refferer
+  // Set Referer
   initializeReferralData()
 }
