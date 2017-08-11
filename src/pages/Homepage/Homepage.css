@@ -19,28 +19,6 @@
   position: relative;
   color: #fff;
 }
-a.yellowLink {
-  color: $yellow;
-  text-decoration: none;
-  font-size: 22px;
-  cursor: pointer!important;
-  transition: color 0.2s linear;
-  &:hover {
-    color: #fff;
-    background: 0 0;
-  }
-}
-.content {
-  max-width: 96rem;
-  margin: auto;
-  padding-bottom: 100px;
-  a {
-    color: #222;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-  }
-}
 .bg {
   display: flex;
   justify-content: space-between;
@@ -58,11 +36,6 @@ a.yellowLink {
   max-width: 500px;
   filter: invert(1);
 }
-
-.buttons {
-  text-align: center;
-}
-
 .hero {
   display: flex;
   position: inherit;
@@ -287,136 +260,5 @@ a.yellowLink {
 
   &:after {
     background-color: #f26d61;
-  }
-}
-.cta {
-  padding: 0 0 15px 0;
-  color: #000;
-  text-align: center;
-  align-items: center;
-  composes: avenir from "../../index.css";
-}
-.cta a {
-  width: 300px;
-  justify-content: center;
-}
-.ctaInner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  :global(.SVGInline) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.ctaText {
-
-}
-.cta a svg {
-  width: 20px;
-  height: 20px;
-  fill: #ffd734;
-  justify-content: center;
-}
-.center {
-  text-align: center;
-}
-.newsletter {
-  background: $black2;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  composes: avenir from '../../index.css';
-  border-top: 1px solid rgba(255,255,255,0.03);
-  margin-top:0px;
-  padding: 80px 0;
-}
-@media (max-width: 1060px) {
-}
-@media (max-width: 768px) {
-  .testimonials .customer {
-    flex-direction: column;
-    font-size: 16px;
-    img {
-      margin-left: 0px;
-      margin-top: 10px;
-    }
-  }
-  .providerLogos {
-    max-width: 100%;
-  }
-  .poweredBy {
-    margin-top: 20px;
-  }
-  .heroFramework {
-    margin: 25px auto;
-    height: 80px;
-    width: 100%;
-  }
-  .testimonials .testimonial {
-    font-size: 20px;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .emailContainerInner {
-    max-width: 100%;
-  }
-  .heading {
-    font-size: 19px;
-  }
-  .hero {
-    padding-top: 0px;
-  }
-  .heroRight {
-    min-height: 277px;
-    padding-bottom: 13px;
-  }
-  .cta {
-    margin: 0;
-  }
-  .cta a {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .tagline {
-    width: auto;
-    height: auto;
-    font-size: 20px;
-    line-height: 28px;
-    display: inline-block;
-    margin: 0 0 25px 0;
-    max-width: 80%;
-    &:last-of-type {
-      margin-left:5px;
-      margin-bottom: 15px;
-    }
-  }
-  .yellowLink {
-    font-size: 18px;
-  }
-  .hero {
-    margin-bottom: 0px;
-  }
-  .providers {
-    display: none;
-  }
-  .subHeading {
-    font-size: 27px;
-    margin-top: 10px;
-  }
-  .email-ask {
-    text-align: center;
-  }
-  .bg:before {
-    width: 140vw;
-    height: calc(100vh - $navHeight);
-    max-height: 600px;
-    transform: rotate(0deg);
-    top: 0px;
   }
 }
