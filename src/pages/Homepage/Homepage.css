@@ -7,22 +7,13 @@
   justify-content: flex-start;
 }
 .bound {
-  width: 100%;
-  max-width: 110rem;
-  margin-left: auto;
-  margin-right: auto;
+  composes: bound from "../../index.css";
 }
 .boundSmall {
-  width: 100%;
-  max-width: 85.8rem;
-  margin-left: auto;
-  margin-right: auto;
+  composes: boundSmall from "../../index.css";
 }
 .boundSmaller {
-  width: 100%;
-  max-width: 61rem;
-  margin-left: auto;
-  margin-right: auto;
+  composes: boundSmaller from "../../index.css";
 }
 .top {
   position: relative;

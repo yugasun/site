@@ -13,3 +13,21 @@
   font-family: 'Avenir Next W00', sans-serif;
   font-weight: normal;
 }
+.bound {
+  width: 100%;
+  max-width: 110rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.boundSmall {
+  width: 100%;
+  max-width: 85.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.boundSmaller {
+  width: 100%;
+  max-width: 61rem;
+  margin-left: auto;
+  margin-right: auto;
+}
