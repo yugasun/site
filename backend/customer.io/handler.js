@@ -73,9 +73,19 @@ module.exports.identify = function (event, context, callback) {
 }
 
 module.exports.track = function (event, context, callback) {
-  const body = JSON.parse(event.body)
-  const email = body.email
+  let body
+  // We need to support the API Gateway format and the SNS message format during the swap.
+  if (event.Records && event.Records[0] && event.Records[0].Sns && event.Records[0].Sns.Message) {
+    body = JSON.parse(event.Records[0].Sns.Message)
+  } else if (event.body) {
+    body = JSON.parse(event.body)
+  }
 
+  if (event.Records && event.Records[0]) {
+    console.log('FROM SNS EVENT')
+  }
+
+  const email = body.email
   console.log('track body', body)
 
   if (!body.id) {

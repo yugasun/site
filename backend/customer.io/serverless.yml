@@ -13,6 +13,7 @@ functions:
   track:
     handler: handler.track
     events:
+      - sns: "arn:aws:sns:us-west-2:488110005556:SLSEventsSNSTopic"
       - http:
           path: track
           method: post
