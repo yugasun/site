@@ -15,19 +15,19 @@
 }
 .bound {
   width: 100%;
-  max-width: 110rem;
+  max-width: 132rem;
   margin-left: auto;
   margin-right: auto;
 }
 .boundSmall {
   width: 100%;
-  max-width: 85.8rem;
+  max-width: 88rem;
   margin-left: auto;
   margin-right: auto;
 }
 .boundSmaller {
   width: 100%;
-  max-width: 61rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
 }
