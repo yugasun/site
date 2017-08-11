@@ -1,15 +1,8 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router'
-import Svg from 'react-svg-inline'
-import Button from '../../components/Button'
 // import Button from '@serverless/components/Button'
 import Default from '../../layouts/Default'
-import Terminal from '../../components/Terminal'
-import ContentBlock from '../../components/ContentBlock'
-import terminalCommands from './terminalCommands'
 import styles from './Homepage.css'
-import playSvg from '../../assets/icons/play.svg'
-import docsSvg from '../../assets/icons/book2.svg'
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -29,95 +22,77 @@ export default class Homepage extends Component {
           <div className={styles.top}>
             <div className={styles.bg}>
               <div className={styles.hero}>
-                <div className={`${styles.heroLeft} fadeIn fadeInShort`}>
-
-                  <div className={styles.heroFramework} />
-
-                  <div className={styles.tagline}>
-                    Build auto-scaling, pay-per-execution, event-driven apps on AWS Lambda
-                  </div>
-                  <div className={styles.buttons}>
-                    <div className={styles.cta}>
-                      <Button
-                        kind='black'
-                        href='/framework'
-                      >
-                        <span className={styles.ctaInner}>
-                          <Svg svg={playSvg} cleanup />
-                          <span className={styles.ctaText}>
-                            WATCH THE VIDEO
-                          </span>
-                        </span>
-                      </Button>
-                    </div>
-
-                    <div className={styles.cta}>
-                      <Button
-                        kind='black'
-                        href='/framework/docs'
-                      >
-                        <span className={styles.ctaInner}>
-                          <Svg svg={docsSvg} cleanup />
-                          <span className={styles.ctaText}>
-                            READ THE DOCS
-                          </span>
-                        </span>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                <div ref='animDiv' className={`${styles.heroRight} zoomxIn zoomInxLong`}>
-                  <Terminal commands={terminalCommands} />
-                </div>
-              </div>
-              <div className={styles.poweredBy}>
-                <span>Powered by</span>
+                <h1 className={styles.tagline}>The way cloud should be.</h1>
+                <p className={styles.heroDescription}>Serverless is your single toolkit for deploying cloud functions to any provider. You build the features, we hook up the infrastructure. Done.</p>
               </div>
               <div className={styles.logoWrapper}>
                 <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
               </div>
             </div>
-
           </div>
-
-          <div className={styles.testimonials}>
-            <div className={styles.testimonial}>
-              “The Serverless Framework is a core component of
-              The Coca-Cola Company's initiative to reduce
-              IT operational costs and deploy services faster.”
-            </div>
-            <div className={styles.customer}>
-             - Patrick Brandt, Solutions Architect at The Coca-Cola Company
+          <div className={`${styles.introSecondary} ${styles.boundSmall}`}>
+            <h2 className={styles.sectionHeading}>Server management is over.</h2>
+            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Serverless isn’t the future web—it’s already here and happening. Fortune 500 companies are deploying serverless apps every day. Will you be the first on your team?</p>
+          </div>
+          <div className={styles.sectionBreak} />
+          <div className={styles.section}>
+            <h2 className={styles.sectionHeading}>Build apps without maintaining infrastructure.</h2>
+            <div className={styles.featuresColumns}>
+              <div className={styles.feature}>
+                <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+                <h3 className={styles.featureName}>Provider agnostic</h3>
+                <p className={styles.featureDescription}>Use our Framework to build, test and deploy cloud functions to any provider. Skip the setup; deploy your function right now.</p>
+              </div>
+              <div className={styles.feature}>
+                <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+                <h3 className={styles.featureName}>Automatic scaling</h3>
+                <p className={styles.featureDescription}>Serverless backends expand and contract with demand. Go get on the front page of HackerNews, we dare you.</p>
+              </div>
+              <div className={styles.feature}>
+                <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+                <h3 className={styles.featureName}>Zero waste</h3>
+                <p className={styles.featureDescription}>Don’t spend time and resources provisioning unused infrastructure. Serverless cuts weeks off development cycles and slashes server costs by more than half.</p>
+              </div>
             </div>
           </div>
-
-          <ContentBlock title='The Serverless Architecture' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/architecture.gif'}>
-            <p>
-              Deploy your applications as independent functions, that respond to events, charge you only when they run, and scale automatically.
-            </p>
-          </ContentBlock>
-
-          <ContentBlock title='The Serverless Framework' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/framework.gif'}>
-            <p>The open-source, application framework to easily build serverless architectures on AWS Lambda & more.  Startups and Fortune 500 companies are using it to build incredibly efficient applications.</p>
-            <p>
-              <Link to='/framework'>
-                View the framework
-              </Link>
-            </p>
-          </ContentBlock>
-
-          <ContentBlock title='The Serverless Community' image={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/community.png'}>
-            <p>Over 1,900 people are in our chat room and on our forum every day discussing the Serverless Framework and Serverless Architectures. Join us!</p>
-            <p>
-              <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
-              Join the Chatroom
-              </a>
-              <br />
-              <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
-              Check out the Forum
-              </a>
-            </p>
-          </ContentBlock>
+          <div className={`${styles.section} ${styles.testimonialSection}`}>
+            <div className={`${styles.boundSmall} ${styles.clientsLogos}`}>
+              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cocacola-logo.png' />
+              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/nike-logo.png' />
+              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/nordstorm-logo.png' />
+              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/autodesk-logo.png' />
+            </div>
+            <div className={`${styles.testimonial} ${styles.boundSmall}`}>
+              <div className={styles.testimonialTextBlock}>
+                <div className={styles.testimonialGround} />
+                <p className={styles.testimonialText}>“The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster.”</p>
+              </div>
+              <div className={styles.testimonialMeta}>
+                <h3 className={styles.testimonialAuthor}>Patrick Brandt</h3>
+                <p className={styles.testimonialAuthorTitle}>Solutions Architect at The Coca-Cola Company</p>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.section} ${styles.toolkitSection}`}>
+            <div className={`${styles.toolCard} ${styles.toolCardFramework}`}>
+              <div className={styles.toolCardTop}>
+                <h3 className={styles.toolCardTitle}><img src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/serverless-logo-white.svg' />Framework</h3>
+                <img  className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
+              </div>
+              <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
+              <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
+              <Link to='/framework/'>Learn more</Link>
+            </div>
+            <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
+              <div className={styles.toolCardTop}>
+                <h3 className={styles.toolCardTitle}><img src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/serverless-logo-white.svg' />Event Gateway</h3>
+                <img className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
+              </div>
+              <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
+              <p>React to any event, with any function, on any cloud.</p>
+              <Link to='/event-gateway/'>Learn more</Link>
+            </div>
+          </div>
         </div>
       </Default>
     )

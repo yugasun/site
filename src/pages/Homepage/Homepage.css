@@ -3,12 +3,30 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 0px;
+  padding-top: 0;
   justify-content: flex-start;
 }
+.bound {
+  width: 100%;
+  max-width: 110rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.boundSmall {
+  width: 100%;
+  max-width: 85.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.boundSmaller {
+  width: 100%;
+  max-width: 61rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .top {
-  min-height: calc(100vh - $navHeight);
   position: relative;
+  color: #fff;
 }
 a.yellowLink {
   color: $yellow;
@@ -33,31 +51,21 @@ a.yellowLink {
   }
 }
 .bg {
-  min-height: calc(100vh - $navHeight);
-  margin-bottom: 50px;
-  background: #ffea93;
-  background: radial-gradient(ellipse at top,  #ffea93 0%,#ffd734 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffea93', endColorstr='#ffd734',GradientType=1 );
-}
-.poweredBy {
-  margin-top: 65px;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  span {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 400;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/home-hero-ground.png") repeat, no-repeat;
+  background-size: cover;
 }
 .logoWrapper {
-  margin: auto;
-  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .providerLogos {
   margin: auto;
   max-width: 500px;
+  filter: invert(1);
 }
 
 .buttons {
@@ -67,73 +75,227 @@ a.yellowLink {
 .hero {
   display: flex;
   position: inherit;
-  max-width: 96rem;
-  margin: auto;
+  max-width: 64rem;
   width: 100%;
-  margin: 0 auto;
-  padding-top: 6%;
+  margin: 0 auto 5rem;
+  padding-top: 7rem;
   flex-flow: row wrap;
   align-self: flex-start;
   overflow: hidden;
 }
-.heroLeft {
-  width: 40%;
-  align-items: flex-start;
-}
-.heroRight {
-  width: 60%;
-  padding: 40px 10px 18px 10px;
-  align-items: flex-start;
-  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/terminal_shadow.png) no-repeat bottom;
-  background-size: contain;
-}
-.heroFramework {
-  margin: 0 auto;
-  height: 145px;
-  width: 100%;
-  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/home_framework_v1_1.png) no-repeat center;
-  background-size: contain;
-}
 .tagline {
-  margin: 10px auto 40px auto;
-  height: 50px;
-  width: 100%;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 32px;
-  padding: 0;
-  color: #191919;
-  letter-spacing: -0.35px;
+  font-size: 5rem;
+  margin-top: 16rem;
+  margin-bottom: 4rem;
+}
+.heroDescription {
+  max-width: 54rem;
+  margin-top: 0;
+  font-size: 2rem;
+}
+.introSecondary {
+
+}
+.introSecondaryText {
+  margin-top: 5rem;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 3.7rem;
+  color: #4B4B4B;
+  text-align: justify;
+}
+.sectionHeading {
+  margin-top: 7.8rem;
+  margin-bottom: 7.8rem;
+  font-size: 3rem;
+  line-height: 3.4rem;
+  font-weight: 600;
   text-align: center;
 }
-.testimonials {
+.sectionBreak {
+  height: 10rem;
+  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
+  background-size: cover;
+}
+.featuresColumns {
   display: flex;
-  width: 100%;
-  max-width: 960px;
-  margin: 0px auto 80px auto;
-  padding: 0 0 80px 0;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid rgba(0,0,0,0.075)
-}
-.testimonials .testimonial {
-  font-size: 26px;
-  text-align: center;
-  width: 75%;
-  margin: 40px auto;
-  margin-bottom: 20px;
-}
-.testimonials .customer {
-  width: 100%;
-  text-align: center;
-  color: #636363;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 23px;
+  align-items: flex-start;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3);
+  max-width: 44rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.featureIcon {
+  width: 21rem;
+  height: 21rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.featureName {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.featureDescription {
+  font-size: 1.8rem;
+  text-align: justify;
+  line-height: 2.4rem;
+}
+.testimonialSection {
+  margin-top: 20rem;
+}
+.clientsLogos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clientLogo {
+  max-width: 20rem;
+  max-height: 5.5rem;
+}
+.testimonial {
+  margin-top: 7.5rem;
+  margin-bottom: 5rem;
+}
+.testimonialText {
+  position: relative;
+  z-index: 1;
+  font-size: 2.6rem;
+  color: #464646;
+}
+.testimonialGround {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #F7F7F7;
+  transform: skew(-15deg);
+
+  &:after {
+    content: "";
+     display: block;
+     width: 100%;
+     height: 100%;
+     border: 2px dotted #575757;
+     position: absolute;
+     top: -1rem;
+     left: 1rem;
+     z-index: 1;
+ }
+}
+.testimonialTextBlock {
+  position: relative;
+  max-width: 80rem;
+  z-index: 2;
+  padding: 0.75rem 9rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonialMeta {
+  margin-top: 2rem;
+  text-align: right;
+  color: #484848;
+}
+.testimonialAuthor {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  &:before {
+    content: "- "
+  }
+}
+.testimonialAuthorTitle {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.toolkitSection {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/toolkit-ground.png");
+  background-size: cover;
+}
+.toolCard {
+  position: relative;
+  width: 100%;
+  max-width: 42rem;
+  margin: 12rem 4.5rem 15rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.12);
+  color: #fff;
+  background-color: #159BBA;
+  ;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -6rem;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-color: #159BBA;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem 0.25rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    border-bottom: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #3498DB;
+    background-color: #fff;
+  }
+}
+.toolCardTop {
+  text-align: center;
+}
+.toolCardTitle {
+  margin-top: 3.2rem;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-family: Serverless, monospace;
+
   img {
-    width: 145px;
-    margin-left: 10px;
+    width: 2.5rem;
+    margin-right: 1.5rem;
+  }
+}
+.toolCardIcon {
+  display: inline-block;
+  width: 16.6rem;
+  height: 16.6rem;
+  padding: 3rem;
+  margin-top: 4.2rem;
+  margin-bottom: 4.7rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.toolCardTagline {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+}
+.toolCardFramework {
+  background-color: #F26D61;
+
+  &:after {
+    background-color: #f26d61;
   }
 }
 .cta {
@@ -183,36 +345,6 @@ a.yellowLink {
   padding: 80px 0;
 }
 @media (max-width: 1060px) {
-  .hero {
-    padding-top: 40px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .heroLeft .cta {
-    text-align: center;
-  }
-  .heroLeft, .heroRight {
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .heroRight {
-    padding-top: 15px;
-    max-width: 600px;
-    margin-bottom: 20px;
-  }
-  .heroFramework {
-    margin: 0 auto;
-    height: 100px;
-    width: 100%;
-  }
-  .tagline {
-    margin: 20px auto 10px auto;
-  }
 }
 @media (max-width: 768px) {
   .testimonials .customer {
