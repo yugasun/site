@@ -73,7 +73,6 @@
   margin-bottom: 7.8rem;
   font-size: 3rem;
   line-height: 3.4rem;
-  font-weight: 600;
   text-align: center;
 }
 .sectionBreak {
@@ -103,7 +102,6 @@
   text-align: center;
 }
 .featureName {
-  font-weight: 600;
   font-size: 2.4rem;
 }
 .featureDescription {
@@ -173,7 +171,6 @@
 .testimonialAuthor {
   margin: 0;
   font-size: 2.4rem;
-  font-weight: 600;
 
   &:before {
     content: "- "
@@ -253,7 +250,6 @@
 .toolCardTagline {
   font-size: 2rem;
   line-height: 2.2rem;
-  font-weight: 600;
 }
 .toolCardFramework {
   background-color: #F26D61;
