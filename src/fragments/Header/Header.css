@@ -1,4 +1,7 @@
 .header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
 .bumper {
@@ -9,8 +12,6 @@
   height: $navHeight;
 }
 .navFixed {
-  background: $black2;
-  height: $navHeight;
 }
 
 .navWrapper {
