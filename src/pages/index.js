@@ -18,6 +18,8 @@ import Enterprise from './Enterprise'
 export { Enterprise }
 import Framework from './Framework'
 export { Framework }
+import EventGateway from './EventGateway'
+export { EventGateway }
 import Auth from './Auth'
 export { Auth }
 import Success from './Success'

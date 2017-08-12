@@ -1,0 +1,55 @@
+.bound {
+  composes: bound from "../../index.css";
+}
+.boundSmall {
+  composes: boundSmall from "../../index.css";
+}
+.boundSmaller {
+  composes: boundSmaller from "../../index.css";
+}
+.toolHero {
+  background-color: #159BBA;
+  composes: toolHero from "../Framework/Framework.css";
+}
+.toolIcon {
+  composes: toolIcon from "../Framework/Framework.css";
+}
+.toolTitle {
+  composes: toolTitle from "../Framework/Framework.css";
+}
+.toolDescription {
+  composes: toolDescription from "../Framework/Framework.css";
+}
+.sectionIntro {
+  max-width: 97.4rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  color: #4B4B4B;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.4rem;
+    font-weight: 600;
+  }
+}
+.introText {
+  margin-top: 4rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.7rem;
+  text-align: justify;
+}
+.sectionBreak {
+  composes: sectionBreak from "../../index.css";
+}
+.sectionFeatures {
+  margin-top: 8rem;
+  composes: sectionFeatures from "../Framework/Framework.css";
+}
+.feature {
+  composes: feature from "../Framework/Framework.css";
+}
+.featureTitle {
+  composes: featureTitle from "../Framework/Framework.css";
+}
