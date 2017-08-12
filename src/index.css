@@ -31,3 +31,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+.sectionBreak {
+  height: 10rem;
+  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
+  background-size: cover;
+}

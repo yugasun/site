@@ -76,9 +76,7 @@
   text-align: center;
 }
 .sectionBreak {
-  height: 10rem;
-  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
-  background-size: cover;
+  composes: sectionBreak from "../../index.css";
 }
 .featuresColumns {
   display: flex;
