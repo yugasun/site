@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .terminal {
@@ -13,31 +13,34 @@
   max-width: 500px;
   height: 40%;
   min-height: 330px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.25);
   background: #191919;/*$black1;*/
   transition: box-shadow .3s linear;
-  border-radius: 3px;
   background: #191919 url(../../assets/images/terminal_glare.png) no-repeat center;
   background-size: contain;
 }
 .terminalHead {
   width: 100%;
-  height: 25px;
-  background: $black2;
-  border-radius: 3px;
+  height: 35px;
+  background: #F7F7F7;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 .terminalText {
-  padding: 20px 5%;
+  padding: 20px 2%;
   line-height: 1.5;
   :global(.command) {
     display: block;
-    color: $yellow;
+    color: #fff;
     margin-bottom: 10px;
+    font-weight: 600;
     &:before {
       content: '$ ';
-      color: $yellow;
+      color: #fff;
     }
   }
   :global {
@@ -68,26 +71,26 @@
 .circle {
   position: relative;
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-left: 4px;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
   font-size: 0;
   font-weight: 700;
   border-radius: 10px;
 }
 $buttonColor: #3b3b3b;
 .close {
-  border: 1px solid $buttonColor;
-  margin-left: 7px;
-  background: $buttonColor;
+  border: 1px solid #FF795D;
+  margin-left: 18px;
+  background: #FF795D;
 }
 .turn {
-  border: 1px solid $buttonColor;
-  background: $buttonColor;
+  border: 1px solid #F8E71C;
+  background: #F8E71C;
 }
 .expand {
-  background: $buttonColor;
-  border: 1px solid $buttonColor;
+  background: #44BFA3;
+  border: 1px solid #44BFA3;
 }
 
 @media (max-width: 768px) {

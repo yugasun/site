@@ -1,65 +1,90 @@
-.page {
+.bound {
+  composes: bound from "../../index.css";
+}
+.boundSmall {
+  composes: boundSmall from "../../index.css";
+}
+.boundSmaller {
+  composes: boundSmaller from "../../index.css";
+}
+.toolHero {
+  padding-top: 17rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  border-bottom: 1px solid #BBBBBB;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+  color: #fff;
+  background-color: #FD574F;
+}
+.toolIcon {
+  padding: 5rem;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.15);
+}
+.toolTitle {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-family: Serverless, monospace;
+}
+.toolDescription {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.toolProperties {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sectionDemo {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  .bound {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.demoMeta {
+  width: 55%;
+}
+.demoDescription {
+  color: #4B4B4B;
+  font-size: 3rem;
+  line-height: 3.7rem;
+  font-weight: 300;
+}
+.demoLinks {
+  display: flex;
+  justify-content: center;
+}
+.demoHalf {
+  width: 45%;
+}
+.sectionFeatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.feature {
+  width: calc(100% / 3);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 6rem;
+
   p {
-    max-width: 660px;
+    max-width: 31.4rem;
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 2.7rem;
   }
 }
-
-.header {
-  margin: 35px 0;
-  max-width: 660px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 20px;
-  margin: auto;
+.featureTitle {
+  font-size: 2.4rem;
+  line-height: 2.7rem;
 }
-
-.headerText {
-  text-align: center;
-  margin: 40px 0px;
-  margin-bottom: 20px;
-}
-
-.componentBox {
-  display: flex;
-}
-.component {
-  margin: 20px;
-  width: 33%;
-  text-align: center;
-  img {
-    width: 50px;
-  }
-}
-.buttons {
-  text-align: center;
-}
-.button {
-  margin-top: 20px;
-  margin-right: 30px;
-}
-.yellow {
-  background: $yellow !important;
-  span {
-    color: black;
-  }
-}
-@media (max-width: 850px) {
-  .componentBox {
-    display: block;
-  }
-  .component {
-    margin: auto;
-    width: 90%;
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 768px) {
-  iframe {
-    width: 100%;
-    max-width: 100%;
-  }
-  .component {
-    width: 90%;
-  }
+.red {
+  color: #F26D61;
 }
