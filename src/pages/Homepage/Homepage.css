@@ -30,11 +30,11 @@
 .logoWrapper {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .providerLogos {
   margin: auto;
-  max-width: 500px;
-  filter: invert(1);
+  filter: invert(0.5);
 }
 .hero {
   display: flex;
@@ -51,11 +51,14 @@
   font-size: 5rem;
   margin-top: 16rem;
   margin-bottom: 4rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.12);
 }
 .heroDescription {
-  max-width: 54rem;
+  max-width: 59rem;
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-align: justify;
 }
 .introSecondary {
 
@@ -69,8 +72,8 @@
   text-align: justify;
 }
 .sectionHeading {
-  margin-top: 7.8rem;
-  margin-bottom: 7.8rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   font-size: 3rem;
   line-height: 3.4rem;
   text-align: center;
@@ -82,6 +85,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 .feature {
   display: flex;
@@ -108,7 +113,8 @@
   line-height: 2.4rem;
 }
 .testimonialSection {
-  margin-top: 20rem;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
 }
 .clientsLogos {
   display: flex;
@@ -116,8 +122,8 @@
   align-items: center;
 }
 .clientLogo {
-  max-width: 20rem;
-  max-height: 5.5rem;
+  max-width: 15rem;
+  max-height: 4rem;
 }
 .testimonial {
   margin-top: 7.5rem;
@@ -182,16 +188,20 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/toolkit-ground.png");
-  background-size: cover;
+  background-size: contain;
+  background: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/home-toolkit-ground.svg") no-repeat center center;
 }
 .toolCard {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
   max-width: 42rem;
-  margin: 12rem 4.5rem 15rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  margin: 6rem 4.5rem 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.12);
   color: #fff;
   background-color: #159BBA;
@@ -248,11 +258,12 @@
 .toolCardTagline {
   font-size: 2rem;
   line-height: 2.2rem;
+  font-weight: 600;
 }
 .toolCardFramework {
-  background-color: #F26D61;
+  background-color: #FD5750;
 
   &:after {
-    background-color: #f26d61;
+    background-color: #FD5750;
   }
 }
