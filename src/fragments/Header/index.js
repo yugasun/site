@@ -66,12 +66,12 @@ export default class Header extends Component {
                   </Link>
                   <ul className={styles.subNavItems}>
                     <li>
-                      <Link to='/framework' className={`${styles.link} ${styles.noMobile}`}>
+                      <Link to='/framework/' className={`${styles.link} ${styles.noMobile}`}>
                         Framework
                       </Link>
                     </li>
                     <li>
-                      <Link to='/framework/docs' className={styles.link}>
+                      <Link to='/event-gateway/' className={styles.link}>
                         Event Gateway
                       </Link>
                     </li>
