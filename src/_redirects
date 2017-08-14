@@ -1,6 +1,6 @@
 # Proxy redirects
 /dynamic/* https://dkrldao3ic.execute-api.us-east-1.amazonaws.com/dev/posts/:splat 200
-/api/framework/track https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/track 200
+/api/framework/track https://4okc0gmyx4.execute-api.us-west-2.amazonaws.com/prod/api/framework/sls-events 200
 /api/framework/identify https://3dq75n244i.execute-api.us-west-2.amazonaws.com/prod/identify 200
 # Simple 301 redirects from one path to another
 /hiring https://jobs.lever.co/serverless 301
