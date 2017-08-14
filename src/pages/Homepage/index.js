@@ -23,7 +23,7 @@ export default class Homepage extends Component {
             <div className={styles.bg}>
               <div className={styles.hero}>
                 <h1 className={styles.tagline}>The way cloud should be.</h1>
-                <p className={styles.heroDescription}>A toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure.</p>
+                <p className={styles.heroDescription}>Serverless is your toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure.</p>
               </div>
             </div>
           </div>
