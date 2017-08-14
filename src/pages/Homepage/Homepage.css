@@ -238,6 +238,7 @@
   margin-top: 3.2rem;
   font-size: 3rem;
   line-height: 3.6rem;
+  font-weight: normal;
   font-family: Serverless, monospace;
 
   img {
