@@ -44,3 +44,67 @@
   local("Serverless-Regular"),
   url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/serverless-regular-v3.otf") format("opentype");
 }
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Gibson Light"),
+  local("Gibson-Light"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300;
+  font-style: italic;
+  src: local("Gibson Light Italic"),
+  local("Gibson-LightIt"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-LightIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Gibson"),
+  local("Gibson-Regular"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: normal;
+  font-style: italic;
+  src: local("Gibson Italic"),
+  local("Gibson-Italic"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Gibson SemiBold"),
+  local("Gibson-SemiBold"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 600;
+  font-style: italic;
+  src: local("Gibson Semibold Italic"),
+  local("Gibson-SemiboldIt"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-SemiboldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Gibson Bold"),
+  local("Gibson-Bold"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Gibson Bold Italic"),
+  local("Gibson-BoldItalic"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/Gibson-BoldItalic.otf") format("opentype");
+}
