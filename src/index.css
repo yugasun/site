@@ -36,3 +36,11 @@
   background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
   background-size: cover;
 }
+@font-face {
+  font-family: "Serverless";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Serverless"),
+  local("Serverless-Regular"),
+  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/serverless-regular-v3.otf") format("opentype");
+}
