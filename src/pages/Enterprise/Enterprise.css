@@ -1,40 +1,91 @@
-.header {
-  text-align: center;
-  margin-top: 35px;
+.bound {
+  composes: bound from "../../index.css";
 }
-
-.subHeader {
-  text-align: center;
-  display: block;
-  padding-bottom: 70px;
+.boundSmall {
+  composes: boundSmall from "../../index.css";
 }
-.box {
+.boundSmaller {
+  composes: boundSmaller from "../../index.css";
+}
+.hero {
+  position: relative;
   display: flex;
-  flex-direction: column;
-}
-
-.component {
-  display: flex;
-  max-width: 50rem;
-  padding-bottom: 20px;
-  img {
-    margin-bottom: auto;
-    width: 50px;
+  align-items: flex-end;
+  padding-top: 17rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  border-bottom: 1px solid #BBBBBB;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+  color: #fff;
+  background-color: #FD574F;
+  background: linear-gradient(rgba(53, 14, 79, 0.16), rgba(53, 14, 79, 0.16)),
+              linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%),
+              url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/enterprise-hero-ground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    min-height: 62rem;
   }
 }
-
-.copy {
-  margin-left: 25px
+.heroTitle {
+  font-family: Serverless, monospace;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  text-align: center;
+  font-weight: normal;
 }
-.componentRight {
-  margin-left: auto;
+.heroDescription {
+  margin-bottom: 6.4rem;
 }
+.heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
+.sectionAction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 6rem;
+}
+.features, .form {
+  width: 50%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.feature {
+  margin-bottom: 5.7rem;
+}
+.featureDescription {
+  max-width: 56.4rem;
+  font-size: 2rem;
+  text-align: justify;
+  line-height: 3.1rem;
+}
+.clientsSection {
+  margin-top: 8rem;
+  margin-bottom: 12rem;
 
+  .heading {
+    text-align: center;
+  }
+}
+.clientsLogos {
+  margin-top: 3rem;
+  composes: clientsLogos from "../Homepage/Homepage.css";
+}
+.clientLogo {
+  composes: clientLogo from "../Homepage/Homepage.css"
+}
+.newsletterSection {
+  max-width: 110rem;
+  margin-bottom: 6.4rem;
+}
 .enterprise {
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     input {
       width: 35rem;
