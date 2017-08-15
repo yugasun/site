@@ -11,6 +11,7 @@ const EventGatewayPage = (props) => {
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
           <h1 className={styles.toolTitle}>Event Gateway</h1>
           <p className={styles.toolDescription}>React to any event, with any function, on any provider. Serverless architectures can hop across the cloud.</p>
+          <a className={`${styles.btn} ${styles.btnGrey}`} href='https://github.com/serverless/event-gateway'><img width={24} height={24} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon.svg' /> Github</a>
         </div>
       </div>
       <div className={`${styles.sectionIntro} ${styles.boundSmall}`}>

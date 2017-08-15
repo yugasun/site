@@ -56,3 +56,9 @@
 .featureTitle {
   composes: featureTitle from "../Framework/Framework.css";
 }
+.btn {
+  composes: btn from "../Framework/Framework.css";
+}
+.btnGrey {
+  composes: btnGrey from "../Framework/Framework.css";
+}
