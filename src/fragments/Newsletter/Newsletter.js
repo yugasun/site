@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getItemSync } from '../../utils/storage'
 import track from '../../utils/analytics/track'
 import styles from './Newsletter.css'
+import classnames from 'classnames'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
 function validateEmail(value) {
@@ -11,6 +12,7 @@ function validateEmail(value) {
 }
 
 const propTypes = {
+  className: PropTypes.string,
   children: PropTypes.any,
   buttonText: PropTypes.string
 }
@@ -86,16 +88,17 @@ export default class Newsletter extends Component {
     })
   }
   render() {
-    const { buttonText } = this.props
+    const { buttonText, className } = this.props
     const { isFetching, error } = this.state
-    let text = (isFetching) ? 'Success!' : buttonText
+    let text = (isFetching) ? 'Success!' : buttonText,
+        classes = classnames(className, styles.emailForm)
 
     if (error) {
       text = 'Try Again'
     }
 
     return (
-      <div className={styles.emailForm}>
+      <div className={classes}>
         <div className='form-group'>
           <input
             ref='email'
