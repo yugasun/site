@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 // import Button from '@serverless/components/Button'
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
+import NewsletterStrip from '../../fragments/NewsletterStrip'
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -94,6 +95,9 @@ export default class Homepage extends Component {
                 <p className={styles.testimonialAuthorTitle}>Solutions Architect at The Coca-Cola Company</p>
               </div>
             </div>
+          </div>
+          <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+            <NewsletterStrip />
           </div>
         </div>
       </Default>

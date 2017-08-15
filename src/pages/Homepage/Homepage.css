@@ -271,3 +271,7 @@
     background-color: #FD5750;
   }
 }
+.newsletterSection {
+  max-width: 110rem;
+  margin-bottom: 6.4rem;
+}
