@@ -52,6 +52,7 @@
 }
 .tagline {
   font-size: 5rem;
+  font-weight: bold;
   margin-top: 16rem;
   margin-bottom: 4rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.12);
