@@ -67,7 +67,7 @@ export default class PartnersPage extends React.Component {
           <div className={styles.features}>
             <div className={styles.feature}>
               <h3 className={styles.heading}>Train your team</h3>
-              <p className={styles.featureDescription}>As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn how to do serverless ops at scale, service discovery, and deploy serverless applications from start to finish.</p>
+              <p className={styles.featureDescription}>As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn about serverless ops at scale, service discovery, and deploying serverless applications from start to finish.</p>
             </div>
             <div className={styles.feature}>
               <h3 className={styles.heading}>Operationalize</h3>
