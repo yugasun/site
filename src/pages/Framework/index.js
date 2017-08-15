@@ -42,7 +42,7 @@ const FrameworkPage = (props) => {
             <p>Centrally deploy to AWS Lambda, Microsoft Azure, Google Cloud Platform and IBM OpenWhisk.</p>
           </div>
           <div className={styles.feature}>
-            <h3 className={styles.featureTitle}>Extensible (we <span className={styles.red}>❤</span> plugins)</h3>
+            <h3 className={styles.featureTitle}>Extensible with plugins</h3>
             <p>Use dozens community-made plugins, or make a new one specific to your application. Framework is open source and easy to build for.</p>
           </div>
           <div className={styles.feature}>
@@ -50,11 +50,11 @@ const FrameworkPage = (props) => {
             <p>Don’t be hamstrung by just one language: write functions in python, node.js, java, scala or C#.</p>
           </div>
           <div className={styles.feature}>
-            <h3 className={styles.featureTitle}>Automatically scale</h3>
+            <h3 className={styles.featureTitle}>Automatic scaling</h3>
             <p>Don’t spend time and resources provisioning unused infrastructure. Serverless architectures expand and contract on demand, cutting server costs by more than half.</p>
           </div>
           <div className={styles.feature}>
-            <h3 className={styles.featureTitle}>Faster iterations</h3>
+            <h3 className={styles.featureTitle}>Faster iteration</h3>
             <p>Develop and deploy infinitely scalable applications within minutes. Provision and deploy a REST API or data pipeline without provisioning resources.</p>
           </div>
           <div className={styles.feature}>
