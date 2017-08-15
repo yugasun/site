@@ -11,7 +11,7 @@ const FrameworkPage = (props) => {
       <div className={styles.toolHero}>
         <div className={styles.boundSmaller}>
           <img className={styles.toolIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
-          <h1 className={styles.toolTitle}>Framework</h1>
+          <h1 className={styles.toolTitle}>Serverless Framework</h1>
           <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 18,000 stars on GitHub, the Framework started a movement.</p>
           <div className={styles.toolProperties}>
             <div className={styles.toolProperty}>18,000</div>
