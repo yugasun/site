@@ -23,7 +23,7 @@ export default class Homepage extends Component {
             <div className={styles.bg}>
               <div className={styles.hero}>
                 <h1 className={styles.tagline}>The way cloud should be.</h1>
-                <p className={styles.heroDescription}>Serverless is your single toolkit for deploying cloud functions to any provider. You build the features, we hook up the infrastructure. Done.</p>
+                <p className={styles.heroDescription}>Serverless is your toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure.</p>
               </div>
             </div>
           </div>
@@ -55,24 +55,24 @@ export default class Homepage extends Component {
             <div className={styles.logoWrapper}>
               <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
             </div>
-            <h2 className={styles.sectionHeading}>Server management is over.</h2>
-            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment--to any cloud provider. You don’t have to provision infrastructure, or worry about scale. Serverless teams cut time to market in half.</p>
+            <h2 className={styles.sectionHeading}>Build faster with serverless architectures.</h2>
+            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
           </div>
           <div className={styles.featuresColumns}>
             <div className={styles.feature}>
               <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
-              <h3 className={styles.featureName}>Provider agnostic</h3>
-              <p className={styles.featureDescription}>Use our Framework to build, test and deploy cloud functions to any provider. Skip the setup; deploy your function right now.</p>
-            </div>
-            <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
-              <h3 className={styles.featureName}>Automatic scaling</h3>
+              <h3 className={styles.featureName}>Automatic Scaling</h3>
               <p className={styles.featureDescription}>Serverless backends expand and contract with demand. Go get on the front page of HackerNews, we dare you.</p>
             </div>
             <div className={styles.feature}>
               <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
-              <h3 className={styles.featureName}>Zero waste</h3>
-              <p className={styles.featureDescription}>Don’t spend time and resources provisioning unused infrastructure. Serverless cuts weeks off development cycles and slashes server costs by more than half.</p>
+              <h3 className={styles.featureName}>Provider Agnostic</h3>
+              <p className={styles.featureDescription}>Build, test and deploy cloud functions to any provider. Skip the setup; deploy your function right now.</p>
+            </div>
+            <div className={styles.feature}>
+              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+              <h3 className={styles.featureName}>Rapid deployment</h3>
+              <p className={styles.featureDescription}>Serverless cuts weeks off development cycles. Don’t spend time provisioning unused infrastructure.</p>
             </div>
           </div>
           <div className={styles.sectionBreak} />
