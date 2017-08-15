@@ -56,7 +56,7 @@ export default class Homepage extends Component {
               <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
             </div>
             <h2 className={styles.sectionHeading}>Build faster with serverless architectures.</h2>
-            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure, or worry about scale. Serverless teams cut time to market in half.</p>
+            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
           </div>
           <div className={styles.featuresColumns}>
             <div className={styles.feature}>
