@@ -47,7 +47,7 @@ export default class Homepage extends Component {
                   <img className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
                 </div>
                 <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
-                <p>React to any event, with any function, on any cloud. Your tool for cross-cloud events and function discovery.</p>
+                <p>React to any event, with any function, on any cloud. Expose events and functions across the team.</p>
               </div>
               <Link to='/event-gateway/'>Learn more</Link>
             </div>
