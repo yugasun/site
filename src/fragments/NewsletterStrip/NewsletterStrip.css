@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 5rem;
+  background-color: #535353;
+  clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+}
+.logo {
+  width: 4.3rem;
+}
+.description {
+  width: 100%;
+  max-width: calc(35rem + 5.5rem);
+  margin: 0;
+  padding-left: 2.5rem;
+  padding-right: 3rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: justify;
+}
+.newsletter {
+  width: 100%;
+  max-width: 47rem;
+}
