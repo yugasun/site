@@ -7,20 +7,20 @@ $height: 50px;
 :global {
 
   .form-group {
-   width: 70%;
+    width: 70%;
+    padding-right: 1.6rem;
   }
   .form-control {
     width: 100%;
-    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 3px;
     background: 0 0;
-    border: 2px solid $yellow;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border: none;
     height: $height;
-    font-family: avenir, sans-serif;
     font-size: 14px;
     color: $black2;
+    background-color: #fff;
     &:focus {
       outline: 0!important;
     }
@@ -34,18 +34,17 @@ $height: 50px;
     touch-action: manipulation;
     cursor: pointer;
     user-select: none;
-    border: none;
+    border: 1px solid #fff;
     font-size: 16px;
     padding: 0 25px;
     padding-right: 30px;
     border-radius: 3px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     height: $height;
-    font-family: avenir, sans-serif;
-    color: rgba(0,0,0,.7);
-    background-color: $yellow;
+    font-family: Serverless, monospace;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
     min-width: 30%;
+    text-transform: uppercase;
   }
   @media (max-width: 768px) {
     .sl-email-inner {

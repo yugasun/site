@@ -17,7 +17,7 @@ const propTypes = {
   buttonText: PropTypes.string
 }
 const defaultProps = {
-  buttonText: 'Subscribe'
+  buttonText: 'Sign Up'
 }
 export default class Newsletter extends Component {
   constructor(props, context) {
@@ -105,7 +105,7 @@ export default class Newsletter extends Component {
             type='email'
             className='form-control email'
             name='EMAIL'
-            placeholder='Your Email'
+            placeholder='you@example.com'
           />
         </div>
         <button onClick={this.handleSubmit} className='btn btn-action'>
