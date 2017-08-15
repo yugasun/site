@@ -75,6 +75,11 @@ export default class Header extends Component {
                         Event Gateway
                       </Link>
                     </li>
+                    <li>
+                      <Link to='/platform/docs' className={styles.link}>
+                        Platform
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li className={styles.navItem}>
