@@ -14,11 +14,6 @@ const EventGatewayPage = (props) => {
           <a className={`${styles.btn} ${styles.btnGrey}`} href='https://github.com/serverless/event-gateway'><img width={24} height={24} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon.svg' /> Github</a>
         </div>
       </div>
-      <div className={`${styles.sectionIntro} ${styles.boundSmall}`}>
-        <h2>Unlock the potential of serverless architectures.</h2>
-        <p className={styles.introText}>The Serverless Framework boiled the serverless developer experience down to the components that matter: functions and events. The Event Gateway does that same thing for the serverless architecture as a whole. React to any event, with any function, on any cloud. This is the dream of serverless, and the Event Gateway is the missing piece of infrastructure to make it a reality.</p>
-      </div>
-      <div className={styles.sectionBreak} />
       <div className={styles.bound}>
         <div className={styles.sectionFeatures}>
           <div className={styles.feature}>

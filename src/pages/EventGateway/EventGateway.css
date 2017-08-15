@@ -20,29 +20,6 @@
 .toolDescription {
   composes: toolDescription from "../Framework/Framework.css";
 }
-.sectionIntro {
-  max-width: 97.4rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  color: #4B4B4B;
-
-  h2 {
-    text-align: center;
-    font-size: 3rem;
-    line-height: 3.4rem;
-    font-weight: 600;
-  }
-}
-.introText {
-  width: 94.7rem;
-  margin-top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 3.7rem;
-  text-align: justify;
-}
 .sectionBreak {
   composes: sectionBreak from "../../index.css";
 }
