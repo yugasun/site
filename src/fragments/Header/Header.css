@@ -89,8 +89,9 @@
   text-align: center;
 }
 .linkSpecial {
-  border: 1px solid;
+  border: 1px solid #fff;
   border-radius: 3px;
+  transition: color 250ms, background-color 300ms;
 }
 .caret {
   width: 8px !important;
@@ -139,6 +140,10 @@
     color: #fff;
     background: 0 0;
     font-weight: 600;
+  }
+  > .linkSpecial {
+    color: #4B4B4B;
+    background-color: #fff;
   }
   .caret {
     opacity: 1;
