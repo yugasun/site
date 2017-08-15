@@ -26,8 +26,8 @@ const FrameworkPage = (props) => {
             <h2>Deploy your function right now.</h2>
             <p className={styles.demoDescription}>Serverless Framework is your single toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure. Done.</p>
             <div className={styles.demoLinks}>
-              <Link to='/framework/docs/'>View Docs</Link>
-              <a href='https://github.com/serverless/serverless'>Github</a>
+              <Link className={`${styles.btn} ${styles.btnBlue}`} to='/framework/docs/'>View Docs</Link>
+              <a className={`${styles.btn} ${styles.btnGrey}`} href='https://github.com/serverless/serverless'><img width={24} height={24} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon.svg' /> Github</a>
             </div>
           </div>
           <div className={styles.demoHalf}>

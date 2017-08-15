@@ -62,6 +62,37 @@
   display: flex;
   justify-content: center;
 }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  font-family: Serverless, monospace;
+  line-height: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  img {
+    vertical-align: sub;
+    margin-right: 1rem;
+  }
+}
+.btnBlue {
+  color: #fff !important;
+  background-color: #4A90E2;
+  border-bottom-width: 0 !important;
+}
+.btnGrey {
+  border: 1px solid #D1D1D1;
+  color: #000 !important;
+  background-color: #F8F8F8;
+}
 .demoHalf {
   width: 45%;
 }
