@@ -94,7 +94,7 @@ export default class Header extends Component {
                 </li>
                 <li className={styles.navItem}>
                   <Link to='/beta' className={`${styles.link} ${styles.linkSpecial}`}>
-                    Join the beta
+                    Platform beta
                   </Link>
                 </li>
 
