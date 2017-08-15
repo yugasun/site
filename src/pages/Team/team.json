@@ -165,5 +165,18 @@
 			"short": "Type-theory esotericist who knows kung fu",
 			"long": "From the Florida Gulf Coast to San Francisco, I’ve crossed the continent to help envision and implement the future of the serverless paradigm."
 		}
+	},
+	{
+		"name": "Felix Desroches",
+		"title": "Product & UX",
+		"github": "jfdesroches",
+		"twitter": "felixdesroches",
+		"linkedin": "jfdesroches",
+		"avatar": "https://avatars3.githubusercontent.com/u/5177299?v=3&s=460",
+		"location": "San Francisco, CA",
+		"bio": {
+			"short": "Surfer-designer & Third Culture Kid",
+			"long": ""
+		}
 	}
 ]
