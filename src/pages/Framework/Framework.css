@@ -138,3 +138,7 @@
 .red {
   color: #F26D61;
 }
+.newsletterSection {
+  max-width: 110rem;
+  margin-bottom: 6.4rem;
+}

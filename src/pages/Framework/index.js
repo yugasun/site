@@ -4,6 +4,7 @@ import Default from '../../layouts/Default'
 import styles from './Framework.css'
 import Terminal from '../../components/Terminal'
 import terminalCommands from './terminalCommands'
+import NewsletterStrip from '../../fragments/NewsletterStrip'
 
 const FrameworkPage = (props) => {
   return (
@@ -62,6 +63,9 @@ const FrameworkPage = (props) => {
             <p>Develop, test and deploy functions and the events they react to on any cloud provider. Manage your services and functions in one place--from the CLI.</p>
           </div>
         </div>
+      </div>
+      <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+        <NewsletterStrip />
       </div>
     </Default>
   )
