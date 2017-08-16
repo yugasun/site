@@ -1,13 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import Svg from 'react-svg-inline'
 import handleClickAway from '../../utils/handleClickAway'
-import gitHubSvg from '../../assets/icons/github.svg'
-import Logo from '../../assets/images/serverless-logo.svg'
 import styles from './Header.css'
-import Auth from '../../components/Auth/Auth'
 
 const propTypes = {
+  whiteLogo: PropTypes.bool,
   fullWidth: PropTypes.bool
 }
 
@@ -41,7 +38,7 @@ export default class Header extends Component {
     })
   }
   render() {
-    const { fullWidth } = this.props
+    const { fullWidth, whiteLogo } = this.props
     const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
@@ -51,7 +48,7 @@ export default class Header extends Component {
         <div className={styles.navFixed}>
           <div className={`${styles.navWrapper} ${containerStyle}`}>
             <div className={styles.navLeft}>
-              <Link to='/' className={styles.logo}><Svg svg={Logo} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
+              <Link to='/' className={styles.logo}><img width={28} height={23} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' + (whiteLogo ? '#white' : '')} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
             </div>
             <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
               <div className={styles.ham}>

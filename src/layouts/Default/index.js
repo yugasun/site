@@ -15,6 +15,7 @@ const propTypes = {
   className: PropTypes.string,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
+  whiteLogo: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   head: PropTypes.object,
   body: PropTypes.string,
@@ -33,6 +34,7 @@ const DefaultLayout = (props) => {
     children,
     className,
     fullWidth,
+    whiteLogo,
     isLoading
   } = props
 
@@ -81,7 +83,7 @@ const DefaultLayout = (props) => {
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} />
-      <Header />
+      <Header whiteLogo={whiteLogo} />
       <div className={classes}>
         {header}
         {children || markdown}
