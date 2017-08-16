@@ -4,6 +4,10 @@
   top: 0;
   left: 0;
   z-index: 1;
+  background-color: transparent;
+}
+.coloredHeader {
+  background-color: #313131;
 }
 
 .bumper {
