@@ -39,26 +39,32 @@ const FrameworkPage = (props) => {
       <div className={styles.bound}>
         <div className={styles.sectionFeatures}>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/provider-agnostic.svg' />
             <h3 className={styles.featureTitle}>Provider agnostic</h3>
             <p>Centrally deploy to AWS Lambda, Microsoft Azure, Google Cloud Platform and IBM OpenWhisk.</p>
           </div>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/extensible.svg' />
             <h3 className={styles.featureTitle}>Extensible with plugins</h3>
             <p>Use dozens community-made plugins, or make a new one specific to your application. Framework is open source and easy to build for.</p>
           </div>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/multi-lingual.svg' />
             <h3 className={styles.featureTitle}>Multi-lingual</h3>
             <p>Don’t be hamstrung by just one language: write functions in python, node.js, java, scala or C#.</p>
           </div>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/automatic-scaling.svg' />
             <h3 className={styles.featureTitle}>Automatic scaling</h3>
             <p>Don’t spend time and resources provisioning unused infrastructure. Serverless architectures expand and contract on demand, cutting server costs by more than half.</p>
           </div>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/faster-iterations.svg' />
             <h3 className={styles.featureTitle}>Faster iteration</h3>
             <p>Develop and deploy infinitely scalable applications within minutes. Provision and deploy a REST API or data pipeline without provisioning resources.</p>
           </div>
           <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/unified-dev-experience.svg' />
             <h3 className={styles.featureTitle}>Unified dev experience</h3>
             <p>Develop, test and deploy functions and the events they react to on any cloud provider. Manage your services and functions in one place--from the CLI.</p>
           </div>

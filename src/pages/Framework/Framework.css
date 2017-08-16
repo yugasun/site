@@ -158,6 +158,12 @@
     line-height: 2rem;
   }
 }
+.featureIcon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  composes: featureIcon from "../Homepage/Homepage.css";
+}
 .featureTitle {
   margin-bottom: 1rem;
   font-size: 1.8rem;
