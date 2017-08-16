@@ -83,6 +83,10 @@ h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.02rem; }
 h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
 p {  letter-spacing: 0; }
 
+img {
+  max-width: 100%;
+}
+
 img[align="left"] {
   margin-right: 20px;
 }

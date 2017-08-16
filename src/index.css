@@ -18,23 +18,34 @@
   max-width: 124rem;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
 }
 .boundSmall {
   width: 100%;
   max-width: 88rem;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
 }
 .boundSmaller {
   width: 100%;
   max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
 }
 .sectionBreak {
-  height: 10rem;
+  height: 3rem;
   background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  ;
+  @media screen and (min-width: 768px) {
+    height: 10rem;
+  }
 }
 @font-face {
   font-family: "Serverless";
