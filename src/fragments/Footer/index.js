@@ -30,7 +30,7 @@ const Footer = (props) => {
           </div>
           <div className={styles.navBlock}>
             <h4 className={styles.navTitle}>About</h4>
-            <Link to='/company/team'>Company</Link>
+            <Link to='/company/team/'>Company</Link>
             <Link to='/blog/'>Blog</Link>
           </div>
         </nav>
