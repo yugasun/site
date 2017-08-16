@@ -8,7 +8,7 @@ import NewsletterStrip from '../../fragments/NewsletterStrip'
 
 const FrameworkPage = (props) => {
   return (
-    <Default className={styles.page} {...props} fullWidth>
+    <Default className={styles.page} {...props} fullWidth whiteLogo>
       <div className={styles.toolHero}>
         <div className={styles.boundSmaller}>
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
