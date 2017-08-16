@@ -87,6 +87,11 @@
   font-weight: 300;
   line-height: 3.1rem;
 }
+.form {
+  @media screen and (min-width: 768px) {
+    width: calc(50% - 5rem);
+  }
+}
 .clientsSection {
   margin-top: 8rem;
   margin-bottom: 12rem;
