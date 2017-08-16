@@ -8,7 +8,7 @@
   composes: boundSmaller from "../../index.css";
 }
 .toolHero {
-  padding-top: 17rem;
+  padding-top: 10rem;
   padding-bottom: 5rem;
   text-align: center;
   border-bottom: 1px solid #BBBBBB;
@@ -19,6 +19,10 @@
   background-size: 100%;
   background-blend-mode: screen;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 17rem;
+  }
 }
 .toolIcon {
   padding: 5rem;
@@ -26,9 +30,12 @@
   background-color: rgba(255,255,255,0.15);
 }
 .toolTitle {
-  font-size: 4rem;
+  font-size: 2.8rem;
   line-height: 4.8rem;
   font-family: Serverless, monospace;
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
 }
 .toolDescription {
   margin-bottom: 3.6rem;
@@ -56,16 +63,24 @@
 }
 .sectionDemo {
   padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
 
   .bound {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-bottom: 7rem;
+    }
   }
 }
 .demoMeta {
-  width: 55%;
+  margin-bottom: 5rem;
+  ;
+  @media screen and (min-width: 768px) {
+    width: 55%;
+  }
 }
 .demoDescription {
   color: #4B4B4B;
@@ -109,7 +124,9 @@
   background-color: #F8F8F8;
 }
 .demoHalf {
-  width: 45%;
+  @media screen and (min-width: 768px) {
+    width: 45%;
+  }
 }
 .sectionFeatures {
   display: flex;
@@ -119,27 +136,50 @@
   margin-top: 4rem;
 }
 .feature {
-  width: calc(100% / 3);
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 3);
+    margin-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
+  }
 
   p {
     max-width: 31.4rem;
-    font-size: 1.8rem;
-    font-weight: 300;
-    text-align: justify;
-    line-height: 2.7rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
 .featureTitle {
-  font-size: 2.4rem;
-  line-height: 2.7rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
 }
 .red {
   color: #F26D61;
 }
 .newsletterSection {
   max-width: 110rem;
-  margin-bottom: 6.4rem;
+  padding-right: 0;
+  padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 6.4rem;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
 }
