@@ -5,7 +5,7 @@ import styles from './EventGateway.css'
 
 const EventGatewayPage = (props) => {
   return (
-    <Default className={styles.page} {...props} fullWidth whiteLogo>
+    <Default className={styles.page} {...props} fullWidth whiteLogo coloredHeader={false}>
       <div className={styles.toolHero}>
         <div className={styles.boundSmaller}>
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />

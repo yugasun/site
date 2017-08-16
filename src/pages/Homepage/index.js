@@ -19,7 +19,7 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Default {...this.props} fullWidth>
+      <Default {...this.props} fullWidth coloredHeader={false}>
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.bg}>
