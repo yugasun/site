@@ -18,7 +18,7 @@ const Footer = (props) => {
           <div className={styles.navBlock}>
             <h4 className={styles.navTitle}>Work with us</h4>
             <Link to='/enterprise/'>Enterprise</Link>
-            <Link to=''>Plugins</Link>
+            <a href='https://github.com/serverless/plugins'>Plugins</a>
           </div>
           <div className={styles.navBlock}>
             <h4 className={styles.navTitle}>Talk to us</h4>
