@@ -38,7 +38,7 @@ const Footer = (props) => {
           <p className={styles.ctaText}>It’s not too late - sign up for the Platform beta and we’ll let you know when it’s ready for prime time.</p>
           <Link className={styles.cta} to='/beta'>Platform beta</Link>
           <p className={styles.madeStatement}>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Tennessee & Thailand.<br/><br/>
-            Serverless, Inc. © ${year}</p>
+            Serverless, Inc. © {year}</p>
         </div>
       </div>
     </footer>
