@@ -158,13 +158,10 @@
   }
 }
 
-.yellowLink {
-  color: $yellow;
-  &:hover {
-    color: #fff;
-    background: 0 0;
-  }
+.mobileOnly {
+  display: none;
 }
+
 .link svg, .link :global(.SVGInline) {
   fill: white;
   width: 20px;
@@ -240,7 +237,10 @@ $lineHeight: 2px;
   transform: rotate(-45deg);
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .mobileOnly {
+    display: block;
+  }
   .noMobile {
     display: none !important;
   }
@@ -265,6 +265,7 @@ $lineHeight: 2px;
     padding: 0px;
     li, a {
       width: 100%;
+      max-width: 20rem;
       display: block;
       position: inherit;
     }
@@ -301,7 +302,11 @@ $lineHeight: 2px;
     }
   }
   .link {
-    padding: 7px 9px 0px 9px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .linkSpecial {
+    border-radius: 0;
   }
   .subNavItems {
     position: initial;
@@ -312,9 +317,9 @@ $lineHeight: 2px;
     }
     .link {
       padding: 5px;
-      padding-left: 15px;
-      margin-top: 0px;
+      margin-top: 0;
       position: inherit;
+      text-align: center;
       display: block;
       &:hover {
         background: #ffd426;
