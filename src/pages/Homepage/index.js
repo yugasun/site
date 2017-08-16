@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
 import NewsletterStrip from '../../fragments/NewsletterStrip'
+import ClientsLogos from '../../fragments/ClientsLogos'
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -78,12 +79,8 @@ export default class Homepage extends Component {
           </div>
           <div className={styles.sectionBreak} />
           <div className={`${styles.section} ${styles.testimonialSection}`}>
-            <div className={`${styles.boundSmall} ${styles.clientsLogos}`}>
-              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-ea.png' />
-              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cocacola-logo.png' />
-              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/nordstorm-logo.png' />
-              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-expedia.png' />
-              <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-reuters.png' />
+            <div className={styles.boundSmall}>
+              <ClientsLogos />
             </div>
             <div className={`${styles.testimonial} ${styles.boundSmall}`}>
               <div className={styles.testimonialTextBlock}>

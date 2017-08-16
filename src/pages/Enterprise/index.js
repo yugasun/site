@@ -4,6 +4,7 @@ import airtablePost from '../../utils/forms/airtable'
 import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 import NewsletterStrip from '../../fragments/NewsletterStrip'
+import ClientsLogos from '../../fragments/ClientsLogos'
 
 export default class PartnersPage extends React.Component {
   static hasLoadingState = true
@@ -92,12 +93,8 @@ export default class PartnersPage extends React.Component {
         </div>
         <div className={`${styles.bound} ${styles.clientsSection}`}>
           <h3 className={styles.heading}>Developers at these companies use Serverless</h3>
-          <div className={`${styles.boundSmall} ${styles.clientsLogos}`}>
-            <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-ea.png' />
-            <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cocacola-logo.png' />
-            <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/nordstorm-logo.png' />
-            <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-expedia.png' />
-            <img className={styles.clientLogo} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/client-reuters.png' />
+          <div className={styles.boundSmall}>
+            <ClientsLogos style={{marginTop: '3rem'}} />
           </div>
         </div>
         <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>

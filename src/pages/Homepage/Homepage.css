@@ -120,15 +120,6 @@
   margin-top: 12rem;
   margin-bottom: 6rem;
 }
-.clientsLogos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.clientLogo {
-  max-width: 15rem;
-  max-height: 4rem;
-}
 .testimonial {
   margin-top: 7.5rem;
   margin-bottom: 5rem;

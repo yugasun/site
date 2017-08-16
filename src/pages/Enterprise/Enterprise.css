@@ -71,13 +71,6 @@
     text-align: center;
   }
 }
-.clientsLogos {
-  margin-top: 3rem;
-  composes: clientsLogos from "../Homepage/Homepage.css";
-}
-.clientLogo {
-  composes: clientLogo from "../Homepage/Homepage.css"
-}
 .newsletterSection {
   max-width: 110rem;
   margin-bottom: 6.4rem;
