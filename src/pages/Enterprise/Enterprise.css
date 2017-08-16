@@ -11,7 +11,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding-top: 17rem;
+  padding-top: 10rem;
   padding-bottom: 4rem;
   text-align: center;
   border-bottom: 1px solid #BBBBBB;
@@ -24,35 +24,61 @@
   background-size: cover;
   background-repeat: no-repeat;
   @media screen and (min-width: 768px) {
+    padding-top: 17rem;
     min-height: 62rem;
   }
 }
 .heroTitle {
   font-family: Serverless, monospace;
-  font-size: 4rem;
-  line-height: 4.8rem;
+  font-size: 2.8rem;
+  line-height: 3rem;
   text-align: center;
   font-weight: normal;
+  ;
+
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
 }
 .heroDescription {
   margin-bottom: 6.4rem;
+  padding-right: 0;
+  padding-left: 0;
+  ;
+
+  @media screen and (min-width: 768px) {
+
+  }
 }
 .heading {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 2.7rem;
+  line-height: 2rem;
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
 }
 .sectionAction {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 6rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 .features, .form {
-  width: 50%;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
 .feature {
   margin-bottom: 5.7rem;
@@ -70,10 +96,23 @@
   .heading {
     text-align: center;
   }
+
+  .boundSmall {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .newsletterSection {
   max-width: 110rem;
-  margin-bottom: 6.4rem;
+  padding-right: 0;
+  padding-left: 0;
+  ;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 6.4rem;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
 }
 .enterprise {
   form {
@@ -81,15 +120,17 @@
     flex-direction: column;
 
     input {
-      width: 35rem;
+      width: 100%;
+      max-width: 35rem;
       padding: 15px;
       margin-bottom: 10px;
     }
     button {
+      width: 100%;
+      max-width: 35rem;
       border: 1px solid black;
       background: white;
       padding: 15px 30px;
-      width: 35rem;
       margin-bottom: 30px;
     }
   }
