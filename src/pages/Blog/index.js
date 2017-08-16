@@ -60,7 +60,7 @@ export default class BlogPage extends Component {
       )
     }
     return (
-      <Default {...this.props}>
+      <Default {...this.props} coloredHeader>
         <h2 className={styles.pageTitle}>Serverless Blog</h2>
         <div className={styles.wrapper}>
           {renderContent}
