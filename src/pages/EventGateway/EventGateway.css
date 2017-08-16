@@ -9,6 +9,10 @@
 }
 .toolHero {
   background-color: #159BBA;
+  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/toolkit-ground.png"),
+                    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway-ground.svg");
+  background-position: center top, center 65%;
+  background-size: 100%, 94%;
   composes: toolHero from "../Framework/Framework.css";
 }
 .toolIcon {
