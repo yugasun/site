@@ -62,17 +62,17 @@ export default class Homepage extends Component {
           </div>
           <div className={styles.featuresColumns}>
             <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/automatic-scaling.svg' />
               <h3 className={styles.featureName}>Automatic Scaling</h3>
               <p className={styles.featureDescription}>Serverless backends expand and contract with demand. Go get on the front page of HackerNews, we dare you.</p>
             </div>
             <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/provider-agnostic.svg' />
               <h3 className={styles.featureName}>Provider Agnostic</h3>
               <p className={styles.featureDescription}>Build, test and deploy cloud functions to any provider. Skip the setup; deploy your function right now.</p>
             </div>
             <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cloud-box.svg' />
+              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/rapid-deployment.svg' />
               <h3 className={styles.featureName}>Rapid deployment</h3>
               <p className={styles.featureDescription}>Serverless cuts weeks off development cycles. Don’t spend time provisioning unused infrastructure.</p>
             </div>
