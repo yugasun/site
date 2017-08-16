@@ -279,11 +279,11 @@ $lineHeight: 2px;
   .navItems {
     margin-top: 70px;
     flex-direction: column;
-    height: 103vh;
+    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 105%;
-    padding-bottom: 100px;
+    padding-bottom: 3rem;
     .subNavItems {
       background: none;
     }
