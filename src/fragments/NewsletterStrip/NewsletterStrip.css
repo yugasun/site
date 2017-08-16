@@ -14,7 +14,7 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   ;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     margin-bottom: 0;
   }
 }
@@ -23,7 +23,6 @@
 }
 .description {
   width: 100%;
-  max-width: calc(35rem + 5.5rem);
   margin: 0;
   padding-left: 2.5rem;
   color: #FFFFFF;
@@ -34,6 +33,9 @@
     padding-right: 3rem;
     font-size: 1.8rem;
     line-height: 2.4rem;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 40.5rem;
   }
 }
 .newsletter {
