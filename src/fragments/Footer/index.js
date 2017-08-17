@@ -117,6 +117,7 @@ export default class Footer extends Component {
           onEscKeyDown={this.handleToggle}
           onOverlayClick={this.handleToggle}
         >
+          <span className={headerStyles.modalClose} onClick={this.handleToggle}>⨯</span>
           <h3 className={headerStyles.modalHeading}>Platform Beta - coming Q3 2017</h3>
           <p className={headerStyles.modalText}>We like to move fast, but Serverless Platform isn’t quite ready for primetime.<br/><br/>
             We can’t wait, because when it’s ready Platform will be the best way to monitor, manage and collaborate on all your serverless
