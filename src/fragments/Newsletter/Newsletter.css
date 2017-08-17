@@ -4,6 +4,18 @@ $height: 50px;
   display: flex;
 }
 
+.black {
+  color: #272727;
+
+  .formControl {
+    border: 1px solid;
+  }
+  .btnAction {
+    color: inherit;
+    border-color: currentColor;
+  }
+}
+
 .formGroup {
   width: 70%;
   padding-right: 1.6rem;

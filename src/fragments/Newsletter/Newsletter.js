@@ -14,7 +14,8 @@ function validateEmail(value) {
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.any,
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
+  black: PropTypes.bool,
 }
 const defaultProps = {
   buttonText: 'Sign Up'
@@ -88,10 +89,10 @@ export default class Newsletter extends Component {
     })
   }
   render() {
-    const { buttonText, className } = this.props
+    const { buttonText, className, black } = this.props
     const { isFetching, error } = this.state
     let text = (isFetching) ? 'Success!' : buttonText,
-        classes = classnames(className, styles.emailForm)
+        classes = classnames(className, styles.emailForm, (black === true ? styles.black : ''))
 
     if (error) {
       text = 'Try Again'
