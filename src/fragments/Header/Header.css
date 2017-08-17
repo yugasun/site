@@ -147,7 +147,6 @@
   > .link {
     color: #fff;
     background: 0 0;
-    font-weight: 600;
   }
   > .linkSpecial {
     color: #4B4B4B;
@@ -329,4 +328,65 @@ $lineHeight: 2px;
   .caret {
     display: none !important;
   }
+}
+.modalWrapper {
+  padding: 3rem 6rem;
+}
+.modalHeading {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-family: Serverless, monospace;
+}
+.modalText {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: justify;
+  font-weight: 300;
+  color: #4B4B4B;
+}
+.modalForm {
+  max-width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+  ;
+
+  input, select {
+    width: 100%;
+    padding: 1.3rem 1.5rem 1.5rem;
+    margin-bottom: 2.8rem;
+    border-radius: 3px;
+    border: 1px solid #CECECE;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: inherit;
+  }
+  button {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: white;
+    padding: 15px 30px;
+    margin: 3rem auto 0;
+    cursor: pointer;
+  }
+}
+.inputWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input:first-child {
+    margin-right: 1rem;
+  }
+}
+.sectionBreak {
+  height: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  composes: sectionBreak from "../../index.css";
 }

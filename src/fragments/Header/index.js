@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import handleClickAway from '../../utils/handleClickAway'
+import Modal from '../../components/Modal/Modal'
+import AutoForm from 'react-auto-form'
+import airtablePost from '../../utils/forms/airtable'
 import styles from './Header.css'
 import classnames from 'classnames'
 
@@ -11,10 +14,14 @@ const propTypes = {
 }
 
 export default class Header extends Component {
+  static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
     this.state = {
-      sideNavOpen: false
+      sideNavOpen: false,
+      showModal: false,
+      error: false,
+      success: false,
     }
     this.handleClick = this.handleClick.bind(this)
     this.closeNav = this.closeNav.bind(this)
@@ -24,6 +31,41 @@ export default class Header extends Component {
   }
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
+  }
+  openModal = (e) => {
+    e.preventDefault()
+    this.setState({
+      showModal: true,
+    })
+  }
+  handleToggle = (e) => {
+    e.preventDefault()
+    this.setState({
+      showModal: !this.state.showModal,
+    })
+  }
+  handleSubmit = (event, data) => {
+    event.preventDefault()
+    const token = 'keynoipW7vgeiBMuZ'
+    const url = 'https://api.airtable.com/v0/appyZzQmAS6nvzZ5r/Table%201'
+    const airTableData = {
+      fields: {
+        Name: data.name,
+        Email: data.email,
+        Company: data.company,
+        'Date Added': new Date()
+      }
+    }
+    airtablePost(url, airTableData, token).then((_response) => {
+      this.setState({
+        success: true,
+      })
+    })
+      .catch((err) => {
+        this.setState({
+          error: err
+        })
+      })
   }
   closeNav(e) {
     const toggleNode = this.refs.toggle
@@ -41,11 +83,27 @@ export default class Header extends Component {
   }
   render() {
     const { fullWidth, whiteLogo, colored } = this.props
-    const { sideNavOpen } = this.state
+    const { sideNavOpen, showModal } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
     const containerStyle = (fullWidth) ? styles.fullWidth : ''
     const headerClasses = (colored) ? classnames(styles.header, styles.coloredHeader) : styles.header
+    let errorDiv
+    if (this.state.error) {
+      errorDiv = (
+        <div className={styles.error}>
+          Oops! Please fill out all the fields.
+        </div>
+      )
+    }
+    let successDiv
+    if (this.state.success) {
+      successDiv = (
+        <div className={styles.success}>
+          Thanks! Someone will be in touch shortly.
+        </div>
+      )
+    }
     return (
       <header className={headerClasses}>
         <div className={styles.navFixed}>
@@ -96,7 +154,7 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link to='/beta' className={`${styles.link} ${styles.linkSpecial}`}>
+                  <Link to='javascript:' onClick={this.openModal} className={`${styles.link} ${styles.linkSpecial}`}>
                     Platform beta
                   </Link>
                 </li>
@@ -105,6 +163,39 @@ export default class Header extends Component {
             </nav>
           </div>
         </div>
+        <Modal
+          className={styles.modalWrapper}
+          active={showModal}
+          onEscKeyDown={this.handleToggle}
+          onOverlayClick={this.handleToggle}
+        >
+          <h3 className={styles.modalHeading}>Platform Beta - coming Q3 2017</h3>
+          <p className={styles.modalText}>We like to move fast, but Serverless Platform isn’t quite ready for primetime.<br/><br/>
+            We can’t wait, because when it’s ready Platform will be the best way to monitor, manage and collaborate on all your serverless
+            applications. Sign up below and we’ll send you an invite to the private beta really soon. We won’t spam you with any
+            other email, we promise.</p>
+          <div className={styles.sectionBreak} />
+          {errorDiv}
+          {successDiv}
+          <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit className={styles.modalForm}>
+            <div className={styles.inputWrap}>
+              <input required={true} name='firstname' placeholder='First name' />
+              <input required={true} name='lastname' placeholder='Last name' />
+            </div>
+            <input required={true} type='email' name='email' placeholder='you@example.com' />
+            <select required={true} name='role'>
+              <option disabled={true} selected={true} value=''>Role</option>
+              <option value='frontend-developer'>Frontend developer</option>
+              <option value='backend-developer'>Backend developer</option>
+              <option value='designer'>Designer</option>
+              <option value='product-manager'>Product manager</option>
+              <option value='architect'>Architect</option>
+              <option value='executive'>Executive</option>
+              <option value='other'>Other</option>
+            </select>
+            <button kind='black' className={styles.btn}>Submit</button>
+          </AutoForm>
+        </Modal>
       </header>
     )
   }
