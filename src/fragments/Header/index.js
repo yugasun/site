@@ -46,14 +46,15 @@ export default class Header extends Component {
   }
   handleSubmit = (event, data) => {
     event.preventDefault()
-    const token = 'keynoipW7vgeiBMuZ'
-    const url = 'https://api.airtable.com/v0/appyZzQmAS6nvzZ5r/Table%201'
+    const token = 'keyWrghCH61ag6tA3'
+    const url = 'https://api.airtable.com/v0/appa9MFt4j0J2mGNq/Table%201'
     const airTableData = {
       fields: {
-        Name: data.name,
+        FirstName: data.firstName,
+        LastName: data.lastName,
         Email: data.email,
-        Company: data.company,
-        'Date Added': new Date()
+        Role: data.role,
+        DateAdded: new Date()
       }
     }
     airtablePost(url, airTableData, token).then((_response) => {
@@ -180,19 +181,19 @@ export default class Header extends Component {
           {successDiv}
           <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit className={styles.modalForm}>
             <div className={styles.inputWrap}>
-              <input required={true} name='firstname' placeholder='First name' />
-              <input required={true} name='lastname' placeholder='Last name' />
+              <input required={true} name='firstName' placeholder='First name' />
+              <input required={true} name='lastName' placeholder='Last name' />
             </div>
             <input required={true} type='email' name='email' placeholder='you@example.com' />
-            <select required={true} name='role'>
-              <option disabled={true} selected={true} value=''>Role</option>
-              <option value='frontend-developer'>Frontend developer</option>
-              <option value='backend-developer'>Backend developer</option>
-              <option value='designer'>Designer</option>
-              <option value='product-manager'>Product manager</option>
-              <option value='architect'>Architect</option>
-              <option value='executive'>Executive</option>
-              <option value='other'>Other</option>
+            <select required={true} name='role' defaultValue={''}>
+              <option disabled={true} value=''>Role</option>
+              <option value='Frontend developer'>Frontend developer</option>
+              <option value='Backend developer'>Backend developer</option>
+              <option value='Designer'>Designer</option>
+              <option value='Product manager'>Product manager</option>
+              <option value='Architect'>Architect</option>
+              <option value='Executive'>Executive</option>
+              <option value='Other'>Other</option>
             </select>
             <button kind='black' className={styles.btn}>Submit</button>
           </AutoForm>
