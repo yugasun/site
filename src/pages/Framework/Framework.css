@@ -53,12 +53,17 @@
 .toolProperty {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
   font-size: 2rem;
   font-family: Serverless, monospace;
   line-height: 2.4rem;
 
   img {
     margin-right: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 }
 .sectionDemo {
