@@ -66,7 +66,7 @@ export default class BlogPage extends Component {
           {renderContent}
           <div className={styles.sidebar}>
             <BetaCTA buttonText='Signup for Beta' />
-            <NewsletterCTA style={{ marginTop: '20px' }} />
+            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
             <AuthorCTA style={{ marginTop: '20px' }} />
           </div>
         </div>
