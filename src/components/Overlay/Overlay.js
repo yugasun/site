@@ -20,7 +20,7 @@ export default class Overlay extends Component {
   componentDidMount() {
     if (this.props.active) {
       this.escKeyListener = document.body.addEventListener('keydown', this.handleEscKey.bind(this))
-      this.disableScroll()
+      // this.disableScroll()
       // document.body.style.overflow = 'hidden'
     }
   }
@@ -28,7 +28,7 @@ export default class Overlay extends Component {
   componentWillUpdate(nextProps) {
     if (nextProps.active && !this.props.active) {
       // document.body.style.overflow = 'hidden'
-      this.disableScroll()
+      // this.disableScroll()
     }
     if (!nextProps.active && this.props.active) {
       this.enableScroll()
