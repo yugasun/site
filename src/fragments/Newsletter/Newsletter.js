@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getItemSync } from '../../utils/storage'
 import track from '../../utils/analytics/track'
 import styles from './Newsletter.css'
+import classnames from 'classnames'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
 function validateEmail(value) {
@@ -11,11 +12,13 @@ function validateEmail(value) {
 }
 
 const propTypes = {
+  className: PropTypes.string,
   children: PropTypes.any,
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
+  black: PropTypes.bool,
 }
 const defaultProps = {
-  buttonText: 'Subscribe'
+  buttonText: 'Sign Up'
 }
 export default class Newsletter extends Component {
   constructor(props, context) {
@@ -86,26 +89,27 @@ export default class Newsletter extends Component {
     })
   }
   render() {
-    const { buttonText } = this.props
+    const { buttonText, className, black } = this.props
     const { isFetching, error } = this.state
-    let text = (isFetching) ? 'Success!' : buttonText
+    let text = (isFetching) ? 'Success!' : buttonText,
+        classes = classnames(className, styles.emailForm, (black === true ? styles.black : ''))
 
     if (error) {
       text = 'Try Again'
     }
 
     return (
-      <div className={styles.emailForm}>
-        <div className='form-group'>
+      <div className={classes}>
+        <div className={styles.formGroup}>
           <input
             ref='email'
             type='email'
-            className='form-control email'
+            className={styles.formControl}
             name='EMAIL'
-            placeholder='Your Email'
+            placeholder='you@example.com'
           />
         </div>
-        <button onClick={this.handleSubmit} className='btn btn-action'>
+        <button onClick={this.handleSubmit} className={styles.btnAction}>
           {text}
         </button>
       </div>

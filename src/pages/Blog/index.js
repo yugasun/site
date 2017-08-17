@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 import enhanceCollection from 'phenomic-serverless/lib/enhance-collection'
 import Default from '../../layouts/Default'
 import BetaCTA from '../../fragments/BetaCTA'
-import EmitCTA from '../../fragments/EmitCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
 import NewsletterCTA from '../../fragments/NewsletterCTA'
 import BlogPreview from './BlogPreview'
@@ -61,14 +60,13 @@ export default class BlogPage extends Component {
       )
     }
     return (
-      <Default {...this.props}>
-        <EmitCTA style={{marginTop: '-10px', marginBottom: '20px'}} />
+      <Default {...this.props} coloredHeader>
         <h2 className={styles.pageTitle}>Serverless Blog</h2>
         <div className={styles.wrapper}>
           {renderContent}
           <div className={styles.sidebar}>
-            <BetaCTA buttonText='Get early access' />
-            <NewsletterCTA style={{ marginTop: '20px' }} />
+            <BetaCTA buttonText='Signup for Beta' />
+            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
             <AuthorCTA style={{ marginTop: '20px' }} />
           </div>
         </div>

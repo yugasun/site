@@ -14,6 +14,10 @@ html { box-sizing: border-box; }
 
 html {
   font-size: 62.5%; /* html is set to 62.5% so that all the REM measurements throughout  are based on 10px sizing. So basically 1.5rem = 15px :) */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -62,7 +66,10 @@ video {
 body {
   font-size: $fontSize;
   line-height: 1.9;
-  font-family: 'Avenir Next W00', sans-serif;
+  font-family: Gibson, sans-serif;
+}
+h1, h2, h3 {
+  font-weight: 600;
 }
 h1, h2, h3, h4, h5, h6 {
    margin-top: 0;
@@ -75,6 +82,10 @@ h4 { font-size: 1.8rem; line-height: 1.35; letter-spacing: -.02rem; }
 h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.02rem; }
 h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
 p {  letter-spacing: 0; }
+
+img {
+  max-width: 100%;
+}
 
 img[align="left"] {
   margin-right: 20px;

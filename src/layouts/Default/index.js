@@ -15,6 +15,8 @@ const propTypes = {
   className: PropTypes.string,
   /** if true, page will be full width */
   fullWidth: PropTypes.bool,
+  whiteLogo: PropTypes.bool,
+  coloredHeader: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   head: PropTypes.object,
   body: PropTypes.string,
@@ -33,6 +35,8 @@ const DefaultLayout = (props) => {
     children,
     className,
     fullWidth,
+    whiteLogo,
+    coloredHeader,
     isLoading
   } = props
 
@@ -76,12 +80,12 @@ const DefaultLayout = (props) => {
   )
 
   const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
-  const classes = classnames(styles.base, wrapperClass, className)
+  const classes = classnames(styles.base, wrapperClass, className, (head.hasOwnProperty('topMargin') && head.topMargin === true ? styles.topMargin : ''))
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} />
-      <Header />
+      <Header whiteLogo={whiteLogo} colored={(typeof coloredHeader === "undefined") ? true: coloredHeader} />
       <div className={classes}>
         {header}
         {children || markdown}

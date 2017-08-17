@@ -3,6 +3,8 @@ import AutoForm from 'react-auto-form'
 import airtablePost from '../../utils/forms/airtable'
 import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
+import NewsletterStrip from '../../fragments/NewsletterStrip'
+import ClientsLogos from '../../fragments/ClientsLogos'
 
 export default class PartnersPage extends React.Component {
   static hasLoadingState = true
@@ -55,51 +57,49 @@ export default class PartnersPage extends React.Component {
        )
     }
     return (
-      <Default className={styles.enterprise} {...this.props}>
-        <h1 className={styles.header}>
-          Serverless For The Enterprise
-        </h1>
-        <i className={styles.subHeader}>
-          Enabling enterprise development teams to take advantage of all of the benefits of serverless architectures.
-        </i>
-        <div className={styles.box}>
-          <div className={styles.component}>
-            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
-            <div className={styles.copy}>
-              <h3>Serverless Architecture</h3>
-              <p>Empower your development team to focus more time on solving business problems, less on operations, and to deploy faster than ever.</p>
-            </div>
-          </div>
-
-          <div className={`${styles.component} ${styles.componentRight}`}>
-            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/network.svg' />
-            <div className={styles.copy}>
-              <h3>Event Driven Microservices</h3>
-              <p>Keep units of deployment small, dramatically improve service discoverablity, and easily react to any event in your system.</p>
-            </div>
-          </div>
-
-          <div className={styles.component}>
-            <img style={svgSize} role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/controls.svg' />
-            <div className={styles.copy}>
-              <h3>Infinite Scalability</h3>
-              <p>Sleep well at night knowing your serverless services can to scale to meet any demands that are placed on them.</p>
-            </div>
+      <Default className={styles.enterprise} {...this.props} fullWidth whiteLogo={true} coloredHeader={false}>
+        <div className={styles.hero}>
+          <div className={styles.boundSmall}>
+            <h1 className={styles.heroTitle}>Accelerate serverless adoption</h1>
+            <p className={`${styles.heroDescription} ${styles.boundSmaller}`}>With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.</p>
           </div>
         </div>
-        <h2 className={styles.header}>Want To Learn More?</h2>
-        {errorDiv}
-        {successDiv}
-        <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit>
-          <input required='true' name='name' placeholder='Name' />
-          <input required='true' type='email' name='email' placeholder='Email' />
-          <input name='company' placeholder='Company' />
-          <span className={styles.feedbackSubmit}>
-            <button kind='black' className={styles.btn}>
-              Submit
-            </button>
-          </span>
-        </AutoForm>
+        <div className={`${styles.sectionAction} ${styles.bound}`}>
+          <div className={styles.features}>
+            <div className={styles.feature}>
+              <h3 className={styles.heading}>Train your team</h3>
+              <p className={styles.featureDescription}>As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn about serverless ops at scale, service discovery, and deploying serverless applications from start to finish.</p>
+            </div>
+            <div className={styles.feature}>
+              <h3 className={styles.heading}>Operationalize</h3>
+              <p className={styles.featureDescription}>Centralize your events and functions in one interface, across all your cloud services. Serverless Platform makes it easy to expose and share pieces of serverless applications for quick repurposing. Give your team the tools they need to create and iterate—without pausing to provision test environments and infrastructure.</p>
+            </div>
+          </div>
+          <div className={styles.form}>
+            <h2 className={styles.header}>Let’s talk!</h2>
+            {errorDiv}
+            {successDiv}
+            <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit>
+              <input required='true' name='name' placeholder='Name' />
+              <input required='true' type='email' name='email' placeholder='Email' />
+              <input name='company' placeholder='Company' />
+              <span className={styles.feedbackSubmit}>
+                <button kind='black' className={styles.btn}>
+                  Submit
+                </button>
+              </span>
+            </AutoForm>
+          </div>
+        </div>
+        <div className={`${styles.bound} ${styles.clientsSection}`}>
+          <h3 className={styles.heading}>Developers at these companies use Serverless</h3>
+          <div className={styles.boundSmall}>
+            <ClientsLogos style={{marginTop: '3rem'}} />
+          </div>
+        </div>
+        <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+          <NewsletterStrip />
+        </div>
       </Default>
     )
   }

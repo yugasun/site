@@ -9,7 +9,7 @@ const NewsletterCTA = (props) => {
         Stay up to date<br />
         Subscribe to the Newsletter
       </h3>
-      <Newsletter />
+      <Newsletter black={props.black} />
     </Block>
   )
 }

@@ -23,8 +23,9 @@ const BetaCTA = (props) => {
       loggedInComponent={loggedIn}
     >
       <Block className={styles.container}>
-        <h1 className={styles.title}>The Serverless platform is coming</h1>
-        <img src={platformImage} className={styles.image} role='presentation' />
+        <img src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' className={styles.image} role='presentation' />
+        <h3 className={styles.title}>Serverless Platform</h3>
+        <p>The best way to manage and collaborate on Serverless applications.</p>
         <Button>{props.buttonText}</Button>
       </Block>
     </Auth>

@@ -1,65 +1,196 @@
-.page {
-  p {
-    max-width: 660px;
+.bound {
+  composes: bound from "../../index.css";
+}
+.boundSmall {
+  composes: boundSmall from "../../index.css";
+}
+.boundSmaller {
+  composes: boundSmaller from "../../index.css";
+}
+.toolHero {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  border-bottom: 1px solid #BBBBBB;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+  color: #fff;
+  background-color: #FD574F;
+  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/toolkit-ground.png");
+  background-size: 100%;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 17rem;
   }
 }
-
-.header {
-  margin: 35px 0;
-  max-width: 660px;
+.toolIcon {
+  padding: 5rem;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.15);
+}
+.toolTitle {
+  font-size: 2.8rem;
+  line-height: 4.8rem;
+  font-family: Serverless, monospace;
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+.toolDescription {
+  margin-bottom: 3.6rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.toolProperties {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 20px;
-  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 46rem;
+  margin-right: auto;
+  margin-left: auto;
 }
-
-.headerText {
-  text-align: center;
-  margin: 40px 0px;
-  margin-bottom: 20px;
-}
-
-.componentBox {
+.toolProperty {
   display: flex;
-}
-.component {
-  margin: 20px;
-  width: 33%;
-  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: Serverless, monospace;
+  line-height: 2.4rem;
+
   img {
-    width: 50px;
+    margin-right: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 }
-.buttons {
+.sectionDemo {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+
+  .bound {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-bottom: 7rem;
+    }
+  }
+}
+.demoMeta {
+  margin-bottom: 5rem;
+  ;
+  @media screen and (min-width: 768px) {
+    width: 55%;
+  }
+}
+.demoDescription {
+  color: #4B4B4B;
+  font-size: 2.4rem;
+  line-height: 3.7rem;
+  font-weight: 300;
+}
+.demoLinks {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  font-family: Serverless, monospace;
+  line-height: 1.9rem;
   text-align: center;
-}
-.button {
-  margin-top: 20px;
-  margin-right: 30px;
-}
-.yellow {
-  background: $yellow !important;
-  span {
-    color: black;
+  text-transform: uppercase;
+
+  img {
+    vertical-align: sub;
+    margin-right: 1rem;
   }
 }
-@media (max-width: 850px) {
-  .componentBox {
-    display: block;
-  }
-  .component {
-    margin: auto;
-    width: 90%;
-    margin-bottom: 40px;
+.btnBlue {
+  color: #fff !important;
+  background-color: #4A90E2;
+  border-bottom-width: 0 !important;
+}
+.btnGrey {
+  border: 1px solid #D1D1D1;
+  color: #000 !important;
+  background-color: #F8F8F8;
+}
+.demoHalf {
+  @media screen and (min-width: 768px) {
+    width: 45%;
   }
 }
-@media (max-width: 768px) {
-  iframe {
-    width: 100%;
-    max-width: 100%;
+.sectionFeatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.feature {
+  margin-bottom: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 3);
+    margin-bottom: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
   }
-  .component {
-    width: 90%;
+
+  p {
+    max-width: 31.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+.featureIcon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  composes: featureIcon from "../Homepage/Homepage.css";
+}
+.featureTitle {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
+}
+.red {
+  color: #F26D61;
+}
+.newsletterSection {
+  max-width: 110rem;
+  padding-right: 0;
+  padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 6.4rem;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
   }
 }

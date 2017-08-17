@@ -1,86 +1,77 @@
 import React from 'react'
+import { Link } from 'react-router'
 import Default from '../../layouts/Default'
 import styles from './Framework.css'
-import Button from '../../components/Button/Button'
+import Terminal from '../../components/Terminal'
+import terminalCommands from './terminalCommands'
+import NewsletterStrip from '../../fragments/NewsletterStrip'
 
 const FrameworkPage = (props) => {
   return (
-    <Default className={styles.page} {...props}>
-      <div className={styles.header}>
-        <h1 style={{ marginBottom: '10px' }}>What is the Serverless Framework?</h1>
-        <p style={{ marginBottom: '0px' }}>
-          The open source framework is a tool built to help developers <strong>build, manage and deploy</strong> their functions into the cloud provider of their choice (AWS, Azure, IBM, Google).
-        </p>
-        <p style={{ marginBottom: '20px' }}>
-          Get started by running <code>npm install serverless -g</code> in your terminal, then login with the <code>serverless login</code> command.
-        </p>
-      </div>
-      <iframe
-        className='center' src='https://player.vimeo.com/video/186516527?color=FFD734&byline=0&portrait=0' width='640'
-        height='360'
-        frameBorder='0'
-        allowFullScreen='true'
-      />
-
-      <div className={styles.buttons}>
-        <Button
-          className={styles.button}
-          kind='black'
-          href='/framework/docs/'
-        >
-          Read the docs
-        </Button>
-        <Button
-          className={styles.button + ' ' + styles.yellow}
-          kind='black'
-          href='/framework/docs/getting-started/'
-        >
-          Get Started
-        </Button>
-      </div>
-      <h2 className={styles.headerText}>What can you do with the framework?</h2>
-      <p className='center' style={{ marginTop: '10px', marginBottom: '30px' }}>
-        Build applications comprised of microservices that run in response to events, that will auto-scale for you, and only charge you when they run.
-      </p>
-      <div className={styles.componentBox}>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/flash.svg' />
-          <h3>Move Fast</h3>
-          <p>Provision and deploy a REST API, data pipe-line, or one of many other use cases in minutes.
-          </p>
-        </div>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/signs.svg' />
-          <h3>Simplicity</h3>
-          <p>Our CLI makes it simple to manage and build a serverless architecture by abstracting away provider-level complexity.
-          </p>
-        </div>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/time-is-money.svg' />
-          <h3>100% Utilization</h3>
-          <p>Pay when your code runs, so you never have to worry about paying for idle server time.
-          </p>
+    <Default className={styles.page} {...props} fullWidth whiteLogo coloredHeader={false}>
+      <div className={styles.toolHero}>
+        <div className={styles.boundSmaller}>
+          <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
+          <h1 className={styles.toolTitle}>Serverless Framework</h1>
+          <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 18,000 stars on GitHub, the Framework started a movement.</p>
+          <div className={styles.toolProperties}>
+            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 18,391</div>
+            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-forum.png' />5,000</div>
+            <div className={styles.toolProperty}><img width={18} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-gitter.png' />1,700</div>
+          </div>
         </div>
       </div>
-      <div className={styles.componentBox}>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/handshake.svg' />
-          <h3>Collaboration</h3>
-          <p>We provide a flexible application structure for easy management of code, resources, and events across large projects & teams.
-          </p>
+      <div className={styles.sectionDemo}>
+        <div className={styles.bound}>
+          <div className={styles.demoMeta}>
+            <h2>Deploy your function right now.</h2>
+            <p className={styles.demoDescription}>Serverless Framework is your single toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure. Done.</p>
+            <div className={styles.demoLinks}>
+              <Link className={`${styles.btn} ${styles.btnBlue}`} to='/framework/docs/'>View Docs</Link>
+              <a className={`${styles.btn} ${styles.btnGrey}`} href='https://github.com/serverless/serverless'><img width={24} height={24} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon.svg' /> Github</a>
+            </div>
+          </div>
+          <div className={styles.demoHalf}>
+            <Terminal commands={terminalCommands} />
+          </div>
         </div>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/profile.svg' />
-          <h3>Community</h3>
-          <p>Serverless is an MIT open-source project, actively maintained by a vibrant and engaged community of developers.
-          </p>
+      </div>
+      <div className={styles.bound}>
+        <div className={styles.sectionFeatures}>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/provider-agnostic.svg' />
+            <h3 className={styles.featureTitle}>Provider agnostic</h3>
+            <p>Centrally deploy to AWS Lambda, Microsoft Azure, Google Cloud Platform and IBM OpenWhisk.</p>
+          </div>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/extensible.svg' />
+            <h3 className={styles.featureTitle}>Extensible with plugins</h3>
+            <p>Use dozens community-made plugins, or make a new one specific to your application. Framework is open source and easy to build for.</p>
+          </div>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/multi-lingual.svg' />
+            <h3 className={styles.featureTitle}>Multi-lingual</h3>
+            <p>Don’t be hamstrung by just one language: write functions in python, node.js, java, scala or C#.</p>
+          </div>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/automatic-scaling.svg' />
+            <h3 className={styles.featureTitle}>Automatic scaling</h3>
+            <p>Don’t spend time and resources provisioning unused infrastructure. Serverless architectures expand and contract on demand, cutting server costs by more than half.</p>
+          </div>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/faster-iterations.svg' />
+            <h3 className={styles.featureTitle}>Faster iteration</h3>
+            <p>Develop and deploy infinitely scalable applications within minutes. Provision and deploy a REST API or data pipeline without provisioning resources.</p>
+          </div>
+          <div className={styles.feature}>
+            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/unified-dev-experience.svg' />
+            <h3 className={styles.featureTitle}>Unified dev experience</h3>
+            <p>Develop, test and deploy functions and the events they react to on any cloud provider. Manage your services and functions in one place--from the CLI.</p>
+          </div>
         </div>
-        <div className={styles.component}>
-          <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/controls.svg' />
-          <h3>Infinite Scaleability</h3>
-          <p>Framework users are reacting to billions of events per month on AWS Lambda infrastructure.
-          </p>
-        </div>
+      </div>
+      <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+        <NewsletterStrip />
       </div>
     </Default>
   )

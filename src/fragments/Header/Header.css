@@ -1,9 +1,13 @@
 .header {
-  color: #eee;
-  background: $black2;
-  /*  background: transparent;*/
-  font-family: 'Avenir Next W00', sans-serif;
-  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+.coloredHeader {
+  background-color: #313131;
 }
 
 .bumper {
@@ -14,30 +18,31 @@
   height: $navHeight;
 }
 .navFixed {
-  background: $black2;
-  /*  background: transparent;*/
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 10;
-  height: $navHeight;
 }
 
 .navWrapper {
-  font-family: "Avenir Next W00", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   left: 0;
   right: 0;
-  max-width: 96rem;
+  max-width: 140rem;
   margin: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
   position: relative;
-  padding: 0 1rem 0 1rem;
+  color: #fff;
   &.fullWidth {
     max-width: 100%;
     width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -50,10 +55,20 @@
   align-items: center;
 }
 
-.logo, .logo img {
-  max-height: 35px;
-  position: relative;
-  z-index: 12;
+.logo {
+  color: inherit;
+  font-family: Serverless, monospace;
+  font-size: 2.6rem;
+  text-decoration: none;
+  min-width: 18rem;
+}
+.logoIcon {
+
+}
+.logoText {
+  font-size: 2.2rem;
+  vertical-align: top;
+  margin-left: 1rem;
 }
 .hiring {
   color: $black1 !important;
@@ -65,7 +80,7 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
-  li, a {
+  li {
     position: relative;
     display: flex;
     align-items: center;
@@ -73,23 +88,18 @@
   }
 }
 .link {
-  display: flex;
-  align-items: center;
-  padding: 7px 9px 12px 9px;
-  color: inherit;
+  display: block;
+  font-size: 1.4rem;
   text-decoration: none;
-  color: #888;
-  font-size: 15px;
-  font-weight: 200;
-  cursor: pointer;
-  transition: color 0.2s linear;
-  letter-spacing: -0.5px;
-  border: none;
-  &:hover {
-    color: #fff;
-    background: 0 0;
-  }
-
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 11rem;
+  text-align: center;
+}
+.linkSpecial {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transition: color 250ms, background-color 300ms;
 }
 .caret {
   width: 8px !important;
@@ -105,55 +115,20 @@
   padding: 0;
   position: absolute;
   top: 54px;
-  left: -50%;
+  left: 10%;
   background: #fff;
-  width: 185px;
-  border: 1px solid rgba(0, 0, 0, 0.0980392);
-  box-shadow: 0 2px 7px rgba(0, 0, 0, .05);
-  border-radius: 0px;
-  /*&:before {
-    background-color: rgb(255, 255, 255);
-    content: "";
-    opacity: 0;
-    transform: rotate(45deg);
-    visibility: hidden;
-    width: 12px;
-    display: inline-block;
-    height: 12px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.0980392);
-    border-image: initial;
-    transition: visibility 0s 0.2s, opacity 0.2s;
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s;
-  }*/
-  &:after {
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: transparent;
-    border-width: 16px;
-    margin-left: -16px;
-    left: 50%;
-    border-bottom-color: #fff;
-    bottom: 100%;
-    margin-bottom: -10px;
-    z-index: 0;
-  }
+  width: 13.2rem;
+  border-radius: 2px;
+  z-index: 1;
   .link {
+    position: relative;
     width: 100%;
     margin-top: -1px;
     justify-content: flex-start;
-    padding: 7px;
-    padding-left: 15px;
+    padding: 7px 7px 7px 15px;
+    text-align: left;
     color: rgba(0,0,0,.64);
     transition: color 0s linear;
-    position: relative;
     z-index: 1;
     &:hover {
       color: $black2;
@@ -162,6 +137,9 @@
   }
 }
 
+.navItem {
+  display: inline-block;
+}
 .navItem:hover {
   .subNavItems {
     display: block;
@@ -170,18 +148,19 @@
     color: #fff;
     background: 0 0;
   }
+  > .linkSpecial {
+    color: #4B4B4B;
+    background-color: #fff;
+  }
   .caret {
     opacity: 1;
   }
 }
 
-.yellowLink {
-  color: $yellow;
-  &:hover {
-    color: #fff;
-    background: 0 0;
-  }
+.mobileOnly {
+  display: none;
 }
+
 .link svg, .link :global(.SVGInline) {
   fill: white;
   width: 20px;
@@ -201,7 +180,7 @@ $lineSpacing: 10px;
 $lineHeight: 2px;
 .ham {
   position: absolute;
-  top: 15px;
+  top: 0.5rem ;
   left: 0;
   right: 0;
   bottom: 0;
@@ -257,7 +236,10 @@ $lineHeight: 2px;
   transform: rotate(-45deg);
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .mobileOnly {
+    display: block;
+  }
   .noMobile {
     display: none !important;
   }
@@ -282,6 +264,7 @@ $lineHeight: 2px;
     padding: 0px;
     li, a {
       width: 100%;
+      max-width: 20rem;
       display: block;
       position: inherit;
     }
@@ -295,11 +278,11 @@ $lineHeight: 2px;
   .navItems {
     margin-top: 70px;
     flex-direction: column;
-    height: 103vh;
+    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 105%;
-    padding-bottom: 100px;
+    padding-bottom: 3rem;
     .subNavItems {
       background: none;
     }
@@ -318,7 +301,11 @@ $lineHeight: 2px;
     }
   }
   .link {
-    padding: 7px 9px 0px 9px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .linkSpecial {
+    border-radius: 0;
   }
   .subNavItems {
     position: initial;
@@ -329,9 +316,9 @@ $lineHeight: 2px;
     }
     .link {
       padding: 5px;
-      padding-left: 15px;
-      margin-top: 0px;
+      margin-top: 0;
       position: inherit;
+      text-align: center;
       display: block;
       &:hover {
         background: #ffd426;
@@ -341,4 +328,80 @@ $lineHeight: 2px;
   .caret {
     display: none !important;
   }
+}
+.modalWrapper {
+  padding: 2rem;
+  ;
+
+  @media screen and (min-width: 768px) {
+    padding: 3rem 6rem;
+  }
+}
+.modalClose {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: 5rem;
+  font-size: 5rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 5rem;
+}
+.modalHeading {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-family: Serverless, monospace;
+}
+.modalText {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: justify;
+  font-weight: 300;
+  color: #4B4B4B;
+}
+.modalForm {
+  max-width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+  ;
+
+  input, select {
+    width: 100%;
+    padding: 1.3rem 1.5rem 1.5rem;
+    margin-bottom: 2.8rem;
+    border-radius: 3px;
+    border: 1px solid #CECECE;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: inherit;
+  }
+  button {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: white;
+    padding: 15px 30px;
+    margin: 3rem auto 0;
+    cursor: pointer;
+  }
+}
+.inputWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input:first-child {
+    margin-right: 1rem;
+  }
+}
+.sectionBreak {
+  height: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  composes: sectionBreak from "../../index.css";
 }
