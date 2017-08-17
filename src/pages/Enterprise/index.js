@@ -84,10 +84,10 @@ export default class PartnersPage extends React.Component {
               <input required='true' type='email' name='email' placeholder='Email' />
               <input name='company' placeholder='Company' />
               <span className={styles.feedbackSubmit}>
-            <button kind='black' className={styles.btn}>
-              Submit
-            </button>
-          </span>
+                <button kind='black' className={styles.btn}>
+                  Submit
+                </button>
+              </span>
             </AutoForm>
           </div>
         </div>
