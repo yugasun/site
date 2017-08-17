@@ -99,16 +99,16 @@ export default class Newsletter extends Component {
 
     return (
       <div className={classes}>
-        <div className='form-group'>
+        <div className={styles.formGroup}>
           <input
             ref='email'
             type='email'
-            className='form-control email'
+            className={styles.formControl}
             name='EMAIL'
             placeholder='you@example.com'
           />
         </div>
-        <button onClick={this.handleSubmit} className='btn btn-action'>
+        <button onClick={this.handleSubmit} className={styles.btnAction}>
           {text}
         </button>
       </div>
