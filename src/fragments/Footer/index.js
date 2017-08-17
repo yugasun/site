@@ -69,9 +69,7 @@ export default class Footer extends Component {
     let successDiv
     if (this.state.success) {
       successDiv = (
-        <div className={styles.success}>
-          Thanks! Someone will be in touch shortly.
-        </div>
+        <div className={styles.success}>Thanks! We will be in touch soon.</div>
       )
     }
 
