@@ -80,7 +80,7 @@ const DefaultLayout = (props) => {
   )
 
   const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
-  const classes = classnames(styles.base, wrapperClass, className)
+  const classes = classnames(styles.base, wrapperClass, className, (head.hasOwnProperty('topMargin') && head.topMargin === true ? styles.topMargin : ''))
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
