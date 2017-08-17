@@ -81,7 +81,7 @@ export default class Footer extends Component {
               <h4 className={styles.navTitle}>Toolkit</h4>
               <Link to='/framework/'>Serverless Framework</Link>
               <Link to='/event-gateway/'>Event Gateway</Link>
-              <Link to='/platform/docs'>Serverless Platform</Link>
+              <Link to='/platform/docs/'>Serverless Platform</Link>
               <a href='https://github.com/serverless/guide'>Serverless Guide</a>
             </div>
             <div className={styles.navBlock}>
