@@ -112,7 +112,6 @@ class Post extends Component {
 
     return (
       <Default {...props} className={styles.postPage}>
-        <EmitCTA style={{marginTop: '-15px', marginBottom: '25px'}} />
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
