@@ -140,10 +140,20 @@ $buttonPadding: 12px;
   border: 1px solid #F26D61;
   color: #FDFDFD;
   background-color: #F26D61;
+  ;
+  &:hover {
+    color: #F26D61;
+    background-color: #FDFDFD;
+  }
 }
 .redBordered {
   padding: 1rem 1.5rem;
   border: 1px solid;
   color: #F26D61;
-  background-color: #fff;
+  background-color: #FDFDFD;
+  ;
+  &:hover {
+    background-color: #F26D61;
+    color: #FDFDFD;
+  }
 }
