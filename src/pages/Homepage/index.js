@@ -21,15 +21,13 @@ export default class Homepage extends Component {
     return (
       <Default {...this.props} fullWidth coloredHeader={false}>
         <div className={styles.wrapper}>
-          <div className={styles.top}>
-            <div className={styles.bg}>
-              <div className={styles.hero}>
-                <h1 className={styles.tagline}>The way cloud should be.</h1>
-                <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
-                <div className={`${styles.boundSmaller} ${styles.heroCTAs}`}>
-                  <Button href='/framework/docs/' kind='red'>Framework Docs</Button>
-                  <Button href='javascript:' kind='redBordered'>Sign up for Beta</Button>
-                </div>
+          <div className={`${styles.hero} ${styles.boundSmaller}`}>
+            <div>
+              <h1 className={styles.tagline}>The way cloud should be.</h1>
+              <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
+              <div className={`${styles.heroCTAs}`}>
+                <Button href='/framework/docs/' kind='red'>Framework Docs</Button>
+                <Button href='javascript:' kind='redBordered'>Sign up for Beta</Button>
               </div>
             </div>
           </div>
