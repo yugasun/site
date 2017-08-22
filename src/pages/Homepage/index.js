@@ -41,7 +41,7 @@ export default class Homepage extends Component {
                 <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
                 <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
               </div>
-              <Link to='/framework/'>Learn more</Link>
+              <Button kind='redBordered' href='/framework/'>Learn more</Button>
             </div>
             <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
               <div>
@@ -52,7 +52,7 @@ export default class Homepage extends Component {
                 <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
                 <p>Span the cloud. React to any event, with any function, on any provider.</p>
               </div>
-              <Link to='/event-gateway/'>Learn more</Link>
+              <Button kind='red' href='/event-gateway/'>Learn more</Button>
             </div>
           </div>
           <div className={`${styles.introSecondary} ${styles.boundSmall}`}>
