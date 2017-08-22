@@ -9,7 +9,7 @@ $buttonPadding: 12px;
   cursor: pointer;
   display: inline-block;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 500;
   outline: none;
   position: relative;
   transition: all 0.3s;
@@ -127,7 +127,6 @@ $buttonPadding: 12px;
   user-select: none;
   border: none;
   font-size: 20px;
-  font-weight: 500;
   padding: 15px 25px;
   border-radius: 3px;
   height: auto;
@@ -135,4 +134,15 @@ $buttonPadding: 12px;
   color: rgba(0,0,0,.7);
   background-color: $yellow;
   min-width: 142px;
+}
+.red {
+  padding: 1rem 1.5rem;
+  border: 1px solid #F26D61;
+  color: #FDFDFD;
+  background-color: #F26D61;
+}
+.redBordered {
+  padding: 1rem 1.5rem;
+  border: 1px solid;
+  color: #F26D61;
 }
