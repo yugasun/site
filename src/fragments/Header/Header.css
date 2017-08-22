@@ -5,22 +5,43 @@
   left: 0;
   z-index: 1;
   background-color: transparent;
+  font-weight: 500;
 }
 .coloredHeader {
   background-color: #313131;
+  color: white;
+  ;
+  .navItem {
+    ;
+    &:hover .link {
+      color: white;
+    }
+  }
+  .subNavItems {
+    background-color: #2b303b;
+  }
+}
+.whiteLogo {
+  color: white;
+  ;
+
+  .linkSpecial {
+    color: inherit;
+  }
 }
 
 .bumper {
   height: $navHeight;
   width: 100%;
 }
-.navFixed, .navWrapper, .navItems, .navItem {
+.navFixed, .navWrapper {
   height: $navHeight;
 }
 .navFixed {
 }
 
 .navWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -30,8 +51,6 @@
   margin: auto;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
-  position: relative;
-  color: #fff;
   &.fullWidth {
     max-width: 100%;
     width: 100%;
@@ -40,10 +59,10 @@
     padding-right: 1rem;
     padding-left: 1rem;
   }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 
@@ -77,35 +96,35 @@
 }
 
 .navItems {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   list-style: none;
   li {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 .link {
   display: block;
-  font-size: 1.4rem;
   text-decoration: none;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  width: 11rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   text-align: center;
+  ;
+  &:hover {
+    background: rgba(238, 238, 238, 0.3);
+  }
 }
 .linkSpecial {
-  border: 1px solid #F26D61;
-  border-radius: 3px;
+  border: 1px solid;
+  color: #ff6352;
   transition: color 250ms, background-color 300ms;
 }
 .caret {
   width: 8px !important;
   height: 4px !important;
   margin-left: 6px;
-  stroke: white;
+  stroke: currentColor;
   opacity: .6;
   transition: opacity 0.2s linear;
 }
@@ -114,25 +133,28 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 54px;
+  top: 4rem;
   left: 10%;
   background: #fff;
   width: 13.2rem;
-  border-radius: 2px;
   z-index: 1;
+  list-style: none;
+  ;
   .link {
     position: relative;
     width: 100%;
     margin-top: -1px;
     justify-content: flex-start;
-    padding: 7px 7px 7px 15px;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 1rem;
     text-align: left;
     color: rgba(0,0,0,.64);
     transition: color 0s linear;
     z-index: 1;
+    ;
     &:hover {
       color: $black2;
-      background: rgba(238, 238, 238, 0.3);
     }
   }
 }
@@ -141,16 +163,16 @@
   display: inline-block;
 }
 .navItem:hover {
+  ;
   .subNavItems {
     display: block;
   }
   > .link {
-    color: #fff;
-    background: 0 0;
+    color: #4B4B4B;
   }
   > .linkSpecial {
-    color: #F26D61;
-    background-color: #fff;
+    color: #FDFDFD;
+    background-color: #F26D61;
   }
   .caret {
     opacity: 1;
@@ -162,7 +184,7 @@
 }
 
 .link svg, .link :global(.SVGInline) {
-  fill: white;
+  fill: currentColor;
   width: 20px;
   height: 20px;
 }
@@ -404,4 +426,7 @@ $lineHeight: 2px;
   margin-top: 3rem;
   margin-bottom: 3rem;
   composes: sectionBreak from "../../index.css";
+}
+.bound {
+  composes: bound from "../../index.css";
 }

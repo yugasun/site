@@ -65,8 +65,7 @@ video {
 
 body {
   font-size: $fontSize;
-  line-height: 1.9;
-  font-family: Gibson, sans-serif;
+  font-family: Avenir, sans-serif;
 }
 h1, h2, h3 {
   font-weight: 600;

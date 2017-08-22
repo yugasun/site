@@ -88,7 +88,9 @@ export default class Header extends Component {
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
     const containerStyle = (fullWidth) ? styles.fullWidth : ''
-    const headerClasses = (colored) ? classnames(styles.header, styles.coloredHeader) : styles.header
+    const headerClasses = whiteLogo ?
+      classnames(((colored) ? classnames(styles.header, styles.coloredHeader) : styles.header), styles.bound, styles.whiteLogo) :
+      classnames(((colored) ? classnames(styles.header, styles.coloredHeader) : styles.header), styles.bound)
     let errorDiv
     if (this.state.error) {
       errorDiv = (
