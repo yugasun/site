@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
+import Button from '../../components/Button'
 import handleClickAway from '../../utils/handleClickAway'
 import Modal from '../../components/Modal/Modal'
 import AutoForm from 'react-auto-form'
@@ -155,9 +156,9 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Link to='javascript:' onClick={this.openModal} className={`${styles.link} ${styles.linkSpecial}`}>
+                  <Button to='javascript:' kind='redBordered' onClick={this.openModal}>
                     Signup for beta
-                  </Link>
+                  </Button>
                 </li>
 
               </ul>
