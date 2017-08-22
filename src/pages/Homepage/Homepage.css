@@ -1,11 +1,10 @@
 .wrapper {
-  background: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 0;
   justify-content: flex-start;
-  color: #4B4B4B;
+  color: #242424;
 }
 .bound {
   composes: bound from "../../index.css";
@@ -18,15 +17,12 @@
 }
 .top {
   position: relative;
-  color: #fff;
 }
 .bg {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/home-hero-ground.png") repeat, no-repeat;
-  background-size: cover;
   @media screen and (min-width: 768px) {
     min-height: 62rem;
   }
@@ -41,40 +37,31 @@
   filter: invert(0.5);
 }
 .hero {
-  display: flex;
   position: inherit;
-  max-width: 68.8rem;
+  max-width: 64rem;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   width: 100%;
-  margin: 0 auto 5rem;
-  padding-top: 7rem;
-  flex-flow: row wrap;
-  align-self: flex-start;
-  overflow: hidden;
 }
 .tagline {
+  width: 100%;
+  margin-bottom: 3.3rem;
   font-size: 2.4rem;
   font-weight: bold;
-  margin-top: 3.5rem;
-  margin-bottom: 3.3rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  text-align: center;
   @media screen and (min-width: 768px) {
-    margin-top: 16rem;
     margin-bottom: 4rem;
-    font-size: 5rem;
+    font-size: 4.8rem;
   }
 }
 .heroDescription {
   max-width: 59rem;
   margin-top: 0;
   font-size: 1.6rem;
-  line-height: 2rem;
   text-align: justify;
 
   @media screen and (min-width: 768px) {
     font-size: 2.4rem;
-    line-height: 3.6rem;
   }
 }
 .introSecondary {
@@ -85,7 +72,6 @@
   padding-right: 0;
   padding-left: 0;
   font-size: 1.6rem;
-  line-height: 2rem;
   text-align: justify;
   ;
 
@@ -93,7 +79,6 @@
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     font-size: 2.4rem;
-    line-height: 3.7rem;
     font-weight: 300;
   }
 }
@@ -101,14 +86,12 @@
   margin-top: 6rem;
   margin-bottom: 3rem;
   font-size: 2.4rem;
-  line-height: 2.1rem;
   text-align: center;
   color: #464646;
   ;
   @media screen and (min-width: 768px) {
     margin-bottom: 6rem;
     font-size: 3rem;
-    line-height: 3.4rem;
   }
 }
 .sectionBreak {
@@ -157,7 +140,6 @@
 }
 .featureName {
   font-size: 1.6rem;
-  line-height: 1.8rem;
   font-weight: 600;
   margin-bottom: 0;
   color: #464646;
@@ -169,7 +151,6 @@
 }
 .featureDescription {
   font-size: 1.6rem;
-  line-height: 2.4rem;
   ;
 
   @media screen and (min-width: 768px) {
@@ -320,7 +301,6 @@
 .toolCardTitle {
   margin-top: 3.2rem;
   font-size: 3rem;
-  line-height: 3.6rem;
   font-weight: normal;
   font-family: Serverless, monospace;
 
@@ -350,7 +330,6 @@
 }
 .toolCardTagline {
   font-size: 2rem;
-  line-height: 2.2rem;
   font-weight: 600;
 }
 .toolCardFramework {
