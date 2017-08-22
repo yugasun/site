@@ -153,6 +153,16 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
+                  <Link to='/community/meetups/testtwo/' className={styles.link}>
+                    testtwo
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
+                  <Link to='/community/meetups/testthree/' className={styles.link}>
+                    testthree
+                  </Link>
+                </li>
+                <li className={styles.navItem}>
                   <Link to='javascript:' onClick={this.openModal} className={`${styles.link} ${styles.linkSpecial}`}>
                     Signup for beta
                   </Link>
