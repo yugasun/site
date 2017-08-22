@@ -164,7 +164,7 @@ export default class Header extends Component {
                 </li>
                 <li className={styles.navItem}>
                   <Link to='/community/meetups/testfour/' className={styles.link}>
-                    testfour
+                    testfourx
                   </Link>
                 </li>
                 <li className={styles.navItem}>

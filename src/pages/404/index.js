@@ -21,6 +21,7 @@ export default class PageError extends Component {
     error: 404,
     errorText: 'Page Not Found',
   }
+  static hasLoadingState = true
   componentDidMount() {
     const { error } = this.props
     const url = window.location.href

@@ -9,6 +9,7 @@ import { getParams } from '../../utils/analytics/source/urlParams'
 import styles from './index.css'
 
 export default class Splash extends Component { // eslint-disable-line
+  static hasLoadingState = true
   componentDidMount() {
     const params = getParams()
     this.setState({ // eslint-disable-line
