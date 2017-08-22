@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router'
-// import Button from '@serverless/components/Button'
+import Button from '../../components/Button'
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
 import NewsletterStrip from '../../fragments/NewsletterStrip'
@@ -26,6 +26,10 @@ export default class Homepage extends Component {
               <div className={styles.hero}>
                 <h1 className={styles.tagline}>The way cloud should be.</h1>
                 <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
+                <div className={`${styles.boundSmaller} ${styles.heroCTAs}`}>
+                  <Button href='/framework/docs/' kind='red'>Framework Docs</Button>
+                  <Button href='javascript:' kind='redBordered'>Sign up for Beta</Button>
+                </div>
               </div>
             </div>
           </div>

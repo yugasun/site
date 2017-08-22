@@ -20,11 +20,13 @@
 }
 .bg {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 8rem;
+  ;
   @media screen and (min-width: 768px) {
-    min-height: 62rem;
+    min-height: 60rem;
   }
 }
 .logoWrapper {
@@ -81,6 +83,11 @@
     font-size: 2.4rem;
     font-weight: 300;
   }
+}
+.heroCTAs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
 }
 .sectionHeading {
   margin-top: 6rem;
