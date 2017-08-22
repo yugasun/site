@@ -97,7 +97,7 @@
   text-align: center;
 }
 .linkSpecial {
-  border: 1px solid #fff;
+  border: 1px solid #F26D61;
   border-radius: 3px;
   transition: color 250ms, background-color 300ms;
 }
@@ -149,7 +149,7 @@
     background: 0 0;
   }
   > .linkSpecial {
-    color: #4B4B4B;
+    color: #F26D61;
     background-color: #fff;
   }
   .caret {
