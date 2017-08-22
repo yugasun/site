@@ -320,6 +320,9 @@ a.editLinkWrapper {
     padding: 0;
   }
 }
+strong {
+  font-weight: 600;
+}
 .subPageLinkHeading {
   font-weight: bold;
   display: block;
