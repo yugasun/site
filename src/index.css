@@ -21,7 +21,7 @@
   padding-right: 2.4rem;
   padding-left: 2.4rem;
 }
-.boundSmall {
+.boundMedium {
   width: 100%;
   max-width: 88rem;
   margin-left: auto;
@@ -29,7 +29,7 @@
   padding-right: 2.4rem;
   padding-left: 2.4rem;
 }
-.boundSmaller {
+.boundSmall {
   width: 100%;
   max-width: 64rem;
   margin-left: auto;

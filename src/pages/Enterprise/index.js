@@ -59,9 +59,9 @@ export default class PartnersPage extends React.Component {
     return (
       <Default className={styles.enterprise} {...this.props} fullWidth whiteLogo={true} coloredHeader={false}>
         <div className={styles.hero}>
-          <div className={styles.boundSmall}>
+          <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Accelerate serverless adoption</h1>
-            <p className={`${styles.heroDescription} ${styles.boundSmaller}`}>With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.</p>
+            <p className={`${styles.heroDescription} ${styles.boundSmall}`}>With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.</p>
           </div>
         </div>
         <div className={`${styles.sectionAction} ${styles.bound}`}>
@@ -93,11 +93,11 @@ export default class PartnersPage extends React.Component {
         </div>
         <div className={`${styles.bound} ${styles.clientsSection}`}>
           <h3 className={styles.heading}>Developers at these companies use Serverless</h3>
-          <div className={styles.boundSmall}>
+          <div className={styles.boundMedium}>
             <ClientsLogos style={{marginTop: '3rem'}} />
           </div>
         </div>
-        <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+        <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
           <NewsletterStrip />
         </div>
       </Default>

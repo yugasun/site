@@ -10,7 +10,7 @@ const FrameworkPage = (props) => {
   return (
     <Default className={styles.page} {...props} fullWidth whiteLogo coloredHeader={false}>
       <div className={styles.toolHero}>
-        <div className={styles.boundSmaller}>
+        <div className={styles.boundSmall}>
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
           <h1 className={styles.toolTitle}>Serverless Framework</h1>
           <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 18,000 stars on GitHub, the Framework started a movement.</p>
@@ -70,7 +70,7 @@ const FrameworkPage = (props) => {
           </div>
         </div>
       </div>
-      <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+      <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
         <NewsletterStrip />
       </div>
     </Default>

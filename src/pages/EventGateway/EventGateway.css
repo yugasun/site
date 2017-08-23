@@ -1,11 +1,11 @@
 .bound {
   composes: bound from "../../index.css";
 }
+.boundMedium {
+  composes: boundMedium from "../../index.css";
+}
 .boundSmall {
   composes: boundSmall from "../../index.css";
-}
-.boundSmaller {
-  composes: boundSmaller from "../../index.css";
 }
 .toolHero {
   background-color: #159BBA;

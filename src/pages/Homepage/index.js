@@ -21,7 +21,7 @@ export default class Homepage extends Component {
     return (
       <Default {...this.props} fullWidth coloredHeader={false}>
         <div className={styles.wrapper}>
-          <div className={`${styles.hero} ${styles.boundSmaller}`}>
+          <div className={`${styles.hero} ${styles.boundSmall}`}>
             <div>
               <h1 className={styles.tagline}>The way cloud should be.</h1>
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
@@ -55,12 +55,12 @@ export default class Homepage extends Component {
               <Button kind='red' href='/event-gateway/'>Learn more</Button>
             </div>
           </div>
-          <div className={`${styles.introSecondary} ${styles.boundSmall}`}>
+          <div className={`${styles.introSecondary} ${styles.boundMedium}`}>
             <div className={styles.logoWrapper}>
               <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
             </div>
             <h2 className={styles.sectionHeading}>Build faster with serverless architectures.</h2>
-            <p className={`${styles.boundSmall} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
+            <p className={`${styles.boundMedium} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
           </div>
           <div className={styles.featuresColumns}>
             <div className={styles.feature}>
@@ -81,10 +81,10 @@ export default class Homepage extends Component {
           </div>
           <div className={styles.sectionBreak} />
           <div className={`${styles.section} ${styles.testimonialSection}`}>
-            <div className={styles.boundSmall}>
+            <div className={styles.boundMedium}>
               <ClientsLogos />
             </div>
-            <div className={`${styles.testimonial} ${styles.boundSmall}`}>
+            <div className={`${styles.testimonial} ${styles.boundMedium}`}>
               <div className={styles.testimonialTextBlock}>
                 <div className={styles.testimonialGround} />
                 <p className={styles.testimonialText}>“The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster.”</p>
@@ -95,7 +95,7 @@ export default class Homepage extends Component {
               </div>
             </div>
           </div>
-          <div className={`${styles.boundSmall} ${styles.newsletterSection}`}>
+          <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
             <NewsletterStrip />
           </div>
         </div>
