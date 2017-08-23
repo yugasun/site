@@ -77,9 +77,11 @@
 }
 
 .navItems {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
   list-style: none;
+  ;
   li {
     position: relative;
     display: flex;
@@ -89,17 +91,11 @@
 }
 .link {
   display: block;
-  font-size: 1.4rem;
   text-decoration: none;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 11rem;
   text-align: center;
-}
-.linkSpecial {
-  border: 1px solid #F26D61;
-  border-radius: 3px;
-  transition: color 250ms, background-color 300ms;
 }
 .caret {
   width: 8px !important;
@@ -147,10 +143,6 @@
   > .link {
     color: #fff;
     background: 0 0;
-  }
-  > .linkSpecial {
-    color: #F26D61;
-    background-color: #fff;
   }
   .caret {
     opacity: 1;
@@ -328,80 +320,4 @@ $lineHeight: 2px;
   .caret {
     display: none !important;
   }
-}
-.modalWrapper {
-  padding: 2rem;
-  ;
-
-  @media screen and (min-width: 768px) {
-    padding: 3rem 6rem;
-  }
-}
-.modalClose {
-  position: absolute;
-  top: 0;
-  right: 2rem;
-  width: 5rem;
-  font-size: 5rem;
-  cursor: pointer;
-  text-align: center;
-  line-height: 5rem;
-}
-.modalHeading {
-  text-align: center;
-  font-size: 2.4rem;
-  line-height: 2.9rem;
-  font-family: Serverless, monospace;
-}
-.modalText {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  text-align: justify;
-  font-weight: 300;
-  color: #4B4B4B;
-}
-.modalForm {
-  max-width: 32rem;
-  margin-right: auto;
-  margin-left: auto;
-  ;
-
-  input, select {
-    width: 100%;
-    padding: 1.3rem 1.5rem 1.5rem;
-    margin-bottom: 2.8rem;
-    border-radius: 3px;
-    border: 1px solid #CECECE;
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    font-weight: 300;
-    font-style: italic;
-    color: inherit;
-  }
-  button {
-    display: block;
-    width: 100%;
-    max-width: 20rem;
-    border: 1px solid black;
-    border-radius: 3px;
-    background: white;
-    padding: 15px 30px;
-    margin: 3rem auto 0;
-    cursor: pointer;
-  }
-}
-.inputWrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  input:first-child {
-    margin-right: 1rem;
-  }
-}
-.sectionBreak {
-  height: 5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  composes: sectionBreak from "../../index.css";
 }
