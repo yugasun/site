@@ -20,6 +20,11 @@
   margin-right: auto;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
+
+  .boundMedium, .boundSmall {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .boundMedium {
   width: 100%;
