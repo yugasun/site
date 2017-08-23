@@ -8,7 +8,6 @@ $buttonPadding: 12px;
   background: none;
   cursor: pointer;
   display: inline-block;
-  letter-spacing: 1px;
   font-weight: 400;
   outline: none;
   position: relative;
@@ -135,4 +134,27 @@ $buttonPadding: 12px;
   color: rgba(0,0,0,.7);
   background-color: $yellow;
   min-width: 142px;
+}
+.redBordered {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #F26D61;
+  border-radius: 3px;
+  transition: color 250ms, background-color 300ms;
+  ;
+  &:hover {
+    color: #F26D61;
+    background-color: #fff;
+  }
+}
+.whiteBordered {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid;
+  border-radius: 3px;
+  color: #fff;
+  transition: color 250ms, background-color 300ms;
+  ;
+  &:hover {
+    color: #000000;
+    background-color: #fff;
+  }
 }
