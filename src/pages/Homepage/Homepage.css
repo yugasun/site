@@ -15,9 +15,6 @@
 .boundSmall {
   composes: boundSmall from "../../index.css";
 }
-.top {
-  position: relative;
-}
 .logoWrapper {
   margin-top: 2rem;
   margin-bottom: 2rem;
