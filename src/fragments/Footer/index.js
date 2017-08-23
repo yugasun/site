@@ -16,20 +16,20 @@ export default class Footer extends Component {
               <Link to='/framework/'>Serverless Framework</Link>
               <Link to='/event-gateway/'>Event Gateway</Link>
               <Link to='/platform/docs/'>Serverless Platform</Link>
-              <a href='https://github.com/serverless/guide'>Serverless Guide</a>
+              <a href='https://github.com/serverless/guide' target='_blank'>Serverless Guide</a>
             </div>
             <div className={styles.navBlock}>
               <h4 className={styles.navTitle}>Work with us</h4>
               <Link to='/enterprise/'>Enterprise</Link>
-              <a href='https://github.com/serverless/plugins'>Plugins</a>
+              <a href='https://github.com/serverless/plugins' target='_blank'>Plugins</a>
             </div>
             <div className={styles.navBlock}>
               <h4 className={styles.navTitle}>Talk to us</h4>
-              <a href='https://gitter.im/serverless/serverless'>Gitter</a>
-              <a href='https://forum.serverless.com/'>Forum</a>
-              <a href='https://twitter.com/goserverless'>Twitter</a>
-              <a href='https://www.facebook.com/serverless/'>Facebook</a>
-              <a href='https://www.instagram.com/serverlessinc/'>Instagram</a>
+              <a href='https://gitter.im/serverless/serverless' target='_blank'>Gitter</a>
+              <a href='https://forum.serverless.com/' target='_blank'>Forum</a>
+              <a href='https://twitter.com/goserverless' target='_blank'>Twitter</a>
+              <a href='https://www.facebook.com/serverless/' target='_blank'>Facebook</a>
+              <a href='https://www.instagram.com/serverlessinc/' target='_blank'>Instagram</a>
             </div>
             <div className={styles.navBlock}>
               <h4 className={styles.navTitle}>About</h4>
