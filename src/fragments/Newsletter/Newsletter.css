@@ -47,11 +47,11 @@ $height: 50px;
 .black {
   color: #272727;
   .formControl {
-    border: 1px solid;
+    border: 1px solid #000;
   }
   .btnAction {
-    color: inherit;
-    border-color: currentColor;
+    color: black;
+    border-color: black;
     text-transform: lowercase;
     background: #eee;
   }
