@@ -4,21 +4,9 @@ $height: 50px;
   display: flex;
 }
 
-.black {
-  color: #272727;
-
-  .formControl {
-    border: 1px solid;
-  }
-  .btnAction {
-    color: inherit;
-    border-color: currentColor;
-  }
-}
-
 .formGroup {
   width: 70%;
-  padding-right: 1.6rem;
+  padding-right: 10px;
 }
 .formControl {
   width: 100%;
@@ -28,7 +16,7 @@ $height: 50px;
   background: 0 0;
   border: none;
   height: $height;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 300;
   color: $black2;
@@ -47,16 +35,39 @@ $height: 50px;
   cursor: pointer;
   user-select: none;
   border: 1px solid #fff;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border-radius: 3px;
   height: $height;
   font-family: Serverless, monospace;
   color: rgb(255, 255, 255);
   background-color: transparent;
-  min-width: 30%;
-  text-transform: uppercase;
+  padding: 0px 15px;
 }
+
+.black {
+  color: #272727;
+  .formControl {
+    border: 1px solid;
+  }
+  .btnAction {
+    color: inherit;
+    border-color: currentColor;
+    text-transform: lowercase;
+    background: #eee;
+  }
+}
+
 @media (max-width: 768px) {
+  .emailForm {
+    flex-direction: column;
+    align-items: center;
+  }
+  .formGroup {
+    width: 100%;
+  }
+  .formControl {
+    margin-bottom: 10px;
+  }
   .sl-email-inner {
     width: 100%;
     margin: 0 auto;
