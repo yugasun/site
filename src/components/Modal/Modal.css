@@ -80,3 +80,9 @@ $dialog-translate-y: 4rem;
   padding-left: $dialog-navigation-padding;
   margin-left: $dialog-navigation-padding;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
