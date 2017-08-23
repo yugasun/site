@@ -13,7 +13,9 @@ export default class PlatformBetaCTA extends Component {
     const { kind } = this.props
     return (
       <Auth loggedInComponent={<span />}>
-        <Button href='javascript:' kind={kind || 'redBordered'} onClick={this.openModal}>Sign up for Beta</Button>
+        <Button href='javascript:' kind={kind || 'redBordered'} onClick={this.openModal}>
+          Sign up for Beta
+        </Button>
       </Auth>
     )
   }
