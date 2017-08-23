@@ -32,27 +32,29 @@ export default class Homepage extends Component {
             </div>
           </div>
           <div className={`${styles.section} ${styles.toolkitSection}`}>
-            <div className={`${styles.toolCard} ${styles.toolCardFramework}`}>
-              <div>
-                <div className={styles.toolCardTop}>
-                  <h3 className={styles.toolCardTitle}>Serverless Framework</h3>
-                  <img  className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
+            <div className={styles.boundMedium}>
+              <div className={`${styles.toolCard} ${styles.toolCardFramework}`}>
+                <div>
+                  <div className={styles.toolCardTop}>
+                    <h3 className={styles.toolCardTitle}>Serverless Framework</h3>
+                    <img  className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
+                  </div>
+                  <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
+                  <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
                 </div>
-                <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
-                <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
+                <Button kind='redBordered' href='/framework/'>Learn more</Button>
               </div>
-              <Button kind='redBordered' href='/framework/'>Learn more</Button>
-            </div>
-            <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
-              <div>
-                <div className={styles.toolCardTop}>
-                  <h3 className={styles.toolCardTitle}>Event Gateway</h3>
-                  <img className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
+              <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
+                <div>
+                  <div className={styles.toolCardTop}>
+                    <h3 className={styles.toolCardTitle}>Event Gateway</h3>
+                    <img className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
+                  </div>
+                  <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
+                  <p>Span the cloud. React to any event, with any function, on any provider.</p>
                 </div>
-                <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
-                <p>Span the cloud. React to any event, with any function, on any provider.</p>
+                <Button kind='red' href='/event-gateway/'>Learn more</Button>
               </div>
-              <Button kind='red' href='/event-gateway/'>Learn more</Button>
             </div>
           </div>
           <div className={`${styles.introSecondary} ${styles.boundMedium}`}>
