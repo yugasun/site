@@ -15,15 +15,6 @@
 .boundSmall {
   composes: boundSmall from "../../index.css";
 }
-.logoWrapper {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.providerLogos {
-  margin: auto;
-  filter: invert(0.5);
-}
 .hero {
   position: inherit;
   display: flex;
@@ -158,6 +149,15 @@
   .toolCardIcon {
     background-color: rgba(255, 255, 255, 0.15);
   }
+}
+.logoWrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.providerLogos {
+  margin: auto;
+  filter: invert(0.5);
 }
 .sectionHeading {
   margin-top: 6rem;
