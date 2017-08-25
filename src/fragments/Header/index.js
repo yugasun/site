@@ -103,7 +103,6 @@ export default class Header extends Component {
                 <li className={styles.navItem}>
                   <PlatformBetaCTA />
                 </li>
-
               </ul>
             </nav>
           </div>
