@@ -156,7 +156,7 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Button to='javascript:' kind='redBordered' onClick={this.openModal}>
+                  <Button to='javascript:' kind={whiteLogo ? 'whiteBordered' : 'redBordered'} onClick={this.openModal}>
                     Signup for beta
                   </Button>
                 </li>
