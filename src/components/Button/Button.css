@@ -1,7 +1,8 @@
 $borderColor: #a5a5a5;
 $buttonPadding: 12px;
 .btn {
-  border: none;
+  padding: 0.75em 1.25em;
+  border: 1px solid;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -136,10 +137,9 @@ $buttonPadding: 12px;
   min-width: 142px;
 }
 .blue {
-  padding: 1rem 1.5rem;
-  background-color: $blue;
+  border-color: $blue;
   color: $white;
-  border: 1px solid $blue;
+  background-color: $blue;
 
   &:hover {
     background-color: $white;
@@ -147,8 +147,7 @@ $buttonPadding: 12px;
   }
 }
 .red {
-  padding: 1rem 1.5rem;
-  border: 1px solid $red2;
+  border-color: $red2;
   color: $white;
   background-color: $red2;
   ;
@@ -158,8 +157,6 @@ $buttonPadding: 12px;
   }
 }
 .redBordered {
-  padding: 1rem 1.5rem;
-  border: 1px solid;
   color: $red2;
   background-color: $white;
   ;
@@ -169,8 +166,6 @@ $buttonPadding: 12px;
   }
 }
 .whiteBordered {
-  padding: 0.75em 1.5em;
-  border: 1px solid;
   color: $white;
   background-color: transparent;
   ;
