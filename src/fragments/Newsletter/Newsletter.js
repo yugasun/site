@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import { getItemSync } from '../../utils/storage'
 import track from '../../utils/analytics/track'
+import Button from '../../components/Button/Button'
 import styles from './Newsletter.css'
 import classnames from 'classnames'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
@@ -109,9 +110,7 @@ export default class Newsletter extends Component {
             placeholder='you@example.com'
           />
         </div>
-        <button onClick={this.handleSubmit} className={styles.btnAction}>
-          {text}
-        </button>
+        <Button onClick={this.handleSubmit} kind='whiteBordered' style={{width: '30%'}}>{text}</Button>
       </div>
     )
   }
