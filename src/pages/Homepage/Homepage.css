@@ -145,12 +145,11 @@
   font-weight: 600;
 }
 .toolCardFramework {
-  background-color: #FD5750;
-  border-color: #FDFDFD;
-  color: white;
+  background-color: #FDFDFD;
+  border-color: #FD5750;
   ;
   .toolCardIcon {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #FD5750;
   }
 }
 .logoWrapper {

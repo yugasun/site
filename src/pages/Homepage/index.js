@@ -42,7 +42,7 @@ export default class Homepage extends Component {
                   <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
                   <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
                 </div>
-                <Button kind='redBordered' href='/framework/'>Learn more</Button>
+                <Button kind='red' href='/framework/'>Learn more</Button>
               </div>
               <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
                 <div>
