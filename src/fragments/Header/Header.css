@@ -49,8 +49,7 @@
   right: 0;
   max-width: 140rem;
   margin: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  ;
   &.fullWidth {
     max-width: 100%;
     width: 100%;
@@ -186,9 +185,9 @@ a {
   z-index: 9;
   display: none;
 }
-$hamSize: 30px;
-$lineSpacing: 10px;
-$lineHeight: 2px;
+$hamSize: 3rem;
+$lineSpacing: 1rem;
+$lineHeight: 0.2rem;
 .ham {
   position: absolute;
   top: 0.5rem ;
@@ -211,7 +210,7 @@ $lineHeight: 2px;
 .bar {
   position: relative;
   transform: translateY($lineSpacing);
-  background: white;
+  background: $black;
   transition: all 0ms 300ms;
 }
 .bar.animate {
@@ -223,7 +222,7 @@ $lineHeight: 2px;
   position: absolute;
   left: 0;
   bottom: $lineSpacing;
-  background: white;
+  background: $black;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -232,7 +231,7 @@ $lineHeight: 2px;
   position: absolute;
   left: 0;
   top: $lineSpacing;
-  background: white;
+  background: $black;
   transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -266,13 +265,13 @@ $lineHeight: 2px;
   }
   .open {
     display: block;
-    width: 100%;
-    background: $black2;
+    width: calc(100% + 4.8rem);
+    background: $white;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: -2.4rem;
+    top: 0;
     z-index: 10;
-    padding: 0px;
+    padding: 0;
     li, a {
       width: 100%;
       max-width: 20rem;
@@ -292,16 +291,15 @@ $lineHeight: 2px;
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 105%;
+    width: 100%;
     padding-bottom: 3rem;
     .subNavItems {
       background: none;
     }
     .subNavItems a {
-      color: #fff;
+      color: $black;
     }
     .subNavItems, .subNavItems:hover {
-      display: block;
       display: block;
       width: 100%;
       border: none;
