@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import styles from './Terminal.css'
 
 const propTypes = {
+  style: PropTypes.object,
   children: PropTypes.any,
+  onComplete: PropTypes.function,
   commands: PropTypes.array,
 }
 
@@ -26,7 +28,7 @@ export default class TerminalCommands extends Component {
     window.clearTimeout(this.delay)
   }
   writeText() {
-    const { commands } = this.props
+    const { commands, onComplete } = this.props
     let contents
     if (commands[this.lineIndex].skip) {
       contents = commands[this.lineIndex].text
@@ -62,6 +64,11 @@ export default class TerminalCommands extends Component {
           this.writeText()
         }, 200)
       }
+      if (this.lineIndex === commands.length) {
+        if (onComplete && typeof onComplete === 'function') {
+          onComplete()
+        }
+      }
     } else {
       const timeout = (commands[this.lineIndex].skip) ? 0 : this.typeSpeed
       this.delay = setTimeout(() => {
@@ -89,7 +96,7 @@ export default class TerminalCommands extends Component {
     return (
       <div className={styles.wrapper}>
 
-        <div className={styles.terminal}>
+        <div style={this.props.style} className={styles.terminal}>
           <div className={styles.terminalHead}>
             <div className={`${styles.circle} ${styles.close}`} />
             <div className={`${styles.circle} ${styles.turn}`} />
