@@ -168,3 +168,15 @@ $buttonPadding: 12px;
     color: $white;
   }
 }
+.whiteBordered {
+  padding: 0.75em 1.5em;
+  border: 1px solid;
+  color: $white;
+  background-color: transparent;
+  ;
+  &:hover {
+    border-color: $white;
+    color: $black2;
+    background-color: $white;
+  }
+}
