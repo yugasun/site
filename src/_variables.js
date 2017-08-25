@@ -17,6 +17,7 @@ module.exports = () => {
     gray2: '#202020',
     black1: '#212121',
     black2: '#191919',
+    white: '#FDFDFD',
     // -- Fonts
     fontSize: baseFontSize,
     fontSizeTiny: formatFont(1.2),
