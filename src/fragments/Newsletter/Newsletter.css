@@ -24,15 +24,13 @@ $height: 50px;
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-radius: 3px;
-  background: 0 0;
   border: none;
   height: $height;
   font-size: 1.8rem;
-  font-style: italic;
+  font-family: inherit;
   font-weight: 300;
   color: $black2;
-  background-color: #fff;
+  background-color: $white;
   &:focus {
     outline: 0!important;
   }
