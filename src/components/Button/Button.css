@@ -137,34 +137,34 @@ $buttonPadding: 12px;
 }
 .blue {
   padding: 1rem 1.5rem;
-  background-color: #159BBA;
-  color: #FDFDFD;
-  border: 1px solid #159BBA;
+  background-color: $blue;
+  color: $white;
+  border: 1px solid $blue;
 
   &:hover {
-    background-color: #fdfdfd;
-    color: #159BBA;
+    background-color: $white;
+    color: $blue;
   }
 }
 .red {
   padding: 1rem 1.5rem;
-  border: 1px solid #F26D61;
-  color: #FDFDFD;
-  background-color: #F26D61;
+  border: 1px solid $red2;
+  color: $white;
+  background-color: $red2;
   ;
   &:hover {
-    color: #F26D61;
-    background-color: #FDFDFD;
+    color: $red2;
+    background-color: $white;
   }
 }
 .redBordered {
   padding: 1rem 1.5rem;
   border: 1px solid;
-  color: #F26D61;
-  background-color: #FDFDFD;
+  color: $red2;
+  background-color: $white;
   ;
   &:hover {
-    background-color: #F26D61;
-    color: #FDFDFD;
+    background-color: $red2;
+    color: $white;
   }
 }
