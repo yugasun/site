@@ -16,6 +16,7 @@ module.exports = () => {
     blue: '#159BBA',
     gray1: '#aaa',
     gray2: '#202020',
+    black: '#333333',
     black1: '#212121',
     black2: '#191919',
     white: '#FDFDFD',
