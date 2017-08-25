@@ -167,9 +167,6 @@ a {
   .subNavItems {
     display: block;
   }
-  > .link {
-    color: #4B4B4B;
-  }
   > .linkSpecial {
     color: $white;
     background-color: #F26D61;
