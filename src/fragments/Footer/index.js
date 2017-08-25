@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import styles from './index.css'
 import Modal from '../../components/Modal/Modal'
+import Button from '../../components/Button/Button'
 import AutoForm from 'react-auto-form'
 import airtablePost from '../../utils/forms/airtable'
 import headerStyles from '../Header/Header.css'
@@ -105,7 +106,7 @@ export default class Footer extends Component {
           </nav>
           <div className={styles.ctaBlock}>
             <p className={styles.ctaText}>It’s not too late - sign up for the Platform beta and we’ll let you know when it’s ready for prime time.</p>
-            <a onClick={this.openModal} className={styles.cta} href='javascript:'>Platform beta</a>
+            <Button onClick={this.openModal} className={styles.cta} kind='whiteBordered' style={{marginTop: '1rem', marginBottom: '1rem'}}>Platform beta</Button>
             <p className={styles.madeStatement}>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand.<br/><br/>
               Serverless, Inc. © {year}</p>
           </div>

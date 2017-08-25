@@ -51,21 +51,6 @@
 .ctaBlock {
   width: 30rem;
 }
-.cta {
-  display: inline-block;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  padding: 0.5em 1.25em;
-  border: 1px solid;
-  border-radius: 3px;
-  transition: color 200ms, background-color 250ms;
-  ;
-
-  &:hover {
-    color: #000;
-    background-color: #fff;
-  }
-}
 .madeStatement {
   color: #8C8C8C;
 }
