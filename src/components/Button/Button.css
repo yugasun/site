@@ -135,6 +135,17 @@ $buttonPadding: 12px;
   background-color: $yellow;
   min-width: 142px;
 }
+.blue {
+  padding: 1rem 1.5rem;
+  background-color: #159BBA;
+  color: #FDFDFD;
+  border: 1px solid #159BBA;
+
+  &:hover {
+    background-color: #fdfdfd;
+    color: #159BBA;
+  }
+}
 .red {
   padding: 1rem 1.5rem;
   border: 1px solid #F26D61;
