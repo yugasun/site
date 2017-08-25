@@ -59,7 +59,10 @@ export default class Homepage extends Component {
           </div>
           <div className={`${styles.introSecondary} ${styles.boundMedium}`}>
             <div className={styles.logoWrapper}>
-              <img className={styles.providerLogos} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/providers_black.png'} alt='aws Lambda' />
+              <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/aws-black.png'} alt='aws Lambda' />
+              <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/gcf-black.png'} alt='aws Lambda' />
+              <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/azure-black.png'} alt='aws Lambda' />
+              <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/openwhisk-black.png'} alt='aws Lambda' />
             </div>
             <h2 className={styles.sectionHeading}>Build faster with serverless architectures.</h2>
             <p className={`${styles.boundMedium} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
