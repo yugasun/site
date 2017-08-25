@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import Button from '../../components/Button'
 import handleClickAway from '../../utils/handleClickAway'
-import Modal from '../../components/Modal/Modal'
-import AutoForm from 'react-auto-form'
-import airtablePost from '../../utils/forms/airtable'
+import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
 import styles from './Header.css'
 import classnames from 'classnames'
 
@@ -33,42 +31,6 @@ export default class Header extends Component {
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
   }
-  openModal = (e) => {
-    e.preventDefault()
-    this.setState({
-      showModal: true,
-    })
-  }
-  handleToggle = (e) => {
-    e.preventDefault()
-    this.setState({
-      showModal: !this.state.showModal,
-    })
-  }
-  handleSubmit = (event, data) => {
-    event.preventDefault()
-    const token = 'keyWrghCH61ag6tA3'
-    const url = 'https://api.airtable.com/v0/appa9MFt4j0J2mGNq/Table%201'
-    const airTableData = {
-      fields: {
-        FirstName: data.firstName,
-        LastName: data.lastName,
-        Email: data.email,
-        Role: data.role,
-        DateAdded: new Date()
-      }
-    }
-    airtablePost(url, airTableData, token).then((_response) => {
-      this.setState({
-        success: true,
-      })
-    })
-      .catch((err) => {
-        this.setState({
-          error: err
-        })
-      })
-  }
   closeNav(e) {
     const toggleNode = this.refs.toggle
     const isOutsideClick = handleClickAway(toggleNode, e)
@@ -85,27 +47,12 @@ export default class Header extends Component {
   }
   render() {
     const { fullWidth, whiteLogo, colored } = this.props
-    const { sideNavOpen, showModal } = this.state
+    const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
     const containerStyle = (fullWidth) ? styles.fullWidth : ''
-    const headerClasses = whiteLogo ?
-      classnames(((colored) ? classnames(styles.header, styles.coloredHeader) : styles.header), styles.bound, styles.whiteLogo) :
-      classnames(((colored) ? classnames(styles.header, styles.coloredHeader) : styles.header), styles.bound)
-    let errorDiv
-    if (this.state.error) {
-      errorDiv = (
-        <div className={styles.error}>
-          Oops! Please fill out all the fields.
-        </div>
-      )
-    }
-    let successDiv
-    if (this.state.success) {
-      successDiv = (
-        <div className={styles.success}>Thanks! We will be in touch soon.</div>
-      )
-    }
+    let headerClasses = colored ? classnames(styles.header, styles.bound, styles.coloredHeader) : classnames(styles.header, styles.bound)
+        headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
     return (
       <header className={headerClasses}>
         <div className={styles.navFixed}>
@@ -156,49 +103,12 @@ export default class Header extends Component {
                   </Link>
                 </li>
                 <li className={styles.navItem}>
-                  <Button to='javascript:' kind={whiteLogo ? 'whiteBordered' : 'redBordered'} onClick={this.openModal}>
-                    Signup for beta
-                  </Button>
+                  <PlatformBetaCTA />
                 </li>
-
               </ul>
             </nav>
           </div>
         </div>
-        <Modal
-          className={styles.modalWrapper}
-          active={showModal}
-          onEscKeyDown={this.handleToggle}
-          onOverlayClick={this.handleToggle}
-        >
-          <span className={styles.modalClose} onClick={this.handleToggle}>⨯</span>
-          <h3 className={styles.modalHeading}>Platform Beta - coming Q3 2017</h3>
-          <p className={styles.modalText}>We like to move fast, but Serverless Platform isn’t quite ready for primetime.<br/><br/>
-            We can’t wait, because when it’s ready Platform will be the best way to monitor, manage and collaborate on all your serverless
-            applications. Sign up below and we’ll send you an invite to the private beta really soon. We won’t spam you with any
-            other email, we promise.</p>
-          <div className={styles.sectionBreak} />
-          {errorDiv}
-          {successDiv}
-          <AutoForm id='enterprise' onSubmit={this.handleSubmit} trimOnSubmit className={styles.modalForm}>
-            <div className={styles.inputWrap}>
-              <input required={true} name='firstName' placeholder='First name' />
-              <input required={true} name='lastName' placeholder='Last name' />
-            </div>
-            <input required={true} type='email' name='email' placeholder='you@example.com' />
-            <select required={true} name='role' defaultValue={''}>
-              <option disabled={true} value=''>Role</option>
-              <option value='Frontend developer'>Frontend developer</option>
-              <option value='Backend developer'>Backend developer</option>
-              <option value='Designer'>Designer</option>
-              <option value='Product manager'>Product manager</option>
-              <option value='Architect'>Architect</option>
-              <option value='Executive'>Executive</option>
-              <option value='Other'>Other</option>
-            </select>
-            <button kind='black' className={styles.btn}>Submit</button>
-          </AutoForm>
-        </Modal>
       </header>
     )
   }

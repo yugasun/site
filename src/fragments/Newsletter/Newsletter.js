@@ -38,6 +38,7 @@ export default class Newsletter extends Component {
   }
   handleSubmit(e) {
     e.preventDefault()
+    const { onSubmit } = this.props
     const emailNode = this.refs.email
     const email = emailNode.value
     if (!validateEmail(email)) {
@@ -48,21 +49,15 @@ export default class Newsletter extends Component {
       isFetching: true,
       error: false
     })
-    const data = {
-      email,
-      name: ''
-    }
     const that = this
     axios({
       method: 'post',
       url: newsletterSubscribeAPI,
-      data,
+      data: {
+        email: email,
+        name: ''
+      },
     }).then((response) => {
-      // console.log(response.data)
-      // console.log(response.status);
-      // console.log(response.statusText);
-      // console.log(response.headers);
-      // console.log(response.config);
       if (response && response.data && response.data.created) {
         console.log('creation succeed') // eslint-disable-line
         // Customer.io
@@ -74,8 +69,13 @@ export default class Newsletter extends Component {
         that.setState({
           isSubscribed: true,
           isFetching: false
+        }, () => {
+          // trigger callback
+          emailNode.value = ''
+          if (onSubmit) {
+            onSubmit()
+          }
         })
-        emailNode.value = ''
       } else {
         console.log('failed creation') // eslint-disable-line
         that.setState({
@@ -92,8 +92,9 @@ export default class Newsletter extends Component {
   render() {
     const { buttonText, className, black } = this.props
     const { isFetching, error } = this.state
-    let text = (isFetching) ? 'Success!' : buttonText,
-        classes = classnames(className, styles.emailForm, (black === true ? styles.black : ''))
+    let text = (isFetching) ? 'Success!' : buttonText
+    const isBlack = (black === true) ? styles.black : ''
+    const classes = classnames(className, styles.emailForm, isBlack)
 
     if (error) {
       text = 'Try Again'

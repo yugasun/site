@@ -4,21 +4,9 @@ $height: 50px;
   display: flex;
 }
 
-.black {
-  color: #272727;
-
-  .formControl {
-    border: 1px solid;
-  }
-  .btnAction {
-    color: inherit;
-    border-color: currentColor;
-  }
-}
-
 .formGroup {
   width: 70%;
-  padding-right: 1.6rem;
+  padding-right: 10px;
 }
 .formControl {
   width: 100%;
@@ -34,17 +22,4 @@ $height: 50px;
   &:focus {
     outline: 0!important;
   }
-}
-@media (max-width: 768px) {
-  .sl-email-inner {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .email-ask {
-    text-align: center;
-    padding:0;
-    margin:0;
-  }
-
 }

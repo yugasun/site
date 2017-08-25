@@ -65,7 +65,6 @@ $buttonPadding: 12px;
   }
   &:hover:before {
     color: $yellow;
-    //content: "😀";
     transition: all 0.3s;
   }
   &:before {

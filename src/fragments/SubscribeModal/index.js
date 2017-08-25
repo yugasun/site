@@ -42,7 +42,11 @@ export default class FeedbackModal extends Component {
             </a>
           </h3>
           <div className={styles.newsletterWrapper}>
-            <Newsletter />
+            <Newsletter
+              black
+              buttonText={'Subscribe for Updates'}
+              onSubmit={this.handleToggle}
+            />
           </div>
         </div>
       </Modal>
