@@ -422,9 +422,8 @@ $lineHeight: 2px;
   }
 }
 .sectionBreak {
-  height: 5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   composes: sectionBreak from "../../index.css";
 }
 .bound {
