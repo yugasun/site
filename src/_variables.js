@@ -13,6 +13,7 @@ module.exports = () => {
     yellow: '#ffd734',
     red: '#e55934',
     red2: '#FD5750',
+    blue: '#159BBA',
     gray1: '#aaa',
     gray2: '#202020',
     black1: '#212121',
