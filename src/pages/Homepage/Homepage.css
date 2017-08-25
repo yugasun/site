@@ -94,7 +94,7 @@
   width: 100%;
   padding: 1rem 3rem;
   margin-bottom: 5rem;
-  border: 1px solid #F26D61;
+  border: 1px solid #159BBA;
   background-color: #fff;
   box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.12);
   ;
@@ -129,7 +129,7 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 50%;
-  background-color: #FD5750;
+  background-color: #159BBA;
   ;
 
   @media screen and (min-width: 768px) {
@@ -146,6 +146,7 @@
 }
 .toolCardFramework {
   background-color: #FD5750;
+  border-color: #FDFDFD;
   color: white;
   ;
   .toolCardIcon {

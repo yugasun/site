@@ -53,7 +53,7 @@ export default class Homepage extends Component {
                   <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
                   <p>Span the cloud. React to any event, with any function, on any provider.</p>
                 </div>
-                <Button kind='red' href='/event-gateway/'>Learn more</Button>
+                <Button kind='blue' href='/event-gateway/'>Learn more</Button>
               </div>
             </div>
           </div>
