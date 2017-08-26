@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react'
-import { Link } from 'react-router'
 import Button from '../../components/Button'
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
 import NewsletterStrip from '../../fragments/NewsletterStrip'
 import ClientsLogos from '../../fragments/ClientsLogos'
+import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ export default class Homepage extends Component {
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
               <div className={`${styles.heroCTAs}`}>
                 <Button href='/framework/docs/' kind='red'>Framework Docs</Button>
-                <Button href='javascript:' kind='redBordered'>Sign up for Beta</Button>
+                <PlatformBetaCTA kind='redBordered' text='Sign Up'/>
               </div>
             </div>
           </div>
