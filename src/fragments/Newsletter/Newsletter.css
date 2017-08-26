@@ -2,6 +2,12 @@ $height: 50px;
 
 .emailForm {
   display: flex;
+
+  button {
+    width: 30%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
 }
 
 .formGroup {
@@ -12,7 +18,7 @@ $height: 50px;
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border: none;
+  border: 1px solid transparent;
   height: $height;
   font-size: 1.8rem;
   font-family: inherit;
@@ -21,5 +27,20 @@ $height: 50px;
   background-color: $white;
   &:focus {
     outline: 0!important;
+  }
+}
+
+.black {
+
+  .formControl {
+    border-color: black;
+  }
+
+  button {
+    color: $black;
+
+    &:hover {
+      border-color: $black;
+    }
   }
 }

@@ -111,7 +111,7 @@ export default class Newsletter extends Component {
             placeholder='you@example.com'
           />
         </div>
-        <Button onClick={this.handleSubmit} kind='whiteBordered' style={{width: '30%'}}>{text}</Button>
+        <Button onClick={this.handleSubmit} kind='whiteBordered'>{text}</Button>
       </div>
     )
   }
