@@ -5,15 +5,16 @@ import Auth from '../../components/Auth'
 const propTypes = {
   kind: PropTypes.string,
   text: PropTypes.string,
+  loggedInComponent: PropTypes.element,
 }
 export default class PlatformBetaCTA extends Component {
   constructor(props, context) {
     super(props, context)
   }
   render() {
-    const { kind, text } = this.props
+    const { kind, text, loggedInComponent } = this.props
     return (
-      <Auth loggedInComponent={<span />}>
+      <Auth loggedInComponent={loggedInComponent || <span />}>
         <Button kind={kind || 'redBordered'}>{text || 'Sign Up'}</Button>
       </Auth>
     )
