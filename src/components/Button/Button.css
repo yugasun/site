@@ -12,10 +12,12 @@ $buttonPadding: 12px;
   letter-spacing: 1px;
   font-weight: 500;
   outline: none;
+  text-align: center;
   position: relative;
   transition: all 0.3s;
   text-decoration: none;
   font-style: normal;
+  ;
   &:after {
     content: '';
     position: absolute;
