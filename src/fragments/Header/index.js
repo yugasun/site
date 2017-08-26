@@ -53,61 +53,59 @@ export default class Header extends Component {
         headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
     return (
       <header className={headerClasses}>
-        <div className={styles.navFixed}>
-          <div className={`${styles.navWrapper} ${containerStyle}`}>
-            <div className={styles.navLeft}>
-              <Link to='/' className={styles.logo}><img width={28} height={23} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' + (whiteLogo ? '#white' : '')} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
-            </div>
-            <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
-              <div className={styles.ham}>
-                <div className={`${styles.bar} ${openClass}`} />
-              </div>
-            </div>
-            <nav className={`${styles.navRight} ${mobileNav}`}>
-              <ul className={styles.navItems}>
-                <li className={styles.navItem}>
-                  <Link to='/' className={`${styles.link} ${styles.mobileOnly}`}>Home</Link>
-                </li>
-                <li className={styles.navItem}>
-                  <Link to='/framework/docs/' className={styles.link}>
-                    Docs
-                  </Link>
-                </li>
-                <li className={styles.navItem}>
-                  <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
-                    Toolkit <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
-                  </a>
-                  <ul className={styles.subNavItems}>
-                    <li>
-                      <Link to='/framework/' className={styles.link}>
-                        Framework
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/event-gateway/' className={styles.link}>
-                        Event Gateway
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className={styles.navItem}>
-                  <Link to='/community/' className={styles.link}>
-                    Community
-                  </Link>
-                </li>
-                <li className={styles.navItem}>
-                  <Link to='/blog/' className={styles.link}>
-                    Blog
-                  </Link>
-                </li>
-                <li className={styles.navItem}>
-                  <Link to='/enterprise/' className={styles.link}>
-                    Enterprise
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+        <div className={`${styles.navWrapper} ${containerStyle}`}>
+          <div className={styles.navLeft}>
+            <Link to='/' className={styles.logo}><img width={28} height={23} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' + (whiteLogo ? '#white' : '')} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
           </div>
+          <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
+            <div className={styles.ham}>
+              <div className={`${styles.bar} ${openClass}`} />
+            </div>
+          </div>
+          <nav className={`${styles.navRight} ${mobileNav}`}>
+            <ul className={styles.navItems}>
+              <li className={styles.navItem}>
+                <Link to='/' className={`${styles.link} ${styles.mobileOnly}`}>Home</Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to='/framework/docs/' className={styles.link}>
+                  Docs
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
+                  Toolkit <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
+                </a>
+                <ul className={styles.subNavItems}>
+                  <li>
+                    <Link to='/framework/' className={styles.link}>
+                      Framework
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/event-gateway/' className={styles.link}>
+                      Event Gateway
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className={styles.navItem}>
+                <Link to='/community/' className={styles.link}>
+                  Community
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to='/blog/' className={styles.link}>
+                  Blog
+                </Link>
+              </li>
+              <li className={styles.navItem}>
+                <Link to='/enterprise/' className={styles.link}>
+                  Enterprise
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
     )

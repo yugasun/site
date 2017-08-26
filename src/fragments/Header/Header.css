@@ -30,16 +30,6 @@
   }
 }
 
-.bumper {
-  height: $navHeight;
-  width: 100%;
-}
-.navFixed, .navWrapper {
-  height: $navHeight;
-}
-.navFixed {
-}
-
 .navWrapper {
   position: relative;
   display: flex;
@@ -47,16 +37,12 @@
   justify-content: flex-start;
   left: 0;
   right: 0;
-  max-width: 140rem;
+  height: $navHeight;
   margin: auto;
   ;
   &.fullWidth {
     max-width: 100%;
     width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    padding-right: 1rem;
-    padding-left: 1rem;
   }
 }
 a {
@@ -74,26 +60,16 @@ a {
 }
 
 .logo {
-  color: inherit;
-  font-family: Serverless, monospace;
-  font-size: 2.6rem;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
   min-width: 18rem;
-}
-.logoIcon {
-
 }
 .logoText {
   font-size: 2.2rem;
-  vertical-align: top;
+  margin-bottom: 0.5rem;
   margin-left: 1rem;
+  font-family: Serverless, monospace;
 }
-.hiring {
-  color: $black1 !important;
-  background: $yellow !important;
-  font-weight: bold !important;
-}
-
 .navItems {
   padding: 0;
   margin: 0;
@@ -177,13 +153,13 @@ a {
   height: 20px;
 }
 .toggle {
-  height: $navHeight;
-  width: $navHeight;
   position: absolute;
-  right: 5px;
-  top:0;
-  z-index: 9;
   display: none;
+  height: 5rem;
+  width: 5rem;
+  right: -1rem;
+  top: 1rem;
+  z-index: 9;
 }
 $hamSize: 3rem;
 $lineSpacing: 1rem;
