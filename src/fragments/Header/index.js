@@ -49,11 +49,11 @@ export default class Header extends Component {
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
     const containerStyle = (fullWidth) ? styles.fullWidth : ''
-    let headerClasses = colored ? classnames(styles.header, styles.bound, styles.coloredHeader) : classnames(styles.header, styles.bound)
+    let headerClasses = colored ? classnames(styles.header, styles.coloredHeader) : styles.header
         headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
     return (
       <header className={headerClasses}>
-        <div className={`${styles.navWrapper} ${containerStyle}`}>
+        <div className={`${styles.navWrapper} ${containerStyle} ${styles.bound}`}>
           <div className={styles.navLeft}>
             <Link to='/' className={styles.logo}><img width={28} height={23} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' + (whiteLogo ? '#white' : '')} className={styles.logoIcon} /><span className={styles.logoText}>serverless</span></Link>
           </div>
