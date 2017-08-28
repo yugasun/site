@@ -60,7 +60,7 @@ const authMiddleware = runMiddlewareOnce((dispatch) => { // eslint-disable-line
 })
 
 function handleAuthRedirect(data) {
-  const redirect = new CustomEvent('routerRedirect', { // eslint-disable-line
+  const redirect = new CustomEvent('authSuccess', { // eslint-disable-line
     detail: {
       url: data.url,
       profile: data.profile

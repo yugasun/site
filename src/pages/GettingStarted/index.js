@@ -84,8 +84,10 @@ export default class Welcome extends Component {
     if (terminalFinished) {
       return (
         <div className={styles.description + ' ' + styles.finished}>
-          Welcome to the serverless movement<br/><br/>
-          buttons here
+          Welcome to the serverless movement<br/>
+          <a className={styles.docsLink} href='/framework/docs/getting-started'>
+            Getting Started Docs
+          </a>
         </div>
       )
     }
@@ -106,7 +108,7 @@ export default class Welcome extends Component {
 
           <div className={styles.terminalContainer}>
             <Terminal
-              style={{minHeight: '360px'}}
+              className={styles.terminal}
               commands={commands}
               onComplete={this.handleTerminalComplete}
             />

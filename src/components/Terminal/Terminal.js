@@ -3,6 +3,7 @@ import styles from './Terminal.css'
 
 const propTypes = {
   style: PropTypes.object,
+  className: PropTypes.string,
   children: PropTypes.any,
   onComplete: PropTypes.function,
   commands: PropTypes.array,
@@ -92,11 +93,10 @@ export default class TerminalCommands extends Component {
   }
   render() {
     const terminalOutput = this.renderLines()
-
+    const classes = this.props.className || ''
     return (
       <div className={styles.wrapper}>
-
-        <div style={this.props.style} className={styles.terminal}>
+        <div style={this.props.style} className={`${styles.terminal} ${classes}`}>
           <div className={styles.terminalHead}>
             <div className={`${styles.circle} ${styles.close}`} />
             <div className={`${styles.circle} ${styles.turn}`} />
