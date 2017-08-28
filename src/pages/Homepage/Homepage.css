@@ -9,6 +9,9 @@
 .bound {
   composes: bound from "../../index.css";
 }
+.boundLarge {
+  composes: boundLarge from "../../index.css";
+}
 .boundMedium {
   composes: boundMedium from "../../index.css";
 }
@@ -19,19 +22,29 @@
   position: inherit;
   display: flex;
   align-items: center;
-  padding: 10rem 2.4rem 0;
-  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 10rem;
   @media screen and (min-width: 768px) {
     min-height: 55rem;
+  }
+}
+.heroHalf {
+  margin-bottom: 5rem;
+
+  @media screen and (min-width: 960px) {
+    width: 50%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .tagline {
   width: 100%;
   margin-bottom: 3.3rem;
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     margin-bottom: 4rem;
     font-size: 4.8rem;
   }

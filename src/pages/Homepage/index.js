@@ -5,6 +5,8 @@ import styles from './Homepage.css'
 import NewsletterStrip from '../../fragments/NewsletterStrip'
 import ClientsLogos from '../../fragments/ClientsLogos'
 import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
+import Terminal from '../../components/Terminal'
+import terminalCommands from '../Framework/terminalCommands'
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -21,14 +23,17 @@ export default class Homepage extends Component {
     return (
       <Default {...this.props} fullWidth coloredHeader={false}>
         <div className={styles.wrapper}>
-          <div className={`${styles.hero} ${styles.boundSmall}`}>
-            <div>
+          <div className={`${styles.hero} ${styles.boundLarge}`}>
+            <div className={styles.heroHalf}>
               <h1 className={styles.tagline}>The way cloud should be.</h1>
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
               <div className={`${styles.heroCTAs}`}>
                 <Button href='/framework/docs/getting-started/' kind='red' style={{marginRight: '2.4rem'}}>Quick Start Docs</Button>
                 <PlatformBetaCTA kind='redBordered' text='Sign Up'/>
               </div>
+            </div>
+            <div className={styles.heroHalf}>
+              <Terminal commands={terminalCommands} />
             </div>
           </div>
           <div className={`${styles.providersWrapper} ${styles.boundMedium}`}>
