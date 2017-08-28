@@ -26,6 +26,13 @@
     padding-right: 0;
   }
 }
+.boundLarge {
+  max-width: 124rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}
 .boundMedium {
   width: 100%;
   max-width: 96rem;
