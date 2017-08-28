@@ -32,3 +32,5 @@ import Blog from './Blog'
 export { Blog }
 import SignUp from './SignUp'
 export { SignUp }
+import GettingStarted from './GettingStarted'
+export { GettingStarted }

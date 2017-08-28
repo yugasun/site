@@ -41,17 +41,25 @@ export default class App extends Component {
     initUAClasses()
     // chrome ignores hash anchors ¯\_(ツ)_/¯...
     fixChromeHash()
-    window.addEventListener('routerRedirect', this.handleAuthRedirect, false)
+    window.addEventListener('authSuccess', this.handleAuthRedirect, false)
     window.onpopstate = history.onpushstate = handleRouteChange
   }
   componentWillUnmount() {
-    window.removeEventListener('routerRedirect', this.handleAuthRedirect)
+    window.removeEventListener('authSuccess', this.handleAuthRedirect)
   }
   handleAuthRedirect = (e) => {
     const redirectURL = e.detail.url
+    const gettingStartedURL = '/getting-started/'
     const profile = e.detail.profile
     // handle redirect
-    this.props.history.push(redirectURL)
+    const width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+
+    if (width < 850) {
+      this.props.history.push(redirectURL)
+    } else {
+      this.props.history.push(gettingStartedURL)
+    }
+
     // handle analytics save
     if (profile && profile.login_count === 1) {
       track('site:account_created', {
@@ -79,7 +87,6 @@ export default class App extends Component {
         <div className={styles.content}>
           {this.props.children}
         </div>
-        <SubscribeModal />
         <Scripts params={params} query={currentQuery} />
       </div>
     )

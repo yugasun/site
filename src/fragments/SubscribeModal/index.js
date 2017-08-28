@@ -11,10 +11,10 @@ export default class FeedbackModal extends Component {
     }
   }
   componentDidMount() {
-    window.addEventListener('routerRedirect', this.handleToggle, false)
+    window.addEventListener('authSuccess', this.handleToggle, false)
   }
   componentWillUnmount() {
-    window.removeEventListener('routerRedirect', this.handleToggle)
+    window.removeEventListener('authSuccess', this.handleToggle)
   }
   handleToggle = () => {
     this.setState({ showModal: !this.state.showModal })
