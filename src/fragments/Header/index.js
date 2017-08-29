@@ -98,7 +98,7 @@ export default class Header extends Component {
                   <li><Link to='/community/meetups/' className={styles.link}>Meetups</Link></li>
                   <li><a target='_blank' href='https://forum.serverless.com/' className={styles.link}>Forum</a></li>
                   <li><a target='_blank' href='https://gitter.im/serverless/serverless' className={styles.link}>Gitter</a></li>
-                  <li><a target='_blank' href='https://serverlessteam.slack.com/' className={styles.link}>Slack</a></li>
+                  <li><a target='_blank' href='https://join.slack.com/t/serverless-contrib/shared_invite/MjI5NzY1ODM2MTc3LTE1MDM0NDIyOTUtMDgxNTcxMTcxNg' className={styles.link}>Slack</a></li>
                 </ul>
               </li>
               <li className={styles.navItem}>
