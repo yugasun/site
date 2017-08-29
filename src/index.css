@@ -15,36 +15,43 @@
 }
 .bound {
   width: 100%;
-  max-width: 124rem;
+  max-width: 142.4rem;
   margin-left: auto;
   margin-right: auto;
   padding-right: 2.4rem;
   padding-left: 2.4rem;
+
+  .boundMedium, .boundSmall {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.boundLarge {
+  max-width: 124rem;
+  composes: bound;
+}
+.boundMedium {
+  max-width: 96rem;
+  composes: bound;
 }
 .boundSmall {
-  width: 100%;
-  max-width: 88rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
-}
-.boundSmaller {
-  width: 100%;
   max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  composes: bound;
 }
 .sectionBreak {
-  height: 3rem;
-  background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/section-break.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
+  border-bottom: 2px dashed #575757;
+  transform: skewY(-3.5deg);
   ;
-  @media screen and (min-width: 768px) {
-    height: 10rem;
+  &:after {
+     content: "";
+     position: absolute;
+     background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg) no-repeat;
+     width: 3rem;
+     height: 3rem;
+     transform: skewY(3.5deg);
+     left: 50%;
+     top: -1rem;
   }
 }
 @font-face {

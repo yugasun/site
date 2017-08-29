@@ -1,19 +1,23 @@
 $borderColor: #a5a5a5;
 $buttonPadding: 12px;
 .btn {
-  border: none;
+  padding: 0.75em 1.25em;
+  border: 1px solid;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background: none;
   cursor: pointer;
   display: inline-block;
-  font-weight: 400;
+  letter-spacing: 1px;
+  font-weight: 500;
   outline: none;
+  text-align: center;
   position: relative;
   transition: all 0.3s;
   text-decoration: none;
   font-style: normal;
+  ;
   &:after {
     content: '';
     position: absolute;
@@ -125,7 +129,6 @@ $buttonPadding: 12px;
   user-select: none;
   border: none;
   font-size: 20px;
-  font-weight: 500;
   padding: 15px 25px;
   border-radius: 3px;
   height: auto;
@@ -134,26 +137,40 @@ $buttonPadding: 12px;
   background-color: $yellow;
   min-width: 142px;
 }
-.redBordered {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #F26D61;
-  border-radius: 3px;
-  transition: color 250ms, background-color 300ms;
+.blue {
+  border-color: $blue;
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue2;
+    border-color: $blue2;
+  }
+}
+.red {
+  border-color: $red2;
+  color: $white;
+  background-color: $red2;
   ;
   &:hover {
-    color: #F26D61;
-    background-color: #fff;
+    background-color: $red3;
+    border-color: $red3;
+  }
+}
+.redBordered {
+  color: $red2;
+  ;
+  &:hover {
+    background-color: $red4;
   }
 }
 .whiteBordered {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid;
-  border-radius: 3px;
-  color: #fff;
-  transition: color 250ms, background-color 300ms;
+  color: $white;
+  background-color: transparent;
   ;
   &:hover {
-    color: #000000;
-    background-color: #fff;
+    border-color: $white;
+    color: $black2;
+    background-color: $white;
   }
 }

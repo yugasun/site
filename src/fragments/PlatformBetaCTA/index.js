@@ -4,18 +4,18 @@ import Auth from '../../components/Auth'
 
 const propTypes = {
   kind: PropTypes.string,
+  text: PropTypes.string,
+  loggedInComponent: PropTypes.element,
 }
 export default class PlatformBetaCTA extends Component {
   constructor(props, context) {
     super(props, context)
   }
   render() {
-    const { kind } = this.props
+    const { kind, text, loggedInComponent } = this.props
     return (
-      <Auth loggedInComponent={<span />}>
-        <Button style={{textAlign: 'center' }} href='javascript:' kind={kind || 'redBordered'} onClick={this.openModal}>
-          Sign up for Beta
-        </Button>
+      <Auth loggedInComponent={loggedInComponent || <span />}>
+        <Button kind={kind || 'redBordered'}>{text || 'Sign Up'}</Button>
       </Auth>
     )
   }

@@ -1,14 +1,14 @@
 .bound {
   composes: bound from "../../index.css";
 }
+.boundMedium {
+  composes: boundMedium from "../../index.css";
+}
 .boundSmall {
   composes: boundSmall from "../../index.css";
 }
-.boundSmaller {
-  composes: boundSmaller from "../../index.css";
-}
 .toolHero {
-  background-color: #159BBA;
+  background-color: $blue;
   background-image: url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/toolkit-ground.png"),
                     url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway-ground.svg");
   background-position: center top, center 65%;

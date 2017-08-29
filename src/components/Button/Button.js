@@ -6,7 +6,7 @@ const propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string,
   children: PropTypes.any,
-  kind: PropTypes.oneOf(['dark', 'black', 'yellow', 'redBordered', 'whiteBordered']),
+  kind: PropTypes.oneOf(['dark', 'black', 'yellow', 'blue', 'red', 'redBordered', 'whiteBordered']),
   style: PropTypes.object,
   /** if href provided to button, button will be a link */
   href: PropTypes.string,

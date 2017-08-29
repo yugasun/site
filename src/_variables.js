@@ -7,15 +7,23 @@ module.exports = () => {
   return {
     // -- Sizing
     unit: '1rem',
-    navHeight: '70px',
-    footerHeight: '155px',
+    navHeight: '7rem',
+    footerHeight: '15.5rem',
     // -- Colors
     yellow: '#ffd734',
     red: '#e55934',
+    red2: '#FD5750',
+    red3: '#e14e47',
+    red4: '#fff2ef',
+    blue: '#159BBA',
+    blue2: '#147d9b',
+    lightGray: '#EAEAEA',
     gray1: '#aaa',
     gray2: '#202020',
+    black: '#333333',
     black1: '#212121',
     black2: '#191919',
+    white: '#FDFDFD',
     // -- Fonts
     fontSize: baseFontSize,
     fontSizeTiny: formatFont(1.2),
