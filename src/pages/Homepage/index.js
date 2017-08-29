@@ -28,7 +28,7 @@ export default class Homepage extends Component {
               <h1 className={styles.tagline}>The way cloud should be.</h1>
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
               <div className={`${styles.heroCTAs}`}>
-                <Button href='/framework/docs/getting-started/' kind='red' style={{marginRight: '2.4rem'}}>Quick Start Docs</Button>
+                <Button href='/framework/docs/getting-started/' kind='red'>Quick Start Docs</Button>
                 <PlatformBetaCTA kind='redBordered' text='Sign Up'/>
               </div>
             </div>
