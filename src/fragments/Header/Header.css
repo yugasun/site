@@ -21,6 +21,11 @@
   .subNavItems {
     background-color: #2b303b;
   }
+  .bar {
+    &, &:before, &:after {
+      background-color: $gray1;
+    }
+  }
 }
 .whiteLogo {
   color: white;
