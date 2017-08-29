@@ -4,6 +4,7 @@ import styles from './Terminal.css'
 const propTypes = {
   children: PropTypes.any,
   commands: PropTypes.array,
+  className: PropTypes.string,
 }
 
 export default class TerminalCommands extends Component {
@@ -84,10 +85,11 @@ export default class TerminalCommands extends Component {
     return output
   }
   render() {
+    const { className } = this.props
     const terminalOutput = this.renderLines()
 
     return (
-      <div className={styles.wrapper}>
+      <div className={`${styles.wrapper} ${className}`}>
 
         <div className={styles.terminal}>
           <div className={styles.terminalHead}>
