@@ -14,6 +14,7 @@ module.exports = () => {
     red: '#e55934',
     red2: '#FD5750',
     red3: '#e14e47',
+    red4: '#fff2ef',
     blue: '#159BBA',
     blue2: '#147d9b',
     lightGray: '#EAEAEA',
