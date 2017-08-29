@@ -28,26 +28,15 @@
 }
 .boundLarge {
   max-width: 124rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  composes: bound;
 }
 .boundMedium {
-  width: 100%;
   max-width: 96rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  composes: bound;
 }
 .boundSmall {
-  width: 100%;
   max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  composes: bound;
 }
 .sectionBreak {
   position: relative;
