@@ -143,8 +143,8 @@ $buttonPadding: 12px;
   background-color: $blue;
 
   &:hover {
-    background-color: $white;
-    color: $blue;
+    background-color: $blue2;
+    border-color: $blue2;
   }
 }
 .red {
@@ -153,8 +153,8 @@ $buttonPadding: 12px;
   background-color: $red2;
   ;
   &:hover {
-    color: $red2;
-    background-color: $white;
+    background-color: $red3;
+    border-color: $red3;
   }
 }
 .redBordered {
