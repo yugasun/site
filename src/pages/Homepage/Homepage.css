@@ -1,11 +1,3 @@
-.wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 0;
-  color: #242424;
-}
 .bound {
   composes: bound from "../../index.css";
 }
