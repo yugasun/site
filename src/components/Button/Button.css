@@ -161,8 +161,7 @@ $buttonPadding: 12px;
   color: $red2;
   ;
   &:hover {
-    background-color: $red2;
-    color: $white;
+    background-color: $red4;
   }
 }
 .whiteBordered {
