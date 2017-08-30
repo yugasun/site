@@ -14,10 +14,10 @@ import identify from './utils/analytics/identify'
 import { customerIOPageView } from './utils/analytics/page'
 import './index.global.css'
 import styles from './index.css'
-// import deleteServiceWorkers from './utils/deleteServiceWorkers'
+import deleteServiceWorkers from './utils/deleteServiceWorkers'
 
 if (typeof window !== 'undefined') {
-  // deleteServiceWorkers()
+  deleteServiceWorkers()
   // expose React for app scripts
   window.React = React
   window.ReactDOM = ReactDOM
