@@ -136,7 +136,6 @@ $contentLeftPadding: 70px;
     margin-left: -50px;
     /* line-height: 1.4rem; */
     text-decoration: none;
-    z-index: 7;
     opacity: .1;
     line-height: inherit;
     color: transparent;
@@ -176,7 +175,6 @@ $contentLeftPadding: 70px;
       left: 8px;
       border-radius: 3px;
       transition: .25s ease-in-out 0s;
-      z-index: 11;
     }
     &:hover {
       opacity: 1;
@@ -216,7 +214,6 @@ $contentLeftPadding: 70px;
     }*/
   }
   p, pre, code, ul, li {
-    z-index: 3;
     position: relative;
   }
   ul {
@@ -224,7 +221,6 @@ $contentLeftPadding: 70px;
     padding-right: 80px;
   }
   h1, h2, h3, h4, h5, h6 {
-    z-index: 1;
     &:before {
       display: block;
       content: " ";
