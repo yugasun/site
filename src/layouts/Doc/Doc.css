@@ -7,6 +7,10 @@ $contentLeftPadding: 70px;
   margin-top: 7rem;
   padding-bottom: 0;
   margin-bottom: 0;
+
+  a {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
 }
 .docContainer {
   margin-top: 0px;
