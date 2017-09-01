@@ -5,9 +5,9 @@ layout: Default
 
 # Join a Serverless Meetup
 
-Community-driven Serverless Meetups are hosted locally in cities across the world. Get together. Spread knowledge. Unleash the power of Serverless Applications. Learn about serverless projects, microservices and FaaS.
+Community-driven [Serverless Meetups](https://www.meetup.com/pro/serverless/) are hosted locally in cities across the world. Get together. Spread knowledge. Unleash the power and simplicity of Serverless Applications.
 
-Join a [Serverless Meetup](https://www.meetup.com/pro/serverless/) near you.
+We hope to [see you there](https://www.meetup.com/pro/serverless/) soon.
 
 # Run a Meetup in your city
 
