@@ -17,5 +17,6 @@ const NewsletterCTA = (props) => {
 NewsletterCTA.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  black: PropTypes.bool,
 }
 export default NewsletterCTA
