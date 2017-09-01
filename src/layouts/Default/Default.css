@@ -4,6 +4,12 @@
 .page {
   max-width: 96rem;
   margin: 8rem auto 0 auto;
+  font-family: Gibson, Avenir, sans-serif;
+  line-height: 1.6;
+
+  h1, h2, h3, h4, strong {
+    font-family: Avenir, Gibson, sans-serif;
+  }
   img {
     max-width: 100%;
   }
