@@ -152,7 +152,7 @@ class Post extends Component {
 
             <BetaCTA buttonText='Get early access' />
 
-            <NewsletterCTA style={{ marginTop: '20px' }} />
+            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
 
             <AuthorCTA style={{ marginTop: '20px' }} />
 
