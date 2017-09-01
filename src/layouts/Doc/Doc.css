@@ -224,8 +224,6 @@ $contentLeftPadding: 70px;
     &:before {
       display: block;
       content: " ";
-      margin-top: -80px;
-      height: 80px;
       visibility: hidden;
     }
   }
@@ -440,8 +438,6 @@ strong {
       &:before {
         display: block;
         content: " ";
-        margin-top: -80px;
-        height: 80px;
         visibility: hidden;
       }
     }
