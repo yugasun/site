@@ -7,7 +7,7 @@ layout: Default
 
 Community-driven [Serverless Meetups](https://www.meetup.com/pro/serverless/) are hosted locally in cities across the world. Get together. Spread knowledge. Unleash the power and simplicity of Serverless Applications.
 
-[Fine a Serverless Meetup](https://www.meetup.com/pro/serverless/) near you.
+[Find a Serverless Meetup](https://www.meetup.com/pro/serverless/) near you.
 
 # Run a Meetup in your city
 
