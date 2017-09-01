@@ -1,6 +1,10 @@
-module.exports = [
+import React from 'react'
+import Terminal from '../../components/Terminal'
+import styles from './index.css'
+
+const commands = [
   {
-    text: 'Install serverless globally',
+    text: 'Step 1. Install serverless globally',
     type: 'comment',
     skip: true
   },
@@ -9,7 +13,7 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Login to your Serverless account',
+    text: 'Step 2. Login to your Serverless account',
     type: 'comment',
     skip: true
   },
@@ -18,7 +22,7 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Create a serverless function',
+    text: 'Step 3. Create a serverless function',
     type: 'comment',
     skip: true
   },
@@ -27,7 +31,7 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Deploy to cloud provider',
+    text: 'Step 4. Deploy to cloud provider',
     type: 'comment',
     skip: true
   },
@@ -36,7 +40,7 @@ module.exports = [
     type: 'command'
   },
   {
-    text: 'Function deployed! Trigger with live url',
+    text: 'Your Function is deployed!',
     type: 'comment',
     skip: true
   },
@@ -45,5 +49,18 @@ module.exports = [
     text: 'http://xyz.amazonaws.com/hello-world',
     type: 'command',
     skip: true
-  }
+  },
 ]
+
+
+const TerminalCTA = (props) => {
+  return (
+    <Terminal
+      className={styles.terminal}
+      commands={commands}
+      onComplete={props.onComplete}
+    />
+  )
+}
+
+export default TerminalCTA

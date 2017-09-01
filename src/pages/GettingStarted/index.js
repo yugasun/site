@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import axios from 'axios' // eslint-disable-line
 import { Link } from 'react-router' // eslint-disable-line
 import { setItem, getItem } from '../../utils/storage' // eslint-disable-line
-import Terminal from '../../components/Terminal'
+import TerminalCTA from '../../fragments/TerminalCTA'
 import identify from '../../utils/analytics/identify'
 import track from '../../utils/analytics/track'
 import removeURLParams from '../../utils/analytics/source/removeURLParams'
@@ -107,11 +107,7 @@ export default class Welcome extends Component {
           </div>
 
           <div className={styles.terminalContainer}>
-            <Terminal
-              className={styles.terminal}
-              commands={commands}
-              onComplete={this.handleTerminalComplete}
-            />
+            <TerminalCTA onComplete={this.handleTerminalComplete} />
           </div>
           {this.renderWhenFinished()}
           <div style={{display: 'none'}}>
