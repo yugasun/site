@@ -422,8 +422,9 @@ strong {
     padding-left: 13px;
     padding-right: 0px;
     padding-top: 20px;
+    font-size: 14px;
     pre code:global(.hljs) {
-      font-size: 12px;
+      font-size: 11px;
       line-height: 1.4;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -431,11 +432,18 @@ strong {
     :global(.phenomic-HeadingAnchor) {
       display: none;
     }
+    ol, ul {
+      font-size: 13px;
+      padding: 0px 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
     h1 {
       font-size: 22px;
     }
     h1, h2, h3, h4, h5, h6, p {
-      padding-right: 13px;
+      padding-right: 20px;
 
     }
     h1, h2, h3, h4, h5, h6 {

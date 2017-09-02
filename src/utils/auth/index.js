@@ -2,7 +2,8 @@
  * Auth0 Lock instance
  */
 import { initializeXsrfToken, getXsrfToken } from './xsrfToken'
-import LogoImg from '../../assets/images/serverless_logo.png'
+
+const logoUrl = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype-white.png'
 
 if (!process.env.AUTH0_CLIENT_ID) {
   throw new Error('AUTH_CLIENT_ID is not defined in /src/_config.js file')
@@ -35,7 +36,7 @@ if (typeof window !== 'undefined') {
         },
       },
       theme: {
-        logo: LogoImg,
+        logo: logoUrl,
         primaryColor: '#000'
       },
       languageDictionary: {

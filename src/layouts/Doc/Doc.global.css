@@ -10,6 +10,9 @@
   max-width: 90%;
   position: relative;
   z-index: 3;
+  a {
+    border: none !important;
+  }
   > div {
     max-width: 90%;
     box-shadow: 0 0 3px rgba(0,0,0,.2);
