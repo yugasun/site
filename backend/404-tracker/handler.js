@@ -49,25 +49,4 @@ module.exports.FourOFourTracker = (event, context, callback) => {
   }).catch((err) => {
     return callback(err)
   });
-
-  //
-  //
-  // dynamoDoc.put({
-  //   TableName: ERROR_TABLE,
-  //   Item: {
-  //     url: url,
-  //     lastUpdated: Math.round(+new Date() / 1000),
-  //     lastReferrer: referrer,
-  //     count:
-  //   }
-  // }).promise().then(() => {
-  //   return callback(null, {
-  //     statusCode: 200,
-  //     body: JSON.stringify({
-  //       message: `404 recorded for ${url} referring site was ${referrer}`
-  //     }),
-  //   })
-  // }).catch((err) => {
-  //   return callback(err)
-  // })
 }
