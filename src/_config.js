@@ -16,7 +16,7 @@ module.exports = function siteConfig(isProduction) {
       CUSTOMER_IO_KEY: process.env.CUSTOMER_IO_KEY || '219fca0102ab3451a96a',
       /* Serverless API Gateway Endpoints */
       API: {
-        ERROR: 'https://h413evrxuk.execute-api.us-west-2.amazonaws.com/dev/report',
+        ERROR: 'https://kuen1ml0f0.execute-api.us-west-2.amazonaws.com/prod/report',
         NEWSLETTER: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
         ADD_CONTACT: 'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add'
       }

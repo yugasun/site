@@ -6,24 +6,28 @@ module.exports.FourOFourTracker = (event, context, callback) => {
   const body = JSON.parse(event.body)
   const url = body.url
   const referrer = body.referrer
-  console.log('ran')
+
+  // Prep DynamoDB update Params
   const params = {
     TableName: ERROR_TABLE,
     Key: {
       url: url
     },
-    // Update or create items
+    // Set updates and Increment counter with Add
     UpdateExpression: 'SET #lastReferrer = :lastReferrer, #lastUpdated = :lastUpdated ADD #instanceCount :incr',
+    // Define Variables for keys used in `UpdateExpression`
     ExpressionAttributeNames: {
       '#lastReferrer': 'lastReferrer',
       '#lastUpdated': 'lastUpdated',
       '#instanceCount': 'instanceCount'
     },
+    // Define Variables for values used in `UpdateExpression`
     ExpressionAttributeValues: {
       ':incr': 1,
       ':lastUpdated': Math.round(+new Date() / 1000),
       ':lastReferrer': referrer
     },
+    // Return updated values in response to act upon
     ReturnValues: 'UPDATED_NEW'
   };
 
@@ -38,7 +42,6 @@ module.exports.FourOFourTracker = (event, context, callback) => {
         console.log("CALL ALEX AT HOME")
       }
     }
-
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify({
