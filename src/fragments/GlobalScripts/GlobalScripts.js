@@ -2,16 +2,19 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import GoogleAnalytics from './GoogleAnalytics'
 import CustomerIO from './CustomerIO'
+import optimizelyScript from './Optimizely'
 
 export default function GlobalScripts(props) {
   let HubSpotScript
   if (process.env.NODE_ENV === 'production') {
     HubSpotScript = (
       <Helmet
-        script={[{
-          src: 'https://js.hs-scripts.com/2901603.js',
-          type: 'text/javascript'
-        }]}
+        script={
+          [{
+            src: 'https://js.hs-scripts.com/2901603.js',
+            type: 'text/javascript'
+          }]
+        }
       />
     )
   }
@@ -20,6 +23,7 @@ export default function GlobalScripts(props) {
       <GoogleAnalytics {...props} />
       {HubSpotScript}
       <div dangerouslySetInnerHTML={{ __html: CustomerIO }} />
+      <div dangerouslySetInnerHTML={{ __html: optimizelyScript }} />
     </div>
   )
 }
