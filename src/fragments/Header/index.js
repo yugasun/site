@@ -113,7 +113,7 @@ export default class Header extends Component {
                   Enterprise
                 </Link>
               </li>
-              {hideCTA ? null : <li className={styles.navItem}><PlatformBetaCTA kind='redBordered' text='Sign Up'/></li>}
+              {hideCTA ? null : <li className={styles.navItem}><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>}
             </ul>
           </nav>
         </div>
