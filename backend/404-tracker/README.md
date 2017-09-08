@@ -14,6 +14,7 @@ Install serverless CLI.
 
 ```bash
 npm install serverless -g
+```
 
 Then run `serverless deploy`
 
