@@ -21,7 +21,7 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Default {...this.props} fullWidth coloredHeader={false}>
+      <Default {...this.props} fullWidth coloredHeader={false} headerHideCTA={true}>
         <div className={styles.wrapper}>
           <div className={`${styles.hero} ${styles.boundLarge}`}>
             <div className={styles.heroHalf}>
