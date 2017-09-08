@@ -256,7 +256,7 @@ class Doc extends Component {
     )
 
     return (
-      <Default {...this.props} fullWidth className={`${styles.docPage}`} header={breadcrumbs}>
+      <Default {...this.props} fullWidth className={`${styles.docPage}`} header={breadcrumbs} coloredHeader={true}>
         <Helmet
           link={[
             {
