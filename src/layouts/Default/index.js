@@ -17,6 +17,7 @@ const propTypes = {
   fullWidth: PropTypes.bool,
   whiteLogo: PropTypes.bool,
   coloredHeader: PropTypes.bool,
+  headerHideCTA: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   head: PropTypes.object,
   body: PropTypes.string,
@@ -37,7 +38,8 @@ const DefaultLayout = (props) => {
     fullWidth,
     whiteLogo,
     coloredHeader,
-    isLoading
+    headerHideCTA,
+    isLoading,
   } = props
 
   let metaTitle
@@ -86,7 +88,8 @@ const DefaultLayout = (props) => {
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} />
-      <Header whiteLogo={whiteLogo} colored={(typeof coloredHeader === "undefined") ? true: coloredHeader} />
+      <Header whiteLogo={whiteLogo} colored={coloredHeader !== false && coloredHeader !== undefined}
+              hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
       <div className={classes}>
         {header}
         {children || markdown}

@@ -3,11 +3,13 @@ import { Link } from 'react-router'
 import handleClickAway from '../../utils/handleClickAway'
 import styles from './Header.css'
 import classnames from 'classnames'
+import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
 
 const propTypes = {
   whiteLogo: PropTypes.bool,
   colored: PropTypes.bool,
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  hideCTA: PropTypes.bool,
 }
 
 export default class Header extends Component {
@@ -44,7 +46,7 @@ export default class Header extends Component {
     })
   }
   render() {
-    const { fullWidth, whiteLogo, colored } = this.props
+    const { fullWidth, whiteLogo, colored, hideCTA } = this.props
     const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
@@ -111,6 +113,7 @@ export default class Header extends Component {
                   Enterprise
                 </Link>
               </li>
+              {hideCTA ? null : <li className={styles.navItem}><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>}
             </ul>
           </nav>
         </div>
