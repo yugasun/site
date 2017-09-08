@@ -8,7 +8,7 @@ import initializeAnalytics from './utils/analytics/init'
 import initUAClasses from './utils/brower-detect'
 import fixChromeHash from './utils/fixChromeHash'
 import { setItem, getItem } from './utils/storage' // eslint-disable-line
-import { initializeRouteListener, handleRouteChange } from './utils/routerUtils'
+import { initializeRouteListener, handleRouteChange, initOptimizely } from './utils/routerUtils'
 import track from './utils/analytics/track'
 import identify from './utils/analytics/identify'
 import { customerIOPageView } from './utils/analytics/page'
@@ -43,6 +43,7 @@ export default class App extends Component {
     fixChromeHash()
     window.addEventListener('authSuccess', this.handleAuthRedirect, false)
     window.onpopstate = history.onpushstate = handleRouteChange
+    initOptimizely()
   }
   componentWillUnmount() {
     window.removeEventListener('authSuccess', this.handleAuthRedirect)

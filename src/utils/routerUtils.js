@@ -21,6 +21,7 @@ const LAST_PAGE_SEEN = 'last_page_seen'
 /* eslint-disable */
 export function handleRouteChange(e) {
   const previousURL = window.location.href
+  // need timeout to get new url
   setTimeout(() => {
     const newURL = window.location.href
     const loading = window.location.origin + '/loading/'
@@ -30,6 +31,7 @@ export function handleRouteChange(e) {
     if (newURL === loading || previousURL === loading) {
       return false
     }
+    initOptimizely()
     // Set last page viewed for 404 tracker
     setItem(LAST_PAGE_SEEN, previousURL, function(){
       if (process.env.NODE_ENV === 'development') {
@@ -38,3 +40,13 @@ export function handleRouteChange(e) {
     })
   }, 0)
 }
+
+const initOptimizely = () => {
+  console.log('init optimizely')
+  if (typeof window !== 'undefined') {
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push({type: 'activate'});
+  }
+}
+
+export { initOptimizely }
