@@ -38,7 +38,8 @@ export function gaPageView(pageData) {
   if (typeof ga !== 'undefined') {
     // console.info(`GA Pageview > ${window.location.href}`)
     ga('set', 'page', data.path) // eslint-disable-line
-    ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
+    // { hitCallback: removeUTM }
+    ga('send', 'pageview') // eslint-disable-line
   }
 }
 
