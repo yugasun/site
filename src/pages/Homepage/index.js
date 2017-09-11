@@ -24,6 +24,7 @@ export default class Homepage extends Component {
       <Default {...this.props} fullWidth coloredHeader={false}>
         <div className={styles.wrapper}>
           <div className={`${styles.hero} ${styles.boundLarge}`}>
+            <h1>HIIIII</h1>
             <div className={styles.heroHalf}>
               <h1 className={styles.tagline}>The way cloud should be.</h1>
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
