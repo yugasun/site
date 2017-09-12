@@ -131,6 +131,7 @@ $borderColor: #e8e8e8;
 }
 .authorDetails {
   overflow: hidden;
+  padding-left: 0px;
 }
 
 .comments {
