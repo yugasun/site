@@ -22,8 +22,10 @@ import EventGateway from './EventGateway'
 export { EventGateway }
 import Auth from './Auth'
 export { Auth }
-import Success from './Success'
-export { Success }
+import Success from './Success' // to depricate after 10+ releases
+export { Success }  // to depricate after 10+ releases
+import SuccessNew from './SuccessNew'
+export { SuccessNew }
 import Splash from './Splash'
 export { Splash }
 import Jobs from './Jobs'
