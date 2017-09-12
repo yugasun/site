@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom' // eslint-disable-line
 import Head from './fragments/Head'
 import Scripts from './fragments/GlobalScripts'
-import SubscribeModal from './fragments/SubscribeModal'
 import initializeAnalytics from './utils/analytics/init'
 import initUAClasses from './utils/brower-detect'
 import fixChromeHash from './utils/fixChromeHash'
@@ -68,7 +67,7 @@ export default class App extends Component {
     }
     // handle user identification
     if (profile && profile.user_id) {
-      // check for mergeInProgress
+      // check for original id from auth0
       const id = profile.tracking_id || profile.user_id
       // ID user
       identify(id, profile)
