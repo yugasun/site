@@ -1,5 +1,5 @@
 /**
- * 404 page template
+ * Old CLI login Success Page to be depricated
  */
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
@@ -10,7 +10,7 @@ import identify from '../../utils/analytics/identify'
 import track from '../../utils/analytics/track'
 import removeURLParams from '../../utils/analytics/source/removeURLParams'
 import { getParams } from '../../utils/analytics/source/urlParams'
-import styles from './index.css'
+import styles from './styles.css'
 
 export default class Welcome extends Component {
   static hasLoadingState = true
