@@ -15,30 +15,27 @@ export default class CLISuccessNew extends React.Component {
     if (params.idtoken) {
       const decoded = decode(params.idtoken)
       const userID = decoded.tracking_id || decoded.sub
-      const email = decoded.email
-      const name = decoded.name
-      const createdAt = decoded.created_at
 
-      console.log('IDENTITy Call')
-      console.log(userID)
-
-      const data = {
-        created_at: createdAt,
-        email: email,
-        name: name,
-        // login_count: params.c,
+      let data = {
+        created_at: decoded.created_at,
+        email: decoded.email,
+        name: decoded.name,
+        // login_count: params.login_count,
         // frameworkId: params.id
       }
-      console.log('LOG DATA', data)
+      if (decoded.name) {
+        data.name = decoded.name
+      }
       // ID call
-      // identify(userID, data)
+      identify(userID, data)
       // Track Login Success
-      // track('site:cli_loginCompleted', {
-      //   label: 'Framework Login Completed'
-      // })
+      track('site:cli_loginCompleted', {
+        label: 'Framework Login Completed'
+      })
     }
   }
   render() {
+    // this returns in iframe on platform.serverless.com
     return null
   }
 }
