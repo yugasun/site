@@ -303,8 +303,14 @@ pre code.hljs {
   font-size: 0.9em;
 }
 .hljs.language-yml:before {
-  content: 'YAML';
+  content: 'yaml';
 }
 .hljs.language-javascript:before {
-  content: 'JavaScript';
+  content: 'javascript';
+}
+.hljs.language-bash:before {
+  content: 'bash';
+}
+.hljs.language-python:before {
+  content: 'python';
 }

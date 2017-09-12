@@ -14,7 +14,6 @@ import AuthorCTA from '../../fragments/AuthorCTA'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
-import EmitCTA from '../../fragments/EmitCTA'
 
 class Post extends Component {
   static hasLoadingState = true
@@ -35,40 +34,6 @@ class Post extends Component {
     }
 
     if (!isLoading) {
-      pageDate = head.date ? new Date(head.date) : null
-      const actualDate = new Date(pageDate.getTime() + Math.abs(pageDate.getTimezoneOffset() * 60000))
-      let postDataContent
-      if (pageDate) {
-        postDataContent = (
-          <span className={styles.publishMeta}>
-          Published on&nbsp;
-            <time key={actualDate.toISOString()}>
-              {actualDate.toDateString()}
-            </time>
-          </span>
-        )
-      }
-      markdownContent = (
-        <BodyContainer>
-          {body}
-        </BodyContainer>
-      )
-      // &nbsp;by Jim
-      githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
-      postMeta = (
-        <header className={styles.postMeta}>
-          {postDataContent}
-          <span className={styles.editLink}>
-            <Svg svg={gitHubSvg} cleanup />
-            <a target='_blank' rel='noopener noreferrer' href={githubURL}>
-              Edit this post
-            </a>
-          </span>
-        </header>
-      )
-
-      title = head.title
-
       if (head.authors && Array.isArray(head.authors)) {
         // console.log('page.authors', page.authors)
         const authorInfo = head.authors.map((a) => {
@@ -89,6 +54,43 @@ class Post extends Component {
           }
         }
       }
+
+      pageDate = head.date ? new Date(head.date) : null
+      const actualDate = new Date(pageDate.getTime() + Math.abs(pageDate.getTimezoneOffset() * 60000))
+
+      let postDataContent
+
+      if (pageDate) {
+        postDataContent = (
+          <span className={styles.publishMeta}>
+          Written by {author}.&nbsp;
+            <time key={actualDate.toISOString()}>
+              {actualDate.toDateString()}
+            </time>
+          </span>
+        )
+      }
+      markdownContent = (
+        <BodyContainer>
+          {body}
+        </BodyContainer>
+      )
+      githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
+      postMeta = (
+        <header className={styles.postMeta}>
+          {postDataContent}
+          <span className={styles.editLink}>
+            <Svg svg={gitHubSvg} cleanup />
+            <a target='_blank' rel='noopener noreferrer' href={githubURL}>
+              Edit this post
+            </a>
+          </span>
+        </header>
+      )
+
+      title = head.title
+
+
     }
 
     let authorBox
@@ -111,7 +113,7 @@ class Post extends Component {
     }
 
     return (
-      <Default {...props} className={styles.postPage}>
+      <Default {...props} fullWidth className={styles.postPage}>
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
@@ -131,8 +133,24 @@ class Post extends Component {
           </div>
 
           <div className={styles.sidebar}>
-            <Block className={styles.sidebarBlock}>
+            <div className={styles.sidebarInner}>
+            <div className={styles.aboutBlog}>
+              <h2>Serverless Blog</h2>
+              <h3>The blog on serverless and event driven compute</h3>
+            </div>
+
+            <div className={styles.getStarted}>
+              <h3>New to serverless?</h3>
+              <p>Run the following commands to get started today</p>
+              <code>
+                npm install serverless -g
+              </code>
+              {/* <img src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/getting-started-once.gif'/> */}
+            </div>
+
+            <div className={styles.quickLinks}>
               <h2>Quick Links</h2>
+
               <div className={styles.sidebarLinks}>
                 <Link to='/framework/docs'>
                   Serverless documentation
@@ -148,14 +166,10 @@ class Post extends Component {
                   Ask Questions on the Forum
                 </a>
               </div>
-            </Block>
+            </div>
 
-            <BetaCTA buttonText='Get early access' />
-
-            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
-
-            <AuthorCTA style={{ marginTop: '20px' }} />
-
+            <NewsletterCTA style={{ marginBottom: '20px' }} black={true} />
+            </div>
           </div>
         </div>
         <div className={styles.comments} id='disqus_thread' />

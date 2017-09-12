@@ -1,16 +1,16 @@
 import React, { PropTypes } from 'react'
 import Newsletter from '../Newsletter'
-import Block from '../../components/Block'
+import styles from './styles.css'
 
 const NewsletterCTA = (props) => {
   return (
-    <Block className={props.className} style={props.style}>
+    <div className={props.className} style={props.style}>
       <h3>
         Stay up to date<br />
         Subscribe to the Newsletter
       </h3>
-      <Newsletter black={props.black} />
-    </Block>
+      <Newsletter className={styles.stacked} black={props.black} />
+    </div>
   )
 }
 

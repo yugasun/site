@@ -11,7 +11,6 @@ $height: 50px;
 }
 
 .formGroup {
-  width: 70%;
   padding-right: 10px;
 }
 .formControl {
@@ -20,7 +19,7 @@ $height: 50px;
   padding-right: 1.5rem;
   border: 1px solid transparent;
   height: $height;
-  font-size: 1.8rem;
+  font-size: 15px;
   font-family: inherit;
   font-weight: 300;
   color: $black2;
