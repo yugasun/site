@@ -54,6 +54,7 @@ $borderColor: #e8e8e8;
     max-width: 100%;
     min-width: 100%;
     width: 100%;
+    border: 1px solid #ddd;
     border-left: none;
     border-right: none;
     background: rgb(248, 248, 248);
