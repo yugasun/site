@@ -8,13 +8,13 @@ import authorData from '../../pages/Blog/generated-authors.json'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
 import NewsletterCTA from '../../fragments/NewsletterCTA'
+import Sidebar from './sidebar'
 import Block from '../../components/Block'
 import BetaCTA from '../../fragments/BetaCTA'
 import AuthorCTA from '../../fragments/AuthorCTA'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
-import EmitCTA from '../../fragments/EmitCTA'
 
 class Post extends Component {
   static hasLoadingState = true
@@ -35,40 +35,6 @@ class Post extends Component {
     }
 
     if (!isLoading) {
-      pageDate = head.date ? new Date(head.date) : null
-      const actualDate = new Date(pageDate.getTime() + Math.abs(pageDate.getTimezoneOffset() * 60000))
-      let postDataContent
-      if (pageDate) {
-        postDataContent = (
-          <span className={styles.publishMeta}>
-          Published on&nbsp;
-            <time key={actualDate.toISOString()}>
-              {actualDate.toDateString()}
-            </time>
-          </span>
-        )
-      }
-      markdownContent = (
-        <BodyContainer>
-          {body}
-        </BodyContainer>
-      )
-      // &nbsp;by Jim
-      githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
-      postMeta = (
-        <header className={styles.postMeta}>
-          {postDataContent}
-          <span className={styles.editLink}>
-            <Svg svg={gitHubSvg} cleanup />
-            <a target='_blank' rel='noopener noreferrer' href={githubURL}>
-              Edit this post
-            </a>
-          </span>
-        </header>
-      )
-
-      title = head.title
-
       if (head.authors && Array.isArray(head.authors)) {
         // console.log('page.authors', page.authors)
         const authorInfo = head.authors.map((a) => {
@@ -89,6 +55,45 @@ class Post extends Component {
           }
         }
       }
+
+      pageDate = head.date ? new Date(head.date) : null
+      const actualDate = new Date(pageDate.getTime() + Math.abs(pageDate.getTimezoneOffset() * 60000))
+      const prettyDate = actualDate.toDateString().split(" ")
+      prettyDate.splice(0, 1)
+
+      let postDataContent
+
+      if (pageDate) {
+        postDataContent = (
+          <span className={styles.publishMeta}>
+          Written by {author}.&nbsp;
+            <time key={actualDate.toISOString()}>
+              {prettyDate.join(" ")}
+            </time>
+          </span>
+        )
+      }
+      markdownContent = (
+        <BodyContainer>
+          {body}
+        </BodyContainer>
+      )
+      githubURL = `https://github.com/serverless/blog/edit/master/posts${head.gitLink}`
+      postMeta = (
+        <header className={styles.postMeta}>
+          {postDataContent}
+          <span className={styles.editLink}>
+            <Svg svg={gitHubSvg} cleanup />
+            <a target='_blank' rel='noopener noreferrer' href={githubURL}>
+              Edit this post
+            </a>
+          </span>
+        </header>
+      )
+
+      title = head.title
+
+
     }
 
     let authorBox
@@ -107,20 +112,25 @@ class Post extends Component {
     }
 
     if (isLoading) {
-      markdownContent = <ContentLoading numberOfLines={30} />
+      markdownContent = (
+        <div className={styles.loadingWrapper}>
+          <ContentLoading numberOfLines={30} />
+        </div>
+      )
     }
 
     return (
-      <Default {...props} className={styles.postPage}>
+      <Default {...props} fullWidth className={styles.postPage}>
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
+          editLink={githubURL}
         />
         <div className={styles.postWrapper}>
           <div className={styles.contentWrapper}>
-
-            <h1 className={styles.title}>{title}</h1>
-
+            <h1 className={styles.title}>
+              {title}
+            </h1>
             <div className={styles.postMetaWrapper}>
               {postMeta}
             </div>
@@ -129,35 +139,9 @@ class Post extends Component {
               {authorBox}
             </div>
           </div>
-
-          <div className={styles.sidebar}>
-            <Block className={styles.sidebarBlock}>
-              <h2>Quick Links</h2>
-              <div className={styles.sidebarLinks}>
-                <Link to='/framework/docs'>
-                  Serverless documentation
-                </Link>
-              </div>
-              <div className={styles.sidebarLinks}>
-                <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
-                  Chat in Gitter
-                </a>
-              </div>
-              <div className={styles.sidebarLinks}>
-                <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
-                  Ask Questions on the Forum
-                </a>
-              </div>
-            </Block>
-
-            <BetaCTA buttonText='Get early access' />
-
-            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
-
-            <AuthorCTA style={{ marginTop: '20px' }} />
-
-          </div>
+          <Sidebar />
         </div>
+        <h3 className={styles.commentsHeading}>Comments</h3>
         <div className={styles.comments} id='disqus_thread' />
         <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
       </Default>

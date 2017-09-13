@@ -2,15 +2,11 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import enhanceCollection from 'phenomic-serverless/lib/enhance-collection'
 import Default from '../../layouts/Default'
-import BetaCTA from '../../fragments/BetaCTA'
-import AuthorCTA from '../../fragments/AuthorCTA'
-import NewsletterCTA from '../../fragments/NewsletterCTA'
 import BlogPreview from './BlogPreview'
-// import Newsletter from '../../fragments/Newsletter/Newsletter'
+import Sidebar from '../../layouts/Post/sidebar'
 import styles from './Blog.css'
 
-const numberOfLatestPosts = 15
-// const isClient = typeof window !== 'undefined'
+const numberOfLatestPosts = 25
 
 export default class BlogPage extends Component {
   static hasLoadingState = true
@@ -31,12 +27,12 @@ export default class BlogPage extends Component {
       reverse: true,
     })
     .slice(pagination, offset)
-    let nextLink = <Link to={'/blog/page/1'}>Next</Link>
+    let nextLink = <Link to={'/blog/page/1'}>Next Page</Link>
     let previousLink
     if (params && params.page) {
       const prevNum = ((pageNumber - 1) === 0) ? '' : `page/${pageNumber - 1}`
-      nextLink = <Link to={`/blog/page/${pageNumber + 1}`}>Next</Link>
-      previousLink = <Link to={`/blog/${prevNum}`}>Previous</Link>
+      nextLink = <Link to={`/blog/page/${pageNumber + 1}`}>Next Page</Link>
+      previousLink = <Link to={`/blog/${prevNum}`}>Previous Page</Link>
     }
     let renderContent = (
       <div className={styles.postList}>
@@ -56,19 +52,16 @@ export default class BlogPage extends Component {
           <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
           <BlogPreview page={{ title: 'loading....', description: text }} isLoading />
           <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
         </div>
       )
     }
     return (
-      <Default {...this.props} coloredHeader>
-        <h2 className={styles.pageTitle}>Serverless Blog</h2>
+      <Default {...this.props} fullWidth coloredHeader className={styles.blogPage}>
         <div className={styles.wrapper}>
           {renderContent}
-          <div className={styles.sidebar}>
-            <BetaCTA buttonText='Signup for Beta' />
-            <NewsletterCTA style={{ marginTop: '20px' }} black={true} />
-            <AuthorCTA style={{ marginTop: '20px' }} />
-          </div>
+          <Sidebar />
         </div>
       </Default>
     )

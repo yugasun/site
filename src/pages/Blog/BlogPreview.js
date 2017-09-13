@@ -43,7 +43,9 @@ const BlogPreview = ({ page }) => {
   return (
     <div className={styles.post}>
       <div className={styles.thumbnail}>
-        <img src={thumbnail} role='presentation' />
+        <Link to={page.__url}>
+          <img src={thumbnail} role='presentation' />
+        </Link>
       </div>
       <div className={styles.content}>
         <Link className={styles.title} to={page.__url}>

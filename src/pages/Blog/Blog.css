@@ -1,15 +1,22 @@
+.blogPage {
+  margin-top: 7rem;
+}
 .wrapper {
   display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  justify-content: flex-end;
 }
 .postList {
   width: 66.66666666666666%;
-  padding-right: 35px;
-}
-.sidebar {
-  width: 33.33333333333333%;
+  max-width: 800px;
+  padding-left: 30px;
+  margin-top: 20px;
+  padding-bottom: 50px;
 }
 .pageination {
-  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 500;
   a {
     margin-right: 20px;
   }
@@ -18,12 +25,12 @@
 @media (max-width: 960px) {
   .wrapper {
     flex-direction: column;
-    padding: 10px;
   }
-  .pageTitle {
-    padding: 0 10px;
+  .pageination {
+    margin: 20px;
+    margin-top: 30px;
   }
-  .postList, .sidebar {
+  .postList {
     width: 100%;
     padding: 0px;
   }

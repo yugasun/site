@@ -1,15 +1,80 @@
-$sidebarWidth: 250px;
+$contentWrapper: 70%;
+$contentWidth: 660px;
+$contentPadding: 60px;
+$contentPaddingMobile: 20px;
+$borderColor: #e8e8e8;
+
 .postPage {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 .postWrapper {
   display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  justify-content: flex-end;
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 30px;
 }
 .contentWrapper {
-  width: 650px;
-  max-width: 650px;
-  min-width: 650px;
-  padding-right: 50px;
+  min-width: $contentWrapper;
+  flex-grow: 1;
+  font-size: 17px;
+  line-height: 28px;
+  img, iframe {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: underline;
+  }
+  h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
+    padding-left: $contentPadding;
+  }
+  blockquote p, blockquote li, li p  {
+    padding: 0px;
+  }
+  blockquote {
+    margin-left: $contentPadding;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+  }
+  ul, ol {
+    padding-left: resolve($contentPadding * 1.6);
+  }
+  /* sub lists */
+  ul ul, ol ol {
+    padding-left: 30px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, .loadingWrapper, .authorBox {
+    width: $contentWidth;
+    max-width: $contentWidth;
+    min-width: $contentWidth;
+  }
+  pre code {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: -.02rem;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-right: none;
+    background: rgb(248, 248, 248);
+    white-space: pre;
+    position: relative;
+    padding-left: $contentPadding !important;
+  }
+  ul pre code, ol pre code {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left: 10px !important;
+  }
   img, iframe {
     max-width: 100%;
   }
@@ -24,8 +89,7 @@ $sidebarWidth: 250px;
     max-height: 22px;
   }
   .postContent {
-    margin-top: 25px;
-    margin-bottom: 60px;
+    margin-top: 25px 0px;
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
@@ -41,8 +105,9 @@ $sidebarWidth: 250px;
   a {
     border: none;
     display: inline-block;
-    font-size: 13px;
+    font-size: 11px;
     margin-left: 5px;
+    text-decoration: none;
   }
   svg, :global(.SVGInline) {
     display: block;
@@ -52,46 +117,55 @@ $sidebarWidth: 250px;
 }
 
 .authorBox {
-  margin-top: 30px;
   display: flex;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
-  padding: 20px;
+  padding: 0px;
+  margin-bottom: 35px;
+  width: $contentWidth;
+  max-width: $contentWidth;
+  min-width: $contentWidth;
+  h3 {
+    padding-left: 0px !important;
+  }
 }
 .authorImage {
   width: 90px;
   min-width: 90px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   img {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
   }
 }
-
+.authorDetails {
+  overflow: hidden;
+  padding-left: 0px;
+}
+.commentsHeading {
+  display: none;
+  margin-left: 20px;
+}
 .comments {
+  max-width: 80%;
+  margin: auto;
   margin-bottom: 40px;
 }
-.sidebar {
-  flex-grow: 1;
-}
-.sidebarBlock {
-  padding: 20px;
-  margin-bottom: 20px;
-}
-.sidebarLinks {
-  margin-bottom: 5px;
-  a:hover {
-    border-bottom: 1px dashed black;
-  }
-}
+
 
 @media (max-width: 960px) {
   .postWrapper, .comments {
     flex-direction: column;
-    padding: 10px;
+    border-bottom: none;
   }
   .contentWrapper, .sidebar {
     width: 100%;
     min-width: 100%;
+    max-width: 100%;
     padding: 0px;
+    overflow: hidden;
   }
 }
 
@@ -100,8 +174,46 @@ $sidebarWidth: 250px;
     font-size: 1.5rem;
     margin-top: 7rem;
   }
-  .sidebar {
-    margin-bottom: 30px;
+  .commentsHeading {
+    display: block;
+  }
+  .contentWrapper {
+    font-size: 16px;
+    line-height: 26px;
+    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox  {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
+      padding-left: $contentPaddingMobile;
+      padding-right: $contentPaddingMobile;
+    }
+    blockquote {
+      margin-left: $contentPaddingMobile;
+      border-width: 7px;
+    }
+    pre code {
+      padding-left: $contentPaddingMobile !important;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    ul, ol {
+      padding-left: resolve($contentPaddingMobile * 2.5);
+      font-size: 15px;
+    }
+    ul pre code, ol pre code {
+      margin-left: -20px;
+    }
+    .postContent {
+      margin-bottom: 0px;
+    }
+  }
+  .comments {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 0px;
   }
   .postPage h1 {
     font-size: 2.2rem;
@@ -121,5 +233,10 @@ $sidebarWidth: 250px;
   }
   .authorBox {
     flex-direction: column;
+    border: none;
+    margin-bottom: 0px;
+  }
+  .authorImage {
+    display: none;
   }
 }
