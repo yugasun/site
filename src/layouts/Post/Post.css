@@ -196,9 +196,12 @@ $borderColor: #e8e8e8;
     pre code {
       padding-left: $contentPaddingMobile !important;
     }
+    li {
+      margin-bottom: 6px;
+    }
     ul, ol {
       padding-left: resolve($contentPaddingMobile * 2.5);
-      font-size: 14px;
+      font-size: 15px;
     }
     ul pre code, ol pre code {
       margin-left: -20px;
