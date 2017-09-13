@@ -244,12 +244,7 @@ tfoot td {
   max-width: 650px !important;
   min-width: 650px !important;
 }
-@media (max-width: 768px) {
-  .algolia-autocomplete .ds-dropdown-menu {
-      max-width: 100% !important;
-      min-width: 100% !important;
-  }
-}
+
 @keyframes zoomIn {
   from { transform: scale(0);opacity:0; } to { transform: scale(1);opacity:1; }
 }
@@ -313,4 +308,16 @@ pre code.hljs {
 }
 .hljs.language-python:before {
   content: 'python';
+}
+
+@media (max-width: 768px) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  .hljs:before {
+    right: 2px;
+    top: 3px;
+    font-size: 11px;
+  }
 }

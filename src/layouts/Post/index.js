@@ -57,6 +57,8 @@ class Post extends Component {
 
       pageDate = head.date ? new Date(head.date) : null
       const actualDate = new Date(pageDate.getTime() + Math.abs(pageDate.getTimezoneOffset() * 60000))
+      const prettyDate = actualDate.toDateString().split(" ")
+      prettyDate.splice(0, 1)
 
       let postDataContent
 
@@ -65,7 +67,7 @@ class Post extends Component {
           <span className={styles.publishMeta}>
           Written by {author}.&nbsp;
             <time key={actualDate.toISOString()}>
-              {actualDate.toDateString()}
+              {prettyDate.join(" ")}
             </time>
           </span>
         )
@@ -138,7 +140,6 @@ class Post extends Component {
           </div>
 
           <div className={styles.sidebar}>
-            <div className={styles.sidebarInner}>
             <div className={styles.aboutBlog}>
               <h2>Serverless Blog</h2>
               <h3>The blog on serverless and event driven compute</h3>
@@ -172,7 +173,6 @@ class Post extends Component {
             </div>
             <NewsletterCTA style={{ marginBottom: '20px' }} black={true} />
             </div>
-          </div>
         </div>
         <div className={styles.comments} id='disqus_thread' />
         <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
