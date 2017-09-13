@@ -3,8 +3,6 @@ $thumbnailSize: 100px;
 
 .post {
   display: flex;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  border: 1px solid #e3e5e7;
   margin-bottom: 20px;
   border-radius: 3px;
 }
@@ -12,7 +10,6 @@ $thumbnailSize: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
   min-width: $thumbnailContainer;
   img {
     border-radius: 50%;
@@ -51,6 +48,9 @@ $thumbnailSize: 100px;
 @media (max-width: 768px) {
   .post {
     flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #e3e5e7;
+    margin: 10px;
   }
   .thumbnail {
     padding: 0px;

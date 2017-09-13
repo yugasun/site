@@ -11,7 +11,7 @@ const Sidebar = (props) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.aboutBlog}>
-        <h2>Serverless Blog</h2>
+        <h2><Link to='/blog'>Serverless Blog</Link></h2>
         <h3>The blog on serverless and event driven compute</h3>
       </div>
 
