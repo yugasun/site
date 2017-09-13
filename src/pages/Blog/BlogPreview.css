@@ -1,16 +1,21 @@
-$thumbnailContainer: 130px;
-$thumbnailSize: 100px;
+$thumbnailContainer: 160px;
+$thumbnailSize: 130px;
 
 .post {
   display: flex;
   margin-bottom: 20px;
   border-radius: 3px;
+  /*&:nth-child(even) {
+    flex-direction: row-reverse;
+  }*/
 }
+
 .thumbnail {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: $thumbnailContainer;
+  margin-right: 5px;
   img {
     border-radius: 50%;
     width: $thumbnailSize;
