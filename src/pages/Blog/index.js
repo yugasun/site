@@ -10,7 +10,7 @@ import Sidebar from '../../layouts/Post/sidebar'
 // import Newsletter from '../../fragments/Newsletter/Newsletter'
 import styles from './Blog.css'
 
-const numberOfLatestPosts = 15
+const numberOfLatestPosts = 25
 // const isClient = typeof window !== 'undefined'
 
 export default class BlogPage extends Component {
@@ -56,6 +56,8 @@ export default class BlogPage extends Component {
         <div className={styles.postList}>
           <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
           <BlogPreview page={{ title: 'loading....', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
+          <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
           <BlogPreview page={{ title: 'loading...', description: text }} isLoading />
         </div>
       )
