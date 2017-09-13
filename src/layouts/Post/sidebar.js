@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import { Link } from 'react-router'
-import NewsletterCTA from '../../fragments/NewsletterCTA'
+import Newsletter from '../../fragments/Newsletter'
 import styles from './sidebar.css'
 
 const propTypes = {
@@ -12,23 +12,33 @@ const Sidebar = (props) => {
     <div className={styles.sidebar}>
       <div className={styles.aboutBlog}>
         <h2><Link to='/blog'>Serverless Blog</Link></h2>
-        <h3>The blog on serverless and event driven compute</h3>
+        <h3>The blog on serverless & event driven compute</h3>
       </div>
 
       <div className={styles.getStarted}>
         <h3>New to serverless?</h3>
-        <p>Run the following commands to get started today</p>
+        <p>Pop open your terminal and run to get started</p>
         <code>
           npm install serverless -g
         </code>
       </div>
 
       <div className={styles.quickLinks}>
-        <h2>Quick Links</h2>
+        <h3>Resources & Links</h3>
         <div className={styles.sidebarLinks}>
           <Link to='/framework/docs'>
-            Serverless documentation
+            Documentation
           </Link>
+        </div>
+        <div className={styles.sidebarLinks}>
+          <a href='https://github.com/serverless/examples' target='_blank' rel='noopener noreferrer'>
+            Serverless examples
+          </a>
+        </div>
+        <div className={styles.sidebarLinks}>
+          <a href='https://github.com/serverless/plugins' target='_blank' rel='noopener noreferrer'>
+            Serverless plugins
+          </a>
         </div>
         <div className={styles.sidebarLinks}>
           <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
@@ -37,11 +47,19 @@ const Sidebar = (props) => {
         </div>
         <div className={styles.sidebarLinks}>
           <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
-            Ask Questions on the Forum
+            Engage on the Forum
           </a>
         </div>
       </div>
-      <NewsletterCTA style={{ marginBottom: '20px' }} black={true} />
+      <div className={styles.subscribe}>
+        <h3>
+          Subscribe
+        </h3>
+        <p>
+          Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
+        </p>
+      </div>
+      <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
     </div>
   )
 }

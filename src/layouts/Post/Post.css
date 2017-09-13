@@ -18,6 +18,8 @@ $borderColor: #e8e8e8;
 .contentWrapper {
   min-width: $contentWrapper;
   flex-grow: 1;
+  font-size: 17px;
+  line-height: 28px;
   img, iframe {
     max-width: 100%;
   }

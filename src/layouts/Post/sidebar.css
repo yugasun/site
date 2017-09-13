@@ -18,11 +18,36 @@ $borderColor: #e8e8e8;
     height: 1px;
     z-index: 3;
   }
+  h3 {
+    margin-bottom: 5px;
+  }
 }
 .sidebarLinks {
   margin-bottom: 5px;
+  margin-left: 1px;
+  font-size: 14px;
   a:hover {
     border-bottom: 1px dashed black;
+  }
+  &:before {
+    content: "-";
+    margin-right: 5px;
+  }
+}
+.subscribe {
+  p {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+}
+.stacked {
+  flex-direction: column;
+  input {
+    width: 90%;
+  }
+  button {
+    margin-top: 10px;
+    width: 50% !important;
   }
 }
 .aboutBlog {
@@ -37,9 +62,7 @@ $borderColor: #e8e8e8;
 }
 .getStarted {
   margin-bottom: 20px;
-  h3 {
-    margin-bottom: 0px;
-  }
+
   p {
     font-size: 13px;
     margin: 0px;
