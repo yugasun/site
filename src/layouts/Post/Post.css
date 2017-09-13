@@ -1,8 +1,9 @@
-$sidebarWidth: 30%;
-$sidebarInnerWidth: 28%;
 $contentWrapper: 70%;
 $contentWidth: 660px;
+$contentPadding: 60px;
+$contentPaddingMobile: 20px;
 $borderColor: #e8e8e8;
+
 .postPage {
   margin-top: 7rem;
 }
@@ -23,17 +24,18 @@ $borderColor: #e8e8e8;
   a {
     text-decoration: underline;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox {
-    padding-left: 50px;
+  h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox, iframe {
+    padding-left: $contentPadding;
   }
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
   }
   pre code {
-    padding-left: 50px !important;
+    padding-left: $contentPadding !important;
   }
   ul, ol {
-    padding-left: 80px;
+    padding-left: resolve($contentPadding * 1.6);
+    font-size: 14px;
   }
   li {
     margin-bottom: 10px;
@@ -92,30 +94,7 @@ $borderColor: #e8e8e8;
     height: 15px;
   }
 }
-.aboutBlog {
-  margin-bottom: 30px;
-  h2 {
-    font-size: 20px;
-    margin-bottom: 0px;
-  }
-  h3 {
-    font-size: 13px;
-  }
-}
-.quickLinks {
-  margin-bottom: 30px;
-}
-.getStarted {
-  margin-bottom: 20px;
-  h3 {
-    margin-bottom: 0px;
-  }
-  p {
-    font-size: 13px;
-    margin: 0px;
-    margin-bottom: 5px;
-  }
-}
+
 .authorBox {
   margin-top: 30px;
   display: flex;
@@ -146,31 +125,6 @@ $borderColor: #e8e8e8;
   padding-left: 0px;
 }
 
-.sidebar {
-  padding-top: 30px;
-  max-width: $sidebarWidth;
-  margin-left: 40px;
-  border-right: 1px solid $borderColor;
-  min-height: 100%;
-  padding-right: 20px;
-  &:after {
-    content: "";
-    width: 90%;
-    position: absolute;
-    background: #dddedf;
-    left: 5%;
-    top: -1px;
-    height: 1px;
-    z-index: 3;
-  }
-}
-.sidebarLinks {
-  margin-bottom: 5px;
-  a:hover {
-    border-bottom: 1px dashed black;
-  }
-}
-
 .comments {
   max-width: 80%;
   margin: auto;
@@ -180,12 +134,13 @@ $borderColor: #e8e8e8;
 @media (max-width: 960px) {
   .postWrapper, .comments {
     flex-direction: column;
-    padding: 10px 0px;
   }
   .contentWrapper, .sidebar {
     width: 100%;
     min-width: 100%;
+    max-width: 100%;
     padding: 0px;
+    overflow: hidden;
   }
 }
 
@@ -194,30 +149,24 @@ $borderColor: #e8e8e8;
     font-size: 1.5rem;
     margin-top: 7rem;
   }
-  .sidebar {
-    margin-bottom: 30px;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding-left: 20px;
-  }
   .contentWrapper {
     h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox  {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
     }
-    h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox {
-      padding-left: 20px;
-      padding-right: 20px;
+    h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox, iframe {
+      padding-left: $contentPaddingMobile;
+      padding-right: $contentPaddingMobile;
     }
     pre code {
-      padding-left: 20px !important;
+      padding-left: $contentPaddingMobile !important;
     }
     ul, ol {
-      padding-left: 50px;
+      padding-left: resolve($contentPaddingMobile * 2.5);
+    }
+    .postContent {
+      margin-bottom: 0px;
     }
   }
   .comments {

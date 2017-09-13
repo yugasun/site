@@ -1,0 +1,64 @@
+$sidebarWidth: 310px;
+$borderColor: #e8e8e8;
+.sidebar {
+  padding-top: 30px;
+  max-width: $sidebarWidth;
+  min-width: $sidebarWidth;
+  margin-left: 40px;
+  border-right: 1px solid $borderColor;
+  min-height: 100%;
+  padding-right: 20px;
+  &:after {
+    content: "";
+    width: 90%;
+    position: absolute;
+    background: #dddedf;
+    left: 5%;
+    top: -1px;
+    height: 1px;
+    z-index: 3;
+  }
+}
+.sidebarLinks {
+  margin-bottom: 5px;
+  a:hover {
+    border-bottom: 1px dashed black;
+  }
+}
+.aboutBlog {
+  margin-bottom: 30px;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-size: 13px;
+  }
+}
+.getStarted {
+  margin-bottom: 20px;
+  h3 {
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 13px;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+}
+.quickLinks {
+  margin-bottom: 30px;
+}
+
+
+@media (max-width: 767px) {
+  .sidebar {
+    margin-bottom: 30px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+  }
+}
