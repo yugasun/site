@@ -2,16 +2,11 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import enhanceCollection from 'phenomic-serverless/lib/enhance-collection'
 import Default from '../../layouts/Default'
-import BetaCTA from '../../fragments/BetaCTA'
-import AuthorCTA from '../../fragments/AuthorCTA'
-import NewsletterCTA from '../../fragments/NewsletterCTA'
 import BlogPreview from './BlogPreview'
 import Sidebar from '../../layouts/Post/sidebar'
-// import Newsletter from '../../fragments/Newsletter/Newsletter'
 import styles from './Blog.css'
 
 const numberOfLatestPosts = 25
-// const isClient = typeof window !== 'undefined'
 
 export default class BlogPage extends Component {
   static hasLoadingState = true
