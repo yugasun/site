@@ -281,9 +281,6 @@ $lineHeight: 0.2rem;
     .subNavItems {
       background: none;
     }
-    .subNavItems a {
-      color: $black;
-    }
     .subNavItems, .subNavItems:hover {
       display: block;
       width: 100%;
@@ -295,6 +292,7 @@ $lineHeight: 0.2rem;
     }
   }
   .link {
+    color: $black;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
