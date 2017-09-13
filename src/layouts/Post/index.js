@@ -141,6 +141,7 @@ class Post extends Component {
           </div>
           <Sidebar />
         </div>
+        <h3 className={styles.commentsHeading}>Comments</h3>
         <div className={styles.comments} id='disqus_thread' />
         <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
       </Default>

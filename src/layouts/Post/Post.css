@@ -144,16 +144,21 @@ $borderColor: #e8e8e8;
   overflow: hidden;
   padding-left: 0px;
 }
-
+.commentsHeading {
+  display: none;
+  margin-left: 20px;
+}
 .comments {
   max-width: 80%;
   margin: auto;
   margin-bottom: 40px;
 }
 
+
 @media (max-width: 960px) {
   .postWrapper, .comments {
     flex-direction: column;
+    border-bottom: none;
   }
   .contentWrapper, .sidebar {
     width: 100%;
@@ -169,15 +174,24 @@ $borderColor: #e8e8e8;
     font-size: 1.5rem;
     margin-top: 7rem;
   }
+  .commentsHeading {
+    display: block;
+  }
   .contentWrapper {
+    font-size: 16px;
+    line-height: 26px;
     h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox  {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
     }
-    h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox, iframe {
+    h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
       padding-left: $contentPaddingMobile;
       padding-right: $contentPaddingMobile;
+    }
+    blockquote {
+      margin-left: $contentPaddingMobile;
+      border-width: 7px;
     }
     pre code {
       padding-left: $contentPaddingMobile !important;
@@ -185,6 +199,9 @@ $borderColor: #e8e8e8;
     ul, ol {
       padding-left: resolve($contentPaddingMobile * 2.5);
       font-size: 14px;
+    }
+    ul pre code, ol pre code {
+      margin-left: -20px;
     }
     .postContent {
       margin-bottom: 0px;
@@ -213,6 +230,10 @@ $borderColor: #e8e8e8;
   }
   .authorBox {
     flex-direction: column;
-    border: 1px solid #e3e5e7;
+    border: none;
+    margin-bottom: 0px;
+  }
+  .authorImage {
+    display: none;
   }
 }
