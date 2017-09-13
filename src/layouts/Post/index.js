@@ -120,7 +120,7 @@ class Post extends Component {
     }
 
     return (
-      <Default {...props} fullWidth className={styles.postPage}>
+      <Default {...props} fullWidth className={styles.postPage} coloredHeader={true}>
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
