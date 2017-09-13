@@ -24,8 +24,11 @@ $borderColor: #e8e8e8;
   a {
     text-decoration: underline;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, pre code {
+  h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox {
     padding-left: 50px;
+  }
+  pre code {
+    padding-left: 50px !important;
   }
   ul, ol {
     padding-left: 80px;
@@ -33,7 +36,7 @@ $borderColor: #e8e8e8;
   li {
     margin-bottom: 10px;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta {
+  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, .loadingWrapper, .authorBox {
     width: $contentWidth;
     max-width: $contentWidth;
     min-width: $contentWidth;
@@ -116,7 +119,6 @@ $borderColor: #e8e8e8;
   display: flex;
   box-shadow: 0 0 3px rgba(0,0,0,.2);
   padding: 20px;
-  margin-left: 50px;
   width: $contentWidth;
   max-width: $contentWidth;
   min-width: $contentWidth;
@@ -135,7 +137,7 @@ $borderColor: #e8e8e8;
 }
 
 .comments {
-  max-width: 90%;
+  max-width: 80%;
   margin: auto;
   margin-bottom: 40px;
 }
@@ -157,13 +159,6 @@ $borderColor: #e8e8e8;
     z-index: 3;
   }
 }
-.sidebarInner {
-
-}
-.sidebarBlock {
-  padding: 20px;
-  margin-bottom: 20px;
-}
 .sidebarLinks {
   margin-bottom: 5px;
   a:hover {
@@ -174,7 +169,7 @@ $borderColor: #e8e8e8;
 @media (max-width: 960px) {
   .postWrapper, .comments {
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 0px;
   }
   .contentWrapper, .sidebar {
     width: 100%;
@@ -190,6 +185,34 @@ $borderColor: #e8e8e8;
   }
   .sidebar {
     margin-bottom: 30px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+  }
+  .contentWrapper {
+    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox  {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    pre code {
+      padding-left: 20px !important;
+    }
+    ul, ol {
+      padding-left: 35px;
+    }
+  }
+  .comments {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 0px;
   }
   .postPage h1 {
     font-size: 2.2rem;

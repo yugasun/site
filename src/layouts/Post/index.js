@@ -109,7 +109,11 @@ class Post extends Component {
     }
 
     if (isLoading) {
-      markdownContent = <ContentLoading numberOfLines={30} />
+      markdownContent = (
+        <div className={styles.loadingWrapper}>
+          <ContentLoading numberOfLines={30} />
+        </div>
+      )
     }
 
     return (
@@ -117,6 +121,7 @@ class Post extends Component {
         <FixedSocialButtons
           url={`https://serverless.com${this.props.__url}`}
           title={title}
+          editLink={githubURL}
         />
         <div className={styles.postWrapper}>
           <div className={styles.contentWrapper}>
@@ -145,12 +150,10 @@ class Post extends Component {
               <code>
                 npm install serverless -g
               </code>
-              {/* <img src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/getting-started-once.gif'/> */}
             </div>
 
             <div className={styles.quickLinks}>
               <h2>Quick Links</h2>
-
               <div className={styles.sidebarLinks}>
                 <Link to='/framework/docs'>
                   Serverless documentation
@@ -167,7 +170,6 @@ class Post extends Component {
                 </a>
               </div>
             </div>
-
             <NewsletterCTA style={{ marginBottom: '20px' }} black={true} />
             </div>
           </div>
