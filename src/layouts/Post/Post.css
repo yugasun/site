@@ -24,8 +24,14 @@ $borderColor: #e8e8e8;
   a {
     text-decoration: underline;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, .postMeta, .loadingWrapper, .authorBox, iframe {
+  h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
     padding-left: $contentPadding;
+  }
+  blockquote p, blockquote li  {
+    padding: 0px;
+  }
+  blockquote {
+    margin-left: $contentPadding;
   }
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
@@ -35,7 +41,6 @@ $borderColor: #e8e8e8;
   }
   ul, ol {
     padding-left: resolve($contentPadding * 1.6);
-    font-size: 14px;
   }
   li {
     margin-bottom: 10px;
@@ -67,8 +72,7 @@ $borderColor: #e8e8e8;
     max-height: 22px;
   }
   .postContent {
-    margin-top: 25px;
-    margin-bottom: 60px;
+    margin-top: 25px 0px;
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
@@ -96,9 +100,7 @@ $borderColor: #e8e8e8;
 }
 
 .authorBox {
-  margin-top: 30px;
   display: flex;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
   padding: 20px;
   width: $contentWidth;
   max-width: $contentWidth;
@@ -164,6 +166,7 @@ $borderColor: #e8e8e8;
     }
     ul, ol {
       padding-left: resolve($contentPaddingMobile * 2.5);
+      font-size: 14px;
     }
     .postContent {
       margin-bottom: 0px;
@@ -192,5 +195,6 @@ $borderColor: #e8e8e8;
   }
   .authorBox {
     flex-direction: column;
+    border: 1px solid #e3e5e7;
   }
 }
