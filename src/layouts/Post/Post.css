@@ -68,6 +68,11 @@ $borderColor: #e8e8e8;
     position: relative;
     padding-left: $contentPadding !important;
   }
+  ul pre code, ol pre code {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding-left: 10px !important;
+  }
   img, iframe {
     max-width: 100%;
   }
@@ -111,7 +116,8 @@ $borderColor: #e8e8e8;
 
 .authorBox {
   display: flex;
-  padding: 20px;
+  padding: 0px;
+  margin-bottom: 35px;
   width: $contentWidth;
   max-width: $contentWidth;
   min-width: $contentWidth;
