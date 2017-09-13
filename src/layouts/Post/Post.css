@@ -51,6 +51,11 @@ $borderColor: #e8e8e8;
     min-width: $contentWidth;
   }
   pre code {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    letter-spacing: -.02rem;
     max-width: 100%;
     min-width: 100%;
     width: 100%;
@@ -58,6 +63,8 @@ $borderColor: #e8e8e8;
     border-left: none;
     border-right: none;
     background: rgb(248, 248, 248);
+    white-space: pre;
+    position: relative;
   }
   img, iframe {
     max-width: 100%;
