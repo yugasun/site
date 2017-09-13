@@ -296,8 +296,8 @@ pre code.hljs {
 }
 .hljs:before {
   position: absolute;
-  right:0;
-  top:5px;
+  right: 5px;
+  top: 5px;
   padding: 0 0.5em;
   color: rgba(0, 0, 0, 0.32);
   font-size: 0.9em;
