@@ -320,6 +320,9 @@ $lineHeight: 0.2rem;
   .caret {
     display: none !important;
   }
+  .cta {
+    text-align: center;
+  }
 }
 .bound {
   composes: bound from "../../index.css";
