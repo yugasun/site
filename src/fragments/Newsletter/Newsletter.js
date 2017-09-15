@@ -108,7 +108,7 @@ export default class Newsletter extends Component {
             type='email'
             className={styles.formControl}
             name='EMAIL'
-            placeholder='you@example.com'
+            placeholder='Enter your email'
           />
         </div>
         <Button onClick={this.handleSubmit} kind='whiteBordered'>{text}</Button>
