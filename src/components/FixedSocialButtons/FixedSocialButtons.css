@@ -44,7 +44,7 @@
     font-size: 10px;
   }
 }
-@media (max-width: 1120px) {
+@media (max-width: 1050px) {
   .social {
     display: none;
   }
