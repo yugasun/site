@@ -24,7 +24,7 @@ $borderColor: #e8e8e8;
 }
 .sidebarLinks {
   margin-bottom: 5px;
-  margin-left: 4px;
+  margin-left: 1px;
   font-size: 14px;
   position: relative;
   a {
@@ -41,6 +41,9 @@ $borderColor: #e8e8e8;
     opacity: 0;
     background: #FD5750;
     animation: none;
+  }
+  &:hover a {
+    font-weight: 500;
   }
   &:hover:before, &:focus:before {
     animation: blinkblink 0.4s cubic-bezier(0.5,0,1,1) infinite alternate;
