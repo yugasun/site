@@ -1,5 +1,7 @@
 $sidebarWidth: 310px;
+$sidebarMargin: 40px;
 $borderColor: #e8e8e8;
+
 .sidebar {
   padding-top: 30px;
   max-width: $sidebarWidth;
@@ -20,7 +22,24 @@ $borderColor: #e8e8e8;
   }
   h3 {
     margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.015rem;
   }
+  pre {
+    margin: 0px;
+  }
+  .code {
+    border: 1px solid rgba(221, 221, 221, 0.68);
+    color: #000;
+    background: rgb(248, 248, 248);
+    width: resolve($sidebarWidth + $sidebarMargin);
+    padding: 1rem;
+    margin-left: resolve($sidebarMargin * -1);
+    padding-left: $sidebarMargin;
+    border-left: none;
+  }
+
 }
 .sidebarLinks {
   margin-bottom: 5px;
@@ -40,6 +59,7 @@ $borderColor: #e8e8e8;
     margin-top: 0px;
   }
 }
+
 .stacked {
   flex-direction: column;
   input {
@@ -51,7 +71,7 @@ $borderColor: #e8e8e8;
   }
 }
 .aboutBlog {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   h2 {
     font-size: 20px;
     margin-bottom: 0px;
@@ -61,22 +81,26 @@ $borderColor: #e8e8e8;
   }
 }
 .getStarted {
-  margin-bottom: 20px;
-
+  margin-bottom: 25px;
   p {
     font-size: 13px;
     margin: 0px;
     margin-bottom: 5px;
   }
+  .continue {
+    margin-top: 5px;
+    color: #FD5750;
+    font-weight: 600;
+  }
 }
 .quickLinks {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 
 @media (max-width: 767px) {
   .sidebar {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -84,5 +108,8 @@ $borderColor: #e8e8e8;
     margin-bottom: 0px;
     padding-left: 20px;
     border-right: none;
+    .code  {
+      width: 100vw;
+    }
   }
 }

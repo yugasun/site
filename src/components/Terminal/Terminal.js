@@ -5,7 +5,7 @@ const propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.any,
-  onComplete: PropTypes.function,
+  onComplete: PropTypes.func,
   commands: PropTypes.array,
 }
 

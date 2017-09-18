@@ -1,13 +1,16 @@
 import React, { PropTypes } from 'react'
 import Newsletter from '../Newsletter'
 import styles from './NewsletterStrip.css'
+const logo = process.env.LOGO
 
 const NewsletterStrip = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.descriptionBlock}>
-        <img className={styles.logo} width={52} height={35} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg' />
-        <p className={styles.description}>Join our newsletter and get the latest news about Serverless products and happenings. #nospamwepromise</p>
+        <img className={styles.logo} width={52} height={35} src={logo.ICON} />
+        <p className={styles.description}>
+          Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
+        </p>
       </div>
       <Newsletter className={styles.newsletter} />
     </div>
