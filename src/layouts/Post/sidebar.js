@@ -17,10 +17,17 @@ const Sidebar = (props) => {
 
       <div className={styles.getStarted}>
         <h3>New to serverless?</h3>
-        <p>Pop open your terminal and run to get started</p>
-        <code>
+        <p>To get started, pop open your terminal & run</p>
+        <pre>
+          <code className={styles.code}>
           npm install serverless -g
-        </code>
+          </code>
+        </pre>
+        <p className={styles.continue}>
+          <Link to='/framework/docs/getting-started/'>
+            how? learn more
+          </Link>
+        </p>
       </div>
 
       <div className={styles.quickLinks}>
