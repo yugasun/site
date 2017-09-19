@@ -172,12 +172,6 @@ class Doc extends Component {
     let parentDisplay = parentName
     let parentURL
 
-    if (parentName === 'aws') {
-      parentDisplay = 'AWS'
-    } else if (parentName === 'framework') {
-      parentDisplay = 'Framework Docs'
-    }
-
     let menu = generatedMenu[__url] || generatedMenu[trimmedURL]
     if (!menu) {
       parentURL = getParentUrl(trimmedURL)
@@ -214,11 +208,6 @@ class Doc extends Component {
               {items}
             </ul>
           </div>
-
-
-          <div className={styles.versionNumber}>
-            Docs Version: {process.env.DOCS_VERSION}
-          </div>
         </div>
       </div>
     )
@@ -248,9 +237,14 @@ class Doc extends Component {
     if (typeof window !== 'undefined' && window.outerWidth < 600) {
       searchBox = this.renderSearchBox()
     }
+    const breadCrumbContent = (
+      <div className={styles.versionNumber}>
+        Docs Version: {process.env.DOCS_VERSION}
+      </div>
+    )
     const breadcrumbs = (
       <div className={`${styles.breadCrumbContainer}  docs-breadcrumbs`}>
-        <Breadcrumbs path={url} />
+        <Breadcrumbs path={url} rightContent={breadCrumbContent} />
         {searchBox}
       </div>
     )

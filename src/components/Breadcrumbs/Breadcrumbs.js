@@ -18,45 +18,57 @@ const Breadcrumbs = ({
   pathSeparator,
   getUrlFromPathSegments,
   onClick,
-  className
+  className,
+  rightContent
 }) => {
   const pathArray = explodePath(path, pathSeparator)
+  let renderRight
+  if (rightContent) {
+    renderRight = (
+      <div className={styles.rightContent}>
+        {rightContent}
+      </div>
+    )
+  }
   return (
-    <ul className={`${styles.breadcrumbs} ${className}`}>
-      {pathRoot ? (
-        <li
-          key='root'
-          className={`${styles.item} ${styles.basePath}`}
-        >
-          <span className={styles.itemInner}>
-            <BreadcrumbItem
-              label={pathRoot}
-              pathSegments={[]}
-              {...{ getUrlFromPathSegments, onClick }}
-            />
-          </span>
-        </li>
-        ) : null}
-
-      {pathArray.map((segment, id) => {
-        const pathSegments = pathArray.map(encodeURIComponent).slice(0, id + 1)
-        const active = (pathArray.length === id + 1) ? styles.current : ''
-        return (
+    <div className={styles.breadcrumbWrapper}>
+      <ul className={`${styles.breadcrumbs} ${className}`}>
+        {pathRoot ? (
           <li
-            key={id}
-            className={`${styles.item} ${active}`}
+            key='root'
+            className={`${styles.item} ${styles.basePath}`}
           >
             <span className={styles.itemInner}>
               <BreadcrumbItem
-                label={segment}
-                pathSegments={pathSegments}
+                label={pathRoot}
+                pathSegments={[]}
                 {...{ getUrlFromPathSegments, onClick }}
               />
             </span>
           </li>
-        )
-      })}
-    </ul>
+          ) : null}
+
+        {pathArray.map((segment, id) => {
+          const pathSegments = pathArray.map(encodeURIComponent).slice(0, id + 1)
+          const active = (pathArray.length === id + 1) ? styles.current : ''
+          return (
+            <li
+              key={id}
+              className={`${styles.item} ${active}`}
+            >
+              <span className={styles.itemInner}>
+                <BreadcrumbItem
+                  label={segment}
+                  pathSegments={pathSegments}
+                  {...{ getUrlFromPathSegments, onClick }}
+                />
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+      {renderRight}
+  </div>
   )
 }
 
