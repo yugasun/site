@@ -15,8 +15,6 @@ const propTypes = {
 
 export default class Header extends Component {
   static hasLoadingState = true
-  static lastScrollTop = 0
-  static scrolling = false
   constructor(props, context) {
     super(props, context)
     this.state = {
@@ -24,6 +22,10 @@ export default class Header extends Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.closeNav = this.closeNav.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+
+    this.lastScrollTop = 0
+    this.scrolling = false
   }
   componentDidMount() {
     document.body.addEventListener('click', this.closeNav)
@@ -49,7 +51,9 @@ export default class Header extends Component {
         header.classList.add(styles.coloredHeader)
       } else {
         header.classList.remove(styles.headerDetached)
-        header.classList.remove(styles.coloredHeader)
+        if (!this.props.colored) {
+          header.classList.remove(styles.coloredHeader)
+        }
       }
 
       if (st > this.lastScrollTop && (st - this.lastScrollTop) > 10){
