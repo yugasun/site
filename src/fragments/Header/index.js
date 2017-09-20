@@ -49,10 +49,16 @@ export default class Header extends Component {
       if (st > 50) {
         header.classList.add(styles.headerDetached)
         header.classList.add(styles.coloredHeader)
+        if (this.props.whiteLogo) {
+          logo.src = logo.src.includes('#white') ? logo.src.substr(0, logo.src.length - 6) : logo.src
+        }
       } else {
         header.classList.remove(styles.headerDetached)
         if (!this.props.colored) {
           header.classList.remove(styles.coloredHeader)
+        }
+        if (this.props.whiteLogo) {
+          logo.src = logo.src.includes('#white') ? logo.src : logo.src + '#white'
         }
       }
 
