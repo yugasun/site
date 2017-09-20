@@ -15,6 +15,8 @@ const propTypes = {
 
 export default class Header extends Component {
   static hasLoadingState = true
+  static lastScrollTop = 0
+  static scrolling = false
   constructor(props, context) {
     super(props, context)
     this.state = {
@@ -25,9 +27,39 @@ export default class Header extends Component {
   }
   componentDidMount() {
     document.body.addEventListener('click', this.closeNav)
+    window.addEventListener('scroll', this.handleScroll)
   }
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+  handleScroll(e) {
+    if (this.scrolling) {
+      return
+    }
+    requestAnimationFrame(() => {
+      this.scrolling = true
+      let header = document.getElementById('header'),
+          logo = document.getElementById('logo')
+
+      let st = window.pageYOffset || document.documentElement.scrollTop
+
+      if (st > 50) {
+        header.classList.add(styles.headerDetached)
+        header.classList.add(styles.coloredHeader)
+      } else {
+        header.classList.remove(styles.headerDetached)
+        header.classList.remove(styles.coloredHeader)
+      }
+
+      if (st > this.lastScrollTop && (st - this.lastScrollTop) > 10){
+        header.classList.add(styles.headerHidden)
+      } else if((this.lastScrollTop - st) > 10) {
+        header.classList.remove(styles.headerHidden)
+      }
+      this.lastScrollTop = st
+      this.scrolling = false
+    })
   }
   closeNav(e) {
     const toggleNode = this.refs.toggle
@@ -52,11 +84,12 @@ export default class Header extends Component {
     let headerClasses = colored ? classnames(styles.header, styles.coloredHeader) : styles.header
         headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
     return (
-      <header className={headerClasses}>
+      <header id='header' className={headerClasses}>
         <div className={`${styles.navWrapper} ${containerStyle} ${styles.bound}`}>
           <div className={styles.navLeft}>
             <Link to='/' className={styles.logo}>
               <img
+                id='logo'
                 width={28}
                 height={23}
                 src={logo.ICON + (whiteLogo ? '#white' : '')}
