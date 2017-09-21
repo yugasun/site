@@ -8,8 +8,7 @@ import classnames from 'classnames'
 const newsletterSubscribeAPI = process.env.API.NEWSLETTER
 
 function validateEmail(value) {
-  const test = /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
-  return test
+  return /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
 }
 
 const propTypes = {
