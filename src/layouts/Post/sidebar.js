@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react'
 import { Link } from 'react-router'
 import Newsletter from '../../fragments/Newsletter'
+import { getItemSync } from '../../utils/storage'
 import styles from './sidebar.css'
 
 const propTypes = {
@@ -8,6 +9,7 @@ const propTypes = {
 }
 
 const Sidebar = (props) => {
+  const newsletterSubscribed = getItemSync('newsletterSubscribed') === true
   return (
     <div className={styles.sidebar}>
       <div className={styles.aboutBlog}>
@@ -58,15 +60,19 @@ const Sidebar = (props) => {
           </a>
         </div>
       </div>
-      <div className={styles.subscribe}>
-        <h3>
-          Subscribe
-        </h3>
-        <p>
-          Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
-        </p>
-      </div>
-      <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
+      {newsletterSubscribed ? null :
+          <div>
+            <div className={styles.subscribe}>
+              <h3>
+                Subscribe
+              </h3>
+              <p>
+                Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
+              </p>
+            </div>
+            <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
+          </div>
+      }
     </div>
   )
 }

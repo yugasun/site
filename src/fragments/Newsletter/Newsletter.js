@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
-import { getItemSync } from '../../utils/storage'
+import { getItemSync, setItemSync } from '../../utils/storage'
 import track from '../../utils/analytics/track'
 import Button from '../../components/Button/Button'
 import styles from './Newsletter.css'
@@ -24,7 +24,7 @@ export default class Newsletter extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      isSubscribed: false,
+      isSubscribed: getItemSync('newsletterSubscribed') === true,
       isFetching: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -75,6 +75,7 @@ export default class Newsletter extends Component {
             onSubmit()
           }
         })
+        setItemSync('newsletterSubscribed', true)
       } else {
         console.log('failed creation') // eslint-disable-line
         that.setState({
