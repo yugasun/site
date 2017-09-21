@@ -3,6 +3,7 @@ $sidebarMargin: 40px;
 $borderColor: #e8e8e8;
 
 .sidebar {
+  position: fixed;
   padding-top: 30px;
   max-width: $sidebarWidth;
   min-width: $sidebarWidth;
@@ -10,6 +11,7 @@ $borderColor: #e8e8e8;
   border-right: 1px solid $borderColor;
   min-height: 100%;
   padding-right: 20px;
+  top: 70px;
   &:after {
     content: "";
     width: 90%;
@@ -100,16 +102,20 @@ $borderColor: #e8e8e8;
 
 @media (max-width: 767px) {
   .sidebar {
-    margin-bottom: 30px !important;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 30px;
     padding-left: 20px;
     border-right: none;
     .code  {
       width: 100vw;
     }
+  }
+}
+@media (max-width: 960px) {
+  .sidebar {
+    position: static;
   }
 }
