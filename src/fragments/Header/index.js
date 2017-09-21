@@ -30,6 +30,8 @@ export default class Header extends Component {
   componentDidMount() {
     document.body.addEventListener('click', this.closeNav)
     window.addEventListener('scroll', this.handleScroll)
+    this.header = document.getElementById('header')
+    this.logo = document.getElementById('logo')
   }
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
@@ -41,31 +43,29 @@ export default class Header extends Component {
     }
     requestAnimationFrame(() => {
       this.scrolling = true
-      let header = document.getElementById('header'),
-          logo = document.getElementById('logo')
 
       let st = window.pageYOffset || document.documentElement.scrollTop
 
       if (st > 50) {
-        header.classList.add(styles.headerDetached)
-        header.classList.add(styles.coloredHeader)
+        this.header.classList.add(styles.headerDetached)
+        this.header.classList.add(styles.coloredHeader)
         if (this.props.whiteLogo) {
-          logo.src = logo.src.includes('#white') ? logo.src.substr(0, logo.src.length - 6) : logo.src
+          this.logo.src = logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
         }
       } else {
-        header.classList.remove(styles.headerDetached)
+        this.header.classList.remove(styles.headerDetached)
         if (!this.props.colored) {
-          header.classList.remove(styles.coloredHeader)
+          this.header.classList.remove(styles.coloredHeader)
         }
         if (this.props.whiteLogo) {
-          logo.src = logo.src.includes('#white') ? logo.src : logo.src + '#white'
+          this.logo.src = this.logo.src.includes('#white') ? this.logo.src : this.logo.src + '#white'
         }
       }
 
       if (st > this.lastScrollTop && (st - this.lastScrollTop) > 10){
-        header.classList.add(styles.headerHidden)
+        this.header.classList.add(styles.headerHidden)
       } else if((this.lastScrollTop - st) > 10) {
-        header.classList.remove(styles.headerHidden)
+        this.header.classList.remove(styles.headerHidden)
       }
       this.lastScrollTop = st
       this.scrolling = false
