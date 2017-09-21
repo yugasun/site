@@ -32,6 +32,7 @@ export default class Header extends Component {
     window.addEventListener('scroll', this.handleScroll)
     this.header = document.getElementById('header')
     this.logo = document.getElementById('logo')
+    this.cta = document.getElementsByClassName(styles.cta)[0]
   }
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
@@ -52,6 +53,9 @@ export default class Header extends Component {
         if (this.props.whiteLogo) {
           this.logo.src = logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
         }
+        if (this.props.hideCTA) {
+          this.cta.classList.remove(styles.mobileOnly)
+        }
       } else {
         this.header.classList.remove(styles.headerDetached)
         if (!this.props.colored) {
@@ -59,6 +63,9 @@ export default class Header extends Component {
         }
         if (this.props.whiteLogo) {
           this.logo.src = this.logo.src.includes('#white') ? this.logo.src : this.logo.src + '#white'
+        }
+        if (this.props.hideCTA) {
+          this.cta.classList.add(styles.mobileOnly)
         }
       }
 
@@ -184,7 +191,7 @@ export default class Header extends Component {
                   Enterprise
                 </Link>
               </li>
-              {hideCTA ? null : <li className={`${styles.navItem} ${styles.cta}`}><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>}
+              <li className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
             </ul>
           </nav>
         </div>
