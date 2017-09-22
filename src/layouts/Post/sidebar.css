@@ -1,5 +1,6 @@
-$sidebarWidth: 310px;
+$sidebarWidth: 350px;
 $sidebarMargin: 40px;
+$sidebarPadding: 20px;
 $borderColor: #e8e8e8;
 
 .sidebar {
@@ -7,11 +8,21 @@ $borderColor: #e8e8e8;
   padding-top: 30px;
   max-width: $sidebarWidth;
   min-width: $sidebarWidth;
-  margin-left: 40px;
   border-right: 1px solid $borderColor;
-  min-height: 100%;
-  padding-right: 20px;
+  min-height: 100vh;
+  height: 100%;
+  padding-right: $sidebarPadding;
+  padding-left: $sidebarMargin;
   top: 70px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 0;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
   &:after {
     content: "";
     width: 90%;
@@ -35,7 +46,7 @@ $borderColor: #e8e8e8;
     border: 1px solid rgba(221, 221, 221, 0.68);
     color: #000;
     background: rgb(248, 248, 248);
-    width: resolve($sidebarWidth + $sidebarMargin);
+    width: resolve($sidebarWidth);
     padding: 1rem;
     margin-left: resolve($sidebarMargin * -1);
     padding-left: $sidebarMargin;
@@ -99,9 +110,9 @@ $borderColor: #e8e8e8;
   margin-bottom: 25px;
 }
 
-
-@media (max-width: 767px) {
+@media (max-width: 960px) {
   .sidebar {
+    position: static;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -109,13 +120,13 @@ $borderColor: #e8e8e8;
     margin-bottom: 30px;
     padding-left: 20px;
     border-right: none;
-    .code  {
+    overflow-y: initial;
+    overflow-x: initial;
+
+    .code {
       width: 100vw;
+      margin-left: -$sidebarPadding;
+      padding-left: $sidebarPadding;
     }
-  }
-}
-@media (max-width: 960px) {
-  .sidebar {
-    position: static;
   }
 }
