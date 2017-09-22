@@ -47,7 +47,7 @@ export default class Header extends Component {
 
       let st = window.pageYOffset || document.documentElement.scrollTop
 
-      if (st > 50) {
+      if (st > 0) {
         this.header.classList.add(styles.headerDetached)
         this.header.classList.add(styles.coloredHeader)
         if (this.props.whiteLogo) {
