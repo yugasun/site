@@ -2,14 +2,14 @@
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
-    "node": true,
+    "node": true
   },
   "plugins": [
-    "react",
+    "react"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
@@ -37,7 +37,7 @@
     "import/extensions": 0,
     "object-shorthand": 0,
     "import/no-unresolved": 0,
-    'no-warning-comments': ['warn', { terms: ['todo', 'fixme', '@todo', '@fixme'], location: 'start' }],
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme", "@todo", "@fixme"], "location": "start" }],
     "jsx-quotes": [2, "prefer-single"],
     "react/forbid-prop-types": 0,
     "react/prefer-stateless-function": 1,
