@@ -16,6 +16,7 @@ export default class Footer extends Component {
               <Link to='/framework/'>Serverless Framework</Link>
               <Link to='/event-gateway/'>Event Gateway</Link>
               <Link to='/framework/docs/platform/'>Serverless Platform</Link>
+              <Link to='/framework/fake-page/'>Serverless Platform docs</Link>
               <a href='https://github.com/serverless/guide' target='_blank'>Serverless Guide</a>
             </div>
             <div className={styles.navBlock}>
