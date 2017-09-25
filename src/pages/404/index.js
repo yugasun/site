@@ -4,7 +4,6 @@
 import React, { Component, PropTypes } from 'react'
 import axios from 'axios'
 import Splash from '../Splash'
-import removeURLParams from '../../utils/analytics/source/removeURLParams'
 import { getParams } from '../../utils/analytics/source/urlParams'
 import { getItem } from '../../utils/storage'
 import { twitterShare } from '../../utils/social/share'
@@ -37,13 +36,13 @@ export default class PageError extends Component {
       params: params
     })
 
-    if (!params || !params.is404) {
+    if (!params || !params.rd) {
       const appendage = (url.match(/\?/)) ? '&' : '?'
-      window.location.href = `${url}${appendage}is404=true`
+      window.location.href = `${url}${appendage}rd=true`
       return false
     }
 
-    if (params && params.is404 && error === 404) {
+    if (params && params.rd && error === 404) {
       if (url.match(/localhost/)) {
         console.log('local 404 recorded')
         return false
@@ -68,7 +67,7 @@ export default class PageError extends Component {
     const { error, errorText } = this.props
     const { params } = this.state
 
-    if (!params || !params.is404) {
+    if (!params || !params.rd) {
       // show nothing if 404 not set
       return null
     }
@@ -82,9 +81,9 @@ export default class PageError extends Component {
     const content = (
       <div className={styles.content}>
         <div className={styles.message}>
-          Refresh this page to try again
+          FIDDLESTICKS! Page not found.
           <br /><br />
-          If you are still seeing a 404 please report this page!
+          Please report this page!
         </div>
         <div>
           Tweet at <a target='_blank' rel='noopener noreferrer' href={tweet}>@goServerless</a> or&nbsp;
