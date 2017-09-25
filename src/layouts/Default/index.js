@@ -44,6 +44,7 @@ const DefaultLayout = (props) => {
 
   let metaTitle
   let meta = []
+  let link
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page
 
   if (!isLoading && head) {
@@ -64,6 +65,13 @@ const DefaultLayout = (props) => {
     if (head.thumbnail) {
       meta.push({ property: 'og:image', content: head.thumbnail })
     }
+
+    if (head.rss) {
+      link = [
+        { rel: 'alternate', type: 'application/rss+xml', href: head.rss, title: metaTitle },
+      ]
+    }
+
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
   }
 
@@ -87,7 +95,7 @@ const DefaultLayout = (props) => {
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
-      <Helmet title={metaTitle} meta={meta} />
+      <Helmet title={metaTitle} meta={meta} link={link} />
       <Header whiteLogo={whiteLogo} colored={coloredHeader !== false && coloredHeader !== undefined}
               hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
       <div className={classes}>
