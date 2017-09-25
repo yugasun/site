@@ -25,13 +25,17 @@ export default class PageError extends Component {
   constructor (props, context) {
     super(props, context)
     this.state = {
-      params: getParams()
+      params: null
     }
   }
   componentDidMount() {
     const { error } = this.props
     const url = window.location.href
-    const params = this.state.params
+    const params = getParams()
+
+    this.setState({
+      params: params
+    })
 
     if (!params || !params.is404) {
       const appendage = (url.match(/\?/)) ? '&' : '?'
