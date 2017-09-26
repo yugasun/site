@@ -51,7 +51,7 @@ export default class Header extends Component {
         this.header.classList.add(styles.headerDetached)
         this.header.classList.add(styles.coloredHeader)
         if (this.props.whiteLogo) {
-          this.logo.src = logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
+          this.logo.src = this.logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
         }
         if (this.props.hideCTA) {
           this.cta.classList.remove(styles.mobileOnly)
