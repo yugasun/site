@@ -45,7 +45,7 @@ export default class Sidebar extends React.Component {
       <div id='sidebar' className={styles.sidebar}>
         <div className={styles.aboutBlog}>
           <h2><Link to='/blog'>Serverless Blog</Link></h2>
-          <h3>The blog on serverless & event driven compute</h3>
+          <h3>The blog on serverless & event-driven compute</h3>
         </div>
 
         <div className={styles.getStarted}>
