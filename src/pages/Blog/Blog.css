@@ -10,9 +10,10 @@
 .postList {
   width: 66.66666666666666%;
   max-width: 800px;
+  padding-bottom: 50px;
   padding-left: 30px;
   margin-top: 20px;
-  padding-bottom: 50px;
+  margin-left: 35rem;
 }
 .pageination {
   margin-top: 30px;
@@ -32,6 +33,7 @@
   }
   .postList {
     width: 100%;
-    padding: 0px;
+    padding: 0;
+    margin-left: 0;
   }
 }
