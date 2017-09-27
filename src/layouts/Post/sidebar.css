@@ -14,6 +14,7 @@ $borderColor: #e8e8e8;
   padding-right: $sidebarPadding;
   padding-left: $sidebarMargin;
   top: 70px;
+  left: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
