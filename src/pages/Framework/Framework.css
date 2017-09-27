@@ -46,9 +46,9 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 46rem;
   margin-right: auto;
   margin-left: auto;
+  letter-spacing: -0.5px;
 }
 .toolProperty {
   display: flex;

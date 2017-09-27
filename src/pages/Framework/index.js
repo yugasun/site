@@ -18,6 +18,7 @@ const FrameworkPage = (props) => {
             <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 18,391</div>
             <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-forum.png' />5,000</div>
             <div className={styles.toolProperty}><img width={18} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-gitter.png' />1,700</div>
+            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/icon-deploy.svg' />2.5M deploys</div>
           </div>
         </div>
       </div>
