@@ -1,8 +1,9 @@
 $contentWrapper: 70%;
-$contentWidth: 660px;
-$contentPadding: 60px;
+$contentPadding: 65px;
+$contentWidth: resolve(660px + $contentPadding);
 $contentPaddingMobile: 20px;
 $borderColor: #e8e8e8;
+$sidebarWidth: 350px;
 
 .postPage {
   margin-top: 7rem;
@@ -18,12 +19,9 @@ $borderColor: #e8e8e8;
 .contentWrapper {
   min-width: $contentWrapper;
   flex-grow: 1;
-  margin-left: 350px;
+  margin-left: $sidebarWidth;
   font-size: 17px;
   line-height: 28px;
-  img, iframe {
-    max-width: 100%;
-  }
   a {
     text-decoration: underline;
   }
@@ -76,7 +74,10 @@ $borderColor: #e8e8e8;
     border-right: 1px solid #ddd;
     padding-left: 10px !important;
   }
-  img, iframe {
+  img {
+    max-width: 120%;
+  }
+  iframe {
     max-width: 100%;
   }
   .title {
@@ -150,13 +151,19 @@ $borderColor: #e8e8e8;
   margin-left: 20px;
 }
 .comments {
-  max-width: 80%;
-  margin: auto;
   margin-bottom: 40px;
+  margin-left: 380px;
+  padding-right: 60px;
 }
-
-
-@media (max-width: 960px) {
+@media (max-width: 1260px) {
+  .contentWrapper {
+    margin-left: resolve($sidebarWidth - 40px);
+    img {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 1060px) {
   .postWrapper, .comments {
     flex-direction: column;
     border-bottom: none;
@@ -170,6 +177,10 @@ $borderColor: #e8e8e8;
   }
   .contentWrapper {
     margin-left: 0;
+  }
+  .comments {
+    max-width: 100vw;
+    margin-left: 30px;
   }
 }
 
@@ -187,6 +198,9 @@ $borderColor: #e8e8e8;
     h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox  {
       width: 100%;
       min-width: 100%;
+      max-width: 100%;
+    }
+    img, iframe {
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
@@ -218,6 +232,8 @@ $borderColor: #e8e8e8;
     max-width: 90%;
     margin: auto;
     margin-bottom: 0px;
+    margin-left: 20px;
+    padding: 0px;
   }
   .postPage h1 {
     font-size: 2.2rem;
