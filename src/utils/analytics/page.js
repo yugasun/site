@@ -40,6 +40,7 @@ export function gaPageView(pageData) {
     // console.info(`GA Pageview > ${window.location.href}`)
     ga('set', 'page', data.path) // eslint-disable-line
     /* dimension1: branch  --  See in "Custom Definitions" of serverless.com property " */
+    console.info('ga branch:', data.branch)
     ga('set', 'dimension1', data.branch) // eslint-disable-line no-undef
     ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
   }
