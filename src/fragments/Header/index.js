@@ -30,9 +30,6 @@ export default class Header extends Component {
   componentDidMount() {
     document.body.addEventListener('click', this.closeNav)
     window.addEventListener('scroll', this.handleScroll)
-    this.header = document.getElementById('header')
-    this.logo = document.getElementById('logo')
-    this.cta = document.getElementsByClassName(styles.cta)[0]
   }
   componentWillUnmount() {
     document.body.removeEventListener('click', this.closeNav)
@@ -101,7 +98,7 @@ export default class Header extends Component {
     let headerClasses = colored ? classnames(styles.header, styles.coloredHeader) : styles.header
         headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
     return (
-      <header id='header' className={headerClasses}>
+      <header id='header' className={headerClasses} ref={header => { this.header = header }}>
         <div className={`${styles.navWrapper} ${containerStyle} ${styles.bound}`}>
           <div className={styles.navLeft}>
             <Link to='/' className={styles.logo}>
@@ -111,6 +108,7 @@ export default class Header extends Component {
                 height={23}
                 src={logo.ICON + (whiteLogo ? '#white' : '')}
                 className={styles.logoIcon}
+                ref={logo => { this.logo = logo }}
               />
               <span className={styles.logoText}>
                 serverless
@@ -191,7 +189,10 @@ export default class Header extends Component {
                   Enterprise
                 </Link>
               </li>
-              <li className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
+              <li
+                  className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
+                  ref={cta => { this.cta = cta }}
+              ><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
             </ul>
           </nav>
         </div>
