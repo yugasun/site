@@ -76,6 +76,7 @@ export default class Newsletter extends Component {
           }
         })
         setItemSync('newsletterSubscribed', true)
+        that.container.innerHTML = <p>Thank you for subscribing!</p>
       } else {
         console.log('failed creation') // eslint-disable-line
         that.setState({
@@ -101,9 +102,8 @@ export default class Newsletter extends Component {
     }
 
     return (
-      <div className={classes}>
-        <div className={styles.formGroup}>
-          <input
+      <div ref={container => this.container = container} className={classes}>
+        <input
             ref='email'
             type='email'
             className={styles.formControl}
