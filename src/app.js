@@ -51,7 +51,7 @@ export default class App extends Component {
     const gettingStartedURL = '/getting-started/'
     const profile = e.detail.profile
     // handle redirect
-    const width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 
     if (width < 850) {
       this.props.history.push(redirectURL)
