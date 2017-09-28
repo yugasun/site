@@ -17,7 +17,6 @@ export default class Sidebar extends React.Component {
     this.scrolling = false
   }
   componentDidMount() {
-    this.sidebar = document.getElementById('sidebar')
     window.addEventListener('scroll', this.handleScroll)
   }
   componentWillUnmount() {
@@ -42,7 +41,7 @@ export default class Sidebar extends React.Component {
   }
   render() {
     return (
-      <div id='sidebar' className={styles.sidebar}>
+      <div ref={sidebar => this.sidebar = sidebar } className={styles.sidebar}>
         <div className={styles.aboutBlog}>
           <h2><Link to='/blog'>Serverless Blog</Link></h2>
           <h3>The blog on serverless & event-driven compute</h3>
