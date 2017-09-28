@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import removeUTM from './source/removeUTM'
 const isProduction = process.env.NODE_ENV === 'production'
+const branch = process.env.BRANCH || 'master'
 let singlePageAppLoaded = false
 
 // called in /src/fragments/GlobalScripts/GoogleAnalytics.js
@@ -38,6 +39,8 @@ export function gaPageView(pageData) {
   if (typeof ga !== 'undefined') {
     // console.info(`GA Pageview > ${window.location.href}`)
     ga('set', 'page', data.path) // eslint-disable-line
+    /* dimension1: branch  --  See in "Custom Definitions" of serverless.com property " */
+    ga('set', 'dimension1', data.branch) // eslint-disable-line no-undef
     ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
   }
 }
@@ -72,7 +75,8 @@ function getPageData(opts) {
     width: options.width || window.innerWidth,
     height: options.height || window.innerHeight,
     path: options.path || window.location.pathname,
-    url: options.url || window.location.href
+    url: options.url || window.location.href,
+    branch,
   }
   if (document.referrer && document.referrer !== '') {
     pageData.referrer = document.referrer

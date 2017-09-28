@@ -2,6 +2,9 @@
  * Project config
  * NOTE: No private data/keys should be stored here.
  */
+
+import gitBranch from 'git-branch'
+
 module.exports = function siteConfig(isProduction) {
   return (
     {
@@ -22,7 +25,8 @@ module.exports = function siteConfig(isProduction) {
         ERROR: 'https://kuen1ml0f0.execute-api.us-west-2.amazonaws.com/prod/report',
         NEWSLETTER: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
         ADD_CONTACT: 'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add'
-      }
+      },
+      BRANCH: process.env.BRANCH || gitBranch.sync(),
     }
   )
 }
