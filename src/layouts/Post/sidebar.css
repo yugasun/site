@@ -67,20 +67,13 @@ $borderColor: #e8e8e8;
   }
 }
 .subscribe {
+  margin-bottom: 2rem;
   p {
     font-size: 14px;
     margin-top: 0px;
   }
-}
-
-.stacked {
-  flex-direction: column;
-  input {
-    width: 90%;
-  }
   button {
-    margin-top: 10px;
-    width: 50% !important;
+    font-size: 1.2rem;
   }
 }
 .aboutBlog {

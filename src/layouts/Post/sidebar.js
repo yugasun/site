@@ -100,7 +100,7 @@ export default class Sidebar extends React.Component {
             <p>
               Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
             </p>
-            <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
+            <Newsletter buttonText={'Get Updates'} black />
           </div>
         }
       </div>
