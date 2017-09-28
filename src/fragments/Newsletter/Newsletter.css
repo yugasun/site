@@ -2,19 +2,19 @@ $height: 50px;
 
 .emailForm {
   display: flex;
+  align-items: stretch;
 
   button {
     width: 30%;
+    min-width: 10rem;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    border-left: none;
   }
 }
 
-.formGroup {
-  padding-right: 10px;
-}
 .formControl {
-  width: 100%;
+  width: 70%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border: 1px solid transparent;
