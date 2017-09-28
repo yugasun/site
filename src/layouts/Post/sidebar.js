@@ -92,26 +92,14 @@ export default class Sidebar extends React.Component {
             </a>
           </div>
         </div>
-        <div className={styles.subscribe}>
-          <h3>
-            Subscribe
-          </h3>
-          <p>
-            Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
-          </p>
-        </div>
-        <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
-      </div>
-      {this.newsletterSubscribed ? null :
-          <div>
-            <div className={styles.subscribe}>
-              <h3>
-                Subscribe
-              </h3>
-              <p>
-                Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
-              </p>
-            </div>
+        {this.newsletterSubscribed ? null :
+          <div className={styles.subscribe}>
+            <h3>
+              Subscribe
+            </h3>
+            <p>
+              Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
+            </p>
             <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
           </div>
         }
