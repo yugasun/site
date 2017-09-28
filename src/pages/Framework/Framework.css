@@ -139,6 +139,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 4rem;
+  text-align: center;
 }
 .feature {
   margin-bottom: 2rem;
@@ -159,6 +160,8 @@
 
   p {
     max-width: 31.4rem;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 1.4rem;
     line-height: 2rem;
   }
