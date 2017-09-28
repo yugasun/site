@@ -37,6 +37,7 @@ export default class Newsletter extends Component {
   }
   handleSubmit(e) {
     e.preventDefault()
+    if (this.state.isFetching) return
     const { onSubmit } = this.props
     const emailNode = this.refs.email
     const email = emailNode.value
@@ -58,7 +59,7 @@ export default class Newsletter extends Component {
       },
     }).then((response) => {
       if (response && response.data && response.data.created) {
-        console.log('creation succeed') // eslint-disable-line
+        console.info('Newsletter subscription creation succeed') // eslint-disable-line
         // Customer.io
         // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
         track('site:newsletter_subscribed', {
@@ -78,13 +79,11 @@ export default class Newsletter extends Component {
         setItemSync('newsletterSubscribed', true)
         that.container.innerHTML = <p>Thank you for subscribing!</p>
       } else {
-        console.log('failed creation') // eslint-disable-line
-        that.setState({
-          error: 'alreadyEntered'
-        })
+        console.error('Newsletter subscription failed creation',
+            (response && response.data && response.data.message) ? response.data.message : '')
       }
     }).catch((error) => {
-      console.log(error) // eslint-disable-line
+      console.error(error) // eslint-disable-line
       that.setState({
         error: 'serviceDown'
       })
@@ -93,13 +92,8 @@ export default class Newsletter extends Component {
   render() {
     const { buttonText, className, black } = this.props
     const { isFetching, error } = this.state
-    let text = (isFetching) ? 'Success!' : buttonText
     const isBlack = (black === true) ? styles.black : ''
     const classes = classnames(className, styles.emailForm, isBlack)
-
-    if (error) {
-      text = 'Try Again'
-    }
 
     return (
       <div ref={container => this.container = container} className={classes}>
@@ -109,9 +103,8 @@ export default class Newsletter extends Component {
             className={styles.formControl}
             name='EMAIL'
             placeholder='Enter your email'
-          />
-        </div>
-        <Button onClick={this.handleSubmit} kind='whiteBordered'>{text}</Button>
+        />
+        <Button onClick={this.handleSubmit} kind='whiteBordered' disabled={isFetching}>{error ? 'Try Again' : buttonText}</Button>
       </div>
     )
   }
