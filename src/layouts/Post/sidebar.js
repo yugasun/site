@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react'
 import { Link } from 'react-router'
 import Newsletter from '../../fragments/Newsletter'
+import { getItemSync } from '../../utils/storage'
 import styles from './sidebar.css'
 
 const propTypes = {
@@ -11,9 +12,9 @@ export default class Sidebar extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-
+    
+    this.newsletterSubscribed = getItemSync('newsletterSubscribed') === true
     this.handleScroll = this.handleScroll.bind(this)
-
     this.scrolling = false
   }
   componentDidMount() {
@@ -90,15 +91,17 @@ export default class Sidebar extends React.Component {
             </a>
           </div>
         </div>
-        <div className={styles.subscribe}>
-          <h3>
-            Subscribe
-          </h3>
-          <p>
-            Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
-          </p>
-        </div>
-        <Newsletter className={styles.stacked} buttonText={'Get Updates'} black />
+        {this.newsletterSubscribed ? null :
+          <div className={styles.subscribe}>
+            <h3>
+              Subscribe
+            </h3>
+            <p>
+              Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends
+            </p>
+            <Newsletter buttonText={'Get Updates'} black />
+          </div>
+        }
       </div>
     )
   }
