@@ -23,8 +23,7 @@ export default class Header extends Component {
     this.handleClick = this.handleClick.bind(this)
     this.closeNav = this.closeNav.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
-
-    this.lastScrollTop = 0
+    
     this.scrolling = false
   }
   componentDidMount() {
@@ -44,8 +43,7 @@ export default class Header extends Component {
 
       let st = window.pageYOffset || document.documentElement.scrollTop
 
-      if (st > 0) {
-        this.header.classList.add(styles.headerDetached)
+      if (st > 10) {
         this.header.classList.add(styles.coloredHeader)
         if (this.props.whiteLogo) {
           this.logo.src = this.logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
@@ -54,7 +52,6 @@ export default class Header extends Component {
           this.cta.classList.remove(styles.mobileOnly)
         }
       } else {
-        this.header.classList.remove(styles.headerDetached)
         if (!this.props.colored) {
           this.header.classList.remove(styles.coloredHeader)
         }
@@ -65,13 +62,6 @@ export default class Header extends Component {
           this.cta.classList.add(styles.mobileOnly)
         }
       }
-
-      if (st > this.lastScrollTop && (st - this.lastScrollTop) > 10){
-        this.header.classList.add(styles.headerHidden)
-      } else if((this.lastScrollTop - st) > 10) {
-        this.header.classList.remove(styles.headerHidden)
-      }
-      this.lastScrollTop = st
       this.scrolling = false
     })
   }
