@@ -46,8 +46,9 @@
   &:after {
      content: "";
      position: absolute;
-     background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg) no-repeat;
-     width: 3rem;
+     background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg) no-repeat top center / 3rem,
+                 linear-gradient(to bottom, #fff 0%,#fff 100%);
+     width: 4rem;
      height: 3rem;
      transform: skewY(3.5deg);
      left: 50%;
