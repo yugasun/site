@@ -84,7 +84,7 @@ $borderColor: #e8e8e8;
     width: 50%;
     border-left: 1px solid;
     margin-top: 1rem;
-    margin-left: auto;
+    margin-right: auto;
   }
 }
 .aboutBlog {
