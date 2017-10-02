@@ -34,7 +34,7 @@ export function gaPageView(pageData) {
   const data = pageData || getPageData()
   if (!isProduction) {
     console.info(`DEV: GA Pageview > ${window.location.href}`)
-    return setTimeout(removeUTM, 0)
+    setTimeout(removeUTM, 0)
   }
   if (typeof ga !== 'undefined') {
     // console.info(`GA Pageview > ${window.location.href}`)
