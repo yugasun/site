@@ -32,7 +32,7 @@ class Doc extends Component {
   }
   componentDidMount() {
     const { origin, pathname } = window.location
-    if (window.outerWidth > 600) {
+    if (window.outerWidth > 768) {
       window.addEventListener('scroll', debounce(this.handleScroll, 10))
       window.addEventListener('resize', debounce(this.handleScroll, 10))
       this.sidebarNode = this.refs.sidebar
@@ -86,10 +86,10 @@ class Doc extends Component {
     }
   }
   handleScroll = (_event) => {
-    const offsetHeigh = window.pageYOffset || document.documentElement.scrollTop
+    const offsetHeight = window.pageYOffset || document.documentElement.scrollTop
     const stickyNavHeight = 0
     const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
-    if (offsetHeigh >= cachedOffset) {
+    if (offsetHeight >= cachedOffset) {
       if (this.sidebarNode.style.position !== 'fixed') {
         this.sidebarNode.style.position = 'fixed'
         this.sidebarNode.style.top = `${stickyNavHeight}px`
