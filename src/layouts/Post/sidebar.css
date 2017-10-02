@@ -5,9 +5,9 @@ $borderColor: #e8e8e8;
 
 .sidebar {
   position: fixed;
-  padding-top: 30px;
   max-width: $sidebarWidth;
-  min-width: $sidebarWidth;
+  width: 100%;
+  padding-top: 30px;
   border-right: 1px solid $borderColor;
   min-height: 100vh;
   height: 100%;
