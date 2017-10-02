@@ -96,7 +96,6 @@ $contentLeftPadding: 70px;
 }
 
 .sidebarInner {
-  background: #fff;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;
   padding: 0px;
@@ -109,12 +108,12 @@ $contentLeftPadding: 70px;
   position: relative;
   padding-top: 3rem;
   max-width: 100%;
+  min-height: 100vh;
   padding-bottom: $footerHeight;
   overflow: hidden;
   border-left: 1px solid #ddd;
   border-top: 1px solid #ddd;
   padding-left: $contentLeftPadding;
-  padding-bottom: 760px;
   pre code:global(.hljs) {
     margin-left: -$contentLeftPadding !important;
     padding-left: $contentLeftPadding !important;
@@ -128,7 +127,6 @@ $contentLeftPadding: 70px;
     display: inline-block;
     position: absolute !important;
     text-align: left;
-    margin-left: 0;
     margin-right: 0;
     width: 130px;
     margin-left: -50px;
@@ -348,7 +346,6 @@ strong {
 @media (max-width: 1000px) {
   .content {
     padding-left: 30px;
-    padding-bottom: 560px;
     pre code:global(.hljs) {
       margin-left: -30px !important;
       padding-left: 30px !important;
