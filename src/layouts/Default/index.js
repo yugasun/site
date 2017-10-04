@@ -45,7 +45,8 @@ const DefaultLayout = (props) => {
   let metaTitle
   let meta = []
   let link
-  let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page
+  let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
+      heroImage = null
 
   if (!isLoading && head) {
     const uri = joinUri(process.env.PHENOMIC_USER_URL, __url)
@@ -73,6 +74,10 @@ const DefaultLayout = (props) => {
     }
 
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
+
+    if (head.heroImage) {
+      heroImage = <div className={styles.hero} style={{ backgroundImage: `url(${head.heroImage})` }} />
+    }
   }
 
   // Remove jumpy footer with loading state
@@ -96,8 +101,9 @@ const DefaultLayout = (props) => {
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} link={link} />
-      <Header whiteLogo={whiteLogo} colored={coloredHeader !== false && coloredHeader !== undefined}
+      <Header whiteLogo={whiteLogo || heroImage} colored={coloredHeader !== false && coloredHeader !== undefined}
               hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
+      {heroImage}
       <div className={classes}>
         {header}
         {children || markdown}

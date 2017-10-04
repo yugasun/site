@@ -1,6 +1,7 @@
 ---
 title: Serverless Meetups
 layout: Default
+heroImage: "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/meetup-hero-ground.png"
 ---
 
 # Join a Serverless Meetup
