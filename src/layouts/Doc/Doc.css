@@ -409,10 +409,7 @@ strong {
     flex-flow: column-reverse;
   }
   .content {
-    padding-bottom: 0px;
-    padding-left: 13px;
-    padding-right: 0px;
-    padding-top: 20px;
+    padding: 20px 0 0 13px;
     font-size: 14px;
     pre code:global(.hljs) {
       font-size: 11px;

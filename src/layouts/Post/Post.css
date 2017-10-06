@@ -169,7 +169,7 @@ $sidebarWidth: 350px;
     }
   }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1023px) {
   .postWrapper, .comments {
     flex-direction: column;
     border-bottom: none;
