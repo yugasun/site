@@ -1,6 +1,6 @@
 ---
 # Homepage no content
-title: Serverless - The Serverless Application Framework powered by AWS Lambda and API Gateway
-description: Build web, mobile and IoT applications powered exclusively by AWS Lambda and API Gateway
+title: Serverless - Build faster with serverless architectures
+description: Serverless is your toolkit for deploying and operating serverless architectures.
 layout: Homepage
 ---
