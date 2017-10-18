@@ -8,7 +8,9 @@
   margin-bottom: 20px;
 }
 .input {
-  padding: 15px 10px;
+  font-family: "Gibson";
+  font-size: 16px;
+  padding: 15px;
   border: 1px solid #949494;
   &:focus {
     border: 1px solid $black2;
