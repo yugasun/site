@@ -29,16 +29,16 @@ export default class WorkShopPage extends React.Component {
             <Link to='/workshops/sanfrancisco'>
               San Francisco
             </Link>
-            <Link to='/workshops/sanfrancisco'>
+            <Link to='/workshops/seattle'>
               Seattle
             </Link>
-            <Link to='/workshops/sanfrancisco'>
+            <Link to='/workshops/new-york'>
               New York City
             </Link>
-            <Link to='/workshops/sanfrancisco'>
+            <Link to='/workshops/atlanta'>
               Atlanta
             </Link>
-            <Link to='/workshops/sanfrancisco'>
+            <Link to='/workshops/london'>
               London
             </Link>
           </div>
