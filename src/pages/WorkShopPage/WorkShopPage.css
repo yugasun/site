@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-family: "Gibson";
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: justify;
+  border: 1px solid #D6D6D6;
+  color: #fff;
+  background-color: #fff;
+  margin-bottom: 70px;
+}
+.title {
+  font-size: 100px;
+  text-transform: uppercase;
+  background: #000;
+}
+.subtitle {
+  font-family: Gibson;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: center;
+  background: #000;
+}
+
+.fieldSet {
+  display: flex;
+}
+.fakeLabel {
+  color: #000000;
+  font-family: Gibson;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: right;
+  width: 300px;
+  margin-right: 45px;
+}
+.inputs {
+  width: 300px;
+}
+.content {
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 150px;
+}
