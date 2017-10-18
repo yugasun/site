@@ -61,18 +61,24 @@ export default class PartnersPage extends React.Component {
         <div className={styles.hero}>
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Accelerate serverless adoption</h1>
-            <p className={`${styles.heroDescription} ${styles.boundSmall}`}>With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.</p>
+            <p className={`${styles.heroDescription} ${styles.boundSmall}`}>
+              With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.
+            </p>
           </div>
         </div>
         <div className={`${styles.sectionAction} ${styles.bound}`}>
           <div className={styles.features}>
             <div className={styles.feature}>
               <h3 className={styles.heading}>Train your team</h3>
-              <p className={styles.featureDescription}>As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn about serverless ops at scale, service discovery, and deploying serverless applications from start to finish.</p>
+              <p className={styles.featureDescription}>
+                As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn about serverless ops at scale, service discovery, and deploying serverless applications from start to finish.
+              </p>
             </div>
             <div className={styles.feature}>
               <h3 className={styles.heading}>Operationalize</h3>
-              <p className={styles.featureDescription}>Centralize your events and functions in one interface, across all your cloud services. Serverless Platform makes it easy to expose and share pieces of serverless applications for quick repurposing. Give your team the tools they need to create and iterate—without pausing to provision test environments and infrastructure.</p>
+              <p className={styles.featureDescription}>
+                Centralize your events and functions in one interface, across all your cloud services. Serverless Platform makes it easy to expose and share pieces of serverless applications for quick repurposing. Give your team the tools they need to create and iterate—without pausing to provision test environments and infrastructure.
+              </p>
             </div>
           </div>
           <div className={styles.form}>
