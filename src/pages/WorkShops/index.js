@@ -4,6 +4,8 @@ import { Link } from 'react-router'
 import Section from './Section'
 import styles from './WorkShops.css'
 
+const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
+
 export default class WorkShopPage extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
@@ -26,7 +28,7 @@ export default class WorkShopPage extends React.Component {
         </div>
         <div>
           <div className={styles.cityLinks}>
-            <Link to='/workshops/sanfrancisco'>
+            <Link to='/workshops/san-francisco'>
               San Francisco
             </Link>
             <Link to='/workshops/seattle'>
@@ -42,11 +44,12 @@ export default class WorkShopPage extends React.Component {
               London
             </Link>
           </div>
-          <Section />
-          <Section />
-          <Section />
+          <Section link='/workshops/san-francisco' img={`${imgBase}san-francisco-text.png`} />
+          <Section link='/workshops/seattle' img={`${imgBase}seattle-text.png`} />
+          <Section link='/workshops/new-york' img={`${imgBase}new-york-text.png`} />
+          <Section link='/workshops/atlanta' img={`${imgBase}atlanta-text.png`} />
+          <Section link='/workshops/london' img={`${imgBase}london-text.png`} />
         </div>
-        <Section />
       </Default>
     )
   }

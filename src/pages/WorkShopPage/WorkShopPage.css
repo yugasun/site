@@ -1,3 +1,6 @@
+.padding {
+  height: 7rem;
+}
 .hero {
   position: relative;
   display: flex;
@@ -15,18 +18,31 @@
   color: #fff;
   background-color: #fff;
   margin-bottom: 70px;
+  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/seattle.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 360px;
+}
+.opacity {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.26);
+  top: 0;
+  left: 0;
 }
 .title {
+  position: relative;
   font-size: 100px;
   text-transform: uppercase;
-  background: #000;
+  z-index: 2;
 }
 .subtitle {
+  position: relative;
   font-family: Gibson;
   font-size: 48px;
   line-height: 54px;
   text-align: center;
-  background: #000;
+  z-index: 2;
 }
 
 .fieldSet {

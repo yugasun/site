@@ -16,6 +16,8 @@ export default class WorkShopPage extends React.Component {
   }
   onSubmit = (event, data) => {
     event.preventDefault()
+    const formId = this.props.__url.split('/')[2]
+    console.log('formId', formId)
     console.log(data)
   }
   onChange = (e, name, data, change) => {
@@ -25,14 +27,20 @@ export default class WorkShopPage extends React.Component {
   render() {
     const { isLoading, __url } = this.props
     let title = '...'
+    let background = {}
     if (!isLoading) {
       const url = __url.split('/')[2]
       title = url.replace(/-/, ' ')
+      background = {
+        backgroundImage: `url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/${url}.jpg)`
+      }
     }
 
     return (
       <Default {...this.props} fullWidth>
-        <div className={styles.hero}>
+        <div className={styles.padding} />
+        <div className={styles.hero} style={background}>
+          <div className={styles.opacity}/>
           <h1 className={styles.title}>
             {title}
           </h1>
