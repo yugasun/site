@@ -1,5 +1,5 @@
 ---
-title: "Serverless Workshops in San Francisco"
+title: "Serverless Workshops in Atlanta"
 description: "Join a Serverless Workshop in your area"
 layout: WorkShopPage
 ---
