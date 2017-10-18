@@ -31,6 +31,7 @@
 
 .fieldSet {
   display: flex;
+  margin-bottom: 40px;
 }
 .fakeLabel {
   color: #000000;
@@ -41,8 +42,25 @@
   width: 300px;
   margin-right: 45px;
 }
+.textArea {
+  width: 450px;
+  height: 250px;
+  font-family: "Gibson";
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid #949494;
+  &:focus {
+    border: 1px solid $black2;
+    outline: none;
+  }
+}
 .inputs {
   width: 300px;
+}
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .content {
   max-width: 650px;

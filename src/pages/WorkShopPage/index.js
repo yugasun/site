@@ -18,6 +18,10 @@ export default class WorkShopPage extends React.Component {
     event.preventDefault()
     console.log(data)
   }
+  onChange = (e, name, data, change) => {
+    event.preventDefault()
+    console.log(e, name, data, change)
+  }
   render() {
     const { isLoading, __url } = this.props
     let title = '...'
@@ -38,7 +42,7 @@ export default class WorkShopPage extends React.Component {
         </div>
         <div>
           <div className={styles.content}>
-            <AutoForm onSubmit={this.onSubmit} trimOnSubmit>
+            <AutoForm onSubmit={this.onSubmit} onChange={this.onChange} trimOnSubmit>
               <div className={styles.fieldSet}>
                 <div className={styles.fakeLabel}>
                   Contact information
@@ -88,9 +92,9 @@ export default class WorkShopPage extends React.Component {
                   Platforms of interest
                 </div>
                 <div className={styles.inputs}>
-                  <Checkbox name={'interest__AWS'} label={'AWS'} />
-                  <Checkbox name={'interest__Google_Cloud_Platform'} label={'Google Cloud Platform'} />
-                  <Checkbox name={'interest__Microsoft_Azure'} label={'Microsoft Azure'} />
+                  <Checkbox name={'poi'} label={'AWS'} />
+                  <Checkbox name={'poi'} label={'Google Cloud Platform'} />
+                  <Checkbox name={'poi'} label={'Microsoft Azure'} />
                 </div>
               </div>
               <div className={styles.fieldSet}>
@@ -98,12 +102,12 @@ export default class WorkShopPage extends React.Component {
                   Primary developement languages
                 </div>
                 <div className={styles.inputs}>
-                  <Checkbox name={'language__nodejs'} label={'Node JS'} />
-                  <Checkbox name={'language__python'} label={'Python'} />
-                  <Checkbox name={'language__java'} label={'Java'} />
-                  <Checkbox name={'language__ruby'} label={'Ruby'} />
-                  <Checkbox name={'language__php'} label={'PHP'} />
-                  <Checkbox name={'language__go'} label={'Go'} />
+                  <Checkbox name={'language'} label={'Node JS'} />
+                  <Checkbox name={'language'} label={'Python'} />
+                  <Checkbox name={'language'} label={'Java'} />
+                  <Checkbox name={'language'} label={'Ruby'} />
+                  <Checkbox name={'language'} label={'PHP'} />
+                  <Checkbox name={'language'} label={'Go'} />
                 </div>
               </div>
               <div className={styles.fieldSet}>
@@ -111,12 +115,12 @@ export default class WorkShopPage extends React.Component {
                   Tell us a little about your goals with serverless
                 </div>
                 <div className={styles.inputs}>
-                  <textarea name={'serverless_goals'} />
+                  <textarea className={styles.textArea} name={'serverless_goals'} />
                 </div>
               </div>
-              <div className={styles.button}>
-                <Button kind={'red'}>
-                  Submit Resource
+              <div className={styles.submit}>
+                <Button kind={'red'} style={{padding: '13px 48px'}}>
+                  SUBMIT
                 </Button>
               </div>
             </AutoForm>

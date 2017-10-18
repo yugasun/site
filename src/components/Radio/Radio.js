@@ -92,7 +92,7 @@ const factory = (Radio) => {
             type='radio'
           />
           <Radio checked={checked} disabled={disabled} />
-          {label ? <span className={'hi'}>{label}</span> : null}
+          {label ? <span className={styles.labelText}>{label}</span> : null}
           {children}
         </label>
       )

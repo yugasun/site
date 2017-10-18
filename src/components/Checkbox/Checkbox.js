@@ -10,9 +10,10 @@ const propTypes = {
 }
 
 const Check = ({ name, label }) => {
+  const value = label
   return (
     <div className={styles.checkbox}>
-      <input type='checkbox' id={name} name={name} />
+      <input type='checkbox' id={name} name={name} value={value} />
       <div className={styles.check} />
       <label htmlFor={name}>{label}</label>
     </div>

@@ -11,4 +11,9 @@ $checkboxColor: #000;
 }
 .label {
   display: block;
+  margin-bottom: 10px;
+}
+.labelText {
+  display: inline-block;
+  margin-left: 10px;
 }
