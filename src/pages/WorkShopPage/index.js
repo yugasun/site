@@ -19,10 +19,10 @@ export default class WorkShopPage extends React.Component {
     console.log(data)
   }
   render() {
-    const { isLoading } = this.props
+    const { isLoading, __url } = this.props
     let title = '...'
     if (!isLoading) {
-      const url = window.location.pathname.split('/')[2]
+      const url = __url.split('/')[2]
       title = url.replace(/-/, ' ')
     }
 
