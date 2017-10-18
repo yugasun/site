@@ -40,3 +40,5 @@ import WorkShops from './WorkShops'
 export { WorkShops }
 import WorkShopPage from './WorkShopPage'
 export { WorkShopPage }
+import Blank from './Blank'
+export { Blank }
