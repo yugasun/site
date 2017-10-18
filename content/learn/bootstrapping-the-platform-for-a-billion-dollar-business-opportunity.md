@@ -1,6 +1,6 @@
 ---
 title: Bootstrapping the Platform for a Billion Dollar Business Opportunity
-description: "How SC5 used Serverless to help MaaS revolutionize transportation"
+description: "How Nordcloud used Serverless to help MaaS revolutionize transportation"
 layout: Default
 ---
 
@@ -8,10 +8,8 @@ layout: Default
 
 ### Background
 
-SC5, based in Helsinki, is a digital agency specializing in cloud solutions.
-The SC5 team works with enterprise clients to create cloud-native apps,
-APIs and data solutions. The team recently helped build the backend for the
-award-winning Whim personal transportation app by MaaS Global.
+Nordcloud Solutions is a Nordcloud Group company with expertise in designing and developing applications that leverage the capabilities of leading public cloud platforms.
+The Nordcloud Solutions team recently helped build the backend for the award-winning Whim personal transportation app by MaaS Global.
 
 <a href="http://maas.global" target="_blank">MaaS Global</a> (Mobility as a
 Service) is a startup working to revolutionize personal transportation.
@@ -36,13 +34,13 @@ Instead of creating its own maps, geodata or routing systems, MaaS aimed to tap
 into the existing systems in the field. The technical challenge was making them
 work together reliably while supporting potentially millions of concurrent users.
 
-SC5 constructed the technical backbone of this system, so that it could be proven
+Nordcloud Solutions constructed the technical backbone of this system, so that it could be proven
 to the investors and partners, and helped MaaS developers get up-to-speed with
 Serverless development on AWS.
 
 ### The Solution
 
-SC5, in co-operation with the MaaS development team, applied their Serverless
+Nordcloud Solutions, in co-operation with the MaaS development team, applied their Serverless
 know-how and constructed a microservices architecture consisting of a few dozen
 adapters with its own data storage for order handling. The system was founded on
 AWS services, consisting of a REST API using the Serverless Framework and Postgres
@@ -60,7 +58,7 @@ without exhaustive manual integration and testing work.
 
 ### Why Serverless
 
-SC5 chose the Serverless Framework because they had prior experience with
+Nordcloud Solutions chose the Serverless Framework because they had prior experience with
 the framework and its predecessor (JAWS), and it was the most robust framework
 for developing serverless applications on AWS. The framework also provided a
 plug-in mechanism. This helped to streamline the build and deploy process for
@@ -78,7 +76,7 @@ Creating a Serverless backend allowed developers to focus on building applicatio
 logic instead of operating the infrastructure. This is the same reason why
 companies like Zalando are operating their stack in the cloud.
 
-The Whim app, powered by the SC5 bootstrapped backend has won several awards,
+The Whim app, powered by the Nordcloud Solutions bootstrapped backend has won several awards,
 including the Helsinki Smart City Action Award and Nordic Smart Cities Award. Whim
 has been featured in the international press, including *The Economist*, *The
 Guardian*, *Wired* and *Helsingin Sanomat*.
@@ -90,7 +88,7 @@ the Helsinki area, and is currently expanding to the first locations outside
 of Finland. An internal development team capable of taking over the task of
 developing the solution further was successfully ramped up during the project.
 
-<blockquote>SC5 was our choice for this project because of their expertise in
+<blockquote>Nordcloud Solutions was our choice for this project because of their expertise in
 cloud solutions and Serverless microservices. We needed Whim-app to be
 extendable and scale arbitrarily straight from the start.  The whole process was
 really fast-paced and results spectacular; first online routing demo with a test
@@ -102,35 +100,29 @@ making the CTO look good in the process!<br/>
 for us. The serverless architecture allows developers to focus on actual
 business logic instead of the black magic involved in classical backend
 solutions. This has helped us to lower the bar in enabling frontend developers
-to go fullstack and contribute to the backend application as well.”, SC5 CTO
+to go fullstack and contribute to the backend application as well.”, Nordcloud Solutions CTO
 Mikael Puittinen. He adds: ”The serverless framework allows us to automate the
 development lifecycle from project creation to deployment and operations. Its
 open plugin architecture allows developers such as us to extend the platform
 with functionality that streamlines the development lifecycle even further."
 
-### About us (SC5):
+### About Nordcloud:
 
-We create cloud native applications and solutions that allow you to serve your
-customers faster, better and more cost-efficiently. We are experts in the
-latest serverless technologies, user centric design and web UI development and
-have a track record of over 400 customer projects. SC5 was founded in 2006.
+Nordcloud is a European leader of public cloud infrastructure solutions and services. Since 2012 we've completed over 300 deployments to help our enterprise customers gain the maximum benefits of the cloud including security, agility, scalability and overall cost-savings. As an independent cloud-native company, we are representing all globally leading cloud technology providers neutrally for the customers’ benefit. With a strong Nordic heritage, Nordcloud is headquartered in Helsinki with offices in Stockholm, Malmö, Oslo, London, Amsterdam, Poznan and Munich.
 
-We are an AWS Lambda, API Gateway and DynamoDB APN Partner.
+Nordcloud is an AWS Premier, Managed Services, Lambda, API Gateway and DynamoDB Partner, Microsoft Azure Gold Cloud Partner and strategic Google Cloud Platform Partner. 
 
-### Serverless contributions by SC5
+### Serverless contributions by Nordcloud
 
-* https://github.com/SC5/serverless-boilerplate : a boilerplate project for the
+* https://github.com/SC5/sc5-serverless-boilerplate : a boilerplate project for the
   serverless framework, which incorporates optimized deployment and commands for
   test driven development
-* https://github.com/SC5/serverless-mocha-plugin : a plugin for creating
+* https://www.npmjs.com/package/serverless-mocha-plugin : a plugin for creating
   functions, test cases and invoking tests
-* https://github.com/SC5/serverless-authentication-boilerplate : a boilerplate
-  for creating API gateway custom authorizers
-* https://github.com/SC5/serverless-messenger-boilerplate : a boilerplate for
-  creating Messenger / Wit.ai bots
+* https://www.npmjs.com/package/serverless-kms-secrets : a plugin for managing secrets using AWS KMS
+* https://github.com/SC5/serverless-authentication-boilerplate : a boilerplate for creating API gateway custom authorizers
 * http://serverless.fi : Serverless Finland community
-* http://serverless.fi/docs/bot-workshop.pdf : a step-by-step workshop for
-  creating a simple serverless blog backend using the Serverless framework
+* http://serverless.fi/docs/bot-workshop.pdf : a step-by-step workshop for creating a simple serverless blog backend using the Serverless framework
 * http://serverless.fi/docs/messenger-workshop.pdf : a step-by-step workshop for
   creating a weather bot on Messenger using the Serverless framework. Featured
   in ServerlessConf London 2016
