@@ -81,11 +81,6 @@ export default class WorkShopPage extends React.Component {
                   />
                 </div>
               </div>
-              <div>
-                 <input type="radio" name="gender" value="male" /> Male<br/>
-                 <input type="radio" name="gender" value="female" /> Female<br/>
-                 <input type="radio" name="gender" value="other" /> Other
-              </div>
               <div className={styles.fieldSet}>
                 <div className={styles.fakeLabel}>
                   Serverless Experience

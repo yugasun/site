@@ -43,12 +43,12 @@ const factory = (Radio) => {
     handleClick = (e) => {
       const { checked, disabled, onChange, name, value, isAutoForm, isStateless } = this.props
 
-      console.log('this.firstOnChangeFired', this.firstOnChangeFired)
-      console.log('is isAutoForm', isAutoForm)
+      // console.log('this.firstOnChangeFired', this.firstOnChangeFired)
+      // console.log('is isAutoForm', isAutoForm)
       if (isAutoForm && !this.firstOnChangeFired) {
         /* when using AutoForm onchange handled gets removed on re-render.
           Attach onChange handler to RadioGroup directly */
-        console.log('stop the first one. set firstOnChangeFired true')
+        // console.log('stop the first one. set firstOnChangeFired true')
         this.firstOnChangeFired = true
         return false
       }
