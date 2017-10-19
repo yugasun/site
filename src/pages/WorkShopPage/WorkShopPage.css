@@ -104,11 +104,13 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   }
   .subtitle {
     font-size: 22px;
+    line-height: 33px;
   }
   .hero {
     padding-top: 25px;
-    min-height: 140px;
+    min-height: 130px;
     margin-bottom: 20px;
+    background-attachment: inherit;
   }
   .content {
     max-width: 100%;
@@ -117,7 +119,7 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   .fakeLabel {
     width: 100%;
     text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 18px;
   }
   .fieldSet {
