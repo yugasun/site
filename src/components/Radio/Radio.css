@@ -12,8 +12,12 @@ $checkboxColor: #000;
 .label {
   display: block;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .labelText {
   display: inline-block;
   margin-left: 10px;
+}
+.circle {
+  cursor: pointer;
 }

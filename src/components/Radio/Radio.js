@@ -112,7 +112,7 @@ const factory = (Radio) => {
           <input
             {...others}
             checked={setChecked}
-            className={'lol'}
+            className={styles.circle}
             disabled={disabled}
             name={name}
             onChange={() => {}}
