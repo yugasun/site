@@ -10,6 +10,9 @@ const radioFactory = (props) => {
 
 const factory = (Radio) => {
   class RadioButton extends Component {
+
+    static displayName = 'RadioButton';
+
     static propTypes = {
       checked: PropTypes.bool,
       children: PropTypes.node,
