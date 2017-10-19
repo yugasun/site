@@ -45,7 +45,7 @@ const factory = (RadioButton) => {
       console.log('isAutoForm', isAutoForm)
 
       return React.Children.map(children, child => {
-        // console.log('child', child)
+        console.log('radio child', child)
         if (child && child.type && child.type.displayName !== 'RadioButton') {
           return child
         }

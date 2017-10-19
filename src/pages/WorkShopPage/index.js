@@ -8,6 +8,7 @@ import Radio from '../../components/Radio/Radio'
 import Button from '../../components/Button'
 import styles from './WorkShopPage.css'
 
+const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
 /* single workshop view */
 export default class WorkShopPage extends React.Component {
   static hasLoadingState = true
@@ -21,7 +22,7 @@ export default class WorkShopPage extends React.Component {
     console.log(data)
   }
   onChange = (e, name, data, change) => {
-    event.preventDefault()
+    // event.preventDefault()
     console.log(e, name, data, change)
   }
   render() {
@@ -32,7 +33,7 @@ export default class WorkShopPage extends React.Component {
       const url = __url.split('/')[2]
       title = url.replace(/-/, ' ')
       background = {
-        backgroundImage: `url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/${url}.jpg)`
+        backgroundImage: `url(${imgBase}${url}.jpg)`
       }
     }
 
@@ -80,6 +81,11 @@ export default class WorkShopPage extends React.Component {
                   />
                 </div>
               </div>
+              <div>
+                 <input type="radio" name="gender" value="male" /> Male<br/>
+                 <input type="radio" name="gender" value="female" /> Female<br/>
+                 <input type="radio" name="gender" value="other" /> Other
+              </div>
               <div className={styles.fieldSet}>
                 <div className={styles.fakeLabel}>
                   Serverless Experience
@@ -91,9 +97,9 @@ export default class WorkShopPage extends React.Component {
                      required
                      onChange={this.onChange}
                    >
-                     <Radio name='experience' label='None' value='none' />
-                     <Radio name='experience' label='I’ve played around with it' value='beginner' />
-                     <Radio name='experience' label='I run serverless in production' value='professional' />
+                     <Radio label='None' value='none' />
+                     <Radio label='I’ve played around with it' value='beginner' />
+                     <Radio label='I run serverless in production' value='professional' />
                    </RadioGroup>
 
                 </div>
