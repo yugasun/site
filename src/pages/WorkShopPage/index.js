@@ -1,6 +1,6 @@
 import React from 'react'
 import Default from '../../layouts/Default'
-import AutoForm from 'react-auto-form'
+import Form from '../../components/Form'
 import TextInput from '../../components/TextInput'
 import Checkbox from '../../components/Checkbox/Check'
 import RadioGroup from '../../components/Radio/RadioGroup'
@@ -50,7 +50,7 @@ export default class WorkShopPage extends React.Component {
         </div>
         <div>
           <div className={styles.content}>
-            <AutoForm onSubmit={this.onSubmit} onChange={this.onChange} trimOnSubmit>
+            <Form onSubmit={this.onSubmit} onChange={this.onChange} trimOnSubmit>
               <div className={styles.fieldSet}>
                 <div className={styles.fakeLabel}>
                   Contact information
@@ -87,12 +87,15 @@ export default class WorkShopPage extends React.Component {
                 <div className={styles.inputs}>
                   <RadioGroup
                      label='Serverless Experience'
-                     isStateless
+                     name='experience'
+                     required
+                     onChange={this.onChange}
                    >
-                     <Radio label='None' value='none' />
-                     <Radio label='I’ve played around with it' value='beginner' />
-                     <Radio label='I run serverless in production' value='professional' />
+                     <Radio name='experience' label='None' value='none' />
+                     <Radio name='experience' label='I’ve played around with it' value='beginner' />
+                     <Radio name='experience' label='I run serverless in production' value='professional' />
                    </RadioGroup>
+
                 </div>
               </div>
               <div className={styles.fieldSet}>
@@ -131,7 +134,7 @@ export default class WorkShopPage extends React.Component {
                   SUBMIT
                 </Button>
               </div>
-            </AutoForm>
+            </Form>
           </div>
         </div>
 

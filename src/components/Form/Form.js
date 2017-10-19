@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import AutoForm from 'react-auto-form'
 
-const Form = ({ onSubmit, onChange, children }) => {
+const Form = ({ onSubmit, onChange, trimOnSubmit, children }) => {
   return (
-    <AutoForm onChange={onChange} onSubmit={onSubmit}>
+    <AutoForm className='form-node' trimOnSubmit={trimOnSubmit} onChange={onChange} onSubmit={onSubmit}>
       {children}
     </AutoForm>
   )

@@ -4,6 +4,7 @@ import styles from './Radio.css'
 import classnames from 'classnames'
 
 const radioFactory = (props) => {
+  // custom renderer for future use
   return (<span></span>)
 }
 
@@ -13,6 +14,7 @@ const factory = (Radio) => {
       checked: PropTypes.bool,
       children: PropTypes.node,
       className: PropTypes.string,
+      required: PropTypes.bool,
       disabled: PropTypes.bool,
       label: PropTypes.oneOfType([
         PropTypes.string,
@@ -33,10 +35,30 @@ const factory = (Radio) => {
       disabled: false,
     }
 
-    handleClick = (event) => {
-      const { checked, disabled, onChange } = this.props
-      if (event.pageX !== 0 && event.pageY !== 0) this.blur()
-      if (!disabled && !checked && onChange) onChange(event, this)
+    firstOnChangeFired = false
+
+    handleClick = (e) => {
+      const { checked, disabled, onChange, name, value, isAutoForm, isStateless } = this.props
+
+      if (isAutoForm && !this.firstOnChangeFired) {
+        /* when using AutoForm onchange handled gets removed on re-render.
+          Attach onChange handler to RadioGroup directly */
+        this.firstOnChangeFired = true
+        return false
+      }
+
+      if (event.pageX !== 0 && event.pageY !== 0) {
+        this.blur()
+      }
+
+      if (isStateless && onChange) {
+        // for autoForm. just use DOM
+        return onChange(e, name, value, { [`${name}`]: value } )
+      }
+      if (!disabled && !checked && onChange) {
+        // e, name, data, change
+        return onChange(e, name, value, { [`${name}`]: value } )
+      }
     }
 
     blur() {
@@ -63,6 +85,7 @@ const factory = (Radio) => {
         onMouseEnter,
         onMouseLeave,
         isStateless, // use dom values
+        required,
         ...others
       } = this.props
       const _className = classnames(this.props.disabled ? 'disabled' : 'field', className)
@@ -90,6 +113,7 @@ const factory = (Radio) => {
             onClick={this.handleClick}
             ref={(node) => { this.inputNode = node }}
             type='radio'
+            required={required}
           />
           <Radio checked={checked} disabled={disabled} />
           {label ? <span className={styles.labelText}>{label}</span> : null}

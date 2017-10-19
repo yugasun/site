@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import InjectRadioButton from './Radio'
+import isInsideElement from '../../utils/isInsideElement'
+
+
 
 const factory = (RadioButton) => {
   class RadioGroup extends Component {
@@ -17,19 +20,29 @@ const factory = (RadioButton) => {
       disabled: false,
     }
 
-    handleChange = (value, event) => {
-      // alert('change it')
-      if (this.props.onChange) this.props.onChange(value, event)
+    componentDidMount() {
+      console.log('this.node', this.node)
+    }
+
+    handleChange = (e, name, data, change) => {
+      if (this.props.onChange) {
+        // e, name, data, change
+        this.props.onChange(e, name, data, change)
+      }
     }
 
     renderRadioButtons() {
 
-      const { children, disabled, isStateless, id, label } = this.props
+      const { children, disabled, isStateless, id, name, label, required } = this.props
 
-      let name = id
+      let childrenName = name
       if (!name && label) {
-        name = label.toLowerCase().replace(/ /g,"_")
+        childrenName = label.toLowerCase().replace(/ /g,"_")
       }
+
+      const isAutoForm = (isInsideElement(this.node, 'form-node')) ? true : false
+
+      console.log('isAutoForm', isAutoForm)
 
       return React.Children.map(children, child => {
         // console.log('child', child)
@@ -37,19 +50,28 @@ const factory = (RadioButton) => {
           return child
         }
 
-        return React.cloneElement(child, {
-          // checked: child.props.value === this.props.value,
+        const childProps = {
+          checked: null, // Let DOM do its default thing
+          required: required || child.props.required,
           disabled: disabled || child.props.disabled,
-          onChange: this.handleChange.bind(this, child.props.value),
-          name: name,
-          isStateless: isStateless || child.props.isStateless,
-        })
+          onChange: this.handleChange,
+          name: childrenName,
+          isStateless: !this.props.value,
+          isAutoForm: isAutoForm
+        }
+
+        // if value passed in from parent, manage the state in parent
+        if (this.props.value) {
+          childProps.checked = child.props.value === this.props.value
+        }
+
+        return React.cloneElement(child, childProps)
       })
     }
 
     render() {
       return (
-        <div className={this.props.className}>
+        <div ref={(node) => { this.node = node }} className={this.props.className}>
           {this.renderRadioButtons()}
         </div>
       )

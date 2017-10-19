@@ -11,11 +11,12 @@ const propTypes = {
 
 const Check = ({ name, label }) => {
   const value = label
+  const id = (label) ? `form_${label.replace(/ /g, '_').toLowerCase()}` : null
   return (
     <div className={styles.checkbox}>
-      <input type='checkbox' id={name} name={name} value={value} />
+      <input type='checkbox' id={id} name={name} value={value} />
       <div className={styles.check} />
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={id}>{label}</label>
     </div>
   )
 }
