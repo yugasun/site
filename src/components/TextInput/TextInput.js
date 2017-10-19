@@ -37,15 +37,11 @@ class TextInput extends Component {
     disabled: false,
     required: false,
     type: 'text',
-    debounce: 750
+    debounce: 1000
   };
 
   constructor(props, context) {
     super(props, context)
-    this.handleChange = this.handleChange.bind(this)
-    this.emitDelayedChange = this.emitDelayedChange.bind(this)
-    this.handleBlur = this.handleBlur.bind(this)
-    this.handleFocus = this.handleFocus.bind(this)
     this.state = {
       isValid: this.doValidation(props.value).isValid,
       blurRanOnce: false,
@@ -57,7 +53,7 @@ class TextInput extends Component {
     setTimeout(() => {
       // sometimes value is set via the DOM. This updates initial state
       if (!this.state.value) {
-        const value = this.refs.input.value
+        const value = this.textInput.value
         if (value) {
           const isValid = this.doValidation(value).isValid
           console.log(`isValid ${value}`, isValid) // eslint-disable-line
@@ -139,8 +135,9 @@ class TextInput extends Component {
       errorMessage: ''
     }
   }
-  handleChange(event) {
+  handleChange = (event) => {
     const { tid } = this.state
+    const { debounce } = this.props
 
     if (tid) {
       clearTimeout(tid)
@@ -148,10 +145,10 @@ class TextInput extends Component {
 
     this.setState({
       value: event.target.value,
-      tid: setTimeout(this.emitDelayedChange, 800),
+      tid: setTimeout(this.emitDelayedChange, debounce),
     })
   }
-  emitDelayedChange() {
+  emitDelayedChange = () => {
     const { value } = this.state
     const { onChange } = this.props
 
@@ -166,7 +163,7 @@ class TextInput extends Component {
     if (onChange) {
       // because debounce, fake event is passed back
       const fakeEvent = {}
-      fakeEvent.target = this.refs.input
+      fakeEvent.target = this.textInput
       onChange(fakeEvent, value, inputData.isValid)
     }
   }
@@ -174,13 +171,13 @@ class TextInput extends Component {
     const { validation } = this.props
     if (validation && !isInputValid) {
       // has validation and is not valid!
-      this.refs.input.style.border = '1px solid red'
+      this.textInput.style.border = '1px solid #f26d62'
     } else if (validation && isInputValid) {
       // has validation and is valid!
-      this.refs.input.style.border = '1px solid green'
+      this.textInput.style.border = '1px solid green'
     }
   }
-  handleFocus(event) {
+  handleFocus = (event) => {
     const { onFocus } = this.props
     const { isValid } = this.state
 
@@ -189,12 +186,31 @@ class TextInput extends Component {
       onFocus(event, event.target.value, isValid)
     }
   }
-  handleBlur(event) {
+  prompt = () => {
+    const { value } = this.state
+    const { onChange } = this.props
+
+    const inputData = this.doValidation(value)
+
+    this.setState({
+      tid: void 0,  // eslint-disable-line
+      isValid: inputData.isValid,
+      errorMessage: inputData.errorMessage
+    }, this.doVisibleValidation(inputData.isValid))
+
+  }
+  handleBlur = (event) => {
     const { onBlur } = this.props
     const { isValid } = this.state
     if (onBlur) {
       onBlur(event, event.target.value, isValid)
     }
+
+    if (event.target.value) {
+      // only show if input has some value
+      this.prompt()
+    }
+
     // console.log('this.state.', this.state)
     // console.log('this.state.blurRanOnce', this.state.blurRanOnce)
     // console.log('event.target.value', event.target.value)
@@ -208,7 +224,8 @@ class TextInput extends Component {
   }
   captureFocusWhenInvalid() {
     if (!this.state.isValid) {
-      this.focus()
+      // not sure about this guy. Results in different form tabbing behavior
+      // this.focus()
     }
   }
   showValidation() {
@@ -219,18 +236,18 @@ class TextInput extends Component {
     } else if (this.state.blurRanOnce) {
       const classes = cx(styles.validation, errorMessageClassName)
       return (
-        <div className={classes}>
+        <div className={classes} onClick={this.focus}>
           {errorMessage}
         </div>
       )
     }
   }
-  blur() {
-    this.refs.input.blur()
+  blur = () =>  {
+    this.textInput.blur()
   }
 
-  focus() {
-    this.refs.input.focus()
+  focus = () => {
+    this.textInput.focus()
   }
 
   render() {
@@ -251,7 +268,7 @@ class TextInput extends Component {
       onChange: this.handleChange,
       onBlur: this.handleBlur,
       onFocus: this.handleFocus,
-      ref: 'input',
+      ref: (input) => { this.textInput = input },
       role: 'input',
       name: others.name || others.id || others.ref || formatName(others.placeholder),
       disabled,

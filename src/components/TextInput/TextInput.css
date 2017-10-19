@@ -23,7 +23,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  right: 5px;
-  top:0;
+  top: -33px;
+  font-size: 11px;
   font-size: 1.3rem;
+  user-select: none;
+  cursor: pointer;
 }
