@@ -12,7 +12,7 @@ export default class Sidebar extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-    
+
     this.newsletterSubscribed = getItemSync('newsletterSubscribed') === true
     this.handleScroll = this.handleScroll.bind(this)
     this.scrolling = false
@@ -32,9 +32,9 @@ export default class Sidebar extends React.Component {
       let st = window.pageYOffset || document.documentElement.scrollTop
 
       if (st > 70) {
-        this.sidebar.style.top = '0'
+        // this.sidebar.style.top = '70px'
       } else {
-        this.sidebar.style.top = 70 - st + 'px'
+        // this.sidebar.style.top = 70 - st + 'px'
       }
 
       this.scrolling = false
