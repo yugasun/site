@@ -10,7 +10,7 @@ const WorkshopSection = (props) => {
       <div className={styles.imgWrapper}>
         <img src={imgSrc} />
       </div>
-      <p className={styles.title}>
+      <p className={styles.description}>
         {text}
       </p>
       <Button href={props.link} kind='red'>

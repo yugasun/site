@@ -60,6 +60,7 @@ export default class WorkShopPage extends React.Component {
                   <TextInput
                     ref={(c) => { this.title = c }}
                     name='name'
+                    validation={'isFullName'}
                     placeholder='Name'
                     required
                   />

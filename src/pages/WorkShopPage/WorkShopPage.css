@@ -1,3 +1,4 @@
+$shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
 .padding {
   height: 7rem;
 }
@@ -18,8 +19,16 @@
   color: #fff;
   background-color: #fff;
   margin-bottom: 70px;
-  background: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/seattle.jpg) no-repeat center center fixed;
+  background-image: url(https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/seattle.jpg);
+  background-position-x: center;
+  background-position-y: center;
   background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #fff;
   min-height: 360px;
 }
 .opacity {
@@ -35,6 +44,7 @@
   font-size: 100px;
   text-transform: uppercase;
   z-index: 2;
+  text-shadow: $shadow;
 }
 .subtitle {
   position: relative;
@@ -43,6 +53,7 @@
   line-height: 54px;
   text-align: center;
   z-index: 2;
+  text-shadow: $shadow;
 }
 
 .fieldSet {
@@ -83,3 +94,39 @@
   margin: auto;
   margin-bottom: 150px;
 }
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+    margin-bottom: 0px;
+
+  }
+  .subtitle {
+    font-size: 22px;
+  }
+  .hero {
+    padding-top: 25px;
+    min-height: 140px;
+    margin-bottom: 20px;
+  }
+  .content {
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+  .fakeLabel {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .fieldSet {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .inputs, .textArea {
+    width: 100%;
+  }
+}
+
