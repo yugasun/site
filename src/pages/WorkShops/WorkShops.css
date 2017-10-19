@@ -86,16 +86,11 @@
 }
 
 
-@media (max-width: 1200px) {
-  .imgWrapper {
-    img {
-      max-width: 850px;
-    }
-  }
-}
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 25px;
+    line-height: 40px;
   }
   .heroDescription {
     font-size: 17px;
