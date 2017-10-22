@@ -24,6 +24,7 @@
     }
     .description {
       color: inherit;
+      background-color: rgba(0, 0, 0, 0.55);
     }
   }
 }
@@ -42,13 +43,16 @@
   -webkit-text-fill-color: transparent;
 }
 .description {
+  padding: 1rem;
+  border-radius: 3px;
   color: #000000;
   font-family: Gibson, sans-serif;
   font-size: 24px;
   font-weight: 300;
   line-height: 27px;
   text-align: center;
-  transition: color 300ms;
+  background-color: #FFF;
+  transition: color 300ms, background-color 400ms;
 }
 
 @media (max-width: 1200px) {
