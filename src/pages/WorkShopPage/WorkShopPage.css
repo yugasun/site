@@ -9,7 +9,6 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   flex-direction: column;
   padding-top: 10rem;
   padding-bottom: 0;
-  text-align: center;
   font-family: "Gibson", sans-serif;
   font-size: 28px;
   font-weight: 300;
@@ -23,11 +22,9 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
+  background-repeat: no-repeat;
   background-origin: initial;
   background-clip: initial;
-  background-color: #fff;
   min-height: 360px;
 }
 .opacity {
