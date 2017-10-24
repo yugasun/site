@@ -24,6 +24,7 @@ const propTypes = {
   header: PropTypes.element,
   footer: PropTypes.element,
   __url: PropTypes.string,
+  prefetch: PropTypes.array,
 }
 
 const DefaultLayout = (props) => {
@@ -40,11 +41,12 @@ const DefaultLayout = (props) => {
     coloredHeader,
     headerHideCTA,
     isLoading,
+    prefetch,
   } = props
 
   let metaTitle
   let meta = []
-  let link
+  let link = []
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
       heroImage = null
 
@@ -68,9 +70,13 @@ const DefaultLayout = (props) => {
     }
 
     if (head.rss) {
-      link = [
-        { rel: 'alternate', type: 'application/rss+xml', href: head.rss, title: metaTitle },
-      ]
+      link.push({ rel: 'alternate', type: 'application/rss+xml', href: head.rss, title: metaTitle })
+    }
+
+    if (prefetch && prefetch instanceof Array) {
+      prefetch.forEach(prefetchLink => {
+        link.push({ rel: 'prefetch', href: prefetchLink })
+      })
     }
 
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
