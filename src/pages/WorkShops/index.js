@@ -18,11 +18,19 @@ export default class WorkShopPage extends React.Component {
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Upcoming Serverless Workshops</h1>
             <p className={`${styles.heroDescription}`}>
-              Serverless Developer Workshops are a full day focused on providing training and guidance for serverless development, testing, security and operations. These workshops are most valuable  for developers  and technology leaders who are aiming to operationalize serverless across their organization. Join a waitlist below.
+              Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations.  
+            </p>
+
+            <p className={`${styles.heroDescription}`}>
+              These workshops will empower developers and technology leaders to operationalize serverless across their organization.
+            </p>
+
+            <p className={`${styles.heroDescription}`}>
+              Join the waitlist for your city below.
             </p>
 
             <p className={`${styles.heroDescription} ${styles.center}`}>
-              Priced at $1095 per person. For private workshops please email workshops@serverless.com
+              Priced at $1095 per person. For private workshops, please email workshops@serverless.com
             </p>
           </div>
         </div>
