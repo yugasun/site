@@ -20,7 +20,6 @@
     .cityName {
       color: inherit;
       text-fill-color: initial;
-      -webkit-text-fill-color: initial;
     }
     .description {
       color: inherit;
@@ -38,9 +37,7 @@
   background-size: cover;
   background-position: center -3rem;
   background-clip: text;
-  -webkit-background-clip: text;
   text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
 }
 .description {
   padding: 1rem;
