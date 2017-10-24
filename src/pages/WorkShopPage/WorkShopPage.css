@@ -10,7 +10,7 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   padding-top: 10rem;
   padding-bottom: 0;
   text-align: center;
-  font-family: "Gibson";
+  font-family: "Gibson", sans-serif;
   font-size: 28px;
   font-weight: 300;
   line-height: 32px;
@@ -47,7 +47,7 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
 }
 .subtitle {
   position: relative;
-  font-family: Gibson;
+  font-family: "Gibson", sans-serif;
   font-size: 48px;
   line-height: 54px;
   text-align: center;
@@ -61,7 +61,7 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
 }
 .fakeLabel {
   color: #000000;
-  font-family: Gibson;
+  font-family: "Gibson", sans-serif;
   font-size: 24px;
   line-height: 27px;
   text-align: right;
@@ -71,7 +71,7 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
 .textArea {
   width: 450px;
   height: 250px;
-  font-family: "Gibson";
+  font-family: "Gibson", sans-serif;
   font-size: 16px;
   padding: 15px;
   border: 1px solid #949494;
