@@ -92,6 +92,7 @@ const factory = (Radio) => {
         onMouseLeave,
         isStateless, // use dom values
         required,
+        isAutoForm,
         ...others
       } = this.props
       const _className = classnames(this.props.disabled ? 'disabled' : 'field', className)

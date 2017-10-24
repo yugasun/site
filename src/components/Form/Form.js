@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import AutoForm from 'react-auto-form'
 
+
 function fixScroll(){
   // http://bit.ly/2gQ6jFJ
   this.scrollIntoView(false)
@@ -8,6 +9,8 @@ function fixScroll(){
 
 export default class Form extends React.Component {
   componentDidMount() {
+    // console.log('refs', this.refs)
+    //console.log('this._reactInternalInstance._currentElement', this._reactInternalInstance._currentElement._owner)
     const list = this.node.querySelectorAll('input,select,textarea');
     for (var i = 0; i < list.length; i++) {
       list[i].addEventListener('invalid', fixScroll)
@@ -20,11 +23,20 @@ export default class Form extends React.Component {
     }
   }
 
+
+  handleSubmit = (event, data) => {
+    const { onSubmit, id, onChange, trimOnSubmit, children } = this.props
+    event.preventDefault()
+    if (onSubmit) {
+      onSubmit(event, data)
+    }
+  }
+
   render() {
-    const { onSubmit, onChange, trimOnSubmit, children } = this.props
+    const { onSubmit, id, onChange, trimOnSubmit, children } = this.props
     return (
       <div ref={(node) => { this.node = node }}>
-        <AutoForm className='form-node' trimOnSubmit={trimOnSubmit} onChange={onChange} onSubmit={onSubmit}>
+        <AutoForm ref='form' id={id} className='form-node' trimOnSubmit={trimOnSubmit} onChange={onChange} onSubmit={this.handleSubmit}>
           {children}
         </AutoForm>
       </div>

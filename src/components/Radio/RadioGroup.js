@@ -21,7 +21,7 @@ const factory = (RadioButton) => {
     }
 
     componentDidMount() {
-      console.log('this.node', this.node)
+      // console.log('this.node', this.node)
     }
 
     handleChange = (e, name, data, change) => {
@@ -42,10 +42,10 @@ const factory = (RadioButton) => {
 
       const isAutoForm = (isInsideElement(this.node, 'form-node')) ? true : false
 
-      console.log('isAutoForm', isAutoForm)
+      // console.log('isAutoForm', isAutoForm)
 
       return React.Children.map(children, child => {
-        console.log('radio child', child)
+        // console.log('radio child', child)
         if (child && child.type && child.type.displayName !== 'RadioButton') {
           return child
         }

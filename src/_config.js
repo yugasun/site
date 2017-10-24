@@ -24,7 +24,8 @@ module.exports = function siteConfig(isProduction) {
       API: {
         ERROR: 'https://kuen1ml0f0.execute-api.us-west-2.amazonaws.com/prod/report',
         NEWSLETTER: 'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
-        ADD_CONTACT: 'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add'
+        ADD_CONTACT: 'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add',
+        FORMS: 'https://d3ul21vxig.execute-api.us-west-2.amazonaws.com/prod/handle-entry'
       },
       BRANCH: process.env.BRANCH || gitBranch.sync(),
     }
