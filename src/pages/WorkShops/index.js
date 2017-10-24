@@ -6,7 +6,7 @@ import styles from './WorkShops.css'
 
 const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
 
-export default class WorkShopPage extends React.Component {
+export default class WorkShops extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
