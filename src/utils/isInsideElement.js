@@ -1,7 +1,5 @@
 export default function isInsideElement (element, className) {
-  console.log('run?')
   while (element) {
-    console.log('element', element)
     // if target is DOCUMENT_NODE bail
     if (element.nodeType === 9) {
       return false
