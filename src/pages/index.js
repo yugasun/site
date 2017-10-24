@@ -36,3 +36,9 @@ import SignUp from './SignUp'
 export { SignUp }
 import GettingStarted from './GettingStarted'
 export { GettingStarted }
+import WorkShops from './WorkShops'
+export { WorkShops }
+import WorkShopPage from './WorkShopPage'
+export { WorkShopPage }
+import Blank from './Blank'
+export { Blank }

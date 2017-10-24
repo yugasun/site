@@ -1,24 +1,26 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import styles from './Checkbox.css'
-// http://codepen.io/DavidWells/pen/PzvEWa
+// 😻 http://codepen.io/DavidWells/pen/PzvEWa
+
 const propTypes = {
   children: PropTypes.any,
   checked: PropTypes.bool,
   name: PropTypes.string,
   label: PropTypes.string,
 }
-export default class Check extends Component {
 
-  render() {
-    const { name, label } = this.props
-    return (
-      <div className={styles.checkbox}>
-        <input type='checkbox' id={name} name={name} />
-        <div className={styles.check} />
-        <label htmlFor={name}>{label}</label>
-      </div>
-    )
-  }
+const Check = ({ name, label }) => {
+  const value = label
+  const id = (label) ? `form_${label.replace(/ /g, '_').toLowerCase()}` : null
+  return (
+    <div className={styles.checkbox}>
+      <input type='checkbox' id={id} name={name} value={value} />
+      <div className={styles.check} />
+      <label htmlFor={id}>{label}</label>
+    </div>
+  )
 }
 
 Check.propTypes = propTypes
+
+export default Check
