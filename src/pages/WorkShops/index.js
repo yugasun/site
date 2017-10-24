@@ -13,7 +13,18 @@ export default class WorkShops extends React.Component {
   }
   render() {
     return (
-      <Default className={styles.enterprise} {...this.props} fullWidth >
+      <Default
+        className={styles.enterprise}
+        {...this.props}
+        fullWidth
+        prefetch={[
+          `${imgBase}san-francisco.jpg`,
+          `${imgBase}seattle.jpg`,
+          `${imgBase}new-york.jpg`,
+          `${imgBase}atlanta.jpg`,
+          `${imgBase}london.jpg`,
+        ]}
+      >
         <div className={styles.hero}>
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Upcoming Serverless Workshops</h1>
