@@ -17,7 +17,7 @@ export default class WorkShops extends React.Component {
         className={styles.enterprise}
         {...this.props}
         fullWidth
-        prefetch={[
+        prefetches={[
           `${imgBase}san-francisco.jpg`,
           `${imgBase}seattle.jpg`,
           `${imgBase}new-york.jpg`,
