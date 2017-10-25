@@ -29,14 +29,10 @@ export default class WorkShops extends React.Component {
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Upcoming Serverless Workshops</h1>
             <p className={`${styles.heroDescription}`}>
-              Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations.  
+              Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations. These workshops will empower developers and technology leaders to operationalize serverless across their organization.  
             </p>
 
-            <p className={`${styles.heroDescription}`}>
-              These workshops will empower developers and technology leaders to operationalize serverless across their organization.
-            </p>
-
-            <p className={`${styles.heroDescription}`}>
+            <p className={`${styles.heroDescription} ${styles.center}`}>
               Join the waitlist for your city below.
             </p>
 
