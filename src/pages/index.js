@@ -2,43 +2,23 @@
  * Usage in markdown ->
  * Layout: Homepage
  */
-import PageError from './404'
-export { PageError }
-import Homepage from './Homepage'
-export { Homepage }
-import PageLoading from './PageLoading'
-export { PageLoading }
-import Partners from './Partners'
-export { Partners }
-import Team from './Team'
-export { Team }
-import Community from './Community'
-export { Community }
-import Enterprise from './Enterprise'
-export { Enterprise }
-import Framework from './Framework'
-export { Framework }
-import EventGateway from './EventGateway'
-export { EventGateway }
-import Auth from './Auth'
-export { Auth }
-import Success from './Success' // to depricate after 10+ releases
-export { Success }  // to depricate after 10+ releases
-import SuccessNew from './SuccessNew'
-export { SuccessNew }
-import Splash from './Splash'
-export { Splash }
-import Jobs from './Jobs'
-export { Jobs }
-import Blog from './Blog'
-export { Blog }
-import SignUp from './SignUp'
-export { SignUp }
-import GettingStarted from './GettingStarted'
-export { GettingStarted }
-import WorkShops from './WorkShops'
-export { WorkShops }
-import WorkShopPage from './WorkShopPage'
-export { WorkShopPage }
-import Blank from './Blank'
-export { Blank }
+export { default as PageError } from './404'
+export { default as Homepage } from './Homepage'
+export { default as PageLoading } from './PageLoading'
+export { default as Partners } from './Partners'
+export { default as Team } from './Team'
+export { default as Community } from './Community'
+export { default as Enterprise } from './Enterprise'
+export { default as Framework } from './Framework'
+export { default as EventGateway } from './EventGateway'
+export { default as Auth } from './Auth'
+export { default as Success } from './Success'  // to depricate after 10+ releases
+export { default as SuccessNew } from './SuccessNew'
+export { default as Splash } from './Splash'
+export { default as Jobs } from './Jobs'
+export { default as Blog } from './Blog'
+export { default as SignUp } from './SignUp'
+export { default as GettingStarted } from './GettingStarted'
+export { default as WorkShops } from './WorkShops'
+export { default as WorkShopPage } from './WorkShopPage'
+export { default as Blank } from './Blank'
