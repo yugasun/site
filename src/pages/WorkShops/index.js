@@ -6,14 +6,25 @@ import styles from './WorkShops.css'
 
 const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
 
-export default class WorkShopPage extends React.Component {
+export default class WorkShops extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
   }
   render() {
     return (
-      <Default className={styles.enterprise} {...this.props} fullWidth >
+      <Default
+        className={styles.enterprise}
+        {...this.props}
+        fullWidth
+        prefetches={[
+          `${imgBase}san-francisco.jpg`,
+          `${imgBase}seattle.jpg`,
+          `${imgBase}new-york.jpg`,
+          `${imgBase}atlanta.jpg`,
+          `${imgBase}london.jpg`,
+        ]}
+      >
         <div className={styles.hero}>
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Upcoming Serverless Workshops</h1>
