@@ -101,7 +101,7 @@ const DefaultLayout = (props) => {
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} link={link} />
-      <Header whiteLogo={whiteLogo || heroImage} colored={coloredHeader !== false && coloredHeader !== undefined}
+      <Header whiteLogo={!!(whiteLogo || heroImage)} colored={coloredHeader !== false && coloredHeader !== undefined}
               hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
       {heroImage}
       <div className={classes}>
