@@ -32,7 +32,6 @@ $sidebarWidth: 350px;
     padding: 0;
     width: resolve($contentWidth - ($contentPadding * 1.6));
     max-width: resolve($contentWidth - ($contentPadding * 1.6));
-    min-width: resolve($contentWidth - ($contentPadding * 1.6));
   }
   blockquote {
     margin-left: $contentPadding;
@@ -53,10 +52,9 @@ $sidebarWidth: 350px;
   li {
     margin-bottom: 10px;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, .loadingWrapper, .authorBox {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, .postMeta, .loadingWrapper, .authorBox {
     width: $contentWidth;
     max-width: $contentWidth;
-    min-width: $contentWidth;
   }
   pre code {
     padding-top: 1.6rem;
@@ -201,9 +199,8 @@ $sidebarWidth: 350px;
   .contentWrapper {
     font-size: 16px;
     line-height: 26px;
-    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox, ul ul, ol ol, ul p {
+    h1, h2, h3, h4, h5, h6, p, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox, ul ul, ol ol, ul p {
       width: 100%;
-      min-width: 100%;
       max-width: 100%;
     }
     ul ul, ol ol {
@@ -219,6 +216,9 @@ $sidebarWidth: 350px;
     blockquote {
       margin-left: $contentPaddingMobile;
       border-width: 7px;
+    }
+    blockquote p {
+      width: 100%;
     }
     pre code {
       padding-left: $contentPaddingMobile !important;
