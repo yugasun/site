@@ -201,7 +201,8 @@ $sidebarWidth: 350px;
   .contentWrapper {
     font-size: 16px;
     line-height: 26px;
-    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox, ul ul, ol ol, ul p {
+    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox,
+    ul ul, ol ol, ul p {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
@@ -219,6 +220,12 @@ $sidebarWidth: 350px;
     blockquote {
       margin-left: $contentPaddingMobile;
       border-width: 7px;
+      p {
+        max-width: 90%;
+        min-width: 90%;
+        width: 90%;
+        font-size: 14px;
+      }
     }
     pre code {
       padding-left: $contentPaddingMobile !important;
