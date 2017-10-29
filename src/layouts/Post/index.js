@@ -1,17 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import Helmet from 'react-helmet'
 import { BodyContainer } from 'phenomic-serverless'
-import { Link } from 'react-router'
 import Svg from 'react-svg-inline'
 import Default from '../Default'
 import authorData from '../../pages/Blog/generated-authors.json'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
 import FixedSocialButtons from '../../components/FixedSocialButtons'
-import NewsletterCTA from '../../fragments/NewsletterCTA'
 import Sidebar from './sidebar'
-import Block from '../../components/Block'
-import BetaCTA from '../../fragments/BetaCTA'
-import AuthorCTA from '../../fragments/AuthorCTA'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
@@ -92,8 +87,6 @@ class Post extends Component {
       )
 
       title = head.title
-
-
     }
 
     let authorBox
