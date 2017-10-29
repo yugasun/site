@@ -91,7 +91,6 @@ a {
 .link {
   display: block;
   text-decoration: none;
-  padding: 1rem;
   text-align: center;
   &:hover {
     background: rgba(238, 238, 238, 0.3);
@@ -100,6 +99,9 @@ a {
   @media screen and (min-width: 768px) {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+  @media screen and (min-width: 960px) {
+    padding: 1rem;
   }
 }
 .caret {
