@@ -1,46 +1,23 @@
-.contentWrapper {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-bottom: 1px solid #D6D6D6;
-  padding: 3rem 0;
-  background-color: #FFF;
-  transition: background-color 350ms;
-
-  &:hover {
-    background-color: transparent;
-    color: #FFF;
-
-    .cityName {
-      color: inherit;
-      text-fill-color: initial;
-    }
-    .description {
-      color: inherit;
-    }
+  padding: 30px 0px;
+}
+.imgWrapper {
+  img {
+    max-width: 1200px;
   }
 }
-.cityName {
-  width: 100%;
-  text-align: center;
-  font-size: 15rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color 300ms;
-  background-size: cover;
-  background-position: center -3rem;
-  background-clip: text;
-  text-fill-color: transparent;
-}
 .description {
-  color: #000000;
-  font-family: Gibson, sans-serif;
+	color: #000000;
+  font-family: Gibson;
   font-size: 24px;
   font-weight: 300;
   line-height: 27px;
   text-align: center;
-  transition: color 300ms;
 }
 
 @media (max-width: 1200px) {

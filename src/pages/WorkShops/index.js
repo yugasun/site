@@ -59,11 +59,11 @@ export default class WorkShops extends React.Component {
               London
             </Link>
           </div>
-          <Section link='/workshops/san-francisco' city='San Francisco' backgroundImage={`${imgBase}sf-hero.jpg`} />
-          <Section link='/workshops/seattle' city='Seattle' backgroundImage={`${imgBase}seattle-hero.jpg`} />
-          <Section link='/workshops/new-york' city='New York' backgroundImage={`${imgBase}new-york-hero.jpg`} />
-          <Section link='/workshops/atlanta' city='Atlanta' backgroundImage={`${imgBase}atlanta-hero.jpg`} />
-          <Section link='/workshops/london' city='London' backgroundImage={`${imgBase}london-hero.jpg`} />
+          <Section link='/workshops/san-francisco' img={`${imgBase}san-francisco-text.png`} />
+          <Section link='/workshops/seattle' img={`${imgBase}seattle-text.png`} />
+          <Section link='/workshops/new-york' img={`${imgBase}new-york-text.png`} />
+          <Section link='/workshops/atlanta' img={`${imgBase}atlanta-text.png`} />
+          <Section link='/workshops/london' img={`${imgBase}london-text.png`} />
         </div>
       </Default>
     )
