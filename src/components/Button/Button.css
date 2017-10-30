@@ -17,7 +17,8 @@ $buttonPadding: 12px;
   transition: all 0.3s;
   text-decoration: none;
   font-style: normal;
-  ;
+  border-radius: 0;
+
   &:after {
     content: '';
     position: absolute;
