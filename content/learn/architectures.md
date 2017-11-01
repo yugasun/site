@@ -172,7 +172,7 @@ Serverless is a single, end-to-end solution for delivering and maintaining serve
 
 Our tools start by helping you build, test and deploy the application to your cloud providers. Then, we offer ways for you to continue to manage the application’s full life cycle: monitoring, logging and debugging.
 
-### Serverless Framework
+#### Serverless Framework
 
 Serverless architectures also allow you to configure your entire infrastructure as code. The Serverless Framework is a Command Line Interface (CLI) that reduces this setup process to only a few lines of code.
 
@@ -184,7 +184,7 @@ The Framework ties all of your application’s events and functions into a singl
 
 This enables developers without intimate knowledge of FaaS interfaces to get their applications deployed without too much up front investment. 
 
-### Event Gateway
+#### Event Gateway
 
 The Event Gateway is the backbone of your serverless application. Its works by expressing all data in your application as events, which you can then use as triggers for your functions.
 
@@ -192,7 +192,7 @@ Most importantly, the Event Gateway allows you to take functions hosted on any c
 
 [IMAGE: multi-cloud]
 
-### Dashboard
+#### Dashboard
 
 Above, we talked about one of the toughest challenges of microservices: facilitating team collaboration with service discovery and repurposing. The dashboard within the Serverless Platform is the first step we are taking to eliminate that challenge for serverless teams.
 
@@ -204,4 +204,6 @@ Microservices used to be prohibitively difficult, something that only a small po
 
 Not anymore. Serverless architectures democratize that power.
 
-As adoption continues to pick up speed, the industry is only just beginning to see the new types of applications and workflows serverless could enable.
+Even though the technology is still relatively new, developers are seeing serverless development as critical to their productivity. Their first question is: "Can we do this in a serverless way?" And if the answer is *no*, then their next question is: "How long until we can?"
+
+We're only just beginning to see the new types of applications and workflows serverless can enable. Adoption is only picking up speed.
