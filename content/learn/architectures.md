@@ -198,7 +198,7 @@ Above, we talked about one of the toughest challenges of microservices: facilita
 
 Developers can access the dashboard to see events and functions used throughout their organization, or for specific applications. Team members can then choose to tie their own events into services that are already deployed.
 
-## Serverless as a movement
+## The serverless movement
 
 Microservices used to be prohibitively difficult, something that only a small pool of tech-advanced and resource-rich companies were able to instrument.
 
