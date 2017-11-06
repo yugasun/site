@@ -116,7 +116,7 @@ $borderColor: #e8e8e8;
 
 @media (max-width: 1023px) {
   .sidebar {
-    position: static;
+    position: inherit;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
