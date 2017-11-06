@@ -175,9 +175,17 @@ export default class Header extends Component {
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link to='/enterprise/' className={styles.link}>
-                  Enterprise
-                </Link>
+                <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
+                  Enterprise <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
+                </a>
+                <ul className={styles.subNavItems}>
+                  <li>
+                    <Link to='/workshops/' className={styles.link}>Workshops</Link>
+                  </li>
+                  <li>
+                    <Link to='/enterprise/' className={styles.link}>Contact Us</Link>
+                  </li>
+                </ul>
               </li>
               <li
                   className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
