@@ -185,6 +185,7 @@ export default class Header extends Component {
                   <li>
                     <Link to='/enterprise/' className={styles.link}>Contact Us</Link>
                   </li>
+                </ul>
               </li>
               <li
                   className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
