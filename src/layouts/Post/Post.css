@@ -163,13 +163,17 @@ $sidebarWidth: 350px;
 }
 @media (max-width: 1260px) {
   .contentWrapper {
-    margin-left: resolve($sidebarWidth - 40px);
+    margin-left: $sidebarWidth;
     img {
       max-width: 100%;
     }
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1170px) {
+  .postWrapper {
+    display: block;
+    overflow: hidden;
+  }
   .postWrapper, .comments {
     flex-direction: column;
     border-bottom: none;
