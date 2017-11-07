@@ -68,7 +68,7 @@ const DefaultLayout = (props) => {
     if (head.thumbnail) {
       meta.push({ property: 'og:image', content: head.thumbnail })
     } else {
-      meta.push({ property: 'og:image', content: https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/Serverless_mark_black_400x400_v3%402x.jpg })
+      meta.push({ property: 'og:image', content: "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/Serverless_mark_black_400x400_v3%402x.jpg" })
     }
     
     https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/Serverless_mark_black_400x400_v3%402x.jpg
