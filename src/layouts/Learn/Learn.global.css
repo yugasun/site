@@ -14,6 +14,7 @@
     margin-right: 20px;
     padding: 10px !important;
     margin-top: 20px;
+    margin-bottom: 20px;
     &:hover {
       background: #f5f7f9;
     }
