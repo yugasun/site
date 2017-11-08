@@ -14,6 +14,7 @@ class Learn extends Component {
     const { head, body, isLoading, loadingData } = props
     let markdownContent
     let title = (head) ? head.title : '...'
+    let description = (head) ? head.description : '...'
 
     if (loadingData && loadingData.title) {
       title = loadingData.title
@@ -28,6 +29,7 @@ class Learn extends Component {
       )
 
       title = head.title
+      description = head.description;
     }
 
     if (isLoading) {
@@ -45,6 +47,9 @@ class Learn extends Component {
           <h1 className={styles.title}>
             {title}
           </h1>
+          <p className={styles.description}>
+            {description}
+          </p>
           <div className={styles.postContent}>
             {markdownContent}
           </div>

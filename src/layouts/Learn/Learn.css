@@ -2,7 +2,7 @@
   min-height: calc(100vh - $navHeight);
 }
 .learnPage {
-  max-width: 96rem;
+  max-width: 600px;
   margin: 8rem auto 0 auto;
   font-family: Gibson, Avenir, sans-serif;
   line-height: 1.6;
@@ -35,6 +35,14 @@
 .title {
   font-family: Serverless, monospace !important;
   font-weight: 100;
+}
+
+.description {
+  font-style: italic;
+}
+
+blockquote {
+  font-style: italic;
 }
 
 @media (max-width: 960px) {

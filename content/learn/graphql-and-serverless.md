@@ -1,10 +1,8 @@
 ---
-title: Trek10 + PlayBrain Customer Story
-description: "GraphQL and Rendering HTML with Serverless"
-layout: Default
+title: "GraphQL and Rendering HTML with Serverless"
+description: "Learn how Trek10 & PlayBrain created a highly-scalable application using GraphQL and the Serverless Framework"
+layout: Learn
 ---
-
-# GraphQL and Rendering HTML with Serverless
 
 ### Background
 <img width="400px" class="right" src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/partners/playbrain.png">

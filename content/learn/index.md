@@ -7,28 +7,33 @@ layout: Default
 # Serverless Resources
 
 <div class="learnWrapper">
-  <div class="learnSqaure">
-    <img src="http://www.fillmurray.com/200/150" />
-    <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"> Bootstrapping the Platform for a Billion Dollar Business Opportunity
+  <div class="learnSquare">
+    <p class="resourceLabel">Tutorial</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/Github-Logo-200px.png" />
+    <a href="/learn/tutorials/serverless-github-webhook-slack/">
+      Build a Serverless webhook handler for Github events
     </a>
   </div>
-  <div class="learnSqaure">
-    <img src="http://www.fillmurray.com/200/150" />
-     <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
-      Bootstrapping the Platform for a Billion Dollar Business Opportunity
+  <div class="learnSquare">
+    <p class="resourceLabel">Case Study</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/graphql-logo-200px.png" />
+     <a href="/learn/graphql-and-serverless/">
+      GraphQL & Rendering HTML with Serverless
     </a>
   </div>
-  <div class="learnSqaure">
-      <img src="http://www.fillmurray.com/200/150" />
-      <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
-        Bootstrapping the Platform for a Billion Dollar Business Opportunity
-      </a>
+  <div class="learnSquare">
+    <p class="resourceLabel">Case Study</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype_500x91.png" />
+     <a href="/learn/scaling-to-millions-of-requests/">
+       Scaling to Millions of Requests with Serverless
+    </a>
   </div>
-  <div class="learnSqaure">
-      <img src="http://www.fillmurray.com/200/150" />
+  <div class="learnSquare">
+    <p class="resourceLabel">Case Study</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype_500x91.png" />
      <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
-      Bootstrapping the Platform for a Billion Dollar Business Opportunity
-     </a>
+       Bootstrapping the Platform for a Billion Dollar Business Opportunity
+    </a>
   </div>
 
 </div>

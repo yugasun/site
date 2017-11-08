@@ -25,7 +25,12 @@
   }
 }
 
-.learnSqaure {
+.learnSquare {
   max-width: 22rem;
   width: 100%;
+}
+
+.resourceLabel {
+  text-align: center;
+  font-weight: 600;
 }
