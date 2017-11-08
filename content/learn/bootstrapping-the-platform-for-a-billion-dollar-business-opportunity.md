@@ -1,10 +1,8 @@
 ---
 title: Bootstrapping the Platform for a Billion Dollar Business Opportunity
 description: "How Nordcloud used Serverless to help MaaS revolutionize transportation"
-layout: Default
+layout: Learn
 ---
-
-# Bootstrapping the Platform for a Billion Dollar Business Opportunity
 
 ### Background
 
@@ -110,7 +108,7 @@ with functionality that streamlines the development lifecycle even further."
 
 Nordcloud is a European leader of public cloud infrastructure solutions and services. Since 2012 we've completed over 300 deployments to help our enterprise customers gain the maximum benefits of the cloud including security, agility, scalability and overall cost-savings. As an independent cloud-native company, we are representing all globally leading cloud technology providers neutrally for the customers’ benefit. With a strong Nordic heritage, Nordcloud is headquartered in Helsinki with offices in Stockholm, Malmö, Oslo, London, Amsterdam, Poznan and Munich.
 
-Nordcloud is an AWS Premier, Managed Services, Lambda, API Gateway and DynamoDB Partner, Microsoft Azure Gold Cloud Partner and strategic Google Cloud Platform Partner. 
+Nordcloud is an AWS Premier, Managed Services, Lambda, API Gateway and DynamoDB Partner, Microsoft Azure Gold Cloud Partner and strategic Google Cloud Platform Partner.
 
 ### Serverless contributions by Nordcloud
 
