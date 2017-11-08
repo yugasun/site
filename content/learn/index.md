@@ -22,6 +22,20 @@ layout: Default
     </a>
   </div>
   <div class="learnSquare">
+    <p class="resourceLabel">Tutorial</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/express-logo-200px.png" />
+    <a href="/blog/serverless-express-rest-api/">
+      Build a Node.js REST API with Express.js, Serverless, and DynamoDB
+    </a>
+  </div>
+  <div class="learnSquare">
+    <p class="resourceLabel">Case Study</p>
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/droplr-logo-200px.png" />
+     <a href="/blog/how-droplr-scales-to-millions-serverless-framework/">
+       How Droplr Scales to Millions With The Serverless Framework
+    </a>
+  </div>
+  <div class="learnSquare">
     <p class="resourceLabel">Case Study</p>
     <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype_500x91.png" />
      <a href="/learn/scaling-to-millions-of-requests/">
@@ -30,7 +44,7 @@ layout: Default
   </div>
   <div class="learnSquare">
     <p class="resourceLabel">Case Study</p>
-    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype_500x91.png" />
+    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/nordcloud-logo-200px.jpg" />
      <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
        Bootstrapping the Platform for a Billion Dollar Business Opportunity
     </a>
