@@ -1,6 +1,6 @@
 ---
-title: "Serverless Overview"
-description: "Overview of Serverless Architectures"
+title: "Serverless Learn"
+description: "Tutorials, guides, and case studies for learning about Serverless"
 layout: Default
 ---
 
@@ -26,7 +26,7 @@ layout: Default
   <div class="learnSquare">
     <p class="resourceLabel">Tutorial</p>
     <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/python-logo-300px.png" />
-     <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
+     <a href="/learn/tutorials/flask-rest-api-serverless/">
       Build a Python REST API with Flask, Serverless, and DynamoDB
     </a>
   </div>
