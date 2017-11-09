@@ -1,4 +1,10 @@
-Flask and Python REST api
+---
+title: Build a Python REST API with Serverless, Lambda, and DynamoDB
+description: Deploy a Serverless REST API in minutes using the popular Flask web framework
+layout: Learn
+---
+
+# Introduction
 
 Your existing web framework tooling can work seamlessly with Serverless. Let’s go over how to use the Python web framework [Flask](http://flask.pocoo.org/) to deploy a Serverless REST API.
 
@@ -558,6 +564,8 @@ $ serverless install --url https://github.com/alexdebrie/serverless-flask --name
 $ cd my-flask-app && npm run setup
 ```
 
-Then run `sls deploy`, and you're ready to roll. Hit the main web page to see your starter application:
+Then run `sls deploy` and hit the main web page to see your starter application:
 
 <img width="992" alt="Serverless Flask landing page" src="https://user-images.githubusercontent.com/6509926/32280095-b690a726-bee8-11e7-9a66-f92b40b4aaba.png">
+
+You're off and running! What will you build? ⚡️

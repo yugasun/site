@@ -26,7 +26,7 @@ layout: Default
   <div class="learnSquare">
     <p class="resourceLabel">Tutorial</p>
     <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/python-logo-300px.png" />
-     <a href="/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/">
+     <a href="/learn/tutorials/flask-rest-api-serverless/">
       Build a Python REST API with Flask, Serverless, and DynamoDB
     </a>
   </div>
