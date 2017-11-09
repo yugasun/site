@@ -1,6 +1,6 @@
 ---
-title: "Serverless Overview"
-description: "Overview of Serverless Architectures"
+title: "Serverless Learn"
+description: "Tutorials, guides, and case studies for learning about Serverless"
 layout: Default
 ---
 
