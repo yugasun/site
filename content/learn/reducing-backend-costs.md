@@ -1,10 +1,8 @@
 ---
-title: Reducing Backend costs case study with AbstractAI + Brainitch + LaidBackLuke
-description: "95% reduction in recurring back-end costs using Serverless Framework"
-layout: Default
+title: "AbstractAI reduces back-end costs using Serverless Framework"
+description: "See how AbstractAI, Brainitch, and Laidback Luke worked together to get a 95% reduction in recurring back-end costs using the Serverless Framework"
+layout: Learn
 ---
-
-# AbstractAI reduces back-end costs using Serverless Framework
 
 ### Background
 

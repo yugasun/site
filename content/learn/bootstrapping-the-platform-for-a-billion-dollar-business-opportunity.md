@@ -1,5 +1,5 @@
 ---
-title: Bootstrapping the Platform for a Billion Dollar Business Opportunity
+title: "Bootstrapping the Platform for a Billion Dollar Business Opportunity"
 description: "How Nordcloud used Serverless to help MaaS revolutionize transportation"
 layout: Learn
 ---
