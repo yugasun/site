@@ -6,7 +6,7 @@ layout: Default
 
 # Serverless Resources
 
-# Tutorials
+## Tutorials
 
 <div class="learnWrapper">
   <div class="learnSquare">
@@ -33,7 +33,7 @@ layout: Default
 
 </div>
 
-# Case Studies
+## Case Studies
 
 <div class="learnWrapper">
   <div class="learnSquare">
