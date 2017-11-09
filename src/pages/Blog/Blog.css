@@ -23,9 +23,10 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1170px) {
   .wrapper {
-    flex-direction: column;
+    display: block;
+    overflow: hidden;
   }
   .pageination {
     margin: 20px;
@@ -33,7 +34,15 @@
   }
   .postList {
     width: 100%;
+    max-width: 100%;
     padding: 0;
+    padding-left: 30px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .postList {
+    padding-left: 0px;
   }
 }
