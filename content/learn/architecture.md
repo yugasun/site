@@ -45,7 +45,7 @@ It was good.
 
 It was so good, that services got further broken up into microservices. Throughout all of this, small, functional teams began to form. These teams were experts in the specific area of the service they developed.
 
-![evolution](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Monolith-to-SOA%401x.jpg)
+![evolution](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Monolith-to-SOA.jpg)
 
 As the number of services mushroomed, the pain in provisioning infrastructure to host them increased many-fold. And then, the pain of maintaining them. And then, adequately scaling the infrastructure based on load.
 
@@ -68,7 +68,7 @@ In a world laden with maintenance, serverless compute was revolutionary. Lambda 
 
 Every major cloud provider was right behind, hitting the market with their own serverless compute. On Lambda’s heels there came Microsoft Azure, Google Cloud Functions, and IBM Cloud Functions.
 
-![serverlesstrends](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Google-trends%401x.jpg)
+![serverlesstrends](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Google-trends.jpg)
 
 ## The formation of serverless architectures
 In the beginning, we saw that monolithic services were broken up into microservices, which led to microservice architecture.
@@ -85,7 +85,7 @@ Serverless functions are bits of code that react to business events in your appl
 
 When the functions are asleep, they contract into a pinprick of action potential which you do not pay for. When they are called, they can scale as broadly as the cloud they are hosted on.
 
-![serverless-events](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Sls-events%401x.jpg)
+![serverless-events](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Sls-events.jpg)
 
 What this means is that the scaling part of the equation is no longer your team’s responsibility; it happens automatically in the background.
 
@@ -137,14 +137,14 @@ Even better, the cost savings from code improvements are instantaneous. Say you 
 
 This is because you’re paying for the runtime, not the provisioned space.
 
-![morevalue](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/pay-per-use%401x.jpg)
+![morevalue](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/pay-per-use.jpg)
 
 ### Allows polyglot teams to develop
 In current project-planning paradigms, the first discussion is about which language the new application should be built in. Language choice isn’t about what suits the project best, but rather which resources are already on-hand and which languages developers already know.
 
 With serverless, language isn’t a complete roadblock. Applications can be multi-lingual, which eliminates a lot of barriers for developers to center around a project and get it shipped.
 
-![multi-language](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/polyglot-teamsv3%401x.jpg)
+![multi-language](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/polyglot-teamsv3.jpg)
 
 ## An opening for new types of applications
 The thing to know is, any web app at scale was hard before Lambda. We talk today about the challenges of microservices and distributed systems, but those same challenges have existed for years, and many determined architects have hit on some solutions that work well enough.
@@ -176,7 +176,7 @@ Microservices, by definition, are fragmented and hyperspecific. Each one is sepa
 
 The end result is a distributed system. Serverless architectures require operational expertise in logging, monitoring and debugging distributed systems, and operations teams must rise to meet these needs.
 
-![distributedsystems](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/distributed+systems%401x.jpg)
+![distributedsystems](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/distributed+systems.jpg)
 
 ### Ease of collaboration
 Individual microservices are often mixed and remixed to form a variety of full-functioned applications. In your application, there might be one service that lets users add items to their cart and another that lets them pay. These services would be combined together to create a unified purchase experience.
@@ -209,7 +209,7 @@ We still need DevOps. In fact, we need a reimagined DevOps.
 
 As things currently stand, DevOps teams are bogged down with the mundane aspects of setting up infrastructure. Now they can focus on building better tools for tracking and monitoring dozens of functions and services.
 
-![globaldevops](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/devops%401x.jpg)
+![globaldevops](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/devops.jpg)
 
 ## Next steps: accelerate your team’s serverless adoption
 It’s one thing to build a greenfield project with a relatively new piece of technology. It’s another to migrate an existing team and product over to new paradigms.
