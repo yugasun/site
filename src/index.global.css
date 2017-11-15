@@ -317,3 +317,24 @@ pre code.hljs {
     font-size: 11px;
   }
 }
+
+.architectureHeader {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.architectureHeaderLink {
+  text-align: center;
+  font-size: 2.0rem;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.architectureHeaderLink a {
+  border-bottom: none;
+}
