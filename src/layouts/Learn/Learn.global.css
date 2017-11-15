@@ -26,6 +26,12 @@
   }
 }
 
+.sectionHeader {
+  font-family: Serverless, monospace !important;
+  font-weight: 100;
+  color: #FD5750;
+}
+
 .learnSquare {
   max-width: 22rem;
   width: 100%;
@@ -34,4 +40,29 @@
 .resourceLabel {
   text-align: center;
   font-weight: 600;
+}
+
+.architectureHeader {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.architectureHeaderLink {
+  font-family: Serverless, monospace !important;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 4px;
+}
+
+.architectureHeaderLink a {
+  border-bottom: none;
+}
+
+.architectureHeaderLink a:hover {
+  color: #FD5750;
 }

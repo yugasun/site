@@ -11,23 +11,25 @@ layout: Learn
     </a>
   </div>
   <div class="architectureHeaderLink">
-    <a href="#benefits-what-does-serverless-computing-mean-for-developers">
+    <a href="#benefits">
       Benefits
     </a>
   </div>
   <div class="architectureHeaderLink">
-    <a href="#challenges-what-to-consider-before-switching">
+    <a href="#challenges">
       Challenges
     </a>
   </div>
   <div class="architectureHeaderLink">
-    <a href="#how-to-adopt-serverless-teams-work-differently">
+    <a href="#how-to-adopt">
       How to adopt
     </a>
   </div>
 </div>
 
-# Serverless Architectures
+<h1 class="sectionHeader" id="serverless-architectures">
+  Serverless Architectures
+</h1>
 
 ## History: from monolith to microservice
 
@@ -101,7 +103,9 @@ Serverless democratizes this power. As with all new technologies, the edges are 
 
 Imagine, then, what the future holds. Things are rapidly getting even more robust and refined.
 
-# Benefits: What does serverless computing mean for developers?
+<h1 class="sectionHeader" id="benefits">
+  Benefits: What does serverless computing mean for developers?
+</h1>
 
 ## Improved efficiency
 Applications with a serverless infrastructure are fast to build, relatively easy to maintain and can operate on lower budgets. This is because so much of the daily workload is put onto the shoulders of the FaaS provider (the serverless compute service), and taken off developers’ plates.
@@ -157,7 +161,9 @@ This is because serverless development is fundamentally event-driven. You can tr
 
 There are just more tools available to make more things more easily.
 
-# Challenges: What to consider before switching
+<h1 class="sectionHeader" id="challenges">
+  Challenges: What to consider before switching
+</h1>
 
 Serverless architectures are essentially cloud-based microservice architectures that are powered by serverless compute. Which is to say: some (though not all) of the traditional challenges of microservice architectures will still apply.
 
@@ -179,7 +185,9 @@ Which also means: it’s useful when teams can share the services they’ve buil
 
 Currently, there are relatively few tools that do this well, though this is rapidly changing as providers move to be the first to solve serverless pain points.
 
-# How to adopt: Serverless teams work differently
+<h1 class="sectionHeader" id="how-to-adopt">
+  How to adopt: Serverless teams work differently
+</h1>
 
 The migration into serverless architectures will bring change not only for your infrastructure, but for the way your teams work together as well. We think that’s a good thing.
 

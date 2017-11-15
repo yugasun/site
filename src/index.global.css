@@ -317,28 +317,3 @@ pre code.hljs {
     font-size: 11px;
   }
 }
-
-.architectureHeader {
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.architectureHeaderLink {
-  text-align: center;
-  font-size: 2.0rem;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-
-.architectureHeaderLink a {
-  border-bottom: none;
-}
-
-.architectureHeaderLink a:hover {
-  color: #FD5750;
-}
