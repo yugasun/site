@@ -45,7 +45,7 @@ It was good.
 
 It was so good, that services got further broken up into microservices. Throughout all of this, small, functional teams began to form. These teams were experts in the specific area of the service they developed.
 
-[IMAGE: evolution of mono > SOA > micro]
+![evolution](https://user-images.githubusercontent.com/6509926/32855968-0014440e-ca09-11e7-8767-54818c7205d6.png)
 
 As the number of services mushroomed, the pain in provisioning infrastructure to host them increased many-fold. And then, the pain of maintaining them. And then, adequately scaling the infrastructure based on load.
 
@@ -68,7 +68,7 @@ In a world laden with maintenance, serverless compute was revolutionary. Lambda 
 
 Every major cloud provider was right behind, hitting the market with their own serverless compute. On Lambda’s heels there came Microsoft Azure, Google Cloud Functions, and IBM Cloud Functions.
 
-[IMAGE: google trends chart]
+<img width="776" alt="google-trends" src="https://user-images.githubusercontent.com/6509926/32856018-2caf0fee-ca09-11e7-81f0-b7ce0e53e22e.png">
 
 ## The formation of serverless architectures
 In the beginning, we saw that monolithic services were broken up into microservices, which led to microservice architecture.
@@ -85,7 +85,7 @@ Serverless functions are bits of code that react to business events in your appl
 
 When the functions are asleep, they contract into a pinprick of action potential which you do not pay for. When they are called, they can scale as broadly as the cloud they are hosted on.
 
-[IMAGE: serverless events]
+![serverless-events](https://user-images.githubusercontent.com/6509926/32856045-418517ba-ca09-11e7-9227-e3bf4d1f3603.png)
 
 What this means is that the scaling part of the equation is no longer your team’s responsibility; it happens automatically in the background.
 
@@ -137,14 +137,14 @@ Even better, the cost savings from code improvements are instantaneous. Say you 
 
 This is because you’re paying for the runtime, not the provisioned space.
 
-[---IMAGE: value to cost ratio - pre to post serverless---]
+![felix](https://user-images.githubusercontent.com/6509926/32856105-74bb365a-ca09-11e7-9049-ca15cdc5da47.jpeg)
 
 ### Allows polyglot teams to develop
 In current project-planning paradigms, the first discussion is about which language the new application should be built in. Language choice isn’t about what suits the project best, but rather which resources are already on-hand and which languages developers already know.
 
 With serverless, language isn’t a complete roadblock. Applications can be multi-lingual, which eliminates a lot of barriers for developers to center around a project and get it shipped.
 
-[IMAGE: multi-language -> feed into same application]
+![multi-language](https://user-images.githubusercontent.com/6509926/32856128-866928e4-ca09-11e7-8d2a-818898ba43a6.png)
 
 ## An opening for new types of applications
 The thing to know is, any web app at scale was hard before Lambda. We talk today about the challenges of microservices and distributed systems, but those same challenges have existed for years, and many determined architects have hit on some solutions that work well enough.
@@ -176,7 +176,7 @@ Microservices, by definition, are fragmented and hyperspecific. Each one is sepa
 
 The end result is a distributed system. Serverless architectures require operational expertise in logging, monitoring and debugging distributed systems, and operations teams must rise to meet these needs.
 
-[---IMAGE: distributed system---]
+![felix](https://user-images.githubusercontent.com/6509926/32856105-74bb365a-ca09-11e7-9049-ca15cdc5da47.jpeg)
 
 ### Ease of collaboration
 Individual microservices are often mixed and remixed to form a variety of full-functioned applications. In your application, there might be one service that lets users add items to their cart and another that lets them pay. These services would be combined together to create a unified purchase experience.
@@ -209,7 +209,7 @@ We still need DevOps. In fact, we need a reimagined DevOps.
 
 As things currently stand, DevOps teams are bogged down with the mundane aspects of setting up infrastructure. Now they can focus on building better tools for tracking and monitoring dozens of functions and services.
 
-[---IMAGE: ???---]
+![felix](https://user-images.githubusercontent.com/6509926/32856105-74bb365a-ca09-11e7-9049-ca15cdc5da47.jpeg)
 
 ## Next steps: accelerate your team’s serverless adoption
 It’s one thing to build a greenfield project with a relatively new piece of technology. It’s another to migrate an existing team and product over to new paradigms.
@@ -228,7 +228,7 @@ It is provider-agnostic, and can be used with any cloud your teams choose, thus 
 
 The Framework ties all of your application’s events and functions into a single configuration file, where you can see which functions do what, which events are triggered and which provider they are deployed to.
 
-[---IMAGE: CLI???---]
+![felix](https://user-images.githubusercontent.com/6509926/32856105-74bb365a-ca09-11e7-9049-ca15cdc5da47.jpeg)
 
 This enables developers without intimate knowledge of FaaS interfaces to get their applications deployed without too much up front investment.
 
@@ -239,7 +239,7 @@ Think of the Event Gateway as the centralized event hub, and the underlying comm
 
 You can take functions hosted on any cloud provider and subscribe them to any events—even those hosted on different cloud providers. It helps teams break away from vendor-specific tooling, and the single-vendor development environment that results.
 
-[IMAGE: multi-cloud]
+![multi-cloud](https://user-images.githubusercontent.com/6509926/32856195-b47c56fc-ca09-11e7-9190-42ebd08028bb.png)
 
 #### Dashboard
 Above, we talked about one of the toughest challenges of microservices: facilitating team collaboration with service discovery and repurposing. The dashboard within the Serverless Platform is the first step we are taking to eliminate that challenge for serverless teams.

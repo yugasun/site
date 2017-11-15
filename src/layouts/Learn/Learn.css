@@ -9,7 +9,7 @@
 
   h1, h2, h3, h4, strong {
     font-family: Avenir, Gibson, sans-serif;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 5px;
   }
   img {
@@ -21,7 +21,7 @@
     border-bottom: 1px solid rgba(0,0,0,0.2);
     font-weight: 400;
   }
-  p {
+  p, li {
     font-size: 18px;
   }
   margin-top: $navHeight;
