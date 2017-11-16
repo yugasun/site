@@ -202,7 +202,7 @@ Even though the technology is still relatively new, developers are seeing server
 
 We're only just beginning to see the new types of applications and workflows serverless can enable. Adoption is only picking up speed.
 
-## Developers take ownership
+### Developers take ownership
 Because serverless architectures eliminate the need for infrastructure provisioning, there is no barrier to putting an idea down in code and testing it immediately. It empowers teams to try out and suggest new things.
 
 So much of developers’ time is currently spent on mundane aspects of thinking about infrastructure (versus building out new features). The migration away from daily administrative tasks also frees up mental bandwidth for creativity and learning opportunities.
@@ -213,7 +213,7 @@ Conveniently, this comes just at a time when companies across the board are payi
 
 Developers will be able to dedicate time to learning new skills not only related to serverless architectures, but to new languages and use cases in a rapidly-expanding field.
 
-## DevOps gets creative
+### DevOps gets creative
 We still need DevOps. In fact, we need a reimagined DevOps.
 
 As things currently stand, DevOps teams are bogged down with the mundane aspects of setting up infrastructure. Now they can focus on building better tools for tracking and monitoring dozens of functions and services.
