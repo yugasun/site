@@ -193,35 +193,37 @@ The migration into serverless architectures will bring change not only for your 
 
 Here’s why: those changes are fundamentally about developer empowerment.
 
-## Teams gain flexibility
+## The serverless movement
+Microservices used to be prohibitively difficult, something that only a small pool of tech-advanced and resource-rich companies were able to instrument.
 
-### Developers take ownership
+Not anymore. Serverless architectures democratize that power.
+
+Even though the technology is still relatively new, developers are seeing serverless development as critical to their productivity. Their first question is: "Can we do this in a serverless way?" And if the answer is *no*, then their next question is: "How long until we can?"
+
+We're only just beginning to see the new types of applications and workflows serverless can enable. Adoption is only picking up speed.
+
+## Developers take ownership
 Because serverless architectures eliminate the need for infrastructure provisioning, there is no barrier to putting an idea down in code and testing it immediately. It empowers teams to try out and suggest new things.
 
 So much of developers’ time is currently spent on mundane aspects of thinking about infrastructure (versus building out new features). The migration away from daily administrative tasks also frees up mental bandwidth for creativity and learning opportunities.
+
+![globaldevops](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/devops.jpg)
 
 Conveniently, this comes just at a time when companies across the board are paying more and more attention to what makes employees fulfilled in their roles. 
 
 Developers will be able to dedicate time to learning new skills not only related to serverless architectures, but to new languages and use cases in a rapidly-expanding field.
 
-### DevOps gets creative
+## DevOps gets creative
 We still need DevOps. In fact, we need a reimagined DevOps.
 
 As things currently stand, DevOps teams are bogged down with the mundane aspects of setting up infrastructure. Now they can focus on building better tools for tracking and monitoring dozens of functions and services.
 
-![globaldevops](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/devops.jpg)
-
-## Next steps: accelerate your team’s serverless adoption
+# Next steps: accelerate your team’s serverless adoption
 It’s one thing to build a greenfield project with a relatively new piece of technology. It’s another to migrate an existing team and product over to new paradigms.
 
-Our mission at Serverless is to flatten the learning curve and get teams producing valuable services as soon as possible.
+Our mission at Serverless.com is to flatten the learning curve and get teams producing valuable services as soon as possible. Here are a couple of ways that we can help.
 
-### Serverless Platform
-The Serverless Platform is a single, end-to-end solution for delivering and maintaining serverless applications. 
-
-Our tools start by helping you build, test and deploy the application to your cloud providers. Then, we offer ways for you to continue to manage the application’s full life cycle: monitoring, logging and debugging.
-
-#### Serverless Framework
+### Serverless Framework
 Serverless architectures also allow you to configure your entire infrastructure as code. The Serverless Framework is a Command Line Interface (CLI) that reduces this setup process to only a few lines of code.
 
 It is provider-agnostic, and can be used with any cloud your teams choose, thus helping to alleviate vendor lock-in.
@@ -232,7 +234,7 @@ The Framework ties all of your application’s events and functions into a singl
 
 This enables developers without intimate knowledge of FaaS interfaces to get their applications deployed without too much up front investment.
 
-#### Event Gateway
+### Event Gateway
 The Event Gateway is the backbone of your serverless application. It works by expressing all activity in your application as events, which you can then use as triggers for your functions.
 
 Think of the Event Gateway as the centralized event hub, and the underlying communication fabric, for all of your events—regardless of which provider they are on.
@@ -240,17 +242,3 @@ Think of the Event Gateway as the centralized event hub, and the underlying comm
 You can take functions hosted on any cloud provider and subscribe them to any events—even those hosted on different cloud providers. It helps teams break away from vendor-specific tooling, and the single-vendor development environment that results.
 
 ![multi-cloud](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/event-gateway.jpg)
-
-#### Dashboard
-Above, we talked about one of the toughest challenges of microservices: facilitating team collaboration with service discovery and repurposing. The dashboard within the Serverless Platform is the first step we are taking to eliminate that challenge for serverless teams.
-
-Developers can access the dashboard to see events and functions used throughout their organization, or for specific applications. Team members can then choose to tie their own events into services that are already deployed.
-
-## The serverless movement
-Microservices used to be prohibitively difficult, something that only a small pool of tech-advanced and resource-rich companies were able to instrument.
-
-Not anymore. Serverless architectures democratize that power.
-
-Even though the technology is still relatively new, developers are seeing serverless development as critical to their productivity. Their first question is: "Can we do this in a serverless way?" And if the answer is *no*, then their next question is: "How long until we can?"
-
-We're only just beginning to see the new types of applications and workflows serverless can enable. Adoption is only picking up speed.
