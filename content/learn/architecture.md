@@ -239,7 +239,7 @@ Think of the Event Gateway as the centralized event hub, and the underlying comm
 
 You can take functions hosted on any cloud provider and subscribe them to any events—even those hosted on different cloud providers. It helps teams break away from vendor-specific tooling, and the single-vendor development environment that results.
 
-![multi-cloud](https://user-images.githubusercontent.com/6509926/32856195-b47c56fc-ca09-11e7-9190-42ebd08028bb.png)
+![multi-cloud](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/event-gateway.jpg)
 
 #### Dashboard
 Above, we talked about one of the toughest challenges of microservices: facilitating team collaboration with service discovery and repurposing. The dashboard within the Serverless Platform is the first step we are taking to eliminate that challenge for serverless teams.
