@@ -35,23 +35,23 @@ layout: Learn
 
 In the beginning, there were monolithic architectures, where all applications were deployed as a single unit. With monoliths, deployments were rare and brittle.
 
-When any part of the monolith failed, the whole thing had to be rolled back. A small change in one area could lead to broken functionality elsewhere. Developers needed to test the whole thing before they could deploy any new pieces of code.
+A small change in one area of the monolith could lead to broken functionality elsewhere; Developers needed to test the whole thing before they could deploy any new pieces of code. When any part of a monolith failed, the whole thing had to be rolled back.
 
 And then someone saw this and said, let us break the monolith up into loosely-coupled web services, and it was so.
 
 From the rubble, service-oriented architectures (SOA) emerged. Developers could finally deploy different services at different times. They could scale high-traffic APIs faster than others.
 
-It was good.
+It was good. It was so good, that services got further broken up into *microservices*.
 
-It was so good, that services got further broken up into microservices. Throughout all of this, small, functional teams began to form. These teams were experts in the specific area of the service they developed.
+Throughout all of this, small, functional teams began to form. These teams began to focus on smaller bits of code, and they became experts in the specific area of the service they developed.
 
 ![evolution](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Monolith-to-SOA.jpg)
 
-As the number of services mushroomed, the pain in provisioning infrastructure to host them increased many-fold. And then, the pain of maintaining them. And then, adequately scaling the infrastructure based on load.
+As the number of services mushroomed, it became more painful to provision infrastructure to host them. And then, more painful to maintain them. And then, more painful to adequately scale the infrastructure based on load.
 
 Microservices took micromanagement.
 
-Whole armies of DevOps teams formed. Their mission: to maintain the infrastructure. Less attention overall was paid to monitoring application performance.
+In response, whole armies of DevOps teams were formed. Their mission: to maintain the infrastructure. Less attention overall was paid to monitoring application performance.
 
 ### Containerization
 
@@ -64,9 +64,9 @@ While these shifts helped DevOps teams, it did not remove the maintenance of phy
 ### Solving the challenges of microservices
 And then, in 2014, AWS Lambda was born—the world’s first serverless compute service.
 
-In a world laden with maintenance, serverless compute was revolutionary. Lambda rendered it obsolete to have to provision, maintain, scale, or pay-for-idle infrastructure.
+In a world bogged down with maintenance, serverless compute was revolutionary. Lambda rendered much of that drudgery obsolete. It was suddenly no longer necessary to provision, maintain, scale, or pay-for-idle infrastructure.
 
-Every major cloud provider was right behind, hitting the market with their own serverless compute. On Lambda’s heels there came Microsoft Azure, Google Cloud Functions, and IBM Cloud Functions.
+Every major cloud provider began to hit the market with their own serverless compute. On Lambda’s heels there came Microsoft Azure Functions, Google Cloud Functions, and IBM Cloud Functions.
 
 ![serverlesstrends](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Google-trends.jpg)
 
@@ -75,7 +75,7 @@ In the beginning, we saw that monolithic services were broken up into microservi
 
 Now we see the proliferation of serverless architectures, which are a subset of microservice architectures that rely on serverless compute.
 
-An architecture is _serverless_ if it exhibits these three characteristics:
+For some guidelines on this, an architecture is considered _serverless_ if it exhibits these three characteristics:
 - runs on serverless compute (or FaaS)
 - is zero-administration
 - is automatically-scaling
@@ -131,7 +131,7 @@ Along the same lines, scoping smaller chunks of code (aka, functions) allows for
 ### Stretched value-to-cost ratio
 Because serverless functions lie dormant until they are called by an event, you are only responsible for the amount of runtime you use. Serverless computing utilizes a pay-per-execution model.
 
-This further means that it is no longer necessary to provision resources just in case they need to be used. Serverless infrastructure expands and contracts as you need it to, and you only pay for the runtime you use.
+This further means that it is no longer necessary to provision resources just in case you need them. Serverless infrastructure expands and contracts as you need it to, and you only pay for the runtime you use.
 
 Even better, the cost savings from code improvements are instantaneous. Say you tweak your code to cut out unnecessary iteration loops; you’ll directly see the decrease in your cloud provider bill.
 
@@ -140,7 +140,7 @@ This is because you’re paying for the runtime, not the provisioned space.
 ![morevalue](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/pay-per-use.jpg)
 
 ### Allows polyglot teams to develop
-In current project-planning paradigms, the first discussion is about which language the new application should be built in. Language choice isn’t about what suits the project best, but rather which resources are already on-hand and which languages developers already know.
+In current project-planning paradigms, the first discussion is about which language the new application should be built in. Language choice isn’t about what suits the project best, but rather which resources are already on hand and which languages developers already know.
 
 With serverless, language isn’t a complete roadblock. Applications can be multi-lingual, which eliminates a lot of barriers for developers to center around a project and get it shipped.
 
@@ -153,7 +153,7 @@ The key problems that serverless solves are ease of scale and administration. Yo
 
 Automatic scaling has been the revolution.
 
-As a result, you see very traditional industries (like insurance and banking) go against their stereotypes; they’re embracing new technology and launching full arrays of digital products.
+As a result, you see very traditional industries (like insurance and banking) go against their 'slow to innovate' stereotypes; they’re embracing new technology and launching full arrays of digital products.
 
 This is happening alongside a general explosion in new software use cases—things like Artificial Intelligence and IoT—that the serverless ecosystem adds even more fuel to.
 
