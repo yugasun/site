@@ -242,3 +242,9 @@ Think of the Event Gateway as the centralized event hub, and the underlying comm
 You can take functions hosted on any cloud provider and subscribe them to any events—even those hosted on different cloud providers. It helps teams break away from vendor-specific tooling, and the single-vendor development environment that results.
 
 ![multi-cloud](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/event-gateway.jpg)
+
+## Ready to get started?
+
+[Sign up and give serverless a test drive](https://serverless.com/).
+
+Here's [an example project](https://serverless.com/blog/anatomy-of-a-serverless-app/) to get you started.
