@@ -200,7 +200,7 @@ Not anymore. Serverless architectures democratize that power.
 
 Even though the technology is still relatively new, developers are seeing serverless development as critical to their productivity. Their first question is: "Can we do this in a serverless way?" And if the answer is *no*, then their next question is: "How long until we can?"
 
-We're only just beginning to see the new types of applications and workflows serverless can enable. Adoption is only picking up speed.
+We're only just beginning to see the new types of applications and workflows serverless can enable.
 
 ### Developers take ownership
 Because serverless architectures eliminate the need for infrastructure provisioning, there is no barrier to putting an idea down in code and testing it immediately. It empowers teams to try out and suggest new things.
