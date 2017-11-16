@@ -165,7 +165,7 @@ There are just more tools available to make more things more easily.
   Challenges: What to consider before switching
 </h1>
 
-Serverless architectures are essentially cloud-based microservice architectures that are powered by serverless compute. Which is to say: some (though not all) of the traditional challenges of microservice architectures will still apply.
+Serverless architectures are cloud-based microservice architectures that are powered by serverless compute. Which is to say: some (though not all) of the traditional challenges of microservice architectures will still apply.
 
 There are new tools being developed to handle these challenges, as we will discuss in a bit, but it’s important to get a realistic grasp of the problem space as it currently stands.
 
