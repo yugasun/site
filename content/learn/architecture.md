@@ -39,9 +39,9 @@ A small change in one area of the monolith could lead to broken functionality el
 
 And then someone saw this and said, let us break the monolith up into loosely-coupled web services, and it was so.
 
-From the rubble, service-oriented architectures (SOA) emerged. Developers could finally deploy different services at different times. They could scale high-traffic APIs faster than others.
+From the rubble, service-oriented architectures (SOA) emerged. Developers could finally deploy different services at different times. They could scale high-traffic APIs faster than others, and it was good.
 
-It was good. It was so good, that services got further broken up into *microservices*.
+It was so good, that services got further broken up into *microservices*.
 
 Throughout all of this, small, functional teams began to form. These teams began to focus on smaller bits of code, and they became experts in the specific area of the service they developed.
 
