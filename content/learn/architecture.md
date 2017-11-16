@@ -214,7 +214,7 @@ As things currently stand, DevOps teams are bogged down with the mundane aspects
 ## Next steps: accelerate your team’s serverless adoption
 It’s one thing to build a greenfield project with a relatively new piece of technology. It’s another to migrate an existing team and product over to new paradigms.
 
-Our mission at Serverless is to flatten the learning curve and get teams producing valuable services as soon as possible.
+Our mission at Serverless is to flatten the learning curve and get teams producing valuable services as soon as possible. Here are a couple of ways that we can help.
 
 ### Serverless Platform
 The Serverless Platform is a single, end-to-end solution for delivering and maintaining serverless applications. 
