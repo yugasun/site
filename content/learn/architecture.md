@@ -230,7 +230,7 @@ It is provider-agnostic, and can be used with any cloud your teams choose, thus 
 
 The Framework ties all of your application’s events and functions into a single configuration file, where you can see which functions do what, which events are triggered and which provider they are deployed to.
 
-![frameworkgif](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/getting-started-once.gif)
+![frameworkgif](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/ServerlessCLI.jpg)
 
 This enables developers without intimate knowledge of FaaS interfaces to get their applications deployed without too much up front investment.
 
