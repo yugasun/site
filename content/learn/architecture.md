@@ -1,6 +1,6 @@
 ---
 title: What is a Serverless Architecture?
-description: "Overview of Serverless Architectures"
+description: "Your primer on serverless and serverless architectures. Learn about the benefits, challenges, and steps to adoption."
 layout: Learn
 ---
 
@@ -224,7 +224,7 @@ It’s one thing to build a greenfield project with a relatively new piece of te
 Our mission at Serverless.com is to flatten the learning curve and get teams producing valuable services as soon as possible. Here are a couple of ways that we can help.
 
 ### Serverless Framework
-Serverless architectures also allow you to configure your entire infrastructure as code. The Serverless Framework is a Command Line Interface (CLI) that reduces this setup process to only a few lines of code.
+Serverless architectures also allow you to configure your entire infrastructure as code. The [Serverless Framework](www.serverless.com/framework) is a Command Line Interface (CLI) that reduces this setup process to only a few lines of code.
 
 It is provider-agnostic, and can be used with any cloud your teams choose, thus helping to alleviate vendor lock-in.
 
@@ -235,7 +235,7 @@ The Framework ties all of your application’s events and functions into a singl
 This enables developers without intimate knowledge of FaaS interfaces to get their applications deployed without too much up front investment.
 
 ### Event Gateway
-The Event Gateway is the backbone of your serverless application. It works by expressing all activity in your application as events, which you can then use as triggers for your functions.
+The [Event Gateway](www.serverless.com/event-gateway) is the backbone of your serverless application. It works by expressing all activity in your application as events, which you can then use as triggers for your functions.
 
 Think of the Event Gateway as the centralized event hub, and the underlying communication fabric, for all of your events—regardless of which provider they are on.
 
