@@ -12,9 +12,9 @@
 .coloredHeader {
   background-color: #313131;
   color: white;
-  ;
+
   .navItem {
-    ;
+
     &:hover .link {
       color: white;
     }
@@ -33,7 +33,6 @@
 }
 .whiteLogo {
   color: white;
-  ;
 
   .linkSpecial {
     color: inherit;
@@ -49,7 +48,7 @@
   right: 0;
   height: $navHeight;
   margin: auto;
-  ;
+
   &.fullWidth {
     max-width: 100%;
     width: 100%;
@@ -84,7 +83,7 @@ a {
   padding: 0;
   margin: 0;
   list-style: none;
-  ;
+
   li {
     position: relative;
   }
@@ -92,7 +91,6 @@ a {
 .link {
   display: block;
   text-decoration: none;
-  padding: 1rem;
   text-align: center;
   &:hover {
     background: rgba(238, 238, 238, 0.3);
@@ -101,6 +99,9 @@ a {
   @media screen and (min-width: 768px) {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+  @media screen and (min-width: 960px) {
+    padding: 1rem;
   }
 }
 .caret {
@@ -136,7 +137,7 @@ a {
     color: rgba(0,0,0,.64);
     transition: color 0s linear;
     z-index: 1;
-    ;
+
     &:hover {
       color: $black2;
     }
@@ -147,7 +148,7 @@ a {
   display: inline-block;
 }
 .navItem:hover {
-  ;
+
   .subNavItems {
     display: block;
   }
