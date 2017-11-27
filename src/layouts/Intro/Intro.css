@@ -1,0 +1,71 @@
+.base {
+  min-height: calc(100vh - $navHeight);
+}
+.introPage {
+  max-width: 700px;
+  margin: 8rem auto 0 auto;
+  font-family: Gibson, Avenir, sans-serif;
+  line-height: 1.6;
+
+  h1, h2, h3, h4, strong {
+    font-family: Avenir, Gibson, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+  img {
+    max-width: 120%;
+    width: 120%;
+    margin-left: -10%;
+  }
+  a {
+    color: $black2;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-weight: 400;
+  }
+  p, li {
+    font-size: 18px;
+  }
+  margin-top: $navHeight;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.contentWrapper {
+  margin-top: calc(30px + $navHeight);
+  width: 650px;
+}
+
+.title {
+  font-family: Serverless, monospace !important;
+  font-weight: 100;
+  text-align: center;
+}
+
+.description {
+  font-style: italic;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 23px;
+  }
+  .introPage, .contentWrapper {
+    max-width: 100%;
+  }
+  .contentWrapper {
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+
+}
