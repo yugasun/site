@@ -4,29 +4,6 @@ description: "Use Cases for Serverless"
 layout: Intro
 ---
 
-<div class="introHeader">
-  <div class="introHeaderLink">
-    <a href="/intro/what-is-serverless">
-      What is Serverless?
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a class="active" href="/intro/use-cases">
-      Use Cases
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/comparisons">
-      Comparisons
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/quick-start">
-      Quick Start
-    </a>
-  </div>
-</div>
-
 Serverless is the hot new architecture pattern. We're seeing more and more people move to Serverless as a way to increase velocity and decrease monotony.
 
 Some of the more common use cases for Serverless are:

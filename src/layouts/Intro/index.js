@@ -9,6 +9,34 @@ import globalStyles from './Intro.global.css'
 
 class Intro extends Component {
   static hasLoadingState = true
+  renderNav() {
+    return (
+      <div className={styles.navWrapper}>
+        <div className={styles.navInner} >
+          <div className={styles.navLink}>
+            <a href="/intro/what-is-serverless">
+              - Why Serverless?
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a href="/intro/use-cases">
+              - Use Cases
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a class="active" href="/intro/comparisons">
+              - Comparisons
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a href="/intro/quick-start">
+              - Quick Start
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
   render() {
     const { props } = this
     const { head, body, isLoading, loadingData } = props
@@ -40,6 +68,7 @@ class Intro extends Component {
 
     return (
       <Default {...props} fullWidth className={styles.introPage} >
+        {this.renderNav()} 
         <div className={styles.contentWrapper}>
           <h1 className={styles.title}>
             {title}

@@ -4,29 +4,6 @@ description: "When should you use Serverless over other tools?"
 layout: Intro
 ---
 
-<div class="introHeader">
-  <div class="introHeaderLink">
-    <a href="/intro/what-is-serverless">
-      What is Serverless?
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/use-cases">
-      Use Cases
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a class="active" href="/intro/comparisons">
-      Comparisons
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/quick-start">
-      Quick Start
-    </a>
-  </div>
-</div>
-
 Serverless architectures are enabling a wide range of use cases, but they're not right for every situation.
 
 Below, you can see how Serverless compares to other tools.

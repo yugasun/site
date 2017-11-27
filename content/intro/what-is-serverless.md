@@ -4,31 +4,6 @@ description: "What is the Serverless movement about and why does it matter?"
 layout: Intro
 ---
 
-<div class="introHeader">
-  <div class="introHeaderLink">
-    <a class="active" href="/intro/what-is-serverless">
-      What is Serverless?
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/use-cases">
-      Use Cases
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/comparisons">
-      Comparisons
-    </a>
-  </div>
-  <div class="introHeaderLink">
-    <a href="/intro/quick-start">
-      Quick Start
-    </a>
-  </div>
-</div>
-
-## History: from monolith to microservice
-
 Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
 
 Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
