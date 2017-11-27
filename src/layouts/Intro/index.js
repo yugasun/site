@@ -14,7 +14,7 @@ class Intro extends Component {
       <div className={styles.navWrapper}>
         <div className={styles.navInner} >
           <div className={styles.navLink}>
-            <a href="/intro/what-is-serverless">
+            <a href="/intro/why-serverless">
               - Why Serverless?
             </a>
           </div>
@@ -24,7 +24,7 @@ class Intro extends Component {
             </a>
           </div>
           <div className={styles.navLink}>
-            <a class="active" href="/intro/comparisons">
+            <a href="/intro/comparisons">
               - Comparisons
             </a>
           </div>

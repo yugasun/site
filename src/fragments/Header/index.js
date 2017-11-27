@@ -116,7 +116,7 @@ export default class Header extends Component {
                 <Link to='/' className={`${styles.link} ${styles.mobileOnly}`}>Home</Link>
               </li>
               <li className={styles.navItem}>
-                <Link to='/intro/what-is-serverless/' className={styles.link}>
+                <Link to='/intro/why-serverless/' className={styles.link}>
                   Intro
                 </Link>
               </li>
