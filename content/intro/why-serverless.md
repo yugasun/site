@@ -1,5 +1,5 @@
 ---
-title: "What is Serverless?"
+title: "Why Serverless?"
 description: "What is the Serverless movement about and why does it matter?"
 layout: Intro
 ---
