@@ -6,41 +6,6 @@ layout: Default
 
 # Serverless Resources
 
-## Serverless Primer
-
-<div class="learnWrapper">
-  <div class="learnSquare">
-    <p class="resourceLabel">Tutorial</p>
-    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/nodejs-logo-300px.png" />
-    <a href="/learn/intro/why-serverless/">
-      Why Serverless?
-    </a>
-  </div>
-  <div class="learnSquare">
-    <p class="resourceLabel">Tutorial</p>
-    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/github-logo-300px.png" />
-    <a href="/learn/intro/use-cases/">
-      Serverless Use Cases
-    </a>
-  </div>
-  <div class="learnSquare">
-    <p class="resourceLabel">Tutorial</p>
-    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/python-logo-300px.png" />
-     <a href="/learn/intro/comparisons/">
-       Comparisons
-    </a>
-  </div>
-  <div class="learnSquare">
-    <p class="resourceLabel">Tutorial</p>
-    <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/other/python-logo-300px.png" />
-     <a href="/learn/intro/quick-start/">
-       Quick Start
-    </a>
-  </div>
-
-</div>
-
-
 ## Tutorials
 
 <div class="learnWrapper">
