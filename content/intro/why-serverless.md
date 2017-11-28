@@ -4,46 +4,58 @@ description: "What is the Serverless movement about and why does it matter?"
 layout: Intro
 ---
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
+# Introduction to Serverless
+Just like wireless internet has wires somewhere, serverless architectures still have servers somewhere.
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+What ‘serverless’ really means is that, as a developer you don’t have to think about those servers. You just focus on code.
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+## The Serverless Movement
+Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
+There are a lot of benefits to that abstraction that improve work flow. You can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. There’s no need to provision servers, or pay for resources that go unused.
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+Serverless has become a movement about developer empowerment. The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
 
-![evolution](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Monolith-to-SOA.jpg)
+## What makes an application serverless?
+An application is serverless when it is hosted on a serverless compute service: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions, and others.
 
-### Containerization
+These Serverless Compute Services carry huge benefits for developers who buid and maintain services or applications.
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+## Benefits of Serverless Applications
+These are the 4 core benefits of Serverless Applications you should know about:
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
+1. **Zero administration** - This is the most liberating thing about serverless. Deploy code without provisioning anything beforehand, or managing anything afterward. There is no concept of a fleet, an instance, or even an operating system. Everything runs in the cloud and the provider manages scaling for you.
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+2. **Pay-per-execution** - This is what typically incentivizes developers to try serverless. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
+3. **Function as unit of deployment** - Serverless architectures are composed of very small, independent bits of code (functions) that are loosely coupled and collaborative—also known as a microservice architecture. This means pieces of the system can be developed and deployed independently. The result is fewer blockers and far greater developer autonomy and productivity.
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+4. **Event-Driven** - Serverless functions are stateless, and essentially dormant, until they have an event to react to. The event is what brings them to life and provides them with the data/context to do their job. Event-driven architectures are nothing new, but the rise of serverless compute has renewed interest in them because serverless architectures are by definition event-driven.
 
-![serverlesstrends](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Google-trends.jpg)
 
-## The formation of serverless architectures
+## The Serverless Framework
+If Serverless Compute is the new and improved application house on the block, then the Serverless Framework is the door you use to enter that house.
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
+Serverless Compute Services, for all their benefits, have some downsides that the Serverless Framework works to resolve. Serverless Compute vendors attempt to keep you within their own ecosystem (vendor lock-in). There are no standardized function signatures that will work cross-platform, meaning that functions must be completely rewritten in order to migrate them to a different vendor. It can also be cumbersome to properly set up serverless functions within vendor dashboards and native tooling.
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+That is where the Serverless Framework comes in. Use the Serverless Framework CLI to build and deploy your application to any and every cloud provider, in a single place, with a single function structure. The Framework automatically configures cloud vendor settings for you, based on the language you use and the cloud provider you deploy to.
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
+### Benefits of the Serverless Framework:
+These are the 6 core benefits of the Serverless Framework you should know about:
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+* **Increase development speed** - The Serverless Framework CLI enables developers to build, test, and deploy all in the same environment. Developers write their functions in cloud-agnostic Serverless YAML, and services can be deployed with a single command. Transactionally deploy code to multiple providers, version your deployments, and roll back the deployment if necessary.
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
+* **Avoid vendor lock-in** - Different cloud providers all have different required formats and function signatures. The Framework assembles your application into a single package that can be deployed across any cloud provider, abstracting away any necessary tweaking.
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+* **Infrastructure as Code** - Configure infrastructure across multiple clouds. Serverless cleanly integrates with every Serverless Compute Service so that you can formalize and standardize your entire infrastructure as code.
+
+* **Existing ecosystem** - The Serverless Framework is pluggable, and many dozens of community-contributed plugins exist in our [GitHub Plugins repo](https://github.com/serverless/plugins). The Serverless Framework is widely adopted, meaning there are always active discussions on forums and there are a wide array of tutorials that will help you get started.
+
+
+## Next Steps
+
+Dive further into the anatomy of the [Serverless Application](./the-serverless-application.md). Check out all the different [use cases](./use-cases.md) for serverless applications. Take a peek at how the Serverless Platform [compares to other software](./serverless-vs-other.md).
+
+Or if you’re ready, follow our [step-by-step guide](./getting-started) to start building a Serverless Application with your favorite language.
