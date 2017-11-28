@@ -13,9 +13,9 @@ What ‘serverless’ really means is that, as a developer you don’t have to t
 ## The Serverless Movement
 Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
 
-There are a lot of benefits to that abstraction that improve work flow. You can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. There’s no need to provision servers, or pay for resources that go unused.
-
 Serverless has become a movement about developer empowerment. The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
+
+It means developers can rapidly build apps that handle production-ready traffic. They don’t have to actively manage scaling for your applications. They don't have to provision servers, or pay for resources that go unused.
 
 ## What makes an application serverless?
 An application is serverless when it is hosted on a serverless compute service: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions, and others.
