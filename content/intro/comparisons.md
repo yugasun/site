@@ -8,13 +8,6 @@ Serverless Architectures are enabling a wide range of use cases, but they're not
 
 Below, you can see how Serverless compares to other tools.
 
-# Serverless vs. Other Software
-
-Serverless tooling makes it easy to build, deploy and manage Serverless Applications because of its abstraction. This means the Serverless Platform can be used to solve an array of problems, and many tools will have some overlapping functionality with the Serverless Platform.
-
-Below, we’ve done our best to lay out what the similarities and differences are. Note that the Serverless Platform can be used either alone or in conjunction with other systems, and we support direct integrations with many of these tools.
-
-
 ## Serverless vs. Docker
 
 Containers (such as Docker) package software into standardized units to make it easier to manage server instances, and many people use containers so they can control their scaling. It is a serverful architecture that runs VMs on your behalf, with a likewise serverful cost model.
