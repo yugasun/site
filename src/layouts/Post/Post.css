@@ -44,7 +44,7 @@ $sidebarWidth: 350px;
     padding-left: resolve($contentPadding * 1.6);
   }
   /* sub lists */
-  ul ul, ol ol {
+  ul ul, ul ol, ol ol {
     padding-left: 30px;
     width: resolve($contentWidth - ($contentPadding * 1.6));
     max-width: resolve($contentWidth - ($contentPadding * 1.6));
