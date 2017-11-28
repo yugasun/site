@@ -72,10 +72,7 @@ Using Cloudformation to deploy Serverless apps puts a hard requirement on the us
 
 Serverless has tooling that eliminates complexity in creating and managing applications that are distributed across the cloud.
 
-So, the Serverless Platform does not replace your cloud provider. Rather, our event-gateway ties together your cloud architecture while our deployment engine orchestrates deploying applications to various cloud providers and serverless compute services: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions.
-
-
-dashboard forms the visible backbone of your application (by exposing events and functions), while our tooling provides a single deployment and lifecycle management environment for Serverless Applications hosted on any (or on multiple) cloud providers.
+So, the Serverless Platform does not replace your cloud provider. Rather, our event-gateway ties together your cloud architecture, while our deployment engine orchestrates deploying applications to various cloud providers and serverless compute services: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions.
 
 
 ## Serverless vs. Heroku
