@@ -25,7 +25,7 @@ $sidebarWidth: 350px;
   a {
     text-decoration: underline;
   }
-  h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
+  h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe, table, twitterwidget {
     padding-left: $contentPadding;
   }
   blockquote p, blockquote li, li p  {
@@ -53,7 +53,7 @@ $sidebarWidth: 350px;
   li {
     margin-bottom: 10px;
   }
-  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, .loadingWrapper, .authorBox {
+  h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, .loadingWrapper, .authorBox, twitterwidget {
     width: $contentWidth;
     max-width: $contentWidth;
     min-width: $contentWidth;
@@ -205,8 +205,8 @@ $sidebarWidth: 350px;
   .contentWrapper {
     font-size: 16px;
     line-height: 26px;
-    h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox,
-    ul ul, ol ol, ul p {
+    h1, h2, h3, h4, h5, h6, p, blockquote, table, ul, ol, .postMeta, pre code, .loadingWrapper, .authorBox,
+    ul ul, ol ol, ul p, twitterwidget {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
@@ -217,7 +217,7 @@ $sidebarWidth: 350px;
     img, iframe {
       max-width: 100%;
     }
-    h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe {
+    h1, h2, h3, h4, h5, h6, p, .postMeta, .loadingWrapper, .authorBox, iframe, table, twitterwidget {
       padding-left: $contentPaddingMobile;
       padding-right: $contentPaddingMobile;
     }
