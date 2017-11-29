@@ -13,6 +13,7 @@ Below, you can see how Serverless compares to other tools, such as:
 - [Serverless Application Model (SAM)](#serverless-vs-sam)
 - [Zappa, ClaudiaJS, etc.](#serverless-vs-zappa-claudiajs-etc)
 - [Terraform](#serverless-vs-terraform)
+- [Rolling your own tooling](#serverless-vs-rolling-your-own-tooling)
 - [Cloud Providers](#serverless-vs-cloud-providers)
 - [Heroku](#serverless-vs-heroku)
 
@@ -83,6 +84,13 @@ Terraform is an unopinionated cloud deployment tool. Specifically, it describes 
 The Serverless Platform has one strong opinion about how an application is defined, and then is flexible about everything else. It facilitates developing and deploying Serverless Applications, abstracting away the boilerplate required to deploy serverless applications. It also assists with the packaging and monitoring of your serverless applications.
 
 Terraform and the Serverless Platform are not mutually exclusive, and can easily be used in tandem.
+
+## Serverless vs. Rolling your own tooling
+----
+
+Rather than using the Serverless Framework, you may be tempted to create your own tooling for managing serverless applications. We get the feeling -- you get to build something! It's why our founder created the Framework in the first place.
+
+Just be careful about what you're getting into. If your needs are small, you can get away with bash scripts or micro-frameworks. As you start using more and more pieces, you may find that maintaining your tooling is a full-time job in itself. Don't underestimate the costs of the community and ecosystem that is adding new features and fixing bugs.
 
 ## Serverless vs. Cloud Providers
 ----
