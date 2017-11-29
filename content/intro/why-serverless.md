@@ -15,7 +15,7 @@ Serverless abstracts away the most menial parts of building an application, leav
 
 Serverless has become a movement about developer empowerment. The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
 
-It means developers can rapidly build apps that handle production-ready traffic. They don’t have to actively manage scaling for your applications. They don't have to provision servers, or pay for resources that go unused.
+It means that you, the developer, can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. You don't have to provision servers, or pay for resources that go unused.
 
 ## What makes an application serverless?
 An application is serverless when it is hosted on a serverless compute service: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions, and others.
