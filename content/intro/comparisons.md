@@ -24,24 +24,6 @@ Docker packages software into standardized units (containers) to make it easier 
 
 Serverless compute services are essentially ephemeral containers, where the start/stop is managed automatically. The Serverless Applications deployed on them are fundamentally zero-administration and scale automatically with demand, which eliminates the need to manage server instances at all. Serverless Applications are also code-centric, and carry other [serverless benefits](./#serverless-benefits) such as pay-per-execution pricing models.
 
-<!-- TODO [more docker notes]
-Still has strong OS administration and management responsibilities
-Image is the unit of deployment
-It helps compartmentalize the execution environment using cgroups
-Shares system resources at the kernel level yet provides a feel of complete execution environment
-Packages the execution environment along with the app and its dependencies nicely
-Provides portability across hosts - Windows and Linux
-Faster uptimes than VMs
-Cheaper than VMs
-Is not serverless because does not adhere to the 3 tenets:
-Admin required, Cannot Auto-scale, Paying for idle time as container is up all the time
-
-Lambda is nothing but ECS with:
-ephemeral containers with start/stop managed automatically,
-with instrumentation built-in, to meter and hence provide pay-per-execution,
-using AWS managed pre-defined images per language runtime.
--->
-
 ## Serverless vs. CloudFormation
 ----
 
@@ -52,15 +34,6 @@ The Serverless Framework provides a configuration DSL which is designed for serv
 The Serverless Framework is provider-agnostic, so you can use it to deploy serverless applications to AWS, Microsoft Azure, Google Cloud Platform, or many other providers. This reduces lock-in and enables a multi-cloud strategy while giving you a consistent experience across clouds.
 
 Finally, the Serverless Framework assists with additional aspects of the serverless application lifecycle, including building your function package, invoking your functions for testing, and viewing your application logs.
-
-<!-- TODO: [more CloudFormation notes]
-CloudFormation main focus is on deploying infrastructure, and not focused on compute.
-Using CloudFormation to deploy Serverless apps is a slow process. While we do currently depend on it, Serverless can be a lot faster if it focused on functions
-CloudFormation is NOT provider agnostic and locks the users to AWS.
-CloudFormation syntax is hard to reason around which causes the DX to suffer.
-Using Cloudformation to deploy Serverless apps puts a hard requirement on the user to host his code on S3, which complicates the process. If Serverless focused on functions without depending on CloudFormation, this wouldn’t be a requirement.
-
--->
 
 ## Serverless vs. SAM
 ----
