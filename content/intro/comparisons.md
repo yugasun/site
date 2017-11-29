@@ -6,9 +6,18 @@ layout: Intro
 
 Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation.
 
-Below, you can see how Serverless compares to other tools.
+Below, you can see how Serverless compares to other tools, such as:
+
+- [Docker](#serverless-vs-docker)
+- [CloudFormation](#serverless-vs-cloudformation)
+- [Serverless Application Model (SAM)](#serverless-vs-sam)
+- [Zappa, ClaudiaJS, etc.](#serverless-vs-zappa-claudiajs-etc)
+- [Terraform](#serverless-vs-terraform)
+- [Cloud Providers](#serverless-vs-cloud-providers)
+- [Heroku](#serverless-vs-heroku)
 
 ## Serverless vs. Docker
+----
 
 Docker packages software into standardized units (containers) to make it easier to manage application dependencies and avoid the "works on my machine" problem. Many people use containers so they can control their scaling. It is a serverful architecture where you run a cluster of VM instances, with a likewise serverful cost model.
 
@@ -33,6 +42,7 @@ using AWS managed pre-defined images per language runtime.
 -->
 
 ## Serverless vs. CloudFormation
+----
 
 CloudFormation is an AWS tool for deploying infrastructure. You describe your desired infrastructure in YAML or JSON, then submit your CloudFormation template for deployment. It enables "infrastructure as code".
 
@@ -52,12 +62,21 @@ Using Cloudformation to deploy Serverless apps puts a hard requirement on the us
 -->
 
 ## Serverless vs. SAM
+----
 
 The Serverless Application Model (SAM) is an extension to CloudFormation within AWS. It provides a way to use CloudFormation syntax to define your Serverless Applications, though it can only be used within the AWS ecosystem.
 
 While SAM reduces the boilerplate of defining your serverless application, the other limitations of CloudFormation still apply. The Serverless Framework has a provider-agnostic way to define serverless applications. It manages additional aspects of the serverless application lifecycle. Finally, it has a broader feature set and larger community of plugins, examples, and guides.
 
+## Serverless vs. Zappa, ClaudiaJS, etc.
+----
+
+There are a number of deployment tools for serverless applications, including [Zappa](https://github.com/Miserlou/Zappa) for Python web applications or [ClaudiaJS](https://github.com/claudiajs/claudia) for Node web applications. These tools are purpose-built for their particular use cases. If they fit the use case you're looking for and you prefer their design, you should use them!
+
+The Serverless Framework is a more general purpose tool for deploying and managing serverless applications. You can deploy Python or Node web applications while also provisioning the infrastructure that your application needs, such as databases, queues, and object storage. Further, you can use the Framework to build multiple types of applications, including event streaming, image manipulation, and more.
+
 ## Serverless vs. Terraform
+----
 
 Terraform is an unopinionated cloud deployment tool. Specifically, it describes Infrastructure as Code and deploys to multiple clouds and SaaS systems at once. It is comparable to CloudFormation but for multiple clouds.
 
@@ -66,12 +85,14 @@ The Serverless Platform has one strong opinion about how an application is defin
 Terraform and the Serverless Platform are not mutually exclusive, and can easily be used in tandem.
 
 ## Serverless vs. Cloud Providers
+----
 
 Serverless has tooling that eliminates complexity in creating and managing applications that are distributed across the cloud.
 
 So, the Serverless Platform does not replace your cloud provider. Rather, our event-gateway ties together your cloud architecture, while our deployment engine orchestrates deploying applications to various cloud providers and serverless compute services: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions.
 
 ## Serverless vs. Heroku
+----
 
 Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba.
 

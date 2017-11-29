@@ -14,11 +14,6 @@
     margin-top: 30px;
     margin-bottom: 5px;
   }
-  img {
-    max-width: 120%;
-    width: 120%;
-    margin-left: -10%;
-  }
   a {
     color: $black2;
     text-decoration: none;
@@ -29,6 +24,7 @@
     font-size: 18px;
   }
   margin-top: $navHeight;
+  margin-bottom: 50px;
 }
 
 .navWrapper {
