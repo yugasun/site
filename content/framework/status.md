@@ -1,7 +1,6 @@
 ---
 title: Serverless Roadmap
 layout: Default
-topMargin: true
 fullWidth: true
 scripts: https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/apps/status-board/status-board-loader.js
 inlineJS: "
@@ -11,7 +10,7 @@ if (typeof window.loadStatusBoard !== 'undefined') {
 "
 inlineCSS: "
   #footer { display: none; }
-  #status-board { min-height: 100vh; background: #1a1a1a; }
+  #status-board { min-height: 100vh; background: #1a1a1a; margin-top: 7rem; }
   body { overflow: hidden; }
   #github-cta {
     text-align: center;

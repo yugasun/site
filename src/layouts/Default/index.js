@@ -58,6 +58,7 @@ const DefaultLayout = (props) => {
     { property: 'og:title', content: metaTitle },
     { property: 'og:url', content: uri },
     { property: 'og:description', content: head.description },
+    { property: 'og:image', content: `${process.env.S3_BUCKET}logos/Serverless_mark_black_400x400_v3%402x.jpg` },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:creator', content: `@${process.env.TWITTER}` },
@@ -67,8 +68,6 @@ const DefaultLayout = (props) => {
 
     if (head.thumbnail) {
       meta.push({ property: 'og:image', content: head.thumbnail })
-    } else {
-      meta.push({ property: 'og:image', content: "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/Serverless_mark_black_400x400_v3%402x.jpg" })
     }
 
     if (head.rss) {
@@ -103,14 +102,20 @@ const DefaultLayout = (props) => {
   )
 
   const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
-  const classes = classnames(styles.base, wrapperClass, className,
-    ((typeof head !== 'undefined' && head.hasOwnProperty('topMargin') && head.topMargin === true) ? styles.topMargin : ''))
+  const classes = classnames(
+    styles.base,
+    wrapperClass,
+    className,
+  )
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} link={link} />
-      <Header whiteLogo={!!(whiteLogo || heroImage)} colored={coloredHeader !== false && coloredHeader !== undefined}
-              hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
+      <Header
+        whiteLogo={!!(whiteLogo || heroImage)}
+        colored={coloredHeader !== false && coloredHeader !== undefined}
+        hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
+      />
       {heroImage}
       <div className={classes}>
         {header}
