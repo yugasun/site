@@ -28,7 +28,7 @@ The quick start is aimed at teaching you the key components of Serverless. If yo
 
 First, you'll need to install the Serverless Framework. This requires you to have NodeJS & NPM installed.
 
-Installing the Framework is simple:
+You can install the Framework with NPM:
 
 ```bash
 $ npm install -g serverless
@@ -97,11 +97,86 @@ functions:
           cors: true
 ```
 
+Look to the `functions` block as it's the core of a Serverless application. A function is an entrypoint to your code that will be triggered upon specified events.
 
+There's one function listed -- `helloWorld`. It has the a `handler` property describes the path to the handler file and the name of the function to be triggered within that file.
 
+Further, it has an `events` property with an array of event subscriptions. In this example, we've configured an `http` event which is triggered on a `GET` request to `/hello-world`. You can configure a [number of different events](https://serverless.com/framework/docs/providers/aws/events/), including [HTTP requests](https://serverless.com/framework/docs/providers/aws/events/apigateway/), [messages in pub/sub topics](https://serverless.com/framework/docs/providers/aws/events/sns/), [scheduled tasks](https://serverless.com/framework/docs/providers/aws/events/schedule/), [object storage notifications](https://serverless.com/framework/docs/providers/aws/events/s3/), or [record batches in an event log](https://serverless.com/framework/docs/providers/aws/events/streams/).
+
+**Functions and Events.** These are the building blocks of Serverless applications. You write the code to be executed and the events that will trigger that code.
+
+Finally, look at the `handler.js` file:
+
+```javascript
+'use strict';
+
+module.exports.helloWorld = (event, context, callback) => {
+  const response = {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+    },
+    body: JSON.stringify({
+      message: 'Go Serverless v1.0! Your function executed successfully!',
+      input: event,
+    }),
+  };
+
+  callback(null, response);
+};
+```
+
+We have our defined `helloWorld` function. It implements the function signature from AWS Lambda which includes an `event`, `context`, and a `callback` function. Our function assembles a response with a `statusCode`, `headers`, and a response `body`. 
+
+We'll dig deeper into the function itself later on.
 
 ## Deploying your first service
+
+We have a service. Our configuration is defined in `serverless.yml`. Our function is defined in `handler.js`. It's time to make it live.
+
+Deploy your service with `sls deploy`:
+
+```bash
+$ sls deploy
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Creating Stack...
+Serverless: Checking Stack create progress...
+.....
+Serverless: Stack create finished...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (404 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+..................................
+Serverless: Stack update finished...
+Service Information
+service: hello-world
+stage: dev
+region: us-east-1
+stack: hello-world-dev
+api keys:
+  None
+endpoints:
+  GET - https://li6gy63jl6.execute-api.us-east-1.amazonaws.com/dev/hello-world
+functions:
+  helloWorld: hello-world-dev-helloWorld
+```
+
+Your service is deployed! In the Service Information at the bottom, there's an HTTP endpoint to access your function. Copy and paste that into your browser. I'm using Firefox, which has a nice viewer for JSON responses:
+
+<img width="892" alt="Hello World request" src="https://user-images.githubusercontent.com/6509926/33442664-518bb2be-d5bb-11e7-96a7-6a9c5dbeae30.png">
+
+In 5 minutes and 40 lines of code, we have an active HTTP endpoint accessible from any browser that scales automatically and is billed on a per-request basis.
+
+Amazing.
+
 ## Understanding the event model
+
+
+
 ## Adding a database resource
 ## Debugging your application with logs
 ## Viewing your service metrics
