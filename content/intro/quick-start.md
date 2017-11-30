@@ -1,51 +1,108 @@
 ---
 title: "Quick Start"
-description: "What is the Serverless movement about and why does it matter?"
+description: "Getting started with the Serverless Framework"
 layout: Intro
 ---
 
-## History: from monolith to microservice
+This quick start will take you through the basics of using the Serverless Framework. We'll learn how to create and deploy a service with an HTTP endpoint. Then, we'll understand how the serverless event model works and add some dynamic logic to our endpoint. Next, we'll learn how to provision a database with the Framework to persist state between requests. Finally, we'll look at some basic operations with Serverless.
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
+The quick start is aimed at teaching you the key components of Serverless. If you would prefer a walkthrough to build a project, check out these tutorials:
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+- [Create a Node REST API with Express.js](https://serverless.com/blog/serverless-express-rest-api/)
+- [Make a Serverless GraphQL API](https://serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb/)
+- [Create a Python REST API with Flask](https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/)
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
+# Table of Contents:
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+- [Installing Serverless](#installing-serverless)
+- [Creating a new service](#creating-a-new-service)
+- [Deploying your first service](#deploying-your-first-service)
+- [Understanding the event model](#understanding-the-event-model)
+- [Adding a database resource](#adding-a-database-resource)
+- [Debugging your application with logs](#debugging-your-application-with-logs)
+- [Viewing your service metrics](#viewing-your-service-metrics)
+- [Cleaning up and next steps](#cleaning-up-and-next-steps)
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+## Installing Serverless
 
-![evolution](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Monolith-to-SOA.jpg)
+First, you'll need to install the Serverless Framework. This requires you to have NodeJS & NPM installed.
 
-### Containerization
+Installing the Framework is simple:
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
+```bash
+$ npm install -g serverless
+```
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+After the install completes, you'll have an executable that you can invoke with the command `serverless` or the shorthand `sls`. 
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
+Check the version to make sure it's properly installed:
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+```bash
+$ sls version
+1.24.1
+```
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
+If you see a version listed, your install was successful!
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+To complete the actions in this tutorial, you'll need your environment configured with AWS credentials. If you haven't done that already, follow the steps in our [provider onboarding guide](https://serverless.com/provider-setup).
 
-![serverlesstrends](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/Google-trends.jpg)
+## Creating a new service
 
-## The formation of serverless architectures
+With the Framework installed, it's time to create our service. The built-in `create` command can bootstrap a service from a template.
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba. Signature Jared Short Ben Kehoe gateway zero-maintenance. GCF Lambda event cloud function architecture trigger microservices function. Ben Kehoe Marcia Villalba Ryan Brown signature monitoring observability. Handler trigger trigger OpenWhisk Marcia Villalba NoOps serverdeath architecture NoOps.
+We'll use the `hello-world` template to get started:
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud pay-per-execution cloud IoT serverdeath services. Serverdeath monitoring source NoOps multi-cloud. GCF framework event YAML pay-per-execution.
+```bash
+$ sls create --template hello-world --path hello-world
+Serverless: Generating boilerplate...
+Serverless: Generating boilerplate in "/Users/alexdebrie/scratch/hello-world"
+ _______                             __
+|   _   .-----.----.--.--.-----.----|  .-----.-----.-----.
+|   |___|  -__|   _|  |  |  -__|   _|  |  -__|__ --|__ --|
+|____   |_____|__|  \___/|_____|__| |__|_____|_____|_____|
+|   |   |             The Serverless Application Framework
+|       |                           serverless.com, v1.24.1
+ -------'
 
-YAML function function Azure Marcia Villalba multi-cloud source source framework. Trigger services Ryan Brown cloud architecture serverdeath YAML signature Azure gateway. Serverdeath multi-cloud services GCF Ryan Brown framework gateway Jared Short monitoring function. Function gateway YAML OpenWhisk deployment. Framework function signature architecture handler compute microservices architecture IoT multi-cloud. Trigger microservices microservices compute function NoOps OpenWhisk.
+Serverless: Successfully generated boilerplate for template: "hello-world"
+```
 
-IoT Azure signature event observability Azure Ryan Brown Azure. Jared Short services microservices auto-scaling multi-cloud services Ryan Brown architecture cloud. Trigger multi-cloud observability cloud function Azure. Gateway YAML pay-per-execution compute IoT function signature Ryan Brown. Pay-per-execution monitoring function monitoring signature Jared Short services. Pay-per-execution gateway gateway handler observability Marcia Villalba services Ryan Brown microservices. Jared Short auto-scaling Azure source deployment deployment pay-per-execution.
+Let's change into our directory and look at the files:
 
-Ryan Brown framework OpenWhisk OpenWhisk Ryan Brown event. Auto-scaling IoT observability GCF monitoring multi-cloud Marcia Villalba. Serverdeath serverdeath observability Marcia Villalba GCF. Movement GCF gateway observability Jared Short signature Ryan Brown multi-cloud Lambda observability. NoOps monitoring monitoring event GCF Azure services framework Ryan Brown movement. Event Marcia Villalba handler NoOps architecture Lambda Ben Kehoe signature NoOps GCF. Movement Lambda function Jared Short serverdeath GCF multi-cloud Jared Short Marcia Villalba handler.
+```bash
+$ cd hello-world
+$ ls
+handler.js	serverless.yml
+```
 
-Jared Short zero-maintenance deployment IoT services Jared Short gateway NoOps gateway Jared Short. Architecture microservices Marcia Villalba cloud NoOps. Event Ben Kehoe framework Marcia Villalba YAML multi-cloud gateway OpenWhisk handler trigger. Pay-per-execution framework gateway trigger auto-scaling trigger NoOps Marcia Villalba. Jared Short OpenWhisk compute GCF framework trigger.
+The `serverless.yml` contains our Serverless configuration for the project. It gives you a way to describe your infrastructure as code and keep it directly with your project.
+
+The contents of `serverless.yml` are (comments removed):
+
+```yml
+service: hello-world
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  helloWorld:
+    handler: handler.helloWorld
+    events:
+      - http:
+          path: hello-world
+          method: get
+          cors: true
+```
+
+
+
+
+## Deploying your first service
+## Understanding the event model
+## Adding a database resource
+## Debugging your application with logs
+## Viewing your service metrics
+## Cleaning up and next steps
