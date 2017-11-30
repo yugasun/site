@@ -20,6 +20,7 @@ module.exports = function siteConfig(isProduction) {
       LOGO: {
         ICON: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg'
       },
+      S3_BUCKET: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/',
       /* Serverless API Gateway Endpoints */
       API: {
         ERROR: 'https://kuen1ml0f0.execute-api.us-west-2.amazonaws.com/prod/report',
