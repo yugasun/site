@@ -4,16 +4,9 @@ description: "Getting started with the Serverless Framework"
 layout: Intro
 ---
 
-This quick start will take you through the basics of using the Serverless Framework. We'll learn how to create and deploy a service with an HTTP endpoint. Then, we'll understand how the serverless event model works and add some dynamic logic to our endpoint. Next, we'll learn how to provision a database with the Framework to persist state between requests. Finally, we'll look at some basic operations with Serverless.
-
-The quick start is aimed at teaching you the key components of Serverless. If you would prefer a walkthrough to build a project, check out these tutorials:
-
-- [Create a Node REST API with Express.js](https://serverless.com/blog/serverless-express-rest-api/)
-- [Make a Serverless GraphQL API](https://serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb/)
-- [Create a Python REST API with Flask](https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/)
-
 # Table of Contents:
 
+- [Intro](#intro)
 - [Installing Serverless](#installing-serverless)
 - [Creating a new service](#creating-a-new-service)
 - [Deploying your first service](#deploying-your-first-service)
@@ -23,6 +16,15 @@ The quick start is aimed at teaching you the key components of Serverless. If yo
 - [Viewing your service metrics](#viewing-your-service-metrics)
 - [Cleaning up and next steps](#cleaning-up-and-next-steps)
 
+## Intro 
+
+This quick start will take you through the basics of using the Serverless Framework. We'll learn how to create and deploy a service with an HTTP endpoint. Then, we'll understand how the serverless event model works and add some dynamic logic to our endpoint. Next, we'll learn how to provision a database with the Framework to persist state between requests. Finally, we'll look at some basic operations with Serverless.
+
+The quick start is aimed at teaching you the key components of Serverless. If you would prefer a walkthrough to build a project, check out these tutorials:
+
+- [Create a Node REST API with Express.js](https://serverless.com/blog/serverless-express-rest-api/)
+- [Make a Serverless GraphQL API](https://serverless.com/blog/make-serverless-graphql-api-using-lambda-dynamodb/)
+- [Create a Python REST API with Flask](https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/)
 
 ## Installing Serverless
 
@@ -175,6 +177,63 @@ Amazing.
 
 ## Understanding the event model
 
+Time to dig a little deeper into the event model of serverless compute. In the example above, we're using AWS Lambda. As I showed when looking at `handler.js`, we need to implement a function with a specific signature. This includes `event` and `context` arguments, as well as a `callback` function when using Node.
+
+The `event` object is important to understand. It will have the dynamic content of your invocation -- what was invoking it? What was the payload?
+
+In our `helloWorld` function, we returned our full `event` in the response to make it easy to inspect. Notice that the event includes a lot of information like the HTTP method (`GET`), the various headers, and other parameters.
+
+Let's make a new request but add a querystring to the request. In your browser, paste your endpoint and add `?name=Yoda`:
+
+<img width="891" alt="Yoda query string" src="https://user-images.githubusercontent.com/6509926/33456197-46403802-d5e4-11e7-95f5-84df2a08a106.png">
+
+The querystring shows up in our event under the `querystringParameters` key.
+
+Let's add a second Lambda function that is dynamic based on the value of a querystring. In your `handler.js` file, add the following function below the `helloWorld` function:
+
+```javascript
+module.exports.helloName = (event, context, callback) => {
+  let name = 'stranger';
+  if (event.queryStringParameters && event.queryStringParameters.name) {
+    name = event.queryStringParameters.name;
+  }
+  const response = {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+    },
+    body: JSON.stringify({
+      message: `Hello, ${name}!`
+    })
+  };
+
+  callback(null, response);
+}
+```
+
+This function will look for a `name` querystring parameter and return it in the response.
+
+Let's add the new function to our `serverless.yml` too. Add the following code to your `functions` block:
+
+```yml
+  helloName:
+    handler: handler.helloName
+    events:
+      - http:
+          path: hello-name
+          method: get
+          cors: true
+```
+
+Then, run `sls deploy` to deploy your new endpoint.
+
+Once it's live, hit your new `/hello-name` endpoint with a `?name=Leia` parameter:
+
+<img width="870" alt="Leia query string" src="https://user-images.githubusercontent.com/6509926/33458116-8d412472-d5ea-11e7-8876-e5fcced4f1f7.png">
+
+You can play around with different parameters to see it work. You can also play with different aspects of the `event` object.
+
+In this section, we learned about the Lambda event model for HTTP events. We 
 
 
 ## Adding a database resource
