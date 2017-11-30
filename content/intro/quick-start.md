@@ -233,10 +233,18 @@ Once it's live, hit your new `/hello-name` endpoint with a `?name=Leia` paramete
 
 You can play around with different parameters to see it work. You can also play with different aspects of the `event` object.
 
-In this section, we learned about the Lambda event model for HTTP events. We 
-
+In this section, we learned about the Lambda event model for HTTP events. We found out how to use the event object inside our function for dynamic behavior.
 
 ## Adding a database resource
+
+Simple endpoints are fun, but interesting applications almost always require some sort of state. In this section, we'll learn how to provision a DynamoDB table with the Serverless Framework to be used in your Serverless application. Then, we'll implement two endpoints -- one to store state and one to retrieve it.
+
+First, let's provision a database. In your `serverless.yml`, you can provision infrastructure using the `resources` key. When using the AWS provider, you provision these resources using [CloudFormation](https://aws.amazon.com/cloudformation/).
+
+We'll provision a DynamoDB table as it's a Serverless-friendly database service due to it's managed scaling, low maintenance, and pricing model. It's a NoSQL database with a key-object model.
+
+When provisioning a DynamoDB table, you need to specify a hash key to uniquely identify each key. We'll use a hash key of `name`
+
 ## Debugging your application with logs
 ## Viewing your service metrics
 ## Cleaning up and next steps
