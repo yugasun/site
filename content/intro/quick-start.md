@@ -22,8 +22,7 @@ This quick start will take you through the basics of using the Serverless Framew
 
 We will:
 - create and deploy a service with an HTTP endpoint
-- cover how the serverless event model works
-- add some dynamic logic to our endpoint
+- cover how the serverless event model works and add some dynamic logic to our endpoint
 - use the Framework to provision a database that will persist state between requests
 - discuss some basic operations with Serverless
 
