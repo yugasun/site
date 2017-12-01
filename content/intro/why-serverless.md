@@ -43,7 +43,7 @@ Serverless Compute Services, for all their benefits, have some downsides that th
 That is where the Serverless Framework comes in. Use the Serverless Framework CLI to build and deploy your application to any and every cloud provider, in a single place, with a single function structure. The Framework automatically configures cloud vendor settings for you, based on the language you use and the cloud provider you deploy to.
 
 ### Benefits of the Serverless Framework:
-These are the 6 core benefits of the Serverless Framework you should know about:
+These are the 4 core benefits of the Serverless Framework you should know about:
 
 * **Increase development speed** - The Serverless Framework CLI enables developers to build, test, and deploy all in the same environment. Developers write their functions in cloud-agnostic Serverless YAML, and services can be deployed with a single command. Transactionally deploy code to multiple providers, version your deployments, and roll back the deployment if necessary.
 

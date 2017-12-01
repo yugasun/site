@@ -75,7 +75,10 @@ So, the Serverless Platform does not replace your cloud provider. Rather, our ev
 ## Serverless vs. Heroku
 ----
 
-Pay-per-execution monitoring serverdeath observability Ryan Brown YAML Marcia Villalba.
+Heroku is a service for managing stateless web application using the 12 Factor App approach that they pioneered. It has similarities to serverless applications in that much of work of managing and maintaining servers is done for you.
 
-Microservices signature NoOps Ben Kehoe multi-cloud. Deployment YAML observability multi-cloud. 
+However, serverless applications have a number of advantages over Heroku. With Heroku, you need to specify the number of "Dynos" (servers) available to handle your web application. With serverless application, this scaling is handled for you, automatically.
 
+Further, you only pay for the resources you consume with Serverless architectures. With Heroku, you pay for your Dynos even when they're sitting idle.
+
+Finally, Serverless architectures play more nicely as part of a larger, polyglot architecture. They are deployed directly to your existing cloud provider's account, so you can interact with other parts of your infrastructure.

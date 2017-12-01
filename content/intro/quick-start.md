@@ -249,7 +249,62 @@ First, let's provision a database. In your `serverless.yml`, you can provision i
 
 We'll provision a DynamoDB table as it's a Serverless-friendly database service due to it's managed scaling, low maintenance, and pricing model. It's a NoSQL database with a key-object model.
 
-When provisioning a DynamoDB table, you need to specify a hash key to uniquely identify each key. We'll use a hash key of `name`
+In your `serverless.yml`, paste the following configuration:
+
+```yml
+
+service: hello-world
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+      Resource:
+        - { "Fn::GetAtt": ["NamesDynamoDBTable", "Arn" ] }
+  environment:
+    NAMES_TABLE: { "Ref": "NamesDynamoDBTable" }
+
+functions:
+  saveName:
+    handler: handler.saveName
+    events:
+      - http:
+          path: name
+          method: post
+          cors: true
+  getName:
+    handler: handler.getName
+    events:
+      - http:
+          path: name
+          method: get
+          cors: true
+
+resources:
+  Resources:
+    NamesDynamoDBTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: name
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: name
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+```
+
+There's a lot to digest here, so let's take it in pieces.
+
+First, look to the `resources` section. 
 
 ## Debugging your application with logs
 ## Viewing your service metrics
