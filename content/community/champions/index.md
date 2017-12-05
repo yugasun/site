@@ -12,7 +12,7 @@ To recognize our community superstars, we established the **Serverless Champions
 
 Our champions show serverless thought leadership. They contribute to serverless open source projects. They are all-around ambassadors in the community.
 
-<No>hi</No>
+<Separator />
 
 <MyComponent tag='span'>
   hi

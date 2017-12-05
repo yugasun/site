@@ -6,7 +6,10 @@ import { BodyContainer, joinUri } from 'phenomic-serverless'
 import Helmet from 'react-helmet'
 import classnames from 'classnames'
 import getCustomScripts from '../../fragments/CustomScripts'
+import Button from '../../components/Button'
+import Separator from '../../components/Separator'
 import Header from '../../fragments/Header'
+import Hero from '../../fragments/Hero'
 import Footer from '../../fragments/Footer'
 import styles from './Default.css'
 
@@ -25,6 +28,23 @@ const propTypes = {
   footer: PropTypes.element,
   __url: PropTypes.string,
   prefetches: PropTypes.array,
+}
+
+class MyComponent extends React.Component {
+  constructor (props, context) {
+    super(props, context)
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick() {
+    alert('hi')
+  }
+	render() {
+		return (
+      <span className={styles.red} onClick={this.handleClick}>
+        <Button>{this.props.children}</Button>
+      </span>
+    )
+	}
 }
 
 const DefaultLayout = (props) => {
@@ -49,7 +69,7 @@ const DefaultLayout = (props) => {
   let link = []
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
       heroImage = null
-
+  let hero
   if (!isLoading && head) {
     const uri = joinUri(process.env.PHENOMIC_USER_URL, __url)
     metaTitle = head.metaTitle || head.title
@@ -85,6 +105,18 @@ const DefaultLayout = (props) => {
     if (head.heroImage) {
       heroImage = <div className={styles.hero} style={{ backgroundImage: `url(${head.heroImage})` }} />
     }
+
+
+    if (head.heroTitle) {
+      hero = (
+        <Hero
+          title={head.heroTitle}
+          subTitle={head.heroSubTitle}
+          background={head.heroBackground}
+        />
+      )
+    }
+
   }
 
   // Remove jumpy footer with loading state
@@ -95,8 +127,14 @@ const DefaultLayout = (props) => {
 
   /* Markdown content will display if it exists */
   const bodyContent = body || '' // reset for loading state
+
+  const componentsMap = {
+    MyComponent: MyComponent,
+    Separator: Separator
+    //TEST: NewsletterStrip
+  }
   const markdown = (
-    <BodyContainer>
+    <BodyContainer components={componentsMap}>
       {bodyContent}
     </BodyContainer>
   )
@@ -117,6 +155,7 @@ const DefaultLayout = (props) => {
         hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
       />
       {heroImage}
+      {hero}
       <div className={classes}>
         {header}
         {children || markdown}

@@ -13,7 +13,7 @@ To recognize our community superstars, we established The Serverless Champions p
 
 </div>
 
-<hr/>
+<Separator />
 
 <div class="container">
   <div class="row">
@@ -36,7 +36,7 @@ To recognize our community superstars, we established The Serverless Champions p
 </div>
 
 
-<hr/>
+hi there. hi steve bill. cool. yes. wowx
 
 ## Nominated members receive:
 
