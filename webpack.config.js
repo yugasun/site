@@ -7,6 +7,7 @@ import { phenomicLoader } from 'phenomic-serverless'
 import pkg from './package.json'
 import serverlessPkg from './serverless/package.json'
 import getSiteConfig from './src/_config'
+var Visualizer = require('webpack-visualizer-plugin');
 
 export default (config = {}) => {
   // console.log('phenomic config', config)
@@ -135,6 +136,9 @@ export default (config = {}) => {
     },
 
     plugins: [
+      // new Visualizer({
+      //   filename: './statistics.html'
+      // }),
       // possible perf upgrade for local dev
       // new webpack.DllReferencePlugin({
       //    context: process.cwd(),
