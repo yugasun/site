@@ -1,5 +1,5 @@
 .blogPage {
-  margin-top: 7rem;
+  margin-top: $navHeight;
 }
 .wrapper {
   display: flex;

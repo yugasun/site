@@ -8,6 +8,7 @@
   background-color: transparent;
   font-weight: 500;
   transition: background-color 150ms ease-in, top 300ms;
+  font-size: 14px;
 }
 .coloredHeader {
   background-color: #313131;
@@ -72,6 +73,7 @@ a {
   display: flex;
   align-items: center;
   min-width: 18rem;
+  margin-right: 20px;
 }
 .logoText {
   font-size: 2.2rem;

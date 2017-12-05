@@ -14,7 +14,7 @@ $borderColor: #e8e8e8;
   padding-right: $sidebarMargin;
   padding-left: $sidebarMargin;
   background: white;
-  top: 70px;
+  top: $navHeight;
   left: 0;
   overflow-y: scroll;
   overflow-x: hidden;

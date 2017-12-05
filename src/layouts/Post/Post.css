@@ -6,7 +6,7 @@ $borderColor: #e8e8e8;
 $sidebarWidth: 350px;
 
 .postPage {
-  margin-top: 7rem;
+  margin-top: $navHeight;
 }
 .postWrapper {
   display: flex;
@@ -197,7 +197,7 @@ $sidebarWidth: 350px;
 @media (max-width: 767px) {
   .postPage {
     font-size: 1.5rem;
-    margin-top: 7rem;
+    margin-top: $navHeight;
   }
   .commentsHeading {
     display: block;
