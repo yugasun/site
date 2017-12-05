@@ -6,10 +6,11 @@ import Checkbox from '../../components/Checkbox/Check'
 import RadioGroup from '../../components/Radio/RadioGroup'
 import Radio from '../../components/Radio/Radio'
 import Button from '../../components/Button'
+import Hero from '../../fragments/Hero'
 import formHandler from '../../utils/formHandler'
 import styles from './WorkShopPage.css'
 
-const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
+const imgBase = `${process.env.S3_BUCKET}images/workshops/`
 /* single workshop view */
 export default class WorkShopPage extends React.Component {
   static hasLoadingState = true
@@ -22,8 +23,13 @@ export default class WorkShopPage extends React.Component {
   onSubmit = (event, data) => {
     event.preventDefault()
     const formId = this.props.__url.split('/')[2]
-    console.log('formId', formId)
-    console.log(data)
+
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('Form ID', formId)
+      console.log('Form data', data)
+      return false
+    }
+
     this.setState({
       loading: true
     })
@@ -34,7 +40,6 @@ export default class WorkShopPage extends React.Component {
     }
 
     formHandler(formData).then((res) => {
-      console.log('SUCSSES', res)
       this.setState({
         success: true,
         loading: false
@@ -42,7 +47,6 @@ export default class WorkShopPage extends React.Component {
         window.scrollTo(0, 0)
       })
     }).catch((e) => {
-      console.log('ERROR', e)
       this.setState({
         success: false,
         loading: false,
@@ -50,34 +54,30 @@ export default class WorkShopPage extends React.Component {
       })
     })
   }
-  onChange = (e, name, data, change) => {
-    // event.preventDefault()
-    // console.log(e, name, data, change)
-  }
+
   renderForm() {
     const { isLoading, __url } = this.props
     const { loading, success } = this.state
     let formId
 
     if (!isLoading) {
-      const url = __url.split('/')[2]
-      formId = `${this.props.__url.split('/')[2]}-workshop`
+      formId = `${__url.split('/')[2]}-workshop`
     }
 
     if (success) {
       return (
         <div>
           <p className={styles.thanks}>
-            Great! You’re now on the waitlist for one of our workshops. If you’re new to Serverless, why not <a href="https://serverless.com/framework/docs/">check out our documentation</a> to get started, or head on <a href="https://serverless.com/blog/">over to our blog?</a>
+            Great! You’re now on the waitlist for one of our workshops. If you’re new to Serverless, why not <a href='https://serverless.com/framework/docs/'>check out our documentation</a> to get started, or head on <a href='https://serverless.com/blog/'>over to our blog?</a>
           </p>
         </div>
       )
     }
 
-    const buttonText = (loading) ? "LOADING" : "SUBMIT"
+    const buttonText = (loading) ? 'LOADING' : 'SUBMIT'
 
     return (
-      <Form id={formId} onSubmit={this.onSubmit} onChange={this.onChange} trimOnSubmit>
+      <Form id={formId} onSubmit={this.onSubmit} trimOnSubmit>
         <div className={styles.fieldSet}>
           <div className={styles.fakeLabel}>
             Contact information
@@ -113,13 +113,11 @@ export default class WorkShopPage extends React.Component {
                label='Serverless Experience'
                name='experience'
                required
-               onChange={this.onChange}
              >
                <Radio label='None' value='none' />
                <Radio label='I’ve played around with it' value='beginner' />
                <Radio label='I run serverless in production' value='professional' />
              </RadioGroup>
-
           </div>
         </div>
         <div className={styles.fieldSet}>
@@ -163,35 +161,27 @@ export default class WorkShopPage extends React.Component {
   }
   render() {
     const { isLoading, __url } = this.props
-    const { loading, success } = this.state
+
     let title = '...'
-    let background = {}
+    let background = null
+    let url = ''
     if (!isLoading) {
-      const url = __url.split('/')[2]
+      url = __url.split('/')[2]
       title = url.replace(/-/, ' ')
-      background = {
-        backgroundImage: `url(${imgBase}${url}.jpg)`
-      }
+      background = `${imgBase}${url}.jpg`
     }
 
     return (
       <Default {...this.props} fullWidth>
         <div className={styles.padding} />
-        <div className={styles.hero} style={background}>
-          <div className={styles.opacity}/>
-          <h1 className={styles.title}>
-            {title}
-          </h1>
-          <h2 className={styles.subtitle}>
-            Serverless Workshop
-          </h2>
+        <Hero
+          title={title.toUpperCase()}
+          subTitle={'Serverless Workshop'}
+          background={background}
+        />
+        <div className={styles.content}>
+          {this.renderForm()}
         </div>
-        <div>
-          <div className={styles.content}>
-            {this.renderForm()}
-          </div>
-        </div>
-
       </Default>
     )
   }
