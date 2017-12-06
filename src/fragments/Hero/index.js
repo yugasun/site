@@ -36,14 +36,17 @@ export default class Hero extends Component {
     }
     const classes = classnames(styles.hero, className)
     return (
-      <div className={styles.hero} style={heroBackground}>
-        <div className={styles.opacity}/>
-        <h1 className={styles.title}>
-          {heroTitle}
-        </h1>
-        <h2 className={styles.subtitle}>
-          {heroSubTitle}
-        </h2>
+      <div className={styles.heroWrapper}>
+        <div className={styles.navPadding} />
+        <div className={styles.hero} style={heroBackground}>
+          <div className={styles.opacity}/>
+          <h1 className={styles.title}>
+            {heroTitle}
+          </h1>
+          <h2 className={styles.subtitle}>
+            {heroSubTitle}
+          </h2>
+        </div>
       </div>
     )
   }

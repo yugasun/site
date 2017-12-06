@@ -30,23 +30,6 @@ const propTypes = {
   prefetches: PropTypes.array,
 }
 
-class MyComponent extends React.Component {
-  constructor (props, context) {
-    super(props, context)
-    this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick() {
-    alert('hi')
-  }
-	render() {
-		return (
-      <span className={styles.red} onClick={this.handleClick}>
-        <Button>{this.props.children}</Button>
-      </span>
-    )
-	}
-}
-
 const DefaultLayout = (props) => {
   const {
     __url,
@@ -70,6 +53,7 @@ const DefaultLayout = (props) => {
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
       heroImage = null
   let hero
+  const hasHero = head.heroTitle || head.heroSubTitle || head.heroBackground
   if (!isLoading && head) {
     const uri = joinUri(process.env.PHENOMIC_USER_URL, __url)
     metaTitle = head.metaTitle || head.title
@@ -102,12 +86,13 @@ const DefaultLayout = (props) => {
 
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
 
+    // TODO: refactor this out of default template completely
     if (head.heroImage) {
       heroImage = <div className={styles.hero} style={{ backgroundImage: `url(${head.heroImage})` }} />
     }
 
 
-    if (head.heroTitle) {
+    if (hasHero) {
       hero = (
         <Hero
           title={head.heroTitle}
@@ -116,7 +101,6 @@ const DefaultLayout = (props) => {
         />
       )
     }
-
   }
 
   // Remove jumpy footer with loading state
@@ -126,13 +110,14 @@ const DefaultLayout = (props) => {
   }
 
   /* Markdown content will display if it exists */
-  const bodyContent = body || '' // reset for loading state
+  const bodyContent = body || ''
 
   const componentsMap = {
-    MyComponent: MyComponent,
-    Separator: Separator
-    //TEST: NewsletterStrip
+    Separator: Separator,
+    Button: Button,
+    Hero: Hero
   }
+
   const markdown = (
     <BodyContainer components={componentsMap}>
       {bodyContent}
@@ -150,11 +135,10 @@ const DefaultLayout = (props) => {
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} link={link} />
       <Header
-        whiteLogo={!!(whiteLogo || heroImage)}
+        whiteLogo={!!(whiteLogo)}
         colored={coloredHeader !== false && coloredHeader !== undefined}
         hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
       />
-      {heroImage}
       {hero}
       <div className={classes}>
         {header}

@@ -270,7 +270,11 @@ tfoot td {
   margin: auto;
   text-align: center;
 }
-
+.round-image {
+  img {
+    border-radius: 50%;
+  }
+}
 /* phenomic overrides
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .phenomic-HeadingAnchor, .auth0-lock-badge-bottom, .auth0-lock.auth0-lock .auth0-lock-name {

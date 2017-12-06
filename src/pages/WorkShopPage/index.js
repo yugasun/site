@@ -173,7 +173,6 @@ export default class WorkShopPage extends React.Component {
 
     return (
       <Default {...this.props} fullWidth>
-        <div className={styles.padding} />
         <Hero
           title={title.toUpperCase()}
           subTitle={'Serverless Workshop'}

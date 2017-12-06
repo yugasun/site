@@ -3,7 +3,7 @@ title: Serverless community
 layout: Community
 ---
 
-<div class='center'>
+<div class='center' style="max-width:800px; margin:auto;">
 
 # Serverless Champions Program
 
@@ -13,7 +13,7 @@ To recognize our community superstars, we established The Serverless Champions p
 
 </div>
 
-<Separator />
+<Separator margin="30" />
 
 <div class="container">
   <div class="row">
@@ -35,21 +35,25 @@ To recognize our community superstars, we established The Serverless Champions p
   </div>
 </div>
 
+<Separator margin="30" />
 
-hi there. hi steve bill. cool. yes. wowx
-
-## Nominated members receive:
+<div class='center'>
+  <h2>Nominated members receive:</h2>
+<div>
 
 <div class="container">
   <div class="row">
     <div class="one-third column">
-      Limited-edition t-shirt and jacket with Serverless Champion insignia
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/shwag.svg"/>
+      <div>Limited-edition t-shirt and jacket with Serverless Champion insignia</div>
     </div>
     <div class="one-third column">
-      Special recognition post on the Serverless.com blog
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/blog.svg"/>
+      <div>Special recognition post on the Serverless.com blog</div>
     </div>
     <div class="one-third column">
-      Showcase on the Serverless Champions page with exclusive interview
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/interview.svg"/>
+      <div>Showcase on the Serverless Champions page with exclusive interview</div>
     </div>
   </div>
 </div>
@@ -57,13 +61,16 @@ hi there. hi steve bill. cool. yes. wowx
 <div class="container marginTop-40">
   <div class="row">
     <div class="one-third column">
-      Serverless Champ sticker and digital badges
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/badge.svg"/>
+      <div>Serverless Champ sticker and digital badges</div>
     </div>
     <div class="one-third column">
-      Invitation to the Serverless Champs Slack channel
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/slack.svg"/>
+      <div>Invitation to the Serverless Champs Slack channel</div>
     </div>
     <div class="one-third column">
-      Early product announcements and invitations to alpha/beta releases
+      <img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/vip.svg"/>
+      <div>Early product announcements and invitations to alpha/beta releases</div>
     </div>
   </div>
 </div>
