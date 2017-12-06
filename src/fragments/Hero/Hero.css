@@ -34,6 +34,9 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   top: 0;
   left: 0;
 }
+.noTitle .opacity {
+  background: transparent;
+}
 .title {
   position: relative;
   font-size: 75px;

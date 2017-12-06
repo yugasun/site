@@ -2,6 +2,7 @@
 title: Serverless champions
 heroTitle: '#serverless4life'
 heroSubTitle: 'Serverless Champions'
+heroBackground: '#f26c60'
 layout: Community
 ---
 

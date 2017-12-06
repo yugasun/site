@@ -4,7 +4,7 @@ $backgroundColor: #f6f6f6;
 $sidebarRadius: 6px;
 $contentLeftPadding: 70px;
 .docPage {
-  margin-top: 7rem;
+  margin-top: $navHeight;
   padding-bottom: 0;
   margin-bottom: 0;
 
@@ -61,7 +61,7 @@ $contentLeftPadding: 70px;
   }
 }
 .searchBumper {
-  min-height: 47px;
+  min-height: $navHeight;
   background: $backgroundColor;
   min-width: $sidebarWidth;
   max-width: $sidebarWidth;

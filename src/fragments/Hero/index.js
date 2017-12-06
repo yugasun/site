@@ -34,11 +34,20 @@ export default class Hero extends Component {
         }
       }
     }
-    const classes = classnames(styles.hero, className)
+
+    const classes = classnames(
+      className,
+      styles.hero,
+      // if no title or sub title hide background opacity and just show image
+      {
+        [styles.noTitle]: !title && !subTitle
+      }
+    )
+
     return (
       <div className={styles.heroWrapper}>
         <div className={styles.navPadding} />
-        <div className={styles.hero} style={heroBackground}>
+        <div className={classes} style={heroBackground}>
           <div className={styles.opacity}/>
           <h1 className={styles.title}>
             {heroTitle}
