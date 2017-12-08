@@ -106,13 +106,13 @@ functions:
 
 Look to the `functions` block as it's the core of a Serverless application. A function is an entrypoint to your code that will be triggered upon specified events.
 
-There's one function listed -- `helloWorld`. It has the a `handler` property describes the path to the handler file and the name of the function to be triggered within that file.
+There's one function listed—`helloWorld`. It has the a `handler` property describes the path to the handler file and the name of the function to be triggered within that file.
 
 Further, it has an `events` property with an array of event subscriptions. In this example, we've configured an `http` event which is triggered on a `GET` request to `/hello-world`. You can configure a [number of different events](https://serverless.com/framework/docs/providers/aws/events/), including [HTTP requests](https://serverless.com/framework/docs/providers/aws/events/apigateway/), [messages in pub/sub topics](https://serverless.com/framework/docs/providers/aws/events/sns/), [scheduled tasks](https://serverless.com/framework/docs/providers/aws/events/schedule/), [object storage notifications](https://serverless.com/framework/docs/providers/aws/events/s3/), or [record batches in an event log](https://serverless.com/framework/docs/providers/aws/events/streams/).
 
 **Functions and Events.** These are the building blocks of Serverless applications. You write the code to be executed and the events that will trigger that code.
 
-Finally, look at the `handler.js` file:
+Look at the `handler.js` file:
 
 ```javascript
 'use strict';
@@ -172,19 +172,19 @@ functions:
   helloWorld: hello-world-dev-helloWorld
 ```
 
-Your service is deployed! In the Service Information at the bottom, there's an HTTP endpoint to access your function. Copy and paste that into your browser. I'm using Firefox, which has a nice viewer for JSON responses:
+Your service is deployed! In the Service Information at the bottom, there's an HTTP endpoint to access your function. Copy and paste that into your browser.
+
+I'm using Firefox, which has a nice viewer for JSON responses:
 
 <img width="892" alt="Hello World request" src="https://user-images.githubusercontent.com/6509926/33442664-518bb2be-d5bb-11e7-96a7-6a9c5dbeae30.png">
 
-In 5 minutes and 40 lines of code, we have an active HTTP endpoint accessible from any browser that scales automatically and is billed on a per-request basis.
-
-Amazing.
+In 5 minutes and 40 lines of code, we have an active HTTP endpoint accessible from any browser that scales automatically and is billed on a per-request basis!
 
 ## Understanding the event model
 
 Time to dig a little deeper into the event model of serverless compute. In the example above, we're using AWS Lambda. As I showed when looking at `handler.js`, we need to implement a function with a specific signature. This includes `event` and `context` arguments, as well as a `callback` function when using Node.
 
-The `event` object is important to understand. It will have the dynamic content of your invocation -- what was invoking it? What was the payload?
+The `event` object is important to understand. It will have the dynamic content of your invocation—what was invoking it? What was the payload?
 
 In our `helloWorld` function, we returned our full `event` in the response to make it easy to inspect. Notice that the event includes a lot of information like the HTTP method (`GET`), the various headers, and other parameters.
 
@@ -242,7 +242,7 @@ In this section, we learned about the Lambda event model for HTTP events. We fou
 
 ## Adding a database resource
 
-Simple endpoints are fun, but interesting applications almost always require some sort of state. In this section, we'll learn how to provision a DynamoDB table with the Serverless Framework to be used in your Serverless application. Then, we'll implement two endpoints -- one to store state and one to retrieve it.
+Simple endpoints are fun, but interesting applications almost always require some sort of state. In this section, we'll learn how to provision a DynamoDB table with the Serverless Framework to be used in your Serverless application. Then, we'll implement two endpoints—one to store state and one to retrieve it.
 
 First, let's provision a database. In your `serverless.yml`, you can provision infrastructure using the `resources` key. When using the AWS provider, you provision these resources using [CloudFormation](https://aws.amazon.com/cloudformation/).
 
