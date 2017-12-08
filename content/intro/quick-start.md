@@ -12,8 +12,7 @@ layout: Intro
 - [Deploying your first service](#deploying-your-first-service)
 - [Understanding the event model](#understanding-the-event-model)
 - [Adding a database resource](#adding-a-database-resource)
-- [Debugging your application with logs](#debugging-your-application-with-logs)
-- [Viewing your service metrics](#viewing-your-service-metrics)
+- [Serverless Operations: Metrics and logs](#serverless-operations-metrics-and-logs)
 - [Cleaning up and next steps](#cleaning-up-and-next-steps)
 
 ## Intro 
@@ -304,8 +303,216 @@ resources:
 
 There's a lot to digest here, so let's take it in pieces.
 
-First, look to the `resources` section. 
+First, look to the `resources` section. We're creating a DynamoDB table using the required [CloudFormation syntax](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html). This includes giving it a required hash key (`name`) that will uniquely identify a particular key. We also specify how much read & write capacity units we want. Finally, notice that our resource is keyed as `NamesDynamoDBTable`. This is the [Logical ID](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html) of our resource and will be used in other places of our `serverless.yml`. 
 
-## Debugging your application with logs
-## Viewing your service metrics
+Second, let's look to the new things we've added in the `provider` block. We added IAM permissions that gives our functions the ability to call the `GetItem` and `PutItem` on our DynamoDB table. IAM permissions are a complicated beast, but you can get a [primer on IAM here](https://serverless.com/blog/abcs-of-iam-permissions/).
+
+In our `provider` section, we've also added an environment variable of `NAMES_TABLE`. It uses the [CloudFormation `Ref` function](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) to pull in the table name of our DynamoDB table using its Logical ID.
+
+Finally, we have two new functions -- `saveName` and `getName`. We'll use these to implement Create and Read operations for our simple API.
+
+To implement these functions, paste the following into your `handler.js`:
+
+```javascript
+// handler.js
+
+const AWS = require('aws-sdk');
+
+const NAMES_TABLE = process.env.NAMES_TABLE;
+const dynamoDb = new AWS.DynamoDB.DocumentClient();
+
+
+module.exports.saveName = (event, context, callback) => {
+  let response = {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    }
+  };
+  const name = event.queryStringParameters.name;
+  const age = event.queryStringParameters.age;
+  console.log(`Request to save name ${name} with age ${age}`);
+
+  const params = {
+    TableName: NAMES_TABLE,
+    Item: {
+      name,
+      age
+    },
+  }
+
+  dynamoDb.put(params, (error) => {
+    if (error) {
+      console.log(error);
+      response.statusCode = 400;
+      response.body = JSON.stringify({ error: "Could not save name" })
+
+      callback(null, response);
+    }
+    response.body = JSON.stringify({ name, age })
+    callback(null, response);
+  });
+}
+
+module.exports.getName = (event, context, callback) => {
+  let response = {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    }
+  };
+
+  const name = event.queryStringParameters.name;
+  console.log(`Request to retrieve name ${name}`);
+
+  const params = {
+    TableName: NAMES_TABLE,
+    Key: {
+      name
+    },
+  }
+
+  dynamoDb.get(params, (error, result) => {
+    if (error) {
+      console.log(error);
+      response.statusCode = 400;
+      response.body = JSON.stringify({ error: "Could not retrieve name" })
+
+      callback(null, response);
+    }
+    if (result.Item) {
+      const {name, age } = result.Item;
+      response.body = JSON.stringify({ name, age })
+
+      callback(null, response);
+    } else {
+      response.statusCode = 400;
+      response.body = JSON.stringify({ error: "Name does not exist" })
+
+      callback(null, response);
+    }
+  });
+}
+```
+
+We have our two functions, `saveName` and `getName`. `saveName` takes `name` and `age` as querystring parameters, then saves the result to a DynamoDB table. `getName` takes `name` as a querystring parameter, fetches the name from our DynamoDB table, and returns the name and age.
+
+Deploy this service to AWS:
+
+```bash
+$ sls deploy
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (700 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+....................
+Serverless: Stack update finished...
+Service Information
+service: hello-world
+stage: dev
+region: us-east-1
+stack: hello-world-dev
+api keys:
+  None
+endpoints:
+  POST - https://e4wtqlhq6j.execute-api.us-east-1.amazonaws.com/dev/name
+  GET - https://e4wtqlhq6j.execute-api.us-east-1.amazonaws.com/dev/name
+functions:
+  saveName: hello-world-dev-saveName
+  getName: hello-world-dev-getName
+```
+
+Then, test your function with curl:
+
+```bash
+$ curl -X POST "https://e4wtqlhq6j.execute-api.us-east-1.amazonaws.com/dev/name?name=Alex&age=29"
+{"name":"Alex","age":"29"}
+```
+
+Note that you'll need to change the URL to match your URL as provided by the `sls deploy command`.
+
+Then, you can retrieve your data with another curl command:
+
+```bash
+$ curl -X GET "https://e4wtqlhq6j.execute-api.us-east-1.amazonaws.com/dev/name?name=Alex"
+{"name":"Alex","age":"29"}
+```
+
+Cool! It successfully returned my data.
+
+In this module, we learned how to implement stateful applications with Serverless by using a DynamoDB table. We provisioned that table using CloudFormation in the `resources` block of our `serverless.yml`.
+
+## Serverless Operations: Metrics and logs
+
+When developing your application, you'll often want easy access to certain operational insights. This includes how many times your functions have been invoked and the logs emitted by your functions.
+
+The Serverless Framework has built-in command to assist with these operational insights.
+
+To check numbers around function invocations, errors, and more, use the `sls insights` command:
+
+```bash
+$ sls metrics
+Service wide metrics
+December 7, 2017 7:31 PM - December 8, 2017 7:31 PM
+
+Invocations: 9
+Throttles: 0
+Errors: 1
+Duration (avg.): 112.11ms
+```
+
+By default, it shows metrics on a service level. To get metrics on a function level, use the `-f` flag:
+
+```bash
+$ sls metrics -f saveName
+saveName
+December 7, 2017 7:33 PM - December 8, 2017 7:33 PM
+
+Invocations: 5
+Throttles: 0
+Errors: 0
+Duration (avg.): 113.59ms
+```
+
+You can also check your application logs with the Serverless Framework using the `sls logs` command. You'll need to provide a function name with the `-f` flag:
+
+```bash
+$ sls logs -f saveName
+START RequestId: aca02111-dc4c-11e7-a2c2-47f13c728428 Version: $LATEST
+2017-12-08 19:19:13.825 (+00:00)	aca02111-dc4c-11e7-a2c2-47f13c728428	Request to save name Alex with age 31
+END RequestId: aca02111-dc4c-11e7-a2c2-47f13c728428
+REPORT RequestId: aca02111-dc4c-11e7-a2c2-47f13c728428	Duration: 111.07 ms	Billed Duration: 200 ms 	Memory Size: 1024 MB	Max Memory Used: 39 MB
+```
+
+It includes AWS machine logging around when the request started and ended, plus a full report of the execution. Finally, it includes any application logs you logged, such as this one:
+
+```bash
+2017-12-08 19:19:13.825 (+00:00)	aca02111-dc4c-11e7-a2c2-47f13c728428	Request to save name Alex with age 31
+```
+
+This matches the expected output from `console.log()` in our `saveName` function. The ability to log and view your logs can aid in your debugging process.
+
 ## Cleaning up and next steps
+
+You made it all the way through the quick start! You should now know how the Serverless Framework works and understand the key concepts of functions and events. You know how to provision resources for your application and perform basic operations.
+
+Before you move on, first remove your service so you don't incur any AWS charges:
+
+```bash
+$ sls remove
+Serverless: Getting all objects in S3 bucket...
+Serverless: Removing objects in S3 bucket...
+Serverless: Removing Stack...
+Serverless: Checking Stack removal progress...
+................................
+Serverless: Stack removal finished...
+```
+
+Now it's time to hop into some deeper tutorials and guides! Check out these ones first:
+
+- [Build an Node.js REST API](/blog/serverless-express-rest-api/)
+- [Deploy a GraphQL endpoint](/blog/make-serverless-graphql-api-using-lambda-dynamodb/)
