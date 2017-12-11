@@ -117,9 +117,10 @@ const DefaultLayout = (props) => {
     Button: Button,
     Hero: Hero
   }
+  // components={componentsMap} for future use of components via markdown
 
   const markdown = (
-    <BodyContainer components={componentsMap}>
+    <BodyContainer>
       {bodyContent}
     </BodyContainer>
   )
