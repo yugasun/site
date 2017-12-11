@@ -104,7 +104,7 @@ functions:
           cors: true
 ```
 
-Look to the `functions` block as it's the core of a Serverless application. A function is an entrypoint to your code that will be triggered upon specified events.
+Look to the `functions` block, as it's the core of a Serverless application. A function is an entrypoint to your code that will be triggered upon specified events.
 
 There's one function listed—`helloWorld`. It has the a `handler` property describes the path to the handler file and the name of the function to be triggered within that file.
 
@@ -303,13 +303,15 @@ resources:
 
 There's a lot to digest here, so let's take it in pieces.
 
-First, look to the `resources` section. We're creating a DynamoDB table using the required [CloudFormation syntax](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html). This includes giving it a required hash key (`name`) that will uniquely identify a particular key. We also specify how much read & write capacity units we want. Finally, notice that our resource is keyed as `NamesDynamoDBTable`. This is the [Logical ID](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html) of our resource and will be used in other places of our `serverless.yml`. 
+First, look to the `resources` section. We're creating a DynamoDB table using the required [CloudFormation syntax](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html). This includes giving it a required hash key (`name`) that will uniquely identify a particular key. We also specify how much read & write capacity units we want.
 
-Second, let's look to the new things we've added in the `provider` block. We added IAM permissions that gives our functions the ability to call the `GetItem` and `PutItem` on our DynamoDB table. IAM permissions are a complicated beast, but you can get a [primer on IAM here](https://serverless.com/blog/abcs-of-iam-permissions/).
+Notice that our resource is keyed as `NamesDynamoDBTable`. This is the [Logical ID](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html) of our resource and will be used in other parts of our `serverless.yml`. 
+
+Second, let's look to the new things we've added in the `provider` block. We added IAM permissions that give our functions the ability to call the `GetItem` and `PutItem` on our DynamoDB table. IAM permissions are a complicated beast, but you can get a [primer on IAM here](https://serverless.com/blog/abcs-of-iam-permissions/).
 
 In our `provider` section, we've also added an environment variable of `NAMES_TABLE`. It uses the [CloudFormation `Ref` function](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) to pull in the table name of our DynamoDB table using its Logical ID.
 
-Finally, we have two new functions -- `saveName` and `getName`. We'll use these to implement Create and Read operations for our simple API.
+Finally, we have two new functions—`saveName` and `getName`. We'll use these to implement Create and Read operations for our simple API.
 
 To implement these functions, paste the following into your `handler.js`:
 
@@ -512,7 +514,9 @@ Serverless: Checking Stack removal progress...
 Serverless: Stack removal finished...
 ```
 
-Now it's time to hop into some deeper tutorials and guides! Check out these ones first:
+Now it's time to hop into some deeper tutorials and guides!
+
+We recommend starting with one of these:
 
 - [Build an Node.js REST API](/blog/serverless-express-rest-api/)
 - [Deploy a GraphQL endpoint](/blog/make-serverless-graphql-api-using-lambda-dynamodb/)
