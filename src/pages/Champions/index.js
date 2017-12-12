@@ -28,7 +28,9 @@ export default class ChampionsPage extends React.Component {
                 Our champions show serverless thought leadership. They contribute to serverless open source projects. They are all-around ambassadors in the community.
               </p>
               <div className={styles.heroButton}>
-                <Button kind="red">LEARN MORE</Button>
+                <Button kind="red" href="/community/champions/program/">
+                  LEARN MORE
+                </Button>
               </div>
             </div>
             <div className={styles.heroRight}>
