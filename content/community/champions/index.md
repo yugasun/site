@@ -1,4 +1,4 @@
 ---
-title: Serverless champions
+title: Serverless Champions
 layout: Champions
 ---

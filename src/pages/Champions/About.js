@@ -72,11 +72,11 @@ export default class ChampionsAbout extends React.Component {
               <div className={styles.perksRow}>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/badge.svg`} />
-                  <div>Serverless Champ sticker and digital badges</div>
+                  <div>Serverless Champion sticker and digital badges</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/slack.svg`} />
-                  <div>Invitation to the Serverless Champs Slack channel</div>
+                  <div>Invitation to the Serverless Champions Slack channel</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/vip.svg`} />
