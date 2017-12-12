@@ -54,7 +54,7 @@ export default class ChampionsPage extends React.Component {
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Takahiro Horike is Software Engineer at DigitalCube Co. Ltd. He's the author of Serverless Dashboard for Atom and Serverless Step Functions Plugin, and Serverless Framework core maintainer.</p>
+              <p>Takahiro Horike is Software Engineer at DigitalCube Co. Ltd. He's the author of Serverless Dashboard for Atom and Serverless Step Functions Plugin, and is a Serverless Framework core maintainer.</p>
             </div>
           </div>
 
@@ -71,9 +71,9 @@ export default class ChampionsPage extends React.Component {
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Marcia is a Senior Full-stack Developer, from Uruguay located in Finland. She has been designing and developing software professionally in very renown companies for over 10 years such as Rovio, IBM, and Nokia.</p>
-              <p>Marcia has a broad experience in all the different stages of building scaling and performant software. She has deep knowledge of the public cloud and architecting for it. She has been working with AWS for more many years and for almost two years mostly with serverless technologies.</p>
-              <p>Marcia runs her own Youtube channel, in which she publishes at least one new video every week. In her channel, she focuses on teaching how to use AWS serverless technologies and managed services. She is also an AWS Community Hero and runs the Finland AWS User Group.</p>
+              <p>Marcia is a Senior Full-stack Developer from Uruguay, located in Finland. She has been designing and developing software professionally in companies like Rovio, IBM and Nokia for over 10 years.</p>
+              <p>Marcia has broad experience building and scaling performant software, and knows a lot about how to architect for the public cloud. She's got a long history with AWS, and has been working with serverless technologies since not long after Lambda was released.</p>
+              <p>In addition to being an engineering rockstar, she runs her own Youtube channel, in which she publishes at least one new video every week. In her channel, she focuses on teaching others how to use AWS serverless technologies and managed services. She is also an AWS Community Hero and runs the Finland AWS User Group.</p>
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default class ChampionsPage extends React.Component {
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Ryan has been building out cloud infrastructures since 2010, and currently focuses on automation tooling and Infrastructure-as-Code practices. He's both a contributor and user of Ansible and the Serverless Framework, and loves building in the open as much as possible.</p>
+              <p>Ryan has been building out cloud infrastructures since 2010, and currently focuses on automation tooling and Infrastructure-as-Code (IaC) practices. He's both a contributor and user of Ansible and the Serverless Framework, and loves building in the open as much as possible.</p>
               <p>Beginning with the Lambda developer preview, Ryan has built event-driven behaviors into infrastructure/deployment pipelines with Python and Lambda. Early on, he started sharing successes (and failed experiments) on ServerlessCode.com to help others and push for a common set of practices. One of those practices is the Serverless Framework: a common language spec for multiple providers to smooth the way from idea to implementation.</p>
             </div>
           </div>
