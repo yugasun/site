@@ -14,7 +14,6 @@ Below, you can see how Serverless compares to other tools, such as:
 - [Zappa, ClaudiaJS, etc.](#serverless-vs-zappa-claudiajs-etc)
 - [Terraform](#serverless-vs-terraform)
 - [Rolling your own tooling](#serverless-vs-rolling-your-own-tooling)
-- [Cloud Providers](#serverless-vs-cloud-providers)
 - [Heroku](#serverless-vs-heroku)
 
 ## Serverless vs. Docker
@@ -22,7 +21,7 @@ Below, you can see how Serverless compares to other tools, such as:
 
 Docker packages software into standardized units (containers) to make it easier to manage application dependencies and avoid the "works on my machine" problem. Many people use containers so they can control their scaling. It is a serverful architecture where you run a cluster of VM instances, with a likewise serverful cost model.
 
-Serverless compute services are essentially ephemeral containers, where the start/stop is managed automatically. The Serverless Applications deployed on them are fundamentally zero-administration and scale automatically with demand, which eliminates the need to manage server instances at all. Serverless Applications are also code-centric, and carry other [serverless benefits](./#serverless-benefits) such as pay-per-execution pricing models.
+Serverless compute services are essentially ephemeral containers, where the start/stop is managed automatically. The Serverless Applications deployed on them are fundamentally zero-administration and scale automatically with demand, which eliminates the need to manage server instances at all. Serverless Applications are also code-centric, and carry other [serverless benefits](../why-serverless#serverless-benefits) such as pay-per-execution pricing models.
 
 ## Serverless vs. CloudFormation
 ----
@@ -30,6 +29,8 @@ Serverless compute services are essentially ephemeral containers, where the star
 CloudFormation is an AWS tool for deploying infrastructure. You describe your desired infrastructure in YAML or JSON, then submit your CloudFormation template for deployment. It enables "infrastructure as code".
 
 The Serverless Framework provides a configuration DSL which is designed for serverless applications. It also enables infrastructure as code while removing a lot of the boilerplate required for deploying serverless applications, including permissions, event subscriptions, logging, etc.
+
+When deploying to AWS, the Serverless Framework is using CloudFormation under the hood. This means you can use the Serverless Framework's easy syntax to describe most of your Serverless Application while still having the ability to supplement with standard CloudFormation if needed.
 
 The Serverless Framework is provider-agnostic, so you can use it to deploy serverless applications to AWS, Microsoft Azure, Google Cloud Platform, or many other providers. This reduces lock-in and enables a multi-cloud strategy while giving you a consistent experience across clouds.
 
@@ -52,25 +53,18 @@ The Serverless Framework is a more general purpose tool for deploying and managi
 ## Serverless vs. Terraform
 ----
 
-Terraform is an unopinionated cloud deployment tool. Specifically, it describes Infrastructure as Code and deploys to multiple clouds and SaaS systems at once. It is comparable to CloudFormation but for multiple clouds.
+Terraform is an unopinionated cloud deployment tool. It describes Infrastructure as Code and deploys to multiple clouds and SaaS systems at once. It is comparable to CloudFormation but for multiple clouds.
 
 The Serverless Platform has one strong opinion about how an application is defined, and then is flexible about everything else. It facilitates developing and deploying Serverless Applications, abstracting away the boilerplate required to deploy serverless applications. It also assists with the packaging and monitoring of your serverless applications.
 
-Terraform and the Serverless Platform are not mutually exclusive, and can easily be used in tandem.
+Terraform and the Serverless Platform are not mutually exclusive and can easily be used in tandem.
 
 ## Serverless vs. Rolling your own tooling
 ----
 
 Rather than using the Serverless Framework, you may be tempted to create your own tooling for managing serverless applications. We get the feeling -- you get to build something! It's why our founder created the Framework in the first place.
 
-Just be careful about what you're getting into. If your needs are small, you can get away with bash scripts or micro-frameworks. As you start using more and more pieces, you may find that maintaining your tooling is a full-time job in itself. Don't underestimate the costs of the community and ecosystem that is adding new features and fixing bugs.
-
-## Serverless vs. Cloud Providers
-----
-
-Serverless has tooling that eliminates complexity in creating and managing applications that are distributed across the cloud.
-
-So, the Serverless Platform does not replace your cloud provider. Rather, our event-gateway ties together your cloud architecture, while our deployment engine orchestrates deploying applications to various cloud providers and serverless compute services: AWS Lambda, Google Cloud Functions, Microsoft Azure, IBM Cloud Functions.
+Just be careful about what you're getting into. If your needs are small, you can get away with bash scripts or micro-frameworks. As you start using more and more pieces, you may find that maintaining your tooling is a full-time job in itself. Don't underestimate the benefit of a large community and ecosystem that is adding new features and fixing bugs.
 
 ## Serverless vs. Heroku
 ----
