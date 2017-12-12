@@ -94,7 +94,7 @@ $darkBackground: #211F21;
 }
 .personName {
   color: #000000;
-  font-family: Serverless;
+  font-family: Serverless, monospace;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
