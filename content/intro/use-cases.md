@@ -4,7 +4,7 @@ description: "Use Cases for Serverless"
 layout: Intro
 ---
 
-Serverless is the hot new architecture pattern. We're seeing more and more people move to Serverless as a way to increase velocity and decrease monotony.
+Serverless is the new architecture pattern on the block, and we're seeing a lot of people move to Serverless as a way to increase velocity and decrease monotony.
 
 Here we describe some core use cases for serverless, though we encourage you to think beyond them. Serverless is incredibly flexible and can be used to address a wide variety of application problems. It is also extensible, making it easy to build in use cases that are not currently supported.
 
