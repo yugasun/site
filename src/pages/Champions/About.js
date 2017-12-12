@@ -32,7 +32,7 @@ export default class ChampionsAbout extends React.Component {
 
             <div className={styles.listWrapper}>
               <h2 className={styles.sectionTitle}>
-                What does it take to become a  Serverless Champion?
+                What does it take to become a Serverless Champion?
               </h2>
               <div className={styles.list}>
                 <span>Our Serverless Champions are:</span>
@@ -57,30 +57,30 @@ export default class ChampionsAbout extends React.Component {
               <div className={styles.perksRow}>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/shwag.svg`} />
-                  <div>Limited-edition t-shirt and jacket with Serverless Champion insignia</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Limited-edition t-shirt and jacket with Serverless Champion insignia</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/blog.svg`} />
-                  <div>Special recognition post on the Serverless.com blog</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Special recognition post on the Serverless.com blog</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/interview.svg`} />
-                  <div>Showcase on the Serverless Champions page with exclusive interview</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Showcase on the Serverless Champions page with exclusive interview</div>
                 </div>
               </div>
 
               <div className={styles.perksRow}>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/badge.svg`} />
-                  <div>Serverless Champion sticker and digital badges</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Serverless Champion sticker and digital badges</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/slack.svg`} />
-                  <div>Invitation to the Serverless Champions Slack channel</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Invitation to the Serverless Champions Slack channel</div>
                 </div>
                 <div className={styles.perk}>
                   <img src={`${imgBase}/vip.svg`} />
-                  <div>Early product announcements and invitations to alpha/beta releases</div>
+                  <div><img className={styles.bullet} src={`${imgBase}/claw.svg`} /> Early product announcements and invitations to alpha/beta releases</div>
                 </div>
               </div>
             </div>
