@@ -1,7 +1,7 @@
 ---
 title: "Quick Start"
 description: "Getting started with the Serverless Framework"
-layout: Intro
+layout: Learn
 ---
 
 # Table of Contents:

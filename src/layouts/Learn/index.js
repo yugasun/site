@@ -9,12 +9,39 @@ import globalStyles from './Learn.global.css'
 
 class Learn extends Component {
   static hasLoadingState = true
+  renderNav() {
+    return (
+      <div className={styles.navWrapper}>
+        <div className={styles.navInner} >
+          <div className={styles.navLink}>
+            <a href="/learn/why-serverless">
+              - Why Serverless?
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a href="/learn/use-cases">
+              - Use Cases
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a href="/learn/comparisons">
+              - Comparisons
+            </a>
+          </div>
+          <div className={styles.navLink}>
+            <a href="/learn/quick-start">
+              - Quick Start
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
   render() {
     const { props } = this
     const { head, body, isLoading, loadingData } = props
     let markdownContent
     let title = (head) ? head.title : '...'
-    let description = (head) ? head.description : '...'
 
     if (loadingData && loadingData.title) {
       title = loadingData.title
@@ -29,7 +56,6 @@ class Learn extends Component {
       )
 
       title = head.title
-      description = head.description;
     }
 
     if (isLoading) {
@@ -41,15 +67,12 @@ class Learn extends Component {
     }
 
     return (
-      <Default {...props} fullWidth className={styles.learnPage} coloredHeader={true}>
+      <Default {...props} fullWidth className={styles.learnPage} >
+        {this.renderNav()} 
         <div className={styles.contentWrapper}>
-          <Link className={styles.backLink} to='/learn'>Back to all resources</Link>
           <h1 className={styles.title}>
             {title}
           </h1>
-          <p className={styles.description}>
-            {description}
-          </p>
           <div className={styles.postContent}>
             {markdownContent}
           </div>
