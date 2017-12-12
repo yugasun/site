@@ -11,7 +11,9 @@ const Separator = (props) => {
         marginTop: top,
         marginBottom: bottom
       }}
-    />
+    >
+      <span className={styles.icon} />
+    </span>
   )
 }
 
