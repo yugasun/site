@@ -10,7 +10,7 @@ Here we describe some core use cases for serverless, though we encourage you to 
 
 ## Auto-scaling Websites and APIs
 
-![auto-scaling](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/intro/auto-scaling%402x.jpg)
+<img src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/learn/intro/auto-scaling%402x.jpg">
 
 Serverless websites and applications can be written and deployed without the front-work of setting up infrastructure. As such, it is possible to launch a fully-functional site in days.
 
