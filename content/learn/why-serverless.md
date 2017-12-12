@@ -9,7 +9,6 @@ Just like wireless internet has wires somewhere, serverless architectures still 
 
 What ‘serverless’ really means is that, as a developer you don’t have to think about those servers. You just focus on code.
 
-
 ## The Serverless Movement
 Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
 
