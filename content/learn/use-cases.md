@@ -4,7 +4,7 @@ description: "Use Cases for Serverless"
 layout: Learn
 ---
 
-Serverless is the hot new architecture pattern on the block, and we're seeing a lot of people move to Serverless as a way to increase velocity and decrease monotony.
+More and more developers are moving to Serverless as a way to increase velocity and decrease monotony.
 
 Here we describe some core use cases for serverless, though we encourage you to think beyond them. Serverless is incredibly flexible and can be used to address a wide variety of application problems. It is also extensible, making it easy to build in use cases that are not currently supported.
 
@@ -57,8 +57,6 @@ Pipe user data and activities to Salesforce to enhance lead flow. React to Strip
 Individual cloud providers often don’t meet every business requirement on their own. Teams choose to utilize the strongest features from each vendor, requiring them to deploy services to multiple providers inside a single application. But the cloud providers themselves do not make it easy to do this.
 
 Our tooling abstracts away any necessary tweaking required to get functions to fit cloud vendors’ unique formats. This lets you easily deploy to any cloud provider you choose, thus maximizing the efficacy of your application and utilizing the best each cloud vendor has to offer.
-
-You can use this to deploy redundant services in multiple zones for failover cases
 
 ## Multi-language Applications
 
