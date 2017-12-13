@@ -3,7 +3,7 @@
  */
 import { initializeXsrfToken, getXsrfToken } from './xsrfToken'
 
-const logoUrl = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype-white.png'
+const logoUrl = `${process.env.S3_BUCKET}logos/serverless_logotype-white.png`
 
 if (!process.env.AUTH0_CLIENT_ID) {
   throw new Error('AUTH_CLIENT_ID is not defined in /src/_config.js file')

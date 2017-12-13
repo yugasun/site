@@ -39,7 +39,6 @@ export default function Button({ onClick, label, children, kind, style, href, ta
 
   return (
     <button className={`${styles.btn} ${kindStyle}`} onClick={onClick} style={style}>
-      <span className={styles.background} />
       <div>{text}</div>
     </button>
   )

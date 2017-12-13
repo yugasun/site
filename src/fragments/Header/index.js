@@ -23,7 +23,7 @@ export default class Header extends Component {
     this.handleClick = this.handleClick.bind(this)
     this.closeNav = this.closeNav.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
-    
+
     this.scrolling = false
   }
   componentDidMount() {
@@ -151,7 +151,14 @@ export default class Header extends Component {
                     </a>
                   </li>
                   <li>
-                    <Link to='/community/meetups/' className={styles.link}>Meetups</Link>
+                    <Link to='/community/meetups/' className={styles.link}>
+                      Meetups
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/community/champions/' className={styles.link}>
+                      Champions
+                    </Link>
                   </li>
                   <li>
                     <a

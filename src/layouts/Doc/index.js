@@ -17,6 +17,7 @@ import ContentLoading from '../../components/ContentLoading/Paragraph'
 import globalStyles from './Doc.global.css' // eslint-disable-line
 import styles from './Doc.css'
 
+
 const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
 /* TO DO:
 add previous release tag links https://developer.github.com/v3/repos/releases/
@@ -87,7 +88,8 @@ class Doc extends Component {
   }
   handleScroll = (_event) => {
     const offsetHeight = window.pageYOffset || document.documentElement.scrollTop
-    const stickyNavHeight = 0
+    // TODO: refactor hardcoded nav height number to variable
+    const stickyNavHeight = 55
     const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
     if (offsetHeight >= cachedOffset) {
       if (this.sidebarNode.style.position !== 'fixed') {

@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import Section from './Section'
 import styles from './WorkShops.css'
 
-const imgBase = 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/workshops/'
+const imgBase = `${process.env.S3_BUCKET}images/workshops/`
 
 export default class WorkShops extends React.Component {
   static hasLoadingState = true
@@ -29,7 +29,7 @@ export default class WorkShops extends React.Component {
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>Upcoming Serverless Workshops</h1>
             <p className={`${styles.heroDescription}`}>
-              Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations. These workshops will empower developers and technology leaders to operationalize serverless across their organization.  
+              Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations. These workshops will empower developers and technology leaders to operationalize serverless across their organization.
             </p>
 
             <p className={`${styles.heroDescription} ${styles.center}`}>

@@ -6,7 +6,10 @@ import { BodyContainer, joinUri } from 'phenomic-serverless'
 import Helmet from 'react-helmet'
 import classnames from 'classnames'
 import getCustomScripts from '../../fragments/CustomScripts'
+import Button from '../../components/Button'
+import Separator from '../../components/Separator'
 import Header from '../../fragments/Header'
+import Hero from '../../fragments/Hero'
 import Footer from '../../fragments/Footer'
 import styles from './Default.css'
 
@@ -49,7 +52,8 @@ const DefaultLayout = (props) => {
   let link = []
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
       heroImage = null
-
+  let hero
+  const hasHero = head.heroTitle || head.heroSubTitle || head.heroBackground
   if (!isLoading && head) {
     const uri = joinUri(process.env.PHENOMIC_USER_URL, __url)
     metaTitle = head.metaTitle || head.title
@@ -58,6 +62,7 @@ const DefaultLayout = (props) => {
     { property: 'og:title', content: metaTitle },
     { property: 'og:url', content: uri },
     { property: 'og:description', content: head.description },
+    { property: 'og:image', content: `${process.env.S3_BUCKET}logos/Serverless_mark_black_400x400_v3%402x.jpg` },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:creator', content: `@${process.env.TWITTER}` },
@@ -67,8 +72,6 @@ const DefaultLayout = (props) => {
 
     if (head.thumbnail) {
       meta.push({ property: 'og:image', content: head.thumbnail })
-    } else {
-      meta.push({ property: 'og:image', content: "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/Serverless_mark_black_400x400_v3%402x.jpg" })
     }
 
     if (head.rss) {
@@ -83,8 +86,20 @@ const DefaultLayout = (props) => {
 
     wrapperClass = (head.fullWidth || fullWidth) ? styles.fullWidth : styles.page
 
+    // TODO: refactor this out of default template completely
     if (head.heroImage) {
       heroImage = <div className={styles.hero} style={{ backgroundImage: `url(${head.heroImage})` }} />
+    }
+
+
+    if (hasHero) {
+      hero = (
+        <Hero
+          title={head.heroTitle}
+          subTitle={head.heroSubTitle}
+          background={head.heroBackground}
+        />
+      )
     }
   }
 
@@ -95,7 +110,15 @@ const DefaultLayout = (props) => {
   }
 
   /* Markdown content will display if it exists */
-  const bodyContent = body || '' // reset for loading state
+  const bodyContent = body || ''
+
+  const componentsMap = {
+    Separator: Separator,
+    Button: Button,
+    Hero: Hero
+  }
+  // components={componentsMap} for future use of components via markdown
+
   const markdown = (
     <BodyContainer>
       {bodyContent}
@@ -103,15 +126,21 @@ const DefaultLayout = (props) => {
   )
 
   const pageClass = (head) ? `layout-${head.layout.toLowerCase()}` : ''
-  const classes = classnames(styles.base, wrapperClass, className,
-    ((typeof head !== 'undefined' && head.hasOwnProperty('topMargin') && head.topMargin === true) ? styles.topMargin : ''))
+  const classes = classnames(
+    styles.base,
+    wrapperClass,
+    className,
+  )
   const customScripts = getCustomScripts(head)
   return (
     <div id='base' className={pageClass}>
       <Helmet title={metaTitle} meta={meta} link={link} />
-      <Header whiteLogo={!!(whiteLogo || heroImage)} colored={coloredHeader !== false && coloredHeader !== undefined}
-              hideCTA={headerHideCTA !== false && headerHideCTA !== undefined} />
-      {heroImage}
+      <Header
+        whiteLogo={!!(whiteLogo)}
+        colored={coloredHeader !== false && coloredHeader !== undefined}
+        hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
+      />
+      {hero}
       <div className={classes}>
         {header}
         {children || markdown}
