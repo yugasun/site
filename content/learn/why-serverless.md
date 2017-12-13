@@ -12,15 +12,17 @@ What ‘serverless’ really means is that, as a developer you don’t have to t
 
 ## The Serverless Movement
 
-Serverless has become a movement about developer empowerment. Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
+Serverless has become a movement about developer empowerment. As a technology, it abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
 
-It means that you, the developer, can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. You don't have to provision servers, or pay for resources that go unused.
+What this means is that you, the developer, can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. You don't have to provision servers, or pay for resources that go unused.
 
 The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
 
 ## What makes an application serverless?
 
-The serverless movement was started with the release of AWS Lambda, a function-as-a-service compute service. But serverless is much more than just functions-as-a-service. Ultimately, _serverless is about focusing your efforts on what provides value to your users_. This means using managed services for databases, search indexes, queues, SMS messaging, and email delivery. Tie these services together using stateless, ephemeral compute like the various functions-as-a-service offerings.
+The serverless movement started with the release of AWS Lambda, a Function-as-a-Service (FaaS) compute service. But serverless is much more than just FaaS.
+
+Ultimately, _serverless is about focusing your efforts on what provides value to your users_. This means using managed services for databases, search indexes, queues, SMS messaging, and email delivery. It means tying these services together using stateless, ephemeral compute like the various FaaS offerings.
 
 Upgrading your Linux distro does not provide value to your users. Managing your RabbitMQ servers does not provide value to your users. Shipping product provides value to your users.
 
