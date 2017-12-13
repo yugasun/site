@@ -10,7 +10,7 @@ if (typeof window.loadStatusBoard !== 'undefined') {
 "
 inlineCSS: "
   #footer { display: none; }
-  #status-board { min-height: 100vh; background: #1a1a1a; margin-top: 7rem; }
+  #status-board { min-height: 100vh; background: #1a1a1a; margin-top: 5.5rem; }
   body { overflow: hidden; }
   #github-cta {
     text-align: center;
