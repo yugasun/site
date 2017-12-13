@@ -12,11 +12,11 @@ What ‘serverless’ really means is that, as a developer you don’t have to t
 
 ## The Serverless Movement
 
-Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
-
-Serverless has become a movement about developer empowerment. The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
+Serverless has become a movement about developer empowerment. Serverless abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.
 
 It means that you, the developer, can rapidly build apps that handle production-ready traffic. You don’t have to actively manage scaling for your applications. You don't have to provision servers, or pay for resources that go unused.
+
+The technology is still early, but thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost.
 
 ## What makes an application serverless?
 
@@ -32,17 +32,17 @@ These are the 4 core benefits of Serverless Applications you should know about:
 
 1. **Zero administration** - Deploy code without provisioning anything beforehand, or managing anything afterward. There is no concept of a fleet, an instance, or even an operating system. No more bothering the Ops department.
 
-2. **Pay-per-use** - Function-as-a-service compute and managed services charged based on usage rather than pre-provisioned capacity. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.
+2. **Auto-scaling** - Let your service providers manage the scaling challenges. No need to fire alerts or write scripts to scale up and down. Handle quick bursts of traffic and weekend lulls the same way -- with peace of mind.
 
-3. **Increased velocity** - Shorten the loop between having an idea and deploying to production. Because there's less to provision up front and less to manage after deployment, smaller teams can ship more features. It's easier than ever to make your idea live.
+3. **Pay-per-use** - Function-as-a-service compute and managed services charged based on usage rather than pre-provisioned capacity. You can have complete resource utilization without paying a cent for idle time. The results? 90% cost-savings over a cloud VM, and the satisfaction of knowing that you never pay for resources you don’t use.
 
-4. **Event-Driven** - Serverless functions are stateless, and essentially dormant, until they have an event to react to. The event is what brings them to life and provides them with the data/context to do their job. Event-driven architectures are nothing new, but the rise of serverless compute has renewed interest in them because serverless architectures are by definition event-driven.
+4. **Increased velocity** - Shorten the loop between having an idea and deploying to production. Because there's less to provision up front and less to manage after deployment, smaller teams can ship more features. It's easier than ever to make your idea live.
 
 ## The Serverless Framework
 
 If the Serverless Application is the new and improved application house on the block, then the Serverless Framework is the door you use to enter that house.
 
-Serverless Applications are the next step in cloud-native development, and they _require_ automation. If you're tying together multiple managed services and functions, you cannot rely on a checklist of manual steps. You should be able to recreate your entire service with a command.
+Serverless Applications are the next step in cloud-native development, and they _require_ automation. If you're tying together multiple managed services and functions, you cannot rely on a checklist of manual steps. You should be able to recreate your entire application with a command.
 
 That is where the Serverless Framework comes in. Use the Serverless Framework CLI to build and deploy your application to any and every cloud provider with a consistent experience. The Framework automatically configures cloud vendor settings for you, based on the language you use and the cloud provider you deploy to.
 
