@@ -47,7 +47,7 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/horike.jpg`} />
               </div>
               <span className={styles.personName}>
-                Takahiro Horike
+                <a href="takahiro-horike/">Takahiro Horike</a>
               </span>
               <span className={styles.personCompany}>
                 DigitalCube Co. Ltd
@@ -64,7 +64,7 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/marcia.jpg`} />
               </div>
               <span className={styles.personName}>
-                Marcia Villalba
+                <a href="marcia-villalba/">Marcia Villalba</a>
               </span>
               <span className={styles.personCompany}>
                 Rovio
@@ -83,7 +83,7 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/ryan-scott-brown.jpg`} />
               </div>
               <span className={styles.personName}>
-                Ryan Scott Brown
+                <a href="ryan-scott-brown/">Ryan Scott Brown</a>
               </span>
               <span className={styles.personCompany}>
                 Ansible
