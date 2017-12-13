@@ -65,7 +65,7 @@ export default class ChampionBiosTH extends React.Component {
             <p>After graduating, I started working at an IT company near my hometown, creating a mobile web application with PHP, JavaScript and HTML. From there, I worked on various other web application projects. The foundation of my programming skills was built on those experiences.</p>
             <p>It was hard to deploy and manage Lambda functions (and by default serverless architectures). I noticed serverless computing had various issues and problems. I wanted to improve them because I could tell that my ideal programming world was so, so close. And I could help make it a reality!</p>
             <p>However, improving Lambda was too hard, because to do that I’d have to join the team at AWS. That’s a high hurdle.</p>
-            <p>Then, I found the Serverless Framework. I love Cloud and OSS, so the Serverless Framework attitude and way just fit my mindset well. OSS was _not_ a high hurdle. It was then that I decided to improve the serverless computing world by working on the Serverless Framework movement.</p>
+            <p>Then, I found the Serverless Framework. I love Cloud and OSS, so the Serverless Framework attitude and way just fit my mindset well. OSS was <i>not</i> a high hurdle. It was then that I decided to improve the serverless computing world by working on the Serverless Framework movement.</p>
           </div>
 
           <h4>You have been a contributor and an evangelist for the Serverless Framework for a long time. When did you start using the Serverless Framework?</h4>
@@ -88,7 +88,7 @@ export default class ChampionBiosTH extends React.Component {
           <div>
             <p>I write most of my functions on AWS because I use that at work.</p>
             <p>The top item on my wishlist would be to provide something that makes it easier to realize what I want to do.</p>
-            <p>Recently, I’ve been playing with GCP a little bit because interested in seif-hosted faas, like OpenFaas and Kubeless. GCP makes it easy to build a Kubernetes cluster.</p>
+            <p>Recently, I’ve been playing with GCP a little bit because interested in self-hosted FaaS, like OpenFaas and Kubeless. GCP makes it easy to build a Kubernetes cluster.</p>
           </div>
 
           <h4>What are your views on the maturity of tooling, service ecosystem and developer experience in the serverless space today?</h4>
