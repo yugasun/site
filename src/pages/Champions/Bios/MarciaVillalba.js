@@ -5,7 +5,7 @@ import styles from './Bio.css'
 
 const imgBase = `${process.env.S3_BUCKET}images/champions`
 
-export default class ChampionBios extends React.Component {
+export default class ChampionBiosMV extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
@@ -112,7 +112,7 @@ export default class ChampionBios extends React.Component {
           <h4>Anything specific you think needs to be done for the Hispanic or Women developer community. What would you like to do, and how can we help?</h4>
           <div>
             <p>There are few female developers, and most of them don’t participate a lot in the community.</p>
-            <p>I am part of many different groups that allow me to work with women in technology and I am trying to do 2 things there. First, encouraging women to start learning to code and help them to change their career if they want to. Second, helping women to stay in tech, by helping them to be more active in the community and gain confidence.</p> 
+            <p>I am part of many different groups that allow me to work with women in technology and I am trying to do 2 things there. First, encouraging women to start learning to code and help them to change their career if they want to. Second, helping women to stay in tech, by helping them to be more active in the community and gain confidence.</p>
             <p>I’ve been considering organizing some kind of meetup for female cloud developers, as I noticed in the AWS Finland User Group there are very few women. I’d really like to grow that community.</p>
             <p>You can help by trying to find more women who are good references for Serverless and helping them to be more exposed to the community. You can also help by collaborating with women-centric user groups.</p>
           </div>
