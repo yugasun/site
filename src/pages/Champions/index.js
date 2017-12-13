@@ -47,14 +47,14 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/horike.jpg`} />
               </div>
               <span className={styles.personName}>
-                Takahiro Horike
+                <a href="takahiro-horike/">Takahiro Horike</a>
               </span>
               <span className={styles.personCompany}>
                 DigitalCube Co. Ltd
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Takahiro Horike is Software Engineer at DigitalCube Co. Ltd. He's the author of Serverless Dashboard for Atom and Serverless Step Functions Plugin, and Serverless Framework core maintainer.</p>
+              <p>Takahiro Horike is Software Engineer at DigitalCube Co. Ltd. He’s the author of Serverless Dashboard for Atom and Serverless Step Functions Plugin, and Serverless Framework core maintainer.</p>
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/marcia.jpg`} />
               </div>
               <span className={styles.personName}>
-                Marcia Villalba
+                <a href="marcia-villalba/">Marcia Villalba</a>
               </span>
               <span className={styles.personCompany}>
                 Rovio
@@ -83,14 +83,14 @@ export default class ChampionsPage extends React.Component {
                 <img src={`${imgBase}/2017/ryan-scott-brown.jpg`} />
               </div>
               <span className={styles.personName}>
-                Ryan Scott Brown
+                <a href="ryan-scott-brown/">Ryan Scott Brown</a>
               </span>
               <span className={styles.personCompany}>
                 Ansible
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Ryan has been building out cloud infrastructures since 2010, and currently focuses on automation tooling and Infrastructure-as-Code practices. He's both a contributor and user of Ansible and the Serverless Framework, and loves building in the open as much as possible.</p>
+              <p>Ryan has been building out cloud infrastructures since 2010, and currently focuses on automation tooling and Infrastructure-as-Code practices. He’s both a contributor and user of Ansible and the Serverless Framework, and loves building in the open as much as possible.</p>
               <p>Beginning with the Lambda developer preview, Ryan has built event-driven behaviors into infrastructure/deployment pipelines with Python and Lambda. Early on, he started sharing successes (and failed experiments) on ServerlessCode.com to help others and push for a common set of practices. One of those practices is the Serverless Framework: a common language spec for multiple providers to smooth the way from idea to implementation.</p>
             </div>
           </div>
