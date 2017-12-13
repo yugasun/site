@@ -143,14 +143,6 @@ export default class Header extends Component {
                 </a>
                 <ul className={styles.subNavItems}>
                   <li>
-                    <a
-                      target='_blank'
-                      href='https://github.com/serverless/guide'
-                      className={styles.link}>
-                      Guide
-                    </a>
-                  </li>
-                  <li>
                     <Link to='/community/meetups/' className={styles.link}>
                       Meetups
                     </Link>
