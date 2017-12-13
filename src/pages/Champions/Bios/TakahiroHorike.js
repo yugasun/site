@@ -5,7 +5,7 @@ import styles from './Bio.css'
 
 const imgBase = `${process.env.S3_BUCKET}images/champions`
 
-export default class ChampionBios extends React.Component {
+export default class ChampionBiosTH extends React.Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
@@ -49,7 +49,6 @@ export default class ChampionBios extends React.Component {
           <div>
             <h2>Interview with Takahiro Horike</h2>
           </div>
-          <img className={styles.bullet} src={`${imgBase}/claw.svg`} />
           <h4>Tell us about your background. How did you get into programming?</h4>
           <div>
             <p>I majored in electrical engineering as a college student. In Japan, during your senior year of college, everyone is assigned to a lab.</p>
@@ -97,7 +96,7 @@ export default class ChampionBios extends React.Component {
             <p>I feel today’s serverless space is still too complex.</p>
             <p>I expect that serverless computing will be programming-less computing in the future. I don’t know exactly what this will look like, but for example—I think we’ll be able to build applications by choosing a service and any data sources via GUI, sort of like IFTTT. Then we’d be able to connect them together by unified-specification events.</p>
             <p>For example, the goal of Serverless Dashboard for Atom is to make developers not even aware of the cloud. They can publish a service by just clicking the ‘deploy’ button.</p>
-            <p>I think the <a href="https://github.com/RafalWilinski/deploy-with-serverless">deploy-with-serverless plugin</a> has a similar concept.</p>
+            <p>I think the <a href="https://github.com/RafalWilinski/deploy-with-serverless" target="_blank">deploy-with-serverless plugin</a> has a similar concept.</p>
           </div>
 
           <h4>What are your thoughts on what is keeping serverless architectures to be adopted widely by organizations?</h4>

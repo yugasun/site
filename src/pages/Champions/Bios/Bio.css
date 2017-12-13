@@ -1,4 +1,5 @@
 $darkBackground: #211F21;
+$serverlessRed: #FD574F;
 .heroWrapper {
   margin-top: $navHeight;
   overflow: hidden;
@@ -12,7 +13,7 @@ $darkBackground: #211F21;
 .hero {
   padding-top: 70px;
   position: relative;
-  width: 80%;
+  width: 90%;
   z-index: 2;
   color: #fff;
   padding-bottom: 10px;
@@ -66,6 +67,9 @@ $darkBackground: #211F21;
       margin-bottom: 30px;
     }
   }
+  a {
+    color: $serverlessRed;
+  }
 }
 .heading {
   font-family: Gibson;
@@ -84,7 +88,7 @@ $darkBackground: #211F21;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 35%;
   border-right: 1px solid #CDCDCD;
   padding-right: 30px;
 }
@@ -114,10 +118,10 @@ $darkBackground: #211F21;
   }
 }
 .personBio {
-  width: 80%;
+  width: 100%;
   p {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 25px;
     padding-left: 40px;
   }
 }

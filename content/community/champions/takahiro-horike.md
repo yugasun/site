@@ -1,4 +1,4 @@
 ---
 title: Serverless Champion - Takahiro Horike
-layout: ChampionBios
+layout: ChampionBiosTH
 ---
