@@ -4,32 +4,32 @@ import { BodyContainer } from 'phenomic-serverless'
 import { Link } from 'react-router'
 import Default from '../Default'
 import ContentLoading from '../../components/ContentLoading/Paragraph'
-import styles from './Learn.css'
-import globalStyles from './Learn.global.css'
+import styles from './Intro.css'
+import globalStyles from './Intro.global.css'
 
-class Learn extends Component {
+class Intro extends Component {
   static hasLoadingState = true
   renderNav() {
     return (
       <div className={styles.navWrapper}>
         <div className={styles.navInner} >
           <div className={styles.navLink}>
-            <a href="/learn/">
+            <a href="/intro/why-serverless">
               - Why Serverless?
             </a>
           </div>
           <div className={styles.navLink}>
-            <a href="/learn/use-cases">
+            <a href="/intro/use-cases">
               - Use Cases
             </a>
           </div>
           <div className={styles.navLink}>
-            <a href="/learn/comparisons">
+            <a href="/intro/comparisons">
               - Comparisons
             </a>
           </div>
           <div className={styles.navLink}>
-            <a href="/learn/quick-start">
+            <a href="/intro/quick-start">
               - Quick Start
             </a>
           </div>
@@ -67,7 +67,7 @@ class Learn extends Component {
     }
 
     return (
-      <Default {...props} fullWidth className={styles.learnPage} >
+      <Default {...props} fullWidth className={styles.introPage} >
         {this.renderNav()} 
         <div className={styles.contentWrapper}>
           <h1 className={styles.title}>
@@ -82,10 +82,10 @@ class Learn extends Component {
   }
 }
 
-Learn.propTypes = {
+Intro.propTypes = {
   head: PropTypes.object.isRequired,
   __url: PropTypes.string,
   phenomicLoading: PropTypes.bool,
 }
 
-export default Learn
+export default Intro 

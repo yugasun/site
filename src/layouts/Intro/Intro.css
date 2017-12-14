@@ -2,7 +2,7 @@
   min-height: calc(100vh - $navHeight);
 }
 
-.learnPage {
+.introPage {
   display: flex;
   max-width: 850px;
   margin: 8rem auto 0 auto;
@@ -40,7 +40,6 @@
 .navLink {
   font-size: 1.7rem;
   margin: 4px;
-  padding-bottom: 10px;
 }
 
 .navLink a {
@@ -69,10 +68,10 @@ blockquote {
   .title {
     font-size: 23px;
   }
-  .learnPage {
+  .introPage {
     flex-direction: column;
   }
-  .learnPage, .contentWrapper, .navWrapper {
+  .introPage, .contentWrapper, .navWrapper {
     width: unset;
     max-width: 100%;
   }
