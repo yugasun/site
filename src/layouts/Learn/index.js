@@ -14,7 +14,7 @@ class Learn extends Component {
       <div className={styles.navWrapper}>
         <div className={styles.navInner} >
           <div className={styles.navLink}>
-            <a href="/learn/why-serverless">
+            <a href="/learn/">
               - Why Serverless?
             </a>
           </div>
