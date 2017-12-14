@@ -64,6 +64,6 @@ These are the 4 core benefits of the Serverless Framework you should know about:
 
 ## Next Steps
 
-Check out all the different [use cases](./use-cases.md) for serverless applications. Take a peek at how the Serverless Framework [compares to other software](./serverless-vs-other.md).
+Check out all the different [use cases](./use-cases.md) for serverless applications. Take a peek at how the Serverless Framework [compares to other software](./comparisons.md).
 
-Or if you’re ready, follow our [step-by-step guide](./getting-started) to start building a Serverless Application with your favorite language.
+Or if you’re ready, follow our [step-by-step guide](./quick-start) to start building a Serverless Application with your favorite language.
