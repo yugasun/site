@@ -48,7 +48,8 @@
 }
 
 .contentWrapper {
-  max-width: 650px;
+  width: 100%;
+  padding: 20px;
 }
 
 .title {

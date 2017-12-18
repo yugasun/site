@@ -2,6 +2,7 @@
 title: "Comparisons: Serverless vs. other tools"
 description: "When should you use Serverless over other tools?"
 layout: Learn
+useLearnNav: true
 ---
 
 Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation.

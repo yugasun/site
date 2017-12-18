@@ -2,6 +2,7 @@
 title: "Serverless Use Cases"
 description: "Use Cases for Serverless"
 layout: Learn
+useLearnNav: true
 ---
 
 More and more developers are moving to Serverless as a way to increase velocity and decrease monotony.

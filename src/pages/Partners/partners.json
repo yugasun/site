@@ -7,7 +7,7 @@
     "website": "https://www.trek10.com",
     "stories": [{
       "title": "GraphQL and Rendering HTML with Serverless",
-      "url":"/learn/graphql-and-serverless/"
+      "url":"/case-studies/graphql-and-serverless/"
       }
     ]
   },
@@ -19,7 +19,7 @@
     "website": "https://www.nordcloud.com",
     "stories": [{
       "title": "Bootstrapping the Platform for a Billion Dollar Business Opportunity",
-      "url": "/learn/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"
+      "url": "/case-studies/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"
       }
     ]
   },
@@ -31,19 +31,7 @@
     "website": "https://parall.ax/",
     "stories": [{
       "title": "Scaling to Millions With David Guetta",
-      "url":"/learn/scaling-to-millions-of-requests/"
-      }
-    ]
-  },
-  "AbstractAI": {
-    "name": "AbstractAI",
-    "logo": "http://www.abstractsoftwaredesign.com/images/logo.png",
-    "tagline": "AbstractAI develops the software and solutions of <i>tomorrow</i>... <br/><b>Today</b>. ",
-    "description": "AbstractAI partners with brands and their agencies to create software leveraging conversational interfaces to deliver core products and services. Based in Los Angeles, AbstractAI engineers chatbots and workflow solutions for the most in-demand platforms including Slack and Facebook Messenger.",
-    "website": "https://www.abstract.ai",
-    "stories": [{
-      "title": "Two Million Fans, One Chatbot",
-      "url":"/learn/reducing-backend-costs/"
+      "url":"/case-studies/scaling-to-millions-of-requests/"
       }
     ]
   }
