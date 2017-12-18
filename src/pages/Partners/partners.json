@@ -7,7 +7,7 @@
     "website": "https://www.trek10.com",
     "stories": [{
       "title": "GraphQL and Rendering HTML with Serverless",
-      "url":"/learn/case-studies/graphql-and-serverless/"
+      "url":"/case-studies/graphql-and-serverless/"
       }
     ]
   },
@@ -19,7 +19,7 @@
     "website": "https://www.nordcloud.com",
     "stories": [{
       "title": "Bootstrapping the Platform for a Billion Dollar Business Opportunity",
-      "url": "/learn/case-studies/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"
+      "url": "/case-studies/bootstrapping-the-platform-for-a-billion-dollar-business-opportunity/"
       }
     ]
   },
@@ -31,7 +31,7 @@
     "website": "https://parall.ax/",
     "stories": [{
       "title": "Scaling to Millions With David Guetta",
-      "url":"/learn/case-studies/scaling-to-millions-of-requests/"
+      "url":"/case-studies/scaling-to-millions-of-requests/"
       }
     ]
   }
