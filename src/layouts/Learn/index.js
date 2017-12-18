@@ -10,6 +10,10 @@ import globalStyles from './Learn.global.css'
 class Learn extends Component {
   static hasLoadingState = true
   renderNav() {
+    // This is kind of janky but allows us to ignore Learn Nav if desired.
+    if (!this.props.head.useLearnNav) {
+      return null
+    };
     return (
       <div className={styles.navWrapper}>
         <div className={styles.navInner} >

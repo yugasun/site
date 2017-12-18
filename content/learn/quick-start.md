@@ -2,6 +2,7 @@
 title: "Quick Start"
 description: "Getting started with the Serverless Framework"
 layout: Learn
+useLearnNav: true
 ---
 
 # Table of Contents:
