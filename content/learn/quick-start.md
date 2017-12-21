@@ -455,7 +455,7 @@ When developing your application, you'll often want easy access to certain opera
 
 The Serverless Framework has built-in command to assist with these operational insights.
 
-To check numbers around function invocations, errors, and more, use the `sls insights` command:
+To check numbers around function invocations, errors, and more, use the `sls metrics` command:
 
 ```bash
 $ sls metrics
