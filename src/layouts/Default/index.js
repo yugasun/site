@@ -53,9 +53,10 @@ const DefaultLayout = (props) => {
   let wrapperClass = (fullWidth) ? styles.fullWidth : styles.page,
       heroImage = null
   let hero
-  const hasHero = head.heroTitle || head.heroSubTitle || head.heroBackground
+  let hasHero
   if (!isLoading && head) {
     const uri = joinUri(process.env.PHENOMIC_USER_URL, __url)
+    hasHero = head.heroTitle || head.heroSubTitle || head.heroBackground
     metaTitle = head.metaTitle || head.title
     meta = [
     { property: 'og:type', content: 'article' },
