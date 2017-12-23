@@ -48,7 +48,7 @@ export default class JobsPage extends React.Component {
 
   render() {
     return (
-      <Default {...this.props} fullWidth>
+      <Default {...this.props} fullWidth coloredHeader>
         <div className={styles.cover}>
           <div className={styles.content}>
             <h1>Working at Serverless</h1>
