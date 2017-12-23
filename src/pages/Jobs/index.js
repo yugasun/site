@@ -125,7 +125,7 @@ export default class JobsPage extends React.Component {
             </div>
             <div>
               <img role='presentation' src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/jobs/icons/perks-icon-6.svg' />
-              Culture of empowerment (our entire company, from processes to values, lives in a Github repo that anyone can propose changes to)
+              Culture of empowerment. Our entire company, from processes to values, lives in a Github repo that anyone can propose changes to.
             </div>
           </div>
         </div>
