@@ -1,6 +1,6 @@
 /* Available page templates
  * Usage in markdown ->
- * Layout: Page
+ * Layout: Post
  */
 export { default as Default } from './Default'
 export { default as Post } from './Post'
