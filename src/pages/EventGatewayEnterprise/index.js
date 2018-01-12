@@ -35,7 +35,7 @@ const EventGatewayPage = (props) => {
           backgroundSize: '100%, 94%'
         }}
         icon={`${urlBase}icons/gateway.svg`}
-        title='Event Gateway Entreprise'
+        title='Event Gateway Enterprise'
         content={content}
         cta={ctaButton}
       />

@@ -151,7 +151,7 @@ export default class WorkShopPage extends React.Component {
 
     const content = (
       <div className={styles.contents}>
-        <p>Event Gateway Entreprise is fully hosted and serverless</p>
+        <p>Event Gateway Enterprise is fully hosted and serverless</p>
       </div>
     )
 
@@ -165,7 +165,7 @@ export default class WorkShopPage extends React.Component {
             backgroundSize: '100%, 94%'
           }}
           content={content}
-          title='Event Gateway Entreprise Beta'
+          title='Event Gateway Enterprise Beta'
         />
         <div className={styles.content}>
           {this.renderForm()}

@@ -23,7 +23,7 @@ const EventGatewayPage = (props) => {
         <img width={24} height={24} src={`${urlBase}images/github-icon.svg`} />
         Github
       </a>
-      <Link to='/event-gateway/entreprise/' className={`${styles.btn} ${styles.btnGrey}`}>
+      <Link to='/event-gateway/enterprise/' className={`${styles.btn} ${styles.btnGrey}`}>
         Gateway Enterprise
       </Link>
     </div>

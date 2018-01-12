@@ -11,7 +11,7 @@ export { default as Community } from './Community'
 export { default as Enterprise } from './Enterprise'
 export { default as Framework } from './Framework'
 export { default as EventGateway } from './EventGateway'
-export { default as EventGatewayEntreprise } from './EventGatewayEntreprise'
+export { default as EventGatewayEnterprise } from './EventGatewayEnterprise'
 export { default as EventGatewayBeta } from './EventGatewayBeta'
 export { default as Auth } from './Auth'
 export { default as Success } from './Success'  // to depricate after 10+ releases
