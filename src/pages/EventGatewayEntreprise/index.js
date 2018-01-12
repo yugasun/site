@@ -19,7 +19,7 @@ const EventGatewayPage = (props) => {
 
   const ctaButton = (
     <div className={styles.ctaWrapper}>
-      <Link to='/event-gateway/entreprise/' className={`${styles.btn} ${styles.btnGrey}`}>
+      <Link to='/event-gateway/beta/' className={`${styles.btn} ${styles.btnGrey}`}>
         Request Beta
       </Link>
     </div>
