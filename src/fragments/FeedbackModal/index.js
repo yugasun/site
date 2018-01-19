@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AutoForm from 'react-auto-form'
-import submitFeatureData from './SubmitSurvey'
 import Checkbox from '../../components/Checkbox/Check'
 import Modal from '../../components/Modal/Modal'
 import Button from '../../components/Button/Button'
@@ -29,15 +28,17 @@ export default class FeedbackModal extends Component {
       userData: localStorage.getItem('profile') // eslint-disable-line
     }
     const that = this
-    submitFeatureData(sendData, (err, _response) => {
-      if (err) {
-        console.log('err', err)
-        return false
-      }
-      that.setState({
-        showModal: false
-      })
-    })
+
+    console.log('need new data store')
+    // submitFeatureData(sendData, (err, _response) => {
+    //   if (err) {
+    //     console.log('err', err)
+    //     return false
+    //   }
+    //   that.setState({
+    //     showModal: false
+    //   })
+    // })
   }
   handleToggle = () => {
     this.setState({ showModal: !this.state.showModal })

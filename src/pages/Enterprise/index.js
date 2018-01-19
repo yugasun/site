@@ -3,7 +3,6 @@ import AutoForm from 'react-auto-form'
 import Form from '../../components/Form'
 import TextInput from '../../components/TextInput'
 import Button from '../../components/Button'
-import airtablePost from '../../utils/forms/airtable'
 import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 import formHandler from '../../utils/formHandler'
@@ -36,35 +35,10 @@ export default class PartnersPage extends React.Component {
     // return false
 
     formHandler(formData).then((res) => {
-
       this.setState({
         success: true,
         loading: false
-      }, () => {
-        // window.scrollTo(0, 0)
-        // send to airtable
-        const token = 'keynoipW7vgeiBMuZ'
-        const url = 'https://api.airtable.com/v0/appyZzQmAS6nvzZ5r/Table%201'
-        const airTableData = {
-          fields: {
-            Name: data.name,
-            Email: data.email,
-            Company: data.company,
-            'Date Added': new Date()
-          }
-        }
-        airtablePost(url, airTableData, token).then((_response) => {
-          this.setState({
-            success: true,
-          })
-        })
-        .catch((err) => {
-          this.setState({
-            error: err
-          })
-        })
       })
-
     }).catch((e) => {
       console.log('ERROR', e)
       this.setState({
@@ -114,6 +88,13 @@ export default class PartnersPage extends React.Component {
               errorMessageClassName={styles.errorMessage}
               required
             />
+            <div className={styles.inputs}>
+              <textarea
+                placeholder='How can we help you'
+                className={styles.textArea}
+                name={'message'}
+               />
+            </div>
           </div>
         </div>
         <div className={styles.submit}>

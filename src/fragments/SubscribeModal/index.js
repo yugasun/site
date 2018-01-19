@@ -3,7 +3,7 @@ import Newsletter from '../../fragments/Newsletter'
 import Modal from '../../components/Modal/Modal'
 import styles from './SubscribeModal.css'
 
-export default class FeedbackModal extends Component {
+export default class SubscribeModal extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
