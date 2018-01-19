@@ -122,6 +122,21 @@
     width: 300px;
   }
 }
+
+.textArea {
+  width: 100%;
+  height: 100px;
+  font-family: "Gibson", sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid #949494;
+  margin-bottom: 20px;
+  &:focus {
+    border: 1px solid $black2;
+    outline: none;
+  }
+}
+
 .success {
   color: green;
   text-align: center;
