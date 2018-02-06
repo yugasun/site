@@ -42,7 +42,6 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Dynalite](https://github.com/sdd/serverless-dynalite)
 - [Dynamodb Autoscaling](https://github.com/sbstjn/serverless-dynamodb-autoscaling)
 - [Dynamodb Local](https://github.com/99xt/serverless-dynamodb-local)
-- [Dynamodb TTL](https://github.com/Jimdo/serverless-dynamodb-ttl)
 
 
 ## Guides
