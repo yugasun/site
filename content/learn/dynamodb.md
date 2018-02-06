@@ -51,7 +51,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Automate your DynamoDB backups with Serverless in less than 5 minutes](https://serverless.com/blog/automatic-dynamodb-backups-serverless/)
 - [Deploy a REST API using Serverless, Express and Node.js](https://serverless.com/blog/serverless-express-rest-api/)
 - [Using DynamoDB with Serverless](http://blog.rowanudell.com/using-dyanmodb-with-serverless/) 
-- [Build a Python REST API with Serverless, Lambda, and DynamoDB]([https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/])
+- [Build a Python REST API with Serverless, Lambda, and DynamoDB](https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/)
 - [Deploy Node.js Serverless Framework app with DynamoDB, S3 and Cognito in 10 Steps](https://medium.com/@connorleech/deploy-node-js-serverless-framework-app-with-dynamodb-s3-and-cognito-in-10-steps-723d2f4ec08f)
 
 
