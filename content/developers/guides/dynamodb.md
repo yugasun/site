@@ -12,16 +12,18 @@ DynamoDB is a popular NoSQL database offering from AWS. It’s fully managed, au
 - Nice integration with Lambda
 - Highly scaleable 
 
-While Dynamo is an amazing service that provides tons of value, there are a few things you should be aware of. Because it’s a proprietary AWS service, it can lead to data lock-in, which is a particularly sticky form of vendor lock-in. Another thing to be aware of is that while DynamoDB often scales very nicely, with very large data-sets that scaling can become very difficult and expensive. Global Tables, a new feature to DynamoDB, makes globally scaling DynamoDB much easier and more affordable. 
+While DynamoDB can provide tons of value, there are a couple things you should be aware of.
+
+Because it’s a proprietary AWS service, it can lead to data lock-in, which is a particularly sticky form of vendor lock-in. While DynamoDB often scales very nicely, that scaling can become difficult and expensive with very large datasets. On the plus side, DynamoDB Global Tables should make globally scaling DynamoDB much easier and more affordable.
 
 ## Disadvantages
-- Vendor lockin 
+- Vendor lock-in 
 - Can be expensive to operate at large scale 
 
 ## DynamoDB Pricing
 AWS prices Dynamo based on a combination of provsioned throughput (both read and write) and the amount of indexed data storage. They also offer a generous free tier to get you up and going. For full details on pricing, checkout the [DynamoDB](https://aws.amazon.com/dynamodb/pricing/) pricing page.
 
-## DynamoDB Vs.
+## DyanamoDB vs MongoDB, Cassandra, BigTable
 | DBaaS     | Description                                                    | Typing | Data Model                      | Secondary Indexes | Triggers | Open Source |
 |-----------|----------------------------------------------------------------|--------|---------------------------------|-------------------|----------|-------------|
 | DynamoDB  | Hosted, auto-scaling database service by AWS                   | Yes    | Document Store, Key Value Store | Yes               | Yes      | No          |
@@ -42,6 +44,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Dynalite](https://github.com/sdd/serverless-dynalite)
 - [Dynamodb Autoscaling](https://github.com/sbstjn/serverless-dynamodb-autoscaling)
 - [Dynamodb Local](https://github.com/99xt/serverless-dynamodb-local)
+- [Dynamodb TTL](https://github.com/Jimdo/serverless-dynamodb-ttl)
 
 
 ## Guides
@@ -51,7 +54,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Automate your DynamoDB backups with Serverless in less than 5 minutes](https://serverless.com/blog/automatic-dynamodb-backups-serverless/)
 - [Deploy a REST API using Serverless, Express and Node.js](https://serverless.com/blog/serverless-express-rest-api/)
 - [Using DynamoDB with Serverless](http://blog.rowanudell.com/using-dyanmodb-with-serverless/) 
-- [Build a Python REST API with Serverless, Lambda, and DynamoDB](https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/)
+- [Build a Python REST API with Serverless, Lambda, and DynamoDB]([https://serverless.com/blog/flask-python-rest-api-serverless-lambda-dynamodb/])
 - [Deploy Node.js Serverless Framework app with DynamoDB, S3 and Cognito in 10 Steps](https://medium.com/@connorleech/deploy-node-js-serverless-framework-app-with-dynamodb-s3-and-cognito-in-10-steps-723d2f4ec08f)
 
 
