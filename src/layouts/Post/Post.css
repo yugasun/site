@@ -83,6 +83,9 @@ $sidebarWidth: 350px;
   img {
     max-width: 120%;
   }
+  td img {
+    max-width: 100%;
+  }
   iframe {
     max-width: 100%;
   }
