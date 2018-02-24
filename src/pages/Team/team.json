@@ -178,5 +178,18 @@
 			"short": "Surfer-designer & Third Culture Kid",
 			"long": ""
 		}
+	},
+	{
+		"name": "Ganesh RK",
+		"title": "VP of Engineering",
+		"github": "ganeshvlrk",
+		"twitter": "Ganesh__RK",
+		"linkedin": "ganeshvlrk",
+		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/ganesh.jpg",
+		"location": "San Francisco, CA",
+		"bio": {
+			"short": "VP of Engineering & Productivity hacker",
+			"long": ""
+		}
 	}
 ]
