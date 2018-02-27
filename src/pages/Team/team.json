@@ -63,20 +63,6 @@
 		}
 	},
 	{
-		"name": "Nik Graf",
-		"title": "Chief Frontend Nerd",
-		"github": "nikgraf",
-		"twitter": "nikgraf",
-		"linkedin": "nikolausgraf",
-		"site": "http://serverless.com",
-		"avatar": "https://avatars1.githubusercontent.com/u/223045?v=3&s=260",
-		"location": "Vienna, Austria",
-		"bio": {
-			"short": "Frontend Developer and triathlete",
-			"long": "Nick is passionate about understanding and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
-		}
-	},
-	{
 		"name": "Eslam Hefnawy",
 		"github": "eahefnawy",
 		"twitter": "eahefnawy",
