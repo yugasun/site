@@ -34,6 +34,7 @@ export default class Footer extends Component {
             <div className={styles.navBlock}>
               <h4 className={styles.navTitle}>About</h4>
               <Link to='/company/team/'>Company</Link>
+              <Link to='https://jobs.lever.co/serverless'>Jobs</Link>
               <Link to='/blog/'>Blog</Link>
             </div>
           </nav>
