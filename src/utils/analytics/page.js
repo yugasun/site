@@ -42,7 +42,8 @@ export function gaPageView(pageData) {
     /* dimension1: branch  --  See in "Custom Definitions" of serverless.com property " */
     // console.info('ga branch:', data.branch)
     ga('set', 'dimension1', data.branch) // eslint-disable-line no-undef
-    ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
+    ga('send', 'pageview', { hitCallback: removeUTM,
+                             'Branch':  '{{ getenv "BRANCH" }}' }) // eslint-disable-line
   }
 }
 
