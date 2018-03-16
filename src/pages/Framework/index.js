@@ -13,7 +13,9 @@ const FrameworkPage = (props) => {
         <div className={styles.boundSmall}>
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
           <h1 className={styles.toolTitle}>Serverless Framework</h1>
-          <p className={styles.toolDescription}>The easiest way to build serverless applications. At 22,000 stars on GitHub, the Serverless Framework is where developers come to get more done.</p>
+          <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 22,000 stars on GitHub, the Serverless Framework started a movement.
+
+</p>
           <div className={styles.toolProperties}>
             <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 22,373</div>
             <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-forum.png' />5,000</div>
