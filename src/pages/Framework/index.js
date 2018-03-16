@@ -13,19 +13,19 @@ const FrameworkPage = (props) => {
         <div className={styles.boundSmall}>
           <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
           <h1 className={styles.toolTitle}>Serverless Framework</h1>
-          <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 18,000 stars on GitHub, the Framework started a movement.</p>
+          <p className={styles.toolDescription}>The easiest way to build serverless applications. At 22,000 stars on GitHub, the Serverless Framework is where developers come to get more done.</p>
           <div className={styles.toolProperties}>
-            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 18,391</div>
+            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 22,373</div>
             <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-forum.png' />5,000</div>
             <div className={styles.toolProperty}><img width={18} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-gitter.png' />1,700</div>
-            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/icon-deploy.svg' />2.5M deploys</div>
+            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/icon-deploy.svg' />5.3M deploys</div>
           </div>
         </div>
       </div>
       <div className={styles.sectionDemo}>
         <div className={styles.bound}>
           <div className={styles.demoMeta}>
-            <h2>Deploy your function right now.</h2>
+            <h2>The easy, open serverless workflow.</h2>
             <p className={styles.demoDescription}>Serverless Framework is your single toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure. Done.</p>
             <div className={styles.demoLinks}>
               <Link className={`${styles.btn} ${styles.btnBlue}`} to='/framework/docs/'>View Docs</Link>
