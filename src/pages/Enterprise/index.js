@@ -60,6 +60,9 @@ export default class PartnersPage extends React.Component {
           </p>
         </div>
       )
+      track('site:enterprise_contact', {
+        category: 'Contact Form'
+      })
     }
 
     const buttonText = (loading) ? "LOADING" : "SUBMIT"
