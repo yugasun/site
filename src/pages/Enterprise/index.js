@@ -2,6 +2,7 @@ import React from 'react'
 import AutoForm from 'react-auto-form'
 import Form from '../../components/Form'
 import TextInput from '../../components/TextInput'
+import Checkbox from '../../components/Checkbox/Check'
 import Button from '../../components/Button'
 import track from '../../utils/analytics/track'
 import Default from '../../layouts/Default'
@@ -92,9 +93,20 @@ export default class PartnersPage extends React.Component {
               errorMessageClassName={styles.errorMessage}
               required
             />
+            <div className={styles.checkBox}>
+              <div className={styles.fakeLabel}>
+                Desired use case
+              </div>
+              <div className={styles.inputs}>
+                <Checkbox name={'poi'} label={'Standardizing Development'} />
+                <Checkbox name={'poi'} label={'Extending Legacy Infrastructure'} />
+                <Checkbox name={'poi'} label={'Multi-Cloud'} />
+                <Checkbox name={'poi'} label={'Other'} />
+              </div>
+        </div>
             <div className={styles.inputs}>
               <textarea
-                placeholder='How can we help you'
+                placeholder='Message'
                 className={styles.textArea}
                 name={'message'}
                />
@@ -115,10 +127,10 @@ export default class PartnersPage extends React.Component {
         <div className={styles.hero}>
           <div className={styles.boundMedium}>
             <h1 className={styles.heroTitle}>
-              Accelerate serverless adoption
+              Accelerate cloud adoption
             </h1>
             <p className={`${styles.heroDescription} ${styles.boundSmall}`}>
-              With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in weeks. Let us show you how.
+              With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in days rather than months. Let us show you how.
             </p>
           </div>
         </div>
@@ -126,18 +138,25 @@ export default class PartnersPage extends React.Component {
           <div className={styles.features}>
             <div className={styles.feature}>
               <h3 className={styles.heading}>
-                Train your team
+                Standardize Cloud Development
               </h3>
               <p className={styles.featureDescription}>
-                As the creators and maintainers of the framework, we are the first to centralize best practices and use cases from serverless enterprises. Our workshops pass on that knowledge directly to you. Learn about serverless ops at scale, service discovery, and deploying serverless applications from start to finish.
+As the creators and maintainers of the Serverless Framework, we are the first to define best practices and use cases for serverless enterprises. Our enterprise solutions help you standardize best practices and create templates for your most common use cases.              </p>
+            </div>
+            <div className={styles.feature}>
+              <h3 className={styles.heading}>
+                Extend Legacy Infrastructure 
+              </h3>
+              <p className={styles.featureDescription}>
+                While it's not always possible to migrate completely off legacy infrastructure, the event-driven, serverless architecture makes it possible to extend legacy infrastructure with cloud functions. Let us show you how.
               </p>
             </div>
             <div className={styles.feature}>
               <h3 className={styles.heading}>
-                Operationalize
+                Build Multi-Cloud and Hybrid Architectures  
               </h3>
               <p className={styles.featureDescription}>
-                Centralize your events and functions in one interface, across all your cloud services. Serverless Platform makes it easy to expose and share pieces of serverless applications for quick repurposing. Give your team the tools they need to create and iterate—without pausing to provision test environments and infrastructure.
+                With the amazing array of cloud services on the market, vendor and platform choice can help you stay agile. Our enterprise solutions use event-driven models to you bring multiple cloud architectures together under a single developer experience. 
               </p>
             </div>
           </div>
