@@ -3,6 +3,7 @@ import AutoForm from 'react-auto-form'
 import Form from '../../components/Form'
 import TextInput from '../../components/TextInput'
 import Button from '../../components/Button'
+import track from '../../utils/analytics/track'
 import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 import formHandler from '../../utils/formHandler'
@@ -53,6 +54,8 @@ export default class PartnersPage extends React.Component {
     const formId = 'enterprise-contact-us'
 
     if (success) {
+      track('site:enterprise_contact', {
+        category: 'Contact Form'});
       return (
         <div>
           <p className={styles.thanks}>
@@ -60,6 +63,7 @@ export default class PartnersPage extends React.Component {
           </p>
         </div>
       )
+
     }
 
     const buttonText = (loading) ? "LOADING" : "SUBMIT"
