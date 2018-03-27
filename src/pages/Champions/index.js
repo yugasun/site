@@ -44,6 +44,63 @@ export default class ChampionsPage extends React.Component {
           <div className={styles.personWrapper}>
             <div className={styles.personImage}>
               <div className={styles.roundedImage}>
+                <img src={`${imgBase}/2018/rowan-udell.jpg`} />
+              </div>
+              <span className={styles.personName}>
+                <a href="rowan-udell/">Rowan Udell</a>
+              </span>
+              <span className={styles.personCompany}>
+                Versent
+              </span>
+            </div>
+            <div className={styles.personBio}>
+              <p>Rowan began his career in support and operations before branching out to development 10 years ago. He first worked with the AWS platform over five years ago and has been an avid fan and user of AWS Lambda since it was announced.</p>
+              <p>In his day job as Cloud Practice Director at Versent (an AWS Premier Partner) he helps teams and enterprises get the most out of the AWS platform. He's also an APN (AWS Partner Network) Cloud Warrior.</p>
+              <p>He published the online video course The Serverless Framework: Build a Chatbot course on ACloud.Guru and is the co-author of the AWS Administration Cookbook. Aside from blogging and commenting on the Serverless Framework Forum, Rowan has spoken at local events like the AWS Summit Sydney, Serverless Sydney, and the AWS Sydney User Group.</p>
+            </div>
+          </div>
+
+          <div className={styles.personWrapper}>
+            <div className={styles.personImage}>
+              <div className={styles.roundedImage}>
+                <img src={`${imgBase}/2018/frank-schmid.jpg`} />
+              </div>
+              <span className={styles.personName}>
+                <a href="frank-schmid/">Frank Schmid</a>
+              </span>
+              <span className={styles.personCompany}>
+                Stashimi Inc.
+              </span>
+            </div>
+            <div className={styles.personBio}>
+              <p>It was in 1982 with a Commodore 64 (you remember that one?) when Frank discovered his passion for programming and computer technology (that time with Basic and machine language) at the age of 12.</p>
+              <p>From then on his journey and passion continued steadily. All along this path the excitement and comprehension for different programming languages and architectures grew - and together with that, the eagerness to find out how to solve specific problems with the appropriate tools for the problems (languages and architectural patterns).</p>
+              <p>At the age of 16 he sold his first application, after finishing school, began to study computer science at the University of Saarbrücken (Germany) just to be overwhelmed by his passion again after 4 years, quit University and founded his own company (network technologies and application development).</p>
+              <p>Ten years later he joined Nero and worked there as software engineer, solution architect, team leader and finally as technical director just to join the then just founded startup Stashimi another ten years later where he now works as architect with a completely serverless based infrastructure.</p>
+            </div>
+          </div>
+
+          <div className={styles.personWrapper}>
+            <div className={styles.personImage}>
+              <div className={styles.roundedImage}>
+                <img src={`${imgBase}/2018/alex-casalboni.jpg`} />
+              </div>
+              <span className={styles.personName}>
+                <a href="alex-casalboni/">Alex Casalboni</a>
+              </span>
+              <span className={styles.personCompany}>
+                company inc.
+              </span>
+            </div>
+            <div className={styles.personBio}>
+              <p>Bio para here.</p>
+              <p>Bio para here.</p>
+            </div>
+          </div>
+
+          <div className={styles.personWrapper}>
+            <div className={styles.personImage}>
+              <div className={styles.roundedImage}>
                 <img src={`${imgBase}/2017/horike.jpg`} />
               </div>
               <span className={styles.personName}>
@@ -94,6 +151,7 @@ export default class ChampionsPage extends React.Component {
               <p>Beginning with the Lambda developer preview, Ryan has built event-driven behaviors into infrastructure/deployment pipelines with Python and Lambda. Early on, he started sharing successes (and failed experiments) on ServerlessCode.com to help others and push for a common set of practices. One of those practices is the Serverless Framework: a common language spec for multiple providers to smooth the way from idea to implementation.</p>
             </div>
           </div>
+
         </div>
       </Default>
     )
