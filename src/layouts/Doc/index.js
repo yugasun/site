@@ -210,6 +210,12 @@ class Doc extends Component {
               {items}
             </ul>
           </div>
+
+          <div className={styles.forumCta}>
+            <h2>Have questions?</h2>
+            <p>Head over to the <a href="https://forum.serverless.com/" target="_blank">forums</a> to post your questions & issues.</p>
+            <a className={styles.forumLink} href="https://forum.serverless.com/" target="_blank">Visit the forums</a>
+          </div>
         </div>
       </div>
     )

@@ -81,11 +81,6 @@ export default class Sidebar extends React.Component {
             </a>
           </div>
           <div className={styles.sidebarLinks}>
-            <a href='https://gitter.im/serverless/serverless' target='_blank' rel='noopener noreferrer'>
-              Chat in Gitter
-            </a>
-          </div>
-          <div className={styles.sidebarLinks}>
             <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
               Engage on the Forum
             </a>

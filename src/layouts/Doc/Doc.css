@@ -310,6 +310,24 @@ a.editLinkWrapper {
     padding: 0;
   }
 }
+.forumCta {
+  padding: 0 20px;
+  margin-top: 20px;
+  h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.015rem;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  .forumLink {
+    color: #6060e0;
+    font-size: 15px;
+  }
+}
 strong {
   font-weight: 600;
 }
