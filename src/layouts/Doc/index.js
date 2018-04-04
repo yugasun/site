@@ -213,8 +213,7 @@ class Doc extends Component {
 
           <div className={styles.forumCta}>
             <h2>Have questions?</h2>
-            <p>Head over to the <a href="https://forum.serverless.com/?utm_source=framework-docs" target="_blank">forums</a> to post your questions & issues.</p>
-            <a className={styles.forumLink} href="https://forum.serverless.com/" target="_blank">Visit the forums</a>
+            <p>Head over to the <a href="https://forum.serverless.com?utm_source=framework-docs" target="_blank">forums</a> to search for your questions and issues or post a new one.</p>
           </div>
         </div>
       </div>
