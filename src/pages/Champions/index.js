@@ -89,12 +89,12 @@ export default class ChampionsPage extends React.Component {
                 <a href="alex-casalboni/">Alex Casalboni</a>
               </span>
               <span className={styles.personCompany}>
-                company inc.
               </span>
             </div>
             <div className={styles.personBio}>
-              <p>Bio para here.</p>
-              <p>Bio para here.</p>
+              <p>Alex is a Sr. Software Engineer from Italy. He started his career as a musician, before his passion for coding brought him to Sound & Music Engineering and Web Development.</p>
+              <p>That's how he ended up spending the last four years building web products in the startup world and deepening his knowledge on full stack web development and architecture design in the Cloud.</p>
+              <p>Alex has been evangelizing the Serverless Cloud since early 2016, contributing to the Serverless Framework, speaking at conferences and meetups around the world, co-organizing JeffConfs (now ServerlessDays), and buiding prototypes, open-source libraries, and live webinars.</p>
             </div>
           </div>
 
