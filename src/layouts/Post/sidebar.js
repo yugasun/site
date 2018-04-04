@@ -81,7 +81,7 @@ export default class Sidebar extends React.Component {
             </a>
           </div>
           <div className={styles.sidebarLinks}>
-            <a href='http://forum.serverless.com' target='_blank' rel='noopener noreferrer'>
+            <a href='https://forum.serverless.com?utm_source=sls-blog' target='_blank' rel='noopener noreferrer'>
               Engage on the Forum
             </a>
           </div>
