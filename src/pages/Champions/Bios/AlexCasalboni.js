@@ -41,7 +41,7 @@ export default class ChampionBiosMV extends React.Component {
                 <div className={styles.personBio}>
                   <p>Alex is a Sr. Software Engineer from Italy. He started his career as a musician, before his passion for coding brought him to Sound & Music Engineering and Web Development.</p>
                   <p>That's how he ended up spending the last four years building web products in the startup world and deepening his knowledge on full stack web development and architecture design in the Cloud.</p>
-                  <p>Alex has been evangelizing the Serverless Cloud since early 2016, contributing to the Serverless Framework, speaking at conferences and meetups around the world, co-organizing JeffConfs (now ServerlessDays), and buiding prototypes, open-source libraries, and live webinars.</p>
+                  <p>Alex has been evangelizing the Serverless Cloud since early 2016, contributing to the Serverless Framework, speaking at conferences and meetups around the world, co-organizing JeffConfs (now ServerlessDays), and building prototypes, open-source libraries, and live webinars.</p>
                 </div>
               </div>
             </div>
@@ -105,12 +105,12 @@ export default class ChampionBiosMV extends React.Component {
 
           <h4>You are embedded in the serverless community and we love it. What is the most asked question you get from developers?</h4>
           <div>
-            <p><i>I'm afraid of lock-in: Can you recommend a neutral tool that improves portability? Did you ever have to migrate to a different Cloud?</i></br>
-            <b>Answer</b>: No, that really happens once a decade. But you can make your manager happy with an agnostic tool like the Serverless Framework.</p>
-            <p><i>Debugging and monitoring functions seems pretty obscure: what tools do you use?</i></br>
-            <b>Answer</b>: I use a mix of Serverless Framework and AWS SAM for local debugging and plain CloudWatch for monitoring and logs. I recommend investing on 3rd-party monitoring tools only after you've mastered the native tool of your Cloud provider and found out it's not enough for you.</p>
-            <p><i>How do I choose the "power" (i.e. RAM) of my Lambda Functions?</i></br>
-            <b>Answer</b>Answer: I built a <a href="https://github.com/alexcasalboni/aws-lambda-power-tuning" target="_blank">StepFunctions state machine</a> to empirically find out the optimal configuration for your specific use case.</p>
+            <p><i>I'm afraid of lock-in: Can you recommend a neutral tool that improves portability? Did you ever have to migrate to a different Cloud?</i></p>
+            <p><b>Answer</b>: No, that really happens once a decade. But you can make your manager happy with an agnostic tool like the Serverless Framework.</p>
+            <p><i>Debugging and monitoring functions seems pretty obscure: what tools do you use?</i></p>
+            <p><b>Answer</b>: I use a mix of Serverless Framework and AWS SAM for local debugging and plain CloudWatch for monitoring and logs. I recommend investing on 3rd-party monitoring tools only after you've mastered the native tool of your Cloud provider and found out it's not enough for you.</p>
+            <p><i>How do I choose the "power" (i.e. RAM) of my Lambda Functions?</i></p>
+            <p><b>Answer</b>Answer: I built a <a href="https://github.com/alexcasalboni/aws-lambda-power-tuning" target="_blank">StepFunctions state machine</a> to empirically find out the optimal configuration for your specific use case.</p>
           </div>
 
           <h4>Anything else you want to add that is significant that no one is talking about yet...</h4>
