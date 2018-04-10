@@ -105,17 +105,17 @@ export default class ChampionBiosMV extends React.Component {
 
           <h4>You are embedded in the serverless community and we love it. What is the most asked question you get from developers?</h4>
           <div>
-            <p><i>I'm afraid of lock-in: Can you recommend a neutral tool that improves portability? Did you ever have to migrate to a different Cloud?</i></p>
-            <p><b>Answer</b>: No, that really happens once a decade. But you can make your manager happy with an agnostic tool like the Serverless Framework.</p>
-            <p><i>Debugging and monitoring functions seems pretty obscure: what tools do you use?</i></p>
-            <p><b>Answer</b>: I use a mix of Serverless Framework and AWS SAM for local debugging and plain CloudWatch for monitoring and logs. I recommend investing on 3rd-party monitoring tools only after you've mastered the native tool of your Cloud provider and found out it's not enough for you.</p>
-            <p><i>How do I choose the "power" (i.e. RAM) of my Lambda Functions?</i></p>
-            <p><b>Answer</b>Answer: I built a <a href="https://github.com/alexcasalboni/aws-lambda-power-tuning" target="_blank">StepFunctions state machine</a> to empirically find out the optimal configuration for your specific use case.</p>
+            <p><b>Q:</b><i>I'm afraid of lock-in: Can you recommend a neutral tool that improves portability? Did you ever have to migrate to a different Cloud?</i></p>
+            <p><b>A:</b> No, that really happens once a decade. But you can make your manager happy with an agnostic tool like the Serverless Framework.</p>
+            <p><b>Q:</b><i>Debugging and monitoring functions seems pretty obscure: what tools do you use?</i></p>
+            <p><b>A:</b>I use a mix of Serverless Framework and AWS SAM for local debugging and plain CloudWatch for monitoring and logs. I recommend investing on 3rd-party monitoring tools only after you've mastered the native tool of your Cloud provider and found out it's not enough for you.</p>
+            <p><b>Q:</b><i>How do I choose the "power" (i.e. RAM) of my Lambda Functions?</i></p>
+            <p><b>A:</b>I built a <a href="https://github.com/alexcasalboni/aws-lambda-power-tuning" target="_blank">StepFunctions state machine</a> to empirically find out the optimal configuration for your specific use case.</p>
           </div>
 
           <h4>Anything else you want to add that is significant that no one is talking about yet...</h4>
           <div>
-            <p>JeffConfs have recently been renamed to <a href="https://serverlessdays.io" target="_blank">ServerlessDays</a>. The conference motto is still <b>"One Day, One Track, One Community."</b> and the main goal is to foster new local serverless communities, supported by local meetups, speakers, and sponsors.</p>
+            <p>JeffConfs have recently been renamed to <a href="https://serverlessdays.io" target="_blank">ServerlessDays</a>. The conference motto is still "One Day, One Track, One Community." and the main goal is to foster new local serverless communities, supported by local meetups, speakers, and sponsors.</p>
             <p>There will be more than 10 ServerlessDays by the end of 2018, and I'll do my best to attend all of them (I won't make it to New Zealand, unfortunately!).</p>
             <p>Stay tuned for the upcoming ServerlessDays near you, or get in touch and <a href="https://serverlessdays.io/organise" target="_blank">become an organizer</a>!</p>
           </div>
