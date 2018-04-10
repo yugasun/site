@@ -61,8 +61,8 @@ export default class ChampionBiosMV extends React.Component {
             <p>I ran my own company for several years, in the network design, administration and software development space, before finally switching back to pure software development. I joined a much bigger company and stayed there for 10 years.</p>
             <p>During my tenure there, I ran through various positions: senior software engineer, solutions architect, team leader, and finally, technical director. All the practical experience I already had (in languages like C++/C/Assembler/SQL/PHP/Perl, etc.), and knowing how to solve problems with the proper language and architecture from prior experience, helped me to improve in areas of software engineering that were not that important and visible before. It even turned out that cultural differences impose a problem that has to be solved—in my time as team leader, part of my team was located in China—and was an essential part of software engineering. As Technical Director, a strategic component complemented the tactical and operational ones.</p>
             <p>After that I switched back to a small startup—Stashimi. That was nearly 3 years ago. Of course this is completely different, it is agile, hands-on. It is fun, though it actually means more work. :-) It feels like going back in time before the big company, but with a much more complete understanding of the software world.</p>
-            <p>You asked <i>How did you get into programming?</i></br>
-            Looking back over the years, I think "programming" is only a very small part of what crosses the gap between success and failure. It is a lot more than that—it is more a well-balanced mix of knowledge, problem solution and detection skills, target-orientation, etc. And even as you evolve further over time, you see that more and more areas come in that you initially thought not to be related with "programming" at all. For example, the personal fit of team members, which is as essential for a team's and a project's success as problem solving skills or knowledge. Also things like the best working methodology (agile/SCRUM vs. traditional) for the team.</p>
+            <p>You asked <i>How did you get into programming?</i></p>
+            <p>Looking back over the years, I think "programming" is only a very small part of what crosses the gap between success and failure. It is a lot more than that—it is more a well-balanced mix of knowledge, problem solution and detection skills, target-orientation, etc. And even as you evolve further over time, you see that more and more areas come in that you initially thought not to be related with "programming" at all. For example, the personal fit of team members, which is as essential for a team's and a project's success as problem solving skills or knowledge. Also things like the best working methodology (agile/SCRUM vs. traditional) for the team.</p>
           </div>
 
           <h4>How did you get into serverless computing in general? Can you reflect upon your serverless journey over the years?</h4>
@@ -127,8 +127,8 @@ export default class ChampionBiosMV extends React.Component {
 
           <h4>Anything else you want to add that is significant that no one is talking about yet...</h4>
           <div>
-            <p>I'm not sure I missed anything—oh, yes: The most important one:</br>
-            I'm really impressed with the Serverless Framework and the community. The project has managed to attract and gather very competent and nice people from all over the world. I'd like to thank the community to make this work and happen.</p>
+            <p>I'm not sure I missed anything—oh, yes: The most important one:</p>
+            <p>I'm really impressed with the Serverless Framework and the community. The project has managed to attract and gather very competent and nice people from all over the world. I'd like to thank the community to make this work and happen.</p>
             <p>The Serverless Framework helps a lot of companies and people. Having such a living community is of more value than any similar tool any cloud provider could provide.</p>
           </div>
 
