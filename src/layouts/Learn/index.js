@@ -37,6 +37,11 @@ class Learn extends Component {
               - Quick Start
             </a>
           </div>
+          <div className={styles.navLink}>
+            <a href="/learn/event-gateway">
+              - Why Event Gateway?
+            </a>
+          </div>
         </div>
       </div>
     )
@@ -72,7 +77,7 @@ class Learn extends Component {
 
     return (
       <Default {...props} fullWidth className={styles.learnPage} >
-        {this.renderNav()} 
+        {this.renderNav()}
         <div className={styles.contentWrapper}>
           <h1 className={styles.title}>
             {title}
