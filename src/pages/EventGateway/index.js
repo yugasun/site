@@ -88,14 +88,14 @@ const EventGatewayPage = (props) => {
 
           <div className={ styles.headingBlurbAndGraphic }>
             <img
-              src={ `${ baseUrl }/images/event-gateway/folds.png` }
+              src={ `${ baseUrl }images/event-gateway/folds.png` }
             />
             <div>
               <div>Serverless Event Gateway</div>
               <div>{ `Event Gateway is an event router designed for event-driven, serverless architectures. It makes it easy to wire functions to http endpoints, react to business events with serverless functions, and to share event subscriptions with others.` }</div>
             </div>
             <img
-              src={ `${ baseUrl }/images/event-gateway/providers.png` }
+              src={ `${ baseUrl }images/event-gateway/providers.png` }
             />
           </div>
 
@@ -113,7 +113,7 @@ const EventGatewayPage = (props) => {
             [{
               title: `Simple, serverless APIs`,
               body:  `Use Event Gateway alongside the Serverless Framework to get the simplest, most productive developer experience possible for developing APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live.`,
-              graphicUrl: `${ baseUrl }/images/event-gateway/simple-serverless-apis.png`,
+              graphicUrl: `${ baseUrl }images/event-gateway/simple-serverless-apis.png`,
               link: {
                 to: '/blog',
                 label: 'view example'
@@ -121,7 +121,7 @@ const EventGatewayPage = (props) => {
             }, {
               title: `Subscribe functions to webhooks`,
               body:  `The Event Gateway makes it dead simple to wire functions to any customer event, including webhooks.`,
-              graphicUrl: `${ baseUrl }/images/event-gateway/subscribe-functions-to-webhooks.png`,
+              graphicUrl: `${ baseUrl }images/event-gateway/subscribe-functions-to-webhooks.png`,
               link: {
                 to: '/blog',
                 label: 'view example'
@@ -129,7 +129,7 @@ const EventGatewayPage = (props) => {
             }, {
               title: `Multi-provider service`,
               body:  `Event Gateway is cloud agnostic, allowing for more vendor choice and flexibility.`,
-              graphicUrl: `${ baseUrl }/images/event-gateway/multi-provider-service.png`,
+              graphicUrl: `${ baseUrl }images/event-gateway/multi-provider-service.png`,
               link: {
                 to: '/blog',
                 label: 'view example'
@@ -168,27 +168,27 @@ const EventGatewayPage = (props) => {
           <div className={ styles.featuresGrid }>
             {
               [{
-                graphic: `${ baseUrl }/images/event-gateway/api-gateway.png`,
+                graphic: `${ baseUrl }images/event-gateway/api-gateway.png`,
                 title: `API Gateway`,
                 body: `Easily subscribe FaaS functions to HTTP endpoints. Set up multiple Serverless services under a single domain, even across AWS accounts.`
               }, {
-                graphicUrl: `${ baseUrl }/images/event-gateway/pub-sub.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/pub-sub.png`,
                 title: `Pub/Sub`,
                 body: `Take advantage of pub/sub functionality by utilizing custom events. This allows you to process the same event with multiple systems.`
               }, {
-                graphicUrl: `${ baseUrl }/images/event-gateway/connector-functions.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/connector-functions.png`,
                 title: `Connector Functions`,
                 body: `Automatically route events to external systems like Kinesis, Firehose, SQS, etc.`
               }, {
-                graphicUrl: `${ baseUrl }/images/event-gateway/platform-agnostic.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/platform-agnostic.png`,
                 title: `Platform Agnostic`,
                 body: `All your cloud services are now compatible with one another. Share cross-cloud functions and events with AWS Lambda, Microsoft Azure, Google Cloud Platform, and more.`
               }, {
-                graphicUrl: `${ baseUrl }/images/event-gateway/streaming-events.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/streaming-events.png`,
                 title: `Streaming Events`,
                 body: `Data streams in your application become events. Centralize events from any cloud provider to get a bird’s eye view of all the data flowing through your cloud.`
               }, {
-                graphicUrl: `${ baseUrl }/images/event-gateway/sharable-events.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/sharable-events.png`,
                 title: `Shareable events`,
                 body: `Share events and functions to other parts of the application. Your teammates can find them and utilize them in their own services.`
               }].map(({ graphicUrl, title, body }, i) => (
