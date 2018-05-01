@@ -10,7 +10,7 @@
 .firstSection {
   margin-top: $navHeight;
   color: #fff;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .95);
   background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/harddrive.png');
   background-size: 100%;
   background-position: center top;
@@ -135,10 +135,11 @@
     > :first-child {
       font-size: 1.25em;
       line-height: 1.25em;
+      font-weight: 600;
     }
 
     > :nth-child(2) {
-      color: #8c8c8c;
+      color: #d9d9d9;
       margin-top: 10px;
       line-height: 1.5em;
     }

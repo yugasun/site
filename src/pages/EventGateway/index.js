@@ -129,12 +129,8 @@ const EventGatewayPage = (props) => {
             }, {
               title: `Multi-provider service`,
               body:  `Event Gateway is cloud agnostic, allowing for more vendor choice and flexibility.`,
-              graphicUrl: `${ baseUrl }images/event-gateway/multi-provider-service.png`,
-              link: {
-                to: '/blog',
-                label: 'view example'
-              }
-            }].map(({ title, body, graphic, link : { to, label } }, i) => (
+              graphicUrl: `${ baseUrl }images/event-gateway/multi-provider-service.png`
+            }].map(({ title, body, graphicUrl, link }, i) => (
               <div
                 className={ styles.useCaseSection }
                 key={ i }
@@ -142,12 +138,15 @@ const EventGatewayPage = (props) => {
                 <div>
                   <div>{ title }</div>
                   <div>{ body }</div>
-                  <Link { ...{ to } }>
-                    <div>{ label }</div>
-                  </Link>
+                  {
+                    link &&
+                      <Link to={ link.to }>
+                        <div>{ link.label }</div>
+                      </Link>
+                  }
                 </div>
                 <div>
-                  <img src={ graphic } />
+                  <img src={ graphicUrl } />
                 </div>
               </div>
             ))
@@ -168,7 +167,7 @@ const EventGatewayPage = (props) => {
           <div className={ styles.featuresGrid }>
             {
               [{
-                graphic: `${ baseUrl }images/event-gateway/api-gateway.png`,
+                graphicUrl: `${ baseUrl }images/event-gateway/api-gateway.png`,
                 title: `API Gateway`,
                 body: `Easily subscribe FaaS functions to HTTP endpoints. Set up multiple Serverless services under a single domain, even across AWS accounts.`
               }, {
