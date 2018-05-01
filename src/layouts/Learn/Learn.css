@@ -23,6 +23,9 @@
   p, li {
     font-size: 18px;
   }
+  ul li p:first-of-type {
+    margin: 0px;
+  }
   margin-top: $navHeight;
   margin-bottom: 50px;
 }
