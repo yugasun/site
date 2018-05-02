@@ -12,9 +12,9 @@
   color: #fff;
   background-color: rgba(0, 0, 0, .95);
   background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/harddrive.png');
-  background-size: 100%;
+  background-size: cover;
   background-position: center top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   composes: section;
 }
 
