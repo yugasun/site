@@ -183,16 +183,16 @@ export default class Header extends Component {
                   Enterprise
                 </Link>
               </li>
-              <li
+              {/*<li
                   className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
                   ref={cta => { this.cta = cta }}
-              ><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
+              ><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>*/}
             </ul>
           </nav>
         </div>
       </header>
     )
-  }
+  } 
 }
 
 Header.propTypes = propTypes

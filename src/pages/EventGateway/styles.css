@@ -157,7 +157,6 @@
     }
 
     img:nth-child(3) {
-      margin-top: 60px;
       @media (max-width: 480px) {
         display: none;
       }
