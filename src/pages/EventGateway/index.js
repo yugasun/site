@@ -123,7 +123,7 @@ const EventGatewayPage = (props) => {
               body:  `Use Event Gateway to connect your business systems. Update your CRM whenever a new user signs up for your product. Trigger emails when inventory is running low.`,
               graphicUrl: `${ baseUrl }images/event-gateway/subscribe-functions-to-webhooks.png`,
               link: {
-                to: '/blog',
+                href: 'https://github.com/serverless',
                 label: 'view example'
               }
             }, {
@@ -140,9 +140,19 @@ const EventGatewayPage = (props) => {
                   <div>{ body }</div>
                   {
                     link &&
-                      <Link to={ link.to }>
-                        <div>{ link.label }</div>
-                      </Link>
+                      (
+                        link.href
+                          ? (
+                              <a href={ link.href } target='_blank'>
+                                <div>{ link.label }</div>
+                              </a>
+                            )
+                          : (
+                              <Link to={ link.to }>
+                                <div>{ link.label }</div>
+                              </Link>
+                            )
+                      )
                   }
                 </div>
                 <div>
