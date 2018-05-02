@@ -95,7 +95,7 @@ const EventGatewayPage = (props) => {
               <div>{ `Event Gateway is an event router designed for event-driven, serverless architectures. It makes it easy to wire functions to http endpoints, react to business events with serverless functions, and to share event subscriptions with others.` }</div>
             </div>
             <img
-              src={ `${ baseUrl }images/event-gateway/providers.png` }
+              src={ `${ baseUrl }images/event-gateway/event-gateway-integrations-website.png` }
             />
           </div>
 
