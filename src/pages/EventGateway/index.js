@@ -115,7 +115,7 @@ const EventGatewayPage = (props) => {
               body:  `Use Event Gateway alongside the Serverless Framework to get the simplest, most productive developer experience possible for developing APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live.`,
               graphicUrl: `${ baseUrl }images/event-gateway/simple-serverless-apis.png`,
               link: {
-                to: '/blog',
+                href: 'https://github.com/serverless/event-gateway-getting-started#getting-started-with-the-event-gateway',
                 label: 'view example'
               }
             }, {
@@ -123,7 +123,7 @@ const EventGatewayPage = (props) => {
               body:  `Use Event Gateway to connect your business systems. Update your CRM whenever a new user signs up for your product. Trigger emails when inventory is running low.`,
               graphicUrl: `${ baseUrl }images/event-gateway/subscribe-functions-to-webhooks.png`,
               link: {
-                href: 'https://github.com/serverless',
+                href: 'https://github.com/serverless/event-gateway/tree/master/examples/crm-service#using-custom-events',
                 label: 'view example'
               }
             }, {
