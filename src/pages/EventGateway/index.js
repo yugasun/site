@@ -10,7 +10,7 @@ const baseUrl = process.env.S3_BUCKET
 const EventGatewayPage = (props) => {
 
   return (
-    <Default className={ styles.page } {...props} fullWidth whiteLogo coloredHeader={ true } headerShowSignUp={ true }>
+    <Default className={ styles.page } {...props} fullWidth whiteLogo coloredHeader={ true } headerHideSignUp={ true }>
       
       <div className={ styles.firstSection }>
         <div>

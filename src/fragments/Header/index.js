@@ -80,7 +80,7 @@ export default class Header extends Component {
     })
   }
   render() {
-    const { fullWidth, whiteLogo, colored, hideCTA, showSignUp } = this.props
+    const { fullWidth, whiteLogo, colored, hideCTA, hideSignUp } = this.props
     const { sideNavOpen } = this.state
     const mobileNav = (sideNavOpen) ? styles.open : ''
     const openClass = (sideNavOpen) ? styles.animate : ''
@@ -184,7 +184,7 @@ export default class Header extends Component {
                 </Link>
               </li>
               {
-                showSignUp &&
+                !hideSignUp &&
                   <li
                     className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
                     ref={cta => { this.cta = cta }}
