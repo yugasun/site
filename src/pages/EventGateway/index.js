@@ -186,7 +186,7 @@ const EventGatewayPage = (props) => {
                 body: `Take advantage of pub/sub functionality by utilizing custom events. This allows you to process the same event with multiple systems.`
               }, {
                 graphicUrl: `${ baseUrl }images/event-gateway/connector-functions.png`,
-                title: `Connector Functions`,
+                title: `Connectors`,
                 body: `Automatically route events to external systems like Kinesis, Firehose, SQS, etc.`
               }, {
                 graphicUrl: `${ baseUrl }images/event-gateway/platform-agnostic.png`,
