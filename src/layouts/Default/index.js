@@ -43,6 +43,7 @@ const DefaultLayout = (props) => {
     whiteLogo,
     coloredHeader,
     headerHideCTA,
+    headerShowSignUp,
     isLoading,
     prefetches,
   } = props
@@ -140,6 +141,7 @@ const DefaultLayout = (props) => {
         whiteLogo={!!(whiteLogo)}
         colored={coloredHeader !== false && coloredHeader !== undefined}
         hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
+        showSignUp={ headerShowSignUp !== false && headerShowSignUp !== undefined }
       />
       {hero}
       <div className={classes}>

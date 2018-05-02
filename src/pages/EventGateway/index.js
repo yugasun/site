@@ -5,12 +5,12 @@ import styles from './styles.css'
 import Glitch from '../../components/Glitch'
 import PreFooter from '../../fragments/PreFooter'
 
-const baseUrl = process.env.S3_BUCKET
+const baseUrl = process.env.S3_BUCKET 
 
 const EventGatewayPage = (props) => {
 
   return (
-    <Default className={ styles.page } {...props} fullWidth whiteLogo coloredHeader={ true }>
+    <Default className={ styles.page } {...props} fullWidth whiteLogo coloredHeader={ true } headerShowSignUp={ true }>
       
       <div className={ styles.firstSection }>
         <div>
