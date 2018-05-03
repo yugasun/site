@@ -36,15 +36,12 @@ const BlogPreview = ({ page }) => {
   if (page.thumbnail) {
     thumbnail = page.thumbnail
   }
-  const avatarImg = (
-    <img role='presentation' className={styles.avatarImg} src={avatarURL} />
-  )
 
   return (
     <div className={styles.post}>
       <div className={styles.thumbnail}>
         <Link to={page.__url}>
-          <img src={thumbnail} role='presentation' />
+          <img role='presentation' width={130} height={130} src={thumbnail} />
         </Link>
       </div>
       <div className={styles.content}>
@@ -56,7 +53,7 @@ const BlogPreview = ({ page }) => {
         </div>
         <div className={styles.postMeta}>
           <span>written by</span>
-          {avatarImg}
+          <img role='presentation' width={22} height={22} className={styles.avatarImg} src={avatarURL} />
           <span>{author}</span>
         </div>
       </div>
