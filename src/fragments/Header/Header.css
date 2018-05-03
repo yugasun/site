@@ -174,7 +174,7 @@ a {
   height: 5rem;
   width: 5rem;
   right: 1rem;
-  top: 1rem;
+  top: .5rem;
   z-index: 9;
 }
 $hamSize: 3rem;
