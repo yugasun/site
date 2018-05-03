@@ -11,7 +11,15 @@
   margin-top: $navHeight;
   color: #fff;
   background-color: rgba(0, 0, 0, .95);
-  background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/harddrive.png');
+  @media (max-width: 720px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-small.png');
+  }
+  @media (min-width: 721px) and (max-width: 1600px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-medium.png');
+  }
+  @media (min-width: 1601px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-large.png');
+  }
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat; 
@@ -157,7 +165,6 @@
     }
 
     img:nth-child(3) {
-      margin-top: 60px;
       @media (max-width: 480px) {
         display: none;
       }
