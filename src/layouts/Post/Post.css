@@ -146,8 +146,6 @@ $sidebarWidth: 350px;
   align-items: center;
   justify-content: center;
   img {
-    width: 90px;
-    height: 90px;
     border-radius: 100%;
   }
 }
