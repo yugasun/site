@@ -10,14 +10,15 @@
   transition: background-color 150ms ease-in, top 300ms;
   font-size: 14px;
 }
+
 .coloredHeader {
   background-color: #313131;
   color: white;
 
   .navItem {
 
-    &:hover .link {
-      color: white;
+    .link {
+      color: #000;
     }
   }
   .subNavItems {
@@ -95,7 +96,7 @@ a {
   text-decoration: none;
   text-align: center;
   &:hover {
-    background: rgba(238, 238, 238, 0.3);
+    background: #ffd426;
   }
 
   @media screen and (min-width: 768px) {
@@ -149,15 +150,6 @@ a {
 .navItem {
   display: inline-block;
 }
-.navItem:hover {
-
-  .subNavItems {
-    display: block;
-  }
-  .caret {
-    opacity: 1;
-  }
-}
 
 .mobileOnly {
   display: none;
@@ -174,7 +166,7 @@ a {
   height: 5rem;
   width: 5rem;
   right: 1rem;
-  top: 1rem;
+  top: .5rem;
   z-index: 9;
 }
 $hamSize: 3rem;
@@ -288,7 +280,7 @@ $lineHeight: 0.2rem;
     .subNavItems {
       background: none;
     }
-    .subNavItems, .subNavItems:hover {
+    .subNavItems{
       display: block;
       width: 100%;
       border: none;
@@ -319,9 +311,6 @@ $lineHeight: 0.2rem;
       position: inherit;
       text-align: center;
       display: block;
-      &:hover {
-        background: #ffd426;
-      }
     }
   }
   .caret {
