@@ -1,0 +1,80 @@
+.container {
+
+  width: 100%;
+  padding: 0px 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  > div {
+
+    background-image: url('../../assets/images/surreal-cat.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #fd5750;
+
+    > div {
+
+      display: flex;
+      flex-direction: row;
+      background-color: rgba(255, 255, 255, .95);
+      padding: 100px 0px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      > div {
+
+        display: flex;
+        flex : 1;
+        justify-content: center;
+        align-items: center;
+
+        > div {
+          padding: 15px 10%;
+        }
+
+      }
+    }
+  }
+}
+  
+  .text {
+    color: #000;
+    font-size: 1.25em;
+  }
+
+  .enterEmail {
+    > div {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 1;
+    }
+  }
+
+    .input {
+      margin: 0px;
+      padding-top: 5px;
+      padding-bottom: 7px;
+      padding-left: 15px;
+      font-size: 1em;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      border-width: 0px;
+      background-color: rgba(0, 0, 0, .0625);
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button {
+      height: 40px;
+      width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ec6258;
+      cursor: pointer;
+      color: #fff;
+    }

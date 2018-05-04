@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 40px 2.5% 40px 2.5%;
+}
+
+  .paginationItem {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .arrowImage {
+    width: 20px;
+    margin-top: 11px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .paginationLink {
+    composes: paginationItem;
+    padding: 5px 10px;
+  }
+
+  .nextLink {
+    composes: paginationLink;
+  }
+
+  .pageNumberLink {
+    composes: paginationLink;
+  }
+
+  .currentPageNumberLink {
+    composes: paginationLink;
+    background: rgba(253,87,80,0.02);
+    border: 1px solid #fff;
+    -moz-border-image: -moz-linear-gradient(top, #ffffff 0%, #fd5750 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #ffffff 0%, #fd5750 100%);
+    border-image: linear-gradient(to bottom, #ffffff 0%, #fd5750 100%);
+    border-image-slice: 1;
+  }
+
+  .pageNumberLinkSeparator {
+    composes: paginationItem;
+  }
+
+  .previousLink {
+    composes: paginationLink;
+  }
