@@ -8,7 +8,7 @@ const Subscribe = props => (
         <div>
           <div
             className={ styles.text }
-            style={{ color: props.color ? '#000' : '#fff' }}
+            style={{ color: props.redBackground ? '#fff' : '#000' }}
           >{ `Join 12,000+ other serverless devs & keep up to speed on the latest serverless trends.` }</div>
         </div>
         <div>
