@@ -1,0 +1,292 @@
+.section {
+  font-family: Helvetica, sans-serif;
+  > div {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 40px 5%;
+  }
+}
+
+.firstSection {
+  margin-top: $navHeight;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .95);
+  @media (max-width: 720px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-small.png');
+  }
+  @media (min-width: 721px) and (max-width: 1600px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-medium.png');
+  }
+  @media (min-width: 1601px) {
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/event-gateway/panel-large.png');
+  }
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  composes: section;
+}
+
+.nav {
+  /* display: flex; */
+  display: none;
+  flex-direction: row;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+  > * {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    a {
+      flex: 1;
+    }
+    &:first-child {
+      border: .5px solid rgba(255, 255, 255, .3);
+    }
+  }
+}
+
+.navItem {
+  flex: 1;
+  padding: 14px 0px;
+  font-size: .75em;
+  line-height: 1.125em;
+  text-align: center;
+}
+
+.selectedNavItem {
+  background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/dots-black-background.png');
+  background-size: 100px;
+  composes: navItem;
+}
+
+.headingAndCallToAction {
+  @media (max-width: 1100px) {
+    br {
+      display: none;
+    }
+  }
+  margin-top: 60px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
+
+  .heading {
+    flex: 1;
+    font-size: 4em;
+    line-height: 1em;
+    @media (max-width: 480px) {
+      font-size: 3em;
+      line-height: 1.25em;
+    }
+  }
+
+  .callToAction {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (min-width: 760px) {
+      padding-left: 20px;
+    }
+    > * {
+      width: 100%;
+    }
+    > * > * {
+      text-align: center;
+      @media (min-width: 760px) {
+        width: 240px;
+      }
+    }
+    > *:first-child > * {
+      background-color: #fd5750;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      @media (max-width: 760px) {
+        margin-top: 20px;
+      }
+    }
+    > *:nth-child(2) > * {
+      color: #fd5750;
+      border: 1px solid #fd5750;
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .features {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media (min-width: 760px) {
+      flex-direction: row;
+    }
+  }
+
+  .featureHighlight {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/red-dot-grid.png');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 20px 15px;
+    overflow: visible;
+
+    > :first-child {
+      font-size: 1.25em;
+      line-height: 1.25em;
+      font-weight: 600;
+    }
+
+    > :nth-child(2) {
+      color: #d9d9d9;
+      margin-top: 10px;
+      line-height: 1.5em;
+    }
+
+  }
+
+  .headingBlurbAndGraphic {
+
+    padding: 10px 0px 30px 0px;
+    text-align: center;
+
+    img:first-child {
+      width: 50px;
+      margin-top: 40px;
+    }
+
+    img:nth-child(3) {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    > div {
+      max-width: 600px;
+      margin: 20px auto 0px auto;
+      > :first-child {
+        font-size: 1.75em;
+        line-height: 1.625em;
+      }
+      > :nth-child(2) {
+        color: #8c8c8c;
+        line-height: 1.5em;
+      }
+    }
+
+  }
+
+  .sectionHeadingAndSubtitle {
+    margin-top: 0px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .sectionHeading {
+    display: inline-block;
+    margin: 0px auto;
+    padding: 20px 30px 0px 30px;
+    background-image: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/red-dot-grid.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 20px 20px;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  .useCaseSection {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @media (min-width: 600px) {
+      flex-direction: row;
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+    > div {
+      flex: 1;
+      padding: 0px 5%;
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > :first-child {
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+        > :nth-child(2) {
+          color: #5b5b5b;
+          line-height: 1.5em;
+        }
+        > :nth-child(3) {
+          margin-top: 40px;
+          width: 100%;
+          > * {
+            flex: 1;
+            text-align: center;
+            color: #fff;
+            padding: 10px 0px;
+            background-color: #fd5750;
+          }
+        }
+      }
+      &:nth-child(2) {
+        > img {
+          padding: 10%;
+        }
+      }
+    }
+  }
+
+  .featuresGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    width: 100%;
+    padding: 40px;
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+    img {
+      width: 100px;
+      padding-left: 20px;
+    }
+    :nth-child(2) {
+      margin-top: 15px;
+      position: relative;
+      > :first-child {
+        position: absolute;
+        color: #fd5750;
+        font-size: 4em;
+      }
+      > :nth-child(2) {
+        font-size: 1.25em;
+        padding: 26px 0px 15px 0px;
+        background-color: rgba(255, 255, 255, .875);
+        padding-left: 20px;
+      }
+    }
+    div:nth-child(3) {
+      margin-top: 10px;
+      line-height: 1.5em;
+      padding-left: 20px;
+    }
+  }

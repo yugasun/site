@@ -101,7 +101,7 @@ class Post extends Component {
       authorBox = (
         <div className={styles.authorBox}>
           <div className={styles.authorImage}>
-            <img src={avatarURL} role='presentation' />
+            <img src={avatarURL} role='presentation' width={90} height={90} />
           </div>
           <div className={styles.authorDetails}>
             <h3>About {author}</h3>
