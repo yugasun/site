@@ -15,6 +15,10 @@ import AuthorCTA from '../../fragments/AuthorCTA'
 import gitHubSvg from '../../assets/icons/github.svg'
 import styles from './Post.css'
 import disqus from './disqus-script'
+import Subscribe from '../../fragments/Subscribe'
+import FeaturedPostPreview from '../../pages/Blog/FeaturedPostPreview'
+// fix this import (move FeaturedPostPreview to fragment)
+// rename FeaturedPostPreview to HeadingPost... or some'n like that
 
 class Post extends Component {
   static hasLoadingState = true
@@ -34,8 +38,12 @@ class Post extends Component {
       title = loadingData.title
     }
 
+    let authorKey
+
     if (!isLoading) {
       if (head.authors && Array.isArray(head.authors)) {
+
+        authorKey = head.authors[0];
         // console.log('page.authors', page.authors)
         const authorInfo = head.authors.map((a) => {
           return authorData[a]
@@ -104,6 +112,7 @@ class Post extends Component {
             <img src={avatarURL} role='presentation' width={90} height={90} />
           </div>
           <div className={styles.authorDetails}>
+            <div className={ styles.dots }></div>
             <h3>About {author}</h3>
             <div className={styles.authorBio}>{authorBio}</div>
           </div>
@@ -121,29 +130,31 @@ class Post extends Component {
 
     return (
       <Default {...props} fullWidth className={styles.postPage} coloredHeader={true}>
-        <FixedSocialButtons
-          url={`https://serverless.com${this.props.__url}`}
-          title={title}
-          editLink={githubURL}
-        />
         <div className={styles.postWrapper}>
           <div className={styles.contentWrapper}>
-            <h1 className={styles.title}>
-              {title}
-            </h1>
-            <div className={styles.postMetaWrapper}>
-              {postMeta}
-            </div>
+            {
+              author &&
+                <FeaturedPostPreview
+                  image={ props.head.thumbnail }
+                  title={ props.head.title }
+                  description={ props.head.description }
+                  author={ authorKey }
+                  url={ props.url }
+                  displayedWhere='post'
+                />
+            }
             <div className={styles.postContent}>
               {markdownContent}
               {authorBox}
             </div>
           </div>
-          <Sidebar />
         </div>
         <h3 className={styles.commentsHeading}>Comments</h3>
         <div className={styles.comments} id='disqus_thread' />
         <Helmet script={[{ type: 'text/javascript', innerHTML: disqus }]} />
+        <div className={ styles.subscribeContainer }>
+          <Subscribe redBackground />
+        </div>
       </Default>
     )
   }

@@ -48,16 +48,15 @@ const BlogPreview = ({ page }) => {
 
           <div className={ styles.categoryAndDate }>
             {
-              category ? (
+              category && (
                 <Link to={ `/blog/category/${ category }` }>
                   <div>
                     { getCategoryNameFromPath(category) }
                   </div>
                 </Link>
-              ) : 'uncategorized'
+              )
             }
-            { /* ^ Link + flexbox = deleting the nbsp before the dash (instead, we can use padding-left on date) */ }
-            <div className={ styles.date }>{ ` - ${ date }` }</div>
+            <div className={ styles.date }>{ date }</div>
           </div>
 
           <PostLink>
@@ -66,7 +65,9 @@ const BlogPreview = ({ page }) => {
             </div>
           </PostLink>
 
-          <div className={ styles.description }>{ page.description }</div>
+          <div className={ styles.description }>
+            { page.description }
+          </div>
 
           <div className={ styles.authors }>{ authorsLabel }</div>
 

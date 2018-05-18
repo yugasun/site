@@ -30,7 +30,10 @@
 
   .title {
     composes: horizontalPadding;
+    font-family: 'Helvetica';
+    font-weight: 100;
     font-size: 1.75em;
+    line-height: 1.25em;
     font-weight: 500;
     margin-top: 18px;
   }
@@ -38,6 +41,8 @@
   .description {
     composes: horizontalPadding;
     margin-top: 20px;
+    font-family: 'Helvetica';
+    font-weight: 100;
   }
 
   .authorshipLabel {
@@ -50,10 +55,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: 'Helvetica';
+    font-weight: 100;
   }
 
-    .writtenBy {
-      
+    .writtenBy,
+    .name {
+      padding: 0px 10px;
     }
     
     .avatar {

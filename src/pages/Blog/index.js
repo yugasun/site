@@ -53,7 +53,6 @@ class BlogPage extends Component {
 
     }
 
-
     const featuredPost = featuredPosts && featuredPosts[0]
       ? (
           <FeaturedPostPreview
@@ -62,7 +61,6 @@ class BlogPage extends Component {
             title={ featuredPosts[0].title }
             description={ featuredPosts[0].description }
             author={ featuredPosts[0].authors[0] }
-            url={ featuredPosts[0].__url }
           />
         )
       : null
@@ -132,7 +130,7 @@ class BlogPage extends Component {
           <div className={ styles.postList }>
             { featuredPost }
             <Glitch mid />
-            { searchAndFilter }
+            { /* searchAndFilter */ }
             {
               latestPosts.map((page, i) => {
                 return (
