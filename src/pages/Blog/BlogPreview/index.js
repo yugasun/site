@@ -48,13 +48,15 @@ const BlogPreview = ({ page }) => {
 
           <div className={ styles.categoryAndDate }>
             {
-              category && (
-                <Link to={ `/blog/category/${ category }` }>
-                  <div>
-                    { getCategoryNameFromPath(category) }
-                  </div>
-                </Link>
-              )
+              category
+                ? (
+                    <Link to={ `/blog/category/${ category }` }>
+                      <div>
+                        { getCategoryNameFromPath(category) } -
+                      </div>
+                    </Link>
+                  )
+                : <div>uncategorized -</div>
             }
             <div className={ styles.date }>{ date }</div>
           </div>
@@ -77,7 +79,9 @@ const BlogPreview = ({ page }) => {
           <div
             className={ styles.image }
             style={{ backgroundImage : `url(${ image })` }}
-          />
+          >
+            <div></div>
+          </div>
         </PostLink>
 
       </div>

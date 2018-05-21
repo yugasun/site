@@ -141,6 +141,7 @@ class Post extends Component {
                   author={ authorKey }
                   url={ props.url }
                   displayedWhere='post'
+                  category={ props.head.category }
                 />
             }
             <div className={styles.postContent}>

@@ -22,7 +22,7 @@
 
   .paginationLink {
     composes: paginationItem;
-    padding: 5px 10px;
+    padding: 8px 10px 5px 10px;
   }
 
   .nextLink {
@@ -35,7 +35,7 @@
 
   .currentPageNumberLink {
     composes: paginationLink;
-    background: rgba(253,87,80,0.02);
+    background-color: rgba(253, 87, 80, .2);
     border: 1px solid #fff;
     -moz-border-image: -moz-linear-gradient(top, #ffffff 0%, #fd5750 100%);
     -webkit-border-image: -webkit-linear-gradient(top, #ffffff 0%, #fd5750 100%);

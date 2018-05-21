@@ -61,6 +61,7 @@ class BlogPage extends Component {
             title={ featuredPosts[0].title }
             description={ featuredPosts[0].description }
             author={ featuredPosts[0].authors[0] }
+            url={ featuredPosts[0].__url }
           />
         )
       : null
@@ -127,46 +128,49 @@ class BlogPage extends Component {
           </div>
         )
       : (
-          <div className={ styles.postList }>
-            { featuredPost }
+          <div>
+            <div className={ styles.wrapper }>
+              { featuredPost }
+            </div>
             <Glitch mid />
-            { /* searchAndFilter */ }
-            {
-              latestPosts.map((page, i) => {
-                return (
-                  <div>
-                    { i === ( ( numberOfPostsPerPage - ( numberOfPostsPerPage % 2 ) ) / 2 ) && <Subscribe /> }
-                    <BlogPreview key={ i } page={ page } />
-                  </div>
-                )
-              })
-            }
-            <Pagination
-              { ...{
-                categorySubstring,
-                pageNumber,
-                numberOfPages
-              } }
-            />
+            <div className={ styles.wrapper }>
+              { searchAndFilter }
+              {
+                latestPosts.map((page, i) => {
+                  return (
+                    <div>
+                      { i === ( ( numberOfPostsPerPage - ( numberOfPostsPerPage % 2 ) ) / 2 ) && <Subscribe /> }
+                      <BlogPreview key={ i } page={ page } />
+                    </div>
+                  )
+                })
+              }
+              <Pagination
+                { ...{
+                  categorySubstring,
+                  pageNumber,
+                  numberOfPages
+                } }
+              />
 
-            <PreFooter
-              heading={ `New to Serverless?` }
-              subheadings={[
-                `To get started, pop open your terminal & run:`,
-                `npm install serverless -g`
-              ]}
-              links={[{
-                to: '/framework/docs/',
-                label: 'documentation'
-              }, {
-                to: '/framework/docs/',
-                label: 'serverless examples'
-              }, {
-                to: '/framework/docs/',
-                label: 'serverless plugins'
-              }]}
-            />
-
+              <PreFooter
+                heading={ `New to Serverless?` }
+                subheadings={[
+                  `To get started, pop open your terminal & run:`,
+                  `npm install serverless -g`
+                ]}
+                links={[{
+                  to: '/framework/docs/',
+                  label: 'documentation'
+                }, {
+                  to: '/framework/docs/',
+                  label: 'serverless examples'
+                }, {
+                  to: '/framework/docs/',
+                  label: 'serverless plugins'
+                }]}
+              />
+            </div>
           </div>
         )
 
@@ -177,9 +181,7 @@ class BlogPage extends Component {
         coloredHeader
         className={styles.blogPage}
       >
-        <div className={styles.wrapper}>
-          { renderContent }
-        </div>
+        { renderContent }
       </Default>
     )
 

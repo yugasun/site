@@ -35,11 +35,21 @@ const FeaturedPost = ({
               ></div>
             </PostLink>
         }
-        <div className={ styles.category }>
-          <Link to={ `/blog/category/${ category }` }>
-            <div>{ getCategoryNameFromPath(category) }</div>
-          </Link>
-        </div>
+        {
+          category
+            ? (
+                <div className={ styles.category }>
+                  <Link to={ `/blog/category/${ category }` }>
+                    <div>{ getCategoryNameFromPath(category) }</div>
+                  </Link>
+                </div>
+              )
+            : (
+                <div className={ styles.category }>
+                  <div>uncategorized</div>
+                </div>
+              )
+        }
         <div className={ styles.title }>
           {
             displayedWhere === 'blog'

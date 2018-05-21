@@ -2,7 +2,7 @@
 
   width: 100%;
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
@@ -26,14 +26,17 @@
     line-height: 1.3125em;
     color: #8c8c8c;
     margin-top: 40px;
+    * {
+      text-decoration: none !important;
+    }
   }
 
   .title {
     composes: horizontalPadding;
     font-family: 'Helvetica';
     font-weight: 100;
-    font-size: 1.75em;
-    line-height: 1.25em;
+    font-size: 2.5em;
+    line-height: 1em;
     font-weight: 500;
     margin-top: 18px;
   }
@@ -42,7 +45,9 @@
     composes: horizontalPadding;
     margin-top: 20px;
     font-family: 'Helvetica';
-    font-weight: 100;
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #5B5B5B;
   }
 
   .authorshipLabel {
@@ -56,7 +61,8 @@
     justify-content: center;
     align-items: center;
     font-family: 'Helvetica';
-    font-weight: 100;
+    font-weight: 400;
+    color: #8C8C8C;
   }
 
     .writtenBy,
@@ -73,7 +79,7 @@
         height: 30px;
         background-repeat: no-repeat;
         background-size: cover;
-        border: .5px solid #fff;
+        border: 1px solid #fff;
         &:first-child {
           position: relative;
           top: -1px;
