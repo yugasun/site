@@ -11,7 +11,7 @@ export default class TeamPage extends React.Component {
         <div className={styles.block} key={i}>
           <span className={styles.image}>
             <div className={styles.imageBG}>
-              <img src={person.avatar} alt='' />
+              <img width={260} height={260} src={person.avatar} alt='' />
             </div>
           </span>
           <div className={styles.about}>
