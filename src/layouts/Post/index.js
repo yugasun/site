@@ -18,7 +18,7 @@ import disqus from './disqus-script'
 import Subscribe from '../../fragments/Subscribe'
 import FeaturedPostPreview from '../../pages/Blog/FeaturedPostPreview'
 // fix this import (move FeaturedPostPreview to fragment)
-// rename FeaturedPostPreview to HeadingPost... or some'n like that
+// rename FeaturedPostPreview to HeadingPost, or some'n like that
 
 class Post extends Component {
   static hasLoadingState = true
