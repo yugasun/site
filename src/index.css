@@ -1,4 +1,8 @@
 /** Localized Styles for app.js **/
+
+/** for GA AB testing **/
+.async-hide { opacity: 0 !important}
+
 .app {
   min-height: 100vh;
 }
