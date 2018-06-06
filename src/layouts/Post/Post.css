@@ -25,8 +25,7 @@ $borderColor: #e8e8e8;
   font-size: 17px;
   line-height: 28px;
   a {
-    text-decoration-color: #FD5750;
-    text-decoration: underline;
+    border-bottom: 1px solid #FD5750;
   }
   blockquote p, blockquote li, li p  {
     width: 100%;
