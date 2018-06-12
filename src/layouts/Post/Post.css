@@ -29,10 +29,10 @@ $borderColor: #e8e8e8;
   }
   blockquote p, blockquote li, li p  {
     width: 100%;
-    color: #5B5B5B;
+    color: #555555;
   }
   p {
-    color: #5B5B5B;
+    color: #555555;
   }
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
@@ -41,6 +41,7 @@ $borderColor: #e8e8e8;
   /* sub lists */
   ul ul, ul ol, ol ol {
     width: 100%;
+    color: #555555 !important;
   }
   li {
     margin-bottom: 10px;
@@ -136,7 +137,7 @@ $borderColor: #e8e8e8;
   width: 100%;
   font-family: 'Helvetica';
   font-weight: 400;
-  color: #5B5B5B;
+  color: #555555;
   font-size: .875em;
   line-height: 1.5em;
   h3 {
@@ -256,7 +257,7 @@ $borderColor: #e8e8e8;
       padding-left: resolve($contentPaddingMobile * 2);
       padding-right: 20px;
       font-size: 15px;
-      color: #5B5B5B;
+      color: #555555;
     }
     ul pre code, ol pre code {
       margin-left: -20px;
