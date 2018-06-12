@@ -70,7 +70,7 @@ const FeaturedPost = ({
           </div>
           <div className={ styles.avatar }>
             {
-              (() => {
+              /* (() => {
                 let avatarSections = []
                 for(let i = 0; i < 3; i++) {
                   avatarSections.push(
@@ -80,8 +80,9 @@ const FeaturedPost = ({
                   )
                 }
                 return avatarSections
-              })()
+              })() */
             }
+            <div style={{ backgroundImage: `url(${ authorAvatar })` }}></div>
           </div>
           <div className={ styles.name }>
             { authorName.split(' ')[0] }

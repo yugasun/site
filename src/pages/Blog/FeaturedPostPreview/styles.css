@@ -83,7 +83,7 @@
         &:first-child {
           position: relative;
           top: -1px;
-          width: 5px;
+          width: 30px; /* change to 5 px for glitch effect */
           background-position: 0px center;
         }
         &:nth-child(2) {
