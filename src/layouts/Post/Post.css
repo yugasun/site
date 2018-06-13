@@ -148,7 +148,6 @@ $borderColor: #e8e8e8;
     color: #000;
   }
   .dots {
-    display: none; /* remove to re-enable glitch effect */
     position: absolute;
     top: 10px;
     left: -70px;
