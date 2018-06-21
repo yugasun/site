@@ -169,7 +169,7 @@ export default class Header extends Component {
                     </a>
                   </li>
                   <li>
-                    <a target='_blank' href='https://join.slack.com/t/serverless-contrib/shared_invite/MjI5NzY1ODM2MTc3LTE1MDM0NDIyOTUtMDgxNTcxMTcxNg' className={styles.link}>Slack</a>
+                    <a target='_blank' href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU' className={styles.link}>Slack</a>
                   </li>
                 </ul>
               </li>
@@ -195,7 +195,7 @@ export default class Header extends Component {
         </div>
       </header>
     )
-  } 
+  }
 }
 
 Header.propTypes = propTypes
