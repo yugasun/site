@@ -24,17 +24,29 @@ export default function Button({ onClick, label, children, kind, style, href, ta
   const kindStyle = styles[kind]
   const classes = className || ''
   if (href) {
-    return (
-      <Link
-        className={`${styles.btn} ${kindStyle} ${classes}`}
-        to={href}
-        target={target}
-        onClick={onClick} style={style}
-      >
-        <span className={styles.background} />
-        <span>{text}</span>
-      </Link>
-    )
+    if ((new URL(href, window.location.origin)).origin === window.location.origin) {
+      return (
+        <Link
+          className={`${styles.btn} ${kindStyle} ${classes}`}
+          to={href}
+          target={target}
+          onClick={onClick} style={style}
+        >
+          <span className={styles.background} />
+          <span>{text}</span>
+        </Link>
+      )
+    }
+    return <a
+      className={`${styles.btn} ${kindStyle} ${classes}`}
+      href={href}
+      target={target}
+      rel='noopener noreferrer'
+      onClick={onClick} style={style}
+    >
+      <span className={styles.background} />
+      <span>{text}</span>
+    </a>
   }
 
   return (

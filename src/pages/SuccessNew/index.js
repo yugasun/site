@@ -35,7 +35,7 @@ export default class CLISuccessNew extends React.Component {
     }
   }
   render() {
-    // this returns in iframe on platform.serverless.com
+    // this returns in iframe on dashboard.serverless.com
     return null
   }
 }
