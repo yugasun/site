@@ -29,7 +29,7 @@ export default class Homepage extends Component {
               <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
               <div className={`${styles.heroCTAs}`}>
                 <Button href='/framework/docs/getting-started/' kind='redBordered'>Quick Start Docs</Button>
-                <PlatformBetaCTA kind='red' text='Sign Up'/>
+                <PlatformBetaCTA kind='red' text='Sign Up' style={{marginLeft: '2rem'}} />
               </div>
             </div>
             <div className={styles.heroHalf}>
