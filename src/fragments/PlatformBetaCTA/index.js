@@ -12,11 +12,12 @@ export default class PlatformBetaCTA extends Component {
     super(props, context)
   }
   render() {
-    const { kind, text, loggedInComponent } = this.props
+    const { kind, text, loggedInComponent, style } = this.props
     return <Button
       kind={kind || 'redBordered'}
       href='https://dashboard.serverless.com'
       target='_blank'
+      style={style}
     >{text || 'Sign Up'}</Button>
   }
 }
