@@ -25,7 +25,7 @@ export default function Button({ onClick, label, children, kind, style, href, ta
   const kindStyle = styles[kind]
   const classes = className || ''
   if (href) {
-    if ((new URL(href, window.location.origin)).origin === window.location.origin) {
+    if (typeof window !== 'undefined' && (new URL(href, window.location.origin)).origin === window.location.origin) {
       return (
         <Link
           className={`${styles.btn} ${kindStyle} ${classes}`}
