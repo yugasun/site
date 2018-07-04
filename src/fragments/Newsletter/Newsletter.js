@@ -18,7 +18,7 @@ const propTypes = {
   black: PropTypes.bool,
 }
 const defaultProps = {
-  buttonText: 'Sign Up'
+  buttonText: 'Subscribe'
 }
 export default class Newsletter extends Component {
   constructor(props, context) {
