@@ -71,7 +71,8 @@
   }
 }
 .heroCTAs {
-  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   margin-top: 5rem;
 
