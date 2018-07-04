@@ -39,7 +39,7 @@ export default class Footer extends Component {
             </div>
           </nav>
           <div className={styles.ctaBlock}>
-            <p className={styles.ctaText}>It’s not too late - sign up for the Platform beta and we’ll let you know when it’s ready for prime time.</p>
+            <p className={styles.ctaText}>Sign up for the Platform beta.</p>
             <PlatformBetaCTA kind='whiteBordered' style={{marginTop: '1rem', marginBottom: '1rem'}} />
             <p className={styles.madeStatement}>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand.<br/><br/>
               Serverless, Inc. © {year}</p>
