@@ -4,6 +4,8 @@ $backgroundColor: #f6f6f6;
 $sidebarRadius: 6px;
 $contentLeftPadding: 70px;
 .docPage {
+  background: #ffffff;
+  color: #000000;
   margin-top: $navHeight;
   padding-bottom: 0;
   margin-bottom: 0;

@@ -90,26 +90,24 @@ export default class Header extends Component {
     return (
       <header id='header' className={headerClasses} ref={header => { this.header = header }}>
         <div className={`${styles.navWrapper} ${containerStyle} ${styles.bound}`}>
+
           <div className={styles.navLeft}>
             <Link to='/' className={styles.logo}>
-              <img
-                id='logo'
-                width={28}
-                height={23}
-                src={logo.ICON + (whiteLogo ? '#white' : '')}
-                className={styles.logoIcon}
-                ref={logo => { this.logo = logo }}
-              />
+              <span className={styles.logoIcon}>
+              ß
+              </span>
               <span className={styles.logoText}>
                 serverless
               </span>
             </Link>
           </div>
+
           <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
             <div className={styles.ham}>
               <div className={`${styles.bar} ${openClass}`} />
             </div>
           </div>
+
           <nav className={`${styles.navRight} ${mobileNav}`}>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
@@ -117,39 +115,39 @@ export default class Header extends Component {
               </li>
               <li className={styles.navItem}>
                 <Link to='/learn/' className={styles.link}>
-                  Learn
+                  learn
                 </Link>
               </li>
               <li className={styles.navItem}>
                 <Link to='/framework/docs/' className={styles.link}>
-                  Docs
+                  docs
                 </Link>
               </li>
               <li className={styles.navItem}>
                 <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
-                  Toolkit <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
+                  toolkit
                 </a>
                 <ul className={styles.subNavItems}>
                   <li>
                     <Link to='/framework/' className={styles.link}>
-                      Framework
+                      framework
                     </Link>
                   </li>
                   <li>
                     <Link to='/event-gateway/' className={styles.link}>
-                      Event Gateway
+                      event gateway
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className={styles.navItem}>
                 <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
-                  Community <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
+                  community
                 </a>
                 <ul className={styles.subNavItems}>
                   <li>
                     <Link to='/community/meetups/' className={styles.link}>
-                      Meetups
+                      meetups
                     </Link>
                   </li>
                   <li>
@@ -157,7 +155,7 @@ export default class Header extends Component {
                   </li>
                   <li>
                     <Link to='/community/champions/' className={styles.link}>
-                      Champions
+                      champions
                     </Link>
                   </li>
                   <li>
@@ -165,7 +163,7 @@ export default class Header extends Component {
                       target='_blank'
                       href='https://forum.serverless.com/'
                       className={styles.link}>
-                      Forum
+                      forum
                     </a>
                   </li>
                   <li>
@@ -175,21 +173,19 @@ export default class Header extends Component {
               </li>
               <li className={styles.navItem}>
                 <Link to='/blog/' className={styles.link}>
-                  Blog
+                  blog
                 </Link>
               </li>
               <li className={styles.navItem}>
                 <Link to='/enterprise/' className={styles.link}>
-                  Enterprise
+                  enterprise
                 </Link>
               </li>
-              {
-                !hideSignUp &&
-                  <li
-                    className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
-                    ref={cta => { this.cta = cta }}
-                ><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
-              }
+              <li className={styles.navItem}>
+                <Link to='/enterprise/' className={styles.link}>
+                  sign-up
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

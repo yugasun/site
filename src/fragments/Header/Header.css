@@ -1,49 +1,27 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   position: fixed;
   width: 100%;
+  height: 100px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: transparent;
+  padding: 20px 0 0 0;
+  background-color: #000000;
+  color: #ffffff;
   font-weight: 500;
   transition: background-color 150ms ease-in, top 300ms;
   font-size: 14px;
-}
-.coloredHeader {
-  background-color: #313131;
-  color: white;
-
-  .navItem {
-
-    &:hover .link {
-      color: white;
-    }
-  }
-  .subNavItems {
-    background-color: #2b303b;
-  }
-  .bar {
-    &, &:before, &:after {
-      background-color: $gray1;
-    }
-  }
-}
-.whiteHeader {
-  background-color: $white;
-}
-.whiteLogo {
-  color: white;
-
-  .linkSpecial {
-    color: inherit;
-  }
 }
 
 .navWrapper {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   left: 0;
   right: 0;
@@ -55,32 +33,47 @@
     width: 100%;
   }
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
-
-.navLeft,
-.navRight,
-.navItems {
+.navLeft, .navRight {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: Serverless, monospace;
 }
+
+.navLeft {
+  text-align: left;
+  flex: 1;
+}
+
+.navRight {
+  flex: 2;
+  text-align: right;
+  justify-content: flex-end;
+}
+
 
 .logo {
   display: flex;
   align-items: center;
+  justify-content: middle;
   min-width: 18rem;
   margin-right: 20px;
 }
+
+.logoIcon {
+  color: #FD5750;
+  font-family: Serverless;
+  font-size: 40px;
+  padding: 0 8px 0 0;
+  margin-top: -3px;
+}
+
 .logoText {
   font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
   font-family: Serverless, monospace;
 }
+
 .navItems {
   padding: 0;
   margin: 0;
@@ -90,12 +83,14 @@ a {
     position: relative;
   }
 }
+
 .link {
   display: block;
   text-decoration: none;
   text-align: center;
+  font-size: 16px;
   &:hover {
-    background: rgba(238, 238, 238, 0.3);
+
   }
 
   @media screen and (min-width: 768px) {
@@ -106,14 +101,7 @@ a {
     padding: 1rem;
   }
 }
-.caret {
-  width: 8px !important;
-  height: 4px !important;
-  margin-left: 6px;
-  stroke: currentColor;
-  opacity: .6;
-  transition: opacity 0.2s linear;
-}
+
 .subNavItems {
   display: none;
   margin: 0;
