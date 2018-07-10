@@ -178,5 +178,18 @@
 			"short": "Self-taught software engineer and open-source enthusiast.",
 			"long": ""
 		}
+	}, 
+	{
+		"name": "Steve Westergard",
+		"title": "Fullstack Engineer",
+		"github": "westergaards",
+		"twitter": "malediction73",
+		"linkedin": "westergaards",
+		"avatar": "https://avatars2.githubusercontent.com/u/1891122?s=460&v=4",
+		"location": "San Francisco, CA",
+		"bio": {
+			"short": "Friend of music that is dissonant at nature and technology that is emergent",
+			"long": ""
+		}
 	}
 ]
