@@ -24,6 +24,13 @@ module.exports = () => {
     black1: '#212121',
     black2: '#191919',
     white: '#FDFDFD',
+    red_serverless: '#fd5750',
+    black_serverless: '#000000',
+    grey1_serverless: '#5b5b5b',
+    grey2_serverless: '#8c8c8c',
+    grey3_serverless: '#eaeaea',
+    grey4_serverless: '#f7f7f7',
+    white_serverless: '#ffffff',
     // -- Fonts
     fontSize: baseFontSize,
     fontSizeTiny: formatFont(1.2),
@@ -71,3 +78,6 @@ module.exports = () => {
 function formatFont(modifier) {
   return (modifier * baseValue) + unit
 }
+
+
+// $primary-color-dark-blue: #09a0c4; 

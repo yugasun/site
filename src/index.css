@@ -62,7 +62,7 @@
   font-style: normal;
   src: local("Serverless"),
   local("Serverless-Regular"),
-  url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/serverless-regular-v3.otf") format("opentype");
+  url("./assets/fonts/serverless.otf") format("opentype");
 }
 @font-face {
   font-family: "Gibson";
