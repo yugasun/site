@@ -1,13 +1,14 @@
 import React from 'react'
+import commonStyles from './../common.css';
 import styles from './style.css';
 
 const UseCasesSection = ({ title, description, usecases }) => (
   <div className={styles.useCasesWrapper}>
     <div className={styles.useCasesIntro}>
-      <h2 className={styles.textCenter}>
+      <h2 className={commonStyles.textCenter}>
         {title}
       </h2>
-      <p className={styles.textCenter}>
+      <p className={commonStyles.textCenter}>
         {description}
       </p>
     </div>
@@ -20,8 +21,8 @@ const UseCasesSection = ({ title, description, usecases }) => (
               <div className={styles.info}>
                 <p>{usecase.description}</p>
               </div>
-              <div className={styles.btnWrapper}>
-                <a className={ `${styles.btn} ${styles.btnPrimary}` }>view example</a>
+              <div className={commonStyles.btnWrapper}>
+                <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary}` }>view example</a>
               </div>
             </div>
             <div className={styles.useCaseImage}>
