@@ -1,0 +1,82 @@
+.container{
+  width: 100%;
+  max-width: 1260px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  display:block;
+}
+
+.redHighlightWrapper{
+  position: relative;
+  z-index: 10;
+
+  .redHighlightContainer{
+    border: 3px solid $red_serverless;
+    background: $white_serverless;
+    padding: 80px 95px;
+    width: 100%;
+  }
+
+  blockquote{
+    font-family: 'SoleilBk-Italic';
+    font-size: 2.4rem;
+    line-height: 1.33;
+    padding: 0px;
+    padding-bottom: 30px;
+    border: 0px;
+  }
+
+  .quoteDetails{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    .name{
+      font-family: 'Soleil';
+      font-size: 1.8rem;
+      line-height: 1.33;
+      letter-spacing: -0.03rem;
+    }
+
+    .designation{
+      font-family: 'Soleil';
+      font-size: 1.2rem;
+      line-height: 1.33rem;
+      align-items: center;
+      color: $grey2_serverless;
+    }
+  }
+
+  &:before{
+    content: " ";
+    height: 80px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+    background: transparent url('../../assets/images/glitch-effect.png');
+    opacity: 0.05;
+  }
+}
+
+@media (max-width: 768px) { 
+  .redHighlightWrapper{
+    padding: 30px 0px;
+    
+    .redHighlightContainer{
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    blockquote{
+      margin: 0px;
+    }
+  }
+}

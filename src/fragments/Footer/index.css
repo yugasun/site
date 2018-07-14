@@ -1,59 +1,282 @@
-.footer {
-  position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  font-size: 1.4rem;
-  color: $white;
-  background-color: $black1;
-  z-index: 5;
-  ;
-
-  .bound {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 140rem;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-.navBlocks {
-  @media screen and (min-width: 768px) {
-    width: 50%;
-  }
-}
-.navBlock {
-  display: inline-block;
-  vertical-align: top;
+.container{
   width: 100%;
-  margin-bottom: 3rem;
+  max-width: 1260px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  display:block;
+}
+footer{
+  background: $black_serverless;
+  font-family: Serverless;
+  position: relative;
+  padding-bottom: 40px;
 
-  a {
+  .footerLogo{
+    padding-bottom: 100px;
+
+    img{
+      max-width: 138px;
+    }
+  }
+
+}
+
+.footerHighlight{
+  background: $red_serverless;
+  color: $white_serverless;
+  position:relative;
+  top: -240px;
+  margin-bottom: -200px;
+  display: flex;
+  flex-direction: row;
+  
+  .fhighText,
+  .fhighLinks{
+    width: 50%;
+    padding: 150px 100px;
+  }
+
+  
+}
+
+.footerBottomWrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footerNavWrapper{
+  width: 65%;
+  
+  .listWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .footerList{
+      width: 20%;
+      margin: 0px;
+      padding: 0px;
+
+      h4{
+        color: $white_serverless;
+        padding-bottom: 0px;
+        font-size: 1.4rem;
+        line-height: 1.14;
+        letter-spacing: 0.06rem;
+        font-family: 'Serverless'
+      }
+
+      ul{
+        padding: 0px;
+      }
+
+      li{
+        display: block;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        font-size: 1.4rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.14;
+
+        a{
+          display: block;
+          width: 100%;
+          color: $grey1_serverless;
+          transition: all .4s;
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: none;
+            color: $white_serverless;
+          }
+        }
+      }
+    }
+  }  
+
+  .madeWithText{
+    width: 50%;
+
+    p {
+      font-family: 'Soleil';
+      font-size: 1.2rem;
+      line-height: 1.33;
+  
+    }
+  } 
+
+  .copyrightWrapper{
+    font-family: Soleil;
+    
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    
+    p{
+      font-size: 1.2rem;
+      line-height: 1.17;
+      letter-spacing: -0.05rem;
+      font-family: Soleil;
+    }
+
+    .policyNav{
+      margin-left: 200px;
+
+      li{
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        line-height: 1.17;
+        letter-spacing: -0.05rem;
+
+        a{
+          color: $grey1_serverless;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footerSocialWrapper{
+  width: 35%;
+
+  p{
+    color: $white_serverless;
+    margin-bottom: 40px;
+  }
+
+  .socialNavWrapper{
+    padding-top: 60px;
+
+    .socialNav{
+      margin: 0px;
+      padding: 0px;
+
+      li{
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 24px;
+        color: $grey2_serverless;
+
+        a{
+          color: inherit;
+
+          &:hover{
+            text-decoration: none;
+            color: $white_serverless;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer{
+    padding: 80px 0px;
+
+    .footerLogo{
+      padding: 30px 0px;
+    }
+  } 
+
+  .footerHighlight{
+    top: 0;
+    margin: 0px -15px;
     display: block;
-    line-height: 2rem;
-    margin-bottom: 1.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+
+    .fhighText,
+    .fhighLinks{
+      width: 100%;
+      padding: 30px;
+    }
   }
 
-  @media screen and (min-width: 768px) {
-    width: 25%;
+
+  .footerNavWrapper{
+    width: 100%;
+    order: 2;
+
+    .listWrapper{
+      .footerList{
+        width: 50%;
+      }
+    }
+  }
+
+  .footerSocialWrapper{
+    width: 100%;
+    order: 1;
+
+    .socialNavWrapper{
+      padding:30px 0px;
+    }
   }
 }
-.navTitle {
-  color: #8C8C8C;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  font-family: Serverless, monospace;
+
+.subscribeForm{
+  display: flex;
+
+  .greyTextbox{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Serverless';
+    letter-spacing: 0.05rem;
+    background: $grey1_serverless;
+    border: 0px;
+    color: #fff;
+    padding: 16px;
+    width: 70%;
+  }
+
+  .btn{
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 18px 25px;
+    letter-spacing: .08rem;
+    border: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Serverless';
+
+    &:hover{
+      text-decoration: none;
+    }
+
+    &.btnPrimary{
+      background: $red_serverless;
+      color: $white_serverless;
+    }
+
+    &.btnTransparent{
+      background: transparent;
+      color: $red_serverless;
+      padding: 15px 22px;
+      border: 3px solid $red_serverless;
+    }
+
+    &.btnTransparentWhite{
+      background: transparent;
+      color: $white_serverless;
+      padding: 12px 22px;
+      border: 3px solid $white_serverless;
+    }
+
+  
+  }
 }
-.ctaBlock {
-  width: 30rem;
-}
-.madeStatement {
-  color: #8C8C8C;
-}
-.bound {
-  composes: bound from "../../index.css";
+
+@media (max-width: 768px) { 
+  .subscribeForm{
+
+    .greyTextbox{
+      width: 60%;
+    }
+  }  
 }

@@ -1,50 +1,99 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import styles from './index.css'
-import PlatformBetaCTA from '../PlatformBetaCTA'
+import logo from '../../assets/images/logo.png'
+import facebook from '../../assets/images/facebook.png'
+import instagram from '../../assets/images/instagram.png'
+import twitter from '../../assets/images/twitter.png'
 
 export default class Footer extends Component {
   render() {
     const year = new Date().getFullYear()
 
     return (
-      <footer id='footer' className={styles.footer}>
-        <div className={styles.bound}>
-          <nav className={styles.navBlocks}>
-            <div className={styles.navBlock}>
-              <h4 className={styles.navTitle}>Toolkit</h4>
-              <Link to='/framework/'>Serverless Framework</Link>
-              <Link to='/event-gateway/'>Event Gateway</Link>
-              <Link to='/framework/docs/platform/'>Serverless Platform</Link>
-              <a href='https://github.com/serverless/guide' target='_blank'>Serverless Guide</a>
+      <footer className={styles.footer}>
+            <div className={`${styles.footerContainer} ${styles.container}`}>
+        
+        <div className={styles.footerLogo}><img src={logo} alt='' /></div>
+        <div className={styles.footerBottomWrapper}>
+          <div className={styles.footerNavWrapper}>
+            <div className={styles.listWrapper}>
+              <div className={styles.footerList}>
+                <h4>platform</h4>
+                <ul>
+                  <li><a href=''>framework</a></li>
+                  <li><a href=''>dashboard</a></li>
+                  <li><a href=''>event gateway</a></li>
+                  <li><a href=''>enterprise</a></li>
+                </ul>  
+              </div>
+              <div className={styles.footerList}>
+                <h4>developers</h4>
+                <ul>
+                  <li><a href=''>docs</a></li>
+                  <li><a href=''>quick starts</a></li>
+                  <li><a href=''>examples & guides</a></li>
+                </ul>  
+              </div>
+              <div className={styles.footerList}>
+                <h4>learn</h4>
+                <ul>
+                  <li><a href=''>why?</a></li>
+                  <li><a href=''>use cases</a></li>
+                  <li><a href=''>comparisions</a></li>
+                  <li><a href=''>case studies</a></li>
+                </ul>  
+              </div>
+              <div className={styles.footerList}>
+                <h4>resources</h4>
+                <ul>
+                  <li><a href=''>blog</a></li>
+                  <li><a href=''>forum</a></li>
+                  <li><a href=''>meetups</a></li>
+                  <li><a href=''>slack</a></li>
+                  <li><a href=''>workshops</a></li>
+                </ul>  
+              </div>
+              <div className={styles.footerList}>
+                <h4>company</h4>
+                <ul>
+                  <li><a href=''>jobs</a></li>
+                  <li><a href=''>campions</a></li>
+                  <li><a href=''>contact</a></li>
+                </ul>  
+              </div>
             </div>
-            <div className={styles.navBlock}>
-              <h4 className={styles.navTitle}>Work with us</h4>
-              <Link to='/enterprise/'>Enterprise</Link>
-              <a href='https://github.com/serverless/plugins' target='_blank'>Plugins</a>
+            <div className={styles.madeWithText}>
+              <p>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand</p>
             </div>
-            <div className={styles.navBlock}>
-              <h4 className={styles.navTitle}>Talk to us</h4>
-              <a href='https://gitter.im/serverless/serverless' target='_blank'>Gitter</a>
-              <a href='https://forum.serverless.com/' target='_blank'>Forum</a>
-              <a href='https://twitter.com/goserverless' target='_blank'>Twitter</a>
-              <a href='https://www.facebook.com/serverless/' target='_blank'>Facebook</a>
-              <a href='https://www.instagram.com/serverlessinc/' target='_blank'>Instagram</a>
+            <div className={styles.copyrightWrapper}>
+              <div className={styles.text}><p>Serverless, Inc. &copy; 2018</p></div>
+              <ul className={styles.policyNav}>
+                <li><a href=''>terms of service</a></li>
+                <li><a href=''>privacy policy</a></li>
+              </ul>
             </div>
-            <div className={styles.navBlock}>
-              <h4 className={styles.navTitle}>About</h4>
-              <Link to='/company/team/'>Company</Link>
-              <a href='https://jobs.lever.co/serverless' target='_blank'>Jobs</a>
-              <Link to='/blog/'>Blog</Link>
+          </div>
+          <div className={styles.footerSocialWrapper}>
+            <p>
+              Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
+            </p>
+            <div className={styles.newsLetterWrapper}>
+              <form className={styles.subscribeForm} action=''>
+                <input className={styles.greyTextbox} type='text' placeholder='email address' />
+                <button className={`${styles.btn} ${styles.btnPrimary}`} type='submit'>sign up</button>
+              </form>
             </div>
-          </nav>
-          <div className={styles.ctaBlock}>
-            <p className={styles.ctaText}>Sign up for the Platform beta.</p>
-            <PlatformBetaCTA kind='whiteBordered' style={{marginTop: '1rem', marginBottom: '1rem'}} />
-            <p className={styles.madeStatement}>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand.<br/><br/>
-              Serverless, Inc. © {year}</p>
+            <div className={styles.socialNavWrapper}>
+              <ul className={styles.socialNav}>
+                <li><a href=''><img src={facebook} alt='' /></a></li>
+                <li><a href=''><img src={instagram} alt='' /></a></li>
+                <li><a href=''><img src={twitter} alt='' /></a></li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
       </footer>
     )
   }

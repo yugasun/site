@@ -8,6 +8,35 @@ import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
 import Terminal from '../../components/Terminal'
 import terminalCommands from '../Framework/terminalCommands'
 
+
+import Testimonial from '../../fragments/Testimonial'
+import NextFooter from '../../fragments/NextFooter'
+
+
+import bolt from '../../assets/images/bolt.png'
+import iconDashboard from '../../assets/images/icon-dashboard.png'
+import group6 from '../../assets/images/group-6.png'
+
+import gcp from '../../assets/images/gcp.png'
+import azure from '../../assets/images/azure.png'
+import aws from '../../assets/images/aws.png'
+import ibm from '../../assets/images/ibm.png'
+import kubernetes from '../../assets/images/kubernetes.png'
+
+import vol from '../../assets/images/icon-vol.png'
+import graph from '../../assets/images/icon-graph.png'
+import dash from '../../assets/images/icon-dash.png'
+
+import illustration1 from '../../assets/images/illustration-1.png'
+import illustration2 from '../../assets/images/illustration-2.png'
+import illustration3 from '../../assets/images/illustration-3.png'
+
+import ea from '../../assets/images/ea-logo.png'
+import cocacolaLogo from '../../assets/images/cocacola-logo.png'
+import nordstrom from '../../assets/images/nordstrom-logo.png'
+import expedia from '../../assets/images/expedia-logo.png'
+import reuters from '../../assets/images/reuters-logo.png'
+
 export default class Homepage extends Component {
   static propTypes = {
     phenomicLoading: PropTypes.bool
@@ -21,93 +50,162 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Default {...this.props} fullWidth coloredHeader={false} headerHideCTA={true}>
+      <Default fullWidth className={styles.body}>
         <div className={styles.wrapper}>
-          <div className={`${styles.hero} ${styles.boundLarge}`}>
-            <div className={styles.heroHalf}>
-              <h1 className={styles.tagline}>The way cloud should be.</h1>
-              <p className={styles.heroDescription}>Serverless is your toolkit for deploying and operating serverless architectures. Focus on your application, not your infrastructure.</p>
-              <div className={`${styles.heroCTAs}`}>
-                <Button href='/framework/docs/getting-started/' kind='redBordered'>Quick Start Docs</Button>
-                <PlatformBetaCTA kind='red' text='Sign Up'/>
-              </div>
-            </div>
-            <div className={styles.heroHalf}>
-              <Terminal commands={terminalCommands} />
-            </div>
+    <div className={`${styles.platformBg} ${styles.heroSectionWrapper}`}>
+      <div className={`${styles.heroContainer} ${styles.container}`}>
+        <h2 className={`${styles.white} ${styles.textCenter}`}>serverless</h2>
+        <h1 className={`${styles.white} ${styles.textCenter}`}>platform</h1>
+        <div className={`${styles.heroDesc} ${styles.textCenter}`}>Everything you need to operationalize serverless development</div>
+        <div className={styles.heroBulletsWrapper}>
+          <div className={styles.heroBullets}>
+            <a>
+              <figure>
+                <img src={bolt} alt='' />
+              </figure>
+              <h4 className={styles.white}>serverless</h4>
+              <h3 className={styles.white}>famework</h3>
+            </a>
           </div>
-          <div className={`${styles.providersWrapper} ${styles.boundMedium}`}>
-            <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/aws-black.png'} alt='Amazon web services' />
-            <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/gcf-black.png'} alt='Google Cloud Platform' />
-            <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/azure-black.png'} alt='Microsoft Azure' />
-            <img className={styles.providerLogo} src={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/openwhisk-black.png'} alt='IBM OpenWhisk' />
+          <div className={styles.heroBullets}>
+            <a>
+              <figure>
+                <img src={iconDashboard} alt='' />
+              </figure>
+              <h4 className={styles.white}>serverless</h4>
+              <h3 className={styles.white}>dashboard</h3>
+            </a>
           </div>
-          <div className={`${styles.section} ${styles.toolkitSection}`}>
-            <div className={styles.boundMedium}>
-              <div className={`${styles.toolCard} ${styles.toolCardFramework}`}>
-                <div>
-                  <div className={styles.toolCardTop}>
-                    <h3 className={styles.toolCardTitle}>Serverless Framework</h3>
-                    <img  className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
-                  </div>
-                  <h4 className={styles.toolCardTagline}>Rapid serverless deployment</h4>
-                  <p>Turn 200 lines of code into 4. At 18,000 stars on GitHub, the Framework started a movement.</p>
-                </div>
-                <Button kind='red' href='/framework/'>Learn more</Button>
-              </div>
-              <div className={`${styles.toolCard} ${styles.toolCardEventGateway}`}>
-                <div>
-                  <div className={styles.toolCardTop}>
-                    <h3 className={styles.toolCardTitle}>Event Gateway</h3>
-                    <img className={styles.toolCardIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/gateway.svg' />
-                  </div>
-                  <h4 className={styles.toolCardTagline}>Centralize events & data</h4>
-                  <p>Span the cloud. React to any event, with any function, on any provider.</p>
-                </div>
-                <Button kind='blue' href='/event-gateway/'>Learn more</Button>
-              </div>
-            </div>
+          <div className={styles.heroBullets}>
+            <a>
+              <figure>
+                <img src={group6} alt='' />
+              </figure>
+              <h4 className={styles.white}>serverless</h4>
+              <h3 className={styles.white}>gateway</h3>
+            </a>
           </div>
-          <div className={`${styles.introSecondary} ${styles.boundMedium}`}>
-            <h2 className={styles.sectionHeading}>Build faster with serverless architectures.</h2>
-            <p className={`${styles.boundMedium} ${styles.introSecondaryText}`}>Develop, test and deploy in a single environment, to any cloud provider. You don’t have to provision infrastructure or worry about scale. Serverless teams cut time to market in half.</p>
+        </div>
+        <div className={`${styles.heroContactWrapper} ${styles.textCenter}`}>
+          <a href='' className={`${styles.btn} ${styles.btnPrimary}`}>sign up</a>
+          <a href='' className={`${styles.btn} ${styles.btnTransparent}`}>contact sales</a>
+        </div>
+        <div className={styles.heroClientsWrapper}>
+          <p className={styles.textCenter}>Build serverless applications using serverless functions and infrastructure on any platform</p>
+          <ul className={styles.clientList}>
+            <li><img src={gcp} alt='' /></li>
+            <li><img src={azure} alt='' /></li>
+            <li><img src={aws} alt='' /></li>
+            <li><img src={ibm} alt='' /></li>
+            <li><img src={kubernetes} alt='' /></li>
+          </ul>
+        </div>    
+      </div>
+    </div>
+
+
+    <div className={styles.whiteSectionWrapper}>
+      <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+        <div className={styles.sectionHighlight}>
+          <div>Build more, manage less.</div>
+          <div>Serverless lets you focus on driving business value.</div>
+        </div>
+        <h3>The benefits of serverless technology</h3>
+        <div className={`${styles.benifitsBulletsWrapper} ${styles.bulletsWrapper}`}>
+          <ul>
+            <li>
+              <img src={vol} alt="" />
+              <h4>Automatic Scaling</h4>
+              <p>Forget about provisioning & managing your server fleet. Serverless applications scale with demand.</p>
+            </li>
+            <li>
+              <img src={graph} alt="" />
+              <h4>Pay-per execution</h4>
+              <p>Never pay for idle. Serverless applications charge you only when they run the service.</p>
+            </li>
+            <li>
+              <img src={dash} alt="" />
+              <h4>Low Overhead</h4>
+              <p>Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.</p>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    <Testimonial></Testimonial>
+
+
+  <div className={styles.whiteSectionWrapper}>
+      <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+        <div className={`${styles.sectionHighlight} ${styles.width90} ${styles.padBtm}`}>
+          <div>Serverless Platform empowers developers to build & deploy serverless applications, on any provider.</div>
+        </div>
+        <div className={`${styles.serverlessBulletsWrapper} ${styles.bulletsWrapper}`}>
+          <ul>
+            <li>
+              <figure>
+                <img src={illustration1} alt="" />
+              </figure>
+              <h4>Serverless Framework</h4>
+              <p>Build serverless applications quickly on any vendor.</p>
+              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+            </li>
+            <li>
+              <figure>
+                <img src={illustration3} alt="" />
+              </figure>
+              <h4>Serverless Dashboard</h4>
+              <p>Observe and monitor your functions in action.</p>
+              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+            </li>
+            <li>
+              <figure>
+                <img src={illustration2} alt="" />
+              </figure>
+              <h4>Event Gateway</h4>
+              <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
+              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+
+    <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper}`}>
+      <div className={`${styles.clientContainer} ${styles.container}`}>
+        <h4>Serverless Platform is trusted by</h4>
+        <ul className={styles.clientList}>
+          <li><img src={ea} alt="" /></li>
+          <li><img src={cocacolaLogo} alt="" /></li>
+          <li><img src={nordstrom} alt="" /></li>
+          <li><img src={expedia} alt="" /></li>
+          <li><img src={reuters}  alt="" /></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div className={styles.footer}>
+      <div className={`${styles.footerContainer} ${styles.container}`}>
+        <div className={`${styles.footerHighlight}`}>
+          <div className={styles.fhighText}>
+            <h2 className={styles.white}>Next Steps</h2>
+            <p className={styles.white}>Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</p>
+            <p className={styles.white}>Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</p>
           </div>
-          <div className={styles.featuresColumns}>
-            <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/automatic-scaling.svg' />
-              <h3 className={styles.featureName}>Automatic Scaling</h3>
-              <p className={styles.featureDescription}>Serverless backends expand and contract with demand. Go get on the front page of HackerNews, we dare you.</p>
-            </div>
-            <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/provider-agnostic.svg' />
-              <h3 className={styles.featureName}>Provider Agnostic</h3>
-              <p className={styles.featureDescription}>Build, test and deploy cloud functions to any provider. Skip the setup; deploy your function right now.</p>
-            </div>
-            <div className={styles.feature}>
-              <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/rapid-deployment.svg' />
-              <h3 className={styles.featureName}>Rapid deployment</h3>
-              <p className={styles.featureDescription}>Serverless cuts weeks off development cycles. Don’t spend time provisioning unused infrastructure.</p>
-            </div>
+          <div className={styles.fhighLinks}>
+            <ul>
+              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>use cases</a></li>
+              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>comparisions</a></li>
+              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>case studies</a></li>
+            </ul>
           </div>
-          <div className={styles.sectionBreak} />
-          <div className={`${styles.section} ${styles.testimonialSection}`}>
-            <div className={styles.boundMedium}>
-              <ClientsLogos />
-            </div>
-            <div className={`${styles.testimonial} ${styles.boundMedium}`}>
-              <div className={styles.testimonialTextBlock}>
-                <div className={styles.testimonialGround} />
-                <p className={styles.testimonialText}>“The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster.”</p>
-              </div>
-              <div className={styles.testimonialMeta}>
-                <h3 className={styles.testimonialAuthor}>Patrick Brandt</h3>
-                <p className={styles.testimonialAuthorTitle}>Solutions Architect at The Coca-Cola Company</p>
-              </div>
-            </div>
-          </div>
-          <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
-            <NewsletterStrip />
-          </div>
+        </div>
+      </div>
+    </div>
+
         </div>
       </Default>
     )

@@ -144,10 +144,6 @@ const DefaultLayout = (props) => {
     })(window,document.documentElement,'async-hide','dataLayer',4000,
     {'GTM-M5WQLDN':true});`}</script>
       <Header
-        whiteLogo={!!(whiteLogo)}
-        colored={coloredHeader !== false && coloredHeader !== undefined}
-        hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
-        hideSignUp={ headerHideSignUp }
       />
       {hero}
       <div className={classes}>
