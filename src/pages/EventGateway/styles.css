@@ -818,3 +818,92 @@ ul{
     }
   }
 }
+
+
+.useCasesWrapper{
+  padding: 160px 0px;
+}
+
+.useCasesIntro{
+  h2{
+    font-family: 'SoleilSb';
+    font-size: 4rem;
+    margin-bottom: 0px;
+  }
+
+  p{
+    font-family: 'Soleil';
+    font-size: 1.2rem;
+  }
+}
+
+
+.useCaseItem{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px 0px;
+
+  .useCaseDetail,
+  .useCaseImage{
+    width: 50%;
+  }
+
+  .useCaseDetail{
+    order: 1;
+    padding-right: 40px;
+
+    h3{
+      font-size: 3.2rem;
+      font-family: 'SoleilBk';
+      padding: 0px;
+      margin: 0px;
+      text-align: left;
+      padding-bottom: 25px;
+    }
+
+    .info{
+      p{
+        font-size: 1.6rem;
+        font-family: 'SoleilBk';
+        line-height: 1.5;
+        color: $grey1_serverless;
+        padding-bottom: 25px;
+      }
+    }
+
+    .btnWrapper{
+      .btn{
+        max-width: 280px;
+        width: 100%;
+      }
+    }
+  }
+
+  .useCaseImage{
+    order: 2;
+
+    img{
+      display: block;
+      margin: auto;
+      max-width: 100%;
+    }
+  }
+
+  &:nth-of-type(2n){
+    .useCaseDetail{
+      order: 2;
+      padding-right: 0px;
+      padding-left: 40px;
+    }
+
+    .useCaseImage{
+      order: 1;
+    }
+  }
+
+  &:last-of-type{
+    padding-bottom: 0px;
+  }
+}
