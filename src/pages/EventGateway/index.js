@@ -6,6 +6,7 @@ import Glitch from '../../components/Glitch'
 import PreFooter from '../../fragments/PreFooter'
 import UseCasesSection from '../../fragments/UseCasesSection'
 import SectionSeperator from '../../fragments/SectionSeperator'
+import Features from './../../fragments/Features'
 
 import iconDashboard from '../../assets/images/icon-dashboard.png';
 import Illustration from '../../assets/images/illustration-platform-dash.png';
@@ -93,55 +94,41 @@ const EventGatewayPage = (props) => {
 
       <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
         <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
-          <div className={styles.featuresListWrapper}>
-            <h2 className={styles.textCenter}>Features</h2>
-            <ol className={styles.featureList}>
-              <li>
-                <figure>
-                  <img src={iconFeature1} alt="" />
-                </figure>
-                <h3>Architecture Visualization</h3>
-                <p>Let your team share the functions, events, and subscriptions that make up your serverless application.</p>
-              </li>
-              <li>
-                <figure>
-                  <img src={iconFeature2} alt="" />
-                </figure>
-                <h3>Easy Logs</h3>
-                <p>Access logs from within the dashboard, making it easier to debug and deploy your serverless applications.</p>
-              </li>
-              <li>
-                <figure>
-                  <img src={iconFeature3} alt="" />
-                </figure>
-                <h3>User Access Control</h3>
-                <p>Manage which team members have access to which cloud resources, making security and compliance for serverless seamless.</p>
-              </li>
-              <li>
-                <figure>
-                  <img src={iconFeature4} alt="" />
-                </figure>
-                <h3>Application Metrics</h3>
-                <p>View all vital serverless application metrics in one place, making serverless operations simple and intuitive.</p>
-              </li>
-              <li>
-                <figure>
-                  <img src={iconFeature5} alt="" />
-                </figure>
-                <h3>Streaming Events</h3>
-                <p>Data streams in your application become events. Centralize events from any cloud provider to get a bird’s eye view of all the data flowing through your cloud.</p>
-              </li>
-              <li>
-                <figure>
-                  <img src={iconFeature6} alt="" />
-                </figure>
-                <h3>Audit Logs</h3>
-                <p>View and manage key operations events, such as deployments, in one single place for all your serverless applications.</p>
-              </li>
-            </ol>
-          </div>
+          <Features features={[
+            {
+              title: 'Architecture Visualization',
+              description: 'Let your team share the functions, events, and subscriptions that make up your serverless application.',
+              image: iconFeature1
+            },
+            {
+              title: 'Easy Logs',
+              description: 'Access logs from within the dashboard, making it easier to debug and deploy your serverless applications.',
+              image: iconFeature2
+            },
+            {
+              title: 'User Access Control',
+              description: 'Manage which team members have access to which cloud resources, making security and compliance for serverless seamless.',
+              image: iconFeature3
+            },
+            {
+              title: 'Application Metrics',
+              description: 'View all vital serverless application metrics in one place, making serverless operations simple and intuitive.',
+              image: iconFeature4
+            },
+            {
+              title: 'Streaming Events',
+              description: 'Data streams in your application become events. Centralize events from any cloud provider to get a birdâ€™s eye view of all the data flowing through your cloud.',
+              image: iconFeature5
+            },
+            {
+              title: 'Audit Logs',
+              description: 'View and manage key operations events, such as deployments, in one single place for all your serverless applications.',
+              image: iconFeature6
+            }
+          ]} />
         </div>
       </div>
+
       <div className={styles.footer}>
         <div className={`${styles.footerContainer} ${styles.container}`}>
           <div className={`${styles.footerHighlight}`}>
