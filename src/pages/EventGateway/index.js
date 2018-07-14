@@ -4,6 +4,7 @@ import Default from '../../layouts/Default'
 import styles from './styles.css'
 import Glitch from '../../components/Glitch'
 import PreFooter from '../../fragments/PreFooter'
+import UseCasesSection from '../../fragments/UseCasesSection'
 
 import iconDashboard from '../../assets/images/icon-dashboard.png';
 import Illustration from '../../assets/images/illustration-platform-dash.png';
@@ -60,60 +61,33 @@ const EventGatewayPage = (props) => {
           </div>
         </div>
       </div>
+
       <div className={styles.whiteSectionWrapper}>
         <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
-          <div className={styles.useCasesWrapper}>
-            <div className={styles.useCasesIntro}>
-              <h2 className={styles.textCenter}>Serverless Dashboard Use Cases</h2>
-              <p className={styles.textCenter}>These are the 3 main use cases for the Serverless Dashboard that you should know about.</p>
-            </div>
-            <div className={styles.usesCasesListWrapper}>
-              <div className={styles.useCaseItem}>
-              <div className={styles.useCaseDetail}>
-                  <h3>Onboarding new team members</h3>
-                  <div className={styles.info}>
-                  <p>The Serverless Dashboard makes onboarding new team members easy, quick, and secure. Architecture visualizions help them get up to speed on your applications, sandbox accounts provide them a safe learning enviroment, and user access controls allow for a secure experience.</p>
-                  </div>
-                  <div className={styles.btnWrapper}>
-                    <a className={ `${styles.btn} ${styles.btnPrimary}` }>view example</a>
-                  </div>
-              </div>
-                <div className={styles.useCaseImage}>
-                  <img src={IllustrationPart1} alt="" />
-                </div>
-              </div>
-              <div className={styles.useCaseItem}>
-                <div className={styles.useCaseDetail}>
-                  <h3>Operating at scale</h3>
-                  <div className={styles.info}>
-                    <p>The Serverless Dashboard provides the tools you need to build, deploy, and operate Servleress applications at scale. Logging, metrics, and deep observability help you accomplish more with serverless technology.</p>
-                  </div>
-                  <div className={styles.btnWrapper}>
-                    <a className={ `${styles.btn} ${styles.btnPrimary}` }>view example</a>
-                  </div>
-              </div>
-                <div className={styles.useCaseImage}>
-                  <img src={IllustrationPart2} alt="" />
-                </div>
-              </div>
-              <div className={styles.useCaseItem}>
-              <div className={styles.useCaseDetail}>
-                  <h3>Operate applications, not infrastructure </h3>
-                  <div className={styles.info}>
-                  <p>TThe Serverless Dashboard provides an operations experience that is centered on applications, not on infrastrucutre. Regardless of their cloud experience, any developer will have the power to manage and operate serverless applications from development to production. </p>
-                  </div>
-                  <div className={styles.btnWrapper}>
-                    <a className={ `${styles.btn} ${styles.btnPrimary}` }>view example</a>
-                  </div>
-              </div>
-                <div className={styles.useCaseImage}>
-                  <img src={IllustrationPart3} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <UseCasesSection
+            title="Serverless Dashboard Use Cases"
+            description="These are the 3 main use cases for the Serverless Dashboard that you should know about."
+            usecases={[
+              {
+                title: 'Onboarding new team members',
+                description: 'The Serverless Dashboard makes onboarding new team members easy, quick, and secure. Architecture visualizions help them get up to speed on your applications, sandbox accounts provide them a safe learning enviroment, and user access controls allow for a secure experience.',
+                image: IllustrationPart1,
+              },
+              {
+                title: 'Operating at scale',
+                description: 'The Serverless Dashboard provides the tools you need to build, deploy, and operate Servleress applications at scale. Logging, metrics, and deep observability help you accomplish more with serverless technology.',
+                image: IllustrationPart2,
+              },
+              {
+                title: 'Operate applications, not infrastructure',
+                description: 'The Serverless Dashboard provides an operations experience that is centered on applications, not on infrastrucutre. Regardless of their cloud experience, any developer will have the power to manage and operate serverless applications from development to production.',
+                image: IllustrationPart3,
+              },
+            ]}
+          />
         </div>
       </div>
+
       <div className={styles.greySectionSeperator}></div>
       <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
         <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
