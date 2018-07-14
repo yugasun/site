@@ -108,6 +108,7 @@ const EventGatewayPage = (props) => {
           </div>
         </div>
       </div>
+      <div className={styles.greySectionSeperator}></div>
     </Default>
   )
 }
