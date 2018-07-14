@@ -819,15 +819,6 @@ ul{
   }
 }
 
-.greySectionSeperator{
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 80px;
-  opacity: 0.1;
-  background: $white_serverless url('../../assets/images/glitch-effect.png') no-repeat;
-}
-
 .featuresListWrapper{
   h2{
     font-family: 'SoleilSb';

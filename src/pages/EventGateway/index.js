@@ -5,6 +5,7 @@ import styles from './styles.css'
 import Glitch from '../../components/Glitch'
 import PreFooter from '../../fragments/PreFooter'
 import UseCasesSection from '../../fragments/UseCasesSection'
+import SectionSeperator from '../../fragments/SectionSeperator'
 
 import iconDashboard from '../../assets/images/icon-dashboard.png';
 import Illustration from '../../assets/images/illustration-platform-dash.png';
@@ -88,7 +89,8 @@ const EventGatewayPage = (props) => {
         </div>
       </div>
 
-      <div className={styles.greySectionSeperator}></div>
+      <SectionSeperator />
+
       <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
         <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
           <div className={styles.featuresListWrapper}>
