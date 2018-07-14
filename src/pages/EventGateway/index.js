@@ -10,6 +10,12 @@ import Illustration from '../../assets/images/illustration-platform-dash.png';
 import IllustrationPart1 from '../../assets/images/illustration-use-case-1.png';
 import IllustrationPart2 from '../../assets/images/illustration-use-case-2.png';
 import IllustrationPart3 from '../../assets/images/illustration-use-case-3.png';
+import iconFeature1 from '../../assets/images/icon-feature-1.png';
+import iconFeature2 from '../../assets/images/icon-feature-2.png';
+import iconFeature3 from '../../assets/images/icon-feature-3.png';
+import iconFeature4 from '../../assets/images/icon-feature-4.png';
+import iconFeature5 from '../../assets/images/icon-feature-5.png';
+import iconFeature6 from '../../assets/images/icon-feature-6.png';
 
 const baseUrl = process.env.S3_BUCKET
 
@@ -109,6 +115,57 @@ const EventGatewayPage = (props) => {
         </div>
       </div>
       <div className={styles.greySectionSeperator}></div>
+      <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
+        <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+          <div className={styles.featuresListWrapper}>
+            <h2 className={styles.textCenter}>Features</h2>
+            <ol className={styles.featureList}>
+              <li>
+                <figure>
+                  <img src={iconFeature1} alt="" />
+                </figure>
+                <h3>Architecture Visualization</h3>
+                <p>Let your team share the functions, events, and subscriptions that make up your serverless application.</p>
+              </li>
+              <li>
+                <figure>
+                  <img src={iconFeature2} alt="" />
+                </figure>
+                <h3>Easy Logs</h3>
+                <p>Access logs from within the dashboard, making it easier to debug and deploy your serverless applications.</p>
+              </li>
+              <li>
+                <figure>
+                  <img src={iconFeature3} alt="" />
+                </figure>
+                <h3>User Access Control</h3>
+                <p>Manage which team members have access to which cloud resources, making security and compliance for serverless seamless.</p>
+              </li>
+              <li>
+                <figure>
+                  <img src={iconFeature4} alt="" />
+                </figure>
+                <h3>Application Metrics</h3>
+                <p>View all vital serverless application metrics in one place, making serverless operations simple and intuitive.</p>
+              </li>
+              <li>
+                <figure>
+                  <img src={iconFeature5} alt="" />
+                </figure>
+                <h3>Streaming Events</h3>
+                <p>Data streams in your application become events. Centralize events from any cloud provider to get a bird’s eye view of all the data flowing through your cloud.</p>
+              </li>
+              <li>
+                <figure>
+                  <img src={iconFeature6} alt="" />
+                </figure>
+                <h3>Audit Logs</h3>
+                <p>View and manage key operations events, such as deployments, in one single place for all your serverless applications.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </Default>
   )
 }
