@@ -26,7 +26,9 @@ export default class Header extends Component {
         <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
           <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
             <div className={styles.logoWrapper}>
-              <Svg svg={logo} className={styles.logo} />
+              <Link to='/'>
+                <Svg svg={logo} className={styles.logo} />
+              </Link>
             </div>
             <div className={`${styles.navBtn} ${this.state.navActive ? styles.active : ''}`} onClick={this.navClicked}>
               <img src={close} className={styles.faTimes} alt="" />
@@ -45,19 +47,19 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>quick starts</h3>
                         <ul>
-                          <li><a href="">nodejs</a></li>
-                          <li><a href="">python</a></li>
-                          <li><a href="">java</a></li>
-                          <li><a href="">go</a></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>nodejs</Link></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>python</Link></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>java</Link></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>go</Link></li>
                         </ul>
                       </div>
                       <div className={styles.devDropList}>
                         <h3>example & guides</h3>
                         <ul>
-                          <li><a href="">API's</a></li>
-                          <li><a href="">Cron Jobs</a></li>
-                          <li><a href="">Webhooks</a></li>
-                          <li><a href="">Event Processing</a></li>
+                          <li><Link to={''}>API's</Link></li>
+                          <li><Link to={''}>Cron Jobs</Link></li>
+                          <li><Link to={''}>Webhooks</Link></li>
+                          <li><Link to={''}>Event Processing</Link></li>
                         </ul>
                       </div>
                     </div>
@@ -67,10 +69,10 @@ export default class Header extends Component {
                   <a href="">learn</a>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><a href="">why?</a></li>
-                      <li><a href="">use cases</a></li>
-                      <li><a href="">comparisons</a></li>
-                      <li><a href="">case studies</a></li>
+                      <li><Link to={''}>why?</Link></li>
+                      <li><Link to={''}>use cases</Link></li>
+                      <li><Link to={''}>comparisons</Link></li>
+                      <li><Link to={''}>case studies</Link></li>
                     </ul>
                   </div>
                 </li>
@@ -78,15 +80,15 @@ export default class Header extends Component {
                   <a href="">resources</a>
                   <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><a href="">blog</a></li>
-                      <li><a href="">forum</a></li>
-                      <li><a href="">meetups</a></li>
-                      <li><a href="">slack</a></li>
-                      <li><a href="">workshops</a></li>
+                      <li><Link to='/blog'>blog</Link></li>
+                      <li><a href='https://forum.serverless.com'>forum</a></li>
+                      <li><Link to='/community/meetups'>meetups</Link></li>
+                      <li><a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a></li>
+                      <li><Link to='/workshops'>workshops</Link></li>
                     </ul>
                   </div>
                 </li>
-                <li><a href="">enterprise</a></li>
+                <li><Link to='/enterprise'>enterprise</Link></li>
                 <li><a href="">sign up</a></li>
               </ul>
             </nav>
