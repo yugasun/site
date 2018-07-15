@@ -116,7 +116,7 @@ export default class Header extends Component {
                   <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li><Link to='/blog'>blog</Link></li>
-                      <li><a href='https://forum.serverless.com'>forum</a></li>
+                      <li><a href='https://forum.serverless.com' target='_blank'>forum</a></li>
                       <li><Link to='/community/meetups'>meetups</Link></li>
                       <li><a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a></li>
                       <li><Link to='/workshops'>workshops</Link></li>
@@ -124,7 +124,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li><Link to='/enterprise'>enterprise</Link></li>
-                <li><a href="">sign up</a></li>
+                <li><a href="https://dashboard.serverless.com" target='_blank'>sign up</a></li>
               </ul>
             </nav>
           </div>
