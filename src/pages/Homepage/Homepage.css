@@ -41,12 +41,12 @@ ul{
 
 .row{
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .justify-space-between{
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 
@@ -146,7 +146,7 @@ ul{
 /* button helpers*/
 
 /*media queries*/
-  @media (max-width: 768px) { 
+  @media (max-width: 768px) {
     h1{
       font-size: 48px;
       line-height:48px;
@@ -230,7 +230,7 @@ ul{
 
     figure{
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: center;
       height: 106px;
       position: relative;
@@ -297,7 +297,7 @@ ul{
   width: 100%;
   justify-content: space-between;
   padding-top: 40px;
-  
+
   .heroBullets{
     text-align: left;
     padding: 0px 25px;
@@ -317,7 +317,7 @@ ul{
         width: 45px;
         height: 35px;
         background: rgba(253, 87, 80,0.3);
-        z-index: -1; 
+        z-index: -1;
       }
     }
 
@@ -362,18 +362,18 @@ ul{
     flex-wrap: wrap;
     align-items: center;
     padding-top: 40px;
-    
+
     li{
       display: inline-block;
     }
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
   .heroSectionWrapper{
     padding: 40px 0px;
-    
+
     .heroContainer{
       > h2{
         font-size: 2.4rem;
@@ -462,7 +462,7 @@ ul{
     justify-content: center;
     margin: 0px;
     padding: 0px;
-    
+
 
     li{
       width: 33.33%;
@@ -473,7 +473,7 @@ ul{
       figure{
         height: 300px;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
         margin: 0px;
 
@@ -523,7 +523,7 @@ ul{
         p{
           padding-bottom: 20px;
         }
-        
+
         &:first-of-type{
           padding-left: 0px;
         }
@@ -536,7 +536,7 @@ ul{
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .whiteSectionWrapper{
     .sectionHighlight{
       font-size: 3.2rem;
@@ -585,7 +585,7 @@ ul{
 }
 
 @media (max-width: 768px) {
-  
+
   .clientsWrapper{
     .clientList{
       li{
@@ -613,210 +613,5 @@ ul{
     height: 80px;
     width: 100%;
     background: #fff url('../../assets/images/glitch-effect.png');
-  }
-}
-
-.footerHighlight{
-  background: $red_serverless;
-  color: $white_serverless;
-  position:relative;
-  top: -240px;
-  margin-bottom: -200px;
-  display: flex;
-  flex-direction: row;
-  
-  .fhighText,
-  .fhighLinks{
-    width: 50%;
-    padding: 150px 100px;
-  }
-
-  .fhighText{
-    font-family: 'SoleilBk';
-    overflow: hidden;
-    
-    h2{
-      font-size: 4.80rem;
-      line-height: 1;
-      letter-spacing: 0.05rem;
-      font-family: 'SoleilBk';
-      position: relative;
-      z-index: 10;
-
-      &:before{
-        content: " ";
-        position: absolute;
-        right: 90%;
-        top: -60%;
-        width: 150px;
-        height: 100px;
-        background: transparent url('../../assets/images/rectangle-19.png');
-        z-index: -1;
-      }
-    }
-
-    p{
-      font-size: 1.6rem;
-      letter-height: 1.5;
-      margin-bottom: 15px; 
-    }
-  }
-
-  .fhighLinks{
-    background: $red_serverless url('../../assets/images/rectangle-19.png');
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    ul{
-      margin: 0px;
-      padding: 0px;
-      
-      li{
-        display: block;
-        padding-bottom: 25px;
-        text-align: center;
-        
-        .btn{
-          width: 100%;
-          min-width: 280px;
-          margin: auto;
-        }
-
-        &:last-of-type{
-          padding-bottom: 0px;
-        }
-      }
-
-    }
-  }
-}
-
-
-
-.footer{
-  background: $black_serverless;
-  padding: 100px 0px 10px 0px;
-  position: relative;
-
-  &:before{
-    content: " ";
-    position: absolute;
-    top: 0px;
-    height: 80px;
-    width: 100%;
-    background: #fff url('../../assets/images/glitch-effect.png');
-  }
-  .footer-logo{
-    padding-top: 20px;
-    padding-bottom: 100px;
-
-    img{
-      max-width: 138px;
-    }
-  }
-}
-
-.footerHighlight{
-  background: $red_serverless;
-  color: $white_serverless;
-  position:relative;
-  top: -240px;
-  margin-bottom: -200px;
-  display: flex;
-  flex-direction: row;
-  
-  .fhighText,
-  .fhighLinks{
-    width: 50%;
-    padding: 150px 100px;
-  }
-
-  .fhighText{
-    font-family: 'SoleilBk';
-    overflow: hidden;
-    
-    h2{
-      font-size: 4.80rem;
-      line-height: 1;
-      letter-spacing: 0.05rem;
-      font-family: 'SoleilBk';
-      position: relative;
-      z-index: 10;
-
-      &:before{
-        content: " ";
-        position: absolute;
-        right: 90%;
-        top: -60%;
-        width: 150px;
-        height: 100px;
-        background: transparent url('../../assets/images/rectangle-19.png');
-        z-index: -1;
-      }
-    }
-
-    p{
-      font-size: 1.6rem;
-      letter-height: 1.5;
-      margin-bottom: 15px; 
-    }
-  }
-
-  .fhighLinks{
-    background: $red_serverless url('../../assets/images/rectangle-19.png');
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    ul{
-      margin: 0px;
-      padding: 0px;
-      
-      li{
-        display: block;
-        padding-bottom: 25px;
-        text-align: center;
-        
-        .btn{
-          width: 100%;
-          min-width: 280px;
-          margin: auto;
-        }
-
-        &:last-of-type{
-          padding-bottom: 0px;
-        }
-      }
-
-    }
-  }
-}
-
-
-
-@media (max-width: 768px) {
-  footer{
-    padding: 80px 0px;
-
-    .footerLogo{
-      padding: 30px 0px;
-    }
-  } 
-
-  .footerHighlight{
-    top: 0;
-    margin: 0px -15px;
-    display: block;
-
-    .fhighText,
-    .fhighLinks{
-      width: 100%;
-      padding: 30px;
-    }
   }
 }
