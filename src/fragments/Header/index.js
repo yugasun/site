@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Svg from 'react-svg-inline'
+
 import styles from './Header.css'
 import commonStyles from './../common.css';
 
 import logo from '../../assets/images/logo.svg'
-import Svg from 'react-svg-inline'
 import mobilemenu from '../../assets/images/icon-mobile-menu.png'
 import close from '../../assets/images/icon-close.png'
+import frameworkIcon from '../../assets/images/bolt.png'
+import gatewayIcon from '../../assets/images/group-6.png'
+import dashboardIcon from '../../assets/images/icon-dashboard.png'
 
 export default class Header extends Component {
   constructor(props){
@@ -36,8 +40,39 @@ export default class Header extends Component {
             </div>
             <nav className={`${this.state.navActive ? styles.active : ''}`}>
               <ul className={`${styles.mainNav} ${commonStyles.marg0}`}>
-                <li className={styles.active}>
+                <li>
                   <a href="">platform</a>
+                  <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
+                    <ul>
+                      <li>
+                        <Link to='/framework/'>
+                          <img src={frameworkIcon} alt="" />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>framework</span>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/event-gateway/'>
+                          <img src={gatewayIcon} alt="" />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>event gateway</span>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/dashboard/'>
+                          <img src={dashboardIcon} alt="" />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>dashboard</span>
+                          </div>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <a href="">developers</a>

@@ -157,14 +157,14 @@
             font-size: 1.2rem;
             line-height: 1.7;
             letter-spacing: 0.05rem;
-            font-family: 'Serverless-Regular';
+            font-family: 'Serverless';
           }
 
           .bottom{
             font-size: 1.8rem;
             line-height: 0.78;
             letter-spacing: 0.08rem;
-            font-family: 'Serverless-Regular';
+            font-family: 'Serverless';
           }
         }
       }
