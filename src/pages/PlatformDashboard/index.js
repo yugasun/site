@@ -28,7 +28,7 @@ const PlatformDashboardPage = (props) => {
       <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
         <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
           <div className={ styles.heroPrimeImage }>
-            <img src={iconDashboard} alt="" />
+            <img src={iconDashboard} alt='Serverless Dashboard' />
           </div>
           <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
             serverless
@@ -51,7 +51,7 @@ const PlatformDashboardPage = (props) => {
             </Link>
           </div>
           <div className={ styles.heroPrimeImage }>
-            <img src={Illustration} alt="" />
+            <img src={Illustration} alt='Serverless Dashboard' />
           </div>
           <div className={styles.heroBulletsAlternate}>
             <div className={styles.heroBullets}>
@@ -73,8 +73,8 @@ const PlatformDashboardPage = (props) => {
       <div className={styles.whiteSectionWrapper}>
         <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
           <UseCasesSection
-            title="Serverless Dashboard Use Cases"
-            description="These are the 3 main use cases for the Serverless Dashboard that you should know about."
+            title='Serverless Dashboard Use Cases'
+            description='These are the 3 main use cases for the Serverless Dashboard that you should know about.'
             usecases={[
               {
                 title: 'Onboarding new team members',

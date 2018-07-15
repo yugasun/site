@@ -54,16 +54,16 @@ export default class Homepage extends Component {
           <div className={styles.heroBullets}>
             <a>
               <figure>
-                <img src={bolt} alt='' />
+                <img src={bolt} alt='Serverless Framework' />
               </figure>
               <h4 className={commonStyles.white}>serverless</h4>
-              <h3 className={commonStyles.white}>famework</h3>
+              <h3 className={commonStyles.white}>framework</h3>
             </a>
           </div>
           <div className={styles.heroBullets}>
             <a>
               <figure>
-                <img src={iconDashboard} alt='' />
+                <img src={iconDashboard} alt='Serverless Dashboard' />
               </figure>
               <h4 className={commonStyles.white}>serverless</h4>
               <h3 className={commonStyles.white}>dashboard</h3>
@@ -72,7 +72,7 @@ export default class Homepage extends Component {
           <div className={styles.heroBullets}>
             <a>
               <figure>
-                <img src={group6} alt='' />
+                <img src={group6} alt='Serverless Gateway' />
               </figure>
               <h4 className={commonStyles.white}>serverless</h4>
               <h3 className={commonStyles.white}>gateway</h3>
@@ -80,7 +80,7 @@ export default class Homepage extends Component {
           </div>
         </div>
         <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
-          <a href="https://dashboard.serverless.com"
+          <a href='https://dashboard.serverless.com'
             target='_blank'
             className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
             sign up
@@ -96,11 +96,11 @@ export default class Homepage extends Component {
             Build serverless applications using serverless functions and infrastructure on any platform
           </p>
           <ul className={styles.clientList}>
-            <li><img src={gcp} alt='' /></li>
-            <li><img src={azure} alt='' /></li>
-            <li><img src={aws} alt='' /></li>
-            <li><img src={ibm} alt='' /></li>
-            <li><img src={kubernetes} alt='' /></li>
+            <li><img src={gcp} alt='Google Cloud Provider' /></li>
+            <li><img src={azure} alt='Microsoft Azure' /></li>
+            <li><img src={aws} alt='Amazon Web Services' /></li>
+            <li><img src={ibm} alt='IBM Open Whisk' /></li>
+            <li><img src={kubernetes} alt='Kubernetes' /></li>
           </ul>
         </div>
       </div>
@@ -117,17 +117,17 @@ export default class Homepage extends Component {
         <div className={`${styles.benifitsBulletsWrapper} ${styles.bulletsWrapper}`}>
           <ul>
             <li>
-              <img src={vol} alt="" />
+              <img src={vol} alt='Automatic Scaling' />
               <h4>Automatic Scaling</h4>
               <p>Forget about provisioning & managing your server fleet. Serverless applications scale with demand.</p>
             </li>
             <li>
-              <img src={graph} alt="" />
+              <img src={graph} alt='Pay per execution' />
               <h4>Pay-per execution</h4>
               <p>Never pay for idle. Serverless applications charge you only when they run the service.</p>
             </li>
             <li>
-              <img src={dash} alt="" />
+              <img src={dash} alt='Low Overhead' />
               <h4>Low Overhead</h4>
               <p>Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.</p>
             </li>
@@ -148,7 +148,7 @@ export default class Homepage extends Component {
           <ul>
             <li>
               <figure>
-                <img src={illustration1} alt="" />
+                <img src={illustration1} alt='Vendor Agnostic' />
               </figure>
               <h4>Serverless Framework</h4>
               <p>Build serverless applications quickly on any vendor.</p>
@@ -159,7 +159,7 @@ export default class Homepage extends Component {
             </li>
             <li>
               <figure>
-                <img src={illustration3} alt="" />
+                <img src={illustration3} alt='Serverless Dashboard' />
               </figure>
               <h4>Serverless Dashboard</h4>
               <p>Observe and monitor your functions in action.</p>
@@ -170,7 +170,7 @@ export default class Homepage extends Component {
             </li>
             <li>
               <figure>
-                <img src={illustration2} alt="" />
+                <img src={illustration2} alt='Event Gateway' />
               </figure>
               <h4>Event Gateway</h4>
               <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
@@ -189,11 +189,11 @@ export default class Homepage extends Component {
       <div className={`${styles.clientContainer} ${commonStyles.container}`}>
         <h4>Serverless Platform is trusted by</h4>
         <ul className={styles.clientList}>
-          <li><img src={ea} alt="" /></li>
-          <li><img src={cocacolaLogo} alt="" /></li>
-          <li><img src={nordstrom} alt="" /></li>
-          <li><img src={expedia} alt="" /></li>
-          <li><img src={reuters}  alt="" /></li>
+          <li><img src={ea} alt='Electronic Arts' /></li>
+          <li><img src={cocacolaLogo} alt='Coca Cola' /></li>
+          <li><img src={nordstrom} alt='Nordstorm' /></li>
+          <li><img src={expedia} alt='Expedia' /></li>
+          <li><img src={reuters}  alt='Reuters' /></li>
         </ul>
       </div>
     </div>

@@ -35,8 +35,8 @@ export default class Header extends Component {
               </Link>
             </div>
             <div className={`${styles.navBtn} ${this.state.navActive ? styles.active : ''}`} onClick={this.navClicked}>
-              <img src={close} className={styles.faTimes} alt="" />
-              <img src={mobilemenu} className={styles.faBars} alt="" />
+              <img src={close} className={styles.faTimes}  />
+              <img src={mobilemenu} className={styles.faBars}  />
             </div>
             <nav className={`${this.state.navActive ? styles.active : ''}`}>
               <ul className={`${styles.mainNav} ${commonStyles.marg0}`}>
@@ -46,7 +46,7 @@ export default class Header extends Component {
                     <ul>
                       <li>
                         <Link to='/framework/'>
-                          <img src={frameworkIcon} alt="" />
+                          <img src={frameworkIcon} alt='Framework' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
                             <span className={styles.bottom}>framework</span>
@@ -55,7 +55,7 @@ export default class Header extends Component {
                       </li>
                       <li>
                         <Link to='/event-gateway/'>
-                          <img src={gatewayIcon} alt="" />
+                          <img src={gatewayIcon} alt='Event Gateway' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
                             <span className={styles.bottom}>event gateway</span>
@@ -64,7 +64,7 @@ export default class Header extends Component {
                       </li>
                       <li>
                         <Link to='/dashboard/'>
-                          <img src={dashboardIcon} alt="" />
+                          <img src={dashboardIcon} alt='Dashboard' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
                             <span className={styles.bottom}>dashboard</span>
