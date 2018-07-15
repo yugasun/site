@@ -78,7 +78,7 @@ export default class Footer extends Component {
                       <a href='https://forum.serverless.com' target='_blank'>forum</a>
                     </li>
                     <li>
-                      <Link to='/commuity/meetups/'>meetups</Link>
+                      <Link to='/community/meetups/'>meetups</Link>
                     </li>
                     <li>
                       <a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a>

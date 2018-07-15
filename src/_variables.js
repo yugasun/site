@@ -7,7 +7,7 @@ module.exports = () => {
   return {
     // -- Sizing
     unit: '1rem',
-    navHeight: '5.5rem',
+    navHeight: '8rem',
     footerHeight: '15.5rem',
     // -- Colors
     yellow: '#ffd734',
@@ -80,4 +80,4 @@ function formatFont(modifier) {
 }
 
 
-// $primary-color-dark-blue: #09a0c4; 
+// $primary-color-dark-blue: #09a0c4;
