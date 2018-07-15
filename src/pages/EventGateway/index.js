@@ -58,7 +58,7 @@ class EventGatewayPage extends React.Component {
             <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
               serverless
             </h2>
-            <h1 className={ `${commonStyles.white} ${commonStyles.textCenter}`}>
+            <h1 className={ `${commonStyles.white} ${commonStyles.textCenter} ${styles.medium}`}>
               event gateway
             </h1>
             <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>

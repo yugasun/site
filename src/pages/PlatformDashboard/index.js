@@ -51,13 +51,13 @@ class PlatformDashboardPage extends React.Component {
       >
         <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
-            <div className={ `${styles.innerMainImage} ${styles.heroPrimeImage}` }>
+            <div className={ `${styles.heroPrimeImage}` }>
               <img src={iconDashboard} alt='Serverless Dashboard' />
             </div>
             <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
               serverless
             </h2>
-            <h1 className={ `${commonStyles.white} ${commonStyles.textCenter}`}>
+            <h1 className={ `${commonStyles.white} ${commonStyles.textCenter} ${styles.medium}`}>
               dashboard
             </h1>
             <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
