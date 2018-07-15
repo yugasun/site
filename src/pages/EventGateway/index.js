@@ -37,7 +37,7 @@ const EventGatewayPage = (props) => {
           <h1 className={ `${styles.white} ${styles.textCenter} `}>
             dashboard
           </h1>
-          <div className={ `${styles.heroDesc} ${styles.textCenter}` }>
+          <div className={ `${styles.helfPad} ${styles.heroDesc} ${styles.textCenter}` }>
             Visualize, monitor & collaborate on serverless applications
           </div>
           <div className={ `${styles.heroContactWrapper} ${styles.textCenter}` }>
