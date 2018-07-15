@@ -1,18 +1,9 @@
 import React, { PropTypes, Component } from 'react'
-import Button from '../../components/Button'
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
-import NewsletterStrip from '../../fragments/NewsletterStrip'
-import ClientsLogos from '../../fragments/ClientsLogos'
-import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
-import Terminal from '../../components/Terminal'
-import terminalCommands from '../Framework/terminalCommands'
-
+import commonStyles from './../../fragments/common.css';
 
 import Testimonial from '../../fragments/Testimonial'
-import NextFooter from '../../fragments/NextFooter'
-
-
 import bolt from '../../assets/images/bolt.png'
 import iconDashboard from '../../assets/images/icon-dashboard.png'
 import group6 from '../../assets/images/group-6.png'
@@ -50,20 +41,22 @@ export default class Homepage extends Component {
   }
   render() {
     return (
-      <Default fullWidth className={styles.body}>
+      <Default fullWidth className={commonStyles.body}>
     <div className={`${styles.platformBg} ${styles.heroSectionWrapper}`}>
-      <div className={`${styles.heroContainer} ${styles.container}`}>
-        <h2 className={`${styles.white} ${styles.textCenter}`}>serverless</h2>
-        <h1 className={`${styles.white} ${styles.textCenter}`}>platform</h1>
-        <div className={`${styles.heroDesc} ${styles.textCenter}`}>Everything you need to operationalize serverless development</div>
+      <div className={`${styles.heroContainer} ${commonStyles.container}`}>
+        <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
+        <h1 className={`${commonStyles.white} ${commonStyles.textCenter}`}>platform</h1>
+        <div className={`${styles.heroDesc} ${commonStyles.textCenter}`}>
+          Everything you need to operationalize serverless development
+        </div>
         <div className={styles.heroBulletsWrapper}>
           <div className={styles.heroBullets}>
             <a>
               <figure>
                 <img src={bolt} alt='' />
               </figure>
-              <h4 className={styles.white}>serverless</h4>
-              <h3 className={styles.white}>famework</h3>
+              <h4 className={commonStyles.white}>serverless</h4>
+              <h3 className={commonStyles.white}>famework</h3>
             </a>
           </div>
           <div className={styles.heroBullets}>
@@ -71,8 +64,8 @@ export default class Homepage extends Component {
               <figure>
                 <img src={iconDashboard} alt='' />
               </figure>
-              <h4 className={styles.white}>serverless</h4>
-              <h3 className={styles.white}>dashboard</h3>
+              <h4 className={commonStyles.white}>serverless</h4>
+              <h3 className={commonStyles.white}>dashboard</h3>
             </a>
           </div>
           <div className={styles.heroBullets}>
@@ -80,17 +73,18 @@ export default class Homepage extends Component {
               <figure>
                 <img src={group6} alt='' />
               </figure>
-              <h4 className={styles.white}>serverless</h4>
-              <h3 className={styles.white}>gateway</h3>
+              <h4 className={commonStyles.white}>serverless</h4>
+              <h3 className={commonStyles.white}>gateway</h3>
             </a>
           </div>
         </div>
-        <div className={`${styles.heroContactWrapper} ${styles.textCenter}`}>
-          <a href='' className={`${styles.btn} ${styles.btnPrimary}`}>sign up</a>
-          <a href='' className={`${styles.btn} ${styles.btnTransparent}`}>contact sales</a>
+        <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
+          <a href='' className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>sign up</a>
+          &nbsp;
+          <a href='' className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>contact sales</a>
         </div>
         <div className={styles.heroClientsWrapper}>
-          <p className={styles.textCenter}>Build serverless applications using serverless functions and infrastructure on any platform</p>
+          <p className={commonStyles.textCenter}>Build serverless applications using serverless functions and infrastructure on any platform</p>
           <ul className={styles.clientList}>
             <li><img src={gcp} alt='' /></li>
             <li><img src={azure} alt='' /></li>
@@ -104,7 +98,7 @@ export default class Homepage extends Component {
 
 
     <div className={styles.whiteSectionWrapper}>
-      <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+      <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
         <div className={styles.sectionHighlight}>
           <div>Build more, manage less.</div>
           <div>Serverless lets you focus on driving business value.</div>
@@ -136,7 +130,7 @@ export default class Homepage extends Component {
 
 
   <div className={styles.whiteSectionWrapper}>
-      <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+      <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
         <div className={`${styles.sectionHighlight} ${styles.width90} ${styles.padBtm}`}>
           <div>Serverless Platform empowers developers to build & deploy serverless applications, on any provider.</div>
         </div>
@@ -148,7 +142,7 @@ export default class Homepage extends Component {
               </figure>
               <h4>Serverless Framework</h4>
               <p>Build serverless applications quickly on any vendor.</p>
-              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
             </li>
             <li>
               <figure>
@@ -156,7 +150,7 @@ export default class Homepage extends Component {
               </figure>
               <h4>Serverless Dashboard</h4>
               <p>Observe and monitor your functions in action.</p>
-              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
             </li>
             <li>
               <figure>
@@ -164,7 +158,7 @@ export default class Homepage extends Component {
               </figure>
               <h4>Event Gateway</h4>
               <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
-              <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
+              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
             </li>
           </ul>
         </div>
@@ -173,7 +167,7 @@ export default class Homepage extends Component {
 
 
     <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper}`}>
-      <div className={`${styles.clientContainer} ${styles.container}`}>
+      <div className={`${styles.clientContainer} ${commonStyles.container}`}>
         <h4>Serverless Platform is trusted by</h4>
         <ul className={styles.clientList}>
           <li><img src={ea} alt="" /></li>
