@@ -38,9 +38,9 @@
       position: relative;
       font-size: 3.2rem;
       line-height: 1.13;
-      letter-spacing: -0.05rem;
+      font-weight: normal;
+      letter-spacing: -0.5px;
       font-family: 'SoleilBk';
-
 
       &:before{
         content: counter(step-counter, decimal-leading-zero);

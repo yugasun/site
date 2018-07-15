@@ -20,6 +20,7 @@
 
   blockquote{
     font-family: 'SoleilBk-Italic';
+    font-weight: normal;
     font-size: 2.4rem;
     line-height: 1.33;
     padding: 0px;
@@ -65,14 +66,30 @@
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .redHighlightWrapper{
-    padding: 30px 0px;
-    
+    padding: 0;
+
     .redHighlightContainer{
       width: 90%;
       margin: auto;
-      padding: 20px;
+      padding: 60px 20px;
+
+      .quoteDetails{
+        .info{
+          order: 2;
+        }
+
+        .companyLogo{
+          order: 1;
+          padding-top: 10px;
+          padding-bottom: 15px;
+
+          img{
+            width: 80px;
+          }
+        }
+      }
     }
 
     blockquote{

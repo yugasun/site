@@ -8,7 +8,7 @@ import SectionSeperator from '../../fragments/SectionSeperator'
 import Features from './../../fragments/Features'
 import PreFooter from './../../fragments/PreFooter'
 
-import iconDashboard from '../../assets/images/icon-dashboard.png';
+import iconDashboard from '../../assets/images/icon-platform-dash.png';
 import Illustration from '../../assets/images/illustration-platform-dash.png';
 import IllustrationPart1 from '../../assets/images/illustration-use-case-1.png';
 import IllustrationPart2 from '../../assets/images/illustration-use-case-2.png';
@@ -51,7 +51,7 @@ class PlatformDashboardPage extends React.Component {
       >
         <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
-            <div className={ styles.heroPrimeImage }>
+            <div className={ `${styles.innerMainImage} ${styles.heroPrimeImage}` }>
               <img src={iconDashboard} alt='Serverless Dashboard' />
             </div>
             <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
