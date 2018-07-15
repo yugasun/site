@@ -3,33 +3,28 @@ import styles from './../Footer/index.css'
 import commonStyles from './../common.css'
 import { Link } from 'react-router'
 
-const PreFooter = () => (
+const PreFooter = ({ heading, descriptions, links }) => (
   <div className={styles.footerHighlight}>
     <div className={styles.fhighText}>
-      <h2 className={commonStyles.white}>Next Steps</h2>
-      <p className={commonStyles.white}>Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</p>
-      <p className={commonStyles.white}>Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</p>
+      <h2 className={commonStyles.white}>{heading}</h2>
+      {
+        descriptions.map((description) => (
+          <p className={commonStyles.white}>{description}</p>
+        ))
+      }
     </div>
     <div className={styles.fhighLinks}>
       <ul>
-        <li>
-          <Link to=''
-            className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-            use cases
-          </Link>
-        </li>
-        <li>
-          <Link to=''
-            className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-            comparisions
-          </Link>
-        </li>
-        <li>
-          <Link to=''
-            className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-            case studies
-          </Link>
-        </li>
+        {
+          links.map((link) => (
+            <li>
+              <Link to={link.url}
+                className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                {link.title}
+              </Link>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>

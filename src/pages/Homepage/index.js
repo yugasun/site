@@ -43,7 +43,20 @@ export default class Homepage extends Component {
   }
 
   renderPrefooter() {
-    return <PreFooter />;
+    return  (
+      <PreFooter
+        heading='Next Steps'
+        descriptions={[
+          'Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.',
+          'Or if you\'re ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.'
+        ]}
+        links={[
+          { url: '/', title: 'use cases' },
+          { url: '/', title: 'comparisions' },
+          { url: '/', title: 'case studies' }
+        ]}
+      />
+    );
   }
 
   render() {
