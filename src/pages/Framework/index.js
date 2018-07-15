@@ -1,84 +1,155 @@
 import React from 'react'
-import { Link } from 'react-router'
 import Default from '../../layouts/Default'
-import styles from './Framework.css'
-import Terminal from '../../components/Terminal'
-import terminalCommands from './terminalCommands'
-import NewsletterStrip from '../../fragments/NewsletterStrip'
+import styles from './style.css'
+import commonStyles from './../../fragments/common.css';
+import UseCasesSection from '../../fragments/UseCasesSection'
+import SectionSeperator from '../../fragments/SectionSeperator'
+import Features from './../../fragments/Features'
+
+import iconFramework from '../../assets/images/bolt.png';
+import Illustration from '../../assets/images/framework-illustration.png';
+
+import gcp from '../../assets/images/gcp.png'
+import azure from '../../assets/images/azure.png'
+import aws from '../../assets/images/aws.png'
+import ibm from '../../assets/images/ibm.png'
+import kubernetes from '../../assets/images/kubernetes.png'
+
+import IllustrationPart1 from '../../assets/images/framework-illustration1.png';
+import IllustrationPart2 from '../../assets/images/framework-illustration2.png';
+import IllustrationPart3 from '../../assets/images/framework-illustration3.png';
+import iconFeature1 from '../../assets/images/icon-feature-1.png';
+import iconFeature2 from '../../assets/images/icon-feature-2.png';
+import iconFeature3 from '../../assets/images/icon-feature-3.png';
+import iconFeature4 from '../../assets/images/icon-feature-4.png';
+import iconFeature5 from '../../assets/images/icon-feature-5.png';
+import iconFeature6 from '../../assets/images/icon-feature-6.png';
+
+const baseUrl = process.env.S3_BUCKET
 
 const FrameworkPage = (props) => {
   return (
-    <Default className={styles.page} {...props} fullWidth whiteLogo coloredHeader={false}>
-      <div className={styles.toolHero}>
-        <div className={styles.boundSmall}>
-          <img className={styles.toolIcon} width={200} height={200} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/platform.svg' />
-          <h1 className={styles.toolTitle}>Serverless Framework</h1>
-          <p className={styles.toolDescription}>Open-source CLI for building serverless architectures. At 22,000 stars on GitHub, the Serverless Framework started a movement.
-
-</p>
-          <div className={styles.toolProperties}>
-            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon-white.svg' /> ★ 22,373</div>
-            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-forum.png' />5,000</div>
-            <div className={styles.toolProperty}><img width={18} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/icon-gitter.png' />1,700</div>
-            <div className={styles.toolProperty}><img width={30} height={30} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/icon-deploy.svg' />5.3M deploys</div>
+    <Default className={ commonStyles.body } {...props} fullWidth whiteLogo coloredHeader={ true } headerHideSignUp={ true }>
+      <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
+        <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
+          <div className={ styles.heroPrimeImage }>
+            <img src={iconFramework} alt="" />
           </div>
-        </div>
-      </div>
-      <div className={styles.sectionDemo}>
-        <div className={styles.bound}>
-          <div className={styles.demoMeta}>
-            <h2>The easy, open serverless workflow.</h2>
-            <p className={styles.demoDescription}>Serverless Framework is your single toolkit for deploying serverless architectures to any provider. You build the features, we configure the infrastructure. Done.</p>
-            <div className={styles.demoLinks}>
-              <Link className={`${styles.btn} ${styles.btnBlue}`} to='/framework/docs/'>View Docs</Link>
-              <a className={`${styles.btn} ${styles.btnGrey}`} href='https://github.com/serverless/serverless'><img width={24} height={24} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/github-icon.svg' /> Github</a>
+          <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
+            serverless
+          </h2>
+          <h1 className={ `${commonStyles.white} ${commonStyles.textCenter}`}>
+            framework
+          </h1>
+          <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
+            The easy, open way to build Serverless applications
+          </div>
+          <div className={`${styles.heroClientsWrapper} ${styles.midWrapper}`}>
+            <p className={commonStyles.textCenter}>
+              The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
+            </p>
+          </div>
+          <div className={ styles.heroPrimeImage }>
+            <img src={Illustration} alt="" />
+          </div>
+          <div className={styles.heroBulletsAlternate}>
+            <div className={styles.heroBullets}>
+              <h3 className={commonStyles.white}>Infrastructure As Code</h3>
+              <p>With the Serverless Framework you can define your entire Serverless application, utlizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.  </p>
+            </div>
+            <div className={styles.heroBullets}>
+              <h3 className={commonStyles.white}>Simple Serverless Development</h3>
+              <p>The Serverless Framework provides a simple, intuitive CLI experience that makes it easy to develop and deploy applications to cloud platforms like AWS, Microsoft Azure, Google Cloud Platform, IBM OpenWhisk, and more.</p>
+            </div>
+            <div className={styles.heroBullets}>
+              <h3 className={commonStyles.white}>Provider Agnostic</h3>
+              <p>The Serverless Framework is open source and provider agnostic, meaning you only need one tool to tap in to the power of all the cloud providers.</p>
             </div>
           </div>
-          <div className={styles.demoHalf}>
-            <Terminal commands={terminalCommands} />
+          <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>quick start</a>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>login</a>
+          </div>
+          <div className={styles.heroClientsWrapper}>
+            <ul className={styles.clientList}>
+              <li><img src={gcp} alt='' /></li>
+              <li><img src={azure} alt='' /></li>
+              <li><img src={aws} alt='' /></li>
+              <li><img src={ibm} alt='' /></li>
+              <li><img src={kubernetes} alt='' /></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div className={styles.bound}>
-        <div className={styles.sectionFeatures}>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/provider-agnostic.svg' />
-            <h3 className={styles.featureTitle}>Provider agnostic</h3>
-            <p>Centrally deploy to AWS Lambda, Microsoft Azure, Google Cloud Platform and IBM OpenWhisk.</p>
-          </div>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/extensible.svg' />
-            <h3 className={styles.featureTitle}>Extensible with plugins</h3>
-            <p>Use dozens community-made plugins, or make a new one specific to your application. Framework is open source and easy to build for.</p>
-          </div>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/multi-lingual.svg' />
-            <h3 className={styles.featureTitle}>Multi-lingual</h3>
-            <p>Don’t be hamstrung by just one language: write functions in python, node.js, java, scala or C#.</p>
-          </div>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/automatic-scaling.svg' />
-            <h3 className={styles.featureTitle}>Automatic scaling</h3>
-            <p>Don’t spend time and resources provisioning unused infrastructure. Serverless architectures expand and contract on demand, cutting server costs by more than half.</p>
-          </div>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/faster-iterations.svg' />
-            <h3 className={styles.featureTitle}>Faster iteration</h3>
-            <p>Develop and deploy infinitely scalable applications within minutes. Provision and deploy a REST API or data pipeline without provisioning resources.</p>
-          </div>
-          <div className={styles.feature}>
-            <img className={styles.featureIcon} src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/unified-dev-experience.svg' />
-            <h3 className={styles.featureTitle}>Unified dev experience</h3>
-            <p>Develop, test and deploy functions and the events they react to on any cloud provider. Manage your services and functions in one place--from the CLI.</p>
-          </div>
+
+      <div className={styles.whiteSectionWrapper}>
+        <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
+          <UseCasesSection
+            title="Serverless Framework Use Cases"
+            description="These are the 3 main use cases for the Serverless Framework that you should know about."
+            usecases={[
+              {
+                title: 'Simple, scaleable APIs',
+                description: 'The Serverless Framework provides a simple way to develop infinitely scaleable, pay-per-execution APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live. With native support for AWS API Gatewway, Event Gateway, and more you can utilize the tools you know and trust with a single experience.',
+                image: IllustrationPart1,
+              },
+              {
+                title: 'Easy Automation',
+                description: 'The Serverless Framework makes automating anything quick and easy. Simply subscribe a function to the event  and let the framework take care of the rest.',
+                image: IllustrationPart2,
+              },
+              {
+                title: 'Data Processing',
+                description: 'Transforming data and building data pipelines and has never been easier.',
+                image: IllustrationPart3,
+              },
+            ]}
+          />
         </div>
       </div>
-      <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
-        <NewsletterStrip />
+
+      <SectionSeperator />
+
+      <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
+        <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
+          <Features features={[
+            {
+              title: 'Minimum Configuration',
+              description: 'Define your entire Serverless application with a single yaml configuration file.',
+              image: iconFeature1
+            },
+            {
+              title: 'Robust Ecosystem',
+              description: 'The Serverless Framework community has built and published hudreds of plugins to extend the framework’s functionality and example projects to get you started quickly. ',
+              image: iconFeature2
+            },
+            {
+              title: 'Multi Lingual',
+              description: 'Don’t be hamstrung by just one language: write functions in python, node.js, java, Go, scala, C# and more.',
+              image: iconFeature3
+            },
+            {
+              title: 'Cloud Agnostic',
+              description: 'All your cloud services are now compatible with one another: share cross-cloud functions and events with AWS Lambda, Microsoft Azure, IBM OpenWhisk and Google Cloud Platform.',
+              image: iconFeature4
+            },
+            {
+              title: 'Application Lifecycle Management',
+              description: 'With built in support for local development, stages, rollback and more, the framework is loaded with the functionality you need to manage the lifecycle of your application.',
+              image: iconFeature5
+            },
+            {
+              title: 'Streaming Logs',
+              description: 'Streaming logs from your functions directly in to your CLI, making it easy to rapidly redug and troubleshoot. ',
+              image: iconFeature6
+            }
+          ]} />
+        </div>
       </div>
     </Default>
   )
 }
+
 FrameworkPage.hasLoadingState = true
 
 export default FrameworkPage
