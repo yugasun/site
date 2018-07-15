@@ -13,35 +13,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className={`${styles.footerContainer} ${commonStyles.container}`}>
-          <div className={styles.footerHighlight}>
-            <div className={styles.fhighText}>
-              <h2 className={commonStyles.white}>Next Steps</h2>
-              <p className={commonStyles.white}>Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</p>
-              <p className={commonStyles.white}>Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</p>
-            </div>
-            <div className={styles.fhighLinks}>
-              <ul>
-                <li>
-                  <Link to=''
-                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-                    use cases
-                  </Link>
-                </li>
-                <li>
-                  <Link to=''
-                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-                    comparisions
-                  </Link>
-                </li>
-                <li>
-                  <Link to=''
-                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-                    case studies
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+          { this.props.renderPrefooter ? this.props.renderPrefooter() : null }
           <div className={styles.footerLogo}>
             <img src={logo} alt="" />
           </div>

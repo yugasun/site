@@ -26,6 +26,7 @@ const propTypes = {
   body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
+  renderPrefooter: PropTypes.func,
   __url: PropTypes.string,
   prefetches: PropTypes.array,
 }
@@ -37,6 +38,7 @@ const DefaultLayout = (props) => {
     body,
     header,
     footer,
+    renderPrefooter,
     children,
     className,
     fullWidth,
@@ -108,7 +110,7 @@ const DefaultLayout = (props) => {
   // Remove jumpy footer with loading state
   let footerRender
   if (!isLoading) {
-    footerRender = <Footer />
+    footerRender = <Footer renderPrefooter={renderPrefooter} />
   }
 
   /* Markdown content will display if it exists */

@@ -28,6 +28,7 @@ import cocacolaLogo from '../../assets/images/cocacola-logo.png'
 import nordstrom from '../../assets/images/nordstrom-logo.png'
 import expedia from '../../assets/images/expedia-logo.png'
 import reuters from '../../assets/images/reuters-logo.png'
+import PreFooter from '../../fragments/PreFooter';
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -40,9 +41,14 @@ export default class Homepage extends Component {
       show: true
     }
   }
+
+  renderPrefooter() {
+    return <PreFooter />;
+  }
+
   render() {
     return (
-      <Default fullWidth className={commonStyles.body}>
+      <Default fullWidth className={commonStyles.body} renderPrefooter={this.renderPrefooter}>
     <div className={`${styles.platformBg} ${styles.heroSectionWrapper}`}>
       <div className={`${styles.heroContainer} ${commonStyles.container}`}>
         <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
