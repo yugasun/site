@@ -125,7 +125,7 @@ export default class Footer extends Component {
                       </a>
                     </li>
                     <li>
-                      <Link to='/'>champions</Link>
+                      <Link to='/community/champions/'>champions</Link>
                     </li>
                     <li>
                       <Link to='/'>contact</Link>
