@@ -51,7 +51,6 @@ export default class Homepage extends Component {
   render() {
     return (
       <Default fullWidth className={styles.body}>
-        <div className={styles.wrapper}>
     <div className={`${styles.platformBg} ${styles.heroSectionWrapper}`}>
       <div className={`${styles.heroContainer} ${styles.container}`}>
         <h2 className={`${styles.white} ${styles.textCenter}`}>serverless</h2>
@@ -185,7 +184,6 @@ export default class Homepage extends Component {
         </ul>
       </div>
     </div>
-        </div>
       </Default>
     )
   }
