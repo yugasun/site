@@ -21,8 +21,8 @@ const UseCasesSection = ({ title, description, usecases }) => (
               <div className={styles.info}>
                 <p>{usecase.description}</p>
               </div>
-              <div className={commonStyles.btnWrapper}>
-                <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary}` }>view example</a>
+              <div className={`${commonStyles.btnWrapper} ${styles.btnWrapper}`}>
+                <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>view example</a>
               </div>
             </div>
             <div className={styles.useCaseImage}>

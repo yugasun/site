@@ -1,17 +1,20 @@
 .useCasesWrapper{
-  padding: 160px 0px;
+  padding-top: 190px;
 }
 
 .useCasesIntro{
   h2{
     font-family: 'SoleilSb';
     font-size: 4rem;
+    line-height: 1.4;
     margin-bottom: 0px;
   }
 
   p{
     font-family: 'Soleil';
     font-size: 1.2rem;
+    line-height: 1.33;
+    padding-top: 20px;
   }
 }
 
@@ -20,7 +23,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 80px 0px;
+  padding: 155px 0px;
 
   .useCaseDetail,
   .useCaseImage{
@@ -29,11 +32,13 @@
 
   .useCaseDetail{
     order: 1;
-    padding-right: 40px;
+    padding-right: 110px;
 
     h3{
       font-size: 3.2rem;
       font-family: 'SoleilBk';
+      line-height: 1.13;
+      letter-spacing: -0.05rem;
       padding: 0px;
       margin: 0px;
       text-align: left;
@@ -41,6 +46,7 @@
     }
 
     .info{
+
       p{
         font-size: 1.6rem;
         font-family: 'SoleilBk';
@@ -72,7 +78,7 @@
     .useCaseDetail{
       order: 2;
       padding-right: 0px;
-      padding-left: 40px;
+      padding-left: 110px;
     }
 
     .useCaseImage{
@@ -81,6 +87,45 @@
   }
 
   &:last-of-type{
+    padding-top: 40px;
     padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .useCasesWrapper{
+    padding-top: 60px;
+  }
+
+  .useCaseItem{
+    padding: 60px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .useCaseItem{
+
+    padding: 20px 0px;;
+
+    .useCaseDetail,
+    .useCaseImage{
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .useCaseDetail{
+      order: 2;
+    }
+
+    .useCaseImage{
+      order: 1;
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(2n){
+      .useCaseDetail{
+        padding: 0 20px;
+      }
+    }
   }
 }

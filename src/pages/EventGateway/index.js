@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router'
 import Default from '../../layouts/Default'
 import styles from './styles.css'
-import Glitch from '../../components/Glitch'
-import PreFooter from '../../fragments/PreFooter'
+import commonStyles from './../../fragments/common.css';
 import UseCasesSection from '../../fragments/UseCasesSection'
 import SectionSeperator from '../../fragments/SectionSeperator'
 import Features from './../../fragments/Features'
@@ -25,39 +23,39 @@ const baseUrl = process.env.S3_BUCKET
 const EventGatewayPage = (props) => {
 
   return (
-    <Default className={ styles.page } {...props} fullWidth whiteLogo coloredHeader={ true } headerHideSignUp={ true }>
+    <Default className={ commonStyles.body } {...props} fullWidth whiteLogo coloredHeader={ true } headerHideSignUp={ true }>
       <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
-        <div className={ `${styles.heroContainer} ${styles.container}` }>
+        <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
           <div className={ styles.heroPrimeImage }>
             <img src={iconDashboard} alt="" />
           </div>
-          <h2 className={ `${styles.white} ${styles.textCenter}` }>
+          <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
             serverless
           </h2>
-          <h1 className={ `${styles.white} ${styles.textCenter} `}>
+          <h1 className={ `${commonStyles.white} ${commonStyles.textCenter}`}>
             dashboard
           </h1>
-          <div className={ `${styles.helfPad} ${styles.heroDesc} ${styles.textCenter}` }>
+          <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
             Visualize, monitor & collaborate on serverless applications
           </div>
-          <div className={ `${styles.heroContactWrapper} ${styles.textCenter}` }>
-            <a className={ `${styles.btn} ${styles.btnPrimary}` }>sign up</a>
-            <a className={ `${styles.btn} ${styles.btnTransparent}` }>contact sales</a>
+          <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>sign up</a>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>contact sales</a>
           </div>
           <div className={ styles.heroPrimeImage }>
             <img src={Illustration} alt="" />
           </div>
           <div className={styles.heroBulletsAlternate}>
             <div className={styles.heroBullets}>
-              <h3 className={styles.white}>Visualize Your Applications</h3>
+              <h3 className={commonStyles.white}>Visualize Your Applications</h3>
               <p>The Serverless Dashboard gives your team a shared overview of the functions, events, and subscriptions that make up your serverless application.</p>
             </div>
             <div className={styles.heroBullets}>
-              <h3 className={styles.white}>Streamline Development</h3>
+              <h3 className={commonStyles.white}>Streamline Development</h3>
               <p>View your application logs and metrics from within the UI to ease debugging and increase velocity.</p>
             </div>
             <div className={styles.heroBullets}>
-              <h3 className={styles.white}>Collaborate & Manage Access</h3>
+              <h3 className={commonStyles.white}>Collaborate & Manage Access</h3>
               <p>Control your security and compliance needs by managing which team members have access to which cloud resources.</p>
             </div>
           </div>
@@ -65,7 +63,7 @@ const EventGatewayPage = (props) => {
       </div>
 
       <div className={styles.whiteSectionWrapper}>
-        <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+        <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
           <UseCasesSection
             title="Serverless Dashboard Use Cases"
             description="These are the 3 main use cases for the Serverless Dashboard that you should know about."
@@ -93,7 +91,7 @@ const EventGatewayPage = (props) => {
       <SectionSeperator />
 
       <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
-        <div className={`${styles.whiteSectionContainer} ${styles.container}`}>
+        <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
           <Features features={[
             {
               title: 'Architecture Visualization',

@@ -61,7 +61,7 @@
   }
 }
 
-.heroBulletsWrapper{
+.heroBulletsWrapper, .heroBulletsAlternate{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -131,8 +131,15 @@
   }
 }
 
-.heroBulletsAlternate{
-  @extend .hero-bullets-wrapper;
+.heroBulletsAlternate {
+  .heroBulletsWrapper {
+    overflow: hidden;
+    .heroBullets{
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
   width: 100%;
   justify-content: space-between;
   padding-top: 40px;
@@ -247,7 +254,7 @@
 
   }
 
-  .heroBulletsWrapper{
+  .heroBulletsWrapper, .heroBulletsAlternate{
     overflow: hidden;
 
     .heroBullets{
