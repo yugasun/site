@@ -19,7 +19,6 @@ import iconFeature4 from '../../assets/images/icon-feature-4.png';
 import iconFeature5 from '../../assets/images/icon-feature-5.png';
 import iconFeature6 from '../../assets/images/icon-feature-6.png';
 
-const baseUrl = process.env.S3_BUCKET
 
 const PlatformDashboardPage = (props) => {
 

@@ -118,7 +118,7 @@ const FrameworkPage = (props) => {
         </div>
       </div>
 
-      <SectionSeperator />
+      <Testimonial></Testimonial>
 
       <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
         <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
