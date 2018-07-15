@@ -1,18 +1,19 @@
-.container{
-  width: 100%;
-  max-width: 1260px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: auto;
-  display:block;
-}
 footer{
   background: $black_serverless;
-  font-family: Serverless;
+  padding: 100px 0px;
   position: relative;
-  padding-bottom: 40px;
+
+  &:before{
+    content: " ";
+    position: absolute;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+    background: #fff url('../../assets/images/glitch-effect.png');
+  }
 
   .footerLogo{
+    padding-top: 20px;
     padding-bottom: 100px;
 
     img{
@@ -30,14 +31,78 @@ footer{
   margin-bottom: -200px;
   display: flex;
   flex-direction: row;
-  
+
   .fhighText,
   .fhighLinks{
     width: 50%;
     padding: 150px 100px;
   }
 
-  
+  .fhighText{
+    font-family: 'SoleilBk';
+    overflow: hidden;
+
+    h2{
+      font-size: 4.80rem;
+      line-height: 1;
+      letter-spacing: 0.05rem;
+      font-family: 'SoleilBk';
+      position: relative;
+      z-index: 10;
+
+      &:before{
+        content: " ";
+        position: absolute;
+        right: 90%;
+        top: -60%;
+        width: 150px;
+        height: 100px;
+        background: transparent url('../../assets/images/rectangle-19.png');
+        z-index: -1;
+      }
+
+      &.padBottom{
+        padding-bottom: 25px;
+      }
+    }
+
+    p{
+      font-size: 1.6rem;
+      letter-height: 1.5;
+      margin-bottom: 15px;
+    }
+  }
+
+  .fhighLinks{
+    background: $red_serverless url('../../assets/images/rectangle-19.png');
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+      margin: 0px;
+      padding: 0px;
+
+      li{
+        display: block;
+        padding-bottom: 25px;
+        text-align: center;
+
+        .btn{
+          width: 100%;
+          min-width: 280px;
+          margin: auto;
+        }
+
+        &:last-of-type{
+          padding-bottom: 0px;
+        }
+      }
+
+    }
+  }
 }
 
 .footerBottomWrapper{
@@ -48,7 +113,7 @@ footer{
 
 .footerNavWrapper{
   width: 65%;
-  
+
   .listWrapper{
     display: flex;
     flex-direction: row;
@@ -95,7 +160,7 @@ footer{
         }
       }
     }
-  }  
+  }
 
   .madeWithText{
     width: 50%;
@@ -104,23 +169,22 @@ footer{
       font-family: 'Soleil';
       font-size: 1.2rem;
       line-height: 1.33;
-  
     }
-  } 
+  }
 
   .copyrightWrapper{
-    font-family: Soleil;
-    
+    font-family: 'Soleil';
+
     padding-top: 40px;
     display: flex;
     flex-direction: row;
     font-size: 12px;
-    
+
     p{
       font-size: 1.2rem;
       line-height: 1.17;
       letter-spacing: -0.05rem;
-      font-family: Soleil;
+      font-family: 'Soleil';
     }
 
     .policyNav{
@@ -183,7 +247,7 @@ footer{
     .footerLogo{
       padding: 30px 0px;
     }
-  } 
+  }
 
   .footerHighlight{
     top: 0;
@@ -197,7 +261,6 @@ footer{
     }
   }
 
-
   .footerNavWrapper{
     width: 100%;
     order: 2;
@@ -205,6 +268,16 @@ footer{
     .listWrapper{
       .footerList{
         width: 50%;
+      }
+    }
+
+    .madeWithText{
+      width: 100%;
+    }
+
+    .copyrightWrapper{
+      .policyNav{
+        margin-left: 40px;
       }
     }
   }
@@ -231,52 +304,21 @@ footer{
     border: 0px;
     color: #fff;
     padding: 16px;
-    width: 70%;
+    width: 60%;
   }
 
   .btn{
-    display: inline-block;
     font-size: 1.6rem;
     line-height: 1.5;
-    padding: 18px 25px;
-    letter-spacing: .08rem;
-    border: 0px;
-    text-align: center;
-    text-decoration: none;
     font-family: 'Serverless';
-
-    &:hover{
-      text-decoration: none;
-    }
-
-    &.btnPrimary{
-      background: $red_serverless;
-      color: $white_serverless;
-    }
-
-    &.btnTransparent{
-      background: transparent;
-      color: $red_serverless;
-      padding: 15px 22px;
-      border: 3px solid $red_serverless;
-    }
-
-    &.btnTransparentWhite{
-      background: transparent;
-      color: $white_serverless;
-      padding: 12px 22px;
-      border: 3px solid $white_serverless;
-    }
-
-  
+    width: 40%;
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .subscribeForm{
-
     .greyTextbox{
       width: 60%;
     }
-  }  
+  }
 }

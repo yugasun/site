@@ -99,7 +99,7 @@ export default class Homepage extends Component {
             <li><img src={ibm} alt='' /></li>
             <li><img src={kubernetes} alt='' /></li>
           </ul>
-        </div>    
+        </div>
       </div>
     </div>
 
@@ -129,7 +129,7 @@ export default class Homepage extends Component {
               <p>Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.</p>
             </li>
           </ul>
-        </div> 
+        </div>
       </div>
     </div>
 
@@ -168,7 +168,7 @@ export default class Homepage extends Component {
               <a href="" className={`${styles.btn} ${styles.btnPrimary}`}>learn more</a>
             </li>
           </ul>
-        </div> 
+        </div>
       </div>
     </div>
 
@@ -185,27 +185,6 @@ export default class Homepage extends Component {
         </ul>
       </div>
     </div>
-
-
-    <div className={styles.footer}>
-      <div className={`${styles.footerContainer} ${styles.container}`}>
-        <div className={`${styles.footerHighlight}`}>
-          <div className={styles.fhighText}>
-            <h2 className={styles.white}>Next Steps</h2>
-            <p className={styles.white}>Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</p>
-            <p className={styles.white}>Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</p>
-          </div>
-          <div className={styles.fhighLinks}>
-            <ul>
-              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>use cases</a></li>
-              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>comparisions</a></li>
-              <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>case studies</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
         </div>
       </Default>
     )
