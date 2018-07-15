@@ -31,7 +31,7 @@ const UseCasesSection = ({ title, description, usecases }) => (
               </div>
             </div>
             <div className={styles.useCaseImage}>
-              <img src={usecase.image} alt="" />
+              <img src={usecase.image} alt={usecase.title} />
             </div>
           </div>
         ))

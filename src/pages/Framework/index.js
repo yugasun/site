@@ -4,7 +4,7 @@ import Default from '../../layouts/Default'
 import styles from './style.css'
 import commonStyles from './../../fragments/common.css';
 import UseCasesSection from '../../fragments/UseCasesSection'
-import SectionSeperator from '../../fragments/SectionSeperator'
+import Testimonial from '../../fragments/Testimonial'
 import Features from './../../fragments/Features'
 import PreFooter from './../../fragments/PreFooter'
 
@@ -27,7 +27,6 @@ import iconFeature4 from '../../assets/images/icon-feature-4.png';
 import iconFeature5 from '../../assets/images/icon-feature-5.png';
 import iconFeature6 from '../../assets/images/icon-feature-6.png';
 
-const baseUrl = process.env.S3_BUCKET
 
 class FrameworkPage extends React.Component {
   renderPrefooter() {
@@ -60,7 +59,7 @@ class FrameworkPage extends React.Component {
         <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ styles.heroPrimeImage }>
-              <img src={iconFramework} alt="" />
+              <img src={iconFramework} alt="Serverless Framework" />
             </div>
             <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
               serverless
@@ -77,7 +76,7 @@ class FrameworkPage extends React.Component {
               </p>
             </div>
             <div className={ styles.heroPrimeImage }>
-              <img src={Illustration} alt="" />
+              <img src={Illustration} alt="Serverless Framework" />
             </div>
             <div className={styles.heroBulletsAlternate}>
               <div className={styles.heroBullets}>
@@ -107,11 +106,11 @@ class FrameworkPage extends React.Component {
             </div>
             <div className={styles.heroClientsWrapper}>
               <ul className={styles.clientList}>
-                <li><img src={gcp} alt='' /></li>
-                <li><img src={azure} alt='' /></li>
-                <li><img src={aws} alt='' /></li>
-                <li><img src={ibm} alt='' /></li>
-                <li><img src={kubernetes} alt='' /></li>
+                <li><img src={gcp} alt='Google Cloud Provider' /></li>
+                <li><img src={azure} alt='Microsoft Azure' /></li>
+                <li><img src={aws} alt='Amazon Web Services' /></li>
+                <li><img src={ibm} alt='IBM OpenWhisk' /></li>
+                <li><img src={kubernetes} alt='Kubernetes' /></li>
               </ul>
             </div>
           </div>
@@ -120,8 +119,8 @@ class FrameworkPage extends React.Component {
         <div className={styles.whiteSectionWrapper}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
-              title="Serverless Framework Use Cases"
-              description="These are the 3 main use cases for the Serverless Framework that you should know about."
+              title='Serverless Framework Use Cases'
+              description='These are the 3 main use cases for the Serverless Framework that you should know about.'
               usecases={[
                 {
                   title: 'Simple, scaleable APIs',
@@ -143,7 +142,7 @@ class FrameworkPage extends React.Component {
           </div>
         </div>
 
-        <SectionSeperator />
+        <Testimonial />
 
         <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>

@@ -10,7 +10,7 @@ export default ({ features }) => (
         features.map((feature) => (
           <li key={feature.title}>
             <figure>
-              <img src={feature.image} alt="" />
+              <img src={feature.image} alt={feature.title} />
             </figure>
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>

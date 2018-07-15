@@ -21,7 +21,6 @@ import iconFeature4 from '../../assets/images/icon-feature-4.png';
 import iconFeature5 from '../../assets/images/icon-feature-5.png';
 import iconFeature6 from '../../assets/images/icon-feature-6.png';
 
-const baseUrl = process.env.S3_BUCKET
 
 class EventGatewayPage extends React.Component {
   renderPrefooter() {
@@ -54,7 +53,7 @@ class EventGatewayPage extends React.Component {
         <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ styles.heroPrimeImage }>
-              <img src={iconGateway} alt="" />
+              <img src={iconGateway} alt="Event Gateway" />
             </div>
             <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
               serverless
@@ -71,7 +70,7 @@ class EventGatewayPage extends React.Component {
               </p>
             </div>
             <div className={ styles.heroPrimeImage }>
-              <img src={Illustration} alt="" />
+              <img src={Illustration} alt="Event Router" />
             </div>
             <div className={styles.heroBulletsAlternate}>
               <div className={styles.heroBullets}>
@@ -105,8 +104,8 @@ class EventGatewayPage extends React.Component {
         <div className={styles.whiteSectionWrapper}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
-              title="Event Gateway Use Cases"
-              description="These are the 3 main use cases for Event Gateway that you should know about."
+              title='Event Gateway Use Cases'
+              description='These are the 3 main use cases for Event Gateway that you should know about.'
               usecases={[
                 {
                   title: 'Simple, serverless APIs',

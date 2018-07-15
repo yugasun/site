@@ -14,7 +14,7 @@ export default class extends React.Component {
         <div className={styles.name}>Patrick Brandt</div>
         <div className={styles.designation}>Solutions Architect at The Coca-Cola Company</div>
       </div>
-      <div className={styles.companyLogo}><img src={cocacola} alt="" /></div>
+      <div className={styles.companyLogo}><img src={cocacola} alt='Coca Cola' /></div>
     </div>
   </div>
 </div>
