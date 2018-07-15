@@ -1,6 +1,12 @@
 .mainHeaderWrapper{
-  padding: 25px 0px;
   background: $black_serverless;
+
+  .logoWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+  }
 
   .navBtn{
     display: none;
@@ -47,7 +53,7 @@
     > a{
       color: inherit;
       display: inline-block;
-      padding: 5px 25px;
+      padding: 30px 25px;
       text-decoration: none;
       position: relative;
       font-family: "Serverless";
@@ -58,10 +64,11 @@
         position: absolute;
         content: " ";
         width: 5px;
-        height: 80%;
+        height: 25px;
         background: $red_serverless;
         left: 0;
-        top:10%;
+        margin-top: -12.5px;
+        top: 50%;
         opacity: 0;
         visibility: hidden;
         transition: all .4s;
@@ -101,8 +108,9 @@
   box-shadow: 0 0px 50px 1px rgba(255,255,255,0.3);
   position: absolute;
   z-index: 999;
-  top: 60px;
-  left: -50%;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   bottom: 40px;
   padding: 48px;
 
@@ -291,11 +299,11 @@
   .mainNav{
     > li {
       > a{
-        padding: 5px;
+        padding: 30px 5px;
         &:before{
-          height: 60%;
+          height: 18px;
           top: 20%;
-          left: -5px;
+          margin-top: -7.5px;
         }
       }
     }
@@ -330,6 +338,12 @@
     width: 100%;
     padding: 25px 0px;
 
+    > li {
+      > a {
+        padding: 5px;
+      }
+    }
+
     li{
       display: block;
       text-align: left;
@@ -342,6 +356,7 @@
     position: static;
     margin: 20px 0px;
     padding: 20px;
+    transform: translate(0%, 0%);
     box-shadow: none;
     border-top: 1px solid $grey1_serverless;
     border-bottom: 1px solid $grey1_serverless;
@@ -363,6 +378,10 @@
           width: 100%;
         }
       }
+    }
+
+    &:before {
+      display: none;
     }
   }
 }
