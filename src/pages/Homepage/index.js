@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react'
+import { Link } from 'react-router';
 import Default from '../../layouts/Default'
 import styles from './Homepage.css'
 import commonStyles from './../../fragments/common.css';
@@ -79,12 +80,21 @@ export default class Homepage extends Component {
           </div>
         </div>
         <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
-          <a href='' className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>sign up</a>
+          <a href="https://dashboard.serverless.com"
+            target='_blank'
+            className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+            sign up
+          </a>
           &nbsp;
-          <a href='' className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>contact sales</a>
+          <Link to={''}
+            className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
+            contact sales
+          </Link>
         </div>
         <div className={styles.heroClientsWrapper}>
-          <p className={commonStyles.textCenter}>Build serverless applications using serverless functions and infrastructure on any platform</p>
+          <p className={commonStyles.textCenter}>
+            Build serverless applications using serverless functions and infrastructure on any platform
+          </p>
           <ul className={styles.clientList}>
             <li><img src={gcp} alt='' /></li>
             <li><img src={azure} alt='' /></li>
@@ -142,7 +152,10 @@ export default class Homepage extends Component {
               </figure>
               <h4>Serverless Framework</h4>
               <p>Build serverless applications quickly on any vendor.</p>
-              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
+              <Link to='/framework/'
+                className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                learn more
+              </Link>
             </li>
             <li>
               <figure>
@@ -150,7 +163,10 @@ export default class Homepage extends Component {
               </figure>
               <h4>Serverless Dashboard</h4>
               <p>Observe and monitor your functions in action.</p>
-              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
+              <Link to='/dashboard/'
+                className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                learn more
+              </Link>
             </li>
             <li>
               <figure>
@@ -158,7 +174,10 @@ export default class Homepage extends Component {
               </figure>
               <h4>Event Gateway</h4>
               <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
-              <a href="" className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>learn more</a>
+              <Link to='/event-gateway/'
+                className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                learn more
+              </Link>
             </li>
           </ul>
         </div>
