@@ -1,12 +1,8 @@
-.logo {
-  height: 30px;
-  display: block;
-}
 .mainHeaderWrapper{
   padding: 25px 0px;
   background: $black_serverless;
 
-  .navBtn {
+  .navBtn{
     display: none;
     font-size: 3rem;
     width: 35px;
@@ -24,8 +20,8 @@
       height: 20px;
     }
 
-    .faTimes{
-      display:none;
+    .faTimes {
+      display: none;
     }
 
     &.active{
@@ -42,13 +38,13 @@
 
 
 .mainNav{
-  margin:0;
-  li{
+
+  > li{
     display: inline-block;
     color: #fff;
     position: relative;
-    
-    a{
+
+    > a{
       color: inherit;
       display: inline-block;
       padding: 5px 25px;
@@ -57,7 +53,6 @@
       font-family: "Serverless";
       font-size: 1.6rem;
       letter-spacing: 0.7px;
-
 
       &:before{
         position: absolute;
@@ -73,17 +68,24 @@
       }
     }
 
-    &:hover a, &.active a{
-      text-decoration: none;
-      &:before{
-        opacity: 1;
-        visibility: visible;
-        transform: rotateZ(200deg);
+    &:hover,
+    &.active{
+      .mainNavDropdown{
+        display: block;
+      }
+
+      & > a{
+        text-decoration: none;
+        &:before{
+          opacity: 1;
+          visibility: visible;
+          transform: rotateZ(200deg);
+        }
       }
     }
 
     &:last-of-type{
-      a{
+      > a{
         padding-right: 0px;
       }
     }
@@ -91,28 +93,183 @@
 }
 
 .mainNavDropdown{
-  display: block;
+  display: none;
   width: 220px;
   height: auto;
+  max-height: auto;
   background: $black_serverless;
-  box-shadow: 0 10px 50px rgba(255,255,255,0.3);
+  box-shadow: 0 0px 50px 1px rgba(255,255,255,0.3);
   position: absolute;
   z-index: 999;
   top: 60px;
   left: -50%;
   bottom: 40px;
-  padding: 25px;
+  padding: 50px;
 
-  li{
-    &:before{
-      display: none;
+  ul{
+    margin: 0px;
+    padding: 0px;
+
+    li{
+      width: 100%;
+      text-decoration: none;
+
+      a{
+        color: $white_serverless;
+        text-decoration: none;
+      }
     }
   }
 
-  &.platform-drop{
-    width: 310px;
-    height: 310px;
-    // overflow: hidden;
+  &.platformDrop{
+    width: 300px;
+    min-height: 300px;
+
+    ul{
+      > li{
+        display: block;
+        text-decoration: none;
+
+        > a{
+          display: flex;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px 0px;
+          margin: 0px;
+
+          img{
+            display: inline-block;
+            width: 100%;
+            width: 40px;
+            max-height: 40px;
+            margin-right: 20px;
+          }
+
+          .text{
+            display: inline-block;
+          }
+
+          .top,.bottom{
+            display: block;
+          }
+
+          .top{
+            font-size: 1.2rem;
+            line-height: 1.7;
+            letter-spacing: 0.05rem;
+            font-family: 'Serverless-Regular';
+          }
+
+          .bottom{
+            font-size: 1.8rem;
+            line-height: 0.78;
+            letter-spacing: 0.08rem;
+            font-family: 'Serverless-Regular';
+          }
+        }
+      }
+    }
+  }
+
+  &.simpleDrop{
+    padding: 40px;
+    min-height: 220px;
+    height: auto;
+    max-height: auto;
+    overflow: visible;
+
+    ul{
+      > li {
+        display: block;
+
+        > a{
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.14;
+          letter-spacing: 0.06rem;
+          padding: 0px;
+          margin: 15px 0px;
+          position: relative;
+          z-index: 10;
+
+          &:before{
+            content: " ";
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            left:-10px;
+            top: -5px;
+            z-index: -1;
+            background: $red_serverless;
+            display: none;
+            opacity: 0.2;
+          }
+
+          &:hover,
+          &.active{
+            &:before{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.resourcesDrop{
+    min-height: 250px;
+  }
+
+  &.devDrop{
+    width: 440px;
+    height: 300px;
+
+    h3{
+      color: $white_serverless;
+      font-size: 1.4rem;
+      line-height: 1.14;
+      letter-spacing: 0.06rem;
+      padding: 0px;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 10;
+
+      &:before{
+        content: " ";
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left:-10px;
+        top: -5px;
+        z-index: -1;
+        background: $red_serverless;
+        display: block;
+        opacity: 0.2;
+      }
+    }
+
+    .devDropListWrapper{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .devDropList{
+        width: 50%;
+
+        ul{
+          padding: 0px;
+
+          a{
+            color: $grey1_serverless;
+
+            &:hover,
+            &:hover{
+              color: $white_serverless;
+            }
+          }
+        }
+      }
+    }
   }
 
   &:before{
@@ -129,25 +286,41 @@
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 992px) {
+  .main-nav{
+    > li {
+      > a{
+        padding: 5px;
+        &:before{
+          height: 60%;
+          top: 20%;
+          left: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .mainHeaderWrapper{
     padding: 30px 0px;
     background: $black_serverless;
-    
+
     nav{
       height: 0px;
       width: 100%;
       overflow: hidden;
       visibility: hidden;
-      
-      &.active{
+      transition: all .4s;
+
+      &.active {
         height: 100%;
         visibility: visible;
       }
     }
 
     .navBtn{
-      display: block;
+      display: flex;
     }
   }
 
@@ -161,5 +334,34 @@
       text-align: left;
       margin-left: 15px;
     }
-  }  
+  }
+
+  .mainNavDropdown{
+    width: 100%;
+    position: static;
+    margin: 20px 0px;
+    padding: 20px;
+    box-shadow: none;
+    border-top: 1px solid $grey1_serverless;
+    border-bottom: 1px solid $grey1_serverless;
+
+    &.simpleDrop,
+    &.platformDrop,
+    &.devDrop,
+    &.resourcesDrop {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      min-height: auto;
+      max-height: auto;
+    }
+
+    &.devDrop{
+      .devDropListWrapper{
+        .devDropList{
+          width: 100%;
+        }
+      }
+    }
+  }
 }
