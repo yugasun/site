@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import Default from '../../layouts/Default'
 import styles from './style.css'
 import commonStyles from './../../fragments/common.css';
@@ -67,8 +68,16 @@ const FrameworkPage = (props) => {
             </div>
           </div>
           <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
-            <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>quick start</a>
-            <a className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>login</a>
+            <Link to='/framework/docs/getting-started/'
+              className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
+              quick start
+            </Link>
+            &nbsp;
+            <a href='https://dashboard.serverless.com'
+              target='_blank'
+              className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
+              login
+            </a>
           </div>
           <div className={styles.heroClientsWrapper}>
             <ul className={styles.clientList}>

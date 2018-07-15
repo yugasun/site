@@ -1,6 +1,8 @@
 import React from 'react'
-import commonStyles from './../common.css';
-import styles from './style.css';
+import { Link } from 'react-router'
+
+import commonStyles from './../common.css'
+import styles from './style.css'
 
 const UseCasesSection = ({ title, description, usecases }) => (
   <div className={styles.useCasesWrapper}>
@@ -22,7 +24,10 @@ const UseCasesSection = ({ title, description, usecases }) => (
                 <p>{usecase.description}</p>
               </div>
               <div className={`${commonStyles.btnWrapper} ${styles.btnWrapper}`}>
-                <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>view example</a>
+                <Link to='/'
+                  className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
+                  view example
+                </Link>
               </div>
             </div>
             <div className={styles.useCaseImage}>
