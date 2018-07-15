@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
-import commonStyles from './../common.css';
+import commonStyles from './../common.css'
 import styles from './index.css'
 import logo from '../../assets/images/logo.png'
 import facebook from '../../assets/images/facebook.png'
@@ -21,19 +22,22 @@ export default class Footer extends Component {
             <div className={styles.fhighLinks}>
               <ul>
                 <li>
-                  <a className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                  <Link to=''
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
                     use cases
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                  <Link to=''
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
                     comparisions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                  <Link to=''
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
                     case studies
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -47,45 +51,85 @@ export default class Footer extends Component {
                 <div className={styles.footerList}>
                   <h4>platform</h4>
                   <ul>
-                    <li><a>framework</a></li>
-                    <li><a>dashboard</a></li>
-                    <li><a>event gateway</a></li>
-                    <li><a>enterprise</a></li>
+                    <li>
+                      <Link to='/framework/'>framework</Link>
+                    </li>
+                    <li>
+                      <Link to='/dashboard/'>dashboard</Link>
+                    </li>
+                    <li>
+                      <Link to='/event-gateway/'>event gateway</Link>
+                    </li>
+                    <li>
+                      <Link to='/enterprise/'>enterprise</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className={styles.footerList}>
                   <h4>developers</h4>
                   <ul>
-                    <li><a>docs</a></li>
-                    <li><a>quick starts</a></li>
-                    <li><a>examples & guides</a></li>
+                    <li>
+                      <Link to='/framework/docs/'>docs</Link>
+                    </li>
+                    <li>
+                      <Link to='/framework/docs/getting-started/'>quick starts</Link>
+                    </li>
+                    <li>
+                      <Link to='/framework/docs/providers/aws/examples/'>examples & guides</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className={styles.footerList}>
                   <h4>learn</h4>
                   <ul>
-                    <li><a>why?</a></li>
-                    <li><a>use cases</a></li>
-                    <li><a>comparisions</a></li>
-                    <li><a>case studies</a></li>
+                    <li>
+                      <Link to='/'>why?</Link>
+                    </li>
+                    <li>
+                      <Link to='/'>use cases</Link>
+                    </li>
+                    <li>
+                      <Link to='/'>comparisions</Link>
+                    </li>
+                    <li>
+                      <Link to='/'>case studies</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className={styles.footerList}>
                   <h4>resources</h4>
                   <ul>
-                    <li><a>blog</a></li>
-                    <li><a>forum</a></li>
-                    <li><a>meetups</a></li>
-                    <li><a>slack</a></li>
-                    <li><a>workshops</a></li>
+                    <li>
+                      <Link to='/blog/'>blog</Link>
+                    </li>
+                    <li>
+                      <a href='https://forum.serverless.com' target='_blank'>forum</a>
+                    </li>
+                    <li>
+                      <Link to='/commuity/meetups/'>meetups</Link>
+                    </li>
+                    <li>
+                      <a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a>
+                    </li>
+                    <li>
+                      <Link to='/workshops/'>workshops</Link>
+                    </li>
                   </ul>
                 </div>
                 <div className={styles.footerList}>
                   <h4>company</h4>
                   <ul>
-                    <li><a>jobs</a></li>
-                    <li><a>campions</a></li>
-                    <li><a>contact</a></li>
+                    <li>
+                      <a href='https://jobs.lever.co/serverless' target='_blank'>
+                        jobs
+                      </a>
+                    </li>
+                    <li>
+                      <Link to='/'>champions</Link>
+                    </li>
+                    <li>
+                      <Link to='/'>contact</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -97,8 +141,8 @@ export default class Footer extends Component {
                   <p>Serverless, Inc. &copy; 2018</p>
                 </div>
                 <ul className={styles.policyNav}>
-                  <li><a>terms of service</a></li>
-                  <li><a>privacy policy</a></li>
+                  <li><Link to='/'>terms of service</Link></li>
+                  <li><Link to='/'>privacy policy</Link></li>
                 </ul>
               </div>
             </div>
@@ -114,9 +158,21 @@ export default class Footer extends Component {
               </div>
               <div className={styles.socialNavWrapper}>
                 <ul className={styles.socialNav}>
-                  <li><a><img src={facebook} alt="" /></a></li>
-                  <li><a><img src={instagram} alt="" /></a></li>
-                  <li><a><img src={twitter} alt="" /></a></li>
+                  <li>
+                    <a href='https://www.facebook.com/serverless/' target='_blank'>
+                      <img src={facebook} alt='facebook' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://www.instagram.com/serverlessinc/' target='_blank'>
+                      <img src={instagram} alt='instagram' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://twitter.com/goserverless' target='_blank'>
+                      <img src={twitter} alt='twitter' />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

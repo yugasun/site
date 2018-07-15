@@ -91,10 +91,10 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>example & guides</h3>
                         <ul>
-                          <li><Link to={''}>API's</Link></li>
-                          <li><Link to={''}>Cron Jobs</Link></li>
-                          <li><Link to={''}>Webhooks</Link></li>
-                          <li><Link to={''}>Event Processing</Link></li>
+                          <li><Link to='/'>API's</Link></li>
+                          <li><Link to='/'>Cron Jobs</Link></li>
+                          <li><Link to='/'>Webhooks</Link></li>
+                          <li><Link to='/'>Event Processing</Link></li>
                         </ul>
                       </div>
                     </div>
@@ -104,10 +104,10 @@ export default class Header extends Component {
                   <a href="">learn</a>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><Link to={''}>why?</Link></li>
-                      <li><Link to={''}>use cases</Link></li>
-                      <li><Link to={''}>comparisons</Link></li>
-                      <li><Link to={''}>case studies</Link></li>
+                      <li><Link to='/'>why?</Link></li>
+                      <li><Link to='/'>use cases</Link></li>
+                      <li><Link to='/'>comparisons</Link></li>
+                      <li><Link to='/'>case studies</Link></li>
                     </ul>
                   </div>
                 </li>
