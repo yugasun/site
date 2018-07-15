@@ -1,16 +1,17 @@
 import React from 'react'
 import Default from '../../layouts/Default'
-import styles from './styles.css'
+import styles from './style.css'
 import commonStyles from './../../fragments/common.css';
 import UseCasesSection from '../../fragments/UseCasesSection'
 import SectionSeperator from '../../fragments/SectionSeperator'
 import Features from './../../fragments/Features'
 
-import iconDashboard from '../../assets/images/icon-dashboard.png';
-import Illustration from '../../assets/images/illustration-platform-dash.png';
-import IllustrationPart1 from '../../assets/images/illustration-use-case-1.png';
-import IllustrationPart2 from '../../assets/images/illustration-use-case-2.png';
-import IllustrationPart3 from '../../assets/images/illustration-use-case-3.png';
+import iconGateway from '../../assets/images/group-6.png';
+import Illustration from '../../assets/images/gateway-illustration.png';
+
+import IllustrationPart1 from '../../assets/images/gateway-illustration1.png';
+import IllustrationPart2 from '../../assets/images/gateway-illustration2.png';
+import IllustrationPart3 from '../../assets/images/gateway-illustration3.png';
 import iconFeature1 from '../../assets/images/icon-feature-1.png';
 import iconFeature2 from '../../assets/images/icon-feature-2.png';
 import iconFeature3 from '../../assets/images/icon-feature-3.png';
@@ -20,44 +21,48 @@ import iconFeature6 from '../../assets/images/icon-feature-6.png';
 
 const baseUrl = process.env.S3_BUCKET
 
-const EventGatewayPage = (props) => {
-
+const FrameworkPage = (props) => {
   return (
     <Default className={ commonStyles.body } {...props} fullWidth whiteLogo coloredHeader={ true } headerHideSignUp={ true }>
       <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
         <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
           <div className={ styles.heroPrimeImage }>
-            <img src={iconDashboard} alt="" />
+            <img src={iconGateway} alt="" />
           </div>
           <h2 className={ `${commonStyles.white} ${commonStyles.textCenter} ${commonStyles.medium}` }>
             serverless
           </h2>
           <h1 className={ `${commonStyles.white} ${commonStyles.textCenter}`}>
-            dashboard
+            event gateway
           </h1>
           <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
-            Visualize, monitor & collaborate on serverless applications
+            React to any event on any cloud.
           </div>
-          <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
-            <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>sign up</a>
-            <a className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>contact sales</a>
+          <div className={`${styles.heroClientsWrapper} ${styles.midWrapper}`}>
+            <p className={commonStyles.textCenter}>
+              The Event Gateway is an event router designed for event-driven, serverless architectures. It makes it easy to wire functions to http endpoints, react to business events with serverless functions, and to share event subscriptions with others.
+            </p>
           </div>
           <div className={ styles.heroPrimeImage }>
             <img src={Illustration} alt="" />
           </div>
           <div className={styles.heroBulletsAlternate}>
             <div className={styles.heroBullets}>
-              <h3 className={commonStyles.white}>Visualize Your Applications</h3>
-              <p>The Serverless Dashboard gives your team a shared overview of the functions, events, and subscriptions that make up your serverless application.</p>
+              <h3 className={commonStyles.white}>Simplify API development</h3>
+              <p>Simplify API The Event Gateway is the simplest developer experience for wiring Serverless functions to http endpoints.</p>
             </div>
             <div className={styles.heroBullets}>
-              <h3 className={commonStyles.white}>Streamline Development</h3>
-              <p>View your application logs and metrics from within the UI to ease debugging and increase velocity.</p>
+              <h3 className={commonStyles.white}>React to custom events</h3>
+              <p>Expand your Serverless use-cases by reacting to any custom event with Serverless functions.</p>
             </div>
             <div className={styles.heroBullets}>
-              <h3 className={commonStyles.white}>Collaborate & Manage Access</h3>
-              <p>Control your security and compliance needs by managing which team members have access to which cloud resources.</p>
+              <h3 className={commonStyles.white}>Vendor Choice</h3>
+              <p>The Event Gateway is open source and cloud agnostic, allowing for more choice and flexibility.</p>
             </div>
+          </div>
+          <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>sign up</a>
+            <a className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>contact sales</a>
           </div>
         </div>
       </div>
@@ -65,22 +70,22 @@ const EventGatewayPage = (props) => {
       <div className={styles.whiteSectionWrapper}>
         <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
           <UseCasesSection
-            title="Serverless Dashboard Use Cases"
-            description="These are the 3 main use cases for the Serverless Dashboard that you should know about."
+            title="Event Gateway Use Cases"
+            description="These are the 3 main use cases for Event Gateway that you should know about."
             usecases={[
               {
-                title: 'Onboarding new team members',
-                description: 'The Serverless Dashboard makes onboarding new team members easy, quick, and secure. Architecture visualizions help them get up to speed on your applications, sandbox accounts provide them a safe learning enviroment, and user access controls allow for a secure experience.',
+                title: 'Simple, serverless APIs',
+                description: 'Use the Event Gateway alongside with Serverless Framework to get the simplest, most productive developer experience possible for developing APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live.',
                 image: IllustrationPart1,
               },
               {
-                title: 'Operating at scale',
-                description: 'The Serverless Dashboard provides the tools you need to build, deploy, and operate Servleress applications at scale. Logging, metrics, and deep observability help you accomplish more with serverless technology.',
+                title: 'Subscribe functions to webhooks',
+                description: 'The Event Gateway makes it dead simple to wire functions to any customer event, including webhooks.',
                 image: IllustrationPart2,
               },
               {
-                title: 'Operate applications, not infrastructure',
-                description: 'The Serverless Dashboard provides an operations experience that is centered on applications, not on infrastrucutre. Regardless of their cloud experience, any developer will have the power to manage and operate serverless applications from development to production.',
+                title: 'Multi-provider service',
+                description: 'The Event Gateway is cloud agnostic, allowing for more vendor choice and flexibility.',
                 image: IllustrationPart3,
               },
             ]}
@@ -94,33 +99,33 @@ const EventGatewayPage = (props) => {
         <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
           <Features features={[
             {
-              title: 'Architecture Visualization',
-              description: 'Let your team share the functions, events, and subscriptions that make up your serverless application.',
+              title: 'API Gateway',
+              description: 'Easily subscribe FaaS functions to HTTP endpoints. Setup multiple Serverless services under a single domain, even across AWS accounts.',
               image: iconFeature1
             },
             {
-              title: 'Easy Logs',
-              description: 'Access logs from within the dashboard, making it easier to debug and deploy your serverless applications.',
+              title: 'Pub/Sub',
+              description: 'Take advantage of pub/sun functionality but utilizing custom events. This allows you to process the same event with multiple systems.',
               image: iconFeature2
             },
             {
-              title: 'User Access Control',
-              description: 'Manage which team members have access to which cloud resources, making security and compliance for serverless seamless.',
+              title: 'Connector Functions',
+              description: 'Automatically route events to external systems like Kinesis, Firehose, SQS, etc.',
               image: iconFeature3
             },
             {
-              title: 'Application Metrics',
-              description: 'View all vital serverless application metrics in one place, making serverless operations simple and intuitive.',
+              title: 'Platform Agnostic',
+              description: 'All your cloud services are now compatible with one another; share cross-cloud functions and events with AWS Lambda, Microsoft Azure, IBM OpenWhisk and Google Cloud Platform.',
               image: iconFeature4
             },
             {
               title: 'Streaming Events',
-              description: 'Data streams in your application become events. Centralize events from any cloud provider to get a birdâ€™s eye view of all the data flowing through your cloud.',
+              description: 'Data streams in you application become events. Centralize events from any cloud provider to get a bird’s eye view of all the data flowing through your cloud.',
               image: iconFeature5
             },
             {
-              title: 'Audit Logs',
-              description: 'View and manage key operations events, such as deployments, in one single place for all your serverless applications.',
+              title: 'Shareable events',
+              description: 'Share events and functions to other parts of the application. Your teammates can find them and utilize them in their own services.',
               image: iconFeature6
             }
           ]} />
@@ -130,6 +135,6 @@ const EventGatewayPage = (props) => {
   )
 }
 
-EventGatewayPage.hasLoadingState = true
+FrameworkPage.hasLoadingState = true
 
-export default EventGatewayPage
+export default FrameworkPage
