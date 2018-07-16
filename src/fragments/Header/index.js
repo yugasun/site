@@ -41,7 +41,7 @@ export default class Header extends Component {
             <nav className={`${this.state.navActive ? styles.active : ''}`}>
               <ul className={`${styles.mainNav} ${commonStyles.marg0}`}>
                 <li>
-                  <a href="">platform</a>
+                  <Link to=''>platform</Link>
                   <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li>
@@ -75,7 +75,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <a href="">developers</a>
+                  <Link to=''>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <h3>documentation</h3>
                     <div className={styles.devDropListWrapper}>
@@ -101,7 +101,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <a href="">learn</a>
+                  <Link to=''>learn</Link>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li><Link to='/'>why?</Link></li>
@@ -112,7 +112,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <a href="">resources</a>
+                  <Link to=''>resources</Link>
                   <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li><Link to='/blog'>blog</Link></li>
