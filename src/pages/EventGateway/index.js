@@ -99,7 +99,7 @@ class EventGatewayPage extends React.Component {
                 sign up
               </a>
               &nbsp;
-              <Link to='/'
+              <Link to='/enterprise'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
                 contact sales
               </Link>
