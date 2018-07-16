@@ -366,8 +366,12 @@ footer{
     background: $grey1_serverless;
     border: 0px;
     color: #fff;
-    padding: 16px;
+    padding: 13px;
     width: 60%;
+
+    &::placeholder {
+      color: $white_serverless;
+    }
   }
 
   .btn{
@@ -380,8 +384,14 @@ footer{
 
 @media (max-width: 768px) {
   .subscribeForm{
+    display: block;
     .greyTextbox{
-      width: 60%;
+      width: 100%;
+    }
+
+    .btn {
+      width: 45%;
+      padding: 13px;
     }
   }
 }

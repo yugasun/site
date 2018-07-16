@@ -125,7 +125,7 @@ export default class Footer extends Component {
               <div className={styles.newsLetterWrapper}>
                 <form className={styles.subscribeForm} action="">
                   <input className={styles.greyTextbox} type="text" placeholder="email address" />
-                  <button className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`} type="submit">submit</button>
+                  <button className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`} type="submit">sign up</button>
                 </form>
               </div>
               <div className={styles.socialNavWrapper}>
