@@ -252,7 +252,9 @@ footer{
     padding-top: 0;
 
     .footerLogo{
-      padding: 30px 0px;
+      height: 0px;
+      visibility: hidden;
+      padding-bottom: 50px;
     }
 
     &:before {
