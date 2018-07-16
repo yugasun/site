@@ -104,9 +104,9 @@ export default class Header extends Component {
                   <Link to=''>learn</Link>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><Link to='/'>why?</Link></li>
-                      <li><Link to='/'>use cases</Link></li>
-                      <li><Link to='/'>comparisons</Link></li>
+                      <li><Link to='/learn'>why?</Link></li>
+                      <li><Link to='/learn/use-cases'>use cases</Link></li>
+                      <li><Link to='/learn/comparisions'>comparisons</Link></li>
                       <li><Link to='/'>case studies</Link></li>
                     </ul>
                   </div>
