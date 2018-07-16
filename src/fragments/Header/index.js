@@ -91,10 +91,10 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>example & guides</h3>
                         <ul>
-                          <li><Link to='/'>API's</Link></li>
-                          <li><Link to='/'>Cron Jobs</Link></li>
-                          <li><Link to='/'>Webhooks</Link></li>
-                          <li><Link to='/'>Event Processing</Link></li>
+                          <li><Link to='/framework/docs'>API's</Link></li>
+                          <li><Link to='/framework/docs'>Cron Jobs</Link></li>
+                          <li><Link to='/framework/docs'>Webhooks</Link></li>
+                          <li><Link to='/framework/docs'>Event Processing</Link></li>
                         </ul>
                       </div>
                     </div>
