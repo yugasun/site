@@ -77,7 +77,8 @@ footer{
   }
 
   .fhighLinks{
-    background: $red_serverless url('../../assets/images/rectangle-19.png');
+    background: $red_serverless url('../../assets/images/pre-footer-bg-image.png') no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -263,6 +264,12 @@ footer{
     top: 0;
     margin: 0px -15px;
     display: block;
+
+    .fhighText {
+      h2:before {
+        background: none;
+      }
+    }
 
     .fhighText,
     .fhighLinks{

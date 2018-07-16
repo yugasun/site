@@ -207,7 +207,7 @@ export default class Homepage extends Component {
     <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper} ${styles.newSite}`}>
       <div className={`${styles.clientContainer} ${commonStyles.container}`}>
         <h4>Serverless Platform is trusted by</h4>
-        <ul className={styles.clientList}>
+        <ul className={`${styles.clientList} ${styles.trustedBy}`}>
           <li><img src={ea} alt='Electronic Arts' /></li>
           <li><img src={cocacolaLogo} alt='Coca Cola' /></li>
           <li><img src={nordstrom} alt='Nordstorm' /></li>

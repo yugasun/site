@@ -224,8 +224,8 @@
   }
 
   .clientList{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -243,6 +243,10 @@
   .heroClientsWrapper {
     &.midWrapper {
       padding: 0 8%;
+    }
+
+    .clientList {
+      padding: 0 2rem;
     }
   }
 
@@ -299,10 +303,11 @@
 
     .clientList{
       display: block;
+      padding: 1rem 0;
       li{
         display: block;
         width: 100%;
-        padding: 5px 0px;
+        padding: 1.5rem 0px;
         text-align: center;
       }
     }
@@ -532,6 +537,10 @@
       display: inline-block;
     }
   }
+
+  .trustedBy {
+    padding: 2% 10%;
+  }
 }
 
 .footerPrevPad{
@@ -539,6 +548,10 @@
 }
 
 @media (max-width: 768px) {
+  .patternSectionWrapper{
+    background: none;
+  }
+
   .clientsWrapper{
     padding-top: 0;
     background-color: $white_serverless;
@@ -548,6 +561,18 @@
         width: 100%;
         text-align: center;
         padding-bottom: 15px;
+      }
+    }
+
+    .trustedBy {
+      padding: 2% 0;
+
+      li {
+        padding-bottom: 25px;
+
+        img {
+          max-height: 41px;
+        }
       }
     }
 
