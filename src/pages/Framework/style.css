@@ -332,6 +332,14 @@
   .heroBulletsWrapper, .heroBulletsAlternate{
     overflow: hidden;
 
+    .heroBullets:nth-of-type(2) {
+      figure {
+        &:before, &:after {
+          background: none;
+        }
+      }
+    }
+
     .heroBullets{
       width: 100%;
       margin-bottom: 30px;
