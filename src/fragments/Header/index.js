@@ -75,7 +75,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to=''>developers</Link>
+                  <Link to='/framework/docs'>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <h3>documentation</h3>
                     <div className={styles.devDropListWrapper}>
@@ -106,7 +106,7 @@ export default class Header extends Component {
                     <ul>
                       <li><Link to='/learn'>why?</Link></li>
                       <li><Link to='/learn/use-cases'>use cases</Link></li>
-                      <li><Link to='/learn/comparisions'>comparisons</Link></li>
+                      <li><Link to='/learn/comparisons'>comparisons</Link></li>
                       <li><Link to='/'>case studies</Link></li>
                     </ul>
                   </div>

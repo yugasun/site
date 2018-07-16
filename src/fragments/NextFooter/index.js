@@ -14,7 +14,7 @@ export default class extends React.Component {
         <div className={styles.fhighLinks}>
           <ul>
             <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>use cases</a></li>
-            <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>comparisions</a></li>
+            <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>comparisons</a></li>
             <li><a href='' className={`${styles.btn} ${styles.btnTransparentWhite}`}>case studies</a></li>
           </ul>
         </div>
