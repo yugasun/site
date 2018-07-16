@@ -75,7 +75,7 @@ class FrameworkPage extends React.Component {
                 The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
               </p>
             </div>
-            <div className={ styles.heroPrimeImage }>
+            <div className={ `${styles.heroPrimeImage} ${styles.heroMainImage}` }>
               <img src={Illustration} alt="Serverless Framework" />
             </div>
             <div className={styles.heroBulletsAlternate}>

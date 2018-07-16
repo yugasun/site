@@ -554,6 +554,10 @@
 }
 
 @media (max-width: 768px) {
+  .heroMainImage {
+    display: none;
+  }
+
   .patternSectionWrapper{
     background: none;
   }

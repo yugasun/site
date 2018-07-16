@@ -74,7 +74,7 @@ class PlatformDashboardPage extends React.Component {
                 contact sales
               </Link>
             </div>
-            <div className={ styles.heroPrimeImage }>
+            <div className={ `${styles.heroPrimeImage} ${styles.heroMainImage}` }>
               <img src={Illustration} alt='Serverless Dashboard' />
             </div>
             <div className={styles.heroBulletsAlternate}>
