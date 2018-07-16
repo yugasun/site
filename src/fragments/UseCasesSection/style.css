@@ -1,5 +1,5 @@
 .useCasesWrapper{
-  padding-top: 190px;
+  padding-top: 140px;
 }
 
 .useCasesIntro{
@@ -44,6 +44,7 @@
       margin: 0px;
       text-align: left;
       padding-bottom: 25px;
+      font-weight: normal;
     }
 
     .info{
@@ -96,7 +97,7 @@
 
 @media (max-width: 1200px) {
   .useCasesWrapper{
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .useCaseItem{
@@ -105,23 +106,39 @@
 }
 
 @media (max-width: 768px) {
+  .useCasesIntro {
+    padding: 0 20px;
+
+    h2, p {
+      text-align: left !important;
+    }
+
+    h2 {
+      font-family: SoleilBk;
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 1.13;
+      letter-spacing: -0.5px;
+    }
+  }
+
   .useCaseItem{
+    padding: 20px 0px;
 
-    padding: 20px 0px;;
-
-    .useCaseDetail,
-    .useCaseImage{
+    .useCaseDetail, .useCaseImage {
       width: 100%;
-      padding: 0 20px;
+      padding: 0 18px;
     }
 
     .useCaseDetail{
       order: 2;
+      padding: 20px;
     }
 
     .useCaseImage{
       order: 1;
       margin-bottom: 20px;
+      padding: 0;
     }
 
     &:nth-of-type(2n){

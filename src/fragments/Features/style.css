@@ -106,17 +106,31 @@
 
 @media (max-width: 768px) {
   .featuresListWrapper{
-    padding-top: 40px;
+    padding-top: 0;
 
     > h2{
-      padding-botom: 40px;
+      font-family: SoleilBk;
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 1.13;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 80px;
     }
   }
 
   .featureList{
     li{
       width: 100%;
-      padding: 15px 50px;
+      padding: 15px;
+
+      h3:before {
+        content: '';
+      }
+
+      &:nth-of-type(2n) {
+        padding: 15px;
+      }
     }
   }
 }

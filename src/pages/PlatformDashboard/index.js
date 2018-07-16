@@ -60,7 +60,7 @@ class PlatformDashboardPage extends React.Component {
             <h1 className={ `${commonStyles.white} ${commonStyles.textCenter} ${styles.medium}`}>
               dashboard
             </h1>
-            <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
+            <div className={ `${styles.heroDesc} ${styles.helfPad} ${commonStyles.textCenter}` }>
               Visualize, monitor & collaborate on serverless applications
             </div>
             <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
@@ -120,7 +120,7 @@ class PlatformDashboardPage extends React.Component {
           </div>
         </div>
 
-        <SectionSeperator />
+        <SectionSeperator className={styles.sectionSeperator} />
 
         <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>

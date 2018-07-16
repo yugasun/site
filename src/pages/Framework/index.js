@@ -67,7 +67,7 @@ class FrameworkPage extends React.Component {
             <h1 className={ `${commonStyles.white} ${commonStyles.textCenter} ${styles.medium}`}>
               framework
             </h1>
-            <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
+            <div className={ `${styles.heroDesc} ${styles.helfPad} ${commonStyles.textCenter}` }>
               The easy, open way to build Serverless applications
             </div>
             <div className={`${styles.heroClientsWrapper} ${styles.midWrapper}`}>

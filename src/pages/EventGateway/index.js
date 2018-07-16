@@ -61,7 +61,7 @@ class EventGatewayPage extends React.Component {
             <h1 className={ `${commonStyles.white} ${commonStyles.textCenter} ${styles.medium}`}>
               event gateway
             </h1>
-            <div className={ `${styles.helfPad} ${styles.heroDesc} ${commonStyles.textCenter}` }>
+            <div className={ `${styles.heroDesc} ${styles.helfPad} ${commonStyles.textCenter}` }>
               React to any event on any cloud.
             </div>
             <div className={`${styles.heroClientsWrapper} ${styles.midWrapper}`}>
@@ -127,7 +127,7 @@ class EventGatewayPage extends React.Component {
           </div>
         </div>
 
-        <SectionSeperator />
+        <SectionSeperator className={styles.sectionSeperator} />
 
         <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>

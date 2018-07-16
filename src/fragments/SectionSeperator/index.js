@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.css';
 
-export default () => (
-  <div className={styles.greySectionSeperator}></div>
+export default ({ className }) => (
+  <div className={`${styles.greySectionSeperator} ${className}`}></div>
 );
