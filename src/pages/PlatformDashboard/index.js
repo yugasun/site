@@ -69,6 +69,7 @@ class PlatformDashboardPage extends React.Component {
                 className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
                 sign up
               </a>
+              &nbsp;
               <Link to='/'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
                 contact sales
@@ -79,15 +80,15 @@ class PlatformDashboardPage extends React.Component {
             </div>
             <div className={styles.heroBulletsAlternate}>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Visualize Your Applications</h3>
+                <span className={commonStyles.white}>Visualize Your Applications</span>
                 <p>The Serverless Dashboard gives your team a shared overview of the functions, events, and subscriptions that make up your serverless application.</p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Streamline Development</h3>
+                <span className={commonStyles.white}>Streamline Development</span>
                 <p>View your application logs and metrics from within the UI to ease debugging and increase velocity.</p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Collaborate & Manage Access</h3>
+                <span className={commonStyles.white}>Collaborate & Manage Access</span>
                 <p>Control your security and compliance needs by managing which team members have access to which cloud resources.</p>
               </div>
             </div>

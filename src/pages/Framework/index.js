@@ -80,15 +80,15 @@ class FrameworkPage extends React.Component {
             </div>
             <div className={styles.heroBulletsAlternate}>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Infrastructure As Code</h3>
+                <span className={commonStyles.white}>Infrastructure As Code</span>
                 <p>With the Serverless Framework you can define your entire Serverless application, utlizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.  </p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Simple Serverless Development</h3>
+                <span className={commonStyles.white}>Simple Serverless Development</span>
                 <p>The Serverless Framework provides a simple, intuitive CLI experience that makes it easy to develop and deploy applications to cloud platforms like AWS, Microsoft Azure, Google Cloud Platform, IBM OpenWhisk, and more.</p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Provider Agnostic</h3>
+                <span className={commonStyles.white}>Provider Agnostic</span>
                 <p>The Serverless Framework is open source and provider agnostic, meaning you only need one tool to tap in to the power of all the cloud providers.</p>
               </div>
             </div>

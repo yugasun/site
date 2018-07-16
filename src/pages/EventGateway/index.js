@@ -74,15 +74,21 @@ class EventGatewayPage extends React.Component {
             </div>
             <div className={styles.heroBulletsAlternate}>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Simplify API development</h3>
+                <span className={commonStyles.white}>
+                  Simplify API development
+                </span>
                 <p>Simplify API The Event Gateway is the simplest developer experience for wiring Serverless functions to http endpoints.</p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>React to custom events</h3>
+                <span className={commonStyles.white}>
+                  React to custom events
+                </span>
                 <p>Expand your Serverless use-cases by reacting to any custom event with Serverless functions.</p>
               </div>
               <div className={styles.heroBullets}>
-                <h3 className={commonStyles.white}>Vendor Choice</h3>
+                <span className={commonStyles.white}>
+                  Vendor Choice
+                </span>
                 <p>The Event Gateway is open source and cloud agnostic, allowing for more choice and flexibility.</p>
               </div>
             </div>

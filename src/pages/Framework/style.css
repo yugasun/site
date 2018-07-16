@@ -188,12 +188,11 @@
     text-align: left;
     padding: 0px 25px;
 
-    h3{
+    span{
       font-family: 'SoleilBk';
       font-size: 2.4rem;
       line-height: 1.33;
       letter-spacing: -0.04rem;
-      margin-bottom: 25px;
       position: relative;
       z-index: 10;
 
@@ -214,6 +213,7 @@
       line-height: 1.67;
       font-size: 1.8rem;
       font-weight: normal;
+      margin-top: 25px;
     }
 
     &:first-of-type{
@@ -330,13 +330,14 @@
     .heroBullets{
       width: 100%;
       margin-bottom: 30px;
+      text-align: center;
 
-      h3 {
+      span {
         text-align: center;
 
         &:before {
-          left: 40px;
-          top: -10px;
+          left: -16px;
+          top: -14px;
         }
       }
     }
