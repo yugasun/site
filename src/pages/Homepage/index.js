@@ -51,8 +51,8 @@ export default class Homepage extends Component {
           'Or if you\'re ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.'
         ]}
         links={[
-          { url: '/', title: 'use cases' },
-          { url: '/', title: 'comparisions' },
+          { url: '/learn/use-cases/', title: 'use cases' },
+          { url: '/learn/comparisions', title: 'comparisions' },
           { url: '/', title: 'case studies' }
         ]}
       />
