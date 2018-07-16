@@ -117,7 +117,7 @@ ul.mainNav{
   box-shadow: 0 0px 50px 1px rgba(255,255,255,0.3);
   position: absolute;
   z-index: 999;
-  top: 80px;
+  top: calc($navHeight - 1px);
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 40px;
