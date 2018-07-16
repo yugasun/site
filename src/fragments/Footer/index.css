@@ -157,6 +157,13 @@ footer{
           color: $grey1_serverless;
           transition: all .4s;
           text-decoration: none;
+          font-family: 'Serverless';
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.14;
+          letter-spacing: 0.6px;
 
           &:hover{
             text-decoration: none;
@@ -174,6 +181,14 @@ footer{
       font-family: 'Soleil';
       font-size: 1.2rem;
       line-height: 1.33;
+      opacity: 0.5;
+      color: $white_serverless;
+      font-family: Soleil;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
     }
   }
 
@@ -189,7 +204,13 @@ footer{
       font-size: 1.2rem;
       line-height: 1.17;
       letter-spacing: -0.05rem;
-      font-family: 'Soleil';
+      opacity: 0.5;
+      font-family: 'Serverless';
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.17;
+      color: $white_serverless;
     }
 
     .policyNav{
@@ -201,6 +222,11 @@ footer{
         font-size: 1.2rem;
         line-height: 1.17;
         letter-spacing: -0.05rem;
+        font-family: 'Serverless';
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        color: #ffffff;
 
         a{
           color: $grey1_serverless;
@@ -260,6 +286,10 @@ footer{
     &:before {
       display: none;
     }
+
+    .footerBottomWrapper {
+      padding: 0 12px;
+    }
   }
 
   .footerHighlight{
@@ -312,6 +342,12 @@ footer{
     padding: 0;
     width: 100%;
     order: 1;
+
+    .socialNav {
+      li {
+        padding-right: 35px !important;
+      }
+    }
 
     .socialNavWrapper{
       padding:30px 0px;
