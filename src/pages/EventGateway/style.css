@@ -485,9 +485,10 @@
         ul{
           li{
             figure{
+              width: 80%;
+              margin: auto;
               height: 280px;
               img{
-                width: 80%;
                 margin: auto;
               }
             }
