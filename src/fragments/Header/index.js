@@ -39,7 +39,7 @@ export default class Header extends Component {
               <img src={mobilemenu} className={styles.faBars}  />
             </div>
             <nav className={`${this.state.navActive ? styles.active : ''}`}>
-              <ul className={`${styles.mainNav} ${commonStyles.marg0}`}>
+              <ul className={`${commonStyles.marg0} ${styles.mainNav}`}>
                 <li>
                   <Link to=''>platform</Link>
                   <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
