@@ -257,6 +257,19 @@
     letter-spacing: -0.03rem;
   }
 
+  .cloudProvider {
+    opacity: 0.3;
+    font-family: 'SoleilBk';
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $white_serverless;
+    text-align: left;
+    margin-top: 7rem;
+    padding-bottom: 10px;
+  }
+
   .clientList{
     margin: 0;
     padding: 0 7rem;
@@ -271,6 +284,11 @@
       display: inline-block;
     }
   }
+
+  .topCloudProviders {
+    padding: 64px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #222222);
+  }
 }
 
 @media (max-width: 992px) {
@@ -281,6 +299,14 @@
 
     .clientList {
       padding: 0 2rem;
+    }
+
+    .cloudProvider {
+      margin-top: 2rem;
+    }
+
+    .topCloudProviders {
+      padding: 40px;
     }
   }
 
