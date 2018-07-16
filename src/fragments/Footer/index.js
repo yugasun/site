@@ -8,8 +8,83 @@ import facebook from '../../assets/images/facebook.png'
 import instagram from '../../assets/images/instagram.png'
 import twitter from '../../assets/images/twitter.png'
 
+
+import axios from 'axios'
+import { getItemSync, setItemSync } from '../../utils/storage'
+const newsletterSubscribeAPI = process.env.API.NEWSLETTER
+import track from '../../utils/analytics/track'
+
+function validateEmail(value) {
+  return /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
+}
+
 export default class Footer extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      isSubscribed: getItemSync('newsletterSubscribed') === true,
+      isFetching: false
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+  componentDidMount() {
+    const user = getItemSync('profile')
+    if (user) {
+      this.refs.email.value = user.email
+    }
+  }
+  handleSubmit(e) {
+    e.preventDefault()
+    if (this.state.isFetching) return
+    const emailNode = this.refs.email
+    const email = emailNode.value
+    if (!validateEmail(email)) {
+      alert('Woops! invalid email address') // eslint-disable-line
+      return false
+    }
+    this.setState({
+      isFetching: true,
+      error: false
+    })
+    const that = this
+    axios({
+      method: 'post',
+      url: newsletterSubscribeAPI,
+      data: {
+        email: email,
+        name: ''
+      },
+    }).then((response) => {
+      if (response && response.data && response.data.created) {
+        console.info('Newsletter subscription creation succeed') // eslint-disable-line
+        // Customer.io
+        // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
+        track('site:newsletter_subscribed', {
+          label: 'Newsletter Subscription',
+          value: window.location.href
+        })
+        that.setState({
+          isSubscribed: true,
+          isFetching: false
+        }, () => {
+          // trigger callback
+          emailNode.value = ''
+        })
+        setItemSync('newsletterSubscribed', true)
+        that.container.innerHTML = '<p>Thank you for subscribing!</p>'
+      } else {
+        console.error('Newsletter subscription failed creation',
+            (response && response.data && response.data.message) ? response.data.message : '')
+      }
+    }).catch((error) => {
+      console.error(error) // eslint-disable-line
+      that.setState({
+        error: 'serviceDown'
+      })
+    })
+  }
   render() {
+    const { isFetching, error } = this.state
     return (
       <footer className={ `${this.props.renderPrefooter ? styles.withPreFooter : ''} ${commonStyles.newSite}` }>
         <div className={`${styles.footerContainer} ${commonStyles.container}`}>
@@ -122,10 +197,17 @@ export default class Footer extends Component {
               <p>
                 Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
               </p>
-              <div className={styles.newsLetterWrapper}>
+              <div className={styles.newsLetterWrapper} ref={container => this.container = container}>
                 <form className={styles.subscribeForm} action="">
-                  <input className={styles.greyTextbox} type="text" placeholder="email address" />
-                  <button className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`} type="submit">sign up</button>
+                  <input ref='email' className={styles.greyTextbox} type="text" placeholder="email address" />
+                  <button 
+                    onClick={this.handleSubmit} 
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`} 
+                    type="submit"
+                    disabled={isFetching}
+                    >
+                      {error ? 'Try Again' : 'sign up'}
+                  </button>
                 </form>
               </div>
               <div className={styles.socialNavWrapper}>
