@@ -58,7 +58,36 @@
 
     .heroContactWrapper{
       padding-top: 30px;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
+    }
+
+    .heroContainer {
+      > h2 {
+        font-size: 5rem;
+        font-weight: normal;
+        line-height: 1;
+        letter-spacing: -1.1px;
+      }
+
+      > h1 {
+        font-size: 9rem;
+        font-weight: normal;
+        line-height: 1.11;
+        letter-spacing: -2px;
+      }
+
+      .heroDesc {
+        font-size: 2.4rem;
+        font-weight: normal;
+        line-height: 1.33;
+      }
+
+      .midWrapper p, .heroBullets p {
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+      }
     }
   }
 
@@ -171,11 +200,11 @@
       &:before{
         content: " ";
         position: absolute;
-        top: -10px;
+        top: -12px;
         left: -10px;
         width: 45px;
-        height: 35px;
-        background: rgba(253, 87, 80,0.3);
+        height: 26px;
+        background: url('../../assets/images/dot-grid.png');
         z-index: -1;
       }
     }
@@ -259,6 +288,10 @@
 }
 
 @media (max-width: 768px) {
+  .sectionSeperator {
+    display: none;
+  }
+
   .heroSectionWrapper{
     padding: 40px 0px;
 
@@ -266,6 +299,14 @@
       .heroDesc{
         font-size: 1.6rem;
         padding: 10%;
+      }
+
+      .helfPad {
+        font-size: 2.4rem;
+        font-weight: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: center;
       }
 
       > h2{
@@ -289,6 +330,15 @@
     .heroBullets{
       width: 100%;
       margin-bottom: 30px;
+
+      h3 {
+        text-align: center;
+
+        &:before {
+          left: 40px;
+          top: -10px;
+        }
+      }
     }
   }
 
@@ -303,7 +353,12 @@
 
   .heroClientsWrapper{
     &.midWrapper {
-      padding: 0 2%;
+      padding: 0 8%;
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: center;
+      }
     }
 
     .clientList{
@@ -332,7 +387,7 @@
 
 .whiteSectionWrapper{
   padding: 100px 0px;
-  padding-bottom: 0px 0px;
+  padding-bottom: 0px;
 
   .sectionHighlight{
     font-family: 'SoleilSb';
@@ -455,7 +510,8 @@
   }
 
   .whiteSectionWrapper{
-    padding: 80px 0px;
+    padding: 80px 0;
+    padding-bottom: 0;
 
     .whiteSectionContainer{
       > h3{

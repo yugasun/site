@@ -1,5 +1,5 @@
 .useCasesWrapper{
-  padding-top: 140px;
+  padding-top: 60px;
 }
 
 .useCasesIntro{
@@ -24,7 +24,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 155px 0px;
+  padding: 100px 0px;
 
   .useCaseDetail,
   .useCaseImage{
@@ -91,7 +91,6 @@
 
   &:last-of-type{
     padding-top: 40px;
-    padding-bottom: 0px;
   }
 }
 
