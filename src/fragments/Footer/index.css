@@ -2,6 +2,7 @@ footer{
   background: $black_serverless;
   padding: 100px 0px;
   position: relative;
+  z-index: 6;
 
   &.withPreFooter:before {
     content: " ";
