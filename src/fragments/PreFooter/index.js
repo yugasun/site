@@ -4,7 +4,7 @@ import commonStyles from './../common.css'
 import { Link } from 'react-router'
 
 const PreFooter = ({ heading, descriptions, links }) => (
-  <div className={styles.footerHighlight}>
+  <div className={`${styles.footerHighlight} ${commonStyles.newSite}`}>
     <div className={styles.fhighText}>
       <h2 className={commonStyles.white}>{heading}</h2>
       {

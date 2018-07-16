@@ -26,7 +26,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header className={styles.mainHeaderWrapper}>
+      <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite}`}>
         <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
           <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
             <div className={styles.logoWrapper}>

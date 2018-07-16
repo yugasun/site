@@ -61,8 +61,8 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <Default fullWidth className={commonStyles.body} renderPrefooter={this.renderPrefooter}>
-    <div className={`${styles.platformBg} ${styles.heroSectionWrapper}`}>
+      <Default fullWidth className={`${commonStyles.body} ${commonStyles.newSite}`} renderPrefooter={this.renderPrefooter}>
+    <div className={`${styles.platformBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
       <div className={`${styles.heroContainer} ${commonStyles.container}`}>
         <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
         <h1 className={`${commonStyles.white} ${commonStyles.textCenter}`}>platform</h1>
@@ -126,7 +126,7 @@ export default class Homepage extends Component {
     </div>
 
 
-    <div className={styles.whiteSectionWrapper}>
+    <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
       <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
         <div className={styles.sectionHighlight}>
           <div>Build more, manage less.</div>
@@ -158,7 +158,7 @@ export default class Homepage extends Component {
     <Testimonial></Testimonial>
 
 
-  <div className={styles.whiteSectionWrapper}>
+  <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
       <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
         <div className={`${styles.sectionHighlight} ${styles.width90} ${styles.padBtm}`}>
           <div>Serverless Platform empowers developers to build & deploy serverless applications, on any provider.</div>
@@ -204,7 +204,7 @@ export default class Homepage extends Component {
     </div>
 
 
-    <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper}`}>
+    <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper} ${styles.newSite}`}>
       <div className={`${styles.clientContainer} ${commonStyles.container}`}>
         <h4>Serverless Platform is trusted by</h4>
         <ul className={styles.clientList}>

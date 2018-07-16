@@ -11,7 +11,7 @@ import twitter from '../../assets/images/twitter.png'
 export default class Footer extends Component {
   render() {
     return (
-      <footer className={ this.props.renderPrefooter ? styles.withPreFooter : '' }>
+      <footer className={ `${this.props.renderPrefooter ? styles.withPreFooter : ''} ${commonStyles.newSite}` }>
         <div className={`${styles.footerContainer} ${commonStyles.container}`}>
           { this.props.renderPrefooter ? this.props.renderPrefooter() : null }
           <div className={styles.footerLogo}>

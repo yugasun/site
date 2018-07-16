@@ -49,14 +49,14 @@ class FrameworkPage extends React.Component {
   render() {
     return (
       <Default
-        className={ commonStyles.body }
+        className={ `${commonStyles.body} ${commonStyles.newSite}` }
         {...this.props}
         fullWidth
         whiteLogo
         coloredHeader={ true }
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}>
-        <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}` }>
+        <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ styles.heroPrimeImage }>
               <img src={iconFramework} alt="Serverless Framework" />
@@ -116,7 +116,7 @@ class FrameworkPage extends React.Component {
           </div>
         </div>
 
-        <div className={styles.whiteSectionWrapper}>
+        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
               title='Serverless Framework Use Cases'
@@ -144,7 +144,7 @@ class FrameworkPage extends React.Component {
 
         <Testimonial />
 
-        <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper}`}>
+        <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <Features features={[
               {

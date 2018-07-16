@@ -3,75 +3,76 @@
   font-family: 'Serverless';
 }
 
-h1,h2,h3,h4,h5,h6{
-  color: $black_serverless;
+.newSite {
+  h1,h2,h3,h4,h5,h6{
+    color: $black_serverless;
 
-  &.white{
-    color: $white_serverless;
+    &.white{
+      color: $white_serverless;
+    }
   }
-}
 
-h1{
-  font-size: 90px;
-  line-height: 100px;
-  letter-spacing: -2px;
-}
+  h1{
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: -2px;
+  }
 
-h2{
-  font-size: 48px;
-  line-height: 48px;
-}
+  h2{
+    font-size: 48px;
+    line-height: 48px;
+  }
 
-.container{
-  width: 100%;
-  max-width: 1260px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: auto;
-  display:block;
-}
+  .container{
+    width: 100%;
+    max-width: 1260px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    display:block;
+  }
 
-ul{
-  padding: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+  ul{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-.justifySpaceBetween{
-  justify-content: space-between;
-}
+  .justifySpaceBetween{
+    justify-content: space-between;
+  }
 
-.marg0{
-  margin: 0px;
-}
+  .marg0{
+    margin: 0px;
+  }
 
-.pad0{
-  padding: 0px;
-}
+  .pad0{
+    padding: 0px;
+  }
 
-.padLeft0{
-  padding-left: 0px;
-}
+  .padLeft0{
+    padding-left: 0px;
+  }
 
-.padRight0{
-  padding-right: 0px;
-}
+  .padRight0{
+    padding-right: 0px;
+  }
 
-.padTop0{
-  padding-top: 0px;
-}
+  .padTop0{
+    padding-top: 0px;
+  }
 
-.padBottom0{
-  padding-bottom: 0px
-}
+  .padBottom0{
+    padding-bottom: 0px
+  }
 
-/* basic text helpers*/
+  /* basic text helpers*/
   .textLeft{
     text-align: left;
   }
@@ -101,12 +102,8 @@ ul{
   p.white{
     color: #fff;
   }
-
-  color-white{
-
-  }
-/* basic text helpers*/
-/* button helpers*/
+  /* basic text helpers*/
+  /* button helpers*/
   .btn{
     display: inline-block;
     font-size: 2rem;
@@ -140,10 +137,12 @@ ul{
       border: 3px solid $white_serverless;
     }
   }
-/* button helpers*/
+  /* button helpers*/
+}
 
 /*media queries*/
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .newSite {
     h1{
       font-size: 48px;
       line-height:48px;
@@ -154,4 +153,5 @@ ul{
       line-height: 32px;
     }
   }
+}
 /*media queries*/

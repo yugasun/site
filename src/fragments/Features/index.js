@@ -3,7 +3,7 @@ import commonStyles from './../common.css';
 import styles from './style.css';
 
 export default ({ features }) => (
-  <div className={styles.featuresListWrapper}>
+  <div className={`${styles.featuresListWrapper} ${styles.newSite}`}>
     <h2 className={commonStyles.textCenter}>Features</h2>
     <ol className={styles.featureList}>
       {

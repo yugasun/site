@@ -5,7 +5,7 @@ import commonStyles from './../common.css'
 import styles from './style.css'
 
 const UseCasesSection = ({ title, description, usecases }) => (
-  <div className={styles.useCasesWrapper}>
+  <div className={`${styles.useCasesWrapper} ${commonStyles.newSite}`}>
     <div className={styles.useCasesIntro}>
       <h2 className={commonStyles.textCenter}>
         {title}
