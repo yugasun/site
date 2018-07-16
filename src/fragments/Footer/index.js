@@ -130,13 +130,13 @@ export default class Footer extends Component {
                   <h4>learn</h4>
                   <ul>
                     <li>
-                      <Link to='/'>why?</Link>
+                      <Link to='/learn/'>why?</Link>
                     </li>
                     <li>
-                      <Link to='/'>use cases</Link>
+                      <Link to='/learn/use-cases/'>use cases</Link>
                     </li>
                     <li>
-                      <Link to='/'>comparisions</Link>
+                      <Link to='/learn/comparisons'>comparisions</Link>
                     </li>
                     <li>
                       <Link to='/'>case studies</Link>
@@ -200,9 +200,9 @@ export default class Footer extends Component {
               <div className={styles.newsLetterWrapper} ref={container => this.container = container}>
                 <form className={styles.subscribeForm} action="">
                   <input ref='email' className={styles.greyTextbox} type="text" placeholder="email address" />
-                  <button 
-                    onClick={this.handleSubmit} 
-                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`} 
+                  <button
+                    onClick={this.handleSubmit}
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnPrimary}`}
                     type="submit"
                     disabled={isFetching}
                     >
