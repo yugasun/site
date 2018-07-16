@@ -75,7 +75,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to='/framework/docs'>developers</Link>
+                  <Link to='/'>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <h3>documentation</h3>
                     <div className={styles.devDropListWrapper}>
