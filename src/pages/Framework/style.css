@@ -4,6 +4,11 @@
   background-position: center center;
   margin-top: $navHeight;
 
+  .noLink {
+    pointer-events: none;
+    cursor: default;
+  }
+
   .heroContainer{
     > h2{
       font-size: 4rem;
