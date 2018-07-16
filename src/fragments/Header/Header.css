@@ -308,11 +308,11 @@ ul.mainNav{
   ul.mainNav{
     > li {
       > a{
-        padding: 30px 5px;
+        padding: 30px 8px;
         &:before{
           height: 35px;
           margin-top: -18.5px;
-          left: -8px;
+          left: -1px;
         }
       }
     }
