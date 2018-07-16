@@ -8,8 +8,8 @@ const PreFooter = ({ heading, descriptions, links }) => (
     <div className={styles.fhighText}>
       <h2 className={commonStyles.white}>{heading}</h2>
       {
-        descriptions.map((description) => (
-          <p className={commonStyles.white}>{description}</p>
+        descriptions.map((description, index) => (
+          <p className={commonStyles.white} key={index}>{description}</p>
         ))
       }
     </div>
@@ -17,7 +17,7 @@ const PreFooter = ({ heading, descriptions, links }) => (
       <ul>
         {
           links.map((link) => (
-            <li>
+            <li key={link.title}>
               <Link to={link.url}
                 className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
                 {link.title}

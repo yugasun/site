@@ -93,7 +93,7 @@ export default class Homepage extends Component {
               <figure>
                 <img src={group6} alt='Serverless Gateway' />
               </figure>
-              <h4 className={commonStyles.white}>serverless</h4>
+              <h4 className={commonStyles.white}>event</h4>
               <h3 className={commonStyles.white}>gateway</h3>
             </a>
           </div>
