@@ -20,12 +20,12 @@ import kubernetes from '../../assets/images/kubernetes.png'
 import IllustrationPart1 from '../../assets/images/framework-illustration1.png';
 import IllustrationPart2 from '../../assets/images/framework-illustration2.png';
 import IllustrationPart3 from '../../assets/images/framework-illustration3.png';
-import iconFeature1 from '../../assets/images/icon-feature-1.png';
-import iconFeature2 from '../../assets/images/icon-feature-2.png';
-import iconFeature3 from '../../assets/images/icon-feature-3.png';
-import iconFeature4 from '../../assets/images/icon-feature-4.png';
-import iconFeature5 from '../../assets/images/icon-feature-5.png';
-import iconFeature6 from '../../assets/images/icon-feature-6.png';
+import iconFeature1 from '../../assets/images/framework-feature-1.png';
+import iconFeature2 from '../../assets/images/framework-feature-2.png';
+import iconFeature3 from '../../assets/images/framework-feature-3.png';
+import iconFeature4 from '../../assets/images/framework-feature-4.png';
+import iconFeature5 from '../../assets/images/framework-feature-5.png';
+import iconFeature6 from '../../assets/images/framework-feature-6.png';
 
 
 class FrameworkPage extends React.Component {

@@ -13,12 +13,12 @@ import Illustration from '../../assets/images/illustration-platform-dash.png';
 import IllustrationPart1 from '../../assets/images/illustration-use-case-1.png';
 import IllustrationPart2 from '../../assets/images/illustration-use-case-2.png';
 import IllustrationPart3 from '../../assets/images/illustration-use-case-3.png';
-import iconFeature1 from '../../assets/images/icon-feature-1.png';
-import iconFeature2 from '../../assets/images/icon-feature-2.png';
-import iconFeature3 from '../../assets/images/icon-feature-3.png';
-import iconFeature4 from '../../assets/images/icon-feature-4.png';
-import iconFeature5 from '../../assets/images/icon-feature-5.png';
-import iconFeature6 from '../../assets/images/icon-feature-6.png';
+import iconFeature1 from '../../assets/images/dashboard-feature-1.png';
+import iconFeature2 from '../../assets/images/dashboard-feature-2.png';
+import iconFeature3 from '../../assets/images/dashboard-feature-3.png';
+import iconFeature4 from '../../assets/images/dashboard-feature-4.png';
+import iconFeature5 from '../../assets/images/dashboard-feature-5.png';
+import iconFeature6 from '../../assets/images/dashboard-feature-6.png';
 
 
 class PlatformDashboardPage extends React.Component {
