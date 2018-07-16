@@ -139,7 +139,7 @@ export default class Footer extends Component {
                       <Link to='/learn/comparisons'>comparisons</Link>
                     </li>
                     <li>
-                      <Link to='/'>case studies</Link>
+                      <Link to='/learn'>case studies</Link>
                     </li>
                   </ul>
                 </div>
