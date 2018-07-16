@@ -1,8 +1,7 @@
 .container{
   width: 100%;
   max-width: 1260px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 37px;
   margin: auto;
   display:block;
 }
@@ -14,7 +13,7 @@
   .redHighlightContainer{
     border: 3px solid $red_serverless;
     background: $white_serverless;
-    padding: 80px 95px;
+    padding: 68px 85px;
     width: 100%;
   }
 
@@ -26,6 +25,7 @@
     padding: 0px;
     padding-bottom: 30px;
     border: 0px;
+    margin-right: 0;
   }
 
   .quoteDetails{
@@ -34,6 +34,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    .companyLogo {
+      max-height: 41px;
+    }
 
     .name{
       font-family: 'Soleil';
@@ -67,6 +70,10 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
   .redHighlightWrapper{
     padding: 0;
 
@@ -84,6 +91,7 @@
           order: 1;
           padding-top: 10px;
           padding-bottom: 15px;
+          margin-bottom: 20px;
 
           img{
             width: 80px;
