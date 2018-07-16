@@ -14,12 +14,12 @@ import Illustration from '../../assets/images/gateway-illustration.png';
 import IllustrationPart1 from '../../assets/images/gateway-illustration1.png';
 import IllustrationPart2 from '../../assets/images/gateway-illustration2.png';
 import IllustrationPart3 from '../../assets/images/gateway-illustration3.png';
-import iconFeature1 from '../../assets/images/icon-feature-1.png';
-import iconFeature2 from '../../assets/images/icon-feature-2.png';
-import iconFeature3 from '../../assets/images/icon-feature-3.png';
-import iconFeature4 from '../../assets/images/icon-feature-4.png';
-import iconFeature5 from '../../assets/images/icon-feature-5.png';
-import iconFeature6 from '../../assets/images/icon-feature-6.png';
+import iconFeature1 from '../../assets/images/event-gateway-feature1.png';
+import iconFeature2 from '../../assets/images/event-gateway-feature2.png';
+import iconFeature3 from '../../assets/images/event-gateway-feature3.png';
+import iconFeature4 from '../../assets/images/event-gateway-feature4.png';
+import iconFeature5 from '../../assets/images/event-gateway-feature5.png';
+import iconFeature6 from '../../assets/images/event-gateway-feature6.png';
 
 
 class EventGatewayPage extends React.Component {
