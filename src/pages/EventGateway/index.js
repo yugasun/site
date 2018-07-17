@@ -93,7 +93,7 @@ class EventGatewayPage extends React.Component {
                 <p>The Event Gateway is open source and cloud agnostic, allowing for more choice and flexibility.</p>
               </div>
             </div>
-            <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter}` }>
+            <div className={ `${styles.heroContactWrapper} ${commonStyles.textCenter} ${commonStyles.padBottom0}` }>
               <a href='https://dashboard.serverless.com'
                 target='_blank'
                 className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>

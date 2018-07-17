@@ -78,7 +78,7 @@ class PlatformDashboardPage extends React.Component {
             <div className={ `${styles.heroPrimeImage} ${styles.heroMainImage}` }>
               <img src={Illustration} alt='Serverless Dashboard' />
             </div>
-            <div className={styles.heroBulletsAlternate}>
+            <div className={`${styles.heroBulletsAlternate} ${commonStyles.padBottom0}`}>
               <div className={styles.heroBullets}>
                 <span className={commonStyles.white}>Visualize Your Applications</span>
                 <p>The Serverless Dashboard gives your team a shared overview of the functions, events, and subscriptions that make up your serverless application.</p>
