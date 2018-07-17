@@ -7,9 +7,11 @@ header {
   z-index: 999;
 }
 
-.mainHeaderWrapper{
-  background: $black_serverless;
+.blackBackground {
+  background-color: $black_serverless;
+}
 
+.mainHeaderWrapper{
   .logoWrapper {
     display: flex;
     flex-direction: row;

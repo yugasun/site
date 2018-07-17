@@ -53,6 +53,7 @@ class FrameworkPage extends React.Component {
         {...this.props}
         fullWidth
         whiteLogo
+        navbarInitialTransparency
         coloredHeader={ true }
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}>

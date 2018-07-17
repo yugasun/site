@@ -20,7 +20,6 @@ import iconFeature4 from '../../assets/images/dashboard-feature-4.png'
 import iconFeature5 from '../../assets/images/dashboard-feature-5.png'
 import iconFeature6 from '../../assets/images/dashboard-feature-6.png'
 
-
 class PlatformDashboardPage extends React.Component {
   renderPrefooter() {
     return  (
@@ -45,6 +44,7 @@ class PlatformDashboardPage extends React.Component {
         {...this.props}
         fullWidth
         whiteLogo
+        navbarInitialTransparency
         coloredHeader={ true }
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}

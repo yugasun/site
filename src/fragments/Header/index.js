@@ -13,20 +13,47 @@ import gatewayIcon from '../../assets/images/group-6.png'
 import dashboardIcon from '../../assets/images/icon-dashboard.png'
 
 export default class Header extends Component {
+  defaultProps = { navbarInitialTransparency: false };
+
   constructor(props){
     super(props);
-    this.state = { navActive: false };
+    this.state = {
+      navActive: false,
+      currentNavClass: props.navbarInitialTransparency ? '' : styles.blackBackground
+    };
+  }
+
+  scrollHandler = () => {
+    if (window.scrollY > 79) {
+      if (this.state.currentNavClass !== '') { return; }
+      this.setState({ currentNavClass: styles.blackBackground });
+    } else if (this.state.currentNavClass === styles.blackBackground) {
+      this.setState({ currentNavClass: '' });
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.navbarInitialTransparency) {
+      document.addEventListener('scroll', this.scrollHandler);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.navbarInitialTransparency) {
+      document.removeEventListener('scroll', this.scrollHandler);
+    }
   }
 
   navClicked = () => {
-    this.setState(function(prevState){
-      return  {navActive: !prevState.navActive}
+    this.setState(function(prevState) {
+      return { navActive: !prevState.navActive };
     })
   }
 
   render() {
+    const { navActive, currentNavClass } = this.state;
     return (
-      <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite}`}>
+      <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite} ${currentNavClass}`}>
         <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
           <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
             <div className={styles.logoWrapper}>
@@ -34,11 +61,11 @@ export default class Header extends Component {
                 <Svg svg={logo} className={styles.logo} />
               </Link>
             </div>
-            <div className={`${styles.navBtn} ${this.state.navActive ? styles.active : ''}`} onClick={this.navClicked}>
+            <div className={`${styles.navBtn} ${navActive ? styles.active : ''}`} onClick={this.navClicked}>
               <img src={close} className={styles.faTimes}  />
               <img src={mobilemenu} className={styles.faBars}  />
             </div>
-            <nav className={`${this.state.navActive ? styles.active : ''}`}>
+            <nav className={`${navActive ? styles.active : ''}`}>
               <ul className={`${commonStyles.marg0} ${styles.mainNav}`}>
                 <li>
                   <Link to=''>platform</Link>

@@ -26,6 +26,7 @@ const propTypes = {
   body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
+  navbarInitialTransparency: PropTypes.bool,
   renderPrefooter: PropTypes.func,
   __url: PropTypes.string,
   prefetches: PropTypes.array,
@@ -38,6 +39,7 @@ const DefaultLayout = (props) => {
     body,
     header,
     footer,
+    navbarInitialTransparency,
     renderPrefooter,
     children,
     className,
@@ -145,7 +147,7 @@ const DefaultLayout = (props) => {
       (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
     })(window,document.documentElement,'async-hide','dataLayer',4000,
     {'GTM-M5WQLDN':true});`}</script>
-      <Header />
+      <Header navbarInitialTransparency={navbarInitialTransparency} />
       {hero}
       <div className={classes}>
         {header}

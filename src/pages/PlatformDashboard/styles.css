@@ -1,8 +1,7 @@
 .heroSectionWrapper{
-  padding: 50px 0px;
+  padding: calc($navHeight + 50px) 0px;
   background-color: $black_serverless;
   background-position: center center;
-  margin-top: $navHeight;
 
   .noLink {
     pointer-events: none;

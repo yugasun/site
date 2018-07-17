@@ -61,7 +61,10 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <Default fullWidth className={`${commonStyles.body} ${commonStyles.newSite}`} renderPrefooter={this.renderPrefooter}>
+      <Default fullWidth className={`${commonStyles.body} ${commonStyles.newSite}`}
+        navbarInitialTransparency
+        renderPrefooter={this.renderPrefooter}
+      >
     <div className={`${styles.platformBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
       <div className={`${styles.heroContainer} ${commonStyles.container}`}>
         <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
