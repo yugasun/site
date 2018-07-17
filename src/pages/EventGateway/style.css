@@ -30,6 +30,13 @@
         letter-spacing: -0.17rem;
       }
     }
+
+    .helfPad, .midWrapper {
+      max-width: 800px;
+      padding-left: 0;
+      padding-right: 0;
+      margin: auto;
+    }
   }
 
   .heroDesc{
@@ -261,10 +268,6 @@
 }
 
 .heroClientsWrapper{
-  &.midWrapper {
-    padding: 0 15%;
-  }
-
   p{
     font-family: 'SoleilBk';
     font-size: 1.8rem;
@@ -307,21 +310,25 @@
 }
 
 @media (max-width: 992px) {
-  .heroClientsWrapper {
-    &.midWrapper {
-      padding: 0 8%;
-    }
+  .heroSectionWrapper {
+    .heroContainer {
+      .heroClientsWrapper {
+        &.midWrapper {
+          padding: 0 8%;
+        }
 
-    .clientList {
-      padding: 0 2rem;
-    }
+        .clientList {
+          padding: 0 2rem;
+        }
 
-    .cloudProvider {
-      margin-top: 2rem;
-    }
+        .cloudProvider {
+          margin-top: 2rem;
+        }
 
-    .topCloudProviders {
-      padding: 40px;
+        .topCloudProviders {
+          padding: 40px;
+        }
+      }
     }
   }
 
@@ -330,7 +337,6 @@
       overflow: hidden;
     }
   }
-
 }
 
 @media (max-width: 768px) {
