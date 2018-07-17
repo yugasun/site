@@ -62,14 +62,14 @@
     }
 
     &.innerMainImage{
-      padding-top: 0px;
+      padding-top: 0;
       padding-bottom: 80px;
     }
   }
 
   &.platformInnerHero{
     .heroDesc{
-      padding: 20px 0px;
+      padding: 34px 0;
     }
 
     .heroContactWrapper{
