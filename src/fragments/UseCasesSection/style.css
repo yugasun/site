@@ -98,6 +98,17 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .useCaseItem {
+    .useCaseImage {
+      img {
+        max-width: 80%;
+      }
+    }
+    padding: 80px 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .useCasesWrapper{
     padding-top: 0;

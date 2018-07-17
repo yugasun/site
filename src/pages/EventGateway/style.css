@@ -543,7 +543,7 @@
 
         figure{
           img{
-            width: auto;
+            width: 75%;
           }
         }
 
@@ -567,6 +567,20 @@
   .heroMainImage {
     width: 80%;
     margin: auto;
+  }
+
+  .bulletsWrapper {
+    &.serverlessBulletsWrapper {
+      ul {
+        li {
+          figure {
+            img {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
