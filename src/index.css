@@ -62,7 +62,7 @@
   font-style: normal;
   src: local("Serverless"),
   local("Serverless-Regular"),
-  url("./assets/fonts/serverless.otf") format("opentype");
+  url(" https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/serverless.otf") format("opentype");
 }
 @font-face {
   font-family: "Gibson";
@@ -135,7 +135,7 @@
   font-style: normal;
   src: local("SoleilBk"),
   local("Soleil-Book"),
-  url("./assets/fonts/soleil-bk.otf") format("opentype");
+  url(" https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-bk.otf") format("opentype");
 }
 
 @font-face {
@@ -144,7 +144,7 @@
   font-style: normal;
   src: local("SoleilSB"),
   local("Soleil-Small-Book"),
-  url("./assets/fonts/soleil-sb.otf") format("opentype");
+  url(" https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-sb.otf") format("opentype");
 }
 
 @font-face {
@@ -153,7 +153,7 @@
   font-style: normal;
   src: local("Soleil"),
   local("Soleil"),
-  url("./assets/fonts/soleil.otf") format("opentype");
+  url(" https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil.otf") format("opentype");
 }
 
 @font-face {
@@ -161,5 +161,5 @@
   font-weight: normal;
   font-style: normal;
   src: local("SoleilBk-Italic"),
-  url("./assets/fonts/soleil-bk-italic.otf") format("opentype");
+  url(" https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-bk-italic.otf") format("opentype");
 }
