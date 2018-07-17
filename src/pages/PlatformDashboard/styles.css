@@ -203,7 +203,8 @@
 
   width: 100%;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 
   .heroBullets{
     text-align: left;
@@ -435,6 +436,9 @@
   }
 
   .heroBulletsAlternate{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     .heroBullets{
       padding: 0px 25px;
 
