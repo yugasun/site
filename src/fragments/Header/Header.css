@@ -361,13 +361,16 @@ ul.mainNav{
     > li {
       > a {
         padding: 5px;
+        &:before {
+          left: -10px;
+        }
       }
     }
 
     li{
       display: block;
       text-align: left;
-      margin-left: 15px;
+      margin-left: 25px;
     }
   }
 
