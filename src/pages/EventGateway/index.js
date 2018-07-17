@@ -1,25 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router';
+import { Link } from 'react-router'
 import Default from '../../layouts/Default'
 import styles from './style.css'
-import commonStyles from './../../fragments/common.css';
+import commonStyles from './../../fragments/common.css'
 import UseCasesSection from '../../fragments/UseCasesSection'
-import SectionSeperator from '../../fragments/SectionSeperator'
 import Features from './../../fragments/Features'
 import PreFooter from './../../fragments/PreFooter'
 
-import iconGateway from '../../assets/images/group-6.png';
-import Illustration from '../../assets/images/gateway-illustration.png';
+import iconGateway from '../../assets/images/group-6.png'
+import Illustration from '../../assets/images/gateway-illustration.png'
 
-import IllustrationPart1 from '../../assets/images/gateway-illustration1.png';
-import IllustrationPart2 from '../../assets/images/gateway-illustration2.png';
-import IllustrationPart3 from '../../assets/images/gateway-illustration3.png';
-import iconFeature1 from '../../assets/images/event-gateway-feature1.png';
-import iconFeature2 from '../../assets/images/event-gateway-feature2.png';
-import iconFeature3 from '../../assets/images/event-gateway-feature3.png';
-import iconFeature4 from '../../assets/images/event-gateway-feature4.png';
-import iconFeature5 from '../../assets/images/event-gateway-feature5.png';
-import iconFeature6 from '../../assets/images/event-gateway-feature6.png';
+import IllustrationPart1 from '../../assets/images/gateway-illustration1.png'
+import IllustrationPart2 from '../../assets/images/gateway-illustration2.png'
+import IllustrationPart3 from '../../assets/images/gateway-illustration3.png'
+import glitchDivider from '../../assets/images/glitch-divider.png'
+import iconFeature1 from '../../assets/images/event-gateway-feature1.png'
+import iconFeature2 from '../../assets/images/event-gateway-feature2.png'
+import iconFeature3 from '../../assets/images/event-gateway-feature3.png'
+import iconFeature4 from '../../assets/images/event-gateway-feature4.png'
+import iconFeature5 from '../../assets/images/event-gateway-feature5.png'
+import iconFeature6 from '../../assets/images/event-gateway-feature6.png'
 
 
 class EventGatewayPage extends React.Component {
@@ -133,7 +133,9 @@ class EventGatewayPage extends React.Component {
           </div>
         </div>
 
-        <SectionSeperator className={styles.sectionSeperator} />
+        <div className={styles.sectionSeperator}>
+          <img src={glitchDivider} />
+        </div>
 
         <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>

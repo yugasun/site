@@ -121,7 +121,9 @@ class PlatformDashboardPage extends React.Component {
           </div>
         </div>
 
-        <SectionSeperator className={styles.sectionSeperator} />
+        <div className={styles.sectionSeperator}>
+          <img src={glitchDivider} />
+        </div>
 
         <div className={`${styles.footerPrevPad} ${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
