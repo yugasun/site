@@ -3,7 +3,10 @@
   h2{
     font-family: 'SoleilSb';
     font-size: 4rem;
+    font-weight: normal;
     margin-bottom: 110px;
+    letter-spacing: normal;
+    line-height: 1.4;
   }
 }
 
