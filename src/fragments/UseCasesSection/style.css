@@ -24,7 +24,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 100px 0px;
+  padding: 100px 0;
 
   .useCaseDetail,
   .useCaseImage{
@@ -91,6 +91,10 @@
 
   &:last-of-type{
     padding-top: 40px;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 }
 
