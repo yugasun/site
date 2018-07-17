@@ -107,7 +107,7 @@ class FrameworkPage extends React.Component {
             </div>
             <div className={styles.heroClientsWrapper}>
               <div className={styles.cloudProvider}>Supports Top Cloud Providers</div>
-              <ul className={`${styles.clientList} ${styles.topCloudProviders}`}>
+              <ul className={styles.clientList}>
                 <li><img src={gcp} alt='Google Cloud Provider' /></li>
                 <li><img src={azure} alt='Microsoft Azure' /></li>
                 <li><img src={aws} alt='Amazon Web Services' /></li>

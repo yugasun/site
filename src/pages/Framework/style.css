@@ -284,7 +284,7 @@
     line-height: 1.5;
     letter-spacing: normal;
     color: $white_serverless;
-    text-align: left;
+    text-align: center;
     margin-top: 7rem;
     padding-bottom: 10px;
   }
@@ -302,11 +302,6 @@
     li{
       display: inline-block;
     }
-  }
-
-  .topCloudProviders {
-    padding: 64px;
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #222222);
   }
 }
 
