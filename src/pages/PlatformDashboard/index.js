@@ -9,7 +9,7 @@ import Features from './../../fragments/Features'
 import PreFooter from './../../fragments/PreFooter'
 
 import iconDashboard from '../../assets/images/icon-platform-dash.png';
-import Illustration from '../../assets/images/illustration-platform-dash.png';
+import Illustration from '../../assets/images/dashboard-illustration.png';
 import IllustrationPart1 from '../../assets/images/illustration-use-case-1.png';
 import IllustrationPart2 from '../../assets/images/illustration-use-case-2.png';
 import IllustrationPart3 from '../../assets/images/illustration-use-case-3.png';
