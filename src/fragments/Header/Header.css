@@ -381,6 +381,7 @@ ul.mainNav{
     padding: 20px;
     transform: translate(0%, 0%);
     box-shadow: none;
+    background: $black_serverless;
     border-top: 1px solid $grey1_serverless;
     border-bottom: 1px solid $grey1_serverless;
 
