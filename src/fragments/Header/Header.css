@@ -115,8 +115,8 @@ ul.mainNav{
   width: 220px;
   height: auto;
   max-height: auto;
-  background: $black_serverless;
-  box-shadow: 0 0px 50px 1px rgba(255,255,255,0.3);
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), $black2), linear-gradient($black_serverless, $black_serverless);
+  box-shadow: 0 10px 50px 0 $black_serverless;
   position: absolute;
   z-index: 999;
   top: calc($navHeight - 1px);
@@ -302,7 +302,7 @@ ul.mainNav{
     margin-left: -7.5px;
     border-style: solid;
     border-width: 0 7.5px 13.0px 7.5px;
-    border-color: transparent transparent $black_serverless transparent;
+    border-color: transparent transparent $black2 transparent;
   }
 }
 
