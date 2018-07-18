@@ -175,7 +175,7 @@ export default class Footer extends Component {
                       <Link to='/community/champions/'>champions</Link>
                     </li>
                     <li>
-                      <Link to='/'>contact</Link>
+                      <a href='mailto:hello@serverless.com' target='_blank'>contact</a>
                     </li>
                   </ul>
                 </div>

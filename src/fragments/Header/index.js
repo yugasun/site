@@ -109,10 +109,10 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>quick starts</h3>
                         <ul>
-                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>nodejs</Link></li>
-                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>python</Link></li>
-                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>java</Link></li>
-                          <li><Link to='/framework/docs/providers/aws/guide/quick-start'>go</Link></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start/'>AWS</Link></li>
+                          <li><Link to='/framework/docs/providers/azure/guide/quick-start/'>Azure</Link></li>
+                          <li><Link to='/framework/docs/providers/google/guide/quick-start/'>Google Cloud</Link></li>
+                          <li><Link to='/framework/docs/'>Others</Link></li>
                         </ul>
                       </div>
                       <div className={styles.devDropList}>

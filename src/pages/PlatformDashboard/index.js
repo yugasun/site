@@ -70,10 +70,11 @@ class PlatformDashboardPage extends React.Component {
                 sign up
               </a>
               &nbsp;
-              <Link to='/enterprise'
+              <a href='mailto:hello@serverless.com'
+                target='_blank'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
                 contact sales
-              </Link>
+              </a>
             </div>
             <div className={ `${styles.heroPrimeImage} ${styles.heroMainImage}` }>
               <img src={Illustration} alt='Serverless Dashboard' />
