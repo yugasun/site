@@ -191,5 +191,18 @@
 			"short": "Friend of music that is dissonant in nature and technology that is emergent",
 			"long": ""
 		}
+	},
+	{
+		"name": "Sebastian Borza",
+		"title": "Software Engineer",
+		"github": "sebito91",
+		"twitter": "sebito91",
+		"linkedin": "sborza",
+		"avatar": "https://avatars3.githubusercontent.com/u/3159454?s=460&v=4",
+		"location": "Chicago, IL",
+		"bio": {
+			"short": "Software Engineer interested in all things opensource golang, C and python. A hockey-playing Canadian living in the US",
+			"long": ""
+		}
 	}
 ]
