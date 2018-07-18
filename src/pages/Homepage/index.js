@@ -52,8 +52,7 @@ export default class Homepage extends Component {
         ]}
         links={[
           { url: '/learn/use-cases/', title: 'use cases' },
-          { url: '/learn/comparisons', title: 'comparisons' },
-          { url: '/learn', title: 'case studies' }
+          { url: '/learn/comparisons', title: 'comparisons' }
         ]}
       />
     );

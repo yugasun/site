@@ -134,7 +134,6 @@ export default class Header extends Component {
                       <li><Link to='/learn'>why?</Link></li>
                       <li><Link to='/learn/use-cases'>use cases</Link></li>
                       <li><Link to='/learn/comparisons'>comparisons</Link></li>
-                      <li><Link to='/learn'>case studies</Link></li>
                     </ul>
                   </div>
                 </li>

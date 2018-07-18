@@ -138,9 +138,6 @@ export default class Footer extends Component {
                     <li>
                       <Link to='/learn/comparisons'>comparisons</Link>
                     </li>
-                    <li>
-                      <Link to='/learn'>case studies</Link>
-                    </li>
                   </ul>
                 </div>
                 <div className={styles.footerList}>
