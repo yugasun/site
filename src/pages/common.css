@@ -107,12 +107,24 @@
     }
   }
 
-  &.platformBg{
-    background-image: url('./../assets/images/harddrive.png');
+  &.homeBg {
+    background-image: url('./../assets/images/home.png');
+    background-size: contain;
   }
 
-  &.platformDashboardBg{
-    background-image: url('./../assets/images/platform-dash-bg.png');
+  &.dashboardBg {
+    background-image: url('./../assets/images/dashboard.png');
+    background-size: contain;
+  }
+
+  &.gatewayBg {
+    background-image: url('./../assets/images/gateway.png');
+    background-size: contain;
+  }
+
+  &.frameworkBg {
+    background-image: url('./../assets/images/framework.png');
+    background-size: contain;
   }
 }
 

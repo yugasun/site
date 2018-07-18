@@ -49,7 +49,7 @@ class PlatformDashboardPage extends React.Component {
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}
       >
-        <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
+        <div className={ `${styles.dashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ `${styles.heroPrimeImage}` }>
               <img src={iconDashboard} alt='Serverless Dashboard' />

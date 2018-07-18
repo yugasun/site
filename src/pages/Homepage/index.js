@@ -65,7 +65,7 @@ export default class Homepage extends Component {
         navbarInitialTransparency
         renderPrefooter={this.renderPrefooter}
       >
-    <div className={`${styles.platformBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
+    <div className={`${styles.homeBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
       <div className={`${styles.heroContainer} ${commonStyles.container}`}>
         <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
         <h1 className={`${commonStyles.white} ${commonStyles.textCenter}`}>platform</h1>

@@ -57,7 +57,7 @@ class FrameworkPage extends React.Component {
         coloredHeader={ true }
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}>
-        <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
+        <div className={ `${styles.frameworkBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ styles.heroPrimeImage }>
               <img src={iconFramework} alt="Serverless Framework" />

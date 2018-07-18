@@ -51,7 +51,7 @@ class EventGatewayPage extends React.Component {
         headerHideSignUp={ true }
         renderPrefooter={this.renderPrefooter}
       >
-        <div className={ `${styles.platformDashboardBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
+        <div className={ `${styles.gatewayBg} ${styles.platformInnerHero} ${styles.heroSectionWrapper}  ${commonStyles.newSite}` }>
           <div className={ `${styles.heroContainer} ${commonStyles.container}` }>
             <div className={ styles.heroPrimeImage }>
               <img src={iconGateway} alt="Event Gateway" />
