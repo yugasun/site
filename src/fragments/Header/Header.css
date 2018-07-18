@@ -151,10 +151,14 @@ ul.mainNav{
 
         > a{
           display: flex;
-          color: #fff;
+          color: $grey1_serverless;
           text-decoration: none;
           padding: 10px 0px;
           margin: 0px;
+
+          &:hover {
+            color: $white_serverless;
+          }
 
           img{
             display: inline-block;
