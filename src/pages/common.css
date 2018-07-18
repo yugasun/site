@@ -108,11 +108,11 @@
   }
 
   &.platformBg{
-    background-image: url('../../assets/images/harddrive.png');
+    background-image: url('./../assets/images/harddrive.png');
   }
 
   &.platformDashboardBg{
-    background-image: url('../../assets/images/platform-dash-bg.png');
+    background-image: url('./../assets/images/platform-dash-bg.png');
   }
 }
 
@@ -173,7 +173,7 @@
         margin-top: -1px;
         height: 20px;
         width: 180px;
-        background: url('../../assets/images/bullet-left-marker.png') no-repeat;
+        background: url('./../assets/images/bullet-left-marker.png') no-repeat;
         background-position: center center;
       }
 
@@ -185,7 +185,7 @@
         margin-top: -1px;
         height: 20px;
         width: 180px;
-        background: url('../../assets/images/bullet-right-marker.png') no-repeat;
+        background: url('./../assets/images/bullet-right-marker.png') no-repeat;
         background-position: center center;
       }
     }
@@ -225,7 +225,7 @@
         left: -10px;
         width: 45px;
         height: 26px;
-        background: url('../../assets/images/dot-grid.png');
+        background: url('./../assets/images/dot-grid.png');
         z-index: -1;
       }
     }
@@ -565,7 +565,7 @@
 
 @media (max-width: 1280px) {
   .heroMainImage {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
 
@@ -575,7 +575,7 @@
         li {
           figure {
             img {
-              width: 60%;
+              width: 55%;
             }
           }
         }
@@ -652,7 +652,7 @@
 
 .patternSectionWrapper{
   padding: 80px 0px;
-  background: url('../../assets/images/rectangle-19.png') repeat;
+  background: url('./../assets/images/rectangle-19.png') repeat;
 }
 
 .clientsWrapper{

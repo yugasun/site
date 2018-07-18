@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router';
 import Default from '../../layouts/Default'
-import styles from './Homepage.css'
+import styles from './../common.css'
 import commonStyles from './../../fragments/common.css';
 
 import Testimonial from '../../fragments/Testimonial'
