@@ -118,10 +118,10 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>example & guides</h3>
                         <ul>
-                          <li><Link to='/framework/docs'>API's</Link></li>
-                          <li><Link to='/framework/docs'>Cron Jobs</Link></li>
-                          <li><Link to='/framework/docs'>Webhooks</Link></li>
-                          <li><Link to='/framework/docs'>Event Processing</Link></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>API's</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Cron Jobs</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Webhooks</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Event Processing</a></li>
                         </ul>
                       </div>
                     </div>
