@@ -73,7 +73,7 @@ class EventGatewayPage extends React.Component {
             <div className={ `${styles.heroPrimeImage} ${styles.heroMainImage}` }>
               <img src={Illustration} alt="Event Router" />
             </div>
-            <div className={styles.heroBulletsAlternate}>
+            <div className={`${styles.heroBulletsAlternate} ${styles.gatewayBullets}`}>
               <div className={styles.heroBullets}>
                 <span className={commonStyles.white}>
                   Simplify API development
