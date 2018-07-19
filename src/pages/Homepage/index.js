@@ -107,11 +107,10 @@ export default class Homepage extends Component {
             sign up
           </a>
           &nbsp;
-          <a href='mailto:hello@serverless.com'
-            target='_blank'
+          <Link to='/enterprise'
             className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
             contact sales
-          </a>
+          </Link>
         </div>
         <div className={styles.heroClientsWrapper}>
           <p className={commonStyles.textCenter}>

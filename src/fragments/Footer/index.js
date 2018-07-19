@@ -184,10 +184,10 @@ export default class Footer extends Component {
                 <div className={styles.text}>
                   <p>Serverless, Inc. &copy; 2018</p>
                 </div>
-                {/* <ul className={styles.policyNav}>
-                  <li><Link to='/'>terms of service</Link></li>
-                  <li><Link to='/'>privacy policy</Link></li>
-                </ul> */}
+                <ul className={styles.policyNav}>
+                  <li><a href='https://dashboard.serverless.com/legal/terms' target='_blank'>terms of service</a></li>
+                  <li><a href='https://dashboard.serverless.com/legal/privacy' target='_blank'>privacy policy</a></li>
+                </ul>
               </div>
             </div>
             <div className={styles.footerSocialWrapper}>
