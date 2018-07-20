@@ -104,7 +104,16 @@ export default class Header extends Component {
                 <li>
                   <Link to='/'>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
-                    <h3>documentation</h3>
+                    <div className={styles.devDropListWrapper}>
+                      <div className={styles.devDropList}>
+                        <h3>documentation</h3>
+                        <ul>
+                          <li><Link to='/framework/docs'>framework</Link></li>
+                          <li><a href='https://github.com/serverless/platform/tree/master/docs'>platform</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <br />
                     <div className={styles.devDropListWrapper}>
                       <div className={styles.devDropList}>
                         <h3>quick starts</h3>

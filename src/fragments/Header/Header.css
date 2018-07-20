@@ -268,7 +268,7 @@ ul.mainNav{
 
   &.devDrop{
     width: 440px;
-    height: 300px;
+    height: 350px;
 
     h3{
       color: $white_serverless;
@@ -352,8 +352,18 @@ ul.mainNav{
 }
 
 @media (max-width: 768px) {
+  .blackBackground {
+    ul.mainNav {
+      > li {
+        > a {
+          padding: 5px;
+        }
+      }
+    }
+  }
+
   .mainHeaderWrapper{
-    padding: 15px 0px;
+    padding: 19px 0px;
     background: $black_serverless;
 
     .logoWrapper{
