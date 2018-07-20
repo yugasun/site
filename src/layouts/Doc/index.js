@@ -89,7 +89,7 @@ class Doc extends Component {
   handleScroll = (_event) => {
     const offsetHeight = window.pageYOffset || document.documentElement.scrollTop
     // TODO: refactor hardcoded nav height number to variable
-    const stickyNavHeight = 79
+    const stickyNavHeight = 74
     const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
     if (offsetHeight >= cachedOffset) {
       if (this.sidebarNode.style.position !== 'fixed') {

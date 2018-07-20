@@ -7,7 +7,7 @@ module.exports = () => {
   return {
     // -- Sizing
     unit: '1rem',
-    navHeight: '7.9rem',
+    navHeight: '7.4rem',
     mobileNavHeight: '6.6rem',
     footerHeight: '67.9375rem',
     // -- Colors

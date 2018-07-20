@@ -24,7 +24,7 @@ export default class Header extends Component {
   }
 
   scrollHandler = () => {
-    if (window.scrollY > 79) {
+    if (window.scrollY > 50) {
       if (this.state.currentNavClass !== '') { return; }
       this.setState({ currentNavClass: styles.blackBackground });
     } else if (this.state.currentNavClass === styles.blackBackground) {

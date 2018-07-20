@@ -9,6 +9,19 @@ header {
 
 .blackBackground {
   background-color: $black_serverless;
+
+  ul.mainNav {
+    > li {
+      > a {
+        padding: 27.5px 25px;
+        transition: padding 0.5s;
+      }
+    }
+  }
+
+  .mainNavDropdown {
+    top: calc($navHeight - 1px);
+  }
 }
 
 .mainHeaderWrapper{
@@ -64,7 +77,7 @@ ul.mainNav{
     > a{
       color: inherit;
       display: inline-block;
-      padding: 30px 25px;
+      padding: 57.5px 25px;
       text-decoration: none;
       position: relative;
       font-family: "Serverless";
@@ -119,7 +132,7 @@ ul.mainNav{
   box-shadow: 0 10px 50px 0 $black_serverless;
   position: absolute;
   z-index: 999;
-  top: calc($navHeight - 1px);
+  top: calc(13.4rem - 2rem);
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 40px;
