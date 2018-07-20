@@ -421,3 +421,26 @@ pre code.hljs {
     font-size: 11px;
   }
 }
+
+
+
+/* header pages global to be refactored
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.headerContainer{
+  width: 100%;
+  max-width: 1260px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  display:block;
+}
+
+.headerRow{
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+}
+
+.headerJustifySpaceBetween{
+  justify-content: space-between;  
+}

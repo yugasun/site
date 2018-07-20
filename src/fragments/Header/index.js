@@ -1,201 +1,171 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router'
-import handleClickAway from '../../utils/handleClickAway'
-import styles from './Header.css'
-import classnames from 'classnames'
-import PlatformBetaCTA from '../../fragments/PlatformBetaCTA'
-const logo = process.env.LOGO
+import Svg from 'react-svg-inline'
 
-const propTypes = {
-  whiteLogo: PropTypes.bool,
-  colored: PropTypes.bool,
-  fullWidth: PropTypes.bool,
-  hideCTA: PropTypes.bool,
-}
+import styles from './Header.css'
+import commonStyles from './../common.css';
+
+import logo from '../../assets/images/logo.svg'
+import mobilemenu from '../../assets/images/icon-mobile-menu.png'
+import close from '../../assets/images/icon-close.png'
+import frameworkIcon from '../../assets/images/bolt.png'
+import gatewayIcon from '../../assets/images/group-6.png'
+import dashboardIcon from '../../assets/images/icon-dashboard.png'
 
 export default class Header extends Component {
-  static hasLoadingState = true
-  constructor(props, context) {
-    super(props, context)
+  defaultProps = { navbarInitialTransparency: false };
+
+  constructor(props){
+    super(props);
     this.state = {
-      sideNavOpen: false,
-    }
-    this.handleClick = this.handleClick.bind(this)
-    this.closeNav = this.closeNav.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
-
-    this.scrolling = false
+      navActive: false,
+      currentNavClass: props.navbarInitialTransparency ? '' : styles.blackBackground
+    };
   }
+
+  scrollHandler = () => {
+    if (window.scrollY > 34) {
+      if (this.state.currentNavClass !== '') { return; }
+      this.setState({ currentNavClass: styles.blackBackground });
+    } else if (this.state.currentNavClass === styles.blackBackground) {
+      this.setState({ currentNavClass: '' });
+    }
+  }
+
   componentDidMount() {
-    document.body.addEventListener('click', this.closeNav)
-    window.addEventListener('scroll', this.handleScroll)
+    if (this.props.navbarInitialTransparency) {
+      document.addEventListener('scroll', this.scrollHandler);
+    }
   }
+
   componentWillUnmount() {
-    document.body.removeEventListener('click', this.closeNav)
-    window.removeEventListener('scroll', this.handleScroll)
-  }
-  handleScroll(e) {
-    if (this.scrolling) {
-      return
-    }
-    requestAnimationFrame(() => {
-      this.scrolling = true
-
-      let st = window.pageYOffset || document.documentElement.scrollTop
-
-      if (st > 10) {
-        this.header.classList.add(styles.coloredHeader)
-        if (this.props.whiteLogo) {
-          this.logo.src = this.logo.src.includes('#white') ? this.logo.src.substr(0, this.logo.src.length - 6) : this.logo.src
-        }
-        if (this.props.hideCTA) {
-          this.cta.classList.remove(styles.mobileOnly)
-        }
-      } else {
-        if (!this.props.colored) {
-          this.header.classList.remove(styles.coloredHeader)
-        }
-        if (this.props.whiteLogo) {
-          this.logo.src = this.logo.src.includes('#white') ? this.logo.src : this.logo.src + '#white'
-        }
-        if (this.props.hideCTA) {
-          this.cta.classList.add(styles.mobileOnly)
-        }
-      }
-      this.scrolling = false
-    })
-  }
-  closeNav(e) {
-    const toggleNode = this.refs.toggle
-    const isOutsideClick = handleClickAway(toggleNode, e)
-    if (toggleNode && isOutsideClick) {
-      this.setState({
-        sideNavOpen: false
-      })
+    if (this.props.navbarInitialTransparency) {
+      document.removeEventListener('scroll', this.scrollHandler);
     }
   }
-  handleClick() {
-    this.setState({
-      sideNavOpen: !this.state.sideNavOpen
+
+  navClicked = () => {
+    this.setState(function(prevState) {
+      return { navActive: !prevState.navActive };
     })
   }
+
   render() {
-    const { fullWidth, whiteLogo, colored, hideCTA, hideSignUp } = this.props
-    const { sideNavOpen } = this.state
-    const mobileNav = (sideNavOpen) ? styles.open : ''
-    const openClass = (sideNavOpen) ? styles.animate : ''
-    const containerStyle = (fullWidth) ? styles.fullWidth : ''
-    let headerClasses = colored ? classnames(styles.header, styles.coloredHeader) : styles.header
-        headerClasses = whiteLogo ? classnames(headerClasses, styles.whiteLogo) : headerClasses
+    const { navActive, currentNavClass } = this.state;
     return (
-      <header id='header' className={headerClasses} ref={header => { this.header = header }}>
-        <div className={`${styles.navWrapper} ${containerStyle} ${styles.bound}`}>
-          <div className={styles.navLeft}>
-            <Link to='/' className={styles.logo}>
-              <img
-                id='logo'
-                width={28}
-                height={23}
-                src={logo.ICON + (whiteLogo ? '#white' : '')}
-                className={styles.logoIcon}
-                ref={logo => { this.logo = logo }}
-              />
-              <span className={styles.logoText}>
-                serverless
-              </span>
-            </Link>
-          </div>
-          <div ref='toggle' onClick={this.handleClick} className={styles.toggle}>
-            <div className={styles.ham}>
-              <div className={`${styles.bar} ${openClass}`} />
+      <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite} ${currentNavClass}`}>
+        <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
+          <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
+            <div className={styles.logoWrapper}>
+              <Link to='/'>
+                <Svg svg={logo} className={styles.logo} />
+              </Link>
             </div>
+            <div className={`${styles.navBtn} ${navActive ? styles.active : ''}`} onClick={this.navClicked}>
+              <img src={close} className={styles.faTimes}  />
+              <img src={mobilemenu} className={styles.faBars}  />
+            </div>
+            <nav className={`${navActive ? styles.active : ''}`}>
+              <ul className={`${commonStyles.marg0} ${styles.mainNav}`}>
+                <li>
+                  <Link to=''>platform</Link>
+                  <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
+                    <ul>
+                      <li>
+                        <Link to='/framework/'>
+                          <img src={frameworkIcon} alt='Framework' />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>framework</span>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/event-gateway/'>
+                          <img src={gatewayIcon} alt='Event Gateway' />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>event gateway</span>
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to='/dashboard/'>
+                          <img src={dashboardIcon} alt='Dashboard' />
+                          <div className={styles.text}>
+                            <span className={styles.top}>serverless</span>
+                            <span className={styles.bottom}>dashboard</span>
+                          </div>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <Link to='/'>developers</Link>
+                  <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
+                    <div className={styles.devDropListWrapper}>
+                      <div className={styles.devDropList}>
+                        <h3>documentation</h3>
+                        <ul>
+                          <li><Link to='/framework/docs'>framework</Link></li>
+                          <li><a target='_blank' href='https://github.com/serverless/platform/tree/master/docs'>platform</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <br />
+                    <div className={styles.devDropListWrapper}>
+                      <div className={styles.devDropList}>
+                        <h3>quick starts</h3>
+                        <ul>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start/'>AWS</Link></li>
+                          <li><Link to='/framework/docs/providers/azure/guide/quick-start/'>Azure</Link></li>
+                          <li><Link to='/framework/docs/providers/google/guide/quick-start/'>Google Cloud</Link></li>
+                          <li><Link to='/framework/docs/'>Others</Link></li>
+                        </ul>
+                      </div>
+                      <div className={styles.devDropList}>
+                        <h3>example & guides</h3>
+                        <ul>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>API's</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Cron Jobs</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Webhooks</a></li>
+                          <li><a href='https://github.com/serverless/examples' target='_blank'>Event Processing</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <Link to=''>learn</Link>
+                  <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
+                    <ul>
+                      <li><Link to='/learn'>why?</Link></li>
+                      <li><Link to='/learn/use-cases'>use cases</Link></li>
+                      <li><Link to='/learn/comparisons'>comparisons</Link></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <Link to=''>resources</Link>
+                  <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
+                    <ul>
+                      <li><Link to='/blog'>blog</Link></li>
+                      <li><a href='https://forum.serverless.com' target='_blank'>forum</a></li>
+                      <li><Link to='/community/meetups'>meetups</Link></li>
+                      <li><a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a></li>
+                      <li><Link to='/workshops'>workshops</Link></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><Link to='/enterprise'>enterprise</Link></li>
+                <li><a href="https://dashboard.serverless.com" target='_blank'>sign up</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav className={`${styles.navRight} ${mobileNav}`}>
-            <ul className={styles.navItems}>
-              <li className={styles.navItem}>
-                <Link to='/' className={`${styles.link} ${styles.mobileOnly}`}>Home</Link>
-              </li>
-              <li className={styles.navItem}>
-                <Link to='/learn/' className={styles.link}>
-                  Learn
-                </Link>
-              </li>
-              <li className={styles.navItem}>
-                <Link to='/framework/docs/' className={styles.link}>
-                  Docs
-                </Link>
-              </li>
-              <li className={styles.navItem}>
-                <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
-                  Toolkit <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
-                </a>
-                <ul className={styles.subNavItems}>
-                  <li>
-                    <Link to='/framework/' className={styles.link}>
-                      Framework
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='/event-gateway/' className={styles.link}>
-                      Event Gateway
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className={styles.navItem}>
-                <a href='javascript:' className={`${styles.link} ${styles.noMobile}`}>
-                  Community <svg className={styles.caret} width='8' height='4' viewBox='62 7 10 6'><path d='M71.884 7.698l-4.56 5.116c-.013.022-.008.05-.026.07-.083.084-.192.12-.3.116-.106.004-.214-.033-.295-.117-.02-.02-.014-.047-.028-.068L62.115 7.7c-.154-.16-.154-.42 0-.58.156-.16.408-.16.563 0L67 11.97l4.322-4.85c.155-.16.406-.16.56 0 .157.16.157.418.002.578z' fill='#fff' /></svg>
-                </a>
-                <ul className={styles.subNavItems}>
-                  <li>
-                    <Link to='/community/meetups/' className={styles.link}>
-                      Meetups
-                    </Link>
-                  </li>
-                  <li>
-                  <Link to='/workshops/' className={styles.link}>Workshops</Link>
-                  </li>
-                  <li>
-                    <Link to='/community/champions/' className={styles.link}>
-                      Champions
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      target='_blank'
-                      href='https://forum.serverless.com/'
-                      className={styles.link}>
-                      Forum
-                    </a>
-                  </li>
-                  <li>
-                    <a target='_blank' href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU' className={styles.link}>Slack</a>
-                  </li>
-                </ul>
-              </li>
-              <li className={styles.navItem}>
-                <Link to='/blog/' className={styles.link}>
-                  Blog
-                </Link>
-              </li>
-              <li className={styles.navItem}>
-                <Link to='/enterprise/' className={styles.link}>
-                  Enterprise
-                </Link>
-              </li>
-              {
-                !hideSignUp &&
-                  <li
-                    className={`${styles.navItem} ${styles.cta} ${styles.mobileOnly}` + (hideCTA ? '' : styles.mobileOnly)}
-                    ref={cta => { this.cta = cta }}
-                ><PlatformBetaCTA kind={colored ? 'redBordered' : 'whiteBordered'} text='Sign Up'/></li>
-              }
-            </ul>
-          </nav>
         </div>
       </header>
     )
   }
 }
 
-Header.propTypes = propTypes

@@ -1,65 +1,31 @@
 import React from 'react'
-import styles from './styles.css'
+import styles from './../Footer/index.css'
+import commonStyles from './../common.css'
 import { Link } from 'react-router'
-import Glitch from '../../components/Glitch'
 
-const PreFooter = ({
-  heading,
-  subheadings,
-  links
-}) => (
-  <div className={ styles.container }>
-    <div>
-      <div className={ styles.text }>
-
-        <div>
-
-          <div className={ styles.heading }>
-            { heading }
-          </div>
-
-          {
-            subheadings.map((text, i) => (
-              <div
-                className={ styles.subheading }
-                key={ i }
-              >
-                { text }
-              </div>
-            ))
-          }
-
-        </div>
-
-      </div>
-      <div className={ styles.links }>
-
-        <div>
-          {
-            links.map(({ external, to, label }, i) => (
-              external
-                ? (
-                    <a
-                      href={ to }
-                      target='_blank'
-                    >
-                      <div className={ styles.link }>
-                        { label }
-                      </div>
-                    </a>
-                  )
-                : (
-                    <Link { ...{ to } }>
-                      <div className={ styles.link }>
-                        { label }
-                      </div>
-                    </Link>
-                  )
-            ))
-          }
-        </div>
-
-      </div>
+const PreFooter = ({ heading, descriptions, links }) => (
+  <div className={`${styles.footerHighlight} ${commonStyles.newSite}`}>
+    <div className={styles.fhighText}>
+      <h2 className={commonStyles.white}>{heading}</h2>
+      {
+        descriptions.map((description, index) => (
+          <p className={commonStyles.white} key={index}>{description}</p>
+        ))
+      }
+    </div>
+    <div className={styles.fhighLinks}>
+      <ul>
+        {
+          links.map((link) => (
+            <li key={link.title}>
+              <Link to={link.url}
+                className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                {link.title}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
 )

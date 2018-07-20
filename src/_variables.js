@@ -7,23 +7,34 @@ module.exports = () => {
   return {
     // -- Sizing
     unit: '1rem',
-    navHeight: '5.5rem',
-    footerHeight: '15.5rem',
+    navHeight: '7.4rem',
+    mobileNavHeight: '6.6rem',
+    footerHeight: '67.9375rem',
     // -- Colors
     yellow: '#ffd734',
     red: '#e55934',
     red2: '#FD5750',
     red3: '#e14e47',
     red4: '#fff2ef',
+    red5: '#cb0a02',
     blue: '#159BBA',
     blue2: '#147d9b',
     lightGray: '#EAEAEA',
+    light_red: 'rgba(253, 87, 80, 0.1)',
+    light_white: 'rgba(255, 255, 255, 0.2)',
     gray1: '#aaa',
     gray2: '#202020',
     black: '#333333',
     black1: '#212121',
     black2: '#191919',
     white: '#FDFDFD',
+    red_serverless: '#fd5750',
+    black_serverless: '#000000',
+    grey1_serverless: '#5b5b5b',
+    grey2_serverless: '#8c8c8c',
+    grey3_serverless: '#eaeaea',
+    grey4_serverless: '#f7f7f7',
+    white_serverless: '#ffffff',
     // -- Fonts
     fontSize: baseFontSize,
     fontSizeTiny: formatFont(1.2),
@@ -71,3 +82,6 @@ module.exports = () => {
 function formatFont(modifier) {
   return (modifier * baseValue) + unit
 }
+
+
+// $primary-color-dark-blue: #09a0c4;

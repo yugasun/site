@@ -26,6 +26,8 @@ const propTypes = {
   body: PropTypes.string,
   header: PropTypes.element,
   footer: PropTypes.element,
+  navbarInitialTransparency: PropTypes.bool,
+  renderPrefooter: PropTypes.func,
   __url: PropTypes.string,
   prefetches: PropTypes.array,
 }
@@ -37,6 +39,8 @@ const DefaultLayout = (props) => {
     body,
     header,
     footer,
+    navbarInitialTransparency,
+    renderPrefooter,
     children,
     className,
     fullWidth,
@@ -108,7 +112,7 @@ const DefaultLayout = (props) => {
   // Remove jumpy footer with loading state
   let footerRender
   if (!isLoading) {
-    footerRender = <Footer />
+    footerRender = <Footer renderPrefooter={renderPrefooter} />
   }
 
   /* Markdown content will display if it exists */
@@ -143,12 +147,7 @@ const DefaultLayout = (props) => {
       (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
     })(window,document.documentElement,'async-hide','dataLayer',4000,
     {'GTM-M5WQLDN':true});`}</script>
-      <Header
-        whiteLogo={!!(whiteLogo)}
-        colored={coloredHeader !== false && coloredHeader !== undefined}
-        hideCTA={headerHideCTA !== false && headerHideCTA !== undefined}
-        hideSignUp={ headerHideSignUp }
-      />
+      <Header navbarInitialTransparency={navbarInitialTransparency} />
       {hero}
       <div className={classes}>
         {header}

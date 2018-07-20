@@ -4,6 +4,7 @@
  */
 export { default as PageError } from './404'
 export { default as Homepage } from './Homepage'
+export { default as PlatformDashboard } from './PlatformDashboard'
 export { default as PageLoading } from './PageLoading'
 export { default as Partners } from './Partners'
 export { default as Team } from './Team'
