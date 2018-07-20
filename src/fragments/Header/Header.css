@@ -295,6 +295,10 @@ ul.mainNav{
           a{
             color: $grey1_serverless;
 
+            &:before {
+              background: none;
+            }
+
             &:hover,
             &:hover{
               color: $white_serverless;
