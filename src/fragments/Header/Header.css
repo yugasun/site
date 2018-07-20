@@ -30,6 +30,10 @@ header {
     flex-direction: row;
     justify-content: right;
     align-items: center;
+
+    svg {
+      margin-top: 10px;
+    }
   }
 
   .navBtn{
@@ -337,6 +341,21 @@ ul.mainNav{
 }
 
 @media (max-width: 992px) {
+  .blackBackground {
+    ul.mainNav {
+      > li {
+        > a {
+          padding: 30px 8px;
+          transition: padding 0.5s;
+        }
+      }
+    }
+
+    .mainNavDropdown {
+      top: calc($navHeight - 1px);
+    }
+  }
+
   ul.mainNav{
     > li {
       > a{
@@ -348,6 +367,10 @@ ul.mainNav{
         }
       }
     }
+  }
+
+  .mainNavDropdown {
+    top: calc($navHeight - 1px);
   }
 }
 
