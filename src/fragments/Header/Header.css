@@ -81,7 +81,7 @@ ul.mainNav{
     > a{
       color: inherit;
       display: inline-block;
-      padding: 57.5px 25px;
+      padding: 35.5px 25px;
       text-decoration: none;
       position: relative;
       font-family: "Serverless";
@@ -136,7 +136,7 @@ ul.mainNav{
   box-shadow: 0 10px 50px 0 $black_serverless;
   position: absolute;
   z-index: 999;
-  top: calc(13.4rem - 2rem);
+  top: calc(9rem - 5px);
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 40px;

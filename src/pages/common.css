@@ -1,5 +1,5 @@
 .heroSectionWrapper{
-  padding: calc($navHeight + 100px) 0 100px;
+  padding: calc($navHeight + 30px) 0 100px;
   background-color: $black_serverless;
   background-position: center center;
 
@@ -10,7 +10,7 @@
 
   .heroContainer{
     > h2{
-      font-size: 4rem;
+      font-size: 2.8rem;
       margin-bottom: 0px;
       line-height: 1.25;
       letter-spacing: -1.3px;
@@ -18,7 +18,7 @@
     }
 
     > h1{
-      font-size: 7.5rem;
+      font-size: 5rem;
       font-weight: normal;
       letter-spacing: -1.7px;
       margin-bottom: 0px;
@@ -34,15 +34,15 @@
       max-width: 800px;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 35px;
+      padding-bottom: 15px;
       margin: auto;
     }
   }
 
   .heroDesc{
     font-family: 'SoleilBk';
-    padding: 40px 0px;
-    font-size: 2.8rem;
+    padding: 20px 0;
+    font-size: 2rem;
     line-height: 1.46;
     color: $white_serverless;
   }
@@ -69,31 +69,31 @@
 
   &.platformInnerHero{
     .heroDesc{
-      padding: 34px 0;
+      padding: 20px 0;
     }
 
     .heroContactWrapper{
-      padding-top: 30px;
-      padding-bottom: 40px;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
     .heroContainer {
       > h2 {
-        font-size: 5rem;
+        font-size: 2.8rem;
         font-weight: normal;
         line-height: 1;
         letter-spacing: -1.1px;
       }
 
       > h1 {
-        font-size: 9rem;
+        font-size: 5rem;
         font-weight: normal;
         line-height: 1.11;
         letter-spacing: -2px;
       }
 
       .heroDesc {
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-weight: normal;
         line-height: 1.33;
       }
@@ -138,19 +138,20 @@
   color: $white_serverless;
 
   .heroBullets{
-    width: 33.3%;
+    width: 30.3%;
+    margin: auto;
     text-align: center;
 
     figure{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 106px;
+      height: 86px;
       position: relative;
 
       img {
-        max-height: 106px;
-        max-width: 100px;
+        max-height: 86px;
+        max-width: 70px;
       }
     }
 
@@ -160,7 +161,7 @@
     }
 
     h4{
-      font-size: 2rem;
+      font-size: 1.8rem;
       line-height: .7;
       letter-spacing: .08px;
       font-weight: normal;
@@ -169,7 +170,7 @@
     }
 
     h3{
-      font-size: 3.2rem;
+      font-size: 2.5rem;
       line-height: 1;
       letter-spacing: .13rem;
     }
@@ -215,8 +216,8 @@
 
   width: 100%;
   justify-content: space-between;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 35px;
+  padding-bottom: 35px;
 
   .heroBullets{
     text-align: left;
@@ -265,7 +266,7 @@
 }
 
 .heroContactWrapper{
-  padding: 80px 0px;
+  padding: 40px 0px;
 
   .btn{
     margin-right: 30px;
@@ -301,7 +302,7 @@
     letter-spacing: normal;
     color: $white_serverless;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 4rem;
     padding-bottom: 10px;
   }
 
