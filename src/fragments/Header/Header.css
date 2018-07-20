@@ -123,7 +123,7 @@ ul.mainNav{
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 40px;
-  padding: 48px;
+  padding: 42px;
 
   ul{
     margin: 0px;
@@ -142,7 +142,7 @@ ul.mainNav{
 
   &.platformDrop{
     width: 300px;
-    min-height: 300px;
+    min-height: 280px;
 
     ul{
       > li{
@@ -162,8 +162,7 @@ ul.mainNav{
 
           img{
             display: inline-block;
-            width: 100%;
-            width: 40px;
+            max-width: 52px;
             max-height: 40px;
             margin-right: 20px;
           }
@@ -188,6 +187,16 @@ ul.mainNav{
             line-height: 0.78;
             letter-spacing: 0.08rem;
             font-family: 'Serverless';
+          }
+        }
+
+        &:first-child {
+          a {
+            img {
+              max-height: 52px;
+              margin-left: 8px;
+              margin-right: 30px;
+            }
           }
         }
       }
