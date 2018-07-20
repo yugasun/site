@@ -1,5 +1,5 @@
 .heroSectionWrapper{
-  padding: calc($navHeight + 30px) 0 100px;
+  padding: calc($navHeight + 30px) 0 55px;
   background-color: $black_serverless;
   background-position: center center;
 
