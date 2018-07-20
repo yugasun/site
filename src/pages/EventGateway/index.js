@@ -32,7 +32,7 @@ class EventGatewayPage extends React.Component {
         ]}
         links={[
           { url: '/framework/docs/getting-started/', title: 'getting started' },
-          { url: '/framework/docs/', title: 'learn more' },
+          { url: '/learn/', title: 'learn more' },
           { url: '/framework/docs/providers/aws/examples/', title: 'examples' }
         ]}
       />
