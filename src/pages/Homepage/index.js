@@ -60,164 +60,165 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <Default fullWidth className={`${commonStyles.body} ${commonStyles.newSite}`}
+      <Default
+        {...this.props}
+        fullWidth
         navbarInitialTransparency
+        className={`${commonStyles.body} ${commonStyles.newSite}`}
         renderPrefooter={this.renderPrefooter}
       >
-    <div className={`${styles.homeBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
-      <div className={`${styles.heroContainer} ${commonStyles.container}`}>
-        <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
-        <h1 className={`${commonStyles.white} ${commonStyles.textCenter}`}>platform</h1>
-        <div className={`${styles.heroDesc} ${commonStyles.textCenter}`}>
-          Everything you need to operationalize serverless development
-        </div>
-        <div className={styles.heroBulletsWrapper}>
-          <div className={styles.heroBullets}>
-            <a className={styles.noLink}>
-              <figure>
-                <img src={bolt} alt='Serverless Framework' />
-              </figure>
-              <h4 className={commonStyles.white}>serverless</h4>
-              <h3 className={commonStyles.white}>framework</h3>
-            </a>
-          </div>
-          <div className={styles.heroBullets}>
-            <a className={styles.noLink}>
-              <figure>
-                <img src={iconDashboard} alt='Serverless Dashboard' />
-              </figure>
-              <h4 className={commonStyles.white}>serverless</h4>
-              <h3 className={commonStyles.white}>dashboard</h3>
-            </a>
-          </div>
-          <div className={styles.heroBullets}>
-            <a className={styles.noLink}>
-              <figure>
-                <img src={group6} alt='Serverless Gateway' />
-              </figure>
-              <h4 className={commonStyles.white}>event</h4>
-              <h3 className={commonStyles.white}>gateway</h3>
-            </a>
-          </div>
-        </div>
-        <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
-          <a href='https://dashboard.serverless.com'
-            target='_blank'
-            className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
-            sign up
-          </a>
-          &nbsp;
-          <Link to='/enterprise'
-            className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
-            contact sales
-          </Link>
-        </div>
-        <div className={styles.heroClientsWrapper}>
-          <p className={commonStyles.textCenter}>
-            Build serverless applications using serverless functions and infrastructure on any platform
-          </p>
-          <ul className={styles.clientList}>
-            <li><img src={gcp} alt='Google Cloud Provider' /></li>
-            <li><img src={azure} alt='Microsoft Azure' /></li>
-            <li><img src={aws} alt='Amazon Web Services' /></li>
-            <li><img src={ibm} alt='IBM Open Whisk' /></li>
-            <li><img src={kubernetes} alt='Kubernetes' /></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
-      <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
-        <div className={styles.sectionHighlight}>
-          <div>Build more, manage less.</div>
-          <div>Serverless lets you focus on driving business value.</div>
-        </div>
-        <h3>The benefits of serverless technology</h3>
-        <div className={`${styles.benifitsBulletsWrapper} ${styles.bulletsWrapper}`}>
-          <ul>
-            <li>
-              <img src={vol} alt='Automatic Scaling' />
-              <h4>Automatic Scaling</h4>
-              <p>Forget about provisioning & managing your server fleet. Serverless applications scale with demand.</p>
-            </li>
-            <li>
-              <img src={graph} alt='Pay per execution' />
-              <h4>Pay-per execution</h4>
-              <p>Never pay for idle. Serverless applications charge you only when they run the service.</p>
-            </li>
-            <li>
-              <img src={dash} alt='Low Overhead' />
-              <h4>Low Overhead</h4>
-              <p>Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <Testimonial></Testimonial>
-
-
-  <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
-      <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
-        <div className={`${styles.sectionHighlight} ${styles.width90} ${styles.padBtm}`}>
-          <div>Serverless Platform empowers developers to build & deploy serverless applications, on any provider.</div>
-        </div>
-        <div className={`${styles.serverlessBulletsWrapper} ${styles.bulletsWrapper}`}>
-          <ul>
-            <li>
-              <figure>
-                <img src={illustration1} alt='Vendor Agnostic' />
-              </figure>
-              <h4>Serverless Framework</h4>
-              <p>Build serverless applications quickly on any vendor.</p>
-              <Link to='/framework/'
+        <div className={`${styles.homeBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
+          <div className={`${styles.heroContainer} ${commonStyles.container}`}>
+            <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
+            <h1 className={`${commonStyles.white} ${commonStyles.textCenter}`}>platform</h1>
+            <div className={`${styles.heroDesc} ${commonStyles.textCenter}`}>
+              Everything you need to operationalize serverless development
+            </div>
+            <div className={styles.heroBulletsWrapper}>
+              <div className={styles.heroBullets}>
+                <a className={styles.noLink}>
+                  <figure>
+                    <img src={bolt} alt='Serverless Framework' />
+                  </figure>
+                  <h4 className={commonStyles.white}>serverless</h4>
+                  <h3 className={commonStyles.white}>framework</h3>
+                </a>
+              </div>
+              <div className={styles.heroBullets}>
+                <a className={styles.noLink}>
+                  <figure>
+                    <img src={iconDashboard} alt='Serverless Dashboard' />
+                  </figure>
+                  <h4 className={commonStyles.white}>serverless</h4>
+                  <h3 className={commonStyles.white}>dashboard</h3>
+                </a>
+              </div>
+              <div className={styles.heroBullets}>
+                <a className={styles.noLink}>
+                  <figure>
+                    <img src={group6} alt='Serverless Gateway' />
+                  </figure>
+                  <h4 className={commonStyles.white}>event</h4>
+                  <h3 className={commonStyles.white}>gateway</h3>
+                </a>
+              </div>
+            </div>
+            <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
+              <a href='https://dashboard.serverless.com'
+                target='_blank'
                 className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
-                learn more
+                sign up
+              </a>
+              &nbsp;
+              <Link to='/enterprise'
+                className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
+                contact sales
               </Link>
-            </li>
-            <li>
-              <figure>
-                <img src={illustration3} alt='Serverless Dashboard' />
-              </figure>
-              <h4>Serverless Dashboard</h4>
-              <p>Observe and monitor your functions in action.</p>
-              <Link to='/dashboard/'
-                className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
-                learn more
-              </Link>
-            </li>
-            <li>
-              <figure>
-                <img src={illustration2} alt='Event Gateway' />
-              </figure>
-              <h4>Event Gateway</h4>
-              <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
-              <Link to='/event-gateway/'
-                className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
-                learn more
-              </Link>
-            </li>
-          </ul>
+            </div>
+            <div className={styles.heroClientsWrapper}>
+              <p className={commonStyles.textCenter}>
+                Build serverless applications using serverless functions and infrastructure on any platform
+              </p>
+              <ul className={styles.clientList}>
+                <li><img src={gcp} alt='Google Cloud Provider' /></li>
+                <li><img src={azure} alt='Microsoft Azure' /></li>
+                <li><img src={aws} alt='Amazon Web Services' /></li>
+                <li><img src={ibm} alt='IBM Open Whisk' /></li>
+                <li><img src={kubernetes} alt='Kubernetes' /></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
+          <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
+            <div className={styles.sectionHighlight}>
+              <div>Build more, manage less.</div>
+              <div>Serverless lets you focus on driving business value.</div>
+            </div>
+            <h3>The benefits of serverless technology</h3>
+            <div className={`${styles.benifitsBulletsWrapper} ${styles.bulletsWrapper}`}>
+              <ul>
+                <li>
+                  <img src={vol} alt='Automatic Scaling' />
+                  <h4>Automatic Scaling</h4>
+                  <p>Forget about provisioning & managing your server fleet. Serverless applications scale with demand.</p>
+                </li>
+                <li>
+                  <img src={graph} alt='Pay per execution' />
+                  <h4>Pay-per execution</h4>
+                  <p>Never pay for idle. Serverless applications charge you only when they run the service.</p>
+                </li>
+                <li>
+                  <img src={dash} alt='Low Overhead' />
+                  <h4>Low Overhead</h4>
+                  <p>Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <Testimonial></Testimonial>
 
 
-    <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper} ${styles.newSite}`}>
-      <div className={`${styles.clientContainer} ${commonStyles.container} ${styles.trustedByContainer}`}>
-        <h4>Serverless Platform is trusted by</h4>
-        <ul className={`${styles.clientList} ${styles.trustedBy}`}>
-          <li><img src={ea} alt='Electronic Arts' /></li>
-          <li><img src={cocacolaLogo} alt='Coca Cola' /></li>
-          <li><img src={nordstrom} alt='Nordstorm' /></li>
-          <li><img src={expedia} alt='Expedia' /></li>
-          <li><img src={reuters}  alt='Reuters' /></li>
-        </ul>
-      </div>
-    </div>
+        <div className={`${styles.whiteSectionWrapper} ${styles.newSite}`}>
+          <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
+            <div className={`${styles.sectionHighlight} ${styles.width90} ${styles.padBtm}`}>
+              <div>Serverless Platform empowers developers to build & deploy serverless applications, on any provider.</div>
+            </div>
+            <div className={`${styles.serverlessBulletsWrapper} ${styles.bulletsWrapper}`}>
+              <ul>
+                <li>
+                  <figure>
+                    <img src={illustration1} alt='Vendor Agnostic' />
+                  </figure>
+                  <h4>Serverless Framework</h4>
+                  <p>Build serverless applications quickly on any vendor.</p>
+                  <Link to='/framework/'
+                    className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                    learn more
+                  </Link>
+                </li>
+                <li>
+                  <figure>
+                    <img src={illustration3} alt='Serverless Dashboard' />
+                  </figure>
+                  <h4>Serverless Dashboard</h4>
+                  <p>Observe and monitor your functions in action.</p>
+                  <Link to='/dashboard/'
+                    className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                    learn more
+                  </Link>
+                </li>
+                <li>
+                  <figure>
+                    <img src={illustration2} alt='Event Gateway' />
+                  </figure>
+                  <h4>Event Gateway</h4>
+                  <p>Integrate serverless & legacy applications via event-driven extensibility.</p>
+                  <Link to='/event-gateway/'
+                    className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
+                    learn more
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={`${styles.clientsWrapper} ${styles.footerPrevPad} ${styles.patternSectionWrapper} ${styles.newSite}`}>
+          <div className={`${styles.clientContainer} ${commonStyles.container} ${styles.trustedByContainer}`}>
+            <h4>Serverless Platform is trusted by</h4>
+            <ul className={`${styles.clientList} ${styles.trustedBy}`}>
+              <li><img src={ea} alt='Electronic Arts' /></li>
+              <li><img src={cocacolaLogo} alt='Coca Cola' /></li>
+              <li><img src={nordstrom} alt='Nordstorm' /></li>
+              <li><img src={expedia} alt='Expedia' /></li>
+              <li><img src={reuters}  alt='Reuters' /></li>
+            </ul>
+          </div>
+        </div>
       </Default>
     )
   }
