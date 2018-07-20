@@ -109,7 +109,7 @@ export default class Header extends Component {
                         <h3>documentation</h3>
                         <ul>
                           <li><Link to='/framework/docs'>framework</Link></li>
-                          <li><a href='https://github.com/serverless/platform/tree/master/docs'>platform</a></li>
+                          <li><a target='_blank' href='https://github.com/serverless/platform/tree/master/docs'>platform</a></li>
                         </ul>
                       </div>
                     </div>
