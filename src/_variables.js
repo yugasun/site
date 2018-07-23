@@ -19,6 +19,7 @@ module.exports = () => {
     red5: '#cb0a02',
     blue: '#159BBA',
     blue2: '#147d9b',
+    darkBlack: '#000000',
     lightGray: '#EAEAEA',
     light_red: 'rgba(253, 87, 80, 0.1)',
     light_white: 'rgba(255, 255, 255, 0.2)',

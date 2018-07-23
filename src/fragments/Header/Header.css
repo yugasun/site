@@ -132,7 +132,7 @@ ul.mainNav{
   width: 220px;
   height: auto;
   max-height: auto;
-  background-image: linear-gradient(to left, #000000 25%, #222222), linear-gradient(#000000, #000000);
+  background-image: linear-gradient(to left, $darkBlack 25%, $black2), linear-gradient($darkBlack, $darkBlack);
   box-shadow: 0 10px 50px 0 $black_serverless;
   position: absolute;
   z-index: 999;
