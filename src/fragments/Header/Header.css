@@ -91,15 +91,15 @@ ul.mainNav{
       &:before{
         position: absolute;
         content: " ";
-        width: 5px;
-        height: 25px;
+        width: 0;
+        height: 0;
         background: $red_serverless;
         left: 0;
         margin-top: -12.5px;
         top: 50%;
         opacity: 0;
-        visibility: hidden;
-        transition: all .4s;
+        transition: all .2s;
+        transition-property: height, width;
       }
     }
 
@@ -113,7 +113,8 @@ ul.mainNav{
         text-decoration: none;
         &:before{
           opacity: 1;
-          visibility: visible;
+          height: 25px;
+          width: 5px;
           transform: rotateZ(200deg);
         }
       }
