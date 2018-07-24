@@ -122,7 +122,16 @@ ul.mainNav{
 
     &:last-of-type{
       > a{
-        padding-right: 0px;
+        padding: 18px;
+        font-size: 1.6rem;
+        margin: 0 5px;
+        line-height: 0.88;
+        letter-spacing: 0.7px;
+        text-align: center;
+
+        &:before {
+          display: none;
+        }
       }
     }
   }
@@ -388,6 +397,10 @@ ul.mainNav{
       > li {
         > a {
           padding: 5px;
+        }
+
+        &:last-child a:before {
+          display: none;
         }
       }
     }
