@@ -86,7 +86,7 @@ export default class Footer extends Component {
   render() {
     const { isFetching, error } = this.state
     return (
-      <footer className={ `${this.props.renderPrefooter ? styles.withPreFooter : ''} ${commonStyles.newSite}` }>
+      <footer className={ `${this.props.renderPrefooter ? styles.withPreFooter : ''} ${commonStyles.newSite} ${styles.newSite}` }>
         <div className={`${styles.footerContainer} ${commonStyles.container}`}>
           { this.props.renderPrefooter ? this.props.renderPrefooter() : null }
           <div className={styles.footerLogo}>

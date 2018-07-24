@@ -1,4 +1,4 @@
-footer{
+footer.newSite{
   background: $black_serverless;
   padding: 100px 0px;
   position: relative;
@@ -274,7 +274,7 @@ footer{
 }
 
 @media (max-width: 768px) {
-  footer{
+  footer.newSite{
     padding: 80px 0px;
     padding-top: 0;
 
