@@ -1,4 +1,4 @@
-header {
+header.mainHeaderWrapper {
   position: fixed;
   width: 100%;
   top: 0;
@@ -91,15 +91,15 @@ ul.mainNav{
       &:before{
         position: absolute;
         content: " ";
-        width: 5px;
-        height: 25px;
+        width: 0;
+        height: 0;
         background: $red_serverless;
         left: 0;
         margin-top: -12.5px;
         top: 50%;
         opacity: 0;
-        visibility: hidden;
-        transition: all .4s;
+        transition: all .2s;
+        transition-property: height, width;
       }
     }
 
@@ -113,7 +113,8 @@ ul.mainNav{
         text-decoration: none;
         &:before{
           opacity: 1;
-          visibility: visible;
+          height: 25px;
+          width: 5px;
           transform: rotateZ(200deg);
         }
       }
@@ -132,7 +133,7 @@ ul.mainNav{
   width: 220px;
   height: auto;
   max-height: auto;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), $black2), linear-gradient($black_serverless, $black_serverless);
+  background-image: linear-gradient(to left, $darkBlack 25%, $black2), linear-gradient($darkBlack, $darkBlack);
   box-shadow: 0 10px 50px 0 $black_serverless;
   position: absolute;
   z-index: 999;
@@ -140,7 +141,7 @@ ul.mainNav{
   left: 50%;
   transform: translate(-50%, 0%);
   bottom: 40px;
-  padding: 42px;
+  padding: 40px;
 
   ul{
     margin: 0px;
@@ -159,7 +160,7 @@ ul.mainNav{
 
   &.platformDrop{
     width: 300px;
-    min-height: 280px;
+    min-height: 254px;
 
     ul{
       > li{
@@ -209,11 +210,18 @@ ul.mainNav{
 
         &:first-child {
           a {
+            padding-top: 0;
             img {
               max-height: 52px;
               margin-left: 8px;
               margin-right: 30px;
             }
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 0;
           }
         }
       }
@@ -222,7 +230,7 @@ ul.mainNav{
 
   &.simpleDrop{
     padding: 40px;
-    min-height: 220px;
+    min-height: 160px;
     height: auto;
     max-height: auto;
     overflow: visible;
@@ -237,8 +245,8 @@ ul.mainNav{
           font-size: 1.4rem;
           line-height: 1.14;
           letter-spacing: 0.06rem;
-          padding: 0px;
-          margin: 15px 0px;
+          padding: 0;
+          margin: 0 0 15px;
           position: relative;
           z-index: 10;
 
@@ -267,7 +275,7 @@ ul.mainNav{
   }
 
   &.resourcesDrop{
-    min-height: 250px;
+    min-height: 216px;
   }
 
   &.devDrop{
@@ -336,7 +344,7 @@ ul.mainNav{
     margin-left: -7.5px;
     border-style: solid;
     border-width: 0 7.5px 13.0px 7.5px;
-    border-color: transparent transparent $black2 transparent;
+    border-color: transparent transparent #090915 transparent;
   }
 }
 
