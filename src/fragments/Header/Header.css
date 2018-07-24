@@ -160,7 +160,7 @@ ul.mainNav{
 
   &.platformDrop{
     width: 300px;
-    min-height: 280px;
+    min-height: 254px;
 
     ul{
       > li{
@@ -210,11 +210,18 @@ ul.mainNav{
 
         &:first-child {
           a {
+            padding-top: 0;
             img {
               max-height: 52px;
               margin-left: 8px;
               margin-right: 30px;
             }
+          }
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 0;
           }
         }
       }
@@ -223,7 +230,7 @@ ul.mainNav{
 
   &.simpleDrop{
     padding: 40px;
-    min-height: 220px;
+    min-height: 160px;
     height: auto;
     max-height: auto;
     overflow: visible;
@@ -238,8 +245,8 @@ ul.mainNav{
           font-size: 1.4rem;
           line-height: 1.14;
           letter-spacing: 0.06rem;
-          padding: 0px;
-          margin: 15px 0px;
+          padding: 0;
+          margin: 0 0 15px;
           position: relative;
           z-index: 10;
 
@@ -268,7 +275,7 @@ ul.mainNav{
   }
 
   &.resourcesDrop{
-    min-height: 250px;
+    min-height: 216px;
   }
 
   &.devDrop{
