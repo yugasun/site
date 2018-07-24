@@ -172,7 +172,9 @@ export default class Footer extends Component {
                       <Link to='/community/champions/'>champions</Link>
                     </li>
                     <li>
-                      <a href='mailto:hello@serverless.com' target='_blank'>contact</a>
+                      <a target='_blank' onClick={() => {
+                        location = "mailto:hello@serverless.com";
+                      }}>contact</a>
                     </li>
                   </ul>
                 </div>

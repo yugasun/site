@@ -169,6 +169,7 @@ footer.newSite{
           &:hover{
             text-decoration: none;
             color: $white_serverless;
+            cursor: pointer;
           }
         }
       }
