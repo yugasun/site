@@ -94,7 +94,7 @@ class PlatformDashboardPage extends React.Component {
           </div>
         </div>
 
-        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
+        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite} ${styles.noMobileBottom}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
               title='Serverless Dashboard Use Cases'

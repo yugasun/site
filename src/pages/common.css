@@ -602,6 +602,10 @@
     margin-top: calc($mobileNavHeight - 1px);
   }
 
+  .noMobileBottom {
+    padding-bottom: 0 !important;
+  }
+
   .whiteSectionWrapper{
     padding: 80px 0;
 
@@ -724,9 +728,9 @@
     }
 
     .trustedByContainer {
-      padding-top: 80px;
+      padding-top: 0;
       .trustedBy {
-        padding: 2% 0;
+        padding: 35px 0;
 
         li {
           padding-bottom: 25px;
