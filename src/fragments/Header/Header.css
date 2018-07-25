@@ -418,7 +418,7 @@ ul.mainNav{
   }
 
   .mainHeaderWrapper{
-    padding: 4px 0px;
+    padding: 5px 0px;
     background: $black_serverless;
 
     .logoWrapper{
