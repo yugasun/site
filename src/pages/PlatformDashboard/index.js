@@ -149,7 +149,7 @@ class PlatformDashboardPage extends React.Component {
               },
               {
                 title: 'Streaming Events',
-                description: 'Data streams in your application become events. Centralize events from any cloud provider to get a birdâ€™s eye view of all the data flowing through your cloud.',
+                description: 'Data streams in your application become events. Centralize events from any cloud provider to get a bird\'s eye view of all the data flowing through your cloud.',
                 image: iconFeature5
               },
               {
