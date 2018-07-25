@@ -640,9 +640,10 @@
             figure{
               width: 80%;
               margin: auto;
-              height: 280px;
+              height: auto;
               img{
-                margin: auto;
+                width: 80%;
+                margin: 25px auto;
               }
             }
             h4{
