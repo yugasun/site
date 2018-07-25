@@ -417,7 +417,9 @@ ul.mainNav{
     }
   }
 
-  .mainHeaderWrapper{
+  header.mainHeaderWrapper {
+    max-height: 100%;
+    overflow-y: scroll;
     padding: 5px 0px;
     background: $black_serverless;
 
