@@ -109,7 +109,6 @@ export default class Homepage extends Component {
                 className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
                 sign up
               </a>
-              &nbsp;
               <Link to='/enterprise'
                 className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
                 contact sales
