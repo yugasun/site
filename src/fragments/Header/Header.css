@@ -377,11 +377,18 @@ ul.mainNav{
     > li {
       > a{
         padding: 30px 8px;
+        font-size: 1.4rem;
+
         &:before{
           height: 35px;
           margin-top: -18.5px;
-          left: -1px;
+          left: 0;
         }
+      }
+
+      &:last-child >  a {
+        font-size: 1.4rem;
+        padding: 15px;
       }
     }
   }
