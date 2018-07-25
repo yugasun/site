@@ -126,7 +126,7 @@
   .featureList{
     li{
       width: 100%;
-      padding: 15px;
+      padding: 30px 15px;
 
       h3:before {
         content: '';
