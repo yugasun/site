@@ -55,7 +55,7 @@ export default class Header extends Component {
     return (
       <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite} ${currentNavClass}`}>
         <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
-          <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
+          <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween} ${commonStyles.alignCenter}`}>
             <div className={styles.logoWrapper}>
               <Link to='/'>
                 <Svg svg={logo} className={styles.logo} />
