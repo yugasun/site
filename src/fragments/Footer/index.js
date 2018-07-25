@@ -164,6 +164,9 @@ export default class Footer extends Component {
                   <h4>company</h4>
                   <ul>
                     <li>
+                      <Link to='/company/team/'>team</Link>
+                    </li>
+                    <li>
                       <a href='https://jobs.lever.co/serverless' target='_blank'>
                         jobs
                       </a>
