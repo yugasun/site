@@ -68,7 +68,7 @@ export default class Header extends Component {
             <nav className={`${navActive ? styles.active : ''}`}>
               <ul className={`${commonStyles.marg0} ${styles.mainNav}`}>
                 <li>
-                  <Link to=''>platform</Link>
+                  <Link to='' className={commonStyles.noLink}>platform</Link>
                   <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li>
@@ -102,7 +102,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to='/'>developers</Link>
+                  <Link to='' className={commonStyles.noLink}>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <div className={styles.devDropListWrapper}>
                       <div className={styles.devDropList}>
@@ -137,7 +137,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to=''>learn</Link>
+                  <Link to='' className={commonStyles.noLink}>learn</Link>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li><Link to='/learn'>why?</Link></li>
@@ -147,7 +147,7 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to=''>resources</Link>
+                  <Link to='' className={commonStyles.noLink}>resources</Link>
                   <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li><Link to='/blog'>blog</Link></li>

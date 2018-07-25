@@ -164,6 +164,11 @@ a {
     }
   }
   /* button helpers*/
+
+  .noLink {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 /*media queries*/
