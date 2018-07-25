@@ -599,7 +599,7 @@
 
 @media (max-width: 768px) {
   .heroSectionWrapper{
-    margin-top: $mobileNavHeight;
+    margin-top: calc($mobileNavHeight - 1px);
   }
 
   .whiteSectionWrapper{

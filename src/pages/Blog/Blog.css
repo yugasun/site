@@ -45,4 +45,8 @@
   .postList {
     padding-left: 0px;
   }
+
+  .blogPage {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
 }

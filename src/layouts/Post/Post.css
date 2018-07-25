@@ -198,7 +198,7 @@ $sidebarWidth: 350px;
 @media (max-width: 767px) {
   .postPage {
     font-size: 1.5rem;
-    margin-top: $navHeight;
+    margin-top: calc($mobileNavHeight - 1px);
   }
   .commentsHeading {
     display: block;

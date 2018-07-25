@@ -144,6 +144,9 @@ $darkBackground: #211F21;
 }
 
 @media (max-width: 768px) {
+  .heroWrapper {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
   .heroContent, .personWrapper, .personWrapper:nth-child(odd) {
     flex-direction: column;
   }
