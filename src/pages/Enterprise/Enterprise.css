@@ -6,7 +6,7 @@
   display: inline-block;
   width: 50%;
   margin: 15.7rem 0;
-  margin-bottom: 20.7rem;
+  margin-bottom: 4.6rem;
 }
 
 .contentSection {
@@ -162,6 +162,9 @@ textarea.formField {
     width: 100%;
     display: block;
     margin-top: 10rem;
-    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 10rem;
+    }
   }
 }

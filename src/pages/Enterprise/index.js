@@ -1,6 +1,8 @@
 import React from 'react'
 import Default from '../../layouts/Default'
 import PreFooter from './../../fragments/PreFooter'
+import TrustedClients from '../../fragments/TrustedClients';
+
 import styles from './Enterprise.css'
 import commonStyles from '../../fragments/common.css'
 import ContactForm from './contact-form'
@@ -74,6 +76,8 @@ export default class PartnersPage extends React.Component {
             <ContactForm />
           </div>
         </div>
+
+        <TrustedClients />
       </Default>
     )
   }
