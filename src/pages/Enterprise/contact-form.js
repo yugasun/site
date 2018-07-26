@@ -1,38 +1,101 @@
-import React from 'react';
-import Dropdown from 'react-dropdown';
-import './dropdown.css';
+import React from 'react'
+import Dropdown from 'react-dropdown'
+import Form from '../../components/Form'
+import formHandler from '../../utils/formHandler'
+import track from '../../utils/analytics/track'
+import './dropdown.css'
 
-import commonStyles from './../../fragments/common.css';
-import styles from './Enterprise.css';
+import commonStyles from './../../fragments/common.css'
+import styles from './Enterprise.css'
 
 class ContactForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: false,
+      error: false,
+      success: false,
+      poi: '',
+      devCount: ''
+    }
+  }
+
+  onSubmit = (event, data) => {
+    event.preventDefault()
+    const formId = event.target.id
+    const { poi, devCount } = this.state;
+
+    this.setState({ loading: true })
+
+    const formData = {
+      formId: formId,
+      fields: { ...data, poi, developers_count: devCount }
+    }
+
+    formHandler(formData).then((res) => {
+      this.setState({
+        success: true,
+        loading: false
+      })
+    }).catch((e) => {
+      console.log('ERROR', e)
+      this.setState({
+        success: false,
+        loading: false,
+        error: e
+      })
+    })
+  }
+
   render() {
+    const { loading, success } = this.state
+    const formId = 'enterprise-contact-us'
+
+    if (success) {
+      track('site:enterprise_contact', { category: 'Contact Form' });
+      return (
+        <div>
+          <p className={styles.thanks}>
+            Thanks we will be in touch shortly.
+          </p>
+        </div>
+      )
+    }
+
     return (
-      <form>
+      <Form onSubmit={this.onSubmit} id={formId}>
         <div className={styles.formGroup}>
           <input
+            name='email'
             type='email'
             placeholder='Email'
             className={styles.formField}
+            required
           />
         </div>
         <div className={`${styles.formGroup} ${styles.formInputGroup}`}>
           <input
+            name='first_name'
             type='text'
             placeholder='First Name'
             className={styles.formField}
+            required
           />
           <input
+            name='last_name'
             type='text'
             placeholder='Last Name'
             className={styles.formField}
+            required
           />
         </div>
         <div className={styles.formGroup}>
           <input
+            name='company'
             type='text'
             placeholder='Company Name'
             className={styles.formField}
+            required
           />
         </div>
         <div className={styles.formGroup}>
@@ -45,10 +108,11 @@ class ContactForm extends React.Component {
               { label: 'In Production', value: 'In Production' },
               { label: 'Not at all', value: 'Not at all' }
             ]}
+            name='poi'
             className={styles.input}
-            onChange={this._onSelect}
             placeholderClassName={styles.placeholder}
-            placeholder="Select"
+            placeholder='Select'
+            onChange={({ value }) => this.setState({ ...this.state, poi: value })}
           />
         </div>
         <div className={styles.formGroup}>
@@ -56,6 +120,7 @@ class ContactForm extends React.Component {
             How many developers in your organization plan on doing serverless development?
           </label>
           <Dropdown
+            name='developers_count'
             options={[
               { label: 'Less than 5', value: 'Less than 5' },
               { label: '5 - 15', value: '5 - 15' },
@@ -64,9 +129,9 @@ class ContactForm extends React.Component {
               { label: '100 +', value: '100 +' }
             ]}
             className={styles.input}
-            onChange={this._onSelect}
             placeholderClassName={styles.placeholder}
-            placeholder="Select"
+            placeholder='Select'
+            onChange={({ value }) => this.setState({ ...this.state, devCount: value })}
           />
         </div>
         <div className={`${styles.formGroup} ${styles.formInputGroup}`}>
@@ -122,17 +187,20 @@ class ContactForm extends React.Component {
           <textarea
             placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
             className={styles.formField}
+            name='message'
           />
         </div>
         <div className={styles.formGroup}>
           <input
             type='submit'
             className={`${commonStyles.btn} ${commonStyles.btnPrimary}`}
+            value={loading ? "Loading" : "Submit"}
+            disabled={loading}
           />
         </div>
-      </form>
-    );
+      </Form>
+    )
   }
 }
 
-export default ContactForm;
+export default ContactForm
