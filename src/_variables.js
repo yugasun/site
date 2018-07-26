@@ -25,7 +25,6 @@ module.exports = () => {
     light_white: 'rgba(255, 255, 255, 0.2)',
     gray1: '#aaa',
     gray2: '#202020',
-    gray3: 'rgba(91, 91, 91, 0.3)',
     black: '#333333',
     black1: '#212121',
     black2: '#222222',

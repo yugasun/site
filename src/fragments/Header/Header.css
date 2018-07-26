@@ -143,7 +143,6 @@ ul.mainNav{
   height: auto;
   background-image: linear-gradient(to left, $darkBlack 25%, $black2), linear-gradient($darkBlack, $darkBlack);
   box-shadow: 0 10px 50px 0 $black4;
-  border: 1px solid $gray3;
   position: absolute;
   z-index: 999;
   top: calc(9rem - 5px);
@@ -344,19 +343,6 @@ ul.mainNav{
   }
 
   &:before {
-    content: " ";
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 50%;
-    top: -12.5px;
-    margin-left: -7.5px;
-    border-style: solid;
-    border-width: 0 7.5px 12.5px 7.5px;
-    border-color: transparent transparent $gray3 transparent;
-  }
-
-  &:after {
     content: " ";
     width: 0;
     height: 0;
