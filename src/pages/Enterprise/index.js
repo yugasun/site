@@ -128,7 +128,7 @@ export default class PartnersPage extends React.Component {
         fullWidth
         whiteLogo={true}
         coloredHeader={false}>
-        <div className={commonStyles.container}>
+        <div className={`${commonStyles.container} ${styles.container}`}>
           <div className={`${styles.section} ${styles.contentSection}`}>
             <div className={styles.titleSection}>
               <h2 className={styles.title}>

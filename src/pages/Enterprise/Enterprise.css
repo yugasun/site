@@ -1,3 +1,7 @@
+.container {
+  display: flex !important;
+}
+
 .section {
   display: inline-block;
   width: 50%;
@@ -69,7 +73,8 @@ input[type='radio'].radioBtn {
 }
 
 .formInputGroup {
-  label.formField {
+  .inputContainer {
+    display: inline-flex !important;
     background: transparent;
     margin: 0;
   }
@@ -88,6 +93,14 @@ input[type='radio'].radioBtn {
   }
 }
 
+.formGroup {
+  margin: 42px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
 .formField {
   height: 50px;
   background-color: rgba(39, 39, 39, 0.05);
@@ -95,7 +108,6 @@ input[type='radio'].radioBtn {
   border: 0;
   border-radius: 0;
   padding: 14.5px 11px;
-  composes: input;
   -webkit-appearance: none;
 
   &:focus {
@@ -114,4 +126,15 @@ input[type='radio'].radioBtn {
 
 textarea.formField {
   height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block !important;
+  }
+
+  .section {
+    width: 100%;
+    display: block;
+  }
 }

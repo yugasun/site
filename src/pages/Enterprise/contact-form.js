@@ -2,11 +2,11 @@ import React from 'react';
 import Dropdown from 'react-dropdown';
 import './dropdown.css';
 
+import commonStyles from './../../fragments/common.css';
 import styles from './Enterprise.css';
 
 class ContactForm extends React.Component {
   render() {
-    console.log(Dropdown);
     return (
       <form>
         <div className={styles.formGroup}>
@@ -73,51 +73,61 @@ class ContactForm extends React.Component {
           <label>
             Which infrastructure providers you are utilizing with the Serverless Framework?
           </label>
-          <div className={styles.inputContainer}>
-            <label className={styles.formField}>
+          <div>
+            <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
                 type='radio'
                 className={styles.radioBtn}
                 value='AWS'
+                id='aws'
                 name='infrastructure'
               />
-              AWS
-            </label>
-            <label className={styles.formField}>
+              <label htmlFor='aws'>AWS</label>
+            </div>
+            <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
                 type='radio'
                 className={styles.radioBtn}
                 value='Google Cloud Platform'
+                id='google-cloud'
                 name='infrastructure'
               />
-              Google Cloud Platform
-            </label>
+              <label htmlFor='google-cloud'>Google Cloud Platform</label>
+            </div>
           </div>
-          <div className={styles.inputContainer}>
-            <label className={styles.formField}>
+          <div>
+            <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
                 type='radio'
                 className={styles.radioBtn}
                 value='Microsoft Azure'
                 name='infrastructure'
+                id='azure'
               />
-              Microsoft Azure
-            </label>
-            <label className={styles.formField}>
+              <label htmlFor='azure'>Microsoft Azure</label>
+            </div>
+            <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
                 type='radio'
                 className={styles.radioBtn}
                 value='Other'
                 name='infrastructure'
+                id='other'
               />
-              Other
-            </label>
+              <label htmlFor='other'>Other</label>
+            </div>
           </div>
         </div>
         <div className={styles.formGroup}>
           <textarea
             placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
             className={styles.formField}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <input
+            type='submit'
+            className={`${commonStyles.btn} ${commonStyles.btnPrimary}`}
           />
         </div>
       </form>
