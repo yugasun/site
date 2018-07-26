@@ -55,7 +55,7 @@ export default class Header extends Component {
     return (
       <header className={`${styles.mainHeaderWrapper} ${commonStyles.newSite} ${currentNavClass}`}>
         <div className={`${styles.mainHeaderContainer} ${commonStyles.container}`}>
-          <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween}`}>
+          <div className={`${commonStyles.row} ${commonStyles.justifySpaceBetween} ${commonStyles.alignCenter}`}>
             <div className={styles.logoWrapper}>
               <Link to='/'>
                 <Svg svg={logo} className={styles.logo} />
@@ -68,11 +68,11 @@ export default class Header extends Component {
             <nav className={`${navActive ? styles.active : ''}`}>
               <ul className={`${commonStyles.marg0} ${styles.mainNav}`}>
                 <li>
-                  <Link to=''>platform</Link>
+                  <Link to='' className={commonStyles.noLink}>platform</Link>
                   <div className={`${styles.platformDrop} ${styles.mainNavDropdown}`}>
                     <ul>
                       <li>
-                        <Link to='/framework/'>
+                        <Link to='/framework/' onClick={this.navClicked}>
                           <img src={frameworkIcon} alt='Framework' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
@@ -81,7 +81,7 @@ export default class Header extends Component {
                         </Link>
                       </li>
                       <li>
-                        <Link to='/event-gateway/'>
+                        <Link to='/event-gateway/' onClick={this.navClicked}>
                           <img src={gatewayIcon} alt='Event Gateway' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
@@ -90,7 +90,7 @@ export default class Header extends Component {
                         </Link>
                       </li>
                       <li>
-                        <Link to='/dashboard/'>
+                        <Link to='/dashboard/' onClick={this.navClicked}>
                           <img src={dashboardIcon} alt='Dashboard' />
                           <div className={styles.text}>
                             <span className={styles.top}>serverless</span>
@@ -102,13 +102,13 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to='/'>developers</Link>
+                  <Link to='' className={commonStyles.noLink}>developers</Link>
                   <div className={`${styles.devDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <div className={styles.devDropListWrapper}>
                       <div className={styles.devDropList}>
                         <h3>documentation</h3>
                         <ul>
-                          <li><Link to='/framework/docs'>framework</Link></li>
+                          <li><Link to='/framework/docs' onClick={this.navClicked}>framework</Link></li>
                           <li><a target='_blank' href='https://github.com/serverless/platform/tree/master/docs'>platform</a></li>
                         </ul>
                       </div>
@@ -118,10 +118,10 @@ export default class Header extends Component {
                       <div className={styles.devDropList}>
                         <h3>quick starts</h3>
                         <ul>
-                          <li><Link to='/framework/docs/providers/aws/guide/quick-start/'>AWS</Link></li>
-                          <li><Link to='/framework/docs/providers/azure/guide/quick-start/'>Azure</Link></li>
-                          <li><Link to='/framework/docs/providers/google/guide/quick-start/'>Google Cloud</Link></li>
-                          <li><Link to='/framework/docs/'>Others</Link></li>
+                          <li><Link to='/framework/docs/providers/aws/guide/quick-start/' onClick={this.navClicked}>AWS</Link></li>
+                          <li><Link to='/framework/docs/providers/azure/guide/quick-start/' onClick={this.navClicked}>Azure</Link></li>
+                          <li><Link to='/framework/docs/providers/google/guide/quick-start/' onClick={this.navClicked}>Google Cloud</Link></li>
+                          <li><Link to='/framework/docs/' onClick={this.navClicked}>Others</Link></li>
                         </ul>
                       </div>
                       <div className={styles.devDropList}>
@@ -137,29 +137,37 @@ export default class Header extends Component {
                   </div>
                 </li>
                 <li>
-                  <Link to=''>learn</Link>
+                  <Link to='' className={commonStyles.noLink}>learn</Link>
                   <div className={`${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><Link to='/learn'>why?</Link></li>
-                      <li><Link to='/learn/use-cases'>use cases</Link></li>
-                      <li><Link to='/learn/comparisons'>comparisons</Link></li>
+                      <li><Link to='/learn' onClick={this.navClicked}>why?</Link></li>
+                      <li><Link to='/learn/use-cases' onClick={this.navClicked}>use cases</Link></li>
+                      <li><Link to='/learn/comparisons' onClick={this.navClicked}>comparisons</Link></li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <Link to=''>resources</Link>
+                  <Link to='' className={commonStyles.noLink}>resources</Link>
                   <div className={`${styles.resourcesDrop} ${styles.simpleDrop} ${styles.mainNavDropdown}`}>
                     <ul>
-                      <li><Link to='/blog'>blog</Link></li>
+                      <li><Link to='/blog' onClick={this.navClicked}>blog</Link></li>
                       <li><a href='https://forum.serverless.com' target='_blank'>forum</a></li>
-                      <li><Link to='/community/meetups'>meetups</Link></li>
+                      <li><Link to='/community/meetups' onClick={this.navClicked}>meetups</Link></li>
                       <li><a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU'>slack</a></li>
-                      <li><Link to='/workshops'>workshops</Link></li>
+                      <li><Link to='/workshops' onClick={this.navClicked}>workshops</Link></li>
                     </ul>
                   </div>
                 </li>
                 <li><Link to='/enterprise'>enterprise</Link></li>
-                <li><a href="https://dashboard.serverless.com" target='_blank'>sign up</a></li>
+                <li>
+                  <a
+                    href="https://dashboard.serverless.com"
+                    target='_blank'
+                    className={`${commonStyles.btn} ${commonStyles.btnPrimary}`}
+                  >
+                    sign up
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>

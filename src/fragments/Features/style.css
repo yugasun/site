@@ -119,14 +119,14 @@
       line-height: 1.13;
       letter-spacing: -0.5px;
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 48px;
     }
   }
 
   .featureList{
     li{
       width: 100%;
-      padding: 15px;
+      padding: 30px 15px;
 
       h3:before {
         content: '';

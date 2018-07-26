@@ -106,5 +106,7 @@
 }
 
 @media (max-width: 768px) {
-
+  .wrapper {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
 }

@@ -374,6 +374,9 @@ strong {
   }
 }
 @media (max-width: 768px) {
+  .docPage {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
   .sidebar {
     z-index: 9;
   }

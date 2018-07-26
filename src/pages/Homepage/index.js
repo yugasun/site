@@ -76,7 +76,7 @@ export default class Homepage extends Component {
             </div>
             <div className={styles.heroBulletsWrapper}>
               <div className={styles.heroBullets}>
-                <a className={styles.noLink}>
+                <a href='/framework/'>
                   <figure>
                     <img src={bolt} alt='Serverless Framework' />
                   </figure>
@@ -85,7 +85,7 @@ export default class Homepage extends Component {
                 </a>
               </div>
               <div className={styles.heroBullets}>
-                <a className={styles.noLink}>
+                <a href='/dashboard/'>
                   <figure>
                     <img src={iconDashboard} alt='Serverless Dashboard' />
                   </figure>
@@ -94,7 +94,7 @@ export default class Homepage extends Component {
                 </a>
               </div>
               <div className={styles.heroBullets}>
-                <a className={styles.noLink}>
+                <a href='/event-gateway/'>
                   <figure>
                     <img src={group6} alt='Serverless Gateway' />
                   </figure>
@@ -109,7 +109,6 @@ export default class Homepage extends Component {
                 className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
                 sign up
               </a>
-              &nbsp;
               <Link to='/enterprise'
                 className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
                 contact sales
