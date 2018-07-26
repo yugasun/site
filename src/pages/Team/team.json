@@ -11,6 +11,20 @@
 			"long": "Founder & CEO - Software engineering leader tired of managing infrastructure.  Enjoys building cohesive development teams, distributed systems and elegant developer tooling."
 		}
 	},
+		{
+		"name": "Nick Gottlieb",
+		"title": "VP of Growth",
+		"github": "worldsoup",
+		"twitter": "worldsoup",
+		"linkedin": "nicholasgottlieb",
+		"site": "http://serverless.com",
+		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/Nick.jpg",
+		"location": "San Francisco",
+		"bio": {
+			"short": "VP of Growth and global man of mystery",
+			"long": "Nick is passionate about discovering and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
+		}
+	},
 	{
 		"name": "Ganesh RK",
 		"title": "VP of Engineering",
@@ -20,7 +34,19 @@
 		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/ganesh.jpg",
 		"location": "San Francisco, CA",
 		"bio": {
-			"short": "VP of Engineering & Productivity hacker",
+			"short": "VP of Engineering & productivity hacker",
+			"long": ""
+		}
+	},
+		{
+		"name": "Bill Fine",
+		"title": "VP of Product",
+		"github": "",
+		"twitter": "https://twitter.com/billfine",
+		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/bill.jpg",
+		"location": "San Francisco",
+		"bio": {
+			"short": "Product VP. Trying to make this cloud thing simple (and open) for nearly two decades.",
 			"long": ""
 		}
 	},
@@ -36,20 +62,7 @@
 			"long": "Serverless Operations Manager Casey Shultz is a yoga loving, dog cuddling, San Francisco transplant originally from Alaska. When she's not ruling the Serverless office with an iron fist you can find her camping in Yosemite."
 		}
 	},
-	{
-		"name": "Nick Gottlieb",
-		"title": "Head of Growth",
-		"github": "worldsoup",
-		"twitter": "worldsoup",
-		"linkedin": "nicholasgottlieb",
-		"site": "http://serverless.com",
-		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/team-nick-gottlieb-serverless.jpg",
-		"location": "San Francisco",
-		"bio": {
-			"short": "Head of Growth and global man of mystery",
-			"long": "Nick is passionate about understanding and solving complex problems for software development teams. Prior to joining Serverless he was in charge of scaling growth at CircleCI and helped to design and build early versions of CircleCI Enterprise."
-		}
-	},
+
 	{
 		"name": "Philipp Müns",
 		"title": "Senior Core Developer",
@@ -86,19 +99,6 @@
 		"bio": {
 			"short": "Platform Backend Engineer and proud new father",
 			"long": "Maciej Winnicki is a passionate software engineer focused on building distributed systems, designing easy-to-use APIs and creating tools for making developer's life easier. He has been working for different-sized companies, from a SV startup to the largest e-commerce site in Eastern Europe. These days you can find him actively contributing to and maintaining the open source projects."
-		}
-	},
-	{
-		"name": "Rupak Ganguly",
-		"title": "Enterprise Advocate",
-		"github": "rupakg",
-		"twitter": "rupakg",
-		"linkedin": "rupakg",
-		"avatar": "https://avatars1.githubusercontent.com/u/8188?v=3&s=460",
-		"location": "Atlanta, Georgia",
-		"bio": {
-			"short": "Technology Evangelist who loves to code, mentor and share the knowledge.",
-			"long": "Rupak Ganguly is a technologist with an eye for simple design, big picture, clear goals and strong foundations rooted in diversity."
 		}
 	},
 	{
@@ -204,5 +204,32 @@
 			"short": "Software Engineer interested in all things opensource golang, C and python. A hockey-playing Canadian living in the US",
 			"long": ""
 		}
+	},
+		{
+		"name": "André Pires",
+		"title": "Lead Brand Designer",
+		"github": "",
+		"twitter": "",
+		"linkedin": "",
+		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/andre.JPG",
+		"location": "Buenos Aires",
+		"bio": {
+			"short": "Lead brand designer and Brazilian living in Argentina",
+			"long": ""
+		}
+	},
+	{
+		"name": "Thom Crowe",
+		"title": "Community Manager",
+		"github": "",
+		"twitter": "",
+		"linkedin": "",
+		"avatar": "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/team/thom.png",
+		"location": "Tulsa, OK",
+		"bio": {
+			"short": "Community manager and resident Christmas enthusiast",
+			"long": ""
+		}
 	}
+
 ]
