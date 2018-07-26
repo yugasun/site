@@ -8,6 +8,7 @@ import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 import formHandler from '../../utils/formHandler'
 import commonStyles from '../../fragments/common.css'
+import ContactForm from './contact-form'
 
 export default class PartnersPage extends React.Component {
   static hasLoadingState = true
@@ -164,6 +165,7 @@ export default class PartnersPage extends React.Component {
             </div>
           </div>
           <div className={styles.section}>
+            <ContactForm />
           </div>
         </div>
       </Default>
