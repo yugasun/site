@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const { loading, success } = this.state
+    const { loading, success, poi, devCount } = this.state
     const formId = 'enterprise-contact-us'
 
     if (success) {
@@ -112,6 +112,7 @@ class ContactForm extends React.Component {
             className={styles.input}
             placeholderClassName={styles.placeholder}
             placeholder='Select'
+            value={poi}
             onChange={({ value }) => this.setState({ ...this.state, poi: value })}
           />
         </div>
@@ -131,6 +132,7 @@ class ContactForm extends React.Component {
             className={styles.input}
             placeholderClassName={styles.placeholder}
             placeholder='Select'
+            value={devCount}
             onChange={({ value }) => this.setState({ ...this.state, devCount: value })}
           />
         </div>
