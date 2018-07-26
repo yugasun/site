@@ -69,7 +69,6 @@ class PlatformDashboardPage extends React.Component {
                 className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
                 sign up
               </a>
-              &nbsp;
               <Link to='/enterprise'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
                 contact sales
@@ -95,7 +94,7 @@ class PlatformDashboardPage extends React.Component {
           </div>
         </div>
 
-        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
+        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite} ${styles.noMobileBottom}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
               title='Serverless Dashboard Use Cases'
@@ -150,7 +149,7 @@ class PlatformDashboardPage extends React.Component {
               },
               {
                 title: 'Streaming Events',
-                description: 'Data streams in your application become events. Centralize events from any cloud provider to get a birdâ€™s eye view of all the data flowing through your cloud.',
+                description: 'Data streams in your application become events. Centralize events from any cloud provider to get a bird\'s eye view of all the data flowing through your cloud.',
                 image: iconFeature5
               },
               {

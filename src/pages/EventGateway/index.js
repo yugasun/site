@@ -99,7 +99,6 @@ class EventGatewayPage extends React.Component {
                 className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
                 sign up
               </a>
-              &nbsp;
               <Link to='/enterprise'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>
                 contact sales
@@ -108,7 +107,7 @@ class EventGatewayPage extends React.Component {
           </div>
         </div>
 
-        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite}`}>
+        <div className={`${styles.whiteSectionWrapper} ${commonStyles.newSite} ${styles.noMobileBottom}`}>
           <div className={`${styles.whiteSectionContainer} ${commonStyles.container}`}>
             <UseCasesSection
               title='Event Gateway Use Cases'

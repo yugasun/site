@@ -52,3 +52,9 @@ $shadow: 1px 1px 45px rgba(51, 51, 51, 0.35);
   z-index: 2;
   text-shadow: $shadow;
 }
+
+@media (max-width: 768px) {
+  .navPadding {
+    height: calc($mobileNavHeight - 1px);
+  }
+}

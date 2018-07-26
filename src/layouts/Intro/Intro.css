@@ -65,6 +65,9 @@ blockquote {
 }
 
 @media (max-width: 760px) {
+  .introPage {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
   .title {
     font-size: 23px;
   }

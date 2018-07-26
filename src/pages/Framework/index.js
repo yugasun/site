@@ -98,7 +98,6 @@ class FrameworkPage extends React.Component {
                 className={ `${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}` }>
                 quick start
               </Link>
-              &nbsp;
               <a href='https://dashboard.serverless.com'
                 target='_blank'
                 className={ `${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}` }>

@@ -122,7 +122,16 @@ ul.mainNav{
 
     &:last-of-type{
       > a{
-        padding-right: 0px;
+        padding: 18px;
+        font-size: 1.6rem;
+        margin: 0 5px;
+        line-height: 0.88;
+        letter-spacing: 0.7px;
+        text-align: center;
+
+        &:before {
+          display: none;
+        }
       }
     }
   }
@@ -368,11 +377,18 @@ ul.mainNav{
     > li {
       > a{
         padding: 30px 8px;
+        font-size: 1.4rem;
+
         &:before{
           height: 35px;
-          margin-top: -18.5px;
-          left: -1px;
+          margin-top: -15px;
+          left: 0;
         }
+      }
+
+      &:last-child >  a {
+        font-size: 1.4rem;
+        padding: 15px;
       }
     }
   }
@@ -389,12 +405,22 @@ ul.mainNav{
         > a {
           padding: 5px;
         }
+
+        &:last-child > a {
+          padding: 15px;
+        }
+
+        &:last-child a:before {
+          display: none;
+        }
       }
     }
   }
 
-  .mainHeaderWrapper{
-    padding: 19px 0px;
+  header.mainHeaderWrapper {
+    max-height: 100%;
+    overflow-y: scroll;
+    padding: 5px 0px;
     background: $black_serverless;
 
     .logoWrapper{
@@ -403,7 +429,9 @@ ul.mainNav{
       }
 
       svg {
-        margin-top: 0;
+        width: 124px;
+        height: 21px;
+        margin-top: 8px;
       }
     }
 
@@ -422,9 +450,14 @@ ul.mainNav{
 
     .navBtn{
       display: flex;
-      height: 25px;
-      width: 25px;
-      line-height: 20px;
+      height: 16px;
+      width: 16px;
+      line-height: 16px;
+
+      img {
+        height: 16px;
+        width: 16px;
+      }
     }
   }
 
@@ -438,27 +471,36 @@ ul.mainNav{
         padding: 5px;
         &:before {
           left: -10px;
+          height: 30px !important;
+          top: 12px;
         }
+      }
+
+      &:last-child >  a {
+        margin-top: 40px;
       }
     }
 
     li{
       display: block;
       text-align: left;
-      margin-left: 25px;
+      margin-left: 50px;
+      padding: 8px 0;
     }
   }
 
   .mainNavDropdown{
     width: 100%;
     position: static;
-    margin: 20px 0px;
+    margin: 15px 0px;
     padding: 20px;
     transform: translate(0%, 0%);
     box-shadow: none;
     background: $black_serverless;
-    border-top: 1px solid $grey1_serverless;
-    border-bottom: 1px solid $grey1_serverless;
+
+    ul > li {
+      margin-left: 0;
+    }
 
     &.simpleDrop,
     &.platformDrop,

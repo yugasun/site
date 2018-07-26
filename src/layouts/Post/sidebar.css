@@ -134,3 +134,9 @@ $borderColor: #e8e8e8;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: calc($mobileNavHeight - 1px);
+  }
+}
