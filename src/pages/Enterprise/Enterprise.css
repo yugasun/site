@@ -114,6 +114,16 @@ input[type='radio'].radioBtn {
   &:first-child {
     margin-top: 0;
   }
+
+  h3.formHeading {
+    width: 70%;
+    font-family: 'SoleilBk';
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: -0.4px;
+    padding-bottom: 25px;
+  }
 }
 
 .formField {
