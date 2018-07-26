@@ -1,5 +1,4 @@
 import React from 'react'
-import AutoForm from 'react-auto-form'
 import Form from '../../components/Form'
 import TextInput from '../../components/TextInput'
 import Checkbox from '../../components/Checkbox/Check'
@@ -8,8 +7,7 @@ import track from '../../utils/analytics/track'
 import Default from '../../layouts/Default'
 import styles from './Enterprise.css'
 import formHandler from '../../utils/formHandler'
-import NewsletterStrip from '../../fragments/NewsletterStrip'
-import ClientsLogos from '../../fragments/ClientsLogos'
+import commonStyles from '../../fragments/common.css'
 
 export default class PartnersPage extends React.Component {
   static hasLoadingState = true
@@ -123,57 +121,50 @@ export default class PartnersPage extends React.Component {
   }
   render() {
     return (
-      <Default className={styles.enterprise} {...this.props} fullWidth whiteLogo={true} coloredHeader={false}>
-        <div className={styles.hero}>
-          <div className={styles.boundMedium}>
-            <h1 className={styles.heroTitle}>
-              Accelerate cloud adoption
-            </h1>
-            <p className={`${styles.heroDescription} ${styles.boundSmall}`}>
-              With Serverless Framework & Event Gateway, your team can rapidly deploy to any cloud provider. Build, test and launch new features in days rather than months. Let us show you how.
-            </p>
-          </div>
-        </div>
-        <div className={`${styles.sectionAction} ${styles.bound}`}>
-          <div className={styles.features}>
-            <div className={styles.feature}>
-              <h3 className={styles.heading}>
-                Standardize Cloud Development
-              </h3>
-              <p className={styles.featureDescription}>
-As the creators and maintainers of the Serverless Framework, we are the first to define best practices and use cases for serverless enterprises. Our enterprise solutions help you standardize best practices and create templates for your most common use cases.              </p>
+      <Default
+        className={ `${commonStyles.body} ${commonStyles.newSite}` }
+        {...this.props}
+        fullWidth
+        whiteLogo={true}
+        coloredHeader={false}>
+        <div className={commonStyles.container}>
+          <div className={`${styles.section} ${styles.contentSection}`}>
+            <div className={styles.titleSection}>
+              <h2 className={styles.title}>
+                Move fast, safely
+              </h2>
+              <div className={styles.description}>
+                The Serverless Platform gives you everything you need to operationalize Serverless development.
+              </div>
             </div>
-            <div className={styles.feature}>
-              <h3 className={styles.heading}>
-                Extend Legacy Infrastructure 
-              </h3>
-              <p className={styles.featureDescription}>
-                While it's not always possible to migrate completely off legacy infrastructure, the event-driven, serverless architecture makes it possible to extend legacy infrastructure with cloud functions. Let us show you how.
-              </p>
+
+            <div className={styles.featureSection}>
+              <h2 className={styles.title}>
+                Get Support
+              </h2>
+              <div className={styles.description}>
+                Get 24-hour support from the team behind the Serverless Framework and the Serverless Platform.
+              </div>
             </div>
-            <div className={styles.feature}>
-              <h3 className={styles.heading}>
-                Build Multi-Cloud and Hybrid Architectures  
-              </h3>
-              <p className={styles.featureDescription}>
-                With the amazing array of cloud services on the market, vendor and platform choice can help you stay agile. Our enterprise solutions use event-driven models to you bring multiple cloud architectures together under a single developer experience. 
-              </p>
+            <div className={styles.featureSection}>
+              <h2 className={styles.title}>
+                Gain Visibility
+              </h2>
+              <div className={styles.description}>
+                Get team access to the Serverless Dashboard, the vendor-neutral Serverless operations console.
+              </div>
+            </div>
+            <div className={styles.featureSection}>
+              <h2 className={styles.title}>
+                Standardize Development
+              </h2>
+              <div className={styles.description}>
+                Get custom templates, with policy enforcement, to help standardize development across teams and onboard new team-members quickly.
+              </div>
             </div>
           </div>
-          <div className={styles.form}>
-            {this.renderForm()}
+          <div className={styles.section}>
           </div>
-        </div>
-        <div className={`${styles.bound} ${styles.clientsSection}`}>
-          <h3 className={styles.heading}>
-            Developers at these companies use Serverless
-          </h3>
-          <div className={styles.boundMedium}>
-            <ClientsLogos style={{marginTop: '3rem'}} />
-          </div>
-        </div>
-        <div className={`${styles.boundMedium} ${styles.newsletterSection}`}>
-          <NewsletterStrip />
         </div>
       </Default>
     )

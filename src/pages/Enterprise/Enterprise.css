@@ -1,155 +1,43 @@
-.bound {
-  composes: bound from "../../index.css";
+.section {
+  display: inline-block;
+  width: 50%;
+  margin: 10.7rem 0;
 }
-.boundMedium {
-  composes: boundMedium from "../../index.css";
+
+.contentSection {
+  margin-right: 10%;
+  width: 40%;
 }
-.boundSmall {
-  composes: boundSmall from "../../index.css";
-}
-.hero {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding-top: 10rem;
-  padding-bottom: 4rem;
-  text-align: center;
-  border-bottom: 1px solid #BBBBBB;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
-  color: #fff;
-  background-color: #FD574F;
-  background: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media screen and (min-width: 768px) {
-    padding-top: 14rem;
-  }
-}
-.heroTitle {
-  font-family: Serverless, monospace;
-  font-size: 2.8rem;
-  line-height: 3rem;
-  text-align: center;
+
+.description {
+  font-family: 'SoleilBk';
+  font-size: 1.6rem;
   font-weight: normal;
-  ;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $grey1_serverless;
+}
 
-  @media screen and (min-width: 768px) {
-    font-size: 4rem;
-    line-height: 4.8rem;
+.titleSection {
+  padding-bottom: 20px;
+  .title {
+    font-family: 'SoleilBk';
+    font-size: 4.8rem;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 0.5px;
   }
 }
-.heroDescription {
-  max-width: 50rem;
-  margin-bottom: 6rem;
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 2rem;
-  line-height: 2.8rem;
-}
-.heading {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 2rem;
-  @media screen and (min-width: 768px) {
+
+.featureSection {
+  padding-top: 48px;
+  .title {
+    font-family: 'SoleilBk';
     font-size: 2.4rem;
-    line-height: 2.7rem;
-  }
-}
-.sectionAction {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 6rem;
-  ;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-.features, .form {
-  ;
-
-  @media screen and (min-width: 768px) {
-    width: 70%;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-}
-.feature {
-  margin-bottom: 5.7rem;
-}
-.featureDescription {
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 3.1rem;
-}
-.form {
-  @media screen and (min-width: 768px) {
-    width: calc(30% - 5rem);
-  }
-}
-.clientsSection {
-  margin-top: 4rem;
-  margin-bottom: 12rem;
-
-  .heading {
-    text-align: center;
-  }
-
-  .boundMedium {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.newsletterSection {
-  max-width: 110rem;
-  padding-right: 0;
-  padding-left: 0;
-  ;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 6.4rem;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
-  }
-}
-.enterprise {
-  .inputs {
-    width: 300px;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: -0.4px;
+    margin-bottom: 25px;
   }
 }
 
-.checkBox {
-    font-family: "Gibson";
-    font-size: 16px;
-    padding: 15px;
-    border: 1px solid #949494;
-    margin-bottom: 20px;
-}
-
-.textArea {
-  width: 100%;
-  height: 100px;
-  font-family: "Gibson", sans-serif;
-  font-size: 16px;
-  padding: 15px;
-  border: 1px solid #949494;
-  margin-bottom: 20px;
-  &:focus {
-    border: 1px solid $black2;
-    outline: none;
-  }
-}
-.fakeLabel {
-  color: gray;
-}
-
-.success {
-  color: green;
-  text-align: center;
-}
-
-.error {
-  color: red;
-  text-align: center;
-}
