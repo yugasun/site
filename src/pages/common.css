@@ -597,6 +597,16 @@
   }
 }
 
+@media (max-width: 992px) {
+  ul.trustedBy {
+    flex-wrap: nowrap !important;
+
+    li > img {
+      width: 80%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .heroSectionWrapper{
     margin-top: calc($mobileNavHeight - 1px);
@@ -730,12 +740,14 @@
     .trustedByContainer {
       padding-top: 0;
       .trustedBy {
+        flex-wrap: wrap !important;
         padding: 35px 0;
 
         li {
           padding-bottom: 25px;
 
           img {
+            width: auto;
             max-height: 41px;
           }
         }
