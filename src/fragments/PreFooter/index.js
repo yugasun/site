@@ -18,10 +18,20 @@ const PreFooter = ({ heading, descriptions, links }) => (
         {
           links.map((link) => (
             <li key={link.title}>
-              <Link to={link.url}
-                className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
-                {link.title}
-              </Link>
+              {
+                link.url.startsWith('http') ? (
+                  <a href={link.url}
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}
+                    target='_blank'>
+                    {link.title}
+                  </a>
+                ) : (
+                  <Link to={link.url}
+                    className={`${commonStyles.btn} ${styles.btn} ${commonStyles.btnTransparentWhite}`}>
+                    {link.title}
+                  </Link>
+                )
+              }
             </li>
           ))
         }

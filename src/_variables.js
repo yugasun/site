@@ -29,6 +29,7 @@ module.exports = () => {
     black1: '#212121',
     black2: '#222222',
     black3: '#111111',
+    black4: 'rgba(0, 0, 0, 0.15)',
     white: '#FDFDFD',
     red_serverless: '#fd5750',
     black_serverless: '#000000',

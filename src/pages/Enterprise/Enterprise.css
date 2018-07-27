@@ -1,155 +1,229 @@
-.bound {
-  composes: bound from "../../index.css";
+.container {
+  display: flex !important;
 }
-.boundMedium {
-  composes: boundMedium from "../../index.css";
+
+.section {
+  display: inline-block;
+  width: 50%;
+  margin: 15.7rem 0;
+  margin-bottom: 4.6rem;
 }
-.boundSmall {
-  composes: boundSmall from "../../index.css";
+
+.contentSection {
+  margin-right: 10%;
+  width: 40%;
 }
-.hero {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding-top: 10rem;
-  padding-bottom: 4rem;
-  text-align: center;
-  border-bottom: 1px solid #BBBBBB;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
-  color: #fff;
-  background-color: #FD574F;
-  background: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media screen and (min-width: 768px) {
-    padding-top: 14rem;
-  }
-}
-.heroTitle {
-  font-family: Serverless, monospace;
-  font-size: 2.8rem;
-  line-height: 3rem;
-  text-align: center;
+
+.description {
+  font-family: 'SoleilBk';
+  font-size: 1.6rem;
   font-weight: normal;
-  ;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $grey1_serverless;
+}
 
-  @media screen and (min-width: 768px) {
-    font-size: 4rem;
-    line-height: 4.8rem;
+.titleSection {
+  padding-bottom: 20px;
+  .title {
+    font-family: 'SoleilBk';
+    font-size: 4.8rem;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    position: relative;
+
+    &:before {
+      content: " ";
+      width: 60px;
+      height: 35px;
+      position: absolute;
+      left: -8px;
+      top: -10px;
+      z-index: -1;
+      background: url('../../assets/images/dot-grid.png');
+      background-size: cover;
+      display: block;
+    }
   }
 }
-.heroDescription {
-  max-width: 50rem;
-  margin-bottom: 6rem;
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 2rem;
-  line-height: 2.8rem;
-}
-.heading {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 2rem;
-  @media screen and (min-width: 768px) {
+
+.featureSection {
+  padding-top: 48px;
+  .title {
+    font-family: 'SoleilBk';
     font-size: 2.4rem;
-    line-height: 2.7rem;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: -0.4px;
+    margin-bottom: 25px;
   }
 }
-.sectionAction {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 6rem;
-  ;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
+.input {
+  margin: 21px 0;
+}
+
+.formInputGroup {
+  .inputContainer {
+    display: inline-flex !important;
+    background: transparent;
+    margin: 0;
+    align-items: center;
+
+    input[type='checkbox'] {
+      margin-right: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:before {
+        content:"";
+        display:inline-block;
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 18px;
+        height: 18px;
+        background-size: contain;
+        background-image: url('../../assets/images/unchecked.png');
+      }
+
+      &:checked:before {
+        background-image: url('../../assets/images/checked.png');
+      }
+    }
+  }
+
+  .formField {
+    width: 48%;
+    display: inline-block;
+  }
+
+  .formField:nth-child(2n) {
+    margin-left: 2%;
+  }
+
+  .formField:nth-child(2n+1) {
+    margin-right: 2%;
+  }
+
+  .inputWrapper {
+    width: 48%;
+    display: inline-flex;
+    margin-bottom: 0 !important;
+
+    &:nth-child(2n) {
+      margin-left: 2%;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 2%;
+    }
+
+    .formField {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
-.features, .form {
-  ;
 
-  @media screen and (min-width: 768px) {
+.formGroup {
+  margin: 42px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  h3.formHeading {
     width: 70%;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-}
-.feature {
-  margin-bottom: 5.7rem;
-}
-.featureDescription {
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 3.1rem;
-}
-.form {
-  @media screen and (min-width: 768px) {
-    width: calc(30% - 5rem);
-  }
-}
-.clientsSection {
-  margin-top: 4rem;
-  margin-bottom: 12rem;
-
-  .heading {
-    text-align: center;
-  }
-
-  .boundMedium {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.newsletterSection {
-  max-width: 110rem;
-  padding-right: 0;
-  padding-left: 0;
-  ;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 6.4rem;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
-  }
-}
-.enterprise {
-  .inputs {
-    width: 300px;
+    font-family: 'SoleilBk';
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.33;
+    letter-spacing: -0.4px;
+    padding-bottom: 25px;
   }
 }
 
-.checkBox {
-    font-family: "Gibson";
-    font-size: 16px;
-    padding: 15px;
-    border: 1px solid #949494;
-    margin-bottom: 20px;
+.errorMessage {
+  color: $red_serverless;
+  top: -40px !important;
 }
 
-.textArea {
+.placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formGroup > label {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formField::placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formField::-webkit-input-placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formField {
+  height: 50px;
+  background-color: rgba(39, 39, 39, 0.05);
   width: 100%;
-  height: 100px;
-  font-family: "Gibson", sans-serif;
-  font-size: 16px;
-  padding: 15px;
-  border: 1px solid #949494;
-  margin-bottom: 20px;
+  border: 0;
+  border-radius: 0;
+  padding: 14.5px 11px;
+  box-shadow: none;
+  -webkit-appearance: none;
+  composes: placeholder;
+
   &:focus {
-    border: 1px solid $black2;
     outline: none;
   }
 }
-.fakeLabel {
-  color: gray;
+
+textarea.formField {
+  height: 150px;
 }
 
-.success {
-  color: green;
-  text-align: center;
-}
+@media screen and (max-width: 768px) {
+  .container {
+    display: block !important;
+  }
 
-.error {
-  color: red;
-  text-align: center;
+  .section {
+    width: 100%;
+    display: block;
+    margin-top: 10rem;
+
+    &:last-child {
+      margin-bottom: 10rem;
+    }
+  }
 }

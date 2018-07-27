@@ -253,6 +253,7 @@ class TextInput extends Component {
   render() {
     const {
       className,
+      wrapperClassName,
       disabled,
       required,
       validation, // eslint-disable-line
@@ -278,7 +279,7 @@ class TextInput extends Component {
       className: cx(className, styles.input),
     }
     return (
-      <div className={styles.inputWrapper}>
+      <div className={cx(wrapperClassName, styles.inputWrapper)}>
         {this.showValidation()}
         <input {...props} />
       </div>
