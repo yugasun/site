@@ -198,12 +198,13 @@ class ContactForm extends React.Component {
           />
         </div>
         <div className={styles.formGroup}>
-          <input
+          <button
             type='submit'
             className={`${commonStyles.btn} ${commonStyles.btnPrimary}`}
-            value={loading ? "Loading" : "Submit"}
             disabled={loading}
-          />
+          >
+            {loading ? "Loading" : "Submit"}
+          </button>
         </div>
       </Form>
     )
