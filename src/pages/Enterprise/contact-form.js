@@ -73,9 +73,11 @@ class ContactForm extends React.Component {
         <TextInput
           name='email'
           type='email'
+          validation='isEmail'
           placeholder='Email'
           className={styles.formField}
           wrapperClassName={styles.formGroup}
+          errorMessageClassName={styles.errorMessage}
           required
         />
         <div className={`${styles.formGroup} ${styles.formInputGroup}`}>
@@ -83,16 +85,20 @@ class ContactForm extends React.Component {
             name='first_name'
             type='text'
             placeholder='First Name'
+            validation='isFirstName'
             className={styles.formField}
             wrapperClassName={styles.inputWrapper}
+            errorMessageClassName={styles.errorMessage}
             required
           />
           <TextInput
             name='last_name'
             type='text'
             placeholder='Last Name'
+            validation='isLastName'
             className={styles.formField}
             wrapperClassName={styles.inputWrapper}
+            errorMessageClassName={styles.errorMessage}
             required
           />
         </div>

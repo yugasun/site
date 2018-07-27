@@ -94,6 +94,19 @@ input[type='radio'].radioBtn {
     margin: 0;
   }
 
+  .formField {
+    width: 48%;
+    display: inline-block;
+  }
+
+  .formField:nth-child(2n) {
+    margin-left: 2%;
+  }
+
+  .formField:nth-child(2n+1) {
+    margin-right: 2%;
+  }
+
   .inputWrapper {
     width: 48%;
     display: inline-flex;
@@ -109,20 +122,9 @@ input[type='radio'].radioBtn {
 
     .formField {
       width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
-  }
-
-  .formField {
-    width: 48%;
-    display: inline-block;
-  }
-
-  .formField:nth-child(2n) {
-    margin-left: 2%;
-  }
-
-  .formField:nth-child(2n+1) {
-    margin-right: 2%;
   }
 }
 
@@ -142,6 +144,11 @@ input[type='radio'].radioBtn {
     letter-spacing: -0.4px;
     padding-bottom: 25px;
   }
+}
+
+.errorMessage {
+  color: $red_serverless;
+  top: -40px !important;
 }
 
 .placeholder {
