@@ -94,6 +94,24 @@ input[type='radio'].radioBtn {
     margin: 0;
   }
 
+  .inputWrapper {
+    width: 48%;
+    display: inline-flex;
+    margin-bottom: 0 !important;
+
+    &:nth-child(2n) {
+      margin-left: 2%;
+    }
+
+    &:nth-child(2n+1) {
+      margin-right: 2%;
+    }
+
+    .formField {
+      width: 100%;
+    }
+  }
+
   .formField {
     width: 48%;
     display: inline-block;
@@ -126,6 +144,46 @@ input[type='radio'].radioBtn {
   }
 }
 
+.placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formGroup > label {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formField::placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
+.formField::-webkit-input-placeholder {
+  font-family: Serverless !important;
+  font-size: 16px !important;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #8c8c8c !important;
+  border-width: 0 !important;
+}
+
 .formField {
   height: 50px;
   background-color: rgba(39, 39, 39, 0.05);
@@ -134,19 +192,11 @@ input[type='radio'].radioBtn {
   border-radius: 0;
   padding: 14.5px 11px;
   -webkit-appearance: none;
+  composes: placeholder;
 
   &:focus {
     outline: none;
   }
-}
-
-.formField, .formField::placeholder, .formGroup > label, .placeholder {
-  font-family: Serverless;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  color: #8c8c8c;
 }
 
 textarea.formField {

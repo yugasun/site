@@ -1,6 +1,7 @@
 import React from 'react'
 import Dropdown from 'react-dropdown'
 import Form from '../../components/Form'
+import TextInput from '../../components/TextInput'
 import formHandler from '../../utils/formHandler'
 import track from '../../utils/analytics/track'
 import './dropdown.css'
@@ -69,40 +70,40 @@ class ContactForm extends React.Component {
             Wanna know how Serverless can help your company? Let’s talk.
           </h3>
         </div>
-        <div className={styles.formGroup}>
-          <input
-            name='email'
-            type='email'
-            placeholder='Email'
-            className={styles.formField}
-            required
-          />
-        </div>
+        <TextInput
+          name='email'
+          type='email'
+          placeholder='Email'
+          className={styles.formField}
+          wrapperClassName={styles.formGroup}
+          required
+        />
         <div className={`${styles.formGroup} ${styles.formInputGroup}`}>
-          <input
+          <TextInput
             name='first_name'
             type='text'
             placeholder='First Name'
             className={styles.formField}
+            wrapperClassName={styles.inputWrapper}
             required
           />
-          <input
+          <TextInput
             name='last_name'
             type='text'
             placeholder='Last Name'
             className={styles.formField}
+            wrapperClassName={styles.inputWrapper}
             required
           />
         </div>
-        <div className={styles.formGroup}>
-          <input
-            name='company'
-            type='text'
-            placeholder='Company Name'
-            className={styles.formField}
-            required
-          />
-        </div>
+        <TextInput
+          name='company'
+          type='text'
+          placeholder='Company Name'
+          className={styles.formField}
+          wrapperClassName={styles.formGroup}
+          required
+        />
         <div className={styles.formGroup}>
           <label>
             How is your company currently using the Serverless Framework?
