@@ -40,9 +40,10 @@
 
   .Dropdown-menu {
     background-color: white;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $black4;
+    border-bottom: 1px solid $black4;
     margin-top: -1px;
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
     position: absolute;
     top: 100%;
