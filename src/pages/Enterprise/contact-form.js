@@ -155,7 +155,7 @@ class ContactForm extends React.Component {
           <div>
             <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
-                type='radio'
+                type='checkbox'
                 className={styles.radioBtn}
                 value='AWS'
                 id='aws'
@@ -165,7 +165,7 @@ class ContactForm extends React.Component {
             </div>
             <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
-                type='radio'
+                type='checkbox'
                 className={styles.radioBtn}
                 value='Google Cloud Platform'
                 id='google-cloud'
@@ -177,7 +177,7 @@ class ContactForm extends React.Component {
           <div>
             <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
-                type='radio'
+                type='checkbox'
                 className={styles.radioBtn}
                 value='Microsoft Azure'
                 name='infrastructure'
@@ -187,7 +187,7 @@ class ContactForm extends React.Component {
             </div>
             <div className={`${styles.formField} ${styles.inputContainer}`}>
               <input
-                type='radio'
+                type='checkbox'
                 className={styles.radioBtn}
                 value='Other'
                 name='infrastructure'
