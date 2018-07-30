@@ -33,6 +33,7 @@ header.mainHeaderWrapper {
 
     svg {
       margin-top: 10px;
+      max-width: 170px;
     }
   }
 
@@ -113,6 +114,7 @@ ul.mainNav{
         text-decoration: none;
         &:before{
           opacity: 1;
+          left: 5px;
           height: 25px;
           width: 5px;
           transform: rotateZ(200deg);
@@ -139,21 +141,18 @@ ul.mainNav{
 
 .mainNavDropdown{
   display: none;
-  width: 220px;
-  height: auto;
-  background-image: linear-gradient(to left, $darkBlack 25%, $black2), linear-gradient($darkBlack, $darkBlack);
+  background-image: linear-gradient(210deg, $darkBlack 25%, $black2), linear-gradient($darkBlack, $darkBlack);
   box-shadow: 0 10px 50px 0 $black4;
   position: absolute;
   z-index: 999;
   top: calc(9rem - 5px);
   left: 50%;
   transform: translate(-50%, 0%);
-  bottom: 40px;
-  padding: 40px;
+  padding: 20px 40px 40px 40px;
 
   ul{
     margin: 0px;
-    padding: 0px;
+    min-width: 250px;
 
     li{
       width: 100%;
@@ -162,13 +161,14 @@ ul.mainNav{
       a{
         color: $white_serverless;
         text-decoration: none;
+        font-size: 1.1em;
       }
     }
   }
 
   &.platformDrop{
-    width: 300px;
-    min-height: 254px;
+
+    padding: 30px 40px 40px 40px;
 
     ul{
       > li{
@@ -177,9 +177,9 @@ ul.mainNav{
 
         > a{
           display: flex;
-          color: $grey1_serverless;
+          color: $grey2_serverless;
           text-decoration: none;
-          padding: 10px 0px;
+          padding: 10px 0px 15px 0px;
           margin: 0px;
 
           &:hover {
@@ -188,9 +188,8 @@ ul.mainNav{
 
           img{
             display: inline-block;
-            max-width: 52px;
             max-height: 40px;
-            margin-right: 20px;
+            margin-right: 30px;
           }
 
           .text{
@@ -202,15 +201,15 @@ ul.mainNav{
           }
 
           .top{
-            font-size: 1.2rem;
-            line-height: 1.7;
+            font-size: 1.5rem;
+            line-height: 0.7;
             letter-spacing: 0.05rem;
             font-family: 'Serverless';
           }
 
           .bottom{
-            font-size: 1.8rem;
-            line-height: 0.78;
+            font-size: 2rem;
+            line-height: 1.7;
             letter-spacing: 0.08rem;
             font-family: 'Serverless';
           }
@@ -222,7 +221,7 @@ ul.mainNav{
             img {
               max-height: 52px;
               margin-left: 8px;
-              margin-right: 30px;
+              margin-right: 43px;
             }
           }
         }
@@ -250,12 +249,13 @@ ul.mainNav{
 
         > a{
           display: block;
+          color: $grey2_serverless;
           font-family: 'Serverless';
-          font-size: 1.4rem;
+          font-size: 1.1em;
           line-height: 1.14;
           letter-spacing: 0.06rem;
           padding: 0;
-          margin: 0 0 15px;
+          margin: 0 0 20px;
           position: relative;
           z-index: 10;
 
@@ -274,6 +274,7 @@ ul.mainNav{
 
           &:hover,
           &.active{
+            color: $white_serverless;
             &:before{
               display: block;
             }
@@ -288,12 +289,13 @@ ul.mainNav{
   }
 
   &.devDrop{
-    width: 440px;
-    height: 350px;
+    min-width: 460px;
+    min-height: 350px;
+    padding: 40px 50px;
 
     h3{
       color: $white_serverless;
-      font-size: 1.4rem;
+      font-size: 1.9rem;
       line-height: 1.14;
       letter-spacing: 0.06rem;
       padding: 0px;
@@ -319,6 +321,7 @@ ul.mainNav{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      padding: 10px;
 
       .devDropList{
         width: 50%;
@@ -327,7 +330,9 @@ ul.mainNav{
           padding: 0px;
 
           a{
-            color: $grey1_serverless;
+            color: $grey2_serverless;
+            font-size: 1.1em;
+            text-transform: lowercase;
 
             &:before {
               background: none;
@@ -365,6 +370,11 @@ ul.mainNav{
           padding: 30px 8px;
           transition: padding 0.5s;
         }
+
+        &:before{
+          opacity: 0!important;
+          display: none;
+        }
       }
     }
 
@@ -380,9 +390,7 @@ ul.mainNav{
         font-size: 1.4rem;
 
         &:before{
-          height: 35px;
-          margin-top: -15px;
-          left: 0;
+          display: none;
         }
       }
 

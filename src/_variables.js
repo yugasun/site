@@ -34,7 +34,7 @@ module.exports = () => {
     red_serverless: '#fd5750',
     black_serverless: '#000000',
     grey1_serverless: '#5b5b5b',
-    grey2_serverless: '#8c8c8c',
+    grey2_serverless: '#aaaaaa',
     grey3_serverless: '#eaeaea',
     grey4_serverless: '#f7f7f7',
     white_serverless: '#ffffff',

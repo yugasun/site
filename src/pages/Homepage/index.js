@@ -111,9 +111,6 @@ export default class Homepage extends Component {
               </Link>
             </div>
             <div className={styles.heroClientsWrapper}>
-              <p className={commonStyles.textCenter}>
-                Build serverless applications using serverless functions and infrastructure on any platform
-              </p>
               <ul className={styles.clientList}>
                 <li><img src={gcp} alt='Google Cloud Provider' /></li>
                 <li><img src={azure} alt='Microsoft Azure' /></li>
