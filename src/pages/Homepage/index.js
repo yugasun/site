@@ -21,9 +21,6 @@ import illustration3 from '../../assets/images/illustration-3.png'
 import TrustedClients from '../../fragments/TrustedClients';
 import PreFooter from '../../fragments/PreFooter';
 
-import Modal from '../../components/Modal/Modal'
-import { getParams } from '../../utils/analytics/source/urlParams';
-
 export default class Homepage extends Component {
   static propTypes = {
     phenomicLoading: PropTypes.bool
@@ -31,21 +28,7 @@ export default class Homepage extends Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-    this.state = {
-      show: true,
-      videoModal: false,
-    }
-  }
-
-  componentDidMount() {
-    const queryParams = getParams(location.toString());
-    if(queryParams.hasOwnProperty('play-learn-more-video')) {
-      this.setState({ videoModal: true });
-    }
-  }
-
-  showVideo = () => {
-    this.setState({ videoModal: !this.state.videoModal })
+    this.state = { show: true }
   }
 
   renderPrefooter() {
@@ -84,24 +67,6 @@ export default class Homepage extends Component {
         className={`${commonStyles.body} ${commonStyles.newSite}`}
         renderPrefooter={this.renderPrefooter}
       >
-
-      <Modal
-        active={this.state.videoModal}
-        onEscKeyDown={this.showVideo}
-        onOverlayClick={this.showVideo}
-      >
-        <div>
-          <iframe className={styles.videoModal}
-            src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0"
-            frameBorder="0"
-            allowFullScreen
-            webkitallowfullscreen="true"
-            mozallowfullscreen="true"
-          >
-          </iframe>
-        </div>
-      </Modal>
-
         <div className={`${styles.homeBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.heroContainer} ${commonStyles.container}`}>
             <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
@@ -149,10 +114,12 @@ export default class Homepage extends Component {
                 contact sales
               </Link>
             </div>
-            <div className={styles.heroAnnouncementWrapper} onClick={this.showVideo}>
+            <Link
+              className={styles.heroAnnouncementWrapper}
+              to='/overview-video'>
               <img src={video} alt='serverless platform overview video' />
               watch the video to learn more
-            </div>
+            </Link>
           </div>
         </div>
 
