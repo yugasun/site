@@ -129,10 +129,6 @@ export default class Homepage extends Component {
                 </a>
               </div>
             </div>
-            <div className={styles.heroAnnouncementWrapper} onClick={this.showVideo}>
-              <img src={video} alt='serverless platform overview video' />
-              watch the video to learn more
-            </div>
             <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
               <a href='https://dashboard.serverless.com'
                 target='_blank'
@@ -143,6 +139,10 @@ export default class Homepage extends Component {
                 className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
                 contact sales
               </Link>
+            </div>
+            <div className={styles.heroAnnouncementWrapper} onClick={this.showVideo}>
+              <img src={video} alt='serverless platform overview video' />
+              watch the video to learn more
             </div>
           </div>
         </div>
