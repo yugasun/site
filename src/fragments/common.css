@@ -156,8 +156,8 @@ a {
     &.btnTransparentWhite{
       background: transparent;
       color: $white_serverless;
-      padding: 11px 22px 13px;
-      border: 3px solid $white_serverless;
+      padding: 22px 25px 25px;
+      border: 2.5px solid $white_serverless;
     }
 
     &.btnTransparentWhite:hover {

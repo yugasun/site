@@ -291,9 +291,9 @@ iframe.videoModal {
   justify-content: center;
   align-items: center;
   width: 75%;
-  height: 80px;
-  margin: 45px auto 0px auto;
-  color: $red_serverless;
+  height: 60px;
+  margin: 0px auto 0px auto;
+  color: #ffffff;
   font-size: 22px;
   text-align: center;
 
