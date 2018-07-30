@@ -91,10 +91,10 @@ export default class Homepage extends Component {
         <div>
           <iframe className={styles.videoModal}
             src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0"
-            frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
           >
           </iframe>
         </div>
