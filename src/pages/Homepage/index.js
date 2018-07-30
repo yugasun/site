@@ -89,7 +89,14 @@ export default class Homepage extends Component {
         onOverlayClick={this.showVideo}
       >
         <div>
-          <iframe src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe className={styles.videoModal}
+            src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          >
+          </iframe>
         </div>
       </Modal>
 
