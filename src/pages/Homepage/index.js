@@ -8,12 +8,7 @@ import Testimonial from '../../fragments/Testimonial'
 import bolt from '../../assets/images/bolt.png'
 import iconDashboard from '../../assets/images/icon-dashboard.png'
 import group6 from '../../assets/images/group-6.png'
-
-import gcp from '../../assets/images/gcp.png'
-import azure from '../../assets/images/azure.png'
-import aws from '../../assets/images/aws.png'
-import ibm from '../../assets/images/ibm.png'
-import kubernetes from '../../assets/images/kubernetes.png'
+import video from '../../assets/images/video.png'
 
 import vol from '../../assets/images/icon-vol.png'
 import graph from '../../assets/images/icon-graph.png'
@@ -33,9 +28,7 @@ export default class Homepage extends Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-    this.state = {
-      show: true
-    }
+    this.state = { show: true }
   }
 
   renderPrefooter() {
@@ -53,6 +46,17 @@ export default class Homepage extends Component {
       />
     );
   }
+
+
+  // <div className={styles.heroClientsWrapper}>
+  //   <ul className={styles.clientList}>
+  //     <li><img src={gcp} alt='Google Cloud Provider' /></li>
+  //     <li><img src={azure} alt='Microsoft Azure' /></li>
+  //     <li><img src={aws} alt='Amazon Web Services' /></li>
+  //     <li><img src={ibm} alt='IBM Open Whisk' /></li>
+  //     <li><img src={kubernetes} alt='Kubernetes' /></li>
+  //   </ul>
+  // </div>
 
   render() {
     return (
@@ -110,18 +114,12 @@ export default class Homepage extends Component {
                 contact sales
               </Link>
             </div>
-            <div className={styles.heroClientsWrapper}>
-              <p className={commonStyles.textCenter}>
-                Build serverless applications using serverless functions and infrastructure on any platform
-              </p>
-              <ul className={styles.clientList}>
-                <li><img src={gcp} alt='Google Cloud Provider' /></li>
-                <li><img src={azure} alt='Microsoft Azure' /></li>
-                <li><img src={aws} alt='Amazon Web Services' /></li>
-                <li><img src={ibm} alt='IBM Open Whisk' /></li>
-                <li><img src={kubernetes} alt='Kubernetes' /></li>
-              </ul>
-            </div>
+            <Link
+              className={styles.heroAnnouncementWrapper}
+              to='/overview-video'>
+              <img src={video} alt='serverless platform overview video' />
+              watch the video to learn more
+            </Link>
           </div>
         </div>
 

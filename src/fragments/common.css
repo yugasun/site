@@ -115,13 +115,14 @@ a {
   /* button helpers*/
   .btn{
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: .7;
-    padding: 17px 25px 19px;
+    padding: 22px 25px 25px;
     letter-spacing: .08rem;
     border: 0px;
     text-align: center;
     text-decoration: none;
+    text-transform: lowercase;
     font-family: 'Serverless';
 
     &:hover{
@@ -144,8 +145,8 @@ a {
     &.btnTransparent {
       background: transparent;
       color: $red_serverless;
-      padding: 14px 22px 16px;
-      border: 3px solid $red_serverless;
+      padding: 20px 25px 23px;
+      border: 2.5px solid $red_serverless;
     }
 
     &.btnTransparent:hover {
@@ -155,8 +156,8 @@ a {
     &.btnTransparentWhite{
       background: transparent;
       color: $white_serverless;
-      padding: 11px 22px 13px;
-      border: 3px solid $white_serverless;
+      padding: 22px 25px 25px;
+      border: 2.5px solid $white_serverless;
     }
 
     &.btnTransparentWhite:hover {

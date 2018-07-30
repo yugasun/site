@@ -11,9 +11,12 @@ $dialog-translate-y: 4rem;
   max-width: 96vw;
   max-height: 96vh;
   flex-direction: column;
-  background-color: #fff;
+  vertical-align: middle;
+  align-items: center;
+  background-color: #000000;
   border-radius: 0;
   opacity: 0;
+  text-align: center;
   transition-delay: $animationDelay;
   transition-timing-function: $animationCurveDefault;
   transition-duration: $animationDuration;
@@ -43,7 +46,8 @@ $dialog-translate-y: 4rem;
 }
 
 .normal {
-  width: 50vw;
+  width: 60vw;
+  min-height: 60vh;
 
   @media screen and (max-width: $breakpointXs) {
     width: 90vw;
