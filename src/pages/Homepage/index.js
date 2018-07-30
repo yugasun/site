@@ -31,10 +31,16 @@ export default class Homepage extends Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-    const queryParams = getParams(location.toString());
     this.state = {
       show: true,
-      videoModal: queryParams.hasOwnProperty('play-learn-more-video'),
+      videoModal: false,
+    }
+  }
+
+  componentDidMount() {
+    const queryParams = getParams(location.toString());
+    if(queryParams.hasOwnProperty('play-learn-more-video')) {
+      this.setState({ videoModal: true });
     }
   }
 
