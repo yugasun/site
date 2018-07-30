@@ -10,12 +10,6 @@ import iconDashboard from '../../assets/images/icon-dashboard.png'
 import group6 from '../../assets/images/group-6.png'
 import video from '../../assets/images/video.png'
 
-import gcp from '../../assets/images/gcp.png'
-import azure from '../../assets/images/azure.png'
-import aws from '../../assets/images/aws.png'
-import ibm from '../../assets/images/ibm.png'
-import kubernetes from '../../assets/images/kubernetes.png'
-
 import vol from '../../assets/images/icon-vol.png'
 import graph from '../../assets/images/icon-graph.png'
 import dash from '../../assets/images/icon-dash.png'
@@ -28,6 +22,7 @@ import TrustedClients from '../../fragments/TrustedClients';
 import PreFooter from '../../fragments/PreFooter';
 
 import Modal from '../../components/Modal/Modal'
+import { getParams } from '../../utils/analytics/source/urlParams';
 
 export default class Homepage extends Component {
   static propTypes = {
@@ -36,9 +31,10 @@ export default class Homepage extends Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
+    const queryParams = getParams(window.location.toString());
     this.state = {
       show: true,
-      videoModal: false,
+      videoModal: queryParams.hasOwnProperty('play-learn-more-video'),
     }
   }
 
