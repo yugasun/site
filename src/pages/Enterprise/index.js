@@ -43,7 +43,7 @@ export default class PartnersPage extends React.Component {
                 Move fast, safely
               </h2>
               <div className={styles.description}>
-                The Serverless Platform gives you everything you need to operationalize Serverless development.
+                The Serverless Enterprise Platform gives you everything you need to operationalize Serverless development.
               </div>
             </div>
 
