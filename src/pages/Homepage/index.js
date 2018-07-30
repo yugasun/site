@@ -8,6 +8,7 @@ import Testimonial from '../../fragments/Testimonial'
 import bolt from '../../assets/images/bolt.png'
 import iconDashboard from '../../assets/images/icon-dashboard.png'
 import group6 from '../../assets/images/group-6.png'
+import video from '../../assets/images/video.png'
 
 import gcp from '../../assets/images/gcp.png'
 import azure from '../../assets/images/azure.png'
@@ -26,6 +27,8 @@ import illustration3 from '../../assets/images/illustration-3.png'
 import TrustedClients from '../../fragments/TrustedClients';
 import PreFooter from '../../fragments/PreFooter';
 
+import Modal from '../../components/Modal/Modal'
+
 export default class Homepage extends Component {
   static propTypes = {
     phenomicLoading: PropTypes.bool
@@ -34,8 +37,13 @@ export default class Homepage extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      show: true
+      show: true,
+      videoModal: false,
     }
+  }
+
+  showVideo = () => {
+    this.setState({ videoModal: !this.state.videoModal })
   }
 
   renderPrefooter() {
@@ -54,6 +62,17 @@ export default class Homepage extends Component {
     );
   }
 
+
+  // <div className={styles.heroClientsWrapper}>
+  //   <ul className={styles.clientList}>
+  //     <li><img src={gcp} alt='Google Cloud Provider' /></li>
+  //     <li><img src={azure} alt='Microsoft Azure' /></li>
+  //     <li><img src={aws} alt='Amazon Web Services' /></li>
+  //     <li><img src={ibm} alt='IBM Open Whisk' /></li>
+  //     <li><img src={kubernetes} alt='Kubernetes' /></li>
+  //   </ul>
+  // </div>
+
   render() {
     return (
       <Default
@@ -63,6 +82,17 @@ export default class Homepage extends Component {
         className={`${commonStyles.body} ${commonStyles.newSite}`}
         renderPrefooter={this.renderPrefooter}
       >
+
+      <Modal
+        active={this.state.videoModal}
+        onEscKeyDown={this.showVideo}
+        onOverlayClick={this.showVideo}
+      >
+        <div>
+          <iframe src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </Modal>
+
         <div className={`${styles.homeBg} ${styles.heroSectionWrapper} ${commonStyles.newSite}`}>
           <div className={`${styles.heroContainer} ${commonStyles.container}`}>
             <h2 className={`${commonStyles.white} ${commonStyles.textCenter}`}>serverless</h2>
@@ -99,6 +129,10 @@ export default class Homepage extends Component {
                 </a>
               </div>
             </div>
+            <div className={styles.heroAnnouncementWrapper} onClick={this.showVideo}>
+              <img src={video} alt='serverless platform overview video' />
+              watch the video to learn more
+            </div>
             <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
               <a href='https://dashboard.serverless.com'
                 target='_blank'
@@ -109,15 +143,6 @@ export default class Homepage extends Component {
                 className={`${commonStyles.btn} ${commonStyles.btnTransparent} ${styles.btn}`}>
                 contact sales
               </Link>
-            </div>
-            <div className={styles.heroClientsWrapper}>
-              <ul className={styles.clientList}>
-                <li><img src={gcp} alt='Google Cloud Provider' /></li>
-                <li><img src={azure} alt='Microsoft Azure' /></li>
-                <li><img src={aws} alt='Amazon Web Services' /></li>
-                <li><img src={ibm} alt='IBM Open Whisk' /></li>
-                <li><img src={kubernetes} alt='Kubernetes' /></li>
-              </ul>
             </div>
           </div>
         </div>
