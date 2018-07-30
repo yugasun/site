@@ -31,7 +31,7 @@ export default class Homepage extends Component {
   static hasLoadingState = true
   constructor(props, context) {
     super(props, context)
-    const queryParams = getParams(window.location.toString());
+    const queryParams = getParams(location.toString());
     this.state = {
       show: true,
       videoModal: queryParams.hasOwnProperty('play-learn-more-video'),
