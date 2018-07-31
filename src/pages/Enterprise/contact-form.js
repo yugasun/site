@@ -67,7 +67,7 @@ class ContactForm extends React.Component {
       <Form onSubmit={this.onSubmit} id={formId}>
         <div className={styles.formGroup}>
           <h3 className={styles.formHeading}>
-            Wanna know how Serverless can help your company? Let’s talk.
+            Interested in an enterprise demo?<br> Let’s talk.
           </h3>
         </div>
         <TextInput
