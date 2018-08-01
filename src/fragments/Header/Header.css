@@ -248,7 +248,7 @@ ul.mainNav{
         display: block;
 
         > a{
-          display: block;
+          display: inline-block;
           color: $grey2_serverless;
           font-family: 'Serverless';
           font-size: 1.1em;
