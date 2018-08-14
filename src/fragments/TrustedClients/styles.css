@@ -29,6 +29,10 @@
 
   .trustedBy {
     padding: 2% 10%;
+
+    li > img {
+      max-height: 50px;
+    }
   }
 }
 
@@ -41,7 +45,7 @@
     flex-wrap: nowrap !important;
 
     li > img {
-      width: 80%;
+      max-width: 80%;
     }
   }
 }
