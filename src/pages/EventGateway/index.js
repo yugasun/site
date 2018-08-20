@@ -147,7 +147,7 @@ class EventGatewayPage extends React.Component {
               },
               {
                 title: 'Pub/Sub',
-                description: 'Take advantage of pub/sun functionality but utilizing custom events. This allows you to process the same event with multiple systems.',
+                description: 'Take advantage of pub/sub functionality but utilizing custom events. This allows you to process the same event with multiple systems.',
                 image: iconFeature2
               },
               {
