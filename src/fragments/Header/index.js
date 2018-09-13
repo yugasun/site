@@ -153,7 +153,7 @@ export default class Header extends Component {
                       <li><Link to='/blog' onClick={this.navClicked}>blog</Link></li>
                       <li><a href='https://forum.serverless.com' target='_blank'>forum</a></li>
                       <li><Link to='/community/meetups' onClick={this.navClicked}>meetups</Link></li>
-                      <li><a href='/slack'>slack</a></li>
+                      <li><a href='/slack/' target='_blank'>slack</a></li>
                       <li><Link to='/workshops' onClick={this.navClicked}>workshops</Link></li>
                     </ul>
                   </div>
