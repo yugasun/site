@@ -153,7 +153,7 @@ export default class Footer extends Component {
                       <Link to='/community/meetups/'>meetups</Link>
                     </li>
                     <li>
-                      <a href='https://join.slack.com/t/serverless-contrib/shared_invite/enQtNDI4MjM3MTIwMTgzLTE3Y2RkOTY1YTY1MTE0ZjA0YTBhYjA2NzNiMGUwODNlYWFjNjE3YTE1OGFjZjFiNmE1NTgzM2NjYzc5ZTNhM2Q'>slack</a>
+                      <a href='/slack'>slack</a>
                     </li>
                     <li>
                       <Link to='/workshops/'>workshops</Link>
