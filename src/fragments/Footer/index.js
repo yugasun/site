@@ -153,7 +153,7 @@ export default class Footer extends Component {
                       <Link to='/community/meetups/'>meetups</Link>
                     </li>
                     <li>
-                      <a href='/slack'>slack</a>
+                      <a href='/slack/' target='_blank'>slack</a>
                     </li>
                     <li>
                       <Link to='/workshops/'>workshops</Link>
