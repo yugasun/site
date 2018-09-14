@@ -161,7 +161,6 @@ export default class Header extends Component {
                 <li>
                   <a
                     href="https://serverless.com/enterprise/"
-                    target='_blank'
                     className={`${commonStyles.btn} ${commonStyles.btnPrimary}`}
                   >
                     enterprise
