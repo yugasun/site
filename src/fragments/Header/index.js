@@ -158,6 +158,7 @@ export default class Header extends Component {
                     </ul>
                   </div>
                 </li>
+                <li>
                   <a
                     href="https://serverless.com/enterprise/"
                     target='_blank'
