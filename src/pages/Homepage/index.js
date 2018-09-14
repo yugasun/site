@@ -105,7 +105,6 @@ export default class Homepage extends Component {
             </div>
             <div className={`${styles.heroContactWrapper} ${commonStyles.textCenter}`}>
               <a href='https://serverless.com/framework/docs/getting-started/'
-                target='_blank'
                 className={`${commonStyles.btn} ${commonStyles.btnPrimary} ${styles.btn}`}>
                 start with framework
               </a>
