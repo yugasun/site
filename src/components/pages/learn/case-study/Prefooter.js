@@ -12,7 +12,7 @@ const actions = [
     name: 'view documentation',
     navProps: {
       to: '/framework/docs',
-      completed: false,
+      completed: true,
     },
   },
 ]

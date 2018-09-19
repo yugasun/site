@@ -12,14 +12,14 @@ const actions = [
     name: 'documentation',
     navProps: {
       to: '/framework/docs',
-      completed: false,
+      completed: true,
     },
   },
   {
     name: 'serverless example',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
-      completed: false,
+      completed: true,
     },
   },
   {
