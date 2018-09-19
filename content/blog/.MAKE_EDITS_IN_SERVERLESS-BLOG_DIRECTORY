@@ -3,11 +3,11 @@
 Notice to anyone working on the blog
 -------------
 
-Any local edits in this /Users/kamesh/Documents/Projects/serverless-gatsby/content/blog/ directory will not be saved
+Any local edits in this /Users/kamesh/Documents/Projects/site/content/blog/ directory will not be saved
 
 These blog markdown files are pulled from ./serverless-blog directory
 
-Please make changes to blog posts in /Users/kamesh/Documents/Projects/serverless-gatsby/serverless-blog/posts/.
+Please make changes to blog posts in /Users/kamesh/Documents/Projects/site/serverless-blog/posts/.
 
-Then you can push up those changes to the https://github.com/codebrahma/blog repo
+Then you can push up those changes to the https://github.com/serverless/blog repo
 
