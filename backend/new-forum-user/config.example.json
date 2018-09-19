@@ -1,5 +1,0 @@
-{
-  "SENDGRID_API_KEY": "your-api-key-here",
-  "SERVERLESS_USER_API_ENDPOINT": "live endpoint url",
-  "SERVERLESS_USER_API_KEY": "service-api-key"
-}

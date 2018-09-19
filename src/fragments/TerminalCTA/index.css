@@ -1,8 +1,0 @@
-.terminal {
-  min-height: 385px;
-}
-@media (max-width: 768px) {
-  .terminal {
-    min-height: 285px;
-  }
-}
