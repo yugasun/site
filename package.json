@@ -39,8 +39,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "buildprod": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby build",
+    "build": "gatsby build && mv public dist",
+    "buildprod": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby build && mv public dist",
     "update-design-system": "git submodule update -f --init --recursive; cd serverless-design-system; npm install; cd .. ;",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
