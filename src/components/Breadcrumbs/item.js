@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react'
-import { Link } from 'react-router'
+import React from 'react'
+import Link from 'gatsby-link'
 
 export default function BreadcrumbItem({ getUrlFromPathSegments, pathSegments, label }) {
   return (
@@ -9,8 +9,3 @@ export default function BreadcrumbItem({ getUrlFromPathSegments, pathSegments, l
   )
 }
 
-BreadcrumbItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  pathSegments: PropTypes.array.isRequired,
-  getUrlFromPathSegments: PropTypes.func,
-}

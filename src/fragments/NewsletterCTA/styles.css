@@ -1,9 +1,0 @@
-.stacked {
-  flex-direction: column;
-  input {
-    width: 90%;
-  }
-  button {
-    margin-top: 10px;
-  }
-}

@@ -1,35 +1,18 @@
-# node / npm
+# Project dependencies
+.cache
 node_modules
-serverless
-serverless-blog
-.serverless
-*.log
+yarn-error.log
+.idea/
 
-# serverless backend
-config.json
-githubUser.json
-
-# third party external content
-content-external
-
-# phenomic build
-dist
-backend/post-scheduler
-secrets.json
-.env
-
-#IDE Stuff
-**/.idea
-.idea
-
-#OS STUFF
+# Build directory
+/public
+/dist
 .DS_Store
-.tmp
 
-# Ignore stuff pull from serverless core repo
-content/framework/docs
-# Blog content gets pulled from https://github.com/serverless/blog
-content/blog
-src/pages/Blog/generated-authors.json
+# blogs
+serverless-blog
+serverless
 
-generated-menu-items.js
+# dynamic config
+.env.development
+.env.production

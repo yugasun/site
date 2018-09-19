@@ -18,5 +18,7 @@ module.exports = {
   blogRepoPath: path.join(projectRoot, 'serverless-blog'),
   blogRepoPostPath: path.join(projectRoot, 'serverless-blog/posts/'),
   siteBlogPath: path.join(projectRoot, 'content/blog/'),
-  authorDataPath: path.join(projectRoot, 'src/pages/Blog/', 'generated-authors.json'),
+  authorDataPath: path.join(projectRoot, 'src/constants/', 'generated-authors.json'),
+  categoriesDataPath: path.join(projectRoot, 'src/constants', 'categories.json'),
+  featuredBlogsDataPath: path.join(projectRoot, 'src/constants', 'featured-blogs.json'),
 }

@@ -15,7 +15,7 @@ var _cio = _cio || [];
       s = document.getElementsByTagName('script')[0];
   t.async = true;
   t.id    = 'cio-tracker';
-  t.setAttribute('data-site-id', '${process.env.CUSTOMER_IO_KEY}');
+  t.setAttribute('data-site-id', '${process.env.GATSBY_CUSTOMER_IO_KEY}');
   t.src = 'https://assets.customer.io/assets/track.js';
   s.parentNode.insertBefore(t, s);
 })();</script>`

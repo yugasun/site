@@ -1,18 +1,20 @@
 /* eslint-disable no-console */
-import React, { Component, PropTypes } from 'react'
-import ga from 'react-google-analytics'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
+import GAInitializer from './GAInitializer'
 import pageView from '../../utils/analytics/page'
-const InjectGoogleAnalytics = ga.Initializer
+
 const isClient = typeof window !== 'undefined'
-const googleAnalyticsUA = process.env.GOOGLE_ANALYTICS_UA
+const googleAnalyticsUA = process.env.GATSBY_GOOGLE_ANALYTICS_UA
 
 class GoogleAnalyticsTracker extends Component {
 
   componentWillMount() {
     if (isClient) {
       if (process.env.NODE_ENV === 'production') {
-        ga('create', googleAnalyticsUA, 'auto')
-        ga('require', 'GTM-M5WQLDN')
+        ReactGA.initialize(googleAnalyticsUA)
+        ReactGA.ga('require', 'GTM-M5WQLDN')
       } else {
         console.info('ga.create', googleAnalyticsUA)
       }
@@ -22,21 +24,19 @@ class GoogleAnalyticsTracker extends Component {
 
   componentWillReceiveProps(props) {
     // if route is new, log pageview
-    if (props.params.splat !== this.props.params.splat) {
+    if ((props.path !== this.props.path) || (props.query !== this.props.query)) {
       pageView()
     }
   }
 
   render() {
-    return (
-      <InjectGoogleAnalytics />
-    )
+    return (<GAInitializer />)
   }
 }
 
 GoogleAnalyticsTracker.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  params: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default GoogleAnalyticsTracker

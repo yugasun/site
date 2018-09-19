@@ -1,8 +1,8 @@
-# [Serverless Site](https://serverless.com/) 
+# [Serverless Site](https://serverless.com/)
 
 This site is 100% serverless! :tada:
 
-Built using react, redux and [phenomic](https://github.com/MoOx/phenomic) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
+Built using react, redux and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
 
 The [site content](https://github.com/serverless/site/tree/master/content), [docs](https://github.com/serverless/serverless/tree/master/docs), and [blog](https://github.com/serverless/blog) are hosted on github, so if you see a typo or error feel free to contribute back!
 
@@ -14,13 +14,19 @@ API calls are made with the [serverless framework](https://github.com/serverless
 
 # Quick Start
 
-**1. Clone down the site**
+**1. Make sure that you have the Gatsby CLI program installed:**
+
+```sh
+npm install --global gatsby-cli
+```
+
+**2. Clone down the site**
 
 ```bash
 git clone git@github.com:serverless/site.git
 ```
 
-**2. Install site dependencies**
+**3. Install site dependencies**
 
 ```bash
 npm install
@@ -29,10 +35,10 @@ npm install
 **3. Run site on your local computer**
 
 ```bash
-npm start
+npm run dev
 ```
 
-Open your browser to http://localhost:3333
+Open your browser to http://localhost:8000
 
 Run `npm run syncProd` or `npm run syncLocal` to pull in the blog and docs repos (if the postinstall command doesn't run for you). These 2 commands pull in the external content sources the site uses.
 
@@ -40,7 +46,7 @@ Run `npm run syncProd` or `npm run syncLocal` to pull in the blog and docs repos
 
 Fork the site and submit a pull request!
 
-When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:3333`
+When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
 
 ### **Blog edits:**
 
@@ -81,9 +87,3 @@ Successful deploys are published to the [notifications slack channel](https://se
 If everything looks good on your unique netlify subdomain, you can go ahead and merge your branch to master on github.
 
 Merging branches into master will trigger a site rebuild and `serverless.com` will be updated.
-
-# Making Phenomic changes while working on the site
-
-If you want to work on [phenomic](https://phenomic.io/) src code while working on the site, change the [transpile path in phenomic's package.json](https://github.com/MoOx/phenomic/blob/master/package.json#L149) to point to the the sites node_module path. `../site/node_modules/phenomic/lib`
-
-Then inside of the phenomic src directory you can run `npm run transpile -- --watch` to work on phenomic src code and see the live changes effect the serverless site.

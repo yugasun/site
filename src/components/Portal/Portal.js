@@ -1,15 +1,14 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-export default class Portal extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-    container: PropTypes.any,
-    lockBody: PropTypes.bool
-  }
+const getContainer = container => {
+  const _container = typeof container === 'function' ? container() : container
+  return ReactDOM.findDOMNode(_container) || document.body // eslint-disable-line
+}
 
+class Portal extends Component {
   static defaultProps = {
-    lockBody: true
+    lockBody: true,
   }
 
   componentDidMount() {
@@ -57,7 +56,9 @@ export default class Portal extends Component {
     if (overlay !== null) {
       this._mountOverlayTarget()
       this._overlayInstance = ReactDOM.unstable_renderSubtreeIntoContainer(
-        this, overlay, this._overlayTarget
+        this,
+        overlay,
+        this._overlayTarget
       )
     } else {
       this._unrenderOverlay()
@@ -77,8 +78,11 @@ export default class Portal extends Component {
   }
 
   getOverlayDOMNode() {
-    if (!this.isMounted()) { // eslint-disable-line
-      throw new Error('getOverlayDOMNode(): A component must be mounted to have a DOM node.')
+    if (!this.isMounted()) {
+      // eslint-disable-line
+      throw new Error(
+        'getOverlayDOMNode(): A component must be mounted to have a DOM node.'
+      )
     }
 
     if (this._overlayInstance) {
@@ -94,10 +98,6 @@ export default class Portal extends Component {
   render() {
     return null
   }
-
 }
 
-function getContainer(container) {
-  const _container = typeof container === 'function' ? container() : container
-  return ReactDOM.findDOMNode(_container) || document.body // eslint-disable-line
-}
+export default Portal

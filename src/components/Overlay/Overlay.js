@@ -1,56 +1,73 @@
-import React, { Component, PropTypes } from 'react'
-import classnames from 'classnames'
-import styles from './Overlay.css'
+import React, { Component } from 'react'
+import styled from 'styled-components'
 import Portal from '../Portal/Portal'
 
-export default class Overlay extends Component {
-  static propTypes = {
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    invisible: PropTypes.bool,
-    onClick: PropTypes.func,
-    onEscKeyDown: PropTypes.func,
-  };
+import { Absolute, Flex } from 'serverless-design-system/src'
 
+const OverlayWrapper = styled(Flex)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  pointer-events: ${({ invisible }) => (invisible ? 'none' : 'all')};
+`
+
+const Backdrop = styled(Absolute)`
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${props => props.theme.colors.black};
+  opacity: ${({ active }) => (active ? 1 : 0)};
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.35s;
+  transition-property: opacity;
+  pointer-events: ${({ invisible }) => (invisible ? 'none' : 'all')};
+`
+
+class Overlay extends Component {
   static defaultProps = {
-    invisible: false
-  };
+    invisible: false,
+  }
 
   componentDidMount() {
     if (this.props.active) {
-      this.escKeyListener = document.body.addEventListener('keydown', this.handleEscKey.bind(this))
-      // this.disableScroll()
-      // document.body.style.overflow = 'hidden'
+      this.escKeyListener = document.body.addEventListener(
+        'keydown',
+        this.handleEscKey.bind(this)
+      )
     }
   }
 
   componentWillUpdate(nextProps) {
-    if (nextProps.active && !this.props.active) {
-      // document.body.style.overflow = 'hidden'
-      // this.disableScroll()
-    }
     if (!nextProps.active && this.props.active) {
       this.enableScroll()
-      // document.body.style.overflow = null
     }
   }
 
   componentDidUpdate() {
     if (this.props.active && !this.escKeyListener) {
-      this.escKeyListener = document.body.addEventListener('keydown', this.handleEscKey.bind(this))
+      this.escKeyListener = document.body.addEventListener(
+        'keydown',
+        this.handleEscKey.bind(this)
+      )
     }
   }
 
   componentWillUnmount() {
-    // document.body.style.overflow = null
     this.enableScroll()
     if (this.escKeyListener) {
       document.body.removeEventListener('keydown', this.handleEscKey)
       this.escKeyListener = null
     }
   }
-  preventDefault = (e) => {
+  preventDefault = e => {
     const event = e || window.event
     if (event.preventDefault) {
       event.preventDefault()
@@ -90,19 +107,17 @@ export default class Overlay extends Component {
   }
 
   render() {
-    const { active, className, children, invisible, onClick } = this.props
-    const _className = classnames(styles.overlay, {
-      [styles.active]: active,
-      [styles.invisible]: invisible
-    }, className)
+    const { active, children, invisible, onClick } = this.props
 
     return (
       <Portal>
-        <div className={_className}>
-          <div className={styles.backdrop} onClick={onClick} />
+        <OverlayWrapper invisible={invisible}>
+          <Backdrop onClick={onClick} active={active} invisible={invisible} />
           {children}
-        </div>
+        </OverlayWrapper>
       </Portal>
     )
   }
 }
+
+export default Overlay

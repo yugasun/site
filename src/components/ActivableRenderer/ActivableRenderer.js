@@ -1,24 +1,20 @@
 /*
  Render and unrender higher order component from https://github.com/react-toolbox/
 */
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
-const ActivableRendererFactory = (options = { delay: 500 }) => (ActivableComponent) => {
+const ActivableRendererFactory = (
+  options = { delay: 500 }
+) => ActivableComponent => {
   return class ActivableRenderer extends Component {
-    static propTypes = {
-      active: PropTypes.bool.isRequired,
-      children: PropTypes.any,
-      delay: PropTypes.number
-    };
-
     static defaultProps = {
-      delay: options.delay
+      delay: options.delay,
     }
 
     state = {
       active: this.props.active,
-      rendered: this.props.active
-    };
+      rendered: this.props.active,
+    }
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.active && !this.props.active) this.renderAndActivate()
@@ -46,9 +42,9 @@ const ActivableRendererFactory = (options = { delay: 500 }) => (ActivableCompone
     render() {
       const { delay, ...others } = this.props // eslint-disable-line no-unused-vars
       const { active, rendered } = this.state
-      return rendered
-        ? <ActivableComponent {...others} active={active} />
-        : null
+      return rendered ? (
+        <ActivableComponent {...others} active={active} />
+      ) : null
     }
   }
 }

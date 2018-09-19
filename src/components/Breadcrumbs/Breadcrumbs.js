@@ -1,7 +1,7 @@
 /* fork of https://github.com/TiuSh/react-simple-breadcrumb/ */
 import React from 'react'
 import BreadcrumbItem from './item'
-import styles from './Breadcrumbs.css'
+import BreadcrumbsWrapper from './BreadcrumbsWrapper'
 
 /**
 <Breadcrumb
@@ -25,20 +25,20 @@ const Breadcrumbs = ({
   let renderRight
   if (rightContent) {
     renderRight = (
-      <div className={styles.rightContent}>
+      <div className="rightContent">
         {rightContent}
       </div>
     )
   }
   return (
-    <div className={styles.breadcrumbWrapper}>
-      <ul className={`${styles.breadcrumbs} ${className}`}>
+    <BreadcrumbsWrapper>
+      <ul className={`breadcrumbs ${className}`}>
         {pathRoot ? (
           <li
             key='root'
-            className={`${styles.item} ${styles.basePath}`}
+            className="item basePath"
           >
-            <span className={styles.itemInner}>
+            <span className="itemInner">
               <BreadcrumbItem
                 label={pathRoot}
                 pathSegments={[]}
@@ -50,13 +50,13 @@ const Breadcrumbs = ({
 
         {pathArray.map((segment, id) => {
           const pathSegments = pathArray.map(encodeURIComponent).slice(0, id + 1)
-          const active = (pathArray.length === id + 1) ? styles.current : ''
+          const active = (pathArray.length === id + 1) ? "current" : ''
           return (
             <li
               key={id}
-              className={`${styles.item} ${active}`}
+              className={`item ${active}`}
             >
-              <span className={styles.itemInner}>
+              <span className="itemInner">
                 <BreadcrumbItem
                   label={segment}
                   pathSegments={pathSegments}
@@ -68,20 +68,8 @@ const Breadcrumbs = ({
         })}
       </ul>
       {renderRight}
-  </div>
+  </BreadcrumbsWrapper>
   )
-}
-
-Breadcrumbs.propTypes = {
-  path: React.PropTypes.string.isRequired,
-  pathSeparator: React.PropTypes.string,
-  pathRoot: React.PropTypes.string,
-  getUrlFromPathSegments: React.PropTypes.func,
-  onClick: React.PropTypes.func,
-  className: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object,
-  ]),
 }
 
 Breadcrumbs.defaultProps = {

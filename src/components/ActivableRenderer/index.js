@@ -1,1 +1,1 @@
-export { default } from './ActivableRenderer'
+export { default as ActivableRenderer } from './ActivableRenderer'

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const hubspotEndpoint = process.env.API.ADD_CONTACT
+const hubspotEndpoint = process.env.GATSBY_ADD_CONTACT_API
 
 export default function addContact(data) {
   return axios({

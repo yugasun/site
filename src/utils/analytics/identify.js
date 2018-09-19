@@ -45,7 +45,7 @@ export default function identify(id, profile) {
   }
 
   // Send data to hubspot
-  if (process.env.API && process.env.API.ADD_CONTACT) {
+  if (process.env.GATSBY_ADD_CONTACT_API) {
     addHubspotContact(data).then((hsResponse) => {
       // get hubspot data
       // console.log('hsResponse', hsResponse)

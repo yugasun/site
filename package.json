@@ -1,192 +1,80 @@
 {
-  "private": true,
-  "version": "0.0.1",
-  "name": "serverless-site",
-  "homepage": "https://serverless.com",
-  "repository": "https://github.com/serverless/site.git",
-  "phenomic": {
-    "CNAME": true,
-    "offline": false,
-    "cache": false,
-    "disableServiceWorkerReload": true
-  },
-  "scripts": {
-    "lintfix": "eslint --ignore-path .gitignore --fix ./src",
-    "lint:js": "eslint --ignore-path .gitignore src",
-    "lint:css": "stylelint \"src/**/*.css\"",
-    "lint": "npm-run-all --parallel lint:*",
-    "watch:blog": "node scripts/blog/watch.js",
-    "watch:docs": "node scripts/docs/watch.js",
-    "watch": "npm-run-all --parallel watch:*",
-    "components": "npm run transpile -- --watch",
-    "prepareContent": "node scripts/docs && node scripts/blog",
-    "dev": "npm run prepareContent && phenomic start",
-    "start": "npm-run-all --parallel dev watch",
-    "syncLocal": "npm run postinstall",
-    "syncProd": "npm run syncProd:Docs && npm run syncProd:Blog",
-    "syncProd:Docs": "node scripts/docs/sync-docs-remote.js",
-    "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
-    "prebuild": "npm run prepareContent",
-    "build": "phenomic build",
-    "buildprod": "npm run syncProd && npm run prepareContent && phenomic build",
-    "postbuildprod": "node scripts/redirects.js",
-    "postinstall": "node scripts/build/postinstall.js",
-    "postbuild": "node scripts/redirects.js",
-    "static": "cd dist && http-server",
-    "pretest": "npm run lint",
-    "dll": "webpack --display-chunks --color --config webpack.DLL.babel.js"
-  },
+  "name": "Serverless",
+  "description": "Serverless Website",
+  "version": "1.0.0",
   "dependencies": {
-    "@serverless/ui-components": "0.0.5",
-    "auth0-lock": "10.2.1",
-    "axios": "^0.13.1",
-    "classnames": "^2.2.5",
-    "clipboard": "^1.5.16",
-    "jwt-decode": "^2.1.0",
-    "localforage": "^1.4.3",
+    "algoliasearch": "^3.30.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.6",
+    "clipboard": "^2.0.1",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.3.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
+    "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-sharp": "^1.6.27",
+    "localforage": "^1.7.2",
     "lodash.debounce": "^4.0.8",
-    "phenomic-serverless": "0.22.00",
-    "prop-types": "^15.5.10",
-    "react": "^15.0.0",
-    "react-auto-form": "^1.3.0",
-    "react-dom": "^15.0.0",
-    "react-dropdown": "^1.5.0",
-    "react-google-analytics": "^0.2.0",
-    "react-helmet": "^3.0.0",
-    "react-redux": "^4.4.1",
-    "react-router": "^2.3.0",
-    "react-showdown": "^1.6.0",
-    "react-svg-inline": "^1.1.0",
-    "redux": "^3.0.0",
-    "redux-thunk": "^2.1.0",
-    "whatwg-fetch": "^0.11.0"
+    "react-ga": "^2.5.3",
+    "react-helmet": "^5.2.0",
+    "react-instantsearch-dom": "^5.2.3",
+    "remark-autolink-headings": "^5.0.0",
+    "remark-highlight.js": "^5.0.0",
+    "remark-slug": "^4.2.3",
+    "styled-components": "^3.3.3",
+    "url": "^0.11.0",
+    "url-loader": "^1.0.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build && mv public dist",
+    "buildprod": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby build && mv public dist",
+    "update-design-system": "git submodule update -f --init --recursive; cd serverless-design-system; npm install; cd .. ;",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint ./src/ --ext .js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:blog": "node scripts/blog/watch.js",
+    "components": "npm run transpile -- --watch",
+    "prepareContent": "node scripts/docs && node scripts/blog && node scripts/build-config",
+    "dev": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby develop",
+    "syncLocal": "npm run postinstall",
+    "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs",
+    "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
+    "syncProd:Docs": "node scripts/docs/sync-docs-remote.js",
+    "prebuild": "npm run prepareContent",
+    "postbuildprod": "node scripts/redirects.js",
+    "postbuild": "node scripts/redirects.js"
   },
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-core": "^6.14.0",
-    "babel-eslint": "^7.0.0",
-    "babel-loader": "^7.0.0-beta.1",
-    "babel-plugin-transform-react-jsx-self": "^6.11.0",
-    "babel-plugin-transform-react-jsx-source": "^6.9.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-react-optimize": "^1.0.1",
-    "babel-preset-stage-2": "^6.22.0",
-    "cheerio": "^0.22.0",
-    "classnames": "^2.2.5",
-    "color": "^0.11.1",
-    "critical": "^0.8.0",
-    "css-loader": "^0.28.0",
-    "cssnano": "^3.7.7",
-    "directory-tree": "^1.1.0",
-    "download": "^5.0.2",
-    "eslint": "^3.7.1",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-react": "^6.4.0",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "file-loader": "^0.9.0",
-    "fs-extra": "^0.30.0",
-    "git-branch": "^1.0.0",
-    "globby": "^6.1.0",
-    "gray-matter": "^2.0.2",
-    "history": "^2.0.0",
-    "install-github-dep": "0.0.2",
-    "invariant": "^2.1.1",
-    "jade": "^1.11.0",
-    "json-loader": "^0.5.2",
-    "node-dir": "^0.1.16",
-    "npm-run-all": "^1.7.0",
-    "postcss-browser-reporter": "^0.4.0",
-    "postcss-cssnext": "^2.4.0",
-    "postcss-import": "^8.1.2",
-    "postcss-loader": "^1.3.3",
-    "postcss-math": "0.0.8",
-    "postcss-nested": "^1.0.0",
-    "postcss-reporter": "^1.3.0",
-    "postcss-simple-vars": "^3.0.0",
-    "prepend-file": "^1.3.0",
-    "raw-loader": "^0.5.1",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "rimraf": "^2.5.4",
-    "sitemap": "^1.8.1",
-    "style-loader": "^0.13.0",
-    "stylelint": "^7.2.0",
-    "svgo": "^0.7.0",
-    "watch": "^1.0.1",
-    "webpack": "^2.3.0",
-    "webpack-visualizer-plugin": "^0.1.11",
-    "yamljs": "^0.2.8"
+    "async": "^2.6.1",
+    "download": "^7.1.0",
+    "fs-extra": "^7.0.0",
+    "gatsby-plugin-root-import": "^1.0.0",
+    "git-branch": "^2.0.1",
+    "gray-matter": "^4.0.1",
+    "node-dir": "^0.1.17",
+    "prettier": "^1.13.7",
+    "react-masonry-css": "^1.0.11",
+    "remark-html": "^8.0.0",
+    "remark-parse": "^5.0.0",
+    "unified": "^7.0.0",
+    "yamljs": "^0.3.0"
   },
-  "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
-  "babel": {
-    "env": {
-      "test": {
-        "presets": [
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      },
-      "development": {
-        "presets": [
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel"
-        ]
-      },
-      "production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      },
-      "webpack-development": {
-        "presets": [
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ],
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ],
-        "plugins": [
-          "babel-plugin-transform-react-jsx-source",
-          "babel-plugin-transform-react-jsx-self",
-          "react-hot-loader/babel"
-        ]
-      },
-      "webpack-production": {
-        "presets": [
-          "babel-preset-react-optimize",
-          [
-            "babel-preset-env",
-            {
-              "modules": false
-            }
-          ],
-          "babel-preset-stage-2",
-          "babel-preset-react"
-        ]
-      }
-    }
-  },
-  "stylelint": {
-    "extends": "./node_modules/phenomic-serverless/lib/stylelint-config-recommended/index.js",
-    "rules": {
-      "block-no-empty": null
-    }
-  },
-  "dllPlugin": {
-    "path": "node_modules/@dummy-dll-folder"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

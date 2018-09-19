@@ -112,7 +112,7 @@ function trimContent(content) {
 
 function generateDocMenu() {
   buildMenuObject().then((data) => {
-    // console.log(data)
+    console.log(data)
     const content = `module.exports = ${JSON.stringify(data, null, 2)}`
     const fileName = 'generated-menu-items.js'
     const p = path.join(config.docsMenuPath, fileName)

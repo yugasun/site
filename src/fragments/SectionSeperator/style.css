@@ -1,8 +1,0 @@
-.greySectionSeperator{
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 160px;
-  opacity: 0.1;
-  background: $white_serverless url('../../assets/images/glitch-effect.png');
-}

@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
+import ReactGA from 'react-ga'
 import removeUTM from './source/removeUTM'
 const isProduction = process.env.NODE_ENV === 'production'
-const branch = process.env.BRANCH || 'master'
+const branch = process.env.GATSBY_BRANCH || 'master'
 let singlePageAppLoaded = false
 
 // called in /src/fragments/GlobalScripts/GoogleAnalytics.js
