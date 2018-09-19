@@ -1,12 +1,19 @@
 import React from 'react'
-
+import styled from 'styled-components'
 import { Box, P } from 'serverless-design-system/src'
 import NavLink from 'src/components/NavLink'
 
+const ItemWrapper = styled(Box)`
+  a:hover {
+    p {
+      color: white;
+    }
+  }
+`
+
 // Renders Each item in the footer list
-// If used >= 3 move to molecules. (Currently 2)
 const FooterListItem = ({ content, color, pt }) => (
-  <Box>
+  <ItemWrapper>
     <NavLink {...content.navProps}>
       <P
         color={color}
@@ -20,7 +27,7 @@ const FooterListItem = ({ content, color, pt }) => (
         {content.name}
       </P>
     </NavLink>
-  </Box>
+  </ItemWrapper>
 )
 
 export default FooterListItem
