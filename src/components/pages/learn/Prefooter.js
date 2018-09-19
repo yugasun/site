@@ -23,21 +23,21 @@ const actions = [
     name: 'use cases',
     navProps: {
       to: '/learn/use-cases',
-      completed: false,
+      completed: true,
     },
   },
   {
     name: 'comparisons',
     navProps: {
       to: '/learn/comparisons',
-      completed: false,
+      completed: true,
     },
   },
   {
     name: 'case studies',
     navProps: {
       to: '/learn/case-study',
-      completed: false,
+      completed: true,
     },
   },
 ]

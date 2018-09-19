@@ -11,21 +11,21 @@ const actions = [
     name: 'getting started',
     navProps: {
       to: '/framework/docs/getting-started/',
-      completed: false,
+      completed: true,
     },
   },
   {
     name: 'learn more',
     navProps: {
-      to: '/learn/',
-      completed: false,
+      to: '/learn/overview',
+      completed: true,
     },
   },
   {
     name: 'examples',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
-      completed: false,
+      completed: true,
     },
   },
 ]
