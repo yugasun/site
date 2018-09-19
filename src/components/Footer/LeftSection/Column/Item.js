@@ -11,21 +11,25 @@ const ItemWrapper = styled(Box)`
   }
 `
 
+const ItemText = styled(P)`
+  display: inline-block;
+  padding-top: 5px;
+`
+
 // Renders Each item in the footer list
 const FooterListItem = ({ content, color, pt }) => (
   <ItemWrapper>
     <NavLink {...content.navProps}>
-      <P
+      <ItemText
         color={color}
         fontFamily={'Serverless'}
         fontSize={1}
         lineHeight={1}
         letterSpacing='text'
         my={'5px'}
-        pt={1}
       >
         {content.name}
-      </P>
+      </ItemText>
     </NavLink>
   </ItemWrapper>
 )
