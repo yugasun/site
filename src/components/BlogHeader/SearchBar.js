@@ -33,7 +33,7 @@ const Wrapper = styled(Overflow)`
 `
 
 const LinkText = styled(Text.span)`
-  opacity: 0.6;
+  opacity: ${({ selected }) => ( selected ? 1 : 0.6 )};
 
   &:hover {
     opacity: 1;
@@ -85,6 +85,9 @@ class SearchBar extends React.Component {
 
   render() {
     const borderColor = this.props.theme.colors.gray[2];
+    const { pathname } = typeof window === 'undefined' ? {} : window.location
+    const isAllPage = pathname === '/blog' || pathname === '/blog' || /^\/blog\/page\/\d+$/.test(pathname)
+
     return (
       <SearchBarWrapper display={['none', 'none', 'block']}>
         <Flex
@@ -142,6 +145,7 @@ class SearchBar extends React.Component {
                         fontFamily="Serverless"
                         lineHeight={1}
                         color="white"
+                        selected={isAllPage}
                       >
                         all
                       </LinkText>
@@ -159,6 +163,7 @@ class SearchBar extends React.Component {
                             fontFamily="Serverless"
                             lineHeight={1}
                             color="white"
+                            selected={pathname === getCategoryLink(tab)}
                           >
                             { CategoriesData[tab] }
                           </LinkText>
