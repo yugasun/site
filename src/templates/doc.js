@@ -24,7 +24,7 @@ export default ({ data: { doc }, location }) => (
       ]}
     />
 
-    <DocsWrapper>
+    <DocsWrapper __url={location.pathname}>
       <SEOHelmet
         {...doc.frontmatter}
         location={location}

@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
+import { navigateTo } from 'gatsby-link'
 import { Column } from 'serverless-design-system/src'
+
+import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 const Wrapper = styled(Column)`
@@ -655,6 +658,9 @@ export default class DocsWrapper extends React.Component {
         `\n<a class="line">${number++}</a>`
       ))
     })
+
+    this.linkCatcher = new LinkCatcher(domNode, navigateTo)
+
     const { origin, pathname } = window.location
     // disable anchor tags until they are removed
     this.attachHandlers()
@@ -683,6 +689,9 @@ export default class DocsWrapper extends React.Component {
   }
 
   attachHandlers = () => {
+    // attach link handlers
+    this.linkCatcher.add()
+
     const html = document.documentElement
     if (html && html.className.indexOf('safari') > -1) {
       // clipboard doesnt work in safari
@@ -695,6 +704,9 @@ export default class DocsWrapper extends React.Component {
   }
 
   dettachHandlers = () => {
+    // detach link handler
+    this.linkCatcher.remove()
+
     const html = document.documentElement
     if (html && html.className.indexOf('safari') > -1) {
       return false
