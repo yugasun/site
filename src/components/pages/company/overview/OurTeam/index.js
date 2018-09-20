@@ -22,14 +22,19 @@ import andre from 'src/assets/images/team/andre.png'
 import thom from 'src/assets/images/team/thom.png'
 import eric from 'src/assets/images/team/eric.png'
 import charmmie from 'src/assets/images/team/charmmie.png'
-import bumper from 'src/assets/images/team/bumper.png'
+import bumperPic from 'src/assets/images/team/bumper.png'
 
-const teamMembers = [
+const getLastName = (name) => name.split(' ').pop()
+
+const leaders = [
   { image: austin, name: 'Austen Collins', position: 'Founder & CEO' },
   { image: nick, name: 'Nick Gottlieb', position: 'VP of Growth' },
   { image: ganesh, name: 'Ganesh Radhakrishnan', position: 'VP of Engineering' },
   { image: bill, name: 'Bill Fine', position: 'VP of Product' },
   { image: casey, name: 'Casey Shultz', position: 'Head of Operations' },
+]
+
+const teamMembers = [
   { image: philip, name: 'Phillip Müns', position: 'Framework Core Developer' },
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
   { image: maciej, name: 'Maciej Winnicki', position: 'Platform Engineer' },
@@ -45,8 +50,11 @@ const teamMembers = [
   { image: thom, name: 'Thom Crowe', position: 'Community manager' },
   { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },
   { image: charmmie, name: 'Charmmie Hendon', position: 'Executive Assistant' },
-  { image: bumper, name: 'Bumper', position: 'Chief Snuggles Officer' },
-]
+].sort((object1, object2) => (
+  getLastName(object1.name).localeCompare(getLastName(object2.name))
+))
+
+const bumper = { image: bumperPic, name: 'Bumper', position: 'Chief Snuggles Officer' }
 
 const OurTeam= () => (
   <AppContainer>
@@ -60,7 +68,11 @@ const OurTeam= () => (
       </Flex>
       <Flex flexWrap='wrap' justifyContent='center'>
         {
-          teamMembers.map(({ image, name, position }) => (
+          [
+            ...leaders,
+            ...teamMembers,
+            bumper,
+          ].map(({ image, name, position }) => (
             <TeamMemberImageCard
               key={name}
               image={image}
