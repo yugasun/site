@@ -57,6 +57,7 @@ export default class ShareOptions extends React.Component {
         <Absolute
           display={['none', 'none', 'none', 'block']}
           right={20}
+          top={34}
         >
           <InlineBlock>
             <Icon

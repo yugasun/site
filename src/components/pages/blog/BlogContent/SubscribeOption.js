@@ -24,6 +24,7 @@ export default class SubscribeOption extends React.Component {
       >
         <Absolute
           right={0}
+          top={20}
           style={{
             transform: 'rotate(270deg) translate(0, -100%)',
             transformOrigin: '100% 0'
