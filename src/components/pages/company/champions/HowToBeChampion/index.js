@@ -12,6 +12,7 @@ import {
   InlineBlock,
   Image,
   HorizontalRule,
+  Overflow,
 } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
@@ -44,98 +45,100 @@ const memberReceivals = [
 
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
-  <AppContainer>
-    <Flex.column pt={[5, 5, 6, 8]}>
-      <Flex flexDirection={['column', 'column', 'row']}>
-        <Box width={[1, 1, 0.65]} px={[0, 0, 0, 2]}>
-          <Box mb={[2, 2, 3, 5]}>
-            <TitleWithIcon>
-              What does it take to become a Serverless Champion?
-            </TitleWithIcon>
-          </Box>
-          <Heading.h4 fontFamily="SoleilBk">
-            Our Serverless Champions are:
-          </Heading.h4>
-          {
-            serverlessChampions.map((champion, index) => (
-              <Row
-                mt={3}
-                key={index}
-                alignItems="center"
-              >
-                <InlineBlock mr={2}>
-                  <Image src={checkmarkIcon} height="20px" width="20px" />
-                </InlineBlock>
-                <P
-                  key={index}
-                  my={0}
-                  fontFamily='Soleilbk'
-                >
-                  {champion}
-                </P>
-              </Row>
-            ))
-          }
-        </Box>
-
-        <Box
-          width={[1, 1, 0.35]}
-          mt={[5, 5, 6, 8]}
-          mb={[2, 2, 3, 0]}
-        >
-          <RelativeCard
-            width={1}
-            boxShadow='2px 2px 8px 0 #eaeaea'
-            border='1px solid #eaeaea'
-            px={[2, 2, 2, 4]}
-            py={3}
-            bg="white"
-          >
-            <Absolute
-              height="fullHeight"
-              width="100vw"
-              top={["-30px", "-30px", "-40px", "-50px"]}
-              zIndex={-1}
-            >
-              <Background
-                background={`url(${benefitsBackground})`}
-                backgroundSize="contain"
-                height="fullHeight"
-                width={1}
-              />
-            </Absolute>
-            <Heading.h4
-              fontSize={3}
-              fontFamily='SoleilBk'
-            >
-              Our Benefits
+  <Overflow ox="hidden">
+    <AppContainer>
+      <Flex.column pt={[5, 5, 6, 8]}>
+        <Flex flexDirection={['column', 'column', 'row']}>
+          <Box width={[1, 1, 0.65]} px={[0, 0, 0, 2]}>
+            <Box mb={[2, 2, 3, 5]}>
+              <TitleWithIcon>
+                What does it take to become a Serverless Champion?
+              </TitleWithIcon>
+            </Box>
+            <Heading.h4 fontFamily="SoleilBk">
+              Our Serverless Champions are:
             </Heading.h4>
-            <HorizontalRule
-              height="1px"
-              color="#eaeaea"
-            />
-
             {
-              memberReceivals.map((benefit, index) => (
-                <Row mt={3} alignItems="center">
-                  <Box mr={2}>
-                    <Image src={lionIcon} height="40px" minWidth="40px" />
-                  </Box>
+              serverlessChampions.map((champion, index) => (
+                <Row
+                  mt={3}
+                  key={index}
+                  alignItems="center"
+                >
+                  <InlineBlock mr={2}>
+                    <Image src={checkmarkIcon} height="20px" width="20px" />
+                  </InlineBlock>
                   <P
                     key={index}
                     my={0}
                     fontFamily='Soleilbk'
                   >
-                    {benefit}
+                    {champion}
                   </P>
                 </Row>
               ))
             }
-          </RelativeCard>
-        </Box>
-      </Flex>
-    </Flex.column>
-  </AppContainer>
+          </Box>
+
+          <Box
+            width={[1, 1, 0.35]}
+            mt={[5, 5, 6, 8]}
+            mb={[2, 2, 3, 0]}
+          >
+            <RelativeCard
+              width={1}
+              boxShadow='2px 2px 8px 0 #eaeaea'
+              border='1px solid #eaeaea'
+              px={[2, 2, 2, 4]}
+              py={3}
+              bg="white"
+            >
+              <Absolute
+                height="fullHeight"
+                width="100vw"
+                top={["-30px", "-30px", "-40px", "-50px"]}
+                zIndex={-1}
+              >
+                <Background
+                  background={`url(${benefitsBackground})`}
+                  backgroundSize="contain"
+                  height="fullHeight"
+                  width={1}
+                />
+              </Absolute>
+              <Heading.h4
+                fontSize={3}
+                fontFamily='SoleilBk'
+              >
+                Our Benefits
+              </Heading.h4>
+              <HorizontalRule
+                height="1px"
+                color="#eaeaea"
+              />
+
+              {
+                memberReceivals.map((benefit, index) => (
+                  <Row mt={3} alignItems="center">
+                    <Box mr={2}>
+                      <Image src={lionIcon} height="40px" minWidth="40px" />
+                    </Box>
+                    <P
+                      key={index}
+                      my={0}
+                      fontFamily='Soleilbk'
+                    >
+                      {benefit}
+                    </P>
+                  </Row>
+                ))
+              }
+            </RelativeCard>
+          </Box>
+        </Flex>
+      </Flex.column>
+    </AppContainer>
+  </Overflow>
 )
 
 export default HowToBeChampion
