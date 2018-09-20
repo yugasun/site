@@ -10,41 +10,14 @@ import {
 
 import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
+import Vacancies from './data'
 import JobDetail from './JobDetail'
 import backgroundImage from 'src/assets/images/rectangle-19.png'
 
-const jobs = [
-  {
-    heading: 'Engineering',
-    title: 'Full Stack Engineer',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-  {
-    heading: 'Engineering',
-    title: 'Senior Software Engineer, Open Source Tools',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-  {
-    heading: 'Engineering',
-    title: 'Senior/Principal Engineer Distributed Systems',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-  {
-    heading: 'Growth',
-    title: 'Growth and Brand Designer',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-  {
-    heading: 'Growth',
-    title: 'Growth Engineer',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-  {
-    heading: 'Growth',
-    title: 'Lead Developer Evangelist',
-    location: (<JobDetail location="San Francisco" status="Full-time" />)
-  },
-]
+const jobs = Vacancies.map(({ location, status, ...data }) => ({
+  ...data,
+  location: (<JobDetail location={location} status={status} />)
+}))
 
 export default () => (
   <Background backgroundImage={`url(${backgroundImage})`}>
