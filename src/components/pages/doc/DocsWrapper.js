@@ -457,6 +457,7 @@ const Wrapper = styled(Column)`
     padding-bottom: 0px;
     padding-top: 0;
     font-size: 15px;
+    line-height: 1.63;
   }
   .subPages {
     padding: 10px;
@@ -479,10 +480,12 @@ const Wrapper = styled(Column)`
       font-size: 18px;
       font-weight: 500;
       letter-spacing: -.015rem;
+      line-height: 1.63;
     }
     p {
       font-size: 14px;
       margin-top: 0px;
+      line-height: 1.63;
     }
     .forumLink {
       color: #6060e0;
@@ -578,7 +581,7 @@ const Wrapper = styled(Column)`
       display: none;
     }
     .editLink {
-      top: 175px;
+      display: none;
     }
     .versionNumber {
       display: none;

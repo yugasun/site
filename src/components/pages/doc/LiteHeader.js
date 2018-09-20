@@ -1,4 +1,6 @@
 import React from 'react'
+import { Box } from 'serverless-design-system/src'
+
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import SearchBox from './SearchBox'
 
@@ -8,14 +10,14 @@ export default ({ url }) => {
     searchBox = (<SearchBox />)
   }
   const breadCrumbContent = (
-    <div className="versionNumber">
+    <Box className="versionNumber">
       Docs Version: {process.env.GATSBY_DOCS_VERSION}
-    </div>
+    </Box>
   )
   return (
-    <div className="breadCrumbContainer docs-breadcrumbs">
+    <Box className="breadCrumbContainer docs-breadcrumbs">
       <Breadcrumbs path={url} rightContent={breadCrumbContent} />
       {searchBox}
-    </div>
+    </Box>
   )
 }
