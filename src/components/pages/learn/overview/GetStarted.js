@@ -1,4 +1,5 @@
 import React from 'react'
+import { push } from 'gatsby-link'
 import {
   Box,
   Background,
@@ -9,6 +10,7 @@ import {
   TertiaryButton,
 } from 'serverless-design-system/src'
 
+import { developers } from 'src/constants/urls'
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'
 
 const GetStarted = () => (
@@ -47,7 +49,7 @@ const GetStarted = () => (
           >
             The Serverless Platform is a three-part toolkit that enables developers build, operate, and integrate their serverless applications on any cloud provider.
           </Text.p>
-          <TertiaryButton>
+          <TertiaryButton onClick={() => push(developers.documentation.gettingStarted)}>
             get started
           </TertiaryButton>
         </Column>
