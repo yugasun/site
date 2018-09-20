@@ -13,7 +13,7 @@ export default class Authors extends React.Component {
 
     return (
       <BlogLayout prefooter={NewToServerlessPrefooter}>
-        <Flex.center py={2}>
+        <Flex.center my={[3, 3, 4, 5]}>
           <Heading.h2
             fontSize={[4, 4, 6]}
             fontFamily="SoleilSb"

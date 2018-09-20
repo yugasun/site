@@ -31,11 +31,7 @@ export default ({
         location={location}
       />
       {
-        currentPage === 0 && (
-          <React.Fragment>
-            <HighlightedBlogs blogs={highlightedBlogs} />
-          </React.Fragment>
-        )
+        currentPage === 0 && (<HighlightedBlogs blogs={highlightedBlogs} />)
       }
       <BlogPreview blogs={edges.map(({ node }) => node)} />
       <Pagination total={totalPages} current={currentPage} />
