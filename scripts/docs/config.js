@@ -16,6 +16,7 @@ module.exports = {
   serverlessRepoPath: path.join(projectRoot, 'serverless'),
   serverlessDocsPath: path.join(projectRoot, 'serverless/docs/'),
   // path to where docs live in site content folder
+  mainSiteDocsPath: path.join(projectRoot, 'content/framework/'),
   siteDocsPath: path.join(projectRoot, 'content/framework/docs/'),
   docsMenuPath: path.join(projectRoot, 'src/constants/'),
   // downloadLink: `${repoURL}/archive/master/.zip`
