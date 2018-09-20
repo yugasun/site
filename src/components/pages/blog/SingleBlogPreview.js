@@ -17,8 +17,10 @@ import {
   getCategoryNameById,
 } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
+import ImagePlaceholder from './ImagePlaceholder'
 
 const HyperLinkBackground = getLinkComponent(Background)
+const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
 
 export default ({ id, frontmatter }) => {
   const { title, date, description, category: categoryIds, thumbnail } = frontmatter
@@ -100,16 +102,29 @@ export default ({ id, frontmatter }) => {
         width={0.4}
         mt={[2, 2, 2, 0]}
       >
-        <HyperLinkBackground
-          height="auto"
-          width={[55, 55, 55, 1]}
-          maxHeight={[55, 55, 55, 200]}
-          background={`black url(${thumbnail})`}
-          backgroundSize="cover"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
-          to={getBlogLink(id)}
-        />
+        {
+          thumbnail ? (
+            <HyperLinkBackground
+              height="auto"
+              width={[55, 55, 55, 1]}
+              maxHeight={[55, 55, 55, 200]}
+              background={`black url(${JSON.stringify(thumbnail)})`}
+              backgroundSize="cover"
+              backgroundPosition="center"
+              backgroundRepeat="no-repeat"
+              to={getBlogLink(id)}
+            />
+          ) : (
+            <HyperLinkImagePlaceholder
+              size="small"
+              wrapperProps={{
+                width: [55, 55, 55, 1],
+                height: [55, 55, 55, 200]
+              }}
+            />
+          )
+        }
+
       </Row>
     </Row>
   )
