@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading } from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
+import { NewToServerlessPrefooter } from 'src/fragments'
 import CategoryData from 'src/constants/categories.json'
 
 export default class Authors extends React.Component {
@@ -12,7 +12,7 @@ export default class Authors extends React.Component {
     const category = CategoryData[categoryId]
 
     return (
-      <BlogLayout prefooter={BlogListPrefooter}>
+      <BlogLayout prefooter={NewToServerlessPrefooter}>
         <Flex.center py={2}>
           <Heading.h2
             fontSize={[4, 4, 6]}

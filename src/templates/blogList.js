@@ -2,8 +2,7 @@ import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
-import { Helmet } from 'src/fragments'
+import { Helmet, NewToServerlessPrefooter } from 'src/fragments'
 import { Pagination } from 'src/components'
 import HighlightedBlogList from 'src/constants/featured-blogs.json'
 
@@ -25,7 +24,7 @@ export default ({
     })
 
   return (
-    <BlogLayout prefooter={BlogListPrefooter}>
+    <BlogLayout prefooter={NewToServerlessPrefooter}>
       <Helmet
         title="Serverless Blog"
         description="Articles, resources, and posts on serverless architectures, best practices, and how-to"

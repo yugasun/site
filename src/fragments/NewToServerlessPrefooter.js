@@ -1,9 +1,10 @@
 import React from 'react'
+import { Text } from 'serverless-design-system/src'
 import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
   'To get started, pop open your terminal & run:',
-  'npm install serverless -g',
+  (<Text.p fontFamily="Serverless">npm install serverless -g</Text.p>),
 ]
 
 const actions = [
@@ -11,14 +12,14 @@ const actions = [
     name: 'documentation',
     navProps: {
       to: '/framework/docs',
-      completed: true,
+      completed: false,
     },
   },
   {
     name: 'serverless examples',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
-      completed: true,
+      completed: false,
     },
   },
   {
@@ -31,7 +32,7 @@ const actions = [
   },
 ]
 
-const HomePrefooter = () => (
+const NewToServerlessPrefooter = () => (
   <Prefooter
     heading='New to serverless?'
     sentences={sentences}
@@ -39,4 +40,4 @@ const HomePrefooter = () => (
   />
 )
 
-export default HomePrefooter
+export default NewToServerlessPrefooter
