@@ -19,7 +19,7 @@ const featureItemsData = [
     header: 'Robust Ecosystem',
     img: robustEcosystem,
     content:
-      'The Serverless Framework community has built and published hudreds of plugins to extend the framework’s functionality and example projects to get you started quickly.',
+      'The Serverless Framework community has built and published hundreds of plugins to extend the framework’s functionality and example projects to get you started quickly.',
   },
   {
     header: 'Multi Lingual',
