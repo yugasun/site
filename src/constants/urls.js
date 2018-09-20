@@ -43,6 +43,8 @@ export default {
   privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',
   facebookHandle: 'https://www.facebook.com/serverless/',
   instagramHandle: 'https://www.instagram.com/serverlessinc/',
+  githubHandle: 'https://github.com/serverless/',
+  linkedinHandle: 'https://www.linkedin.com/company/serverless/',
   twitterHandle: 'https://twitter.com/goserverless/',
   enterprise: '/enterprise',
   signup: 'https://dashboard.serverless.com/',
