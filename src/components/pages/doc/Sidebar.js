@@ -1,8 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
+import { Box, Heading, Text, List, ListItem } from 'serverless-design-system/src'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
-import debounce from 'lodash.debounce'
 import generatedMenu from 'src/constants/generated-menu-items'
 import SearchBox from './SearchBox'
 
@@ -11,43 +10,6 @@ export default class Sidebar extends React.Component {
     super(props, context)
     this.sidebarNode = null
     this.sidebarNodeOffset = null
-  }
-
-  componentDidMount() {
-    if (window.outerWidth > 768) {
-      window.addEventListener('scroll', this.getDebouncedHandler)
-      window.addEventListener('resize', this.getDebouncedHandler)
-      this.sidebarNode = ReactDOM.findDOMNode(this.sidebarRef)
-      this.sidebarNodeOffset = this.sidebarNode.offsetTop
-      this.handleScroll()
-    }
-  }
-
-  componentWillUnmount() {
-    if (window.outerWidth > 768) {
-      window.removeEventListener('scroll', this.getDebouncedHandler)
-      window.removeEventListener('resize', this.getDebouncedHandler)
-    }
-  }
-
-  getDebouncedHandler = () => debounce(this.handleScroll, 10)
-
-  handleScroll = (_event) => {
-    const offsetHeight = window.pageYOffset || document.documentElement.scrollTop
-    // TODO: refactor hardcoded nav height number to variable
-    const stickyNavHeight = 74
-    const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
-    if (offsetHeight >= cachedOffset) {
-      if (this.sidebarNode.style.position !== 'fixed') {
-        this.sidebarNode.style.position = 'fixed'
-        this.sidebarNode.style.top = `${stickyNavHeight}px`
-        // this.sidebarNode.style.background = 'red'
-      }
-    } else {
-      this.sidebarNode.style.position = 'relative'
-      this.sidebarNode.style.top = '0px'
-      // this.sidebarNode.style.background = 'white'
-    }
   }
 
   renderList() {
@@ -87,11 +49,11 @@ export default class Sidebar extends React.Component {
         }
         alreadyLinked[item.path.replace(/\/$/, '')] = true
         return (
-          <li key={i} className={`subPageLink ${currentStyle}`}>
+          <ListItem key={i} className={`subPageLink ${currentStyle}`}>
             <Link to={item.path}>
               {item.title || item.menuText}
             </Link>
-          </li>
+          </ListItem>
         )
       })
     }
@@ -125,26 +87,27 @@ export default class Sidebar extends React.Component {
     }
 
     return (
-      <div className="sidebar">
-        <div className="sidebarInner" ref={(ref) => { this.sidebarRef = ref; }}>
-          {searchBox}
+      <Box className="sidebar">
+        <Box
+          className="sidebarInner"
+          ref={(ref) => { this.sidebarRef = ref; }}
+        >
+          <Box>{ searchBox }</Box>
+          <Box className="pageContext">{ parentDisplay }</Box>
+          <Box className="subPages">
+            <List>
+              { items }
+            </List>
+          </Box>
 
-          <div className="pageContext">
-            {parentDisplay}
-          </div>
-
-          <div className="subPages">
-            <ul>
-              {items}
-            </ul>
-          </div>
-
-          <div className="forumCta">
-            <h2>Have questions?</h2>
-            <p>Head over to the <a href="https://forum.serverless.com?utm_source=framework-docs" target="_blank">forums</a> to search for your questions and issues or post a new one.</p>
-          </div>
-        </div>
-      </div>
+          <Box className="forumCta">
+            <Heading.h2>Have questions?</Heading.h2>
+            <Text.p>
+              Head over to the <a href="https://forum.serverless.com?utm_source=framework-docs" target="_blank">forums</a> to search for your questions and issues or post a new one.
+            </Text.p>
+          </Box>
+        </Box>
+      </Box>
     )
   }
 }

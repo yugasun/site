@@ -31,6 +31,7 @@ export const query = graphql`
         gitLink
         category
         heroImage
+        scripts
       }
       content
     }

@@ -46,8 +46,7 @@ const FrameworkFeatures = () => (
   >
     <Features
       features={featureItemsData}
-      title="Get involed in the Serverless Community"
-      description="by a community of productivity-minded, user-centric developers all over the world."
+      title="Get involved in the Serverless Community"
       leadingNumber={false}
     />
   </Box>

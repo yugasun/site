@@ -17,7 +17,7 @@ API calls are made with the [serverless framework](https://github.com/serverless
 **1. Make sure that you have the Gatsby CLI program installed:**
 
 ```sh
-npm install --global gatsby-cli
+npm install --global gatsby-cli@1.1.58
 ```
 
 **2. Clone down the site**

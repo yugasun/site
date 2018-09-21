@@ -52,6 +52,7 @@ export default class Carousel extends React.Component {
         <Relative
           width={1}
           height={[450, 450, 450, 550]}
+          bg="#000000e6"
         >
           {
             this.props.children.map((child, index) => (

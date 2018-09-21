@@ -37,6 +37,7 @@ export default class EmailField extends React.Component {
         fontSize={2}
         fontFamily="Serverless"
         placeholderColor="white"
+        required
         {...this.props}
         onFocus={this.clearPlaceholder}
         onBlur={this.restorePlaceholder}

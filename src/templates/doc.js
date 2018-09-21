@@ -5,7 +5,7 @@ import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
-import gitHubSvg from 'src/assets/images/githubIcon.svg'
+import gitHubSvg from 'src/assets/images/github.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
 
 export default ({ data: { doc }, location }) => (
@@ -24,7 +24,7 @@ export default ({ data: { doc }, location }) => (
       ]}
     />
 
-    <DocsWrapper>
+    <DocsWrapper __url={location.pathname}>
       <SEOHelmet
         {...doc.frontmatter}
         location={location}

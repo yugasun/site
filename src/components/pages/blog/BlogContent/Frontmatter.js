@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import {
   Column,
   Text,
@@ -22,7 +23,7 @@ const WrittenByText = ({ children }) => (
 )
 
 export default ({ frontmatter }) => {
-  const { category: categoryIds, authors, title } = frontmatter
+  const { category: categoryIds, authors, title, scripts } = frontmatter
   const author = getAuthorById((authors || [])[0])
 
   return (
@@ -33,6 +34,11 @@ export default ({ frontmatter }) => {
       mb={[1, 1, 2]}
       alignItems="center"
     >
+      {
+        scripts && (
+          <Helmet script={scripts.map((src) => ({ type: "text/javascript", src }))} />
+        )
+      }
       <Categories categoryIds={categoryIds} />
       <Heading.h1
         fontSize={[4, 4, 4, 7]}

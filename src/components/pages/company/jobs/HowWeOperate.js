@@ -13,6 +13,7 @@ import {
   InlineBlock,
   HorizontalRule,
   ResponsiveStack,
+  Overflow,
 } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
@@ -33,7 +34,7 @@ const benefitList = [
 ]
 
 const HowWeOperate = () => (
-  <React.Fragment>
+  <Overflow ox="hidden">
     <Column
       pt={[3, 3, 3, 5, 8]}
       pb={[3, 3, 3, 5]}
@@ -128,7 +129,7 @@ const HowWeOperate = () => (
     >
       <Image src={team} width={1} mt={4} />
     </Box>
-  </React.Fragment>
+  </Overflow>
 )
 
 export default HowWeOperate
