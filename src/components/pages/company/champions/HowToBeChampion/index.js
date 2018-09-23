@@ -27,7 +27,7 @@ const RelativeCard = styled(Card)`
 const serverlessChampions = [
   'Heroes in the serverless community',
   'Big evangelists of Serverless projects',
-  'Though leaders in an enterprise cheering serverless',
+  'Thought leaders in an enterprise cheering serverless',
   'Major contributors to open-source serverless projects',
   'Proactive at answering community questions and resolving issues',
   'Speakers at serverless conferences and meetups',
