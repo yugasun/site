@@ -4,7 +4,7 @@ This site is 100% serverless! :tada:
 
 Built using react, redux and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
 
-The [site content](https://github.com/serverless/site/tree/master/content), [docs](https://github.com/serverless/serverless/tree/master/docs), and [blog](https://github.com/serverless/blog) are hosted on github, so if you see a typo or error feel free to contribute back!
+The [docs](https://github.com/serverless/serverless/tree/master/docs), and [blog](https://github.com/serverless/blog) are hosted on github, so if you see a typo or error feel free to contribute back!
 
 API calls are made with the [serverless framework](https://github.com/serverless/serverless/tree/master/docs) pinging AWS lambda functions. User Authentication is handled via [Auth0](https://auth0.com). Site search handled by [Algolia](https://community.algolia.com/docsearch/).
 
@@ -58,7 +58,9 @@ To make edits to framework docs, edit the files in `./serverless/docs` (this dir
 
 ### Editing other pages
 
-To make edits to other pages, browse through the `./pages` directory, then find the respective react component and edit it.
+To make edits to other pages, browse through the `./pages` directory, find the file with the name as the url of the page you want to edit. Then, open the file and edit the content.
+
+For example, if you want to edit the contents of `/framework`, then look at `framework.js` inside `./pages` directory and edit.
 
 # Publishing Site Updates
 
