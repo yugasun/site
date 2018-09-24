@@ -82,7 +82,7 @@ function getMarkdownData(file) {
   }
 
   let mdData = {
-    path: cleanPathName(file),
+    path: `${cleanPathName(file)}/`,
     title: title
   }
 
