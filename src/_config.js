@@ -2,6 +2,10 @@
  * Project config
  * NOTE: No private data/keys should be stored here.
  * KEY NAME MUST BE IN CAPITAL LETTERS
+ *
+ * When using a config variable in the source code, make sure you prefix `GATSBY_` to the config name.
+ * For Example, If the config name is: `SITENAME`, then you should use `GATSBY_SITENAME` across your
+ * source code
  */
 
 const gitBranch = require('git-branch')

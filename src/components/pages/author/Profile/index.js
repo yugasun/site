@@ -16,7 +16,7 @@ const Profile = ({ author }) => (
       >
         <Avatar avatar={author.avatar} />
         <Links
-          personalWebsite={author.personalWebsite}
+          personalWebsite={author.site}
           githubHandle={author.github}
           twitterHandle={author.twitter}
           mediumHandle={author.medium}

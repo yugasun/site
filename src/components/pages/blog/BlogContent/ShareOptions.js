@@ -62,7 +62,7 @@ export default class ShareOptions extends React.Component {
           <InlineBlock>
             <Icon
               icon={facebookIcon}
-              link={`http://www.facebook.com/sharer.php?u=${this.blogLink}`}
+              link={`https://www.facebook.com/sharer.php?u=${this.blogLink}`}
             />
             <Icon
               icon={twitterIcon}

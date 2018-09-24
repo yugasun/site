@@ -1,3 +1,7 @@
+/*
+* Generates `.env.development` and `.env.production` from `_config` file
+*/
+
 const path = require('path')
 const fs = require('fs-extra')
 const projectRoot = path.join(__dirname, '..')
