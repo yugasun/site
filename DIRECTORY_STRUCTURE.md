@@ -23,5 +23,5 @@
         │   ├── templates              # Contains templates for generating docs, blogs, categories and authors pages dynamically
         │   ├── utils                  # Defines utility functions
         │   ├── _config                # Contains site-wide config, API keys and tokens
-        │   └── _redirects     	       # Contains redirect rules for netlify
+        │   └── _redirects             # Contains redirect rules for netlify
         └── netlify.toml               # Contains netlify config
