@@ -9,15 +9,6 @@ module.exports = {
     'gatsby-plugin-root-import',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `img`,
-        path: `${__dirname}/src/assets/images/`
-      }
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/assets/images/favicon.png",
