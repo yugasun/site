@@ -42,6 +42,10 @@ Open your browser to http://localhost:8000
 
 Run `npm run syncProd` or `npm run syncLocal` to pull in the blog and docs repos (if the postinstall command doesn't run for you). These 2 commands pull in the external content sources the site uses.
 
+# Directory Structure
+
+Refer [directory structure doc](./DIRECTORY_STRUCTURE.md)
+
 # Editing Site Content
 
 Fork the site and submit a pull request!
