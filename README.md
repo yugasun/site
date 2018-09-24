@@ -58,9 +58,7 @@ To make edits to framework docs, edit the files in `./serverless/docs` (this dir
 
 ### Editing other pages
 
-To make edits to other pages, edit the markdown in `./content`
-
-Some pages have custom designs/layouts and the html might need to be altered. That content can be found in `./src/layouts` or `./src/pages`
+To make edits to other pages, browse through the `./pages` directory, then find the respective react component and edit it.
 
 # Publishing Site Updates
 
