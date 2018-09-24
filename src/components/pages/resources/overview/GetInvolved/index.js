@@ -34,7 +34,7 @@ const featureItemsData = [
     header: 'Blog',
     img: resourcesOverviewBlog,
     content:
-      `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+      `Stay up to date on the latest in the industry. The Serverless blog is the best place to find best practices, see project walk-throughs, and learn about what’s new.`,
     action: (<Action name="view the blog" link={resources.blog} />),
   },
 ]
