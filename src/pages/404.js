@@ -46,7 +46,7 @@ const prefooter = () => (
 )
 
 const NotFoundPage = () => (
-  <ThemeProvider>
+  <ThemeProvider theme={theme}>
     <DefaultLayout prefooter={prefooter}>
       <Helmet title="404 - Page not found" />
       <Background
