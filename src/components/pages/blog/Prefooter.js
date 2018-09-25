@@ -7,7 +7,7 @@ import {
   Heading,
   TertiaryButton,
   Card,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
 import blogFooterBackground from 'src/assets/images/blog-footer-background.png'
 

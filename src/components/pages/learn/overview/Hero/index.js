@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex } from 'serverless-design-system/src'
+import { Box, Flex } from 'serverless-design-system'
 import { HeroWrapper } from 'src/fragments'
 import Description from './Description'
 import Actions from './Actions'

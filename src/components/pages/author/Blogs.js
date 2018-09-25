@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Heading } from 'serverless-design-system/src'
+import { Flex, Heading } from 'serverless-design-system'
 import BlogPreview from "src/components/pages/blog/Preview"
 
 export default ({ authorName, blogs }) => (

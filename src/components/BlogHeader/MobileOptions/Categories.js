@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Box, Flex, Text } from 'serverless-design-system/src'
+import { Box, Flex, Text } from 'serverless-design-system'
 import BlogNavbarContext from '../BlogNavbarContext'
 import CategoriesData from 'src/constants/categories.json'
 import { getCategoryNameById } from 'src/utils/blog'

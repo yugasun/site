@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Heading } from 'serverless-design-system/src'
+import { Heading } from 'serverless-design-system'
 
 export default ({ children }) => (
   <Heading.h4

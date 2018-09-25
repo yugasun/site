@@ -3,7 +3,7 @@ import {
   Relative,
   withBeforeAfter,
   Testimonial,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/glitch-effect.png'

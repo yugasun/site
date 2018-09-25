@@ -5,7 +5,7 @@ import {
   Button,
   SecondaryButton,
   ResponsiveStack,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import NavLink from 'src/components/NavLink'
 
 const HeroActions = ({

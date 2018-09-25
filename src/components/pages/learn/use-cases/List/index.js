@@ -4,7 +4,7 @@ import {
   P,
   ResponsiveStack,
   Text,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { AutoScrollList } from 'src/fragments'
 import TechBox from './TechBox'

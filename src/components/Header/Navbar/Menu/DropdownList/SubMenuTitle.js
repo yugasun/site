@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, TextWithIcon } from 'serverless-design-system/src'
+import { Heading, TextWithIcon } from 'serverless-design-system'
 
 import dotGridBackground from 'src/assets/images/dot-grid.png'
 

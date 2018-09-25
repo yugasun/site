@@ -4,7 +4,7 @@
 // Make image load faster
 
 import React from 'react'
-import { Background, Box, Column, Row } from 'serverless-design-system/src'
+import { Background, Box, Column, Row } from 'serverless-design-system'
 
 import FooterIcon from './FooterIcon'
 import LeftSection from './LeftSection'

@@ -3,7 +3,7 @@ import {
   Relative,
   Background,
   ResponsiveStack,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import BlogCard from './BlogCard'
 import glitchDivider from 'src/assets/images/glitch-divider.png'

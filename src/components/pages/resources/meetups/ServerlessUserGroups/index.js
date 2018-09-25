@@ -1,5 +1,5 @@
 import React from 'react'
-import { Background, Box, Heading } from 'serverless-design-system/src'
+import { Background, Box, Heading } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container } from 'serverless-design-system/src'
+import { Box, Container } from 'serverless-design-system'
 
 export default ({ children }) => (
   <Container>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Position, Absolute, Button } from 'serverless-design-system/src'
+import { Position, Absolute, Button } from 'serverless-design-system'
 
 const ButtonWithNoOutline = styled(Button)`
   &:focus {

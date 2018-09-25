@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system/src'
+import { Box } from 'serverless-design-system'
 
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import SearchBox from './SearchBox'

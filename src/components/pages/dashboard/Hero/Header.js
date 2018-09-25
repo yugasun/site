@@ -5,7 +5,7 @@ import {
   HeroTitle,
   HeroMainTitle,
   HeroInlineDescription,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import dashboardIcon from 'src/assets/images/icon-platform-dash.png'
 
