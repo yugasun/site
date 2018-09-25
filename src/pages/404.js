@@ -1,7 +1,8 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import { Background } from 'serverless-design-system'
-import { ThemeProvider } from 'serverless-design-system'
+import { Background } from 'serverless-design-system/src'
+import theme from 'serverless-design-system/src/theme'
 
 import { Helmet } from 'src/fragments'
 import Prefooter from 'src/components/Prefooter'

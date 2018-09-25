@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, P } from 'serverless-design-system'
+import { Box, P } from 'serverless-design-system/src'
 import NavLink from 'src/components/NavLink'
 
 const ItemWrapper = styled(Box)`

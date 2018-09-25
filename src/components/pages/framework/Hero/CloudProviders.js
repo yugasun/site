@@ -6,7 +6,7 @@ import {
   P,
   ResponsiveStack,
   ImageList,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import google from 'src/assets/images/cloud-google.svg'
 import azure from 'src/assets/images/cloud-azure.svg'

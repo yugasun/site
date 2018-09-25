@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system/src'
 
 export default styled(Flex)`
   align-items: center;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Box } from 'serverless-design-system'
+import { Box } from 'serverless-design-system/src'
 
 export default () => (
   <Box>

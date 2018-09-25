@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading } from 'serverless-design-system'
+import { Heading } from 'serverless-design-system/src'
 import NavLink from 'src/components/NavLink'
 
 const SubMenuItem = ({ children, navProps }) => (

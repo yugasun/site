@@ -13,7 +13,7 @@ import {
   Text,
   Transition,
   withBeforeAfter,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'

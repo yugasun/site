@@ -6,7 +6,7 @@ import {
   Text,
   Heading,
   P
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { BlockLink } from 'src/components'
 import { getLinkComponent } from 'src/components/BlockLink'
 import {

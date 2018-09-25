@@ -1,5 +1,5 @@
 import React from 'react'
-import { Column, ResponsiveStack } from 'serverless-design-system'
+import { Column, ResponsiveStack } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 
 import Avatar from './Avatar'

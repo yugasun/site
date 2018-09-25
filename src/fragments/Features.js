@@ -6,7 +6,7 @@ import {
   Heading,
   Row,
   Text,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 

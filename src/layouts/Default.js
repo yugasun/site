@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Column } from 'serverless-design-system'
+import { Box, Column } from 'serverless-design-system/src'
 import { Header, Footer } from 'src/components'
 
 const DefaultLayout = ({ children, prefooter, transparentHeader, footerBackground }) => (

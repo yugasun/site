@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Checkbox } from 'serverless-design-system';
+import { Checkbox } from 'serverless-design-system/src';
 
 export default styled(Checkbox)`
   &:before {

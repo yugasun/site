@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from 'serverless-design-system'
+import { Heading } from 'serverless-design-system/src'
 
 const HeadingWithMaxWidth = styled(Heading.h2)`
   max-width: 800px;

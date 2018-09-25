@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Column,
   Text,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 const LeftSection = () => (
   <Column

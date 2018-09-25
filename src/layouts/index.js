@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { ThemeProvider } from 'styled-components'
 
-import { ThemeProvider } from 'serverless-design-system'
-import { Flex } from 'serverless-design-system'
+import theme from 'serverless-design-system/src/theme'
+import { Flex } from 'serverless-design-system/src'
 import Head from 'src/fragments/Head'
 import initializeAnalytics from 'src/utils/analytics/init'
 import Scripts from 'src/fragments/GlobalScripts'
@@ -21,7 +22,7 @@ class Layout extends React.Component {
     return (
       <Flex width={1}>
         <Head />
-        <ThemeProvider>
+        <ThemeProvider theme={theme}>
           { children() }
         </ThemeProvider>
         <Scripts

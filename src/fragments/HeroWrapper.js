@@ -1,6 +1,6 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { Background, Box } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 

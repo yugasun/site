@@ -1,6 +1,6 @@
 import React from 'react'
 import { push } from 'gatsby-link'
-import { Logo } from 'serverless-design-system'
+import { Logo } from 'serverless-design-system/src'
 import logo from 'src/assets/images/blog-logo.svg'
 
 const LogoComponent = () => (

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Background, Card, Column, Heading, P } from 'serverless-design-system'
+import { Background, Card, Column, Heading, P } from 'serverless-design-system/src'
 import Masonry from 'react-masonry-css'
 import styled from 'styled-components'
-import { theme } from 'serverless-design-system'
 
-const { breakpoints } = theme
+import { breakpoints } from 'serverless-design-system/src/theme'
 
 const breakpointCols = breakpoints.reduce((accumulator, bp, index) => {
   if (index < 2) {

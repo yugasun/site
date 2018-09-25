@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
+import { Box } from 'serverless-design-system/src'
 import HeaderWrapper from './Wrapper'
 import ServerlessLink from './ServerlessLink'
 import LogoAndOptions from './LogoAndOptions'

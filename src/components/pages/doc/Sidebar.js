@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Box, Heading, Text, List, ListItem } from 'serverless-design-system'
+import { Box, Heading, Text, List, ListItem } from 'serverless-design-system/src'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/constants/generated-menu-items'
 import SearchBox from './SearchBox'

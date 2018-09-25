@@ -4,7 +4,7 @@ import {
   Flex,
   Image,
   ResponsiveStack
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
 import investorTrinity from 'src/assets/images/trinity.png'

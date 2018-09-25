@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image } from 'serverless-design-system'
+import { Box, Image } from 'serverless-design-system/src'
 import glitchDivider from '../assets/images/glitch-divider.png'
 
 export default ({ visibleInSmallScreens }) => (

@@ -7,7 +7,7 @@ import {
   Fixed,
   TextField,
   Text
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { connectAutoComplete } from 'react-instantsearch-dom'
 import { BlockLink } from 'src/components'
 import { getBlogLink } from 'src/utils/blog'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Text } from 'serverless-design-system'
+import { Row, Text } from 'serverless-design-system/src'
 import { LinkWithoutStyle } from 'src/components'
 import {
   getCategoryLink,

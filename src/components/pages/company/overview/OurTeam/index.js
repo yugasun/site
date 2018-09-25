@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TeamMemberImageCard, TitleWithIcon } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'

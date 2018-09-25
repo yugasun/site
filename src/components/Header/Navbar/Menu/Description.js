@@ -2,10 +2,8 @@
 import React from 'react'
 
 import { withTheme } from 'styled-components';
-import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system'
+import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system/src'
 import NavbarContext from './../../NavbarContext'
-
-console.log(withBeforeAfter)
 
 // TODO: remove hardcoded color
 const MenuWrapper = withBeforeAfter(

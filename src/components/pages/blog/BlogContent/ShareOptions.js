@@ -6,7 +6,7 @@ import {
   Card,
   Image,
   Position,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { getBlogLink } from 'src/utils/blog'
 import facebookIcon from 'src/assets/images/facebook-black.svg'
 import twitterIcon from 'src/assets/images/twitter-black.svg'

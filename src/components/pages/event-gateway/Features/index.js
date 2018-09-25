@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
 import gatewayFeature1 from 'src/assets/images/icon-dash-light.svg'
 import gatewayFeature2 from 'src/assets/images/icon-component.svg'
