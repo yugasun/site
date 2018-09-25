@@ -25,6 +25,7 @@
     "remark-autolink-headings": "^5.0.0",
     "remark-highlight.js": "^5.0.0",
     "remark-slug": "^4.2.3",
+    "serverless-design-system": "0.0.2p1",
     "styled-components": "^3.3.3",
     "url": "^0.11.0",
     "url-loader": "^1.0.1"
@@ -65,7 +66,6 @@
     "react-masonry-css": "^1.0.11",
     "remark-html": "^8.0.0",
     "remark-parse": "^5.0.0",
-    "serverless-design-system": "0.0.1-p4",
     "unified": "^7.0.0",
     "yamljs": "^0.3.0"
   },
