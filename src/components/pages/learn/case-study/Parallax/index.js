@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Column } from 'serverless-design-system'
+import { Column } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { Divider } from 'src/fragments'
 import Introduction from './Introduction'

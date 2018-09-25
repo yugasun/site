@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'serverless-design-system'
+import { Image } from 'serverless-design-system/src'
 
 export default ({ heroImage }) => (
   heroImage && (

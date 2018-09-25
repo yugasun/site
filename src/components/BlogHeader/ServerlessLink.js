@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { Box, Text } from 'serverless-design-system'
+import { Box, Text } from 'serverless-design-system/src'
 
 import BlogNavbarContext from './BlogNavbarContext'
 

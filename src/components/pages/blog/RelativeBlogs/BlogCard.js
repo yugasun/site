@@ -7,7 +7,7 @@ import {
   Text,
   Heading,
   P
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { getLinkComponent } from 'src/components/BlockLink'
 import { getAuthorInfo, getBlogLink } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'

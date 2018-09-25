@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, P, UseCase } from 'serverless-design-system'
+import { Box, Flex, P, UseCase } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 

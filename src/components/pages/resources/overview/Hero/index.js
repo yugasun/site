@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Text, ResponsiveStack } from 'serverless-design-system'
+import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import background from 'src/assets/images/resources-overview-background.png'

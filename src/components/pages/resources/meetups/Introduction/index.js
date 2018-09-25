@@ -6,7 +6,7 @@ import {
   Column,
   Heading,
   Image,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 import resourcesMeetupMap from 'src/assets/images/resourcesMeetupMap.png'

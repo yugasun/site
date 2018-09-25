@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextArea } from 'serverless-design-system'
+import { TextArea } from 'serverless-design-system/src'
 
 export default (props) => (
   <TextArea

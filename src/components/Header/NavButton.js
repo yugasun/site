@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Image } from 'serverless-design-system'
+import { Box, Image } from 'serverless-design-system/src'
 import NavbarContext from './NavbarContext'
 
 import closeIcon from 'src/assets/images/icon-close.png'

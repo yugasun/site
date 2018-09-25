@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Row, Column } from 'serverless-design-system'
+import { Row, Column } from 'serverless-design-system/src'
 import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'

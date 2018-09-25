@@ -13,7 +13,7 @@ import {
   Image,
   HorizontalRule,
   Overflow,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'

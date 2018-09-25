@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, List, ListItem } from 'serverless-design-system'
+import { Box, Flex, List, ListItem } from 'serverless-design-system/src'
 
 import SubMenuTitle from './SubMenuTitle'
 import SubMenuItem from './SubMenuItem'

@@ -8,7 +8,7 @@ import {
   TertiaryButton,
   Relative,
   ResponsiveStack,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 import { company } from 'src/constants/urls'

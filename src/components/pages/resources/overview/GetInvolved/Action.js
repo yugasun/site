@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'serverless-design-system'
+import { Button } from 'serverless-design-system/src'
 import { NavLink } from 'src/components'
 
 const Action = ({ name, link, options = {} }) => (

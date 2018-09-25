@@ -5,7 +5,7 @@ import {
   Box,
   Relative,
   Row,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 const Pointer = styled(Box)`
   cursor: pointer;

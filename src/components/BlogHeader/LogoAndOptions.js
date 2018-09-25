@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Flex } from 'serverless-design-system'
+import { Box, Flex } from 'serverless-design-system/src'
 
 import { NewsLetterForm } from 'src/components'
 import Logo from './Logo'

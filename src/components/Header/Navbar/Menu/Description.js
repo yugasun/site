@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { withTheme } from 'styled-components';
-import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system'
+import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system/src'
 import NavbarContext from './../../NavbarContext'
 
 // TODO: remove hardcoded color

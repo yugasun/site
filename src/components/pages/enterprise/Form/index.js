@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Button, Flex, InlineBlock, P } from 'serverless-design-system'
+import { Box, Button, Flex, InlineBlock, P } from 'serverless-design-system/src'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'

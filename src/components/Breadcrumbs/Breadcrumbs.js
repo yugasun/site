@@ -1,6 +1,5 @@
 /* fork of https://github.com/TiuSh/react-simple-breadcrumb/ */
 import React from 'react'
-import { Box, List, ListItem, Text } from 'serverless-design-system'
 import BreadcrumbItem from './item'
 import BreadcrumbsWrapper from './BreadcrumbsWrapper'
 
@@ -26,48 +25,48 @@ const Breadcrumbs = ({
   let renderRight
   if (rightContent) {
     renderRight = (
-      <Box className="rightContent">
+      <div className="rightContent">
         {rightContent}
-      </Box>
+      </div>
     )
   }
   return (
     <BreadcrumbsWrapper>
-      <List className={`breadcrumbs ${className}`}>
+      <ul className={`breadcrumbs ${className}`}>
         {pathRoot ? (
-          <ListItem
+          <li
             key='root'
             className="item basePath"
           >
-            <Text.span className="itemInner">
+            <span className="itemInner">
               <BreadcrumbItem
                 label={pathRoot}
                 pathSegments={[]}
                 {...{ getUrlFromPathSegments, onClick }}
               />
-            </Text.span>
-          </ListItem>
+            </span>
+          </li>
           ) : null}
 
         {pathArray.map((segment, id) => {
           const pathSegments = pathArray.map(encodeURIComponent).slice(0, id + 1)
           const active = (pathArray.length === id + 1) ? "current" : ''
           return (
-            <ListItem
+            <li
               key={id}
               className={`item ${active}`}
             >
-              <Text.span className="itemInner">
+              <span className="itemInner">
                 <BreadcrumbItem
                   label={segment}
                   pathSegments={pathSegments}
                   {...{ getUrlFromPathSegments, onClick }}
                 />
-              </Text.span>
-            </ListItem>
+              </span>
+            </li>
           )
         })}
-      </List>
+      </ul>
       {renderRight}
   </BreadcrumbsWrapper>
   )

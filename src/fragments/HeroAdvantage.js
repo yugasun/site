@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Column, Flex, P, TextWithIcon, Text } from 'serverless-design-system'
+import { Column, Flex, P, TextWithIcon, Text } from 'serverless-design-system/src'
 import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
 
 const HeroAdvantage = ({ title, description }) => (

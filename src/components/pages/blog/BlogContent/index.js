@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
+import { Box } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { getAuthorById } from 'src/utils/blog'
 import AuthorCard from './AuthorCard'

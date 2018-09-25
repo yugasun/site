@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button } from 'serverless-design-system'
+import { Box, Button } from 'serverless-design-system/src'
 
 import MenuTitle from './Title'
 import MenuDescription from './Description'

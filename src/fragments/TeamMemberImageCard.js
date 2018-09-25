@@ -7,7 +7,7 @@ import {
   Image,
   P,
   Relative,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const TeamMemberImageCard = ({ name, position, image }) => (

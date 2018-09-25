@@ -11,7 +11,7 @@ import {
   Relative,
   ResponsiveStack,
   P,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButton'

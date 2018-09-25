@@ -1,5 +1,5 @@
 import React from 'react'
-import { Column, P, Image, ResponsiveStack } from 'serverless-design-system'
+import { Column, P, Image, ResponsiveStack } from 'serverless-design-system/src'
 import { TitleWithIcon } from 'src/fragments'
 import Parallax from 'src/assets/images/parallax.png'
 

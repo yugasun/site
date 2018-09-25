@@ -1,5 +1,5 @@
 import React from 'react';
-import { DropDown } from 'serverless-design-system';
+import { DropDown } from 'serverless-design-system/src';
 
 const optionProps = {
   background: 'rgba(39, 39, 39, .05)',

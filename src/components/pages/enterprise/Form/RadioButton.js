@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { RadioButton } from 'serverless-design-system'
+import { RadioButton } from 'serverless-design-system/src'
 import checkedRadio from 'src/assets/images/checked-radio.png'
 import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 

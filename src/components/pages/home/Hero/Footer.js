@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import { Flex, Image, InlineBlock, Heading } from 'serverless-design-system'
+import { Flex, Image, InlineBlock, Heading } from 'serverless-design-system/src'
 import videoIcon from 'src/assets/images/video.png'
 
 const StyledLink = styled(Link)`

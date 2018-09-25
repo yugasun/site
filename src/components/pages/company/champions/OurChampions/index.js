@@ -11,7 +11,7 @@ import {
   Text,
   Relative,
   ResponsiveStack
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
 import Champion1 from 'src/assets/images/champion1.png'

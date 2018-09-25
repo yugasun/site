@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { push } from 'gatsby-link'
-import { Row, Column, Text } from 'serverless-design-system'
+import { Row, Column, Text } from 'serverless-design-system/src'
 
 const pagesToShow = 7;
 const PaginationButton = styled(Column)`

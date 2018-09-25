@@ -4,7 +4,7 @@ import {
   Flex,
   Box,
   Button,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 import { learn } from 'src/constants/urls'
 
 const RightSection = () => (

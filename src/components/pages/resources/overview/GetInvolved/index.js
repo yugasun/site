@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
 import { resources } from 'src/constants/urls'
 import Action from './Action'

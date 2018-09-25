@@ -1,12 +1,12 @@
 import React from 'react'
-import {
-  Flex,
+import { 
+  Flex, 
   Image,
   HeroTitle,
   HeroMainTitle,
   HeroDescription,
-  HeroInlineDescription,
-} from 'serverless-design-system'
+  HeroInlineDescription, 
+} from 'serverless-design-system/src'
 
 import serverlessBolt from 'src/assets/images/group-6.png'
 import {

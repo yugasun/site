@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { navigateTo } from 'gatsby-link'
-import { Column } from 'serverless-design-system'
+import { Column } from 'serverless-design-system/src'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'

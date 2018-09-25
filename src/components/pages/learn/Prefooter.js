@@ -12,7 +12,7 @@ import {
   Relative,
   ResponsiveStack,
   P,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import { NavLink, WhiteButton } from 'src/components'
 import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'

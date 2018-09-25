@@ -9,7 +9,7 @@ import {
   Image,
   Card,
   Text,
-} from 'serverless-design-system'
+} from 'serverless-design-system/src'
 
 import verticalRedRectangleDots from 'src/assets/images/verticalRedRectangleDots.svg'
 
