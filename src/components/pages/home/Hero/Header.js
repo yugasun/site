@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Column, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system/src'
+import { Column, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system'
 
 const HeroHeader = () => (
   <Column mt={2}>

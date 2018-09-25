@@ -1,5 +1,5 @@
 import React from 'react'
-import { Fixed, Row, Image } from 'serverless-design-system/src'
+import { Fixed, Row, Image } from 'serverless-design-system'
 import OptionWrapper from './OptionWrapper'
 import AutoComplete from './AutoComplete'
 import algoliasearch from 'algoliasearch/lite'

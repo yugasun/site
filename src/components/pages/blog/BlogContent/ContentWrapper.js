@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import { Column } from 'serverless-design-system/src'
+import { Column } from 'serverless-design-system'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 const ContentWrapper = styled(Column)`

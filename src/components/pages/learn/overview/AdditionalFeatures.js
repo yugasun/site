@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system/src'
+import { Box } from 'serverless-design-system'
 import { Description } from 'src/fragments'
 import operateWithDashboard from 'src/assets/images/operate-with-dashboard.png'
 import integrateWithGateway from 'src/assets/images/integrate-with-gateway.png'

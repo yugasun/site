@@ -6,7 +6,7 @@ import {
   Heading,
   Row,
   Image,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { BlockLink } from 'src/components'
 import { getAuthorById, getAuthorLink } from 'src/utils/blog'
 import Categories from '../Categories'

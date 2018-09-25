@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ActivableRenderer from '../ActivableRenderer/ActivableRenderer'
 import InjectOverlay from '../Overlay/Overlay'
 
-import { Box, Flex } from 'serverless-design-system/src'
+import { Box, Flex } from 'serverless-design-system'
 
 const getDimensions = ({ type }) => {
   switch (type) {

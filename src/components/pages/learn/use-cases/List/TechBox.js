@@ -6,7 +6,7 @@ import {
   Box,
   Image,
   HorizontalRule,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 export default ({ upperImage, lowerImage }) => (
   <Card

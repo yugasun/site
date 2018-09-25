@@ -9,7 +9,7 @@ import {
   Image,
   Row,
   Column,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { getLinkComponent } from 'src/components/BlockLink'
 import { AppContainer, BlockLink } from 'src/components'
 import { withTheme } from 'styled-components'

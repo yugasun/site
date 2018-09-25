@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Column } from 'serverless-design-system/src'
+import { Flex, Column } from 'serverless-design-system'
 
 import CompanyDetails from './CompanyDetails'
 import PlatformColumn from './PlatformColumn'
