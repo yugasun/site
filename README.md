@@ -2,7 +2,7 @@
 
 This site is 100% serverless! :tada:
 
-Built using react, redux and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
+Built using react and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
 
 The [docs](https://github.com/serverless/serverless/tree/master/docs), and [blog](https://github.com/serverless/blog) are hosted on github, so if you see a typo or error feel free to contribute back!
 
@@ -50,7 +50,7 @@ Refer [directory structure doc](./DIRECTORY_STRUCTURE.md)
 
 Fork the site and submit a pull request!
 
-When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
+When you start the site with `npm run dev` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
 
 ### **Blog edits:**
 
