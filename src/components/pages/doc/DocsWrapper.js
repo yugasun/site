@@ -683,7 +683,9 @@ export default class DocsWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    this.clipboardInstance.destroy()
+    if (this.clipboardInstance) {
+      this.clipboardInstance.destroy()
+    }
     // disable anchor tags until they are removed
     this.dettachHandlers()
   }
