@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, TextField } from 'serverless-design-system/src'
+import { Box, TextField } from 'serverless-design-system'
 
 export default class SearchBox extends React.Component {
   componentDidMount() {

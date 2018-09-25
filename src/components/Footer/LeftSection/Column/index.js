@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, P } from 'serverless-design-system/src'
+import { Box, P } from 'serverless-design-system'
 import FooterListItem from './Item'
 
 // Renders each column in the footer list

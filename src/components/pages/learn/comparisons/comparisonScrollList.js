@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, P, HyperLink } from 'serverless-design-system/src'
+import { Box, P, HyperLink } from 'serverless-design-system'
 
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'

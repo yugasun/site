@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { InlineFlex, Column, Text } from 'serverless-design-system/src'
+import { InlineFlex, Column, Text } from 'serverless-design-system'
 
 const TabWrapper = styled(Column)`
   background: ${({ background }) => (background)};

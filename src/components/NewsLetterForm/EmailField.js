@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TextField } from 'serverless-design-system/src'
+import { TextField } from 'serverless-design-system'
 
 const TextFieldWithNoOutline = styled(TextField)`
   &:focus {

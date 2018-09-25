@@ -5,6 +5,6 @@ exports.sourceNodes = async ({ boundActionCreators: { createNode } }) => (
   nodeGenerator(createNode)
 )
 
-exports.createPages = ({ graphql, boundActionCreators: { createPage } }) => (
-  pageGenerator(graphql, createPage)
+exports.createPages = ({ graphql, boundActionCreators: { createPage, createRedirect } }) => (
+  pageGenerator(graphql, createPage, createRedirect)
 )

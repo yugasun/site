@@ -8,7 +8,7 @@ import {
   Text,
   Heading,
   TertiaryButton,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { developers } from 'src/constants/urls'
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'

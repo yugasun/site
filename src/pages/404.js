@@ -1,8 +1,7 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 
-import { Background } from 'serverless-design-system/src'
-import theme from 'serverless-design-system/src/theme'
+import { Background } from 'serverless-design-system'
+import { ThemeProvider } from 'serverless-design-system'
 
 import { Helmet } from 'src/fragments'
 import Prefooter from 'src/components/Prefooter'
@@ -46,7 +45,7 @@ const prefooter = () => (
 )
 
 const NotFoundPage = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <DefaultLayout prefooter={prefooter}>
       <Helmet title="404 - Page not found" />
       <Background

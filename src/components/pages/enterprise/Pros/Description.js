@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text } from 'serverless-design-system/src'
+import { Text } from 'serverless-design-system'
 
 export default ({ children }) => (
   <Text.p

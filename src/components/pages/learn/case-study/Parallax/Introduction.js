@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Box, Image, P, Text } from 'serverless-design-system/src'
+import { Flex, Box, Image, P, Text } from 'serverless-design-system'
 import parallaxLogo from 'src/assets/images/parallax-logo.svg'
 
 const Introduction = () => (

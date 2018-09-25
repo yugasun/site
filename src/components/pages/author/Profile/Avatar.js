@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image } from 'serverless-design-system/src'
+import { Box, Image } from 'serverless-design-system'
 
 const Avatar = ({ avatar }) => (
   <Box pb={1}>

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { navigateTo } from 'gatsby-link'
-import { Column } from 'serverless-design-system/src'
+import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
@@ -683,7 +683,9 @@ export default class DocsWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    this.clipboardInstance.destroy()
+    if (this.clipboardInstance) {
+      this.clipboardInstance.destroy()
+    }
     // disable anchor tags until they are removed
     this.dettachHandlers()
   }

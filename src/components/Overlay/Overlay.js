@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Portal from '../Portal/Portal'
 
-import { Absolute, Flex } from 'serverless-design-system/src'
+import { Absolute, Flex } from 'serverless-design-system'
 
 const OverlayWrapper = styled(Flex)`
   position: fixed;

@@ -2,7 +2,7 @@
 
 This site is 100% serverless! :tada:
 
-Built using react, redux and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
+Built using react and [gatsby](https://github.com/gatsbyjs/gatsby) this site is statically built and hosted on the [netlify](https://www.netlify.com/) CDN for 🔥blazingly fast performance and scale.
 
 The [docs](https://github.com/serverless/serverless/tree/master/docs), and [blog](https://github.com/serverless/blog) are hosted on github, so if you see a typo or error feel free to contribute back!
 
@@ -50,7 +50,7 @@ Refer [directory structure doc](./DIRECTORY_STRUCTURE.md)
 
 Fork the site and submit a pull request!
 
-When you start the site with `npm start` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
+When you start the site with `npm run dev` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
 
 ### **Blog edits:**
 
@@ -65,6 +65,22 @@ To make edits to framework docs, edit the files in `./serverless/docs` (this dir
 To make edits to other pages, browse through the `./pages` directory, find the file with the name as the url of the page you want to edit. Then, open the file and edit the content.
 
 For example, if you want to edit the contents of `/framework`, then look at `framework.js` inside `./pages` directory and edit.
+
+### Writing React Components
+
+Write react components with the components from `serverless-design-system`. Do not use basic html tags like `div`, `span`, `h1` and etc. Use serverless-design-system components instead. To know more about the `design-system` components, refer the docs at design-system-serverless.netlify.com.
+
+If you dont see a component in `design-system` to acheive the design needed, then you can write a new component with styled-components. For example: If you want to set a CSS property `user-select` to `none` for a Box component from `design-system`, then you can write a new component like this.
+
+```
+import styled from 'styled-components'
+export default styled(Box)`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+`
+```
 
 # Publishing Site Updates
 
