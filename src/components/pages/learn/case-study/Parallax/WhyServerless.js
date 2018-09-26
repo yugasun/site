@@ -10,7 +10,7 @@ import {
   Heading,
   Relative,
   ResponsiveStack,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { TitleWithIcon } from 'src/fragments'
 import JamesHall from 'src/assets/images/JamesHall.png'
 import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'serverless-design-system/src'
+import { Box } from 'serverless-design-system'
 import { Features } from 'src/fragments'
 import minimumConfiguration from 'src/assets/images/icon-logs.svg'
 import robustEcosystem from 'src/assets/images/icon-ecosystem.svg'

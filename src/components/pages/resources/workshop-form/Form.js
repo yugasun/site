@@ -11,7 +11,7 @@ import {
   ResponsiveStack,
   TextWithIcon,
   P,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import formHandler from 'src/utils/formHandler'

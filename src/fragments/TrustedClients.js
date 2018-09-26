@@ -6,7 +6,7 @@ import {
   Container,
   Heading,
   ImageList,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import eaLogo from 'src/assets/images/ea-logo.png'
 import cocacolaLogo from 'src/assets/images/cocacola-logo.png'

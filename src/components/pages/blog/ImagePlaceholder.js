@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Background } from 'serverless-design-system/src'
+import { Flex, Background } from 'serverless-design-system'
 import ServerlessLogo from 'src/assets/images/logo-light-gray.svg'
 
 const sizes = {

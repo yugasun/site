@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'serverless-design-system/src'
+import { Text } from 'serverless-design-system'
 import Prefooter from 'src/components/Prefooter'
 
 const sentences = [

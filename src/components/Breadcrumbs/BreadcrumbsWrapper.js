@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Row } from 'serverless-design-system/src'
+import { Row } from 'serverless-design-system'
 
 export default styled(Row)`
   margin: 0;

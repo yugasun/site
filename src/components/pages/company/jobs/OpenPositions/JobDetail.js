@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveStack, Column } from 'serverless-design-system/src'
+import { ResponsiveStack, Column } from 'serverless-design-system'
 
 export default ({ location, status }) => (
   <ResponsiveStack justifyContent="space-between">

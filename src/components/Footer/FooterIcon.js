@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Image } from 'serverless-design-system/src'
+import { Box, Image } from 'serverless-design-system'
 import logo from '../../assets/images/logo.svg'
 
 // Renders the Footer Icon

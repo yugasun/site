@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, ListItem } from 'serverless-design-system/src'
+import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
 import { resources } from 'src/constants/urls'

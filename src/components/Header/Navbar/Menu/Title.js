@@ -1,7 +1,7 @@
 // TODO: REFACTOR THIS COMPONENT.
 
 import React from 'react'
-import { Transition, Text, withBeforeAfter } from 'serverless-design-system/src'
+import { Transition, Text, withBeforeAfter } from 'serverless-design-system'
 import NavbarContext from '../../NavbarContext'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(

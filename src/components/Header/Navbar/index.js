@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Box, List, ListItem } from 'serverless-design-system/src'
+import { Box, List, ListItem } from 'serverless-design-system'
 import NavbarContext from './../NavbarContext'
 import MenuList from './Menu/List'
 

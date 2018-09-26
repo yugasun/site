@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Box, P, ResponsiveStack } from 'serverless-design-system/src'
+import { Flex, Box, P, ResponsiveStack } from 'serverless-design-system'
 import NavLink from 'src/components/NavLink'
 import { termsOfService, privacyPolicy } from 'src/constants/urls'
 

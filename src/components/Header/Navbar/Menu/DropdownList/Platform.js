@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   Relative,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import NavLink from 'src/components/NavLink'
 import { platform } from 'src/constants/urls'

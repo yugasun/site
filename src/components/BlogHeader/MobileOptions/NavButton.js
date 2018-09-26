@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'serverless-design-system/src'
+import { Image } from 'serverless-design-system'
 
 import OptionWrapper from './OptionWrapper'
 import BlogNavbarContext from '../BlogNavbarContext'

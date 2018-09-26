@@ -10,7 +10,7 @@ import {
   Image,
   InlineBlock,
   Text,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { BlockLink } from 'src/components'
 import BlogNavbarContext from './BlogNavbarContext'
