@@ -8,7 +8,7 @@ const sentences = [
 
 const actions = [
   {
-    name: 'host your own meetup',
+    name: 'host your own event',
     navProps: {
       to: company.contact,
       crossDomain: true,
@@ -19,7 +19,7 @@ const actions = [
 
 const MeetupsPrefooter = () => (
   <Prefooter
-    heading='Host meetup in your city.'
+    heading='Host event in your city.'
     sentences={sentences}
     actions={actions}
   />
