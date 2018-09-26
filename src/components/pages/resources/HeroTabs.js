@@ -20,9 +20,9 @@ const data = [
     navProps: { to: resources.forum, crossDomain: true },
   },
   {
-    label: 'meetups',
-    value: 'meetups',
-    navProps: { to: resources.meetups },
+    label: 'events',
+    value: 'events',
+    navProps: { to: resources.events },
   },
   {
     label: 'slack',

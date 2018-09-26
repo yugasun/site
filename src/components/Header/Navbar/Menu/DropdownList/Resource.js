@@ -42,12 +42,12 @@ const Resource = () => (
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: resources.meetups,
+          to: resources.events,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        meetups
+        events
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>

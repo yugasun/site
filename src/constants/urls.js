@@ -29,7 +29,7 @@ export default {
     overview: '/resources/overview',
     blog: '/blog',
     forum: 'https://forum.serverless.com/',
-    meetups: '/resources/meetups/',
+    events: '/resources/events/',
     slack: '/slack',
     workshops: '/resources/workshops',
   },

@@ -12,7 +12,7 @@ const MeetupsHero = () => (
     backgroundPosition="center"
   >
     <Box mb={[2, 2, 7]}>
-      <HeroTabs selected="meetups" />
+      <HeroTabs selected="events" />
     </Box>
 
     <ResponsiveStack
@@ -27,7 +27,7 @@ const MeetupsHero = () => (
           letterSpacing={'-0.2'}
           m={0}
         >
-          Meetups
+          Events
         </Text.p>
       </Box>
       <Box
@@ -43,7 +43,7 @@ const MeetupsHero = () => (
           mt={[3, 3, 1]}
           mb={3}
         >
-          Serverless meetups are hosted locally in cities all over the world. Meetups are a great chance to meet other serverless pros and learn more about the technology.
+          Serverless events are hosted locally in cities all over the world. Events are a great chance to meet other serverless pros and learn more about the technology.
         </Text.p>
       </Box>
     </ResponsiveStack>
