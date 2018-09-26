@@ -33,7 +33,7 @@ const Introduction = () => (
         lineHeight={4}
         align="center"
       >
-        Don't see a event in your city ? Contact us and start your own.
+        Don't see an event in your city ? Contact us and start your own.
       </Heading.h6>
     </AppContainer>
     <Box mt={4} width={1}>

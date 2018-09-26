@@ -19,7 +19,7 @@ const actions = [
 
 const MeetupsPrefooter = () => (
   <Prefooter
-    heading='Host event in your city.'
+    heading='Host an event in your city.'
     sentences={sentences}
     actions={actions}
   />
