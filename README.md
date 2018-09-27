@@ -66,7 +66,7 @@ To make edits to other pages, browse through the `./pages` directory, find the f
 
 For example, if you want to edit the contents of `/framework`, then look at `framework.js` inside `./pages` directory and edit.
 
-### Writing React Components
+### Developer Notes
 
 Write react components with the components from `serverless-design-system`. Do not use basic html tags like `div`, `span`, `h1` and etc. Use serverless-design-system components instead. To know more about the `design-system` components, refer the docs at design-system-serverless.netlify.com.
 
