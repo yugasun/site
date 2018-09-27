@@ -10,11 +10,11 @@ import {
   ResourceDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { enterprise, signup } from 'src/constants/urls'
+import { enterprise } from 'src/constants/urls'
 
 const PlatformMenu = () => (
   <Box>
-    <MenuTitle name={'platform'} />
+    <MenuTitle name={'product'} />
     <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'] }}>
       <PlatformDropdownList />
     </MenuDescription>

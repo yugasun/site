@@ -20,8 +20,8 @@ const ResourceColumn = () => (
         navProps: { to: resources.forum, crossDomain: true },
       },
       {
-        name: 'meetups',
-        navProps: { to: resources.meetups, completed: true },
+        name: 'events',
+        navProps: { to: resources.events, completed: true },
       },
       {
         name: 'slack',

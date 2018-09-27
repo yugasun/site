@@ -30,7 +30,7 @@ const serverlessChampions = [
   'Thought leaders in an enterprise cheering serverless',
   'Major contributors to open-source serverless projects',
   'Proactive at answering community questions and resolving issues',
-  'Speakers at serverless conferences and meetups',
+  'Speakers at serverless conferences and events',
   'Builders of serverless projects, and teachers for those who are learning',
 ]
 

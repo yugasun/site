@@ -17,11 +17,11 @@ const featureItemsData = [
     action: (<Action link={resources.forum} options={{ crossDomain: true }} />),
   },
   {
-    header: 'Meetups',
+    header: 'Events',
     img: resourcesOverviewMeetup,
     content:
-      'Serverless Meetups are held locally in cities worldwide. Get together. Share what you know. Learn from the implementations of others.',
-    action: (<Action link={resources.meetups} />),
+      'Serverless Events are held locally in cities worldwide. Get together. Share what you know. Learn from the implementations of others.',
+    action: (<Action link={resources.events} />),
   },
   {
     header: 'Workshops',
