@@ -4,7 +4,14 @@ import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
   'To get started, pop open your terminal & run:',
-  (<Text.p fontFamily="Serverless">npm install serverless -g</Text.p>),
+  (
+    <Text.p
+      color="white"
+      fontFamily="Serverless"
+    >
+      npm install serverless -g
+    </Text.p>
+  ),
 ]
 
 const actions = [

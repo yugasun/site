@@ -49,9 +49,15 @@ const LeftColumn = ({ heading, sentences }) => (
       </TextWithIcon>
       {
         sentences.map((sentence, index) => (
-          <P color='white' mt={0} key={index}>
-            {sentence}
-          </P>
+          ( typeof sentence === 'string' ) ? (
+            <P color='white' mt={0} key={index}>
+              {sentence}
+            </P>
+          ) : (
+            <React.Fragment key={index}>
+              {sentence}
+            </React.Fragment>
+          )
         ))
       }
     </Overflow>
