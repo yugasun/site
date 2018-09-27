@@ -1,6 +1,6 @@
 import React from 'react'
 import { push } from 'gatsby-link'
-import { Box, Card, DropDown } from 'serverless-design-system/src'
+import { Box, Card, DropDown } from 'serverless-design-system'
 
 import { Tabs } from 'src/components'
 import selectedTabBackground from 'src/assets/images/active-marker.png'

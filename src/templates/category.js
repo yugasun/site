@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Heading } from 'serverless-design-system/src'
+import { Flex, Heading } from 'serverless-design-system'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import { NewToServerlessPrefooter } from 'src/fragments'

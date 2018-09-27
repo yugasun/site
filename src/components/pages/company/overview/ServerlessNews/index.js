@@ -6,7 +6,7 @@ import {
   P,
   Heading,
   Box
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'

@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { Box } from 'serverless-design-system'
 import GoogleAnalytics from './GoogleAnalytics'
 import CustomerIO from './CustomerIO'
 
@@ -16,10 +17,10 @@ export default function GlobalScripts(props) {
     )
   }
   return (
-    <div>
+    <Box>
       <GoogleAnalytics {...props} />
       {HubSpotScript}
-      <div dangerouslySetInnerHTML={{ __html: CustomerIO }} />
-    </div>
+      <Box dangerouslySetInnerHTML={{ __html: CustomerIO }} />
+    </Box>
   )
 }

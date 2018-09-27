@@ -4,7 +4,7 @@ import {
   Heading,
   ImageCard,
   ResponsiveStack,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import { HeadingWithMaxWidth } from 'src/fragments'

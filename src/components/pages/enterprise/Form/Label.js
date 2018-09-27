@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Label } from 'serverless-design-system/src'
+import { Label } from 'serverless-design-system'
 
 export default ({ children }) => (
   <Label
