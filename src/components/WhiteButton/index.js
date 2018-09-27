@@ -1,6 +1,6 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { SecondaryButton } from 'serverless-design-system/src'
+import { SecondaryButton } from 'serverless-design-system'
 
 const comp = ({ children, theme }) => (
   <SecondaryButton

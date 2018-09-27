@@ -9,7 +9,7 @@ import {
   Background,
   Heading,
   P,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { getAuthorLink } from 'src/utils/blog'
 import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
 

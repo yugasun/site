@@ -6,7 +6,7 @@ import {
   Image,
   Relative,
   withBeforeAfter,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { getLinkComponent } from 'src/components/BlockLink'
 import frameworkIcon from 'src/assets/images/bolt.png'
 import dashboardIcon from 'src/assets/images/icon-dashboard.png'

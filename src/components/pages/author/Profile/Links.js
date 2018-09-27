@@ -6,7 +6,7 @@ import {
   Column,
   Image,
   Text
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import {
   getLinkName,
   getGithubLink,

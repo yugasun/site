@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Box, Image } from 'serverless-design-system/src'
+import { Flex, Box, Image } from 'serverless-design-system'
 
 import frameworkIllustrator from 'src/assets/images/frameworkIllustration.png'
 

@@ -5,7 +5,7 @@ import {
   Column,
   InlineBlock,
   P,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 
 import NavLink from '../NavLink'
 import NewsLetterForm from '../NewsLetterForm'

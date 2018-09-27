@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Column,
   ResponsiveStack,
-} from 'serverless-design-system/src'
+} from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import { MeetupCard, TitleWithIcon } from 'src/fragments'
 import meetupMember11 from 'src/assets/images/meetupMember11.png'
