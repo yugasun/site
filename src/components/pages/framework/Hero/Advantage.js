@@ -6,7 +6,7 @@ const advantages = [
   {
     title: 'Infrastructure as Code',
     description:
-      'With the Serverless Framework you can define your entire Serverless application, utlizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.',
+      'With the Serverless Framework you can define your entire Serverless application, utilizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.',
   },
   {
     title: 'Simple Serverless Development',
