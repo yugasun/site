@@ -24,6 +24,123 @@ const Examples = ({ location }) => {
                 "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
               }
             }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
+          },
+          {
+            "node": {
+              "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
+              "frontmatter": {
+                "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
+                "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+              }
+            }
           }
    ]
 
