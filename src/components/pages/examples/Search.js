@@ -1,8 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import { Box, Text, Card, DropDown, TextField, Button, Flex, OptionWrapper, Image, ResponsiveStack } from 'serverless-design-system'
 
-import searchIcon from 'src/assets/images/white-search-icon.svg'
+import searchIcon from 'src/assets/images/search-icon.svg'
+
+const SearchFieldWithIcon = styled(TextField)`
+    background: url(${searchIcon}) no-repeat;
+    background-position: right 15px center;
+    padding-left: 30px;
+    background-color: white;
+    background-size: 17.5px;
+`
 
 export default class Search extends React.Component {
   state = { isSearchBarActive: false }
@@ -61,7 +70,7 @@ export default class Search extends React.Component {
         ]}
         />
       </Box>
-      <TextField
+      <SearchFieldWithIcon
         placeholder='Search for an example'
         height={50}
         width='100%'
