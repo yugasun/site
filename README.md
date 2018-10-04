@@ -70,7 +70,7 @@ For example, if you want to edit the contents of `/framework`, then look at `fra
 
 Write react components with the components from `serverless-design-system`. Do not use basic html tags like `div`, `span`, `h1` and etc. Use serverless-design-system components instead. To know more about the `design-system` components, refer the docs at design-system-serverless.netlify.com.
 
-If you dont see a component in `design-system` to acheive the design needed, then you can write a new component with styled-components. For example: If you want to set a CSS property `user-select` to `none` for a Box component from `design-system`, then you can write a new component like this.
+If you dont see a component in `design-system` to achieve the design needed, then you can write a new component with styled-components. For example: If you want to set a CSS property `user-select` to `none` for a Box component from `design-system`, then you can write a new component like this.
 
 ```
 import styled from 'styled-components'
