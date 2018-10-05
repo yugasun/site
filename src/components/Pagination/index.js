@@ -112,7 +112,6 @@ export default class Pagination extends React.Component {
         {
           (Math.abs(current - total) > 2) && (
             <PaginationButton onClick={() => push(`/blog/page/${current+1}`)}>
-              &rarr;
             </PaginationButton>
           )
         }
