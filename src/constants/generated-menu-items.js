@@ -94,10 +94,6 @@ module.exports = {
       {
         "path": "/framework/docs/providers/spotinst/",
         "title": "Spotinst"
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/",
-        "title": "Webtasks"
       }
     ]
   },
@@ -2013,113 +2009,6 @@ module.exports = {
         "path": "/framework/docs/providers/spotinst/guide/IAM-roles/",
         "title": "IAM Role",
         "order": 11
-      }
-    ]
-  },
-  "/framework/docs/providers/webtasks": {
-    "index": [
-      {
-        "path": "/framework/docs/providers/webtasks/index/",
-        "title": "Webtasks"
-      }
-    ],
-    "children": [
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/",
-        "title": "CLI Reference"
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/events/",
-        "title": "Auth0 Webtasks Events"
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/guide/",
-        "title": "Guide"
-      }
-    ]
-  },
-  "/framework/docs/providers/webtasks/cli-reference": {
-    "index": [
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/index/",
-        "title": "CLI Reference"
-      }
-    ],
-    "children": [
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/config-credentials/",
-        "title": "config credentials",
-        "order": 1
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/create/",
-        "title": "create",
-        "order": 2
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/deploy/",
-        "title": "deploy",
-        "order": 5
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/invoke/",
-        "title": "invoke",
-        "order": 8
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/logs/",
-        "title": "logs",
-        "order": 10
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/info/",
-        "title": "info",
-        "order": 12
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/cli-reference/remove/",
-        "title": "remove",
-        "order": 15
-      }
-    ]
-  },
-  "/framework/docs/providers/webtasks/events": {
-    "index": [
-      {
-        "path": "/framework/docs/providers/webtasks/events/index/",
-        "title": "Auth0 Webtasks Events"
-      }
-    ],
-    "children": [
-      {
-        "path": "/framework/docs/providers/webtasks/events/http/",
-        "title": "http",
-        "order": 1
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/events/schedule/",
-        "title": "schedule",
-        "order": 4
-      }
-    ]
-  },
-  "/framework/docs/providers/webtasks/guide": {
-    "index": [
-      {
-        "path": "/framework/docs/providers/webtasks/guide/index/",
-        "title": "Guide"
-      }
-    ],
-    "children": [
-      {
-        "path": "/framework/docs/providers/webtasks/guide/intro/",
-        "title": "Intro",
-        "order": 1
-      },
-      {
-        "path": "/framework/docs/providers/webtasks/guide/quick-start/",
-        "title": "Quick Start",
-        "order": 2
       }
     ]
   }

@@ -1,7 +1,7 @@
 ---
 title: 'Strategies for working with remote and distributed teams'
 description: 'Distributed teams allow you to hire the best people from over the world. Here are some lessons learned, and how-tos, for doing them right.'
-date: '2018-04-04'
+date: '2018-04-03'
 Thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Casey''s+Blog+Posts/remote-worker-small.jpg'
 category:
     - engineering-culture

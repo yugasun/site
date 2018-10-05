@@ -1,7 +1,7 @@
 ---
 title: 'React to any cloud event with hosted Event Gateway'
 description: 'Event Gateway as a hosted service, configurable connectors, and a plugin for the Serverless Framework.'
-date: '2018-05-03'
+date: '2018-05-02'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/event-gateway-announcement/event-gateway-readme-header1.png'
 category:
     - news

@@ -1,7 +1,7 @@
 ---
 title: 'Build and deploy a Serverless Node.js app powered by Cosmic JS'
 description: 'Get started with the Cosmic JS Serverless Starter app. Transform any Node.js app into an infinitely scalable Node.js Serverless app.'
-date: '2018-07-12'
+date: '2018-07-11'
 thumbnail: 'https://cosmic-s3.imgix.net/e07fd3b0-7eee-11e8-bc42-55745f37e956-cosmic-serverless-lambda.jpg?w=1000'
 category:
     - guides-and-tutorials

@@ -1,7 +1,7 @@
 ---
 title: 'How to Create a Dynamic Site with Pre-built Serverless Components'
 description: 'A step-by-step tutorial that guides you through creating a dynamic website with pre-built Serverless Components.'
-date: '2018-05-31'
+date: '2018-05-30'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/components/serverless-components.gif'
 category:
     - guides-and-tutorials

@@ -1,7 +1,7 @@
 ---
 title: 'A DynamoDB-backed CRUDL example using Golang'
 description: 'What a veteran coder learned about Golang by building a working CRUDL serverless example.'
-date: '2018-04-05'
+date: '2018-04-04'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Golang/golang-logo.png'
 category:
     - guides-and-tutorials

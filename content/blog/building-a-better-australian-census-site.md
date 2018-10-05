@@ -1,7 +1,7 @@
 ---
 layout: Post
 title: 'Building A Better Australian Census Website with Serverless Architecture'
-date: '2016-09-20'
+date: '2016-09-19'
 description: 'Two students built an alternative Australian Bureau of Statistics Census website for 
 0 million less than the Australian government'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/austrialia.png'

@@ -1,7 +1,7 @@
 ---
 title: 'ETL job processing with Serverless, Lambda, and AWS Redshift'
 description: 'Build an ETL job service by fetching data from a public API endpoint and dumping it into an AWS Redshift database.'
-date: '2018-02-20'
+date: '2018-02-19'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/redshift.png'
 category:
     - operations-and-observability

@@ -1,7 +1,7 @@
 ---
 title: 'Serverless v1.24 - Alexa Smart Home event source, Print content of resolved serverless config file'
 description: 'Alexa Smart Home event source, update checker, enhancements, bug fixes and more added in the Serverless Framework v1.24 release.'
-date: '2017-11-01'
+date: '2017-10-31'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework_v1.24.jpg'
 authors:

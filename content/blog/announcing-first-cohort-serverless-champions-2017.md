@@ -1,7 +1,7 @@
 ---
 title: 'The Serverless Champions Program HAS BEGUN!'
 description: 'Do you have what it takes to be a Serverless Champion?'
-date: '2017-12-13'
+date: '2017-12-12'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/champions/champion_logo_square.png'
 category:
     - news

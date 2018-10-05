@@ -1,7 +1,7 @@
 ---
 title: 'How to build a serverless notification system on AWS'
 description: 'Guest author Diego Zanon writes about building a serverless notification system for browsers using the Serverless Framework and AWS IoT.'
-date: '2016-11-30'
+date: '2016-11-29'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/header+images/serverless-notifications-on-aws.jpg'
 category:
     - guides-and-tutorials

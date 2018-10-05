@@ -1,7 +1,7 @@
 ---
 title: 'Serverless panel - the future of event-driven compute'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s our panel on the future of event-driven compute.'
-date: '2017-11-07'
+date: '2017-11-06'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/emit_square.png'
 authors:

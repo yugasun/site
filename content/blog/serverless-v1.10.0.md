@@ -1,7 +1,7 @@
 ---
 title: 'Faster Deployment for Large Services, Support for Node.js 6.10 Runtime with Serverless v1.10'
 description: 'Faster deploy times for large services, support for Node.js 6.10 runtime, Groovy service template and more in the Serverless Framework v1.10 release.'
-date: '2017-03-29'
+date: '2017-03-28'
 layout: Post
 authors:
     - PhilippMuns

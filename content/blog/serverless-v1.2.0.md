@@ -1,7 +1,7 @@
 ---
 title: 'Flexible Environment Variable Support for AWS Lambda - Serverless Framework V1.2'
 description: 'Environment variable support, optimized function packaging, per function IAM permissions, and new configuration options available in Serverless v1.2'
-date: '2016-11-22'
+date: '2016-11-21'
 layout: Post
 authors:
     - PhilippMuns

@@ -1,7 +1,7 @@
 ---
 title: 'Serverless Ops 102 - CloudWatch Logs and Centralized Logging with AWS Lambda'
 description: 'Monitor and Debug your Serverless Lambda functions with CloudWatch and centralized logging.'
-date: '2017-09-08'
+date: '2017-09-07'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/centralized-logging-aws-lambda.jpg'
 category:
     - operations-and-observability

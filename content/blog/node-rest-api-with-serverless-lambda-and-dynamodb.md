@@ -1,7 +1,7 @@
 ---
 title: 'Building a REST API in Node.js with AWS Lambda, API Gateway, DynamoDB, and Serverless Framework'
 description: 'A hands-on tutorial on building a REST API in Node.js using AWS Lambda, API Gateway, DynamoDB, and the Serverless Framework .'
-date: '2017-03-31'
+date: '2017-03-30'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24562572/cc34ee56-1610-11e7-9b5b-3127a08296df.png'
 layout: Post
 authors:

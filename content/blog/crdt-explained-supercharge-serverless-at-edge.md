@@ -1,7 +1,7 @@
 ---
 title: 'CRDTs explained - supercharge your serverless with CRDTs at the Edge'
 description: 'How to supercharge your serverless with CRDTs at the edge. Your comprehensive CRDT explainer.'
-date: '2017-11-13'
+date: '2017-11-12'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/crdt/kuihro-logo.png'
 category:
     - guides-and-tutorials

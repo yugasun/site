@@ -1,7 +1,7 @@
 ---
 title: 'Serverless (FaaS) vs. Containers - when to pick which?'
 description: 'Docker, Kubernetes, Serverless? Let''s discuss the respective ups and downs of containers and serverless.'
-date: '2017-10-06'
+date: '2017-10-05'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-vs-containers.jpg'
 category:
     - guides-and-tutorials

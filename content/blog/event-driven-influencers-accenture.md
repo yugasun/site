@@ -1,7 +1,7 @@
 ---
 title: 'Event-driven Influencers - Accenture'
 description: 'Anticipating change on behalf of the serverless enterprise.'
-date: '2017-08-10'
+date: '2017-08-09'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Accenture_Logo1.gif'
 authors:

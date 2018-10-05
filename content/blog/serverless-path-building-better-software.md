@@ -1,7 +1,7 @@
 ---
 title: 'The serverless path to building better software'
 description: 'Nick Gottlieb shares his ServerlessConf Tokyo talk on serverless, the state of software, and ways to accelerate productivity.'
-date: '2018-02-23'
+date: '2018-02-22'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/better+software/devs-thumb.jpeg'
 category:
     - engineering-culture

@@ -1,7 +1,7 @@
 ---
 title: 'How Shifter Introduced Serverless Hosting to WordPress Using AWS, DynamoDB & the Serverless Framework'
 description: 'Learn how Shifter transforms WordPress blogs and websites into static sites to make them faster, more secure and scalable in this guest post.'
-date: '2016-12-20'
+date: '2016-12-19'
 thumbnail: 'https://s3.amazonaws.com/shifter-serverless-blog/shifter-square.png'
 layout: Post
 authors:

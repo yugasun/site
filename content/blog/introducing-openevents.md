@@ -1,7 +1,7 @@
 ---
 title: 'Introducing OpenEvents'
 description: 'Announcing a specification for describing event data in a common way'
-date: '2017-12-06'
+date: '2017-12-05'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/openevents-logo-square.png'
 category:
     - news

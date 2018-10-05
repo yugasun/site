@@ -1,7 +1,7 @@
 ---
 title: '3 things I learned designing developer-centric tools at Serverless'
 description: 'As the newest product designer at Serverless, I had to ramp fast. Here''s what I learned about keeping developers at the center of my design strategy.'
-date: '2017-10-03'
+date: '2017-10-02'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/devtools.jpg'
 authors:

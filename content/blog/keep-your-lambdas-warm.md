@@ -1,7 +1,7 @@
 ---
 title: 'Keeping Functions Warm - How To Fix AWS Lambda Cold Start Issues'
 description: 'Learn how to prevent cold start in your Lambda functions with the Serverless WarmUp plugin.'
-date: '2017-04-25'
+date: '2017-04-24'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/header+images/keep-your-lambdas-warm.jpg'
 category:
     - guides-and-tutorials

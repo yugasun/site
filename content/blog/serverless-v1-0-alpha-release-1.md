@@ -1,7 +1,7 @@
 ---
 title: 'Serverless V1.0 Alpha 1'
 description: 'Introducing the serverless service concept in the serverless framework v1 alpha'
-date: '2016-06-28'
+date: '2016-06-27'
 layout: Post
 thumbnail: 'https://avatars1.githubusercontent.com/u/13742415?v=3&s=200'
 authors:

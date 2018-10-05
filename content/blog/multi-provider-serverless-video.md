@@ -1,7 +1,7 @@
 ---
 title: 'The Multi-Provider Future of Serverless Application Development [Video]'
 description: 'Serverless Product Manager Brian Neisler gives tips for overcoming provider lock-in to create more portability and freedom in your Serverless projects.'
-date: '2017-05-11'
+date: '2017-05-10'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/25921531/625cca6c-359b-11e7-8f63-1435740a74cc.png'
 layout: Post
 authors:

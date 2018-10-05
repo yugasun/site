@@ -1,7 +1,7 @@
 ---
 title: 'Serverless by the numbers: 2018 report'
 description: 'Serverless usage stats: event sources, service structures, runtimes, and more.'
-date: '2018-03-09'
+date: '2018-03-08'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/observability-tools/graph-thumb.png'
 category:
     - news

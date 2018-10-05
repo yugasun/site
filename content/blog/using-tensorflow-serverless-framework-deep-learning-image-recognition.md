@@ -1,7 +1,7 @@
 ---
 title: 'Using TensorFlow and the Serverless Framework for deep learning and image recognition'
 description: 'We’ll cover how to use TensorFlow, the Serverless Framework, AWS Lambda and API Gateway to deploy a simple deep learning model.'
-date: '2018-07-24'
+date: '2018-07-23'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/tensorflow/tensorflow-serverless-thumb.png'
 category:
     - guides-and-tutorials

@@ -1,7 +1,7 @@
 ---
 title: 'Run Serverless Functions at half the cost with Spotinst & Serverless Framework'
 description: 'Using the Spotinst provider integration for serverless you can run multi-region, cross-cloud functions at 50-80% the cost'
-date: '2017-09-06'
+date: '2017-09-05'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/spotinst-thumb.png'
 authors:

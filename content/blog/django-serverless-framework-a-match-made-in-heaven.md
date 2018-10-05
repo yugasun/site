@@ -1,7 +1,7 @@
 ---
 title: 'Deploy a REST API using Serverless, Django and Python'
 description: 'Use the Serverless Framework, Django, SQLite and Python to quickly deploy a REST API.'
-date: '2018-08-09'
+date: '2018-08-08'
 thumbnail: ""
 category:
     - guides-and-tutorials

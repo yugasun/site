@@ -1,7 +1,7 @@
 ---
 title: 'Giving back to the community with a TeenTech coding workshop'
 description: 'We''re always trying to find ways we can give back to our local community. Our latest adventure: organizing a TeenTech coding workshop for high schoolers.'
-date: '2018-06-12'
+date: '2018-06-11'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-teentech/serverless-teentech-header.png'
 category:
     - engineering-culture

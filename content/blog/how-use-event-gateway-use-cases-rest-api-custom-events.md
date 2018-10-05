@@ -1,7 +1,7 @@
 ---
 title: 'How to use the Serverless Event Gateway: build a REST API and react to custom events'
 description: 'How to use the Serverless Event Gateway (part of the Serverless Platform) to build REST APIs and react to custom events.'
-date: '2018-08-07'
+date: '2018-08-06'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/event-gateway/event-gateway-thumb1.png'
 authors:

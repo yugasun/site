@@ -1,7 +1,7 @@
 ---
 title: 'Your CORS and API Gateway survival guide'
 description: 'Get the basics on Cross-Origin Resource Sharing (CORS) and how to avoid problems with your Serverless web APIs on Lambda.'
-date: '2018-01-16'
+date: '2018-01-15'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-square-icon-text.png'
 category:
     - guides-and-tutorials

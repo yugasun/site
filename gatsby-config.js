@@ -3,11 +3,16 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+      siteUrl: `https://serverless.com`,
+    },
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-root-import',
     'gatsby-plugin-styled-components',
+    `gatsby-plugin-sitemap`,
+
     {
       resolve: `gatsby-plugin-favicon`,
       options: {

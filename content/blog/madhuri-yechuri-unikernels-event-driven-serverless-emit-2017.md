@@ -1,7 +1,7 @@
 ---
 title: 'Madhuri Yechuri - unikernels and event-driven serverless platforms'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s Madhuri with her talk on unikernels and event-driven serverless platforms.'
-date: '2017-10-27'
+date: '2017-10-26'
 layout: Post
 thumbnail: 'http://www.emitconference.com/assets/images/speaker-madhuri-yechuri.jpg'
 authors:

@@ -1,7 +1,7 @@
 ---
 title: 'Writing an Event-driven Serverless Application with Full Local Development Experience'
 description: 'Learn how to write an event-driven serverless application with full local development experience using the Serverless Application Platform.'
-date: '2017-09-12'
+date: '2017-09-11'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/thumbnail_domino.jpg'
 authors:

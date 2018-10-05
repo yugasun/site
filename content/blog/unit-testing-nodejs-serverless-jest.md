@@ -1,7 +1,7 @@
 ---
 title: 'Unit testing for Node.js Serverless projects with Jest'
 description: 'Create unit tests for Node.js using the Serverless Framework, run tests on CI, and check off our list of serverless testing best practices.'
-date: '2018-07-17'
+date: '2018-07-16'
 thumbnail: 'https://s3-eu-west-1.amazonaws.com/wizardondemand/serverless/serverless-1-with-technology-names.png'
 category:
     - guides-and-tutorials

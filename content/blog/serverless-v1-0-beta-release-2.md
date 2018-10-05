@@ -1,7 +1,7 @@
 ---
 title: 'Serverless V1.0 Beta 2'
 description: 'CORS support added for AWS API Gateway in the serverless framework'
-date: '2016-08-17'
+date: '2016-08-16'
 layout: Post
 authors:
     - PhilippMuns
