@@ -6,9 +6,16 @@ import { Box, Flex, Text, Heading, Row} from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Search from './Search'
 import ExamplePreview from './SingleExamplePreview'
+import algoliasearch from 'algoliasearch'
 
-//TODO - do this via static
-const examplesApi = "https://api.myjson.com/bins/11dcl4"
+const client = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY) 
+const examplesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX)
+
+//TODO - dynamic generation of examplesList pages
+const selectedProps = {
+  //platform: 'AWS',
+  //language: 'nodeJS'
+} 
 
 export default class Content extends React.Component {
 
@@ -20,38 +27,66 @@ export default class Content extends React.Component {
       }
   }
 
-  onClick() {
-    console.log("clicked brr")
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScroll, false)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, false)
+  }
+
+  onScroll = () => {
+    if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
+      console.log("load more")
+    }
   }
 
   handleRefreshResults = (filter) => {
-    axios({
-      method: 'get',
-      url: examplesApi
-    }).then((response) => {
-      this.setState({
-        examples: response.data
-      })
-    }).catch((error) => {
-      console.log(error)
-    })
-  }
+    console.log(filter)
+   
+    const thisTitle = filter.title
 
-  changeResults = () => {
-      this.setState({examples: [{
-          "id": "10-serverless-experts-you-should-follow-on-twitter",
-          "frontmatter": {
-            "title": "10 Serverless Experts You Should Follow on Twitter",
-            "description": "The top Twitter accounts you should follow to stay on top of serverless, event-driven architecture, and other tech news."
+    delete filter.framework
+    delete filter.title
+
+    let filtersQuery = ""
+    
+    Object.keys(filter).map((key) => {
+        if(filter[key]) {
+          if(filtersQuery) {
+            filtersQuery += ' AND '
           }
-      },
-      {
-          "id": "2017-04-5-build-webshop-with-graphql-and-serverless",
-          "frontmatter": {
-            "title": "Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Framework",
-            "description": "Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless."
+
+          filtersQuery += `${key}:"${filter[key]}"`
+        }
+    })
+    console.log(filtersQuery, examplesIndex)
+
+    examplesIndex.search({query: thisTitle, filters: filtersQuery }, (err, content) => {
+      if(err) {
+        console.log(err)
+      } else {
+        console.log("hits are", content.hits)
+
+        const examples = content.hits.map((hit) => {
+          return {
+            id: hit.objectID,
+            frontmatter: {
+              title: hit.title,
+              description: hit.description,
+              language: hit.language,
+              platform: hit.platform
+            }
           }
-      }]})
+        })
+
+        this.setState({
+          examples
+        })
+      }
+      
+
+    })
   }
 
   render() {
@@ -72,7 +107,6 @@ export default class Content extends React.Component {
                 fontFamily='SoleilBk'
                 letterSpacing='h4'
                 align='center'
-                onClick={this.changeResults.bind(this)}
               >
             All the examples
           </Heading.h3>
@@ -97,7 +131,7 @@ export default class Content extends React.Component {
           </Box>
         </Flex.horizontallyCenter>
 
-        <Search refreshResults={this.handleRefreshResults}/>
+        <Search refreshResults={this.handleRefreshResults} selectedOptions={selectedProps}/>
 
         <Flex
           flexDirection={['column', 'column', 'row']}

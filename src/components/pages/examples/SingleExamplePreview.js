@@ -18,7 +18,9 @@ import {
   getAuthorInfo,
   getCategoryNameById,
 } from 'src/utils/blog'
+import { getExampleLink } from 'src/utils/example'
 import { formatDate } from 'src/utils/date'
+import { language } from 'gray-matter'
 
 const HyperLinkBackground = getLinkComponent(Background)
 
@@ -33,8 +35,7 @@ const HoverableColumn = styled(Card)`
 `
 
 const singleExamplePreview = ({ id, frontmatter }) => {
-  const { title, date, description, category, thumbnail, platform } = frontmatter
-  const author = "Bob Smith"
+  const { title, description, platform, language } = frontmatter
 
   return (
     <Box 
@@ -44,14 +45,20 @@ const singleExamplePreview = ({ id, frontmatter }) => {
     >
       <HoverableColumn>
        <Box m='36px 48px'>
-        <BlockLink to={getBlogLink(id)}>
+        <BlockLink to={getExampleLink(id)}>
           <Box>
+            <P
+              color='#8c8c8c'
+              fontSize={[0]}
+            >
+            {language}
+            </P>
             <Heading.h3
-              fontSize={[3, 3, 3, 4]}
+              fontSize={[3, 3, 3, 5]}
               fontFamily='SoleilBk'
               letterSpacing='h4'
             >
-              { title }
+              {platform} | { title }
             </Heading.h3>
           </Box>
         </BlockLink>
