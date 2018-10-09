@@ -20,7 +20,6 @@ export default function GlobalScripts(props) {
     <Box>
       <GoogleAnalytics {...props} />
       {HubSpotScript}
-      <Box dangerouslySetInnerHTML={{ __html: CustomerIO }} />
     </Box>
   )
 }
