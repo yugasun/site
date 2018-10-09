@@ -8,6 +8,7 @@ path: article
 thumbnail: image
 author: "Bob Smith"
 framework: "v1"
+highlighted: true
 ---
 # Simple HTTP Endpoint Example
 
