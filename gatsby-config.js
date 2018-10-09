@@ -5,6 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
       siteUrl: `https://serverless.com`,
+      title: 'Official Serverless Blog',
+      description: 'Articles, resources, and posts on serverless architectures, best practices, and how-to.'
     },
   plugins: [
     'gatsby-plugin-react-next',
@@ -35,6 +37,59 @@ module.exports = {
           firefox: true,
         }
       }
+    },
+
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allBlog } }) => {
+              return allBlog.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  url: site.siteMetadata.siteUrl + "/blog/" + edge.node.id,
+                  guid: site.siteMetadata.siteUrl + "/blog/" + edge.node.id,
+                  custom_elements: [{ "content:encoded": edge.node.content }],
+                })
+              })
+            },
+            query: `
+              {
+                allBlog(
+                  limit: 50,
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      id
+                      content
+                      frontmatter {
+                        description
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/blog/feed.xml",
+            title: "Serverless Blog RSS Feed",
+          },
+        ],
+      },
     }
   ],
 }
