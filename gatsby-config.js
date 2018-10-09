@@ -68,6 +68,9 @@ module.exports = {
             query: `
               {
                 allBlog(
+                  filter: {
+                    frontmatter: { date: { ne: null } }
+                  },
                   limit: 50,
                   sort: { order: DESC, fields: [frontmatter___date] }
                 ) {
@@ -85,7 +88,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/blog/feed.xml",
+            output: "blog/feed.xml",
             title: "Serverless Blog RSS Feed",
           },
         ],
