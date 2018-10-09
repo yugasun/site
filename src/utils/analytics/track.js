@@ -18,21 +18,6 @@ export default function track(eventName, payload) {
   } */
   // Handle Google Analytics
   googleAnalytics(eventName, payload)
-  // Handle Customer.io
-  customerIO(eventName, payload)
-}
-
-function customerIO(eventName, payload) {
-  if (typeof _cio !== 'undefined') {
-    console.log('Customer.io Event triggered') // eslint-disable-line
-    const debugCustomerIO = `Customer.io Event > [${eventName}] [payload: ${JSON.stringify(payload, null, 2)}]`
-    if (!isProduction) {
-      console.log(debugCustomerIO) // eslint-disable-line
-      return false
-    }
-    console.log(`Prod>` + debugCustomerIO) // eslint-disable-line
-    _cio.track(eventName, payload) // eslint-disable-line
-  }
 }
 
 function googleAnalytics(eventName, payload) {
