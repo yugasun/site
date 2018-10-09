@@ -17,13 +17,19 @@ const selectedProps = {
   //language: 'nodeJS'
 } 
 
+const paginationLimit = 15
+
 export default class Content extends React.Component {
 
   constructor (props){
       super(props)
       this.state = {
         examples: this.props.examples,
-        filter: {}
+        initState: true,
+        noMoreResults: false,
+        isLoading: false,
+        filter: {},
+        pageNum: 0
       }
   }
 
@@ -37,22 +43,65 @@ export default class Content extends React.Component {
 
   onScroll = () => {
     if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
-      console.log("load more")
+
+      if(this.state.isLoading || this.state.noMoreResults) {
+        return
+      } else {
+        this.setState({isLoading: true})
+
+        if(this.state.initState) {
+          this.addResults({filters: 'NOT highlighted:true'})
+        } else {
+          const currentFilters = this.makeFilterQuery(this.state.filter)
+          this.addResults(currentFilters)
+        }
+      }
     }
   }
 
-  handleRefreshResults = (filter) => {
-    console.log(filter)
-   
-    const thisTitle = filter.title
+  parseExamplesFromAlgolia = (content) => {
+    const examples = content.hits.map((hit) => {
+      return {
+        id: hit.objectID,
+        frontmatter: {
+          title: hit.title,
+          description: hit.description,
+          language: hit.language,
+          platform: hit.platform
+        }
+      }
+    })
 
-    delete filter.framework
-    delete filter.title
+    return examples
+  }
+
+  //triggered when user searches for something new or filters something
+  handleRefreshResults = (filter) => {
+    this.setState({filter: filter, initState: false, noMoreResults: false, isLoading: false, pageNum: 0})
+    const searchObj = this.makeFilterQuery(filter)
+    searchObj.hitsPerPage = paginationLimit
+    searchObj.page = 0
+    this.setState({pageNum: 1})
+    this.refreshResults(searchObj)
+  }
+
+  refreshResults = (searchObj) => {
+    examplesIndex.search(searchObj, (err, content) => {
+      if(err) console.error(err)
+      const examples = this.parseExamplesFromAlgolia(content)
+      this.setState({
+        examples
+      })
+    })
+  }
+
+  makeFilterQuery = (filter) => {
+    const searchQuery = filter.search
 
     let filtersQuery = ""
-    
     Object.keys(filter).map((key) => {
-        if(filter[key]) {
+       //skipping 'search' key since algolia has query parameter specifically for search text, deleting it before forming filterQuery
+        if(filter[key] && key !== 'search') {
           if(filtersQuery) {
             filtersQuery += ' AND '
           }
@@ -60,32 +109,37 @@ export default class Content extends React.Component {
           filtersQuery += `${key}:"${filter[key]}"`
         }
     })
-    console.log(filtersQuery, examplesIndex)
 
-    examplesIndex.search({query: thisTitle, filters: filtersQuery }, (err, content) => {
-      if(err) {
-        console.log(err)
-      } else {
-        console.log("hits are", content.hits)
+    let searchObj = {}
+    if(searchQuery) {
+      searchObj.query = searchQuery
+    }
 
-        const examples = content.hits.map((hit) => {
-          return {
-            id: hit.objectID,
-            frontmatter: {
-              title: hit.title,
-              description: hit.description,
-              language: hit.language,
-              platform: hit.platform
-            }
-          }
-        })
+    if(filtersQuery) {
+      searchObj.filters = filtersQuery
+    }
+    
+    return searchObj
+  }
 
-        this.setState({
-          examples
-        })
+  //used for pagination
+  addResults = (searchObj) => {
+    const currentPageNum = this.state.pageNum
+    
+    searchObj.hitsPerPage = paginationLimit
+    searchObj.page = currentPageNum
+    examplesIndex.search(searchObj, (err, content) => {
+      if(err) console.error(err)
+      const nextPageNum = currentPageNum + 1
+      this.setState({pageNum: nextPageNum, isLoading: false})
+
+      const examples = this.parseExamplesFromAlgolia(content)
+      if(examples.length < paginationLimit) {
+        this.setState({noMoreResults: true})
       }
-      
 
+      const allExamples = this.state.examples.concat(examples)
+      this.setState({examples: allExamples})
     })
   }
 

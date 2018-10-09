@@ -21,7 +21,7 @@ const blogIndex = client.initIndex(process.env.GATSBY_ALGOLIA_BLOG_INDEX)
 const examplesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX)
 
 examplesIndex.setSettings({
-  'attributesForFaceting': ['language', 'platform', 'title', 'framework']
+  'attributesForFaceting': ['language', 'platform', 'title', 'framework', 'highlighted']
 })
 
 const digestCreator = (content) => (
@@ -42,6 +42,7 @@ const sourceExamples = (createNode) => (err, content, filename, next) => {
     platform: frontmatter.platform,
     language: frontmatter.language,
     framework: frontmatter.framework,
+    highlighted: frontmatter.highlighted,
     objectID: exampleId,
   })
 

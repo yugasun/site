@@ -21,7 +21,8 @@ const Examples = ({ data: examples }) => {
 
 export const query = graphql`
   query Examples {
-    allExample(limit: 15,
+    allExample(
+    limit: 15,
     sort: {fields: [frontmatter___highlighted], order: ASC}) {
         totalCount
         edges {

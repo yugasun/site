@@ -27,11 +27,10 @@ export default class Search extends React.Component {
           platform: props.selectedOptions.platform,
           language: props.selectedOptions.language,
           framework: props.selectedOptions.framework,
-          title: props.selectedOptions.search
+          search: props.selectedOptions.search
         },
       }
   }
-  //TODO - is it search or title?
 
   state = { isSearchBarActive: false }
 
@@ -48,7 +47,7 @@ export default class Search extends React.Component {
 
   handQueryFilter = (e) => {
     const updatedFilterObj = this.state.filter
-    updatedFilterObj.title = e.target.value 
+    updatedFilterObj.search = e.target.value 
     this.updateFilterAndRefreshResults(updatedFilterObj)
   }
 
