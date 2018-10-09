@@ -25,7 +25,6 @@ const siteConfig = (isProduction) => {
       ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID || 'V3VM7IN3TH',
       ALGOLIA_SEARCH_KEY: process.env.ALGOLIA_SEARCH_KEY || 'd2dac557d1fd151223e78f3597d59e78',
       // SEGMENT_KEY: process.env.SEGMENT_KEY || 'gNftvcGllpKZTe5PcAxF8pEoenLq32H0',
-      CUSTOMER_IO_KEY: process.env.CUSTOMER_IO_KEY || '219fca0102ab3451a96a',
       LOGO_ICON: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg',
       S3_BUCKET: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/',
 

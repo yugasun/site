@@ -56,7 +56,6 @@ class NewsLetterForm extends React.Component {
     }).then((response) => {
       if (response && response.data && response.data.created) {
         console.info('Newsletter subscription creation succeed') // eslint-disable-line
-        // Customer.io
         // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
         track('site:newsletter_subscribed', {
           label: 'Newsletter Subscription',
@@ -126,13 +125,13 @@ class NewsLetterForm extends React.Component {
         <Wrapper
           {...wrapperProps}
           ref={(ref) => {
-            this.container = ReactDOM.findDOMNode(ref);
+            this.container = ReactDOM.findDOMNode(ref)
           }}
         >
           <EmailField
             {...emailFieldProps}
             ref={(ref) => {
-              this.emailField = ReactDOM.findDOMNode(ref);
+              this.emailField = ReactDOM.findDOMNode(ref)
             }}
           />
           { this.renderSubmitBtn() }
