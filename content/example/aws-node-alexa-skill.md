@@ -6,6 +6,7 @@ platform: AWS
 language: nodeJS
 author: "Bob Smith"
 framework: "v1"
+highlighted: true
 ---
 # Serverless Alexa Skill Example
 

@@ -5,6 +5,7 @@ platform: AWS
 language: nodeJS
 layout: Doc
 framework: "v1"
+highlighted: true
 ---
 
 # DynamoDB stream events to AWS S3

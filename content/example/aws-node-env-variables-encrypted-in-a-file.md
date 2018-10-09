@@ -5,6 +5,7 @@ layout: Doc
 platform: AWS
 language: nodeJS
 framework: "v1"
+highlighted: true
 ---
 # Serverless
 
