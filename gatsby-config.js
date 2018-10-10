@@ -16,6 +16,14 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
     {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: process.env.GATSBY_GOOGLE_TAG_MANAGER_ID,
+        includeInDevelopment: false,
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/assets/images/favicon.png",
