@@ -59,8 +59,8 @@ module.exports = {
             serialize: ({ query: { site, allBlog } }) => {
               return allBlog.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  url: site.siteMetadata.siteUrl + "/blog/" + edge.node.id,
-                  guid: site.siteMetadata.siteUrl + "/blog/" + edge.node.id,
+                  url: site.siteMetadata.siteUrl + "/blog/" + edge.node.id + "/",
+                  guid: site.siteMetadata.siteUrl + "/blog/" + edge.node.id + "/",
                   custom_elements: [{ "content:encoded": edge.node.content }],
                 })
               })
