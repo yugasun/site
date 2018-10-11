@@ -180,7 +180,7 @@ export default class Content extends React.Component {
               m={0}
               align='center'
             >
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Use the serverless functions explorer to find hundreds of user-contributed examples: AWS Lambda, DynamoDB, Node8, Azure Functions, and more.
             </Text.p>
           </Box>
         </Flex.horizontallyCenter>

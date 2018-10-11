@@ -16,7 +16,10 @@ export const query = graphql`
     Example: example (id: { eq: $exampleId }) {
       id
       frontmatter {
-        title
+        title,
+        language,
+        platform,
+        description
       }
       content
     }
