@@ -17,7 +17,11 @@ export default {
       google: '/framework/docs/providers/google/guide/quick-start/',
       others: '/framework/docs/',
     },
-    examples: 'https://github.com/serverless/examples',
+    examples: {
+      docs: '/framework/docs',
+      plugins: 'https://github.com/serverless/plugins',
+      examples: 'https://github.com/serverless/examples',
+    },
   },
   learn: {
     useCases: '/learn/use-cases/',

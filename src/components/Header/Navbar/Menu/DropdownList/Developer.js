@@ -20,19 +20,6 @@ const SubMenu = ({ title, options }) => (
   </Box>
 )
 
-const documentationOptions = [
-  {
-    name: 'framework',
-    to: developers.documentation.framework,
-    completed: true,
-  },
-  {
-    name: 'platform',
-    to: developers.documentation.platform,
-    crossDomain: true,
-    completed: false,
-  },
-]
 
 const quickStartOptions = [
   {
@@ -59,26 +46,19 @@ const quickStartOptions = [
 
 const examplesOptions = [
   {
-    name: `APIs`,
-    to: developers.examples,
+    name: `docs`,
+    to: developers.examples.docs,
+    completed: true,
+  },
+  {
+    name: 'plugins',
+    to: developers.examples.plugins,
     crossDomain: true,
     completed: false,
   },
   {
-    name: 'cron jobs',
-    to: developers.examples,
-    crossDomain: true,
-    completed: false,
-  },
-  {
-    name: 'webhooks',
-    to: developers.examples,
-    crossDomain: true,
-    completed: false,
-  },
-  {
-    name: 'event processing',
-    to: developers.examples,
+    name: 'examples',
+    to: developers.examples.examples,
     crossDomain: true,
     completed: false,
   },
@@ -86,14 +66,11 @@ const examplesOptions = [
 
 const Developer = () => (
   <Flex flexWrap='wrap'>
-    <Box width={1} mb={3}>
-      <SubMenu title='documentation' options={documentationOptions} />
-    </Box>
     <Box width={[1, 1, 1 / 2]}>
       <SubMenu title='quick starts' options={quickStartOptions} />
     </Box>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='examples & guides' options={examplesOptions} />
+      <SubMenu title='resources' options={examplesOptions} />
     </Box>
   </Flex>
 )
