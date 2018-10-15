@@ -61,17 +61,6 @@ const Resource = () => (
         slack
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: resources.workshops,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        workshops
-      </SubMenuItem>
-    </ListItem.noStyleType>
   </List>
 )
 
