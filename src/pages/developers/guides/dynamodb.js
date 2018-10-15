@@ -2,7 +2,7 @@ import React from 'react'
 import DefaultLayout from 'src/layouts/Default'
 import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooter } from 'src/fragments'
-import {Box, Heading, Column} from 'serverless-design-system'
+import {Box, Heading} from 'serverless-design-system'
 import styled from 'styled-components'
 
 const PageContent = styled(Box)`
@@ -23,7 +23,6 @@ const PageContent = styled(Box)`
 export default ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
    <Helmet {...data.Dynamo.frontmatter} />
-   <Column width={1}>
         <Box width={1}
             px={[30, 30, 300]}
             my={10}
@@ -33,7 +32,6 @@ export default ({ data }) => (
                 </Heading.h1>
                 <PageContent width={1} pt={40} mx='auto' dangerouslySetInnerHTML={{ __html: data.Dynamo.content }} />
         </Box>
-    </Column>
   </DefaultLayout>
 )
 
