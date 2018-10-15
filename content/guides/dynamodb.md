@@ -7,6 +7,8 @@ useLearnNav: false
 
 DynamoDB is a popular NoSQL database offering from AWS. It’s fully managed, autoscales, and integrates very nicely with Lambda which makes it an especially popular database among Serverless developers. 
 
+<br/>
+
 ## Advantages
 - Fully managed
 - Nice integration with Lambda
@@ -16,12 +18,18 @@ While DynamoDB can provide tons of value, there are a couple things you should b
 
 Because it’s a proprietary AWS service, it can lead to data lock-in, which is a particularly sticky form of vendor lock-in. While DynamoDB often scales very nicely, that scaling can become difficult and expensive with very large datasets. On the plus side, DynamoDB Global Tables should make globally scaling DynamoDB much easier and more affordable.
 
+<br/>
+
 ## Disadvantages
 - Vendor lock-in 
 - Can be expensive to operate at large scale 
 
+<br/>
+
 ## DynamoDB Pricing
 AWS prices Dynamo based on a combination of provsioned throughput (both read and write) and the amount of indexed data storage. They also offer a generous free tier to get you up and going. For full details on pricing, checkout the [DynamoDB](https://aws.amazon.com/dynamodb/pricing/) pricing page.
+
+<br/>
 
 ## DyanamoDB vs MongoDB, Cassandra, BigTable
 | DBaaS     | Description                                                    | Typing | Data Model                      | Secondary Indexes | Triggers | Open Source |
@@ -31,6 +39,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 | Cassandra | Wide-column store based on concepts from BigTable and DynamoDB | Yes    | Wide column store               | Restricted        | Yes      | Yes         |
 | BigTable  | NoSQL Big Data database service offered by Google.             | No     | Wide column store               | No                | No       | No          |
 
+<br/>
 
 ## Examples 
 - [DynamoDB stream events to AWS S3](https://github.com/serverless/examples/tree/master/aws-node-dynamodb-backup)
@@ -39,6 +48,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Serverless REST API Node](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb)
 - [Serverless REST API Python](https://github.com/serverless/examples/tree/master/aws-python-rest-api-with-dynamodb)
 
+<br/>
 
 ## Plugins 
 - [Dynalite](https://github.com/sdd/serverless-dynalite)
@@ -46,6 +56,7 @@ AWS prices Dynamo based on a combination of provsioned throughput (both read and
 - [Dynamodb Local](https://github.com/99xt/serverless-dynamodb-local)
 - [Dynamodb TTL](https://github.com/Jimdo/serverless-dynamodb-ttl)
 
+<br/>
 
 ## Guides
 - [How To Create a Serverless Node.js App with DynamoDB For The First Time](https://medium.com/statuscode/serverless-ice-cream-or-create-your-serverless-node-js-micro-service-with-a-database-17a6946251e0)
