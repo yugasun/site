@@ -5,6 +5,7 @@ import {
   Column,
   InlineBlock,
   P,
+  Flex
 } from 'serverless-design-system'
 
 import NavLink from '../NavLink'
@@ -62,13 +63,13 @@ const Subscribe = () => (
     pl={[0, 0, 3]}
   >
     <Box mb={4}>
-      <P color='white'>
+      <P color='white' align={['center', 'center', 'left']}>
         Join our newsletter and get the latest news about Serverless products
         and happenings. #noSpamWePromise
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Box py={3}>
+    <Flex pt={[5,5,0]} pb={6} justifyContent={['space-between', 'space-between', 'normal']}>
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}
@@ -94,7 +95,7 @@ const Subscribe = () => (
         icon={linkedinGrayIcon}
         hoverIcon={linkedinWhiteIcon}
       />
-    </Box>
+    </Flex>
   </Column>
 )
 

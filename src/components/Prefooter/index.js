@@ -16,41 +16,32 @@ import {
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButton'
 import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
-import greyDotsSquare from 'src/assets/images/dot-grid-grey-square.png'
 
 const LeftColumn = ({ heading, sentences }) => (
   <Flex.horizontallyCenter
     width={[1, 1, 1 / 2]}
     boxSizing='border-box'
     flexDirection='column'
+    background='white'
   >
     <Overflow
-      o="hidden"
+      o='hidden'
       width={1}
       py={[3, 5, 8]}
       px={[2, 4, 6]}
     >
-      <TextWithIcon
-        iconSrc={greyDotsSquare}
-        iconHeight='100px'
-        iconWidth='118px'
-        iconTop='-30px'
-        iconLeft='-80px'
-        backgroundSize={[0, 0, 'contain']}
-      >
         <Heading.h2
-          color='white'
+          color='black'
           fontFamily={'SoleilBk'}
           fontSize={7}
           letterSpacing={0}
         >
           {heading}
         </Heading.h2>
-      </TextWithIcon>
       {
         sentences.map((sentence, index) => (
           ( typeof sentence === 'string' ) ? (
-            <P color='white' mt={0} key={index}>
+            <P color='black' mt={0} key={index}>
               {sentence}
             </P>
           ) : (
@@ -89,13 +80,13 @@ const Prefooter = ({ heading, sentences, actions }) => (
       <Box width={[1, 1, 1 / 2]}>
         <Background
           width={1}
-          height="fullHeight"
+          height='fullHeight'
           background={`#fd5750 url(${RightBoxBg}) no-repeat`}
           backgroundSize='cover'
         >
           <Flex.center
-            flexDirection="column"
-            height="fullHeight"
+            flexDirection='column'
+            height='fullHeight'
             py={[5, 5, 8]}
             px={[3, 3, 7]}
           >
