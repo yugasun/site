@@ -95,7 +95,7 @@ class NewsLetterForm extends React.Component {
 
     return (
       <Button
-        width={['35%', '35%', '40%']}
+        width={['100%', '100%', '40%']}
         px={[0, 0, 1]}
         py={15}
         m={0}
@@ -126,13 +126,13 @@ class NewsLetterForm extends React.Component {
         <Wrapper
           {...wrapperProps}
           ref={(ref) => {
-            this.container = ReactDOM.findDOMNode(ref);
+            this.container = ReactDOM.findDOMNode(ref)
           }}
         >
           <EmailField
             {...emailFieldProps}
             ref={(ref) => {
-              this.emailField = ReactDOM.findDOMNode(ref);
+              this.emailField = ReactDOM.findDOMNode(ref)
             }}
           />
           { this.renderSubmitBtn() }
