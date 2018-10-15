@@ -6,8 +6,8 @@ const sentences = [
   'To get started, pop open your terminal & run:',
   (
     <Text.p
-      color="white"
-      fontFamily="Serverless"
+      color='black'
+      fontFamily='Serverless'
     >
       npm install serverless -g
     </Text.p>

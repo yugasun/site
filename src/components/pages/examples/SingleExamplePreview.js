@@ -26,11 +26,13 @@ const HyperLinkBackground = getLinkComponent(Background)
 
 
 const HoverableColumn = styled(Card)`
-  background-color: white;
-  border: 1px solid #eaeaea;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
-  &:hover {
-    box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
+  @media screen and (min-width: 415px) {
+      background-color: white;
+      border: 1px solid #eaeaea;
+      box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+      &:hover {
+        box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
+      }
   }
 `
 
@@ -44,7 +46,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
       mb={[1, 1, 1, 4]}
     >
       <HoverableColumn>
-       <Box m='36px 48px'>
+       <Box m={['0px 20px', '0px 20px', '36px 48px']}>
         <BlockLink to={getExampleLink(id)}>
           <Box>
             <P
@@ -54,8 +56,8 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             {language}
             </P>
             <Heading.h3
-              fontSize={[3, 3, 3, 5]}
-              fontFamily='SoleilBk'
+              fontSize='24px'
+              fontFamily='Soleil'
               letterSpacing='h4'
             >
               {platform} | { title }
@@ -63,7 +65,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
           </Box>
         </BlockLink>
         <P
-          fontSize={[0, 0, 0, 2]}
+          fontSize={[1, 1, 2, 2]}
           lineHeight={1.63}
         >
           { description }

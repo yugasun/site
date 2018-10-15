@@ -11,7 +11,7 @@ const Examples = ({ data: examples }) => {
   
   return (
     
-    <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>
+    <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
        <Helmet title='Examples Explorer' />
        <Hero />
        <Content examples={edges.map(({ node }) => node)} />
@@ -32,6 +32,7 @@ export const query = graphql`
                 title
                 platform
                 language
+                description
               }
             }
         }

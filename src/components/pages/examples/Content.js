@@ -166,25 +166,6 @@ export default class Content extends React.Component {
           </Heading.h3>
         </Box>
 
-        <Flex.horizontallyCenter>
-          <Box
-            mb={[2, 2, 4, 5]}
-            width={[1/2]}
-          >
-            <Text.p
-              color='#5b5b5b'
-              fontSize={[1, 1, 2]}
-              fontFamily='Soleil'
-              lineHeight={1}
-              letterSpacing={'-0.2'}
-              m={0}
-              align='center'
-            >
-              Use the serverless functions explorer to find hundreds of user-contributed examples: AWS Lambda, DynamoDB, Node8, Azure Functions, and more.
-            </Text.p>
-          </Box>
-        </Flex.horizontallyCenter>
-
         <Search refreshResults={this.handleRefreshResults} selectedOptions={selectedProps}/>
 
         <Flex

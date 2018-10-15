@@ -7,9 +7,8 @@ import HeroTabs from '../HeroTabs'
 const ExamplesHero = () => {
   return (
   <HeroWrapper
-    background={`black`}
-    backgroundSize='cover'
-    backgroundPosition='center'
+    background={`linear-gradient(119deg, #000000 70%, #b1514d)`}
+    height={[422, 422, 490]}
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs
@@ -21,25 +20,26 @@ const ExamplesHero = () => {
       mb={[2, 2, 4, 9]}
       color='white'
     >
-      <Box width={[1, 1, 1/2]}>
+      <Box width={[1]}>
         <Text.p
-          fontSize={[6, 6, 7, 8]}
+          fontSize={[8, 7, 8]}
           fontFamily='Soleil'
           lineHeight={1}
           letterSpacing={'-0.2'}
           m={0}
+          mt={[4,4,0,0]}
         >
           Examples
         </Text.p>        
       </Box>
       <Box
-        width={[1, 1, 1/2]}
-        pl={[0, 0, 4]}
-        pr={[0, 0, 6]}
+        width={[1, 1, 1, 1]}
+        pl={[0, 0, 6]}
+        pr={[0, 0, 2]}
       >
         <Text.p
-          fontSize={[2, 2, 5]}
-          fontFamily='SoleilLt'
+          fontSize={[2, 2, 2, 4]}
+          fontFamily={['SoleilBk', 'SoleilBk', 'SoleilLt']}
           lineHeight={3}
           letterSpacing={0}
           mt={[3, 3, 1]}
