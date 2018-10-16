@@ -3,7 +3,7 @@ import React from 'react'
 import DefaultLayout from 'src/layouts/Default'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import Hero from 'src/components/pages/examples/Hero'
-
+import Content from 'src/components/pages/examples/Content'
 import { Helmet } from 'src/fragments'
 
 const Examples = ({ data: examples }) => {
@@ -14,7 +14,7 @@ const Examples = ({ data: examples }) => {
     <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
        <Helmet title='Examples Explorer' />
        <Hero />
-       
+       <Content examples={edges.map(({ node }) => node)} />
     </DefaultLayout>
   )
 }

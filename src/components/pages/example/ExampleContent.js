@@ -1,8 +1,7 @@
 
 
 import React from 'react'
-import { Box, Heading, P, Row, Button, Image, Flex } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
+import { Box, Heading, P, Row, Button, Image } from 'serverless-design-system'
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import styled from 'styled-components'
 
@@ -23,6 +22,11 @@ const ExampleBreadcrumbs = styled(Breadcrumbs)`
         color: #5b5b5b;
     }
 `
+
+const PageContent = styled(Box)`
+    font-family: "Soleil";
+`
+
 //TODO - make below code dry
 export default ({ id, frontmatter, content, location }) => {
   return (
@@ -44,7 +48,7 @@ export default ({ id, frontmatter, content, location }) => {
                 />
                 <P color='#8c8c8c' fontSize='12px'> &nbsp; rupakg</P>
             </Row>
-            <P width={1} pt={94} dangerouslySetInnerHTML={{ __html: content }} />
+            <PageContent width={1} pt={94} dangerouslySetInnerHTML={{ __html: content }} />
             <Row justifyContent='space-between' mt={90}>
                 <Button height='50px' fontSize='2rem' p={0} lineHeight={1.4}> 
                     view on Github

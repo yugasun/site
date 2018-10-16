@@ -1,12 +1,10 @@
 import React from 'react'
-import axios from 'axios'
-import { withTheme } from 'styled-components'
-import { Box, Flex, Text, Heading, Row} from 'serverless-design-system'
+import { Box, Flex, Heading} from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import Search from './Search'
 import ExamplePreview from './SingleExamplePreview'
-import algoliasearch from 'algoliasearch'
+import algoliasearch from 'algoliasearch/lite'
 
 const client = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY) 
 const examplesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX)
@@ -34,11 +32,11 @@ export default class Content extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll, false)
+      window.addEventListener('scroll', this.onScroll, false)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll, false)
+      window.removeEventListener('scroll', this.onScroll, false)
   }
 
   onScroll = () => {

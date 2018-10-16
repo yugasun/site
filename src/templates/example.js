@@ -1,6 +1,5 @@
 import React from 'react'
 import DefaultLayout from 'src/layouts/Default'
-import Prefooter from 'src/components/pages/blog/Prefooter'
 import ExampleContent from 'src/components/pages/example/ExampleContent'
 import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooter } from 'src/fragments'

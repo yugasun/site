@@ -3,27 +3,12 @@ import styled from 'styled-components'
 import {
   Background,
   Box,
-  Row,
-  Text,
   Heading,
   P,
   Card
 } from 'serverless-design-system'
 import { BlockLink } from 'src/components'
-import { getLinkComponent } from 'src/components/BlockLink'
-import {
-  getAuthorLink,
-  getBlogLink,
-  getCategoryLink,
-  getAuthorInfo,
-  getCategoryNameById,
-} from 'src/utils/blog'
 import { getExampleLink } from 'src/utils/example'
-import { formatDate } from 'src/utils/date'
-import { language } from 'gray-matter'
-
-const HyperLinkBackground = getLinkComponent(Background)
-
 
 const HoverableColumn = styled(Card)`
   @media screen and (min-width: 415px) {
