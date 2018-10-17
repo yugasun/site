@@ -14,7 +14,7 @@ const CompanyDetails = () => (
       </P>
     </Box>
     <ResponsiveStack pt={4} alignItems={['left', 'left', 'center']}>
-      <Box width={[1 / 2, 1 / 2, 1]}>
+      <Box width={'55%'}>
         <P m={0} fontSize={0} color='white' opacity='0.5' fontFamily='Serverless'>
           Serverless, Inc. © 2018
         </P>
