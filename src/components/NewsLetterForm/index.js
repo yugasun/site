@@ -10,7 +10,7 @@ import EmailField from './EmailField'
 
 const StyledForm = styled.form`
   display: block;
-  height: 100%;
+  height: 32%;
   width: 100%;
 `
 

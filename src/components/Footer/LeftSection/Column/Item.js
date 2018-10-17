@@ -6,7 +6,7 @@ import NavLink from 'src/components/NavLink'
 const ItemWrapper = styled(Box)`
   a:hover {
     p {
-      color: white;
+      opacity: 1;
     }
   }
 `
@@ -22,6 +22,7 @@ const FooterListItem = ({ content, color, pt }) => (
     <NavLink {...content.navProps}>
       <ItemText
         color={color}
+        opacity={0.5}
         fontFamily={'Serverless'}
         fontSize={1}
         lineHeight={1}

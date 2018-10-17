@@ -15,7 +15,7 @@ const CompanyDetails = () => (
     </Box>
     <ResponsiveStack pt={4} alignItems={['left', 'left', 'center']}>
       <Box width={[1 / 2, 1 / 2, 1]}>
-        <P m={0} fontSize={0} color='gray.3'>
+        <P m={0} fontSize={0} color='white' opacity='0.5' fontFamily='Serverless'>
           Serverless, Inc. © 2018
         </P>
       </Box>
@@ -23,12 +23,12 @@ const CompanyDetails = () => (
       <Flex color='gray.3' width={1}>
         <Box>
           <NavLink to={termsOfService} crossDomain>
-            <P fontSize={0}>terms of service</P>
+            <P fontSize={0} fontFamily='Serverless' color='white' opacity='0.5'>terms of service</P>
           </NavLink>
         </Box>
         <Box ml={2}>
           <NavLink to={privacyPolicy} crossDomain>
-            <P fontSize={0}>privacy policy</P>
+            <P fontSize={0} fontFamily='Serverless' color='white' opacity='0.5'>privacy policy</P>
           </NavLink>
         </Box>
       </Flex>
