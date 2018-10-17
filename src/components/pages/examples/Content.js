@@ -155,8 +155,8 @@ export default class Content extends React.Component {
           color='black'
         >
           <Heading.h3
-                fontSize={[4, 4, 4, 6]}
-                fontFamily='SoleilBk'
+                fontSize={[5, 5, 5, 6]}
+                fontFamily='Soleil'
                 letterSpacing='h4'
                 align='center'
               >

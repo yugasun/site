@@ -4,6 +4,8 @@ import React from 'react'
 import { Box, Heading, P, Row, Button, Image } from 'serverless-design-system'
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import styled from 'styled-components'
+import ContentWrapper from './ContentWrapper'
+import { AppContainer } from 'src/components'
 
 //TODO - hacky fix this
 const ExampleBreadcrumbs = styled(Breadcrumbs)`
@@ -23,22 +25,30 @@ const ExampleBreadcrumbs = styled(Breadcrumbs)`
     }
 `
 
-const PageContent = styled(Box)`
-    font-family: "Soleil";
+const WidthContainer = styled(Box)`
+
+    @media screen and (min-width: 415px) {
+        width: 800px;
+        margin: auto;
+    }
 `
 
 //TODO - make below code dry
 export default ({ id, frontmatter, content, location }) => {
   return (
         <Box
-        px={[30, 30, 200]}
         my={10}
     pb={[300, 300, 300, 250]}>
-            <ExampleBreadcrumbs path={`/examples/${frontmatter.language}`}/>
-            <Heading.h1 align='center' fontSize={['32px', '32px', '48px']}>
+        <AppContainer>
+            <ExampleBreadcrumbs path={`/examples/`}/>
+            <WidthContainer>
+
+            
+            <Heading.h1 align='center' fontSize={['32px', '32px', '48px']} fontFamily='Soleil' mt={20} width={1/2}>
                 {frontmatter.platform} | {frontmatter.title}
             </Heading.h1>
             <P align='center'>{frontmatter.description}</P>
+            </WidthContainer>
             <Row justifyContent='center' alignItems='center'>
                 <P color='#8c8c8c' fontSize='12px'>user &nbsp;</P>
                 <Image
@@ -48,8 +58,13 @@ export default ({ id, frontmatter, content, location }) => {
                 />
                 <P color='#8c8c8c' fontSize='12px'> &nbsp; rupakg</P>
             </Row>
-            <PageContent width={1} pt={94} dangerouslySetInnerHTML={{ __html: content }} />
-            <Row justifyContent='space-between' mt={90}>
+            <ContentWrapper
+                width={[1, 1, 1, 0.65]}
+                mx='auto'
+                dangerouslySetInnerHTML={{ __html: content }}
+            />
+            <WidthContainer>
+            <Row justifyContent='space-between' mt={100} mx='auto'>
                 <Button height='50px' fontSize='2rem' p={0} lineHeight={1.4}> 
                     view on Github
                 </Button>
@@ -57,6 +72,8 @@ export default ({ id, frontmatter, content, location }) => {
                 Latest commit b2f54ec  on Sep 24, 2017
                 </P>
             </Row>
+            </WidthContainer>
+            </AppContainer>
         </Box>
   )
 }

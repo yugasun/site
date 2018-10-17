@@ -37,6 +37,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             <P
               color='#8c8c8c'
               fontSize={[0]}
+              fontFamily='Soleil'
             >
             {language}
             </P>
@@ -50,7 +51,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
           </Box>
         </BlockLink>
         <P
-          fontSize={[1, 1, 2, 2]}
+          fontSize={[2, 2, 2, 2]}
           lineHeight={1.63}
         >
           { description }
