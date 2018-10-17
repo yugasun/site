@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import {
   Background,
@@ -7,7 +8,6 @@ import {
   Flex,
   Heading,
   Overflow,
-  TextWithIcon,
   Relative,
   ResponsiveStack,
   P,
@@ -17,12 +17,18 @@ import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButton'
 import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
 
+const FlexWithShadow = styled(Flex.horizontallyCenter)`
+  box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15)
+`
+
 const LeftColumn = ({ heading, sentences }) => (
-  <Flex.horizontallyCenter
-    width={[1, 1, 1 / 2]}
+  <Background background='white' width={[1, 1, 1/2]}>
+  <FlexWithShadow
+    width={1}
     boxSizing='border-box'
     flexDirection='column'
-    background='white'
+    height='100%'
+    mt={[7,7,0]}
   >
     <Overflow
       o='hidden'
@@ -32,7 +38,7 @@ const LeftColumn = ({ heading, sentences }) => (
     >
         <Heading.h2
           color='black'
-          fontFamily={'SoleilBk'}
+          fontFamily={'Soleil'}
           fontSize={7}
           letterSpacing={0}
         >
@@ -52,7 +58,8 @@ const LeftColumn = ({ heading, sentences }) => (
         ))
       }
     </Overflow>
-  </Flex.horizontallyCenter>
+  </FlexWithShadow>
+  </Background>
 )
 
 const RightColumn = ({ actions }) => (
@@ -69,20 +76,22 @@ const RightColumn = ({ actions }) => (
 
 const Prefooter = ({ heading, sentences, actions }) => (
   <Relative
-    top='-320px'
-    mb='-290px'
+    top='-420px'
+    mb={['100px', '100px', '-290px']}
+    mt={150}
+    height='400px'
   >
     <ResponsiveStack
       bg='serverlessRed'
       o='hidden'
     >
       <LeftColumn heading={heading} sentences={sentences} />
-      <Box width={[1, 1, 1 / 2]}>
+      <Box width={[1, 1, 1/2]}>
         <Background
           width={1}
           height='fullHeight'
           background={`#fd5750 url(${RightBoxBg}) no-repeat`}
-          backgroundSize='cover'
+          backgroundSize='100% 100%'
         >
           <Flex.center
             flexDirection='column'
