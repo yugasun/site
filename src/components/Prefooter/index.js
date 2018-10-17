@@ -33,17 +33,17 @@ const LeftColumn = ({ heading, sentences }) => (
     <Overflow
       o='hidden'
       width={1}
-      py={[3, 5, 8]}
+      py={[3, 5, 5]}
       px={[2, 4, 6]}
     >
-        <Heading.h2
+        <Heading.h3
           color='black'
           fontFamily={'Soleil'}
-          fontSize={7}
-          letterSpacing={0}
+          fontSize={5}
+          letterSpacing={'-0.5px'}
         >
           {heading}
-        </Heading.h2>
+        </Heading.h3>
       {
         sentences.map((sentence, index) => (
           ( typeof sentence === 'string' ) ? (

@@ -17,6 +17,8 @@ const sentences = [
       color='gray.2'
       fontFamily='Serverless'
       fontSize={14}
+      letterSpacing={'0.4px'}
+      lineHeight={1.71}
     >
       npm install serverless -g
     </Text.p>
