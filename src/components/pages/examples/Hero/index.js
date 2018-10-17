@@ -7,7 +7,7 @@ import HeroTabs from '../HeroTabs'
 const ExamplesHero = () => {
   return (
   <HeroWrapper
-    background={`linear-gradient(119deg, #000000 70%, #b1514d)`}
+    background={`linear-gradient(120deg, rgb(0, 0, 0) 60%, #70221f)`}
     height={[422, 422, 490]}
   >
     <Box mb={[2, 2, 7]}>
