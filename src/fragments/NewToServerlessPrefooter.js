@@ -3,11 +3,20 @@ import { Text } from 'serverless-design-system'
 import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
-  'To get started, pop open your terminal & run:',
+  (
+    <Text.p 
+      color='gray'
+      mt={8}
+      fontFamily='SoleilBk'
+    >
+      To get started, pop open your terminal &amp; run:
+    </Text.p>
+  ),
   (
     <Text.p
-      color='black'
+      color='gray.2'
       fontFamily='Serverless'
+      fontSize={14}
     >
       npm install serverless -g
     </Text.p>
