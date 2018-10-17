@@ -37,8 +37,7 @@ const WidthContainer = styled(Box)`
 export default ({ id, frontmatter, content, location }) => {
   return (
         <Box
-        my={10}
-    pb={[300, 300, 300, 250]}>
+        my={10}>
         <AppContainer>
             <ExampleBreadcrumbs path={`/examples/`}/>
             <WidthContainer>

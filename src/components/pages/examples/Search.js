@@ -21,6 +21,11 @@ const ExamplesSearchField = styled(TextField)`
 `
 
 const BoxWithMobileBorder = styled(Box)`
+  
+  font-size: 14px;
+  line-height: 1.14;
+  letter-space: 0.6px;
+
   @media screen and (max-width: 412px) {
     border: 1px solid #5b5b5b;
   }
@@ -76,7 +81,7 @@ export default class Search extends React.Component {
         placeholder='platform'
         fieldContainerProps={{
           border: 'none',
-          minWidth: '175px'
+          minWidth: '175px',
         }}
         placeholderProps={{ color: '#5b5b5b' }}
         options={[
@@ -133,7 +138,7 @@ export default class Search extends React.Component {
         height={50}
         width='100%'
         border='none'
-        fontSize={2}
+        fontSize={14}
         fontFamily='Serverless'
         placeholderColor='#8c8c8c'
         px={[1,1,2]}

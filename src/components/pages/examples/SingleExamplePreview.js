@@ -28,16 +28,17 @@ const singleExamplePreview = ({ id, frontmatter }) => {
     <Box 
       width={[1, 1, 1, 1/3]}
       p={[1, 1, 1, 2]}
-      mb={[1, 1, 1, 4]}
+      mb={[1, 1, 0]}
     >
       <HoverableColumn>
        <Box m={['0px 20px', '0px 20px', '36px 48px']}>
         <BlockLink to={getExampleLink(id)}>
           <Box>
             <P
-              color='#8c8c8c'
+              color='gray.2'
               fontSize={[0]}
               fontFamily='Soleil'
+              my='8px'
             >
             {language}
             </P>
@@ -45,6 +46,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
               fontSize='24px'
               fontFamily='Soleil'
               letterSpacing='h4'
+              mb='8px'
             >
               {platform} | { title }
             </Heading.h3>
@@ -53,6 +55,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         <P
           fontSize={[2, 2, 2, 2]}
           lineHeight={1.63}
+          my='8px'
         >
           { description }
         </P>
