@@ -14,7 +14,7 @@ import glitchEffect from '../../assets/images/glitch-effect.png'
 
 // Self contained Root Renderer for footer
 const FooterWrapper = ({ prefooter, footerBackground }) => (
-  <Column>
+  <Column mt={[200, 200, 300]}>
     {
       footerBackground && (
         <Background
@@ -23,7 +23,7 @@ const FooterWrapper = ({ prefooter, footerBackground }) => (
         />
       )
     }
-    <Background background='black' backgroundImage='linear-gradient(43deg, rgb(0, 0, 0) 60%, #70221f)'>
+    <Background background='black' backgroundImage='linear-gradient(30deg, rgb(0, 0, 0) 60%, #70221f)'>
       <Box pt={[0, 0, 7]} pb={7}>
         <Row m='auto' flexWrap='wrap' maxWidth={1}>
           <Box width={1} px={[0, 0, 2]}>

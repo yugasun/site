@@ -78,7 +78,6 @@ const Prefooter = ({ heading, sentences, actions }) => (
   <Relative
     top='-420px'
     mb={['100px', '100px', '-290px']}
-    mt={150}
     height='400px'
   >
     <ResponsiveStack
