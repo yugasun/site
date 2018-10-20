@@ -6,6 +6,8 @@ import Breadcrumbs from 'src/components/Breadcrumbs'
 import styled from 'styled-components'
 import ContentWrapper from './ContentWrapper'
 import { AppContainer } from 'src/components'
+import Link from 'gatsby-link'
+import EditOnGithubOption from './EditOnGithub'
 
 //TODO - hacky fix this
 const ExampleBreadcrumbs = styled(Breadcrumbs)`
@@ -36,8 +38,10 @@ const WidthContainer = styled(Box)`
 //TODO - make below code dry
 export default ({ id, frontmatter, content, location }) => {
   return (
+        
         <Box
         my={10}>
+        <EditOnGithubOption />
         <AppContainer>
             <ExampleBreadcrumbs path={`/examples/`}/>
             <WidthContainer>
@@ -48,15 +52,17 @@ export default ({ id, frontmatter, content, location }) => {
             </Heading.h1>
             <P align='center'>{frontmatter.description}</P>
             </WidthContainer>
+            <a href={frontmatter.authorLink} target='_blank'>
             <Row justifyContent='center' alignItems='center'>
                 <P color='#8c8c8c' fontSize='12px'>user &nbsp;</P>
                 <Image
-                    src='https://secure.gravatar.com/avatar/ac1479a36bca868045a4d56ee4557534'
+                    src={frontmatter.authorAvatar}
                     width='33px'
                     height='33px'
                 />
-                <P color='#8c8c8c' fontSize='12px'> &nbsp; rupakg</P>
+                <P color='#8c8c8c' fontSize='12px'> &nbsp; {frontmatter.authorName}</P>
             </Row>
+            </a>
             <ContentWrapper
                 width={[1, 1, 1, 0.65]}
                 mx='auto'
@@ -65,7 +71,7 @@ export default ({ id, frontmatter, content, location }) => {
             <WidthContainer>
             <Row justifyContent='space-between' mt={100} mx='auto'>
                 <Button height='50px' fontSize='2rem' p={0} lineHeight={1.4}> 
-                    view on Github
+                    edit on Github
                 </Button>
                 <P color='#000000' opacity='0.4'>
                 Latest commit b2f54ec  on Sep 24, 2017
