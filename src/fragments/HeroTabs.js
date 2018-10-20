@@ -56,6 +56,7 @@ export default ({ data, selected }) => (
           background: `url(${selectedTabBackground})`,
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
+          borderColor: 'gray.3'
         }}
         placeholderProps={{ color: 'white' }}
         onChange={({ value }) => (

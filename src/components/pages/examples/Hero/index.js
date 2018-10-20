@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Text, ResponsiveStack } from 'serverless-design-system'
+import { Box, Text, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../HeroTabs'
 
@@ -32,22 +32,22 @@ const ExamplesHero = () => {
           Examples
         </Text.p>        
       </Box>
-      <Box
-        width={[1, 1, 1, 1]}
-        pl={[0, 0, 6]}
-        pr={[0, 0, 2]}
+      <Flex.verticallyCenter
+          width={[1, 1, 1, 1]}
+          pl={[0, 0, 6]}
+          pr={[0, 0, 2]}
       >
         <Text.p
           fontSize={[2, 2, 2, 4]}
           fontFamily={['SoleilBk', 'SoleilBk', 'SoleilLt']}
           lineHeight={3}
           letterSpacing={0}
-          mt={[3, 3, 1]}
-          mb={3}
+          mt={[3, 3, 1.5]}
+          mb={0}
         >
           Search our full examples repository for project examples using all languages and FaaS providers.
         </Text.p>
-      </Box>
+      </Flex.verticallyCenter>
     </ResponsiveStack>
   </HeroWrapper>
   )

@@ -54,9 +54,9 @@ const ResourcesMenu = () => (
 )
 
 const EnterpriseMenu = () => (
-  <Box pt={[2, 2, 0]} pl={[1, 1, 0]}>
+  <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
     <NavLink to={enterprise} completed>
-      <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
+      <Button fontSize={'1.5rem'} px={2} py={'16px'} width={'176px'}>
         enterprise
       </Button>
     </NavLink>

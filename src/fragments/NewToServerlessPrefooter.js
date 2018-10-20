@@ -5,7 +5,7 @@ import Prefooter from 'src/components/Prefooter'
 const sentences = [
   (
     <Text.p 
-      color='gray'
+      color='gray.3'
       mt={8}
       fontFamily='SoleilBk'
     >

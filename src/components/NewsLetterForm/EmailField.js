@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { TextField } from 'serverless-design-system'
 
 const TextFieldWithNoOutline = styled(TextField)`
+  @media screen and (max-width: 414px) {
+    text-align: center;
+  }
+
   &:focus {
     outline: none;
   }
@@ -23,12 +27,11 @@ export default class EmailField extends React.Component {
     return (
       <TextFieldWithNoOutline
         color='white'
-        bg='gray.3'
+        bg='rgba(255, 255, 2555, 0.2)'
         border='none'
         fontSize={3}
         letterSpacing='textField'
         lineHeight={4}
-        opacity='0.2'
         px={[1, 1, 1]}
         py={15}
         m={0}
@@ -36,7 +39,7 @@ export default class EmailField extends React.Component {
         borderRadius={0}
         fontSize={2}
         fontFamily="Serverless"
-        placeholderColor="white"
+        placeholderColor="grey.2"
         required
         {...this.props}
         onFocus={this.clearPlaceholder}

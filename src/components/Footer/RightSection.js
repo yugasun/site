@@ -47,7 +47,7 @@ const SocialIcon = ({ to, icon, hoverIcon }) => (
   <SocialIconWrapper
     icon={icon}
     hoverIcon={hoverIcon}
-    mr={24}
+    mr={[0,0,24]}
   >
     <NavLink to={to} crossDomain>
       <InlineBlock />
@@ -69,7 +69,7 @@ const Subscribe = () => (
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Flex pt={[5,5,0]} pb={6} justifyContent={['space-between', 'space-between', 'normal']}>
+    <Flex pt={[5, 5, 0]} pb={6} justifyContent={['space-between', 'space-between', 'normal']}>
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}

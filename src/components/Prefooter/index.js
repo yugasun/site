@@ -19,6 +19,8 @@ import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
 
 const FlexWithShadow = styled(Flex.horizontallyCenter)`
   box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15)
+
+  
 `
 
 const LeftColumn = ({ heading, sentences }) => (
