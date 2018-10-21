@@ -14,8 +14,8 @@ import { enterprise } from 'src/constants/urls'
 
 const PlatformMenu = () => (
   <Box>
-    <MenuTitle name={'product'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'] }}>
+    <MenuTitle name={'products'} />
+    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px']}}>
       <PlatformDropdownList />
     </MenuDescription>
   </Box>
