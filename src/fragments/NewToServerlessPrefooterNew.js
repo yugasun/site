@@ -1,13 +1,24 @@
 import React from 'react'
 import { Text } from 'serverless-design-system'
-import Prefooter from 'src/components/Prefooter'
+import PrefooterNew from 'src/components/PrefooterNew'
 
 const sentences = [
-  'To get started, pop open your terminal & run:',
+  (
+    <Text.p 
+      color='gray.3'
+      mt={8}
+      fontFamily='SoleilBk'
+    >
+      To get started, pop open your terminal &amp; run:
+    </Text.p>
+  ),
   (
     <Text.p
-      color="white"
-      fontFamily="Serverless"
+      color='gray.2'
+      fontFamily='Serverless'
+      fontSize={14}
+      letterSpacing={'0.4px'}
+      lineHeight={1.71}
     >
       npm install serverless -g
     </Text.p>
@@ -40,7 +51,7 @@ const actions = [
 ]
 
 const NewToServerlessPrefooter = () => (
-  <Prefooter
+  <PrefooterNew
     heading='New to serverless?'
     sentences={sentences}
     actions={actions}
