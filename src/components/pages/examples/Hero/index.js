@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Text, ResponsiveStack, Flex } from 'serverless-design-system'
-import { HeroWrapper } from 'src/fragments'
+import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../HeroTabs'
 
 const ExamplesHero = () => {
