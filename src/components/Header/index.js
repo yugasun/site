@@ -65,7 +65,7 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-          <Box py={[1, 1, 3]}>
+          <Box py={[2, 2, 0]}>
             <AppContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
