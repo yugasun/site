@@ -13,7 +13,7 @@ export default ({ data, selected }) => (
   <Box>
     <Box display={[ 'none', 'none', 'block' ]}>
       <Card
-        display='inline-block'
+        display="inline-block"
         border={"1px solid rgba(255, 255, 255, 0.2)"}
       >
         <Tabs
@@ -27,7 +27,7 @@ export default ({ data, selected }) => (
             align: 'center',
           }}
           tabContainerStyle={{
-            minWidth: '167px',
+            minWidth: '120px',
             height: '46px',
             justifyContent: 'center',
             alignItems: 'center',
@@ -36,7 +36,7 @@ export default ({ data, selected }) => (
           selectedTabContainerStyle={{
             background: `url(${selectedTabBackground})`,
             backgroundSize: 'contain',
-            backgroundRepeat: 'repeat-x',
+            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
           }}
           selectedValue={selected}
@@ -47,7 +47,7 @@ export default ({ data, selected }) => (
 
     <Box
       display={[ 'block', 'block', 'none' ]}
-      maxWidth='320px'
+      maxWidth="320px"
     >
       <DropDown
         options={data}
@@ -56,7 +56,6 @@ export default ({ data, selected }) => (
           background: `url(${selectedTabBackground})`,
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
-          borderColor: 'gray.3'
         }}
         placeholderProps={{ color: 'white' }}
         onChange={({ value }) => (
