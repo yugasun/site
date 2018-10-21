@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/Default'
+import DefaultLayout from 'src/layouts/DefaultNew'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import Hero from 'src/components/pages/examples/Hero'
 import Content from 'src/components/pages/examples/Content'
