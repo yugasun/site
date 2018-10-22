@@ -24,10 +24,10 @@ const ExamplesHero = () => {
         <Text.p
           fontSize={[8, 7, 8]}
           fontFamily='SoleilLt'
-          lineHeight={1.1}
-          letterSpacing={'-2'}
+          lineHeight={[1.29, 1.29, 1.1]}
+          letterSpacing={['0.5px', '0.5px', '-2px']}
           m={0}
-          mt={[4,4,0,0]}
+          mt={[42,42,0,0]}
         >
           Examples
         </Text.p>        
@@ -40,9 +40,9 @@ const ExamplesHero = () => {
         <Text.p
           fontSize={[2, 2, 2, 4]}
           fontFamily={['SoleilBk', 'SoleilBk', 'SoleilLt']}
-          lineHeight={3}
+          lineHeight={[1.63, 1.63, 1.33]}
           letterSpacing={0}
-          mt={[3, 3, 1.5]}
+          mt={[22, 22, 1.5]}
           mb={0}
         >
           Search our full examples repository for project examples using all languages and FaaS providers.

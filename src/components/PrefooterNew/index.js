@@ -14,13 +14,12 @@ import {
 } from 'serverless-design-system'
 
 import NavLink from '../NavLink'
-import WhiteButton from '../WhiteButton'
+import WhiteButton from '../WhiteButtonNew'
 import RightBoxBgNew from 'src/assets/images/footerRightBoxBgNew.png'
 
 const FlexWithShadow = styled(Flex.horizontallyCenter)`
   box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15)
 
-  
 `
 
 const LeftColumn = ({ heading, sentences }) => (
@@ -35,14 +34,15 @@ const LeftColumn = ({ heading, sentences }) => (
     <Overflow
       o='hidden'
       width={1}
-      py={[3, 5, 5]}
-      px={[2, 4, 6]}
+      py={[62, 62, 5]}
+      px={[3, 3, 6]}
     >
         <Heading.h3
           color='black'
           fontFamily={'Soleil'}
           fontSize={5}
           letterSpacing={'-0.5px'}
+          lineHeight={1.38}
         >
           {heading}
         </Heading.h3>
@@ -65,9 +65,9 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Column>
+  <Column height={'198px'} justifyContent='space-between'>  
     {actions.map(({ name, navProps }, index) => (
-      <Box m={1} key={index}>
+      <Box key={index}>
         <NavLink {...navProps}>
           <WhiteButton>{name}</WhiteButton>
         </NavLink>
@@ -85,20 +85,21 @@ const Prefooter = ({ heading, sentences, actions }) => (
     <ResponsiveStack
       bg='serverlessRed'
       o='hidden'
+      height='100%'
     >
       <LeftColumn heading={heading} sentences={sentences} />
       <Box width={[1, 1, 1/2]}>
         <Background
           width={1}
-          height='fullHeight'
+          height={['322px', '322px', 'fullHeight']}
           background={`#fd5750 url(${RightBoxBgNew}) no-repeat`}
           backgroundSize='100% 100%'
         >
           <Flex.center
             flexDirection='column'
             height='fullHeight'
-            py={[5, 5, 8]}
-            px={[3, 3, 7]}
+            py={[0, 0, 0]}
+            px={[0, 0, 0]}
           >
             <RightColumn actions={actions} />
           </Flex.center>
