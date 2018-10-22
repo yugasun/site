@@ -26,7 +26,7 @@ const FooterWrapper = ({ prefooter, footerBackground }) => (
     <Background backgroundImage={['linear-gradient(50deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(50deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(30deg, rgb(0, 0, 0) 60%, #70221f)']}>
       <Box pt={[0, 0, 7]} pb={7}>
         <Row m='auto' flexWrap='wrap' maxWidth={1216}>
-          <Box width={1} px={[0, 0, 0]}>
+          <Box width={1} px={[0, 0, 0]} height={['425px', '425px', '235px']}>
             {prefooter ? prefooter() : null}
             <FooterIcon />
           </Box>
