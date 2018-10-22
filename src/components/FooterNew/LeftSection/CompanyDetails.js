@@ -13,7 +13,7 @@ const CompanyDetails = () => (
         Poland, Nebraska &amp; Thailand
       </P>
     </Box>
-    <ResponsiveStack pt={4} alignItems={['left', 'left', 'center']}>
+    <ResponsiveStack pt={[22,22,49]} alignItems={['left', 'left', 'center']}>
       <Box width={'55%'}>
         <P m={0} fontSize={0} color='white' opacity='0.5' fontFamily='Serverless'>
           Serverless, Inc. © 2018

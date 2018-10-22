@@ -62,14 +62,14 @@ const Subscribe = () => (
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
   >
-    <Box mb={4}>
-      <P color='white' align={['center', 'center', 'left']} lineHeight={1.63}>
+    <Box mb={32, 32, 41}>
+      <P color='white' align={['center', 'center', 'left']} lineHeight={1.63} my={0}>
         Join our newsletter and get the latest news about Serverless products
         and happenings. #noSpamWePromise
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Flex pt={[5, 5, 0]} pb={6} justifyContent={['space-between', 'space-between', 'normal']}>
+    <Flex pt={[62, 62, 86]} pb={[62, 62, 0]} justifyContent={['space-between', 'space-between', 'normal']}>
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}
