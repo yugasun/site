@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.svg'
 
 // Renders the Footer Icon
 const FooterIcon = () => (
-  <Box pt={[0, 0, 2]} pb={[0, 0, 7]} width={1}>
+  <Box pt={[0, 0, 2]} pb={[0, 0, 94]} width={1}>
     <Image width={[0, 0, '138px']} src={logo} />
   </Box>
 )
