@@ -36,9 +36,23 @@ function makeTitle(folderName) {
     
     //uppercase words
     let finalTitle = ""
-    const uppercaseWords = ["Http", "Rest", "Api", "Sns", "Ses", "Iot"]
+    const uppercaseWords = ["Http", "Rest", "Api", "Iot"]
+    const brandWords = {
+        dynamodb: 'DynamoDB',
+        faunadb: 'FaunaDB',
+        pynamodb: 'PynamoDB',
+        mongodb: 'MongoDB',
+        oauth: 'OAuth',
+        sns: 'SNS',
+        ses: 'SES',
+        graphql: 'GraphQL'
+    }
     formattedTitle.split(' ').forEach(word => {
-        if(uppercaseWords.includes(word)) {
+        const wordInLowercase = word.toLowerCase()
+
+        if(brandWords[wordInLowercase]) {
+            finalTitle += ` ${brandWords[wordInLowercase]}`
+        } else if(uppercaseWords.includes(word)) {
             finalTitle += ` ${word.toUpperCase()}`
         } else {
             finalTitle += ` ${word}`
