@@ -6,8 +6,10 @@ const sentences = [
   (
     <Text.p 
       color='gray.3'
-      mt={8}
+      mt={[76, 76, 79]}
+      mb={[0, 0, 0]}
       fontFamily='SoleilBk'
+      lineHeight={1.63}
     >
       To get started, pop open your terminal &amp; run:
     </Text.p>
@@ -15,6 +17,8 @@ const sentences = [
   (
     <Text.p
       color='gray.2'
+      mt={15}
+      mb={[0,0,0]}
       fontFamily='Serverless'
       fontSize={14}
       letterSpacing={'0.4px'}
