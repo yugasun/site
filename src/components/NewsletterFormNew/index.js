@@ -10,8 +10,11 @@ import EmailField from './EmailField'
 
 const StyledForm = styled.form`
   display: block;
-  height: 100%;
   width: 100%;
+`
+
+const ButtonWithLineHeight = styled(Button) `
+  line-height: 0.88;
 `
 
 const newsletterSubscribeAPI = process.env.GATSBY_NEWSLETTER_API
@@ -56,6 +59,7 @@ class NewsLetterForm extends React.Component {
     }).then((response) => {
       if (response && response.data && response.data.created) {
         console.info('Newsletter subscription creation succeed') // eslint-disable-line
+        // Customer.io
         // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
         track('site:newsletter_subscribed', {
           label: 'Newsletter Subscription',
@@ -93,19 +97,21 @@ class NewsLetterForm extends React.Component {
     }
 
     return (
-      <Button
-        width={['35%', '35%', '40%']}
+      <ButtonWithLineHeight
+        width={['100%', '100%', '40%']}
+        height={'50px'}
         px={[0, 0, 1]}
         py={15}
         m={0}
         textAlign='center'
         border={0}
+        letterSpacing={'0.7px'}
         fontSize={2}
         disabled={this.state.isFetching}
         {...submitBtnProps}
       >
         sign up
-      </Button>
+      </ButtonWithLineHeight>
     )
   }
 
