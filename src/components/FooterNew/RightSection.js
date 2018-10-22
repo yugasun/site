@@ -69,7 +69,7 @@ const Subscribe = () => (
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Flex pt={[62, 62, 86]} pb={[62, 62, 0]} justifyContent={['space-between', 'space-between', 'normal']}>
+    <Flex pt={[62, 62, 100]} pb={[62, 62, 0]} justifyContent={['space-between', 'space-between', 'normal']}>
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}
