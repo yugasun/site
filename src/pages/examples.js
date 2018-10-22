@@ -12,7 +12,7 @@ const Examples = ({ data: examples }) => {
   return (
     
     <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false} transparentHeader={true}>
-       <Helmet title='Examples Explorer' />
+       <Helmet title='Examples Explorer | Serverless Functions Directory' />
        <Hero />
        <Content examples={edges.map(({ node }) => node)} />
     </DefaultLayout>

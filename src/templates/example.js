@@ -6,7 +6,7 @@ import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fra
 
 export default ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
-   <Helmet />
+   <Helmet {...data.Example.frontmatter }/>
    <ExampleContent {...data.Example }/>
   </DefaultLayout>
 )
