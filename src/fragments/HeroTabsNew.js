@@ -73,7 +73,6 @@ export default ({ data, selected }) => (
       maxWidth='320px'
     >
         <DropDown
-        icon={Icon}
         options={data}
         value={selected}
         fieldContainerProps={{

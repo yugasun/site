@@ -9,7 +9,7 @@ import {
 } from 'serverless-design-system'
 
 import NavLink from '../NavLink'
-import NewsLetterForm from '../NewsLetterFormNew'
+import NewsLetterForm from '../NewNewsLetterForm'
 import {
   facebookHandle,
   instagramHandle,
