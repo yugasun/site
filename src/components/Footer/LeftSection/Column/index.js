@@ -10,8 +10,8 @@ const FooterListColumn = ({ header, listItems }) => (
       color={'white'}
       fontFamily={'Serverless'}
       fontSize={1}
-      lineHeight={1.14}
-      letterSpacing='0.6px'
+      lineHeight={1}
+      letterSpacing='text'
       my={'5px'}
       py={1}
     >
@@ -19,7 +19,7 @@ const FooterListColumn = ({ header, listItems }) => (
     </P>
     <Box>
       {listItems.map((listItem, index) => (
-        <FooterListItem key={index} color='white' content={listItem} />
+        <FooterListItem key={index} color='gray.3' content={listItem} />
       ))}
     </Box>
   </Box>

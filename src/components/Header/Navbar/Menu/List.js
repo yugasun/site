@@ -14,8 +14,8 @@ import { enterprise } from 'src/constants/urls'
 
 const PlatformMenu = () => (
   <Box>
-    <MenuTitle name={'products'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px']}}>
+    <MenuTitle name={'product'} />
+    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'] }}>
       <PlatformDropdownList />
     </MenuDescription>
   </Box>
@@ -54,9 +54,9 @@ const ResourcesMenu = () => (
 )
 
 const EnterpriseMenu = () => (
-  <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
+  <Box pt={[2, 2, 0]} pl={[1, 1, 0]}>
     <NavLink to={enterprise} completed>
-      <Button fontSize={'1.5rem'} px={2} py={'16px'} width={'176px'}>
+      <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
         enterprise
       </Button>
     </NavLink>

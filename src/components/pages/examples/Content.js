@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex, Heading} from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer }  from 'src/components'
 import Search from './Search'
 import ExamplePreview from './SingleExamplePreview'
 import algoliasearch from 'algoliasearch/lite'
@@ -151,14 +151,15 @@ export default class Content extends React.Component {
       
         <Box
           mt={[6]}
-          mb={[4, 4, 2]}
+          mb={[0, 0, 2]}
           color='black'
         >
           <Heading.h3
-                fontSize={[4, 4, 6]}
-                fontFamily='Soleil'
-                letterSpacing='h4'
-                align='center'
+              fontSize={[4, 4, 6]}
+              fontFamily='Soleil'
+              letterSpacing={['-0.4px', '-0.4px', 0]}
+              lineHeight={[1.33, 1.33, 1.25]}
+              align='center'
               >
             All the examples
           </Heading.h3>
@@ -169,6 +170,7 @@ export default class Content extends React.Component {
         <Flex
           flexDirection={['column', 'column', 'row']}
           flexWrap='wrap'
+          justifyContent='space-between'
         >
           
             { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }

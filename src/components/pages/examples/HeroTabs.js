@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeroTabs } from 'src/fragments'
+import { HeroTabsNew as HeroTabs } from 'src/fragments'
 import { examples, developers } from 'src/constants/urls'
 
 const data = [

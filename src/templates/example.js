@@ -1,8 +1,8 @@
 import React from 'react'
-import DefaultLayout from 'src/layouts/Default'
+import DefaultLayout from 'src/layouts/DefaultNew'
 import ExampleContent from 'src/components/pages/example/ExampleContent'
 import { Helmet } from 'src/fragments'
-import { NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
 
 export default ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>

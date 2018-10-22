@@ -30,12 +30,13 @@ export default class EmailField extends React.Component {
         bg='rgba(255, 255, 2555, 0.2)'
         border='none'
         fontSize={3}
-        letterSpacing='textField'
-        lineHeight={4}
+        letterSpacing='0.4px'
+        lineHeight={1.71}
         px={[1, 1, 1]}
         py={15}
         m={0}
         width={[1, 1, 0.6]}
+        height={'50px'}
         borderRadius={0}
         fontSize={2}
         fontFamily="Serverless"

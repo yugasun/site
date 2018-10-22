@@ -5,6 +5,7 @@ import { Box, Card, DropDown, TextField, ResponsiveStack } from 'serverless-desi
 import searchIcon from 'src/assets/images/search-icon.svg'
 
 const ExamplesSearchField = styled(TextField)`
+    letter-spacing: 0.4px; 
     background: url(${searchIcon}) no-repeat;
     background-position: right 15px center;
     background-color: white;
@@ -16,7 +17,8 @@ const ExamplesSearchField = styled(TextField)`
     }
 
     @media screen and (max-width: 412px) {
-      border: 1px solid #5b5b5b;
+      border: none;
+      border-left: none;
     }
 `
 
@@ -24,10 +26,10 @@ const BoxWithMobileBorder = styled(Box)`
   
   font-size: 14px;
   line-height: 1.14;
-  letter-space: 0.6px;
+  letter-spacing: 0.6px;
 
-  @media screen and (max-width: 412px) {
-    border: 1px solid #5b5b5b;
+  @media screen and (max-width: 414px) {
+    border-bottom: 1px solid #5b5b5b;
   }
 `
 
@@ -70,8 +72,9 @@ export default class Search extends React.Component {
     return (
     <Card
       border='1px solid #5b5b5b'
-      m={[2]}
-      mt={5}
+        mt={[22, 22, 5]}
+        mb={[32, 32, 0]}
+        mx={[15,15,0]}
     >
     <ResponsiveStack>
 
@@ -134,11 +137,11 @@ export default class Search extends React.Component {
         />
       </BoxWithMobileBorder>
       <ExamplesSearchField
-        placeholder='Search for an example'
-        height={50}
-        width='100%'
-        border='none'
-        fontSize={14}
+            placeholder='Search for an example'
+            height={50}
+            width='100%'
+            border='none'
+            fontSize={14} 
         fontFamily='Serverless'
         placeholderColor='#8c8c8c'
         px={[1,1,2]}

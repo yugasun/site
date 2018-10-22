@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import {
   Background,
@@ -8,6 +7,7 @@ import {
   Flex,
   Heading,
   Overflow,
+  TextWithIcon,
   Relative,
   ResponsiveStack,
   P,
@@ -16,40 +16,41 @@ import {
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButton'
 import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
-
-const FlexWithShadow = styled(Flex.horizontallyCenter)`
-  box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15)
-
-  
-`
+import greyDotsSquare from 'src/assets/images/dot-grid-grey-square.png'
 
 const LeftColumn = ({ heading, sentences }) => (
-  <Background background='white' width={[1, 1, 1/2]}>
-  <FlexWithShadow
-    width={1}
+  <Flex.horizontallyCenter
+    width={[1, 1, 1 / 2]}
     boxSizing='border-box'
     flexDirection='column'
-    height='100%'
-    mt={[7,7,0]}
   >
     <Overflow
-      o='hidden'
+      o="hidden"
       width={1}
-      py={[3, 5, 5]}
+      py={[3, 5, 8]}
       px={[2, 4, 6]}
     >
-        <Heading.h3
-          color='black'
-          fontFamily={'Soleil'}
-          fontSize={5}
-          letterSpacing={'-0.5px'}
+      <TextWithIcon
+        iconSrc={greyDotsSquare}
+        iconHeight='100px'
+        iconWidth='118px'
+        iconTop='-30px'
+        iconLeft='-80px'
+        backgroundSize={[0, 0, 'contain']}
+      >
+        <Heading.h2
+          color='white'
+          fontFamily={'SoleilBk'}
+          fontSize={7}
+          letterSpacing={0}
         >
           {heading}
-        </Heading.h3>
+        </Heading.h2>
+      </TextWithIcon>
       {
         sentences.map((sentence, index) => (
           ( typeof sentence === 'string' ) ? (
-            <P color='black' mt={0} key={index}>
+            <P color='white' mt={0} key={index}>
               {sentence}
             </P>
           ) : (
@@ -60,8 +61,7 @@ const LeftColumn = ({ heading, sentences }) => (
         ))
       }
     </Overflow>
-  </FlexWithShadow>
-  </Background>
+  </Flex.horizontallyCenter>
 )
 
 const RightColumn = ({ actions }) => (
@@ -78,25 +78,24 @@ const RightColumn = ({ actions }) => (
 
 const Prefooter = ({ heading, sentences, actions }) => (
   <Relative
-    top='-420px'
-    mb={['100px', '100px', '-290px']}
-    height='400px'
+    top='-320px'
+    mb='-290px'
   >
     <ResponsiveStack
       bg='serverlessRed'
       o='hidden'
     >
       <LeftColumn heading={heading} sentences={sentences} />
-      <Box width={[1, 1, 1/2]}>
+      <Box width={[1, 1, 1 / 2]}>
         <Background
           width={1}
-          height='fullHeight'
+          height="fullHeight"
           background={`#fd5750 url(${RightBoxBg}) no-repeat`}
-          backgroundSize='100% 100%'
+          backgroundSize='cover'
         >
           <Flex.center
-            flexDirection='column'
-            height='fullHeight'
+            flexDirection="column"
+            height="fullHeight"
             py={[5, 5, 8]}
             px={[3, 3, 7]}
           >

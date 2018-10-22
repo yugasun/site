@@ -10,8 +10,11 @@ import EmailField from './EmailField'
 
 const StyledForm = styled.form`
   display: block;
-  height: 32%;
   width: 100%;
+`
+
+const ButtonWithLineHeight = styled(Button) `
+  line-height: 0.88;
 `
 
 const newsletterSubscribeAPI = process.env.GATSBY_NEWSLETTER_API
@@ -94,19 +97,21 @@ class NewsLetterForm extends React.Component {
     }
 
     return (
-      <Button
+      <ButtonWithLineHeight
         width={['100%', '100%', '40%']}
+        height={'50px'}
         px={[0, 0, 1]}
         py={15}
         m={0}
         textAlign='center'
         border={0}
+        letterSpacing={'0.7px'}
         fontSize={2}
         disabled={this.state.isFetching}
         {...submitBtnProps}
       >
         sign up
-      </Button>
+      </ButtonWithLineHeight>
     )
   }
 
