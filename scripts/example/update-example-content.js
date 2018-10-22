@@ -33,7 +33,7 @@ function makeTitle(folderName) {
     const firstTwoElementsRemoved = folderNameArr.splice(0, 2)
 
     const formattedTitle = formatPluginName(folderNameArr.join(seperator))
-    
+
     //uppercase words
     let finalTitle = ""
     const uppercaseWords = ["Http", "Rest", "Api", "Iot"]
@@ -88,6 +88,27 @@ function fixYamlContent(content, filename) {
     return fixedContent
 }
 
+function getPlatformFullName(platform) {
+    let platformFullName
+
+    switch (platform) {
+        case 'AWS':
+            platformFullName = 'AWS Lambda'
+            break
+        case 'Google Cloud':
+            platformFullName = 'Google Cloud Functions'
+            break
+        case 'Azure':
+            platformFullName = 'Azure Functions'
+            break
+        default:
+            platformFullName = platform
+            break
+    }
+
+    return platformFullName
+}
+
 module.exports = function updateExamplesContent(examplesDirectoryPath) {
     dir.readFiles(examplesDirectoryPath, {
             match: /.md$/
@@ -98,6 +119,7 @@ module.exports = function updateExamplesContent(examplesDirectoryPath) {
             const item = matter(fixedContent).data 
             item.gitLink = makeGitLink(folderName)
             item.title = makeTitle(folderName)
+            item.platformFullName = getPlatformFullName(item.platform)
             if (isFileFeatured(folderName)) {
                 item.highlighted = true
             }
