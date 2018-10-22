@@ -59,7 +59,7 @@ export default ({ id, frontmatter, content, location }) => {
                 <Image
                     src={frontmatter.authorAvatar}
                     width='33px'
-                    height='41px'
+                    height='33px'
                 />
                       <P color='#8c8c8c' fontSize='12px' lineHeight={'1.33'} pl={'8px'} my={0}>{frontmatter.authorName}</P>
             </Row>
