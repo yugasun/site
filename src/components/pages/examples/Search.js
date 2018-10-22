@@ -138,7 +138,7 @@ export default class Search extends React.Component {
       </BoxWithMobileBorder>
       <ExamplesSearchField
             placeholder='Search for an example'
-            height={50}
+            height={46}
             width='100%'
             border='none'
             fontSize={14} 

@@ -23,7 +23,7 @@ const HoverableColumn = styled(Card)`
 const BoxWithMiddleElementMargin = styled(Box)`
   @media screen and (min-width: 414px) {
     :nth-child(3n+2) {
-      margin: 0 25px;
+      margin: 0 32px;
     }
   }
 `

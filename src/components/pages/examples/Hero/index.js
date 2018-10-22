@@ -8,9 +8,9 @@ const ExamplesHero = () => {
   return (
   <HeroWrapper
     background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
-    height={[422, 422, 490]}
+    height={[422, 422, 491]}
   >
-    <Box mb={[2, 2, 7]}>
+    <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
       <HeroTabs
        selected='examples-and-guides'
       />
@@ -34,8 +34,7 @@ const ExamplesHero = () => {
       </Box>
       <Flex.verticallyCenter
           width={[1, 1, 1, 1]}
-          pl={[0, 0, 6]}
-          pr={[0, 0, 2]}
+          px={[0, 0, 2]}
       >
         <Text.p
           fontSize={[2, 2, 2, 4]}

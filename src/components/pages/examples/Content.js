@@ -150,8 +150,7 @@ export default class Content extends React.Component {
       >
       
         <Box
-          mt={[6]}
-          mb={[0, 0, 2]}
+          mt={[6, 6, '161px']}
           color='black'
         >
           <Heading.h3
