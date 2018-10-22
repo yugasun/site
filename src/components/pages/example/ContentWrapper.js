@@ -7,6 +7,11 @@ import redHighlighter from 'src/assets/images/red-highlighter.png'
 const ContentWrapper = styled(Column)`
   overflow: hidden;
 
+  ul, ol {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;
@@ -43,7 +48,11 @@ const ContentWrapper = styled(Column)`
     }
   }
 
-  a {
+  h1 > a {
+    color: #000000;
+  }
+
+  p > a {
     color: #5b5b5b;
     text-decoration: none;
     border-bottom: 1px solid #fd5750;
@@ -69,7 +78,15 @@ const ContentWrapper = styled(Column)`
     margin-top: 35px;
     margin-bottom: 15px;
   }
-
+  h1 {
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: normal;
+  }
+  h2 {
+    margin-bottom: 16px;
+    margin-top:46px;
+  }
   li {
     padding-top: 15px;
     padding-bottom: 8px;
@@ -97,6 +114,11 @@ const ContentWrapper = styled(Column)`
     iframe {
       width: 100%;
       height: auto;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 1.33;
+      letter-spacing: normal;
     }
   }
 `

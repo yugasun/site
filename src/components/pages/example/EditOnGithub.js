@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Position, Absolute, Button, Fixed, Box } from 'serverless-design-system'
 
 const EditGithubButton = styled(Button)`
+line-height: 14px;
+
   &:focus {
     outline: none;
   }
@@ -18,7 +20,7 @@ export default class EditOnGithubOption extends React.Component {
     return (
         <Position
         position='sticky'
-        top='50%'
+        top='30%'
         zIndex={1}
       >
         <Absolute
@@ -31,10 +33,11 @@ export default class EditOnGithubOption extends React.Component {
         >
           <EditGithubButton
             height={32}
-            width={162}
+            width={161}
+            fontSize={'14px'}
+            letterSpacing={'0.6px'}
             py={1}
             onClick={this.scrollIntoNewsLetter}
-            fontSize={1.4}
           >
             edit on Github
           </EditGithubButton>
