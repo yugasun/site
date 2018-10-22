@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {
-  Background,
   Box,
   Heading,
   P,
@@ -21,13 +20,21 @@ const HoverableColumn = styled(Card)`
   }
 `
 
+const BoxWithMiddleElementMargin = styled(Box)`
+  @media screen and (min-width: 414px) {
+    :nth-child(3n+2) {
+      margin: 0 25px;
+    }
+  }
+`
+
 const singleExamplePreview = ({ id, frontmatter }) => {
   const { title, description, platform, language } = frontmatter
 
   return (
-    <Box 
-      width={[1, 1, 1, 384]}
-      mb={[42, 42, 0]}
+    <BoxWithMiddleElementMargin 
+      width={[1, 1, 1, '384px']}
+      mb={[42, 42, 32]}
     >
       <HoverableColumn>
        <Box m={['0px 15px', '0px 15px', '36px 48px']}>
@@ -42,7 +49,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             >
             {language}
             </P>
-            <Heading.h3
+            <Heading.h4
               fontSize='24px'
               fontFamily='Soleil'
               letterSpacing={['-0.4px']}
@@ -50,7 +57,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
               mb='8px'
             >
               {platform} | { title }
-            </Heading.h3>
+            </Heading.h4>
           </Box>
         </BlockLink>
           <P
@@ -63,7 +70,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         </P>
         </Box>
       </HoverableColumn>
-    </Box>
+    </BoxWithMiddleElementMargin>
   )
 }
 

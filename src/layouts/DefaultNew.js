@@ -6,7 +6,7 @@ import { HeaderNew as Header, FooterNew as Footer } from 'src/components'
 const DefaultLayout = ({ children, prefooter, transparentHeader, footerBackground }) => (
   <Column width={1}>
     <Header transparent={transparentHeader} />
-    <Box width={1} mt={2}>{children}</Box>
+    <Box width={1}>{children}</Box>
     <Footer prefooter={prefooter} footerBackground={footerBackground} />
   </Column>
 )

@@ -15,11 +15,23 @@ import {
 
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButtonNew'
-import RightBoxBgNew from 'src/assets/images/footerRightBoxBgNew.png'
+import RightBoxBgNew from 'src/assets/images/footerRightBoxBgNew.svg'
 
 const FlexWithShadow = styled(Flex.horizontallyCenter)`
-  box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15)
+  box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15);
 
+  @media screen and (max-width: 412px) {
+    box-shadow: 0 2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+`
+
+const ResponsiveRightPreFooterBackground = styled(Background)`
+    background-size: 100% 100%;
+
+    @media screen and (max-width: 412px) {
+      background-position: 55% 106%;
+      background-size: 138% 103%;
+    }
 `
 
 const LeftColumn = ({ heading, sentences }) => (
@@ -89,11 +101,10 @@ const Prefooter = ({ heading, sentences, actions }) => (
     >
       <LeftColumn heading={heading} sentences={sentences} />
       <Box width={[1, 1, 1/2]}>
-        <Background
+        <ResponsiveRightPreFooterBackground
           width={1}
           height={['322px', '322px', 'fullHeight']}
           background={`#fd5750 url(${RightBoxBgNew}) no-repeat`}
-          backgroundSize='100% 100%'
         >
           <Flex.center
             flexDirection='column'
@@ -103,7 +114,7 @@ const Prefooter = ({ heading, sentences, actions }) => (
           >
             <RightColumn actions={actions} />
           </Flex.center>
-        </Background>
+        </ResponsiveRightPreFooterBackground>
       </Box>
     </ResponsiveStack>
   </Relative>

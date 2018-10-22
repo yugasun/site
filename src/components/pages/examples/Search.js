@@ -73,7 +73,7 @@ export default class Search extends React.Component {
     <Card
       border='1px solid #5b5b5b'
         mt={[22, 22, 5]}
-        mb={[32, 32, 0]}
+        mb={[32, 32, 40]}
         mx={[15,15,0]}
     >
     <ResponsiveStack>
