@@ -42,20 +42,6 @@ export default class EditOnGithubOption extends React.Component {
             edit on Github
           </EditGithubButton>
         </Absolute>
-
-        <Fixed
-            bottom={0}
-            width={'100%'}
-            display={['block', 'block', 'none']}
-        >
-          <EditGithubButton
-            width={'100%'}
-            py={1}
-            fontSize={1.4}
-          >
-            edit on Github
-          </EditGithubButton>
-        </Fixed>
       </Position>
     )
   }
