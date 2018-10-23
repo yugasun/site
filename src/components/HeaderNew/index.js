@@ -1,5 +1,5 @@
 import React from 'react'
-import { Background, Box, Flex, Transition } from 'serverless-design-system'
+import { Background, Flex, Transition } from 'serverless-design-system'
 
 import { AppContainerNew as AppContainer } from 'src/components'
 import Logo from './Logo'
