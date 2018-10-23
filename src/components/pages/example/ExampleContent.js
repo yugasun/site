@@ -24,7 +24,7 @@ const ExampleBreadcrumbs = styled(Breadcrumbs)`
     color: #000000
 
     a:hover  {
-        color: #000000
+        color: #000000;
         opacity: 0.4;
     }
 `
@@ -37,7 +37,7 @@ const WidthContainer = styled(Box)`
     }
 `
 
-//TODO - make below code dry
+//TODO - REFACTOR THIS (components)
 export default ({ id, frontmatter, content, location }) => {
   return (
         
