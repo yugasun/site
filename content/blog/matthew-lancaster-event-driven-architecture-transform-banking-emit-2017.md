@@ -1,7 +1,7 @@
 ---
 title: 'Matthew Lancaster - using even-driven architecture to transform core banking'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s Matthew from Accenture on transforming core banking with event-driven architectures.'
-date: '2017-10-31'
+date: '2017-11-01'
 layout: Post
 thumbnail: 'http://www.emitconference.com/assets/images/speaker-matthew-lancaster.jpg'
 authors:

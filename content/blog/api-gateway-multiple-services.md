@@ -1,7 +1,7 @@
 ---
 title: 'How to deploy multiple micro-services under one API domain with Serverless'
 description: 'Learn how to use the same domain name for multiple Serverless services with API Gateway base path mappings.'
-date: '2017-09-24'
+date: '2017-09-25'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/aws-api-gateway-icon.png'
 category:
     - guides-and-tutorials

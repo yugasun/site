@@ -1,7 +1,7 @@
 ---
 title: 'Best tools for serverless observability'
 description: 'The current best tools for serverless observability: benefits, drawbacks, and which are right for you.'
-date: '2018-02-25'
+date: '2018-02-26'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/observability-tools/graph-thumb.png'
 category:
     - operations-and-observability

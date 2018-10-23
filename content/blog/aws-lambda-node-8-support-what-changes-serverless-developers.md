@@ -1,7 +1,7 @@
 ---
 title: 'AWS Lambda Node.js 8 support: what it changes for serverless developers'
 description: 'AWS Lambda just moved to support Node.js 8.10. This is what serverless developers need to know.'
-date: '2018-04-01'
+date: '2018-04-02'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/node8/nodejs8-full.jpg'
 category:
     - news

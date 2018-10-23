@@ -1,7 +1,7 @@
 ---
 title: 'How you can avoid parking tickets with a Serverless reminder'
 description: 'How to build a simple Serverless app that reminds you about street sweeping days in your neighborhood. Never get a parking ticket again!'
-date: '2017-10-29'
+date: '2017-10-30'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/jordan-andrews-300359.jpg'
 authors:

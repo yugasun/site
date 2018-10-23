@@ -1,7 +1,7 @@
 ---
 title: 'Test-Driven Serverless Application Development'
 description: 'Quick Start to Test-Driven Development with Serverless Framework.'
-date: '2017-02-27'
+date: '2017-02-28'
 thumbnail: 'https://cloud.githubusercontent.com/assets/4726921/23232988/fdabd3fa-f955-11e6-84bd-c8a939841360.png'
 layout: Post
 authors:

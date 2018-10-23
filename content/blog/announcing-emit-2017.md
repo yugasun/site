@@ -1,7 +1,7 @@
 ---
 title: 'Announcing Emit 2017'
 description: 'Announcing Emit, the conference on event-driven architectures.'
-date: '2017-06-26'
+date: '2017-06-27'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/emit_square.png'
 layout: Post
 authors:

@@ -1,7 +1,7 @@
 ---
 title: 'On serverless, data lock-in and vendor choice'
 description: 'Vendor choice is the most important thing IT leaders could be thinking about today. And the path to achieving it is data portability.'
-date: '2018-06-19'
+date: '2018-06-20'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/vendor+choice/serverless-data-portability.jpg'
 category:
     - engineering-culture

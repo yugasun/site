@@ -25,8 +25,8 @@ const SubmitButton = (props) => (
 const Title = ({ component: HeadingComp, color }) => (
   <HeadingComp
     color={color}
-    fontFamily="SoleilLt"
-    letterSpacing="0"
+    fontFamily='SoleilLt'
+    letterSpacing='0'
     lineHeight={2}
   >
     Join 12,000+ other serverless devs &amp; keep up to speed on the latest serverless trends.
@@ -39,11 +39,11 @@ export default () => (
       display={['none', 'none', 'block']}
       top='-320px'
       mb='-290px'
-      id="newsletter-box"
+      id='newsletter-box'
     >
       <Background
         background={`url(${blogFooterBackground})`}
-        backgroundSize="cover"
+        backgroundSize='cover'
       >
         <ResponsiveStack>
           <Flex
@@ -51,11 +51,11 @@ export default () => (
             p={[1, 1, 5, 7]}
             pr={2}
           >
-            <Title component={Heading.h4} color="white" />
+            <Title component={Heading.h4} color='white' />
           </Flex>
           <Flex
-            justifyContent="flex-end"
-            alignItems="center"
+            justifyContent='flex-end'
+            alignItems='center'
             width={[1, 1, 0.5]}
             p={[1, 1, 4, 4, 7]}
           >
@@ -86,10 +86,10 @@ export default () => (
       top='-360px'
       mb='-290px'
     >
-      <Card border="1px solid #fd5750">
+      <Card border='1px solid #fd5750'>
         <Background>
           <ResponsiveStack
-            bg="#ffffffe6"
+            bg='#ffffffe6'
             py={2}
           >
             <Flex

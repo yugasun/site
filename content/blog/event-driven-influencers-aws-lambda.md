@@ -1,7 +1,7 @@
 ---
 title: 'Event-driven Influencers - AWS Lambda'
 description: 'The ones who started it all.'
-date: '2017-07-30'
+date: '2017-07-31'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/AWS-Lambda.png'
 authors:

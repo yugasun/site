@@ -1,7 +1,7 @@
 ---
 title: 'Automate your DynamoDB backups with Serverless in less than 5 minutes'
 description: 'Using the Serverless Framework, you can set up automatic backups of your DynamoDB table.'
-date: '2017-12-11'
+date: '2017-12-12'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/dynamodb.png'
 authors:

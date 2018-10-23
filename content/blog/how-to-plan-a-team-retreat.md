@@ -1,7 +1,7 @@
 ---
 title: 'How to plan a team retreat'
 description: 'Bi-annual retreats - how we improve communication and make remote teams work.'
-date: '2017-10-08'
+date: '2017-10-09'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/team-retreat/team-retreat-photo.JPG'
 layout: Post
 authors:

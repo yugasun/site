@@ -2,7 +2,7 @@
 layout: Post
 description: 'New Serverless variable system for serverless.yml added to the serverless framework'
 title: 'New Release: Serverless V1.0 rc.1'
-date: '2016-09-05'
+date: '2016-09-06'
 authors:
     - PhilippMuns
 gitLink: /2016-09-06-serverless-v1-0-rc-1.md

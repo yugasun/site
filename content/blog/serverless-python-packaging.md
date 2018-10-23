@@ -1,7 +1,7 @@
 ---
 title: 'How to Handle your Python packaging in Lambda with Serverless plugins'
 description: 'Handling Python dependencies in your Lambda functions can be a pain. Here''s how I handle Python packaging with Serverless for dev/prod parity.'
-date: '2017-08-03'
+date: '2017-08-04'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/header+images/serverless-python-packaging.jpg'
 category:
     - guides-and-tutorials

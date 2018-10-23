@@ -1,7 +1,7 @@
 ---
 title: '6 Lessons Learned on Building Awesome Developer Communities from CMX Summit'
 description: 'Severless Operations Manager, Casey Shultz, shares tips for building an engaged developer community from CMX Summit 2016.'
-date: '2016-11-22'
+date: '2016-11-23'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/community.jpg'
 layout: Post
 authors:

@@ -1,7 +1,7 @@
 ---
 title: 'Serverless monitoring - the good, the bad and the ugly'
 description: 'How to re-wire your brain to learn Serverless monitoring.'
-date: '2017-09-25'
+date: '2017-09-26'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/good+bad+ugly.jpg'
 layout: Post
 authors:

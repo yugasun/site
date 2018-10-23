@@ -9,7 +9,7 @@ import searchIcon from 'src/assets/images/white-search-icon.svg'
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
-);
+)
 
 export default class Search extends React.Component {
   state = { isSearchBarActive: false }
@@ -21,36 +21,36 @@ export default class Search extends React.Component {
   }
 
   render() {
-    const { isSearchBarActive } = this.state;
+    const { isSearchBarActive } = this.state
     return (
       <React.Fragment>
         <OptionWrapper
-          justifyContent="center"
-          mx="5px"
+          justifyContent='center'
+          mx='5px'
           onClick={this.toggleSearchBar}
         >
           <Image
-            maxHeight="22px"
+            maxHeight='22px'
             src={searchIcon}
-            objectFit="contain"
+            objectFit='contain'
           />
         </OptionWrapper>
         {
           isSearchBarActive && (
             <Fixed
-              bg="black"
+              bg='black'
               left={0}
               right={41}
             >
               <Row>
                 <OptionWrapper
-                  justifyContent="center"
-                  mx="12px"
+                  justifyContent='center'
+                  mx='12px'
                 >
                   <Image
-                    maxHeight="22px"
+                    maxHeight='22px'
                     src={searchIcon}
-                    objectFit="contain"
+                    objectFit='contain'
                   />
                 </OptionWrapper>
                 <InstantSearch
@@ -64,6 +64,6 @@ export default class Search extends React.Component {
           )
         }
       </React.Fragment>
-    );
+    )
   }
 }

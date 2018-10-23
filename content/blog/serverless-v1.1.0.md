@@ -1,7 +1,7 @@
 ---
 title: 'Serverless Framework Release - 1.1.0'
 description: 'Today we''re releasing 1.1.0 of the Serverless Framework'
-date: '2016-10-26'
+date: '2016-10-27'
 layout: Post
 authors:
     - PhilippMuns

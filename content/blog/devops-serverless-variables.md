@@ -1,7 +1,7 @@
 ---
 title: 'DevOps Use Cases With Serverless Variables'
 description: 'Serverless Framework Engineer Eslam Hefnawy explores creative use cases for using Serverless Variables to optimize and automate operations.'
-date: '2017-06-04'
+date: '2017-06-05'
 category:
     - guides-and-tutorials
     - operations-and-observability

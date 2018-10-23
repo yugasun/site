@@ -1,7 +1,7 @@
 ---
 title: 'Real World Security for your Serverless Apps with FaunaDB [Video]'
 description: 'FaunaDB''s Chris Anderson walks through extending the popular todo list serverless-crud example app to allow sharing and collaboration on lists.'
-date: '2017-05-03'
+date: '2017-05-04'
 layout: Post
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/23813615/4b53e4fc-05a5-11e7-8214-e34c2c02b949.png'
 authors:

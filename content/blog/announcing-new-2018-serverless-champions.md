@@ -1,7 +1,7 @@
 ---
 title: 'Introducing our first cohort of 2018 Serverless Champions'
 description: 'Serverless Champions are leaders in the Serverless Community. Meet our 2018 community heroes.'
-date: '2018-04-09'
+date: '2018-04-10'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/champions/champions_banner.jpg'
 category:
     - news

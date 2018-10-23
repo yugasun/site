@@ -1,7 +1,7 @@
 ---
 title: 'Azure Functions Support & Possibility'
 description: 'Announcing Azure Functions support with the Serverless Framework'
-date: '2017-02-22'
+date: '2017-02-23'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/azure-functions-thumbnail.png'
 layout: Post
 authors:

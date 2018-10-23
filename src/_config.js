@@ -23,6 +23,7 @@ const siteConfig = (isProduction) => {
       AUTH0_DOMAIN: process.env.AUTH0_DOMAIN || 'serverlessqa.auth0.com',
       ALGOLIA_ADMIN: process.env.ALGOLIA_ADMIN || '1f21cf7b86876a3ac23e35b2657894aa',
       ALGOLIA_BLOG_INDEX: (isProduction) ? 'prod_BLOG_SEARCH' : 'dev_BLOG_SEARCH',
+      ALGOLIA_EXAMPLES_INDEX: (isProduction) ? 'prod_EXAMPLES_SEARCH' : 'dev_EXAMPLES_SEARCH',
       ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID || 'V3VM7IN3TH',
       ALGOLIA_SEARCH_KEY: process.env.ALGOLIA_SEARCH_KEY || 'd2dac557d1fd151223e78f3597d59e78',
       // SEGMENT_KEY: process.env.SEGMENT_KEY || 'gNftvcGllpKZTe5PcAxF8pEoenLq32H0',

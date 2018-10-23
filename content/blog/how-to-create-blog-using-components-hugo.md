@@ -1,7 +1,7 @@
 ---
 title: 'Create a blog using pre-built Serverless Components and Hugo'
 description: 'Learn how to use pre-built Serverless Components and a static site generator like Hugo to create and deploy a blog site.'
-date: '2018-05-13'
+date: '2018-05-14'
 thumbnail: 'https://user-images.githubusercontent.com/8188/39884592-5aa800e8-5458-11e8-90df-3bd16d1ac463.png'
 category:
     - guides-and-tutorials

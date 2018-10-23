@@ -6,7 +6,6 @@ import { AppContainer } from 'src/components'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
   <Background
-    background='black'
     {...otherProps}
   >
     <Box

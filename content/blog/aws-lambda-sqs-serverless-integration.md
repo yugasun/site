@@ -1,7 +1,7 @@
 ---
 title: 'Using SQS with AWS Lambda and Serverless'
 description: 'Get started with Simple Queue Service (SQS) and Serverless, and learn some of the important configuration options.'
-date: '2018-07-10'
+date: '2018-07-11'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-sqs-events.jpg'
 category:
     - guides-and-tutorials

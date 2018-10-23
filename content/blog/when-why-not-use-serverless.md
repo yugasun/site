@@ -1,7 +1,7 @@
 ---
 title: 'When (and why) not to go serverless'
 description: 'The benefits, and the drawbacks, to serverless are real. When (and why) not to go serverless.'
-date: '2018-03-20'
+date: '2018-03-21'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/why-not/why-not-header.png'
 category:

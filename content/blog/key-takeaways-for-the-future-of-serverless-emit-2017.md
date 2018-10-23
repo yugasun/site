@@ -1,7 +1,7 @@
 ---
 title: 'Key takeaways for the future of serverless - Emit 2017 recap'
 description: 'Emit Conf 2017 has come and gone. Here are the key serverless takeaways you should know about.'
-date: '2017-08-24'
+date: '2017-08-25'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Emit+Recap/Emit+logo.png'
 authors:

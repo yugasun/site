@@ -20,7 +20,7 @@ const graphqlQuery = `
 
 const createBlogListingPageWithPagination = (createPage, blogs) => {
   for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
-    const page = i / blogsPerPage;
+    const page = i / blogsPerPage
     createPage({
       path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
       component: getFileFromProjectRoot(`src/templates/blogList.js`),

@@ -1,7 +1,7 @@
 ---
 title: 'Rob Gruhl - towards a serverless event-sourced Nordstrom'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s Rob with his talk—towards a serverless event-sourced Nordstrom.'
-date: '2017-10-24'
+date: '2017-10-25'
 layout: Post
 thumbnail: 'http://www.emitconference.com/assets/images/speaker-rob-gruhl.jpg'
 authors:

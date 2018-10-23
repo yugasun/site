@@ -1,7 +1,7 @@
 ---
 title: 'Build a multi-region, multi-master application with Serverless and DynamoDB Global Tables'
 description: 'We''re going to create a multi-region, multi-master, geo-routed application—all in about 30 minutes.'
-date: '2018-01-29'
+date: '2018-01-30'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/dynamodb.png'
 category:
     - guides-and-tutorials

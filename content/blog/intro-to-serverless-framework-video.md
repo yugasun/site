@@ -1,7 +1,7 @@
 ---
 title: 'Getting Started with the Serverless Framework [Video Tutorial]'
 description: 'Serverless lead front-end engineer Nik Graf shows you how to get started writing and deploying functions with the Serverless Framework.'
-date: '2017-05-17'
+date: '2017-05-18'
 layout: Post
 authors:
     - NikGraf

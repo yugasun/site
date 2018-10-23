@@ -1,7 +1,7 @@
 ---
 title: 'Serverless style - my journey from fashion to tech'
 description: 'Our newest team member, Charmmie, entered the tech industry from a career in high fashion. Here''s her story.'
-date: '2018-01-31'
+date: '2018-02-01'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-fashion/charmmie-square.jpg'
 category:
     - engineering-culture

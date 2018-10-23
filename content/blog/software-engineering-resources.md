@@ -1,7 +1,7 @@
 ---
 title: '7 Must Read Books for Becoming a Better Software Developer'
 description: 'Want to be a better engineer or programmer? Check out this list of resources from the Serverless team.'
-date: '2017-04-16'
+date: '2017-04-17'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24940473/2bdb229a-1ef8-11e7-9e8d-8f75b5461748.png'
 layout: Post
 authors:

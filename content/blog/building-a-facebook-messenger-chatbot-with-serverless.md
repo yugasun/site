@@ -1,7 +1,7 @@
 ---
 layout: Post
 title: 'Building a Facebook Messenger Chatbot with Serverless'
-date: '2016-10-03'
+date: '2016-10-04'
 description: 'Learn how to develop your very own Serverless Facebook Messenger Chatbot with the serverless framework'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/facebook.png'
 authors:

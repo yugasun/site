@@ -1,7 +1,7 @@
 ---
 title: 'Get in where you fit in: inclusion and diversity in tech'
 description: 'I''m Charmmie Hendon, and I''m passionate about diversity and inclusion in tech. Here''s a bit of my personal experience, and how you too can affect change.'
-date: '2018-07-15'
+date: '2018-07-16'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/inclusion/serverless-tech-inclusion1.jpg'
 category:
     - engineering-culture

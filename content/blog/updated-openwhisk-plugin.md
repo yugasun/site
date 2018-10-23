@@ -1,7 +1,7 @@
 ---
 title: 'New Event Sources and Other Updates in v0.5.0 of the OpenWhisk Plugin for the Serverless Framework'
 description: 'The official OpenWhisk plugin for Serverless now includes support for Cloudant DB and IBM Message Hub events, exporting Web Actions and more.'
-date: '2017-03-20'
+date: '2017-03-21'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/22410455/110d1f36-e65e-11e6-8db8-87e834504e13.jpg'
 layout: Post
 authors:

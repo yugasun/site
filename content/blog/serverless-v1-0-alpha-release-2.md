@@ -1,7 +1,7 @@
 ---
 title: 'Serverless V1.0 Alpha 2'
 description: 'Serverless templates added to the serverless framework'
-date: '2016-07-18'
+date: '2016-07-19'
 layout: Post
 authors:
     - PhilippMuns

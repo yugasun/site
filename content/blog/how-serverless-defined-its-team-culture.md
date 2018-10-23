@@ -1,7 +1,7 @@
 ---
 title: 'How Serverless Defined Its Team Values'
 description: 'Follow us on our journey to create a resilient team culture that attracts world class talent to the Serverless team.'
-date: '2017-08-23'
+date: '2017-08-24'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/pound-it.jpg'
 authors:

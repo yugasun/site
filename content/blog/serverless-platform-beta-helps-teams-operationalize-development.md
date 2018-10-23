@@ -1,12 +1,12 @@
 ---
 title: 'The new Serverless Platform Beta: everything teams need to operationalize serverless development'
 description: 'The Serverless Platform Beta is everything teams need to operationalize serverless development. Build, operate, and integrate serverless applications in a single toolkit.'
-date: '2018-07-29'
+date: '2018-07-30'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-platform-release/1-Serverless_header-Platform+Beta.jpg'
 category:
     - news
     - operations-and-observability
-heroImage: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/featured-posts/03_The-new-Serverless-Platform-Beta.png'
+heroImage: 'https://lh3.googleusercontent.com/YdsJQDeaNEOTQSrmjmm0JQSIKVOaZuvION1Ac16Sr_t7duSNKVhmamjWFcg03kbdC0P4r072DflLOFSRNaIR4dfJeIhVH4lha6Xt6RTPs4KjYxWnLU_J7TQSfNK6u2yKzbs7wEROVeifiLA4nX6TcmQ3XWJnfiYWX-EFSkE2jOgDb5lwNgO1SEHXbdhQ7_gf5Ul-jWQRhkN4Ov6Xu17hDJjYhir4UhzZ_VC1V04iH_D_WWxvaEhzu0981EULRoZy64J_3AJorABCLwPdvvUDrrbnZ7_s77R6CRTpwgHMjpq26c7TcNVrY59s2oNZtiLYRT9PmFod47ukRmf9-UZ67mEm3ng2A_UkjMw2gSb6924b7ptHYhGy_J8Cf78MlupyLeW9cr08xWKsBKpgM9fjQRwJP2C5vAC0w6EszxP-wLUW_lPxTHHrbpFPGBZG_Rs2jxCsTDBEWpHNkSYReeiDFu-_51zwLjAzV8Df1gnlM0ZIyy60km6taJwRdT3Qnp154PYxQil1O62AUgCxYqW8JFpY4y-nPTrgMqz0NwAophG9I3deCiEgCJWVSia_nEeI0joFxJ6ubs7H78N23M-yGAH5VFZ4dRl1=w1436-h1224'
 authors:
     - AustenCollins
 gitLink: /2018-07-30-serverless-platform-beta-helps-teams-operationalize-development.md

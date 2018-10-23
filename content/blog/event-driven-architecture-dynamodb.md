@@ -1,7 +1,7 @@
 ---
 title: 'Event-driven processing with Serverless and DynamoDB streams'
 description: 'Learn how to use DynamoDB streams and AWS Lambda to keep your search indexes and CRM tools up to date.'
-date: '2017-06-20'
+date: '2017-06-21'
 layout: Post
 thumbnail: 'https://user-images.githubusercontent.com/6509926/27362413-f40e4968-55f3-11e7-9c68-65dc1b06f335.jpg'
 authors:

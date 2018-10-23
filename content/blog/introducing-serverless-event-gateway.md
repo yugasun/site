@@ -1,7 +1,7 @@
 ---
 title: 'Event Gateway - The Missing Piece of Serverless Architectures'
 description: 'Event Gateway is the backbone of your serverless architectures. React to any event, with any function, on any cloud.'
-date: '2017-08-17'
+date: '2017-08-18'
 layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Event_gateway_blog_image.jpg'
 authors:

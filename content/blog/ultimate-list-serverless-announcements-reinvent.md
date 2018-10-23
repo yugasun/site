@@ -1,7 +1,7 @@
 ---
 title: 'The Ultimate Guide to Serverless Announcements @ AWS re:Invent 2017'
 description: 'Your go-to resource for all Serverless announcements at AWS re:Invent.'
-date: '2017-11-26'
+date: '2017-11-27'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/awsreinvent.jpg'
 category:
     - news
