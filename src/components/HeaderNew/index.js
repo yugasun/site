@@ -13,19 +13,21 @@ class Header extends React.Component {
     super(props)
     this.state = {
       isNavbarActive: false,
-      isNavbarTransparencyEnabled: props.transparent,
-      isNavbarTransparent: props.transparent,
-      isNavbarShrinked: false,
+      isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
     }
   }
 
   componentDidMount() {
+    if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
+    }
   }
 
   componentWillUnmount() {
+    if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
+    }
   }
 
   scrollHandler = () => {
@@ -35,14 +37,8 @@ class Header extends React.Component {
         return
       }
       this.toggleNavbarShrinkness()
-      if(this.state.isNavbarTransparencyEnabled) {
-        this.toggleNavbarTransparency()
-      }
     } else if (isNavbarShrinked) {
       this.toggleNavbarShrinkness()
-      if(this.state.isNavbarTransparencyEnabled) {
-        this.toggleNavbarTransparency()
-      }
     }
   }
 
@@ -69,7 +65,7 @@ class Header extends React.Component {
           background={[
             'black',
             'black',
-            this.state.isNavbarTransparent ? 'transparent': 'black',
+            this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
           <Transition py={[1, 1, this.state.isNavbarShrinked ? 0 : 3]} transition='all .5s linear'>
