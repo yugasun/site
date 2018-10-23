@@ -21,12 +21,19 @@ const HoverableColumn = styled(Card)`
 `
 
 const BoxWithMiddleElementMargin = styled(Box)`
-  @media screen and (min-width: 414px) {
-    :nth-child(3n+2) {
-      margin: 0 32px;
+  @media screen and (min-width: 1230px){
+    :not(:nth-child(3n+3)) {
+      margin-right: 32px;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1229px){
+    :nth-child(odd) {
+      margin-right: 32px;
     }
   }
 `
+//margin: 0 32px;
 
 const singleExamplePreview = ({ id, frontmatter }) => {
   const { title, description, platform, language } = frontmatter
@@ -64,7 +71,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             fontSize={[2, 2, 2, 2]}
             lineHeight={1.63}
             mt='8px'
-            mb={[0, 0 ,8]}  
+            mb={[0, 0 ,3.6]}  
         >
           { description }
         </P>

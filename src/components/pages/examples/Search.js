@@ -16,9 +16,12 @@ const ExamplesSearchField = styled(TextField)`
       outline: none;
     }
 
+    @media screen and (max-width: 767px) { 
+      border-left: none;
+    }
+
     @media screen and (max-width: 412px) {
       border: none;
-      border-left: none;
     }
 `
 

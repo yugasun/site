@@ -169,6 +169,7 @@ export default class Content extends React.Component {
         <Flex
           flexDirection={['column', 'column', 'row']}
           flexWrap='wrap'
+          justifyContent='center'
         >
           
             { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }

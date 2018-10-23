@@ -42,7 +42,7 @@ export default ({ id, frontmatter, content, location }) => {
   return (
         
       <Box
-        my={[104, 104, 231]}>
+        my={[104, 104, 170]}>
         <EditOnGithubOption />
         <AppContainer>
             <ExampleBreadcrumbs path={`/examples/`}/>
