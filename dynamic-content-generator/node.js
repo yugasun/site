@@ -10,9 +10,11 @@ const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
 
+//TODO : Refactor to use filesystem/remark to do this + refactor to avoid repetition
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
+const guidesConfig = require('./../scripts/guides/config')
 
 const fileReadingOptions = { match: /.md$/ }
 
@@ -28,11 +30,37 @@ const digestCreator = (content) => (
   crypto.createHash(`md5`).update(JSON.stringify(content)).digest(`hex`)
 )
 
-const sourceExamples = (createNode) => (err, content, filename, next) => {
-  if(err) console.log("error with", content)
+const sourceGuides = (createNode) => (err, content, filename, next) => {
   if (err) throw err
-  try {
-    const { data, content: markdownContent } = matter(content)
+
+  const { data, content: markdownContent } = matter(content)
+  const frontmatter = data.category ? data : { ...data, category: [] }
+  const guideId = path.basename(filename, path.extname(filename))
+
+  unified().
+    use(markdown).
+    use(highlight).
+    use(html).
+    process(markdownContent, (err, file) => {
+      createNode({
+        id: guideId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'Guide',
+          contentDigest: digestCreator(content),
+        },
+        frontmatter,
+        content: String(file),
+      })
+      next()
+    })
+}
+
+const sourceExamples = (createNode) => (err, content, filename, next) => {
+  if (err) throw err
+  
+  const { data, content: markdownContent } = matter(content)
   const frontmatter = data.category ? data : { ...data, category: [] }
   const exampleId = path.basename(filename, path.extname(filename))
 
@@ -64,10 +92,6 @@ const sourceExamples = (createNode) => (err, content, filename, next) => {
       })
       next()
     })
-  } catch(e) {
-    console.log(filename)
-    next()
-  } 
 }
 
 const sourceBlogs = (createNode) => (err, content, filename, next) => {
@@ -152,12 +176,21 @@ const generator = (createNode) => (
         resolve
       )
     }),
-
+    
     new Promise((resolve, reject) => {
       dir.readFiles(
         exampleConfig.siteExamplePath,
         fileReadingOptions,
         sourceExamples(createNode),
+        resolve
+      )
+    }),
+
+    new Promise((resolve, reject) => {
+      dir.readFiles(
+        guidesConfig.siteGuidePath,
+        fileReadingOptions,
+        sourceGuides(createNode),
         resolve
       )
     }),

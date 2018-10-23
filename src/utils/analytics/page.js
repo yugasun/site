@@ -21,8 +21,6 @@ export default function page(opts) {
 
   // place analytics page tracking that auto tracks the first page view below
   if (singlePageAppLoaded) {
-    // Trigger customer.io page view
-    customerIOPageView(pageData)
     // Trigger hubspot page view
     hubspotPageView(pageData)
   }
@@ -44,17 +42,6 @@ export function gaPageView(pageData) {
     // console.info('ga branch:', data.branch)
     ga('set', 'dimension1', data.branch) // eslint-disable-line no-undef
     ga('send', 'pageview', { hitCallback: removeUTM }) // eslint-disable-line
-  }
-}
-
-export function customerIOPageView(pageData) {
-  const data = pageData || getPageData()
-  if (!isProduction) {
-    return console.info(`DEV: Customer.io Pageview > ${window.location.href}`)
-  }
-  if (typeof _cio !== 'undefined') {
-    // console.info(`Customer.io Pageview > ${window.location.href}`)
-    _cio.page(document.location.href, data) // eslint-disable-line
   }
 }
 

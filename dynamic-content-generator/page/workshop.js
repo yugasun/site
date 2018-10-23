@@ -1,5 +1,5 @@
 const { getFileFromProjectRoot } = require('./utils')
-const workshops = getFileFromProjectRoot('src/constants/workshops.json')
+const workshops = require(getFileFromProjectRoot('src/constants/workshops.json'))
 
 const pageCreator = (createPage) => (
   new Promise((resolve, reject) => {

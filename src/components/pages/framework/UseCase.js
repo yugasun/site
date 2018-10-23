@@ -9,7 +9,7 @@ const cases = [
   {
     title: 'Simple, scaleable APIs',
     description:
-      'The Serverless Framework provides a simple way to develop infinitely scaleable, pay-per-execution APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live. With native support for AWS API Gatewway, Event Gateway, and more you can utilize the tools you know and trust with a single experience.',
+      'The Serverless Framework provides a simple way to develop infinitely scaleable, pay-per-execution APIs. A single configuration file allows you to list your functions and define the endpoints that they’re subscribed to. Hit deploy and you’re live. With native support for AWS API Gateway, Event Gateway, and more you can utilize the tools you know and trust with a single experience.',
     imgSrc: scaleableAPI,
   },
   {

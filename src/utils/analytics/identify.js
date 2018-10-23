@@ -39,11 +39,6 @@ export default function identify(id, profile) {
     return false
   }
 
-  // Send data to Customer.io . imits https://learn.customer.io/api/#api-documentationlimits
-  if (typeof _cio !== 'undefined') {
-     _cio.identify(data) // eslint-disable-line
-  }
-
   // Send data to hubspot
   if (process.env.GATSBY_ADD_CONTACT_API) {
     addHubspotContact(data).then((hsResponse) => {
