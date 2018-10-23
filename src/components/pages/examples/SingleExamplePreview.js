@@ -32,6 +32,20 @@ const BoxWithMiddleElementMargin = styled(Box)`
       margin-right: 32px;
     }
   }
+
+  @media screen and (min-width: 919px) and (max-width: 1229px){
+    width: 40%;
+  }
+
+  @media screen and (min-width: 414px) and (max-width: 768px){
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 991px){
+    width: 50%;
+    padding: 0 20px;
+  }
+
 `
 //margin: 0 32px;
 
