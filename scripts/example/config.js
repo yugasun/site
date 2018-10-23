@@ -3,7 +3,7 @@
 */
 const path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
-const repoURL = 'https://github.com/pdaryani/examples' //TODO: change this
+const repoURL = 'https://github.com/serverless/examples'
 const repoBranch = 'master'
 const featuredExamples = [ 
 'aws-java-simple-http-endpoint',
@@ -22,14 +22,12 @@ const featuredExamples = [
 'aws-node-recursive-function',
 'aws-node-rekognition-analysis-s3-image' 
 ]
-const allPlatforms = []
-const languages = []
 
 module.exports = {
   repoURL,
   repoBranch,
   featuredExamples,
-  downloadLink: `${repoURL}/archive/frontmatter-content-update/.zip`, //TODO: change this
+  downloadLink: `${repoURL}/archive/master/.zip`, 
   examplesRepoPath: path.join(projectRoot, 'serverless-examples'),
   examplesTmpPath: path.join(projectRoot, 'content/examples'),
   siteExamplePath: path.join(projectRoot, 'content/examples/'),

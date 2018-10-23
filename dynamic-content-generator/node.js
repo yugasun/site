@@ -101,14 +101,11 @@ const sourceBlogs = (createNode) => (err, content, filename, next) => {
   const frontmatter = data.category ? data : { ...data, category: [] }
   const blogId = path.basename(filename, path.extname(filename))
 
-  //TODO - reenable
-  /*
   blogIndex.saveObject({
     title: frontmatter.title,
     description: frontmatter.description,
     objectID: blogId,
   })
-  */
 
   unified().
     use(markdown).

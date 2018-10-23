@@ -37,7 +37,6 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 
 `
-//margin: 0 32px;
 
 const singleExamplePreview = ({ id, frontmatter }) => {
   const { title, description, platform, language } = frontmatter
