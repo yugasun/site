@@ -1,5 +1,5 @@
 import React from 'react'
-import { Background, Box, Flex } from 'serverless-design-system'
+import { Background, Box, Flex, Transition } from 'serverless-design-system'
 
 import { AppContainerNew as AppContainer } from 'src/components'
 import Logo from './Logo'
@@ -13,21 +13,19 @@ class Header extends React.Component {
     super(props)
     this.state = {
       isNavbarActive: false,
-      isNavbarShrinked: !props.transparent,
+      isNavbarTransparencyEnabled: props.transparent,
+      isNavbarTransparent: props.transparent,
+      isNavbarShrinked: false,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
     }
   }
 
   componentDidMount() {
-    if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
-    }
   }
 
   componentWillUnmount() {
-    if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
-    }
   }
 
   scrollHandler = () => {
@@ -37,19 +35,28 @@ class Header extends React.Component {
         return
       }
       this.toggleNavbarShrinkness()
+      if(this.state.isNavbarTransparencyEnabled) {
+        this.toggleNavbarTransparency()
+      }
     } else if (isNavbarShrinked) {
       this.toggleNavbarShrinkness()
+      if(this.state.isNavbarTransparencyEnabled) {
+        this.toggleNavbarTransparency()
+      }
     }
   }
 
-  toggleNavbarShrinkness = () =>
-    this.setState(prevState => ({
+  toggleNavbarShrinkness = () => this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
-    }))
+  }))
 
-  toggleNavbarActiveness = () => {
-    this.setState(prevState => ({ isNavbarActive: !prevState.isNavbarActive }))
-  }
+  toggleNavbarTransparency = () => this.setState(prevState => ({
+      isNavbarTransparent: !prevState.isNavbarTransparent,
+  }))
+
+  toggleNavbarActiveness = () => this.setState(prevState => ({ 
+      isNavbarActive: !prevState.isNavbarActive,
+  }))
 
   render() {
     return (
@@ -62,10 +69,10 @@ class Header extends React.Component {
           background={[
             'black',
             'black',
-            this.state.isNavbarShrinked ? 'black' : 'transparent',
+            this.state.isNavbarTransparent ? 'transparent': 'black',
           ]}
         >
-          <Box py={[1, 1, 3]}>
+          <Transition py={[1, 1, this.state.isNavbarShrinked ? 0 : 3]} transition='all .5s linear'>
             <AppContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
@@ -78,7 +85,7 @@ class Header extends React.Component {
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
             </AppContainer>
-          </Box>
+          </Transition>
         </Background>
       </HeaderWrapper>
     )
