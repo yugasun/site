@@ -7,14 +7,14 @@ const TabWrapper = styled(Column)`
   background-size: ${({ backgroundSize }) => (backgroundSize)};
   background-position: ${({ backgroundPosition }) => (backgroundPosition)};
   background-repeat: ${({ backgroundRepeat }) => (backgroundRepeat)};
-  cursor: pointer;
+  cursor: ${({ selected }) => selected ? 'default'  :  'pointer'};
 
   &:hover {
     span {
       color: ${({ selected, theme: { colors } }) => selected ? colors.white  : colors.gray[3]};
     }
   }
-`;
+`
 
 const Tab = ({ datum, onClick, selected, ...styles }) => {
   const containerStyles = !selected ? styles.tabContainerStyle : {
@@ -37,7 +37,7 @@ const Tab = ({ datum, onClick, selected, ...styles }) => {
         {datum.label}
       </Text.span>
     </TabWrapper>
-  );
+  )
 }
 
 export default ({
