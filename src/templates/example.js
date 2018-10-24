@@ -5,7 +5,7 @@ import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
 
 export default ({ data }) => (
-  <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
+  <DefaultLayout prefooter={NewToServerlessPrefooter}>
    <Helmet {...data.Example.frontmatter }/>
    <ExampleContent {...data.Example }/>
   </DefaultLayout>
