@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { HeroActions } from 'src/fragments'
+import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'start with framework',
+      name: 'install framework',
       to: '/framework/docs/getting-started/',
       completed: true,
     }}
     secondBtn={{
-      name: 'enterprise demo',
+      name: 'demo platform',
       to: '/enterprise/',
       completed: true,
     }}

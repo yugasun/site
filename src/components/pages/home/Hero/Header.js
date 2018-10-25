@@ -1,21 +1,21 @@
 import React from 'react'
 
-import { Column, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system'
+import { Column, Heading } from 'serverless-design-system'
 
 const HeroHeader = () => (
-  <Column mt={2}>
-    <HeroTitle>serverless</HeroTitle>
-    <HeroMainTitle>platform</HeroMainTitle>
-    <Heading.h3
-      fontSize={[3, 3, 5]}
-      align='center'
+  <Column mt={3} width={['auto', 'auto', '696px']}>
+    <Heading.h1
+      fontSize={['40px', '40px', '90px']}
+      align='left'
       color='white'
-      fontFamily='SoleilBk'
-      mx={2}
-      my={[2, 2, 4]}
+      fontFamily={['Soleil', 'Soleil', 'SoleilLt']}
+      mt={[0, 0, 4]}
+      mb={[2, 2, 2]}
+      lineHeight={['50px', '50px', '100px']}
+      letterSpacing={[0, 0, '-2px']}
     >
-      Everything you need to operationalize serverless development
-    </Heading.h3>
+      The radically simple way to build serverless applications
+    </Heading.h1>
   </Column>
 )
 
