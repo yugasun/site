@@ -1,8 +1,8 @@
 export default {
   platform: {
-    framework: '/framework',
-    eventGateway: '/event-gateway',
-    dashboard: '/dashboard',
+    framework: '/framework/',
+    eventGateway: '/event-gateway/',
+    dashboard: '/dashboard/',
   },
   developers: {
     documentation: {
@@ -18,24 +18,24 @@ export default {
       others: '/framework/docs/',
     },
     examples: {
-      docs: '/framework/docs',
+      docs: '/framework/docs/',
       plugins: 'https://github.com/serverless/plugins',
       examples: 'https://github.com/serverless/examples',
     },
   },
   learn: {
     useCases: '/learn/use-cases/',
-    why: '/learn/overview',
+    why: '/learn/overview/',
     comparisons: '/learn/comparisons/',
     caseStudy: '/learn/case-study/',
   },
   resources: {
-    overview: '/resources/overview',
-    blog: '/blog',
+    overview: '/resources/overview/',
+    blog: '/blog/',
     forum: 'https://forum.serverless.com/',
     events: '/resources/events/',
     slack: '/slack',
-    workshops: '/resources/workshops',
+    workshops: '/resources/workshops/',
   },
   company: {
     team: '/company/overview/',
