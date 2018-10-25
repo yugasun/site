@@ -3,7 +3,7 @@ import { push } from 'gatsby-link'
 import { Box, Card, DropDown } from 'serverless-design-system'
 
 import { Tabs } from 'src/components'
-import selectedTabBackground from 'src/assets/images/active-marker.png'
+import selectedTabBackground from 'src/assets/images/active-marker-new.png'
 import mobileDropdownDoubleTriangle from 'src/assets/images/mobileDropdownDoubleTriangle.svg'
 
 const onTabSelect = ({ navProps: { to, crossDomain } }) => (
