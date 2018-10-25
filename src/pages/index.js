@@ -5,6 +5,7 @@ import DefaultLayout from 'src/layouts/DefaultNew'
 import Hero from 'src/components/pages/home/Hero'
 import Benefits from 'src/components/pages/home/Benefits'
 import PlatformFeatures from 'src/components/pages/home/PlatformFeatures'
+import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
 
 const Home = ({ location }) => {
   return (
@@ -16,6 +17,7 @@ const Home = ({ location }) => {
       />
       <Hero />
       <Benefits />
+      <ServerlessGrowth />
       <Testimonial />
       <PlatformFeatures />
       <TrustedClients />

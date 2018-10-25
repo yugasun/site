@@ -7,7 +7,7 @@ import HeroActions from './Actions'
 import HeroGithub from './Github'
 import HeroPlatforms from './Platforms'
 import { Flex, Box, Absolute, Image, Card } from 'serverless-design-system'
-import homepageHeroUpArrow from 'src/assets/images/homepageHeroUpArrow.svg'
+import upArrowGroup from 'src/assets/images/up-arrow-group-red.svg'
 
 const HomeHeroComponent = () => (
   <HeroWrapper
@@ -27,7 +27,7 @@ const HomeHeroComponent = () => (
   mt={220}
   >
     <Image
-      src={homepageHeroUpArrow}
+      src={upArrowGroup}
     >
     </Image>
   </Absolute>
