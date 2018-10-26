@@ -12,7 +12,7 @@ import RightSection from './RightSection'
 
 // Self contained Root Renderer for footer
 const FooterWrapper = ({ prefooter }) => (
-  <Column mt={[100, 100, 300]}>
+  <Column>
     <Background backgroundImage={['linear-gradient(50deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(50deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(30deg, rgb(0, 0, 0) 60%, #70221f)']}>
       <Box pt={[0, 0, 7]} pb={7}>
         <Row m='auto' flexWrap='wrap' maxWidth={1216}>
