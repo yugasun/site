@@ -48,12 +48,19 @@ export default class HomeBenefits extends React.Component {
         this.state = { 
             showBuildApi: true, 
             showCustomAutomation: false, 
-            showDataProcessing: false 
+            showDataProcessing: false,
+            isUsingMobile: false,
         }
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.onScroll, false)
+        const windowGlobal = typeof window !== 'undefined' && window
+        if(windowGlobal) {
+            if(windowGlobal.innerWidth < 415) {
+                this.setState({isUsingMobile: true})
+            }
+        }
     }
   
     componentWillUnmount() {
@@ -85,13 +92,13 @@ export default class HomeBenefits extends React.Component {
             <DesktopDownArrow />
             
             <MobileBenefitItem number='03' title='Data processing' />
-            <MobileCenteredImage src={dataProcessing} style={{display: window.innerWidth < 415 ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
 
             <MobileBenefitItem number='02' title='Custom automation' />
-            <MobileCenteredImage src={customAutomation} style={{display: window.innerWidth < 415 ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-            <MobileCenteredImage src={buildApi} style={{display: window.innerWidth < 415 || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={buildApi} style={{display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
 
             <Column width={[1, 1, '488px']}>
                 <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px'>
