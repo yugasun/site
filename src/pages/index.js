@@ -6,7 +6,7 @@ import Hero from 'src/components/pages/home/Hero'
 import Benefits from 'src/components/pages/home/Benefits'
 import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
 import AllInOne from 'src/components/pages/home/AllInOne'
-
+import DesktopTestimonialIncline from 'src/components/pages/home/Testimonial/DesktopIncline'
 const Home = ({ location }) => {
   return (
     <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
@@ -18,6 +18,7 @@ const Home = ({ location }) => {
       <Hero />
       <Benefits />
       <ServerlessGrowth />
+      <DesktopTestimonialIncline />
       <Testimonial />
       <AllInOne />
       <TrustedClients />

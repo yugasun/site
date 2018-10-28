@@ -1,34 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import {
-  Absolute,
-  Testimonial,
   Box,
+  Position
 } from 'serverless-design-system'
+import Testimonial from './TestimonialSystemNew'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
 import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
-
-/*
-const TestimonialWrapper = styled(Relative)`
-  & > ${Relative} {
-    &:before {
-      content: " ";
-      height: 600px;
-      width: 100%;
-      display: block;
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      top: 50%;
-      margin-top: -340px;
-      background: #fd5750 url(${testimonialBackground}) no-repeat;
-      opacity: 1;
-    }
-  }
-`
-*/
 
 const TestimonialWrapper = styled(Box)`
     background: #fd5750;
@@ -36,11 +16,16 @@ const TestimonialWrapper = styled(Box)`
         background: #fd5750 url(${testimonialBackground}) no-repeat center;
         height: 646px;
     }
+    @media screen and (max-width: 414px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 `
 
 const TestimonialComponent = () => (
-  <Box mt={100}>
+  <Box mt={[100, 100, 0]}>
   <TestimonialWrapper>
+    <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 200]}>
       <AppContainer>
         <Testimonial
           img={cocaColaLogo}
@@ -53,6 +38,7 @@ const TestimonialComponent = () => (
           services faster."
         </Testimonial>
       </AppContainer>
+    </Position>
   </TestimonialWrapper>
   </Box>
 )
