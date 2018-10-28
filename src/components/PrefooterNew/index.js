@@ -28,8 +28,8 @@ const FlexWithShadow = styled(Flex.horizontallyCenter)`
 const ResponsiveRightPreFooterBackground = styled(Background)`
     background-size: 100% 100%;
 
-    @media screen and (max-width: 412px) {
-      background-position: 55% 106%;
+    @media screen and (max-width: 415px) {
+      background-position: 59% 106%;
       background-size: 138% 103%;
     }
 `
@@ -41,7 +41,6 @@ const LeftColumn = ({ heading, sentences }) => (
     boxSizing='border-box'
     flexDirection='column'
     height='100%'
-    mt={[7,7,0]}
   >
     <Overflow
       o='hidden'
