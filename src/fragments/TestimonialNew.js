@@ -6,7 +6,7 @@ import {
   Box,
 } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
 import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
 
@@ -38,23 +38,11 @@ const TestimonialWrapper = styled(Box)`
     }
 `
 
-const HomepageTestimonial = styled(Testimonial)`
-    div {
-        position: absolute;
-        padding-left: 190px;
-        padding-top: 180px;
-    }
-
-    @media screen and (min-width: 414px) {
-        position: relative
-    }
-`
-
 const TestimonialComponent = () => (
-  <Box my={300}>
+  <Box mt={100}>
   <TestimonialWrapper>
       <AppContainer>
-        <HomepageTestimonial
+        <Testimonial
           img={cocaColaLogo}
           name='Patrick Brandt'
           designation='Solutions Architect at The Coca Cola Company'
@@ -63,7 +51,7 @@ const TestimonialComponent = () => (
           "The Serverless Framework is a core component of The Coca-Cola
           Company's initiative to reduce IT operational costs and deploy
           services faster."
-        </HomepageTestimonial>
+        </Testimonial>
       </AppContainer>
   </TestimonialWrapper>
   </Box>

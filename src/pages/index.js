@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Testimonial, TrustedClients, Helmet, NewToServerlessPrefooterNew as NewToServerlessPrefooter} from 'src/fragments'
+import { TestimonialNew as Testimonial, TrustedClientsNew as TrustedClients, Helmet, NewToServerlessPrefooterNew as NewToServerlessPrefooter} from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNew'
 import Hero from 'src/components/pages/home/Hero'
 import Benefits from 'src/components/pages/home/Benefits'
-import PlatformFeatures from 'src/components/pages/home/PlatformFeatures'
 import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
+import AllInOne from 'src/components/pages/home/AllInOne'
 
 const Home = ({ location }) => {
   return (
@@ -19,7 +19,7 @@ const Home = ({ location }) => {
       <Benefits />
       <ServerlessGrowth />
       <Testimonial />
-      <PlatformFeatures />
+      <AllInOne />
       <TrustedClients />
     </DefaultLayout>
   )
