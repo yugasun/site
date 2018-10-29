@@ -1,7 +1,11 @@
 import styled from 'styled-components'
-import { Checkbox } from 'serverless-design-system';
+import { Checkbox } from 'serverless-design-system'
+import checkedCheckbox from 'src/assets/images/checked-checkbox.svg'
+import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 
 export default styled(Checkbox)`
+  appearance: none;
+  
   &:before {
     content: "";
     display: inline-block;
@@ -9,13 +13,15 @@ export default styled(Checkbox)`
     margin-left: -2px;
     width: 18px;
     height: 18px;
+    background-position: center;
     background-size: contain;
-    background-image: url(https://serverless.com/_/src/assets/images/unchecked.402f05654fb8ebc664071da486b779f3.png);
+    background-image: url(${unCheckedRadio});
+    background-repeat: no-repeat;
   }
 
   &:checked {
     &:before {
-      background-image: url(https://serverless.com/_/src/assets/images/checked.9db08fa8d6d38e9292f0fac4f019d043.png);
+      background-image: url(${checkedCheckbox});
     }
   }
 

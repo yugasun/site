@@ -2,7 +2,7 @@ import React from 'react'
 import { P, Heading, Box } from 'serverless-design-system'
 
 const Benefits = () => (
-    <Box>
+    <Box mt={[8, 8, 0]}>
         <Heading.h4 fontFamily='Soleil'>
             Team Collaboration and Onboarding
         </Heading.h4>

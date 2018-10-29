@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Text, ResponsiveStack, Image, Heading, Row, Column } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import serverlessPlatform from 'src/assets/images/platform/serverless-platform.png'
+import serverlessPlatform from 'src/assets/images/pages/platform/serverless-platform.svg'
 
 const ExamplesHero = () => {
   return (
@@ -11,15 +11,15 @@ const ExamplesHero = () => {
     height={[422, 422, 614]}
   >
 
-    <ResponsiveStack
+    <Column
       color='white'
     >
-      <Box width={[0, 0, 488]} mt={150}>
+      <Box width={['auto', 'auto', 488]} mt={[3, 3, 150]}>
         <Row>
         <Image src={serverlessPlatform} height='92px'/>
           <Column>
           <Heading.h3>serverless</Heading.h3>
-          <Heading.h1>platform</Heading.h1>
+          <Heading.h1 fontSize={['48px', '48px', '81px']}>platform</Heading.h1>
           </Column>
         </Row>
         <Text.p
@@ -27,12 +27,11 @@ const ExamplesHero = () => {
           fontFamily='SoleilLt'
           lineHeight='1.33'
           m={0}
-          mt={[42,42,0,0]}
         >
           Everything you need to scale, operationalize, and secure your serverless application development.
         </Text.p>        
       </Box>
-    </ResponsiveStack>
+    </Column>
   </HeroWrapper>
   )
   }

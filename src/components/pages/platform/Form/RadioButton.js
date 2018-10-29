@@ -9,12 +9,16 @@ export default styled(RadioButton)`
   width: 18px;
   margin-top: 2px;
 
+  &:focus {
+    outline: none
+  }
+
   &:before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-left: -2px
+    margin-left: -2px;
     margin-top: -2px;
     background-position: center;
     background-size: contain;
