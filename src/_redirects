@@ -49,3 +49,12 @@
 /community/champions /company/champions/ 301
 /workshops /resources/workshops/ 301
 /learn /learn/overview/ 301
+/company/team/ /company/overview/ 301
+/learn/event-gateway/ /event-gateway/ 301
+/learn/quick-start/ /framework/docs/getting-started/ 301
+/blog/how-went-from-chef-to-serverless-developer-in-4-years/ /blog/from-chef-to-serverless-developer-in-4-years/ 301
+/blog/page/1 /blog/ 301
+/blog/serverless-framework-best-microservices-api-awards/ /blog/serverless-framework-wins-best-microservices-api-awards/ 301
+/framework/docs/providers/azure/guide/quickstart/ /framework/docs/providers/azure/guide/quick-start/ 301
+/framework/docs/platform/commands/run/ /framework/docs/platform/commands/ 301
+/framework/docs/platform/commands/emit/ /framework/docs/platform/commands/ 301
