@@ -12,7 +12,7 @@ const OnlyDesktopCardWithTopMargin = styled(Card)`
 
 const HomeTestimonialIncline = () => (
         <OnlyDesktopCardWithTopMargin
-        borderLeft='100vw solid transparent'
+        borderLeft='99vw solid transparent'
         borderBottom='200px solid #FD5651'
         mt={100}
         />
