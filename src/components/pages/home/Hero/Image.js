@@ -25,8 +25,8 @@ const HomeHeroImage = () => (
     mx='auto'
     mb={[1, 1, 4]}
   >
-  <TerminalBackground
-    mt='67px'
+    <TerminalBackground
+      mt={['80px', '80px', '67px']}
     ml={[0, 0, '70px']}
   >
     <Image
@@ -36,7 +36,7 @@ const HomeHeroImage = () => (
   </TerminalBackground>
 
   <Relative
-    mt={[100, 100, 150]}
+    mt={[120, 120, 150]}
     ml={[0, 0, 120]}
     width={['320px', '320px', 1]}
   >
@@ -46,12 +46,10 @@ const HomeHeroImage = () => (
     
   </Relative>
   <Absolute
-      mt={['140px', '140px', '200px']}
+      mt={['160px', '160px', '210px']}
       ml={['35px', '35px', '170px']}
     >
-
-      
-      <Text.p color='#727679' mb={[50]} fontSize={['10px', '10px', '13.7px']} letterSpacing='0.1px'>
+      <Text.p color='#727679' fontSize={['10px', '10px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;  # Step 1. Install serverless globally<br/>
       2 &nbsp;&nbsp;&nbsp;&nbsp;  <Text.span color='#fff'>$ npm install serverless -g</Text.span><br/>
       3<br/>

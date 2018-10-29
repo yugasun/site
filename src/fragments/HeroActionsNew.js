@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-  Button,
-  SecondaryButton,
   ResponsiveStack,
 } from 'serverless-design-system'
+import { SecondaryButton } from 'src/fragments/DesignSystem'
 import NavLink from 'src/components/NavLink'
+import Button from 'src/components/pages/home/Button'
 
 const HeroActions = ({
   firstBtn: {
@@ -22,9 +22,9 @@ const HeroActions = ({
     completed: sCompleted = false,
   },
 }) => (
-  <ResponsiveStack width={[1, 1, 1]} mx={'auto'} my={3}>
+    <ResponsiveStack width={[1, 1, 1]} mx={'auto'} mt={3} mb={[0,0,3]}>
     <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
-      <Button mr={'50px'} my={1} border={'2.5px solid'} p={1}>
+      <Button mr={'32px'} my={1} border={'2.5px solid'} p={1}>
         {fName}
       </Button>
     </NavLink>

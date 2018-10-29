@@ -31,9 +31,9 @@ const TrustedClients = () => (
     <Container>
       <Box
         width={1}
-        pt={[5]}
+        pt={['62px', '62px', '92px']}
         pb={[300, 300, 12, 12]}
-        px={[15, 15, 2, 6, 8]}
+        px={[30, 30, 2, 6, 8]}
       >
         <Heading.h5
           align='center'
@@ -41,13 +41,13 @@ const TrustedClients = () => (
           fontSize={4}
           letterSpacing='h5'
           lineHeight={0}
-          mb={4}
+          mb={['34px', '34px', '71px']}
         >
           Serverless Platform is trusted by
         </Heading.h5>
         <Flex
-      justifyContent={['center', 'center', 'space-evenly']}
-      alignItems='space-evenly'
+      justifyContent={['center', 'center', 'space-between']}
+      alignItems='space-between'
       flexDirection='row'
       flexWrap='wrap'
       mb={8}
