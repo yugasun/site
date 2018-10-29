@@ -14,7 +14,6 @@ class GoogleAnalyticsTracker extends Component {
     if (isClient) {
       if (process.env.NODE_ENV === 'production') {
         ReactGA.initialize(googleAnalyticsUA)
-        ReactGA.ga('require', 'GTM-M5WQLDN')
       } else {
         console.info('ga.create', googleAnalyticsUA)
       }
