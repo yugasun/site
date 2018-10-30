@@ -7,6 +7,7 @@ const TextFieldWithNoOutLine = styled(TextField)`
   &:focus {
     outline: none;
   }
+
 `;
 
 export default (props) => (
@@ -14,7 +15,7 @@ export default (props) => (
     p={'15px'}
     width={1}
     border="0"
-    bg="rgba(39, 39, 39, 0.05)"
+    bg="#f7f7f7"
     webkitAppearance="none"
     placeholderFontFamily="Serverless"
     placeholderFontSize={2}
@@ -22,12 +23,13 @@ export default (props) => (
     placeholderLineHeight={4}
     placeholderLetterSpacing={"h2"}
     fontFamily="Serverless"
-    fontSize={2}
     fontWeight="normal"
-    lineHeight={4}
-    letterSpacing={"h2"}
+    fontSize={'14px'}
+    letterSpacing={'0.4px'}
+    lineHeight={'24px'}
     height="50px"
     color="gray.2"
+    placeholderColor="#B6B6B6"
     {...props}
   />
 )

@@ -1,8 +1,28 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import { TextArea } from 'serverless-design-system'
 
+const TextAreaWithNoOutLine = styled(TextArea)`
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #B6B6B6;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #B6B6B6;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #B6B6B6;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #B6B6B6;
+}
+
+resize:none;
+`;
+
 export default (props) => (
-  <TextArea
+  <TextAreaWithNoOutLine
     height="150px"
     width="100%"
     border="none"

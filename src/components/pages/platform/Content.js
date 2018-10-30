@@ -14,10 +14,10 @@ const Content = ({ theme }) => (
         theme.navbarHeights.mobile,
         theme.navbarHeights.desktop,
       ]}
-      mb={[0, 0, 500]}
+      mb={[0, 0, 300]}
     >
       <Flex.spaceBetween
-        flexDirection={['column-reverse', 'column-reverse', 'row']}
+        flexDirection={['column', 'column', 'row']}
       >
         <Box width={[1, 1, 2/5]}>
           <Benefits />

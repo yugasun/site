@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, InlineBlock, P } from 'serverless-design-system'
+import { Box, Flex, InlineBlock, P, Heading } from 'serverless-design-system'
 import Button from '../../home/Button'
 
 import formHandler from 'src/utils/formHandler'
@@ -19,7 +19,7 @@ const StyledForm = styled(Flex.column)`
   position: absolute;
   top: 0;
   background-color: white;
-  margin-top: 300px;
+  margin-top: 330px;
   padding: 40px;
   width: 622px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
@@ -28,8 +28,12 @@ const StyledForm = styled(Flex.column)`
   @media screen and (max-width: 414px) {
     position: relative;
     width: auto;
-    padding: 10px;
+    padding-top: 40px;
+    padding-bottom:40px;
+    padding-right: 20px;
+    padding-left:20px;
     margin-top: 10px;
+    margin-bottom: 80px;
   }
 `
 
@@ -140,16 +144,25 @@ export default class Form extends React.Component {
           <Box width={[ 1, 1, 5/7 ]}>
           </Box>
 
-          <Box my={3} width={1}>
+           <Heading.h4
+            fontFamily="Soleil"
+            lineHeight={'32px'}
+            letterSpacing={'-0.4px'}
+            mb={0}
+          >
+            Request a demo
+          </Heading.h4>
+          
+          <Box mt={3} width={1}>
             <TextField
-              placeholder='Email'
+              placeholder='E-mail'
               name='email'
               onChange={({ target }) => this.setState({ email: target.value })}
               required
             />
           </Box>
 
-          <Flex.spaceBetween my={2}>
+          <Flex.spaceBetween mt={3}>
             <TextField
               width={48/100}
               placeholder='First Name'
@@ -166,7 +179,7 @@ export default class Form extends React.Component {
             />
           </Flex.spaceBetween>
 
-          <Box my={2}>
+          <Box mt={3}>
             <TextField
               placeholder='Company Name'
               name='company'
@@ -175,24 +188,12 @@ export default class Form extends React.Component {
             />
           </Box>
 
-           <Box my={2}>
+           <Box mt={3}>
             <Label>
             How is your company currently using the Serverless Framework?
             </Label>
-            <Flex>
-              <Box mt={2} width={1/3}>
-                <Label htmlFor='in-development'>
-                  <Flex.verticallyCenter>
-                    <RadioButton
-                      name='poi'
-                      id='in-development'
-                      onChange={() => this.updatePoi('In Development')}
-                    />
-                    <InlineBlock>In Development</InlineBlock>
-                  </Flex.verticallyCenter>
-                </Label>
-              </Box>
-              <Box mt={2} width={1/3}>
+            <Flex flexDirection={['column', 'column', 'row']}>
+            <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='five-to-fifteen'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -200,11 +201,23 @@ export default class Form extends React.Component {
                       id='five-to-fifteen'
                       onChange={() => this.updatePoi('In Production')}
                     />
-                    <InlineBlock>In Production</InlineBlock>
+                    <InlineBlock>in production</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/3}>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='in-development'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='poi'
+                      id='in-development'
+                      onChange={() => this.updatePoi('In Development')}
+                    />
+                    <InlineBlock>in development</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='fifteen-to-thirty'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -212,19 +225,19 @@ export default class Form extends React.Component {
                       id='fifteen-to-thirty'
                       onChange={() => this.updatePoi('Not at all')}
                     />
-                    <InlineBlock>Not at all</InlineBlock>
+                    <InlineBlock>not at all</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
             </Flex>
           </Box>
 
-           <Box my={2}>
+           <Box mt={3}>
             <Label>
             How many developers in your organization plan on doing serverless development?
             </Label>
-            <Flex>
-              <Box mt={2} width={1/3}>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='less-than-five'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -232,11 +245,11 @@ export default class Form extends React.Component {
                       id='less-than-five'
                       onChange={() => this.updateDeveloperCount('Less than 5')}
                     />
-                    <InlineBlock>Less than 5</InlineBlock>
+                    <InlineBlock>less than 5</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/3}>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='five-to-fifteen'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -244,11 +257,11 @@ export default class Form extends React.Component {
                       id='five-to-fifteen'
                       onChange={() => this.updateDeveloperCount('5 - 15')}
                     />
-                    <InlineBlock>5 - 15</InlineBlock>
+                    <InlineBlock>5-15</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/3}>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='fifteen-to-thirty'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -256,13 +269,13 @@ export default class Form extends React.Component {
                       id='fifteen-to-thirty'
                       onChange={() => this.updateDeveloperCount('15 - 30')}
                     />
-                    <InlineBlock>15 - 30</InlineBlock>
+                    <InlineBlock>15-30</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
             </Flex>
-            <Flex>
-              <Box mt={2} width={1/3}>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='thirty-to-hundred'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -270,11 +283,11 @@ export default class Form extends React.Component {
                       id='thirty-to-hundred'
                       onChange={() => this.updateDeveloperCount('30 - 100')}
                     />
-                    <InlineBlock>30 - 100</InlineBlock>
+                    <InlineBlock>30-100</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/3}>
+              <Box mt={2} width={[1, 1, 1/3]}>
                 <Label htmlFor='more-than-hundred'>
                   <Flex.verticallyCenter>
                     <RadioButton
@@ -289,12 +302,12 @@ export default class Form extends React.Component {
             </Flex>
           </Box>
 
-          <Box my={2}>
+          <Box mt={3}>
             <Label>
-              Which infrastructure providers you are utilizing with the Serverless Framework?
+              Which infrastructure providers are you utilizing with the Serverless Framework?
             </Label>
-            <Flex>
-              <Box mt={2} width={1/2}>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
                 <Label htmlFor='aws'>
                   <Flex.verticallyCenter>
                     <Checkbox
@@ -306,7 +319,7 @@ export default class Form extends React.Component {
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/2}>
+              <Box mt={2} width={[1, 1, 1/2]}>
                 <Label htmlFor='google-cloud-platform'>
                   <Flex.verticallyCenter>
                     <Checkbox
@@ -319,8 +332,8 @@ export default class Form extends React.Component {
                 </Label>
               </Box>
             </Flex>
-            <Flex>
-              <Box mt={2} width={1/2}>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
                 <Label htmlFor='azure'>
                   <Flex.verticallyCenter>
                     <Checkbox
@@ -332,7 +345,7 @@ export default class Form extends React.Component {
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/2}>
+              <Box mt={2} width={[1, 1, 1/2]}>
                 <Label htmlFor='other'>
                   <Flex.verticallyCenter>
                     <Checkbox
@@ -347,7 +360,7 @@ export default class Form extends React.Component {
             </Flex>
           </Box>
 
-          <Box my={2}>
+          <Box mt={3}>
             <TextArea
               placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
               name='message'
@@ -355,8 +368,8 @@ export default class Form extends React.Component {
             />
           </Box>
 
-          <Box my={4}>
-            <Button width='280px' disabled={loading}>
+          <Box mt={3}>
+            <Button width={['200px']} disabled={loading}>
               { loading ? 'Loading' : 'submit' }
             </Button>
           </Box>

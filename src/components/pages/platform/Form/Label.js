@@ -5,11 +5,11 @@ import { Label } from 'serverless-design-system'
 export default ({ children }) => (
   <Label
     fontFamily="Serverless"
-    fontSize={2}
     fontWeight="normal"
-    lineHeight={4}
-    letterSpacing={"h2"}
+    lineHeight={'24px'}
     color="gray.2"
+    fontSize={'14px'}
+    letterSpacing={'0.4px'}
   >
     {children}
   </Label>

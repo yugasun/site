@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Checkbox } from 'serverless-design-system'
-import checkedCheckbox from 'src/assets/images/checked-checkbox.svg'
-import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
+import checkedCheckbox from 'src/assets/images/checked-checkbox.png'
+import unCheckedRadio from 'src/assets/images/unchecked-checkbox.png'
 
 export default styled(Checkbox)`
   appearance: none;
