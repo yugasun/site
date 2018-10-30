@@ -17,3 +17,9 @@ serverless
 # dynamic config
 .env.development
 .env.production
+
+# dynamic content folders
+content/blog
+content/examples 
+content/framework
+content/example
