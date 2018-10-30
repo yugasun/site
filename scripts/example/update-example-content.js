@@ -16,7 +16,7 @@ function isFileFeatured(folderName) {
 }
 
 function makeGitLink(folderName) {
-    return `https://github.com/serverless/examples/tree/master/${folderName}/README.md` //TODO: in config file
+    return `https://github.com/serverless/examples/tree/master/${folderName}` //TODO: in config file
 }
 
 function makeTitle(folderName) {
