@@ -7,11 +7,9 @@ import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 import Label from './Label'
 import TextField from './TextField'
-import SelectField from './SelectField'
 import Checkbox from './Checkbox'
 import TextArea from './TextArea'
 import RadioButton from './RadioButton'
-import track from 'src/utils/analytics/track'
 
 import styled from 'styled-components'
 
@@ -87,7 +85,6 @@ export default class Form extends React.Component {
       fields: { email, first_name, last_name, company, poi, developers_count, message, infrastructure }
     }
 
-   /*
     formHandler(formData).then((res) => {
       this.setState({
         success: true,
@@ -101,10 +98,6 @@ export default class Form extends React.Component {
         error: e
       })
     })
-
-
-    */
-    console.log(formData)
     return false
   }
 
