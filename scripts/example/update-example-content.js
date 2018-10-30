@@ -16,7 +16,7 @@ function isFileFeatured(folderName) {
 }
 
 function makeGitLink(folderName) {
-    return `https://github.com/serverless/examples/tree/master/${folderName}/README.md` //TODO: in config file
+    return `https://github.com/serverless/examples/tree/master/${folderName}` //TODO: in config file
 }
 
 function makeTitle(folderName) {
@@ -88,25 +88,30 @@ function fixYamlContent(content, filename) {
     return fixedContent
 }
 
-function getPlatformFullName(platform) {
-    let platformFullName
-
+function makePlatformSEOName(title, platform) {
+    let platformSEOName
+    let appendExample = title.includes('Example') ? '' : ' Example'
     switch (platform) {
         case 'AWS':
-            platformFullName = 'AWS Lambda'
+            platformSEOName = `AWS Lambda Function${appendExample}`
             break
         case 'Google Cloud':
-            platformFullName = 'Google Cloud Functions'
+            platformSEOName = `Google Cloud Functions${appendExample}`
             break
         case 'Azure':
-            platformFullName = 'Azure Functions'
+            platformSEOName = `Azure Functions${appendExample}`
             break
         default:
-            platformFullName = platform
+            platformSEOName = `${platform} Function${appendExample}`
             break
     }
 
-    return platformFullName
+    return platformSEOName
+}
+
+function makeSEOTitle(title, platformSEOName, language) {
+    let seoTitle = `${title} | ${platformSEOName} in ${language}`
+    return seoTitle
 }
 
 module.exports = function updateExamplesContent(examplesDirectoryPath) {
@@ -119,7 +124,8 @@ module.exports = function updateExamplesContent(examplesDirectoryPath) {
             const item = matter(fixedContent).data 
             item.gitLink = makeGitLink(folderName)
             item.title = makeTitle(folderName)
-            item.platformFullName = getPlatformFullName(item.platform)
+            item.platformSEOName = makePlatformSEOName(item.title, item.platform)
+            item.seoTitle = makeSEOTitle(item.title, item.platformSEOName, item.language)
             if (isFileFeatured(folderName)) {
                 item.highlighted = true
             }

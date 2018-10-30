@@ -6,7 +6,7 @@ import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fra
 
 export default ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
-   <Helmet {...data.Example.frontmatter }/>
+   <Helmet title={data.Example.frontmatter.seoTitle} description={data.Example.frontmatter.description}/>
    <ExampleContent {...data.Example }/>
   </DefaultLayout>
 )
@@ -24,6 +24,7 @@ export const query = graphql`
         authorName
         authorAvatar
         gitLink
+        seoTitle
       }
       content
     }

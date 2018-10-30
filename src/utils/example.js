@@ -1,4 +1,4 @@
-const getExampleLink = (id) => `/example/${id}`
+const getExampleLink = (id) => `/examples/${id}`
 
 export {
     getExampleLink
