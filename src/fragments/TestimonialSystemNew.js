@@ -11,10 +11,18 @@ import {
   Card
 } from 'serverless-design-system'
 
-const DesktopText = styled(Text)`
-    @media screen and (min-width: 415px) {
+const DesktopText = styled.blockquote`
+  font-family: 'SoleilBk';
+  font-size: 24px;
+  font-style: italic;
+  line-height: 32px;
+  margin: 0;
+  letter-spacing: 0;
+
+  
+  @media screen and (min-width: 415px) {
         width: 800px;
-    }
+  }
 `
 
 const comp = ({
@@ -24,10 +32,12 @@ const comp = ({
   return (
     <Background background='white'>
       <Card
-        px={[2, 3, 4]}
-        py={5}
+        pt={['32px', '32px', '76px']}
+        pb={[2, 3, '72px']}
+        px={['22px', '22px', '104px']}
         border={3}
         borderColor='primaryColor'
+        height={['495px', '495px', '322px']}
       >
         <Flex
           flexWrap='wrap'
@@ -35,12 +45,6 @@ const comp = ({
           justifyContent={['', 'space-between']}
         >
           <DesktopText
-            fontFamily='SoleilBk'
-            fontSize={4}
-            fontStyle='italic'
-            lineHeight={3}
-            mb={3}
-            width={1}
           >
             {testimonial}
           </DesktopText>
@@ -50,12 +54,13 @@ const comp = ({
               width={[1, 1, 4 / 10]}
               order={[ '0', '0', '1' ]}
               alignItems='flex-end'
-              justifyContent={[ 'flex-start', 'flex-start', 'flex-end' ]}
+              justifyContent={['flex-start', 'flex-start', 'flex-end']}
+              mt={['62px', '62px', 0]}
             >
               <Img
                 mt={3}
-                width={[82, 128]}
-                height={[27, 42]}
+                width={['81px', '81px', '128px']}
+                height={['27px', '27px', '42px']}
                 src={img}
                 alt={alt}
               />
@@ -63,21 +68,22 @@ const comp = ({
 
             <Flex
               flexDirection='column'
-              mt={3}
+              mt={['22px','22px', 3]}
               width={[1, 1, 6 / 10]}
               order={[ '1', '1', '0' ]}
             >
               <Text
                 fontFamily='SoleilBk'
                 fontSize={3}
-                letterSpacing='smallNegative'
+                letterSpacing='-0.3px'
+                lineHeight='24px'
               >
                 {name}
               </Text>
               <Text
-                fontFamily='Soleil'
-                fontSize={0}
-                lineHeight={3}
+                fontFamily='SoleilBk'
+                fontSize={['12px','12px', '16px']}
+                lineHeight={['16px', '16px', '26px']}
                 color='gray.2'
               >
                 {designation}

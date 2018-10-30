@@ -21,7 +21,7 @@ import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import DesktopDownArrow from './DesktopDownArrow'
 
 const MobileBenefitItem = ({number, title}) => (
-    <Box display={['block', 'block', 'none']}>
+    <Box display={['block', 'block', 'none']} mt={37}>
     <Row>
     <Button bg='#fd5750' width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px' p={0}>
      {number}
@@ -98,12 +98,12 @@ export default class HomeBenefits extends React.Component {
             <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-            <MobileCenteredImage src={buildApi} style={{display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+                    <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
 
             <Column width={[1, 1, '488px']}>
-                <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px'>
-                <Heading.h3 fontFamily='Soleil' lineHeight='44px' letterSpacing='-0.5px'>
-                What you can do with serverless applications
+                        <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
+                            <Heading.h3 fontFamily='Soleil' lineHeight={['32px', '32px', '44px']} letterSpacing='-0.5px' fontSize={['24px', '24px', '32px']} pt='12px' >
+                What you can do with <br />serverless applications
                 </Heading.h3>
                 </TextWithIcon>
                 <Box display={['none', 'none', 'block']}>
@@ -113,21 +113,21 @@ export default class HomeBenefits extends React.Component {
                         <ButtonWithTransition bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                         01
                         </ButtonWithTransition>
-                    <P color='black' fontSize='24px' ml={[0, 0, '32px']}>Build APIs</P> 
+                                <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Build APIs</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('customAutomation')} mt={[0,0,25]}>
                     <ButtonWithTransition bg={this.state.showCustomAutomation ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     02
                     </ButtonWithTransition>
-                    <P color='black' fontSize='24px' ml={[0, 0, '32px']}>Custom Automation</P> 
+                    <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Custom automation</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('dataProcessing')} mt={[0,0,25]}>
                     <ButtonWithTransition bg={this.state.showDataProcessing ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     03
                     </ButtonWithTransition>
-                    <P color='black' fontSize='24px' ml={[0, 0, '32px']}>Data Processing</P> 
+                    <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Data processing</P> 
                 </Row>  
 
                 <ButtonCTA mt={'50px'}>get started</ButtonCTA>

@@ -11,14 +11,14 @@ const StyledLink = styled(Link)`
 `
 
 const VerticallyAlignedImage = styled(Image)`
-  vertical-align: middle;
+  vertical-align: top;
 `
 
 const HomeHeroFooter = () => (
   <StyledLink to='/overview-video'>
     <Flex
       width={[1, 1, 3 / 4]}
-      my={[2, 4, 5]}
+      my={['12px', '12px', 3]}
       flexWrap='wrap'
       >
       <Heading.h4
@@ -27,6 +27,7 @@ const HomeHeroFooter = () => (
         mb={0}
         lineHeight={'24px'}
         letterSpacing={'-0.3px'}
+        fontFamily='SoleilBk'
       >
       <VerticallyAlignedImage
           src={videoIcon}

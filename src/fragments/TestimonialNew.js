@@ -12,7 +12,7 @@ import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
 
 const TestimonialWrapper = styled(Box)`
     background: #fd5750;
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: 415px) {
         background: #fd5750 url(${testimonialBackground}) no-repeat center;
         height: 646px;
     }
@@ -23,7 +23,7 @@ const TestimonialWrapper = styled(Box)`
 `
 
 const TestimonialComponent = () => (
-  <Box mt={[100, 100, 0]}>
+  <Box mt={[92, 92, 0]}>
   <TestimonialWrapper>
     <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 200]}>
       <AppContainer>

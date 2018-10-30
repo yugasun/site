@@ -4,7 +4,7 @@ import { Card } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const OnlyDesktopCardWithTopMargin = styled(Card)`
-    margin-top: 200px;
+    margin-top: 50px;
     @media screen and (max-width: 415px) {
         display: none;
     }
@@ -12,8 +12,8 @@ const OnlyDesktopCardWithTopMargin = styled(Card)`
 
 const HomeTestimonialIncline = () => (
         <OnlyDesktopCardWithTopMargin
-        borderLeft='100vw solid transparent'
-        borderBottom='200px solid #FD5651'
+        borderLeft='99vw solid transparent'
+        borderBottom='200px solid #fd5750'
         mt={100}
         />
 )
