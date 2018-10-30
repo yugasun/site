@@ -46,8 +46,8 @@ export default class Form extends React.Component {
       email: '',
       first_name: '',
       last_name: '',
-      poi: 'In Production',
-      developers_count: 'Less than 5',
+      poi: '',
+      developers_count: '',
       message: '',
       infrastructure: {
         'AWS' : true,
@@ -121,16 +121,13 @@ export default class Form extends React.Component {
 
   render() {
     const { loading, success } = this.state
-
-    if (success) {
-      //track('site:enterprise_contact', { category: 'Contact Form' })
-      return (
-        <Box>
-          <P>
-            Thanks we will be in touch shortly.
-          </P>
-        </Box>
-      )
+    let submitButtonText
+    if(loading) {
+      submitButtonText = 'loading'
+    } else if(success) {
+      submitButtonText = 'request sent'
+    } else {
+      submitButtonText = 'submit'
     }
 
     return (
@@ -152,7 +149,7 @@ export default class Form extends React.Component {
             <TextField
               placeholder='E-mail'
               name='email'
-              onChange={({ target }) => this.setState({ email: target.value })}
+              onChange={({ target }) => this.setState({ email: target.value, success: false })}
               required
             />
           </Box>
@@ -162,14 +159,14 @@ export default class Form extends React.Component {
               width={48/100}
               placeholder='First Name'
               name='first_name'
-              onChange={({ target }) => this.setState({ first_name: target.value })}
+              onChange={({ target }) => this.setState({ first_name: target.value, success: false })}
               required
             />
             <TextField
               width={48/100}
               placeholder='Last Name'
               name='last_name'
-              onChange={({ target }) => this.setState({ last_name: target.value })}
+              onChange={({ target }) => this.setState({ last_name: target.value, success: false })}
               required
             />
           </Flex.spaceBetween>
@@ -178,7 +175,7 @@ export default class Form extends React.Component {
             <TextField
               placeholder='Company Name'
               name='company'
-              onChange={({ target }) => this.setState({ company: target.value })}
+              onChange={({ target }) => this.setState({ company: target.value, success: false })}
               required
             />
           </Box>
@@ -195,7 +192,6 @@ export default class Form extends React.Component {
                       name='poi'
                       id='five-to-fifteen'
                       onChange={() => this.updatePoi('In Production')}
-                      defaultChecked={true}
                     />
                     <InlineBlock>in production</InlineBlock>
                   </Flex.verticallyCenter>
@@ -240,7 +236,6 @@ export default class Form extends React.Component {
                       name='developer-count'
                       id='less-than-five'
                       onChange={() => this.updateDeveloperCount('Less than 5')}
-                      defaultChecked={true}
                     />
                     <InlineBlock>less than 5</InlineBlock>
                   </Flex.verticallyCenter>
@@ -311,7 +306,6 @@ export default class Form extends React.Component {
                       name='infrastructure'
                       id='aws'
                       onChange={({ target }) => this.updateInfrastructure('AWS', target.checked)}
-                      defaultChecked={true}
                     />
                     <InlineBlock>AWS</InlineBlock>
                   </Flex.verticallyCenter>
@@ -362,13 +356,13 @@ export default class Form extends React.Component {
             <TextArea
               placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
               name='message'
-              onChange={({ target }) => this.setState({ message: target.value })}
+              onChange={({ target }) => this.setState({ message: target.value, success: false })}
             />
           </Box>
 
           <Box mt={3}>
             <Button disabled={loading}>
-              { loading ? 'Loading' : 'submit' }
+              { submitButtonText }
             </Button>
           </Box>
         </StyledForm>

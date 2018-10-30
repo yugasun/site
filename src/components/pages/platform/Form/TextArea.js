@@ -19,22 +19,33 @@ const TextAreaWithNoOutLine = styled(TextArea)`
 }
 
 resize:none;
-`;
+
+opacity: 0.6;
+  
+&:focus {
+  outline: none;
+  opacity: 1;
+  background-image: radial-gradient(red 85%, transparent 16%);
+  background-size: 2px 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+`
 
 export default (props) => (
   <TextAreaWithNoOutLine
-    height="150px"
-    width="100%"
-    border="none"
-    fontFamily="Serverless"
+    height='150px'
+    width='100%'
+    border='none'
+    fontFamily='Serverless'
     fontSize={2}
-    fontWeight="normal"
+    fontWeight='normal'
     lineHeight={4}
-    letterSpacing="h2"
-    color="gray.2"
-    background="rgba(39, 39, 39, .05)"
-    px="14.5px"
-    py="10px"
+    letterSpacing='h2'
+    color='gray.2'
+    background='rgba(39, 39, 39, .05)'
+    px='14.5px'
+    py='10px'
     {...props}
   />
 )

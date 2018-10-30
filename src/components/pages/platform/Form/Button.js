@@ -54,7 +54,7 @@ const Button = styled.button`
 
   @media screen and (max-width: 414px) {
     font-size: 20px;
-    width: '300px';
+    width: 260px;
   }
 `
 
