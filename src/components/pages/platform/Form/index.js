@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Flex, InlineBlock, P, Heading } from 'serverless-design-system'
-import Button from '../../home/Button'
+import Button from './Button'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
@@ -19,7 +19,7 @@ const StyledForm = styled(Flex.column)`
   position: absolute;
   top: 0;
   background-color: white;
-  margin-top: 330px;
+  margin-top: 315px;
   padding: 40px;
   width: 622px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
@@ -48,8 +48,8 @@ export default class Form extends React.Component {
       email: '',
       first_name: '',
       last_name: '',
-      poi: '',
-      developers_count: '',
+      poi: 'In Production',
+      developers_count: 'Less than 5',
       message: '',
       infrastructure: {
         'AWS' : true,
@@ -87,7 +87,7 @@ export default class Form extends React.Component {
       fields: { email, first_name, last_name, company, poi, developers_count, message, infrastructure }
     }
 
-    /*
+   /*
     formHandler(formData).then((res) => {
       this.setState({
         success: true,
@@ -101,6 +101,8 @@ export default class Form extends React.Component {
         error: e
       })
     })
+
+
     */
     console.log(formData)
     return false
@@ -145,7 +147,7 @@ export default class Form extends React.Component {
           </Box>
 
            <Heading.h4
-            fontFamily="Soleil"
+            fontFamily='Soleil'
             lineHeight={'32px'}
             letterSpacing={'-0.4px'}
             mb={0}
@@ -200,6 +202,7 @@ export default class Form extends React.Component {
                       name='poi'
                       id='five-to-fifteen'
                       onChange={() => this.updatePoi('In Production')}
+                      defaultChecked={true}
                     />
                     <InlineBlock>in production</InlineBlock>
                   </Flex.verticallyCenter>
@@ -218,11 +221,11 @@ export default class Form extends React.Component {
                 </Label>
               </Box>
               <Box mt={2} width={[1, 1, 1/3]}>
-                <Label htmlFor='fifteen-to-thirty'>
+                <Label htmlFor='not-at-all'>
                   <Flex.verticallyCenter>
                     <RadioButton
                       name='poi'
-                      id='fifteen-to-thirty'
+                      id='not-at-all'
                       onChange={() => this.updatePoi('Not at all')}
                     />
                     <InlineBlock>not at all</InlineBlock>
@@ -244,6 +247,7 @@ export default class Form extends React.Component {
                       name='developer-count'
                       id='less-than-five'
                       onChange={() => this.updateDeveloperCount('Less than 5')}
+                      defaultChecked={true}
                     />
                     <InlineBlock>less than 5</InlineBlock>
                   </Flex.verticallyCenter>
@@ -314,6 +318,7 @@ export default class Form extends React.Component {
                       name='infrastructure'
                       id='aws'
                       onChange={({ target }) => this.updateInfrastructure('AWS', target.checked)}
+                      defaultChecked={true}
                     />
                     <InlineBlock>AWS</InlineBlock>
                   </Flex.verticallyCenter>
@@ -369,7 +374,7 @@ export default class Form extends React.Component {
           </Box>
 
           <Box mt={3}>
-            <Button width={['200px']} disabled={loading}>
+            <Button disabled={loading}>
               { loading ? 'Loading' : 'submit' }
             </Button>
           </Box>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { Box, Flex, P } from 'serverless-design-system'
+import { Box, Flex } from 'serverless-design-system'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import Form from './Form'
