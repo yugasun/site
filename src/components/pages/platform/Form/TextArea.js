@@ -25,7 +25,7 @@ opacity: 0.6;
 &:focus {
   outline: none;
   opacity: 1;
-  background-image: radial-gradient(red 85%, transparent 16%);
+  background-image: linear-gradient(red 100%, transparent 16%);
   background-size: 2px 100%;
   background-position: left;
   background-repeat: no-repeat;
