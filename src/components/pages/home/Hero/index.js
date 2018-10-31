@@ -8,7 +8,6 @@ import HeroGithub from './Github'
 import HeroPlatforms from './Platforms'
 import HeroIncline from './Incline'
 import { Flex, Box } from 'serverless-design-system'
-import DesktopUpArrows from './DesktopUpArrows'
 
 const HomeHeroComponent = () => (
   <HeroWrapper
@@ -20,7 +19,6 @@ const HomeHeroComponent = () => (
     flexDirection={['column', 'column', 'row']}
   >
     <Box>
-      <DesktopUpArrows />
       <HeroHeader />
       <HeroActions />
       <HeroGithub />

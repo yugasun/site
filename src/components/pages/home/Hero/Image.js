@@ -5,6 +5,7 @@ import {
   Image,
   Relative,
   Absolute,
+  Position,
   Text,
 } from 'serverless-design-system'
 import homepageHeroLinesMain from 'src/assets/images/homepageHeroLinesMain.svg'
@@ -37,7 +38,7 @@ const HomeHeroImage = () => (
 
   <Relative
     mt={[120, 120, 150]}
-    ml={[0, 0, 120]}
+    ml={[0, 0, 7]}
     width={['320px', '320px', 1]}
   >
   <Image
@@ -47,7 +48,7 @@ const HomeHeroImage = () => (
   </Relative>
   <Absolute
       mt={['160px', '160px', '210px']}
-      ml={['35px', '35px', '170px']}
+      ml={['35px', '35px', '150px']}
     >
       <Text.p color='#727679' fontSize={['10px', '10px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;  # Step 1. Install serverless globally<br/>
