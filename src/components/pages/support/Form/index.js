@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, InlineBlock, P, Heading } from 'serverless-design-system'
+import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
 import { TextArea, Button, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
 
 import formHandler from 'src/utils/formHandler'
