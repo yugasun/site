@@ -1,15 +1,10 @@
 import React from 'react'
 
 import { Box, Flex, InlineBlock, P, Heading } from 'serverless-design-system'
-import Button from './Button'
+import { TextArea, Button, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
-import Label from './Label'
-import TextField from './TextField'
-import Checkbox from './Checkbox'
-import TextArea from './TextArea'
-import RadioButton from './RadioButton'
 
 import styled from 'styled-components'
 
@@ -50,7 +45,7 @@ export default class Form extends React.Component {
       developers_count: '',
       message: '',
       infrastructure: {
-        'AWS' : true,
+        'AWS' : false,
         'Google Cloud Platform' :  false,
         'Microsoft Azure' : false,
         'Other' :  false,
