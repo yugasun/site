@@ -19,7 +19,7 @@ const Benefits = () => (
             Standardize Development
         </Heading.h4>
         <P fontFamily='SoleilBk' lineHeight={'26px'} mb={62} mt={0}>
-        Get custom templates, with policy enforcement, to help standardize development across teams and onboard new team-members quickly.  
+        Get custom templates with policy enforcement to help standardize development across teams and onboard new team-members quickly.  
         </P>
     </Box>
 )
