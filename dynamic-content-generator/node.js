@@ -131,6 +131,7 @@ const sourceDocs = (createNode) => (err, content, _filename, next) => {
   if (err) throw err
 
   const { data: frontmatter, content: markdownContent } = matter(content)
+  if(!frontmatter.gitLink) return next() //TODO: temp fix for broken doc file - fix source or end smarter rules
   const url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
 
   unified().
