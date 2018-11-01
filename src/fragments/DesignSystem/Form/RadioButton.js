@@ -5,9 +5,6 @@ import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 
 export default styled(RadioButton)`
   appearance: none;
-  height: 18px;
-  width: 18px;
-  margin-top: 2px;
 
   &:focus {
     outline: none
@@ -16,9 +13,10 @@ export default styled(RadioButton)`
   &:before {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin-left: -2px;
+    margin-right: 5px;
     margin-top: -2px;
     background-position: center;
     background-size: contain;

@@ -10,9 +10,10 @@ export default styled(Checkbox)`
     content: "";
     display: inline-block;
     margin-top: -2px;
+    margin-right: 5px;
     margin-left: -2px;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-position: center;
     background-size: contain;
     background-image: url(${unCheckedRadio});
