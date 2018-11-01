@@ -6,7 +6,6 @@ import HeroImage from './Image'
 import HeroActions from './Actions'
 import HeroGithub from './Github'
 import HeroPlatforms from './Platforms'
-import HeroIncline from './Incline'
 import { Flex, Box } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
@@ -26,7 +25,6 @@ const HomeHeroComponent = () => (
     <HeroImage />
 </Flex>
   <HeroPlatforms />
-  <HeroIncline />
   </HeroWrapper>
 )
 

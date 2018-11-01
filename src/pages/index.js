@@ -6,6 +6,7 @@ import Hero from 'src/components/pages/home/Hero'
 import Benefits from 'src/components/pages/home/Benefits'
 import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
 import AllInOne from 'src/components/pages/home/AllInOne'
+import Incline from 'src/components/pages/home/Hero/Incline'
 import DesktopTestimonialIncline from 'src/components/pages/home/Testimonial/DesktopIncline'
 const Home = ({ location }) => {
   return (
@@ -16,6 +17,7 @@ const Home = ({ location }) => {
         location={location}
       />
       <Hero />
+      <Incline />
       <Benefits />
       <ServerlessGrowth />
       <DesktopTestimonialIncline />
