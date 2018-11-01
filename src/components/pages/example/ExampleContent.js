@@ -47,7 +47,7 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
   return (
       <Box
         my={[104, 104, 170]}>
-        <EditOnGithubOption />
+        <EditOnGithubOption gitLink={frontmatter.gitLink}/>
         <AppContainer>
             <ExampleBreadcrumbs path={`/examples/`}/>
             <WidthContainer>
@@ -76,9 +76,16 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
             />
             <WidthContainer>
             <DesktopOnlyRow justifyContent='space-between' mt={76} mx='auto'>
+                <a
+                    title='View this example on GitHub'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    href={frontmatter.gitLink}
+                    >
                       <Button height='50px' fontSize='2rem' letterSpacing={'0.8px'} p={0} lineHeight={['14px']}> 
-                    edit on Github
+                      view on Github
                 </Button>
+                </a>
                       <P fontSize='14px' lineHeight={'1.57'} letterSpacing={'0.6px'} color='#000000' opacity='0.4' fontFamily='Serverless'>
                 Latest commit b2f54ec  on Sep 24, 2017
                 </P>

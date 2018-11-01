@@ -5,8 +5,8 @@ import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
 
 export default ({ data }) => (
-  <DefaultLayout prefooter={NewToServerlessPrefooter}>
-   <Helmet {...data.Example.frontmatter }/>
+  <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
+   <Helmet title={data.Example.frontmatter.seoTitle} description={data.Example.frontmatter.description}/>
    <ExampleContent {...data.Example }/>
   </DefaultLayout>
 )
@@ -24,6 +24,7 @@ export const query = graphql`
         authorName
         authorAvatar
         gitLink
+        seoTitle
       }
       content
     }

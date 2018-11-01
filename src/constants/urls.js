@@ -20,7 +20,7 @@ export default {
     examples: {
       docs: '/framework/docs/',
       plugins: 'https://github.com/serverless/plugins',
-      examples: 'https://github.com/serverless/examples',
+      examples: '/examples/',
     },
   },
   learn: {
