@@ -86,15 +86,15 @@ export default class HomeBenefits extends React.Component {
     
      if(!this.state.isUsingMobile) {
          console.log(window.scrollY)
-        if(window.scrollY > 1408 && window.scrollY < 2000) {
+        if(window.scrollY > 1408 && window.scrollY < 2100) {
             console.log("triggered bro")
             this.setState({benefitsAnimationTriggered: true})
         } else {
             this.setState({benefitsAnimationTriggered: false})
         }
-        if(window.scrollY > 1620 && window.scrollY < 1760) {
+        if(window.scrollY > 1620 && window.scrollY < 1820) {
             this.showBenefit('customAutomation')
-          } else if(window.scrollY > 1790) {
+          } else if(window.scrollY > 1900) {
               this.showBenefit('dataProcessing')
           } else if(window.scrollY < 1407) {
               this.showBenefit('buildApi')
