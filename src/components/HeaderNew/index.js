@@ -68,8 +68,7 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-          <Transition py={[1, 1, this.state.isNavbarShrinked ? 0 : 3]} transition='all .5s linear'>
-            <AppContainer>
+            <AppContainer py={[1, 1, 0]}>
               <Flex.verticallyCenter
                 flexWrap='wrap'
                 justifyContent='space-between'
@@ -81,7 +80,6 @@ class Header extends React.Component {
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
             </AppContainer>
-          </Transition>
         </Background>
       </HeaderWrapper>
     )

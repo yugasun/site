@@ -18,16 +18,16 @@ const HeroHeader = () => (
     >
       The most widely-adopted toolkit for building serverless applications.
     </Heading.h1>
-    <Heading.h3
+    <Heading.h4
       color='white'
-      fontSize={['24px', '24px', '32px']}
+      fontSize={['24px']}
       lineHeight={['32px', '32px', '44px']}
       letterSpacing={['-0.4px', '-0.4px', '-0.5px']}
       fontFamily={'Soleil'}
       align={['center', 'center', 'left']}
     >
       Any provider. Same experience
-    </Heading.h3>
+    </Heading.h4>
   </Column>
 )
 

@@ -8,8 +8,7 @@ import {
   TextWithIcon,
   Box,
   P,
-  Row,
-  Position
+  Row
 } from 'serverless-design-system'
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
