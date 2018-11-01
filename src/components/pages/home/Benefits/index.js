@@ -40,7 +40,7 @@ const MobileCenteredImage = styled(Image)`
 `
 
 const ButtonWithTransition = styled(Button)`
-    transition: background 1s ease-in-out;
+
 `
 
 const BenefitsAnimationStyles = {
@@ -51,7 +51,9 @@ const BenefitsAnimationStyles = {
     height: '130vh',
     width: '100vw',
     zIndex: '2',
-    padding: '0 192px'
+    paddingLeft: '12%',
+    paddingRight: '13%',
+    paddingTop: '82px',
 } 
 
 export default class HomeBenefits extends React.Component {
@@ -81,19 +83,20 @@ export default class HomeBenefits extends React.Component {
     }
   
     onScroll = () => {
+    
      if(!this.state.isUsingMobile) {
          console.log(window.scrollY)
-        if(window.scrollY > 1408 && window.scrollY < 1510) {
+        if(window.scrollY > 1408 && window.scrollY < 2000) {
             console.log("triggered bro")
             this.setState({benefitsAnimationTriggered: true})
         } else {
             this.setState({benefitsAnimationTriggered: false})
         }
-        if(window.scrollY > 1408 && window.scrollY < 1482) {
+        if(window.scrollY > 1620 && window.scrollY < 1760) {
             this.showBenefit('customAutomation')
-          } else if(window.scrollY > 1495) {
+          } else if(window.scrollY > 1790) {
               this.showBenefit('dataProcessing')
-          } else {
+          } else if(window.scrollY < 1407) {
               this.showBenefit('buildApi')
           }
      }
@@ -110,7 +113,7 @@ export default class HomeBenefits extends React.Component {
     render() {
         return (
             <AppContainer>
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[100, 100, 180]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[100, 100, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             <DesktopDownArrow />
             
             <MobileBenefitItem number='03' title='Data processing' />
