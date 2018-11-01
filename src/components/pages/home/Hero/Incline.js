@@ -6,8 +6,8 @@ const HomeHeroIncline = () => (
     <Absolute height='0' left='0'>
         <Card
         pt={['111px', '111px', '0']}    
-        borderRight='99vw solid transparent'
-        borderBottom={['75px solid white', '75px solid white', '193px solid white']}
+        borderRight='98vw solid transparent'
+        borderBottom={['75px solid white', '75px solid white', '219px solid white']}
         />
     </Absolute>
 )

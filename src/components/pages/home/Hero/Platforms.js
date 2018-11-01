@@ -12,14 +12,14 @@ const HomeHeroFooter = () => (
   <Box>
     <Flex.center
       width={[1, 1, 3 / 4]}
-      mt={[2, 4, 6]}
+      mt={[4, 4, 8]}
       mx={'auto'}
       flexDirection='row'
     >
       <Heading.h4
         color='white'
         fontSize={[24, 24, 32]}
-        mt={['47px','47px','90px']}
+        mt={['47px','47px','110px']}
         mx={1}
         lineHeight={[3, 3, '44px']}
         align='center'
