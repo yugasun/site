@@ -4,7 +4,7 @@ import { Card } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const OnlyDesktopCardWithTopMargin = styled(Card)`
-    margin-top: 50px;
+    margin-top: 170px;
     @media screen and (max-width: 415px) {
         display: none;
     }

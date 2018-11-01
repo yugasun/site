@@ -4,7 +4,7 @@ import {
   Box,
   Position
 } from 'serverless-design-system'
-import Testimonial from './TestimonialSystemNew'
+import Testimonial from './DesignSystem/Testimonial'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
@@ -25,7 +25,7 @@ const TestimonialWrapper = styled(Box)`
 const TestimonialComponent = () => (
   <Box mt={[92, 92, 0]}>
   <TestimonialWrapper>
-    <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 200]}>
+    <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 100, 100, 100, 200]}>
       <AppContainer>
         <Testimonial
           img={cocaColaLogo}

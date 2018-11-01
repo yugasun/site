@@ -22,9 +22,9 @@ import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import DesktopDownArrow from './DesktopDownArrow'
 
 const MobileBenefitItem = ({number, title}) => (
-    <Box display={['block', 'block', 'none']} mt={37}>
+    <Box display={['block', 'block', 'none']} mt={15} mb={25}>
     <Row>
-    <Button bg='#fd5750' width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px' p={0}>
+    <Button bg='#fd5750' width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize={['26.7px', '26.7px', '32px']} p={0}>
      {number}
     </Button>
 
@@ -113,7 +113,7 @@ export default class HomeBenefits extends React.Component {
     render() {
         return (
             <AppContainer>
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[100, 100, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             <DesktopDownArrow />
             
             <MobileBenefitItem number='03' title='Data processing' />
@@ -123,11 +123,11 @@ export default class HomeBenefits extends React.Component {
             <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-                    <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
 
             <Column width={[1, 1, '488px']}>
                         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
-                            <Heading.h3 fontFamily='Soleil' lineHeight={['32px', '32px', '44px']} letterSpacing='-0.5px' fontSize={['24px', '24px', '32px']} pt='12px' >
+                            <Heading.h3 fontFamily='Soleil' lineHeight={['32px', '32px', '44px']} letterSpacing='-0.5px' fontSize={['24px', '24px', '32px']} pt='12px' pb={[4, 4, 0]}>
                 What you can do with <br />serverless applications
                 </Heading.h3>
                 </TextWithIcon>
