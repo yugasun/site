@@ -26,6 +26,8 @@ git clone git@github.com:serverless/site.git
 yarn
 ```
 
+(Install Yarn if you haveb't already)[https://yarnpkg.com/en/docs/install#mac-stable]
+
 **2. Run site on your local computer**
 
 ```bash
