@@ -14,33 +14,27 @@ API calls are made with the [serverless framework](https://github.com/serverless
 
 # Quick Start
 
-**1. Make sure that you have the Gatsby CLI program installed:**
-
-```sh
-npm install --global gatsby-cli@1.1.58
-```
-
-**2. Clone down the site**
+**1. Clone down the site**
 
 ```bash
 git clone git@github.com:serverless/site.git
 ```
 
-**3. Install site dependencies**
+**2. Install site dependencies**
 
 ```bash
-npm install
+yarn
 ```
 
-**3. Run site on your local computer**
+**2. Run site on your local computer**
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Open your browser to http://localhost:8000
 
-Run `npm run syncProd` or `npm run syncLocal` to pull in the blog and docs repos (if the postinstall command doesn't run for you). These 2 commands pull in the external content sources the site uses.
+Run `yarn syncProd` or `yarn syncLocal` to pull in the blog and docs repos (if the postinstall command doesn't run for you). These 2 commands pull in the external content sources the site uses.
 
 # Directory Structure
 
@@ -50,15 +44,15 @@ Refer [directory structure doc](./DIRECTORY_STRUCTURE.md)
 
 Fork the site and submit a pull request!
 
-When you start the site with `npm run dev` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
+When you start the site with `yarn dev` it will start watching for file changes and they will be automatically refreshed in the site on `http://localhost:8000`
 
 ### **Blog edits:**
 
-To make edits to blog posts, edit the files in `./serverless-blog/posts` (this directory is added on `npm i`)
+To make edits to blog posts, edit the files in `./serverless-blog/posts` (this directory is added on `yarn`)
 
 ### **Doc edits:**
 
-To make edits to framework docs, edit the files in `./serverless/docs` (this directory is added on `npm i`)
+To make edits to framework docs, edit the files in `./serverless/docs` (this directory is added on `yarn`)
 
 ### Editing other pages
 
@@ -87,7 +81,7 @@ export default styled(Box)`
 **1. Test the build command locally**
 
 ```bash
-npm run build
+yarn build
 ```
 
 **2. If build command succeeds, push up your changes to a new branch**

@@ -59,18 +59,17 @@ const examplesOptions = [
   {
     name: 'examples',
     to: developers.examples.examples,
-    crossDomain: true,
-    completed: false,
+    completed: true,
   },
 ]
 
 const Developer = () => (
   <Flex flexWrap='wrap'>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='quick starts' options={quickStartOptions} />
+      <SubMenu title='resources' options={examplesOptions} />
     </Box>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='resources' options={examplesOptions} />
+      <SubMenu title='quick starts' options={quickStartOptions} />
     </Box>
   </Flex>
 )

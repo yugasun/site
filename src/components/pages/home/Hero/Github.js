@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-import { Flex, Image, Heading } from 'serverless-design-system'
+import { Flex, Image, Heading, Text } from 'serverless-design-system'
 import videoIcon from 'src/assets/images/github-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 
@@ -12,6 +12,15 @@ const StyledLink = styled(Link)`
 
 const VerticallyAlignedImage = styled(Image)`
   vertical-align: top;
+`
+
+const MobileSpace = styled(Text.span)`
+  @media screen and (max-width: 414px) {
+    &:after {
+      content: "       ";
+      white-space: pre;
+    }
+  }
 `
 
 const HomeHeroFooter = () => (
@@ -34,7 +43,7 @@ const HomeHeroFooter = () => (
           height={'26px'}
           width='26px'
         />
-        &nbsp; View the Serverless Framework on GitHub.&nbsp;&nbsp;&nbsp; 
+        <Text.span>&nbsp; View the Serverless Framework <MobileSpace></MobileSpace> on GitHub.&nbsp;&nbsp;&nbsp;</Text.span> 
       <VerticallyAlignedImage
           src={starIcon}
           height={20}
