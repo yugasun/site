@@ -7,28 +7,42 @@ const TextAreaWithNoOutLine = styled(TextArea)`
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #B6B6B6;
+  opacity: 0.6;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: #B6B6B6;
+  opacity: 0.6;
 }
 :-ms-input-placeholder { /* IE 10+ */
   color: #B6B6B6;
+  opacity: 0.6;
 }
 :-moz-placeholder { /* Firefox 18- */
   color: #B6B6B6;
+  opacity: 0.6;
 }
 
 resize:none;
-
-opacity: 0.6;
   
 &:focus {
   outline: none;
-  opacity: 1;
   background-image: linear-gradient(red 100%, transparent 16%);
   background-size: 2px 100%;
   background-position: left;
   background-repeat: no-repeat;
+}
+
+&:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  opacity: 1;
+}
+&:focus::-moz-placeholder { /* Firefox 19+ */
+  opacity: 1;
+}
+&:focus:-ms-input-placeholder { /* IE 10+ */
+  opacity: 1;
+}
+&:focus:-moz-placeholder { /* Firefox 18- */
+  opacity: 1;
 }
 `
 

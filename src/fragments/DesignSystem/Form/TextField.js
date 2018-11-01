@@ -4,15 +4,39 @@ import styled from 'styled-components'
 import { TextField } from 'serverless-design-system'
 
 const TextFieldWithNoOutLine = styled(TextField)`
-  opacity: 0.6;
   
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 0.6;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    opacity: 0.6;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    opacity: 0.6;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    opacity: 0.6;
+  }
+
   &:focus {
     outline: none;
-    opacity: 1;
     background-image: linear-gradient(red 100%, transparent 16%);
     background-size: 2px 100%;
     background-position: left;
     background-repeat: no-repeat;
+  }
+
+  &:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 1;
+  }
+  &:focus::-moz-placeholder { /* Firefox 19+ */
+    opacity: 1;
+  }
+  &:focus:-ms-input-placeholder { /* IE 10+ */
+    opacity: 1;
+  }
+  &:focus:-moz-placeholder { /* Firefox 18- */
+    opacity: 1;
   }
 
 `
