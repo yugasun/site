@@ -8,7 +8,8 @@ import {
   TextWithIcon,
   Box,
   P,
-  Row
+  Row,
+  Position
 } from 'serverless-design-system'
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
@@ -42,6 +43,17 @@ const ButtonWithTransition = styled(Button)`
     transition: background 1s ease-in-out;
 `
 
+const BenefitsAnimationStyles = {
+    position: 'fixed',
+    backgroundColor: 'white',
+    top: '-27px',
+    left: '0',
+    height: '130vh',
+    width: '100vw',
+    zIndex: '2',
+    padding: '0 192px'
+} 
+
 export default class HomeBenefits extends React.Component {
     constructor() {
         super()
@@ -50,6 +62,7 @@ export default class HomeBenefits extends React.Component {
             showCustomAutomation: false, 
             showDataProcessing: false,
             isUsingMobile: false,
+            benefitsAnimationTriggered: false,
         }
     }
 
@@ -68,13 +81,22 @@ export default class HomeBenefits extends React.Component {
     }
   
     onScroll = () => {
-      if(window.scrollY > 1080 && window.scrollY < 1321) {
-        this.showBenefit('customAutomation')
-      } else if(window.scrollY > 1321) {
-          this.showBenefit('dataProcessing')
-      } else {
-          this.showBenefit('buildApi')
-      }
+     if(!this.state.isUsingMobile) {
+         console.log(window.scrollY)
+        if(window.scrollY > 1408 && window.scrollY < 1510) {
+            console.log("triggered bro")
+            this.setState({benefitsAnimationTriggered: true})
+        } else {
+            this.setState({benefitsAnimationTriggered: false})
+        }
+        if(window.scrollY > 1408 && window.scrollY < 1482) {
+            this.showBenefit('customAutomation')
+          } else if(window.scrollY > 1495) {
+              this.showBenefit('dataProcessing')
+          } else {
+              this.showBenefit('buildApi')
+          }
+     }
     }
 
     showBenefit = (benefitOption) => {
@@ -88,7 +110,7 @@ export default class HomeBenefits extends React.Component {
     render() {
         return (
             <AppContainer>
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[100, 100, 180]}>
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[100, 100, 180]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             <DesktopDownArrow />
             
             <MobileBenefitItem number='03' title='Data processing' />
