@@ -85,9 +85,7 @@ export default class HomeBenefits extends React.Component {
     onScroll = () => {
     
      if(!this.state.isUsingMobile) {
-         console.log(window.scrollY)
         if(window.scrollY > 1408 && window.scrollY < 2100) {
-            console.log("triggered bro")
             this.setState({benefitsAnimationTriggered: true})
         } else {
             this.setState({benefitsAnimationTriggered: false})
