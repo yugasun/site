@@ -57,7 +57,7 @@ export default (props) => (
     lineHeight={4}
     letterSpacing='h2'
     color='gray.2'
-    background='rgba(39, 39, 39, .05)'
+    bg='#f7f7f7'
     px='14.5px'
     py='10px'
     {...props}
