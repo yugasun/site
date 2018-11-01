@@ -10,7 +10,7 @@ import {
 import Button from './Button'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
-import buildApi from 'src/assets/images/home/serverless-applications-rise.png'
+import buildApi from 'src/assets/images/home/serverless-applications-rise.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
 const HomeBenefits = () => (
