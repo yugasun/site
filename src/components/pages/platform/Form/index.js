@@ -13,8 +13,8 @@ const StyledForm = styled(Flex.column)`
   top: 0;
   background-color: white;
   margin-top: 315px;
-  padding: 40px;
-  width: 622px;
+  padding: 32px;
+  width: 608px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #eaeaea;
 
