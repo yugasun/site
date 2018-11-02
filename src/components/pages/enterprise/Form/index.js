@@ -1,16 +1,34 @@
 import React from 'react'
 
-import { Box, Button, Flex, InlineBlock, P } from 'serverless-design-system'
+import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
+import { TextArea, Button, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
-import Label from './Label'
-import TextField from './TextField'
-import SelectField from './SelectField'
-import Checkbox from './Checkbox'
-import TextArea from './TextArea'
-import SubTitle from './../Pros/SubTitle'
-import track from 'src/utils/analytics/track'
+
+import styled from 'styled-components'
+
+const StyledForm = styled(Flex.column)`
+  position: absolute;
+  top: 0;
+  background-color: white;
+  margin-top: 315px;
+  padding: 32px;
+  width: 608px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  border: solid 1px #eaeaea;
+
+  @media screen and (max-width: 414px) {
+    position: relative;
+    width: auto;
+    padding-top: 40px;
+    padding-bottom:40px;
+    padding-right: 20px;
+    padding-left:20px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+`
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -46,7 +64,7 @@ export default class Form extends React.Component {
       poi,
       developers_count,
       message,
-    } = this.state;
+    } = this.state
 
     if (!validateEmail(email)) {
       alert('Please enter valid email address')
@@ -55,7 +73,7 @@ export default class Form extends React.Component {
 
     this.setState({ loading: true })
     const infras = Object.keys(this.state.infrastructure)
-    const infrastructure = infras .filter((infra) => this.state.infrastructure[infra])
+    const infrastructure = infras.filter((infra) => this.state.infrastructure[infra])
 
     const formData = {
       formId: formId,
@@ -84,123 +102,216 @@ export default class Form extends React.Component {
     })
   }
 
+  updateDeveloperCount = (value) => {
+    this.setState({
+      developers_count: value
+    })
+  }
+
+  updatePoi = (value) => {
+    this.setState({
+      poi: value
+    })
+  }
+
   render() {
     const { loading, success } = this.state
-
-    if (success) {
-      track('site:enterprise_contact', { category: 'Contact Form' })
-      return (
-        <Box>
-          <P>
-            Thanks we will be in touch shortly.
-          </P>
-        </Box>
-      )
+    let submitButtonText
+    if(loading) {
+      submitButtonText = 'loading'
+    } else if(success) {
+      submitButtonText = 'request sent'
+    } else {
+      submitButtonText = 'submit'
     }
 
     return (
       <form onSubmit={this.onSubmit}>
-        <Flex.column>
+        <StyledForm>
           <Box width={[ 1, 1, 5/7 ]}>
-            <SubTitle>
-              Interested in an enterprise demo? Let’s talk.
-            </SubTitle>
           </Box>
 
-          <Box my={3} width={1}>
+           <Heading.h4
+            fontFamily='Soleil'
+            lineHeight={'32px'}
+            letterSpacing={'-0.4px'}
+            mb={0}
+          >
+            Wanna know how Serverless can help <br /> your company? Let’s talk.
+          </Heading.h4>
+          
+          <Box mt={3} width={1}>
             <TextField
-              placeholder="Email"
-              name="email"
-              onChange={({ target }) => this.setState({ email: target.value })}
+              placeholder='E-mail'
+              name='email'
+              onChange={({ target }) => this.setState({ email: target.value, success: false })}
               required
             />
           </Box>
 
-          <Flex.spaceBetween my={2}>
+          <Flex.spaceBetween mt={3}>
             <TextField
               width={48/100}
-              placeholder="First Name"
-              name="first_name"
-              onChange={({ target }) => this.setState({ first_name: target.value })}
+              placeholder='First Name'
+              name='first_name'
+              onChange={({ target }) => this.setState({ first_name: target.value, success: false })}
               required
             />
             <TextField
               width={48/100}
-              placeholder="Last Name"
-              name="last_name"
-              onChange={({ target }) => this.setState({ last_name: target.value })}
+              placeholder='Last Name'
+              name='last_name'
+              onChange={({ target }) => this.setState({ last_name: target.value, success: false })}
               required
             />
           </Flex.spaceBetween>
 
-          <Box my={2}>
+          <Box mt={3}>
             <TextField
-              placeholder="Company Name"
-              name="company"
-              onChange={({ target }) => this.setState({ company: target.value })}
+              placeholder='Company Name'
+              name='company'
+              onChange={({ target }) => this.setState({ company: target.value, success: false })}
               required
             />
           </Box>
 
-          <Box my={2}>
+           <Box mt={3}>
             <Label>
-              How is your company currently using the Serverless Framework?
+            How is your company currently using the Serverless Framework?
             </Label>
-            <Box mt={2}>
-              <SelectField
-                options={[
-                  { label: 'In Development', value: 'In Development' },
-                  { label: 'In Production', value: 'In Production' },
-                  { label: 'Not at all', value: 'Not at all' },
-                ]}
-                onChange={({ value }) => this.setState({ poi: value })}
-                value={this.state.poi}
-              />
-            </Box>
+            <Flex flexDirection={['column', 'column', 'row']}>
+            <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='five-to-fifteen'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='poi'
+                      id='five-to-fifteen'
+                      onChange={() => this.updatePoi('In Production')}
+                    />
+                    <InlineBlock>in production</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='in-development'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='poi'
+                      id='in-development'
+                      onChange={() => this.updatePoi('In Development')}
+                    />
+                    <InlineBlock>in development</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='not-at-all'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='poi'
+                      id='not-at-all'
+                      onChange={() => this.updatePoi('Not at all')}
+                    />
+                    <InlineBlock>not at all</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+            </Flex>
           </Box>
 
-          <Box my={2}>
+           <Box mt={3}>
             <Label>
-              How many developers in your organization plan on doing serverless development?
+            How many developers in your organization plan on doing serverless development?
             </Label>
-            <Box mt={2}>
-              <SelectField
-                options={[
-                  { label: 'Less than 5', value: 'Less than 5' },
-                  { label: '5 - 15', value: '5 - 15' },
-                  { label: '15 - 30', value: '15 - 30' },
-                  { label: '30 - 100', value: '30 - 100' },
-                  { label: '100+', value: '100+' },
-                ]}
-                onChange={({ value }) => this.setState({ developers_count: value })}
-                value={this.state.developers_count}
-              />
-            </Box>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='less-than-five'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='developer-count'
+                      id='less-than-five'
+                      onChange={() => this.updateDeveloperCount('Less than 5')}
+                    />
+                    <InlineBlock>less than 5</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='five-to-fifteen'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='developer-count'
+                      id='five-to-fifteen'
+                      onChange={() => this.updateDeveloperCount('5 - 15')}
+                    />
+                    <InlineBlock>5-15</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='fifteen-to-thirty'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='developer-count'
+                      id='fifteen-to-thirty'
+                      onChange={() => this.updateDeveloperCount('15 - 30')}
+                    />
+                    <InlineBlock>15-30</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+            </Flex>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='thirty-to-hundred'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='developer-count'
+                      id='thirty-to-hundred'
+                      onChange={() => this.updateDeveloperCount('30 - 100')}
+                    />
+                    <InlineBlock>30-100</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/3]}>
+                <Label htmlFor='more-than-hundred'>
+                  <Flex.verticallyCenter>
+                    <RadioButton
+                      name='developer-count'
+                      id='more-than-hundred'
+                      onChange={() => this.updateDeveloperCount('More than 100')}
+                    />
+                    <InlineBlock>more than 100</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+            </Flex>
           </Box>
 
-          <Box my={2}>
+          <Box mt={3}>
             <Label>
-              Which infrastructure providers you are utilizing with the Serverless Framework?
+              Which infrastructure providers are you utilizing with the Serverless Framework?
             </Label>
-            <Flex>
-              <Box mt={2} width={1/2}>
-                <Label htmlFor="aws">
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='aws'>
                   <Flex.verticallyCenter>
                     <Checkbox
-                      name="infrastructure"
-                      id="aws"
+                      name='infrastructure'
+                      id='aws'
                       onChange={({ target }) => this.updateInfrastructure('AWS', target.checked)}
                     />
                     <InlineBlock>AWS</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/2}>
-                <Label htmlFor="google-cloud-platform">
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='google-cloud-platform'>
                   <Flex.verticallyCenter>
                     <Checkbox
-                      name="infrastructure"
-                      id="google-cloud-platform"
+                      name='infrastructure'
+                      id='google-cloud-platform'
                       onChange={({ target }) => this.updateInfrastructure('Google Cloud Platform', target.checked)}
                     />
                     <InlineBlock>Google Cloud Platform</InlineBlock>
@@ -208,25 +319,25 @@ export default class Form extends React.Component {
                 </Label>
               </Box>
             </Flex>
-            <Flex>
-              <Box mt={2} width={1/2}>
-                <Label htmlFor="azure">
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='azure'>
                   <Flex.verticallyCenter>
                     <Checkbox
-                      name="infrastructure"
-                      id="azure"
+                      name='infrastructure'
+                      id='azure'
                       onChange={({ target }) => this.updateInfrastructure('Microsoft Azure', target.checked)}
                     />
                     <InlineBlock>Microsoft Azure</InlineBlock>
                   </Flex.verticallyCenter>
                 </Label>
               </Box>
-              <Box mt={2} width={1/2}>
-                <Label htmlFor="other">
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='other'>
                   <Flex.verticallyCenter>
                     <Checkbox
-                      name="infrastructure"
-                      id="other"
+                      name='infrastructure'
+                      id='other'
                       onChange={({ target }) => this.updateInfrastructure('Other', target.checked)}
                     />
                     <InlineBlock>Other</InlineBlock>
@@ -236,20 +347,20 @@ export default class Form extends React.Component {
             </Flex>
           </Box>
 
-          <Box my={2}>
+          <Box mt={3}>
             <TextArea
-              placeholder="Please describe your Serverless use-case and any goals your team has with Serverless."
-              name="message"
-              onChange={({ target }) => this.setState({ message: target.value })}
+              placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
+              name='message'
+              onChange={({ target }) => this.setState({ message: target.value, success: false })}
             />
           </Box>
 
-          <Box my={4}>
-            <Button width="120px" disabled={loading}>
-              { loading ? 'Loading' : 'submit' }
+          <Box mt={3}>
+            <Button disabled={loading}>
+              { submitButtonText }
             </Button>
           </Box>
-        </Flex.column>
+        </StyledForm>
       </form>
     )
   }

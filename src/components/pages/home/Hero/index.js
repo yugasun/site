@@ -1,23 +1,30 @@
 import React from 'react'
 
-import { HeroWrapper } from 'src/fragments'
+import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
-import HeroFooter from './Footer'
-
-import HomePageHeroSectionBackground from 'src/assets/images/home.png'
+import HeroGithub from './Github'
+import HeroPlatforms from './Platforms'
+import { Flex, Box } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
   <HeroWrapper
-    backgroundImage={`url(${HomePageHeroSectionBackground})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
+    background={['linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',`linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)`]}
+    height={[1468]}
   >
-    <HeroHeader />
+  <Flex
+    justifyContent={['start', 'start', 'space-around']}
+    flexDirection={['column', 'column', 'row']}
+  >
+    <Box>
+      <HeroHeader />
+      <HeroActions />
+      <HeroGithub />
+    </Box>
     <HeroImage />
-    <HeroActions />
-    <HeroFooter />
+</Flex>
+  <HeroPlatforms />
   </HeroWrapper>
 )
 

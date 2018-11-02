@@ -2,9 +2,9 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { Box, Flex } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
-import Form from './Form';
-import Pros from './Pros';
+import { AppContainerNewest as AppContainer } from 'src/components'
+import Form from './Form'
+import Benefits from './Benefits'
 
 const Content = ({ theme }) => (
   <AppContainer>
@@ -14,17 +14,16 @@ const Content = ({ theme }) => (
         theme.navbarHeights.mobile,
         theme.navbarHeights.desktop,
       ]}
+      mb={[0, 0, 350]}
     >
       <Flex.spaceBetween
         flexDirection={['column', 'column', 'row']}
-        my={[5, 5, 5, 6]}
       >
         <Box width={[1, 1, 2/5]}>
-          <Pros />
+          <Benefits />
         </Box>
         <Box
           width={[1, 1, 1/2]}
-          mt={[4, 4, 0]}
         >
           <Form />
         </Box>
@@ -33,4 +32,4 @@ const Content = ({ theme }) => (
   </AppContainer>
 )
 
-export default withTheme(Content);
+export default withTheme(Content)

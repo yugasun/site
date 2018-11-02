@@ -3,11 +3,11 @@ import React from 'react'
 import { Box, Column } from 'serverless-design-system'
 import { HeaderNew as Header, FooterNew as Footer } from 'src/components'
 
-const DefaultLayout = ({ children, prefooter, transparentHeader, footerBackground }) => (
+const DefaultLayout = ({ children, prefooter, transparentHeader }) => (
   <Column width={1}>
     <Header transparent={transparentHeader} />
     <Box width={1}>{children}</Box>
-    <Footer prefooter={prefooter} footerBackground={footerBackground} />
+    <Footer prefooter={prefooter} />
   </Column>
 )
 

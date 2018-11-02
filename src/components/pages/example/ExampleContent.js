@@ -30,17 +30,21 @@ const ExampleBreadcrumbs = styled(Breadcrumbs)`
 `
 
 const WidthContainer = styled(Box)`
-
     @media screen and (min-width: 415px) {
         width: 800px;
         margin: auto;
     }
 `
 
+const DesktopOnlyRow = styled(Row)`
+    @media screen and (max-width: 414px) {
+        display: none;
+    }
+`
+
 //TODO - REFACTOR THIS (components)
-export default ({ frontmatter, content }) => {
+const ExampleContent = ({ id, frontmatter, content, location }) => {
   return (
-        
       <Box
         my={[104, 104, 170]}>
         <EditOnGithubOption gitLink={frontmatter.gitLink}/>
@@ -71,23 +75,26 @@ export default ({ frontmatter, content }) => {
                 dangerouslySetInnerHTML={{ __html: content }}
             />
             <WidthContainer>
-            <Row justifyContent='space-between' mt={76} mx='auto'>
+            <DesktopOnlyRow justifyContent='space-between' mt={76} mx='auto'>
                 <a
                     title='View this example on GitHub'
                     rel='noopener noreferrer'
                     target='_blank'
                     href={frontmatter.gitLink}
                     >
-                 <Button height='50px' fontSize='2rem' letterSpacing={'0.8px'} p={0} lineHeight={['14px']}> 
-                    view on Github
+                      <Button height='50px' fontSize='2rem' letterSpacing={'0.8px'} p={0} lineHeight={['14px']}> 
+                      view on Github
                 </Button>
                 </a>
                       <P fontSize='14px' lineHeight={'1.57'} letterSpacing={'0.6px'} color='#000000' opacity='0.4' fontFamily='Serverless'>
                 Latest commit b2f54ec  on Sep 24, 2017
                 </P>
-            </Row>
+            </DesktopOnlyRow>
             </WidthContainer>
+            <Box mb={510}></Box>
             </AppContainer>
         </Box>
   )
 }
+
+export default ExampleContent

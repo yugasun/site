@@ -8,7 +8,7 @@ const CompanyColumn = () => (
     header='company'
     listItems={[
       {
-        name: 'team',
+        name: 'overview',
         navProps: { to: company.team, completed: true },
       },
       {

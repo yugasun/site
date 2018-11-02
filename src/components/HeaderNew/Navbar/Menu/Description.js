@@ -1,7 +1,7 @@
 // TODO: MAKE THIS CLASS READABLE
 import React from 'react'
 
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components'
 import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system'
 import NavbarContext from './../../NavbarContext'
 
@@ -30,7 +30,7 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
         zIndex='999'
         boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
         position={['relative', 'relative', 'absolute']}
-        top={['0', '0', isNavbarShrinked ? '72px' : '90px']}
+        top={['0', '0', '72px']}
         left={['0', '0', '-50%']}
         minWidth={[0, 0, '250px']}
         beforeBoxBorderWidth={[0, 0, '0 7.5px 13.0px 7.5px']}
