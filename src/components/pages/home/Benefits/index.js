@@ -96,12 +96,10 @@ export default class HomeBenefits extends React.Component {
      if(currentScrollY > 1860) {
          this.setState({stopAnimation: false})
      }
-     console.log(scrollMovement, currentScrollY)
+
      if(!this.state.isUsingMobile) {
 
-        if(this.state.currentScrollMovement === 'down') {
-            if(!this.state.stopAnimation) {
-                console.log("down animations")
+        if(this.state.currentScrollMovement === 'down' && !this.state.stopAnimation) {
                 if(currentScrollY > 1408 && currentScrollY < 1850) {
                     this.setState({benefitsAnimationTriggered: true})
                     if(window.scrollY > 1620 && window.scrollY < 1720) {
@@ -109,15 +107,13 @@ export default class HomeBenefits extends React.Component {
                       } else if(window.scrollY > 1720 && window.scrollY < 1800) {
                           this.showBenefit('dataProcessing')
                       } else if(window.scrollY > 1800 && window.scrollY < 2200) {
-                          console.log("triggering stop bro")
-                        window.scroll({top: 1408})
+                        window.scroll({top: 1412})
                         this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
                         
                       } else if(window.scrollY < 1407) {
                           this.showBenefit('buildApi')
                       }
                 }
-            }
         }
 
         if(this.state.currentScrollMovement === 'up') {
@@ -132,6 +128,7 @@ export default class HomeBenefits extends React.Component {
         }
         
      }
+     
     }
 
     showBenefit = (benefitOption) => {
