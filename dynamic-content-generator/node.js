@@ -26,6 +26,14 @@ examplesIndex.setSettings({
   'attributesForFaceting': ['language', 'platform', 'title', 'framework', 'highlighted']
 })
 
+function lengthInUtf8Bytes(str) {
+  // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
+  var m = encodeURIComponent(str).match(/%[89ABab]/g)
+  return str.length + (m ? m.length : 0)
+}
+
+const algoliaMaxBytesLength = 18000
+
 const digestCreator = (content) => (
   crypto.createHash(`md5`).update(JSON.stringify(content)).digest(`hex`)
 )
@@ -94,6 +102,8 @@ const sourceExamples = (createNode) => (err, content, filename, next) => {
     })
 }
 
+
+
 const sourceBlogs = (createNode) => (err, content, filename, next) => {
   if (err) throw err
 
@@ -101,11 +111,18 @@ const sourceBlogs = (createNode) => (err, content, filename, next) => {
   const frontmatter = data.category ? data : { ...data, category: [] }
   const blogId = path.basename(filename, path.extname(filename))
 
-  blogIndex.saveObject({
+  const contentUTFLength = lengthInUtf8Bytes(markdownContent)
+  let blogObjForAlgolia = {
     title: frontmatter.title,
     description: frontmatter.description,
     objectID: blogId,
-  })
+  }
+
+  if(contentUTFLength < algoliaMaxBytesLength) {
+    blogObjForAlgolia.content = markdownContent
+  }
+
+  blogIndex.saveObject(blogObjForAlgolia)
 
   unified().
     use(markdown).

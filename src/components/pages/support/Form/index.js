@@ -49,13 +49,19 @@ export default class Form extends React.Component {
         'Google Cloud Platform' :  false,
         'Microsoft Azure' : false,
         'Other' :  false,
+      },
+      use_cases: {
+        'Backend API': false,
+        'Custom DevOps': false,
+        'Data processing': false,
+        'Other': false,
       }
     }
   }
 
   onSubmit = (event) => {
     event.preventDefault()
-    const formId = 'enterprise-contact-us'
+    const formId = 'support-contact-us'
     const {
       email,
       first_name,
@@ -72,14 +78,17 @@ export default class Form extends React.Component {
     }
 
     this.setState({ loading: true })
-    const infras = Object.keys(this.state.infrastructure)
-    const infrastructure = infras.filter((infra) => this.state.infrastructure[infra])
+    const infrastructure_keys = Object.keys(this.state.infrastructure)
+    const infrastructure = infrastructure_keys.filter((infra) => this.state.infrastructure[infra])
+
+    const use_cases_keys = Object.keys(this.state.use_cases)
+    const use_cases = use_cases_keys.filter((useCase) => this.state.use_cases[useCase])
 
     const formData = {
       formId: formId,
-      fields: { email, first_name, last_name, company, poi, developers_count, message, infrastructure }
+      fields: { email, first_name, last_name, company, poi, developers_count, message, infrastructure, use_cases }
     }
-
+    
     formHandler(formData).then((res) => {
       this.setState({
         success: true,
@@ -99,6 +108,12 @@ export default class Form extends React.Component {
   updateInfrastructure = (fieldName, value) => {
     this.setState({
       infrastructure: { ...this.state.infrastructure, [ fieldName ] : value }
+    })
+  }
+
+  updateUseCases = (fieldName, value) => {
+    this.setState({
+      use_cases: { ...this.state.use_cases, [ fieldName ] : value }
     })
   }
 
@@ -137,7 +152,7 @@ export default class Form extends React.Component {
             letterSpacing={'-0.4px'}
             mb={0}
           >
-            Wanna know how Serverless can help <br /> your company? Let’s talk.
+            Schedule a chat
           </Heading.h4>
           
           <Box mt={3} width={1}>
@@ -339,6 +354,64 @@ export default class Form extends React.Component {
                       name='infrastructure'
                       id='other'
                       onChange={({ target }) => this.updateInfrastructure('Other', target.checked)}
+                    />
+                    <InlineBlock>Other</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+            </Flex>
+          </Box>
+
+          <Box mt={3}>
+            <Label>
+              What use cases do you plan to use Serverless Framework for?
+            </Label>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='backend-api'>
+                  <Flex.verticallyCenter>
+                    <Checkbox
+                      name='use-cases'
+                      id='backend-api'
+                      onChange={({ target }) => this.updateUseCases('Backend API', target.checked)}
+                    />
+                    <InlineBlock>Backend API</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='custom-devops'>
+                  <Flex.verticallyCenter>
+                    <Checkbox
+                      name='use-cases'
+                      id='custom-devops'
+                      onChange={({ target }) => this.updateUseCases('Custom DevOps', target.checked)}
+                    />
+                    <InlineBlock>Custom DevOps</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+            </Flex>
+            <Flex flexDirection={['column', 'column', 'row']}>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='data-processing'>
+                  <Flex.verticallyCenter>
+                    <Checkbox
+                      name='use-cases'
+                      id='data-processing'
+                      onChange={({ target }) => this.updateUseCases('Data processing', target.checked)}
+                    />
+                    <InlineBlock>Data processing</InlineBlock>
+                  </Flex.verticallyCenter>
+                </Label>
+              </Box>
+              <Box mt={2} width={[1, 1, 1/2]}>
+                <Label htmlFor='other'>
+                  <Flex.verticallyCenter>
+                    <Checkbox
+                      name='use-cases'
+                      id='other'
+                      onChange={({ target }) => this.updateUseCases('Other', target.checked)}
                     />
                     <InlineBlock>Other</InlineBlock>
                   </Flex.verticallyCenter>

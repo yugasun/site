@@ -55,7 +55,7 @@ export default class Form extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    const formId = 'enterprise-contact-us'
+    const formId = 'platform-contact-us'
     const {
       email,
       first_name,
@@ -137,7 +137,7 @@ export default class Form extends React.Component {
             letterSpacing={'-0.4px'}
             mb={0}
           >
-            Wanna know how Serverless can help <br /> your company? Let’s talk.
+            Request a demo
           </Heading.h4>
           
           <Box mt={3} width={1}>

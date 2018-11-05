@@ -14,7 +14,7 @@ const Content = ({ theme }) => (
         theme.navbarHeights.mobile,
         theme.navbarHeights.desktop,
       ]}
-      mb={[0, 0, 350]}
+      mb={[0, 0, 450]}
     >
       <Flex.spaceBetween
         flexDirection={['column', 'column', 'row']}

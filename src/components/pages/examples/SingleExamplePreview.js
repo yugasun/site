@@ -6,7 +6,7 @@ import {
   P,
   Card
 } from 'serverless-design-system'
-import { BlockLink } from 'src/components'
+import { InternalLink } from 'src/fragments'
 import { getExampleLink } from 'src/utils/example'
 
 const HoverableColumn = styled(Card)`
@@ -48,7 +48,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
     >
       <HoverableColumn>
        <Box m={['0px 15px', '0px 15px', '36px 48px']}>
-        <BlockLink to={getExampleLink(id)}>
+        <InternalLink to={getExampleLink(id)}>
           <Box>
             <P
               color='gray.2'
@@ -69,7 +69,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
               {platform} | { title }
             </Heading.h4>
           </Box>
-        </BlockLink>
+        </InternalLink>
           <P
             fontSize={[2, 2, 2, 2]}
             lineHeight={1.63}

@@ -14,7 +14,7 @@ const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
   { title: 'Analysts', contents: ['analysts@serverless.com'] },
   { title: 'Careers', contents: ['careers@serverless.com'] },
-  { title: 'Media Inquiries', contents: ['media@serverless.com', '325 9th Street', 'San Francisco, CA 94013']  }
+  { title: 'Media Inquiries', contents: ['media@serverless.com', '95 Minna Street Floor 3', 'San Francisco, CA 94013']  }
 ]
 
 const ContactSection = ({ title, contents }) => (
