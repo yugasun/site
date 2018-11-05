@@ -26,7 +26,7 @@ const HeroHeader = () => (
       fontFamily={'Soleil'}
       align={['center', 'center', 'left']}
     >
-      Any provider. Same experience
+      Any provider. Same experience.
     </Heading.h4>
   </Column>
 )

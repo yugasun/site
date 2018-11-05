@@ -12,7 +12,7 @@ import {
 } from 'serverless-design-system'
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
-
+import { InternalLink } from 'src/fragments'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import buildApi from 'src/assets/images/home-benefits-build-api.svg'
 import customAutomation from 'src/assets/images/home-benefits-custom-automation.svg'
@@ -38,21 +38,24 @@ const MobileCenteredImage = styled(Image)`
     }
 `
 
-const ButtonWithTransition = styled(Button)`
-
-`
+const BenefitsContainerAnimationStyles = {
+    backgroundColor: 'white',
+    top: '-27px',
+    height: '147vh',
+    width: '100vw',
+    zIndex: '2',
+    transition: 'background 0.2s ease, padding 0.8s linear'
+} 
 
 const BenefitsAnimationStyles = {
     position: 'fixed',
     backgroundColor: 'white',
     top: '-27px',
-    left: '0',
-    height: '130vh',
-    width: '100vw',
+    height: '147vh',
+    width: '1216px',
     zIndex: '2',
-    paddingLeft: '12%',
-    paddingRight: '13%',
     paddingTop: '82px',
+    transition: 'background 0.2s ease, padding-bottom 0.8s linear'
 } 
 
 export default class HomeBenefits extends React.Component {
@@ -64,6 +67,9 @@ export default class HomeBenefits extends React.Component {
             showDataProcessing: false,
             isUsingMobile: false,
             benefitsAnimationTriggered: false,
+            stopAnimation: false,
+            currentScrollMovement: 'down',
+            lastScrollY: 0,
         }
     }
 
@@ -82,21 +88,47 @@ export default class HomeBenefits extends React.Component {
     }
   
     onScroll = () => {
-    
-     if(!this.state.isUsingMobile) {
-        if(window.scrollY > 1408 && window.scrollY < 2100) {
-            this.setState({benefitsAnimationTriggered: true})
-        } else {
-            this.setState({benefitsAnimationTriggered: false})
-        }
-        if(window.scrollY > 1620 && window.scrollY < 1820) {
-            this.showBenefit('customAutomation')
-          } else if(window.scrollY > 1900) {
-              this.showBenefit('dataProcessing')
-          } else if(window.scrollY < 1407) {
-              this.showBenefit('buildApi')
-          }
+     const currentScrollY = window.scrollY
+     const scrollMovement = this.state.stopAnimation || currentScrollY > this.state.lastScrollY ? 'down': 'up'
+
+     this.setState({currentScrollMovement: scrollMovement, lastScrollY: currentScrollY})
+
+     if(currentScrollY > 1860) {
+         this.setState({stopAnimation: false, benefitsAnimationTriggered: false})
      }
+
+     if(!this.state.isUsingMobile) {
+
+        if(this.state.currentScrollMovement === 'down' && !this.state.stopAnimation) {
+                if(currentScrollY > 1408 && currentScrollY < 1850) {
+                    this.setState({benefitsAnimationTriggered: true})
+                    if(currentScrollY > 1620 && currentScrollY < 1720) {
+                        this.showBenefit('customAutomation')
+                      } else if(currentScrollY > 1720 && currentScrollY < 1800) {
+                          this.showBenefit('dataProcessing')
+                      } else if(currentScrollY > 1800 && currentScrollY < 2200) {
+                        window.scroll({top: 1412})
+                        this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
+                        
+                      } else if(currentScrollY < 1407) {
+                          this.showBenefit('buildApi')
+                      }
+                }
+        }
+
+        if(this.state.currentScrollMovement === 'up') {
+            if(window.scrollY > 1620 && window.scrollY < 1720) {
+                this.showBenefit('customAutomation')
+              } else if(window.scrollY > 1720 && window.scrollY < 1800) {
+                  this.showBenefit('dataProcessing')
+              } else if(window.scrollY < 1407) {
+                this.setState({benefitsAnimationTriggered: false})
+                  this.showBenefit('buildApi')
+              }
+        }
+        
+     }
+
     }
 
     showBenefit = (benefitOption) => {
@@ -110,8 +142,10 @@ export default class HomeBenefits extends React.Component {
     render() {
         return (
             <AppContainer>
+            <Box style={this.state.benefitsAnimationTriggered ? BenefitsContainerAnimationStyles: {}}>
+            <DesktopDownArrow animationTriggered={this.state.benefitsAnimationTriggered ? true: false}/>
+            </Box>
             <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
-            <DesktopDownArrow />
             
             <MobileBenefitItem number='03' title='Data processing' />
             <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
@@ -132,27 +166,28 @@ export default class HomeBenefits extends React.Component {
 
 
                 <Row onClick={() => this.showBenefit('buildApi')} mt={[0,0,40]}>
-                        <ButtonWithTransition bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                        <Button bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                         01
-                        </ButtonWithTransition>
+                        </Button>
                                 <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Build APIs</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('customAutomation')} mt={[0,0,25]}>
-                    <ButtonWithTransition bg={this.state.showCustomAutomation ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                    <Button bg={this.state.showCustomAutomation ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     02
-                    </ButtonWithTransition>
+                    </Button>
                     <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Custom automation</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('dataProcessing')} mt={[0,0,25]}>
-                    <ButtonWithTransition bg={this.state.showDataProcessing ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                    <Button bg={this.state.showDataProcessing ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     03
-                    </ButtonWithTransition>
+                    </Button>
                     <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Data processing</P> 
                 </Row>  
-
+                <InternalLink to='/framework/docs/getting-started/'>
                 <ButtonCTA mt={'50px'}>get started</ButtonCTA>
+                </InternalLink>
                 </Box>
             </Column>
             </ResponsiveStack.spaceBetween>

@@ -11,7 +11,7 @@ const HomeActions = () => (
     }}
     secondBtn={{
       name: 'demo platform',
-      to: '/enterprise/',
+      to: '/platform/',
       completed: true,
     }}
   />

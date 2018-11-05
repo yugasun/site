@@ -10,6 +10,7 @@ import {
 import Button from './Button'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
+import { InternalLink } from 'src/fragments'
 import buildApi from 'src/assets/images/home/serverless-applications-rise.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
@@ -24,7 +25,9 @@ const HomeBenefits = () => (
         </Heading.h3>
         </TextWithIcon>
         <P lineHeight='26px' pb={['16px', '16px', '24px']} mt={['8px', '8px', 0]}>Serverless developers don’t just leverage FaaS. They build servicefull applications that stitch together SaaS, hosted services and compute.</P>
+        <InternalLink to='/learn/overview/'>
         <Button>learn more</Button>
+        </InternalLink>
       </Column>
       <Image src={buildApi} width={['100%', '100%', 550]} heigh={[248, 248, 300]}/>
     </ResponsiveStack.spaceBetween>
