@@ -34,14 +34,14 @@ const actions = [
     name: 'documentation',
     navProps: {
       to: '/framework/docs',
-      completed: false,
+      completed: true,
     },
   },
   {
     name: 'serverless examples',
     navProps: {
       to: '/examples/',
-      completed: false,
+      completed: true,
     },
   },
   {
