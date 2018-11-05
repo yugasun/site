@@ -26,7 +26,7 @@ import AutoComplete from './AutoComplete'
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
-);
+)
 
 const Wrapper = styled(Overflow)`
   transition: height 0.4s;
@@ -84,7 +84,7 @@ class SearchBar extends React.Component {
     }))
 
   render() {
-    const borderColor = this.props.theme.colors.gray[2];
+    const borderColor = this.props.theme.colors.gray[2]
     const { pathname } = typeof window === 'undefined' ? {} : window.location
     const isAllPage = pathname === '/blog' || pathname === '/blog' || /^\/blog\/page\/\d+$/.test(pathname)
 
@@ -94,19 +94,19 @@ class SearchBar extends React.Component {
           width={1}
           py={1}
           mb={1}
-          justifyContent="space-between"
+          justifyContent='space-between'
         >
           {
             this.state.isSearchBarActive ? (
               <Relative width={1}>
                 <Absolute
-                  left="15px"
-                  top="18px"
+                  left='15px'
+                  top='18px'
                 >
                   <Image
                     src={whiteSearchIcon}
-                    height="16px"
-                    width="15px"
+                    height='16px'
+                    width='15px'
                   />
                 </Absolute>
                 <InstantSearch
@@ -116,14 +116,14 @@ class SearchBar extends React.Component {
                   <AutoComplete />
                 </InstantSearch>
                 <Absolute
-                  right="15px"
-                  top="18px"
+                  right='15px'
+                  top='18px'
                   onClick={this.toggleSearchBar}
                 >
                   <Image
                     src={closeIcon}
-                    height="16px"
-                    width="15px"
+                    height='16px'
+                    width='15px'
                   />
                 </Absolute>
               </Relative>
@@ -137,14 +137,14 @@ class SearchBar extends React.Component {
                 >
                   <BlockLink
                     key={`category-tab-all`}
-                    to="/blog"
+                    to='/blog/'
                   >
                     <InlineBlock px={[1, 1, "5px", 1]}>
                       <LinkText
                         fontSize={[1, 1, 0, 1]}
-                        fontFamily="Serverless"
+                        fontFamily='Serverless'
                         lineHeight={1}
-                        color="white"
+                        color='white'
                         selected={isAllPage}
                       >
                         all
@@ -160,9 +160,9 @@ class SearchBar extends React.Component {
                         <InlineBlock px={[1, 1, "5px", 2]}>
                           <LinkText
                             fontSize={[1, 1, 0, 1]}
-                            fontFamily="Serverless"
+                            fontFamily='Serverless'
                             lineHeight={1}
-                            color="white"
+                            color='white'
                             selected={pathname === getCategoryLink(tab)}
                           >
                             { CategoriesData[tab] }
@@ -174,7 +174,7 @@ class SearchBar extends React.Component {
                 </CardWithAnimation>
                 <CardWithAnimation
                   border={`1px solid ${borderColor}`}
-                  borderLeft="0"
+                  borderLeft='0'
                   onClick={this.toggleSearchBar}
                 >
                   <Flex.center p={16}>

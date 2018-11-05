@@ -7,7 +7,7 @@ import {
   Heading,
   P
 } from 'serverless-design-system'
-import { BlockLink } from 'src/components'
+import { InternalLink } from 'src/fragments'
 import { getLinkComponent } from 'src/components/BlockLink'
 import {
   getAuthorLink,
@@ -37,15 +37,15 @@ export default ({ id, frontmatter }) => {
             fontSize={[0, 0, 0, 1]}
             lineHeight={4}
             opacity={0.4}
-            letterSpacing="text"
+            letterSpacing='text'
             mt={0}
           >
             {
               categoryIds.map((categoryId, index) => (
                 <React.Fragment key={`${id}-${categoryId}`}>
-                  <BlockLink to={getCategoryLink(categoryId)}>
+                  <InternalLink to={getCategoryLink(categoryId)}>
                     { getCategoryNameById(categoryId) }
-                  </BlockLink>
+                  </InternalLink>
                   {
                     (index !== categoryIds.length-1) ? (
                       <React.Fragment>
@@ -66,57 +66,57 @@ export default ({ id, frontmatter }) => {
             { formatDate(date, 'dd.mm.yy') }
           </Text.span>
         </Box>
-        <BlockLink to={getBlogLink(id)}>
+        <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
             <Heading.h3
               fontSize={[3, 3, 3, 5]}
-              fontFamily="SoleilBk"
-              letterSpacing="h4"
+              fontFamily='SoleilBk'
+              letterSpacing='h4'
             >
               { title }
             </Heading.h3>
           </Box>
-        </BlockLink>
+        </InternalLink>
         <P
           fontSize={[0, 0, 0, 1]}
           lineHeight={1.63}
         >
           { description }
         </P>
-        <BlockLink to={getAuthorLink(author.id)}>
+        <InternalLink to={getAuthorLink(author.id)}>
           <Text.p
-            fontFamily="Soleil"
+            fontFamily='Soleil'
             fontSize={0}
-            color="gray.2"
+            color='gray.2'
             lineHeight={3}
             mt={[1, 1, 1, 2]}
           >
             written by&nbsp;
             { author.name }
           </Text.p>
-        </BlockLink>
+        </InternalLink>
       </Box>
 
       <Row
-        justifyContent="center"
+        justifyContent='center'
         width={0.4}
         mt={[2, 2, 2, 0]}
       >
         {
           thumbnail ? (
             <HyperLinkBackground
-              height="auto"
+              height='auto'
               width={[55, 55, 55, 1]}
               maxHeight={[55, 55, 55, 200]}
               background={`black url(${JSON.stringify(thumbnail)})`}
-              backgroundSize="cover"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
+              backgroundSize='cover'
+              backgroundPosition='center'
+              backgroundRepeat='no-repeat'
               to={getBlogLink(id)}
             />
           ) : (
             <HyperLinkImagePlaceholder
-              size="small"
+              size='small'
               wrapperProps={{
                 width: [55, 55, 55, 1],
                 height: [55, 55, 55, 200]

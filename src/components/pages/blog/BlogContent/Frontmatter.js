@@ -7,15 +7,15 @@ import {
   Row,
   Image,
 } from 'serverless-design-system'
-import { BlockLink } from 'src/components'
 import { getAuthorById, getAuthorLink } from 'src/utils/blog'
 import Categories from '../Categories'
+import { InternalLink } from 'src/fragments'
 
 const WrittenByText = ({ children }) => (
   <Text
-    fontFamily="Soleil"
+    fontFamily='Soleil'
     fontSize={0}
-    color="gray.3"
+    color='gray.3'
     lineHeight={2}
   >
     { children }
@@ -29,10 +29,10 @@ export default ({ frontmatter }) => {
   return (
     <Column
       width={[1, 1, 1, 0.65]}
-      mx="auto"
+      mx='auto'
       mt={[1, 1, 4]}
       mb={[1, 1, 2]}
-      alignItems="center"
+      alignItems='center'
     >
       {
         scripts && (
@@ -42,15 +42,15 @@ export default ({ frontmatter }) => {
       <Categories categoryIds={categoryIds} />
       <Heading.h1
         fontSize={[4, 4, 4, 7]}
-        fontFamily="SoleilBk"
-        letterSpacing="h4"
-        align="center"
+        fontFamily='SoleilBk'
+        letterSpacing='h4'
+        align='center'
       >
         { title }
       </Heading.h1>
-      <BlockLink to={getAuthorLink(author.id)}>
+      <InternalLink to={getAuthorLink(author.id)}>
         <Row
-          alignItems="center"
+          alignItems='center'
           my={15}
         >
           <WrittenByText>
@@ -65,7 +65,7 @@ export default ({ frontmatter }) => {
             &nbsp; { author.name }
           </WrittenByText>
         </Row>
-      </BlockLink>
+      </InternalLink>
     </Column>
   )
 }
