@@ -38,20 +38,22 @@ const MobileCenteredImage = styled(Image)`
     }
 `
 
-const ButtonWithTransition = styled(Button)`
-
-`
+const BenefitsContainerAnimationStyles = {
+    backgroundColor: 'white',
+    top: '-27px',
+    height: '147vh',
+    width: '100vw',
+    zIndex: '2',
+    position: 'pixed'
+} 
 
 const BenefitsAnimationStyles = {
     position: 'fixed',
     backgroundColor: 'white',
     top: '-27px',
-    left: '0',
-    height: '130vh',
-    width: '100vw',
+    height: '147vh',
+    width: '1216px',
     zIndex: '2',
-    paddingLeft: '12%',
-    paddingRight: '13%',
     paddingTop: '82px',
 } 
 
@@ -110,8 +112,10 @@ export default class HomeBenefits extends React.Component {
     render() {
         return (
             <AppContainer>
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
+            <Box style={this.state.benefitsAnimationTriggered ? BenefitsContainerAnimationStyles: {}}>
             <DesktopDownArrow />
+            </Box>
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             
             <MobileBenefitItem number='03' title='Data processing' />
             <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
@@ -132,23 +136,23 @@ export default class HomeBenefits extends React.Component {
 
 
                 <Row onClick={() => this.showBenefit('buildApi')} mt={[0,0,40]}>
-                        <ButtonWithTransition bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                        <Button bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                         01
-                        </ButtonWithTransition>
+                        </Button>
                                 <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Build APIs</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('customAutomation')} mt={[0,0,25]}>
-                    <ButtonWithTransition bg={this.state.showCustomAutomation ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                    <Button bg={this.state.showCustomAutomation ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     02
-                    </ButtonWithTransition>
+                    </Button>
                     <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Custom automation</P> 
                 </Row>  
 
                 <Row onClick={() => this.showBenefit('dataProcessing')} mt={[0,0,25]}>
-                    <ButtonWithTransition bg={this.state.showDataProcessing ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
+                    <Button bg={this.state.showDataProcessing ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                     03
-                    </ButtonWithTransition>
+                    </Button>
                     <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Data processing</P> 
                 </Row>  
 

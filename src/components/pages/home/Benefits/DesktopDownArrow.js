@@ -6,7 +6,7 @@ const DesktopDownArrow = () => (
     <Absolute
         display={['none', 'none', 'block']}
         right='0'
-        mr={100}
+        mr={80}
         mt={220}
         >
         <Image
