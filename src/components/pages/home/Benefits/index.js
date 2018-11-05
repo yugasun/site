@@ -44,7 +44,7 @@ const BenefitsContainerAnimationStyles = {
     height: '147vh',
     width: '100vw',
     zIndex: '2',
-    position: 'pixed'
+    transition: 'background 0.2s ease, padding 0.8s linear'
 } 
 
 const BenefitsAnimationStyles = {
@@ -55,6 +55,7 @@ const BenefitsAnimationStyles = {
     width: '1216px',
     zIndex: '2',
     paddingTop: '82px',
+    transition: 'background 0.2s ease, padding-bottom 0.8s linear'
 } 
 
 export default class HomeBenefits extends React.Component {
@@ -66,6 +67,9 @@ export default class HomeBenefits extends React.Component {
             showDataProcessing: false,
             isUsingMobile: false,
             benefitsAnimationTriggered: false,
+            stopAnimation: false,
+            currentScrollMovement: 'down',
+            lastScrollY: 0,
         }
     }
 
@@ -84,20 +88,49 @@ export default class HomeBenefits extends React.Component {
     }
   
     onScroll = () => {
-    
+     const currentScrollY = window.scrollY
+     const scrollMovement = this.state.stopAnimation || currentScrollY > this.state.lastScrollY ? 'down': 'up'
+
+     this.setState({currentScrollMovement: scrollMovement, lastScrollY: currentScrollY})
+
+     if(currentScrollY > 1860) {
+         this.setState({stopAnimation: false})
+     }
+     console.log(scrollMovement, currentScrollY)
      if(!this.state.isUsingMobile) {
-        if(window.scrollY > 1408 && window.scrollY < 2100) {
-            this.setState({benefitsAnimationTriggered: true})
-        } else {
-            this.setState({benefitsAnimationTriggered: false})
+
+        if(this.state.currentScrollMovement === 'down') {
+            if(!this.state.stopAnimation) {
+                console.log("down animations")
+                if(currentScrollY > 1408 && currentScrollY < 1850) {
+                    this.setState({benefitsAnimationTriggered: true})
+                    if(window.scrollY > 1620 && window.scrollY < 1720) {
+                        this.showBenefit('customAutomation')
+                      } else if(window.scrollY > 1720 && window.scrollY < 1800) {
+                          this.showBenefit('dataProcessing')
+                      } else if(window.scrollY > 1800 && window.scrollY < 2200) {
+                          console.log("triggering stop bro")
+                        window.scroll({top: 1408})
+                        this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
+                        
+                      } else if(window.scrollY < 1407) {
+                          this.showBenefit('buildApi')
+                      }
+                }
+            }
         }
-        if(window.scrollY > 1620 && window.scrollY < 1820) {
-            this.showBenefit('customAutomation')
-          } else if(window.scrollY > 1900) {
-              this.showBenefit('dataProcessing')
-          } else if(window.scrollY < 1407) {
-              this.showBenefit('buildApi')
-          }
+
+        if(this.state.currentScrollMovement === 'up') {
+            if(window.scrollY > 1620 && window.scrollY < 1720) {
+                this.showBenefit('customAutomation')
+              } else if(window.scrollY > 1720 && window.scrollY < 1800) {
+                  this.showBenefit('dataProcessing')
+              } else if(window.scrollY < 1407) {
+                this.setState({benefitsAnimationTriggered: false})
+                  this.showBenefit('buildApi')
+              }
+        }
+        
      }
     }
 
@@ -113,7 +146,7 @@ export default class HomeBenefits extends React.Component {
         return (
             <AppContainer>
             <Box style={this.state.benefitsAnimationTriggered ? BenefitsContainerAnimationStyles: {}}>
-            <DesktopDownArrow />
+            <DesktopDownArrow animationTriggered={this.state.benefitsAnimationTriggered ? true: false}/>
             </Box>
             <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             
