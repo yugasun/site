@@ -40,14 +40,14 @@ const actions = [
   {
     name: 'serverless examples',
     navProps: {
-      to: '/framework/docs/providers/aws/examples/',
+      to: '/examples/',
       completed: false,
     },
   },
   {
     name: 'serverless plugins',
     navProps: {
-      to: 'https://github.com/serverless/serverless',
+      to: 'https://github.com/serverless/plugins',
       crossDomain: true,
       completed: false,
     },
