@@ -24,7 +24,7 @@ const MobileSpace = styled(Text.span)`
 `
 
 const HomeHeroFooter = () => (
-  <StyledLink to='/overview-video'>
+  <a href='https://github.com/serverless/serverless' target='_blank' rel='noopener noreferrer'>
     <Flex
       width={[1, 1, 3 / 4]}
       my={['12px', '12px', 3]}
@@ -50,10 +50,10 @@ const HomeHeroFooter = () => (
           width={20}
           maxWidth='none'
         />
-        &nbsp; 26,116
+        &nbsp; 26,257
       </Heading.h4>
     </Flex>
-  </StyledLink>
+  </a>
 )
 
 export default HomeHeroFooter
