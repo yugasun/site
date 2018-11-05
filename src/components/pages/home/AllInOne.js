@@ -18,7 +18,7 @@ const HomePlatform = () => (
   <AppContainer>
     <ResponsiveStack mb={[92, 92, 200]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
     <Position position={['absolute', 'absolute', 'absolute']} left='0'>
-      <Image src={allInOne} />
+      <Image src={allInOne} width={'700px'}/>
     </Position>
       <Column width={[1, 1, '488px']} mt={[370, 370, 200]} mb={[0, 0, 200]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-20px','-20px', '-8px']}>
