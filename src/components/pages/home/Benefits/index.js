@@ -12,7 +12,7 @@ import {
 } from 'serverless-design-system'
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
-
+import { InternalLink } from 'src/fragments'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import buildApi from 'src/assets/images/home-benefits-build-api.svg'
 import customAutomation from 'src/assets/images/home-benefits-custom-automation.svg'
@@ -185,8 +185,9 @@ export default class HomeBenefits extends React.Component {
                     </Button>
                     <P color='black' fontSize='24px' ml={[0, 0, '32px']} lineHeight='32px' letterSpacing='-0.4px'>Data processing</P> 
                 </Row>  
-
+                <InternalLink to='/framework/docs/getting-started/'>
                 <ButtonCTA mt={'50px'}>get started</ButtonCTA>
+                </InternalLink>
                 </Box>
             </Column>
             </ResponsiveStack.spaceBetween>

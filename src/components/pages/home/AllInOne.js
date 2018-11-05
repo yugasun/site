@@ -9,7 +9,7 @@ import {
   Position,
 } from 'serverless-design-system'
 import Button from './Button'
-import Link from 'gatsby-link'
+import { InternalLink } from 'src/fragments'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import allInOne from 'src/assets/images/home/all-in-one.svg'
@@ -28,9 +28,9 @@ const HomePlatform = () => (
         </Heading.h3>
         </TextWithIcon>
         <P mt={['6px', '6px', '12px']} mb={['22px', '22px', '40px']} lineHeight={'26px'}>Check the health of your serverless application. Control and secure your builds. Scale development across the team.</P>
-        <Link to='/platform/'>
+        <InternalLink to='/platform/'>
         <Button>platform demo</Button>
-        </Link>
+        </InternalLink>
       </Column>
     </ResponsiveStack>
   </AppContainer>
