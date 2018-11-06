@@ -17,7 +17,7 @@ const featureItemsData = [
     header: 'Auto-scaling',
     img: autoScaling,
     content:
-      'Let your service providers manage the scaling challenges. No need to fire alerts or write scripts to scale up and down. Handle quick bursts of traffic and weekend fulls the same way -- with peace of mind.',
+      'Let your service providers manage the scaling challenges. No need to fire alerts or write scripts to scale up and down. Handle quick bursts of traffic and weekend lulls the same way -- with peace of mind.',
   },
   {
     header: 'Pay-per-use',
