@@ -25,7 +25,7 @@ const TestimonialWrapper = styled(Box)`
 const TestimonialComponent = () => (
   <Box mt={[92, 92, 0]}>
   <TestimonialWrapper>
-    <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 100, 100, 100, 200]}>
+    <Position position={['relative', 'relative', 'absolute']} pt={[0, 0, 150]} pl={[0, 0, 100, 100, 100, '14%']}>
       <AppContainer>
         <Testimonial
           img={cocaColaLogo}
