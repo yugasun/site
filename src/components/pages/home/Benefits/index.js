@@ -93,35 +93,35 @@ export default class HomeBenefits extends React.Component {
 
      this.setState({currentScrollMovement: scrollMovement, lastScrollY: currentScrollY})
 
-     if(currentScrollY > 1860) {
+     if(currentScrollY > 1962) {
          this.setState({stopAnimation: false, benefitsAnimationTriggered: false})
      }
 
      if(!this.state.isUsingMobile) {
 
         if(this.state.currentScrollMovement === 'down' && !this.state.stopAnimation) {
-                if(currentScrollY > 1408 && currentScrollY < 1850) {
+                if(currentScrollY > 1510 && currentScrollY < 1952) {
                     this.setState({benefitsAnimationTriggered: true})
-                    if(currentScrollY > 1620 && currentScrollY < 1720) {
+                    if(currentScrollY > 1722 && currentScrollY < 1822) {
                         this.showBenefit('customAutomation')
-                      } else if(currentScrollY > 1720 && currentScrollY < 1800) {
+                      } else if(currentScrollY > 1822 && currentScrollY < 1902) {
                           this.showBenefit('dataProcessing')
-                      } else if(currentScrollY > 1800 && currentScrollY < 2200) {
-                        window.scroll({top: 1412})
+                      } else if(currentScrollY > 1902 && currentScrollY < 2302) {
+                        window.scroll({top: 1514})
                         this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
                         
-                      } else if(currentScrollY < 1407) {
+                      } else if(currentScrollY < 1509) {
                           this.showBenefit('buildApi')
                       }
                 }
         }
 
         if(this.state.currentScrollMovement === 'up') {
-            if(window.scrollY > 1620 && window.scrollY < 1720) {
+            if(window.scrollY > 1722 && window.scrollY < 1822) {
                 this.showBenefit('customAutomation')
-              } else if(window.scrollY > 1720 && window.scrollY < 1800) {
+              } else if(window.scrollY > 1822 && window.scrollY < 1902) {
                   this.showBenefit('dataProcessing')
-              } else if(window.scrollY < 1407) {
+              } else if(window.scrollY < 1509) {
                 this.setState({benefitsAnimationTriggered: false})
                   this.showBenefit('buildApi')
               }

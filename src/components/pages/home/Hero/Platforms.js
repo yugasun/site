@@ -19,7 +19,7 @@ const HomeHeroFooter = () => (
       <Heading.h4
         color='white'
         fontSize={[24, 24, 32]}
-        mt={['47px','47px','110px']}
+        mt={['47px','110px','215px']}
         mx={1}
         lineHeight={[3, 3, '44px']}
         align='center'
