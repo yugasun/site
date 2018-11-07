@@ -20,7 +20,7 @@ const CompanyColumn = () => (
         navProps: { to: company.champions, completed: true },
       },
       {
-        name: 'contacts',
+        name: 'contact',
         navProps: { to: company.contact, crossDomain: true },
       },
     ]}

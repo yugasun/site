@@ -1,13 +1,7 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { developers } from 'src/constants/urls'
-
-const {
-  framework: docs,
-  gettingStarted: quickStarts,
-  examplesAndGuides,
-} = developers.documentation
+import { developersMenu as developers } from 'src/constants/urls'
 
 const DevelopersColumn = () => (
   <FooterListColumn
@@ -15,15 +9,19 @@ const DevelopersColumn = () => (
     listItems={[
       {
         name: 'docs',
-        navProps: { to: docs, completed: true },
+        navProps: { to: developers.docs, completed: true },
+      },
+      {
+        name: 'plugins',
+        navProps: { to: developers.plugins, crossDomain: true },
+      },
+      {
+        name: 'examples',
+        navProps: { to: developers.examples, completed: true },
       },
       {
         name: 'quick starts',
-        navProps: { to: quickStarts, completed: true },
-      },
-      {
-        name: 'examples & guides',
-        navProps: { to: examplesAndGuides, completed: true },
+        navProps: { to: developers.quickStarts, completed: true },
       },
     ]}
   />
