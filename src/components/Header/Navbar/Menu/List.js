@@ -7,7 +7,7 @@ import {
   PlatformDropdownList,
   DeveloperDropdownList,
   LearnDropdownList,
-  ResourceDropdownList,
+  CommunityDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
 import { enterprise } from 'src/constants/urls'
@@ -44,12 +44,20 @@ const LearnMenu = () => (
   </Box>
 )
 
-const ResourcesMenu = () => (
+const CommunityMenu = () => (
   <Box>
-    <MenuTitle name={'resources'} />
+    <MenuTitle name={'community'} />
     <MenuDescription>
-      <ResourceDropdownList />
+      <CommunityDropdownList />
     </MenuDescription>
+  </Box>
+)
+
+const BlogMenu = () => (
+  <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
+    <NavLink to={enterprise} completed>
+      <MenuTitle name={'blog'} />
+    </NavLink>
   </Box>
 )
 
@@ -66,7 +74,8 @@ const EnterpriseMenu = () => (
 export default [
   PlatformMenu,
   DeveloperMenu,
+  CommunityMenu,
   LearnMenu,
-  ResourcesMenu,
+  BlogMenu,
   EnterpriseMenu,
 ]
