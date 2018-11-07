@@ -90,7 +90,6 @@ const Platform = () => (
                     fontSize='1.5rem'
                     lineHeight={0.7}
                     letterSpacing='5'
-                    color='white'
                     m={0}
                     pt={[0, 0, 22]}
                   >
@@ -102,7 +101,6 @@ const Platform = () => (
                     lineHeight={1.7}
                     letterSpacing={0.8}
                     m={0}
-                    color='white'
                   >
                     {text}
                   </Heading.h6>

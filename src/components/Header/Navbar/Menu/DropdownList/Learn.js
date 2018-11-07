@@ -8,7 +8,6 @@ const Learn = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
-        defaultColor = 'white'
         navProps={{
           to: learn.why,
           backgroundOnHover: true,
@@ -20,7 +19,6 @@ const Learn = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
-        defaultColor = 'white'
         navProps={{
           to: learn.useCases,
           backgroundOnHover: true,
@@ -32,7 +30,6 @@ const Learn = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
-        defaultColor = 'white'
         navProps={{
           to: learn.comparisons,
           backgroundOnHover: true,
@@ -44,7 +41,6 @@ const Learn = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType>
       <SubMenuItem
-        defaultColor = 'white'
         navProps={{
           to: learn.caseStudy,
           backgroundOnHover: true,
