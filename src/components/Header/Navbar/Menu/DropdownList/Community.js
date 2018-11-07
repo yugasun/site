@@ -9,28 +9,6 @@ const Resource = () => (
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: resources.overview,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        overview
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: resources.blog,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        blog
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
           to: resources.forum,
           crossDomain: true,
           backgroundOnHover: true,

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Background, Box, Flex } from 'serverless-design-system'
+import { Background, Flex, Transition } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import NavButton from './NavButton'
@@ -42,14 +42,17 @@ class Header extends React.Component {
     }
   }
 
-  toggleNavbarShrinkness = () =>
-    this.setState(prevState => ({
+  toggleNavbarShrinkness = () => this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
-    }))
+  }))
 
-  toggleNavbarActiveness = () => {
-    this.setState(prevState => ({ isNavbarActive: !prevState.isNavbarActive }))
-  }
+  toggleNavbarTransparency = () => this.setState(prevState => ({
+      isNavbarTransparent: !prevState.isNavbarTransparent,
+  }))
+
+  toggleNavbarActiveness = () => this.setState(prevState => ({ 
+      isNavbarActive: !prevState.isNavbarActive,
+  }))
 
   render() {
     return (
@@ -65,7 +68,7 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-          <Box py={[2, 2, 0]}>
+        <Transition py={[1, 1, 0]}>
             <AppContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
@@ -78,7 +81,7 @@ class Header extends React.Component {
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
             </AppContainer>
-          </Box>
+        </Transition>
         </Background>
       </HeaderWrapper>
     )
