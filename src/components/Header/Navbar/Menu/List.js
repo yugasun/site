@@ -4,7 +4,7 @@ import { Box, Button } from 'serverless-design-system'
 import MenuTitle from './Title'
 import MenuDescription from './Description'
 import {
-  PlatformDropdownList,
+  ProductDropdownList,
   DeveloperDropdownList,
   LearnDropdownList,
   CommunityDropdownList,
@@ -12,11 +12,11 @@ import {
 import NavLink from 'src/components/NavLink'
 import { enterprise, resources } from 'src/constants/urls'
 
-const PlatformMenu = () => (
+const ProductMenu = () => (
   <Box>
     <MenuTitle name={'products'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px']}}>
-      <PlatformDropdownList />
+    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'], pr: [1, 1, 0], pb: [3] }} >
+      <ProductDropdownList />
     </MenuDescription>
   </Box>
 )
@@ -54,7 +54,7 @@ const CommunityMenu = () => (
 )
 
 const BlogMenu = () => (
-  <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
+  <Box>
     <NavLink to={resources.blog} completed>
       <MenuTitle name={'blog'} />
     </NavLink>
@@ -72,7 +72,7 @@ const EnterpriseMenu = () => (
 )
 
 export default [
-  PlatformMenu,
+  ProductMenu,
   DeveloperMenu,
   CommunityMenu,
   LearnMenu,
