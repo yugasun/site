@@ -8,8 +8,12 @@ import {
   Text,
 } from 'serverless-design-system'
 import homepageHeroLinesMain from 'src/assets/images/home/hero-lines.svg'
+import homepageHeroLinesStatic from 'src/assets/images/home/hero-lines-static.svg'
 import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 import styled from 'styled-components'
+
+//TODO: used in multiple files  - abstract this
+const using_safari_browser = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
 const TerminalBackground = styled(Absolute)`
 
@@ -30,7 +34,7 @@ const HomeHeroImage = () => (
     ml={[0, 0, '56px']}
   >
     <Image
-      src={homepageHeroLinesMain}
+      src={using_safari_browser ? homepageHeroLinesStatic : homepageHeroLinesMain}
       width={586}
     >
     </Image>
