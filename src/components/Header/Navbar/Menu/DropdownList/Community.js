@@ -8,6 +8,7 @@ const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
+        defaultColor = 'white'
         navProps={{
           to: resources.forum,
           crossDomain: true,
@@ -19,6 +20,7 @@ const Resource = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
+        defaultColor = 'white'
         navProps={{
           to: resources.events,
           backgroundOnHover: true,
@@ -30,6 +32,7 @@ const Resource = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
+        defaultColor = 'white'
         navProps={{
           to: resources.slack,
           crossDomain: true,
@@ -41,6 +44,7 @@ const Resource = () => (
     </ListItem.noStyleType>
     <ListItem.noStyleType>
       <SubMenuItem
+        defaultColor = 'white'
         navProps={{
           to: resources.workshops,
           backgroundOnHover: true,
