@@ -10,7 +10,7 @@ import {
   CommunityDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { enterprise } from 'src/constants/urls'
+import { enterprise, resources } from 'src/constants/urls'
 
 const PlatformMenu = () => (
   <Box>
@@ -55,7 +55,7 @@ const CommunityMenu = () => (
 
 const BlogMenu = () => (
   <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
-    <NavLink to={enterprise} completed>
+    <NavLink to={resources.blog} completed>
       <MenuTitle name={'blog'} />
     </NavLink>
   </Box>
