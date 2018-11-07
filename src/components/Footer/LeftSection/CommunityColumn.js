@@ -5,16 +5,8 @@ import { resources } from 'src/constants/urls'
 
 const ResourceColumn = () => (
   <FooterListColumn
-    header='resources'
+    header='community'
     listItems={[
-      {
-        name: 'overview',
-        navProps: { to: resources.overview, completed: true },
-      },
-      {
-        name: 'blog',
-        navProps: { to: resources.blog, completed: true },
-      },
       {
         name: 'forum',
         navProps: { to: resources.forum, crossDomain: true },
