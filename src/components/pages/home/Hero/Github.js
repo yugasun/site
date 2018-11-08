@@ -6,10 +6,6 @@ import { Flex, Image, Heading, Text } from 'serverless-design-system'
 import videoIcon from 'src/assets/images/github-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`
-
 const VerticallyAlignedImage = styled(Image)`
   vertical-align: top;
 `
