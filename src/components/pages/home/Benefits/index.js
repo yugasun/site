@@ -119,7 +119,7 @@ export default class HomeBenefits extends React.Component {
         if(this.state.currentScrollMovement === 'up') {
             if(window.scrollY > 1572 && window.scrollY < 1672) {
                 this.showBenefit('customAutomation')
-              } else if(window.scrollY > 1672 && window.scrollY < 1752) {
+              } else if(window.scrollY > 1672 && window.scrollY < 1787) {
                   this.showBenefit('dataProcessing')
               } else if(window.scrollY < 1359) {
                 this.setState({benefitsAnimationTriggered: false})
