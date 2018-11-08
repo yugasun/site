@@ -1,8 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import Link from 'gatsby-link'
 
-import { Flex, Image, InlineBlock, Heading, ImageList, Box } from 'serverless-design-system'
+import { Flex, Image, Heading, Box } from 'serverless-design-system'
 import awsLogo from 'src/assets/images/aws-logo-grey.svg'
 import kubernetesLogo from 'src/assets/images/kubernetes-logo-grey.svg'
 import googleCloudLogo from 'src/assets/images/google-cloud-logo-grey.png'
@@ -19,7 +17,7 @@ const HomeHeroFooter = () => (
       <Heading.h4
         color='white'
         fontSize={[24, 24, 32]}
-        mt={['47px','47px','110px']}
+        mt={['47px','110px','150px']}
         mx={1}
         lineHeight={[3, 3, '44px']}
         align='center'

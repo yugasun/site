@@ -13,13 +13,14 @@ import { InternalLink } from 'src/fragments'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import allInOne from 'src/assets/images/home/all-in-one.svg'
+import allInOneStatic from 'src/assets/images/home/all-in-one-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
-const HomePlatform = () => (
+const HomePlatform = ({usingSafariDesktop}) => (
   <AppContainer>
-    <ResponsiveStack mb={[92, 92, 200]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
+    <ResponsiveStack mb={[92, 92, 100]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
     <Position position={['absolute', 'absolute', 'absolute']} left='0'>
-      <Image src={allInOne} width={'700px'}/>
+      <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={'700px'}/>
     </Position>
       <Column width={[1, 1, '488px']} mt={[370, 370, 200]} mb={[0, 0, 200]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-20px','-20px', '-8px']}>

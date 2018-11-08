@@ -15,7 +15,7 @@ import {
 
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButtonNew'
-import RightBoxBgNew from 'src/assets/images/footerRightBoxBgNew.png'
+import RightBoxBgNew from 'src/assets/images/footerRightBoxBgNew.svg'
 
 const FlexWithShadow = styled(Flex.horizontallyCenter)`
   box-shadow: 0 -1px 50px 0 rgba(0, 0, 0, 0.15);

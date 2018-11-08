@@ -11,10 +11,11 @@ import Button from './Button'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
 import { InternalLink } from 'src/fragments'
-import buildApi from 'src/assets/images/home/serverless-applications-rise.svg'
+import riseOfServerless from 'src/assets/images/home/serverless-applications-rise.svg'
+import riseOfServerlessStatic from 'src/assets/images/home/serverless-applications-rise-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
-const HomeBenefits = () => (
+const HomeBenefits = ({usingSafariDesktop}) => (
   <AppContainer>
     <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']}>
       
@@ -29,7 +30,7 @@ const HomeBenefits = () => (
         <Button>learn more</Button>
         </InternalLink>
       </Column>
-      <Image src={buildApi} width={['100%', '100%', 550]} heigh={[248, 248, 300]}/>
+      <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 550]}/>
     </ResponsiveStack.spaceBetween>
   </AppContainer>
 )
