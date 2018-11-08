@@ -7,6 +7,7 @@ import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 
 import styled from 'styled-components'
+const formId = 'support-contact-us'
 
 const StyledForm = styled(Flex.column)`
   position: absolute;
@@ -61,7 +62,6 @@ export default class Form extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault()
-    const formId = 'support-contact-us'
     const {
       email,
       first_name,
@@ -141,7 +141,7 @@ export default class Form extends React.Component {
     }
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} id={formId}>
         <StyledForm>
           <Box width={[ 1, 1, 5/7 ]}>
           </Box>
