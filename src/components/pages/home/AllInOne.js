@@ -18,7 +18,7 @@ import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
 const HomePlatform = ({usingSafariDesktop}) => (
   <AppContainer>
-    <ResponsiveStack mb={[92, 92, 200]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
+    <ResponsiveStack mb={[92, 92, 100]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
     <Position position={['absolute', 'absolute', 'absolute']} left='0'>
       <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={'700px'}/>
     </Position>
