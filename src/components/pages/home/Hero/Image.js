@@ -12,9 +12,6 @@ import homepageHeroLinesStatic from 'src/assets/images/home/hero-lines-static.sv
 import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 import styled from 'styled-components'
 
-//TODO: used in multiple files  - abstract this
-const using_safari_browser = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-
 const TerminalBackground = styled(Absolute)`
 
   @media screen and (max-width: 415px) {
@@ -22,7 +19,7 @@ const TerminalBackground = styled(Absolute)`
   }
 `
 
-const HomeHeroImage = () => (
+const HomeHeroImage = ({usingSafariDesktop}) => (
   <Flex
     flexDirection={['column', 'column', 'column']}
     width={[1, 1, 3 / 4]}
@@ -34,7 +31,7 @@ const HomeHeroImage = () => (
     ml={[0, 0, '56px']}
   >
     <Image
-      src={using_safari_browser ? homepageHeroLinesStatic : homepageHeroLinesMain}
+      src={usingSafariDesktop ? homepageHeroLinesStatic : homepageHeroLinesMain}
       width={586}
     >
     </Image>

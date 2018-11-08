@@ -15,9 +15,7 @@ import riseOfServerless from 'src/assets/images/home/serverless-applications-ris
 import riseOfServerlessStatic from 'src/assets/images/home/serverless-applications-rise-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 
-const using_safari_browser = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-
-const HomeBenefits = () => (
+const HomeBenefits = ({usingSafariDesktop}) => (
   <AppContainer>
     <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']}>
       
@@ -32,7 +30,7 @@ const HomeBenefits = () => (
         <Button>learn more</Button>
         </InternalLink>
       </Column>
-      <Image src={using_safari_browser ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 550]}/>
+      <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 550]}/>
     </ResponsiveStack.spaceBetween>
   </AppContainer>
 )
