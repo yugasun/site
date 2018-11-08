@@ -23,3 +23,8 @@ content/blog
 content/examples 
 content/framework
 content/example
+
+# dynamic constants
+src/constants/featured-blogs.json
+src/constants/generated-authors.json
+src/constants/generated-menu-items.js
