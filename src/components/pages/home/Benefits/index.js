@@ -106,7 +106,7 @@ export default class HomeBenefits extends React.Component {
                         this.showBenefit('customAutomation')
                       } else if(currentScrollY > 1672 && currentScrollY < 1787) {
                           this.showBenefit('dataProcessing')
-                      } else if(currentScrollY > 1752 && currentScrollY < 2152) {
+                      } else if(currentScrollY > 1787 && currentScrollY < 2152) {
                         window.scroll({top: 1381})
                         this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
                         
