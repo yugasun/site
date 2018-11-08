@@ -7,6 +7,11 @@ import dotsBackground from 'src/assets/images/dots-background.png'
 
 const items = [
   {
+    title: 'Serverless',
+    location: 'San Francisco, CA',
+    link: 'https://meetup.com/Serverless',
+  },
+  {
     title: 'Triangle Serverless',
     location: 'Raleigh, NC',
     link: 'https://meetup.com/TriangleServerless'
@@ -52,9 +57,9 @@ const items = [
     link: 'https://meetup.com/Serverless-Vancouver',
   },
   {
-    title: 'Serverless',
-    location: 'San Francisco, CA',
-    link: 'https://meetup.com/Serverless',
+    title: 'Serverless Miami',
+    location: 'Miami, FL',
+    link: 'https://www.meetup.com/Serverless-Miami/',
   },
   {
     title: 'Serverless Cork',

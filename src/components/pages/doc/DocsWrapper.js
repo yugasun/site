@@ -543,7 +543,7 @@ const Wrapper = styled(Column)`
   }
   @media (max-width: 768px) {
     & {
-      margin-top: calc(65px);
+      margin-top: calc(47px);
     }
     .sidebar {
       z-index: 9;
@@ -652,7 +652,7 @@ export default class DocsWrapper extends React.Component {
   componentDidMount() {
     const domNode = ReactDOM.findDOMNode(this.ref)
     domNode.querySelectorAll("code.hljs").forEach((code) => {
-      let number = 1;
+      let number = 1
       const zero = `<a class="line">${number++}</a>`
       code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
         `\n<a class="line">${number++}</a>`

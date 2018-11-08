@@ -22,7 +22,7 @@ const FooterListItem = ({ content, color, pt }) => (
     <NavLink {...content.navProps}>
       <ItemText
         color={color}
-        opacity={0.5}
+        opacity={ content.defaultOpacity ? 1 : 0.5 }
         fontFamily={'Serverless'}
         fontSize={1}
         lineHeight={1}

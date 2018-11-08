@@ -8,52 +8,62 @@ import {
   ListItem,
   Relative,
 } from 'serverless-design-system'
+import styled from 'styled-components'
 
 import NavLink from 'src/components/NavLink'
-import { platform } from 'src/constants/urls'
-import frameworkIcon from 'src/assets/images/bolt.png'
-import gatewayIcon from 'src/assets/images/group-6.png'
-import dashboardIcon from 'src/assets/images/icon-dashboard.png'
+import { products } from 'src/constants/urls'
+import frameworkIcon from 'src/assets/images/pages/enterprise/enterprise-icon.svg'
+import supportIcon from 'src/assets/images/pages/support/serverless-support.svg'
+import platformIcon from 'src/assets/images/pages/platform/serverless-platform.svg'
+
 
 const platformMenuConfig = [
   {
     imgProps: {
       src: frameworkIcon,
-      height: '52px',
-      ml: '8px',
-      mr: ['15px', '15px', '15px', '30px'],
+      height: ['60px', '60px', '72px'],
+      mr: '23px'
     },
     text: 'framework',
-    to: platform.framework,
+    to: products.framework,
     crossDomain: false,
     completed: true,
   },
   {
     imgProps: {
-      src: gatewayIcon,
-      height: '40px',
-      mr: ['15px', '15px', '15px', '30px'],
+      src: platformIcon,
+      height: ['61px', '61px', '73px'],
+      ml: '14px',
+      mr: '23px'
     },
-    text: 'event gateway',
-    to: platform.eventGateway,
+    text: 'platform',
+    to: products.platform,
     crossDomain: false,
     completed: true,
   },
   {
     imgProps: {
-      src: dashboardIcon,
-      height: '40px',
-      mr: ['15px', '15px', '15px', '30px'],
+      src: supportIcon,
+      height: ['62px', '62px', '74px'],
+      mr: '23px',
+      mb: [2, 2, 0]
     },
-    text: 'dashboard',
-    to: platform.dashboard,
+    text: 'support',
+    to: products.support,
     crossDomain: false,
     completed: true,
   },
 ]
 
+const ProductMenu = styled(List)`
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    width: 730px;
+  }
+`
+
 const Platform = () => (
-  <List m={0} ml={[2, 2, 0]} p={0}>
+  <ProductMenu m={0} ml={[2, 2, 0]} p={0}>
     {platformMenuConfig.map(
       ({ imgProps: { src, height, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
         <NavLink
@@ -65,13 +75,13 @@ const Platform = () => (
           <ListItem.noStyleType key={text}>
             <Relative>
               <Flex.horizontallyCenter
-                mb={platformMenuConfig.length - 1 === index ? 0 : 2}
+                mb={platformMenuConfig.length - 1 === index ? 0 : [2, 2, 0]}
               >
                 <InlineBlock {...imgContainerProps}>
                   <Image
                     src={src}
                     height={height}
-                    width="auto"
+                    width='auto'
                   />
                 </InlineBlock>
                 <InlineBlock minWidth='155px'>
@@ -81,6 +91,7 @@ const Platform = () => (
                     lineHeight={0.7}
                     letterSpacing='5'
                     m={0}
+                    pt={[0, 0, 22]}
                   >
                     serverless
                   </Heading.h6>
@@ -100,7 +111,7 @@ const Platform = () => (
         </NavLink>
       )
     )}
-  </List>
+  </ProductMenu>
 )
 
 export default Platform
