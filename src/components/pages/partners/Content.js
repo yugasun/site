@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppContainerNew as AppContainer }  from 'src/components'
+import { AppContainerNewest as AppContainer }  from 'src/components'
 import { Box, Heading, Row, Column, Image, Text, Flex } from 'serverless-design-system'
 import allPartners from './PartnersData'
 
