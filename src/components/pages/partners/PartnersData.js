@@ -17,7 +17,8 @@ export default [
             bgHeight: '137px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://www.99xtechnology.com/',
         },
         {
           name: "Kenzan",
@@ -28,18 +29,20 @@ export default [
             bgHeight: '234px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://kenzan.com/',
         },
         {
           name: "Tech Magic",
           location: 'Lviv, Ukraine',
-          description: '99X Technology started with a narrow technology focus that helps startups and established enterprises to build remote dedicated teams. Our narrow technological expertise includes JavaScript, Node.js, Angular, React, Salesforce, Serverless, Native iOS, and Android. We became an AWS Certified ConsultingvPartner in 2017.',
+          description: 'TechMagic is a web and mobile development company from Ukraine that builds dedicated teams skilled in JavaScript, Node.js, Angular, ReactJS, AWS, Salesforce, iOS, Android.',
           logo: {
             url: techMagicLogo,
             bgHeight: '161px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://www.techmagic.co/',
         },
         {
           name: "superluminar",
@@ -50,18 +53,20 @@ export default [
             bgHeight: '156px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://superluminar.io/',
         },
         {
           name: "Mode2",
           location: 'Santa Monica, CA',
-          description: 'Code, not servers. Use serverless to modernize existing applications and give IT organizations a lean makeover - reduce development time and effort, unburden SRE and operations teams, refocus on building user code and features, and further improve business agility by bringing new solutions to users quicker.',
+          description: 'Mode2 provides engineering and consulting services to help companies overcome the challenges of digital transformations, and accelerate their successful adoption of game-changing cloud technologies. Our human-centered approach puts your team at the core of a program that focuses on business and technical innovation for long-term business success.',
           logo: {
             url: mode2Logo,
             bgHeight: '282px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://www.mode2.com/',
         },
         {
           name: "Parallax",
@@ -72,7 +77,8 @@ export default [
             bgHeight: '122px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://parall.ax/',
         },
         {
           name: "Sinapsis",
@@ -83,7 +89,8 @@ export default [
             bgHeight: '351px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://sinapsis.co/',
         },
         {
           name: "Trek10",
@@ -94,6 +101,7 @@ export default [
             bgHeight: '154px'
           },
           caseStudyLink: '',
-          componentLink: ''
+          componentLink: '',
+          websiteLink: 'https://www.trek10.com/',
         }
 ]
