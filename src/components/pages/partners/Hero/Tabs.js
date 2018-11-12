@@ -32,7 +32,7 @@ const data = [
 ]
 
 const tabWidth = {
-  selected: '96px',
+  selected: '126px',
   notSelected: '96px'
 }
 
