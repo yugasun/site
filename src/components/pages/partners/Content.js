@@ -23,17 +23,11 @@ const PartnersContent = () => (
                 <Heading.h2 fontFamily='Soleil'>{partner.name}</Heading.h2>
                 <Heading.h4 fontFamily='Soleil'>{partner.location}</Heading.h4>
                 <Text.p fontFamily='SoleilBk' lineHeight='26px'>{partner.description}</Text.p>
-                <Row>
-                <Text.p color='#fd5750'>
-                  case study >
-                </Text.p>
-                <Text.p color='#fd5750' ml={52}>
-                  component >
-                </Text.p>
-                </Row>
               </Column>
               <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '448px']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? 207 : 0]} mr={[0, 0, isEvenItem ? 0 : 176]} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
-              <Image src={partner.logo.url}></Image>
+              <a href={partner.websiteLink} target='_blank' rel='noopener noreferrer'>
+                <Image src={partner.logo.url}></Image>
+              </a>
               </FlexWithBoxShadow>
             </Flex>
           )
