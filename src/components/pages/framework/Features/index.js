@@ -49,7 +49,7 @@ const featureItemsData = [
 
 const FrameworkFeatures = () => (
   <Box
-    pb={[12, 12, 10]}
+    pb={[12, 12, 430]}
     mb={[4, 4, 0]}
   >
     <Features features={featureItemsData} />
