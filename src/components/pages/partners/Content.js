@@ -22,7 +22,7 @@ const PartnersContent = () => (
               <Column width={['auto', 'auto', 488]}>
                 <Heading.h2 fontFamily='Soleil'>{partner.name}</Heading.h2>
                 <Heading.h4 fontFamily='Soleil'>{partner.location}</Heading.h4>
-                <Text.p fontFamily='SoleilBk' lineHeight='26px'>{partner.description}</Text.p>
+                <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>{partner.description}</Text.p>
               </Column>
               <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '448px']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? 207 : 0]} mr={[0, 0, isEvenItem ? 0 : 176]} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
               <a href={partner.websiteLink} target='_blank' rel='noopener noreferrer'>
