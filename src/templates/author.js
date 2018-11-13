@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
-import { Divider, NewToServerlessPrefooter } from 'src/fragments'
+import { Divider, NewToServerlessPrefooter, Helmet } from 'src/fragments'
 import { getAuthorById } from 'src/utils/blog'
 import Profile from 'src/components/pages/author/Profile'
 import Blogs from 'src/components/pages/author/Blogs'
@@ -11,6 +11,7 @@ export default ({ data, pathContext: { authorId } }) => {
 
   return (
     <BlogLayout prefooter={NewToServerlessPrefooter}>
+      <Helmet title={`Blog posts written by ${author.name}`}/>
       <Profile author={author} />
       <Divider visibleInSmallScreens />
       <Blogs
