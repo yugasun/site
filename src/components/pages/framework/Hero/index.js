@@ -10,9 +10,7 @@ import CloudProviders from './CloudProviders'
 
 const FrameworkHero = () => (
   <HeroWrapper
-    backgroundImage={`url(${FrameworkPageHeroSectionBackground})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
+    background={['linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',`linear-gradient(155deg,rgb(0,0,0) 60%,#70221f)`]}
   >
     <Header />
     <HeroImage />

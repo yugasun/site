@@ -5,7 +5,7 @@ import frameworkIllustrator from 'src/assets/images/pages/framework/framework-il
 
 const HeroImage = () => (
   <Flex.horizontallyCenter py={[0, 0, 3]} height={[0, 0, '100%']}>
-    <Box width={[0, 0, 6 / 10]}>
+    <Box width={[0, 0, 8 / 10]}>
       <Image src={frameworkIllustrator} maxHeight='258px' />
     </Box>
   </Flex.horizontallyCenter>
