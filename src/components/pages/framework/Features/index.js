@@ -43,7 +43,7 @@ const featureItemsData = [
     header: 'Streaming Logs',
     img: streamingLogs,
     content:
-      'Streaming logs from your functions directly in to your CLI, making it easy to rapidly redug and troubleshoot.',
+      'Streaming logs from your functions directly in to your CLI, making it easy to rapidly debug and troubleshoot.',
   },
 ]
 
