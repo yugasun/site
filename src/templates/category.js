@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading } from 'serverless-design-system'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import { NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter, Helmet } from 'src/fragments'
 import CategoryData from 'src/constants/categories.json'
 
 export default class Authors extends React.Component {
@@ -10,16 +10,20 @@ export default class Authors extends React.Component {
     const { data, pathContext: { categoryId } } = this.props
     const edges = data.allBlog ? (data.allBlog.edges || []) : []
     const category = CategoryData[categoryId]
+    const categoryInTitleCase = category.split(' ')
+    .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+    .join(' ')
 
     return (
       <BlogLayout prefooter={NewToServerlessPrefooter}>
+      <Helmet title={`Blogs posts under ${categoryInTitleCase} | AWS & Serverless`}/>
         <Flex.center my={[3, 3, 4, 5]}>
           <Heading.h2
             fontSize={[4, 4, 6]}
-            fontFamily="SoleilSb"
-            align="center"
+            fontFamily='SoleilSb'
+            align='center'
             lineHeight={1.4}
-            letterSpacing="0"
+            letterSpacing='0'
           >
             Posts under {category}
           </Heading.h2>
