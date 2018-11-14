@@ -2,18 +2,20 @@ import React from 'react'
 import {
   Flex,
   Image,
+} from 'serverless-design-system'
+import {
   HeroTitle,
   HeroMainTitle,
   HeroDescription,
   HeroInlineDescription,
-} from 'serverless-design-system'
+} from 'src/fragments/DesignSystem/HeroElements'
 
 import serverlessBolt from 'src/assets/images/serverlessBolt.png'
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
   <Flex.horizontallyCenter flexDirection='column' mb={2}>
-    <Flex.horizontallyCenter height='86px' my={2}>
+    <Flex.horizontallyCenter height='86px' mt={2}>
       <Image src={serverlessBolt} maxHeight='67px' maxWidth='70px' />
     </Flex.horizontallyCenter>
     <HeroTitle>serverless</HeroTitle>
