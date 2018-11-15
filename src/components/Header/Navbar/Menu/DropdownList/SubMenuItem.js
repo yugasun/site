@@ -3,7 +3,7 @@ import { Heading } from 'serverless-design-system'
 import NavLink from 'src/components/NavLink'
 
 const SubMenuItem = ({ children, navProps, defaultColor }) => (
-  <NavLink {...navProps}>
+  <NavLink {...navProps} className='header-menu-item'>
     <Heading.h6 fontSize={'1.76rem'}>{children}</Heading.h6>
   </NavLink>
 )

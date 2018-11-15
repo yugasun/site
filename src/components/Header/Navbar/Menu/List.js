@@ -55,7 +55,7 @@ const CommunityMenu = () => (
 
 const BlogMenu = () => (
   <Box>
-    <NavLink to={resources.blog} completed>
+    <NavLink to={resources.blog} completed className='header-menu-item'>
       <MenuTitle name={'blog'} />
     </NavLink>
   </Box>
@@ -63,7 +63,7 @@ const BlogMenu = () => (
 
 const EnterpriseMenu = () => (
   <Box pt={[2, 2, 0]} pl={[1, 1, 2]}>
-    <NavLink to={enterprise} completed>
+    <NavLink to={enterprise} completed className='header-menu-item'>
       <Button fontSize={'1.5rem'} px={2} py={'16px'} width={'176px'}>
         enterprise
       </Button>
