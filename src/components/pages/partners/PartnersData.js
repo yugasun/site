@@ -9,40 +9,28 @@ import trek10Logo from 'src/assets/images/pages/partners/trek10-logo.svg'
 
 export default [
         {
-          name: "99X Technology",
-          location: 'Colombo, Sri Lanka & Oslo, Norway',
-          description: '99X Technology is an award-winning software product engineering company that specialises in delivering high-end software product development services to independent software vendors (ISVs) worldwide, with a primary focus within the European region.',
+          name: "Trek10",
+          location: 'South Bend, Indiana',
+          description: 'Born in the cloud and 100% focused on AWS infrastructure, Trek10 specializes in leveraging the absolute best tools and AWS platform services to design, build, and support serverless and event-driven architectures for our clients. Trek10 excels at building complete serverless applications for use-cases such as IOT, media management, data-processing pipelines, and more.',
           logo: {
-            url: logo99x,
-            bgHeight: '137px'
+            url: trek10Logo,
+            bgHeight: '154px'
           },
           caseStudyLink: '',
           componentLink: '',
-          websiteLink: 'https://www.99xtechnology.com/',
+          websiteLink: 'https://www.trek10.com/',
         },
         {
-          name: "Kenzan",
-          location: 'New York City, New York',
-          description: 'Kenzan is a software engineering and full service digital consulting firm that provides customized, end-to-end solutions that align technical strategy with business goals. Combining leadership with technical expertise, Kenzan works with partners and clients to craft solutions that leverage cutting-edge technology, from ideation to development and delivery. Specializing in application and platform development, architecture consulting and digital transformation, Kenzan empowers companies to put technology first.',
+          name: "Parallax",
+          location: 'Leeds & London, UK',
+          description: 'With clients all over the world and a passion for everything digital, Parallax is growing fast and committed to providing excellence in digital media services.  We rise to a challenge and we love our customers, which means you’ll always get a personal service from us and the very best products at the end of the project.',
           logo: {
-            url: kenzanLogo,
-            bgHeight: '234px'
+            url: parallaxLogo,
+            bgHeight: '122px'
           },
           caseStudyLink: '',
           componentLink: '',
-          websiteLink: 'https://kenzan.com/',
-        },
-        {
-          name: "Tech Magic",
-          location: 'Lviv, Ukraine',
-          description: 'TechMagic is a web and mobile development company from Ukraine that builds dedicated teams skilled in JavaScript, Node.js, Angular, ReactJS, AWS, Salesforce, iOS, Android.',
-          logo: {
-            url: techMagicLogo,
-            bgHeight: '161px'
-          },
-          caseStudyLink: '',
-          componentLink: '',
-          websiteLink: 'https://www.techmagic.co/',
+          websiteLink: 'https://parall.ax/',
         },
         {
           name: "superluminar",
@@ -69,16 +57,28 @@ export default [
           websiteLink: 'https://www.mode2.com/',
         },
         {
-          name: "Parallax",
-          location: 'Leeds & London, UK',
-          description: 'With clients all over the world and a passion for everything digital, Parallax is growing fast and committed to providing excellence in digital media services.  We rise to a challenge and we love our customers, which means you’ll always get a personal service from us and the very best products at the end of the project.',
+          name: "Tech Magic",
+          location: 'Lviv, Ukraine',
+          description: 'TechMagic is a web and mobile development company from Ukraine that builds dedicated teams skilled in JavaScript, Node.js, Angular, ReactJS, AWS, Salesforce, iOS, Android.',
           logo: {
-            url: parallaxLogo,
-            bgHeight: '122px'
+            url: techMagicLogo,
+            bgHeight: '161px'
           },
           caseStudyLink: '',
           componentLink: '',
-          websiteLink: 'https://parall.ax/',
+          websiteLink: 'https://www.techmagic.co/',
+        },
+        {
+          name: "99X Technology",
+          location: 'Colombo, Sri Lanka & Oslo, Norway',
+          description: '99X Technology is an award-winning software product engineering company that specialises in delivering high-end software product development services to independent software vendors (ISVs) worldwide, with a primary focus within the European region.',
+          logo: {
+            url: logo99x,
+            bgHeight: '137px'
+          },
+          caseStudyLink: '',
+          componentLink: '',
+          websiteLink: 'https://www.99xtechnology.com/',
         },
         {
           name: "Sinapsis",
@@ -93,15 +93,15 @@ export default [
           websiteLink: 'https://sinapsis.co/',
         },
         {
-          name: "Trek10",
-          location: 'South Bend, Indiana',
-          description: 'Born in the cloud and 100% focused on AWS infrastructure, Trek10 specializes in leveraging the absolute best tools and AWS platform services to design, build, and support serverless and event-driven architectures for our clients. Trek10 excels at building complete serverless applications for use-cases such as IOT, media management, data-processing pipelines, and more.',
+          name: "Kenzan",
+          location: 'New York City, New York',
+          description: 'Kenzan is a software engineering and full service digital consulting firm that provides customized, end-to-end solutions that align technical strategy with business goals. Combining leadership with technical expertise, Kenzan works with partners and clients to craft solutions that leverage cutting-edge technology, from ideation to development and delivery. Specializing in application and platform development, architecture consulting and digital transformation, Kenzan empowers companies to put technology first.',
           logo: {
-            url: trek10Logo,
-            bgHeight: '154px'
+            url: kenzanLogo,
+            bgHeight: '234px'
           },
           caseStudyLink: '',
           componentLink: '',
-          websiteLink: 'https://www.trek10.com/',
-        }
+          websiteLink: 'https://kenzan.com/',
+        }  
 ]
