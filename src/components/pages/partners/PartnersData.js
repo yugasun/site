@@ -6,6 +6,7 @@ import sinapsisLogo from 'src/assets/images/pages/partners/sinapsis-logo.png'
 import superluminarLogo from 'src/assets/images/pages/partners/superluminar-logo.svg' 
 import techMagicLogo from 'src/assets/images/pages/partners/tech-magic-logo.png'
 import trek10Logo from 'src/assets/images/pages/partners/trek10-logo.svg'
+import codingSansLogo from 'src/assets/images/pages/partners/codingsans-logo.png'
 
 export default [
         {
@@ -103,5 +104,17 @@ export default [
           caseStudyLink: '',
           componentLink: '',
           websiteLink: 'https://kenzan.com/',
-        }  
+        },
+        {
+          name: "Coding Sans",
+          location: 'Budapest, Hungary',
+          description: 'Full-stack JavaScript development company, creating serverless cross-platform and web applications. Serverless apps, web application development in Hungary.',
+          logo: {
+            url: codingSansLogo,
+            bgHeight: '194px'
+          },
+          caseStudyLink: '',
+          componentLink: '',
+          websiteLink: 'https://codingsans.com/',
+        }    
 ]

@@ -12,7 +12,7 @@ const FlexWithBoxShadow = styled(Flex)`
 const PartnersContent = () => (
     <AppContainer>
         <Box
-        pb={[500, 500, 494]}
+        pb={[500, 500, 515]}
       >
       {
         allPartners.map((partner, index) => {
