@@ -31,7 +31,7 @@ const Icon = styled.span`
 Icon.defaultProps = { isOpen: false }
 
 
-export default ({ data, selected }) => (
+export default ({ data, selected, tabWidth }) => (
   <Box>
     <Box display={[ 'none', 'none', 'block' ]}>
       <Card
@@ -49,7 +49,7 @@ export default ({ data, selected }) => (
             align: 'center',
           }}
           tabContainerStyle={{
-            minWidth: '140px',
+            minWidth: tabWidth && tabWidth.notSelected ? tabWidth.notSelected: '140px',
             height: '46px',
             justifyContent: 'center',
             alignItems: 'center',
@@ -60,7 +60,7 @@ export default ({ data, selected }) => (
             backgroundSize: 'contain',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'center',
-            minWidth: '167px'
+            minWidth: tabWidth && tabWidth.selected ? tabWidth.selected: '167px',
           }}
           selectedValue={selected}
           onTabSelect={onTabSelect}

@@ -16,7 +16,7 @@ export default {
     quickStarts: '/framework/docs/getting-started/'
   },
   community: {
-    partners: '',
+    partners: '/partners/',
     foundries: '',
     forum: 'https://forum.serverless.com/',
     events: '/resources/events/',
