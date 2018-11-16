@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { examples, developers, resources, community } from 'src/constants/urls'
+import { resources, community } from 'src/constants/urls'
 
 const data = [
   {
     label: 'partners',
     value: 'partners',
-    navProps: { to: developers.documentation.framework }
+    navProps: { to: community.partners }
   },
   {
     label: 'forum',
