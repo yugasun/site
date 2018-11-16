@@ -1,33 +1,33 @@
 import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { examples, developers } from 'src/constants/urls'
+import { resources, community } from 'src/constants/urls'
 
 const data = [
   {
     label: 'partners',
     value: 'partners',
-    navProps: { to: developers.documentation.framework }
+    navProps: { to: community.partners }
   },
   {
     label: 'forum',
     value: 'forum',
-    navProps: { to: developers.quickStart.others }
+    navProps: { to: resources.forum, crossDomain: true }
   },
   {
     label: 'events',
     value: 'events',
-    navProps: { to: examples },
+    navProps: { to: community.events },
   },
   {
     label: 'slack',
     value: 'slack',
-    navProps: { to: examples },
+    navProps: { to: community.slack, crossDomain: true },
   },
   {
     label: 'workshops',
     value: 'workshops',
-    navProps: { to: examples },
+    navProps: { to: community.workshops },
   }
 ]
 
