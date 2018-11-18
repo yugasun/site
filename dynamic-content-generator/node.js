@@ -126,6 +126,7 @@ const sourceBlogs = (createNode) => (err, content, filename, next) => {
 
   unified().
     use(markdown).
+    use(slug).
     use(highlight).
     use(html).
     process(markdownContent, (err, file) => {
