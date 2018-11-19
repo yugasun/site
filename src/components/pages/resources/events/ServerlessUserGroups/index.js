@@ -51,15 +51,20 @@ const items = [
     location: 'Sacramento, CA',
     link: 'https://meetup.com/Sacramento-Serverless-Meetup',
   },
+    {
+    title: 'Serverless Miami',
+    location: 'Miami, FL',
+    link: 'https://www.meetup.com/Serverless-Miami/',
+  },
   {
     title: 'Serverless Vancouver',
     location: 'Vancouver, BC',
     link: 'https://meetup.com/Serverless-Vancouver',
   },
-  {
-    title: 'Serverless Miami',
-    location: 'Miami, FL',
-    link: 'https://www.meetup.com/Serverless-Miami/',
+    {
+    title: 'Serverless Cork',
+    location: 'Sao Paulo, Brazil',
+    link: 'https://www.meetup.com/meetup-group-ynxOSSBL/',
   },
   {
     title: 'Serverless Cork',
@@ -81,6 +86,11 @@ const items = [
     location: 'Milano, MI',
     link: 'https://meetup.com/Serverless-Italy',
   },
+    {
+    title: 'Serverless User Group Poland',
+    location: 'Lviv, Ukraine',
+    link: 'https://www.meetup.com/Serverless-Lviv/',
+  },
   {
     title: 'Serverless User Group Poland',
     location: 'Warsaw, Poland',
@@ -98,7 +108,7 @@ const items = [
   },
   {
     title: 'Serverless (Function As a Service) - Pune',
-    location: 'Raleigh, NC',
+    location: 'Pune, Mumbai, India',
     link: 'https://meetup.com/Serverless-Pune',
   },
   {
