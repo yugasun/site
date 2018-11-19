@@ -58,9 +58,9 @@ export default [
           websiteLink: 'https://www.mode2.com/',
         },
         {
-          name: "Tech Magic",
+          name: "TechMagic",
           location: 'Lviv, Ukraine',
-          description: 'TechMagic is a web and mobile development company from Ukraine that builds dedicated teams skilled in JavaScript, Node.js, Angular, ReactJS, AWS, Salesforce, iOS, Android.',
+          description: 'TechMagic is a tech consulting company from Eastern Europe specialized in building complex serverless architectures for web and mobile products, using JavaScript, AWS, Salesforce, and Native Mobile.',
           logo: {
             url: techMagicLogo,
             bgHeight: '161px'
