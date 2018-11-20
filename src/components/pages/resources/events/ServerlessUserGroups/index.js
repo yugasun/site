@@ -87,7 +87,7 @@ const items = [
     link: 'https://meetup.com/Serverless-Italy',
   },
     {
-    title: 'Serverless User Group Poland',
+    title: 'Serverless Ukraine',
     location: 'Lviv, Ukraine',
     link: 'https://www.meetup.com/Serverless-Lviv/',
   },
