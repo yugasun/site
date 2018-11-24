@@ -18,7 +18,6 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll, false)
     const windowGlobal = typeof window !== 'undefined' && window
     const navigatorGlobal = typeof navigator !== 'undefined' && navigator
 
