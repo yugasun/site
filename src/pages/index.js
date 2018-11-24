@@ -6,8 +6,6 @@ import Hero from 'src/components/pages/home/Hero'
 import Benefits from 'src/components/pages/home/Benefits'
 import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
 import AllInOne from 'src/components/pages/home/AllInOne'
-import Incline from 'src/components/pages/home/Hero/Incline'
-import DesktopTestimonialIncline from 'src/components/pages/home/Testimonial/DesktopIncline'
 
 export default class Home extends React.Component {
   constructor() {
@@ -41,10 +39,8 @@ export default class Home extends React.Component {
           location={this.props.location}
         />
         <Hero usingSafariDesktop={this.state.usingSafariDesktop}/>
-        <Incline />
         <Benefits usingSafariDesktop={this.state.usingSafariDesktop}/>
         <ServerlessGrowth />
-        <DesktopTestimonialIncline />
         <Testimonial />
         <AllInOne usingSafariDesktop={this.state.usingSafariDesktop}/>
         <TrustedClients />
