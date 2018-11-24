@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Box, Heading, Background, HorizontalRule, Row, P } from 'serverless-design-system'
+import { Box, Heading, HorizontalRule, Row, P } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const Point = styled(P)`
