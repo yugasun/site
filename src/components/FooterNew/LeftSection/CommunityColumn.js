@@ -1,12 +1,16 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { resources } from 'src/constants/urls'
+import { resources, community } from 'src/constants/urls'
 
 const ResourceColumn = () => (
   <FooterListColumn
     header='community'
     listItems={[
+      {
+        name: 'partners',
+        navProps: { to: community.partners, completed: true },
+      },
       {
         name: 'forum',
         navProps: { to: resources.forum, crossDomain: true },

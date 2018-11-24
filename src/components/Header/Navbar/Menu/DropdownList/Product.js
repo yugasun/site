@@ -71,6 +71,7 @@ const Platform = () => (
           to={to}
           crossDomain={crossDomain}
           completed={completed}
+          className='header-menu-item'
         >
           <ListItem.noStyleType key={text}>
             <Relative>

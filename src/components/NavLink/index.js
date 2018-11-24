@@ -51,6 +51,7 @@ const NavLink = ({
   children,
   completed,
   backgroundOnHover,
+  className
 }) => {
   if (!completed) {
     return (
@@ -58,13 +59,14 @@ const NavLink = ({
         href={crossDomain ? to : `https://serverless.com${to}`}
         backgroundOnHover={backgroundOnHover}
         target='_blank' // open incomplete and cross domain links in new page
+        className={ className ? `nav-menu-item ${className}` : 'nav-menu-item'}
       >
         {children}
       </A>
     )
   } else {
     return (
-      <StyledLink to={to} backgroundOnHover={backgroundOnHover}>
+      <StyledLink to={to} backgroundOnHover={backgroundOnHover} className={ className ? `nav-menu-item ${className}` : 'nav-menu-item'}>
         {children}
       </StyledLink>
     )

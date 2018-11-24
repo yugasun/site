@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { ResponsiveStack, Button } from 'serverless-design-system'
 import { setItemSync, getItemSync } from 'src/utils/storage'
 import { validateEmail } from 'src/utils/validator'
-import track from 'src/utils/analytics/track'
 import EmailField from './EmailField'
 
 const StyledForm = styled.form`
@@ -61,10 +60,6 @@ class NewsLetterForm extends React.Component {
         console.info('Newsletter subscription creation succeed') // eslint-disable-line
         // Customer.io
         // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
-        track('site:newsletter_subscribed', {
-          label: 'Newsletter Subscription',
-          value: window.location.href
-        })
         that.setState({
           isSubscribed: true,
           isFetching: false

@@ -47,19 +47,19 @@ const comparisonData = [
         }
         <Box>
           <Text.p
-            color="black"
-            fontFamily="SoleilBk"
+            color='black'
+            fontFamily='SoleilBk'
             fontSize={3}
             lineHeight={3}
-            letterSpacing="h6"
+            letterSpacing='h6'
           >
             Want to get started? Check out these walkthroughs:
           </Text.p>
           <ResponsiveStack
             alignItems={[ "center", "center", "left" ]}>
-            <TechBox upperImage={nodeJSImage} lowerImage={expressImage} />
-            <TechBox upperImage={pythonImage} lowerImage={flaskImage} />
-            <TechBox upperImage={graphqlImage} />
+            <TechBox upperImage={nodeJSImage} lowerImage={expressImage} to='/blog/serverless-express-rest-api/'/>
+            <TechBox upperImage={pythonImage} lowerImage={flaskImage} to='/blog/flask-python-rest-api-serverless-lambda-dynamodb/'/>
+            <TechBox upperImage={graphqlImage} to='/blog/make-serverless-graphql-api-using-lambda-dynamodb/'/>
           </ResponsiveStack>
         </Box>
       </React.Fragment>

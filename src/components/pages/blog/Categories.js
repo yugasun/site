@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Text } from 'serverless-design-system'
-import { LinkWithoutStyle } from 'src/components'
+import { InternalLink } from 'src/fragments'
 import {
   getCategoryLink,
   getCategoryNameById,
@@ -9,14 +9,14 @@ import {
 const CategoryDetail = ({ id, renderComma, textStyleProps }) => (
   <React.Fragment>
     <Text.span
-      fontFamily="Serverless"
+      fontFamily='Serverless'
       fontSize={1}
       opacity={0.4}
       { ...textStyleProps }
     >
-      <LinkWithoutStyle to={getCategoryLink(id)}>
+      <InternalLink to={getCategoryLink(id)}>
         { getCategoryNameById(id) }
-      </LinkWithoutStyle>
+      </InternalLink>
       { renderComma ? (<React.Fragment>,&nbsp;</React.Fragment>) : '' }
     </Text.span>
   </React.Fragment>

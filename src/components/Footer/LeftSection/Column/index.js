@@ -16,7 +16,7 @@ const FooterListColumn = ({ header, headerLink, listItems }) => (
       my={'5px'}
       py={1}
     >
-      { headerLink ? <InternalLink to={headerLink}> {header} </InternalLink> : header }
+      { headerLink ? <InternalLink to={headerLink} className='footer-menu-item'> {header} </InternalLink> : header }
     </P>
     <Box>
       {listItems.map((listItem, index) => (

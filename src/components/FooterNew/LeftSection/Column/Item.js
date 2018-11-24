@@ -19,7 +19,7 @@ const ItemText = styled(P)`
 // Renders Each item in the footer list
 const FooterListItem = ({ content, color, pt }) => (
   <ItemWrapper>
-    <NavLink {...content.navProps}>
+    <NavLink {...content.navProps} className='footer-menu-item'>
       <ItemText
         color={color}
         opacity={ content.defaultOpacity ? 1 : 0.5 }
