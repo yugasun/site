@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppContainerNewest as AppContainer }  from 'src/components'
-import { Box, Heading, Row, Column, Image, Text, Flex } from 'serverless-design-system'
+import { Box, Heading, Column, Image, Text, Flex } from 'serverless-design-system'
+import { ExternalLink } from 'src/fragments'
 import allPartners from './PartnersData'
 
 import styled from 'styled-components'
@@ -25,9 +26,9 @@ const PartnersContent = () => (
                 <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>{partner.description}</Text.p>
               </Column>
               <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '448px']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? 207 : 0]} mr={[0, 0, isEvenItem ? 0 : 176]} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
-              <a href={partner.websiteLink} target='_blank' rel='noopener noreferrer'>
+              <ExternalLink to={partner.websiteLink}>
                 <Image src={partner.logo.url}></Image>
-              </a>
+              </ExternalLink>
               </FlexWithBoxShadow>
             </Flex>
           )

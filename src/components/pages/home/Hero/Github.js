@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { ExternalLink } from 'src/fragments'
 
 import { Flex, Image, Heading, Text } from 'serverless-design-system'
 import videoIcon from 'src/assets/images/github-gray.svg'
@@ -20,7 +20,7 @@ const MobileSpace = styled(Text.span)`
 `
 
 const HomeHeroFooter = () => (
-  <a href='https://github.com/serverless/serverless' target='_blank' rel='noopener noreferrer'>
+  <ExternalLink to='https://github.com/serverless/serverless'>
     <Flex
       width={[1, 1, 3 / 4]}
       my={['12px', '12px', 3]}
@@ -49,7 +49,7 @@ const HomeHeroFooter = () => (
         &nbsp; 26,257
       </Heading.h4>
     </Flex>
-  </a>
+  </ExternalLink>
 )
 
 export default HomeHeroFooter

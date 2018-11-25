@@ -6,7 +6,7 @@ import Breadcrumbs from 'src/components/Breadcrumbs'
 import styled from 'styled-components'
 import ContentWrapper from './ContentWrapper'
 import { AppContainer } from 'src/components'
-import Link from 'gatsby-link'
+import { ExternalLink } from 'src/fragments'
 import EditOnGithubOption from './EditOnGithub'
 
 //TODO - hacky fix this
@@ -57,7 +57,7 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
                   </Heading.h1>
                   <P align='center' lineHeight={'1.63'} mt={['8px','8px','9px']} mb={['22px','22px','21px']}>{frontmatter.description}</P>
             </WidthContainer>
-            <a href={frontmatter.authorLink} target='_blank'>
+            <ExternalLink to={frontmatter.authorLink}>
                   <Row justifyContent='center' alignItems='center' mb={'57px'} pl={[0, 0, '50px']}>
                       <P color='#8c8c8c' fontSize='12px' lineHeight={'1.33'} pr={'8px'} my={0}>user &nbsp;</P>
                 <Image
@@ -67,7 +67,7 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
                 />
                       <P color='#8c8c8c' fontSize='12px' lineHeight={'1.33'} pl={'8px'} my={0}>{frontmatter.authorName}</P>
             </Row>
-            </a>
+            </ExternalLink>
             <ContentWrapper
                 width={[1, 1, '800px']}
                   mx='auto'
@@ -76,16 +76,14 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
             />
             <WidthContainer>
             <DesktopOnlyRow justifyContent='space-between' mt={76} mx='auto'>
-                <a
+                <ExternalLink
                     title='View this example on GitHub'
-                    rel='noopener noreferrer'
-                    target='_blank'
-                    href={frontmatter.gitLink}
+                    to={frontmatter.gitLink}
                     >
                       <Button height='50px' fontSize='2rem' letterSpacing={'0.8px'} p={0} lineHeight={['14px']}> 
                       view on Github
                 </Button>
-                </a>
+                </ExternalLink>
                       <P fontSize='14px' lineHeight={'1.57'} letterSpacing={'0.6px'} color='#000000' opacity='0.4' fontFamily='Serverless'>
                 Latest commit b2f54ec  on Sep 24, 2017
                 </P>
