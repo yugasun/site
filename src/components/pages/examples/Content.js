@@ -1,19 +1,12 @@
 import React from 'react'
-import { Box, Flex, Heading} from 'serverless-design-system'
-
+import { Box, Flex } from 'serverless-design-system'
 import { AppContainerNew as AppContainer }  from 'src/components'
-import Search from './Search'
 import ExamplePreview from './SingleExamplePreview'
 import algoliasearch from 'algoliasearch/lite'
+import SearchOptions from './Search/index'
 
 const client = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY) 
 const examplesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX)
-
-//TODO - dynamic generation of examplesList pages
-const selectedProps = {
-  //platform: 'AWS',
-  //language: 'nodeJS'
-} 
 
 const paginationLimit = 15
 
@@ -57,6 +50,18 @@ export default class Content extends React.Component {
     }
   }
 
+  //triggered when user searches for something new or filters something
+  handleRefreshResults = (filter) => {
+    console.log(filter)
+    this.setState({filter: filter, initState: false, noMoreResults: false, isLoading: false, pageNum: 0})
+    const searchObj = this.makeFilterQuery(filter)
+    console.log(searchObj)
+    searchObj.hitsPerPage = paginationLimit
+    searchObj.page = 0
+    this.setState({pageNum: 1})
+    this.refreshResults(searchObj)
+  }
+
   parseExamplesFromAlgolia = (content) => {
     const examples = content.hits.map((hit) => {
       return {
@@ -71,16 +76,6 @@ export default class Content extends React.Component {
     })
 
     return examples
-  }
-
-  //triggered when user searches for something new or filters something
-  handleRefreshResults = (filter) => {
-    this.setState({filter: filter, initState: false, noMoreResults: false, isLoading: false, pageNum: 0})
-    const searchObj = this.makeFilterQuery(filter)
-    searchObj.hitsPerPage = paginationLimit
-    searchObj.page = 0
-    this.setState({pageNum: 1})
-    this.refreshResults(searchObj)
   }
 
   refreshResults = (searchObj) => {
@@ -104,7 +99,14 @@ export default class Content extends React.Component {
             filtersQuery += ' AND '
           }
 
-          filtersQuery += `${key}:"${filter[key]}"`
+          filter[key].forEach((value, index) => {
+            if(index === 0) {
+              filtersQuery += `${key}:"${value}"`
+            } else {
+              filtersQuery += ` OR ${key}:"${value}"`
+            }
+          })
+          
         }
     })
 
@@ -143,40 +145,24 @@ export default class Content extends React.Component {
 
   render() {
     return (
+      <Box>
+      <SearchOptions refreshResults={this.handleRefreshResults}/>
       <AppContainer>
-      
-      <Box
-        pb={[300, 300, 12, 12]}
-      >
-      
         <Box
-          mt={[6, 6, '161px']}
-          color='black'
+          pb={[300, 300, 12]}
         >
-          <Heading.h3
-              fontSize={[4, 4, 6]}
-              fontFamily='Soleil'
-              letterSpacing={['-0.4px', '-0.4px', 0]}
-              lineHeight={[1.33, 1.33, 1.25]}
-              align='center'
-              >
-            All the examples
-          </Heading.h3>
+          <Flex
+            flexDirection={['column', 'column', 'row']}
+            flexWrap='wrap'
+            justifyContent='left'
+            mb={[200, 200, 280]}
+          >
+            
+              { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }
+          </Flex>
         </Box>
-
-        <Search refreshResults={this.handleRefreshResults} selectedOptions={selectedProps}/>
-
-        <Flex
-          flexDirection={['column', 'column', 'row']}
-          flexWrap='wrap'
-          justifyContent='left'
-          mb={[200, 200, 280]}
-        >
-          
-            { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }
-        </Flex>
-      </Box>
     </AppContainer>
+    </Box>
     )
   }
 }
