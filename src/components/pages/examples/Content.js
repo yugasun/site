@@ -68,7 +68,8 @@ export default class Content extends React.Component {
           title: hit.title,
           description: hit.description,
           language: hit.language,
-          platform: hit.platform
+          platform: hit.platform,
+          gitLink: hit.gitLink
         }
       }
     })

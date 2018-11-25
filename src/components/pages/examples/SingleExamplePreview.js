@@ -6,8 +6,9 @@ import {
   P,
   Card
 } from 'serverless-design-system'
-import { InternalLink } from 'src/fragments'
+import { InternalLink, ExternalLink } from 'src/fragments'
 import { getExampleLink } from 'src/utils/example'
+import Link from 'gatsby-link'
 
 const HoverableColumn = styled(Card)`
   @media screen and (min-width: 415px) {
@@ -39,7 +40,7 @@ const BoxWithMiddleElementMargin = styled(Box)`
 `
 
 const singleExamplePreview = ({ id, frontmatter }) => {
-  const { title, description, platform, language } = frontmatter
+  const { title, description, platform, language, gitLink } = frontmatter
 
   return (
     <BoxWithMiddleElementMargin 
@@ -78,6 +79,11 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         >
           { description }
         </P>
+        <ExternalLink to={gitLink}>
+          <P color='#fd5750'>
+            go to github >
+          </P>
+        </ExternalLink>
         </Box>
       </HoverableColumn>
     </BoxWithMiddleElementMargin>

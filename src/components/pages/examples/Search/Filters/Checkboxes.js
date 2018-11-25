@@ -32,7 +32,7 @@ export default class Content extends React.Component {
                 <Column>
                 {
                     this.props.options[0].map(({ id, name, text }) => (
-                            <Box mt={2} key={id}>
+                            <Box mt={2} key={id} mr={32}>
                                 <Label htmlFor={id}>
                                 <Flex.verticallyCenter>
                                     <Checkbox
@@ -53,7 +53,7 @@ export default class Content extends React.Component {
                     this.props.options[1] ? 
                         this.props.options[1].map(({ id, name, text }) => (
                             
-                            <Box mt={2} key={id}>
+                            <Box mt={2} key={id} mr={92}>
                                 <Label htmlFor={id}>
                                 <Flex.verticallyCenter>
                                     <Checkbox

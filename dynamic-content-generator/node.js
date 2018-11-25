@@ -76,10 +76,11 @@ const sourceExamples = (createNode) => (err, content, filename, next) => {
     title: frontmatter.title,
     description: frontmatter.description,
     platform: frontmatter.platform,
+    gitLink: frontmatter.gitLink,
     language: frontmatter.language,
     framework: frontmatter.framework,
     highlighted: frontmatter.highlighted,
-    objectID: exampleId,
+    objectID: exampleId
   })
 
   unified().
