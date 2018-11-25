@@ -52,10 +52,8 @@ export default class Content extends React.Component {
 
   //triggered when user searches for something new or filters something
   handleRefreshResults = (filter) => {
-    console.log(filter)
     this.setState({filter: filter, initState: false, noMoreResults: false, isLoading: false, pageNum: 0})
     const searchObj = this.makeFilterQuery(filter)
-    console.log(searchObj)
     searchObj.hitsPerPage = paginationLimit
     searchObj.page = 0
     this.setState({pageNum: 1})
