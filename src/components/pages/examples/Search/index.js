@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Background } from 'serverless-design-system'
 
-import { AppContainerNew as AppContainer }  from 'src/components'
+import { AppContainerNewest as AppContainer }  from 'src/components'
 import SearchField from './Field'
 import SearchHeading from './Heading'
 import SearchFilters from './Filters'
