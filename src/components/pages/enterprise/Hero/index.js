@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Box, Text, Image, Heading, Flex, Column } from 'serverless-design-system'
+import { Box, Text, Heading, Flex, Column } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import serverlessPlatform from 'src/assets/images/pages/platform/serverless-platform.svg'
 
 const ExamplesHero = () => {
   return (
