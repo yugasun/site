@@ -11,9 +11,7 @@ line-height: 14px;
   }
 `
 
-export default class EditOnGithubOption extends React.Component {
-  render() {
-    return (
+const EditOnGithubSticky = ({gitLink}) => (
         <Position
         position='sticky'
         top='30%'
@@ -28,7 +26,7 @@ export default class EditOnGithubOption extends React.Component {
           }}
         >
         <ExternalLink
-          to={this.props.gitLink}
+          to={gitLink}
         >
           <EditGithubButton
             height={32}
@@ -42,6 +40,6 @@ export default class EditOnGithubOption extends React.Component {
          </ExternalLink>
         </Absolute>
       </Position>
-    )
-  }
-}
+)
+
+export default EditOnGithubSticky
