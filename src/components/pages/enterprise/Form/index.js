@@ -356,7 +356,7 @@ export default class Form extends React.Component {
           </Box>
 
           <Box mt={3}>
-            <Button disabled={loading}>
+            <Button disabled={loading || success} style={{ cursor: loading || success ? 'not-allowed': 'pointer'}}>
               { submitButtonText }
             </Button>
           </Box>
