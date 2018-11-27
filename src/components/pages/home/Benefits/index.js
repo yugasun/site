@@ -13,7 +13,7 @@ import {
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
 import { InternalLink } from 'src/fragments'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 import buildApi from 'src/assets/images/home-benefits-build-api.svg'
 import customAutomation from 'src/assets/images/home-benefits-custom-automation.svg'
 import dataProcessing from 'src/assets/images/home-benefits-data-processing.svg'

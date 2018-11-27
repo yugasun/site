@@ -9,7 +9,7 @@ import {
 } from 'serverless-design-system'
 import Button from './Button'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 import { InternalLink } from 'src/fragments'
 import riseOfServerless from 'src/assets/images/home/serverless-applications-rise.svg'
 import riseOfServerlessStatic from 'src/assets/images/home/serverless-applications-rise-static.svg'

@@ -11,7 +11,7 @@ import {
 import Button from './Button'
 import { InternalLink } from 'src/fragments'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 import allInOne from 'src/assets/images/home/all-in-one.svg'
 import allInOneStatic from 'src/assets/images/home/all-in-one-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'

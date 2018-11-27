@@ -6,7 +6,7 @@ import {
 } from 'serverless-design-system'
 import Testimonial from './DesignSystem/Testimonial'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
 import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, Flex, Transition } from 'serverless-design-system'
 
-import { AppContainerNew as AppContainer } from 'src/components'
+import HeaderContainer from './Container'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import NavButton from './NavButton'
@@ -69,7 +69,7 @@ class Header extends React.Component {
           ]}
         >
         <Transition py={[1, 1, 0]}>
-            <AppContainer>
+            <HeaderContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
                 justifyContent='space-between'
@@ -80,7 +80,7 @@ class Header extends React.Component {
                   <Navbar />
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
-            </AppContainer>
+            </HeaderContainer>
         </Transition>
         </Background>
       </HeaderWrapper>
