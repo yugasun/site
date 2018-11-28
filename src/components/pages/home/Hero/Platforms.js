@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Image, Heading, Box } from 'serverless-design-system'
+import { Flex, Image, Text, Box } from 'serverless-design-system'
 import awsLogo from 'src/assets/images/aws-logo-grey.svg'
 import kubernetesLogo from 'src/assets/images/kubernetes-logo-grey.svg'
 import googleCloudLogo from 'src/assets/images/google-cloud-logo-grey.png'
@@ -14,25 +14,24 @@ const HomeHeroFooter = () => (
       mx={'auto'}
       flexDirection='row'
     >
-      <Heading.h4
+      <Text
         color='white'
-        fontSize={[24, 24, 32]}
+        fontSize={[18, 18, 32]}
         mt={['47px','110px','150px']}
-        mx={1}
-        lineHeight={[3, 3, '44px']}
+        lineHeight={['24px', '24px', '44px']}
         align='center'
-        fontFamily='Soleil'
-        letterSpacing={['-0.4px', '-0.4px', '-0.5px']}
+        fontFamily='SoleilBk'
+        letterSpacing={['-0.28px', '-0.28px', '-0.5px']}
       >
         Supports these serverless backends
-      </Heading.h4>
+      </Text>
     </Flex.center>
     <Flex
       justifyContent={['center', 'center', 'space-evenly']}
       alignItems='space-evenly'
       flexDirection='row'
       flexWrap='wrap'
-      mt={['20px','20px', '52px']}
+      mt={['32px','32px', '52px']}
       mb={[0, 0, 9]}
     >
     <Box mr={['20px', '20px', '0px']}>

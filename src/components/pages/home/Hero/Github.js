@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ExternalLink } from 'src/fragments'
 
-import { Flex, Image, Heading, Text } from 'serverless-design-system'
+import { Flex, Image, Text } from 'serverless-design-system'
 import videoIcon from 'src/assets/images/github-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 
@@ -26,7 +26,7 @@ const HomeHeroFooter = () => (
       my={['12px', '12px', 3]}
       flexWrap='wrap'
       >
-      <Heading.h4
+      <Text
         color='gray.2'
         fontSize={18}
         mb={0}
@@ -47,7 +47,7 @@ const HomeHeroFooter = () => (
           maxWidth='none'
         />
         &nbsp; 26,257
-      </Heading.h4>
+      </Text>
     </Flex>
   </ExternalLink>
 )

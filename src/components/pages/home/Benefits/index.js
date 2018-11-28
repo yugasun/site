@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Heading,
   Button,
   ResponsiveStack,
   Image,
@@ -19,15 +18,16 @@ import customAutomation from 'src/assets/images/home-benefits-custom-automation.
 import dataProcessing from 'src/assets/images/home-benefits-data-processing.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import DesktopDownArrow from './DesktopDownArrow'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const MobileBenefitItem = ({number, title}) => (
     <Box display={['block', 'block', 'none']} mt={15} mb={25}>
     <Row>
-    <Button bg='#fd5750' width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize={['26.7px', '26.7px', '32px']} p={0}>
-     {number}
-    </Button>
+        <Button bg='#fd5750' width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize={['26.7px', '26.7px', '32px']} p={0}>
+        {number}
+        </Button>
 
-    <P color='black' fontSize='24px' ml={'32px'} mt={15}>{title}</P> 
+        <P color='black' fontSize='24px' ml={'32px'} mt={15}>{title}</P> 
     </Row>  
     </Box>
 )
@@ -139,6 +139,7 @@ export default class HomeBenefits extends React.Component {
         })
     }
 
+    //TODO: componentize
     render() {
         return (
             <AppContainer>
@@ -157,14 +158,13 @@ export default class HomeBenefits extends React.Component {
             <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
 
             <Column width={[1, 1, '488px']}>
-                        <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
-                            <Heading.h3 fontFamily='Soleil' lineHeight={['32px', '32px', '44px']} letterSpacing='-0.5px' fontSize={['24px', '24px', '32px']} pt='12px' pb={[4, 4, 0]}>
-                What you can do with <br />serverless applications
-                </Heading.h3>
+                <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
+                    <Heading.h3 pt='12px' pb={[4, 4, 0]}>
+                        What you can do with <br />serverless applications
+                    </Heading.h3>
                 </TextWithIcon>
+
                 <Box display={['none', 'none', 'block']}>
-
-
                 <Row onClick={() => this.showBenefit('buildApi')} mt={[0,0,40]}>
                         <Button bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                         01
