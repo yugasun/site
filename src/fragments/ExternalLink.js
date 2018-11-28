@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ExternalLink = ({to, children, ...rest}) => {
+const ExternalLink = ({to, children, ...otherProps}) => {
     return (
-        <a href={to} target='_blank' rel='noopener noreferrer' {...rest}>
+        <a href={to} target='_blank' rel='noopener noreferrer' {...otherProps}>
             {children}
         </a>
     )

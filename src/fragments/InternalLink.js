@@ -8,9 +8,9 @@ function ensureLinkFormat(to) {
     return finalLink
 }
 
-const InternalLink = ({to, children, ...rest}) => {
+const InternalLink = ({to, children, ...otherProps}) => {
     return (
-        <Link to={ensureLinkFormat(to)} style={{color: 'inherit'}} {...rest}>
+        <Link to={ensureLinkFormat(to)} style={{color: 'inherit'}} {...otherProps}>
             {children}
         </Link>
     )
