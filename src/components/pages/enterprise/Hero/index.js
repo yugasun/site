@@ -14,8 +14,8 @@ const ExamplesHero = () => {
     <Column
         color='white' 
     >
-      <Box width={['auto', 'auto', 488]} mt={[0, 30, 100]}>
-        <Flex flexDirection={['column', 'column', 'row']} alignItems={['center', 'center', 'left']}>
+      <Box width={['auto', 'auto', 'auto', 'auto', 488]} mt={[0, 0, 30, 30, 30, 100]}>
+        <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} alignItems={['center', 'center', 'center', 'center', 'left']}>
             <Heading.h1 fontSize={['90px', '65px','90px']} letterSpacing={'-2px'} lineHeight={['100px', '70px', '100px']} mb={0} fontFamily='SoleilLt'>Move fast, safely</Heading.h1>
         </Flex>
         <Description>

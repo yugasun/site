@@ -19,7 +19,7 @@ const StyledForm = styled(Flex.column)`
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #eaeaea;
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 1024px) {
     position: relative;
     width: auto;
     padding-top: 40px;

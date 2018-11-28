@@ -46,7 +46,7 @@ const HomeHeroFooter = () => (
           width={20}
           maxWidth='none'
         />
-        &nbsp; 26,257
+        &nbsp; 26,681
       </Text>
     </Flex>
   </ExternalLink>

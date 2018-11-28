@@ -4,7 +4,22 @@ import { Box, Flex } from 'serverless-design-system'
 
 import { AppContainerNew as AppContainer } from 'src/components'
 import Form from './Form'
-import Benefits from './Benefits'
+import { Benefits } from 'src/components/pages/form-pages/Content'
+
+const enterpriseBenefits = [
+  {
+    heading: 'Get Support',
+    body: 'Get 24-hour support from the team behind the Serverless Framework and the Serverless Platform.'
+  },
+  {
+    heading: 'Gain Visibility',
+    body: 'Get team access to the Serverless Dashboard, the vendor-neutral Serverless operations console.'
+  },
+  {
+    heading: 'Standardize Development',
+    body: 'Get custom templates with policy enforcement to help standardize development across teams and onboard new team-members quickly.'
+  }
+]
 
 const Content = ({ theme }) => (
   <AppContainer>
@@ -14,16 +29,16 @@ const Content = ({ theme }) => (
         theme.navbarHeights.mobile,
         theme.navbarHeights.desktop,
       ]}
-      mb={[0, 0, 350]}
+      mb={[0, 0, 132, 132, 350]}
     >
       <Flex.spaceBetween
-        flexDirection={['column', 'column', 'row']}
+        flexDirection={['column', 'column', 'column', 'column', 'row']}
       >
-        <Box width={[1, 1, 2/5]}>
-          <Benefits />
+        <Box width={[1, 1, 1, 1, 2/5]}>
+          <Benefits benefits={enterpriseBenefits} />
         </Box>
         <Box
-          width={[1, 1, 1/2]}
+          width={[1, 1, 1, 1, 1/2]}
         >
           <Form />
         </Box>

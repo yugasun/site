@@ -14,8 +14,8 @@ const ExamplesHero = () => {
     <Column
         color='white' 
     >
-      <Box width={['auto', 'auto', 488]} mt={[0, 0, 150]}>
-        <Flex flexDirection={['column', 'column', 'row']} alignItems={['center', 'center', 'left']}>
+      <Box width={['auto', 'auto', 'auto', 'auto', 488]} mt={[0, 0, 0, 0, 150]}>
+        <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} alignItems={['center', 'center', 'center', 'center', 'left']}>
           <Box mt={[0, 0, '30px']}>
             <Image src={serverlessPlatform} height={'92px'} width={'75px'} />
           </Box>
