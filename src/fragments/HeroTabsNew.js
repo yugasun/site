@@ -33,7 +33,7 @@ Icon.defaultProps = { isOpen: false }
 
 export default ({ data, selected, tabWidth }) => (
   <Box>
-    <Box display={[ 'none', 'none', 'block' ]}>
+    <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
       <Card
         display='inline-block'
         border={"1px solid rgba(255, 255, 255, 0.2)"}
@@ -69,7 +69,7 @@ export default ({ data, selected, tabWidth }) => (
     </Box>
 
     <Box
-      display={[ 'block', 'block', 'none' ]}
+      display={[ 'block', 'block', 'block', 'block', 'none' ]}
       maxWidth='320px'
     >
         <DropDown

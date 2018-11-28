@@ -43,7 +43,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
 
   return (
     <BoxWithMiddleElementMargin 
-      width={[1, 1, 1, '384px']}
+      width={[1, 1, 1/2, 1/2, '384px']}
       mb={[42, 42, 32]}
     >
       <HoverableColumn>
