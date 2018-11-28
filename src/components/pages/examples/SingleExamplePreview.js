@@ -2,13 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import {
   Box,
-  Heading,
-  P,
+  Text,
   Card
 } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getExampleLink } from 'src/utils/example'
-import Link from 'gatsby-link'
+import { Heading, P } from 'src/fragments/DesignSystem'
 
 const HoverableColumn = styled(Card)`
   @media screen and (min-width: 415px) {
@@ -51,7 +50,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
        <Box m={['0px 15px', '0px 15px', '36px 48px']}>
         <InternalLink to={getExampleLink(id)}>
           <Box>
-            <P
+            <Text
               color='gray.2'
               fontSize={[0]}
               fontFamily='Soleil'
@@ -59,30 +58,24 @@ const singleExamplePreview = ({ id, frontmatter }) => {
               lineHeight={[1.33]}  
             >
             {language}
-            </P>
-            <Heading.h4
-              fontSize='24px'
-              fontFamily='Soleil'
-              letterSpacing={['-0.4px']}
-              lineHeight={[1.33]}   
+            </Text>
+            <Heading.h5 
               mb='8px'
             >
               {platform} | { title }
-            </Heading.h4>
+            </Heading.h5>
           </Box>
         </InternalLink>
           <P
-            fontSize={[2, 2, 2, 2]}
-            lineHeight={1.63}
             mt='8px'
             mb={[0, 0 ,3.6]}  
         >
           { description }
         </P>
         <ExternalLink to={gitLink}>
-          <P color='#fd5750'>
+          <Text color='#fd5750' mt={16}>
             go to github >
-          </P>
+          </Text>
         </ExternalLink>
         </Box>
       </HoverableColumn>

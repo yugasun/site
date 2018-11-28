@@ -38,6 +38,7 @@ export default class ExamplesSearch extends React.Component {
                     <Box
                         color='black'
                         mb='62px'
+                        pb='42px'
                     >
                         <SearchHeading />
                         <SearchField refreshSearch={this.sendResultsToProps}/>
