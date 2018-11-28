@@ -52,22 +52,22 @@ const TrustedClients = () => (
       flexWrap='wrap'
       mb={8}
     >
-    <Box mr={['20px', '20px', '0px']}>
-      <Image src={eaLogo} width={['54px', '54px', '90px']} height={['26px', '26px', '44px']} />
+    <Box mr={['20px', '20px', '20px', '20px', '0px']}>
+      <Image src={eaLogo} width={['54px', '54px', '54px', '54px', '90px']} height={['26px', '26px', '26px', '26px', '44px']} />
     </Box>
     
-    <Box mr={['20px', '20px', '0px']}>
-    <Image src={cocacolaLogo} width={['70px', '70px', '117px']} height={['23px', '23px', '36px']}/>
+    <Box mr={['20px', '20px', '20px', '20px', '0px']}>
+    <Image src={cocacolaLogo} width={['70px', '70px', '70px', '70px','117px']} height={['23px', '23px', '23px', '23px', '36px']}/>
     </Box>
 
-    <Image src={nordstromLogo} width={['108px', '108px', '180px']} height={['16px', '16px', '26px']} />
+    <Image src={nordstromLogo} width={['108px', '108px', '108px', '108px', '180px']} height={['16px', '16px', '16px', '16px', '26px']} />
 
-    <Box mt={['20px', '20px', '0px']} mr={['20px', '20px', '0px']}>
-      <Image src={expediaLogo} width={['88px', '88px', '147px']} height={['25px', '25px', '42px']}/>
+    <Box mt={['20px', '20px', '0px']} mr={['20px', '20px', '20px', '20px', '0px']}>
+      <Image src={expediaLogo} width={['88px', '88px', '88px', '88px', '147px']} height={['25px', '25px', '25px', '25px', '42px']}/>
     </Box>
 
     <Box mt={['20px', '20px', '0px']}>
-      <Image src={reutersLogo} width={['96px', '96px', '160px']} height={['25px', '25px', '42px']}/>
+      <Image src={reutersLogo} width={['96px', '96px', '96px', '96px', '160px']} height={['25px', '25px', '25px', '25px', '42px']}/>
     </Box>
     
     </Flex>

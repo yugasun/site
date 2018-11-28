@@ -28,7 +28,7 @@ const FlexWithShadow = styled(Flex.horizontallyCenter)`
 const ResponsiveRightPreFooterBackground = styled(Background)`
     background-size: 100% 100%;
 
-    @media screen and (max-width: 415px) {
+    @media screen and (max-width: 1024px) {
       background-position: 59% 106%;
       background-size: 138% 103%;
     }
