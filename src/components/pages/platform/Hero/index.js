@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { Box, Text, Image, Heading, Flex, Column } from 'serverless-design-system'
+import { Box, Image, Heading, Flex, Column } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import serverlessPlatform from 'src/assets/images/pages/platform/serverless-platform.svg'
+import { Description, MainHeading, TopHeading } from 'src/components/pages/form-pages/Hero'
 
 const ExamplesHero = () => {
   return (
@@ -10,7 +11,6 @@ const ExamplesHero = () => {
     background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
     height={[440, 440, 614]}
   >
-
     <Column
         color='white' 
     >
@@ -20,20 +20,13 @@ const ExamplesHero = () => {
             <Image src={serverlessPlatform} height={'92px'} width={'75px'} />
           </Box>
             <Column pl={['10px', '10px','50px']}>
-              <Heading.h3 letterSpacing={'-0.8px'} lineHeight={'45px'} mb={0}align={['center', 'center', 'initial']}>serverless</Heading.h3>
-            <Heading.h1 fontSize={['48px', '48px', '81px']} letterSpacing={'-1.8px'} lineHeight={['45px', '45px', '90px']} mb={0}>platform</Heading.h1>
+              <TopHeading>serverless</TopHeading>
+              <MainHeading>platform</MainHeading>
           </Column>
         </Flex>
-        <Text.p
-            fontSize={[18, 18, 24]}
-            fontFamily='SoleilLt'
-            lineHeight='1.33'
-            m={0}
-            pt={['40px', '40px', '30px']}
-            align={['center', 'center', 'initial']}
-        >
+        <Description>
           Everything you need to scale, operationalize, and secure your serverless application development.
-        </Text.p>        
+        </Description>        
       </Box>
     </Column>
   </HeroWrapper>
