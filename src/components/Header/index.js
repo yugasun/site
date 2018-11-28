@@ -59,16 +59,18 @@ class Header extends React.Component {
       <HeaderWrapper
         width={1}
         maxHeight='100%'
-        oy={['scroll', 'scroll', 'visible']}
+        oy={['scroll', 'scroll', 'scroll', 'scroll', 'visible']}
       >
         <Background
           background={[
             'black',
             'black',
+            'black',
+            'black',
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-        <Transition py={[1, 1, 0]}>
+        <Transition py={[1, 1, 1, 1, 0]}>
             <HeaderContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'

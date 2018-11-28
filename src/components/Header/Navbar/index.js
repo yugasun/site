@@ -26,18 +26,20 @@ const Navbar = () => (
   <NavbarContext.Consumer>
     {({ isNavbarActive }) => (
       <Box
-        width={[1, 1, 'auto']}
+        width={[1, 1, 1, 1, 'auto']}
         display={[
+          smallScreenNavbarVisibility(isNavbarActive),
+          smallScreenNavbarVisibility(isNavbarActive),
           smallScreenNavbarVisibility(isNavbarActive),
           smallScreenNavbarVisibility(isNavbarActive),
           'inline-block',
         ]}
       >
-        <List p='0' mt={[4, 3, 0]} ml={[4, 3, 0]} mr={0} mb={0}>
+        <List p='0' mt={[4, 3, 4, 3, 0]} ml={[4, 3,4, 3, 0]} mr={0} mb={0}>
           {MenuList.map((MenuItem, index) => (
             <NavListItem
               key={index}
-              display={['block', 'block', 'inline-block']}
+              display={['block', 'block', 'block', 'block', 'inline-block']}
             >
               <MenuItem />
             </NavListItem>
