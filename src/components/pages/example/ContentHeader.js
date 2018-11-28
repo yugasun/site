@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Heading, Row, P, Image} from 'serverless-design-system'
+import { Box, Heading, Row, Image} from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import styled from 'styled-components'
+import { P } from 'src/fragments/DesignSystem'
 
 const WidthContainer = styled(Box)`
     @media screen and (min-width: 415px) {
@@ -40,7 +41,7 @@ const ContentHeader = ({platform, title, authorLink, description, authorName, au
                   <Heading.h1 align='center' fontSize={['32px', '32px', '48px']} lineHeight={['44px', '44px', '62px']} letterSpacing={['-0.5px', '-0.5px', '0.5px']} fontFamily='Soleil' mt={18} mb={0} width={1/2}>
                 {platform} | {title}
                   </Heading.h1>
-                  <P align='center' lineHeight={'1.63'} mt={['8px','8px','9px']} mb={['22px','22px','21px']}>{description}</P>
+                  <P align='center' mt={['8px','8px','9px']} mb={['22px','22px','21px']}>{description}</P>
             </WidthContainer>
             <ExternalLink to={authorLink}>
                   <Row justifyContent='center' alignItems='center' mb={'57px'} pl={[0, 0, '50px']}>
