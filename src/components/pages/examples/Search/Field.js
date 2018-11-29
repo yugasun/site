@@ -47,15 +47,17 @@ export default class SearchField extends React.Component {
   render() { 
     return (
     <Card
-      border='1px solid #5b5b5b'
+        boxShadow='-2px -2px 8px 0 rgba(0, 0, 0, 0.08)'
         mt={[22, 22, 5]}
         mb={[32, 32, 40]}
-        mx={[15,15,0]}
+        ml={[15,15,0]}
+        width={[1, 1, '490px', '490px', 3/4]}
+        mr={[15, 15, 22, 22, 32]}
     >
     <ResponsiveStack>
       <ExamplesSearchField
             placeholder='Search for an example'
-            height={46}
+            height={50}
             width='100%'
             border='none'
             fontSize={14} 
