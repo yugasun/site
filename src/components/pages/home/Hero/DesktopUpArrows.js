@@ -4,7 +4,7 @@ import upArrowGroup from 'src/assets/images/up-arrow-group-red.svg'
 
 const DesktopUpArrows = () => (
     <Relative
-    display={['none', 'none', 'none', 'block']}
+    display={['none', 'none', 'none', 'none', 'block']}
     left={['-0%', '-0%', '-3%', '-4%', '-10%', '-15%']}
     top='200px'
     >

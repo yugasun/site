@@ -9,11 +9,12 @@ const DownArrowsAnimationStyles = {
 
 const DesktopDownArrow = ({animationTriggered}) => (
     <Absolute
-        display={['none', 'none', 'block']}
+        display={['none', 'none', 'none', 'none', 'block']}
         right='0'
         mr={80}
-        mt={220}
+        mt={70}
         style={animationTriggered ? DownArrowsAnimationStyles: {}}
+        zIndex='5'
         >
         <Image
             src={downArrows}

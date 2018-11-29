@@ -38,9 +38,9 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
   </TerminalBackground>
 
   <Relative
-    mt={[120, 120, 150]}
+    mt={[120, 120, 120, 120, 150]}
     ml={[0, 0, 103]}
-    width={['320px', '320px', 1]}
+    width={['320px', '320px', '320px', '320px', 1]}
   >
   <Image
         src={homepageHeroTerminal}
@@ -48,10 +48,10 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
     
   </Relative>
   <Absolute
-      mt={['160px', '160px', '210px']}
-      ml={['35px', '35px', '155px']}
+      mt={['160px', '160px', '160px', '160px', '210px']}
+      ml={['35px', '35px', '135px', '135px', '155px']}
     >
-      <Text.p color='#727679' fontSize={['10px', '10px', '13.7px']} letterSpacing='0.1px'>
+      <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>
       2 &nbsp;&nbsp;&nbsp;&nbsp;<Text.span color='#fff'>$ npm install serverless -g</Text.span><br/>
       3<br/>
