@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { Box } from 'serverless-design-system'
 import styled from 'styled-components'
