@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { P } from 'src/fragments/DesignSystem'
 
 const WidthContainer = styled(Box)`
-    @media screen and (min-width: 415px) {
+    @media screen and (min-width: 1024px) {
         width: 800px;
         margin: auto;
     }

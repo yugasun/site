@@ -10,14 +10,13 @@ import EditOnGithubBottom from './EditOnGithubBottom'
 import ContentHeader from './ContentHeader'
 
 const WidthContainer = styled(Box)`
-    @media screen and (min-width: 415px) {
+    @media screen and (min-width: 1024px) {
         width: 800px;
         margin: auto;
     }
 `
 
-//TODO - REFACTOR THIS (components)
-const ExampleContent = ({ id, frontmatter, content, location }) => {
+const ExampleContent = ({ frontmatter, content }) => {
   return (
       <Box
         my={[104, 104, 170]}>
@@ -25,7 +24,7 @@ const ExampleContent = ({ id, frontmatter, content, location }) => {
         <AppContainer>
             <ContentHeader {...frontmatter}/>
             <ContentWrapper
-                width={[1, 1, '800px']}
+                width={[1, 1, 1, 1, '800px']}
                   mx='auto'
                 dangerouslySetInnerHTML={{ __html: content }}
             />
