@@ -1,10 +1,9 @@
 import React from 'react'
 import { Box, Flex, P, UseCase } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNew as AppContainer } from 'src/components'
 
-const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
-  return (
+const UseCasesNew = ({ useCaseHeader, useCaseSubHeader, cases }) => (
     <AppContainer>
       <Flex.horizontallyCenter flexDirection='column'>
         {
@@ -39,7 +38,6 @@ const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
         </Box>
       </Flex.horizontallyCenter>
     </AppContainer>
-  )
-}
+)
 
-export default UseCases
+export default UseCasesNew
