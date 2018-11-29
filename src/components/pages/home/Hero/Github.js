@@ -11,7 +11,7 @@ const VerticallyAlignedImage = styled(Image)`
 `
 
 const MobileSpace = styled(Text.span)`
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 1024px) {
     &:after {
       content: "       ";
       white-space: pre;
@@ -22,7 +22,7 @@ const MobileSpace = styled(Text.span)`
 const HomeHeroFooter = () => (
   <ExternalLink to='https://github.com/serverless/serverless'>
     <Flex
-      width={[1, 1, 3 / 4]}
+      width={[1, 1, 1]}
       my={['12px', '12px', 3]}
       flexWrap='wrap'
       >

@@ -13,6 +13,7 @@ const FrameworkHeroActions = () => (
       to: '/enterprise/',
       completed: true,
     }}
+    flexDirection={['column', 'column', 'row']}
     justifyContent='center'
   />
 )

@@ -14,6 +14,8 @@ const HomeActions = () => (
       to: '/platform/',
       completed: true,
     }}
+    flexDirection={['column', 'column', 'column', 'column', 'row']}
+    justifyContent='center'
   />
 )
 

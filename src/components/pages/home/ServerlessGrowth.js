@@ -16,9 +16,9 @@ import { Heading, P } from 'src/fragments/DesignSystem'
 
 const HomeBenefits = ({usingSafariDesktop}) => (
   <AppContainer>
-    <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mb={[0, 0, '170px']}>
+    <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mb={[0, 0, '170px']} mt={[0, 0, 132, 132, 0]}>
       
-      <Column width={[1, 1, '488px']} pt={[33, 33, 200]}>
+      <Column width={[1, 1, '488px']} pt={[33, 33, 25, 25, 200]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
           <Heading.h3 pt='12px'>
             The rise of the serverless application

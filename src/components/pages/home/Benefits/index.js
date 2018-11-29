@@ -7,7 +7,8 @@ import {
   TextWithIcon,
   Box,
   P,
-  Row
+  Row,
+  Text
 } from 'serverless-design-system'
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
@@ -29,6 +30,20 @@ const MobileBenefitItem = ({number, title}) => (
 
         <P color='black' fontSize='24px' ml={'32px'} mt={15}>{title}</P> 
     </Row>  
+    </Box>
+)
+
+const MobileBenefitItemTablet = ({number, title, width}) => (
+    <Box display={['none', 'none', 'block', 'block', 'none']}>
+        <Row>
+            <Button bg='#fd5750' width={['60px', '60px', '43.6px', '43.6px', '72px']} height={['60px', '60px', '43.6px', '43.6px', '72px']} fontSize={['26.7px', '26.7px', '26.7px', '26.7px', '32px']} p={0}>
+            {number}
+            </Button>
+
+            <Box width={width}>
+            <Text color='black' fontSize='24px' lineHeight='38px' letterSpacing='-0.38px' ml={'24px'} my={0} fontFamily='Soleil'>{title}</Text> 
+            </Box>
+        </Row>  
     </Box>
 )
 
@@ -77,7 +92,7 @@ export default class HomeBenefits extends React.Component {
         window.addEventListener('scroll', this.onScroll, false)
         const windowGlobal = typeof window !== 'undefined' && window
         if(windowGlobal) {
-            if(windowGlobal.innerWidth < 415) {
+            if(windowGlobal.innerWidth < 1024) {
                 this.setState({isUsingMobile: true})
             }
         }
@@ -146,17 +161,27 @@ export default class HomeBenefits extends React.Component {
             <Box style={this.state.benefitsAnimationTriggered ? BenefitsContainerAnimationStyles: {}}>
             <DesktopDownArrow animationTriggered={this.state.benefitsAnimationTriggered ? true: false}/>
             </Box>
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mt={100} mb={[50, 50, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
             
+            <Box display={['none', 'none', 'block', 'block', 'none']} mt='92px'>
+                <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
+                    <Heading.h3 pt='12px' pb={[4, 4, 0]}>
+                        What you can do with <br />serverless applications
+                    </Heading.h3>
+                </TextWithIcon>
+            </Box>
+
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse', 'row']} mt={[100, 100, 69, 69, 100]} mb={[50, 50, 29, 29, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
+
             <MobileBenefitItem number='03' title='Data processing' />
-            <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
 
             <MobileBenefitItem number='02' title='Custom automation' />
-            <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
+            <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 615]} height={[233, 233, 581]}/>
-
+            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
+            
+            <Box display={['block', 'block', 'none', 'none', 'block']}>
             <Column width={[1, 1, '488px']}>
                 <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
                     <Heading.h3 pt='12px' pb={[4, 4, 0]}>
@@ -164,7 +189,7 @@ export default class HomeBenefits extends React.Component {
                     </Heading.h3>
                 </TextWithIcon>
 
-                <Box display={['none', 'none', 'block']}>
+                <Box display={['none', 'none', 'none', 'none', 'block']}>
                 <Row onClick={() => this.showBenefit('buildApi')} mt={[0,0,40]}>
                         <Button bg={this.state.showBuildApi ? '#fd5750': '#eaeaea'} width={['60px', '60px', '72px']} height={['60px', '60px', '72px']} fontSize='32px'>
                         01
@@ -190,7 +215,14 @@ export default class HomeBenefits extends React.Component {
                 </InternalLink>
                 </Box>
             </Column>
+            </Box>
+            
             </ResponsiveStack.spaceBetween>
+            <Row display={['none', 'none', 'block', 'block', 'none']} justifyContent='space-between'>
+                <MobileBenefitItemTablet number='01' title='Build APIs' width='152px'/>
+                <MobileBenefitItemTablet number='02' title='Automation' width='170px'/>
+                <MobileBenefitItemTablet number='03' title='Data processing' width='197px' />
+            </Row>
         </AppContainer>
         )
     }

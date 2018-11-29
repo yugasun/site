@@ -21,9 +21,10 @@ const HeroActions = ({
     crossDomain: scrossDomain = false,
     completed: sCompleted = false,
   },
+  flexDirection,
   justifyContent
 }) => (
-    <ResponsiveStack width={[1, 1, 1]} mx={'auto'} mt={3} mb={[0,0,3]} flexDirection={['column', 'column', 'column', 'column', 'row']}>
+    <ResponsiveStack width={[1, 1, 1]} mx={'auto'} mt={3} mb={[0,0,3]} flexDirection={flexDirection} justifyContent={justifyContent}>
     <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
       <Button mr={'32px'} my={1} border={'2.5px solid'} p={1}>
         {fName}
