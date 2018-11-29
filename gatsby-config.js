@@ -29,7 +29,7 @@ module.exports = {
             policy: [{ userAgent: '*' }]
           },
           'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
+            policy: [],
             sitemap: null,
             host: null
           },
