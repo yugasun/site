@@ -29,9 +29,9 @@ const CloudProviders = () => (
         <Box>
           <P
             fontSize={3}
-            color='gray.3'
+            color='gray.2'
             lineHeight={3}
-            letterSpacing="h6"
+            letterSpacing='h6'
           >
             Supports Top Cloud Providers
           </P>
