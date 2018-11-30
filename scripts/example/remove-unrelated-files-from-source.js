@@ -8,8 +8,6 @@ module.exports = async function removeUnrelatedFiles (callback) {
     try {
       await fs.remove(`${examplesDirectoryRepoPath}/README.md`)
       await fs.remove(`${examplesDirectoryRepoPath}/.github`)
-      //TODO: temp - fix and remove this
-      await fs.remove(`${examplesDirectoryRepoPath}/openwhisk-swift-precompiled-binaries`)
       callback(null)
     } catch (err) {
       callback(err)

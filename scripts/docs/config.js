@@ -5,7 +5,7 @@ const path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
 const repoURL = 'https://github.com/serverless/serverless'
 // set branch of docs you want to see (set to tag of latest release)
-const repoBranch = 'v1.32.0'
+const repoBranch = 'master'
 /* uncomment out the line below to work locally with different docs branch
 repoBranch = 'improve-docs'
 /**/
@@ -19,9 +19,6 @@ module.exports = {
   mainSiteDocsPath: path.join(projectRoot, 'content/framework/'),
   siteDocsPath: path.join(projectRoot, 'content/framework/docs/'),
   docsMenuPath: path.join(projectRoot, 'src/constants/'),
-  // downloadLink: `${repoURL}/archive/master/.zip`
+  // comment out downloadLink to use latest release
   downloadLink: `${repoURL}/archive/${repoBranch}/.zip`
 }
-// TODO pull in latest release not master for docs build
-// https://api.github.com/repos/serverless/serverless/releases/latest
-// https://github.com/serverless/serverless/archive/v1.20.2.zip
