@@ -26,7 +26,9 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: []
+            policy: [],
+            sitemap: null,
+            host: null
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
