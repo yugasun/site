@@ -2,27 +2,24 @@ import React from 'react'
 import {
   Box,
   Column,
-  Heading,
   Row,
   Text,
 } from 'serverless-design-system'
 import FeatureItem from './Item'
 
 import { AppContainerNew as AppContainer } from 'src/components'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const Features = ({ title, description, features, leadingNumber }) => (
   <AppContainer>
     <Column px={[0, 0, 0, 45]}>
       <Box my={[0, 0, 0, 4]}>
-        <Heading.h4
+        <Heading.h3
           align='center'
-          fontFamily='Soleil'
-          lineHeight='32px'
-          letterSpacing='-0.4px'
           my={1}
         >
           {title}
-        </Heading.h4>
+        </Heading.h3>
         {
           description && (
             <Text.p

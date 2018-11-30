@@ -1,10 +1,13 @@
 import React from 'react'
 import CompareBox from './Box'
-import { Box, Heading, Background, Flex, Image, Absolute } from 'serverless-design-system'
+import { Box, Background, Flex, Image, Absolute } from 'serverless-design-system'
 import { AppContainerNew as AppContainer} from 'src/components'
 import styled from 'styled-components'
 import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
 import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
+import { Heading, Button } from 'src/fragments/DesignSystem'
+import { enterprise, developersMenu } from 'src/constants/urls'
+import { InternalLink } from 'src/fragments'
 
 const openSourcePoints = [
     ["Infrastructure as code", "Community support"],
@@ -22,11 +25,27 @@ const enterprisePoints = [
 ]
 
 const EnterpriseComparisonBox = styled(Background)`
-    margin-top: 132px;
+    margin-top: 350px;
 
     @media screen and (max-width: 1024px) {
         margin-top: 16px;
     }
+`
+
+const EnterpriseCTAButton = styled(Button)`
+    
+
+`
+
+const OpenSourceComparisonBox = styled(Background)`
+    @media screen and (min-width: 1024px) {
+        margin-top: 200px;
+    }
+`
+
+const OpenSourceCTAButton = styled(Button)`
+    border-color: 'white';
+    background-color: transparent;
 `
 
 export default class ComparisonBoxes extends React.Component {
@@ -55,24 +74,31 @@ export default class ComparisonBoxes extends React.Component {
     render() {
         return (
             <AppContainer>
-            <Heading.h3 align='center' fontFamily='Soleil'>Easy, open Serverless development.</Heading.h3>
-            <Flex mb='500px' flexDirection={['column', 'column', 'column', 'column','row']}>  
+            <Heading.h3 align='center'>Easy, open Serverless development.</Heading.h3>
+            <Flex mb='700px' flexDirection={['column', 'column', 'column', 'column','row']} mt={[0, 0, 0, 0, 46]}>  
             <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
                 <Absolute right='0' zIndex='-1' width='50%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation} />
                 </Absolute>
             </Box>
-            <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
+            <Box display={[ 'none', 'none', 'none', 'none', 'block' ]} mt={[0, 0, 0, 0, 276]}>
                 <Absolute left='0' zIndex='-1' width='50%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation}/>
                 </Absolute>
             </Box>
-            <Background background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']}>
-                <CompareBox points={openSourcePoints} heading='open source'/>
-            </Background>
-            <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
-                <CompareBox points={enterprisePoints} heading='enterprise'/>
-            </EnterpriseComparisonBox>
+
+                <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '491px']}>
+                    <CompareBox points={openSourcePoints} heading='open source'/>
+                    <InternalLink to={enterprise}>
+                        <OpenSourceCTAButton>install free</OpenSourceCTAButton>
+                    </InternalLink>
+                </OpenSourceComparisonBox>
+                <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
+                    <CompareBox points={enterprisePoints} heading='enterprise'/>
+                        <InternalLink to={developersMenu.docs}>
+                    <Button>learn more</Button>
+                    </InternalLink>
+                </EnterpriseComparisonBox>
             </Flex>
         </AppContainer>
         )

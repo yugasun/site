@@ -13,7 +13,7 @@ const HorizontalStyle = styled(HorizontalRule)`
     border-top-style: solid;
 `
 
-const ComparisonBox = ({bgColor, points, heading, mt}) => (
+const ComparisonBox = ({points, heading}) => (
             <Box color='white' px={'32px'} pt={'92px'} pb={'42px'}>
                 <Heading.h3>
                     serverless framework
