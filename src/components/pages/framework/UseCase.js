@@ -21,7 +21,7 @@ const cases = [
   {
     title: 'Data Processing',
     description:
-      'Transforming data and building data pipelines and has never been easier.',
+      'Transforming data and building data pipelines has never been easier.',
     imgSrc: dataProcessing,
   },
 ]
