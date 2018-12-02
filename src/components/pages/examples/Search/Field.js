@@ -65,6 +65,7 @@ export default class SearchField extends React.Component {
         placeholderColor='#8c8c8c'
         px={[1,1,2]}
         onChange={this.handQueryFilter}
+        className='examples-search'
       />
       </ResponsiveStack>
     </Card>
