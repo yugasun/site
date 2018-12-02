@@ -54,6 +54,7 @@ const ContentWrapper = styled(Column)`
   }
 
   img {
+    object-fit: contain;
     margin-top: 16px;
     margin-bottom: 16px;
   }
