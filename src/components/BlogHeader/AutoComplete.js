@@ -54,16 +54,17 @@ class AutoComplete extends React.Component {
           py={17.5}
           px={40}
           border={`1px solid white`}
-          bg="transparent"
+          bg='transparent'
           width={1}
           fontSize={1}
-          fontFamily="Serverless"
+          fontFamily='Serverless'
           lineHeight={1}
           opacity={0.6}
-          color="white"
+          color='white'
           onChange={this.onQueryChange}
           onKeyDown={this.onKeyDown}
           autoFocus
+          className='blog-search'
         />
 
         {
@@ -75,7 +76,7 @@ class AutoComplete extends React.Component {
               zIndex={2}
               style={{ maxHeight: '60vh', overflowY: 'scroll', paddingBottom: '5vh' }}
             >
-              <Card border="1px solid #f7f7f7">
+              <Card border='1px solid #f7f7f7'>
                 {
                   this.props.hits.map(({ title, description, objectID }) => (
                     <BlockLink
@@ -84,10 +85,10 @@ class AutoComplete extends React.Component {
                     >
                       <Option p={15}>
                         <Text.p
-                          fontFamily="SoleilBk"
+                          fontFamily='SoleilBk'
                           fontSize={3}
-                          fontWeight="bold"
-                          my="5px"
+                          fontWeight='bold'
+                          my='5px'
                         >
                           { title }
                         </Text.p>
@@ -109,4 +110,4 @@ class AutoComplete extends React.Component {
 
 AutoComplete.defaultProps = { hits: [] }
 
-export default connectAutoComplete(AutoComplete);
+export default connectAutoComplete(AutoComplete)
