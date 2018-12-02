@@ -89,7 +89,7 @@ const RightColumn = ({ actions }) => (
 
 const Prefooter = ({ heading, sentences, actions }) => (
   <Relative
-    top='-420px'
+    top={['-420px', '-420px', '-420px', '-420px', '-366px']}
     mb={['100px', '100px', '-290px']}
     height='400px'
   >
