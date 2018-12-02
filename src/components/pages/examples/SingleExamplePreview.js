@@ -22,7 +22,7 @@ const HoverableColumn = styled(Card)`
 
 const BoxWithMiddleElementMargin = styled(Box)`
   @media screen and (min-width: 1230px){
-    :not(:nth-child(3n+3)) {
+    :not(:nth-child(4n+4)) {
       margin-right: 32px;
     }
   }
@@ -43,11 +43,11 @@ const singleExamplePreview = ({ id, frontmatter }) => {
 
   return (
     <BoxWithMiddleElementMargin 
-      width={[1, 1, 1/2, 1/2, '384px']}
+      width={[1, 1, 1/2, 1/2, '22.5%', '280px']}
       mb={[42, 42, 32]}
     >
       <HoverableColumn>
-       <Box m={['0px 15px', '0px 15px', '36px 48px']}>
+       <Box m={['0px 15px', '0px 15px', '32px']}>
         <InternalLink to={getExampleLink(id)}>
           <Box>
             <Text

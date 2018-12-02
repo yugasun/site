@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Background, Row } from 'serverless-design-system'
 
-import { AppContainerNew as AppContainer }  from 'src/components'
+import { AppContainerNewest as AppContainer }  from 'src/components'
 import SearchField from './Field'
 import SearchHeading from './Heading'
 import SearchFilters from './Filters'
@@ -52,7 +52,7 @@ export default class ExamplesSearch extends React.Component {
                         <Row>
                             <SearchField refreshSearch={this.sendResultsToProps}/>
                             <Box display={['none', 'none', 'block']}>
-                                <Button onClick={this.toggleFilter} width='176px' mt={[22, 22, 5]} style={ {backgroundColor: this.state.showFilters ? '#b73833': '#fd5750'} }>
+                                <Button onClick={this.toggleFilter} width={[0, 0, '196px', '196px', '196px', '176px']} mt={[22, 22, 5]} style={ {backgroundColor: this.state.showFilters ? '#b73833': '#fd5750'} }>
                                     { this.state.showFilters ? 'hide filters': 'filters'}
                                 </Button>
                             </Box>

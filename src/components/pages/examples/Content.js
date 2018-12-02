@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex } from 'serverless-design-system'
-import { AppContainerNew as AppContainer }  from 'src/components'
+import { AppContainerNewest as AppContainer }  from 'src/components'
 import ExamplePreview from './SingleExamplePreview'
 import algoliasearch from 'algoliasearch/lite'
 import SearchOptions from './Search/index'
