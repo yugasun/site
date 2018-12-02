@@ -1,18 +1,11 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import styled from 'styled-components'
 import ContentWrapper from './ContentWrapper'
 import { AppContainerNew as AppContainer } from 'src/components'
 import EditOnGithubSticky from './EditOnGithubSticky'
 import EditOnGithubBottom from './EditOnGithubBottom'
 import ContentHeader from './ContentHeader'
-
-const WidthContainer = styled(Box)`
-    @media screen and (min-width: 1024px) {
-        width: 800px;
-        margin: auto;
-    }
-`
+import { PageContainer } from 'src/fragments/DesignSystem'
 
 const ExampleContent = ({ frontmatter, content }) => {
   return (
@@ -26,9 +19,9 @@ const ExampleContent = ({ frontmatter, content }) => {
                   mx='auto'
                 dangerouslySetInnerHTML={{ __html: content }}
             />
-            <WidthContainer>
+            <PageContainer>
                 <EditOnGithubBottom gitLink={frontmatter.gitLink} />
-            </WidthContainer>
+            </PageContainer>
             <Box mb={510}></Box>
             </AppContainer>
         </Box>
