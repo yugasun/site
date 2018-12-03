@@ -6,6 +6,7 @@ import {
 } from 'serverless-design-system'
 import { SecondaryButton } from 'src/fragments/DesignSystem'
 import NavLink from 'src/components/NavLink'
+import { InternalLink } from 'src/fragments'
 import Button from 'src/components/pages/home/Button'
 
 const HeroActions = ({
@@ -25,16 +26,16 @@ const HeroActions = ({
   justifyContent
 }) => (
     <ResponsiveStack width={[1, 1, 1]} mx={'auto'} mt={3} mb={[0,0,3]} flexDirection={flexDirection} justifyContent={justifyContent}>
-    <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
+    <InternalLink to={firstLink}>
       <Button mr={'32px'} my={1} border={'2.5px solid'} p={1}>
         {fName}
       </Button>
-    </NavLink>
-    <NavLink to={secondLink} completed={sCompleted} crossDomain={scrossDomain}>
+    </InternalLink>
+    <InternalLink to={secondLink}>
       <SecondaryButton my={1} borderWidth={'2.5px'} p={1}>
         {sName}
       </SecondaryButton>
-    </NavLink>
+    </InternalLink>
   </ResponsiveStack>
 )
 
