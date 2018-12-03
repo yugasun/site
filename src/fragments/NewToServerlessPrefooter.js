@@ -6,8 +6,8 @@ const sentences = [
   'To get started, pop open your terminal & run:',
   (
     <Text.p
-      color="white"
-      fontFamily="Serverless"
+      color='white'
+      fontFamily='Serverless'
     >
       npm install serverless -g
     </Text.p>
@@ -18,7 +18,7 @@ const actions = [
   {
     name: 'documentation',
     navProps: {
-      to: '/framework/docs',
+      to: '/framework/docs/',
       completed: false,
     },
   },
