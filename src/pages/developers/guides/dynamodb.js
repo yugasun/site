@@ -5,7 +5,7 @@ import { NewToServerlessPrefooterNew as NewToServerlessPrefooter} from 'src/frag
 import {Box, Heading} from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
-import { AppContainerNew as AppContainer} from 'src/components'
+import { AppContainerNewest as AppContainer} from 'src/components'
 
 const PageContent = styled(Box)`
     font-family: "Soleil";

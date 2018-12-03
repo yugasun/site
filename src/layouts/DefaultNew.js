@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Column } from 'serverless-design-system'
-import { Header, FooterNew as Footer } from 'src/components'
+import { HeaderNew as Header, FooterNew as Footer } from 'src/components'
 
 const DefaultLayout = ({ children, prefooter, transparentHeader }) => (
   <Column width={1}>
