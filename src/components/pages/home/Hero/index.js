@@ -18,7 +18,7 @@ const HomeHeroComponent = ({usingSafariDesktop}) => (
     flexDirection={['column', 'column', 'row']}
     
   >
-    <Box width={['auto', 'auto', '300px', '300px', '60%', '696px']}>
+    <Box width={['auto', 'auto', '300px', '70%', '60%', '696px']}>
       <HeroHeader />
       <HeroActions />
       <HeroGithub />

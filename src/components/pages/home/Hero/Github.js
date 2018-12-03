@@ -11,7 +11,7 @@ const VerticallyAlignedImage = styled(Image)`
 `
 
 const MobileSpace = styled(Text.span)`
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     &:after {
       content: "       ";
       white-space: pre;

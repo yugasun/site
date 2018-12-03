@@ -27,18 +27,18 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
     mb={[1, 1, 4]}
   >
     <TerminalBackground
-      mt={['80px', '80px', '67px']}
-    ml={[0, 0, '56px']}
+      mt={['80px', '80px', '67px', '27px', '67px']}
+      ml={[0, 0, '56px']}
   >
     <Image
       src={usingSafariDesktop ? homepageHeroLinesStatic : homepageHeroLinesMain}
-      width={586}
+      width={[586, 586, 586, 386, 586, 586]}
     >
     </Image>
   </TerminalBackground>
 
   <Relative
-    mt={[120, 120, 120, 120, 150]}
+    mt={[120, 120, 120, 80, 150]}
     ml={[0, 0, 103]}
     width={['320px', '320px', '320px', '320px', 1]}
   >
@@ -48,7 +48,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
     
   </Relative>
   <Absolute
-      mt={['160px', '160px', '160px', '160px', '210px']}
+      mt={['160px', '160px', '160px', '120px', '210px']}
       ml={['35px', '35px', '135px', '135px', '155px']}
     >
       <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
