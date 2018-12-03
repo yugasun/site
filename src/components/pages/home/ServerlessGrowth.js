@@ -7,7 +7,7 @@ import {
 } from 'serverless-design-system'
 import Button from './Button'
 
-import { AppContainerNew as AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import { InternalLink } from 'src/fragments'
 import riseOfServerless from 'src/assets/images/home/serverless-applications-rise.svg'
 import riseOfServerlessStatic from 'src/assets/images/home/serverless-applications-rise-static.svg'
@@ -29,7 +29,7 @@ const HomeBenefits = ({usingSafariDesktop}) => (
         <Button>learn more</Button>
         </InternalLink>
       </Column>
-      <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 550]}/>
+      <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 550, 550, 450, 550]}/>
     </ResponsiveStack.spaceBetween>
   </AppContainer>
 )

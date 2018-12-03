@@ -9,7 +9,7 @@ import {
 import Button from './Button'
 import { InternalLink } from 'src/fragments'
 
-import { AppContainerNew as AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import allInOne from 'src/assets/images/home/all-in-one.svg'
 import allInOneStatic from 'src/assets/images/home/all-in-one-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
@@ -19,7 +19,7 @@ const HomePlatform = ({usingSafariDesktop}) => (
   <AppContainer>
     <ResponsiveStack mb={[92, 92, 100]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
     <Absolute left='0'>
-      <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={['700px', '700px', '300px', '300px', '700px']}/>
+      <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={['700px', '700px', '300px', '300px', '500px', '700px']}/>
     </Absolute>
       <Column width={[1, 1, 4/6, 4/6, '488px']} mt={[370, 370, 163, 163, 200]} mb={[0, 0, 0, 0, 200]} pl={[0, 0, 80, 80, 0]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-20px','-20px', '-8px']}>

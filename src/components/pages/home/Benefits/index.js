@@ -13,7 +13,7 @@ import {
 import styled from 'styled-components'
 import ButtonCTA from '../Button'
 import { InternalLink } from 'src/fragments'
-import { AppContainerNew as AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import buildApi from 'src/assets/images/home-benefits-build-api.svg'
 import customAutomation from 'src/assets/images/home-benefits-custom-automation.svg'
 import dataProcessing from 'src/assets/images/home-benefits-data-processing.svg'
@@ -62,12 +62,23 @@ const BenefitsContainerAnimationStyles = {
     transition: 'background 0.2s ease, padding 0.8s linear'
 } 
 
-const BenefitsAnimationStyles = {
+const BenefitsAnimationStylesDesktop = {
     position: 'fixed',
     backgroundColor: 'white',
     top: '-27px',
     height: '147vh',
     width: '1216px',
+    zIndex: '2',
+    paddingTop: '82px',
+    transition: 'background 0.2s ease, padding-bottom 0.8s linear'
+} 
+
+const BenefitsAnimationStylesLaptop = {
+    position: 'fixed',
+    backgroundColor: 'white',
+    top: '-27px',
+    height: '147vh',
+    width: '76%',
     zIndex: '2',
     paddingTop: '82px',
     transition: 'background 0.2s ease, padding-bottom 0.8s linear'
@@ -85,6 +96,7 @@ export default class HomeBenefits extends React.Component {
             stopAnimation: false,
             currentScrollMovement: 'down',
             lastScrollY: 0,
+            benefitsAnimationStyles: {},
         }
     }
 
@@ -94,6 +106,12 @@ export default class HomeBenefits extends React.Component {
         if(windowGlobal) {
             if(windowGlobal.innerWidth < 1024) {
                 this.setState({isUsingMobile: true})
+            }
+
+            if(windowGlobal.innerWidth >= 1600) {
+                this.setState({benefitsAnimationStyles: BenefitsAnimationStylesDesktop})
+            } else {
+                this.setState({benefitsAnimationStyles: BenefitsAnimationStylesLaptop})
             }
         }
     }
@@ -170,19 +188,19 @@ export default class HomeBenefits extends React.Component {
                 </TextWithIcon>
             </Box>
 
-            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse', 'row']} mt={[100, 100, 69, 69, 100]} mb={[50, 50, 29, 29, 200]} style={this.state.benefitsAnimationTriggered ? BenefitsAnimationStyles: {}}>
+            <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row-reverse', 'row-reverse', 'row']} mt={[100, 100, 69, 69, 100]} mb={[50, 50, 29, 29, 200]} style={this.state.benefitsAnimationTriggered ? this.state.benefitsAnimationStyles: {}}>
 
             <MobileBenefitItem number='03' title='Data processing' />
-            <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
+            <MobileCenteredImage src={dataProcessing} style={{display: this.state.isUsingMobile ||  this.state.showDataProcessing ? 'block' : 'none' }} width={[250, 250, 181, 181, 515, 615]} height={[233, 233, 169, 169, 581]}/>
 
             <MobileBenefitItem number='02' title='Custom automation' />
-            <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
+            <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 181, 181, 515, 615]} height={[233, 233, 169, 169, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 581]}/>
+            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 481, 581]}/>
             
             <Box display={['block', 'block', 'none', 'none', 'block']}>
-            <Column width={[1, 1, '488px']}>
+            <Column width={[1, 1, '488px', '488px', '368px', '488px']}>
                 <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
                     <Heading.h3 pt='12px' pb={[4, 4, 0]}>
                         What you can do with <br />serverless applications
