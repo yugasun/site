@@ -58,3 +58,6 @@
 /framework/docs/providers/azure/guide/quickstart/ /framework/docs/providers/azure/guide/quick-start/ 301
 /framework/docs/platform/commands/run/ /framework/docs/platform/commands/ 301
 /framework/docs/platform/commands/emit/ /framework/docs/platform/commands/ 301
+/getting-started/ /framework/docs/getting-started/ 301 
+/framework/docs/providers/aws/vpc/ /framework/docs/providers/aws/guide/functions/ 301
+/framework/status/ /framework/ 301
