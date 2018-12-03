@@ -20,26 +20,20 @@ import {
 } from 'src/utils/blog'
 import Categories from '../Categories'
 import ImagePlaceholder from '../ImagePlaceholder'
-import styled from 'styled-components'
 
 const LinkImage = getLinkComponent(Image)
-const BackgroundWithOpacity = styled(Background)`
-  opacity: 0.3;
-  position: absolute;
-`
 
 const WrapperWithHero = ({ heroImage, children }) => (
   heroImage ? (
-    <BackgroundWithOpacity
+    <Background
       width={1}
       height='fullHeight'
       background={`black url(${JSON.stringify(heroImage)})`}
       backgroundSize='cover'
       backgroundPosition='center'
-      opacity='0.5'
     >
       { children }
-    </BackgroundWithOpacity>
+    </Background>
   ) : (
     <ImagePlaceholder size='large'>
       { children }
@@ -53,8 +47,7 @@ const Item = ({ id, frontmatter }) => {
   const { title, category: categoryIds, description, heroImage } = frontmatter
 
   return (
-    <Box>
-      <WrapperWithHero heroImage={heroImage} />
+    <WrapperWithHero heroImage={heroImage}>
       <Absolute
         height='fullHeight'
         width={1}
@@ -148,9 +141,7 @@ const Item = ({ id, frontmatter }) => {
           </Flex.verticallyCenter>
         </AppContainer>
       </Absolute>
-    </Box>
-    
-    
+    </WrapperWithHero>
   )
 }
 

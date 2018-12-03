@@ -127,14 +127,6 @@ export default class BlogWrapper extends React.Component {
         `\n<a class="line">${number++}</a>`
       ))
     })
-
-    if(window.location.href.indexOf('#') > -1) {
-      setTimeout(function() {
-        window.scrollBy(0, -15)
-        window.scrollBy(0, 1)
-      }, 500)
-      
-    }
   }
 
   render() {
