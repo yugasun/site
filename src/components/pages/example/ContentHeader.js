@@ -31,7 +31,7 @@ const ContentHeader = ({platform, title, authorLink, description, authorName, au
         <ExampleBreadcrumbs path={'/examples/'}/>
             <PageContainer>
 
-                  <Heading.h1 align='center' fontSize={['32px', '32px', '48px']} lineHeight={['44px', '44px', '62px']} letterSpacing={['-0.5px', '-0.5px', '0.5px']} fontFamily='Soleil' mt={18} mb={0} width={1/2}>
+                  <Heading.h1 align='center' fontSize={['32px', '32px', '48px']} lineHeight={['44px', '44px', '62px']} letterSpacing={['-0.5px', '-0.5px', '0.5px']} fontFamily='Soleil' mt={18} mb={0} width={1}>
                 {platform} | {title}
                   </Heading.h1>
                   <P align='center' mt={['8px','8px','9px']} mb={['22px','22px','21px']}>{description}</P>

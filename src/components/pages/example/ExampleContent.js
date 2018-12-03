@@ -15,7 +15,7 @@ const ExampleContent = ({ frontmatter, content }) => {
         <AppContainer>
             <ContentHeader {...frontmatter}/>
             <ContentWrapper
-                width={[1, 1, 1, 1, 1/2, '800px']}
+                width={[1, 1, 1, 1, '800px']}
                   mx='auto'
                 dangerouslySetInnerHTML={{ __html: content }}
             />
