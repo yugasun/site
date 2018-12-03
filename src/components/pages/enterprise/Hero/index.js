@@ -14,9 +14,9 @@ const ExamplesHero = () => {
     <Column
         color='white' 
     >
-      <Box width={['auto', 'auto', 'auto', 'auto', 488]} mt={[0, 0, 30, 30, 30, 100]}>
+      <Box width={['auto', 'auto', 'auto', 'auto', 2/5]} mt={[5, 5, 30, 30, 100, 100]}>
         <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} alignItems={['center', 'center', 'center', 'center', 'left']}>
-            <Heading.h1 fontSize={['90px', '65px','90px']} letterSpacing={'-2px'} lineHeight={['100px', '70px', '100px']} mb={0} fontFamily='SoleilLt'>Move fast, safely</Heading.h1>
+            <Heading.h1 fontSize={['65px', '65px', '65px', '75px', '75px', '90px']} letterSpacing={'-2px'} lineHeight={['70px', '70px', '70px', '70px', '70px', '100px']} mb={0} fontFamily='SoleilLt' align={['center', 'center', 'left']}>Move fast, safely</Heading.h1>
         </Flex>
         <Description>
           The Serverless Platform gives you everything you need to operationalize Serverless development. 
