@@ -197,7 +197,7 @@ export default class HomeBenefits extends React.Component {
             <MobileCenteredImage src={customAutomation} style={{display: this.state.isUsingMobile ||  this.state.showCustomAutomation ? 'block' : 'none' }} width={[250, 250, 181, 181, 515, 615]} height={[233, 233, 169, 169, 581]}/>
             
             <MobileBenefitItem number='01' title='Build APIs' />
-            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 181, 181, 615]} height={[233, 233, 169, 169, 481, 581]}/>
+            <MobileCenteredImage src={buildApi} style={{ display: this.state.isUsingMobile || this.state.showBuildApi ? 'block' : 'none' }} width={[250, 250, 181, 181, 581]} height={[233, 233, 169, 169, 481, 581]}/>
             
             <Box display={['block', 'block', 'none', 'none', 'block']}>
             <Column width={[1, 1, '488px', '488px', '368px', '488px']}>
