@@ -24,7 +24,7 @@ import styled from 'styled-components'
 
 const LinkImage = getLinkComponent(Image)
 const BackgroundWithOpacity = styled(Background)`
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
 `
 
