@@ -32,7 +32,7 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 
   @media screen and (min-width: 769px) and (max-width: 1229px){
-    width: 50%;
+    width: 33%;
     padding: 0 20px;
   }
 
@@ -43,7 +43,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
 
   return (
     <BoxWithMiddleElementMargin 
-      width={[1, 1, 1/2, 1/2, '22.5%', '280px']}
+      width={[1, 1, 1/2, 1/3, '22.5%', '280px']}
       mb={[42, 42, 32]}
     >
       <HoverableColumn>
