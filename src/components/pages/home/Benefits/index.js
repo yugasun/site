@@ -104,7 +104,7 @@ export default class HomeBenefits extends React.Component {
         window.addEventListener('scroll', this.onScroll, false)
         const windowGlobal = typeof window !== 'undefined' && window
         if(windowGlobal) {
-            if(windowGlobal.innerWidth < 1024) {
+            if(windowGlobal.innerWidth <= 1024) {
                 this.setState({isUsingMobile: true})
             }
 
