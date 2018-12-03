@@ -7,6 +7,16 @@ import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
 import gitHubSvg from 'src/assets/images/github.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
+import styled from 'styled-components'
+
+const DocContentWrapper = styled(Column)`
+  h1, h2, h3, h4, h5, h6 {
+    &[id] {
+      margin-top: -60px;
+      padding-top: 100px;
+    }
+  }
+`
 
 export default ({ data: { doc }, location }) => (
   <Default footerBackground={false}>
@@ -30,7 +40,7 @@ export default ({ data: { doc }, location }) => (
         location={location}
       />
       <LiteHeader url={location.pathname} />
-      <Row className="docWrapper">
+      <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
         <a
           title='Edit this page on github'
@@ -42,9 +52,9 @@ export default ({ data: { doc }, location }) => (
             <span className='text'>Edit on github</span>
           </span>
         </a>
-        <Column
+        <DocContentWrapper
           dangerouslySetInnerHTML={{ __html: doc.content }}
-          className="content"
+          className='content'
         />
       </Row>
     </DocsWrapper>
