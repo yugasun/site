@@ -20,22 +20,28 @@ import {
 } from 'src/utils/blog'
 import Categories from '../Categories'
 import ImagePlaceholder from '../ImagePlaceholder'
+import styled from 'styled-components'
 
 const LinkImage = getLinkComponent(Image)
+const BackgroundWithOpacity = styled(Background)`
+  opacity: 0.5;
+  position: absolute;
+`
 
 const WrapperWithHero = ({ heroImage, children }) => (
   heroImage ? (
-    <Background
+    <BackgroundWithOpacity
       width={1}
-      height="fullHeight"
+      height='fullHeight'
       background={`black url(${JSON.stringify(heroImage)})`}
-      backgroundSize="cover"
-      backgroundPosition="center"
+      backgroundSize='cover'
+      backgroundPosition='center'
+      opacity='0.5'
     >
       { children }
-    </Background>
+    </BackgroundWithOpacity>
   ) : (
-    <ImagePlaceholder size="large">
+    <ImagePlaceholder size='large'>
       { children }
     </ImagePlaceholder>
   )
@@ -47,11 +53,12 @@ const Item = ({ id, frontmatter }) => {
   const { title, category: categoryIds, description, heroImage } = frontmatter
 
   return (
-    <WrapperWithHero heroImage={heroImage}>
+    <Box>
+      <WrapperWithHero heroImage={heroImage} />
       <Absolute
-        height="fullHeight"
+        height='fullHeight'
         width={1}
-        bg="black"
+        bg='black'
         zIndex={1}
         style={{ opacity: 0.5 }}
       />
@@ -61,9 +68,9 @@ const Item = ({ id, frontmatter }) => {
       >
         <AppContainer>
           <Flex.verticallyCenter
-            flexDirection="column"
+            flexDirection='column'
             width={[1, 1, 1, 0.65]}
-            m="auto"
+            m='auto'
             pt={4}
           >
             <Categories
@@ -72,11 +79,11 @@ const Item = ({ id, frontmatter }) => {
             />
             <BlockLink to={getBlogLink(id)}>
               <Heading.h2
-                fontFamily="SoleilBk"
+                fontFamily='SoleilBk'
                 fontSize={[4, 4, 5, 7]}
-                align="center"
+                align='center'
                 lineHeight={[3, 3, 2, 1]}
-                color="white"
+                color='white'
               >
                 { title }
               </Heading.h2>
@@ -86,11 +93,11 @@ const Item = ({ id, frontmatter }) => {
               px={[0, 0, 0, 4]}
             >
               <Text.p
-                fontFamily="SoleilBk"
-                color="white"
+                fontFamily='SoleilBk'
+                color='white'
                 lineHeight={1.63}
                 mt={[0, 0, 1, 15]}
-                align="center"
+                align='center'
               >
                 { description }
               </Text.p>
@@ -99,14 +106,14 @@ const Item = ({ id, frontmatter }) => {
             <Row width={1}>
               <Column
                 width={1}
-                alignItems="flex-end"
-                justifyContent="center"
+                alignItems='flex-end'
+                justifyContent='center'
               >
                 <BlockLink to={authorURL}>
                   <Text
-                    fontFamily="Soleil"
+                    fontFamily='Soleil'
                     fontSize={0}
-                    color="white"
+                    color='white'
                     lineHeight={2}
                   >
                     written by &nbsp;
@@ -123,14 +130,14 @@ const Item = ({ id, frontmatter }) => {
 
               <Column
                 width={1}
-                alignItems="flex-start"
-                justifyContent="center"
+                alignItems='flex-start'
+                justifyContent='center'
               >
                 <BlockLink to={authorURL}>
                   <Text
-                    fontFamily="Soleil"
+                    fontFamily='Soleil'
                     fontSize={0}
-                    color="white"
+                    color='white'
                     lineHeight={2}
                   >
                     &nbsp; {author.name}
@@ -141,8 +148,10 @@ const Item = ({ id, frontmatter }) => {
           </Flex.verticallyCenter>
         </AppContainer>
       </Absolute>
-    </WrapperWithHero>
-  );
+    </Box>
+    
+    
+  )
 }
 
-export default withTheme(Item);
+export default withTheme(Item)
