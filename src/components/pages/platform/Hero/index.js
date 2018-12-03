@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Image, Heading, Flex, Column } from 'serverless-design-system'
+import { Box, Image, Flex, Column } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import serverlessPlatform from 'src/assets/images/pages/platform/serverless-platform.svg'
 import { Description, MainHeading, TopHeading } from 'src/components/pages/form-pages/Hero'
@@ -9,12 +9,12 @@ const ExamplesHero = () => {
   return (
   <HeroWrapper
     background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
-    height={[440, 440, 614]}
+    height={[440, 440, 560, 560, 614]}
   >
     <Column
         color='white' 
     >
-      <Box width={['auto', 'auto', 'auto', 'auto', 488]} mt={[0, 0, 0, 0, 150]}>
+      <Box width={['auto', 'auto', 'auto', 'auto', 2/5]} mt={[0, 0, 0, 0, 150]}>
         <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} alignItems={['center', 'center', 'center', 'center', 'left']}>
           <Box mt={[0, 0, '30px']}>
             <Image src={serverlessPlatform} height={'92px'} width={'75px'} />

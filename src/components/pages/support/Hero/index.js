@@ -9,7 +9,7 @@ const ExamplesHero = () => {
   return (
   <HeroWrapper
     background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
-    height={[420, 420, 614]}
+    height={[420, 420, 500, 500, 614]}
   >
 
     <Column

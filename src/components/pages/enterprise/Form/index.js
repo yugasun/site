@@ -19,6 +19,10 @@ const StyledForm = styled(Flex.column)`
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #eaeaea;
 
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    width: 38%;
+  }
+
   @media screen and (max-width: 1024px) {
     position: relative;
     width: auto;
@@ -128,9 +132,6 @@ export default class Form extends React.Component {
     return (
       <form onSubmit={this.onSubmit} id={formId}>
         <StyledForm>
-          <Box width={[ 1, 1, 5/7 ]}>
-          </Box>
-
            <Heading.h4
             fontFamily='Soleil'
             lineHeight={'32px'}
