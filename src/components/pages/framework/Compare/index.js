@@ -1,7 +1,7 @@
 import React from 'react'
 import CompareBox from './Box'
 import { Box, Background, Flex, Image, Absolute } from 'serverless-design-system'
-import { AppContainerNew as AppContainer} from 'src/components'
+import { AppContainerNewest as AppContainer} from 'src/components'
 import styled from 'styled-components'
 import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
 import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
