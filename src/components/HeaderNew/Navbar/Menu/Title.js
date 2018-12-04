@@ -38,7 +38,7 @@ const Title = ({ name }) => (
   <NavbarContext.Consumer>
     {({ isNavbarShrinked }) => (
       <TitleWrapperWithLeadingSlash
-        px={[1, 1, '8px', '8px', '2rem', '25px']}
+        px={[1, 1, '8px', '8px', '1.5rem', '15px']}
         py={[2, 2, '27.5px']}
         transition={[
           'none',
@@ -50,11 +50,11 @@ const Title = ({ name }) => (
           'transparent',
           'primaryColor',
         ]}
-        beforeBoxLeft={[0, 0, '-1px', '8px']}
+        beforeBoxLeft={[0, 0, '-1px', '3px', '4px', '3px']}
       >
         <Text.span
           fontFamily='Serverless'
-          fontSize={2}
+          fontSize={14}
           color={'white'}
           letterSpacing={0.7}
         >

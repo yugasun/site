@@ -8,8 +8,8 @@ const LogoComponent = () => (
   <Link to='/'>
     <Logo
       src={logo}
-      height={['21px', '21px', '21px', '30px']}
-      width={['124px', '124px', '124px', '177px']}
+      height={['21px', '21px', '21px', '64px']}
+      width={['124px', '124px', '124px', '153px']}
       alt='Serverless'
     />
   </Link>

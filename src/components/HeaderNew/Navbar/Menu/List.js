@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button } from 'serverless-design-system'
+import { Box } from 'serverless-design-system'
 
 import MenuTitle from './Title'
 import MenuDescription from './Description'
@@ -10,7 +10,8 @@ import {
   CommunityDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { enterprise, resources } from 'src/constants/urls'
+import { enterprise, resources, products } from 'src/constants/urls'
+import { Button } from 'src/fragments/DesignSystem'
 
 const ProductMenu = () => (
   <Box>
@@ -18,6 +19,14 @@ const ProductMenu = () => (
     <MenuDescription wrapperStyles={{ minWidth: [0, 0, 0, 0, '320px'], pr: [1, 1, 1, 1, 0], pb: [3] }} >
       <ProductDropdownList />
     </MenuDescription>
+  </Box>
+)
+
+const EnterpriseMenu = () => (
+  <Box>
+    <NavLink to={enterprise} completed className='header-menu-item'>
+      <MenuTitle name={'enterprise'} />
+    </NavLink>
   </Box>
 )
 
@@ -61,11 +70,11 @@ const BlogMenu = () => (
   </Box>
 )
 
-const EnterpriseMenu = () => (
+const SupportMenu = () => (
   <Box pt={[2, 2, 0]} pl={[1, 1, 2, 2, 2, 2]}>
-    <NavLink to={enterprise} completed className='header-menu-item'>
-      <Button fontSize={'1.5rem'} px={2} py={'16px'} width={['176px', '176px', '176px', '176px', '156px', '176px']}>
-        enterprise
+    <NavLink to={products.support} completed className='header-menu-item'>
+      <Button fontSize={'1.5rem'} px={[2, 2, 2, 2, 0]} width={['176px', '176px', '176px', '176px', '140px', '140px']}>
+        support
       </Button>
     </NavLink>
   </Box>
@@ -73,9 +82,10 @@ const EnterpriseMenu = () => (
 
 export default [
   ProductMenu,
+  EnterpriseMenu,
   DeveloperMenu,
   CommunityMenu,
   LearnMenu,
   BlogMenu,
-  EnterpriseMenu,
+  SupportMenu
 ]
