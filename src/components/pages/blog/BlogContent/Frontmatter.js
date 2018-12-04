@@ -22,7 +22,7 @@ const WrittenByText = ({ children }) => (
   </Text>
 )
 
-export default ({ frontmatter }) => {
+const BlogFrontmatter = ({ frontmatter }) => {
   const { category: categoryIds, authors, title, scripts } = frontmatter
   const author = getAuthorById((authors || [])[0])
 
@@ -45,6 +45,7 @@ export default ({ frontmatter }) => {
         fontFamily='SoleilBk'
         letterSpacing='h4'
         align='center'
+        className='blog-title'
       >
         { title }
       </Heading.h1>
@@ -69,3 +70,5 @@ export default ({ frontmatter }) => {
     </Column>
   )
 }
+
+export default BlogFrontmatter

@@ -14,7 +14,7 @@ const CategoryDetail = ({ id, renderComma, textStyleProps }) => (
       opacity={0.4}
       { ...textStyleProps }
     >
-      <InternalLink to={getCategoryLink(id)}>
+      <InternalLink to={getCategoryLink(id)} className='blog-category'>
         { getCategoryNameById(id) }
       </InternalLink>
       { renderComma ? (<React.Fragment>,&nbsp;</React.Fragment>) : '' }
