@@ -9,19 +9,22 @@ const platformOptions = [
             id: 'gcp',
             name: 'platform',
             text: 'Google Cloud'
-        },
+        }
+    ],
+    [
         {
             id: 'azure',
             name: 'platform',
             text: 'Azure'
         },
-    ],
-    [
         {
             id: 'openwhisk',
             name: 'platform',
             text: 'OpenWhisk'
         },
+        
+    ],
+    [
         {
             id: 'kubeless',
             name: 'platform',
@@ -41,19 +44,21 @@ const languageOptions = [
             id: 'go',
             name: 'language',
             text: 'Go'
-        },
+        }
+    ],
+    [
         {
             id: 'python',
             name: 'language',
             text: 'Python'
         },
-    ],
-    [
         {
             id: 'swift',
             name: 'language',
             text: 'Swift'
-        },
+        }
+    ],
+    [
         {
             id: 'java',
             name: 'language',
@@ -63,7 +68,7 @@ const languageOptions = [
             id: 'php',
             name: 'language',
             text: 'PHP'
-        },
+        }
     ]
 ]
 

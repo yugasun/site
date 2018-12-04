@@ -1,30 +1,23 @@
 import React from 'react'
 import CheckboxFilter from './Checkboxes'
-import { platformOptions, languageOptions, frameworkOptions } from './Data'
+import { platformOptions, languageOptions } from './Data'
 import { Box, P, Row, InlineBlock } from 'serverless-design-system'
 
 const SearchFilterOptions = ({refreshFilters}) => (
     <Box>
         <InlineBlock>
-            <P>platform</P>
+            <P m={0}>platform</P>
             <Row>
                 <CheckboxFilter options={platformOptions} refreshFilter={refreshFilters} name='platform'/>
             </Row>
         </InlineBlock>
 
         <InlineBlock>
-            <P>language</P>
+            <P m={0}>language</P>
                 <Row>
                     <CheckboxFilter options={languageOptions} refreshFilter={refreshFilters} name='language'/>
                 </Row>
-        </InlineBlock>
-
-        <InlineBlock>
-        <P>framework</P>
-            <Row>
-                 <CheckboxFilter options={frameworkOptions} refreshFilter={refreshFilters} name='framework'/>
-            </Row>
-        </InlineBlock>   
+        </InlineBlock>  
     </Box>                      
 )
 
