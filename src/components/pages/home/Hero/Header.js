@@ -2,17 +2,19 @@ import React from 'react'
 
 import { Column } from 'serverless-design-system'
 import DesktopUpArrows from './DesktopUpArrows'
-import { Heading } from 'src/fragments/DesignSystem'
+import { Heading, P } from 'src/fragments/DesignSystem'
+import HeroGithub from './Github'
 
 const HeroHeader = () => (
   <Column mt={[1]}>
     <DesktopUpArrows />
-    <Heading.h1 color='white' align={['center', 'center', 'left']}>
+    <HeroGithub />
+    <Heading.h3 color='white' align={['center', 'center', 'left']}>
       The most widely-adopted toolkit for building serverless applications.
-    </Heading.h1>
-    <Heading.h4>
+    </Heading.h3>
+    <P align={['center', 'center', 'left']}>
       Any provider. Same experience.
-    </Heading.h4>
+    </P>
   </Column>
 )
 

@@ -11,7 +11,6 @@ import {
   Text
 } from 'serverless-design-system'
 import styled from 'styled-components'
-import ButtonCTA from '../Button'
 import { InternalLink } from 'src/fragments'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import buildApi from 'src/assets/images/home-benefits-build-api.svg'
@@ -19,7 +18,7 @@ import customAutomation from 'src/assets/images/home-benefits-custom-automation.
 import dataProcessing from 'src/assets/images/home-benefits-data-processing.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import DesktopDownArrow from './DesktopDownArrow'
-import { Heading } from 'src/fragments/DesignSystem'
+import { Heading, Button as ButtonCTA } from 'src/fragments/DesignSystem'
 
 const MobileBenefitItem = ({number, title}) => (
     <Box display={['block', 'block', 'none']} mt={15} mb={25}>

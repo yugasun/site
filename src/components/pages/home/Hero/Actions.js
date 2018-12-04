@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system'
 import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const HomeActions = () => (
@@ -14,8 +14,8 @@ const HomeActions = () => (
       to: '/platform/',
       completed: true,
     }}
-    flexDirection={['column', 'column', 'column', 'column', 'column', 'row']}
-    justifyContent='center'
+    flexDirection={['column', 'column', 'column', 'column', 'row', 'row']}
+    justifyContent={['center', 'center', 'left']}
   />
 )
 

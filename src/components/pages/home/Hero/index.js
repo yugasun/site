@@ -4,7 +4,6 @@ import HeroWrapper from './Wrapper'
 import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
-import HeroGithub from './Github'
 import HeroPlatforms from './Platforms'
 import { Flex, Box } from 'serverless-design-system'
 
@@ -21,7 +20,6 @@ const HomeHeroComponent = ({usingSafariDesktop}) => (
     <Box width={['auto', 'auto', '300px', '70%', '60%', '696px']}>
       <HeroHeader />
       <HeroActions />
-      <HeroGithub />
     </Box>
     <HeroImage usingSafariDesktop={usingSafariDesktop}/>
 </Flex>
