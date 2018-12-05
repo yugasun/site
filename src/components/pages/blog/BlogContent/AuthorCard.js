@@ -54,6 +54,7 @@ export default ({ author }) => (
         mt={[0, 0, 0, 3]}
         fontFamily='SoleilBk'
         fontSize={[3, 3, 3, 4]}
+        className='blog-author'
       >
         About { author.name }
       </Heading.h4>

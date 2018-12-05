@@ -35,13 +35,14 @@ export default class EmailField extends React.Component {
         width={[1, 1, 0.6]}
         borderRadius={0}
         fontSize={2}
-        fontFamily="Serverless"
-        placeholderColor="white"
+        fontFamily='Serverless'
+        placeholderColor='white'
         required
         {...this.props}
         onFocus={this.clearPlaceholder}
         onBlur={this.restorePlaceholder}
         placeholder={this.state.placeholder}
+        className='newsletter-email'
       />
     )
   }

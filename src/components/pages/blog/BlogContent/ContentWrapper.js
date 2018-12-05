@@ -54,6 +54,7 @@ const ContentWrapper = styled(Column)`
   }
 
   img {
+    object-fit: contain;
     margin-top: 16px;
     margin-bottom: 16px;
   }
@@ -68,6 +69,11 @@ const ContentWrapper = styled(Column)`
     color: #000000;
     margin-top: 35px;
     margin-bottom: 15px;
+
+    &[id] {
+      margin-top: -60px;
+      padding-top: 100px;
+    }
   }
 
   li {
@@ -115,7 +121,7 @@ export default class BlogWrapper extends React.Component {
       node.style.margin = 'auto'
     })
     domNode.querySelectorAll("code.hljs").forEach((code) => {
-      let number = 1;
+      let number = 1
       const zero = `<a class="line">${number++}</a>`
       code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
         `\n<a class="line">${number++}</a>`
