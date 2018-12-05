@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
-import { TextArea, Button, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
+import { TextArea, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
+import { Button } from 'src/fragments/DesignSystem'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
