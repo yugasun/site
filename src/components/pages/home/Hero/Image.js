@@ -12,10 +12,22 @@ import homepageHeroLinesStatic from 'src/assets/images/home/hero-lines-static.sv
 import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 import styled from 'styled-components'
 
-const TerminalBackground = styled(Absolute)`
+const HeroLinesBackground = styled(Absolute)`
 
   @media screen and (max-width: 415px) {
     left: 0px;
+  }
+`
+
+const TerminalBackground = styled(Relative)`
+  @media screen and (max-width: 340px) {
+    margin-left: -37px;
+  }
+`
+
+const TerminalText = styled(Absolute)`
+  @media screen and (max-width: 340px) {
+    margin-left: 1px;
   }
 `
 
@@ -26,8 +38,8 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
     mx='auto'
     mb={[1, 1, 4]}
   >
-    <TerminalBackground
-      mt={['42px', '42px', '67px', '27px', '67px']}
+    <HeroLinesBackground
+      mt={['42px', '42px', '67px', '27px', '43px']}
       ml={[0, 0, '30px', '56px']}
   >
     <Image
@@ -35,21 +47,21 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
       width={[586, 586, 586, 386, 586, 586]}
     >
     </Image>
-  </TerminalBackground>
+  </HeroLinesBackground>
 
-  <Relative
-    mt={[82, 82, 120, 80, 150]}
+  <TerminalBackground
+    mt={[82, 82, 120, 80, 126]}
     ml={[0, 0, 53, 103]}
-    width={['320px', '320px', '320px', '320px', 1]}
+    width={['280px', '320px', '320px', '320px', 1]}
   >
   <Image
         src={homepageHeroTerminal}
       />
     
-  </Relative>
-  <Absolute
-      mt={['122px', '122px', '160px', '120px', '210px']}
-      ml={['35px', '35px', '90px', '135px', '155px']}
+  </TerminalBackground>
+  <TerminalText
+      mt={['122px', '122px', '160px', '120px', '186px']}
+      ml={['1px', '35px', '90px', '135px', '155px']}
     >
       <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>
@@ -69,7 +81,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
 
       </Text.p>
     
-    </Absolute>
+    </TerminalText>
   </Flex>
 )
 

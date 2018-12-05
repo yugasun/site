@@ -6,7 +6,7 @@ import { Heading, P, MobileCenteredBox } from 'src/fragments/DesignSystem'
 import HeroGithub from './Github'
 
 const HeroHeader = () => (
-  <Column mt={[3]}>
+  <Column>
     <DesktopUpArrows />
     <MobileCenteredBox>
         <HeroGithub />

@@ -132,28 +132,28 @@ export default class HomeBenefits extends React.Component {
      if(!this.state.isUsingMobile) {
 
         if(this.state.currentScrollMovement === 'down' && !this.state.stopAnimation) {
-                if(currentScrollY > 1215 && currentScrollY < 1655) {
+                if(currentScrollY > 1060 && currentScrollY < 1500) {
                     this.setState({benefitsAnimationTriggered: true})
-                    if(currentScrollY > 1422 && currentScrollY < 1522) {
+                    if(currentScrollY > 1267 && currentScrollY < 1367) {
                         this.showBenefit('customAutomation')
-                      } else if(currentScrollY > 1522 && currentScrollY < 1637) {
+                      } else if(currentScrollY > 1367 && currentScrollY < 1482) {
                           this.showBenefit('dataProcessing')
-                      } else if(currentScrollY > 1637 && currentScrollY < 2002) {
-                        window.scroll({top: 1231})
+                      } else if(currentScrollY > 1482 && currentScrollY < 1847) {
+                        window.scroll({top: 1076})
                         this.setState({benefitsAnimationTriggered: false, stopAnimation: true, currentScrollMovement: 'down'})
                         
-                      } else if(currentScrollY < 1209) {
+                      } else if(currentScrollY < 1054) {
                           this.showBenefit('buildApi')
                       }
                 }
         }
 
         if(this.state.currentScrollMovement === 'up') {
-            if(window.scrollY > 1422 && window.scrollY < 1522) {
+            if(window.scrollY > 1267 && window.scrollY < 1367) {
                 this.showBenefit('customAutomation')
-              } else if(window.scrollY > 1522 && window.scrollY < 1637) {
+              } else if(window.scrollY > 1367 && window.scrollY < 1482) {
                   this.showBenefit('dataProcessing')
-              } else if(window.scrollY < 1209) {
+              } else if(window.scrollY < 1054) {
                 this.setState({benefitsAnimationTriggered: false})
                   this.showBenefit('buildApi')
               }
