@@ -27,6 +27,11 @@ const FlexWithShadow = styled(Flex.horizontallyCenter)`
 
 const ResponsiveRightPreFooterBackground = styled(Background)`
     background-size: 100% 100%;
+  
+    @media screen and (max-width: 1600px) and (min-width: 1280px){
+      background-size: auto;
+      background-position: 100%;
+    }
 
     @media screen and (max-width: 1024px) {
       background-position: 59% 106%;
@@ -76,7 +81,7 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Column height={'198px'} justifyContent='space-between'>  
+  <Column height={'172px'} justifyContent='space-between'>  
     {actions.map(({ name, navProps }, index) => (
       <Box key={index}>
         <NavLink {...navProps}>
@@ -108,8 +113,6 @@ const Prefooter = ({ heading, sentences, actions }) => (
           <Flex.center
             flexDirection='column'
             height='fullHeight'
-            py={[0, 0, 0]}
-            px={[0, 0, 0]}
           >
             <RightColumn actions={actions} />
           </Flex.center>

@@ -54,7 +54,9 @@ const Button = styled.button`
 
   @media screen and (max-width: 414px) {
     font-size: 14px;
-    width: 176px;
+    width: ${
+      (props) => props.width ? props.width : '176px'
+    };
     line-height: 24px;
     letter-spacing: 1.5px;
   }

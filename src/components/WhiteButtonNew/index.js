@@ -1,14 +1,14 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { SecondaryButton } from 'serverless-design-system'
+import { SecondaryButton } from 'src/fragments/DesignSystem'
 
 const comp = ({ children, theme }) => (
   <SecondaryButton
-    width='280px'
-    borderWidth='2.5px'
+    width='211px'
+    borderWidth='2px'
     color='white'
     p={0}
-    height='50px'
+    height='36px'
     letterSpacing={'0.8px'}
     lineHeight='21px'
     theme={{
