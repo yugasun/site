@@ -10,7 +10,7 @@ import { InternalLink } from 'src/fragments'
 import riseOfServerless from 'src/assets/images/home/serverless-applications-rise.svg'
 import riseOfServerlessStatic from 'src/assets/images/home/serverless-applications-rise-static.svg'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
-import { Heading, P, Button } from 'src/fragments/DesignSystem'
+import { Heading, P, Button, MobileCenteredBox } from 'src/fragments/DesignSystem'
 
 const HomeBenefits = ({usingSafariDesktop}) => (
   <AppContainer>
@@ -27,7 +27,9 @@ const HomeBenefits = ({usingSafariDesktop}) => (
         <Button>learn more</Button>
         </InternalLink>
       </Column>
-      <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={['100%', '100%', 300, 550, 450, 550]}/>
+      <MobileCenteredBox>
+        <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={[300, 300, 300, 550, 450, 550]}/>
+      </MobileCenteredBox>
     </ResponsiveStack.spaceBetween>
   </AppContainer>
 )

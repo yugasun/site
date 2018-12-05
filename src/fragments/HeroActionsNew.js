@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 import {
   ResponsiveStack,
+  Box
 } from 'serverless-design-system'
-import { Button, SecondaryButton } from 'src/fragments/DesignSystem'
+import { Button, SecondaryButton, MobileCenteredBox } from 'src/fragments/DesignSystem'
 import { InternalLink } from 'src/fragments'
 
 const HeroActions = ({
@@ -24,16 +25,22 @@ const HeroActions = ({
   justifyContent
 }) => (
     <ResponsiveStack width={[1, 1, 1]} mx={'auto'} mt={3} mb={[0,0,3]} flexDirection={flexDirection} justifyContent={justifyContent}>
-    <InternalLink to={firstLink}>
-      <Button mr={[0, 0, '32px']} my={1} border={'2.5px solid'} width={['176px', '176px', '176px', '176px', '200px']}>
-        {fName}
-      </Button>
-    </InternalLink>
-    <InternalLink to={secondLink}>
-      <SecondaryButton my={1} borderWidth={'2.5px'} width={['176px', '176px', '176px', '176px', '200px']}>
-        {sName}
-      </SecondaryButton>
-    </InternalLink>
+    <MobileCenteredBox>
+      <InternalLink to={firstLink}>
+        <Button mr={[0, 0, '32px']} my={1} border={'2.5px solid'} width={['176px', '176px', '176px', '176px', '200px']}>
+          {fName}
+        </Button>
+      </InternalLink>
+    </MobileCenteredBox>
+
+    <MobileCenteredBox>
+      <InternalLink to={secondLink}>
+        <SecondaryButton my={1} borderWidth={'2.5px'} width={['176px', '176px', '176px', '176px', '200px']}>
+          {sName}
+        </SecondaryButton>
+      </InternalLink>
+    </MobileCenteredBox>
+
   </ResponsiveStack>
 )
 

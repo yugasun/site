@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
 import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const HomeActions = () => (
