@@ -19,7 +19,9 @@ const HomeHeroComponent = ({usingSafariDesktop}) => (
   >
     <Box width={['auto', 'auto', '300px', '70%', '60%', '696px']}>
       <HeroHeader />
-      <HeroActions />
+      <Box mt={[0, 0, 50]}>
+        <HeroActions />
+      </Box>
     </Box>
     <HeroImage usingSafariDesktop={usingSafariDesktop}/>
 </Flex>
