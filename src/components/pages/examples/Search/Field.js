@@ -57,7 +57,7 @@ export default class SearchField extends React.Component {
     <ResponsiveStack>
       <ExamplesSearchField
             placeholder='Search for an example'
-            height={50}
+            height={36}
             width='100%'
             border='none'
             fontSize={14} 

@@ -52,7 +52,7 @@ export default class ExamplesSearch extends React.Component {
                         <Row>
                             <SearchField refreshSearch={this.sendResultsToProps}/>
                             <Box display={['none', 'none', 'block']}>
-                                <Button onClick={this.toggleFilter} width={[0, 0, '196px', '196px', '196px', '176px']} mt={[22, 22, 5]} style={ {backgroundColor: this.state.showFilters ? '#b73833': '#fd5750'} }>
+                                <Button onClick={this.toggleFilter} width={[0, 0, '196px', '196px', '196px', '176px']} mt={[22, 22, 4]} style={ {backgroundColor: this.state.showFilters ? '#b73833': '#fd5750'} }>
                                     { this.state.showFilters ? 'hide filters': 'filters'}
                                 </Button>
                             </Box>

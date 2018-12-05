@@ -154,7 +154,7 @@ export default class Content extends React.Component {
             flexDirection={['column', 'column', 'row']}
             flexWrap='wrap'
             justifyContent='left'
-            mb={[200, 200, 280]}
+            mb={[200, 200, 230]}
           >
             
               { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }
