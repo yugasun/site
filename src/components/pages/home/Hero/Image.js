@@ -22,13 +22,13 @@ const TerminalBackground = styled(Absolute)`
 const HomeHeroImage = ({usingSafariDesktop}) => (
   <Flex
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, 3 / 4]}
+    width={[1, 1, '55%']}
     mx='auto'
     mb={[1, 1, 4]}
   >
     <TerminalBackground
-      mt={['80px', '80px', '67px', '27px', '67px']}
-      ml={[0, 0, '56px']}
+      mt={['42px', '42px', '67px', '27px', '67px']}
+      ml={[0, 0, '30px', '56px']}
   >
     <Image
       src={usingSafariDesktop ? homepageHeroLinesStatic : homepageHeroLinesMain}
@@ -38,8 +38,8 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
   </TerminalBackground>
 
   <Relative
-    mt={[120, 120, 120, 80, 150]}
-    ml={[0, 0, 103]}
+    mt={[82, 82, 120, 80, 150]}
+    ml={[0, 0, 53, 103]}
     width={['320px', '320px', '320px', '320px', 1]}
   >
   <Image
@@ -48,8 +48,8 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
     
   </Relative>
   <Absolute
-      mt={['160px', '160px', '160px', '120px', '210px']}
-      ml={['35px', '35px', '135px', '135px', '155px']}
+      mt={['122px', '122px', '160px', '120px', '210px']}
+      ml={['35px', '35px', '90px', '135px', '155px']}
     >
       <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>

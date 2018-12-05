@@ -11,7 +11,14 @@ const VerticallyAlignedImage = styled(Image)`
 `
 
 const MobileSpace = styled(Text.span)`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 415px) {
+    &:after {
+      content: "     ";
+      white-space: pre;
+    }
+  }
+
+  @media screen and (min-width: 415px) and (max-width: 960px) {
     &:after {
       content: "     ";
       white-space: pre;
@@ -42,7 +49,7 @@ const HomeHeroFooter = () => (
               width='26px'
             />
         </Box>
-        <Box width={['176px', '200px', 'auto']}>
+        <Box width={['176px', '200px', '200px', 'auto']}>
         <Text.span fontSize={[12, 12, 12, 12, 16]} fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']} ml={['9px']} >&nbsp; View the Serverless Framework <MobileSpace></MobileSpace> on GitHub.&nbsp;&nbsp;&nbsp;</Text.span> 
           <VerticallyAlignedImage
               src={starIcon}

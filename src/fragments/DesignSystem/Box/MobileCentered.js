@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Box } from 'serverless-design-system'
 
 const MobileCentered = styled(Box)`
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 560px) {
       margin: 0 auto;
     }
 `

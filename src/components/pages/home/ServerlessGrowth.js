@@ -14,9 +14,9 @@ import { Heading, P, Button, MobileCenteredBox } from 'src/fragments/DesignSyste
 
 const HomeBenefits = ({usingSafariDesktop}) => (
   <AppContainer>
-    <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mb={[0, 0, '170px']} mt={[0, 0, 132, 132, 0]}>
+    <ResponsiveStack.spaceBetween flexDirection={['column-reverse', 'column-reverse', 'row']} mb={[0, 0, '142px', '142px', '170px']} mt={[0, 0, 132, 132, 0]}>
       
-      <Column width={[1, 1, 1/2, '488px']} pt={[33, 33, 25, 25, 200]}>
+      <Column width={[1, 1, 1/2, '488px']} pt={[33, 33, 0, 107, 100, 180]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-10px','-10px', '4px']}>
           <Heading.h3 pt='12px'>
             The rise of the serverless application
@@ -28,7 +28,7 @@ const HomeBenefits = ({usingSafariDesktop}) => (
         </InternalLink>
       </Column>
       <MobileCenteredBox>
-        <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={[300, 300, 300, 550, 450, 550]}/>
+        <Image src={usingSafariDesktop ? riseOfServerlessStatic : riseOfServerless} width={[300, 300, 300, 400, 450, 550]}/>
       </MobileCenteredBox>
     </ResponsiveStack.spaceBetween>
   </AppContainer>
