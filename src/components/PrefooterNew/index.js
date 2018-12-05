@@ -33,10 +33,16 @@ const ResponsiveRightPreFooterBackground = styled(Background)`
       background-position: 100%;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
       background-position: 59% 106%;
       background-size: 138% 103%;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      background-position: 67% 61%;
+      background-size: 150% 100%;
+    }
+
 `
 
 const LeftColumn = ({ heading, sentences }) => (
