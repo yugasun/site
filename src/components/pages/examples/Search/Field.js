@@ -49,7 +49,7 @@ export default class SearchField extends React.Component {
     <Card
         boxShadow='2px 2px 8px 0 rgba(0, 0, 0, 0.08)'
         mt={[22, 22, 4]}
-        mb={[32, 32, 40]}
+        mb={['8px', '8px', 40]}
         ml={[15,15,0]}
         width={[1, 1, '63.8%', '74%', '84%', 5/6]}
         mr={[15, 15, 22, 22, 32]}
