@@ -6,7 +6,7 @@ import { Heading, P } from 'src/fragments/DesignSystem'
 import HeroGithub from './Github'
 
 const HeroHeader = () => (
-  <Column mt={[1]}>
+  <Column mt={[3]}>
     <DesktopUpArrows />
     <HeroGithub />
     <Heading.h3 color='white' align={['center', 'center', 'left']}>
