@@ -25,7 +25,7 @@ const enterprisePoints = [
 ]
 
 const EnterpriseComparisonBox = styled(Background)`
-    margin-top: 350px;
+    margin-top: 30%;
 
     @media screen and (max-width: 1024px) {
         margin-top: 16px;
@@ -70,13 +70,13 @@ export default class ComparisonBoxes extends React.Component {
         return (
             <AppContainer>
             <Heading.h3 align='center'>Easy, open Serverless development.</Heading.h3>
-            <Flex mb={['500px', '500px', '500px', '500px', '500px', '700px']} flexDirection={['column', 'column', 'column', 'column','row']} mt={[0, 0, 0, 0, 46]}>  
+            <Flex mb={['500px', '500px', '500px', '500px', '500px', '500px']} flexDirection={['column', 'column', 'column', 'column','row']} mt={[0, 0, 0, 0, 46]}>  
             <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
                 <Absolute right='0' zIndex='-1' width='40%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation} />
                 </Absolute>
             </Box>
-            <Box display={[ 'none', 'none', 'none', 'none', 'block' ]} mt={[0, 0, 0, 0, 276]}>
+            <Box display={[ 'none', 'none', 'none', 'none', 'block' ]} mt={[0, 0, 0, 0, '30%']}>
                 <Absolute left='0' zIndex='-1' width='40%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation}/>
                 </Absolute>
