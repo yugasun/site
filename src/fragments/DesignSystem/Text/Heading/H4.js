@@ -4,10 +4,10 @@ import { Heading } from 'serverless-design-system'
 const H4 = ({children, ...otherProps}) => (
     <Heading.h4
       color='white'
-      fontSize={['24px']}
-      lineHeight={['32px', '32px', '44px']}
-      letterSpacing={['-0.4px', '-0.4px', '-0.5px']}
-      fontFamily={'Soleil'}
+      fontSize={['18px', '18px', '18px', '18px', '24px']}
+      lineHeight={['24px', '24px', '24px', '24px', '32px']}
+      letterSpacing={['-0.28px', '-0.28px', '-0.38px']}
+      fontFamily={['SoleilBk', 'SoleilBk', 'SoleilBk', 'SoleilBk', 'Soleil']}
       align={['center', 'center', 'left']}
       {...otherProps}
     >

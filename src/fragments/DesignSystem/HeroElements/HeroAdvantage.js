@@ -18,15 +18,16 @@ const HeroAdvantage = ({ img, title, description }) => (
         <Text.span
           color='white'
           fontFamily='SoleilBk'
-          fontSize='4'
+          fontSize={'18px'}
           align='center'
-          lineHeight='32px'
+          lineHeight={'24px'}
+          letterSpacing={'-0.28px'}
         >
           {title}
         </Text.span>
       </TextWithIcon>
     </Flex>
-    <P color='gray.2'>{description}</P>
+    <P color='gray.2' fontSize={'16px'} lineHeight={'26px'} letterSpacing={0}>{description}</P>
   </Flex>
 )
 

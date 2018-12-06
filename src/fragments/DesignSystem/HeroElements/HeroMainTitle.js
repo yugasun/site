@@ -7,9 +7,9 @@ const HeroMainTitle = ({ children }) => (
     align='center' 
     fontFamily='Serverless' 
     color='white' 
-    fontSize={[48, 48, 90]} 
-    letterSpacing='-2px' 
-    lineHeight={['64px', '64px', '100px']}
+    fontSize={[60, 60, 60, 60, 77]} 
+    letterSpacing={['-1.34px', '-1.34px', '-1.34px', '-1.34px', '-1.72px']}
+    lineHeight={['67px', '67px', '67px', '67px', '86px']}
     >
     {children}
   </Heading.h1>

@@ -3,7 +3,7 @@ import { Flex, P } from 'serverless-design-system'
 
 const HeroInlineDescription = ({ children }) => (
   <Flex.horizontallyCenter px={[2, 2, 0]} pb={1}>
-    <P m={0} fontSize={'2.4rem'} lineHeight={'32px'} color='white' align='center' fontFamily='SoleilLt'>
+    <P m={0} fontSize={['24px', '24px', '18px']} lineHeight={['32px', '32px', '24px']} color='white' align='center' fontFamily={['SoleilLt', 'SoleilLt', 'SoleilBk']} letterSpacing={[0, 0, '-0.28px']}>
       {children}
     </P>
   </Flex.horizontallyCenter>
