@@ -5,7 +5,7 @@ import { Box, Heading, Column, Image, Text, Flex } from 'serverless-design-syste
 //TODO: specific for the /framework page for now, make universal?
 const UseCaseList = ({data}) => (
         <Box
-        pb={[42, 42, 192]}
+        pb={[0, 0, 162]}
       >
       {
         data.map((useCase, index) => {

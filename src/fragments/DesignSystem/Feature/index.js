@@ -13,10 +13,10 @@ import { Heading } from 'src/fragments/DesignSystem'
 const Features = ({ title, description, features, leadingNumber }) => (
   <AppContainer>
     <Column px={[0, 0, 0, 45]}>
-      <Box my={[0, 0, 0, 4]}>
+      <Box>
         <Heading.h3
           align='center'
-          my={1}
+          mt={['62px', '62px', '92px', '92px', '162px']}
         >
           {title}
         </Heading.h3>

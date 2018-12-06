@@ -4,7 +4,6 @@ import { SecondaryButton } from 'src/fragments/DesignSystem'
 
 const comp = ({ children, theme }) => (
   <SecondaryButton
-    width='211px'
     borderWidth='2px'
     color='white'
     p={0}

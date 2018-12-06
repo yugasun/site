@@ -7,8 +7,8 @@ const MobileCentered = styled(Box)`
       margin: 0 auto;
     }
 `
-const MobileCenteredBox = ({children, ...props}) => (
-    <MobileCentered {...props}>
+const MobileCenteredBox = ({children, ...otherProps}) => (
+    <MobileCentered {...otherProps}>
         {children}
     </MobileCentered>
 )
