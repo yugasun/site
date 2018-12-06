@@ -70,23 +70,25 @@ export default class ComparisonBoxes extends React.Component {
         return (
             <AppContainer>
             <Heading.h3 align='center'>Easy, open Serverless development.</Heading.h3>
-            <Flex mb='700px' flexDirection={['column', 'column', 'column', 'column','row']} mt={[0, 0, 0, 0, 46]}>  
+            <Flex mb={['500px', '500px', '500px', '500px', '500px', '700px']} flexDirection={['column', 'column', 'column', 'column','row']} mt={[0, 0, 0, 0, 46]}>  
             <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
-                <Absolute right='0' zIndex='-1' width='50%'>
+                <Absolute right='0' zIndex='-1' width='40%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation} />
                 </Absolute>
             </Box>
             <Box display={[ 'none', 'none', 'none', 'none', 'block' ]} mt={[0, 0, 0, 0, 276]}>
-                <Absolute left='0' zIndex='-1' width='50%'>
+                <Absolute left='0' zIndex='-1' width='40%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation}/>
                 </Absolute>
             </Box>
 
                 <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '491px']}>
                     <CompareBox points={openSourcePoints} heading='open source'/>
-                    <InternalLink to={enterprise}>
-                        <WhiteButton>install free</WhiteButton>
-                    </InternalLink>
+                    <Box p={'32px'}>
+                        <InternalLink to={enterprise}>
+                            <WhiteButton>install free</WhiteButton>
+                        </InternalLink>
+                    </Box>
                 </OpenSourceComparisonBox>
                 <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
                     <CompareBox points={enterprisePoints} heading='enterprise'/>
