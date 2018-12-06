@@ -14,7 +14,7 @@ const HorizontalStyle = styled(HorizontalRule)`
 `
 
 const ComparisonBox = ({points, heading}) => (
-            <Box color='white' px={'32px'} pt={'92px'} pb={'42px'}>
+            <Box color='white' px={'32px'} pt={'92px'} pb={'16px'}>
                 <Heading.h3>
                     serverless framework
                 </Heading.h3>

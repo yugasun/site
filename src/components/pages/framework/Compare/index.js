@@ -1,7 +1,7 @@
 import React from 'react'
 import CompareBox from './Box'
 import { Box, Background, Flex, Image, Absolute } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer} from 'src/components'
+import { AppContainerNewest as AppContainer, WhiteButtonNew as WhiteButton } from 'src/components'
 import styled from 'styled-components'
 import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
 import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
@@ -30,11 +30,6 @@ const EnterpriseComparisonBox = styled(Background)`
     @media screen and (max-width: 1024px) {
         margin-top: 16px;
     }
-`
-
-const EnterpriseCTAButton = styled(Button)`
-    
-
 `
 
 const OpenSourceComparisonBox = styled(Background)`
@@ -90,14 +85,16 @@ export default class ComparisonBoxes extends React.Component {
                 <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '491px']}>
                     <CompareBox points={openSourcePoints} heading='open source'/>
                     <InternalLink to={enterprise}>
-                        <OpenSourceCTAButton>install free</OpenSourceCTAButton>
+                        <WhiteButton>install free</WhiteButton>
                     </InternalLink>
                 </OpenSourceComparisonBox>
                 <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
                     <CompareBox points={enterprisePoints} heading='enterprise'/>
+                    <Box p={'32px'}>
                         <InternalLink to={developersMenu.docs}>
-                    <Button>learn more</Button>
-                    </InternalLink>
+                            <Button>learn more</Button>
+                        </InternalLink>
+                    </Box>
                 </EnterpriseComparisonBox>
             </Flex>
         </AppContainer>

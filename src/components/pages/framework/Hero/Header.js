@@ -16,7 +16,7 @@ import serverlessBolt from 'src/assets/images/serverlessBolt.png'
 const Header = () => (
   <Flex.horizontallyCenter flexDirection='column' mb={2}>
     <Flex.horizontallyCenter height='86px' mt={2}>
-      <Image src={serverlessBolt} maxHeight='67px' maxWidth='70px' />
+      <Image src={serverlessBolt} height='70px' width='50px' />
     </Flex.horizontallyCenter>
     <HeroTitle>serverless</HeroTitle>
     <HeroMainTitle>framework</HeroMainTitle>

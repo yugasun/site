@@ -28,10 +28,10 @@ const CloudProviders = () => (
       <Flex.verticallyCenter flexDirection='column'>
         <Box>
           <P
-            fontSize={3}
-            color='gray.2'
-            lineHeight={3}
-            letterSpacing='h6'
+            fontSize={'18px'}
+            color='white'
+            lineHeight={'24px'}
+            letterSpacing='-0.28px'
           >
             Supports Top Cloud Providers
           </P>
