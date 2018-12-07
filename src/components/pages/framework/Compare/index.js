@@ -82,9 +82,9 @@ export default class ComparisonBoxes extends React.Component {
                 </Absolute>
             </Box>
 
-                <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '491px']}>
+                <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '467px']}>
                     <CompareBox points={openSourcePoints} heading='open source'/>
-                    <MobileCenteredBox p={'32px'}>
+                    <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
                         <InternalLink to={enterprise}>
                             <WhiteButton>install free</WhiteButton>
                         </InternalLink>
@@ -92,7 +92,7 @@ export default class ComparisonBoxes extends React.Component {
                 </OpenSourceComparisonBox>
                 <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
                     <CompareBox points={enterprisePoints} heading='enterprise'/>
-                    <MobileCenteredBox p={'32px'}>
+                    <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
                         <InternalLink to={developersMenu.docs}>
                             <Button m='auto'>learn more</Button>
                         </InternalLink>
