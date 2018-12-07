@@ -13,7 +13,9 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
       pt={[
         theme.navbarHeights.mobile,
         theme.navbarHeights.mobile,
-        theme.navbarHeights.desktop,
+        '80px',
+        '80px',
+        '85px'
       ]}
     >
       <AppContainer>

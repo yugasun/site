@@ -14,7 +14,7 @@ const HeroHeader = () => (
     <Heading.h3 color='white' align={['center', 'center', 'left']}>
       The most widely-adopted toolkit for building serverless applications.
     </Heading.h3>
-    <P align={['center', 'center', 'left']} m={0}>
+    <P align={['center', 'center', 'left']} m={0} color='gray.2'>
       Any provider. Same experience.
     </P>
   </Column>

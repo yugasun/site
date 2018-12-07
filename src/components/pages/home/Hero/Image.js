@@ -51,7 +51,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
 
   <TerminalBackground
     mt={[82, 82, 120, 80, 126]}
-    ml={[0, 0, 53, 103]}
+    ml={[-1, -1, 53, 103]}
     width={['280px', '320px', '320px', '320px', 1]}
   >
   <Image
@@ -61,7 +61,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
   </TerminalBackground>
   <TerminalText
       mt={['122px', '122px', '160px', '120px', '186px']}
-      ml={['1px', '35px', '90px', '135px', '155px']}
+      ml={['1px', '25px', '90px', '135px', '155px']}
     >
       <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>
