@@ -5,8 +5,6 @@ import unCheckedRadio from 'src/assets/images/unchecked-checkbox.png'
 
 export default styled(Checkbox)`
   appearance: none;
-  -webkit-border-radius:0px;
-  -webkit-appearance: none;
   
   &:before {
     content: "";
@@ -30,5 +28,12 @@ export default styled(Checkbox)`
 
   &:focus {
     outline: none;
+  }
+
+  @media screen and (max-width: 414px) {
+    &:before {
+      width: 18px;
+      height: 18px;
+    }
   }
 `

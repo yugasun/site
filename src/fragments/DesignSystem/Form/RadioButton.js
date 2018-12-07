@@ -5,8 +5,6 @@ import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 
 export default styled(RadioButton)`
   appearance: none;
-  -webkit-border-radius:0px;
-  -webkit-appearance: none;
 
   &:focus {
     outline: none
@@ -29,6 +27,13 @@ export default styled(RadioButton)`
   &:checked {
     &:before {
       background-image: url(${checkedRadio});
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    &:before {
+      width: 18px;
+      height: 18px;
     }
   }
 `
