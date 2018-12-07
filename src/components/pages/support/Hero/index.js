@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Image, Heading, Flex, Column } from 'serverless-design-system'
+import { Box, Image, Flex, Column } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import serverlessPlatform from 'src/assets/images/pages/support/serverless-support.svg'
 import { Description, MainHeading, TopHeading } from 'src/components/pages/form-pages/Hero'
