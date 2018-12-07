@@ -12,7 +12,7 @@ import styled from 'styled-components'
 
 import NavLink from 'src/components/NavLink'
 import { products } from 'src/constants/urls'
-import frameworkIcon from 'src/assets/images/pages/enterprise/enterprise-icon.svg'
+import frameworkIcon from 'src/assets/images/home/framework-icon.svg'
 import supportIcon from 'src/assets/images/pages/support/serverless-support.svg'
 import platformIcon from 'src/assets/images/pages/platform/serverless-platform.svg'
 
