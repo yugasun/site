@@ -16,9 +16,9 @@ import { Heading, P, Button } from 'src/fragments/DesignSystem'
 
 const HomePlatform = ({usingSafariDesktop}) => (
   <AppContainer>
-    <ResponsiveStack mb={[92, 92, 100]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
+    <ResponsiveStack mb={[92, 92, 92, 92, 40]} justifyContent={['justify-content', 'justify-content', 'flex-end']}>
     <Absolute left='0'>
-      <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={['320px', '500px', '300px', '400px', '500px', '700px']}/>
+      <Image src={usingSafariDesktop ? allInOneStatic : allInOne} width={['320px', '500px', '300px', '400px', '500px', '640px']}/>
     </Absolute>
       <Column width={[1, 1, 1/2, '488px', '488px']} mt={[400, 400, 163, 163, 200]} mb={[0, 0, 0, 0, 95]}>
         <TextWithIcon iconSrc={dotGrid} iconHeight='38px' iconWidth='98px' iconLeft='-40px' iconTop={['-20px','-20px', '-8px']}>
