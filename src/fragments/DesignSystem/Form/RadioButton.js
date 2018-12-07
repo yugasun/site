@@ -5,6 +5,8 @@ import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 
 export default styled(RadioButton)`
   appearance: none;
+  -webkit-border-radius:0px;
+  -webkit-appearance: none;
 
   &:focus {
     outline: none
