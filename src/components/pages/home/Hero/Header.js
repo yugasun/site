@@ -4,13 +4,20 @@ import { Column } from 'serverless-design-system'
 import DesktopUpArrows from './DesktopUpArrows'
 import { Heading, P, MobileCenteredBox } from 'src/fragments/DesignSystem'
 import HeroGithub from './Github'
+import styled from 'styled-components'
+
+const MobileCenteredTextBox = styled(MobileCenteredBox)`
+  @media screen and (max-width: 415px) {
+    text-align: center;
+  }
+`
 
 const HeroHeader = () => (
   <Column>
     <DesktopUpArrows />
-    <MobileCenteredBox>
+    <MobileCenteredTextBox>
         <HeroGithub />
-    </MobileCenteredBox>
+    </MobileCenteredTextBox>
     <Heading.h3 color='white' align={['center', 'center', 'left']}>
       The most widely-adopted toolkit for building serverless applications.
     </Heading.h3>
