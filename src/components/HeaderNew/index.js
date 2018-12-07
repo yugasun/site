@@ -70,7 +70,7 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-        <Transition py={[1, 1, 1, 1, 0]}>
+        <Transition py={[1, 1, 1, 0, 0]}>
             <HeaderContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'

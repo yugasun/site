@@ -10,7 +10,7 @@ const NavButton = () => (
   <NavbarContext.Consumer>
     {({ isNavbarActive, toggleNavbarActiveness }) => (
       <Box
-        height='26px'
+        height='16px'
         width='26px'
         display={['flex', 'flex', 'flex', 'flex', 'none']}
         onClick={toggleNavbarActiveness}

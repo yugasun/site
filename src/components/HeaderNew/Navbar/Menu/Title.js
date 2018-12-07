@@ -39,7 +39,7 @@ const Title = ({ name }) => (
     {({ isNavbarShrinked }) => (
       <TitleWrapperWithLeadingSlash
         px={[1, 1, '8px', '8px', '1.5rem', '15px']}
-        py={[2, 2, '27.5px']}
+        py={[2, 2, '16.5px']}
         transition={[
           'none',
           'none',

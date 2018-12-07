@@ -30,7 +30,7 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
         zIndex='999'
         boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
         position={['relative', 'relative', 'relative', 'relative', 'absolute']}
-        top={['0', '0', '0', '0', '72px']}
+        top={['0', '0', '0', '0', '52px']}
         left={['0', '0', '0', '0', '-50%']}
         minWidth={[0, 0, 0, 0, '250px']}
         beforeBoxBorderWidth={[0, 0, 0, 0, '0 7.5px 13.0px 7.5px']}
