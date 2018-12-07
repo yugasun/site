@@ -44,6 +44,11 @@ const ResponsiveRightPreFooterBackground = styled(Background)`
     }
 
 `
+const SmallMobileFontWhiteButton = styled(WhiteButton)`
+  @media screen and (max-width: 415px) {
+    font-size: 12px;
+  }
+`
 
 const LeftColumn = ({ heading, sentences }) => (
   <Background background='white' width={[1, 1, 1/2]}>
@@ -91,7 +96,7 @@ const RightColumn = ({ actions }) => (
     {actions.map(({ name, navProps }, index) => (
       <Box key={index}>
         <NavLink {...navProps}>
-          <WhiteButton>{name}</WhiteButton>
+          <SmallMobileFontWhiteButton>{name}</SmallMobileFontWhiteButton>
         </NavLink>
       </Box>
     ))}
