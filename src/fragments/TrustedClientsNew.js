@@ -3,8 +3,6 @@ import React from 'react'
 import {
   Background,
   Box,
-  Container,
-  Heading,
   Flex,
   Image
 } from 'serverless-design-system'
@@ -16,25 +14,23 @@ import expediaLogo from 'src/assets/images/fragments/trusted-clients/expedia-log
 import reutersLogo from 'src/assets/images/fragments/trusted-clients/reuters-logo-gray.png'
 
 import backgroundImage from 'src/assets/images/rectangle-19.png'
+import { P } from 'src/fragments/DesignSystem'
 
 const TrustedClients = () => (
   <Background backgroundImage={[`url(${backgroundImage})`]} height={['700px', '700px', '619px']}>
     <AppContainer>
       <Box
         width={1}
-        pt={['62px', '62px', '92px']}
+        pt={['62px', '62px', '74px']}
         pb={[300, 300, 12, 12]}
       >
-        <Heading.h5
+        <P
           align='center'
-          fontFamily='SoleilBk'
-          fontSize={4}
-          letterSpacing='h5'
-          lineHeight={0}
-          mb={['34px', '34px', '71px']}
+          mb={['34px', '34px', '61px']}
+          color='black'
         >
           Serverless Platform is trusted by
-        </Heading.h5>
+        </P>
         <Flex
       justifyContent={['center', 'center', 'space-between']}
       alignItems='space-between'
