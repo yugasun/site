@@ -29,11 +29,4 @@ export default styled(Checkbox)`
   &:focus {
     outline: none;
   }
-
-  @media screen and (max-width: 414px) {
-    &:before {
-      width: 18px;
-      height: 18px;
-    }
-  }
 `
