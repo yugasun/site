@@ -10,7 +10,7 @@ import { PageContainer } from 'src/fragments/DesignSystem'
 const ExampleContent = ({ frontmatter, content }) => {
   return (
       <Box
-        my={[104, 104, 170]}>
+        my={[104, 104, 150]}>
         <EditOnGithubSticky gitLink={frontmatter.gitLink}/>
         <AppContainer>
             <ContentHeader {...frontmatter}/>
@@ -22,7 +22,7 @@ const ExampleContent = ({ frontmatter, content }) => {
             <PageContainer>
                 <EditOnGithubBottom gitLink={frontmatter.gitLink} />
             </PageContainer>
-            <Box mb={510}></Box>
+            <Box mb={[510, 510, 470]}></Box>
             </AppContainer>
         </Box>
   )
