@@ -658,7 +658,7 @@ export default class DocsWrapper extends React.Component {
     if(typeof window !== 'undefined' && window.location.hash) {
       setTimeout(function() {
         window.scrollBy(0, -80)
-      }, 500)
+      }, 1)
     }
 
     const domNode = ReactDOM.findDOMNode(this.ref)
