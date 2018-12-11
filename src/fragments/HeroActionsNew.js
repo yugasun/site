@@ -35,7 +35,7 @@ const HeroActions = ({
 
     <MobileCenteredBox>
       <InternalLink to={secondLink}>
-        <SecondaryButton my={1} borderWidth={'2.5px'} width={['176px', '176px', '176px', '176px', '200px']}>
+        <SecondaryButton my={1} width={['176px', '176px', '176px', '176px', '200px']}>
           {sName}
         </SecondaryButton>
       </InternalLink>
