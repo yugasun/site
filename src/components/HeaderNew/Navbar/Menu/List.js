@@ -63,9 +63,9 @@ const BlogMenu = () => (
 )
 
 const SupportMenu = () => (
-  <Box pt={[2, 2, 0]} pl={[1, 1, 2, 2, 2, 3]}>
+  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 3]}>
     <NavLink to={products.support} completed className='header-menu-item'>
-    <SecondaryButton px='0.5rem' width='207px'>
+    <SecondaryButton px={[0, 0, 0, 0, '0.3rem', '0.5rem']} width={['187px', '187px', '187px', '187px', '187px', '207px']}>
     enterprise support
     </SecondaryButton>
     
