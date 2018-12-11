@@ -13,7 +13,6 @@ import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 import styled from 'styled-components'
 
 const HeroLinesBackground = styled(Absolute)`
-
   @media screen and (max-width: 415px) {
     left: 0px;
   }
@@ -21,13 +20,30 @@ const HeroLinesBackground = styled(Absolute)`
 
 const TerminalBackground = styled(Relative)`
   @media screen and (max-width: 340px) {
-    margin-left: -37px;
+    margin-left: -27px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 380px){
+    margin-left: 0px;
+  }
+
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    margin-left: 8px;
+    width: 340px;
   }
 `
 
 const TerminalText = styled(Absolute)`
   @media screen and (max-width: 340px) {
-    margin-left: 1px;
+    margin-left: 6px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 380px){
+    margin-left: 38px;
+  }
+
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    margin-left: 55px;
   }
 `
 
