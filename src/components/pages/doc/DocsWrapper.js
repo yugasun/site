@@ -172,7 +172,7 @@ const Wrapper = styled(Column)`
     }
   }
   & {
-    margin-top: 74px;
+    margin-top: 64px;
     padding-bottom: 0;
     margin-bottom: 0;
 
