@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { UseCases } from 'src/fragments'
+import { UseCasesNew as UseCases } from 'src/fragments'
 import scaleableAPI from 'src/assets/images/scalableAPI.svg'
 import dataProcessing from 'src/assets/images/dataProcessing.svg'
 import easyAutomation from 'src/assets/images/easyAutomation.svg'
@@ -21,7 +21,7 @@ const cases = [
   {
     title: 'Data Processing',
     description:
-      'Transforming data and building data pipelines and has never been easier.',
+      'Transforming data and building data pipelines has never been easier.',
     imgSrc: dataProcessing,
   },
 ]

@@ -1,13 +1,14 @@
 import React from 'react'
 
 import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
-import { TextArea, Button, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
+import { TextArea, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
 
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 
 import styled from 'styled-components'
 const formId = 'support-contact-us'
+import { Button } from 'src/fragments/DesignSystem'
 
 const StyledForm = styled(Flex.column)`
   position: absolute;
@@ -19,7 +20,11 @@ const StyledForm = styled(Flex.column)`
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #eaeaea;
 
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    width: 38%;
+  }
+
+  @media screen and (max-width: 1024px) {
     position: relative;
     width: auto;
     padding-top: 40px;
@@ -429,7 +434,7 @@ export default class Form extends React.Component {
           </Box>
 
           <Box mt={3}>
-            <Button disabled={loading}>
+            <Button disabled={loading || success} style={{ cursor: loading || success ? 'not-allowed': 'pointer'}}>
               { submitButtonText }
             </Button>
           </Box>

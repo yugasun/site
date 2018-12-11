@@ -1,18 +1,20 @@
 import React from 'react'
-import { HeroActions } from 'src/fragments'
+import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const FrameworkHeroActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'start with framework',
+      name: 'quick start',
       to: '/framework/docs/getting-started/',
       completed: true,
     }}
     secondBtn={{
-      name: 'enterprise demo',
+      name: 'login',
       to: '/enterprise/',
       completed: true,
     }}
+    flexDirection={['column', 'column', 'row']}
+    justifyContent='center'
   />
 )
 

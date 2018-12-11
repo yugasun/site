@@ -2,10 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-import { ResponsiveStack, Button } from 'serverless-design-system'
+import { ResponsiveStack } from 'serverless-design-system'
 import { setItemSync, getItemSync } from 'src/utils/storage'
 import { validateEmail } from 'src/utils/validator'
 import EmailField from './EmailField'
+import { Button } from 'src/fragments/DesignSystem'
 
 const StyledForm = styled.form`
   display: block;
@@ -93,15 +94,7 @@ class NewsLetterForm extends React.Component {
 
     return (
       <ButtonWithLineHeight
-        width={['100%', '100%', '40%']}
-        height={'50px'}
-        px={[0, 0, 1]}
-        py={15}
-        m={0}
-        textAlign='center'
-        border={0}
-        letterSpacing={'0.7px'}
-        fontSize={2}
+        width={['100%', '100%', '30%']}
         disabled={this.state.isFetching}
         {...submitBtnProps}
       >

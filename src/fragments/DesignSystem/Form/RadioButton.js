@@ -29,4 +29,11 @@ export default styled(RadioButton)`
       background-image: url(${checkedRadio});
     }
   }
+
+  @media screen and (max-width: 414px) {
+    &:before {
+      width: 18px;
+      height: 18px;
+    }
+  }
 `

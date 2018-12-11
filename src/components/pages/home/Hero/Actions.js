@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const HomeActions = () => (
@@ -14,6 +13,8 @@ const HomeActions = () => (
       to: '/platform/',
       completed: true,
     }}
+    flexDirection={['column', 'column', 'column', 'column', 'row', 'row']}
+    justifyContent={['center', 'center', 'left']}
   />
 )
 

@@ -26,7 +26,7 @@ const Breadcrumbs = ({
   let renderRight
   if (rightContent) {
     renderRight = (
-      <Box className="rightContent">
+      <Box className='rightContent'>
         {rightContent}
       </Box>
     )
@@ -37,9 +37,9 @@ const Breadcrumbs = ({
         {pathRoot ? (
           <ListItem
             key='root'
-            className="item basePath"
+            className='item basePath'
           >
-            <Text.span className="itemInner">
+            <Text.span className='itemInner'>
               <BreadcrumbItem
                 label={pathRoot}
                 pathSegments={[]}
@@ -58,7 +58,7 @@ const Breadcrumbs = ({
                 key={id}
                 className={`item ${active}`}
               >
-                <Text.span className="itemInner">
+                <Text.span className='itemInner'>
                   <BreadcrumbItem
                     label={segment}
                     pathSegments={pathSegments}
@@ -78,7 +78,7 @@ const Breadcrumbs = ({
 Breadcrumbs.defaultProps = {
   pathSeparator: '/',
   getUrlFromPathSegments: pathSegments => {
-    const link = `/${pathSegments.join('/')}`
+    const link = `/${pathSegments.join('/')}/`
     return link
   },
 }

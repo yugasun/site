@@ -34,8 +34,8 @@ export default class EmailField extends React.Component {
         px={[1, 1, 1]}
         py={15}
         m={0}
-        width={[1, 1, 0.6]}
-        height={'50px'}
+        width={[1, 1, 0.7]}
+        height={'37px'}
         borderRadius={0}
         fontSize={1}
         fontFamily='Serverless'

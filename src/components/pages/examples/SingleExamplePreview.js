@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import {
   Box,
-  Heading,
-  P,
+  Text,
   Card
 } from 'serverless-design-system'
-import { InternalLink } from 'src/fragments'
+import { InternalLink, ExternalLink } from 'src/fragments'
 import { getExampleLink } from 'src/utils/example'
+import { Heading, P } from 'src/fragments/DesignSystem'
 
 const HoverableColumn = styled(Card)`
   @media screen and (min-width: 415px) {
@@ -22,7 +22,7 @@ const HoverableColumn = styled(Card)`
 
 const BoxWithMiddleElementMargin = styled(Box)`
   @media screen and (min-width: 1230px){
-    :not(:nth-child(3n+3)) {
+    :not(:nth-child(4n+4)) {
       margin-right: 32px;
     }
   }
@@ -32,25 +32,25 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 
   @media screen and (min-width: 769px) and (max-width: 1229px){
-    width: 50%;
+    width: 33%;
     padding: 0 20px;
   }
 
 `
 
 const singleExamplePreview = ({ id, frontmatter }) => {
-  const { title, description, platform, language } = frontmatter
+  const { title, description, platform, language, gitLink } = frontmatter
 
   return (
     <BoxWithMiddleElementMargin 
-      width={[1, 1, 1, '384px']}
+      width={[1, 1, 1/2, 1/3, '22.5%', '280px']}
       mb={[42, 42, 32]}
     >
       <HoverableColumn>
-       <Box m={['0px 15px', '0px 15px', '36px 48px']}>
+       <Box m={['0px 15px', '0px 15px', '32px']}>
         <InternalLink to={getExampleLink(id)}>
           <Box>
-            <P
+            <Text
               color='gray.2'
               fontSize={[0]}
               fontFamily='Soleil'
@@ -58,26 +58,25 @@ const singleExamplePreview = ({ id, frontmatter }) => {
               lineHeight={[1.33]}  
             >
             {language}
-            </P>
-            <Heading.h4
-              fontSize='24px'
-              fontFamily='Soleil'
-              letterSpacing={['-0.4px']}
-              lineHeight={[1.33]}   
+            </Text>
+            <Heading.h5 
               mb='8px'
             >
               {platform} | { title }
-            </Heading.h4>
+            </Heading.h5>
           </Box>
         </InternalLink>
           <P
-            fontSize={[2, 2, 2, 2]}
-            lineHeight={1.63}
             mt='8px'
             mb={[0, 0 ,3.6]}  
         >
           { description }
         </P>
+        <ExternalLink to={gitLink}>
+          <Text color='#fd5750' mt={16}>
+            go to github >
+          </Text>
+        </ExternalLink>
         </Box>
       </HoverableColumn>
     </BoxWithMiddleElementMargin>

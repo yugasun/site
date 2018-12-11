@@ -58,9 +58,9 @@ const SocialIcon = ({ to, icon, hoverIcon }) => (
 // Renders the subscribe column
 const Subscribe = () => (
   <Column
-    width={[1, 1, 0.35]}
-    order={['1', '1', '2']}
-    pl={[0, 0, 3]}
+    width={[1, 1, 2.5/4, 3/4, 0.35]}
+    order={['1', '1', '1', '1', '2']}
+    pl={[0, 0, 0, 0, 3]}
   >
     <Box mb={[32, 32, 41]}>
       <P color='white' align={['center', 'center', 'left']} lineHeight={1.63} my={0}>
@@ -69,7 +69,7 @@ const Subscribe = () => (
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Flex pt={[62, 62, 100]} pb={[62, 62, 0]} justifyContent={['space-between', 'space-between', 'normal']}>
+    <Flex pt={[62, 62, 42, 42, 100]} pb={[62, 62, 82, 82, 0]} justifyContent={['space-between', 'space-between', 'normal']}>
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}

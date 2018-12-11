@@ -5,7 +5,7 @@ import { SecondaryButton } from 'serverless-design-system'
 const comp = ({ children, theme }) => (
   <SecondaryButton
     width='280px'
-    borderWidth='2.5px'
+    borderWidth='2px'
     color='white'
     px='2.5rem'
     theme={{

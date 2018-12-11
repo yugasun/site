@@ -2,7 +2,7 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { Background, Box } from 'serverless-design-system'
 
-import { AppContainerNew as AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
   <Background
@@ -13,11 +13,13 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
       pt={[
         theme.navbarHeights.mobile,
         theme.navbarHeights.mobile,
-        theme.navbarHeights.desktop,
+        '80px',
+        '80px',
+        '85px'
       ]}
     >
       <AppContainer>
-        <Box px={[15, 15, 0]} py={['14px', '14px']}>
+        <Box py={['14px', '14px']}>
           {children}
         </Box>
       </AppContainer>

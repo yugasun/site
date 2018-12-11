@@ -11,13 +11,17 @@ import {
   Card
 } from 'serverless-design-system'
 
+import { P } from 'src/fragments/DesignSystem'
+
 const DesktopText = styled.blockquote`
   font-family: 'SoleilBk';
-  font-size: 24px;
+  font-size: 22px;
   font-style: italic;
+  color: #5b5b5b;
   line-height: 32px;
   margin: 0;
   letter-spacing: 0;
+  max-width: 592px;
 
   
   @media screen and (min-width: 415px) {
@@ -34,7 +38,7 @@ const comp = ({
       <Card
         pt={['32px', '32px', '76px']}
         pb={[2, 3, '72px']}
-        px={['22px', '22px', '104px']}
+        px={['22px', '22px', '40px', '40px', '104px']}
         height={['495px', '495px', '322px']}
       >
         <Flex
@@ -78,14 +82,13 @@ const comp = ({
               >
                 {name}
               </Text>
-              <Text
-                fontFamily={['Soleil', 'Soleil', 'SoleilBk']}
-                fontSize={['12px','12px', '16px']}
+              <P
                 lineHeight={['16px', '16px', '26px']}
-                color='gray.2'
+                color={['gray.2', 'gray.2', 'gray.3']}
+                m={0}
               >
                 {designation}
-              </Text>
+              </P>
             </Flex>
           </ResponsiveStack>
         </Flex>

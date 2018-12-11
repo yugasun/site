@@ -12,46 +12,80 @@ import homepageHeroLinesStatic from 'src/assets/images/home/hero-lines-static.sv
 import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 import styled from 'styled-components'
 
-const TerminalBackground = styled(Absolute)`
-
+const HeroLinesBackground = styled(Absolute)`
   @media screen and (max-width: 415px) {
     left: 0px;
+  }
+`
+
+const TerminalBackground = styled(Relative)`
+  @media screen and (max-width: 340px) {
+    margin-left: -27px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 380px){
+    margin-left: 0px;
+  }
+
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    margin-left: 2px;
+    width: 350px;
+  }
+`
+
+const TerminalText = styled(Absolute)`
+  @media screen and (max-width: 340px) {
+    margin-left: 6px;
+  }
+
+  @media screen and (min-width: 370px) and (max-width: 380px){
+    margin-left: 38px;
+  }
+
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    margin-left: 40px;
+  }
+`
+
+const TerminalTextContent = styled(Text.p)`
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    font-size: 11px;
   }
 `
 
 const HomeHeroImage = ({usingSafariDesktop}) => (
   <Flex
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, 3 / 4]}
+    width={[1, 1, '55%']}
     mx='auto'
     mb={[1, 1, 4]}
   >
-    <TerminalBackground
-      mt={['80px', '80px', '67px']}
-    ml={[0, 0, '56px']}
+    <HeroLinesBackground
+      mt={['42px', '42px', '67px', '27px', '43px']}
+      ml={[0, 0, '30px', '56px']}
   >
     <Image
       src={usingSafariDesktop ? homepageHeroLinesStatic : homepageHeroLinesMain}
-      width={586}
+      width={[586, 586, 586, 386, 586, 586]}
     >
     </Image>
-  </TerminalBackground>
+  </HeroLinesBackground>
 
-  <Relative
-    mt={[120, 120, 150]}
-    ml={[0, 0, 103]}
-    width={['320px', '320px', 1]}
+  <TerminalBackground
+    mt={[82, 82, 120, 80, 126]}
+    ml={[-1, -1, 53, 103]}
+    width={['280px', '320px', '320px', '320px', 1]}
   >
   <Image
         src={homepageHeroTerminal}
       />
     
-  </Relative>
-  <Absolute
-      mt={['160px', '160px', '210px']}
-      ml={['35px', '35px', '155px']}
+  </TerminalBackground>
+  <TerminalText
+      mt={['122px', '122px', '160px', '120px', '186px']}
+      ml={['1px', '25px', '90px', '135px', '155px']}
     >
-      <Text.p color='#727679' fontSize={['10px', '10px', '13.7px']} letterSpacing='0.1px'>
+      <TerminalTextContent color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>
       2 &nbsp;&nbsp;&nbsp;&nbsp;<Text.span color='#fff'>$ npm install serverless -g</Text.span><br/>
       3<br/>
@@ -67,9 +101,9 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
       13 &nbsp;&nbsp;# Your function is deployed!<br/>
       14 &nbsp;&nbsp;<Text.span color='#fff'>$ http://xyz.amazonaws.com/hello-world</Text.span>
 
-      </Text.p>
+      </TerminalTextContent>
     
-    </Absolute>
+    </TerminalText>
   </Flex>
 )
 
