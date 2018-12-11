@@ -28,8 +28,8 @@ const TerminalBackground = styled(Relative)`
   }
 
   @media screen and (min-width: 410px) and (max-width: 420px){
-    margin-left: 8px;
-    width: 340px;
+    margin-left: 2px;
+    width: 350px;
   }
 `
 
@@ -43,7 +43,13 @@ const TerminalText = styled(Absolute)`
   }
 
   @media screen and (min-width: 410px) and (max-width: 420px){
-    margin-left: 55px;
+    margin-left: 40px;
+  }
+`
+
+const TerminalTextContent = styled(Text.p)`
+  @media screen and (min-width: 410px) and (max-width: 420px){
+    font-size: 11px;
   }
 `
 
@@ -79,7 +85,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
       mt={['122px', '122px', '160px', '120px', '186px']}
       ml={['1px', '25px', '90px', '135px', '155px']}
     >
-      <Text.p color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
+      <TerminalTextContent color='#727679' fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']} letterSpacing='0.1px'>
       1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally<br/>
       2 &nbsp;&nbsp;&nbsp;&nbsp;<Text.span color='#fff'>$ npm install serverless -g</Text.span><br/>
       3<br/>
@@ -95,7 +101,7 @@ const HomeHeroImage = ({usingSafariDesktop}) => (
       13 &nbsp;&nbsp;# Your function is deployed!<br/>
       14 &nbsp;&nbsp;<Text.span color='#fff'>$ http://xyz.amazonaws.com/hello-world</Text.span>
 
-      </Text.p>
+      </TerminalTextContent>
     
     </TerminalText>
   </Flex>
