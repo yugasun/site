@@ -64,8 +64,7 @@ const Subscribe = () => (
   >
     <Box mb={[32, 32, 41]}>
       <P color='white' align={['center', 'center', 'left']} lineHeight={1.63} my={0}>
-        Join our newsletter and get the latest news about Serverless products
-        and happenings. #noSpamWePromise
+      Join our monthly newsletter to get the latest news about Serverless updates and happenings.
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
