@@ -30,7 +30,7 @@ const ExamplesHero = () => {
           mt={[42,42,0,0]}
         >
           Partners
-        </Text.p>        
+        </Text.p>
       </Box>
       <Flex.verticallyCenter
           width={[1, 1, 1, 1]}
