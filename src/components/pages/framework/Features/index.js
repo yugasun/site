@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import { Features } from 'src/fragments'
+import Features from 'src/fragments/DesignSystem/Feature'
 import minimumConfiguration from 'src/assets/images/icon-logs.svg'
 import robustEcosystem from 'src/assets/images/icon-ecosystem.svg'
 import multiLingual from 'src/assets/images/icon-visualize.svg'
@@ -49,7 +49,7 @@ const featureItemsData = [
 
 const FrameworkFeatures = () => (
   <Box
-    pb={[12, 12, 10]}
+    pb={[0, 0, 50, 50, 104]}
     mb={[4, 4, 0]}
   >
     <Features features={featureItemsData} />

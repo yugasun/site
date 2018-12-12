@@ -1,22 +1,23 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { SecondaryButton } from 'serverless-design-system'
+import { SecondaryButton } from 'src/fragments/DesignSystem'
 
-const comp = ({ children, theme }) => (
+const comp = ({ children, theme, ...otherProps }) => (
   <SecondaryButton
-    width='280px'
-    borderWidth='2.5px'
+    borderWidth='2px'
     color='white'
     p={0}
-    height='50px'
-    letterSpacing={'0.8px'}
-    lineHeight='21px'
+    height='36px'
+    letterSpacing={'1.5px'}
+    lineHeight='24px'
+    {...otherProps}
     theme={{
       colors: {
         primaryColor: theme.colors.white,
         secondaryColor: theme.colors.white,
       },
     }}
+    
   >
     {children}
   </SecondaryButton>

@@ -11,30 +11,31 @@ import { getBlogLink } from 'src/utils/blog'
 import facebookIcon from 'src/assets/images/facebook-black.svg'
 import twitterIcon from 'src/assets/images/twitter-black.svg'
 import linkedinIcon from 'src/assets/images/linkedin-black.svg'
+import { ExternalLink } from 'src/fragments'
 
 const Icon = ({ link, icon }) => (
   <Card
-    bg="white"
-    boxShadow="2px 2px 8px 0 #dfe5e6"
-    border="solid 1px #dfe5e6"
-    m="5px"
+    bg='white'
+    boxShadow='2px 2px 8px 0 #dfe5e6'
+    border='solid 1px #dfe5e6'
+    m='5px'
   >
-    <a href={link} target="_blank">
+    <ExternalLink to={link}>
       <Column
         height={44}
         width={44}
         p={1}
-        alignItems="center"
-        justifyContent="center"
+        alignItems='center'
+        justifyContent='center'
       >
         <Image
           src={icon}
           maxWidth={20}
           maxHeight={18}
-          objectFit="contain"
+          objectFit='contain'
         />
       </Column>
-    </a>
+    </ExternalLink>
   </Card>
 )
 
@@ -49,8 +50,8 @@ export default class ShareOptions extends React.Component {
 
     return (
       <Position
-        position="sticky"
-        top="50%"
+        position='sticky'
+        top='50%'
         height={20}
         width={1}
       >

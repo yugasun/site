@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { Box, Text, ResponsiveStack, Flex } from 'serverless-design-system'
+import { Box, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../HeroTabs'
+import { PL, Heading } from 'src/fragments/DesignSystem'
 
 const ExamplesHero = () => {
   return (
@@ -21,31 +22,24 @@ const ExamplesHero = () => {
       color='white'
     >
       <Box width={[1]}>
-        <Text.p
-          fontSize={[8, 7, 8]}
-          fontFamily='SoleilLt'
-          lineHeight={[1.29, 1.29, 1.1]}
-          letterSpacing={['0.5px', '0.5px', '-2px']}
+        <Heading.h0
           m={0}
           mt={[42,42,0,0]}
         >
           Examples
-        </Text.p>        
+        </Heading.h0>        
       </Box>
       <Flex.verticallyCenter
           width={[1, 1, 1, 1]}
           px={[0, 0, 2]}
       >
-        <Text.p
-          fontSize={[2, 2, 2, 4]}
-          fontFamily={['SoleilBk', 'SoleilBk', 'SoleilLt']}
-          lineHeight={[1.63, 1.63, 1.33]}
-          letterSpacing={0}
+        <PL
+          color='white'
           mt={[22, 22, 1.5]}
           mb={0}
         >
           Search our full examples repository for project examples using all languages and FaaS providers.
-        </Text.p>
+        </PL>
       </Flex.verticallyCenter>
     </ResponsiveStack>
   </HeroWrapper>

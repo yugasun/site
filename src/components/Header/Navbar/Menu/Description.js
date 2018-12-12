@@ -29,22 +29,24 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
       <MenuWrapper
         zIndex='999'
         boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
-        position={['relative', 'relative', 'absolute']}
-        top={['0', '0', '72px']}
-        left={['0', '0', '-50%']}
-        minWidth={[0, 0, '250px']}
-        beforeBoxBorderWidth={[0, 0, '0 7.5px 13.0px 7.5px']}
+        position={['relative', 'relative', 'relative', 'relative', 'absolute']}
+        top={['0', '0', '0', '0', '72px']}
+        left={['0', '0', '0', '0', '-50%']}
+        minWidth={[0, 0, 0, 0, '250px']}
+        beforeBoxBorderWidth={[0, 0, 0, 0, '0 7.5px 13.0px 7.5px']}
       >
         <Background
           background={[
+            'none',
+            'none',
             'none',
             'none',
             `linear-gradient(210deg, ${theme.colors.black} 25%, ${theme.colors.gradient.black1}), linear-gradient(${theme.colors.black}, ${theme.colors.black})`,
           ]}
         >
           <Box
-            px={[1, 1, 4]}
-            pt={[1, 1, 3]}
+            px={[1, 1, 1, 1, 4]}
+            pt={[1, 1, 1, 1, 3]}
             pb={4}
             {...wrapperStyles}
           >

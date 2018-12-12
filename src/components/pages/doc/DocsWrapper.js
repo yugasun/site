@@ -65,6 +65,10 @@ const Wrapper = styled(Column)`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'SoleilBk';
     color: #000000;
+
+    &[id] {
+      margin-top: 40px;
+    }
   }
 
   @media screen and (max-width: 992px) {
@@ -172,7 +176,7 @@ const Wrapper = styled(Column)`
     }
   }
   & {
-    margin-top: 74px;
+    margin-top: 64px;
     padding-bottom: 0;
     margin-bottom: 0;
 
@@ -650,6 +654,13 @@ const preventDefault = (e) => e.preventDefault()
 
 export default class DocsWrapper extends React.Component {
   componentDidMount() {
+    //TODO: hacky - find a better solution for offsetting anchor scroll
+    if(typeof window !== 'undefined' && window.location.hash) {
+      setTimeout(function() {
+        window.scrollBy(0, -80)
+      }, 1)
+    }
+
     const domNode = ReactDOM.findDOMNode(this.ref)
     domNode.querySelectorAll("code.hljs").forEach((code) => {
       let number = 1

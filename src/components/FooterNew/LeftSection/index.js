@@ -12,7 +12,7 @@ import StandaloneColumn from './StandaloneColumn'
 
 // Renders the entire footer list items
 const LeftSection = () => (
-  <Column width={[1, 1, 0.65]} order={['2', '2', '1']}>
+  <Column width={[1, 1, 1, 1, 0.65]} order={['2', '2', '2', '2', '1']}>
     <Flex width={1} flexWrap='wrap' px={0} mb={[62,62,52]}>
       <ProductsColumn />
       <DevelopersColumn />

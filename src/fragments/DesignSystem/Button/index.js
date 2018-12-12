@@ -53,20 +53,24 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 414px) {
-    font-size: 20px;
-    width: 300px;
+    font-size: 14px;
+    width: ${
+      (props) => props.width ? props.width : '176px'
+    };
+    line-height: 24px;
+    letter-spacing: 1.5px;
   }
 `
 
 Button.defaultProps = {
-  width: '280px',
-  height: '50px',
+  width: '176px',
+  height: '36px',
   color: 'white',
   bg: 'primaryColor',
   border: 'none',
   borderColor: 'primaryColor',
   fontFamily: 'Serverless',
-  fontSize: '2rem',
+  fontSize: '14px',
   letterSpacing: 'primaryBtn',
   p: '0'
 }

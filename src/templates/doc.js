@@ -30,7 +30,7 @@ export default ({ data: { doc }, location }) => (
         location={location}
       />
       <LiteHeader url={location.pathname} />
-      <Row className="docWrapper">
+      <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
         <a
           title='Edit this page on github'
@@ -44,7 +44,7 @@ export default ({ data: { doc }, location }) => (
         </a>
         <Column
           dangerouslySetInnerHTML={{ __html: doc.content }}
-          className="content"
+          className='content'
         />
       </Row>
     </DocsWrapper>

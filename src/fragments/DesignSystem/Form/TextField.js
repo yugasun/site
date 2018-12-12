@@ -18,6 +18,10 @@ const TextFieldWithNoOutLine = styled(TextField)`
     opacity: 0.6;
   }
 
+  /* Safari */
+  border-radius: 0;
+  -webkit-appearance: none;
+
   &:focus {
     outline: none;
     background-image: linear-gradient(red 100%, transparent 16%);

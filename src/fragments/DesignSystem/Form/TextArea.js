@@ -23,6 +23,10 @@ const TextAreaWithNoOutLine = styled(TextArea)`
 }
 
 resize:none;
+
+/* Safari */
+border-radius: 0;
+-webkit-appearance: none;
   
 &:focus {
   outline: none;

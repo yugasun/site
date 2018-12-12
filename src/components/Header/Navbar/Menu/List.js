@@ -15,7 +15,7 @@ import { enterprise, resources } from 'src/constants/urls'
 const ProductMenu = () => (
   <Box>
     <MenuTitle name={'products'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'], pr: [1, 1, 0], pb: [3] }} >
+    <MenuDescription wrapperStyles={{ minWidth: [0, 0, 0, 0, '320px'], pr: [1, 1, 1, 1, 0], pb: [3] }} >
       <ProductDropdownList />
     </MenuDescription>
   </Box>

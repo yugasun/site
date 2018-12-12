@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Position, Absolute, Button } from 'serverless-design-system'
+import { ExternalLink } from 'src/fragments'
 
 const EditGithubButton = styled(Button)`
 line-height: 14px;
@@ -10,9 +11,7 @@ line-height: 14px;
   }
 `
 
-export default class EditOnGithubOption extends React.Component {
-  render() {
-    return (
+const EditOnGithubSticky = ({gitLink}) => (
         <Position
         position='sticky'
         top='30%'
@@ -26,11 +25,8 @@ export default class EditOnGithubOption extends React.Component {
             transformOrigin: '100% 0'
           }}
         >
-        <a
-          title='View this example on GitHub'
-          rel='noopener noreferrer'
-          target='_blank'
-          href={this.props.gitLink}
+        <ExternalLink
+          to={gitLink}
         >
           <EditGithubButton
             height={32}
@@ -41,9 +37,9 @@ export default class EditOnGithubOption extends React.Component {
           >
             view on Github
           </EditGithubButton>
-         </a>
+         </ExternalLink>
         </Absolute>
       </Position>
-    )
-  }
-}
+)
+
+export default EditOnGithubSticky

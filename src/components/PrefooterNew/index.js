@@ -27,11 +27,27 @@ const FlexWithShadow = styled(Flex.horizontallyCenter)`
 
 const ResponsiveRightPreFooterBackground = styled(Background)`
     background-size: 100% 100%;
+  
+    @media screen and (max-width: 1600px) and (min-width: 1280px){
+      background-size: auto;
+      background-position: 100%;
+    }
 
-    @media screen and (max-width: 415px) {
+    @media screen and (max-width: 768px) {
       background-position: 59% 106%;
       background-size: 138% 103%;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      background-position: 67% 61%;
+      background-size: 150% 100%;
+    }
+
+`
+const SmallMobileFontWhiteButton = styled(WhiteButton)`
+  @media screen and (max-width: 415px) {
+    font-size: 12px;
+  }
 `
 
 const LeftColumn = ({ heading, sentences }) => (
@@ -76,11 +92,11 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Column height={'198px'} justifyContent='space-between'>  
+  <Column height={'172px'} justifyContent='space-between'>  
     {actions.map(({ name, navProps }, index) => (
       <Box key={index}>
         <NavLink {...navProps}>
-          <WhiteButton>{name}</WhiteButton>
+          <SmallMobileFontWhiteButton>{name}</SmallMobileFontWhiteButton>
         </NavLink>
       </Box>
     ))}
@@ -89,7 +105,7 @@ const RightColumn = ({ actions }) => (
 
 const Prefooter = ({ heading, sentences, actions }) => (
   <Relative
-    top='-420px'
+    top={['-420px', '-420px', '-420px', '-420px', '-366px']}
     mb={['100px', '100px', '-290px']}
     height='400px'
   >
@@ -108,8 +124,6 @@ const Prefooter = ({ heading, sentences, actions }) => (
           <Flex.center
             flexDirection='column'
             height='fullHeight'
-            py={[0, 0, 0]}
-            px={[0, 0, 0]}
           >
             <RightColumn actions={actions} />
           </Flex.center>

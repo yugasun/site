@@ -9,7 +9,7 @@ import { Helmet, NewToServerlessPrefooter } from 'src/fragments'
 
 const Jobs = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>
-    <Helmet title="Jobs" location={location} />
+    <Helmet title='Serverless, Cloud Computing &amp; AWS Job Openings' location={location} />
     <Hero />
     <OpenPositions />
     <HowWeOperate />

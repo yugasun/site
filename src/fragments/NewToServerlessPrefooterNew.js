@@ -33,7 +33,7 @@ const actions = [
   {
     name: 'documentation',
     navProps: {
-      to: '/framework/docs',
+      to: '/framework/docs/',
       completed: true,
     },
   },

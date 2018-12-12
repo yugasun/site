@@ -10,6 +10,7 @@ const ContentWrapper = styled(Column)`
   ul, ol {
     list-style-position: inside;
     padding-left: 0;
+    white-space: nowrap;
   }
 
   p, li {
@@ -20,6 +21,15 @@ const ContentWrapper = styled(Column)`
     line-height: 1.63;
     color: #5b5b5b;
   }
+
+  li p {
+    display: inline-block;
+  }
+
+  ol li p {
+    text-indent: 0.5em;;
+  }
+  
 
   blockquote {
     margin: 0;
@@ -87,10 +97,6 @@ const ContentWrapper = styled(Column)`
     margin-bottom: 16px;
     margin-top:46px;
   }
-  li {
-    padding-top: 15px;
-    padding-bottom: 8px;
-  }
 
   @media screen and (max-width: 992px) {
     blockquote {
@@ -109,7 +115,7 @@ const ContentWrapper = styled(Column)`
       height: 360px;
     }
   }
-
+  
   @media screen and (max-width: 412px) {
     iframe {
       width: 100%;
