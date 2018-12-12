@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppContainerNewest as AppContainer }  from 'src/components'
-import { Box, Heading, Row, Column, Image, Text, Flex } from 'serverless-design-system'
+import { Box, Heading, Column, Image, Text, Flex } from 'serverless-design-system'
 import allTechPartners from './TechPartnersData'
 
 import styled from 'styled-components'
@@ -19,12 +19,12 @@ const PartnersContent = () => (
           const isEvenItem = index % 2 == 0
           return (
             <Flex flexDirection={['column-reverse', 'column-reverse', isEvenItem ? 'row': 'row-reverse']} key={index} pt={[92, 92, 162]}>
-              <Column width={['auto', 'auto', 488]}>
+              <Column width={['auto', 'auto', '40%']}>
                 <Heading.h2 fontFamily='Soleil'>{partner.name}</Heading.h2>
                 <Heading.h4 fontFamily='Soleil'>{partner.location}</Heading.h4>
                 <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>{partner.description}</Text.p>
               </Column>
-              <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '448px']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? 207 : 0]} mr={[0, 0, isEvenItem ? 0 : 176]} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
+              <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '40%']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? '17%' : 0]} mr={[0, 0, isEvenItem ? 0 : '14%']} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
               <a href={partner.websiteLink} target='_blank' rel='noopener noreferrer'>
                 <Image src={partner.logo.url}></Image>
               </a>
