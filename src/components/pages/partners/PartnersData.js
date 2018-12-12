@@ -1,9 +1,9 @@
 import logo99x from 'src/assets/images/pages/partners/99x-logo.png'
 import kenzanLogo from 'src/assets/images/pages/partners/kenzan-logo.svg'
-import mode2Logo from 'src/assets/images/pages/partners/mode2-logo.png'
+import mode2Logo from 'src/assets/images/pages/partners/mode2-logo.svg'
 import parallaxLogo from 'src/assets/images/pages/partners/parallax-logo.png'
 import sinapsisLogo from 'src/assets/images/pages/partners/sinapsis-logo.png'
-import superluminarLogo from 'src/assets/images/pages/partners/superluminar-logo.svg' 
+import superluminarLogo from 'src/assets/images/pages/partners/superluminar-logo.svg'
 import techMagicLogo from 'src/assets/images/pages/partners/tech-magic-logo.png'
 import trek10Logo from 'src/assets/images/pages/partners/trek10-logo.svg'
 import codingSansLogo from 'src/assets/images/pages/partners/codingsans-logo.png'
@@ -47,11 +47,12 @@ export default [
         },
         {
           name: "Mode2",
-          location: 'Santa Monica, CA',
+          location: 'Los Angeles, CA',
           description: 'Mode2 provides engineering and consulting services to help companies overcome the challenges of digital transformations, and accelerate their successful adoption of game-changing cloud technologies. Our human-centered approach puts your team at the core of a program that focuses on business and technical innovation for long-term business success.',
           logo: {
             url: mode2Logo,
-            bgHeight: '282px'
+            bgHeight: '118px',
+            imageWidth: '229px'
           },
           caseStudyLink: '',
           componentLink: '',
@@ -116,5 +117,5 @@ export default [
           caseStudyLink: '',
           componentLink: '',
           websiteLink: 'https://codingsans.com/',
-        }    
+        }
 ]

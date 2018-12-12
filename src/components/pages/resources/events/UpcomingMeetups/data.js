@@ -1,107 +1,32 @@
-export default [ 
+export default [
     {
-      title: 'Serverless Austin: Google Presents Serverless Computing',
-      schedule: {
-        date: 'Wednesday, November 7, 2018',
-        time: '6:00PM to 9:00PM',
-      },
-      address: {
-        firstLine: 'Google Austin',
-        secondLine: '500 W 2nd St, 28th Floor, Austin, TX',
-      },
-      attending: {
-        memberImages: [],
-        plusCount: 108,
-      }
-    },
-    {
-      title: 'Serverless Nürnberg: Serverless Computing with Azure Functions',
-      schedule: {
-        date: 'Wednesday, November 14, 2018',
-        time: '6:00 PM to 8:00 PM',
-      },
-      address: {
-        firstLine: 'implexis GmbH',
-        secondLine: 'Deutschherrnstraße 15-19, Nürnberg',
-      },
-      attending: {
-        memberImages: [],
-        plusCount: 7,
-      }
-    },
-    {
-      title: 'Serverless Toronto: Serverless Computing with Azure Functions',
-      schedule: {
-        date: 'Wednesday, November 14, 2018',
-        time: '6:00 PM to 8:00 PM',
-      },
-      address: {
-        firstLine: 'implexis GmbH',
-        secondLine: 'Deutschherrnstraße 15-19, Nürnberg',
-      },
-      attending: {
-        memberImages: [],
-        plusCount:33,
-      }
-    },
-    {
-      title: 'Serverless Toronto: Serverless Computing with Azure Functions',
-      schedule: {
-        date: 'Wednesday, November 14, 2018',
-        time: '6:00 PM to 8:00 PM',
-      },
-      address: {
-        firstLine: 'Myplanet (Bank of Upper Canada Building)',
-        secondLine: '252 Adelaide St. E., Toronto',
-      },
-      attending: {
-        memberImages: [],
-        plusCount:33,
-      }
-    },
-    {
-      title: 'Serverless Dubai: November Serverless in the Wild',
-      schedule: {
-        date: 'Wednesday, November 21, 2018',
-        time: '7:00 PM to 9:00 PM',
-      },
-      address: {
-        firstLine: 'Canadian University Dubai',
-        secondLine: 'al badaa street skeikh Zayed Road, Dubai',
-      },
-      attending: {
-        memberImages: [],
-        plusCount:4,
-      }
-    },
-    {
-      title: 'Serverless London: Serverless December!',
-      schedule: {
-        date: 'Wednesday, December 5, 2018',
-        time: '6:30 PM to 9:00 PM',
-      },
-      address: {
-        firstLine: '1 Principal Place',
-        secondLine: '115 Worship Street, EC2A 2FA, London',
-      },
-      attending: {
-        memberImages: [],
-        plusCount:96,
-      }
-    },
-    {
-      title: 'Serverless Toronto: December Meetup',
+      title: 'Serverless Istanbul: Amazon Sagemaker ile Makine öğrenmesi ve .NET Core ile AWS Lambda',
       schedule: {
         date: 'Thursday, December 13, 2018',
-        time: '6:30 PM to 8:30 PM',
+        time: '7:00PM to 8:30PM',
       },
       address: {
-        firstLine: 'Myplanet (Bank of Upper Canada Building)',
-        secondLine: '252 Adelaide St. E., Toronto',
+        firstLine: 'KWORKS Entrepreneurship Research Center',
+        secondLine: '19 Mayıs Mahallesi, Teyyareci Cemal Sk. 2-32, 34360 Şişli/İstanbul, Turkey',
       },
       attending: {
         memberImages: [],
-        plusCount:33,
+        plusCount: 137,
+      }
+    },
+    {
+      title: 'Serverless Toronto: Building Serverless Data Pipelines',
+      schedule: {
+        date: 'Thursday, December 13, 2018',
+        time: '6:00 PM to 8:30 PM',
+      },
+      address: {
+        firstLine: 'Myplanet (Bank of Upper Canada Building)',
+        secondLine: '256 Adelaide St E, Toronto, ON M5A 1N1, Canada',
+      },
+      attending: {
+        memberImages: [],
+        plusCount: 94,
       }
     },
     {
@@ -131,7 +56,22 @@ export default [
         },
         attending: {
           memberImages: [],
-          plusCount:4,
+          plusCount:11,
+        }
+    },
+      {
+        title: 'Serverless Poland: January Meetup',
+        schedule: {
+          date: 'Thursday, January 24, 2019',
+          time: '6:00 PM to 9:30 PM',
+        },
+        address: {
+          firstLine: 'Aviva',
+          secondLine: 'Inflancka 4B · Warszawa',
+        },
+        attending: {
+          memberImages: [],
+          plusCount:32,
         }
     },
 ]
