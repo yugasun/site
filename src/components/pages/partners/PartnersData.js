@@ -51,7 +51,8 @@ export default [
           description: 'Mode2 provides engineering and consulting services to help companies overcome the challenges of digital transformations, and accelerate their successful adoption of game-changing cloud technologies. Our human-centered approach puts your team at the core of a program that focuses on business and technical innovation for long-term business success.',
           logo: {
             url: mode2Logo,
-            bgHeight: '282px'
+            bgHeight: '118px',
+            imageWidth: '229px'
           },
           caseStudyLink: '',
           componentLink: '',

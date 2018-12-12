@@ -27,7 +27,7 @@ const PartnersContent = () => (
               </Column>
               <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '40%']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? '17%' : 0]} mr={[0, 0, isEvenItem ? 0 : '14%']} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
               <ExternalLink to={partner.websiteLink}>
-                <Image src={partner.logo.url}></Image>
+                <Image src={partner.logo.url} width={partner.logo.imageWidth ? partner.logo.imageWidth: 'auto'}></Image>
               </ExternalLink>
               </FlexWithBoxShadow>
             </Flex>
