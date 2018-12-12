@@ -21,30 +21,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        resolveEnv: () => NETLIFY_ENV,
-        env: {
-          production: {
-            policy: [],
-            sitemap: null,
-            host: null
-          },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null
-          },
-          'deploy-preview': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null
-          }
-        }
-      }
-    },
-
-    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: process.env.GATSBY_GOOGLE_TAG_MANAGER_ID,
