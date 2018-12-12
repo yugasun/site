@@ -9,7 +9,7 @@ import { Helmet } from 'src/fragments'
 const Partners = () => {
   return (
     <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-       <Helmet title='AWS Lambda &amp; Cloud Computing Agencies | Serverless Partners' />
+       <Helmet title='Serverless Tech Partners' />
        <Hero />
        <Content />
     </DefaultLayout>
