@@ -29,7 +29,7 @@ const ExamplesHero = () => {
           m={0}
           mt={[42,42,0,0]}
         >
-          Partners
+          Tech Partners
         </Text.p>
       </Box>
       <Flex.verticallyCenter
@@ -44,7 +44,7 @@ const ExamplesHero = () => {
           mt={[22, 22, 1.5]}
           mb={0}
         >
-          Serverless enables developers to prototype new features and get to market, fast. Our Serverless Partner Network is full of serverless-forward organizations, vetted by us, who are experts on modern development stacks and serverless ecosystems. Feel free to start up a conversation with them about your business needs.
+          Serverless enables developers to prototype new features and get to market, fast. Our Serverless Tech Partner Network is full of organizations developing and building tools to improve your Serverless apps. Feel free to give them a try or start up a conversation.
         </Text.p>
       </Flex.verticallyCenter>
     </ResponsiveStack>

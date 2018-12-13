@@ -1,8 +1,7 @@
 import React from 'react'
 import { AppContainerNewest as AppContainer }  from 'src/components'
 import { Box, Heading, Column, Image, Text, Flex } from 'serverless-design-system'
-import { ExternalLink } from 'src/fragments'
-import allPartners from './PartnersData'
+import allTechPartners from './TechPartnersData'
 
 import styled from 'styled-components'
 
@@ -16,7 +15,7 @@ const PartnersContent = () => (
         pb={[500, 500, 515]}
       >
       {
-        allPartners.map((partner, index) => {
+        allTechPartners.map((partner, index) => {
           const isEvenItem = index % 2 == 0
           return (
             <Flex flexDirection={['column-reverse', 'column-reverse', isEvenItem ? 'row': 'row-reverse']} key={index} pt={[92, 92, 162]}>
@@ -26,9 +25,9 @@ const PartnersContent = () => (
                 <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>{partner.description}</Text.p>
               </Column>
               <FlexWithBoxShadow alignItems='center' justifyContent='center' width={['auto', 'auto', '40%']} height={['auto', 'auto', partner.logo.bgHeight]} p={'32px'} ml={[0, 0, isEvenItem ? '17%' : 0]} mr={[0, 0, isEvenItem ? 0 : '14%']} mt={[0, 0, partner.name === 'Sinapsis'? 0 : 74]} mb={[4, 4, 0]}>
-              <ExternalLink to={partner.websiteLink}>
-                <Image src={partner.logo.url} width={partner.logo.imageWidth ? partner.logo.imageWidth: 'auto'}></Image>
-              </ExternalLink>
+              <a href={partner.websiteLink} target='_blank' rel='noopener noreferrer'>
+                <Image src={partner.logo.url}></Image>
+              </a>
               </FlexWithBoxShadow>
             </Flex>
           )
