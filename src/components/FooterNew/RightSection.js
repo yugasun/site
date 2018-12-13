@@ -62,7 +62,7 @@ const Subscribe = () => (
     order={['1', '1', '1', '1', '2']}
     pl={[0, 0, 0, 0, 3]}
   >
-    <Box mb={[32, 32, 41]}>
+    <Box mb={[32, 32, 32, 32, 41]}>
       <P color='white' align={['center', 'center', 'left']} lineHeight={1.63} mb={0} mt={[0, 0, 0, 0, '12px']}>
       Join our monthly newsletter to get the latest Serverless news, updates and happenings.
       </P>
