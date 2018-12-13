@@ -2,10 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system'
-import redHighlighter from 'src/assets/images/red-highlighter.png'
+import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const ContentWrapper = styled(Column)`
-  overflow: hidden;
 
   p, li {
     font-family: 'SoleilBk';
@@ -28,7 +27,7 @@ const ContentWrapper = styled(Column)`
       font-weight: normal;
       font-style: italic;
       line-height: 1.33;
-      color: #000000;
+      color: #5b5b5b;
     }
 
     &:before {
@@ -37,7 +36,7 @@ const ContentWrapper = styled(Column)`
       height: 39px;
       top: 0;
       width: 20px;
-      background: url(${redHighlighter});
+      background: url(${dotGridVertical});
       background-size: cover;
       left: -40px;
     }
@@ -61,11 +60,11 @@ const ContentWrapper = styled(Column)`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'SoleilBk';
-    font-size: 32px;
+    font-size: 40px;
     font-weight: normal;
     font-style: normal;
-    line-height: 1.13;
-    letter-spacing: -0.5px;
+    line-height: 50px;
+    letter-spacing: 0px;
     color: #000000;
     margin-top: 35px;
     margin-bottom: 15px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import { getAuthorById } from 'src/utils/blog'
 import AuthorCard from './AuthorCard'
 import ContentWrapper from './ContentWrapper'
@@ -24,7 +24,7 @@ export default ({ id, frontmatter, content }) => {
         />
         <ContentWrapper
           width={[1, 1, 1, 0.65]}
-          mx="auto"
+          mx='auto'
           dangerouslySetInnerHTML={{ __html: content }}
         />
         <AuthorCard author={author} />
