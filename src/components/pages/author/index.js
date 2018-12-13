@@ -5,7 +5,7 @@ import { AppContainer } from 'src/components'
 import Avatar from './Profile/Avatar'
 import Bio from './Profile/Bio'
 import Links from './Profile/Links'
-import Blogs from './Blogs'
+import Blogs from './Blogs/Blogs'
 
 const Profile = ({ author, allBlog }) => {
   const edges = allBlog ? (allBlog.edges || []) : []
@@ -37,7 +37,7 @@ const Profile = ({ author, allBlog }) => {
         />
       </Column>
       <Column
-        width={[1, 1, 0.25]}
+        width={[1, 1, 0.4]}
       >
         <Blogs
           authorName={author.name.split(' ')[0]}

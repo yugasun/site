@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogPreview from "src/components/pages/blog/Preview"
+import BlogPreview from './Preview'
 
 export default ({ blogs }) => (
   <React.Fragment>

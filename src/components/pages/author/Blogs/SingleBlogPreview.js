@@ -29,12 +29,12 @@ export default ({ id, frontmatter }) => {
   return (
     <Row my={[3, 3, 4, 5]}>
       <Box
-        width={[1, 1, 1, 0.6]}
+        width={[1, 1, 1, 1]}
         pr={[15, 15, 15, '10%']}
       >
         <Box width={[1, 1, 1, 0.75]}>
           <Text.span
-            fontSize={[0, 0, 0, 1]}
+            fontSize={[0, 0, 0, 0.2]}
             lineHeight={4}
             opacity={0.4}
             letterSpacing='text'
@@ -69,7 +69,7 @@ export default ({ id, frontmatter }) => {
         <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
             <Heading.h3
-              fontSize={[3, 3, 3, 5]}
+              fontSize={[3, 3, 3, 2]}
               fontFamily='SoleilBk'
               letterSpacing='h4'
             >
@@ -106,8 +106,8 @@ export default ({ id, frontmatter }) => {
           thumbnail ? (
             <HyperLinkBackground
               height='auto'
-              width={[55, 55, 55, 1]}
-              maxHeight={[55, 55, 55, 200]}
+              width={[55, 55, 55, 61]}
+              maxHeight={[55, 55, 55, 61]}
               background={`black url(${JSON.stringify(thumbnail)})`}
               backgroundSize='cover'
               backgroundPosition='center'
@@ -118,8 +118,8 @@ export default ({ id, frontmatter }) => {
             <HyperLinkImagePlaceholder
               size='small'
               wrapperProps={{
-                width: [55, 55, 55, 1],
-                height: [55, 55, 55, 200]
+                width: [55, 55, 55, 61],
+                height: [55, 55, 55, 61]
               }}
             />
           )

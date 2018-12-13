@@ -6,7 +6,7 @@ import BlogPreview from './SingleBlogPreview'
 export default ({ blogs }) => (
   <AppContainer>
     <Box
-      width={[1, 1, 1, 0.8]}
+      width={[1, 1, 1, 1]}
       mx='auto'
     >
       { blogs.map((blog, index) => (<BlogPreview key={`blog-${index}`} {...blog} />)) }
