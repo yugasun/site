@@ -29,7 +29,7 @@ const Title = ({ component: HeadingComp, color }) => (
     letterSpacing='0'
     lineHeight={2}
   >
-    Join 16,000 other developers and keep up to speed on the latest news in serverless.
+    Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
   </HeadingComp>
 )
 

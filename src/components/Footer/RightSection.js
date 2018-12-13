@@ -63,7 +63,7 @@ const Subscribe = () => (
   >
     <Box mb={4}>
       <P color='white'>
-      Join our monthly newsletter to get the latest news about Serverless updates and happenings.
+      Join our monthly newsletter to get the latest Serverless news, updates and happenings.
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
