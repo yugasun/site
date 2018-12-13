@@ -9,7 +9,6 @@ import {
   Card,
 } from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
-import blogFooterBackground from 'src/assets/images/blog-footer-background.png'
 
 const SubmitButton = (props) => (
   <TertiaryButton
@@ -42,12 +41,12 @@ export default () => (
       id='newsletter-box'
     >
       <Background
-        background={`url(${blogFooterBackground})`}
+        background={'#fd5750'}
         backgroundSize='cover'
       >
         <ResponsiveStack>
           <Flex
-            width={[1, 1, 0.5]}
+            width={[1, 1, 0.8]}
             p={[1, 1, 5, 7]}
             pr={2}
           >
@@ -56,12 +55,12 @@ export default () => (
           <Flex
             justifyContent='flex-end'
             alignItems='center'
-            width={[1, 1, 0.5]}
+            width={[1, 1, 0.7]}
             p={[1, 1, 4, 4, 7]}
           >
             <NewsLetterForm
-              emailFieldProps={{ width: 0.6,
-                height: 60,
+              emailFieldProps={{ width: 1,
+                height: 36,
                 bg: "#ffffff33",
                 fontSize: 1,
                 placeholder: "enter email address",
