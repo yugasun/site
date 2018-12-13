@@ -10,7 +10,7 @@ import AppContainer from './../AppContainer'
 
 export default class BlogHeader extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isNavbarShrinked: false,
       isNavbarActive: false,
@@ -32,7 +32,7 @@ export default class BlogHeader extends React.Component {
     this.previousY = window.scrollY
     if (movingDown) {
       if (isNavbarShrinked || window.scrollY < 55) { return }
-      this.setState({ isNavbarShrinked: true })
+      this.setState({ isNavbarShrinked: false })
     } else if (isNavbarShrinked) {
       this.setState({ isNavbarShrinked: false })
     }
@@ -58,7 +58,7 @@ export default class BlogHeader extends React.Component {
         >
           <Box
             py={[0, 0, 1]}
-            bg="black"
+            bg='black'
           >
             <AppContainer>
               <BlogNavbarContext.Provider value={this.state}>
@@ -70,10 +70,6 @@ export default class BlogHeader extends React.Component {
             </AppContainer>
           </Box>
         </HeaderWrapper>
-        <Box
-          pt={[ 55, 55, 196 ]}
-          bg="black"
-        />
       </React.Fragment>
     )
   }

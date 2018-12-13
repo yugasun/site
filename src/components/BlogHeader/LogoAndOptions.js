@@ -10,7 +10,7 @@ import BlogNavbarContext from './BlogNavbarContext'
 const Wrapper = styled(Flex.verticallyCenter)`
   justify-content: space-between;
   transition: padding 0.5s;
-`;
+`
 
 const NewsLetter = () => (
   <Box
