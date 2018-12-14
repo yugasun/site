@@ -16,12 +16,10 @@ const openSourcePoints = [
 ]
 
 const enterprisePoints = [
-    ["Infrastructure as code", "Architectural reviews"],
-    ["Provider agnostic", "Enterprise enablement and best practices"],
-    ["Simple Serverless development", "Custom Serverless workshop"],
-    ["Community support", "24/7 enterprise support"],
-    ["Community plugins", "Custom plugins"],
-    ["Community examples", "Custom use-case templates"]
+    ["Everything in open source plus…"],
+    ["Architectural reviews", "Enterprise enablement and best practices"],
+    ["Custom Serverless workshop", "24/7 enterprise support"],
+    ["Custom plugins", "Custom use-case templates"]
 ]
 
 const EnterpriseComparisonBox = styled(Background)`
@@ -36,11 +34,6 @@ const OpenSourceComparisonBox = styled(Background)`
     @media screen and (min-width: 1024px) {
         margin-top: 200px;
     }
-`
-
-const OpenSourceCTAButton = styled(Button)`
-    border-color: 'white';
-    background-color: transparent;
 `
 
 export default class ComparisonBoxes extends React.Component {
@@ -70,7 +63,7 @@ export default class ComparisonBoxes extends React.Component {
         return (
             <AppContainer>
             <Heading.h3 align='center'>Easy, open Serverless development.</Heading.h3>
-            <Flex mb={['500px', '500px', '500px', '500px', '500px', '500px']} flexDirection={['column', 'column', 'column', 'column','row']} mt={[62, 62, 92, 92, 46]}>  
+            <Flex mb={['520px']} flexDirection={['column', 'column', 'column', 'column','row']} mt={[62, 62, 92, 92, 46]}>  
             <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
                 <Absolute right='0' zIndex='-1' width='40%'>
                     <Image src={this.state.usingSafariDesktop ? spinningWheel : spinningWheelAnimation} />
@@ -85,7 +78,7 @@ export default class ComparisonBoxes extends React.Component {
                 <OpenSourceComparisonBox background='#fd5750' width={['auto', 'auto', 'auto', 'auto', '50%']} maxHeight={['auto', 'auto', '467px']}>
                     <CompareBox points={openSourcePoints} heading='open source'/>
                     <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
-                        <InternalLink to={enterprise}>
+                        <InternalLink to={developersMenu.docs}>
                             <WhiteButton>install free</WhiteButton>
                         </InternalLink>
                     </MobileCenteredBox>
@@ -93,8 +86,8 @@ export default class ComparisonBoxes extends React.Component {
                 <EnterpriseComparisonBox background='black' width={['auto', 'auto', 'auto', 'auto', '50%']}>
                     <CompareBox points={enterprisePoints} heading='enterprise'/>
                     <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
-                        <InternalLink to={developersMenu.docs}>
-                            <Button m='auto'>learn more</Button>
+                        <InternalLink to={enterprise}>
+                            <Button m='auto' className='enterprise-learn-more'>learn more</Button>
                         </InternalLink>
                     </MobileCenteredBox>
                 </EnterpriseComparisonBox>
