@@ -8,16 +8,16 @@ import { Benefits } from 'src/components/pages/form-pages/Content'
 
 const supportBenefits = [
   {
-    heading: 'World-class support',
-    body: 'Get collaborative, world-class support from the team that brought you the Serverless Framework and innovated the Serverless application.'
+    heading: 'Support and Best Practices',
+    body: 'Get dedicated support from the team that brought you the Serverless Framework: configuration and implementation guidance, architectural design, establishing use cases, onboarding team members, scaling serverless development, troubleshooting, and more.'
   },
   {
-    heading: 'Serverless Enablement',
-    body: 'Work with Serverless and cloud services experts who can help you successfully build, deploy, and manage your serverless applications.'
+    heading: 'Training and Workshops',
+    body: 'Custom onsite workshop with a Serverless Solutions Architect to solidify best practices across your development team: design patterns, DevOps strategies, CI/CD, security, operations, deployments, and more.'
   },
   {
-    heading: 'Serverless Training',
-    body: 'Enable your team with the most proven Serverless development practices. We offer comprehensive workshops both in-person and remote.'
+    heading: 'Development Services',
+    body: 'The Framework supports an extensible, plugin-powered architecture. Our engineers can work with you to build custom plugins, components, and integrations to enhance your workflow.'
   }
 ]
 
@@ -29,7 +29,7 @@ const Content = ({ theme }) => (
         theme.navbarHeights.mobile,
         theme.navbarHeights.desktop,
       ]}
-      mb={[0, 0, 52, 52, 350]}
+      mb={[0, 0, 52, 52, 227]}
     >
       <Flex.spaceBetween
         flexDirection={['column', 'column', 'column', 'column', 'row']}
