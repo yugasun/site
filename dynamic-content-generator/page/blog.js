@@ -4,7 +4,7 @@ const authors = require(getFileFromProjectRoot('src/constants/generated-authors.
 const categories = require(getFileFromProjectRoot('src/constants/categories.json'))
 const highlightedBlogs = require(getFileFromProjectRoot('src/constants/featured-blogs.json'))
 
-const blogsPerPage = 5
+const blogsPerPage = 7
 const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join("|"), 'gi')
 const graphqlQuery = `
 {
@@ -25,7 +25,7 @@ const createBlogListingPageWithPagination = (createPage, blogs) => {
       path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
       component: getFileFromProjectRoot(`src/templates/blogList.js`),
       context: {
-        limit: 5,
+        limit: blogsPerPage,
         start: i,
         highlightedBlogsRegEx,
       }
