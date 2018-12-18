@@ -3,9 +3,7 @@ import {
   Background,
   Box,
   Row,
-  Text,
-  Heading,
-  P
+  Text
 } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 import { getLinkComponent } from 'src/components/BlockLink'
@@ -18,6 +16,7 @@ import {
 } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
 import ImagePlaceholder from './ImagePlaceholder'
+import { Heading, P } from 'src/fragments/DesignSystem'
 
 const HyperLinkBackground = getLinkComponent(Background)
 const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
@@ -27,7 +26,7 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row my={[3, 3, 4, 5]}>
+    <Row mb={[3, 3, 4, 6]}>
       <Box
         width={[1, 1, 1, 0.6]}
         pr={[15, 15, 15, '10%']}
@@ -77,10 +76,7 @@ export default ({ id, frontmatter }) => {
             </Heading.h3>
           </Box>
         </InternalLink>
-        <P
-          fontSize={[0, 0, 0, 1]}
-          lineHeight={1.63}
-        >
+        <P>
           { description }
         </P>
         <InternalLink to={getAuthorLink(author.id)}>
