@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex } from 'serverless-design-system'
+import { Flex, Box } from 'serverless-design-system'
 
 import Logo from './Logo'
 import MobileOptions from './MobileOptions'
@@ -29,7 +29,9 @@ const LogoAndOptions = () => (
       ({ isNavbarShrinked }) => (
         <Wrapper py={[15, 15, isNavbarShrinked ? 0 : 15]}>
           <Logo />
-          <Support />
+          <Box display={['none', 'none', 'none', 'none', 'block']}>
+            <Support />
+          </Box>
           <MobileOptions />
         </Wrapper>
       )

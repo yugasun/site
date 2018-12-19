@@ -6,7 +6,7 @@ import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
 import Categories from './MobileOptions/Categories'
 import BlogNavbarContext from './BlogNavbarContext'
-import AppContainer from './../AppContainer'
+import { AppContainerNewest as AppContainer } from 'src/components'
 
 export default class BlogHeader extends React.Component {
   constructor(props) {
