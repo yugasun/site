@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import BlogPreview from './SingleBlogPreview'
 import BlogSignup from 'src/components/pages/blog/FirstBlogListMidSignup'
 
