@@ -5,6 +5,8 @@ import { default as PL } from './Text/PL'
 import { default as Button } from './Button'
 import { default as PageContainer } from './PageContainer'
 import { default as MobileCenteredBox } from './Box/MobileCentered'
+import { default as Box } from './Box'
+
 export default {
     SecondaryButton,
     Heading,
@@ -12,5 +14,6 @@ export default {
     PL,
     Button,
     PageContainer,
-    MobileCenteredBox
+    MobileCenteredBox,
+    Box
 }

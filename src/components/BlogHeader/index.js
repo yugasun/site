@@ -6,7 +6,7 @@ import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
 import Categories from './MobileOptions/Categories'
 import BlogNavbarContext from './BlogNavbarContext'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { HeaderContainer } from 'src/components'
 
 export default class BlogHeader extends React.Component {
   constructor(props) {
@@ -59,15 +59,16 @@ export default class BlogHeader extends React.Component {
           <Box
             py={[0, 0, 1]}
             bg='black'
+            height={this.state.isNavbarActive ? '100vh': 'auto'}
           >
-            <AppContainer>
+            <HeaderContainer>
               <BlogNavbarContext.Provider value={this.state}>
                 <ServerlessLink />
                 <LogoAndOptions />
                 <SearchBar />
                 <Categories />
               </BlogNavbarContext.Provider>
-            </AppContainer>
+            </HeaderContainer>
           </Box>
         </HeaderWrapper>
       </React.Fragment>

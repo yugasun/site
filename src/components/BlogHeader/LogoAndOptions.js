@@ -1,39 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Box } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 
 import Logo from './Logo'
 import MobileOptions from './MobileOptions'
 import BlogNavbarContext from './BlogNavbarContext'
-import { SecondaryButton } from 'src/fragments/DesignSystem'
-import NavLink from 'src/components/NavLink'
-import { products } from 'src/constants/urls'
+import { Box } from 'src/fragments/DesignSystem'
+import CategoriesPartial from './MobileOptions/CategoriesPartial'
+import EnterpriseSupportButton from 'src/components/HeaderNew/EnterpriseSupportButton'
 
 const Wrapper = styled(Flex.verticallyCenter)`
   justify-content: space-between;
   transition: padding 0.5s;
 `
 
-//TODO: repeated in header - refactor
-const Support = () => (
-  <NavLink to={products.support} completed className='header-menu-item'>
-    <SecondaryButton px={[0, 0, 0, 0, '0.3rem', '0.5rem']} width={['187px', '187px', '187px', '187px', '187px', '207px']}>
-    enterprise support
-    </SecondaryButton>
-  </NavLink>
-)
-
 const LogoAndOptions = () => (
   <BlogNavbarContext.Consumer>
     {
       ({ isNavbarShrinked }) => (
-        <Wrapper py={[15, 15, isNavbarShrinked ? 0 : 15]}>
+        <React.Fragment>
+        <Wrapper pt={['12px', '12px', isNavbarShrinked ? 0 : 15]} pb={['4px', '4px', isNavbarShrinked ? 0 : 15]}>
           <Logo />
-          <Box display={['none', 'none', 'none', 'none', 'block']}>
-            <Support />
-          </Box>
+          <Box.OnlyDesktop>
+            <EnterpriseSupportButton />
+          </Box.OnlyDesktop>
           <MobileOptions />
         </Wrapper>
+
+        <Box.OnlyMobileAndTablet>
+          <Wrapper pb={['12px']}>
+            <CategoriesPartial />
+          </Wrapper>
+        </Box.OnlyMobileAndTablet>
+
+        </React.Fragment>
       )
     }
   </BlogNavbarContext.Consumer>

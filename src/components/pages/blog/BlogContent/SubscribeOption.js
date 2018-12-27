@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Position, Absolute, Button } from 'serverless-design-system'
+import { Position, Absolute } from 'serverless-design-system'
+import { Button } from 'src/fragments/DesignSystem'
 
 const ButtonWithNoOutline = styled(Button)`
   &:focus {
@@ -16,29 +17,30 @@ export default class SubscribeOption extends React.Component {
 
   render() {
     return (
-      <Position
-        position="sticky"
-        top="50%"
-        height={20}
-        width={1}
-      >
-        <Absolute
-          right={0}
-          top={20}
-          style={{
-            transform: 'rotate(270deg) translate(0, -100%)',
-            transformOrigin: '100% 0'
-          }}
+        <Position
+          position='sticky'
+          top='50%'
+          height={20}
+          width={1}
+          display={['none', 'none', 'none', 'none', 'block']}
         >
-          <ButtonWithNoOutline
-            py={1}
-            width={180}
-            onClick={this.scrollIntoNewsLetter}
+          <Absolute
+            right={0}
+            top={20}
+            style={{
+              transform: 'rotate(270deg) translate(0, -100%)',
+              transformOrigin: '100% 0'
+            }}
           >
-            subscribe
-          </ButtonWithNoOutline>
-        </Absolute>
-      </Position>
+            <ButtonWithNoOutline
+              py={1}
+              width={180}
+              onClick={this.scrollIntoNewsLetter}
+            >
+              subscribe
+            </ButtonWithNoOutline>
+          </Absolute>
+        </Position>
     )
   }
 }

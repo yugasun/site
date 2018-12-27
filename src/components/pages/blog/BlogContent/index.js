@@ -7,6 +7,7 @@ import ContentWrapper from './ContentWrapper'
 import Frontmatter from './Frontmatter'
 import HeroImage from './HeroImage'
 import SubscribeOption from './SubscribeOption'
+import SubscribeOptionMobile from './SubscribeOptionMobile'
 import ShareOptions from './ShareOptions'
 
 export default ({ id, frontmatter, content }) => {

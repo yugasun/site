@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, Flex, Transition } from 'serverless-design-system'
 
-import HeaderContainer from './Container'
+import { HeaderContainer } from 'src/components'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import NavButton from './NavButton'

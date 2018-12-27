@@ -26,7 +26,6 @@ export default class Search extends React.Component {
       <React.Fragment>
         <OptionWrapper
           justifyContent='center'
-          mx='5px'
           onClick={this.toggleSearchBar}
         >
           <Image
