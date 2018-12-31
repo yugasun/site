@@ -13,7 +13,7 @@ const Preview = ({ blogs, currentPage }) => {
             <Box
               width={[1, 1, 1, 0.8]}
               mx='auto'
-              mt={ index === 0 ? '132px': 0}
+              mt={ index === 0 ? ['62px', '62px', '62px', '62px', '132px']: 0}
               mb={ index === 3 && currentPage === 0? '122px' : 0 }
             >
               <BlogPreview {...blog} />

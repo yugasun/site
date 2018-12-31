@@ -82,8 +82,8 @@ const FirstBlogListSignup = () => (
     <RelativeWithBoxShadow
       m={15}
       display={['block', 'block', 'none']}
-      top='-360px'
-      mb='-290px'
+      top={['-60px', '-60px', '-60px', '-60px', '-360px']}
+      mb={['-100px', '-100px', '-100px', '-100px', '-290px']}
     >
       <Card border='1px solid #fd5750'>
         <Background>
