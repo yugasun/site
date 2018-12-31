@@ -68,11 +68,6 @@ const ContentWrapper = styled(Column)`
     color: #000000;
     margin-top: 35px;
     margin-bottom: 15px;
-
-    &[id] {
-      margin-top: -60px;
-      padding-top: 100px;
-    }
   }
 
   li {
