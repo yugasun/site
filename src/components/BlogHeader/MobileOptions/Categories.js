@@ -7,6 +7,7 @@ import { getCategoryNameById } from 'src/utils/blog'
 import closeIcon from 'src/assets/images/icon-close.png'
 import mobileMenuIcon from 'src/assets/images/icon-mobile-menu.png'
 import EnterpriseSupportButton from 'src/components/HeaderNew/EnterpriseSupportButton'
+import NewsletterOption from './NewsletterOptin'
 
 const Category = ({ children, link }) => (
   <Box py={'13.5px'}>
@@ -69,7 +70,7 @@ const MobileCategories = () => (
                   </Category>
                 ))
               }
-              <EnterpriseSupportButton />
+              <NewsletterOption />
             </Flex.center>
           </React.Fragment>
         )
