@@ -17,6 +17,7 @@ const RelativeWithBoxShadow = styled(Relative)`
 
 const SubmitButton = (props) => (
   <Button
+    width={['228px', '228px', '228px', '228px', '123px']}
     {...props}
   >
     subscribe
@@ -29,6 +30,7 @@ const Title = ({ component: HeadingComp, color }) => (
     fontFamily='SoleilLt'
     letterSpacing='0'
     lineHeight={2}
+    align={['center', 'center', 'center', 'center', 'left']}
   >
     Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
   </HeadingComp>
@@ -62,12 +64,14 @@ const FirstBlogListSignup = () => (
               emailFieldProps={{ width: 1,
                 height: 36,
                 bg: "#eaeaea",
-                fontSize: 1,
+                fontSize: '14px',
                 placeholder: "email address",
-                id: "newsletter-emailfield"
+                placeholderColor: "#8c8c8c",
+                id: "newsletter-emailfield",
+                color: "gray.3",
               }}
               btnComponent={SubmitButton}
-              wrapperProps={{ width: 1, color: 'white' }}
+              wrapperProps={{ width: 1 }}
               formStyles={{
                 display: 'flex',
                 alignItems: 'center',
@@ -85,7 +89,7 @@ const FirstBlogListSignup = () => (
       top={['-60px', '-60px', '-60px', '-60px', '-360px']}
       mb={['-100px', '-100px', '-100px', '-100px', '-290px']}
     >
-      <Card border='1px solid #fd5750'>
+      <Card>
         <Background>
           <ResponsiveStack
             bg='#ffffffe6'
@@ -102,12 +106,15 @@ const FirstBlogListSignup = () => (
               wrapper={Flex.column}
               wrapperProps={{ alignItems: 'center', width: 1, px: 2 }}
               emailFieldProps={{
+                fontSize: '14px',
+                height: 36,
                 bg: "#8c8c8c33",
                 placeholder: "enter email address",
-                placeholderColor: "gray.3",
+                placeholderColor: "#8c8c8c",
                 color: "gray.3",
                 id: "newsletter-emailfield"
               }}
+              btnComponent={SubmitButton}
             />
           </ResponsiveStack>
         </Background>
