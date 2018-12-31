@@ -16,6 +16,7 @@ export default ({ id, frontmatter, content }) => {
   return (
     <Box pb={[6, 6, 5, 8]}>
       <SubscribeOption />
+      <SubscribeOptionMobile />
       <AppContainer>
         <Frontmatter frontmatter={frontmatter} />
         <HeroImage heroImage={frontmatter.heroImage} />

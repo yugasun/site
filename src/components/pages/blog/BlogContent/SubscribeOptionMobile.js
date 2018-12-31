@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Position, Absolute } from 'serverless-design-system'
+import { Position, Fixed } from 'serverless-design-system'
 import { Button } from 'src/fragments/DesignSystem'
 
 const ButtonWithNoOutline = styled(Button)`
@@ -17,24 +17,25 @@ export default class SubscribeOption extends React.Component {
 
   render() {
     return (
-      <Position
-        position='sticky'
-        width={1}
-        display={['block', 'block', 'block', 'block', 'none']}
-      >
-        <Absolute
-          bottom={0}
+        <Position
+          position='sticky'
           width={1}
+          display={['block', 'block', 'none']}
+          zIndex={1}
+        >
+          <Fixed
+            bottom={0}
+            width={'100%'}
+            
         >
           <ButtonWithNoOutline
-            py={1}
-            width={1}
-            onClick={this.scrollIntoNewsLetter}
+            width={'100%'}
+            fontSize={1.4}
           >
             subscribe
           </ButtonWithNoOutline>
-        </Absolute>
-      </Position>
+        </Fixed>
+        </Position>
     )
   }
 }
