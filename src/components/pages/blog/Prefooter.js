@@ -5,20 +5,22 @@ import {
   Flex,
   Background,
   Heading,
-  TertiaryButton,
   Card,
 } from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
+import { Button } from 'src/fragments/DesignSystem'
 
 const SubmitButton = (props) => (
-  <TertiaryButton
+  <Button
     width={0.4}
-    height={60}
+    height={36}
     fontSize={1}
+    color='#fd5750'
+    bg='white'
     {...props}
   >
     sign up
-  </TertiaryButton>
+  </Button>
 )
 
 const Title = ({ component: HeadingComp, color }) => (
