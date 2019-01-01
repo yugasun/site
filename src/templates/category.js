@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading } from 'serverless-design-system'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import { NewToServerlessPrefooter, Helmet } from 'src/fragments'
+import { NewToServerlessPrefooterNew as NewToServerlessPrefooter, Helmet } from 'src/fragments'
 import CategoryData from 'src/constants/categories.json'
 
 export default class Authors extends React.Component {
@@ -17,7 +17,7 @@ export default class Authors extends React.Component {
     return (
       <BlogLayout prefooter={NewToServerlessPrefooter}>
       <Helmet title={`Blogs posts under ${categoryInTitleCase} | AWS & Serverless`}/>
-        <Flex.center my={[3, 3, 4, 5]}>
+        <Flex.center mt={[5]} mb={5}>
           <Heading.h2
             fontSize={[4, 4, 6]}
             fontFamily='SoleilSb'
