@@ -4,8 +4,6 @@ import {
   Box,
   Row,
   Text,
-  Heading,
-  P
 } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 import { getLinkComponent } from 'src/components/BlockLink'
@@ -18,6 +16,7 @@ import {
 } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
 import ImagePlaceholder from './ImagePlaceholder'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const HyperLinkBackground = getLinkComponent(Background)
 const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
@@ -27,17 +26,17 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row my={[2, 2, 4, 6]}>
+    <Row mt={[2, 2, 4, 4]}>
       <Box
         width={[1, 1, 1, 1]}
         pr={[15, 15, 15, '5%']}
       >
         <Box width={[1, 1, 1, 0.75]}>
           <Text.span
-            fontSize={[0, 0, 0, 0.2]}
-            lineHeight={4}
+            fontSize={[0, 0, 0, 12]}
+            lineHeight={'14px'}
             opacity={0.4}
-            letterSpacing='text'
+            letterSpacing='0.5px'
             mt={0}
           >
             {
@@ -68,27 +67,27 @@ export default ({ id, frontmatter }) => {
         </Box>
         <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
-            <Heading.h3
-              fontSize={[3, 3, 3, 2]}
-              fontFamily='SoleilBk'
-              letterSpacing='h4'
+            <Heading.h5
             >
               { title }
-            </Heading.h3>
+            </Heading.h5>
           </Box>
         </InternalLink>
-        <P
-          fontSize={[0, 0, 0, 1]}
+        <Text
+          fontSize={'12px'}
           lineHeight={1.63}
+          letterSpacing={0}
+          fontFamily='Soleil'
+          color='gray.3'
         >
           { description }
-        </P>
+        </Text>
         <InternalLink to={getAuthorLink(author.id)}>
           <Text.p
             fontFamily='Soleil'
             fontSize={0}
             color='gray.2'
-            lineHeight={3}
+            lineHeight={'16px'}
             mt={[1, 1, 1, 2]}
           >
             written by&nbsp;

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, P } from 'serverless-design-system'
+import { Box } from 'serverless-design-system'
 import { TitleWithIcon } from 'src/fragments'
+import { P } from 'src/fragments/DesignSystem'
 
-export default ({ authorName, bio }) => (
+const AuthorBio = ({ authorName, bio }) => (
   <Box width={[1, 1, 0.85]}>
     <TitleWithIcon>
       { authorName }
@@ -12,3 +13,5 @@ export default ({ authorName, bio }) => (
     </P>
   </Box>
 )
+
+export default AuthorBio

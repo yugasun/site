@@ -34,13 +34,14 @@ const Title = ({ component: HeadingComp, color }) => (
   </HeadingComp>
 )
 
-export default () => (
+const BlogPrefooter = () => (
   <React.Fragment>
     <Relative
       display={['none', 'none', 'block']}
-      top='-320px'
+      top='-370px'
       mb='-290px'
       id='newsletter-box'
+      pt='100px'
     >
       <Background
         background={'#fd5750'}
@@ -117,3 +118,5 @@ export default () => (
     </Relative>
   </React.Fragment>
 )
+
+export default BlogPrefooter

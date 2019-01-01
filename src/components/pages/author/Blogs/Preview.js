@@ -3,14 +3,17 @@ import { Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import BlogPreview from './SingleBlogPreview'
 
-export default ({ blogs }) => (
+const AuthorBlogsPreview = ({ blogs }) => (
   <AppContainer>
     <Box
       width={[1, 1, 1, 1]}
       mx='auto'
-      mb={[132]}
+      mt={[90]}
+      mb={[32]}
     >
       { blogs.map((blog, index) => (<BlogPreview key={`blog-${index}`} {...blog} />)) }
     </Box>
   </AppContainer>
 )
+
+export default AuthorBlogsPreview
