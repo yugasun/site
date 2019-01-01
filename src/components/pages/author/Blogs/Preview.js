@@ -8,6 +8,7 @@ export default ({ blogs }) => (
     <Box
       width={[1, 1, 1, 1]}
       mx='auto'
+      mb={[132]}
     >
       { blogs.map((blog, index) => (<BlogPreview key={`blog-${index}`} {...blog} />)) }
     </Box>

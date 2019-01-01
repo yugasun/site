@@ -1,6 +1,6 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 
 import Avatar from './Profile/Avatar'
 import Bio from './Profile/Bio'
@@ -29,7 +29,7 @@ const Profile = ({ author, allBlog }) => {
       <Column
         width={[1, 1, 0.6]}
         alignItems='center'
-        my={2}
+        my={3}
       >
         <Bio
           authorName={author.name}

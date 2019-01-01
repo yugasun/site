@@ -4,7 +4,7 @@ import { NewToServerlessPrefooterNew as NewToServerlessPrefooter, Helmet } from 
 import { getAuthorById } from 'src/utils/blog'
 import Author from 'src/components/pages/author'
 
-export default ({ data, pathContext: { authorId } }) => {
+const AuthorTemplate = ({ data, pathContext: { authorId } }) => {
   const author = getAuthorById(authorId)
 
   return (
@@ -15,9 +15,13 @@ export default ({ data, pathContext: { authorId } }) => {
   )
 }
 
+export default AuthorTemplate
+
 export const query = graphql`
-  query AuthorsBlogs($authorId: [String]) {
-    allBlog (sort: { fields: [frontmatter___date], order: DESC }, limit: 3, filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
+  query AuthorsBlogs($authorId: [String], $blogsLimit: Int) {
+    allBlog (sort: { fields: [frontmatter___date], order: DESC }, 
+    limit: $blogsLimit, 
+    filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
       edges {
         node {
           id

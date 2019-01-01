@@ -27,10 +27,10 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row my={[3, 3, 4, 5]}>
+    <Row my={[2, 2, 4, 6]}>
       <Box
         width={[1, 1, 1, 1]}
-        pr={[15, 15, 15, '10%']}
+        pr={[15, 15, 15, '5%']}
       >
         <Box width={[1, 1, 1, 0.75]}>
           <Text.span
@@ -100,7 +100,7 @@ export default ({ id, frontmatter }) => {
       <Row
         justifyContent='center'
         width={0.4}
-        mt={[2, 2, 2, 0]}
+        mt={[2, 2, 2, 4]}
       >
         {
           thumbnail ? (
