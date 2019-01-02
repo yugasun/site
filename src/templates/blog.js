@@ -7,7 +7,7 @@ import Comments from 'src/components/pages/blog/Comments'
 import { Helmet } from 'src/fragments'
 
 const BlogTemplate = ({ data: { currentBlog, previousBlog, nextBlog }, location }) => (
-  <BlogLayout prefooter={Prefooter}>
+  <BlogLayout prefooter={Prefooter} prefooterOnlyDesktop>
     <Helmet
       {...currentBlog.frontmatter}
       location={location}
