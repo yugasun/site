@@ -42,7 +42,7 @@ const Title = ({ component: HeadingComp, color }) => (
 const BlogPrefooter = () => (
   <React.Fragment>
     <Relative
-      display={['none', 'none', 'block']}
+      display={['none', 'none', 'none', 'none', 'block']}
       top='-370px'
       mb='-290px'
       id='newsletter-box'
