@@ -19,16 +19,6 @@ import twitterIcon from 'src/assets/images/twitter-black.svg'
 import githubIcon from 'src/assets/images/github.svg'
 import mediumIcon from 'src/assets/images/medium.svg'
 
-const Link = styled.a`
-  color: ${({ theme }) => theme.colors.black};
-
-  opacity: 0.4;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.black};
-  }
-`
-
 const LinkText = styled(Text.p)`
   color: black;
   opacity: 0.4;
@@ -56,7 +46,7 @@ const renderLink = (image, link) => (
 )
 
 const BlogAuthorLinks = ({ personalWebsite, githubHandle, twitterHandle, mediumHandle }) => (
-  <Box width={[1, 1, 'auto', 'auto', 'auto', 280]}>
+  <Box width={[1, 1, 1, 1, 1, 280]}>
     { personalWebsite && renderLink(linkIcon, personalWebsite) }
     { githubHandle && renderLink(githubIcon, getGithubLink(githubHandle)) }
     { twitterHandle && renderLink(twitterIcon, getTwitterLink(twitterHandle)) }
