@@ -23,6 +23,7 @@ export default class SubscribeOption extends React.Component {
           height={20}
           width={1}
           display={['none', 'none', 'none', 'none', 'block']}
+          {...this.props}
         >
           <Absolute
             right={0}
@@ -35,7 +36,6 @@ export default class SubscribeOption extends React.Component {
             <ButtonWithNoOutline
               py={1}
               width={180}
-              onClick={this.scrollIntoNewsLetter}
             >
               subscribe
             </ButtonWithNoOutline>
