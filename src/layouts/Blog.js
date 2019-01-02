@@ -5,7 +5,8 @@ import { BlogHeader as Header, FooterNew as Footer } from 'src/components'
 
 const BlogLayout = ({ children, prefooter, transparentHeader, prefooterOnlyDesktop }) => {
   const pbMobile = prefooterOnlyDesktop ? 62: 300
-
+  const prefooterOnlyDesktopBool = prefooterOnlyDesktop ? true: false
+  
   return (
       <Column width={1}>
         <Header transparent={transparentHeader} />
@@ -15,7 +16,7 @@ const BlogLayout = ({ children, prefooter, transparentHeader, prefooterOnlyDeskt
         >
           {children}
         </Box>
-        <Footer prefooter={prefooter} prefooterOnlyDesktop/>
+        <Footer prefooter={prefooter} prefooterOnlyDesktop={prefooterOnlyDesktopBool} />
       </Column>
     )
   
