@@ -47,6 +47,7 @@ const ResponsiveRightPreFooterBackground = styled(Background)`
 const SmallMobileFontWhiteButton = styled(WhiteButton)`
   @media screen and (max-width: 415px) {
     font-size: 12px;
+    width: 196px;
   }
 `
 
