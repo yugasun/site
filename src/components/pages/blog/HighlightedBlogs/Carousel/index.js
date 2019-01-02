@@ -73,7 +73,7 @@ export default class Carousel extends React.Component {
         </Relative>
         <Absolute
           width={1}
-          bottom={[38, 38, 20, 20, 20]}
+          bottom={[38, 38, 30]}
         >
           <Row
             width={1}
