@@ -9,7 +9,7 @@ const AuthorTemplate = ({ data, pathContext: { authorId } }) => {
   const author = getAuthorById(authorId)
 
   return (
-    <BlogLayout prefooter={Prefooter}>
+    <BlogLayout prefooter={Prefooter} prefooterOnlyDesktop>
       <Helmet title={`Blog posts written by ${author.name}`}/>
       <Author author={author} allBlog={data.allBlog} />
     </BlogLayout>

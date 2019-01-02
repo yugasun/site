@@ -4,7 +4,7 @@ import { Box, Column } from 'serverless-design-system'
 import { BlogHeader as Header, FooterNew as Footer } from 'src/components'
 
 const BlogLayout = ({ children, prefooter, transparentHeader, prefooterOnlyDesktop }) => {
-  const pbMobile = prefooterOnlyDesktop ? 50: 300
+  const pbMobile = prefooterOnlyDesktop ? 62: 300
 
   return (
       <Column width={1}>
