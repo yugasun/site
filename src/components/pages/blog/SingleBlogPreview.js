@@ -31,7 +31,7 @@ export default ({ id, frontmatter }) => {
   return (
     <Row mb={[3, 3, 4, 6]}>
       <Box
-        width={[1, 1, 1, 0.6]}
+        width={[1, 1, 1, 1, 0.6]}
         pr={['10px', '10px', '10px', '10%']}
       >
         <Box width={[1, 1, 1, 0.75]}>
