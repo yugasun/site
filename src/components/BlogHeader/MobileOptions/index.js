@@ -3,7 +3,7 @@ import { Box, Row } from 'serverless-design-system'
 import Search from './Search'
 
 const MobileOptions = () => (
-    <Box display={[ 'block', 'block', 'block', 'block', 'none' ]}>
+    <Box display={[ 'block', 'block', 'none', 'none', 'none' ]}>
       <Row>
         <Search />
       </Row>

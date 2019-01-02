@@ -21,17 +21,17 @@ const LogoAndOptions = () => (
         <React.Fragment>
         <Wrapper pt={['12px', '12px', isNavbarShrinked ? 0 : 15]} pb={['4px', '4px', isNavbarShrinked ? 0 : 15]}>
           <Logo />
-          <Box.OnlyDesktop>
+          <Box.OnlyTabletAndDesktop>
             <EnterpriseSupportButton />
-          </Box.OnlyDesktop>
+          </Box.OnlyTabletAndDesktop>
           <MobileOptions />
         </Wrapper>
 
-        <Box.OnlyMobileAndTablet>
+        <Box.OnlyMobile>
           <Wrapper pb={['12px']}>
             <CategoriesPartial />
           </Wrapper>
-        </Box.OnlyMobileAndTablet>
+        </Box.OnlyMobile>
 
         </React.Fragment>
       )
