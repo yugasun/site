@@ -17,7 +17,7 @@ const RelativeWithBoxShadow = styled(Relative)`
 
 const SubmitButton = (props) => (
   <Button
-    width={['228px', '228px', '228px', '228px', '123px']}
+    width={['100%', '100%', '100%', '100%', '123px']}
     {...props}
   >
     subscribe
