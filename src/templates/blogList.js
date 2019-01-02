@@ -6,7 +6,7 @@ import { Helmet, NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 
 import { Pagination } from 'src/components'
 import HighlightedBlogList from 'src/constants/featured-blogs.json'
 import { Box } from 'serverless-design-system'
-import SubscribeOptionMobile from '../components/pages/blog/BlogContent/SubscribeOptionMobile'
+import SubscribeOptionMobileAndTablet from '../components/pages/blog/BlogContent/SubscribeOptionMobileAndTablet'
 
 const BlogList = ({
   data: { blogs: { edges, totalCount }, highlighted },
@@ -32,7 +32,7 @@ const BlogList = ({
         description='Articles, resources, and posts on serverless architectures, best practices, and how-to'
         location={location}
       />
-      <SubscribeOptionMobile />
+      <SubscribeOptionMobileAndTablet />
       {
         currentPage === 0 && (<HighlightedBlogs blogs={highlightedBlogs} />)
       }

@@ -6,8 +6,8 @@ import AuthorCard from './AuthorCard'
 import ContentWrapper from './ContentWrapper'
 import Frontmatter from './Frontmatter'
 import HeroImage from './HeroImage'
-import SubscribeOption from './SubscribeOption'
-import SubscribeOptionMobile from './SubscribeOptionMobile'
+import SubscribeOptionDesktop from './SubscribeOptionDesktop'
+import SubscribeOptionMobileAndTablet from './SubscribeOptionMobileAndTablet'
 import ShareOptions from './ShareOptions'
 
 export default ({ id, frontmatter, content }) => {
@@ -15,8 +15,8 @@ export default ({ id, frontmatter, content }) => {
 
   return (
     <Box pb={[6, 6, 5, 8]}>
-      <SubscribeOption />
-      <SubscribeOptionMobile />
+      <SubscribeOptionDesktop />
+      <SubscribeOptionMobileAndTablet />
       <AppContainer>
         <Frontmatter frontmatter={frontmatter} />
         <HeroImage heroImage={frontmatter.heroImage} />

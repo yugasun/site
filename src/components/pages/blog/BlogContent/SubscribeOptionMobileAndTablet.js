@@ -20,7 +20,7 @@ export default class SubscribeOption extends React.Component {
         <Position
           position='sticky'
           width={1}
-          display={['block', 'block', 'none']}
+          display={['block', 'block', 'block', 'block', 'none']}
           zIndex={1}
         >
           <Fixed
