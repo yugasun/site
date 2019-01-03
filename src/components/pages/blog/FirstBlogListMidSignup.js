@@ -8,7 +8,7 @@ import {
   Card,
   P,
 } from 'serverless-design-system'
-import { NewsLetterForm } from 'src/components'
+import { NewsLetterFormNew as NewsLetterForm } from 'src/components'
 import styled from 'styled-components'
 import { Button } from 'src/fragments/DesignSystem'
 

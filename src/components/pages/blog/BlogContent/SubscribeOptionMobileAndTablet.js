@@ -11,7 +11,7 @@ const ButtonWithNoOutline = styled(Button)`
 
 export default class SubscribeOption extends React.Component {
   scrollIntoNewsLetter = () => {
-    const newsletterField =  document.getElementById('newsletter-box')
+    const newsletterField =  document.getElementById('newsletter-box-footer')
     newsletterField.scrollIntoView()
   }
 
@@ -31,6 +31,7 @@ export default class SubscribeOption extends React.Component {
           <ButtonWithNoOutline
             width={'100%'}
             fontSize={1.4}
+            onClick={this.scrollIntoNewsLetter}
           >
             subscribe
           </ButtonWithNoOutline>

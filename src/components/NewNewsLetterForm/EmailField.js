@@ -45,6 +45,7 @@ export default class EmailField extends React.Component {
         onFocus={this.clearPlaceholder}
         onBlur={this.restorePlaceholder}
         placeholder={this.state.placeholder}
+        className='newsletter-email'
       />
     )
   }

@@ -3,19 +3,33 @@ import Link from 'gatsby-link'
 import { Box, Text, Flex } from 'serverless-design-system'
 import BlogNavbarContext from '../BlogNavbarContext'
 
-const Category = ({ children, link, color }) => (
+const CategoryItem = ({children, color}) => (
+  <Text.span
+    color={color ? color: '#8c8c8c'}
+    fontSize='12px'
+    lineHeight={0}      
+  >
+    { children }
+  </Text.span>
+)
+
+const Category = ({ children, link, color }) => {
+  return link ? (
     <Box>
       <Link to={link}>
-        <Text.span
-          color={color ? color: '#8c8c8c'}
-          fontSize='12px'
-          lineHeight={0}
-        >
-          { children }
-        </Text.span>
+        <CategoryItem  color={color}>
+          {children}
+        </CategoryItem>
       </Link>
     </Box>
+  ): (
+    <Box>
+        <CategoryItem  color={color}>
+          {children}
+        </CategoryItem>
+    </Box>
   )
+}
 
 const MobileOptions = () => (
   <BlogNavbarContext.Consumer>
@@ -26,14 +40,14 @@ const MobileOptions = () => (
                 <Category link={`/blog/`} color='white'>
                         all
                 </Category>
-                <Category link={`/blog/`}>
+                <Category link={`/category/guides-and-tutorials/`}>
                         guides &amp; tutorials
                 </Category>
-                <Category link={`/blog/`}>
+                <Category link={`/category/user-stories/`}>
                         user stories
                 </Category>
                 <Box onClick={toggleNavbarActiveness}>
-                    <Category>
+                    <Category link={null}>
                             more &#x25BE;
                     </Category>
                 </Box>
