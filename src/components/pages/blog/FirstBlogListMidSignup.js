@@ -6,6 +6,7 @@ import {
   Background,
   Heading,
   Card,
+  P,
 } from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
 import styled from 'styled-components'
@@ -24,16 +25,17 @@ const SubmitButton = (props) => (
   </Button>
 )
 
-const Title = ({ component: HeadingComp, color }) => (
-  <HeadingComp
+const Title = ({ color }) => (
+  <P
     color={color}
     fontFamily='SoleilLt'
-    letterSpacing='0'
-    lineHeight={'32px'}
+    letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '0']}
+    lineHeight={['24px', '24px', '24px', '24px', '32px']}
     align={['center', 'center', 'center', 'center', 'left']}
+    fontSize={['18px', '18px', '18px', '18px', '24px']}
   >
     Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
-  </HeadingComp>
+  </P>
 )
 
 const FirstBlogListSignup = () => (
@@ -50,7 +52,7 @@ const FirstBlogListSignup = () => (
           <Flex
             width={[1, 1, 1]}
             pl={[1, 1, 5, 8]}
-            py={[1, 1, 5, '93px']}
+            py={[1, 1, 5, '63px']}
           >
             <Title component={Heading.h4} color='black' />
           </Flex>
@@ -100,7 +102,7 @@ const FirstBlogListSignup = () => (
               px={2}
               pb={2}
             >
-              <Title component={Heading.h5} />
+              <Title color='black' />
             </Flex>
             <NewsLetterForm
               wrapper={Flex.column}
@@ -109,7 +111,7 @@ const FirstBlogListSignup = () => (
                 fontSize: '14px',
                 height: 36,
                 bg: "#8c8c8c33",
-                placeholder: "enter email address",
+                placeholder: "email address",
                 placeholderColor: "#8c8c8c",
                 color: "gray.3",
                 id: "newsletter-emailfield"
