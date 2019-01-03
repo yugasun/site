@@ -64,7 +64,7 @@ const Item = ({ id, frontmatter }) => {
             flexDirection='column'
             width={[0.84, 0.84, 1, 0.65]}
             m='auto'
-            pt={[2, 2, 4]}
+            pt={[2, 2, 5, 5, 9]}
           >
             <Categories
               categoryIds={categoryIds}

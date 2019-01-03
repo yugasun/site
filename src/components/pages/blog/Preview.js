@@ -14,12 +14,12 @@ const Preview = ({ blogs, currentPage }) => {
               width={[1, 1, 0.8]}
               mx='auto'
               mt={ index === 0 ? ['62px', '62px', '62px', '62px', '132px']: 0}
-              mb={ index === 3 && currentPage === 0? '122px' : 0 }
+              mb={ index === 3 && currentPage === 0? ['122px', '122px', '102px', '102px', '122px'] : 0 }
             >
               <BlogPreview {...blog} />
             </Box>
             { index === 3 && currentPage === 0? 
-             <Box mb={'132px'}><BlogSignup /></Box>: null
+             <Box mb={['132px', '132px', '112px', '112px', '132px']}><BlogSignup /></Box>: null
             }
           </React.Fragment>
         )) 

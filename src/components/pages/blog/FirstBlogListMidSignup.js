@@ -29,7 +29,7 @@ const Title = ({ component: HeadingComp, color }) => (
     color={color}
     fontFamily='SoleilLt'
     letterSpacing='0'
-    lineHeight={2}
+    lineHeight={'32px'}
     align={['center', 'center', 'center', 'center', 'left']}
   >
     Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
@@ -48,17 +48,17 @@ const FirstBlogListSignup = () => (
       >
         <ResponsiveStack>
           <Flex
-            width={[1, 1, 0.8]}
-            p={[1, 1, 5, '73px']}
-            pr={2}
+            width={[1, 1, 1]}
+            pl={[1, 1, 5, 8]}
+            py={[1, 1, 5, '93px']}
           >
             <Title component={Heading.h4} color='black' />
           </Flex>
           <Flex
             justifyContent='flex-end'
             alignItems='center'
-            width={[1, 1, 0.7]}
-            p={[1, 1, 4, 4, 7]}
+            width={[1, 1, 1]}
+            p={[1, 1, 4, 4, 8]}
           >
             <NewsLetterForm
               emailFieldProps={{ width: 1,

@@ -14,7 +14,7 @@ const Category = ({ children, link }) => (
     <Link to={link}>
       <Text.span
         color='white'
-        lineHeight={0}
+        lineHeight='16px'
         letterSpacing='text'
         align='center'
         fontSize='14px'

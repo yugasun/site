@@ -51,7 +51,7 @@ export default class Carousel extends React.Component {
       <Relative width={1}>
         <Relative
           width={1}
-          height={[500, 500, 500, 500, 550]}
+          height={[500, 500, 500, 500, 650]}
           bg='#000000e6'
         >
           {
