@@ -38,7 +38,7 @@ const BlogList = ({
       }
       <BlogPreview blogs={edges.map(({ node }) => node)} currentPage={currentPage}/>
       
-      <Box mb={['222px', '222px', '222px', '222px', '152px']} mt={['62px', '62px', '62px', '62px', '120px']}>
+      <Box mb={['222px', '222px', '152px']} mt={['62px', '62px', '62px', '62px', '120px']}>
         <Pagination total={totalPages} current={currentPage} />
       </Box>
     </BlogLayout>

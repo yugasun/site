@@ -4,7 +4,7 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import BlogPreview from './SingleBlogPreview'
 import BlogSignup from 'src/components/pages/blog/FirstBlogListMidSignup'
 
-const Preview = ({ blogs, currentPage }) => {
+const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
   return (
     <AppContainer>
         { 
@@ -13,7 +13,7 @@ const Preview = ({ blogs, currentPage }) => {
             <Box
               width={[1, 1, 0.8]}
               mx='auto'
-              mt={ index === 0 ? ['62px', '62px', '62px', '62px', '132px']: 0}
+              mt={ index === 0 ? mtFirstBlog || ['62px', '62px', '62px', '62px', '132px']: 0}
               mb={ index === 3 && currentPage === 0? ['122px', '122px', '102px', '102px', '122px'] : 0 }
             >
               <BlogPreview {...blog} />
