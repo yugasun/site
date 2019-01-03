@@ -5,6 +5,7 @@ import AutoComplete from './AutoComplete'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch } from 'react-instantsearch-dom'
 import searchIcon from 'src/assets/images/white-search-icon.svg'
+import closeIcon from 'src/assets/images/icon-close.png'
 
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -28,11 +29,18 @@ export default class Search extends React.Component {
           justifyContent='center'
           onClick={this.toggleSearchBar}
         >
+        { isSearchBarActive ?
+          <Image
+          maxHeight='16px'
+          src={closeIcon}
+          objectFit='contain'
+          /> :
           <Image
             maxHeight='22px'
             src={searchIcon}
             objectFit='contain'
           />
+        }
         </OptionWrapper>
         {
           isSearchBarActive && (
