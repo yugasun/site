@@ -7,7 +7,7 @@ const AuthorBlogsPreview = ({ blogs }) => (
       width={[1, 1, 1, 1]}
       px={['auto', 'auto', 'auto', 'auto', 15]}
       mt={[0, 0, 0, 0, 55]}
-      mb={[32]}
+      mb={[0, 0, 15, 32]}
     >
       { blogs.map((blog, index) => (<BlogPreview key={`blog-${index}`} {...blog} />)) }
     </Box>
