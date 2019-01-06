@@ -2,12 +2,21 @@ import React from 'react'
 import { Background, ThemeProvider } from 'serverless-design-system'
 
 import { Helmet } from 'src/fragments'
-import Prefooter from 'src/components/Prefooter'
-import DefaultLayout from 'src/layouts/Default'
+import Prefooter from 'src/components/PrefooterNew'
+import DefaultLayout from 'src/layouts/DefaultNew'
 import notFoundBackground from 'src/assets/images/404-background.jpg'
+import { P, Box } from 'src/fragments/DesignSystem'
 
 const sentences = [
-  'It’s ok. You’re not the first one. Try any of the links on this page to get back on the right track.',
+  (
+  <P 
+      key='message404'
+      color='gray.3'
+      mt={[76, 76, 79]}
+    >
+      It’s ok. You’re not the first one. Try any of the links on this page to get back on the right track.
+    </P>
+  )
 ]
 
 const actions = [
@@ -44,12 +53,13 @@ const prefooter = () => (
 
 const NotFoundPage = () => (
   <ThemeProvider>
-    <DefaultLayout prefooter={prefooter}>
-      <Helmet title="404 - Page not found" />
+    <DefaultLayout prefooter={prefooter} transparentHeader={true}>
+      <Helmet title='404 - Page not found' />
+      <Box.OnlyMobile mt={'43px'} />
       <Background
         backgroundImage={`url(${notFoundBackground})`}
-        backgroundSize="contain"
-        height="850px"
+        backgroundSize={['contain', 'contain', 'cover']}
+        height={['650px', '650px', '850px']}
       />
     </DefaultLayout>
   </ThemeProvider>
