@@ -1,7 +1,8 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TeamMemberImageCard, TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import { TeamMemberImageCard } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import austin from 'src/assets/images/team/austin.png'
 import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
@@ -9,7 +10,6 @@ import bill from 'src/assets/images/team/bill.png'
 import casey from 'src/assets/images/team/casey.png'
 import philip from 'src/assets/images/team/philip.png'
 import eslam from 'src/assets/images/team/eslam.png'
-import maciej from 'src/assets/images/team/maciej.png'
 import brian from 'src/assets/images/team/brian.png'
 import alex from 'src/assets/images/team/alex.png'
 import jeremy from 'src/assets/images/team/jeremy.png'
@@ -38,7 +38,6 @@ const leaders = [
 const teamMembers = [
   { image: philip, name: 'Phillip Müns', position: 'Framework Core Developer' },
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
-  { image: maciej, name: 'Maciej Winnicki', position: 'Platform Engineer' },
   { image: brian, name: 'Brian Neisler', position: 'Product Manager' },
   { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
@@ -63,7 +62,7 @@ const OurTeam= () => (
     <Flex flexDirection='column'>
       <Flex
         justifyContent='center'
-        mt={3}
+        mt={[3, 3, 5, 6]}
         mb={[0, 0, 1, 2]}
       >
         <TitleWithIcon>Our Team</TitleWithIcon>

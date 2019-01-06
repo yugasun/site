@@ -4,13 +4,13 @@ import {
   Background,
   Column,
   P,
-  Heading,
   Box
 } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
-import { ServerlessUserGroupStack } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import ServerlessUserGroupStack from '../ServerlessUserGroupStack'
 import dotsBackground from 'src/assets/images/dots-background.png'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const newsList = [
   { title: 'The Promise or Peril of the New Cloud Technology', location: `Barron's Magazine` },
@@ -32,19 +32,21 @@ const NewsCard = ({ news: { title, publisher } }) => (
 )
 
 const OurTeam= () => (
-  <AppContainer>
+  
     <Background
       background={`url(${dotsBackground})`}
-      backgroundSize="cover"
+      backgroundSize='cover'
     >
-      <Column py={5}>
-        <Heading.h2 fontFamily='SoleilBk' align='center'>
+    <AppContainer>
+      <Column py={5} mt={[50, 50, 100, 163]}>
+        <Heading.h3 align='center' mt={[0, 0, 0, '11px']}>
           Serverless In The News
-        </Heading.h2>
+        </Heading.h3>
         <ServerlessUserGroupStack items={newsList} />
       </Column>
+      </AppContainer>
     </Background>
-  </AppContainer>
+  
 )
 
 export default OurTeam

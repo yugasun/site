@@ -3,18 +3,18 @@ import {
   Box,
   Column,
   Heading,
-  P,
   ResponsiveStack,
   Text,
 } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import TitleWithIcon from '../TitleWithIcon'
+import { P } from 'src/fragments/DesignSystem'
 
 const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
   { title: 'Analysts', contents: ['analysts@serverless.com'] },
   { title: 'Careers', contents: ['careers@serverless.com'] },
-  { title: 'Media Inquiries', contents: ['media@serverless.com', '95 Minna Street Floor 3', 'San Francisco, CA 94013']  }
+  { title: 'Write to us', contents: ['Serverless, Inc', '325 9th Street', 'San Francisco, CA 94013']  }
 ]
 
 const ContactSection = ({ title, contents }) => (
@@ -25,7 +25,7 @@ const ContactSection = ({ title, contents }) => (
     alignItems={['center', 'center', 'flex-start']}
   >
     <Heading.h4
-      fontFamily="SoleilBk"
+      fontFamily='SoleilBk'
       align='left'
       lineHeight={4}
     >
@@ -37,15 +37,15 @@ const ContactSection = ({ title, contents }) => (
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={[1, 1, 2, 3]} pt={[4, 4, 4, 8]} pb={[300, 300, 14]}>
+    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[500, 500, 430]}>
       <Column alignItems={['center', 'center', 'flex-start']}>
         <TitleWithIcon>Contact Us</TitleWithIcon>
       </Column>
       <Box>
         <Text.p
-          fontFamily="SoleilLt"
+          fontFamily='SoleilLt'
           fontSize={[3, 3, 4]}
-          lineHeight={4}
+          lineHeight={[4]}
           align={['center', 'center', 'left']}
           mt={0}
         >
