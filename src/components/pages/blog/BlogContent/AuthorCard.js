@@ -17,7 +17,7 @@ const PointableRow = styled(Row)`
   cursor: pointer;
 `
 
-export default ({ author }) => (
+const BlogAuthorCard = ({ author }) => (
   <InternalLink to={getAuthorLink(author.id)}>
   <PointableRow
     width={[1, 1, 1, 0.65]}
@@ -68,3 +68,5 @@ export default ({ author }) => (
   </PointableRow>
   </InternalLink>
 )
+
+export default BlogAuthorCard

@@ -83,7 +83,7 @@ export default class BlogContent extends React.Component {
     const { id, frontmatter, content } = this.props
     const author = getAuthorById((frontmatter.authors || [])[0]) || {}
     return (
-        <Box pb={[6, 6, 5, 8]} id='main-blog'>
+        <Box pb={[2, 2, 3, 3, 6]} id='main-blog'>
 
         <ReactModal
             isOpen={this.state.isModalOpen}

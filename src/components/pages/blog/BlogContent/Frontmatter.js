@@ -30,8 +30,8 @@ const BlogFrontmatter = ({ frontmatter }) => {
     <Column
       width={[1, 1, 1, 0.65]}
       mx='auto'
-      mt={[1, 1, 4]}
-      mb={[1, 1, 2]}
+      mt={[3, 3, 4]}
+      mb={[3, 3, 3]}
       alignItems='center'
     >
       {
@@ -41,9 +41,10 @@ const BlogFrontmatter = ({ frontmatter }) => {
       }
       <Categories categoryIds={categoryIds} />
       <Heading.h1
-        fontSize={[4, 4, 4, 7]}
-        fontFamily='SoleilBk'
-        letterSpacing='h4'
+        fontSize={[4, 4, 6, 7]}
+        lineHeight={['38px', '38px', '52px', '62px']}
+        fontFamily='Soleil'
+        letterSpacing={['-0.38px', '-0.38px', '0.5px']}
         align='center'
         className='blog-title'
       >
@@ -52,7 +53,7 @@ const BlogFrontmatter = ({ frontmatter }) => {
       <InternalLink to={getAuthorLink(author.id)}>
         <Row
           alignItems='center'
-          my={15}
+          mb={15}
         >
           <WrittenByText>
             written by &nbsp;

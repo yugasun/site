@@ -59,7 +59,7 @@ const ContentWrapper = styled(Column)`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'SoleilBk';
+    font-family: 'Soleil';
     font-size: 40px;
     font-weight: normal;
     font-style: normal;
@@ -68,6 +68,7 @@ const ContentWrapper = styled(Column)`
     color: #000000;
     margin-top: 35px;
     margin-bottom: 15px;
+    word-wrap: break-word;
   }
 
   li {
@@ -93,7 +94,7 @@ const ContentWrapper = styled(Column)`
     }
   }
 
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 415px) {
     iframe {
       width: 100%;
       height: auto;
