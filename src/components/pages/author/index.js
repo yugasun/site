@@ -12,10 +12,10 @@ const Profile = ({ author, allBlog }) => {
 
   return (
   <AppContainer>
-    <ResponsiveStack mt={[2, 2, 5]}>
+    <ResponsiveStack mt={[2, 2, 3, 4, 5]} flexDirection={['column', 'column', 'column', 'row']} alignItems={['normal', 'normal', 'center', 'normal']}>
       <Column
-        width={[1, 1, 0.25]}
-        alignItems={["center", "center", "flex-end"]}
+        width={[1, 1, 0.6, 0.5, 0.25]}
+        alignItems={["center", "center", "center", "flex-end"]}
         my={2}
       >
         <Avatar avatar={author.avatar} />
@@ -27,7 +27,7 @@ const Profile = ({ author, allBlog }) => {
         />
       </Column>
       <Column
-        width={[1, 1, 0.6]}
+        width={[1, 1, 1, 0.7, 0.7, 0.6]}
         alignItems='center'
         my={3}
       >
@@ -37,7 +37,7 @@ const Profile = ({ author, allBlog }) => {
         />
       </Column>
       <Column
-        width={[1, 1, 0.4]}
+        width={[1, 1, 1, 0.4]}
       >
         <Blogs
           authorName={author.name.split(' ')[0]}
