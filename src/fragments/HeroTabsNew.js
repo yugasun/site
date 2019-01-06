@@ -31,7 +31,7 @@ const Icon = styled.span`
 Icon.defaultProps = { isOpen: false }
 
 
-export default ({ data, selected, tabWidth }) => (
+const HeroTabs = ({ data, selected, tabWidth }) => (
   <Box>
     <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
       <Card
@@ -92,3 +92,5 @@ export default ({ data, selected, tabWidth }) => (
     </Box>
   </Box>
 )
+
+export default HeroTabs
