@@ -2,6 +2,7 @@ import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
 import { resources, community } from 'src/constants/urls'
+import { Box } from 'serverless-design-system'
 
 const data = [
   {
@@ -32,7 +33,7 @@ const data = [
 ]
 
 const WorkshopsTabs = ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
+    <HeroTabs data={data} selected={selected} />
 )
 
 export default WorkshopsTabs

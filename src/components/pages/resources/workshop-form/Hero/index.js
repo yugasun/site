@@ -1,29 +1,27 @@
 import React from 'react'
 
 import { Box, Text, ResponsiveStack } from 'serverless-design-system'
-import { HeroWrapper } from 'src/fragments'
+import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import background from 'src/assets/images/workshops-form-background.png'
 import workshops from 'src/constants/workshops.json'
 
 const WorkshopForm = ({ keyName }) => (
   <HeroWrapper
-    background={`black url(${background})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
+    background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
+  height={[300, 300, 549]}
   >
     <Box mb={[2, 2, 7]}>
-      <HeroTabs selected="workshops" />
+      <HeroTabs selected='workshops' />
     </Box>
 
     <ResponsiveStack
       mb={[2, 2, 4, 7]}
-      color="white"
+      color='white'
     >
       <Box width={[1, 1, 1/2]}>
         <Text.p
           fontSize={[6, 6, 7, 8]}
-          fontFamily="Soleil"
+          fontFamily='Soleil'
           lineHeight={1}
           letterSpacing={'-0.2'}
           m={0}
@@ -32,7 +30,7 @@ const WorkshopForm = ({ keyName }) => (
         </Text.p>
         <Text.p
           fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
+          fontFamily='SoleilLt'
           lineHeight={3}
           letterSpacing={0}
           mt={[3, 3, 1]}
