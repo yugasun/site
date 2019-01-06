@@ -5,15 +5,9 @@ import {
   Flex,
   Background,
   Heading,
-  Card,
 } from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
 import { Button } from 'src/fragments/DesignSystem'
-import styled from 'styled-components'
-
-const RelativeWithBoxShadow = styled(Relative)`
-  box-shadow: 2px 20px 50px 2px rgba(0, 0, 0, 0.15);
-`
 
 const SubmitButton = (props) => (
   <Button
