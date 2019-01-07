@@ -1,9 +1,10 @@
 import React from 'react'
-import { TextWithIcon, Heading } from 'serverless-design-system'
+import { TextWithIcon } from 'serverless-design-system'
 import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
+import { Heading } from 'src/fragments/DesignSystem'
 
 //TODO: refactor so we're using a common version of this across the website
-const CompanyTitleWithIcon = ({ children, ...otherProps }) => (
+const TitleWithIcon = ({ children, ...otherProps }) => (
   <TextWithIcon
     iconSrc={redRectangleDots}
     iconHeight={["30px", "30px", "30px", "38px"]}
@@ -14,16 +15,12 @@ const CompanyTitleWithIcon = ({ children, ...otherProps }) => (
     backgroundPosition='center'
     backgroundRepeat='no-repeat'
   >
-    <Heading.h2
-      fontFamily='Soleil'
-      fontSize={[5, 5, 5, 7]}
-      lineHeight={'62px'}
-      letterSpacing='0.5px'
+    <Heading.h1
       {...otherProps}
     >
       { children }
-    </Heading.h2>
+    </Heading.h1>
   </TextWithIcon>
 )
 
-export default CompanyTitleWithIcon
+export default TitleWithIcon

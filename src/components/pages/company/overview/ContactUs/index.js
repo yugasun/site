@@ -7,7 +7,7 @@ import {
   Text,
 } from 'serverless-design-system'
 import { AppContainerNewest as AppContainer } from 'src/components'
-import TitleWithIcon from '../TitleWithIcon'
+import TitleWithIcon from '../../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
 const contactUsContent = [

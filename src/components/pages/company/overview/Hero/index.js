@@ -32,7 +32,6 @@ const CompanyOverviewHero = () => (
       <Box
         width={[1, 1, 1]}
         pl={[0, 0, 5, 7, 9]}
-        pr={[0, 0, 0]}
       >
         <PL
           color='white'

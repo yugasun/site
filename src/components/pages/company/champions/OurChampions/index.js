@@ -1,23 +1,23 @@
 import React from 'react'
 
 import {
-  Absolute,
-  Background,
   Flex,
   Box,
   Image,
-  P,
-  Heading,
   Text,
-  Relative,
-  ResponsiveStack
+  Column
 } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import Champion1 from 'src/assets/images/champion1.png'
 import Champion2 from 'src/assets/images/champion2.png'
 import Champion3 from 'src/assets/images/champion3.png'
-import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
+import { Heading, P } from 'src/fragments/DesignSystem'
+import styled from 'styled-components'
+
+const ImageWithBorderRadius = styled(Image)`
+  border-radius: 50%;
+`
 
 const champions = [
   {
@@ -38,82 +38,55 @@ const champions = [
 ]
 
 const ChampionCard = ({ name, image, details }) => (
-  <Relative
-    width={[1, 1, 0.33]}
-    maxWidth={400}
-    px={[0, 0, 1, 2]}
-    py={[2, 2, 2, 0]}
-  >
-    <Box
-      width={1}
-      minHeight={390}
-    >
-      <Image
+  <Column mt={[3, 3, 3, 0]}>
+    <ImageWithBorderRadius
         src={image}
         alt={name}
-        width={1}
-        maxHeight={384}
+        width={'auto'}
+        maxHeight={204}
       />
-      <Absolute
-        bottom={[15, 15, 50, 15]}
-        left={25}
-        zIndex={1}
-      >
-        <Background
-          background={`url(${dotGridVertical})`}
-          height="152px"
-          width="80px"
-          backgroundSize="cover"
-        />
-      </Absolute>
-      <Flex justifyContent="flex-end">
-        <Box width={[0.6, 0.6, 0.9, 0.8, 0.65]}>
-          <Heading.h4
+       <Box>
+          <Text
             mt={2}
             fontFamily='SoleilBk'
             fontSize={[3, 3, 3, 4]}
+            align='center'
           >
             {name}
-          </Heading.h4>
+          </Text>
 
-          <P fontSize={[1, 1, 2]}>
+          <P fontSize={[1, 1, 2]} align='center'>
             { details.map((detail) => (<Box>{ detail }</Box>)) }
           </P>
         </Box>
-      </Flex>
-    </Box>
-  </Relative>
+  </Column>
 )
 
 const OurChampions = () => (
   <AppContainer>
-    <Box pt={2} pb={[8, 8, 5, 6]}>
-      <Box my={[1, 2, 3, 4]}>
+    <Box pt={2}>
+      <Box mt={[1, 2, 3, 10]} mb={[1, 2, 3, 8]}>
         <Heading.h2
-          align="center"
-          fontFamily="SoleilSb"
-          lineHeight="1.4"
+          align='center'
           my={1}
         >
           Our Serverless Champions
         </Heading.h2>
         {
-          <Text.p
-            align="center"
-            fontFamily="Soleil"
-            fontSize={1}
-            lineHeight={3}
-            color="gray.2"
+          <P
+            align='center'
+            color='#5b5b5b'
           >
             Community ambassadors handpicked by us.
-          </Text.p>
+          </P>
         }
       </Box>
-      <ResponsiveStack
-        alignItems="center"
-        justifyContent="center"
+      <Flex
+        flexDirection={['column', 'column', 'row']}
         mt={[1, 2, 2, 3]}
-        my={12}
+        mb={[500, 500, 440]}
+        justifyContent='space-around'
+        alignItems='center'
       >
         {
           champions.map((champion, index) => (
@@ -123,7 +96,7 @@ const OurChampions = () => (
             />
           ))
         }
-      </ResponsiveStack>
+      </Flex>
     </Box>
   </AppContainer>
 )

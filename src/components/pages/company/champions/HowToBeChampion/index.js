@@ -6,7 +6,6 @@ import {
   Card,
   Flex,
   Box,
-  Heading,
   P,
   Row,
   InlineBlock,
@@ -14,15 +13,16 @@ import {
   HorizontalRule,
   Overflow,
 } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import TitleWithIcon from '../../TitleWithIcon'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
 import benefitsBackground from 'src/assets/images/benefits-dots-background.png'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const RelativeCard = styled(Card)`
   position: relative;
-`;
+`
 
 const serverlessChampions = [
   'Heroes in the serverless community',
@@ -45,17 +45,17 @@ const memberReceivals = [
 
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
-  <Overflow ox="hidden">
+  <Overflow ox='hidden'>
     <AppContainer>
       <Flex.column pt={[5, 5, 6, 8]}>
-        <Flex flexDirection={['column', 'column', 'row']}>
-          <Box width={[1, 1, 0.65]} px={[0, 0, 0, 2]}>
-            <Box mb={[2, 2, 3, 5]}>
+        <Flex flexDirection={['column', 'column', 'column', 'row']}>
+          <Box width={[1, 1, 1, 0.65]} px={[0, 0, 0, 2]}>
+            <Box mb={[4, 4, 3, 5]}>
               <TitleWithIcon>
                 What does it take to become a Serverless Champion?
               </TitleWithIcon>
             </Box>
-            <Heading.h4 fontFamily="SoleilBk">
+            <Heading.h4 color='black'>
               Our Serverless Champions are:
             </Heading.h4>
             {
@@ -63,10 +63,10 @@ const HowToBeChampion = () => (
                 <Row
                   mt={3}
                   key={index}
-                  alignItems="center"
+                  alignItems='center'
                 >
                   <InlineBlock mr={2}>
-                    <Image src={checkmarkIcon} height="20px" width="20px" />
+                    <Image src={checkmarkIcon} height='20px' width='20px' />
                   </InlineBlock>
                   <P
                     key={index}
@@ -81,7 +81,7 @@ const HowToBeChampion = () => (
           </Box>
 
           <Box
-            width={[1, 1, 0.35]}
+            width={[1, 1, 1, 0.40]}
             mt={[5, 5, 6, 8]}
             mb={[2, 2, 3, 0]}
           >
@@ -91,37 +91,36 @@ const HowToBeChampion = () => (
               border='1px solid #eaeaea'
               px={[2, 2, 2, 4]}
               py={3}
-              bg="white"
+              bg='white'
             >
               <Absolute
-                height="fullHeight"
-                width="100vw"
+                height='fullHeight'
+                width='100vw'
                 top={["-30px", "-30px", "-40px", "-50px"]}
                 zIndex={-1}
               >
                 <Background
                   background={`url(${benefitsBackground})`}
-                  backgroundSize="contain"
-                  height="fullHeight"
+                  backgroundSize='contain'
+                  height='fullHeight'
                   width={1}
                 />
               </Absolute>
-              <Heading.h4
-                fontSize={3}
-                fontFamily='SoleilBk'
+              <Heading.h5
+                color='black'
               >
-                Our Benefits
-              </Heading.h4>
+                Nominated members receive:
+              </Heading.h5>
               <HorizontalRule
-                height="1px"
-                color="#eaeaea"
+                height='1px'
+                color='#eaeaea'
               />
 
               {
                 memberReceivals.map((benefit, index) => (
-                  <Row mt={3} alignItems="center">
+                  <Row mt={3} alignItems='center'>
                     <Box mr={2}>
-                      <Image src={lionIcon} height="40px" minWidth="40px" />
+                      <Image src={lionIcon} height='40px' minWidth='40px' />
                     </Box>
                     <P
                       key={index}
