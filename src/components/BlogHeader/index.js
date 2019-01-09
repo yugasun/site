@@ -55,6 +55,7 @@ export default class BlogHeader extends React.Component {
           width={1}
           maxHeight='100%'
           oy={['scroll', 'scroll', 'visible']}
+          isNavbarActive={this.state.isNavbarActive}
         >
           <Box
             py={[0, 0, 1]}
