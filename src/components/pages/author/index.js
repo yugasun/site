@@ -27,18 +27,16 @@ const Profile = ({ author, allBlog }) => {
         />
       </Column>
       <Column
-        width={[1, 1, 1, 0.7, 0.7, 0.6]}
-        alignItems='center'
+        width={[1, 1, 1, 0.7, 0.7, 0.8]}
+        alignItems='left'
         my={3}
+        ml={[0, 0, 0, '5.5%']}
       >
         <Bio
           authorName={author.name}
           bio={author.bio.long || author.bio.short}
         />
-      </Column>
-      <Column
-        width={[1, 1, 1, 0.4]}
-      >
+
         <Blogs
           authorName={author.name.split(' ')[0]}
           blogs={edges.map(({ node }) => (node))}

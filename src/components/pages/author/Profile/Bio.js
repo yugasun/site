@@ -4,7 +4,7 @@ import { TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
 const AuthorBio = ({ authorName, bio }) => (
-  <Box width={[1, 1, 1, 0.85]}>
+  <Box width={[1, 1, 1, 0.75, 0.55]}>
     <TitleWithIcon>
       { authorName }
     </TitleWithIcon>

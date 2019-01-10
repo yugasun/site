@@ -19,9 +19,8 @@ const AuthorTemplate = ({ data, pathContext: { authorId } }) => {
 export default AuthorTemplate
 
 export const query = graphql`
-  query AuthorsBlogs($authorId: [String], $blogsLimit: Int) {
+  query AuthorsBlogs($authorId: [String]) {
     allBlog (sort: { fields: [frontmatter___date], order: DESC }, 
-    limit: $blogsLimit, 
     filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
       edges {
         node {

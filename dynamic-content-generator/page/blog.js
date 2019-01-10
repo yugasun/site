@@ -53,8 +53,7 @@ const createAuthorPages = (createPage) => (
       path: `author/${authorKey}`,
       component: getFileFromProjectRoot(`src/templates/author.js`),
       context: {
-        authorId: [authorKey],
-        blogsLimit: 3
+        authorId: [authorKey]
       },
     })
   })

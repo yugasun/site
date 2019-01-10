@@ -26,12 +26,12 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row mt={[2, 2, 4, 4]}>
+    <Row mt={[2, 2, 4, 4]} width={[1, 1, 1, 1, 0.4]} mr={[0, 0, 0, 0, 5]}>
       <Box
         width={[1, 1, 1, 1]}
         pr={[15, 15, 15, '5%']}
       >
-        <Box width={[1, 1, 1, 0.75]}>
+        <Box width={[1, 1, 1, 1]}>
           <Text.span
             fontSize={[0, 0, 0, 12]}
             lineHeight={'14px'}
