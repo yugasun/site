@@ -11,7 +11,7 @@ You’ve probably heard “Lambda” in combination with any of several buzzword
 
 These really all boil down to the same things—running code without thinking about servers, and taking a function-based, event-reactive approach to designing applications.
 
-### Already familiar with AWS Lambda?
+**Already familiar with AWS Lambda?**
 
 [Install the Serverless Framework to deploy](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
 
