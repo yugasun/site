@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer, NewsLetterForm } from 'src/components'
+import { AppContainerNewest as AppContainer, NewsLetterFormNew as NewsLetterForm } from 'src/components'
 import { getAuthorById } from 'src/utils/blog'
 import AuthorCard from './AuthorCard'
 import ContentWrapper from './ContentWrapper'
@@ -13,22 +13,35 @@ import ReactModal from 'react-modal'
 import logo from 'src/assets/images/blog-logo.svg'
 import { Logo, Image, Row, 
   Flex,
-  Heading} from 'serverless-design-system'
+  Heading, Container} from 'serverless-design-system'
 import closeIcon from 'src/assets/images/icon-close.png'
 import { Button, P } from 'src/fragments/DesignSystem'
 
-const modalStyles = {
-  content: {
-    top: 0,
-    left: 0,
-    right: 0,
-    height: '496px',
-    background : 'linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)'
-  },
-  overlay: {
-    zIndex: 1000,
-    width: '100%'
+function getModalStyles(device) {
+  let deviceHeight
+  if(device === 'mobile') {
+    deviceHeight = '640px'
+  } else if(device === 'tablet') {
+    deviceHeight = '514px'
+  } else {
+    deviceHeight = '496px'
   }
+
+  const modalStyles = {
+    content: {
+      top: 0,
+      left: 0,
+      right: 0,
+      height: deviceHeight,
+      background : 'linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)'
+    },
+    overlay: {
+      zIndex: 1000,
+      width: '100%'
+    }
+  }
+
+  return modalStyles
 }
 
 const Title = ({ component: HeadingComp, color }) => (
@@ -36,8 +49,9 @@ const Title = ({ component: HeadingComp, color }) => (
     color={color}
     fontFamily='SoleilLt'
     letterSpacing='0'
-    lineHeight={2}
-    align={['center', 'center', 'center', 'center', 'left']}
+    lineHeight={'32px'}
+    align={['left']}
+    mt={[5, 5, 0]}
   >
     Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
     <P color='gray.3'>
@@ -48,7 +62,7 @@ const Title = ({ component: HeadingComp, color }) => (
 
 const SubmitButton = (props) => (
   <Button
-    width={['228px', '228px', '228px', '228px', '123px']}
+    width={[1, 1, '228px', '228px', '123px']}
     {...props}
   >
     subscribe
@@ -60,20 +74,26 @@ export default class BlogContent extends React.Component {
     super(props)
     this.state = {
       isModalOpen: false,
+      modalStyles: getModalStyles()
     }
   }
 
   componentDidMount() {
     ReactModal.setAppElement('#main-blog')
+    if(typeof window !== 'undefined') {
+      if(window.innerWidth <= 415) {
+        this.setState({modalStyles: getModalStyles('mobile')})
+      } else if(window.innerWidth <= 1024) {
+        this.setState({modalStyles: getModalStyles('tablet')})
+      } 
+    }
   }
 
   handleModalOpen = event => {
-    // console.log('handleModalOpen: ', event);
     this.setState({ isModalOpen: true })
   }
 
   handleModalClose = event => {
-    // console.log('handleModalOpen: ', event);
     this.setState({ isModalOpen: false })
   }
 
@@ -89,17 +109,32 @@ export default class BlogContent extends React.Component {
             isOpen={this.state.isModalOpen}
             onRequestClose={this.handleModalClose}
             contentLabel='Serverless Newsletter Subscription'
-            style={modalStyles}
+            style={this.state.modalStyles}
           >
-          <AppContainer>
-            <Row justifyContent='space-between' mt='122px'>
+        <Container maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
+          <Box px={['10px', '10px', 20, 20, 0]}>
+            <Box
+              display={['block', 'block', 'block', 'block', 'none' ]}
+            >
+              <Flex 
+                justifyContent='flex-end'
+              >
+                <Image 
+                      maxHeight='16px'
+                      src={closeIcon}
+                      onClick={this.handleModalClose}
+                      
+                    />
+              </Flex>
+            </Box>
+            <Row justifyContent='space-between' mt={['52px', '52px', '72px', '72px', '122px']}>
               <Logo
                   src={logo}
                   height={['26px']}
                   width={['205px']}
                   alt='Serverless Blog'
                 />
-              <Box mt='4px'>
+              <Box mt='4px' display={['none', 'none', 'none', 'none', 'block' ]}>
               <Image
                 maxHeight='16px'
                 src={closeIcon}
@@ -108,28 +143,30 @@ export default class BlogContent extends React.Component {
               </Box>
             </Row>
 
-            <Row justifyContent='space-between'>
+            <Flex justifyContent='space-between' flexDirection={['column', 'column', 'column', 'column', 'row']}>
               <Flex
-                width={[1, 1, 1, 1, 0.5, 0.4]}
-                py={[1, 1, 5, '73px']}
+                width={[1, 1, 0.83, 0.64, 0.5, 0.4]}
+                pt={[1, 1, 5, 5, '63px']}
+                pb={[1, 1, 3, 4, '63px']}
                 pr={2}
               >
                 <Title component={Heading.h4} color='white' />
               </Flex>
               <Flex
-                width={[1, 1, 0.4]}
-                pl={[7, 7, 7, 7, 7, 8]}
-                pb={7}
+                width={[1, 1, 0.6, 0.6, 0.4]}
+                pl={[0, 0, 0, 0, 7, 8]}
+                pb={[0, 0, 0, 0, 7]}
+                pt={[2, 2, 0]}
               >
                 <NewsLetterForm
-                  emailFieldProps={{ width: 0.8,
+                  emailFieldProps={{ width: [1, 1, 1, 1, 0.8],
                     height: 36,
                     bg: "rgba(255,255,2555,0.2)",
                     fontSize: '14px',
                     placeholder: "email address",
                     placeholderColor: "#8c8c8c",
                     id: "newsletter-emailfield",
-                    color: "gray.3",
+                    color: "#8c8c8c",
                   }}
                   btnComponent={SubmitButton}
                   wrapperProps={{ width: 1 }}
@@ -139,13 +176,14 @@ export default class BlogContent extends React.Component {
                     justifyContent: 'center'
                   }}
                 />
+                </Flex>
               </Flex>
-            </Row>
-          </AppContainer>
+            </Box>
+          </Container>
         </ReactModal>
-
+        
         <SubscribeOptionDesktop onClick={this.handleModalOpen}/>
-        <SubscribeOptionMobileAndTablet />
+        <SubscribeOptionMobileAndTablet onClick={this.handleModalOpen}/>
         <AppContainer>
           <Frontmatter frontmatter={frontmatter} />
           <HeroImage heroImage={frontmatter.heroImage} />

@@ -9,20 +9,14 @@ const ButtonWithNoOutline = styled(Button)`
   }
 `
 
-export default class SubscribeOption extends React.Component {
-  scrollIntoNewsLetter = () => {
-    const newsletterField =  document.getElementById('newsletter-box')
-    newsletterField.scrollIntoView()
-  }
-
-  render() {
+const SubscribeOption = ({...props}) => {
     return (
         <Position
           position='sticky'
           top='50%'
           width={1}
           display={['none', 'none', 'none', 'none', 'block']}
-          {...this.props}
+          {...props}
         >
           <Absolute
             right={0}
@@ -41,5 +35,6 @@ export default class SubscribeOption extends React.Component {
           </Absolute>
         </Position>
     )
-  }
 }
+
+export default SubscribeOption

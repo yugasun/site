@@ -9,19 +9,13 @@ const ButtonWithNoOutline = styled(Button)`
   }
 `
 
-export default class SubscribeOption extends React.Component {
-  scrollIntoNewsLetter = () => {
-    const newsletterField =  document.getElementById('newsletter-box-footer')
-    newsletterField.scrollIntoView()
-  }
-
-  render() {
-    return (
+const SubscribeOptionMobileAndTablet = ({...props}) => (
         <Position
           position='sticky'
           width={1}
           display={['block', 'block', 'block', 'block', 'none']}
           zIndex={1}
+          {...props}
         >
           <Fixed
             bottom={0}
@@ -31,12 +25,11 @@ export default class SubscribeOption extends React.Component {
           <ButtonWithNoOutline
             width={'100%'}
             fontSize={1.4}
-            onClick={this.scrollIntoNewsLetter}
           >
             subscribe
           </ButtonWithNoOutline>
         </Fixed>
         </Position>
-    )
-  }
-}
+)
+
+export default SubscribeOptionMobileAndTablet
