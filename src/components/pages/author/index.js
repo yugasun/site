@@ -1,19 +1,18 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer, SubscribeModal } from 'src/components'
 
 import Avatar from './Profile/Avatar'
 import Bio from './Profile/Bio'
 import Links from './Profile/Links'
 import Blogs from './Blogs/Blogs'
-import SubscribeOptionMobileAndTablet from '../blog/BlogContent/SubscribeOptionMobileAndTablet'
 
 const Profile = ({ author, allBlog }) => {
   const edges = allBlog ? (allBlog.edges || []) : []
 
   return (
   <React.Fragment>
-    <SubscribeOptionMobileAndTablet />
+    <SubscribeModal />
     <AppContainer>
       <ResponsiveStack mt={[2, 2, 3, 4, 5]} flexDirection={['column', 'column', 'column', 'row']} alignItems={['normal', 'normal', 'center', 'normal']}>
           <Column

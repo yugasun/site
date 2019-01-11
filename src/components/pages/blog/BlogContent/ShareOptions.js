@@ -16,22 +16,21 @@ import { ExternalLink } from 'src/fragments'
 const Icon = ({ link, icon }) => (
   <Card
     bg='white'
-    boxShadow='2px 2px 8px 0 #dfe5e6'
-    border='solid 1px #dfe5e6'
+    border='solid 1px #eaeaea'
     m='5px'
   >
     <ExternalLink to={link}>
       <Column
-        height={44}
-        width={44}
+        height={36}
+        width={36}
         p={1}
         alignItems='center'
         justifyContent='center'
       >
         <Image
           src={icon}
-          maxWidth={20}
-          maxHeight={18}
+          maxWidth={18}
+          maxHeight={17}
           objectFit='contain'
         />
       </Column>
@@ -51,7 +50,7 @@ export default class ShareOptions extends React.Component {
     return (
       <Position
         position='sticky'
-        top='50%'
+        top='40%'
         height={20}
         width={1}
       >

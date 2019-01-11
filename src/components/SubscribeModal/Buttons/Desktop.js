@@ -20,7 +20,7 @@ const SubscribeOption = ({...props}) => {
         >
           <Absolute
             right={0}
-            top={20}
+            top={-90}
             style={{
               transform: 'rotate(270deg) translate(0, -100%)',
               transformOrigin: '100% 0'
