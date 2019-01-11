@@ -115,7 +115,6 @@ export default class BlogWrapper extends React.Component {
     domNode.querySelectorAll("a > img").forEach((node) => {
       const { parentNode } = node
       parentNode.style.border = 0
-      parentNode.style.display = node.style.display = 'block'
       node.style.margin = 'auto'
     })
     domNode.querySelectorAll("iframe").forEach((node) => {

@@ -24,7 +24,7 @@ export default [
         {
           name: "PureSec",
           location: 'Tel Aviv, Israel',
-          description: 'PureSec is a global leader in serverless architectures security, enabling its customers to build and maintain secure and reliable serverless applications in a trusted and safe computing environment.',
+          description: 'PureSec is the global leader in serverless security, empowering customers to innovate with serverless, securely.',
           logo: {
             url: puresecLogo,
             bgHeight: '122px'
