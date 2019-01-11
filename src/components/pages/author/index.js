@@ -15,7 +15,7 @@ const Profile = ({ author, allBlog }) => {
     <ResponsiveStack mt={[2, 2, 3, 4, 5]} flexDirection={['column', 'column', 'column', 'row']} alignItems={['normal', 'normal', 'center', 'normal']}>
       <Column
         width={[1, 1, 0.6, 0.5, 0.25]}
-        alignItems={["center", "center", "center", "flex-end"]}
+        alignItems={["center", "center", "center", "center", "flex-end"]}
         my={2}
       >
         <Avatar avatar={author.avatar} />

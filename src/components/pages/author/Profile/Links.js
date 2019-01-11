@@ -46,7 +46,7 @@ const renderLink = (image, link) => (
 )
 
 const BlogAuthorLinks = ({ personalWebsite, githubHandle, twitterHandle, mediumHandle }) => (
-  <Box width={[1, 1, 1, 1, 1, 280]}>
+  <Box width={[1, 1, 280, 280, 1, 280]}>
     { personalWebsite && renderLink(linkIcon, personalWebsite) }
     { githubHandle && renderLink(githubIcon, getGithubLink(githubHandle)) }
     { twitterHandle && renderLink(twitterIcon, getTwitterLink(twitterHandle)) }
