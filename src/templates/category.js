@@ -4,6 +4,7 @@ import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import { NewToServerlessPrefooterNew as NewToServerlessPrefooter, Helmet } from 'src/fragments'
 import CategoryData from 'src/constants/categories.json'
+import SubscribeOptionMobileAndTablet from 'src/components/pages/blog/BlogContent/SubscribeOptionMobileAndTablet'
 
 const BlogCategory = ({ data, pathContext: { categoryId } }) => {
     const edges = data.allBlog ? (data.allBlog.edges || []) : []
@@ -15,6 +16,7 @@ const BlogCategory = ({ data, pathContext: { categoryId } }) => {
     return (
       <BlogLayout prefooter={NewToServerlessPrefooter}>
       <Helmet title={`Blogs posts under ${categoryInTitleCase} | AWS & Serverless`}/>
+      <SubscribeOptionMobileAndTablet />
         <Flex.center mt={[3, 3, 4, 4, 5]}>
           <Heading.h2
             fontSize={[4, 4, 6]}
