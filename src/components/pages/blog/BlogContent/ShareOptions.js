@@ -13,7 +13,7 @@ import twitterIcon from 'src/assets/images/twitter-black.svg'
 import linkedinIcon from 'src/assets/images/linkedin-black.svg'
 import { ExternalLink } from 'src/fragments'
 
-const Icon = ({ link, icon }) => (
+const Icon = ({ link, icon, iconHeight, iconWidth }) => (
   <Card
     bg='white'
     border='solid 1px #eaeaea'
@@ -29,8 +29,8 @@ const Icon = ({ link, icon }) => (
       >
         <Image
           src={icon}
-          maxWidth={18}
-          maxHeight={17}
+          maxWidth={iconWidth}
+          maxHeight={iconHeight}
           objectFit='contain'
         />
       </Column>
@@ -57,20 +57,26 @@ export default class ShareOptions extends React.Component {
         <Absolute
           display={['none', 'none', 'none', 'block']}
           right={20}
-          top={34}
+          top={23}
         >
           <InlineBlock>
             <Icon
               icon={facebookIcon}
               link={`https://www.facebook.com/sharer.php?u=${this.blogLink}`}
+              iconHeight={'18px'}
+              iconWidth={'10px'}
             />
             <Icon
               icon={twitterIcon}
               link={`https://twitter.com/intent/tweet?url=${this.blogLink}&text=${title}`}
+              iconHeight={'15px'}
+              iconWidth={'16px'}
             />
             <Icon
               icon={linkedinIcon}
               link={`https://www.linkedin.com/shareArticle?mini=true&url=${this.blogLink}&title=${title}`}
+              iconHeight={'17px'}
+              iconWidth={'16px'}
             />
           </InlineBlock>
         </Absolute>
