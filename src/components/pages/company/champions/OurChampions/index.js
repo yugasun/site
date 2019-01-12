@@ -85,7 +85,7 @@ const OurChampions = () => (
         flexDirection={['column', 'column', 'row']}
         mt={[1, 2, 2, 3]}
         mb={[500, 500, 440]}
-        justifyContent='space-around'
+        justifyContent='space-evenly'
         alignItems='center'
       >
         {
