@@ -6,6 +6,12 @@ import Prefooter from 'src/components/PrefooterNew'
 import DefaultLayout from 'src/layouts/DefaultNew'
 import notFoundBackground from 'src/assets/images/404-background.jpg'
 import { P, Box } from 'src/fragments/DesignSystem'
+import styled from 'styled-components'
+
+const BackgroundWithFilter = styled(Background)`
+  -webkit-filter: brightness(0.40);
+  filter: brightness(0.40);
+`
 
 const sentences = [
   (
@@ -56,7 +62,7 @@ const NotFoundPage = () => (
     <DefaultLayout prefooter={prefooter} transparentHeader={true}>
       <Helmet title='404 - Page not found' />
       <Box.OnlyMobile mt={'43px'} />
-      <Background
+      <BackgroundWithFilter
         backgroundImage={`url(${notFoundBackground})`}
         backgroundSize={['contain', 'contain', 'cover']}
         height={['650px', '650px', '850px']}
