@@ -12,7 +12,7 @@ const ContentWrapper = styled(Column)`
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word; 
   }
-  
+
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;

@@ -7,6 +7,7 @@ import { Button, P } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/blog-logo.svg'
 import SubscribeOptionDesktop from './Buttons/Desktop'
 import SubscribeOptionMobileAndTablet from './Buttons/MobileAndTablet'
+import 'src/components/SubscribeModal/modal.css'
 
 const SubmitButton = (props) => (
     <Button
@@ -97,6 +98,7 @@ class index extends Component {
                 onRequestClose={this.handleModalClose}
                 contentLabel='Serverless Newsletter Subscription'
                 style={this.state.modalStyles}
+                closeTimeoutMS={2000}
                 >
                 <Container maxWidth={[1216, 1216, 1216, 1216, '76%', 1216]}>
                 <Box px={['10px', '10px', 20, 20, 0]}>
