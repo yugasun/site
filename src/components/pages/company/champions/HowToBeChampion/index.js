@@ -14,7 +14,7 @@ import {
   Overflow,
 } from 'serverless-design-system'
 import { AppContainerNewest as AppContainer } from 'src/components'
-import TitleWithIcon from '../../TitleWithIcon'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
 import benefitsBackground from 'src/assets/images/benefits-dots-background.png'

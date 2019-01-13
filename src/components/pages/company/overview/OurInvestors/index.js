@@ -6,7 +6,7 @@ import {
   ResponsiveStack
 } from 'serverless-design-system'
 import { AppContainerNewest as AppContainer } from 'src/components'
-import TitleWithIcon from '../../TitleWithIcon'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import investorTrinity from 'src/assets/images/trinity.png'
 import investorHeavyBit from 'src/assets/images/heavybit.png'
 
