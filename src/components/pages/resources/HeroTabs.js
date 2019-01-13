@@ -2,7 +2,6 @@ import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
 import { resources, community } from 'src/constants/urls'
-import { Box } from 'serverless-design-system'
 
 const data = [
   {
