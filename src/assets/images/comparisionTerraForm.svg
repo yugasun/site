@@ -16,7 +16,7 @@
         <path fill="#4040B2" d="M534.836 41.557v15.517l13.443-7.754V33.787z"/>
         <path fill="#5C4EE5" d="M505 25.123v15.525l13.443 7.762V32.885zM519.918 66.541l13.443 7.762V58.78l-13.443-7.763z"/>
         <text fill="#FD5750" font-family="Soleil" font-size="100" letter-spacing="3.125" opacity=".08" transform="translate(0 -23)">
-            <tspan x="372" y="103">vs</tspan>
+            <tspan x="350" y="103">vs</tspan>
         </text>
     </g>
 </svg>
