@@ -141,7 +141,6 @@ class AutoScrollList extends React.Component {
               >
                 <List
                   my={0}
-                  mx={2}
                   py={[4, 4, 6, 8]}
                   px={0}
                 >
