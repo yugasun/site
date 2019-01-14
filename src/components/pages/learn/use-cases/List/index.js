@@ -1,14 +1,12 @@
 import React from 'react'
 import {
   Box,
-  P,
   ResponsiveStack,
-  Text,
 } from 'serverless-design-system'
 
 import { AutoScrollList } from 'src/fragments'
 import TechBox from './TechBox'
-
+import { P, Heading } from 'src/fragments/DesignSystem'
 import LearnUsecase01 from 'src/assets/images/learnUsecase01.svg'
 import LearnUsecase02 from 'src/assets/images/learnUsecase02.svg'
 import LearnUsecase03 from 'src/assets/images/learnUsecase03.png'
@@ -45,16 +43,12 @@ const comparisonData = [
             'Serverless websites and applications can be written and deployed without the front-work of setting up infrastructure. As such, it is possible to launch a fully-functional site in days. The best part is that serverless backends scale automatically with demand. No need to fear crashing when you get sudden surges of traffic.'
           ])
         }
-        <Box>
-          <Text.p
-            color='black'
-            fontFamily='SoleilBk'
-            fontSize={3}
-            lineHeight={3}
-            letterSpacing='h6'
+        <Box mt={[2]} mb={[5]}>
+          <Heading.h5
+          mb={[4]}
           >
             Want to get started? Check out these walkthroughs:
-          </Text.p>
+          </Heading.h5>
           <ResponsiveStack
             alignItems={[ "center", "center", "left" ]}>
             <TechBox upperImage={nodeJSImage} lowerImage={expressImage} to='/blog/serverless-express-rest-api/'/>
