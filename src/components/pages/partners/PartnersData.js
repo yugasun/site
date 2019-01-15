@@ -48,7 +48,7 @@ export default [
         {
           name: "Mode2",
           location: 'Los Angeles, CA',
-          description: 'Mode2 provides engineering and consulting services to help companies overcome the challenges of digital transformations, and accelerate their successful adoption of game-changing cloud technologies. Our human-centered approach puts your team at the core of a program that focuses on business and technical innovation for long-term business success.',
+          description: 'Mode2 provides software development and consulting services to help companies successfully transform workloads with serverless architectures. We use a combination of training, reusable code assets, partner tools, developer mentoring, and our collective experience to increase developer velocity and assure successful project delivery.',
           logo: {
             url: mode2Logo,
             bgHeight: '118px',
