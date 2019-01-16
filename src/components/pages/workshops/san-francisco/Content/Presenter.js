@@ -27,12 +27,14 @@ const Presenter = () => (
       />
     </Box>
 
-    <Box mb={['500px']} mt={['100px']} width={[1, 1, 0.6]}>
-      <TitleWithIcon>Jared Short</TitleWithIcon>
-      <P color='gray.2'>
-        Head of Developer Relations and Experience at Serverless, Inc.
-      </P>
-      <P>
+    <Box mt={['140px']} width={[1, 1, 0.6]}>
+      <TitleWithIcon mb={['12px']}>Jared Short</TitleWithIcon>
+      <Box width={[1, 1, 0.5]}>
+        <P color='gray.2' mt={0}>
+          Head of Developer Relations and Experience at Serverless, Inc.
+        </P>
+      </Box>
+      <P mt={62} mb={42}>
         Head of Developer Relations and Experience at Serverless, Inc., and is
         based in Washington, DC. He comes to the company with a strong
         background in and building, operating and maintaining serverless and
@@ -44,7 +46,11 @@ const Presenter = () => (
           <Image src={linkIcon} />
         </ExternalLink>
         <ExternalLink to='https://twitter.com/shortjared'>
-          <ImageWithMarginX src={twitterIcon} />
+          <ImageWithMarginX
+            src={twitterIcon}
+            minWidth='20px'
+            minHeight='18px'
+          />
         </ExternalLink>
         <ExternalLink to='https://github.com/shortjared'>
           <Image src={githubIcon} />

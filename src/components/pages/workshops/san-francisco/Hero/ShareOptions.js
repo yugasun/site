@@ -17,9 +17,15 @@ const NoMobileFlex = styled(Flex)`
 const ShareOptions = () => (
   <NoMobileFlex justifyContent='space-evenly' ml={['5.5%']} mt={'8px'}>
     <Text color='gray.2'>Share with</Text>
-    <ExternalLink><Image src={facebookLogo} /></ExternalLink>
-    <ExternalLink><Image src={twitterLogo} /></ExternalLink>
-    <ExternalLink><Image src={linkedinLogo} /></ExternalLink>
+    <ExternalLink>
+      <Image src={facebookLogo} />
+    </ExternalLink>
+    <ExternalLink>
+      <Image src={twitterLogo} />
+    </ExternalLink>
+    <ExternalLink>
+      <Image src={linkedinLogo} />
+    </ExternalLink>
   </NoMobileFlex>
 )
 

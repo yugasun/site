@@ -1,9 +1,7 @@
 import React from 'react'
 
 import { Box, ResponsiveStack } from 'serverless-design-system'
-import {
-  HeroWrapperNew as HeroWrapper,
-} from 'src/fragments'
+import { HeroWrapperNew as HeroWrapper, ExternalLink } from 'src/fragments'
 import { P, Button } from 'src/fragments/DesignSystem'
 import background from 'src/assets/images/san-francisco-workshop-hero.png'
 import slsSanFranLogo from 'src/assets/images/san-francisco-workshop-logo.svg'
@@ -34,7 +32,9 @@ const EnterpriseWorkshopHero = () => {
               </P>
               <Row mt={[4]}>
                 <Box mx={['auto', 'auto', 'unset']}>
-                  <Button>buy tickets</Button>
+                  <ExternalLink to='https://www.eventbrite.com/e/serverless-workshop-sf-tickets-54621470288'>
+                    <Button>buy tickets</Button>
+                  </ExternalLink>
                 </Box>
                 <ShareOptions />
               </Row>
