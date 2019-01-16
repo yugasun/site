@@ -5,7 +5,7 @@ import ComparisonScrollList from 'src/components/pages/resources/code-of-conduct
 import { Helmet } from 'src/fragments'
 
 const Comparisions = ({ location }) => (
-  <DefaultLayout>
+  <DefaultLayout noPrefooter>
     <Helmet
       title='Comparisons: Serverless vs. other tools'
       description='When should you use Serverless over other tools?'
