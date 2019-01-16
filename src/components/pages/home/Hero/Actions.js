@@ -4,13 +4,13 @@ import { HeroActionsNew as HeroActions } from 'src/fragments'
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'install framework',
+      name: 'install open source',
       to: '/framework/docs/getting-started/',
       completed: true,
     }}
     secondBtn={{
-      name: 'demo platform',
-      to: '/platform/',
+      name: 'framework enterprise',
+      to: '/enterprise/',
       completed: true,
     }}
     flexDirection={['column', 'column', 'column', 'column', 'row', 'row']}

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import {
   Relative,
-  withBeforeAfter,
   Testimonial,
 } from 'serverless-design-system'
 
