@@ -1,5 +1,6 @@
 const { getFileFromProjectRoot } = require('./utils')
 const workshops = require(getFileFromProjectRoot('src/constants/workshops.json'))
+delete workshops['san-francisco']
 
 const pageCreator = (createPage) => (
   new Promise((resolve, reject) => {
