@@ -24,18 +24,18 @@ const BuyTickets = props => (
 
 const BlogPrefooter = () => (
   <React.Fragment>
-    <Relative top='-370px' mb='-290px' id='newsletter-box' pt='100px'>
+    <Relative top='-370px' mb='-290px' pt='100px'>
       <Background background={'#fd5750'} backgroundSize='cover'>
         <ResponsiveStack justifyContent='center'>
           <Flex
-            width={[1, 1, 0.6]}
+            width={[1, 1, 0.7, 0.7, 0.7, 0.6]}
             p={[1, 1, 5, 7]}
             pr={2}
             flexDirection='column'
             alignItems='center'
             justifyContent='center'
           >
-            <Heading.h4 color='white'>
+            <Heading.h4 color='white' align='center'>
               Learn more about the most widely-adopted toolkit for building
               serverless applications.
             </Heading.h4>
