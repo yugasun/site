@@ -34,12 +34,18 @@ const PageContent = styled(Box)`
   thead th {
     background: white;
     color: #5b5b5b;
+    font-family: 'SoleilBk';
+    line-height: 26px;
+    letter-spacing: 0;
   }
 
   tbody td {
     background: white;
     color: #5b5b5b;
     border-top: 1px solid #9b9b9b;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
   }
 
   @media screen and (max-width: 414px) {
