@@ -19,6 +19,7 @@ const Presenter = () => (
       flexDirection={['column', 'column', 'row']}
       width={[1, 1, 1, 1, 0.8]}
       justifyContent='space-between'
+      alignItems={['center', 'center', 'unset']}
       mx='auto'
     >
       <Box mt={[92, 92, 181, 181, 152]}>
@@ -29,14 +30,14 @@ const Presenter = () => (
         />
       </Box>
 
-      <Box mt={['140px']} width={[1, 1, 0.6]}>
+      <Box mt={['50px', '50px', '92px', '92px', '140px']} width={[1, 1, 0.6]}>
         <TitleWithIcon mb={['12px']}>Jared Short</TitleWithIcon>
         <Box width={[1, 1, 0.5]}>
           <P color='gray.2' mt={0}>
             Head of Developer Relations and Experience at Serverless, Inc.
           </P>
         </Box>
-        <P mt={62} mb={42}>
+        <P mt={[40, 40, 62]} mb={42}>
           Head of Developer Relations and Experience at Serverless, Inc., and is
           based in Washington, DC. He comes to the company with a strong
           background in and building, operating and maintaining serverless and

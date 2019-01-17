@@ -18,12 +18,12 @@ const EnterpriseWorkshopHero = () => {
         background={`black url(${background})`}
         backgroundSize='cover'
         backgroundPosition='center'
-        height={[581]}
+        height={[650, 650, 542, 542, 581]}
       >
         <ResponsiveStack mb={[2, 2, 4, 9]} mt={[0, 0, 0, 0, 4]}>
           <Box width={[1, 1, 1, 1, 1 / 2]}>
             <Image src={slsSanFranLogo} />
-            <Box mt={[5]} width={[1, 1, 0.88]}>
+            <Box mt={[3, 3, 5]} width={[1, 1, 1, 1, 0.88]}>
               <P color='gray.2' align={['center', 'center', 'left']}>
                 Join us for a full-day workshop preparing you and your team to
                 manage and run serverless on an enterprise level that is

@@ -40,7 +40,11 @@ const PWithWidth = styled(P)`
 
 const Schedule = () => (
   <AppContainer>
-    <Flex mb={[500]} mt={[140]} alignItems='center' flexDirection='column'>
+    <Flex
+      mb={[360, 360, 265, 265, 335]}
+      alignItems='center'
+      flexDirection='column'
+    >
       <TitleWithIcon mx='auto'>Schedule</TitleWithIcon>
       <Box width={[1, 1, 1, 1, '800px']}>
         <Box>

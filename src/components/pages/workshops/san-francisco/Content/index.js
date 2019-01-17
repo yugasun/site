@@ -37,7 +37,7 @@ export default class EnterpriseWorkshopContent extends React.Component {
     return (
       <React.Fragment>
         <Presenter />
-        <Box mt={[134]} mb={[880]}>
+        <Box mt={[92, 92, 92, 92, 134]} mb={[505, 505, 505, 505, 880]}>
           <ResponsiveMap
             url='https://snazzymaps.com/embed/126425'
             width='100%'
