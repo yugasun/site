@@ -26,6 +26,7 @@ const WhenAndWhere = () => (
           fontSize={['24px']}
           lineHeight={['32px']}
           letterSpacing={['-0.38px']}
+          align={['left', 'left', 'auto']}
         >
           When?
         </TitleWithIcon>
@@ -40,6 +41,7 @@ const WhenAndWhere = () => (
           fontSize={['24px']}
           lineHeight={['32px']}
           letterSpacing={['-0.38px']}
+          align={['left', 'left', 'auto']}
         >
           Where?
         </TitleWithIcon>
