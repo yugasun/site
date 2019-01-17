@@ -14,7 +14,7 @@ const SubscribeOption = ({ location, ...props }) => {
   return (
     <Position
       position='sticky'
-      top='88%'
+      top='401px'
       width={1}
       display={['none', 'none', 'none', 'none', 'block']}
       {...props}
@@ -22,7 +22,7 @@ const SubscribeOption = ({ location, ...props }) => {
     >
       <Absolute
         right={0}
-        top={-321}
+        top={0}
         style={{
           transform: 'rotate(270deg) translate(0, -100%)',
           transformOrigin: '100% 0',
