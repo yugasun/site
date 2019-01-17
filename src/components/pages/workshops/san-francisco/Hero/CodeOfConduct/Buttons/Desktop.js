@@ -22,7 +22,7 @@ const SubscribeOption = ({ location, ...props }) => {
     >
       <Absolute
         right={0}
-        top={-431}
+        top={-321}
         style={{
           transform: 'rotate(270deg) translate(0, -100%)',
           transformOrigin: '100% 0',

@@ -1,11 +1,17 @@
 const { getFileFromProjectRoot } = require('./utils')
 
-const authors = require(getFileFromProjectRoot('src/constants/generated-authors.json'))
-const categories = require(getFileFromProjectRoot('src/constants/categories.json'))
-const highlightedBlogs = require(getFileFromProjectRoot('src/constants/featured-blogs.json'))
+const authors = require(getFileFromProjectRoot(
+  'src/constants/generated-authors.json'
+))
+const categories = require(getFileFromProjectRoot(
+  'src/constants/categories.json'
+))
+const highlightedBlogs = require(getFileFromProjectRoot(
+  'src/constants/featured-blogs.json'
+))
 
 const blogsPerPage = 7
-const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join("|"), 'gi')
+const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join('|'), 'gi')
 const graphqlQuery = `
 {
   allBlog {
@@ -19,16 +25,16 @@ const graphqlQuery = `
 `
 
 const createBlogListingPageWithPagination = (createPage, blogs) => {
-  for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
+  for (let i = 0; i < blogs.length; i += blogsPerPage) {
     const page = i / blogsPerPage
     createPage({
-      path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
+      path: `blog${page === 0 ? '' : '/page/' + (page + 1)}`,
       component: getFileFromProjectRoot(`src/templates/blogList.js`),
       context: {
         limit: blogsPerPage,
         start: i,
         highlightedBlogsRegEx,
-      }
+      },
     })
   }
 }
@@ -47,31 +53,29 @@ const createBlogPages = (createPage, blogs) => {
   })
 }
 
-const createAuthorPages = (createPage) => (
-  Object.keys(authors).forEach((authorKey) => {
+const createAuthorPages = createPage =>
+  Object.keys(authors).forEach(authorKey => {
     createPage({
       path: `author/${authorKey}`,
       component: getFileFromProjectRoot(`src/templates/author.js`),
       context: {
-        authorId: [authorKey]
+        authorId: [authorKey],
       },
     })
   })
-)
 
-const createCategoryPages = (createPage) => (
-  Object.keys(categories).forEach((categoryKey) => {
+const createCategoryPages = createPage =>
+  Object.keys(categories).forEach(categoryKey => {
     createPage({
-      path: `category/${categoryKey}`,
+      path: `blog/category/${categoryKey}`,
       component: getFileFromProjectRoot(`src/templates/category.js`),
       context: {
-        categoryId: [categoryKey]
+        categoryId: [categoryKey],
       },
     })
   })
-)
 
-const pageCreator = (graphql, createPage) => (
+const pageCreator = (graphql, createPage) =>
   new Promise((resolve, reject) => {
     graphql(graphqlQuery).then(result => {
       try {
@@ -81,13 +85,11 @@ const pageCreator = (graphql, createPage) => (
         createAuthorPages(createPage)
         createCategoryPages(createPage)
         resolve()
-      }
-      catch(e) {
+      } catch (e) {
         console.log('error generating blog pages:', e)
         reject(e)
       }
     })
   })
-)
 
 module.exports = pageCreator

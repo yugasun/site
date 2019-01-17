@@ -19,7 +19,7 @@ const Category = ({ children, link }) => (
         align='center'
         fontSize='14px'
       >
-        { children }
+        {children}
       </Text.span>
     </Link>
   </Box>
@@ -27,53 +27,43 @@ const Category = ({ children, link }) => (
 
 const MobileCategories = () => (
   <BlogNavbarContext.Consumer>
-    {
-      ({ isNavbarActive, toggleNavbarActiveness }) => (
-        isNavbarActive && (
-          <React.Fragment>
-            <Row justifyContent='space-between' onClick={toggleNavbarActiveness}>
-              <Box >
-                  <Link to='/'>
-                    <Text.p
-                      mt={0}
-                      color='white'
-                      opacity={0.5}
-                      align='left'
-                      fontSize='12px'
-                    >
-                      &lt; serverless.com
-                    </Text.p>
-                  </Link>
-              </Box>
-              <Image
-                maxHeight='16px'
-                src={isNavbarActive ? closeIcon : mobileMenuIcon}
-                objectFit='contain'
-              />
-            </Row>
-            <Flex.center
-              flexDirection='column'
-              pt={2}
-              pb={3}
-            >
+    {({ isNavbarActive, toggleNavbarActiveness }) =>
+      isNavbarActive && (
+        <React.Fragment>
+          <Row justifyContent='space-between' onClick={toggleNavbarActiveness}>
+            <Box>
+              <Link to='/'>
+                <Text.p
+                  mt={0}
+                  color='white'
+                  opacity={0.5}
+                  align='left'
+                  fontSize='12px'
+                >
+                  &lt; serverless.com
+                </Text.p>
+              </Link>
+            </Box>
+            <Image
+              maxHeight='16px'
+              src={isNavbarActive ? closeIcon : mobileMenuIcon}
+              objectFit='contain'
+            />
+          </Row>
+          <Flex.center flexDirection='column' pt={2} pb={3}>
             <Box mb={'54px'}>
               <EnterpriseSupportButton />
             </Box>
-            
-              <Category link={`/blog/`}>
-                all
+
+            <Category link={`/blog/`}>all</Category>
+            {Object.keys(CategoriesData).map(key => (
+              <Category link={`/blog/category/${key}/`} key={key}>
+                {getCategoryNameById(key)}
               </Category>
-              {
-                Object.keys(CategoriesData).map((key) => (
-                  <Category link={`/category/${key}/`} key={key}>
-                    { getCategoryNameById(key) }
-                  </Category>
-                ))
-              }
-              <NewsletterOption />
-            </Flex.center>
-          </React.Fragment>
-        )
+            ))}
+            <NewsletterOption />
+          </Flex.center>
+        </React.Fragment>
       )
     }
   </BlogNavbarContext.Consumer>
