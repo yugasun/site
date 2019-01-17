@@ -23,10 +23,10 @@ const ShareOptions = () => (
     >
       <Image src={facebookLogo} />
     </ExternalLink>
-    <ExternalLink to='https://twitter.com/intent/tweet?url=https://serverless.com/workshops/san-francisco/&text=Serverless Workshop in San Francisco'>
+    <ExternalLink to='https://twitter.com/intent/tweet?url=https://serverless.com/workshops/san-francisco/&text=Serverless Enterprise Workshop in San Francisco'>
       <Image src={twitterLogo} />
     </ExternalLink>
-    <ExternalLink to='https://www.linkedin.com/shareArticle?mini=true&url=https://serverless.com/workshops/san-francisco/&title=Serverless Workshop in San Francisco'>
+    <ExternalLink to='https://www.linkedin.com/shareArticle?mini=true&url=https://serverless.com/workshops/san-francisco/&title=Serverless Enterprise Workshop in San Francisco'>
       <Image src={linkedinLogo} />
     </ExternalLink>
   </NoMobileFlex>
