@@ -17,7 +17,7 @@ const Presenter = () => (
   <AppContainer>
     <Flex
       flexDirection={['column', 'column', 'row']}
-      width={[1, 1, 1, 1, 0.8]}
+      width={[1, 1, 1, 0.9, 0.9, 0.8]}
       justifyContent='space-between'
       alignItems={['center', 'center', 'unset']}
       mx='auto'
