@@ -45,7 +45,7 @@ const BlogPrefooter = () => (
       <Absolute left='0' bottom='1' width={[152, 152, 270, 270, 316, 316]}>
         <Image src={leftStaticImage} />
       </Absolute>
-      <Absolute right='0' bottom='0' width={[150, 150, 270, 270, 316, 316]}>
+      <Absolute right='0' bottom='-3px' width={[150, 150, 270, 270, 316, 316]}>
         <Image src={rightStaticImage} />
       </Absolute>
       <Background background={'#fd5750'} backgroundSize='cover' height='266px'>
