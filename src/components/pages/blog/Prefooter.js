@@ -8,9 +8,17 @@ import {
 } from 'serverless-design-system'
 import { NewsLetterForm } from 'src/components'
 import { Button } from 'src/fragments/DesignSystem'
+import styled from 'styled-components'
 
-const SubmitButton = (props) => (
-  <Button
+const StyledButton = styled(Button)`
+  &:hover {
+    color: #fd5750;
+    background-color: white;
+  }
+`
+
+const SubmitButton = props => (
+  <StyledButton
     width={[1, 1, 1, 1, 0.4]}
     height={36}
     fontSize={1}
@@ -19,7 +27,7 @@ const SubmitButton = (props) => (
     {...props}
   >
     subscribe
-  </Button>
+  </StyledButton>
 )
 
 const Title = ({ component: HeadingComp, color }) => (
@@ -29,7 +37,8 @@ const Title = ({ component: HeadingComp, color }) => (
     letterSpacing='0'
     lineHeight={2}
   >
-    Join 16,000 other developers and keep up to speed on the latest serverless news and releases.
+    Join 16,000 other developers and keep up to speed on the latest serverless
+    news and releases.
   </HeadingComp>
 )
 
@@ -42,16 +51,9 @@ const BlogPrefooter = () => (
       id='newsletter-box'
       pt='100px'
     >
-      <Background
-        background={'#fd5750'}
-        backgroundSize='cover'
-      >
+      <Background background={'#fd5750'} backgroundSize='cover'>
         <ResponsiveStack>
-          <Flex
-            width={[1, 1, 0.8]}
-            p={[1, 1, 5, 7]}
-            pr={2}
-          >
+          <Flex width={[1, 1, 0.8]} p={[1, 1, 5, 7]} pr={2}>
             <Title component={Heading.h4} color='white' />
           </Flex>
           <Flex
@@ -61,19 +63,20 @@ const BlogPrefooter = () => (
             p={[1, 1, 4, 4, 7]}
           >
             <NewsLetterForm
-              emailFieldProps={{ width: 1,
+              emailFieldProps={{
+                width: 1,
                 height: 36,
-                bg: "#ffffff33",
+                bg: '#ffffff33',
                 fontSize: 1,
-                placeholder: "email address",
-                id: "newsletter-emailfield"
+                placeholder: 'email address',
+                id: 'newsletter-emailfield',
               }}
               btnComponent={SubmitButton}
               wrapperProps={{ width: 1, color: 'white' }}
               formStyles={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
               }}
             />
           </Flex>
