@@ -1,18 +1,13 @@
 import React from 'react'
 
-import { HeroTabs } from 'src/fragments'
-import { resources } from 'src/constants/urls'
+import { HeroTabsNew as HeroTabs } from 'src/fragments'
+import { resources, community } from 'src/constants/urls'
 
 const data = [
   {
-    label: 'overview',
-    value: 'overview',
-    navProps: { to: resources.overview },
-  },
-  {
-    label: 'blog',
-    value: 'blog',
-    navProps: { to: resources.blog, crossDomain: true },
+    label: 'partners',
+    value: 'partners',
+    navProps: { to: community.partners },
   },
   {
     label: 'forum',
@@ -36,6 +31,8 @@ const data = [
   },
 ]
 
-export default ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
-);
+const WorkshopsTabs = ({ selected }) => (
+    <HeroTabs data={data} selected={selected} />
+)
+
+export default WorkshopsTabs

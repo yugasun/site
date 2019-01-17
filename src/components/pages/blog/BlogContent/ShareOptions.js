@@ -13,25 +13,24 @@ import twitterIcon from 'src/assets/images/twitter-black.svg'
 import linkedinIcon from 'src/assets/images/linkedin-black.svg'
 import { ExternalLink } from 'src/fragments'
 
-const Icon = ({ link, icon }) => (
+const Icon = ({ link, icon, iconHeight, iconWidth }) => (
   <Card
     bg='white'
-    boxShadow='2px 2px 8px 0 #dfe5e6'
-    border='solid 1px #dfe5e6'
+    border='solid 1px #eaeaea'
     m='5px'
   >
     <ExternalLink to={link}>
       <Column
-        height={44}
-        width={44}
+        height={36}
+        width={36}
         p={1}
         alignItems='center'
         justifyContent='center'
       >
         <Image
           src={icon}
-          maxWidth={20}
-          maxHeight={18}
+          maxWidth={iconWidth}
+          maxHeight={iconHeight}
           objectFit='contain'
         />
       </Column>
@@ -51,27 +50,33 @@ export default class ShareOptions extends React.Component {
     return (
       <Position
         position='sticky'
-        top='50%'
+        top='40%'
         height={20}
         width={1}
       >
         <Absolute
           display={['none', 'none', 'none', 'block']}
           right={20}
-          top={34}
+          top={23}
         >
           <InlineBlock>
             <Icon
               icon={facebookIcon}
               link={`https://www.facebook.com/sharer.php?u=${this.blogLink}`}
+              iconHeight={'18px'}
+              iconWidth={'10px'}
             />
             <Icon
               icon={twitterIcon}
               link={`https://twitter.com/intent/tweet?url=${this.blogLink}&text=${title}`}
+              iconHeight={'15px'}
+              iconWidth={'16px'}
             />
             <Icon
               icon={linkedinIcon}
               link={`https://www.linkedin.com/shareArticle?mini=true&url=${this.blogLink}&title=${title}`}
+              iconHeight={'17px'}
+              iconWidth={'16px'}
             />
           </InlineBlock>
         </Absolute>

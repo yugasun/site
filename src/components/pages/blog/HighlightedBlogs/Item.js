@@ -4,7 +4,6 @@ import {
   Box,
   Background,
   Flex,
-  Heading,
   Text,
   Image,
   Row,
@@ -20,6 +19,7 @@ import {
 } from 'src/utils/blog'
 import Categories from '../Categories'
 import ImagePlaceholder from '../ImagePlaceholder'
+import { Heading, P } from 'src/fragments/DesignSystem'
 
 const LinkImage = getLinkComponent(Image)
 
@@ -62,38 +62,33 @@ const Item = ({ id, frontmatter }) => {
         <AppContainer>
           <Flex.verticallyCenter
             flexDirection='column'
-            width={[1, 1, 1, 0.65]}
+            width={[0.84, 0.84, 1, 0.65]}
             m='auto'
-            pt={4}
+            pt={[2, 2, 5, 5, 9]}
           >
             <Categories
               categoryIds={categoryIds}
               textStyleProps={{ color: 'white', opacity: 0.5 }}
             />
             <BlockLink to={getBlogLink(id)}>
-              <Heading.h2
-                fontFamily='SoleilBk'
-                fontSize={[4, 4, 5, 7]}
+              <Heading.h1
                 align='center'
-                lineHeight={[3, 3, 2, 1]}
                 color='white'
               >
                 { title }
-              </Heading.h2>
+              </Heading.h1>
             </BlockLink>
             <Box
               width={[1, 1, 1, 0.9]}
               px={[0, 0, 0, 4]}
             >
-              <Text.p
-                fontFamily='SoleilBk'
+              <P
                 color='white'
-                lineHeight={1.63}
                 mt={[0, 0, 1, 15]}
                 align='center'
               >
                 { description }
-              </Text.p>
+              </P>
             </Box>
 
             <Row width={1}>

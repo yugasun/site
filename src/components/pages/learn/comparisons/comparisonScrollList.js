@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, P, HyperLink } from 'serverless-design-system'
-
+import { Box,  HyperLink } from 'serverless-design-system'
+import { P } from 'src/fragments/DesignSystem'
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
 import comparisionCustomTooling from 'src/assets/images/comparisionCustomTooling.svg'
@@ -24,7 +24,7 @@ const renderContents = (contents) => (
 
 const comparisonData = [
   {
-    title: 'Serverless vs Docker',
+    title: 'Docker',
     image: comparisionDocker,
     body: renderContents([
       'Docker packages software into standardized units (containers) to make it easier to manage application dependencies and avoid the "works on my machine" problem. Many people use containers so they can control their scaling. It is a serverfull architecture where you run a cluster of VM instances, with a likewise serverful cost model.',
@@ -57,7 +57,7 @@ const comparisonData = [
     renderContents([
       (
         <React.Fragment>
-          There are a number of deployment tools for serverless applications, including <HyperLink href="https://www.zappa.io/" textDecoration="none"  textDecoration="none" borderBottom="1px solid" borderColor="serverlessRed" hoverColor="#fd5750" target="_blank">Zappa</HyperLink> for Python web applications or <HyperLink href="https://claudiajs.com/" textDecoration="none"  textDecoration="none" borderBottom="1px solid" borderColor="serverlessRed" hoverColor="#fd5750" target="_blank">ClaudiaJS</HyperLink> for Node web applications. These tools are purpose-built for their particular use cases. If they fit the use case you're looking for and you prefer their design, you should use them!
+          There are a number of deployment tools for serverless applications, including <HyperLink href='https://www.zappa.io/' textDecoration='none'  textDecoration='none' borderBottom='1px solid' borderColor='serverlessRed' hoverColor='#fd5750' target='_blank'>Zappa</HyperLink> for Python web applications or <HyperLink href='https://claudiajs.com/' textDecoration='none'  textDecoration='none' borderBottom='1px solid' borderColor='serverlessRed' hoverColor='#fd5750' target='_blank'>ClaudiaJS</HyperLink> for Node web applications. These tools are purpose-built for their particular use cases. If they fit the use case you're looking for and you prefer their design, you should use them!
         </React.Fragment>
       ),
       'The Serverless Framework is a more general purpose tool for deploying and managing serverless applications. You can deploy Python or Node web applications while also provisioning the infrastructure that your application needs, such as databases, queues, and object storage. Further, you can use the Framework to build multiple types of applications, including event streaming, image manipulation, and more.'
@@ -95,7 +95,7 @@ const comparisonData = [
 const ComparisionsScrollList = () => (
   <Box
     width={1}
-    pb={[12, 12, 6, 0]}
+    pb={['400px', '400px', '250px', '250px', 12]}
   >
     <AutoScrollList listData={comparisonData} />
   </Box>

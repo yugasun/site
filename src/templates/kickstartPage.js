@@ -2,7 +2,7 @@ import React from 'react'
 import DefaultLayout from 'src/layouts/DefaultNew'
 import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooterNew as NewToServerlessPrefooter} from 'src/fragments'
-import {Box, Heading} from 'serverless-design-system'
+import { Box, Heading } from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
 import { AppContainerNewest as AppContainer} from 'src/components'
@@ -63,16 +63,16 @@ const PageContent = styled(Box)`
 
 const GuidePage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
-   <Helmet {...data.Dynamo.frontmatter} />
+   <Helmet {...data.Kickstart.frontmatter} />
         <AppContainer>
             <Box width={1}
                 my={10}
                 pb={350}>
                     <PageContainer>
                         <Heading.h1 align='center' fontSize={['38px', '38px', '48px']} fontFamily='SoleilBk' lineHeight='62px' letterSpacing='0.5px'>
-                            {data.Dynamo.frontmatter.title}
+                            {data.Kickstart.frontmatter.title}
                         </Heading.h1>
-                        <PageContent width={1} pt={40} mx='auto' dangerouslySetInnerHTML={{ __html: data.Dynamo.content }} />
+                        <PageContent width={1} pt={40} mx='auto' dangerouslySetInnerHTML={{ __html: data.Kickstart.content }} />
                     </PageContainer>
             </Box>
         </AppContainer>
@@ -82,8 +82,8 @@ const GuidePage = ({ data }) => (
 export default GuidePage
 
 export const query = graphql`
-  query DynamoGuide {
-    Dynamo: guide (id: { eq: "dynamodb" }) {
+  query KickstartPage($kickstartId: String!) {
+    Kickstart: kickstart (id: { eq: $kickstartId }) {
       id
       frontmatter {
         title,

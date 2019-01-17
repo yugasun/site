@@ -14,7 +14,7 @@
             <tspan x="525" y="85">custom tooling</tspan>
         </text>
         <text fill="#FD5750" font-family="Soleil" font-size="100" letter-spacing="3.125" opacity=".08" transform="translate(0 -23)">
-            <tspan x="372" y="103">vs</tspan>
+            <tspan x="350" y="103">vs</tspan>
         </text>
     </g>
 </svg>

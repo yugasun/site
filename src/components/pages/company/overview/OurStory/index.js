@@ -1,22 +1,22 @@
 import React from 'react'
 import {
   Column,
-  P,
   ResponsiveStack,
 } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
+import { P } from 'src/fragments/DesignSystem'
 
 const OurStory = () => (
   <AppContainer>
     <ResponsiveStack
       px={[0, 0, 0, 1, 3]}
-      mt={[5, 5, 6, 10]}
+      mt={[5, 5, 6, 7]}
       mb={[2, 2, 3, 6]}
     >
       <Column
         width={[1, 1, 1/3]}
-        alignItems="center"
+        alignItems='left'
       >
         <TitleWithIcon>
           Our Story

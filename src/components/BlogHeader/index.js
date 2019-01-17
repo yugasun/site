@@ -6,11 +6,11 @@ import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
 import Categories from './MobileOptions/Categories'
 import BlogNavbarContext from './BlogNavbarContext'
-import AppContainer from './../AppContainer'
+import { HeaderContainer } from 'src/components'
 
 export default class BlogHeader extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isNavbarShrinked: false,
       isNavbarActive: false,
@@ -32,7 +32,7 @@ export default class BlogHeader extends React.Component {
     this.previousY = window.scrollY
     if (movingDown) {
       if (isNavbarShrinked || window.scrollY < 55) { return }
-      this.setState({ isNavbarShrinked: true })
+      this.setState({ isNavbarShrinked: false })
     } else if (isNavbarShrinked) {
       this.setState({ isNavbarShrinked: false })
     }
@@ -55,25 +55,23 @@ export default class BlogHeader extends React.Component {
           width={1}
           maxHeight='100%'
           oy={['scroll', 'scroll', 'visible']}
+          isNavbarActive={this.state.isNavbarActive}
         >
           <Box
             py={[0, 0, 1]}
-            bg="black"
+            bg='black'
+            height={this.state.isNavbarActive ? '100vh': 'auto'}
           >
-            <AppContainer>
+            <HeaderContainer>
               <BlogNavbarContext.Provider value={this.state}>
                 <ServerlessLink />
                 <LogoAndOptions />
                 <SearchBar />
                 <Categories />
               </BlogNavbarContext.Provider>
-            </AppContainer>
+            </HeaderContainer>
           </Box>
         </HeaderWrapper>
-        <Box
-          pt={[ 55, 55, 196 ]}
-          bg="black"
-        />
       </React.Fragment>
     )
   }

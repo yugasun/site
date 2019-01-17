@@ -45,19 +45,19 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { currentIndex } = this.state;
+    const { currentIndex } = this.state
 
     return (
       <Relative width={1}>
         <Relative
           width={1}
-          height={[450, 450, 450, 550]}
-          bg="#000000e6"
+          height={[500, 500, 500, 500, 650]}
+          bg='#000000e6'
         >
           {
             this.props.children.map((child, index) => (
               <Absolute
-                height="fullHeight"
+                height='fullHeight'
                 width={1}
                 style={{
                   transition: "opacity 1s ease-in-out",
@@ -73,11 +73,11 @@ export default class Carousel extends React.Component {
         </Relative>
         <Absolute
           width={1}
-          bottom={[15, 15, 20, 20, 20]}
+          bottom={[38, 38, 30]}
         >
           <Row
             width={1}
-            justifyContent="center"
+            justifyContent='center'
           >
             {
               this.props.children.map((_, index) => (

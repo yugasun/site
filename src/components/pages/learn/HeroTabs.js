@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { HeroTabs } from 'src/fragments'
+import { HeroTabsNew as HeroTabs } from 'src/fragments'
 import { learn } from 'src/constants/urls'
 
 const data = [
@@ -28,4 +28,4 @@ const data = [
 
 export default ({ selected }) => (
   <HeroTabs data={data} selected={selected} />
-);
+)

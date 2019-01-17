@@ -2,11 +2,12 @@ import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import { Helmet, NewToServerlessPrefooter } from 'src/fragments'
-import { Pagination } from 'src/components'
+import { Helmet, NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { Pagination, SubscribeModal } from 'src/components'
 import HighlightedBlogList from 'src/constants/featured-blogs.json'
+import { Box } from 'serverless-design-system'
 
-export default ({
+const BlogList = ({
   data: { blogs: { edges, totalCount }, highlighted },
   pathContext: { start, limit },
   location,
@@ -26,18 +27,24 @@ export default ({
   return (
     <BlogLayout prefooter={NewToServerlessPrefooter}>
       <Helmet
-        title="Serverless Blog"
-        description="Articles, resources, and posts on serverless architectures, best practices, and how-to"
+        title='Serverless Blog'
+        description='Articles, resources, and posts on serverless architectures, best practices, and how-to'
         location={location}
       />
+      <SubscribeModal />
       {
         currentPage === 0 && (<HighlightedBlogs blogs={highlightedBlogs} />)
       }
-      <BlogPreview blogs={edges.map(({ node }) => node)} />
-      <Pagination total={totalPages} current={currentPage} />
+      <BlogPreview blogs={edges.map(({ node }) => node)} currentPage={currentPage}/>
+      
+      <Box mb={['222px', '222px', '152px']} mt={['62px', '62px', '62px', '62px', '120px']}>
+        <Pagination total={totalPages} current={currentPage} />
+      </Box>
     </BlogLayout>
   )
 }
+
+export default BlogList 
 
 export const query = graphql`
   query Blogs($start: Int!, $limit: Int!, $highlightedBlogsRegEx: String!) {

@@ -6,21 +6,16 @@ import {
   Column,
   Heading,
   InlineBlock,
-  Button,
   Row,
   ResponsiveStack,
   TextWithIcon,
   P,
 } from 'serverless-design-system'
-
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import formHandler from 'src/utils/formHandler'
 import dotGridGrey from 'src/assets/images/dot-grid-grey.png'
-import TextField from '../../enterprise/Form/TextField'
-import Checkbox from '../../enterprise/Form/Checkbox'
-import Label from '../../enterprise/Form/Label'
-import TextArea from '../../enterprise/Form/TextArea'
-import RadioButton from '../../enterprise/Form/RadioButton'
+import { TextArea, Label, TextField, Checkbox, RadioButton } from 'src/fragments/DesignSystem/Form'
+import { Button } from 'src/fragments/DesignSystem'
 
 const Paragraph = styled(P)`
   a {
@@ -31,9 +26,20 @@ const Paragraph = styled(P)`
   }
 `
 
+const FormHeading = ({children}) => (
+  <Heading.h4
+    fontSize={'24px'}
+    lineHeight={'38px'}
+    letterSpacing={'-0.38px'}
+    fontFamily='Soleil'
+  >
+    {children}
+  </Heading.h4>
+)
+
 const CheckboxWithLabel = ({ id, name, text, onChange }) => (
   <Label htmlFor={id}>
-    <Flex.verticallyCenter my="12px">
+    <Flex.verticallyCenter my='12px'>
       <Checkbox name={name} id={id} onChange={onChange} />
       <InlineBlock>{text}</InlineBlock>
     </Flex.verticallyCenter>
@@ -42,7 +48,7 @@ const CheckboxWithLabel = ({ id, name, text, onChange }) => (
 
 const RadioButtonWithLabel = ({ id, name, text, onChange }) => (
   <Label htmlFor={id}>
-    <Flex.verticallyCenter my="8px">
+    <Flex.verticallyCenter my='8px'>
       <RadioButton
         name={name}
         id={id}
@@ -148,7 +154,7 @@ export default class WorkshopForm extends React.Component {
             mb={[300, 300, 14]}
           >
             <Box width={[1, 1, 1, 0.8]}>
-              <Paragraph align="center">
+              <Paragraph align='center'>
                 Great! You’re now on the waitlist for one of our workshops. If you’re new to Serverless, why not <a href='https://serverless.com/framework/docs/'>check out our documentation</a> to get started, or head on <a href='https://serverless.com/blog/'>over to our blog?</a>
               </Paragraph>
             </Box>
@@ -164,88 +170,88 @@ export default class WorkshopForm extends React.Component {
         <AppContainer>
           <Box
             mt={5}
-            mb={[300, 300, 14]}
+            mb={[500, 500, 460]}
           >
             <Row>
               <TextWithIcon
                 iconSrc={dotGridGrey}
-                iconHeight="35px"
-                iconWidth="65px"
-                iconLeft="-10px"
-                iconTop="-5px"
-                backgroundSize="contain"
+                iconHeight='35px'
+                iconWidth='65px'
+                iconLeft='-10px'
+                iconTop='-5px'
+                backgroundSize='contain'
               >
-                <Heading.h4
-                  fontFamily="SoleilBk"
+                <FormHeading
+                  fontFamily='SoleilBk'
                   lineHeight={3}
                 >
                   Contact Information
-                </Heading.h4>
+                </FormHeading>
               </TextWithIcon>
             </Row>
             <ResponsiveStack
-              justifyContent="space-between"
+              justifyContent='space-between'
               py={1}
             >
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextField
-                  placeholder="full name"
+                  placeholder='full name'
                   onChange={({ target }) => this.setState({ name: target.value })}
                   required
                 />
               </Column>
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextField
-                  placeholder="email address"
+                  placeholder='email address'
                   onChange={({ target }) => this.setState({ email: target.value })}
                   required
                 />
               </Column>
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextField
-                  placeholder="company"
+                  placeholder='company'
                   onChange={({ target }) => this.setState({ company: target.value })}
                   required
                 />
               </Column>
             </ResponsiveStack>
             <ResponsiveStack
-              justifyContent="space-between"
+              justifyContent='space-between'
               py={1}
             >
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextWithIcon
                   iconSrc={dotGridGrey}
-                  iconHeight="35px"
-                  iconWidth="65px"
-                  iconLeft="-10px"
-                  iconTop="-5px"
-                  backgroundSize="contain"
+                  iconHeight='35px'
+                  iconWidth='65px'
+                  iconLeft='-10px'
+                  iconTop='-5px'
+                  backgroundSize='contain'
                 >
-                  <Heading.h4
-                    fontFamily="SoleilBk"
+                  <FormHeading
+                    fontFamily='SoleilBk'
                     lineHeight={3}
                   >
                     Serverless Experience
-                  </Heading.h4>
+                  </FormHeading>
                 </TextWithIcon>
                 <Box>
                   <RadioButtonWithLabel
-                    id="none"
-                    name="experience"
-                    text="none"
+                    id='none'
+                    name='experience'
+                    text='none'
                     onChange={() => this.setState({ experience: 'none' })}
                   />
                   <RadioButtonWithLabel
-                    id="played-around"
-                    name="experience"
-                    text="i’ve played around with it"
+                    id='played-around'
+                    name='experience'
+                    text='i’ve played around with it'
                     onChange={() => this.setState({ experience: 'beginner' })}
                   />
                   <RadioButtonWithLabel
-                    id="serverless-in-prod"
-                    name="experience"
-                    text="i run serverless in production"
+                    id='serverless-in-prod'
+                    name='experience'
+                    text='i run serverless in production'
                     onChange={() => this.setState({ experience: 'professional' })}
                   />
                 </Box>
@@ -253,18 +259,18 @@ export default class WorkshopForm extends React.Component {
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextWithIcon
                   iconSrc={dotGridGrey}
-                  iconHeight="35px"
-                  iconWidth="65px"
-                  iconLeft="-10px"
-                  iconTop="-5px"
-                  backgroundSize="contain"
+                  iconHeight='35px'
+                  iconWidth='65px'
+                  iconLeft='-10px'
+                  iconTop='-5px'
+                  backgroundSize='contain'
                 >
-                  <Heading.h4
-                    fontFamily="SoleilBk"
+                  <FormHeading
+                    fontFamily='SoleilBk'
                     lineHeight={3}
                   >
                     Platforms of Interest
-                  </Heading.h4>
+                  </FormHeading>
                 </TextWithIcon>
                 <Box>
                   {
@@ -272,7 +278,7 @@ export default class WorkshopForm extends React.Component {
                       <CheckboxWithLabel
                         id={poi}
                         key={poi}
-                        name="poi"
+                        name='poi'
                         text={poi.replace(/_/g, ' ')}
                         onChange={({ target }) => this.updateCheckbox('poi', poi, target.value)}
                       />
@@ -283,18 +289,18 @@ export default class WorkshopForm extends React.Component {
               <Column width={[1, 1, 3/10]} py={1}>
                 <TextWithIcon
                   iconSrc={dotGridGrey}
-                  iconHeight="35px"
-                  iconWidth="65px"
-                  iconLeft="-10px"
-                  iconTop="-5px"
-                  backgroundSize="contain"
+                  iconHeight='35px'
+                  iconWidth='65px'
+                  iconLeft='-10px'
+                  iconTop='-5px'
+                  backgroundSize='contain'
                 >
-                  <Heading.h4
-                    fontFamily="SoleilBk"
+                  <FormHeading
+                    fontFamily='SoleilBk'
                     lineHeight={3}
                   >
                     Primary Development Languages
-                  </Heading.h4>
+                  </FormHeading>
                 </TextWithIcon>
                 <Box>
                   {
@@ -302,7 +308,7 @@ export default class WorkshopForm extends React.Component {
                       <CheckboxWithLabel
                         id={lang}
                         key={lang}
-                        name="language"
+                        name='language'
                         text={lang.replace(/_/g, ' ')}
                         onChange={({ target }) => this.updateCheckbox('language', lang, target.value)}
                       />
@@ -313,27 +319,27 @@ export default class WorkshopForm extends React.Component {
             </ResponsiveStack>
 
             <ResponsiveStack
-              justifyContent="space-between"
+              justifyContent='space-between'
               py={1}
             >
               <Column width={1}>
                 <TextWithIcon
                   iconSrc={dotGridGrey}
-                  iconHeight="35px"
-                  iconWidth="65px"
-                  iconLeft="-10px"
-                  iconTop="-5px"
-                  backgroundSize="contain"
+                  iconHeight='35px'
+                  iconWidth='65px'
+                  iconLeft='-10px'
+                  iconTop='-5px'
+                  backgroundSize='contain'
                 >
-                  <Heading.h4
-                    fontFamily="SoleilBk"
+                  <FormHeading
+                    fontFamily='SoleilBk'
                     lineHeight={3}
                   >
                     Tell us a little about your goals with serverless
-                  </Heading.h4>
+                  </FormHeading>
                 </TextWithIcon>
                 <TextArea
-                  placeholder="My goals with serverless…"
+                  placeholder='My goals with serverless…'
                   onChange={({ target }) => this.setState({ serverless_goals: target.value })}
                   width={1}
                 />
@@ -343,10 +349,10 @@ export default class WorkshopForm extends React.Component {
             <Row>
               <Column
                 mt={5}
-                alignItems="center"
+                alignItems='center'
                 width={1}
               >
-                <Button>{buttonText}</Button>
+                <Button width={['280px']}>{buttonText}</Button>
               </Column>
             </Row>
           </Box>

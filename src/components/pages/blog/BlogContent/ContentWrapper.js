@@ -2,10 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system'
-import redHighlighter from 'src/assets/images/red-highlighter.png'
+import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const ContentWrapper = styled(Column)`
-  overflow: hidden;
+  pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word; 
+  }
 
   p, li {
     font-family: 'SoleilBk';
@@ -28,7 +34,7 @@ const ContentWrapper = styled(Column)`
       font-weight: normal;
       font-style: italic;
       line-height: 1.33;
-      color: #000000;
+      color: #5b5b5b;
     }
 
     &:before {
@@ -37,7 +43,7 @@ const ContentWrapper = styled(Column)`
       height: 39px;
       top: 0;
       width: 20px;
-      background: url(${redHighlighter});
+      background: url(${dotGridVertical});
       background-size: cover;
       left: -40px;
     }
@@ -60,20 +66,16 @@ const ContentWrapper = styled(Column)`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'SoleilBk';
-    font-size: 32px;
+    font-family: 'Soleil';
+    font-size: 40px;
     font-weight: normal;
     font-style: normal;
-    line-height: 1.13;
-    letter-spacing: -0.5px;
+    line-height: 50px;
+    letter-spacing: 0px;
     color: #000000;
     margin-top: 35px;
     margin-bottom: 15px;
-
-    &[id] {
-      margin-top: -60px;
-      padding-top: 100px;
-    }
+    word-wrap: break-word;
   }
 
   li {
@@ -99,7 +101,7 @@ const ContentWrapper = styled(Column)`
     }
   }
 
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 415px) {
     iframe {
       width: 100%;
       height: auto;

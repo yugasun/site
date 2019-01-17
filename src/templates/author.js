@@ -1,30 +1,27 @@
 import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
-import { Divider, NewToServerlessPrefooter, Helmet } from 'src/fragments'
+import { Helmet } from 'src/fragments'
+import Prefooter from 'src/components/pages/blog/Prefooter'
 import { getAuthorById } from 'src/utils/blog'
-import Profile from 'src/components/pages/author/Profile'
-import Blogs from 'src/components/pages/author/Blogs'
+import Author from 'src/components/pages/author'
 
-export default ({ data, pathContext: { authorId } }) => {
-  const edges = data.allBlog ? (data.allBlog.edges || []) : []
+const AuthorTemplate = ({ data, pathContext: { authorId } }) => {
   const author = getAuthorById(authorId)
 
   return (
-    <BlogLayout prefooter={NewToServerlessPrefooter}>
+    <BlogLayout prefooter={Prefooter} prefooterOnlyDesktop>
       <Helmet title={`Blog posts written by ${author.name}`}/>
-      <Profile author={author} />
-      <Divider visibleInSmallScreens />
-      <Blogs
-        authorName={author.name.split(' ')[0]}
-        blogs={edges.map(({ node }) => (node))}
-      />
+      <Author author={author} allBlog={data.allBlog} />
     </BlogLayout>
   )
 }
 
+export default AuthorTemplate
+
 export const query = graphql`
   query AuthorsBlogs($authorId: [String]) {
-    allBlog (sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
+    allBlog (sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
       edges {
         node {
           id

@@ -1,28 +1,27 @@
 import React from 'react'
 
 import { Box, Text, ResponsiveStack } from 'serverless-design-system'
-import { HeroWrapper } from 'src/fragments'
+import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import background from 'src/assets/images/comparisons-background.png'
+import { PL } from 'src/fragments/DesignSystem'
 
 const UseCasesHero = () => (
   <HeroWrapper
-    background={`black url(${background})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
+  background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
+  height={[340, 340, 450, 450, 493]}
   >
-    <Box mb={[2, 2, 7]}>
-      <HeroTabs selected="comparisons" />
+    <Box mb={[2, 2, 7, 7, 8]}>
+      <HeroTabs selected='comparisons' />
     </Box>
 
     <ResponsiveStack
       mb={[2, 2, 4, 7]}
-      color="white"
+      color='white'
     >
       <Box width={[1, 1, 1/2]}>
         <Text.p
           fontSize={[6, 6, 7, 8]}
-          fontFamily="Soleil"
+          fontFamily='Soleil'
           lineHeight={1}
           letterSpacing={'-0.2'}
           m={0}
@@ -33,18 +32,14 @@ const UseCasesHero = () => (
       <Box
         width={[1, 1, 1/2]}
         pl={[0, 0, 4]}
-        pr={[0, 0, 6]}
       >
-        <Text.p
-          fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
-          lineHeight={3}
-          letterSpacing={0}
-          mt={[3, 3, 1]}
+        <PL
+          color='white'
+          mt={[3, 3, 1, 1, 3]}
           mb={3}
         >
           Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation.
-        </Text.p>
+        </PL>
       </Box>
     </ResponsiveStack>
   </HeroWrapper>

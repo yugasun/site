@@ -16,14 +16,14 @@ const VerticallyAlignedImage = styled(Image)`
 const MobileSpace = styled(Text.span)`
   @media screen and (max-width: 415px) {
     &:after {
-      content: "     ";
+      content: '     ';
       white-space: pre;
     }
   }
 
   @media screen and (min-width: 415px) and (max-width: 960px) {
     &:after {
-      content: "     ";
+      content: '     ';
       white-space: pre;
     }
   }
@@ -31,42 +31,45 @@ const MobileSpace = styled(Text.span)`
 
 const HomeHeroFooter = () => (
   <ExternalLink to='https://github.com/serverless/serverless'>
+    <Flex width={[1, 1, 1]} mt={['12px', '12px', 5]} mb={2} flexWrap='wrap'>
       <Flex
-        width={[1, 1, 1]}
-        mt={['12px', '12px', 5]}
-        mb={2}
-        flexWrap='wrap'
-        >
-        <Flex
-          color='gray.2'
-          flexDirection={['column', 'column', 'row']}
-          fontSize={[12, 12, 12, 12, 16]}
-          mb={0}
-          lineHeight={['16px', '16px', '24px']}
-          letterSpacing={[0, 0, '-0.3px']}
-          fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']}
-        >
+        color='gray.2'
+        flexDirection={['column', 'column', 'row']}
+        fontSize={[12, 12, 12, 12, 16]}
+        mb={0}
+        lineHeight={['16px', '16px', '24px']}
+        letterSpacing={[0, 0, '-0.3px']}
+        fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']}
+      >
         <Box m={'auto'}>
           <VerticallyAlignedImage
-              src={githubIcon}
-              height={'26px'}
-              width='26px'
-            />
-        </Box>
-        <Box width={['176px', '200px', '200px', 'auto']} m={['auto', 'auto', null]}>
-          <Text.span fontSize={[12, 12, 12, 12, 16]} fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']} ml={[0, 0, '9px']}>&nbsp; View the Serverless Framework <MobileSpace></MobileSpace> on GitHub.&nbsp;&nbsp;&nbsp;</Text.span> 
-          <VerticallyAlignedImage
-                src={starIcon}
-                height={[11, 15, 20]}
-                width={[11, 15, 20]}
-                maxWidth='none'
+            src={githubIcon}
+            height={'26px'}
+            width='26px'
           />
-          <Text.span fontSize={[12, 12, 12, 12, 16]}>
-              &nbsp; 26,804
-          </Text.span>
         </Box>
-        </Flex>
+        <Box
+          width={['176px', '200px', '200px', 'auto']}
+          m={['auto', 'auto', null]}
+        >
+          <Text.span
+            fontSize={[12, 12, 12, 12, 16]}
+            fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']}
+            ml={[0, 0, '9px']}
+          >
+            &nbsp; View the Serverless Framework <MobileSpace /> on
+            GitHub.&nbsp;&nbsp;&nbsp;
+          </Text.span>
+          <VerticallyAlignedImage
+            src={starIcon}
+            height={[11, 15, 20]}
+            width={[11, 15, 20]}
+            maxWidth='none'
+          />
+          <Text.span fontSize={[12, 12, 12, 12, 16]}>&nbsp; 27,524</Text.span>
+        </Box>
       </Flex>
+    </Flex>
   </ExternalLink>
 )
 

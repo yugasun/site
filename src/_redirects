@@ -61,3 +61,9 @@
 /getting-started/ /framework/docs/getting-started/ 301 
 /framework/docs/providers/aws/vpc/ /framework/docs/providers/aws/guide/functions/ 301
 /framework/status/ /framework/ 301
+/developers/guides/dynamodb/ /dynamodb/ 301
+/category/guides-and-tutorials/ /blog/category/guides-and-tutorials/ 301
+/category/user-stories/ /blog/category/user-stories/ 301
+/category/operations-and-observability/ /blog/category/operations-and-observability/ 301
+/category/engineering-culture/ /blog/category/engineering-culture/ 301
+/category/news/ /blog/category/news/ 301

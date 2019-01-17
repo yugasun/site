@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text } from 'serverless-design-system'
+import { Box } from 'serverless-design-system'
 
 import MenuTitle from './Title'
 import MenuDescription from './Description'
@@ -10,8 +10,8 @@ import {
   CommunityDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { resources, products } from 'src/constants/urls'
-import { SecondaryButton } from 'src/fragments/DesignSystem'
+import { resources } from 'src/constants/urls'
+import EnterpriseSupportButton from '../../EnterpriseSupportButton'
 
 const ProductMenu = () => (
   <Box>
@@ -64,12 +64,7 @@ const BlogMenu = () => (
 
 const SupportMenu = () => (
   <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 3]}>
-    <NavLink to={products.support} completed className='header-menu-item'>
-    <SecondaryButton px={[0, 0, 0, 0, '0.3rem', '0.5rem']} width={['187px', '187px', '187px', '187px', '187px', '207px']}>
-    enterprise support
-    </SecondaryButton>
-    
-    </NavLink>
+    <EnterpriseSupportButton />
   </Box>
 )
 

@@ -14,7 +14,7 @@ const algoliasearch = require('algoliasearch')
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
-const guidesConfig = require('./../scripts/guides/config')
+const kickstartConfig = require('./../scripts/kickstart/config')
 
 const fileReadingOptions = { match: /.md$/ }
 
@@ -38,12 +38,12 @@ const digestCreator = (content) => (
   crypto.createHash(`md5`).update(JSON.stringify(content)).digest(`hex`)
 )
 
-const sourceGuides = (createNode) => (err, content, filename, next) => {
+const sourceKickstart = (createNode) => (err, content, filename, next) => {
   if (err) throw err
 
   const { data, content: markdownContent } = matter(content)
   const frontmatter = data.category ? data : { ...data, category: [] }
-  const guideId = path.basename(filename, path.extname(filename))
+  const kickstartId = path.basename(filename, path.extname(filename))
 
   unified().
     use(markdown).
@@ -51,11 +51,11 @@ const sourceGuides = (createNode) => (err, content, filename, next) => {
     use(html).
     process(markdownContent, (err, file) => {
       createNode({
-        id: guideId,
+        id: kickstartId,
         parent: null,
         children: [],
         internal: {
-          type: 'Guide',
+          type: 'Kickstart',
           contentDigest: digestCreator(content),
         },
         frontmatter,
@@ -204,9 +204,9 @@ const generator = (createNode) => (
 
     new Promise((resolve, reject) => {
       dir.readFiles(
-        guidesConfig.siteGuidePath,
+        kickstartConfig.kickstartPagesPath,
         fileReadingOptions,
-        sourceGuides(createNode),
+        sourceKickstart(createNode),
         resolve
       )
     }),

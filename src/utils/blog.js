@@ -1,7 +1,7 @@
 import AuthorData from 'src/constants/generated-authors.json'
 import CategoryData from 'src/constants/categories.json'
 
-const getAuthorById = (authorId) => {
+const getAuthorById = authorId => {
   const author = AuthorData[authorId] || {}
 
   return {
@@ -10,17 +10,16 @@ const getAuthorById = (authorId) => {
   }
 }
 
-const getAuthorInfo = ({ frontmatter }) => (
+const getAuthorInfo = ({ frontmatter }) =>
   (frontmatter.authors || []).map(getAuthorById)[0] || {}
-)
 
-const getAuthorLink = (id) => `/author/${id}`
+const getAuthorLink = id => `/author/${id}`
 
-const getBlogLink = (id) => `/blog/${id}`
+const getBlogLink = id => `/blog/${id}`
 
-const getCategoryLink = (id) => `/category/${id}`
+const getCategoryLink = id => `/blog/category/${id}/`
 
-const getCategoryNameById = (categoryId) => CategoryData[categoryId]
+const getCategoryNameById = categoryId => CategoryData[categoryId]
 
 const getCategoryName = ({ frontmatter }) => CategoryData[frontmatter.category]
 

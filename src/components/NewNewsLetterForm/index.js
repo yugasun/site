@@ -98,7 +98,7 @@ class NewsLetterForm extends React.Component {
         disabled={this.state.isFetching}
         {...submitBtnProps}
       >
-        sign up
+        subscribe
       </ButtonWithLineHeight>
     )
   }

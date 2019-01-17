@@ -1,39 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Flex } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 
-import { NewsLetterForm } from 'src/components'
 import Logo from './Logo'
 import MobileOptions from './MobileOptions'
 import BlogNavbarContext from './BlogNavbarContext'
+import { Box } from 'src/fragments/DesignSystem'
+import CategoriesPartial from './MobileOptions/CategoriesPartial'
+import EnterpriseSupportButton from 'src/components/HeaderNew/EnterpriseSupportButton'
 
 const Wrapper = styled(Flex.verticallyCenter)`
   justify-content: space-between;
   transition: padding 0.5s;
-`;
+`
 
-const NewsLetter = () => (
-  <Box
-    width={[1, 1, 0.5, 0.35]}
-    display={['none', 'none', 'block']}
-  >
-    <NewsLetterForm
-      emailFieldProps={{ p: 15, placeholder: 'enter email for updates' }}
-      submitBtnProps={{ p: 15 }}
-    />
-  </Box>
-)
-
-export default () => (
+const LogoAndOptions = () => (
   <BlogNavbarContext.Consumer>
     {
       ({ isNavbarShrinked }) => (
-        <Wrapper py={[15, 15, isNavbarShrinked ? 0 : 15]}>
+        <React.Fragment>
+        <Wrapper pt={['12px', '12px', isNavbarShrinked ? 0 : 15]} pb={['4px', '4px', isNavbarShrinked ? 0 : 15]}>
           <Logo />
-          <NewsLetter />
+          <Box.OnlyTabletAndDesktop>
+            <EnterpriseSupportButton />
+          </Box.OnlyTabletAndDesktop>
           <MobileOptions />
         </Wrapper>
+
+        <Box.OnlyMobile>
+          <Wrapper pb={['12px']}>
+            <CategoriesPartial />
+          </Wrapper>
+        </Box.OnlyMobile>
+
+        </React.Fragment>
       )
     }
   </BlogNavbarContext.Consumer>
 )
+
+export default LogoAndOptions

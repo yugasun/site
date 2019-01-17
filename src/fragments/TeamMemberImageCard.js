@@ -9,6 +9,7 @@ import {
   Relative,
 } from 'serverless-design-system'
 import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
+import verticalDotImage from 'src/assets/images/white-dots-grid-vertical.png'
 
 const TeamMemberImageCard = ({ name, position, image }) => (
   <Relative
@@ -23,7 +24,7 @@ const TeamMemberImageCard = ({ name, position, image }) => (
     />
     <Column
       width={1}
-      alignItems="left"
+      alignItems='left'
     >
       <P
         color='black'
@@ -48,15 +49,15 @@ const TeamMemberImageCard = ({ name, position, image }) => (
       </P>
     </Column>
     <Absolute
-      top="45px"
-      right="-10px"
+      top='45px'
+      right='-10px'
       zIndex={1}
     >
       <Background
         height={[120, 120, 152]}
         width={[18, 18, 20]}
-        background={`url(${dotGridVertical})`}
-        backgroundSize="cover"
+        background={`url(${verticalDotImage})`}
+        backgroundSize='cover'
       />
     </Absolute>
   </Relative>

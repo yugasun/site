@@ -5,14 +5,14 @@ import {
   Image,
   ResponsiveStack
 } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import investorTrinity from 'src/assets/images/trinity.png'
 import investorHeavyBit from 'src/assets/images/heavybit.png'
 
 const OurInvestors= () => (
   <AppContainer>
-    <Column px={3} pt={[6, 6, 4, 2]}>
+    <Column px={3} pt={[6, 6, 8, 12]}>
       <Flex.center>
         <TitleWithIcon>
           Our Investors
@@ -22,15 +22,15 @@ const OurInvestors= () => (
       <Flex.center>
         <ResponsiveStack
           flexWrap='wrap'
-          width={[1, 1, 2/3, 2/3, 1/2]}
-          justifyContent="space-between"
-          my={[1, 1, 2, 4, 5]}
+          width={[1, 1, 1, 2/3, 1/2]}
+          justifyContent='space-between'
+          mt={[0, 0, 2, 3]}
         >
-          <Column m={[2, 2, 0]} alignItems="center">
-            <Image src={investorTrinity} alt='trinity' height='63px' />
+          <Column m={[2, 2, 2, 0]} alignItems='center'>
+            <Image src={investorTrinity} alt='trinity' height={['43px', '43px', '63px']} />
           </Column>
-          <Column m={[2, 2, 0]} alignItems="center">
-            <Image src={investorHeavyBit} alt='heavybit-industries' height='75px' />
+          <Column m={[2, 2, 2, 0]} alignItems='center'>
+            <Image src={investorHeavyBit} alt='heavybit-industries' height={['55px', '55px', '75px']} />
           </Column>
         </ResponsiveStack>
       </Flex.center>

@@ -20,15 +20,8 @@ const CardContainer = ({ children }) => (
 
 export default ({ blogs }) => (
   <Relative my={5}>
-    <Background
-      width={1}
-      backgroundImage={['', '', `url(${glitchDivider})`]}
-      backgroundSize="contain"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center"
-    >
       <AppContainer>
-        <ResponsiveStack justifyContent="space-between">
+        <ResponsiveStack justifyContent='space-between'>
           {
             blogs.map(({ id, frontmatter }, index) => (
               <CardContainer key={`relative-${index}`}>
@@ -38,6 +31,5 @@ export default ({ blogs }) => (
           }
         </ResponsiveStack>
       </AppContainer>
-    </Background>
   </Relative>
 )

@@ -1,58 +1,72 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Box, Flex, Text } from 'serverless-design-system'
+import { Box, Flex, Text, Row, Image } from 'serverless-design-system'
 import BlogNavbarContext from '../BlogNavbarContext'
 import CategoriesData from 'src/constants/categories.json'
 import { getCategoryNameById } from 'src/utils/blog'
+import closeIcon from 'src/assets/images/icon-close.png'
+import mobileMenuIcon from 'src/assets/images/icon-mobile-menu.png'
+import EnterpriseSupportButton from 'src/components/HeaderNew/EnterpriseSupportButton'
+import NewsletterOption from './NewsletterOptin'
 
 const Category = ({ children, link }) => (
-  <Box py={1}>
+  <Box py={'13.5px'}>
     <Link to={link}>
       <Text.span
-        color="white"
-        lineHeight={0}
-        letterSpacing="text"
-        align="center"
+        color='white'
+        lineHeight='16px'
+        letterSpacing='text'
+        align='center'
+        fontSize='14px'
       >
-        { children }
+        {children}
       </Text.span>
     </Link>
   </Box>
 )
 
-export default () => (
+const MobileCategories = () => (
   <BlogNavbarContext.Consumer>
-    {
-      ({ isNavbarActive }) => (
-        isNavbarActive && (
-          <Flex.center
-            flexDirection="column"
-            py={3}
-          >
-            <Category link={`/blog`}>
-              all
-            </Category>
-            {
-              Object.keys(CategoriesData).map((key) => (
-                <Category link={`/category/${key}`}>
-                  { getCategoryNameById(key) }
-                </Category>
-              ))
-            }
-            <Box pt={3}>
-              <Link to="/">
+    {({ isNavbarActive, toggleNavbarActiveness }) =>
+      isNavbarActive && (
+        <React.Fragment>
+          <Row justifyContent='space-between' onClick={toggleNavbarActiveness}>
+            <Box>
+              <Link to='/'>
                 <Text.p
                   mt={0}
-                  color="white"
+                  color='white'
                   opacity={0.5}
+                  align='left'
+                  fontSize='12px'
                 >
                   &lt; serverless.com
                 </Text.p>
               </Link>
             </Box>
+            <Image
+              maxHeight='16px'
+              src={isNavbarActive ? closeIcon : mobileMenuIcon}
+              objectFit='contain'
+            />
+          </Row>
+          <Flex.center flexDirection='column' pt={2} pb={3}>
+            <Box mb={'54px'}>
+              <EnterpriseSupportButton />
+            </Box>
+
+            <Category link={`/blog/`}>all</Category>
+            {Object.keys(CategoriesData).map(key => (
+              <Category link={`/blog/category/${key}/`} key={key}>
+                {getCategoryNameById(key)}
+              </Category>
+            ))}
+            <NewsletterOption />
           </Flex.center>
-        )
+        </React.Fragment>
       )
     }
   </BlogNavbarContext.Consumer>
 )
+
+export default MobileCategories

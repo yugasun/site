@@ -19,6 +19,8 @@ import {
 import { formatDate } from 'src/utils/date'
 import ImagePlaceholder from './ImagePlaceholder'
 
+//TODO: Heading and P tag don't conform to usual sizing pattern - revisit
+
 const HyperLinkBackground = getLinkComponent(Background)
 const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
 
@@ -27,10 +29,10 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row my={[3, 3, 4, 5]}>
+    <Row mb={[3, 3, 4, 6]}>
       <Box
-        width={[1, 1, 1, 0.6]}
-        pr={[15, 15, 15, '10%']}
+        width={[1, 1, 1, 1, 0.6]}
+        pr={['10px', '10px', '10px', '10%']}
       >
         <Box width={[1, 1, 1, 0.75]}>
           <Text.span
@@ -69,17 +71,19 @@ export default ({ id, frontmatter }) => {
         <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
             <Heading.h3
-              fontSize={[3, 3, 3, 5]}
-              fontFamily='SoleilBk'
-              letterSpacing='h4'
+              fontFamily='Soleil' 
+              lineHeight={['24px', '24px', '24px', '24px', '44px']} letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '-0.5px']}
+              fontSize={['18px', '18px', '18px', '18px', '32px']} 
             >
               { title }
             </Heading.h3>
           </Box>
         </InternalLink>
-        <P
-          fontSize={[0, 0, 0, 1]}
-          lineHeight={1.63}
+        <P 
+          lineHeight={['16px', '16px', '16px', '16px', '26px']} 
+          fontSize={['12px', '12px', '12px', '12px', '16px' ]}
+          fontFamily={['Soleil', 'Soleil', 'Soleil', 'Soleil', 'SoleilBk']}
+          letterSpacing={0}
         >
           { description }
         </P>
@@ -98,8 +102,8 @@ export default ({ id, frontmatter }) => {
       </Box>
 
       <Row
-        justifyContent='center'
-        width={0.4}
+        justifyContent='left'
+        width={[0.25, 0.25, 0.2, 0.2, 0.4]}
         mt={[2, 2, 2, 0]}
       >
         {

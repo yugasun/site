@@ -15,8 +15,8 @@ import {
   withBeforeAfter,
 } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
@@ -58,7 +58,7 @@ class AutoScrollListItem extends React.Component {
         mb={[4, 4, 5, 8]}
         px={[0, 0, 3]}
       >
-        <Box mb={[2, 2, 3 ]}>
+        <Box>
           <TitleWithIcon>{title}</TitleWithIcon>
         </Box>
         <Box
@@ -111,18 +111,18 @@ class AutoScrollList extends React.Component {
     return (
       <Relative width={1} ref={(ref) => { this.container = ref }}>
         <Absolute
-          height="100vh"
+          height='100vh'
           width={[0, 0, 0, "34vw", "32vw"]}
-          top="0"
-          zIndex="-1"
+          top='0'
+          zIndex='-1'
           left={-25}
           ref={(ref) => { this.sidebarBackground = ref }}
         >
           <Background
-            height="fullHeight"
+            height='fullHeight'
             width={1}
             background={`url(${sidebarBackground})`}
-            backgroundSize="cover"
+            backgroundSize='cover'
           />
         </Absolute>
 
@@ -136,12 +136,11 @@ class AutoScrollList extends React.Component {
               <Relative
                 width={1}
                 top={0}
-                maxWidth="300px"
+                maxWidth='300px'
                 ref={(ref) => { this.sidebar = ref }}
               >
                 <List
                   my={0}
-                  mx={2}
                   py={[4, 4, 6, 8]}
                   px={0}
                 >
@@ -171,8 +170,9 @@ class AutoScrollList extends React.Component {
                         >
                           <Text.span
                             fontSize={1}
-                            lineHeight={1}
-                            letterSpacing="0.6px"
+                            lineHeight={'22px'}
+                            letterSpacing='0.58px'
+                            opacity='0.4'
                           >
                             {title}
                           </Text.span>
