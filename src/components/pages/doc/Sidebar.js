@@ -4,6 +4,7 @@ import { Box, Heading, Text, List, ListItem } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/constants/generated-menu-items'
 import SearchBox from './SearchBox'
+import { ExternalLink } from 'src/fragments'
 
 export default class Sidebar extends React.Component {
   constructor(props, context) {
@@ -42,17 +43,26 @@ export default class Sidebar extends React.Component {
     const alreadyLinked = {}
     if (menu && menu.length > 0) {
       items = menu.map((item, i) => {
-        const currentStyle = (item.path === trimmedURL) ? 'currentURL' : ''
+        const currentStyle = item.path === trimmedURL ? 'currentURL' : ''
+        // ensure all internal links end with a trialing /
+        item.path =
+          item.path.startsWith('/') && !item.path.endsWith('/')
+            ? `${item.path}/`
+            : item.path
+
         // check if already linked
         if (alreadyLinked && alreadyLinked[item.path]) {
           return null
         }
-        alreadyLinked[item.path.replace(/\/$/, '')] = true
+        alreadyLinked[item.path] = true
+        //use Link component type according to whether the link is internal or external
+        const FinalLinkType = item.path.startsWith('http') ? ExternalLink : Link
+
         return (
           <ListItem key={i} className={`subPageLink ${currentStyle}`}>
-            <Link to={item.path}>
+            <FinalLinkType to={item.path}>
               {item.title || item.menuText}
-            </Link>
+            </FinalLinkType>
           </ListItem>
         )
       })
@@ -83,27 +93,34 @@ export default class Sidebar extends React.Component {
     let searchBox
 
     if (typeof window !== 'undefined' && window.outerWidth > 600) {
-      searchBox = (<SearchBox />)
+      searchBox = <SearchBox />
     }
 
     return (
-      <Box className="sidebar">
+      <Box className='sidebar'>
         <Box
-          className="sidebarInner"
-          ref={(ref) => { this.sidebarRef = ref; }}
+          className='sidebarInner'
+          ref={ref => {
+            this.sidebarRef = ref
+          }}
         >
-          <Box>{ searchBox }</Box>
-          <Box className="pageContext">{ parentDisplay }</Box>
-          <Box className="subPages">
-            <List>
-              { items }
-            </List>
+          <Box>{searchBox}</Box>
+          <Box className='pageContext'>{parentDisplay}</Box>
+          <Box className='subPages'>
+            <List>{items}</List>
           </Box>
 
-          <Box className="forumCta">
+          <Box className='forumCta'>
             <Heading.h2>Have questions?</Heading.h2>
             <Text.p>
-              Head over to the <a href="https://forum.serverless.com?utm_source=framework-docs" target="_blank">forums</a> to search for your questions and issues or post a new one.
+              Head over to the{' '}
+              <a
+                href='https://forum.serverless.com?utm_source=framework-docs'
+                target='_blank'
+              >
+                forums
+              </a>{' '}
+              to search for your questions and issues or post a new one.
             </Text.p>
           </Box>
         </Box>
