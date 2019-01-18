@@ -44,11 +44,17 @@ export default class Sidebar extends React.Component {
     if (menu && menu.length > 0) {
       items = menu.map((item, i) => {
         const currentStyle = item.path === trimmedURL ? 'currentURL' : ''
+        // ensure all internal links end with a trialing /
+        item.path =
+          item.path.startsWith('/') && !item.path.endsWith('/')
+            ? `${item.path}/`
+            : item.path
+
         // check if already linked
         if (alreadyLinked && alreadyLinked[item.path]) {
           return null
         }
-        alreadyLinked[item.path.replace(/\/$/, '')] = true
+        alreadyLinked[item.path] = true
         //use Link component type according to whether the link is internal or external
         const FinalLinkType = item.path.startsWith('http') ? ExternalLink : Link
 
