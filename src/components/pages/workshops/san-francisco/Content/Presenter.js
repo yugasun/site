@@ -16,7 +16,7 @@ const ImageWithMarginX = styled(Image)`
 const Presenter = () => (
   <AppContainer>
     <Flex
-      mb={[360, 360, 265, 265, 335]}
+      mb={[360, 360, 265, 265, 360]}
       flexDirection={['column', 'column', 'row']}
       width={[1, 1, 1, 0.9, 0.9, 0.8]}
       justifyContent='space-between'
