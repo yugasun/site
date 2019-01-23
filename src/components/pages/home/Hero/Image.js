@@ -67,14 +67,14 @@ const HomeHeroImage = ({ usingSafariDesktop }) => (
     </HeroLinesBackground>
 
     <TerminalBackground
-      mt={[82, 82, 120, 80, 126]}
+      mt={[82, 82, 120, 80, 142]}
       ml={[-1, -1, 53, 103]}
       width={['280px', '320px', '320px', '320px', 1]}
     >
       <Image src={homepageHeroTerminal} />
     </TerminalBackground>
     <TerminalText
-      mt={['122px', '122px', '160px', '120px', '186px']}
+      mt={['128px', '128px', '165px', '120px', '202px']}
       ml={['1px', '25px', '90px', '135px', '155px']}
     >
       <TerminalTextContent

@@ -17,7 +17,7 @@ const HomeHeroFooter = () => (
       <Text
         color='white'
         fontSize={[18]}
-        mt={['47px','110px', '122px', '140px', '135px', '180px']}
+        mt={['140px', '140px', '122px', '140px', '135px', '220px']}
         mb={[0, 0, '10px', '10px', '15px']}
         lineHeight={['24px']}
         align='center'
@@ -32,26 +32,42 @@ const HomeHeroFooter = () => (
       alignItems='space-between'
       flexDirection='row'
       flexWrap='wrap'
-      pt={['32px','32px', '52px']}
+      pt={['32px', '32px', '52px']}
       pb={[0, 0, 9]}
       maxWidth={[null, null, null, null, 800]}
       m={[null, null, 'auto']}
     >
-    <Box mr={['20px', '20px', '0px']}>
-      <Image src={awsLogo} width={['48px', '48px', '48px', '48px', '63.8px']} height={['29px', '29px', '29px', '29px', '38px']} />
-    </Box>
-    
-    <Image src={azureLogo} width={['100px', '100px', '100px', '100px', '131.5px']} height={['29px', '29px', '29px', '29px', '38px']}/>
-    
-    <Box mt={['20px', '20px', '0px']} mr={['10px', '10px', '0px']}>
-      <Image src={googleCloudLogo} width={['199px', '199px', '199px', '199px', '262.6px']} height={['24px', '24px', '24px', '24px', '31px']} />
-    </Box>
+      <Box mr={['20px', '20px', '0px']}>
+        <Image
+          src={awsLogo}
+          width={['48px', '48px', '48px', '48px', '63.8px']}
+          height={['29px', '29px', '29px', '29px', '38px']}
+        />
+      </Box>
 
-    <Box mt={['20px', '20px', '0px']}>
-      <Image src={kubernetesLogo} width={['113px', '113px', '113px', '113px', '146px']} height={['26px', '26px', '26px', '26px', '31px']}/>
-    </Box>
+      <Image
+        src={azureLogo}
+        width={['100px', '100px', '100px', '100px', '131.5px']}
+        height={['29px', '29px', '29px', '29px', '38px']}
+      />
+
+      <Box mt={['20px', '20px', '0px']} mr={['10px', '10px', '0px']}>
+        <Image
+          src={googleCloudLogo}
+          width={['199px', '199px', '199px', '199px', '262.6px']}
+          height={['24px', '24px', '24px', '24px', '31px']}
+        />
+      </Box>
+
+      <Box mt={['20px', '20px', '0px']}>
+        <Image
+          src={kubernetesLogo}
+          width={['113px', '113px', '113px', '113px', '146px']}
+          height={['26px', '26px', '26px', '26px', '31px']}
+        />
+      </Box>
     </Flex>
-    </Box>
+  </Box>
 )
 
 export default HomeHeroFooter
