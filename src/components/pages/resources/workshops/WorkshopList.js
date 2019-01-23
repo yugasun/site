@@ -8,7 +8,7 @@ import {
   TertiaryButton,
   Relative,
   ResponsiveStack,
-  Text
+  Text,
 } from 'serverless-design-system'
 
 import { AppContainerNewest as AppContainer } from 'src/components'
@@ -23,28 +23,30 @@ import PrivateWorkshopImage from 'src/assets/images/private-workshop.png'
 import verticalDotImage from 'src/assets/images/white-dots-grid-vertical.png'
 
 const data = {
-  'san-francisco' : SanFranciscoImage,
-  'seattle' : SeattleImage,
-  'new-york' : NewYorkImage,
-  'atlanta' : AtlantaImage,
-  'london' : LondonImage,
+  'san-francisco': SanFranciscoImage,
+  seattle: SeattleImage,
+  'new-york': NewYorkImage,
+  atlanta: AtlantaImage,
+  london: LondonImage,
 }
 
-const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
-  <Relative
-    p='16px'
-    width={[1, 1, 1/2, 0.33]}
-  >
+const WorkshopListItem = ({
+  keyName,
+  title,
+  img,
+  isContactUs,
+  price,
+  description,
+  cta,
+}) => (
+  <Relative p='16px' width={[1, 1, 1 / 2, 0.33]}>
     <Background
       background={`url(${img})`}
       backgroundSize='cover'
       height='400px'
       minHeight='300px'
     >
-      <Absolute
-        right='19px'
-        top='15px'
-      >
+      <Absolute right='19px' top='15px'>
         <Background
           height='200px'
           width='64px'
@@ -52,11 +54,7 @@ const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
           backgroundSize='cover'
         />
       </Absolute>
-      <Column
-        height='fullHeight'
-        justifyContent='space-between'
-        p={[2, 2, 4]}
-      >
+      <Column height='fullHeight' justifyContent='space-between' p={[2, 2, 4]}>
         <Relative>
           <Heading.h3
             fontFamily='SoleilBk'
@@ -67,13 +65,13 @@ const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
           >
             {title}
           </Heading.h3>
-          <Text.p 
-          fontSize={'14px'}
-          color='white'
-          lineHeight={'16px'}
-          letterSpacing={'0.58px'}
+          <Text.p
+            fontSize={'14px'}
+            color='white'
+            lineHeight={'16px'}
+            letterSpacing={'0.58px'}
           >
-            $ 1095/person
+            {`${price}/person`}
           </Text.p>
         </Relative>
         <Relative>
@@ -84,19 +82,17 @@ const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
             letterSpacing='0'
             mb={'24px'}
           >
-            {
-              isContactUs ? 
-              'Dates for this workshop have not been finalized. Join the waitlist to get notified as soon as the dates are set.':
-              'We’ll work with you privately in a one on one session to empower your team with serverless knowledge. '
-            }
+            {description}
           </Text.p>
           <TertiaryButton
             width={1}
             onClick={() => {
-              isContactUs ? window.open(company.contact) : push(`/workshops/${keyName}`)
+              isContactUs
+                ? window.open(company.contact)
+                : push(`/workshops/${keyName}`)
             }}
           >
-            {isContactUs ? 'contact us' : 'join waitlist'}
+            {cta}
           </TertiaryButton>
         </Relative>
       </Column>
@@ -113,21 +109,25 @@ const WorkshopList = () => (
       alignItems='center'
       justifyContent='center'
     >
-      {
-        Object.keys(workshops).map((key) => (
-          <WorkshopListItem
-            key={key}
-            keyName={key}
-            title={workshops[key]}
-            img={data[key]}
-            isContactUs={false}
-          />
-        ))
-      }
+      {Object.keys(workshops).map(key => (
+        <WorkshopListItem
+          key={key}
+          keyName={key}
+          title={workshops[key]['name']}
+          img={data[key]}
+          isContactUs={false}
+          price={workshops[key]['price']}
+          description={workshops[key]['description']}
+          cta={workshops[key]['cta']}
+        />
+      ))}
       <WorkshopListItem
         title='Private Workshop'
         img={PrivateWorkshopImage}
         isContactUs={true}
+        price='$1095'
+        description='Dates for this workshop have not been finalized. Join the waitlist to get notified as soon as the dates are set.'
+        cta='contact us'
       />
     </ResponsiveStack>
   </AppContainer>

@@ -18,7 +18,7 @@ const EnterpriseWorkshopHero = () => {
         background={`black url(${background})`}
         backgroundSize='cover'
         backgroundPosition='center'
-        height={[650, 650, 542, 542, 581]}
+        height={[700, 700, 542, 542, 581]}
       >
         <ResponsiveStack mb={[2, 2, 4, 9]} mt={[0, 0, 0, 0, 4]}>
           <Box width={[1, 1, 1, 1, 1 / 2]}>
@@ -27,8 +27,8 @@ const EnterpriseWorkshopHero = () => {
               <P color='gray.2' align={['center', 'center', 'left']}>
                 Join us for a full-day workshop preparing you and your team to
                 manage and run serverless on an enterprise level that is
-                designed for developers with all levels of serverless
-                experience.
+                designed for developers with all levels of serverless experience
+                and taught by Serverless, an Amazon Advanced Technology Partner.
               </P>
               <Row mt={[4]}>
                 <Box mx={['auto', 'auto', 'unset']}>
