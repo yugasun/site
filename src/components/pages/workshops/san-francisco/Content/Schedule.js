@@ -41,7 +41,7 @@ const PWithWidth = styled(P)`
 const Schedule = () => (
   <AppContainer>
     <Flex
-      mb={[360, 360, 265, 265, 335]}
+      mb={[102, 102, 122, 122, 162]}
       alignItems='center'
       flexDirection='column'
     >

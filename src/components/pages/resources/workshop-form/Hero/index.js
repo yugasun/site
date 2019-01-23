@@ -7,18 +7,19 @@ import workshops from 'src/constants/workshops.json'
 
 const WorkshopForm = ({ keyName }) => (
   <HeroWrapper
-    background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
-  height={[300, 300, 549]}
+    background={[
+      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+      `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
+    ]}
+    height={[300, 300, 549]}
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected='workshops' />
     </Box>
 
-    <ResponsiveStack
-      mb={[2, 2, 4, 7]}
-      color='white'
-    >
-      <Box width={[1, 1, 1/2]}>
+    <ResponsiveStack mb={[2, 2, 4, 7]} color='white'>
+      <Box width={[1, 1, 1 / 2]}>
         <Text.p
           fontSize={[6, 6, 7, 8]}
           fontFamily='Soleil'
@@ -26,7 +27,7 @@ const WorkshopForm = ({ keyName }) => (
           letterSpacing={'-0.2'}
           m={0}
         >
-          { workshops[keyName] }
+          {workshops[keyName]['name']}
         </Text.p>
         <Text.p
           fontSize={[2, 2, 4]}

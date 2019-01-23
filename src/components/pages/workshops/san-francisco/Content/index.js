@@ -36,15 +36,15 @@ export default class EnterpriseWorkshopContent extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Presenter />
-        <Box mt={[92, 92, 92, 92, 134]} mb={[505, 505, 505, 505, 880]}>
+        <Box mt={[92, 92, 92, 92, 134]} mb={[450, 450, 470, 470, 790]}>
+          <Schedule />
           <ResponsiveMap
             url='https://snazzymaps.com/embed/126425'
             width='100%'
             height={this.state.iFrameHeight}
           />
         </Box>
-        <Schedule />
+        <Presenter />
       </React.Fragment>
     )
   }

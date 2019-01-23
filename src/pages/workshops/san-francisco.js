@@ -12,7 +12,7 @@ const SanFranciscoWorkshop = () => (
     transparentHeader={true}
     prefooterOnlyDesktop
   >
-    <Helmet title='Serverless Workshop - San Francisco' />
+    <Helmet title='Serverless Workshop San Francisco | AWS Lambda, Google Functions &amp; Cloud Computing' />
     <Hero />
     <Content />
   </DefaultLayout>
