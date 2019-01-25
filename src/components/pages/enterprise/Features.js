@@ -64,9 +64,10 @@ const Features = () => (
           >
             <ReactPlayer
               url={feature.videoUrl}
-              playing
+              playing={true}
               loop={true}
               width={'552px'}
+              muted={true}
             />
           </Flex>
         </Flex>
