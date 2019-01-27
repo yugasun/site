@@ -6,7 +6,12 @@ import {
   Image,
   Box,
 } from 'serverless-design-system'
-import { Heading, P, MobileCenteredBox } from 'src/fragments/DesignSystem'
+import {
+  Heading,
+  P,
+  MobileCenteredBox,
+  Button,
+} from 'src/fragments/DesignSystem'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import supportImage from 'src/assets/images/pages/enterprise/support.svg'
 import enterpriseImage from 'src/assets/images/pages/enterprise/enterprise.svg'
@@ -38,7 +43,7 @@ const Benefits = () => (
         </P>
       </Column>
       <MobileCenteredBox width={[1, 1, 0.4]}>
-        <Image src={supportImage} width={[300, 300, 300, 400, 450, 378]} />
+        <Image src={supportImage} width={[300, 300, 300, 400, 450, 321]} />
       </MobileCenteredBox>
     </ResponsiveStack.spaceBetween>
 
@@ -48,7 +53,7 @@ const Benefits = () => (
       pb={[0, 0, 0, 0, 492]}
     >
       <MobileCenteredBox width={[1, 1, 0.4]} ml={[0, 0, 120]}>
-        <Image src={enterpriseImage} width={[300, 300, 300, 400, 450, 378]} />
+        <Image src={enterpriseImage} width={[300, 300, 300, 400, 450, 321]} />
       </MobileCenteredBox>
       <Column width={[1, 1, 1 / 2, '488px']}>
         <TextWithIcon
@@ -72,6 +77,9 @@ const Benefits = () => (
           See full architecture diagrams and time-to-market estimates for common
           use cases in our white paper.
         </P>
+        <Button width={280} mt={4}>
+          download whitepaper
+        </Button>
       </Column>
     </ResponsiveStack.spaceBetween>
   </Box>

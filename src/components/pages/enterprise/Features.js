@@ -22,7 +22,7 @@ const FeaturesData = [
   {
     title: '3. Monitor application health with Serverless Insights',
     description:
-      'A central dashboard provides easy access to check application health.<br/>We’ll provide proactive tips so you can make your applications as efficient as possible: real-time cost and performance analysis, actionable operations events and more.',
+      'A central dashboard provides easy access to check application health. We’ll provide proactive tips so you can make your applications as efficient as possible: real-time cost and performance analysis, actionable operations events and more.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
   },

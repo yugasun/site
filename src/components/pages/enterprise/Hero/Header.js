@@ -3,7 +3,6 @@ import { Flex, Image, Box } from 'serverless-design-system'
 import {
   HeroTitle,
   HeroMainTitle,
-  HeroDescription,
   HeroInlineDescription,
 } from 'src/fragments/DesignSystem/HeroElements'
 

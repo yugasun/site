@@ -1,21 +1,11 @@
 import React from 'react'
-import { HeroActionsNew as HeroActions } from 'src/fragments'
+import { Button } from 'src/fragments/DesignSystem'
+import { Flex } from 'serverless-design-system'
 
 const FrameworkHeroActions = () => (
-  <HeroActions
-    firstBtn={{
-      name: 'case study',
-      to: '/framework/docs/getting-started/',
-      completed: true,
-    }}
-    secondBtn={{
-      name: 'see the demo',
-      to: '/enterprise/',
-      completed: true,
-    }}
-    flexDirection={['column', 'column', 'row']}
-    justifyContent='center'
-  />
+  <Flex justifyContent='center' mt={4}>
+    <Button>see the demo</Button>
+  </Flex>
 )
 
 export default FrameworkHeroActions
