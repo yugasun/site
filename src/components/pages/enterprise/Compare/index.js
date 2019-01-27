@@ -7,10 +7,7 @@ import {
   Image,
   Absolute,
 } from 'serverless-design-system'
-import {
-  AppContainerNewest as AppContainer,
-  WhiteButtonNew as WhiteButton,
-} from 'src/components'
+import { WhiteButtonNew as WhiteButton } from 'src/components'
 import styled from 'styled-components'
 import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
 import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
