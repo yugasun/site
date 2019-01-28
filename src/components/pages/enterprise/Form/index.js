@@ -20,7 +20,7 @@ const StyledForm = styled(Flex)`
   position: absolute;
   top: 0;
   background-color: white;
-  margin-top: 3915px;
+  margin-top: 3940px;
   padding: 32px;
   width: 608px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
