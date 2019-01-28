@@ -10,8 +10,8 @@ import serverlessBolt from 'src/assets/images/serverlessBolt.png'
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex.horizontallyCenter flexDirection='column' mb={['60px', '60px', 0]}>
-    <Flex.horizontallyCenter height='86px' mt={[1, 1, 0, 4, 4]} mb={'5px'}>
+  <Flex.horizontallyCenter flexDirection='column'>
+    <Flex.horizontallyCenter height='86px' mt={[1, 1, 6, 5, 3]} mb={'5px'}>
       <Image
         src={serverlessBolt}
         height={['70px', '70px', '70px', '70px', '67px']}
@@ -19,10 +19,10 @@ const Header = () => (
       />
     </Flex.horizontallyCenter>
     <HeroTitle>serverless</HeroTitle>
-    <HeroMainTitle mb={[52, 52, 32, 32, 52]}>
+    <HeroMainTitle mb={[32, 32, 32, 32, 52]}>
       framework enterprise
     </HeroMainTitle>
-    <Box width={[1, 1, 0.59, 0.59, 0.37]} mx='auto'>
+    <Box width={[1, 1, 0.69, 0.69, 0.37]} mx='auto'>
       <HeroInlineDescription>
         Scale your serverless development with dashboards, collaboration tools
         and 24/7 dedicated support.

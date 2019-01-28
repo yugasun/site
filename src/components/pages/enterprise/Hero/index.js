@@ -15,9 +15,10 @@ const FrameworkHero = () => (
         ? `black url(${background})`
         : `black url(${backgroundAnimated})`
     }
-    backgroundSize='cover'
-    backgroundPosition='center'
-    height={[600, 600, 542, 542, 959]}
+    backgroundSize={['contain', 'contain', 'cover']}
+    backgroundPosition={['top', 'top', 'center']}
+    height={[600, 600, 485, 485, 959]}
+    backgroundRepeat='no-repeat'
   >
     <Header />
     <Actions />

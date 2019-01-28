@@ -15,6 +15,9 @@ import {
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import supportImage from 'src/assets/images/pages/enterprise/support.svg'
 import enterpriseImage from 'src/assets/images/pages/enterprise/enterprise.svg'
+import supportImageAnimated from 'src/assets/images/pages/enterprise/support-animated.svg'
+import enterpriseImageAnimated from 'src/assets/images/pages/enterprise/enterprise-animated.svg'
+import { isSafari, isMobile } from 'react-device-detect'
 
 const Benefits = () => (
   <Box>
@@ -30,7 +33,13 @@ const Benefits = () => (
           iconLeft='-40px'
           iconTop={['-10px', '-10px', '4px']}
         >
-          <Heading.h3 pt='12px' color='white'>
+          <Heading.h3
+            pt='12px'
+            color='white'
+            fontSize={['32px']}
+            lineHeight={['44px']}
+            letterSpacing={['-0.5px']}
+          >
             Plus: 24/7 Support from the team that brought you the Serverless
             Framework
           </Heading.h3>
@@ -43,7 +52,10 @@ const Benefits = () => (
         </P>
       </Column>
       <MobileCenteredBox width={[1, 1, 0.4]}>
-        <Image src={supportImage} width={[300, 300, 300, 400, 450, 321]} />
+        <Image
+          src={isSafari && !isMobile ? supportImage : supportImageAnimated}
+          width={[300, 300, 300, 400, 450, 321]}
+        />
       </MobileCenteredBox>
     </ResponsiveStack.spaceBetween>
 
@@ -53,7 +65,12 @@ const Benefits = () => (
       pb={[0, 0, 0, 0, 492]}
     >
       <MobileCenteredBox width={[1, 1, 0.4]} ml={[0, 0, 120]}>
-        <Image src={enterpriseImage} width={[300, 300, 300, 400, 450, 321]} />
+        <Image
+          src={
+            isSafari && !isMobile ? enterpriseImage : enterpriseImageAnimated
+          }
+          width={[300, 300, 300, 400, 450, 321]}
+        />
       </MobileCenteredBox>
       <Column width={[1, 1, 1 / 2, '488px']}>
         <TextWithIcon
@@ -63,7 +80,13 @@ const Benefits = () => (
           iconLeft='-40px'
           iconTop={['-10px', '-10px', '4px']}
         >
-          <Heading.h3 pt='12px' color='white'>
+          <Heading.h3
+            pt='12px'
+            color='white'
+            fontSize={['32px']}
+            lineHeight={['44px']}
+            letterSpacing={['-0.5px']}
+          >
             Enterprise use cases for serverless
           </Heading.h3>
         </TextWithIcon>
@@ -77,7 +100,7 @@ const Benefits = () => (
           See full architecture diagrams and time-to-market estimates for common
           use cases in our white paper.
         </P>
-        <Button width={280} mt={4}>
+        <Button width={280} mt={4} id='enterprise-contact-form'>
           download whitepaper
         </Button>
       </Column>

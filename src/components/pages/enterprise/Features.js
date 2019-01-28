@@ -3,6 +3,7 @@ import { Flex, Text, Column, Box } from 'serverless-design-system'
 import { Heading, Button } from 'src/fragments/DesignSystem'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import ReactPlayer from 'react-player'
+import MediaQuery from 'react-responsive'
 
 const FeaturesData = [
   {
@@ -29,7 +30,7 @@ const FeaturesData = [
 ]
 
 const Features = () => (
-  <Box>
+  <Box pt={[0, 0, 300, 300, 0]}>
     {FeaturesData.map((feature, index) => {
       const isEvenItem = index % 2 == 0
       return (
@@ -42,33 +43,61 @@ const Features = () => (
           key={index}
           pt={[92, 92, 162]}
         >
-          <Column width={['auto', 'auto', '30%']}>
-            <TitleWithIcon color='white' headingComponent={Heading.h4}>
+          <Column width={['auto', 'auto', '70%', '70%', '30%']}>
+            <TitleWithIcon
+              color='white'
+              headingComponent={Heading.h4}
+              fontSize={[24]}
+              letterSpacing={['-0.38px']}
+              lineHeight={['38px']}
+            >
               {feature.title}
             </TitleWithIcon>
             <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>
               {feature.description}
             </Text.p>
-            <Button width={208} mt={4}>
-              schedule a demo
-            </Button>
+            <a href='#enterprise-contact-form'>
+              <Button width={208} mt={4}>
+                schedule a demo
+              </Button>
+            </a>
           </Column>
           <Flex
             alignItems='center'
             justifyContent='center'
             p={'32px'}
-            ml={[0, 0, isEvenItem ? '17%' : 0]}
-            mr={[0, 0, isEvenItem ? 0 : '14%']}
+            ml={[0, 0, 0, 0, isEvenItem ? '17%' : 0]}
+            mr={[0, 0, 0, 0, isEvenItem ? 0 : '14%']}
             mt={[0, 0, 0]}
             mb={[4, 4, 0]}
           >
-            <ReactPlayer
-              url={feature.videoUrl}
-              playing={true}
-              loop={true}
-              width={'552px'}
-              muted={true}
-            />
+            <MediaQuery minWidth={1224}>
+              <ReactPlayer
+                url={feature.videoUrl}
+                playing={true}
+                loop={true}
+                width={'552px'}
+                muted={true}
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1223}>
+              <ReactPlayer
+                url={feature.videoUrl}
+                controls={true}
+                width={'336px'}
+                height={'179px'}
+                muted={true}
+              />
+            </MediaQuery>
+            <MediaQuery maxWidth={767}>
+              <ReactPlayer
+                url={feature.videoUrl}
+                controls={true}
+                width={'300px'}
+                height={'160px'}
+                muted={true}
+              />
+            </MediaQuery>
           </Flex>
         </Flex>
       )
