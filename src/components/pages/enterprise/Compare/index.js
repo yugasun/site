@@ -40,6 +40,14 @@ const OpenSourceComparisonBox = styled(Background)`
   @media screen and (min-width: 1024px) {
     margin-top: 200px;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-top: 92px;
+  }
+
+  @media screen and (max-width: 424px) {
+    margin-top: 62px;
+  }
 `
 
 export default class ComparisonBoxes extends React.Component {

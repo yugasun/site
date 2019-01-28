@@ -28,7 +28,7 @@ const StyledForm = styled(Flex)`
   width: 73%;
 
   @media screen and (max-width: 1600px) and (min-width: 1024px) {
-    margin-top: 4100px;
+    margin-top: 4180px;
     width: 76%;
   }
 
@@ -45,7 +45,7 @@ const StyledForm = styled(Flex)`
 
   @media screen and (max-width: 1024px) and (min-width: 900px) {
     position: absolute;
-    margin-top: 3400px;
+    margin-top: 3850px;
     width: 92%;
   }
 

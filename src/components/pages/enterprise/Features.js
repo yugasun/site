@@ -80,7 +80,7 @@ const Features = () => (
                 muted={true}
               />
             </MediaQuery>
-            <MediaQuery minWidth={1224} maxWidth={1600}>
+            <MediaQuery minWidth={1024} maxWidth={1600}>
               <ReactPlayer
                 url={feature.videoUrl}
                 playing={true}
@@ -89,7 +89,7 @@ const Features = () => (
                 muted={true}
               />
             </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1223}>
+            <MediaQuery minWidth={768} maxWidth={1023}>
               <ReactPlayer
                 url={feature.videoUrl}
                 controls={true}
