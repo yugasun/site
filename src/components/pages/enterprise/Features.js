@@ -50,6 +50,9 @@ const Features = () => (
               fontSize={[24]}
               letterSpacing={['-0.38px']}
               lineHeight={['38px']}
+              align='left'
+              customIconHeight={['38px', '38px', '38px', '38px', '38px']}
+              customIconWidth={['65px', '65px', '60px', '88px']}
             >
               {feature.title}
             </TitleWithIcon>
