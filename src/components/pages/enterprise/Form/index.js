@@ -28,17 +28,18 @@ const StyledForm = styled(Flex)`
   width: 73%;
 
   @media screen and (max-width: 1600px) and (min-width: 1024px) {
+    margin-top: 4100px;
     width: 76%;
   }
 
   @media screen and (max-width: 1024px) {
-    position: relative;
-    width: auto;
+    position: absolute;
+    width: 92%;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 10px;
+    margin-top: 3400px;
     margin-bottom: 80px;
   }
 `
@@ -178,7 +179,7 @@ export default class Form extends React.Component {
 
             <Flex.spaceBetween mt={1}>
               <TextField
-                width={48 / 100}
+                width={49 / 100}
                 placeholder='First Name'
                 name='first_name'
                 onChange={({ target }) =>
@@ -187,7 +188,7 @@ export default class Form extends React.Component {
                 required
               />
               <TextField
-                width={48 / 100}
+                width={49 / 100}
                 placeholder='Last Name'
                 name='last_name'
                 onChange={({ target }) =>

@@ -14,13 +14,13 @@ const EnterpriseHeroBenefit = () => (
         letterSpacing={['-0.38px', '-0.38px', '-0.38px', '-0.38px', '-0.5px']}
         lineHeight={['38px', '38px', '38px', '38px', '44px']}
       >
-        Ship production-ready applications with dedicated tooling and support
+        We make AWS simple
       </Text>
     </Box>
     <Box width={[1, 1, 0.69, 0.69, 0.49]} mx='auto' mt={25}>
       <Heading.h4 color='#8c8c8c' align='center'>
-        Serverless Framework Enterprise provides tooling and support for every
-        stage of the development cycle.
+        The cloud is powerful, but increasingly complex. The Serverless
+        Framework makes it fast and easy to build applications on AWS.
       </Heading.h4>
     </Box>
   </Box>

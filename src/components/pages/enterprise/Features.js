@@ -9,7 +9,7 @@ const FeaturesData = [
   {
     title: '1. Onboarding enablement and control with Serverless Secrets',
     description:
-      'Our enterprise dashboard gives you control over developer access to your serverless application environments. Collaboration features like secure secrets let new team members start contributing immediately without needing to set up or maintain cloud credentials.',
+      'Get control over developer access to your serverless application environments with the serverless dashboard. Collaboration features like secure secrets let new team members start contributing immediately, without needing to set up or maintain cloud credentials.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
   },
@@ -53,7 +53,7 @@ const Features = () => (
             >
               {feature.title}
             </TitleWithIcon>
-            <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>
+            <Text.p fontFamily='SoleilBk' lineHeight='26px' color='white'>
               {feature.description}
             </Text.p>
             <a href='#enterprise-contact-form'>
@@ -71,12 +71,21 @@ const Features = () => (
             mt={[0, 0, 0]}
             mb={[4, 4, 0]}
           >
-            <MediaQuery minWidth={1224}>
+            <MediaQuery minWidth={1600}>
               <ReactPlayer
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
                 width={'552px'}
+                muted={true}
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={1224} maxWidth={1600}>
+              <ReactPlayer
+                url={feature.videoUrl}
+                playing={true}
+                loop={true}
+                width={'452px'}
                 muted={true}
               />
             </MediaQuery>

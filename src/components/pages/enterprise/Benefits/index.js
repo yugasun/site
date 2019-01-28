@@ -25,7 +25,7 @@ const Benefits = () => (
       flexDirection={['column-reverse', 'column-reverse', 'row']}
       mt={[0, 0, 132, 132, 192]}
     >
-      <Column width={[1, 1, 1 / 2, '488px']}>
+      <Column width={[1, 1, 0.45, 0.45, '488px']}>
         <TextWithIcon
           iconSrc={dotGrid}
           iconHeight='38px'
@@ -51,7 +51,7 @@ const Benefits = () => (
           general best practices and more.
         </P>
       </Column>
-      <MobileCenteredBox width={[1, 1, 0.4]}>
+      <MobileCenteredBox width={[1, 1, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
           src={isSafari && !isMobile ? supportImage : supportImageAnimated}
           width={[300, 300, 300, 400, 450, 321]}
@@ -64,15 +64,15 @@ const Benefits = () => (
       mt={[0, 0, 132]}
       pb={[0, 0, 0, 0, 492]}
     >
-      <MobileCenteredBox width={[1, 1, 0.4]} ml={[0, 0, 120]}>
+      <MobileCenteredBox width={[1, 1, 0.45, 0.45, 0.4]} ml={[0, 0, 0, 0, 120]}>
         <Image
           src={
             isSafari && !isMobile ? enterpriseImage : enterpriseImageAnimated
           }
-          width={[300, 300, 300, 400, 450, 321]}
+          width={[300, 300, 400, 400, 450, 321]}
         />
       </MobileCenteredBox>
-      <Column width={[1, 1, 1 / 2, '488px']}>
+      <Column width={[1, 1, 0.45, 0.45, '488px']}>
         <TextWithIcon
           iconSrc={dotGrid}
           iconHeight='38px'
@@ -100,7 +100,12 @@ const Benefits = () => (
           See full architecture diagrams and time-to-market estimates for common
           use cases in our white paper.
         </P>
-        <Button width={280} mt={4} id='enterprise-contact-form'>
+        <Button
+          width={280}
+          mt={4}
+          id='enterprise-contact-form'
+          mb={[0, 0, 700, 700, 0]}
+        >
           download whitepaper
         </Button>
       </Column>
