@@ -30,7 +30,7 @@ const FeaturesData = [
 ]
 
 const Features = () => (
-  <Box pt={[0, 0, 300, 300, 0]}>
+  <Box pt={[500, 500, 340, 340, 100]}>
     {FeaturesData.map((feature, index) => {
       const isEvenItem = index % 2 == 0
       return (
@@ -65,7 +65,7 @@ const Features = () => (
           <Flex
             alignItems='center'
             justifyContent='center'
-            p={'32px'}
+            p={[0, 0, '32px']}
             ml={[0, 0, 0, 0, isEvenItem ? '17%' : 0]}
             mr={[0, 0, 0, 0, isEvenItem ? 0 : '14%']}
             mt={[0, 0, 0]}

@@ -23,7 +23,7 @@ const Benefits = () => (
   <Box>
     <ResponsiveStack.spaceBetween
       flexDirection={['column-reverse', 'column-reverse', 'row']}
-      mt={[0, 0, 132, 132, 192]}
+      mt={[162, 162, 132, 132, 192]}
     >
       <Column width={[1, 1, 0.45, 0.45, '488px']}>
         <TextWithIcon
@@ -39,6 +39,7 @@ const Benefits = () => (
             fontSize={['32px']}
             lineHeight={['44px']}
             letterSpacing={['-0.5px']}
+            mt={[5, 5, 0]}
           >
             Plus: 24/7 Support from the team that brought you the Serverless
             Framework
@@ -60,8 +61,8 @@ const Benefits = () => (
     </ResponsiveStack.spaceBetween>
 
     <ResponsiveStack.spaceBetween
-      flexDirection={['column-reverse', 'column-reverse', 'row']}
-      mt={[0, 0, 132]}
+      flexDirection={['column', 'column', 'row']}
+      mt={[52, 52, 132]}
       pb={[0, 0, 0, 0, 492]}
     >
       <MobileCenteredBox width={[1, 1, 0.45, 0.45, 0.4]} ml={[0, 0, 0, 0, 120]}>
@@ -104,7 +105,7 @@ const Benefits = () => (
           width={280}
           mt={4}
           id='enterprise-contact-form'
-          mb={[0, 0, 700, 700, 0]}
+          mb={[400, 400, 700, 700, 0]}
         >
           download whitepaper
         </Button>

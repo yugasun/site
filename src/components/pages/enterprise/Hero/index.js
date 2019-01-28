@@ -4,6 +4,7 @@ import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import Header from './Header'
 import Actions from './Actions'
 import Benefit from './Benefit'
+import Points from './Points'
 import background from 'src/assets/images/pages/enterprise/hero-background.svg'
 import backgroundAnimated from 'src/assets/images/pages/enterprise/hero-background-animated.svg'
 import { isSafari, isMobile } from 'react-device-detect'
@@ -23,6 +24,7 @@ const FrameworkHero = () => (
     <Header />
     <Actions />
     <Benefit />
+    <Points />
   </HeroWrapper>
 )
 

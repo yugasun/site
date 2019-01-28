@@ -68,12 +68,12 @@ export default class ComparisonBoxes extends React.Component {
 
   render() {
     return (
-      <Box mt={[62, 62, 92, 92, 446]}>
+      <Box mt={[1250, 1250, 610, 610, 446]}>
         <Heading.h3 align='center'>
           ...Or install <br /> Framework Open Source
         </Heading.h3>
         <Flex
-          mb={['520px', '520px', '520px', '520px', '400px', '550px']}
+          mb={['520px', '520px', '410px', '410px', '400px', '550px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
         >
           <Box display={['none', 'none', 'none', 'none', 'block']}>

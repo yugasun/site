@@ -20,7 +20,7 @@ const StyledForm = styled(Flex)`
   position: absolute;
   top: 0;
   background-color: white;
-  margin-top: 3940px;
+  margin-top: 4040px;
   padding: 32px;
   width: 608px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
@@ -32,15 +32,27 @@ const StyledForm = styled(Flex)`
     width: 76%;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 900px) {
     position: absolute;
     width: 92%;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 3400px;
+    margin-top: 3950px;
     margin-bottom: 80px;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 900px) {
+    position: absolute;
+    margin-top: 3400px;
+    width: 92%;
+  }
+
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    margin-top: 5100px;
+    width: 78%;
   }
 `
 
