@@ -39,7 +39,7 @@ const Benefits = () => (
             fontSize={['32px']}
             lineHeight={['44px']}
             letterSpacing={['-0.5px']}
-            mt={[5, 5, 0]}
+            mt={[5, 5, 0, 0]}
           >
             Plus: 24/7 Support from the team that brought you the Serverless
             Framework
@@ -55,7 +55,7 @@ const Benefits = () => (
       <MobileCenteredBox width={[1, 1, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
           src={isSafari && !isMobile ? supportImage : supportImageAnimated}
-          width={[300, 300, 300, 400, 450, 321]}
+          width={[300, 300, 300, 400, 321, 321]}
         />
       </MobileCenteredBox>
     </ResponsiveStack.spaceBetween>
@@ -65,12 +65,12 @@ const Benefits = () => (
       mt={[52, 52, 132]}
       pb={[0, 0, 0, 0, 492]}
     >
-      <MobileCenteredBox width={[1, 1, 0.45, 0.45, 0.4]} ml={[0, 0, 0, 0, 120]}>
+      <MobileCenteredBox width={[1, 1, 0.4]} ml={[0, 0, 0, 0, 0, 120]}>
         <Image
           src={
             isSafari && !isMobile ? enterpriseImage : enterpriseImageAnimated
           }
-          width={[300, 300, 400, 400, 450, 321]}
+          width={[300, 300, 400, 400, 321, 321]}
         />
       </MobileCenteredBox>
       <Column width={[1, 1, 0.45, 0.45, '488px']}>
