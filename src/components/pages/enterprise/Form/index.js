@@ -49,10 +49,22 @@ const StyledForm = styled(Flex)`
     width: 92%;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 375px) and (min-width: 375px) {
     position: absolute;
-    margin-top: 5100px;
-    width: 78%;
+    margin-top: 5000px;
+    width: 83%;
+  }
+
+  @media screen and (max-width: 360px) and (min-width: 360px) {
+    position: absolute;
+    margin-top: 5150px;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 414px) and (min-width: 414px) {
+    position: absolute;
+    margin-top: 4850px;
+    width: 85%;
   }
 `
 

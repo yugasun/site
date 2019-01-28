@@ -71,9 +71,10 @@ const Benefits = () => (
             isSafari && !isMobile ? enterpriseImage : enterpriseImageAnimated
           }
           width={[300, 300, 400, 400, 321, 321]}
+          align={['center', 'center', 'auto']}
         />
       </MobileCenteredBox>
-      <Column width={[1, 1, 0.45, 0.45, '488px']}>
+      <Column width={[1, 1, 0.45, 0.45, '488px']} mt={[5, 5, 0, 0]}>
         <TextWithIcon
           iconSrc={dotGrid}
           iconHeight='38px'
@@ -102,7 +103,7 @@ const Benefits = () => (
           use cases in our white paper.
         </P>
         <Button
-          width={280}
+          width={[240, 280]}
           mt={4}
           id='enterprise-contact-form'
           mb={[400, 400, 700, 700, 0]}
