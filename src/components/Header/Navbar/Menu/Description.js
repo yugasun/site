@@ -2,7 +2,12 @@
 import React from 'react'
 
 import { withTheme } from 'styled-components'
-import { Background, Box, Position, withBeforeAfter } from 'serverless-design-system'
+import {
+  Background,
+  Box,
+  Position,
+  withBeforeAfter,
+} from 'serverless-design-system'
 import NavbarContext from './../../NavbarContext'
 
 // TODO: remove hardcoded color
@@ -35,15 +40,7 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
         minWidth={[0, 0, 0, 0, '250px']}
         beforeBoxBorderWidth={[0, 0, 0, 0, '0 7.5px 13.0px 7.5px']}
       >
-        <Background
-          background={[
-            'none',
-            'none',
-            'none',
-            'none',
-            `linear-gradient(210deg, ${theme.colors.black} 25%, ${theme.colors.gradient.black1}), linear-gradient(${theme.colors.black}, ${theme.colors.black})`,
-          ]}
-        >
+        <Background background={['none', 'none', 'none', 'none', '#151515']}>
           <Box
             px={[1, 1, 1, 1, 4]}
             pt={[1, 1, 1, 1, 3]}

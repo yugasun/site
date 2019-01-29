@@ -16,7 +16,14 @@ import EnterpriseSupportButton from '../../EnterpriseSupportButton'
 const ProductMenu = () => (
   <Box>
     <MenuTitle name={'products'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, 0, 0, '320px'], pr: [1, 1, 1, 1, 0], pb: [3] }} >
+    <MenuDescription
+      wrapperStyles={{
+        minWidth: [0, 0, 0, 0, '412px'],
+        px: [0],
+        pb: [0],
+        pt: [0],
+      }}
+    >
       <ProductDropdownList />
     </MenuDescription>
   </Box>
@@ -74,5 +81,5 @@ export default [
   CommunityMenu,
   LearnMenu,
   BlogMenu,
-  SupportMenu
+  SupportMenu,
 ]
