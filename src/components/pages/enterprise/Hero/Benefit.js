@@ -14,13 +14,14 @@ const EnterpriseHeroBenefit = () => (
         letterSpacing={['-0.38px', '-0.38px', '-0.38px', '-0.38px', '-0.5px']}
         lineHeight={['38px', '38px', '38px', '38px', '44px']}
       >
-        We make AWS simple
+        We make cloud simple
       </Text>
     </Box>
     <Box width={[1, 1, 0.69, 0.69, 0.49]} mx='auto' mt={25}>
       <Heading.h4 color='#8c8c8c' align='center'>
-        The cloud is powerful, but increasingly complex. The Serverless
-        Framework makes it fast and easy to build applications on AWS.
+        The cloud is powerful, but increasingly complex. Serverless Framework
+        Enterprise lets you start building fast, seamlessly scale, and operate
+        with confidence.
       </Heading.h4>
     </Box>
   </Box>

@@ -32,23 +32,23 @@ const PointText = ({ children }) => (
 const Points = () => (
   <Flex
     flexDirection={['column', 'column', 'row']}
-    justifyContent='space-between'
+    justifyContent='space-evenly'
     mt={62}
     alignItems={['center', 'center', 'auto']}
   >
     <Row mb={[35, 35, 0]}>
       <PointButton>01</PointButton>
-      <PointText>Infrastructure automation</PointText>
+      <PointText>Start fast</PointText>
     </Row>
 
     <Row mb={[35, 35, 0]}>
       <PointButton>02</PointButton>
-      <PointText>Local testing and debugging</PointText>
+      <PointText>Scale easily</PointText>
     </Row>
 
     <Row mb={[35, 35, 0]}>
       <PointButton>03</PointButton>
-      <PointText>Application lifecycle management</PointText>
+      <PointText>Run efficiently</PointText>
     </Row>
   </Flex>
 )
