@@ -30,7 +30,7 @@ const featureItemsData = [
     header: 'Centered on development experience',
     img: developmentExperience,
     content:
-      `We’re engineers, too, and we built a simple, straightforward tool we’d love using. The point of serveless is to make developers more productive; we wanted the Serverless Framework to embody that most of all.`,
+      `We’re engineers, too, and we built a simple, straightforward tool we’d love using. The point of serverless is to make developers more productive; we wanted the Serverless Framework to embody that most of all.`,
   },
 ]
 
