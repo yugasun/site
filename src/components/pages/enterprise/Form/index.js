@@ -51,19 +51,19 @@ const StyledForm = styled(Flex)`
 
   @media screen and (max-width: 375px) and (min-width: 375px) {
     position: absolute;
-    margin-top: 5000px;
+    margin-top: 5400px;
     width: 83%;
   }
 
   @media screen and (max-width: 360px) and (min-width: 360px) {
     position: absolute;
-    margin-top: 5150px;
+    margin-top: 5550px;
     width: 80%;
   }
 
   @media screen and (max-width: 414px) and (min-width: 414px) {
     position: absolute;
-    margin-top: 4850px;
+    margin-top: 5250px;
     width: 85%;
   }
 `
