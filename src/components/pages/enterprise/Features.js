@@ -1,9 +1,22 @@
 import React from 'react'
-import { Flex, Text, Column, Box } from 'serverless-design-system'
+import { Flex, Text, Column, Box, Background } from 'serverless-design-system'
 import { Heading, Button } from 'src/fragments/DesignSystem'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import ReactPlayer from 'react-player'
 import MediaQuery from 'react-responsive'
+import styled from 'styled-components'
+
+const FlexWithBackground = styled(Flex)`
+  background-image: radial-gradient(circle at 50% 50%, #311918 25%, #000 63%);
+`
+const HoverableReactPlayer = styled(ReactPlayer)`
+  @media screen and (min-width: 1280px) {
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+`
 
 const FeaturesData = [
   {
@@ -65,7 +78,7 @@ const Features = () => (
               </Button>
             </a>
           </Column>
-          <Flex
+          <FlexWithBackground
             alignItems='center'
             justifyContent='center'
             p={[0, 0, '32px']}
@@ -73,9 +86,10 @@ const Features = () => (
             mr={[0, 0, 0, 0, isEvenItem ? 0 : '14%']}
             mt={[0, 0, 0]}
             mb={[4, 4, 0]}
+            height={[300, 300, 'auto']}
           >
             <MediaQuery minWidth={1600}>
-              <ReactPlayer
+              <HoverableReactPlayer
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
@@ -84,7 +98,7 @@ const Features = () => (
               />
             </MediaQuery>
             <MediaQuery minWidth={1024} maxWidth={1600}>
-              <ReactPlayer
+              <HoverableReactPlayer
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
@@ -110,7 +124,7 @@ const Features = () => (
                 muted={true}
               />
             </MediaQuery>
-          </Flex>
+          </FlexWithBackground>
         </Flex>
       )
     })}
