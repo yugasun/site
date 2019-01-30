@@ -16,16 +16,25 @@ import { enterprise, developersMenu } from 'src/constants/urls'
 import { InternalLink } from 'src/fragments'
 
 const openSourcePoints = [
-  ['Infrastructure as code', 'Community support'],
-  ['Provider agnostic', 'Community plugins'],
-  ['Simple Serverless development', 'Community examples'],
+  ['An open-source CLI for building and deploying serverless applications', ''],
+  ['Support for AWS, Google Cloud Platform, Microsoft Azure, and more', ''],
+  ['Community provided plugins, examples and support', ''],
 ]
 
 const enterprisePoints = [
   ['Everything in open source plus…'],
-  ['Architectural reviews', 'Enterprise enablement and best practices'],
-  ['Custom Serverless workshop', '24/7 enterprise support'],
-  ['Custom plugins', 'Custom use-case templates'],
+  [
+    'Serverless Secrets, to help you onboard new developers efficiently and securely',
+    'Enterprise enablement and best practices workshop, led by serverless experts',
+  ],
+  [
+    'Serverless Safeguards, to ensure operational and security best practices are followed',
+    'Custom plugin and use case template development',
+  ],
+  [
+    'Serverless Insights to help you monitor, debug and optimize your applications',
+    'Business hour or 24/7 support options',
+  ],
 ]
 
 const EnterpriseComparisonBox = styled(Background)`
@@ -121,7 +130,7 @@ export default class ComparisonBoxes extends React.Component {
           <OpenSourceComparisonBox
             background='#fd5750'
             width={['auto', 'auto', 'auto', 'auto', '50%']}
-            maxHeight={['auto', 'auto', '467px']}
+            maxHeight={['auto', 'auto', '515px']}
           >
             <CompareBox points={openSourcePoints} heading='open source' />
             <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>

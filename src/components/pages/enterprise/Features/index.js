@@ -105,10 +105,10 @@ const Features = () => (
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
-                width={'552px'}
+                width={'450px'}
                 muted={true}
                 style={{ border: '1px #363636 solid' }}
-                height='300px'
+                height='244px'
                 index={index}
               />
             </MediaQuery>
@@ -117,8 +117,8 @@ const Features = () => (
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
-                width={'552px'}
-                height='300px'
+                width={'450px'}
+                height='244px'
                 muted={true}
                 style={{ border: '1px #363636 solid' }}
                 index={index}
