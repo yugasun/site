@@ -120,6 +120,7 @@ const Features = () => (
                 width={'552px'}
                 height='300px'
                 muted={true}
+                style={{ border: '1px #363636 solid' }}
                 index={index}
               />
             </MediaQuery>
