@@ -76,7 +76,7 @@ export default class ComparisonBoxes extends React.Component {
 
   render() {
     return (
-      <Box mt={[1250, 1250, 610, 610, 446]}>
+      <Box mt={[62, 62, 92, 92, 162]}>
         <Heading.h3 align='center'>
           ...Or install <br /> Framework Open Source
         </Heading.h3>

@@ -5,15 +5,24 @@ import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import ReactPlayer from 'react-player'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
+import Headline from './Headline'
 
 const FlexWithBackground = styled(Flex)`
-  background-image: radial-gradient(circle at 50% 50%, #311918 25%, #000 63%);
+  background-image: radial-gradient(circle at 50% 50%, #481f1d 5%, #000 75%);
+  perspective: 1000px;
 `
 const HoverableReactPlayer = styled(ReactPlayer)`
   @media screen and (min-width: 1280px) {
-    transition: transform 1s;
+    transition: all 1s;
+    transform: ${props =>
+      props.index === 1
+        ? 'rotateY(12deg) scale(1.2)'
+        : 'rotateY(-12deg) scale(1.2)'};
     &:hover {
-      transform: scale(1.3);
+      transform: ${props =>
+        props.index === 1
+          ? 'rotateY(25deg) scale(1.4)'
+          : 'rotateY(-25deg) scale(1.4)'};
     }
   }
 `
@@ -43,7 +52,8 @@ const FeaturesData = [
 ]
 
 const Features = () => (
-  <Box pt={[500, 500, 340, 340, 100]}>
+  <Box pt={[500, 500, 420, 420, 240, 180]}>
+    <Headline />
     {FeaturesData.map((feature, index) => {
       const isEvenItem = index % 2 == 0
       return (
@@ -54,9 +64,12 @@ const Features = () => (
             isEvenItem ? 'row' : 'row-reverse',
           ]}
           key={index}
-          pt={[92, 92, 162]}
+          pt={[52, 52, 0, 0, 32]}
         >
-          <Column width={['auto', 'auto', '70%', '70%', '30%']}>
+          <Column
+            width={['auto', 'auto', '70%', '70%', '30%']}
+            mt={[0, 0, 100, 100, 176]}
+          >
             <TitleWithIcon
               color='white'
               headingComponent={Heading.h4}
@@ -84,9 +97,8 @@ const Features = () => (
             p={[0, 0, '32px']}
             ml={[0, 0, 0, 0, isEvenItem ? '17%' : 0]}
             mr={[0, 0, 0, 0, isEvenItem ? 0 : '14%']}
-            mt={[0, 0, 0]}
-            mb={[4, 4, 0]}
-            height={[300, 300, 'auto']}
+            mt={[0, 0, 8, 8, 0]}
+            height={[300, 300, 336, 336, 696]}
           >
             <MediaQuery minWidth={1600}>
               <HoverableReactPlayer
@@ -95,6 +107,9 @@ const Features = () => (
                 loop={true}
                 width={'552px'}
                 muted={true}
+                style={{ border: '1px #363636 solid' }}
+                height='300px'
+                index={index}
               />
             </MediaQuery>
             <MediaQuery minWidth={1024} maxWidth={1600}>
@@ -102,8 +117,10 @@ const Features = () => (
                 url={feature.videoUrl}
                 playing={true}
                 loop={true}
-                width={'452px'}
+                width={'552px'}
+                height='300px'
                 muted={true}
+                index={index}
               />
             </MediaQuery>
             <MediaQuery minWidth={768} maxWidth={1023}>

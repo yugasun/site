@@ -25,10 +25,10 @@ const Enterprise = ({ location }) => (
       <AppContainer>
         <Features />
         <Benefits />
-        <Form />
       </AppContainer>
     </Background>
     <AppContainer>
+      <Form />
       <Compare />
     </AppContainer>
   </DefaultLayout>

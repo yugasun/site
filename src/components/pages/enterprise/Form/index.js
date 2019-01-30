@@ -17,54 +17,22 @@ import styled from 'styled-components'
 const formId = 'enterprise-contact-us'
 
 const StyledForm = styled(Flex)`
-  position: absolute;
+  position: relative;
   top: 0;
   background-color: white;
-  margin-top: 4040px;
+  margin-top: -300px;
   padding: 32px;
   width: 608px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px #eaeaea;
-  width: 73%;
+  width: 100%;
 
-  @media screen and (max-width: 1600px) and (min-width: 1024px) {
-    margin-top: 4030px;
-    width: 76%;
+  @media screen and (max-width: 1024px) {
+    margin-top: -530px;
   }
 
-  @media screen and (max-width: 900px) {
-    position: absolute;
-    width: 92%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-top: 3950px;
-    margin-bottom: 80px;
-  }
-
-  @media screen and (max-width: 1024px) and (min-width: 900px) {
-    position: absolute;
-    margin-top: 3850px;
-    width: 92%;
-  }
-
-  @media screen and (max-width: 375px) and (min-width: 375px) {
-    position: absolute;
-    margin-top: 5400px;
-    width: 83%;
-  }
-
-  @media screen and (max-width: 360px) and (min-width: 360px) {
-    position: absolute;
-    margin-top: 5550px;
-    width: 80%;
-  }
-
-  @media screen and (max-width: 414px) and (min-width: 414px) {
-    position: absolute;
-    margin-top: 5250px;
-    width: 85%;
+  @media screen and (max-width: 414px) {
+    margin-top: -300px;
   }
 `
 
