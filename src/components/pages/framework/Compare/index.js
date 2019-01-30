@@ -54,6 +54,26 @@ const OpenSourceComparisonBox = styled(Background)`
   }
 `
 
+const LeftSpinningWheel = styled(Absolute)`
+  @media screen and (min-width: 2300px) {
+    left: 15%;
+  }
+
+  @media screen and (min-width: 3000px) {
+    left: 25%;
+  }
+`
+
+const RightSpinningWheel = styled(Absolute)`
+  @media screen and (min-width: 2300px) {
+    right: 15%;
+  }
+
+  @media screen and (min-width: 3000px) {
+    right: 25%;
+  }
+`
+
 export default class ComparisonBoxes extends React.Component {
   constructor() {
     super()
@@ -90,7 +110,7 @@ export default class ComparisonBoxes extends React.Component {
           mt={[62, 62, 92, 92, 46]}
         >
           <Box display={['none', 'none', 'none', 'none', 'block']}>
-            <Absolute
+            <RightSpinningWheel
               right='0'
               zIndex='-1'
               width={[0, 0, 0, 0, '40%', '680px']}
@@ -102,13 +122,13 @@ export default class ComparisonBoxes extends React.Component {
                     : spinningWheelAnimation
                 }
               />
-            </Absolute>
+            </RightSpinningWheel>
           </Box>
           <Box
             display={['none', 'none', 'none', 'none', 'block']}
             mt={[0, 0, 0, 0, '30%']}
           >
-            <Absolute
+            <LeftSpinningWheel
               left='0'
               zIndex='-1'
               width={[0, 0, 0, 0, '550px', '650px']}
@@ -120,7 +140,7 @@ export default class ComparisonBoxes extends React.Component {
                     : spinningWheelAnimation
                 }
               />
-            </Absolute>
+            </LeftSpinningWheel>
           </Box>
 
           <OpenSourceComparisonBox
