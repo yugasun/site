@@ -23,7 +23,7 @@ const Benefits = () => (
   <Box>
     <ResponsiveStack.spaceBetween
       flexDirection={['column-reverse', 'column-reverse', 'row']}
-      mt={[162, 162, 132, 132, 50]}
+      mt={[60, 60, 40, 40, 50]}
     >
       <Column width={[1, 1, 0.45, 0.45, '488px']}>
         <TextWithIcon
@@ -52,7 +52,7 @@ const Benefits = () => (
           general best practices and more.
         </P>
       </Column>
-      <MobileCenteredBox width={[1, 1, 0.4]} mt={[0, 0, 3, 3, 0]}>
+      <MobileCenteredBox width={[1, 1, 0.5, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
           src={isSafari && !isMobile ? supportImage : supportImageAnimated}
           width={[300, 300, 300, 400, 321, 321]}
@@ -62,10 +62,10 @@ const Benefits = () => (
 
     <ResponsiveStack.spaceBetween
       flexDirection={['column', 'column', 'row']}
-      mt={[52, 52, 132]}
+      mt={[52, 52, 110, 110, 132]}
       pb={[0, 0, 0, 0, 492]}
     >
-      <MobileCenteredBox width={[1, 1, 0.4]} ml={[0, 0, 0, 0, 0, 120]}>
+      <MobileCenteredBox width={[1, 1, 0.5, 0.4]} ml={[0, 0, 0, 0, 0, 120]}>
         <Image
           src={
             isSafari && !isMobile ? enterpriseImage : enterpriseImageAnimated

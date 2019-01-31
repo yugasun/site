@@ -7,6 +7,10 @@ import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 import Headline from './Headline'
 
+const ButtonWithZindex = styled('a')`
+  z-index: 4;
+`
+
 const FlexWithBackground = styled(Flex)`
   background-image: radial-gradient(circle at 50% 50%, #481f1d 5%, #000 75%);
   perspective: 1000px;
@@ -53,37 +57,47 @@ const Features = () => (
       return (
         <Flex
           flexDirection={[
-            'column-reverse',
-            'column-reverse',
+            'column',
+            'column',
+            'column',
+            'column',
             isEvenItem ? 'row' : 'row-reverse',
           ]}
           key={index}
           pt={[52, 52, 0, 0, 0]}
         >
           <Column
-            width={['auto', 'auto', '70%', '70%', '30%']}
-            mt={[0, 0, 100, 100, 176]}
+            width={['auto', 'auto', '80%', '80%', '30%']}
+            mt={[
+              0,
+              0,
+              index == 0 ? 100 : '10px',
+              index == 0 ? 100 : '10px',
+              176,
+            ]}
           >
-            <TitleWithIcon
-              color='white'
-              headingComponent={Heading.h4}
-              fontSize={[24]}
-              letterSpacing={['-0.38px']}
-              lineHeight={['38px']}
-              align='left'
-              customIconHeight={['38px', '38px', '38px', '38px', '38px']}
-              customIconWidth={['65px', '65px', '60px', '88px']}
-            >
-              {feature.title}
-            </TitleWithIcon>
+            <Box width={[1, 1, 0.7, 1, 1]}>
+              <TitleWithIcon
+                color='white'
+                headingComponent={Heading.h4}
+                fontSize={[24]}
+                letterSpacing={['-0.38px']}
+                lineHeight={['38px']}
+                align='left'
+                customIconHeight={['38px', '38px', '38px', '38px', '38px']}
+                customIconWidth={['65px', '65px', '60px', '88px']}
+              >
+                {feature.title}
+              </TitleWithIcon>
+            </Box>
             <Text.p fontFamily='SoleilBk' lineHeight='26px' color='white'>
               {feature.description}
             </Text.p>
-            <a href='#enterprise-contact-form'>
+            <ButtonWithZindex href='#enterprise-contact-form'>
               <Button width={208} mt={4}>
                 schedule a demo
               </Button>
-            </a>
+            </ButtonWithZindex>
           </Column>
           <FlexWithBackground
             alignItems='center'
@@ -91,10 +105,10 @@ const Features = () => (
             p={[0, 0, '32px']}
             ml={[0, 0, 0, 0, isEvenItem ? '17%' : 0]}
             mr={[0, 0, 0, 0, isEvenItem ? 0 : '14%']}
-            mt={[0, 0, 8, 8, 0]}
-            height={[300, 300, 336, 336, 696]}
+            mt={[0, 0, -5, -5, 0]}
+            height={[300, 300, 571, 571, 696]}
           >
-            <MediaQuery minWidth={1600}>
+            <MediaQuery minWidth={1280}>
               <HoverableReactPlayer
                 url={feature.videoUrl}
                 playing={true}
@@ -103,27 +117,26 @@ const Features = () => (
                 muted={true}
                 style={{ border: '1px #363636 solid' }}
                 height='244px'
-                index={index}
-              />
-            </MediaQuery>
-            <MediaQuery minWidth={1024} maxWidth={1600}>
-              <HoverableReactPlayer
-                url={feature.videoUrl}
-                playing={true}
-                loop={true}
-                width={'450px'}
-                height='244px'
-                muted={true}
-                style={{ border: '1px #363636 solid' }}
                 index={index}
               />
             </MediaQuery>
             <MediaQuery minWidth={768} maxWidth={1023}>
               <ReactPlayer
                 url={feature.videoUrl}
-                controls={true}
-                width={'336px'}
-                height={'179px'}
+                playing={true}
+                loop={true}
+                width={'571px'}
+                height={'571px'}
+                muted={true}
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={1024} maxWidth={1124}>
+              <ReactPlayer
+                url={feature.videoUrl}
+                playing={true}
+                loop={true}
+                width={'700px'}
+                height={'700px'}
                 muted={true}
               />
             </MediaQuery>
