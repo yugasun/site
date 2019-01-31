@@ -27,23 +27,23 @@ const HoverableReactPlayer = styled(ReactPlayer)`
 
 const FeaturesData = [
   {
-    title: '1. Onboarding enablement and control with Serverless Secrets',
+    title: '1. Get developers going quickly',
     description:
-      'Get control over developer access to your serverless application environments with the serverless dashboard. Collaboration features like secure secrets let new team members start contributing immediately, without needing to set up or maintain cloud credentials.',
+      'Let new team members start contributing immediately, without needing to set up or maintain cloud access credentials. Serverless Secrets give you control over developer access to your serverless application environments.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
   },
   {
-    title: '2. Ship fast, safely with Serverless Safeguards',
+    title: '2. Enforce best practices without compromising development speed',
     description:
-      'Safely manage deployments with security policies and enforce operational best practices across your team with serverless safeguards.',
+      'Automated ops and security policy enforcement lets you scale quickly, with confidence. Create your own policies, or use pre-configured Serverless Safeguards designed by serverless and cloud experts.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-safeguards.mp4',
   },
   {
-    title: '3. Monitor application health with Serverless Insights',
+    title: '3. Optimize application cost and performance',
     description:
-      'A central dashboard provides easy access to check application health. We’ll provide proactive tips so you can make your applications as efficient as possible: real-time cost and performance analysis, actionable operations events and more.',
+      'Serverless Insights proactively identifies new errors, efficiency improvements, invocation spikes, and more. Instantly dig deeper into stack traces to troubleshoot root causes.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
   },
