@@ -5,6 +5,7 @@ import {
   HeroMainTitle,
   HeroInlineDescription,
 } from 'src/fragments/DesignSystem/HeroElements'
+import { Heading } from 'src/fragments/DesignSystem'
 
 import serverlessBolt from 'src/assets/images/serverlessBolt.png'
 
@@ -22,11 +23,10 @@ const Header = () => (
     <HeroMainTitle mb={[32, 32, 32, 32, 52]}>
       framework enterprise
     </HeroMainTitle>
-    <Box width={[1, 1, 0.69, 0.69, 0.37]} mx='auto'>
-      <HeroInlineDescription>
-        Scale your serverless development with dashboards, collaboration tools
-        and 24/7 dedicated support.
-      </HeroInlineDescription>
+    <Box width={[1]}>
+      <Heading.h4 align='center'>
+        Scale, monitor, and secure cloud applications.
+      </Heading.h4>
     </Box>
   </Flex.horizontallyCenter>
 )

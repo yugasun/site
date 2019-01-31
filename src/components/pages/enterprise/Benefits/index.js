@@ -23,7 +23,7 @@ const Benefits = () => (
   <Box>
     <ResponsiveStack.spaceBetween
       flexDirection={['column-reverse', 'column-reverse', 'row']}
-      mt={[162, 162, 132, 132, 192]}
+      mt={[162, 162, 132, 132, 50]}
     >
       <Column width={[1, 1, 0.45, 0.45, '488px']}>
         <TextWithIcon
@@ -96,11 +96,11 @@ const Benefits = () => (
           With serverless, developers can spend their time building features
           that drive outcomes. <br />
           <br />A single system can handle entire image processing pipelines.
-          Multiple CRONs can run at once and scale without manual provisioning.{' '}
+          Multiple CRONs can run at once and scale without manual provisioning.
           <br />
           <br />
-          See full architecture diagrams and time-to-market estimates for common
-          use cases in our white paper.
+          See real-world enterprise use cases, with architecture diagrams and
+          time-to-market estimates, in our white paper!
         </P>
         <Button
           width={[240, 280]}

@@ -16,14 +16,8 @@ const HoverableReactPlayer = styled(ReactPlayer)`
     transition: all 1s;
     transform: ${props =>
       props.index === 1
-        ? 'rotateY(12deg) scale(1.2)'
-        : 'rotateY(-12deg) scale(1.2)'};
-    &:hover {
-      transform: ${props =>
-        props.index === 1
-          ? 'rotateY(25deg) scale(1.4)'
-          : 'rotateY(-25deg) scale(1.4)'};
-    }
+        ? 'rotateY(25deg) scale(1.4)'
+        : 'rotateY(-25deg) scale(1.4)'};
   }
 `
 
@@ -64,7 +58,7 @@ const Features = () => (
             isEvenItem ? 'row' : 'row-reverse',
           ]}
           key={index}
-          pt={[52, 52, 0, 0, 32]}
+          pt={[52, 52, 0, 0, 0]}
         >
           <Column
             width={['auto', 'auto', '70%', '70%', '30%']}

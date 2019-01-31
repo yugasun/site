@@ -19,9 +19,8 @@ const EnterpriseHeroBenefit = () => (
     </Box>
     <Box width={[1, 1, 0.69, 0.69, 0.49]} mx='auto' mt={25}>
       <Heading.h4 color='#8c8c8c' align='center'>
-        The cloud is powerful, but increasingly complex. Serverless Framework
-        Enterprise lets you start building fast, seamlessly scale, and operate
-        with confidence.
+        Streamlined tooling and 24/7 support for cloud-based enterprises. Scale
+        fast, safely.
       </Heading.h4>
     </Box>
   </Box>
