@@ -33,7 +33,7 @@ const ComparisonBox = ({ points, heading }) => (
             flexDirection={['column', 'column', 'row']}
             justifyContent='space-between'
           >
-            <Box width={[1, 1, 0.5]} pr={[0, 0, 0, 0, 3]}>
+            <Box width={[1, 1, 0.5]} pr={[0, 0, 0, 2, 3]}>
               <Point>{point[0]}</Point>
             </Box>
             <Box
