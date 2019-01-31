@@ -44,6 +44,23 @@ const ProductMenu = styled(List)`
     height: 110px;
   }
 `
+const InlineBlockWithHoverableIcon = styled(InlineBlock)`
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      &:before {
+        z-index: 1;
+        content: ' ';
+        background-image: url(${props => props.dotGrid});
+        top: 20px;
+        left: 38px;
+        height: 20px;
+        width: 26px;
+        position: absolute;
+        background-size: cover;
+      }
+    }
+  }
+`
 
 const Platform = () => (
   <ProductMenu m={0} ml={[2, 2, 0]} p={0}>
@@ -64,26 +81,22 @@ const Platform = () => (
                 <Flex.horizontallyCenter
                   mb={platformMenuConfig.length - 1 === index ? 0 : [2, 2, 0]}
                 >
-                  <InlineBlock minWidth='206px' ml={[0, 0, 0, 0, 42]}>
-                    <TextWithIcon
-                      iconSrc={dotGrid}
-                      iconHeight='20px'
-                      iconWidth='26px'
-                      iconLeft='-5px'
-                      iconTop={['-2px', '-2px', '20px']}
+                  <InlineBlockWithHoverableIcon
+                    minWidth='206px'
+                    ml={[0, 0, 0, 0, 42]}
+                    dotGrid={dotGrid}
+                  >
+                    <Text
+                      fontFamily='Serverless'
+                      fontSize='12px'
+                      lineHeight={'14px'}
+                      letterSpacing='0.5px'
+                      m={0}
+                      pt={[0, 0, 22]}
+                      color='white'
                     >
-                      <Text
-                        fontFamily='Serverless'
-                        fontSize='12px'
-                        lineHeight={'14px'}
-                        letterSpacing='0.5px'
-                        m={0}
-                        pt={[0, 0, 22]}
-                        color='white'
-                      >
-                        serverless
-                      </Text>
-                    </TextWithIcon>
+                      serverless
+                    </Text>
                     <Text
                       fontFamily='Serverless'
                       fontSize='18px'
@@ -105,7 +118,7 @@ const Platform = () => (
                     >
                       {subText}
                     </Text>
-                  </InlineBlock>
+                  </InlineBlockWithHoverableIcon>
                 </Flex.horizontallyCenter>
               </Relative>
             </ListItem.noStyleType>
