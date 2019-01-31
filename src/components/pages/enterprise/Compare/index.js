@@ -107,13 +107,16 @@ export default class ComparisonBoxes extends React.Component {
     return (
       <Box mt={[62, 62, 92, 92, 162]}>
         <Heading.h3 align='center'>
-          ...Or install <br /> Framework Open Source
+          Or install <br /> Framework Open Source
         </Heading.h3>
         <Flex
           mb={['520px', '520px', '410px', '410px', '400px', '550px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
         >
-          <Box display={['none', 'none', 'none', 'none', 'block']}>
+          <Box
+            display={['none', 'none', 'none', 'none', 'block']}
+            mt={[0, 0, 0, 0, '10%', 0]}
+          >
             <RightSpinningWheel
               right='0'
               zIndex='-1'
@@ -130,7 +133,7 @@ export default class ComparisonBoxes extends React.Component {
           </Box>
           <Box
             display={['none', 'none', 'none', 'none', 'block']}
-            mt={[0, 0, 0, 0, '30%']}
+            mt={[0, 0, 0, 0, '35%', '30%']}
           >
             <LeftSpinningWheel
               left={0}

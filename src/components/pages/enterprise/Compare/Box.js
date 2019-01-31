@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Box, Text, HorizontalRule, Row, P } from 'serverless-design-system'
+import { Box, Text, HorizontalRule, P, Flex } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const Point = styled(P)`
@@ -25,19 +25,33 @@ const ComparisonBox = ({ points, heading }) => (
       {heading}
     </Text>
 
-    {points.map(point => (
-      <Fragment key={point}>
-        <HorizontalStyle color='#eaeaea' height='1px' width='100%' />
-        <Row justifyContent='space-between'>
-          <Box width='50%' pr={[0, 0, 0, 0, 3]}>
-            <Point>{point[0]}</Point>
-          </Box>
-          <Box width='50%'>
-            <Point>{point[1]}</Point>
-          </Box>
-        </Row>
-      </Fragment>
-    ))}
+    {points.map((point, index) => {
+      return (
+        <Fragment key={point}>
+          <HorizontalStyle color='#eaeaea' height='1px' width='100%' />
+          <Flex
+            flexDirection={['column', 'column', 'row']}
+            justifyContent='space-between'
+          >
+            <Box width={[1, 1, 0.5]} pr={[0, 0, 0, 0, 3]}>
+              <Point>{point[0]}</Point>
+            </Box>
+            <Box
+              display={[
+                index == 0 || heading == 'open source' ? 'none' : 'block',
+                index == 0 || heading == 'open source' ? 'none' : 'block',
+                'none',
+              ]}
+            >
+              <HorizontalStyle color='#eaeaea' height='1px' width='100%' />
+            </Box>
+            <Box width={[1, 1, 0.5]}>
+              <Point>{point[1]}</Point>
+            </Box>
+          </Flex>
+        </Fragment>
+      )
+    })}
   </Box>
 )
 
