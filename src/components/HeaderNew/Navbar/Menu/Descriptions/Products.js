@@ -8,7 +8,7 @@ import {
   Position,
   withBeforeAfter,
 } from 'serverless-design-system'
-import NavbarContext from './../../NavbarContext'
+import NavbarContext from '.././../../NavbarContext'
 
 // TODO: remove hardcoded color
 const MenuWrapper = withBeforeAfter(
@@ -19,11 +19,11 @@ const MenuWrapper = withBeforeAfter(
     width: 0;
     height: 0;
     position: absolute;
-    left: 50%;
+    left: 20%;
     top: -10px;
     margin-left: -7.5px;
     border-style: solid;
-    border-color: transparent transparent #090915 transparent;
+    border-color: transparent transparent #FD4C47 transparent;
   `,
   ``
 )

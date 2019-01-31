@@ -7,15 +7,12 @@ import {
   Image,
   Absolute,
 } from 'serverless-design-system'
-import {
-  AppContainerNewest as AppContainer,
-  WhiteButtonNew as WhiteButton,
-} from 'src/components'
+import { WhiteButtonNew as WhiteButton } from 'src/components'
 import styled from 'styled-components'
 import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
 import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
 import { Heading, Button, MobileCenteredBox } from 'src/fragments/DesignSystem'
-import { enterprise, developersMenu } from 'src/constants/urls'
+import { developersMenu } from 'src/constants/urls'
 import { InternalLink } from 'src/fragments'
 
 const openSourcePoints = [
@@ -51,6 +48,14 @@ const EnterpriseComparisonBox = styled(Background)`
 const OpenSourceComparisonBox = styled(Background)`
   @media screen and (min-width: 1024px) {
     margin-top: 200px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-top: 92px;
+  }
+
+  @media screen and (max-width: 424px) {
+    margin-top: 62px;
   }
 `
 
@@ -100,14 +105,13 @@ export default class ComparisonBoxes extends React.Component {
 
   render() {
     return (
-      <AppContainer>
+      <Box mt={[62, 62, 92, 92, 162]}>
         <Heading.h3 align='center'>
-          Easy, open Serverless development.
+          Or install <br /> Framework Open Source
         </Heading.h3>
         <Flex
-          mb={['520px', '520px', '520px', '520px', '400px', '550px']}
+          mb={['520px', '520px', '410px', '410px', '400px', '550px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
-          mt={[62, 62, 92, 92, 46]}
         >
           <Box
             display={['none', 'none', 'none', 'none', 'block']}
@@ -132,7 +136,7 @@ export default class ComparisonBoxes extends React.Component {
             mt={[0, 0, 0, 0, '35%', '30%']}
           >
             <LeftSpinningWheel
-              left='0'
+              left={0}
               zIndex='-1'
               width={[0, 0, 0, 0, '550px', '650px']}
             >
@@ -164,15 +168,15 @@ export default class ComparisonBoxes extends React.Component {
           >
             <CompareBox points={enterprisePoints} heading='enterprise' />
             <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
-              <InternalLink to={enterprise}>
+              <a href='#enterprise-contact-form'>
                 <Button m='auto' className='enterprise-learn-more'>
-                  learn more
+                  schedule a demo
                 </Button>
-              </InternalLink>
+              </a>
             </MobileCenteredBox>
           </EnterpriseComparisonBox>
         </Flex>
-      </AppContainer>
+      </Box>
     )
   }
 }

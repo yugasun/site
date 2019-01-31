@@ -1,41 +1,41 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Row, Column } from 'serverless-design-system'
-import Default from 'src/layouts/Default'
+import Default from 'src/layouts/DefaultNew'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
 import gitHubSvg from 'src/assets/images/github.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
 
-export default ({ data: { doc }, location }) => (
-  <Default footerBackground={false}>
+const DocTemplate = ({ data: { doc }, location }) => (
+  <Default footerBackground={false} noPrefooter>
     <Helmet
       link={[
         {
           rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
-        }
+          href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css',
+        },
       ]}
       script={[
         {
-          src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', type: 'text/javascript'
-        }
+          src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js',
+          type: 'text/javascript',
+        },
       ]}
     />
 
     <DocsWrapper __url={location.pathname}>
-      <SEOHelmet
-        {...doc.frontmatter}
-        location={location}
-      />
+      <SEOHelmet {...doc.frontmatter} location={location} />
       <LiteHeader url={location.pathname} />
       <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
         <a
           title='Edit this page on github'
           rel='noopener noreferrer'
-          href={`https://github.com/serverless/serverless/edit/master${doc.frontmatter.gitLink}`}
+          href={`https://github.com/serverless/serverless/edit/master${
+            doc.frontmatter.gitLink
+          }`}
         >
           <span className='editLink'>
             <img src={gitHubSvg} />
@@ -50,6 +50,8 @@ export default ({ data: { doc }, location }) => (
     </DocsWrapper>
   </Default>
 )
+
+export default DocTemplate
 
 export const query = graphql`
   query Doc($docId: String!) {

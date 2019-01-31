@@ -25,63 +25,65 @@ import charmmie from 'src/assets/images/team/charmmie.png'
 import daniel from 'src/assets/images/team/daniel.png'
 import bumperPic from 'src/assets/images/team/bumper.png'
 
-const getLastName = (name) => name.split(' ').pop()
+const getLastName = name => name.split(' ').pop()
 
 const leaders = [
   { image: austin, name: 'Austen Collins', position: 'Founder & CEO' },
   { image: nick, name: 'Nick Gottlieb', position: 'VP of Growth' },
-  { image: ganesh, name: 'Ganesh Radhakrishnan', position: 'VP of Engineering' },
+  {
+    image: ganesh,
+    name: 'Ganesh Radhakrishnan',
+    position: 'VP of Engineering',
+  },
   { image: bill, name: 'Bill Fine', position: 'VP of Product' },
   { image: casey, name: 'Casey Shultz', position: 'Head of Operations' },
 ]
 
 const teamMembers = [
-  { image: philip, name: 'Phillip Müns', position: 'Framework Core Developer' },
+  { image: philip, name: 'Philipp Müns', position: 'Framework Core Developer' },
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
-  { image: brian, name: 'Brian Neisler', position: 'Product Manager' },
   { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
-  { image: raees, name: 'Raees Iqbal', position: 'Software engineer' },
   { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
   { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
   { image: jonathan, name: 'Jonathan Lucas', position: 'Software engineer' },
-  { image: andrea, name: 'Andrea Passwater', position: 'Lead Content Strategist' },
+  {
+    image: andrea,
+    name: 'Andrea Passwater',
+    position: 'Lead Content Strategist',
+  },
   { image: andre, name: 'André Pires', position: 'Lead Growth Designer' },
   { image: thom, name: 'Thom Crowe', position: 'Community manager' },
   { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },
   { image: charmmie, name: 'Charmmie Hendon', position: 'Executive Assistant' },
   { image: daniel, name: 'Daniel Schep', position: 'Software Engineer' },
-].sort((object1, object2) => (
+].sort((object1, object2) =>
   getLastName(object1.name).localeCompare(getLastName(object2.name))
-))
+)
 
-const bumper = { image: bumperPic, name: 'Bumper', position: 'Chief Snuggles Officer' }
+const bumper = {
+  image: bumperPic,
+  name: 'Bumper',
+  position: 'Chief Snuggles Officer',
+}
 
-const OurTeam= () => (
+const OurTeam = () => (
   <AppContainer>
-    <Flex flexDirection='column'>
-      <Flex
-        justifyContent='center'
-        mt={[3, 3, 5, 6]}
-        mb={[0, 0, 1, 2]}
-      >
+    <Flex flexDirection="column">
+      <Flex justifyContent="center" mt={[3, 3, 5, 6]} mb={[0, 0, 1, 2]}>
         <TitleWithIcon>Our Team</TitleWithIcon>
       </Flex>
-      <Flex flexWrap='wrap' justifyContent='center'>
-        {
-          [
-            ...leaders,
-            ...teamMembers,
-            bumper,
-          ].map(({ image, name, position }) => (
+      <Flex flexWrap="wrap" justifyContent="center">
+        {[...leaders, ...teamMembers, bumper].map(
+          ({ image, name, position }) => (
             <TeamMemberImageCard
               key={name}
               image={image}
               name={name}
               position={position}
             />
-          ))
-        }
+          )
+        )}
       </Flex>
     </Flex>
   </AppContainer>

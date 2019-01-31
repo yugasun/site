@@ -17,7 +17,7 @@ const HomeHeroFooter = () => (
       <Text
         color='white'
         fontSize={[18]}
-        mt={['140px', '140px', '122px', '140px', '135px', '220px']}
+        mt={['140px', '140px', '122px', '140px', '180px', '220px']}
         mb={[0, 0, '10px', '10px', '15px']}
         lineHeight={['24px']}
         align='center'

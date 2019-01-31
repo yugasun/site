@@ -12,45 +12,56 @@ import {
 import NavLink from 'src/components/NavLink'
 import { resources } from 'src/constants/urls'
 import EnterpriseSupportButton from '../../EnterpriseSupportButton'
+import ProductMenuDescription from './Descriptions/Products'
+import DevelopersMenuDescription from './Descriptions/Developers'
+import CommunityMenuDescription from './Descriptions/Community'
+import LearnMenuDescription from './Descriptions/Learn'
 
 const ProductMenu = () => (
   <Box>
     <MenuTitle name={'products'} />
-    <MenuDescription wrapperStyles={{ minWidth: [0, 0, 0, 0, '320px'], pr: [1, 1, 1, 1, 0], pb: [3] }} >
+    <ProductMenuDescription
+      wrapperStyles={{
+        minWidth: [0, 0, 0, 0, '412px'],
+        px: [0],
+        pb: [0],
+        pt: [0],
+      }}
+    >
       <ProductDropdownList />
-    </MenuDescription>
+    </ProductMenuDescription>
   </Box>
 )
 
 const DeveloperMenu = () => (
   <Box>
     <MenuTitle name={'developers'} />
-    <MenuDescription
+    <DevelopersMenuDescription
       wrapperStyles={{
         minWidth: [0, 0, '498px'],
         px: 5,
       }}
     >
       <DeveloperDropdownList />
-    </MenuDescription>
+    </DevelopersMenuDescription>
   </Box>
 )
 
 const LearnMenu = () => (
   <Box>
     <MenuTitle name={'learn'} />
-    <MenuDescription>
+    <LearnMenuDescription>
       <LearnDropdownList />
-    </MenuDescription>
+    </LearnMenuDescription>
   </Box>
 )
 
 const CommunityMenu = () => (
   <Box>
     <MenuTitle name={'community'} />
-    <MenuDescription>
+    <CommunityMenuDescription>
       <CommunityDropdownList />
-    </MenuDescription>
+    </CommunityMenuDescription>
   </Box>
 )
 
@@ -74,5 +85,5 @@ export default [
   CommunityMenu,
   LearnMenu,
   BlogMenu,
-  SupportMenu
+  SupportMenu,
 ]

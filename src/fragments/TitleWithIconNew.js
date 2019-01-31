@@ -6,7 +6,13 @@ import { Heading } from 'src/fragments/DesignSystem'
 
 //TODO: very tightly coupled with workshops san-fran - seperate it out?
 
-const TitleWithIconNew = ({ children, headingComponent, ...otherProps }) => {
+const TitleWithIconNew = ({
+  children,
+  customIconHeight,
+  customIconWidth,
+  headingComponent,
+  ...otherProps
+}) => {
   const FinalHeadingComponent = headingComponent ? headingComponent : Heading.h2
   const finalIconImage =
     headingComponent === Heading.h4 ? redRectangleDotsSmall : redRectangleDots
@@ -22,8 +28,12 @@ const TitleWithIconNew = ({ children, headingComponent, ...otherProps }) => {
   return (
     <TextWithIcon
       iconSrc={finalIconImage}
-      iconHeight={['30px', '30px', '30px', '38px']}
-      iconWidth={['60px', '60px', '60px', '88px']}
+      iconHeight={
+        customIconHeight ? customIconHeight : ['30px', '30px', '30px', '38px']
+      }
+      iconWidth={
+        customIconWidth ? customIconWidth : ['60px', '60px', '60px', '88px']
+      }
       iconTop={finalIconTop}
       iconLeft={finalIconLeft}
       backgroundSize='contain'
