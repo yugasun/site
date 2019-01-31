@@ -12,6 +12,7 @@ import {
   MobileCenteredBox,
   Button,
 } from 'src/fragments/DesignSystem'
+import { ExternalLink } from 'src/fragments'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import supportImage from 'src/assets/images/pages/enterprise/support.svg'
 import enterpriseImage from 'src/assets/images/pages/enterprise/enterprise.svg'
@@ -102,6 +103,7 @@ const Benefits = () => (
           See real-world enterprise use cases, with architecture diagrams and
           time-to-market estimates, in our white paper!
         </P>
+        <ExternalLink to={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'}>
         <Button
           width={[240, 280]}
           mt={4}
@@ -110,6 +112,7 @@ const Benefits = () => (
         >
           download whitepaper
         </Button>
+        </ExternalLink>
       </Column>
     </ResponsiveStack.spaceBetween>
   </Box>
