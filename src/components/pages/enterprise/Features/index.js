@@ -116,7 +116,10 @@ const Features = () => (
                 loop={true}
                 width={'450px'}
                 muted={true}
-                style={{ border: '1px #363636 solid' }}
+                style={{
+                  border: '1px #363636 solid',
+                  transformStyle: 'preserve-3d',
+                }}
                 height='244px'
                 index={index}
               />
