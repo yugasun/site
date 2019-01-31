@@ -65,6 +65,7 @@ const Features = () => (
           ]}
           key={index}
           pt={[52, 52, 0, 0, 0]}
+          mt={[0, 0, 0, 0, index !== 0 ? -70 : 0]}
         >
           <Column
             width={['auto', 'auto', '80%', '80%', '30%']}
