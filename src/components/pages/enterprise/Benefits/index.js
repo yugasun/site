@@ -19,6 +19,7 @@ import enterpriseImage from 'src/assets/images/pages/enterprise/enterprise.svg'
 import supportImageAnimated from 'src/assets/images/pages/enterprise/support-animated.svg'
 import enterpriseImageAnimated from 'src/assets/images/pages/enterprise/enterprise-animated.svg'
 import { isSafari, isMobile } from 'react-device-detect'
+import { WhitepaperModal } from 'src/components'
 
 const Benefits = () => (
   <Box>
@@ -103,16 +104,7 @@ const Benefits = () => (
           See real-world enterprise use cases, with architecture diagrams and
           time-to-market estimates, in our white paper!
         </P>
-        <ExternalLink to={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'}>
-        <Button
-          width={[240, 280]}
-          mt={4}
-          id='enterprise-contact-form'
-          mb={[400, 400, 700, 700, 0]}
-        >
-          download whitepaper
-        </Button>
-        </ExternalLink>
+        <WhitepaperModal />
       </Column>
     </ResponsiveStack.spaceBetween>
   </Box>

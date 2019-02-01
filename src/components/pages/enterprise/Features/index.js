@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, Column, Box, Background } from 'serverless-design-system'
+import { Flex, Text, Column, Box } from 'serverless-design-system'
 import { Heading, Button } from 'src/fragments/DesignSystem'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import ReactPlayer from 'react-player'
