@@ -7,7 +7,7 @@ import MobileOptions from './MobileOptions'
 import BlogNavbarContext from './BlogNavbarContext'
 import { Box } from 'src/fragments/DesignSystem'
 import CategoriesPartial from './MobileOptions/CategoriesPartial'
-import EnterpriseSupportButton from 'src/components/HeaderNew/EnterpriseSupportButton'
+import EnterpriseSupportButton from 'src/components/Header/EnterpriseSupportButton'
 
 const Wrapper = styled(Flex.verticallyCenter)`
   justify-content: space-between;
@@ -16,10 +16,12 @@ const Wrapper = styled(Flex.verticallyCenter)`
 
 const LogoAndOptions = () => (
   <BlogNavbarContext.Consumer>
-    {
-      ({ isNavbarShrinked }) => (
-        <React.Fragment>
-        <Wrapper pt={['12px', '12px', isNavbarShrinked ? 0 : 15]} pb={['4px', '4px', isNavbarShrinked ? 0 : 15]}>
+    {({ isNavbarShrinked }) => (
+      <React.Fragment>
+        <Wrapper
+          pt={['12px', '12px', isNavbarShrinked ? 0 : 15]}
+          pb={['4px', '4px', isNavbarShrinked ? 0 : 15]}
+        >
           <Logo />
           <Box.OnlyTabletAndDesktop>
             <EnterpriseSupportButton />
@@ -32,10 +34,8 @@ const LogoAndOptions = () => (
             <CategoriesPartial />
           </Wrapper>
         </Box.OnlyMobile>
-
-        </React.Fragment>
-      )
-    }
+      </React.Fragment>
+    )}
   </BlogNavbarContext.Consumer>
 )
 

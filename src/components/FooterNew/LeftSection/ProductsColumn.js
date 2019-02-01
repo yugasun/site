@@ -1,23 +1,19 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { products } from 'src/constants/urls'
+import { products, enterprise } from 'src/constants/urls'
 
 const PlatformColumn = () => (
   <FooterListColumn
     header='products'
     listItems={[
       {
-        name: 'framework',
+        name: 'open source',
         navProps: { to: products.framework, completed: true },
       },
       {
-        name: 'platform',
-        navProps: { to: products.platform, completed: true },
-      },
-      {
-        name: 'support',
-        navProps: { to: products.support, completed: true },
+        name: 'enterprise',
+        navProps: { to: enterprise, completed: true },
       },
     ]}
   />
