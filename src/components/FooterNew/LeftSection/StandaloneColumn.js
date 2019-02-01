@@ -1,20 +1,10 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { resources, enterprise } from 'src/constants/urls'
+import { resources } from 'src/constants/urls'
 
 const StandaloneColumn = () => (
-  <FooterListColumn
-    header='blog'
-    headerLink={resources.blog}
-    listItems={[
-      {
-        name: 'enterprise',
-        navProps: { to: enterprise, completed: true },
-        defaultOpacity: true
-      },
-    ]}
-  />
+  <FooterListColumn header='blog' headerLink={resources.blog} listItems={[]} />
 )
 
 export default StandaloneColumn
