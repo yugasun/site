@@ -134,7 +134,7 @@ const Features = () => (
                 muted={true}
               />
             </MediaQuery>
-            <MediaQuery minWidth={1024} maxWidth={1124}>
+            <MediaQuery minWidth={1024} maxWidth={1279}>
               <ReactPlayer
                 url={feature.videoUrl}
                 playing={true}
