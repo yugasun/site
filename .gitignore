@@ -25,6 +25,9 @@ content/examples
 content/framework
 content/example
 
+# dynamic content files
+src/components/pages/company/jobs/OpenPositions/data.js
+
 # dynamic constants
 src/constants/featured-blogs.json
 src/constants/generated-authors.json
