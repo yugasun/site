@@ -7,7 +7,9 @@ import { setItemSync, getItemSync } from 'src/utils/storage'
 import { validateEmail } from 'src/utils/validator'
 import EmailField from './EmailField'
 import { Button as ButtonNew } from 'src/fragments/DesignSystem'
+import { ExternalLink } from 'src/fragments'
 const formId = 'whitepaper-download'
+import formHandler from 'src/utils/formHandler'
 const whitepaperFile =
   'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'
 
@@ -35,8 +37,6 @@ class NewsLetterForm extends React.Component {
     }
   }
 
-  downloadFile() {}
-
   handleSubmit = e => {
     e.preventDefault()
     if (this.state.isFetching) return
@@ -50,7 +50,27 @@ class NewsLetterForm extends React.Component {
       isFetching: true,
       error: false,
     })
-    const that = this
+
+    const formData = {
+      formId: formId,
+      fields: {
+        email,
+      },
+    }
+
+    formHandler(formData)
+      .then(res => {
+        window.open(whitepaperFile)
+        this.setState({
+          isSubscribed: true,
+          isFetching: false,
+        })
+      })
+      .catch(e => {
+        console.log('ERROR', e)
+      })
+    return false
+
     /*
     axios({
       method: 'post',
@@ -98,29 +118,11 @@ class NewsLetterForm extends React.Component {
   }
 
   renderSubmitBtn = () => {
-    const { submitBtnProps, btnComponent: ButtonComponent } = this.props
+    const { btnComponent: ButtonComponent } = this.props
 
     if (ButtonComponent) {
       return <ButtonComponent disabled={this.state.isFetching} />
     }
-
-    return (
-      <a href={whitepaperFile} download='serverless whitepaper'>
-        <Button
-          width={['35%', '35%', '40%']}
-          px={[0, 0, 1]}
-          py={15}
-          m={0}
-          textAlign='center'
-          border={0}
-          fontSize={2}
-          disabled={this.state.isFetching}
-          {...submitBtnProps}
-        >
-          subscribe
-        </Button>
-      </a>
-    )
   }
 
   render() {
@@ -134,9 +136,11 @@ class NewsLetterForm extends React.Component {
     return (
       <React.Fragment>
         {this.state.isSubscribed ? (
-          <ButtonNew width={[323, 323, 400, 400, 383]} mt={[0, 0, 0, 0, 6]}>
-            Thanks for your download!
-          </ButtonNew>
+          <ExternalLink to={whitepaperFile}>
+            <ButtonNew width={[323, 323, 400, 400, 383]} mt={[0, 0, 0, 0, 6]}>
+              Thanks for your download!
+            </ButtonNew>
+          </ExternalLink>
         ) : (
           <StyledForm
             onSubmit={this.handleSubmit}
