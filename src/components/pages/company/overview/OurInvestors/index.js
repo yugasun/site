@@ -4,6 +4,7 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import investorTrinity from 'src/assets/images/trinity.png'
 import investorHeavyBit from 'src/assets/images/heavybit.png'
+import lightspeedVentures from 'src/assets/images/lightspeed-ventures.png'
 
 const OurInvestors = () => (
   <AppContainer>
@@ -15,8 +16,8 @@ const OurInvestors = () => (
       <Flex.center>
         <ResponsiveStack
           flexWrap='wrap'
-          width={[1, 1, 1, 2 / 3, 1 / 2]}
-          justifyContent='space-between'
+          width={[1, 1, 1, 1, 1]}
+          justifyContent='space-evenly'
           mt={[0, 0, 2, 3]}
         >
           <Column m={[2, 2, 2, 0]} alignItems='center'>
@@ -31,6 +32,13 @@ const OurInvestors = () => (
               src={investorHeavyBit}
               alt='heavybit-industries'
               height={['55px', '55px', '75px']}
+            />
+          </Column>
+          <Column m={[2, 2, 2, 0]} alignItems='center'>
+            <Image
+              src={lightspeedVentures}
+              alt='lightspeed-ventures'
+              height={['55px', '55px', '85px']}
             />
           </Column>
         </ResponsiveStack>

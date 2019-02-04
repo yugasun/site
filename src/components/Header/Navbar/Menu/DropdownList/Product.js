@@ -2,114 +2,128 @@ import React from 'react'
 import {
   Flex,
   Heading,
-  Image,
   InlineBlock,
   List,
   ListItem,
   Relative,
+  Background,
+  Text,
+  TextWithIcon,
 } from 'serverless-design-system'
 import styled from 'styled-components'
 
 import NavLink from 'src/components/NavLink'
-import { products } from 'src/constants/urls'
-import frameworkIcon from 'src/assets/images/pages/enterprise/enterprise-icon.svg'
-import supportIcon from 'src/assets/images/pages/support/serverless-support.svg'
-import platformIcon from 'src/assets/images/pages/platform/serverless-platform.svg'
-
+import { products, enterprise } from 'src/constants/urls'
+import dotGridWhite from 'src/assets/images/components/header/dot-grid-menu-white.svg'
+import dotGridRed from 'src/assets/images/components/header/dot-grid-menu-red.svg'
 
 const platformMenuConfig = [
   {
-    imgProps: {
-      src: frameworkIcon,
-      height: ['60px', '60px', '72px'],
-      mr: '23px'
-    },
     text: 'framework',
+    subText: 'open source',
     to: products.framework,
     crossDomain: false,
     completed: true,
+    bgColor: ['#fd5750'],
+    dotGrid: dotGridWhite,
   },
   {
-    imgProps: {
-      src: platformIcon,
-      height: ['61px', '61px', '73px'],
-      ml: '14px',
-      mr: '23px'
-    },
-    text: 'platform',
-    to: products.platform,
+    text: 'framework',
+    subText: 'enterprise',
+    to: enterprise,
     crossDomain: false,
     completed: true,
-  },
-  {
-    imgProps: {
-      src: supportIcon,
-      height: ['62px', '62px', '74px'],
-      mr: '23px',
-      mb: [2, 2, 0]
-    },
-    text: 'support',
-    to: products.support,
-    crossDomain: false,
-    completed: true,
+    bgColor: ['#000', '#000', '#000', '#000', '#151515'],
+    dotGrid: dotGridRed,
   },
 ]
 
 const ProductMenu = styled(List)`
   @media screen and (min-width: 1200px) {
     display: flex;
-    width: 730px;
+    height: 110px;
+  }
+`
+const InlineBlockWithHoverableIcon = styled(InlineBlock)`
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      &:before {
+        z-index: 1;
+        content: ' ';
+        background-image: url(${props => props.dotGrid});
+        top: 20px;
+        left: 38px;
+        height: 20px;
+        width: 26px;
+        position: absolute;
+        background-size: cover;
+      }
+    }
   }
 `
 
 const Platform = () => (
   <ProductMenu m={0} ml={[2, 2, 0]} p={0}>
     {platformMenuConfig.map(
-      ({ imgProps: { src, height, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
-        <NavLink
-          key={index}
-          to={to}
-          crossDomain={crossDomain}
-          completed={completed}
-          className='header-menu-item'
-        >
-          <ListItem.noStyleType key={text}>
-            <Relative>
-              <Flex.horizontallyCenter
-                mb={platformMenuConfig.length - 1 === index ? 0 : [2, 2, 0]}
-              >
-                <InlineBlock {...imgContainerProps}>
-                  <Image
-                    src={src}
-                    height={height}
-                    width='auto'
-                  />
-                </InlineBlock>
-                <InlineBlock minWidth='155px'>
-                  <Heading.h6
-                    fontFamily='Serverless'
-                    fontSize='1.5rem'
-                    lineHeight={0.7}
-                    letterSpacing='5'
-                    m={0}
-                    pt={[0, 0, 22]}
+      (
+        { text, to, crossDomain, completed, subText, bgColor, dotGrid },
+        index
+      ) => (
+        <Background background={bgColor} key={index}>
+          <NavLink
+            to={to}
+            crossDomain={crossDomain}
+            completed={completed}
+            className='header-menu-item'
+          >
+            <ListItem.noStyleType key={text}>
+              <Relative pt={0}>
+                <Flex.horizontallyCenter
+                  mb={platformMenuConfig.length - 1 === index ? 0 : [2, 2, 0]}
+                >
+                  <InlineBlockWithHoverableIcon
+                    minWidth='206px'
+                    ml={[0, 0, 0, 0, 42]}
+                    dotGrid={dotGrid}
                   >
-                    serverless
-                  </Heading.h6>
-                  <Heading.h6
-                    fontFamily='Serverless'
-                    fontSize='2rem'
-                    lineHeight={1.7}
-                    letterSpacing={0.8}
-                    m={0}
-                  >
-                    {text}
-                  </Heading.h6>
-                </InlineBlock>
-              </Flex.horizontallyCenter>
-            </Relative>
-          </ListItem.noStyleType>
-        </NavLink>
+                    <Text
+                      fontFamily='Serverless'
+                      fontSize='12px'
+                      lineHeight={'14px'}
+                      letterSpacing='0.5px'
+                      m={0}
+                      pt={[0, 0, 22]}
+                      color='white'
+                    >
+                      serverless
+                    </Text>
+                    <Text
+                      fontFamily='Serverless'
+                      fontSize='18px'
+                      lineHeight='20px'
+                      letterSpacing='0.75px'
+                      m={0}
+                      mt={'3px'}
+                      color='white'
+                    >
+                      {text}
+                    </Text>
+                    <Text
+                      fontFamily='Serverless'
+                      fontSize='18px'
+                      lineHeight='20px'
+                      letterSpacing='0.75px'
+                      m={0}
+                      color='white'
+                    >
+                      {subText}
+                    </Text>
+                  </InlineBlockWithHoverableIcon>
+                </Flex.horizontallyCenter>
+              </Relative>
+            </ListItem.noStyleType>
+          </NavLink>
+        </Background>
       )
     )}
   </ProductMenu>

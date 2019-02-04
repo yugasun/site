@@ -58,10 +58,11 @@
     "prepareContent": "node scripts/docs && node scripts/blog && node scripts/example && node scripts/build-config",
     "dev": "npm run syncProd && npm run prepareContent && gatsby develop",
     "syncLocal": "npm run postinstall",
-    "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs && npm run syncProd:Examples",
+    "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs && npm run syncProd:Examples && npm run syncProd:Jobs",
     "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
     "syncProd:Docs": "node scripts/docs/sync-docs-remote.js",
     "syncProd:Examples": "node scripts/example/sync-examples-remote.js",
+    "syncProd:Jobs": "node scripts/jobs/sync-jobs-remote.js",
     "prebuild": "npm run prepareContent",
     "postbuildprod": "node scripts/redirects.js",
     "postbuild": "node scripts/redirects.js"
