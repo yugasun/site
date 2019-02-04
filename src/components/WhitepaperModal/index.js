@@ -10,15 +10,19 @@ import {
   Heading,
 } from 'serverless-design-system'
 import closeIcon from 'src/assets/images/icon-close.png'
-import { NewsLetterFormNew as NewsLetterForm } from 'src/components'
 import { Button, P } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/logo.svg'
 import 'src/components/SubscribeModal/modal.css'
+import NewsLetterForm from './WhitepaperDownloadForm'
+const whitepaperFile =
+  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'
 
 const SubmitButton = props => (
-  <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
-    download
-  </Button>
+  <a href={whitepaperFile} download='serverless whitepaper'>
+    <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
+      download
+    </Button>
+  </a>
 )
 
 const Title = ({ component: HeadingComp, color }) => (
