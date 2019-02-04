@@ -17,7 +17,6 @@ import andrea from 'src/assets/images/team/andrea.png'
 import andre from 'src/assets/images/team/andre.png'
 import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
-import bumperPic from 'src/assets/images/team/bumper.png'
 import maciej from 'src/assets/images/team/maciej-skierkowski.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
 
@@ -64,12 +63,6 @@ const teamMembers = [
   getLastName(object1.name).localeCompare(getLastName(object2.name))
 )
 
-const bumper = {
-  image: bumperPic,
-  name: 'Bumper',
-  position: 'Chief Snuggles Officer',
-}
-
 const OurTeam = () => (
   <AppContainer>
     <Flex flexDirection='column'>
@@ -77,16 +70,14 @@ const OurTeam = () => (
         <TitleWithIcon>Our Team</TitleWithIcon>
       </Flex>
       <Flex flexWrap='wrap' justifyContent='center'>
-        {[...leaders, ...teamMembers, bumper].map(
-          ({ image, name, position }) => (
-            <TeamMemberImageCard
-              key={name}
-              image={image}
-              name={name}
-              position={position}
-            />
-          )
-        )}
+        {[...leaders, ...teamMembers].map(({ image, name, position }) => (
+          <TeamMemberImageCard
+            key={name}
+            image={image}
+            name={name}
+            position={position}
+          />
+        ))}
       </Flex>
     </Flex>
   </AppContainer>
