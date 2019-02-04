@@ -18,7 +18,7 @@ import andre from 'src/assets/images/team/andre.png'
 import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
 import bumperPic from 'src/assets/images/team/bumper.png'
-import maciej from 'src/assets/images/team/maciej.jpg'
+import maciej from 'src/assets/images/team/maciej-skierkowski.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
 
 const getLastName = name => name.split(' ').pop()
