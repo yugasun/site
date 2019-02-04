@@ -18,6 +18,8 @@ import andre from 'src/assets/images/team/andre.png'
 import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
 import bumperPic from 'src/assets/images/team/bumper.png'
+import maciej from 'src/assets/images/team/maciej.jpg'
+import kristin from 'src/assets/images/team/kristin.jpg'
 
 const getLastName = name => name.split(' ').pop()
 
@@ -38,6 +40,17 @@ const teamMembers = [
   { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
   { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
+  { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
+  {
+    image: maciej,
+    name: 'Maciej Skierkowski',
+    position: 'Director of Product Management',
+  },
+  {
+    image: kristin,
+    name: 'Kristin Roche',
+    position: 'HR Coordinator/Recruitment Coordinator',
+  },
   { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
   {
     image: andrea,
