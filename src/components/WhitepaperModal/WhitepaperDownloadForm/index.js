@@ -60,7 +60,6 @@ class NewsLetterForm extends React.Component {
 
     formHandler(formData)
       .then(res => {
-        window.open(whitepaperFile)
         this.setState({
           isSubscribed: true,
           isFetching: false,
@@ -70,51 +69,6 @@ class NewsLetterForm extends React.Component {
         console.log('ERROR', e)
       })
     return false
-
-    /*
-    axios({
-      method: 'post',
-      url: newsletterSubscribeAPI,
-      data: {
-        email: email,
-        name: '',
-      },
-    })
-      .then(response => {
-        if (response && response.data && response.data.created) {
-          console.info('Newsletter subscription creation succeed') // eslint-disable-line
-          // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
-          that.setState(
-            {
-              isSubscribed: true,
-              isFetching: false,
-            },
-            () => {
-              // trigger callback
-              that.emailField.value = ''
-              if (onSubmit) {
-                onSubmit()
-              }
-            }
-          )
-          setItemSync('newsletterSubscribed', true)
-          that.container.innerHTML = '<p>Thank you for subscribing!</p>'
-        } else {
-          console.error(
-            'Newsletter subscription failed creation',
-            response && response.data && response.data.message
-              ? response.data.message
-              : ''
-          )
-        }
-      })
-      .catch(error => {
-        console.error(error) // eslint-disable-line
-        that.setState({
-          error: 'serviceDown',
-        })
-      })
-      */
   }
 
   renderSubmitBtn = () => {
@@ -138,7 +92,7 @@ class NewsLetterForm extends React.Component {
         {this.state.isSubscribed ? (
           <ExternalLink to={whitepaperFile}>
             <ButtonNew width={[323, 323, 400, 400, 383]} mt={[0, 0, 0, 0, 6]}>
-              Thanks for your download!
+              Download ready, click here.
             </ButtonNew>
           </ExternalLink>
         ) : (
