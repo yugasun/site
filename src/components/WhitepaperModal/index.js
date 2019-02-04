@@ -18,11 +18,9 @@ const whitepaperFile =
   'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'
 
 const SubmitButton = props => (
-  <a href={whitepaperFile} download='serverless whitepaper'>
-    <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
-      download
-    </Button>
-  </a>
+  <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
+    download
+  </Button>
 )
 
 const Title = ({ component: HeadingComp, color }) => (

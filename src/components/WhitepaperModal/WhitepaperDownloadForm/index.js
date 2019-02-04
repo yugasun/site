@@ -142,6 +142,8 @@ class NewsLetterForm extends React.Component {
             onSubmit={this.handleSubmit}
             style={formStyles}
             id={formId}
+            action={whitepaperFile}
+            method='get'
           >
             <Wrapper
               {...wrapperProps}
