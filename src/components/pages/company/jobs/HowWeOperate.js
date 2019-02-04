@@ -104,9 +104,6 @@ const HowWeOperate = () => (
             </RelativeCard>
           </Column>
         </ResponsiveStack>
-        <Box pb={[4, 4, 6, 6]} m='auto' mt={[3, 3, 2, 2, 8]}>
-          <Image src={team} width={1} mt={4} />
-        </Box>
       </AppContainer>
     </Column>
   </Overflow>
