@@ -42,24 +42,27 @@ class Header extends React.Component {
     }
   }
 
-  toggleNavbarShrinkness = () => this.setState(prevState => ({
+  toggleNavbarShrinkness = () =>
+    this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
-  }))
+    }))
 
-  toggleNavbarTransparency = () => this.setState(prevState => ({
+  toggleNavbarTransparency = () =>
+    this.setState(prevState => ({
       isNavbarTransparent: !prevState.isNavbarTransparent,
-  }))
+    }))
 
-  toggleNavbarActiveness = () => this.setState(prevState => ({ 
+  toggleNavbarActiveness = () =>
+    this.setState(prevState => ({
       isNavbarActive: !prevState.isNavbarActive,
-  }))
+    }))
 
   render() {
     return (
       <HeaderWrapper
         width={1}
         maxHeight='100%'
-        oy={['scroll', 'scroll', 'scroll', 'scroll', 'visible']}
+        oy={['auto', 'auto', 'auto', 'auto', 'visible']}
       >
         <Background
           background={[
@@ -70,7 +73,7 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-        <Transition py={[1, 1, 1, 0, 0]}>
+          <Transition py={[1, 1, 1, 0, 0]}>
             <HeaderContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
@@ -83,7 +86,7 @@ class Header extends React.Component {
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
             </HeaderContainer>
-        </Transition>
+          </Transition>
         </Background>
       </HeaderWrapper>
     )

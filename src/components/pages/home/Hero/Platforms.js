@@ -12,16 +12,16 @@ const HomeHeroFooter = () => (
       width={[1, 1, 3 / 4]}
       mt={[4, 4, 0, 0, '113px', '69px']}
       mx={'auto'}
-      flexDirection='row'
+      flexDirection="row"
     >
       <Text
-        color='white'
+        color="white"
         fontSize={[18]}
-        mt={['140px', '140px', '122px', '140px', '180px', '220px']}
+        mt={['170px', '170px', '122px', '140px', '180px', '220px']}
         mb={[0, 0, '10px', '10px', '15px']}
         lineHeight={['24px']}
-        align='center'
-        fontFamily='SoleilBk'
+        align="center"
+        fontFamily="SoleilBk"
         letterSpacing={['-0.28px']}
       >
         Supports these serverless backends
@@ -29,9 +29,9 @@ const HomeHeroFooter = () => (
     </Flex.center>
     <Flex
       justifyContent={['center', 'center', 'space-between']}
-      alignItems='space-between'
-      flexDirection='row'
-      flexWrap='wrap'
+      alignItems="space-between"
+      flexDirection="row"
+      flexWrap="wrap"
       pt={['32px', '32px', '52px']}
       pb={[0, 0, 9]}
       maxWidth={[null, null, null, null, 800]}
