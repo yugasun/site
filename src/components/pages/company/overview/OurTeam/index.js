@@ -31,6 +31,11 @@ const leaders = [
     position: 'VP of Engineering',
   },
   { image: bill, name: 'Bill Fine', position: 'VP of Product' },
+  {
+    image: maciej,
+    name: 'Maciej Skierkowski',
+    position: 'Director of Product Management',
+  },
 ]
 
 const teamMembers = [
@@ -40,17 +45,12 @@ const teamMembers = [
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
   { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
   { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
-  {
-    image: maciej,
-    name: 'Maciej Skierkowski',
-    position: 'Director of Product Management',
-  },
+
   {
     image: kristin,
     name: 'Kristin Roche',
     position: 'HR Coordinator/Recruitment Coordinator',
   },
-  { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
   {
     image: andrea,
     name: 'Andrea Passwater',
