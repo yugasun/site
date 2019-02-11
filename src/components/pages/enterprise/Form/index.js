@@ -160,7 +160,7 @@ export default class Form extends React.Component {
 
             <Box mt={2} width={1}>
               <TextField
-                placeholder='E-mail'
+                placeholder='Company E-mail'
                 name='email'
                 onChange={({ target }) =>
                   this.setState({ email: target.value, success: false })
