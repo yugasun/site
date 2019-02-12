@@ -34,7 +34,7 @@ const Points = () => (
     flexDirection={['column', 'column', 'row']}
     justifyContent='space-evenly'
     mt={62}
-    mb={[132]}
+    mb={[102, 102, 132]}
     alignItems={['center', 'center', 'auto']}
     id='enterprise-contact-form'
   >
