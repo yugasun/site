@@ -41,11 +41,7 @@ const HowWeOperate = () => (
         <ResponsiveStack>
           <Box width={[1, 1, 0.55]}>
             <P mt={0}>
-              We are a group of self-motivated hackers and creatives who believe
-              that there is a better way to build applications. Our end goal is
-              to make software development accessible to everyone, and we are
-              starting by making it easier for software engineers. Our open
-              source Framework has over 25,000 stars on Github (and counting).
+              We are a group of self-motivated hackers and creatives who believe that there is a better way to build cloud applications. Our end goal is to make software development accessible to everyone, and we are starting by making it easier for software engineers. Our open source Serverless Framework is a massively popular open source project, and the go-to way developers deploy modern cloud applications.
             </P>
             <P>
               At Serverless, we strongly believe in the power of community. We
