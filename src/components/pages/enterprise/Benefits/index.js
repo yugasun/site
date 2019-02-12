@@ -20,6 +20,10 @@ import supportImageAnimated from 'src/assets/images/pages/enterprise/support-ani
 import enterpriseImageAnimated from 'src/assets/images/pages/enterprise/enterprise-animated.svg'
 import { isSafari, isMobile } from 'react-device-detect'
 import { WhitepaperModal } from 'src/components'
+import styled from 'styled-components'
+const ButtonWithZindex = styled('a')`
+  z-index: 4;
+`
 
 const Benefits = () => (
   <Box>
@@ -53,6 +57,11 @@ const Benefits = () => (
           dedicated training and workshops around CI/CD, serverless DevOps,
           general best practices and more.
         </P>
+          <ButtonWithZindex href='#enterprise-contact-form'>
+              <Button width={208} mt={4}>
+                get support
+              </Button>
+          </ButtonWithZindex>
       </Column>
       <MobileCenteredBox width={[1, 1, 0.5, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
