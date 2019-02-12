@@ -1,13 +1,23 @@
 import React from 'react'
 import { Button } from 'src/fragments/DesignSystem'
 import { Flex } from 'serverless-design-system'
+import { HeroActionsNew as HeroActions } from 'src/fragments'
 
 const FrameworkHeroActions = () => (
-  <Flex justifyContent='center' mt={[4, 4, 4, 4, 4]}>
-    <a href='#enterprise-contact-form'>
-      <Button>see the demo</Button>
-    </a>
-  </Flex>
+  <HeroActions
+    firstBtn={{
+      name: 'see the demo',
+      to: '#enterprise-contact-form',
+      anchorLink: true,
+    }}
+    secondBtn={{
+      name: 'get support',
+      to: '#enterprise-contact-form',
+      anchorLink: true,
+    }}
+    flexDirection={['column', 'column', 'row']}
+    justifyContent='center'
+  />
 )
 
 export default FrameworkHeroActions
