@@ -34,7 +34,9 @@ const Points = () => (
     flexDirection={['column', 'column', 'row']}
     justifyContent='space-evenly'
     mt={62}
+    mb={[132]}
     alignItems={['center', 'center', 'auto']}
+    id='enterprise-contact-form'
   >
     <Row mb={[35, 35, 0]}>
       <PointButton>01</PointButton>

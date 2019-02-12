@@ -13,6 +13,7 @@ const Headline = () => (
       fontFamily='Soleil'
       pt={[0, 0, 32]}
       mb={[0, 0, 0, 0, '10px']}
+      mt={[660]}
     >
       Serverless Framework Enterprise features
     </Text>

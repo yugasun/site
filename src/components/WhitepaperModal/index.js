@@ -188,7 +188,6 @@ class index extends Component {
         <Button
           width={[240, 280]}
           mt={4}
-          id='enterprise-contact-form'
           mb={[400, 400, 700, 700, 0]}
           onClick={this.handleModalOpen}
         >

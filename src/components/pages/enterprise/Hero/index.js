@@ -8,6 +8,7 @@ import Points from './Points'
 import background from 'src/assets/images/pages/enterprise/hero-background.svg'
 import backgroundAnimated from 'src/assets/images/pages/enterprise/hero-background-animated.svg'
 import { isSafari, isMobile } from 'react-device-detect'
+import Form from 'src/components/pages/enterprise/Form'
 
 const FrameworkHero = () => (
   <HeroWrapper
@@ -25,6 +26,7 @@ const FrameworkHero = () => (
     <Actions />
     <Benefit />
     <Points />
+    <Form />
   </HeroWrapper>
 )
 

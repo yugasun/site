@@ -74,7 +74,7 @@ const Benefits = () => (
     <ResponsiveStack.spaceBetween
       flexDirection={['column', 'column', 'row']}
       mt={[52, 52, 110, 110, 132]}
-      pb={[0, 0, 0, 0, 492]}
+      pb={[0, 0, 0, 0, 132]}
     >
       <MobileCenteredBox width={[1, 1, 0.5, 0.4]} ml={[0, 0, 0, 0, 0, 120]}>
         <Image
