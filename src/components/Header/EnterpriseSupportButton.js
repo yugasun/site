@@ -5,10 +5,10 @@ import { enterprise } from 'src/constants/urls'
 
 const EnterpriseSupportButton = () => (
   <NavLink to={enterprise} completed className='header-menu-item'>
-    <SecondaryButton px={[0, 0, 0, 0, '0.3rem', '0.5rem']} width={['176px']}>
-      enterprise
-    </SecondaryButton>
-  </NavLink>
+      <SecondaryButton px={[0, 0, 0, 0, '0.3rem', '0.5rem']} width={['187px', '187px', '187px', '187px', '187px', '207px']}>
+      enterprise support
+      </SecondaryButton>
+    </NavLink>
 )
 
 export default EnterpriseSupportButton

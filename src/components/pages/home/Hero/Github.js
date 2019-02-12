@@ -66,7 +66,7 @@ const HomeHeroFooter = () => (
             width={[11, 15, 20]}
             maxWidth='none'
           />
-          <Text.span fontSize={[12, 12, 12, 12, 16]}>&nbsp; 27,524</Text.span>
+          <Text.span fontSize={[12, 12, 12, 12, 16]}>&nbsp; 28,050</Text.span>
         </Box>
       </Flex>
     </Flex>

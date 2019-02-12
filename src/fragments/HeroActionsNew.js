@@ -9,18 +9,32 @@ import {
 } from 'src/fragments/DesignSystem'
 import { InternalLink } from 'src/fragments'
 
+const FinalLink = ({anchorLink, to, children}) => {
+  return (
+  anchorLink ? 
+    <a href={to}> 
+      {children}
+    </a> :
+    <InternalLink to={to}>
+      {children}
+    </InternalLink>
+  )
+}
+
 const HeroActions = ({
   firstBtn: {
     name: fName,
     to: firstLink,
     crossDomain: fcrossDomain = false,
     completed: fCompleted = false,
+    anchorLink: fanchorLink = false,
   },
   secondBtn: {
     name: sName,
     to: secondLink,
     crossDomain: scrossDomain = false,
     completed: sCompleted = false,
+    anchorLink: sanchorLink = false,
   },
   flexDirection,
   justifyContent,
@@ -34,7 +48,7 @@ const HeroActions = ({
     justifyContent={justifyContent}
   >
     <MobileCenteredBox>
-      <InternalLink to={firstLink}>
+      <FinalLink anchorLink={fanchorLink} to={firstLink}>
         <Button
           mr={[
             0,
@@ -49,15 +63,15 @@ const HeroActions = ({
         >
           {fName}
         </Button>
-      </InternalLink>
+      </FinalLink>
     </MobileCenteredBox>
 
     <MobileCenteredBox>
-      <InternalLink to={secondLink}>
+      <FinalLink anchorLink={sanchorLink} to={secondLink}>
         <SecondaryButton my={1} width={['200px']}>
           {sName}
         </SecondaryButton>
-      </InternalLink>
+      </FinalLink>
     </MobileCenteredBox>
   </ResponsiveStack>
 )

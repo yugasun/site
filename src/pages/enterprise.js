@@ -28,7 +28,6 @@ const Enterprise = ({ location }) => (
       </AppContainer>
     </Background>
     <AppContainer>
-      <Form />
       <Compare />
     </AppContainer>
   </DefaultLayout>
