@@ -20,7 +20,6 @@ const SubMenu = ({ title, options }) => (
   </Box>
 )
 
-
 const quickStartOptions = [
   {
     name: 'aws',
@@ -53,8 +52,7 @@ const examplesOptions = [
   {
     name: 'plugins',
     to: developers.examples.plugins,
-    crossDomain: true,
-    completed: false,
+    completed: true,
   },
   {
     name: 'examples',

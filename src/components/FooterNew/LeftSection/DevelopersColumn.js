@@ -13,7 +13,7 @@ const DevelopersColumn = () => (
       },
       {
         name: 'plugins',
-        navProps: { to: developers.plugins, crossDomain: true },
+        navProps: { to: developers.plugins, completed: true },
       },
       {
         name: 'examples',
