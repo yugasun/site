@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Text, Card } from 'serverless-design-system'
+import { Box, Text, Card, Image, Row } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
+import downloadIcon from 'src/assets/images/download-gray.svg'
+import starIcon from 'src/assets/images/star-gray.svg'
+
+const TextWithWordWrap = styled(P)`
+  word-wrap: break-word;
+`
 
 const HoverableColumn = styled(Card)`
   @media screen and (min-width: 415px) {
@@ -45,12 +51,42 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         <Box m={['0px 15px', '0px 15px', '32px']}>
           <InternalLink to={getPluginLink(id)}>
             <Box>
+              <Row my='8px'>
+                <Box mt='-2px'>
+                  <Image maxHeight='16px' src={starIcon} objectFit='contain' />
+                </Box>
+                &nbsp;
+                <Text
+                  color='gray.2'
+                  fontSize={[1]}
+                  fontFamily='Soleil'
+                  lineHeight={[1.33]}
+                >
+                  {'550'}
+                </Text>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <Image
+                  maxHeight='16px'
+                  src={downloadIcon}
+                  objectFit='contain'
+                />
+                &nbsp;
+                <Text
+                  color='gray.2'
+                  fontSize={[1]}
+                  fontFamily='Soleil'
+                  lineHeight={[1.33]}
+                >
+                  {'200k'}
+                </Text>
+              </Row>
+
               <Heading.h5 mb='8px'>{title}</Heading.h5>
             </Box>
           </InternalLink>
-          <P mt='8px' mb={[0, 0, 3.6]}>
+          <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
             {description}
-          </P>
+          </TextWithWordWrap>
           <ExternalLink to={gitLink}>
             <Text color='#fd5750' mt={16}>
               go to github >
