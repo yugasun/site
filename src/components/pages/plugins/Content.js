@@ -1,47 +1,51 @@
 import React from 'react'
 import { Box, Flex } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer }  from 'src/components'
-import ExamplePreview from './SingleExamplePreview'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import PluginPreview from './SinglePluginPreview'
 import algoliasearch from 'algoliasearch/lite'
 import SearchOptions from './Search/index'
 
-const client = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY) 
-const examplesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX)
+const client = algoliasearch(
+  process.env.GATSBY_ALGOLIA_APP_ID,
+  process.env.GATSBY_ALGOLIA_SEARCH_KEY
+)
+const pluginsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_PLUGINS_INDEX)
 
 const paginationLimit = 15
 
 export default class Content extends React.Component {
-
-  constructor (props){
-      super(props)
-      this.state = {
-        examples: this.props.examples,
-        initState: true,
-        noMoreResults: false,
-        isLoading: false,
-        filter: {},
-        pageNum: 0
-      }
+  constructor(props) {
+    super(props)
+    this.state = {
+      plugins: this.props.plugins,
+      initState: true,
+      noMoreResults: false,
+      isLoading: false,
+      filter: {},
+      pageNum: 0,
+    }
   }
 
   componentDidMount() {
-      window.addEventListener('scroll', this.onScroll, false)
+    window.addEventListener('scroll', this.onScroll, false)
   }
 
   componentWillUnmount() {
-      window.removeEventListener('scroll', this.onScroll, false)
+    window.removeEventListener('scroll', this.onScroll, false)
   }
 
   onScroll = () => {
-    if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
-
-      if(this.state.isLoading || this.state.noMoreResults) {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 1500
+    ) {
+      if (this.state.isLoading || this.state.noMoreResults) {
         return
       } else {
-        this.setState({isLoading: true})
+        this.setState({ isLoading: true })
 
-        if(this.state.initState) {
-          this.addResults({filters: 'NOT highlighted:true'})
+        if (this.state.initState) {
+          this.addResults({ filters: 'NOT highlighted:true' })
         } else {
           const currentFilters = this.makeFilterQuery(this.state.filter)
           this.addResults(currentFilters)
@@ -51,117 +55,119 @@ export default class Content extends React.Component {
   }
 
   //triggered when user searches for something new or filters something
-  handleRefreshResults = (filter) => {
-    this.setState({filter: filter, initState: false, noMoreResults: false, isLoading: false, pageNum: 0})
+  handleRefreshResults = filter => {
+    this.setState({
+      filter: filter,
+      initState: false,
+      noMoreResults: false,
+      isLoading: false,
+      pageNum: 0,
+    })
     const searchObj = this.makeFilterQuery(filter)
     searchObj.hitsPerPage = paginationLimit
     searchObj.page = 0
-    this.setState({pageNum: 1})
+    this.setState({ pageNum: 1 })
     this.refreshResults(searchObj)
   }
 
-  parseExamplesFromAlgolia = (content) => {
-    const examples = content.hits.map((hit) => {
+  parsePluginsFromAlgolia = content => {
+    const plugins = content.hits.map(hit => {
       return {
         id: hit.objectID,
         frontmatter: {
           title: hit.title,
           description: hit.description,
-          language: hit.language,
-          platform: hit.platform,
-          gitLink: hit.gitLink
-        }
+          gitLink: hit.gitLink,
+        },
       }
     })
 
-    return examples
+    return plugins
   }
 
-  refreshResults = (searchObj) => {
-    examplesIndex.search(searchObj, (err, content) => {
-      if(err) console.error(err)
-      const examples = this.parseExamplesFromAlgolia(content)
+  refreshResults = searchObj => {
+    pluginsIndex.search(searchObj, (err, content) => {
+      if (err) console.error(err)
+      const plugins = this.parsePluginsFromAlgolia(content)
       this.setState({
-        examples
+        plugins,
       })
     })
   }
 
-  makeFilterQuery = (filter) => {
+  makeFilterQuery = filter => {
     const searchQuery = filter.search
 
-    let filtersQuery = ""
-    Object.keys(filter).map((key) => {
-       //skipping 'search' key since algolia has query parameter specifically for search text, deleting it before forming filterQuery
-        if(filter[key] && key !== 'search') {
-          if(filtersQuery) {
-            filtersQuery += ' AND '
-          }
-
-          filter[key].forEach((value, index) => {
-            if(index === 0) {
-              filtersQuery += `${key}:"${value}"`
-            } else {
-              filtersQuery += ` OR ${key}:"${value}"`
-            }
-          })
-          
+    let filtersQuery = ''
+    Object.keys(filter).map(key => {
+      //skipping 'search' key since algolia has query parameter specifically for search text, deleting it before forming filterQuery
+      if (filter[key] && key !== 'search') {
+        if (filtersQuery) {
+          filtersQuery += ' AND '
         }
+
+        filter[key].forEach((value, index) => {
+          if (index === 0) {
+            filtersQuery += `${key}:"${value}"`
+          } else {
+            filtersQuery += ` OR ${key}:"${value}"`
+          }
+        })
+      }
     })
 
     let searchObj = {}
-    if(searchQuery) {
+    if (searchQuery) {
       searchObj.query = searchQuery
     }
 
-    if(filtersQuery) {
+    if (filtersQuery) {
       searchObj.filters = filtersQuery
     }
-    
+
     return searchObj
   }
 
   //used for pagination
-  addResults = (searchObj) => {
+  addResults = searchObj => {
     const currentPageNum = this.state.pageNum
-    
+
     searchObj.hitsPerPage = paginationLimit
     searchObj.page = currentPageNum
-    examplesIndex.search(searchObj, (err, content) => {
-      if(err) console.error(err)
+    pluginsIndex.search(searchObj, (err, content) => {
+      if (err) console.error(err)
       const nextPageNum = currentPageNum + 1
-      this.setState({pageNum: nextPageNum, isLoading: false})
+      this.setState({ pageNum: nextPageNum, isLoading: false })
 
-      const examples = this.parseExamplesFromAlgolia(content)
-      if(examples.length < paginationLimit) {
-        this.setState({noMoreResults: true})
+      const plugins = this.parsePluginsFromAlgolia(content)
+      if (plugins.length < paginationLimit) {
+        this.setState({ noMoreResults: true })
       }
 
-      const allExamples = this.state.examples.concat(examples)
-      this.setState({examples: allExamples})
+      const allPlugins = this.state.plugins.concat(plugins)
+      this.setState({ plugins: allPlugins })
     })
   }
 
   render() {
     return (
       <Box>
-      <SearchOptions refreshResults={this.handleRefreshResults}/>
-      <AppContainer>
-        <Box
-          pb={[300, 300, 12]}
-        >
-          <Flex
-            flexDirection={['column', 'column', 'row']}
-            flexWrap='wrap'
-            justifyContent='left'
-            mb={[200, 200, 230]}
-          >
-            
-              { this.state.examples.map((example, index) => (<ExamplePreview key={`example-${index}`} {...example} />)) }
-          </Flex>
-        </Box>
-    </AppContainer>
-    </Box>
+        <SearchOptions refreshResults={this.handleRefreshResults} />
+        <AppContainer>
+          <Box pb={[300, 300, 12]}>
+            <Flex
+              flexDirection={['column', 'column', 'row']}
+              flexWrap='wrap'
+              justifyContent='left'
+              mb={[200, 200, 230]}
+            >
+              {this.state.plugins.map((plugin, index) => (
+                <PluginPreview key={`plugin-${index}`} {...plugin} />
+              ))}
+            </Flex>
+          </Box>
+        </AppContainer>
+      </Box>
     )
   }
 }

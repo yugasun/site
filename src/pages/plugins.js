@@ -6,9 +6,9 @@ import Hero from 'src/components/pages/plugins/Hero'
 import Content from 'src/components/pages/plugins/Content'
 import { Helmet } from 'src/fragments'
 
-const Plugins = ({ data: examples }) => {
-  const edges = examples.allExample.edges.filter(
-    examples => examples.node.frontmatter.title !== ''
+const Plugins = ({ data: plugins }) => {
+  const edges = plugins.allPlugin.edges.filter(
+    plugins => plugins.node.frontmatter.title !== ''
   )
 
   return (
@@ -18,14 +18,14 @@ const Plugins = ({ data: examples }) => {
     >
       <Helmet title='Plugins Explorer | Serverless Plugins Directory' />
       <Hero />
-      <Content examples={edges.map(({ node }) => node)} />
+      <Content plugins={edges.map(({ node }) => node)} />
     </DefaultLayout>
   )
 }
 
 export const query = graphql`
   query Plugins {
-    allExample(
+    allPlugin(
       limit: 15
       sort: { fields: [frontmatter___highlighted], order: ASC }
     ) {
@@ -35,8 +35,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            platform
-            language
             description
             gitLink
           }

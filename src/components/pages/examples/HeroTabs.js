@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { examples, developers } from 'src/constants/urls'
+import { developers } from 'src/constants/urls'
 
 const data = [
   {
