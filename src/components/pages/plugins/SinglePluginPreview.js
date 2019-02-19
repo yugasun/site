@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box, Text, Card } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { getExampleLink } from 'src/utils/example'
+import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
 
 const HoverableColumn = styled(Card)`
@@ -43,7 +43,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
     >
       <HoverableColumn>
         <Box m={['0px 15px', '0px 15px', '32px']}>
-          <InternalLink to={getExampleLink(id)}>
+          <InternalLink to={getPluginLink(id)}>
             <Box>
               <Heading.h5 mb='8px'>{title}</Heading.h5>
             </Box>
