@@ -19,6 +19,7 @@ import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
 import maciej from 'src/assets/images/team/maciej-skierkowski.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
+import verne from 'src/assets/images/team/verne.jpg'
 
 const getLastName = name => name.split(' ').pop()
 
@@ -35,6 +36,11 @@ const leaders = [
     image: maciej,
     name: 'Maciej Skierkowski',
     position: 'Director of Product Management',
+  },
+  {
+    image: verne,
+    name: 'Verne Lindner',
+    position: 'Director of UX/UI',
   },
 ]
 
