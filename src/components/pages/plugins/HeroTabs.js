@@ -15,14 +15,14 @@ const data = [
     navProps: { to: developers.quickStart.others },
   },
   {
-    label: 'examples',
-    value: 'examples',
-    navProps: { to: developers.examples.examples },
-  },
-  {
     label: 'plugins',
     value: 'plugins',
     navProps: { to: developers.examples.plugins },
+  },
+  {
+    label: 'examples',
+    value: 'examples',
+    navProps: { to: developers.examples.examples },
   },
 ]
 
