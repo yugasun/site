@@ -1,5 +1,12 @@
 export default [
     {
+        "heading": "Growth",
+        "title": "Enterprise Account Executive",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/963e85b2-79f4-4b30-affc-37521724f33d"
+    },
+    {
         "heading": "Engineering",
         "title": "Senior Full Stack Engineer",
         "location": "San Francisco/Remote",
