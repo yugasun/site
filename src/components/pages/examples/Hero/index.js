@@ -27,8 +27,8 @@ const ExamplesHero = () => {
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>
-            Search our full examples repository for project examples using all
-            languages and FaaS providers.
+            See real world Serverless code and architecture examples. Search all
+            examples below.
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>
