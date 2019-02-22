@@ -52,16 +52,14 @@ const Benefits = () => (
           </Heading.h3>
         </TextWithIcon>
         <P color='white'>
-          A dedicated support engineer will be there to help you design your
-          architecture and troubleshoot issues along the way. We can provide
-          dedicated training and workshops around CI/CD, serverless DevOps,
-          general best practices and more.
+          Dedicated training and support around CI/CD, serverless DevOps,
+          architecture design, and more.
         </P>
-          <ButtonWithZindex href='#enterprise-contact-form'>
-              <Button width={208} mt={4}>
-                get support
-              </Button>
-          </ButtonWithZindex>
+        <ButtonWithZindex href='#enterprise-contact-form'>
+          <Button width={208} mt={4}>
+            get support
+          </Button>
+        </ButtonWithZindex>
       </Column>
       <MobileCenteredBox width={[1, 1, 0.5, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
@@ -85,7 +83,7 @@ const Benefits = () => (
           align={['center', 'center', 'auto']}
         />
       </MobileCenteredBox>
-      <Column width={[1, 1, 0.45, 0.45, '488px']} mt={[5, 5, 0, 0]}>
+      <Column width={[1, 1, 0.45, 0.45, '488px']} mt={[5, 5, 0, 0, 3]}>
         <TextWithIcon
           iconSrc={dotGrid}
           iconHeight='38px'
@@ -104,14 +102,8 @@ const Benefits = () => (
           </Heading.h3>
         </TextWithIcon>
         <P color='white'>
-          With serverless, developers can spend their time building features
-          that drive outcomes. <br />
-          <br />A single system can handle entire image processing pipelines.
-          Multiple CRONs can run at once and scale without manual provisioning.
-          <br />
-          <br />
-          See real-world enterprise use cases, with architecture diagrams and
-          time-to-market estimates, in our white paper!
+          See full architecture diagrams with time-to-market estimates for
+          common serverless use cases in our white paper.
         </P>
         <WhitepaperModal />
       </Column>
