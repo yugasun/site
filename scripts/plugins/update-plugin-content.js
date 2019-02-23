@@ -47,8 +47,9 @@ function getAuthorLink(githubUrl) {
 }
 
 function formatTitle(title) {
-  let formattedTitle
+  let formattedTitle = ''
   const uppercaseWords = [
+    'Aws',
     'Http',
     'Rest',
     'Api',
@@ -61,6 +62,12 @@ function formatTitle(title) {
     'Cf',
     'Waf',
     'Raml',
+    'Wsgi',
+    'Vpc',
+    'Ssm',
+    'Kms',
+    'Sqs',
+    'Ttl',
   ]
   const brandWords = {
     dynamodb: 'DynamoDB',
@@ -70,8 +77,9 @@ function formatTitle(title) {
     oauth: 'OAuth',
     graphql: 'GraphQL',
     iopipe: 'IOpipe',
+    graphiql: 'GraphiQL',
   }
-  formattedTitle.split(' ').forEach(word => {
+  title.split(' ').forEach(word => {
     const wordInLowercase = word.toLowerCase()
 
     if (brandWords[wordInLowercase]) {
@@ -82,13 +90,8 @@ function formatTitle(title) {
       formattedTitle += ` ${word}`
     }
   })
-  if (formatTitle.includes('S 3')) {
-    formatTitle.replace('S 3', 'S3')
-  }
-
-  if (formattedTitle.includes('Sthree')) {
-    formatTitle.replace('Sthree', 'S3')
-  }
+  formattedTitle = formattedTitle.replace('S 3', 'S3')
+  formattedTitle = formattedTitle.replace('Sthree', 'S3')
 
   formattedTitle = formattedTitle.trim()
   return formattedTitle

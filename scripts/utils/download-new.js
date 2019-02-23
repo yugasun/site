@@ -15,7 +15,6 @@ module.exports = function downloadDocs(downloadUrl, outputPath, callBack) {
     .catch(error => {
       if (error) {
         console.log(`download fail! ${downloadUrl}`)
-        console.log(error)
         callBack(error)
       }
     })
