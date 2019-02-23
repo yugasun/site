@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 const TextLoopWithUnderline = styled(TextLoop)`
   min-width: 165px;
+  text-align: left;
   &:after {
     content: '';
     position: absolute;
@@ -30,8 +31,8 @@ const EnterpriseHeroBenefit = () => (
       >
         We make{' '}
         <TextLoopWithUnderline
+          interval={2500}
           children={['cloud', 'Lambda', 'Azure', 'GCF', 'Kubernetes']}
-          className='moving-text'
         />
         &nbsp;simple
       </Text>
