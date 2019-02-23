@@ -46,6 +46,54 @@ function getAuthorLink(githubUrl) {
   return `https://github.com/${authorName}`
 }
 
+function formatTitle(title) {
+  let formattedTitle
+  const uppercaseWords = [
+    'Http',
+    'Rest',
+    'Api',
+    'Iot',
+    'Sam',
+    'Sns',
+    'Ses',
+    'Iam',
+    'Es',
+    'Cf',
+    'Waf',
+    'Raml',
+  ]
+  const brandWords = {
+    dynamodb: 'DynamoDB',
+    faunadb: 'FaunaDB',
+    pynamodb: 'PynamoDB',
+    mongodb: 'MongoDB',
+    oauth: 'OAuth',
+    graphql: 'GraphQL',
+    iopipe: 'IOpipe',
+  }
+  formattedTitle.split(' ').forEach(word => {
+    const wordInLowercase = word.toLowerCase()
+
+    if (brandWords[wordInLowercase]) {
+      formattedTitle += ` ${brandWords[wordInLowercase]}`
+    } else if (uppercaseWords.includes(word)) {
+      formattedTitle += ` ${word.toUpperCase()}`
+    } else {
+      formattedTitle += ` ${word}`
+    }
+  })
+  if (formatTitle.includes('S 3')) {
+    formatTitle.replace('S 3', 'S3')
+  }
+
+  if (formattedTitle.includes('Sthree')) {
+    formatTitle.replace('Sthree', 'S3')
+  }
+
+  formattedTitle = formattedTitle.trim()
+  return formattedTitle
+}
+
 module.exports = function updatePluginsContent(
   rawPluginsData,
   pluginsDirectoryPath,
@@ -68,7 +116,7 @@ module.exports = function updatePluginsContent(
       })[0]
       const fixedContent = fixYamlContent(content, filename)
       const item = matter(fixedContent).data
-      item.title = _.startCase(pluginName)
+      item.title = formatTitle(_.startCase(pluginName))
       item.description = pluginMetaData.description
       item.gitLink = pluginMetaData.githubUrl
       item.authorName = getAuthorName(item.gitLink)
