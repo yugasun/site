@@ -16,7 +16,12 @@ export { default as Helmet } from './Helmet'
 export { default as NewToServerlessPrefooter } from './NewToServerlessPrefooter'
 export { AutoScrollList, AutoScrollMenu } from './AutoscrollMenuList'
 export { default as HeroWrapperNew } from './HeroWrapperNew'
-export { default as NewToServerlessPrefooterNew } from './NewToServerlessPrefooterNew'
+export {
+  default as NewToServerlessPrefooterNew,
+} from './NewToServerlessPrefooterNew'
+export {
+  default as NewToServerlessPrefooterNewest,
+} from './NewToServerlessPrefooterNewest'
 export { default as HeroTabsNew } from './HeroTabsNew'
 export { default as HeroActionsNew } from './HeroActionsNew'
 export { default as TestimonialNew } from './TestimonialNew'
