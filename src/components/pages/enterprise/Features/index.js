@@ -27,23 +27,23 @@ const HoverableReactPlayer = styled(ReactPlayer)`
 
 const FeaturesData = [
   {
-    title: '1. Get developers going quickly',
+    title: '1. Serverless Secrets: onboarding enablement and control',
     description:
-      'Let new team members start contributing immediately, without needing to set up or maintain cloud access credentials. Serverless Secrets give you control over developer access to your serverless application environments.',
+      'New team members can start contributing immediately, without needing to set up or maintain cloud credentials.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
   },
   {
-    title: '2. Enforce best practices without compromising development speed',
+    title: '2. Serverless Safeguards: safer deployments',
     description:
-      'Automated ops and security policy enforcement lets you scale quickly, with confidence. Create your own policies, or use pre-configured Serverless Safeguards designed by serverless and cloud experts.',
+      'Pre-defined security policies enforce best practices across the team.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-safeguards.mp4',
   },
   {
-    title: '3. Optimize application cost and performance',
+    title: '3. Serverless Insights: monitor application health',
     description:
-      'Serverless Insights proactively identifies new errors, efficiency improvements, invocation spikes, and more. Instantly dig deeper into stack traces to troubleshoot root causes.',
+      'Our dashboard provides proactive tips so you can make your applications as efficient as possible: real-time cost and performance analysis, actionable operations events, and more.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
   },
@@ -76,6 +76,7 @@ const Features = () => (
               index == 0 ? 100 : '10px',
               176,
             ]}
+            pt={[0, 0, 0, 0, index == 1 ? 3 : 0]}
           >
             <Box width={[1, 1, 0.7, 1, 1]}>
               <TitleWithIcon
