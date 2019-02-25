@@ -5,7 +5,7 @@ const matter = require('gray-matter')
 const path = require('path')
 const config = require('./config')
 const _ = require('lodash')
-const featuredPlugins = config.featuredPlugins
+let featuredPlugins
 
 function isFileFeatured(folderName) {
   if (featuredPlugins.includes(folderName)) {
@@ -103,6 +103,10 @@ module.exports = function updatePluginsContent(
   pluginsDirectoryPath,
   callback
 ) {
+  featuredPlugins = _.map(
+    _.orderBy(rawPluginsData, ['npmDownloads'], ['desc']).splice(0, 15),
+    'name'
+  )
   dir.readFiles(
     pluginsDirectoryPath,
     {
@@ -123,6 +127,8 @@ module.exports = function updatePluginsContent(
       item.title = formatTitle(_.startCase(pluginName))
       item.description = pluginMetaData.description
       item.gitLink = pluginMetaData.githubUrl
+      item.npmDownloads = pluginMetaData.npmDownloads
+      item.githubStars = pluginMetaData.githubStars
       item.authorName = getAuthorName(item.gitLink)
       item.authorLink = getAuthorLink(item.gitLink)
       item.seoTitle = makeSEOTitle(item.title)

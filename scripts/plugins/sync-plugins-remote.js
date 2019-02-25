@@ -8,9 +8,7 @@ const async = require('async')
 //TODO: resolve error downloads (gitlab, child dir, old etc)
 rimraf(pluginsRepoPath, () => {
   axios
-    .get(
-      'https://raw.githubusercontent.com/serverless/plugins/master/plugins.json'
-    )
+    .get(config.pluginsList)
     .then(function(response) {
       downloadTheseRepos(response.data)
     })

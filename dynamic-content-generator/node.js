@@ -133,6 +133,8 @@ const sourcePlugins = createNode => (err, content, filename, next) => {
   pluginsIndex.saveObject({
     title: frontmatter.title,
     description: frontmatter.description,
+    npmDownloads: frontmatter.npmDownloads,
+    githubStars: frontmatter.githubStars,
     gitLink: frontmatter.gitLink,
     highlighted: frontmatter.highlighted,
     objectID: pluginId,

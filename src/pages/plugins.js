@@ -7,9 +7,9 @@ import Content from 'src/components/pages/plugins/Content'
 import { Helmet } from 'src/fragments'
 
 const Plugins = ({ data: plugins }) => {
-  const edges = plugins.allPlugin.edges.filter(
-    plugins => plugins.node.frontmatter.title !== ''
-  )
+  const edges = plugins.allPlugin.edges
+    .filter(plugins => plugins.node.frontmatter.title !== '')
+    .reverse()
 
   return (
     <DefaultLayout
@@ -27,7 +27,10 @@ export const query = graphql`
   query Plugins {
     allPlugin(
       limit: 15
-      sort: { fields: [frontmatter___highlighted], order: ASC }
+      sort: {
+        fields: [frontmatter___highlighted, frontmatter___npmDownloads]
+        order: ASC
+      }
     ) {
       totalCount
       edges {
@@ -37,6 +40,8 @@ export const query = graphql`
             title
             description
             gitLink
+            npmDownloads
+            githubStars
           }
         }
       }

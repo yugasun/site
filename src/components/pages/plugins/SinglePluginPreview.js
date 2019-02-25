@@ -40,7 +40,7 @@ const BoxWithMiddleElementMargin = styled(Box)`
 `
 
 const singleExamplePreview = ({ id, frontmatter }) => {
-  const { title, description, gitLink } = frontmatter
+  const { title, description, gitLink, npmDownloads, githubStars } = frontmatter
 
   return (
     <BoxWithMiddleElementMargin
@@ -62,7 +62,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
                   fontFamily='Soleil'
                   lineHeight={[1.33]}
                 >
-                  {'550'}
+                  {githubStars}
                 </Text>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Image
@@ -77,7 +77,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
                   fontFamily='Soleil'
                   lineHeight={[1.33]}
                 >
-                  {'200k'}
+                  {npmDownloads}
                 </Text>
               </Row>
 

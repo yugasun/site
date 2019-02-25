@@ -31,9 +31,7 @@ asyncLib.waterfall(
     function(next) {
       //TODO: repeating this, fix
       axios
-        .get(
-          'https://raw.githubusercontent.com/serverless/plugins/master/plugins.json'
-        )
+        .get(config.pluginsList)
         .then(function(response) {
           pluginsRawData = response.data
           next(null)
