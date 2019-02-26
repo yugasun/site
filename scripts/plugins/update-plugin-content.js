@@ -3,7 +3,6 @@ const fs = require('fs-extra')
 const jsonToYaml = require('yamljs')
 const matter = require('gray-matter')
 const path = require('path')
-const config = require('./config')
 const _ = require('lodash')
 let featuredPlugins
 
