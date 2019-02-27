@@ -7,14 +7,7 @@ export default function GlobalScripts(props) {
   let HubSpotScript
   if (process.env.NODE_ENV === 'production') {
     HubSpotScript = (
-      <Helmet
-        script={[
-          {
-            src: 'https://js.hs-scripts.com/2901603.js',
-            type: 'text/javascript',
-          },
-        ]}
-      >
+      <Helmet>
         <style type='text/css'>{` .async-hide { opacity: 0 !important}`}</style>
 
         <script>
@@ -26,6 +19,10 @@ export default function GlobalScripts(props) {
         {'GTM-53WNQ5M':true});
         `}
         </script>
+        <script
+          src='https://js.hs-scripts.com/2901603.js'
+          type='text/javascript'
+        />
       </Helmet>
     )
   }
