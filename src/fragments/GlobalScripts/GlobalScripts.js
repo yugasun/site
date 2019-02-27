@@ -8,17 +8,24 @@ export default function GlobalScripts(props) {
   if (process.env.NODE_ENV === 'production') {
     HubSpotScript = (
       <Helmet
-        script={[{
-          src: 'https://js.hs-scripts.com/2901603.js',
-          type: 'text/javascript'
-        }]}
+        script={[
+          {
+            src: 'https://js.hs-scripts.com/2901603.js',
+            type: 'text/javascript',
+          },
+        ]}
       >
-        <style>.async-hide { opacity: 0 !important} </style>
-        <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+        <style type='text/css'>{` .async-hide { opacity: 0 !important}`}</style>
+
+        <script>
+          {`
+          (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y; h.start=1*new Date;
         h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
         })(window,document.documentElement,'async-hide','dataLayer',4000,
-        {'GTM-53WNQ5M':true});</script>
+        {'GTM-53WNQ5M':true});
+        `}
+        </script>
       </Helmet>
     )
   }
