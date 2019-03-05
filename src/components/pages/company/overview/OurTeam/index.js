@@ -49,7 +49,11 @@ const teamMembers = [
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
   { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
-  { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
+  {
+    image: steve,
+    name: 'Steve Westergaard',
+    position: 'Senior Full Stack Engineer',
+  },
   { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
 
   {
