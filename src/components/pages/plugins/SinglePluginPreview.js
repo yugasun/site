@@ -8,6 +8,13 @@ import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 import certifiedBadge from 'src/assets/images/pages/plugins/certified.svg'
 import unverifiedBadge from 'src/assets/images/pages/plugins/unverified.svg'
+import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
+
+const statusBadges = {
+  certified: certifiedBadge,
+  unverified: unverifiedBadge,
+  approved: approvedBadge,
+}
 
 const TextWithWordWrap = styled(P)`
   word-wrap: break-word;
@@ -61,11 +68,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
           <InternalLink to={getPluginLink(id)}>
             <Box>
               <Absolute mt={-33} ml={192}>
-                <Image
-                  src={
-                    status === 'unverified' ? unverifiedBadge : certifiedBadge
-                  }
-                />
+                <Image src={statusBadges[status]} />
               </Absolute>
               <Row my='8px' pt='5px'>
                 <Box mt='-2px'>
