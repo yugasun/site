@@ -14,7 +14,6 @@ export default class ExamplesSearch extends React.Component {
     }
 
     this.sendResultsToProps = this.sendResultsToProps.bind(this)
-    this.toggleFilter = this.toggleFilter.bind(this)
   }
 
   sendResultsToProps(newFilter) {
@@ -32,11 +31,6 @@ export default class ExamplesSearch extends React.Component {
       }
     })
     return newObj
-  }
-
-  toggleFilter() {
-    const showFiltersBool = this.state.showFilters
-    this.setState({ showFilters: !showFiltersBool })
   }
 
   render() {

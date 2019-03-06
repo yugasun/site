@@ -11,7 +11,7 @@ const SearchFilterOptions = ({ refreshFilters }) => (
         <CheckboxFilter
           options={statusOptions}
           refreshFilter={refreshFilters}
-          name='platform'
+          name='status'
         />
       </Row>
     </InlineBlock>
