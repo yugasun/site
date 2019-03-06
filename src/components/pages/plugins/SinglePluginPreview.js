@@ -13,7 +13,7 @@ import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
 const statusBadges = {
   certified: certifiedBadge,
   unverified: unverifiedBadge,
-  approved: approvedBadge,
+  approved: null,
 }
 
 const TextWithWordWrap = styled(P)`
@@ -67,7 +67,10 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         <Box m={['0px 15px', '0px 15px', '32px']}>
           <InternalLink to={getPluginLink(id)}>
             <Box>
-              <Absolute mt={-33} ml={192}>
+              <Absolute
+                mt={-33}
+                ml={['60%', '60%', '27.7%', '18%', '10.8%', '11.6%']}
+              >
                 <Image src={statusBadges[status]} />
               </Absolute>
               <Row my='8px' pt='5px'>
