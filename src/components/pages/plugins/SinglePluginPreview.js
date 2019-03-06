@@ -69,7 +69,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             <Box>
               <Absolute
                 mt={-33}
-                ml={['60%', '60%', '27.7%', '18%', '10.8%', '11.6%']}
+                ml={['64%', '64%', '28.5%', '18.4%', '11.3%', '11.9%']}
               >
                 <Image src={statusBadges[status]} />
               </Absolute>
