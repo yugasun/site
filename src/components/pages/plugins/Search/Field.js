@@ -49,7 +49,7 @@ export default class SearchField extends React.Component {
         mt={[22, 22, 4]}
         mb={['8px', '8px', 40]}
         ml={[15, 15, 0]}
-        width={[1, 1, '63.8%', '74%', '84%', 5 / 6]}
+        width={[1]}
         mr={[15, 15, 22, 22, 32]}
       >
         <ResponsiveStack>
