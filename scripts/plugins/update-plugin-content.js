@@ -128,6 +128,7 @@ module.exports = function updatePluginsContent(
       item.gitLink = pluginMetaData.githubUrl
       item.npmDownloads = pluginMetaData.npmDownloads
       item.githubStars = pluginMetaData.githubStars
+      item.status = pluginMetaData.status
       item.authorName = getAuthorName(item.gitLink)
       item.authorLink = getAuthorLink(item.gitLink)
       item.seoTitle = makeSEOTitle(item.title)

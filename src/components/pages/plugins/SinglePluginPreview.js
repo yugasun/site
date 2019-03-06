@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Text, Card, Image, Row } from 'serverless-design-system'
+import { Box, Text, Card, Image, Row, Absolute } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
+import certifiedBadge from 'src/assets/images/pages/plugins/certified.svg'
+import unverifiedBadge from 'src/assets/images/pages/plugins/unverified.svg'
 
 const TextWithWordWrap = styled(P)`
   word-wrap: break-word;
@@ -40,7 +42,14 @@ const BoxWithMiddleElementMargin = styled(Box)`
 `
 
 const singleExamplePreview = ({ id, frontmatter }) => {
-  const { title, description, gitLink, npmDownloads, githubStars } = frontmatter
+  const {
+    title,
+    description,
+    gitLink,
+    npmDownloads,
+    status,
+    githubStars,
+  } = frontmatter
 
   return (
     <BoxWithMiddleElementMargin
@@ -51,7 +60,14 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         <Box m={['0px 15px', '0px 15px', '32px']}>
           <InternalLink to={getPluginLink(id)}>
             <Box>
-              <Row my='8px'>
+              <Absolute mt={-33} ml={192}>
+                <Image
+                  src={
+                    status === 'unverified' ? unverifiedBadge : certifiedBadge
+                  }
+                />
+              </Absolute>
+              <Row my='8px' pt='5px'>
                 <Box mt='-2px'>
                   <Image maxHeight='16px' src={starIcon} objectFit='contain' />
                 </Box>

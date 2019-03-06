@@ -134,6 +134,7 @@ const sourcePlugins = createNode => (err, content, filename, next) => {
     title: frontmatter.title,
     description: frontmatter.description,
     npmDownloads: frontmatter.npmDownloads,
+    status: frontmatter.status,
     githubStars: frontmatter.githubStars,
     gitLink: frontmatter.gitLink,
     highlighted: frontmatter.highlighted,

@@ -80,6 +80,7 @@ export default class Content extends React.Component {
           gitLink: hit.gitLink,
           npmDownloads: hit.npmDownloads,
           githubStars: hit.githubStars,
+          status: hit.status,
         },
       }
     })
