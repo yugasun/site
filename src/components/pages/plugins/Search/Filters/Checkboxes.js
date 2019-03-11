@@ -57,8 +57,12 @@ export default class Content extends React.Component {
         </Column>
         <Column>
           {this.props.options[1]
-            ? this.props.options[1].map(({ id, name, text }) => (
-                <Box mt={2} key={id} mr={[0, 0, '5px', 22, 22]}>
+            ? this.props.options[1].map(({ id, name, text }, index) => (
+                <Box
+                  mt={index == 0 ? 2 : '6px'}
+                  key={id}
+                  mr={[0, 0, '5px', 22, 22]}
+                >
                   <Label htmlFor={id}>
                     <Flex.verticallyCenter>
                       <Checkbox
