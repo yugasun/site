@@ -13,9 +13,14 @@ const statusOptions = [
   ],
   [
     {
-      id: 'unverified',
+      id: 'unconfirmed',
       name: 'status',
-      text: 'Unverified',
+      text: 'Unconfirmed',
+    },
+    {
+      id: 'deprecated',
+      name: 'status',
+      text: 'Deprecated',
     },
   ],
 ]

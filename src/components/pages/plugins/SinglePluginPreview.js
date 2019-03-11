@@ -7,12 +7,12 @@ import { Heading, P } from 'src/fragments/DesignSystem'
 import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 import certifiedBadge from 'src/assets/images/pages/plugins/certified.svg'
-import unverifiedBadge from 'src/assets/images/pages/plugins/unverified.svg'
+import unconfirmedBadge from 'src/assets/images/pages/plugins/unverified.svg'
 import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
 
 const statusBadges = {
   certified: certifiedBadge,
-  unverified: unverifiedBadge,
+  unconfirmed: unconfirmedBadge,
   approved: null,
 }
 
