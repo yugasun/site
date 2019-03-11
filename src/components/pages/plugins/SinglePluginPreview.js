@@ -48,6 +48,27 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 `
 
+function nFormatter(num) {
+  let formattedNumber
+  if (num > 999 && num < 999999) {
+    formattedNumber = (num / 1000).toFixed(2) + 'K'
+    formattedNumber =
+      formattedNumber.indexOf('.00') > -1
+        ? formattedNumber.replace('.00', '')
+        : formattedNumber
+  } else if (num > 999999) {
+    formattedNumber = (num / 1000000).toFixed(2) + 'M'
+    formattedNumber =
+      formattedNumber.indexOf('.00') > -1
+        ? formattedNumber.replace('.00', '')
+        : formattedNumber
+  } else {
+    formattedNumber = num
+  }
+
+  return formattedNumber
+}
+
 const singleExamplePreview = ({ id, frontmatter }) => {
   const {
     title,
@@ -84,7 +105,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
                   fontFamily='Soleil'
                   lineHeight={[1.33]}
                 >
-                  {githubStars}
+                  {nFormatter(githubStars)}
                 </Text>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Image
@@ -99,7 +120,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
                   fontFamily='Soleil'
                   lineHeight={[1.33]}
                 >
-                  {npmDownloads}
+                  {nFormatter(npmDownloads)}
                 </Text>
               </Row>
 
