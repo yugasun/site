@@ -12,7 +12,7 @@ const MeetupsHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[380, 380, 500, 500, 525]}
+    height={[380, 380, 490, 470, 490]}
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected='events' />
