@@ -94,7 +94,7 @@ const LeftColumn = ({ heading, sentences, actions }) => (
 )
 
 const Prefooter = ({ heading, sentences, actions }) => (
-  <Relative height='400px' mt={92}>
+  <Relative height='400px' mt={28}>
     <ResponsiveStack bg='white' o='hidden' height='100%'>
       <LeftColumn heading={heading} sentences={sentences} actions={actions} />
     </ResponsiveStack>

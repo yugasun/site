@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Background, Box, Column, Image } from 'serverless-design-system'
+import { Box, Column, Image } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import resourcesMeetupMap from 'src/assets/images/resourcesMeetupMap.png'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { ExternalLink } from 'src/fragments'

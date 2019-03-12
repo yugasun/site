@@ -1,10 +1,10 @@
 import React from 'react'
 import { Background, Box } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
-import { ServerlessUserGroupStack } from 'src/fragments'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import dotsBackground from 'src/assets/images/dots-background.png'
 import { Heading } from 'src/fragments/DesignSystem'
+import ServerlessUserGroupStack from './ServerlessUserGroupStack'
 
 const items = [
   {
@@ -120,7 +120,11 @@ const items = [
 ]
 
 const ServerlessUserGroups = () => (
-  <Background background={`url(${dotsBackground})`} backgroundSize='cover'>
+  <Background
+    background={`url(${dotsBackground})`}
+    backgroundSize='cover'
+    height={['1800px', '1800px', '2000px', '1450px', '1450px', '1400px']}
+  >
     <AppContainer>
       <Box pb={[300, 300, 13]}>
         <Heading.h3 pt={5} pb={2} align='center'>
