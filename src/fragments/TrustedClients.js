@@ -34,14 +34,14 @@ const TrustedClients = () => (
         px={[15, 15, 2, 6, 8]}
       >
         <Heading.h5
-          align="center"
-          fontFamily="SoleilBk"
+          align='center'
+          fontFamily='SoleilBk'
           fontSize={4}
-          letterSpacing="h5"
+          letterSpacing='h5'
           lineHeight={0}
           mb={4}
         >
-          Serverless Platform is trusted by
+          Serverless is trusted by
         </Heading.h5>
         <ImageList
           maxHeight={['41px', '41px', '41px', '50px']}
