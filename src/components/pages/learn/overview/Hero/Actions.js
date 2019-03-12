@@ -6,7 +6,7 @@ import { Button } from 'src/fragments/DesignSystem'
 
 const RightSection = () => (
   <Flex.column
-    width={[1, 1, 4 / 5]}
+    width={[1, 1, 0.75, 0.5, 0.5, 4 / 5]}
     pl={[0, 0, 4]}
     pr={[0, 0, 0]}
     alignItems='center'
@@ -28,7 +28,7 @@ const RightSection = () => (
       What ‘serverless’ really means is that, as a developer you don’t have to
       think about those servers. You just focus on code.
     </Text.p>
-    <Flex width={1} flexDirection={['column', 'column', 'row']}>
+    <Flex width={1} flexDirection={['column', 'column', 'column', 'row']}>
       <Button onClick={() => push(learn.useCases)} mb={3} mr={[0, 0, '32px']}>
         use cases
       </Button>
