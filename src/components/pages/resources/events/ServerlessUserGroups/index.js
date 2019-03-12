@@ -1,9 +1,10 @@
 import React from 'react'
-import { Background, Box, Heading } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
 import dotsBackground from 'src/assets/images/dots-background.png'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const items = [
   {
@@ -14,7 +15,7 @@ const items = [
   {
     title: 'Triangle Serverless',
     location: 'Raleigh, NC',
-    link: 'https://meetup.com/TriangleServerless'
+    link: 'https://meetup.com/TriangleServerless',
   },
   {
     title: 'Serverless New York City',
@@ -51,7 +52,7 @@ const items = [
     location: 'Sacramento, CA',
     link: 'https://meetup.com/Sacramento-Serverless-Meetup',
   },
-    {
+  {
     title: 'Serverless Miami',
     location: 'Miami, FL',
     link: 'https://www.meetup.com/Serverless-Miami/',
@@ -61,7 +62,7 @@ const items = [
     location: 'Vancouver, BC',
     link: 'https://meetup.com/Serverless-Vancouver',
   },
-    {
+  {
     title: 'Serverless Cork',
     location: 'Sao Paulo, Brazil',
     link: 'https://www.meetup.com/meetup-group-ynxOSSBL/',
@@ -86,7 +87,7 @@ const items = [
     location: 'Milano, MI',
     link: 'https://meetup.com/Serverless-Italy',
   },
-    {
+  {
     title: 'Serverless Ukraine',
     location: 'Lviv, Ukraine',
     link: 'https://www.meetup.com/Serverless-Lviv/',
@@ -119,21 +120,12 @@ const items = [
 ]
 
 const ServerlessUserGroups = () => (
-  <Background
-    background={`url(${dotsBackground})`}
-    backgroundSize="cover"
-  >
+  <Background background={`url(${dotsBackground})`} backgroundSize='cover'>
     <AppContainer>
       <Box pb={[300, 300, 13]}>
-        <Heading.h4
-          fontFamily="SoleilBk"
-          fontSize={[4, 4, 5]}
-          pt={5}
-          pb={2}
-          align="center"
-        >
+        <Heading.h3 pt={5} pb={2} align='center'>
           Serverless User Groups
-        </Heading.h4>
+        </Heading.h3>
         <ServerlessUserGroupStack items={items} />
       </Box>
     </AppContainer>
