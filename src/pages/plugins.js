@@ -18,7 +18,7 @@ const Plugins = ({ data: plugins }) => {
     >
       <Helmet title='Plugins Explorer | Serverless Plugins Directory' />
       <Hero />
-      <Content plugins={edges.map(({ node }) => node)} />
+      <Content plugins={edges.reverse().map(({ node }) => node)} />
     </DefaultLayout>
   )
 }
@@ -27,10 +27,7 @@ export const query = graphql`
   query Plugins {
     allPlugin(
       limit: 15
-      sort: {
-        fields: [frontmatter___highlighted, frontmatter___npmDownloads]
-        order: ASC
-      }
+      sort: { fields: [frontmatter___npmDownloads], order: DESC }
     ) {
       totalCount
       edges {
