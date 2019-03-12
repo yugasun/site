@@ -1,26 +1,23 @@
 const statusOptions = [
   [
     {
-      id: 'approved',
-      name: 'status',
-      text: 'Approved',
-    },
-    {
       id: 'certified',
       name: 'status',
-      text: 'Certified',
+      text: 'certified',
+    },
+  ],
+  [
+    {
+      id: 'approved',
+      name: 'status',
+      text: 'approved',
     },
   ],
   [
     {
       id: 'unconfirmed',
       name: 'status',
-      text: 'Unconfirmed',
-    },
-    {
-      id: 'deprecated',
-      name: 'status',
-      text: 'Deprecated',
+      text: 'not yet approved',
     },
   ],
 ]

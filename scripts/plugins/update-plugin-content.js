@@ -6,8 +6,8 @@ const path = require('path')
 const _ = require('lodash')
 let featuredPlugins
 
-function isFileFeatured(folderName) {
-  if (featuredPlugins.includes(folderName)) {
+function isFileFeatured(githubUrl) {
+  if (featuredPlugins.includes(githubUrl)) {
     return true
   } else {
     return false
@@ -102,9 +102,20 @@ module.exports = function updatePluginsContent(
   pluginsDirectoryPath,
   callback
 ) {
+  let rawPluginsDataForFeatured = rawPluginsData.filter(thisPlugin => {
+    if (
+      thisPlugin.status !== 'unchecked' &&
+      thisPlugin.status !== 'deprecated'
+    ) {
+      return thisPlugin
+    }
+  })
   featuredPlugins = _.map(
-    _.orderBy(rawPluginsData, ['npmDownloads'], ['desc']).splice(0, 15),
-    'name'
+    _.orderBy(rawPluginsDataForFeatured, ['npmDownloads'], ['desc']).splice(
+      0,
+      15
+    ),
+    'githubUrl'
   )
   dir.readFiles(
     pluginsDirectoryPath,
@@ -132,7 +143,7 @@ module.exports = function updatePluginsContent(
       item.authorName = getAuthorName(item.gitLink)
       item.authorLink = getAuthorLink(item.gitLink)
       item.seoTitle = makeSEOTitle(item.title)
-      if (isFileFeatured(pluginName)) {
+      if (isFileFeatured(pluginMetaData.githubUrl)) {
         item.highlighted = true
       }
 

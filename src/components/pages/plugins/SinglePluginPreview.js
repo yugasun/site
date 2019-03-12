@@ -1,6 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Text, Card, Image, Row, Absolute } from 'serverless-design-system'
+import {
+  Box,
+  Text,
+  Card,
+  Image,
+  Row,
+  Absolute,
+  Relative,
+  Flex,
+} from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
@@ -13,7 +22,7 @@ import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
 const statusBadges = {
   certified: certifiedBadge,
   unconfirmed: unconfirmedBadge,
-  approved: null,
+  approved: approvedBadge,
 }
 
 const TextWithWordWrap = styled(P)`
@@ -28,6 +37,14 @@ const HoverableColumn = styled(Card)`
     &:hover {
       box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
     }
+  }
+`
+
+const FlexWithFloat = styled(Flex)`
+  float: right;
+  @media screen and (max-width: 415px) {
+    position: absolute;
+    left: 0;
   }
 `
 
@@ -80,64 +97,67 @@ const singleExamplePreview = ({ id, frontmatter }) => {
   } = frontmatter
 
   return (
-    <BoxWithMiddleElementMargin
-      width={[1, 1, 1 / 2, 1 / 3, '22.5%', '280px']}
-      mb={[42, 42, 32]}
-    >
-      <HoverableColumn>
-        <Box m={['0px 15px', '0px 15px', '32px']}>
-          <InternalLink to={getPluginLink(id)}>
-            <Box>
-              <Absolute
-                mt={-33}
-                ml={['64%', '64%', '28.5%', '18.4%', '11.3%', '11.9%']}
-              >
-                <Image src={statusBadges[status]} />
-              </Absolute>
-              <Row my='8px' pt='5px'>
-                <Box mt='-2px'>
-                  <Image maxHeight='16px' src={starIcon} objectFit='contain' />
-                </Box>
-                &nbsp;
-                <Text
-                  color='gray.2'
-                  fontSize={[1]}
-                  fontFamily='Soleil'
-                  lineHeight={[1.33]}
-                >
-                  {nFormatter(githubStars)}
-                </Text>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <Image
-                  maxHeight='16px'
-                  src={downloadIcon}
-                  objectFit='contain'
-                />
-                &nbsp;
-                <Text
-                  color='gray.2'
-                  fontSize={[1]}
-                  fontFamily='Soleil'
-                  lineHeight={[1.33]}
-                >
-                  {nFormatter(npmDownloads)}
-                </Text>
-              </Row>
+    <React.Fragment>
+      <BoxWithMiddleElementMargin
+        width={[1, 1, 1 / 2, 1 / 3, '22.5%', '280px']}
+        mb={[42, 42, 32]}
+      >
+        <HoverableColumn>
+          <FlexWithFloat>
+            <Image src={statusBadges[status]} />
+          </FlexWithFloat>
+          <Box m={['0px 30px', '0px 30px', '32px']}>
+            <InternalLink to={getPluginLink(id)}>
+              <Box>
+                <Row my='8px' pt='5px'>
+                  <Box mt='-2px'>
+                    <Image
+                      maxHeight='16px'
+                      src={starIcon}
+                      objectFit='contain'
+                    />
+                  </Box>
+                  &nbsp;
+                  <Text
+                    color='gray.2'
+                    fontSize={[1]}
+                    fontFamily='Soleil'
+                    lineHeight={[1.33]}
+                  >
+                    {nFormatter(githubStars)}
+                  </Text>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Image
+                    maxHeight='16px'
+                    src={downloadIcon}
+                    objectFit='contain'
+                  />
+                  &nbsp;
+                  <Text
+                    color='gray.2'
+                    fontSize={[1]}
+                    fontFamily='Soleil'
+                    lineHeight={[1.33]}
+                  >
+                    {nFormatter(npmDownloads)}
+                  </Text>
+                </Row>
 
-              <Heading.h5 mb='8px'>{title}</Heading.h5>
-            </Box>
-          </InternalLink>
-          <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
-            {description}
-          </TextWithWordWrap>
-          <ExternalLink to={gitLink}>
-            <Text color='#fd5750' mt={16}>
-              go to github >
-            </Text>
-          </ExternalLink>
-        </Box>
-      </HoverableColumn>
-    </BoxWithMiddleElementMargin>
+                <Heading.h5 mb='8px'>{title}</Heading.h5>
+              </Box>
+            </InternalLink>
+            <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
+              {description}
+            </TextWithWordWrap>
+            <ExternalLink to={gitLink}>
+              <Text color='#fd5750' mt={16}>
+                go to github >
+              </Text>
+            </ExternalLink>
+          </Box>
+        </HoverableColumn>
+      </BoxWithMiddleElementMargin>
+    </React.Fragment>
   )
 }
 

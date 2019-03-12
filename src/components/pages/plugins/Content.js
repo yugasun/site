@@ -45,7 +45,10 @@ export default class Content extends React.Component {
         this.setState({ isLoading: true })
 
         if (this.state.initState) {
-          this.addResults({ filters: 'NOT highlighted:true' })
+          this.addResults({
+            filters:
+              "NOT highlighted:'true' AND NOT status:'deprecated' AND NOT status:'unchecked'",
+          })
         } else {
           const currentFilters = this.makeFilterQuery(this.state.filter)
           this.addResults(currentFilters)
@@ -101,7 +104,7 @@ export default class Content extends React.Component {
   makeFilterQuery = filter => {
     const searchQuery = filter.search
 
-    let filtersQuery = "NOT status:'deprecated'"
+    let filtersQuery = "NOT status:'deprecated' AND NOT status:'unchecked'"
     Object.keys(filter).map(key => {
       //skipping 'search' key since algolia has query parameter specifically for search text, deleting it before forming filterQuery
       if (filter[key] && key !== 'search') {
@@ -110,6 +113,7 @@ export default class Content extends React.Component {
         }
 
         filter[key].forEach((value, index) => {
+          value = value === 'not yet approved' ? 'unconfirmed' : value
           if (index === 0) {
             filtersQuery += `${key}:'${value.toLowerCase()}'`
           } else {
@@ -118,9 +122,6 @@ export default class Content extends React.Component {
         })
       }
     })
-    if (filter.status && filter.status.includes('Deprecated')) {
-      filtersQuery = filtersQuery.replace("NOT status:'deprecated' AND ", '')
-    }
 
     let searchObj = {}
     if (searchQuery) {
