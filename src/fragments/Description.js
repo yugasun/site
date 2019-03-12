@@ -1,25 +1,25 @@
 import React from 'react'
-import {
-  Box,
-  Column,
-  P,
-  Background,
-} from 'serverless-design-system'
-import { AppContainer } from 'src/components'
-import { TitleWithIcon } from 'src/fragments'
+import { Box, Column, Background } from 'serverless-design-system'
+import { AppContainerNewest as AppContainer } from 'src/components'
+import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
+import { P } from 'src/fragments/DesignSystem'
 
 const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
   <Box width={1}>
     <Background
       background={`url(${imgSrc})`}
-      backgroundRepeat="no-repeat"
-      backgroundPosition={[`${imageAlignment} top`, `${imageAlignment} top`, imageAlignment]}
-      backgroundSize={["120%", "120%", "70%"]}
+      backgroundRepeat='no-repeat'
+      backgroundPosition={[
+        `${imageAlignment} top`,
+        `${imageAlignment} top`,
+        imageAlignment,
+      ]}
+      backgroundSize={['120%', '120%', '70%']}
     >
       <AppContainer>
         <Column
           mt={2}
-          alignItems={ imageAlignment === 'right' ? 'flex-start' : 'flex-end' }
+          alignItems={imageAlignment === 'right' ? 'flex-start' : 'flex-end'}
         >
           <Box
             width={[1, 1, 0.45]}
@@ -27,15 +27,11 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
             pt={['95%', '95%', 2, 8, '7vw']}
           >
             <Box mb={[2, 2, 4, 5]}>
-              <TitleWithIcon>
-                { title }
-              </TitleWithIcon>
+              <TitleWithIcon>{title}</TitleWithIcon>
             </Box>
-            {
-              descriptions.map((description, index) => (
-                <P key={`description-${index}`}>{ description }</P>
-              ))
-            }
+            {descriptions.map((description, index) => (
+              <P key={`description-${index}`}>{description}</P>
+            ))}
           </Box>
         </Column>
       </AppContainer>
@@ -45,4 +41,4 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
 
 Description.defaultProps = { imageAlignment: 'right' }
 
-export default Description;
+export default Description
