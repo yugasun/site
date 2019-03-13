@@ -2,7 +2,7 @@
     <g fill="none" fill-rule="evenodd">
         <path fill="#FD5750" d="M0 0h39v39H0z"/>
         <path fill="#FFF" d="M19.5 28.25l-3.233 1.7.618-3.6-2.616-2.55 3.615-.525L19.5 20l1.616 3.275 3.615.525-2.616 2.55.618 3.6z"/>
-        <path stroke="#FFF" d="M14.5 9.5v7.484l5.076 3.41 4.924-3.406V9.5h-10z"/>
+        <path stroke="#FFF" stroke-width="2" d="M15 10v6.717l4.572 3.073L24 16.726V10h-9z"/>
         <path fill="#FFF" d="M14 9h6v12l-6-3.75z"/>
     </g>
 </svg>
