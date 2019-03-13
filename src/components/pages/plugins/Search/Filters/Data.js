@@ -17,7 +17,7 @@ const statusOptions = [
     {
       id: 'unconfirmed',
       name: 'status',
-      text: 'not yet approved',
+      text: 'community',
     },
   ],
 ]

@@ -113,7 +113,7 @@ export default class Content extends React.Component {
         }
 
         filter[key].forEach((value, index) => {
-          value = value === 'not yet approved' ? 'unconfirmed' : value
+          value = value === 'community' ? 'unconfirmed' : value
           if (index === 0) {
             filtersQuery += `${key}:'${value.toLowerCase()}'`
           } else {
