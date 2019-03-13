@@ -2,54 +2,41 @@ import React from 'react'
 import {
   Box,
   Column,
+  Flex,
   Feature as FeatureItem,
-  Heading,
   Row,
   Text,
 } from 'serverless-design-system'
-
+import { Heading, P } from 'src/fragments/DesignSystem'
 import { AppContainer } from 'src/components'
 
 const Features = ({ title, description, features, leadingNumber }) => (
   <AppContainer>
     <Column px={[0, 0, 0, 45]}>
-      <Box my={[0, 0, 0, 4]}>
-        <Heading.h2
-          align="center"
-          fontFamily="SoleilSb"
-          lineHeight="1.4"
-          my={1}
-        >
+      <Box my={[0, 0, 0, 4]} width={[1, 1, 0.5]} mx='auto'>
+        <Heading.h2 align='center' my={1}>
           {title}
         </Heading.h2>
-        {
-          description && (
-            <Text.p
-              align="center"
-              fontFamily="Soleil"
-              fontSize={1}
-              lineHeight={3}
-              color="gray.2"
-            >
-              { description }
-            </Text.p>
-          )
-        }
+        {description && (
+          <Box width={0.8} mx='auto'>
+            <P align='center' color='gray.3'>
+              {description}
+            </P>
+          </Box>
+        )}
       </Box>
       <Row flexWrap='wrap' mt={3}>
-        {
-          features.map(({ header, img, content, action }, index) => (
-            <FeatureItem
-              key={header}
-              header={header}
-              content={content}
-              action={action}
-              img={img}
-              rightAligned={index % 2 === 0}
-              leadingNumber={leadingNumber}
-            />
-          ))
-        }
+        {features.map(({ header, img, content, action }, index) => (
+          <FeatureItem
+            key={header}
+            header={header}
+            content={content}
+            action={action}
+            img={img}
+            rightAligned={index % 2 === 0}
+            leadingNumber={leadingNumber}
+          />
+        ))}
       </Row>
     </Column>
   </AppContainer>
