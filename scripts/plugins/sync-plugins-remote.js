@@ -22,19 +22,23 @@ function downloadTheseRepos(allRepos) {
     allRepos,
     20,
     (thisRepo, eachCallback) => {
-      const thisRepoUrl = thisRepo.githubUrl.endsWith('/')
-        ? thisRepo.githubUrl.slice(0, -1)
-        : thisRepo.githubUrl
-      const downloadLink = `${thisRepoUrl}/archive/master/.zip`
-      const repoUrlSplit = thisRepoUrl.split('/')
-      const repoName = repoUrlSplit[repoUrlSplit.length - 1]
-      download(downloadLink, `${pluginsRepoPath}/${repoName}`, error => {
-        if (error) {
-          eachCallback()
-        } else {
-          eachCallback()
-        }
-      })
+      const thisRepoUrl = thisRepo.repoUrl.endsWith('/')
+        ? thisRepo.repoUrl.slice(0, -1)
+        : thisRepo.repoUrl
+      if (thisRepoUrl) {
+        const downloadLink = `${thisRepoUrl}/archive/master/.zip`
+        const repoUrlSplit = thisRepoUrl.split('/')
+        const repoName = repoUrlSplit[repoUrlSplit.length - 1]
+        download(downloadLink, `${pluginsRepoPath}/${repoName}`, error => {
+          if (error) {
+            eachCallback()
+          } else {
+            eachCallback()
+          }
+        })
+      } else {
+        eachCallback()
+      }
     },
     err => {
       if (err) {

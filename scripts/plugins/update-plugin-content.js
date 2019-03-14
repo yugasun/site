@@ -6,8 +6,8 @@ const path = require('path')
 const _ = require('lodash')
 let featuredPlugins
 
-function isFileFeatured(githubUrl) {
-  if (featuredPlugins.includes(githubUrl)) {
+function isFileFeatured(repoUrl) {
+  if (featuredPlugins.includes(repoUrl)) {
     return true
   } else {
     return false
@@ -36,12 +36,12 @@ function makeSEOTitle(title) {
   return seoTitle
 }
 
-function getAuthorName(githubUrl) {
-  return githubUrl.replace('https://github.com/', '').split('/')[0]
+function getAuthorName(repoUrl) {
+  return repoUrl.replace('https://github.com/', '').split('/')[0]
 }
 
-function getAuthorLink(githubUrl) {
-  const authorName = getAuthorName(githubUrl)
+function getAuthorLink(repoUrl) {
+  const authorName = getAuthorName(repoUrl)
   return `https://github.com/${authorName}`
 }
 
@@ -115,7 +115,7 @@ module.exports = function updatePluginsContent(
       0,
       15
     ),
-    'githubUrl'
+    'repoUrl'
   )
   dir.readFiles(
     pluginsDirectoryPath,
@@ -126,7 +126,7 @@ module.exports = function updatePluginsContent(
       if (err) console.error(err)
       const pluginName = path.parse(filename).base.replace('.md', '')
       const pluginMetaData = rawPluginsData.filter(obj => {
-        if (obj.githubUrl.includes(pluginName)) {
+        if (obj.repoUrl.endsWith(pluginName)) {
           return true
         } else {
           return false
@@ -136,14 +136,14 @@ module.exports = function updatePluginsContent(
       const item = matter(fixedContent).data
       item.title = formatTitle(_.startCase(pluginName))
       item.description = pluginMetaData.description
-      item.gitLink = pluginMetaData.githubUrl
+      item.gitLink = pluginMetaData.repoUrl
       item.npmDownloads = pluginMetaData.npmDownloads
       item.githubStars = pluginMetaData.githubStars
       item.status = pluginMetaData.status
       item.authorName = getAuthorName(item.gitLink)
       item.authorLink = getAuthorLink(item.gitLink)
       item.seoTitle = makeSEOTitle(item.title)
-      if (isFileFeatured(pluginMetaData.githubUrl)) {
+      if (isFileFeatured(pluginMetaData.repoUrl)) {
         item.highlighted = true
       }
 
