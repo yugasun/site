@@ -1,4 +1,5 @@
 export { default as Features } from './Features'
+export { default as Feature } from './Feature'
 export { default as HeroActions } from './HeroActions'
 export { default as HeroWrapper } from './HeroWrapper'
 export { default as Testimonial } from './Testimonial'

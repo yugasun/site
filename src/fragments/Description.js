@@ -4,7 +4,13 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
-const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
+const Description = ({
+  title,
+  descriptions,
+  imgSrc,
+  imageAlignment,
+  customStyle,
+}) => (
   <Box width={1}>
     <Background
       background={`url(${imgSrc})`}
@@ -20,6 +26,7 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
         <Column
           mt={2}
           alignItems={imageAlignment === 'right' ? 'flex-start' : 'flex-end'}
+          {...customStyle}
         >
           <Box
             width={[1, 1, 0.45]}

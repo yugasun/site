@@ -1,28 +1,23 @@
 import React from 'react'
 import { Text } from 'serverless-design-system'
 import PrefooterNewest from 'src/components/PrefooterNewest'
+import { P } from 'src/fragments/DesignSystem'
 
 const sentences = [
-  <Text.p
-    color='gray.3'
-    mt={[0, 0, 0]}
-    mb={[0, 0, 0]}
-    fontFamily='SoleilBk'
-    lineHeight={1.63}
-  >
+  <P color='gray.3' mt={[0, 0, 0]} mb={[0, 0, 0]}>
     To get started, pop open your terminal &amp; run:
-  </Text.p>,
-  <Text.p
+  </P>,
+  <P
     color='gray.2'
-    mb={[0, 0, 62]}
     mt={0}
     fontFamily='Serverless'
-    fontSize={14}
-    letterSpacing={'0.4px'}
+    fontSize={16}
+    letterSpacing={0}
     lineHeight={1.71}
+    mb={0}
   >
     npm install serverless -g
-  </Text.p>,
+  </P>,
 ]
 
 const actions = [

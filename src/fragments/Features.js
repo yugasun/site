@@ -1,14 +1,8 @@
 import React from 'react'
-import {
-  Box,
-  Column,
-  Flex,
-  Feature as FeatureItem,
-  Row,
-  Text,
-} from 'serverless-design-system'
+import { Box, Column, Row } from 'serverless-design-system'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { AppContainer } from 'src/components'
+import { Feature as FeatureItem } from 'src/fragments'
 
 const Features = ({ title, description, features, leadingNumber }) => (
   <AppContainer>

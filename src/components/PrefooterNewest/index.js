@@ -52,7 +52,7 @@ const LeftColumn = ({ heading, sentences, actions }) => (
       <OverflowWithTextCenter
         o='hidden'
         width={1}
-        pb={[62, 62, 110, 110, 5]}
+        pb={[62, 62, 110, 110, 7]}
         pt={[0, 0, 0, 0, 5]}
         px={[3, 3, 6]}
       >
@@ -65,20 +65,23 @@ const LeftColumn = ({ heading, sentences, actions }) => (
         >
           {heading}
         </Heading.h3>
-        {sentences.map(
-          (sentence, index) =>
-            typeof sentence === 'string' ? (
-              <P color='black' mt={0} key={index}>
-                {sentence}
-              </P>
-            ) : (
-              <React.Fragment key={index}>{sentence}</React.Fragment>
-            )
-        )}
+
+        <Flex width={[1, 1, 1, 0.5, 0.5, 0.3]} mx='auto' flexDirection='column'>
+          {sentences.map(
+            (sentence, index) =>
+              typeof sentence === 'string' ? (
+                <P color='black' mt={0} key={index}>
+                  {sentence}
+                </P>
+              ) : (
+                <React.Fragment key={index}>{sentence}</React.Fragment>
+              )
+          )}
+        </Flex>
         <Flex
           justifyContent='center'
           flexDirection={['column', 'column', 'row']}
-          mt={[3, 3, 0]}
+          mt={[3, 3, 5]}
         >
           {actions.map(({ name, navProps }, index) => (
             <Box key={index} mx={[0, 0, '10px']} my={[1, 1, 0]}>
@@ -93,8 +96,8 @@ const LeftColumn = ({ heading, sentences, actions }) => (
   </Background>
 )
 
-const Prefooter = ({ heading, sentences, actions }) => (
-  <Relative height='400px' mt={28}>
+const Prefooter = ({ heading, sentences, actions, prefooterHeight }) => (
+  <Relative height={prefooterHeight ? prefooterHeight : '445px'} mt={28}>
     <ResponsiveStack bg='white' o='hidden' height='100%'>
       <LeftColumn heading={heading} sentences={sentences} actions={actions} />
     </ResponsiveStack>
