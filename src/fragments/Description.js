@@ -20,7 +20,7 @@ const Description = ({
         `${imageAlignment} top`,
         imageAlignment,
       ]}
-      backgroundSize={['120%', '120%', '70%']}
+      backgroundSize={['120%', '120%', '70%', '70%', '63%']}
     >
       <AppContainer>
         <Column

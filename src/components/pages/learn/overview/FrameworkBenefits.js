@@ -23,23 +23,22 @@ const featureItemsData = [
   {
     header: 'Code for your infrastructure',
     img: codeForInfrastructure,
-    content:
-      `Because Serverless Applications require automation. If you're tying together multiple managed services and functions, you cannot rely on a checklist of manual steps. You should be able to recreate your entire application with a command.`,
+    content: `Because Serverless Applications require automation. If you're tying together multiple managed services and functions, you cannot rely on a checklist of manual steps. You should be able to recreate your entire application with a command.`,
   },
   {
     header: 'Centered on development experience',
     img: developmentExperience,
-    content:
-      `We’re engineers, too, and we built a simple, straightforward tool we’d love using. The point of serverless is to make developers more productive; we wanted the Serverless Framework to embody that most of all.`,
+    content: `We’re engineers, too, and we built a simple, straightforward tool we’d love using. The point of serverless is to make developers more productive; we wanted the Serverless Framework to embody that most of all.`,
   },
 ]
 
 const OverviewFeatures = () => (
   <Box>
     <Features
-      title="Build with the Serverless Framework"
-      description="At over 25,000 GitHub stars, the open source Serverless Framework is the number one tool for building and deploying serverless applications. It is:"
+      title='Build with the Serverless Framework'
+      description='At over 25,000 GitHub stars, the open source Serverless Framework is the number one tool for building and deploying serverless applications. It is:'
       features={featureItemsData}
+      headingStyle={{ my: [0, 0, 3, 4] }}
     />
   </Box>
 )

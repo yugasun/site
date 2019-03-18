@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
-import { Text } from 'serverless-design-system'
 import PrefooterNewest from 'src/components/PrefooterNewest'
 import { InternalLink } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
@@ -10,21 +8,21 @@ const actions = [
   {
     name: 'use cases',
     navProps: {
-      to: '/learn/use-cases',
+      to: '/learn/use-cases/',
       completed: true,
     },
   },
   {
     name: 'comparisons',
     navProps: {
-      to: '/learn/comparisons',
+      to: '/learn/comparisons/',
       completed: true,
     },
   },
   {
     name: 'case studies',
     navProps: {
-      to: '/learn/case-study',
+      to: '/learn/case-study/',
       completed: true,
     },
   },
@@ -63,7 +61,7 @@ const LearnPrefooter = () => (
     heading='Next Steps'
     sentences={sentences}
     actions={actions}
-    prefooterHeight={600}
+    prefooterHeight={[600, 600, 500, 500, 550, 600]}
   />
 )
 

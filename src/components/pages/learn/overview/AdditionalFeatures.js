@@ -26,12 +26,12 @@ const data = [
 ]
 
 export default () => (
-  <Box pb={[300, 300, 10, 0]}>
+  <Box pb={[26, 26, 0]}>
     {data.map((description, index) => (
       <Description
         key={index}
         {...description}
-        customStyle={{ pt: [0, 0, 0, 0, 180] }}
+        customStyle={{ pt: [0, 0, 0, 0, 50, 100], mt: [0, 0, 0, 0, 50] }}
       />
     ))}
   </Box>
