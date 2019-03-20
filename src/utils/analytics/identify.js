@@ -14,7 +14,7 @@ export default function identify(id, profile) {
     // set name
     ...getNameData(profile),
     // set company data
-    ...getCompanyName(profile)
+    ...getCompanyName(profile),
   }
   // set picture
   if (profile.picture) {
@@ -34,6 +34,31 @@ export default function identify(id, profile) {
     data.frameworkId = profile.frameworkId
   }
 
+  // set poi
+  if (profile.poi) {
+    data.poi = profile.poi
+  }
+
+  // set infrastructure
+  if (profile.infrastructure) {
+    data.infrastructure = profile.infrastructure
+  }
+
+  // set developers_count
+  if (profile.developers_count) {
+    data.developers_count = profile.developers_count
+  }
+
+  // set message
+  if (profile.message) {
+    data.message = profile.message
+  }
+
+  // set lead_source
+  if (profile.lead_source) {
+    data.lead_source = profile.lead_source
+  }
+
   if (process.env.NODE_ENV !== 'production') {
     console.log('identify', data) // eslint-disable-line
     return false
@@ -41,7 +66,7 @@ export default function identify(id, profile) {
 
   // Send data to hubspot
   if (process.env.GATSBY_ADD_CONTACT_API) {
-    addHubspotContact(data).then((hsResponse) => {
+    addHubspotContact(data).then(hsResponse => {
       // get hubspot data
       // console.log('hsResponse', hsResponse)
     })
@@ -54,7 +79,11 @@ function getNameData(profile) {
   }
   const nameData = {}
 
-  if (profile.name && typeof profile.name === 'string' && !profile.name.match(/@/)) {
+  if (
+    profile.name &&
+    typeof profile.name === 'string' &&
+    !profile.name.match(/@/)
+  ) {
     const name = profile.name.split(' ')
     if (name[0]) {
       nameData.first_name = name[0]
@@ -82,7 +111,6 @@ function getNameData(profile) {
   return nameData
 }
 
-
 function getCompanyName(profile) {
   if (!profile) {
     return {}
@@ -90,12 +118,13 @@ function getCompanyName(profile) {
   if (profile.company && typeof profile.company === 'string') {
     const company = profile.company.trim().replace(/^@/, '')
     return {
-      company
+      company,
     }
   }
   const meta = profile.user_metadata
   if (meta && meta.fullcontact && meta.fullcontact.organizations) {
-    const companyInfo = meta.fullcontact.organizations.filter((org) => { // eslint-disable-line
+    const companyInfo = meta.fullcontact.organizations.filter(org => {
+      // eslint-disable-line
       if (org.isPrimary) {
         return org
       }
@@ -103,7 +132,7 @@ function getCompanyName(profile) {
 
     if (companyInfo && companyInfo[0] && companyInfo[0].name) {
       return {
-        company: companyInfo[0].name.trim()
+        company: companyInfo[0].name.trim(),
       }
     }
   }

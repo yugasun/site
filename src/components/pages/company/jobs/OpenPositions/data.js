@@ -1,6 +1,20 @@
 export default [
     {
         "heading": "Growth",
+        "title": "Developer Advocate",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/efa6e178-29eb-4f92-9d28-49fb393421cc"
+    },
+    {
+        "heading": "Growth",
+        "title": "Director of Growth Marketing",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/ec1a3ae3-3b51-4d1c-9709-696b6fab7970"
+    },
+    {
+        "heading": "Growth",
         "title": "Enterprise Account Executive",
         "location": "San Francisco/Remote",
         "status": "Full-time",
@@ -21,17 +35,17 @@ export default [
         "link": "https://jobs.lever.co/serverless/8386016f-af6d-49e3-b0b6-2ee19a416396"
     },
     {
+        "heading": "Growth",
+        "title": "Senior Serverless Architect",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/efbc8303-9ca2-4b3c-9b57-fea6149807aa"
+    },
+    {
         "heading": "Engineering",
         "title": "Senior Software Engineer, Open Source tools",
         "location": "San Francisco/Remote",
         "status": "Full-time",
         "link": "https://jobs.lever.co/serverless/43775278-aaca-4056-9a4a-90124141e30c"
-    },
-    {
-        "heading": "Growth",
-        "title": "Serverless Architect",
-        "location": "San Francisco/Remote",
-        "status": "Full-time",
-        "link": "https://jobs.lever.co/serverless/efbc8303-9ca2-4b3c-9b57-fea6149807aa"
     }
 ]

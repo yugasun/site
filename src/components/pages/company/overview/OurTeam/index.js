@@ -13,7 +13,6 @@ import alex from 'src/assets/images/team/alex.png'
 import jeremy from 'src/assets/images/team/jeremy.png'
 import steve from 'src/assets/images/team/steve.png'
 import sebastian from 'src/assets/images/team/sebastian.png'
-import andrea from 'src/assets/images/team/andrea.png'
 import andre from 'src/assets/images/team/andre.png'
 import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
@@ -49,18 +48,17 @@ const teamMembers = [
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
   { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
-  { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
+  {
+    image: steve,
+    name: 'Steve Westergaard',
+    position: 'Senior Full Stack Engineer',
+  },
   { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
 
   {
     image: kristin,
     name: 'Kristin Roche',
     position: 'HR Coordinator/Recruitment Coordinator',
-  },
-  {
-    image: andrea,
-    name: 'Andrea Passwater',
-    position: 'Lead Content Strategist',
   },
   { image: andre, name: 'André Pires', position: 'Lead Growth Designer' },
   { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },

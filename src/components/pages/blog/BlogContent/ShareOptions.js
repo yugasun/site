@@ -51,7 +51,7 @@ export default class ShareOptions extends React.Component {
       <Position
         position='sticky'
         top='40%'
-        height={20}
+        height={0}
         width={1}
       >
         <Absolute
