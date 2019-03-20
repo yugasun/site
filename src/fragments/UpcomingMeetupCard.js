@@ -20,7 +20,11 @@ function getMemberImages() {
 }
 
 const MeetupCard = ({ title, schedule, address, attending }) => (
-  <Relative maxWidth='350px' mx={[0, 0, 2]} my={[1, 1, 2]}>
+  <Relative
+    maxWidth={['350px', '350px', '450px', '350px', '280px', '350px']}
+    mx={[0, 0, 2]}
+    my={[1, 1, 2]}
+  >
     <Card
       width={1}
       border='1px solid #dfe5e6'
