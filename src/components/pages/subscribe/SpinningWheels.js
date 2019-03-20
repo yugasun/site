@@ -44,6 +44,8 @@ class SpinningWheels extends Component {
                 : `url(${spinningWheelAnimation})`
             }
             backgroundRepeat='no-repeat'
+            backgroundPosition={[0, 0, 0, 0, '150px 150px', '150px 50px']}
+            backgroundSize='cover'
           />
         </Absolute>
         <Absolute
@@ -62,6 +64,8 @@ class SpinningWheels extends Component {
                 : `url(${spinningWheelAnimation})`
             }
             backgroundRepeat='no-repeat'
+            backgroundPosition={[0, 0, 0, 0, '-150px -80px', '-30px -70px']}
+            backgroundSize='cover'
           />
         </Absolute>
       </React.Fragment>

@@ -6,7 +6,7 @@ import LeftColumn from './LeftColumn'
 import RightColumn from './RightColumn'
 
 const SubscribeBoxes = () => (
-  <Relative height='470px' pt={['0', '0', '10vh', '10vh', '30vh']}>
+  <Relative height='470px' pt={['0', '0', '10vh', '10vh', '25vh', '30vh']}>
     <AppContainer>
       <Flex
         flexDirection={['column', 'column', 'column', 'column', 'row']}

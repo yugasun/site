@@ -18,7 +18,7 @@ const SubscribePage = () => (
           'white',
           'linear-gradient(139deg,rgb(0,0,0) 61%,#7d2724)',
         ]}
-        height={['100vh', '100vh', '130vh', '130vh', '130vh', '100vh']}
+        height={['100vh', '100vh', '130vh', '130vh', '100vh']}
       >
         <SpinningWheels />
         <SubscribeBoxes />
