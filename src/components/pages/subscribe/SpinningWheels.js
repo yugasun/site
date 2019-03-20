@@ -31,41 +31,41 @@ class SpinningWheels extends Component {
     return (
       <React.Fragment>
         <Absolute
-          right='0'
-          bottom='0'
+          right="0"
+          bottom="0"
           display={['none', 'none', 'none', 'none', 'block']}
         >
           <Background
-            width='622px'
-            height='553px'
+            width="622px"
+            height="553px"
             backgroundImage={
               this.state.usingSafariDesktop
                 ? `url(${spinningWheel})`
                 : `url(${spinningWheelAnimation})`
             }
-            backgroundRepeat='no-repeat'
+            backgroundRepeat="no-repeat"
             backgroundPosition={[0, 0, 0, 0, '150px 150px', '150px 50px']}
-            backgroundSize='cover'
+            backgroundSize="cover"
           />
         </Absolute>
         <Absolute
-          top='0'
-          left='0'
-          zIndex='0'
+          top="0"
+          left="0"
+          zIndex="0"
           width={[0, 0, 0, 0, '40%', '622px']}
           display={['none', 'none', 'none', 'none', 'block']}
         >
           <Background
-            width='622px'
-            height='553px'
+            width="622px"
+            height="553px"
             backgroundImage={
               this.state.usingSafariDesktop
                 ? `url(${spinningWheel})`
                 : `url(${spinningWheelAnimation})`
             }
-            backgroundRepeat='no-repeat'
-            backgroundPosition={[0, 0, 0, 0, '-150px -80px', '-30px -70px']}
-            backgroundSize='cover'
+            backgroundRepeat="no-repeat"
+            backgroundPosition={[0, 0, 0, 0, '-70px -140px', '-10px -140px']}
+            backgroundSize="cover"
           />
         </Absolute>
       </React.Fragment>
