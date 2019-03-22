@@ -14,18 +14,18 @@ import { P } from 'src/fragments/DesignSystem'
 const TrustedClients = () => (
   <Background
     backgroundImage={[`url(${backgroundImage})`]}
-    height={['700px', '700px', '619px']}
+    height={['276px', '276px', '280px', '280px', '300px']}
   >
     <AppContainer>
       <Box width={1} pt={['62px', '62px', '74px']} pb={[300, 300, 12, 12]}>
-        <P align='center' mb={['34px', '34px', '61px']} color='black'>
+        <P align="center" mb={['34px', '34px', '61px']} color="black">
           Serverless is trusted by
         </P>
         <Flex
           justifyContent={['center', 'center', 'space-between']}
-          alignItems='space-between'
-          flexDirection='row'
-          flexWrap='wrap'
+          alignItems="space-between"
+          flexDirection="row"
+          flexWrap="wrap"
           mb={8}
         >
           <Box

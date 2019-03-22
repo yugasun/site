@@ -46,7 +46,7 @@ const EnterpriseComparisonBox = styled(Background)`
 `
 
 const OpenSourceComparisonBox = styled(Background)`
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     margin-top: 200px;
   }
 
@@ -110,7 +110,7 @@ export default class ComparisonBoxes extends React.Component {
           Or install <br /> Framework Open Source
         </Heading.h3>
         <Flex
-          mb={['520px', '520px', '410px', '410px', '400px', '550px']}
+          mb={[62, 62, 0, 0, '100px', '100px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
         >
           <Box
@@ -138,7 +138,7 @@ export default class ComparisonBoxes extends React.Component {
             <LeftSpinningWheel
               left={0}
               zIndex='-1'
-              width={[0, 0, 0, 0, '550px', '650px']}
+              width={[0, 0, 0, 0, '40%', '650px']}
             >
               <Image
                 src={

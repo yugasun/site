@@ -20,6 +20,12 @@ const data = [
 
 export default () => (
   <React.Fragment>
-    { data.map((description, index) => (<Description key={index} {...description} />)) }
+    {data.map((description, index) => (
+      <Description
+        key={index}
+        {...description}
+        customStyle={{ mt: [2, 2, 4, 0] }}
+      />
+    ))}
   </React.Fragment>
-);
+)
