@@ -21,7 +21,7 @@ import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
 
 const statusBadges = {
   certified: certifiedBadge,
-  unconfirmed: communityBadge,
+  community: communityBadge,
   approved: approvedBadge,
 }
 

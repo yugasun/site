@@ -15,7 +15,7 @@ const statusOptions = [
   ],
   [
     {
-      id: 'unconfirmed',
+      id: 'community',
       name: 'status',
       text: 'community',
     },
