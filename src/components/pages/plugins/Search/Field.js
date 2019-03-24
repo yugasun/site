@@ -54,7 +54,7 @@ export default class SearchField extends React.Component {
       >
         <ResponsiveStack>
           <ExamplesSearchField
-            placeholder='Search for an example'
+            placeholder='Search for a plugin'
             height={36}
             width='100%'
             border='none'
@@ -63,7 +63,7 @@ export default class SearchField extends React.Component {
             placeholderColor='#8c8c8c'
             px={[1, 1, 2]}
             onChange={this.handQueryFilter}
-            className='examples-search'
+            className='plugins-search'
           />
         </ResponsiveStack>
       </Card>

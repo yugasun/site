@@ -12,6 +12,7 @@ yarn-error.log
 
 # blogs
 serverless-examples
+serverless-plugins
 serverless-blog
 serverless
 
@@ -24,6 +25,7 @@ content/blog
 content/examples 
 content/framework
 content/example
+content/plugins
 
 # dynamic content files
 src/components/pages/company/jobs/OpenPositions/data.js

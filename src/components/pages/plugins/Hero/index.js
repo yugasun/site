@@ -16,19 +16,19 @@ const ExamplesHero = () => {
       height={[422, 422, 491]}
     >
       <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='examples' />
+        <HeroTabs selected='plugins' />
       </Box>
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
         <Box width={[1]}>
           <Heading.h0 m={0} mt={[42, 42, 0, 0]}>
-            Examples
+            Plugins
           </Heading.h0>
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>
-            See real world Serverless code and architecture examples. Search all
-            examples below.
+            Add functionality to the Serverless Framework. Search all plugins
+            below.
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>

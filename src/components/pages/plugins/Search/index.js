@@ -14,7 +14,6 @@ export default class ExamplesSearch extends React.Component {
     }
 
     this.sendResultsToProps = this.sendResultsToProps.bind(this)
-    this.toggleFilter = this.toggleFilter.bind(this)
   }
 
   sendResultsToProps(newFilter) {
@@ -34,11 +33,6 @@ export default class ExamplesSearch extends React.Component {
     return newObj
   }
 
-  toggleFilter() {
-    const showFiltersBool = this.state.showFilters
-    this.setState({ showFilters: !showFiltersBool })
-  }
-
   render() {
     return (
       <Background background='#f7f7f7'>
@@ -46,20 +40,12 @@ export default class ExamplesSearch extends React.Component {
           <Box
             color='black'
             mb='62px'
-            pb={['22px', '22px', '62px']}
+            pb={['22px', '22px', '22px']}
             pt={['12px', '12px', 22]}
           >
             <Row>
               <SearchField refreshSearch={this.sendResultsToProps} />
             </Row>
-
-            <Box
-              display={
-                this.state.showFilters ? ['none', 'none', 'block'] : 'none'
-              }
-            >
-              <SearchFilters refreshFilters={this.sendResultsToProps} />
-            </Box>
           </Box>
         </AppContainer>
       </Background>

@@ -1,5 +1,6 @@
 export default {
-  platform: { //TODO - phaseOut
+  platform: {
+    //TODO - phaseOut
     framework: '/framework/',
     eventGateway: '/event-gateway/',
     dashboard: '/dashboard/',
@@ -7,13 +8,13 @@ export default {
   products: {
     framework: '/framework/',
     platform: '/platform/',
-    support: '/support/'
+    support: '/support/',
   },
   developersMenu: {
     docs: '/framework/docs/',
-    plugins: 'https://github.com/serverless/plugins',
+    plugins: '/plugins/',
     examples: '/examples/',
-    quickStarts: '/framework/docs/getting-started/'
+    quickStarts: '/framework/docs/getting-started/',
   },
   community: {
     partners: '/partners/',
@@ -21,7 +22,7 @@ export default {
     forum: 'https://forum.serverless.com/',
     events: '/resources/events/',
     slack: '/slack',
-    workshops: '/resources/workshops/'
+    workshops: '/resources/workshops/',
   },
   developers: {
     documentation: {
@@ -38,7 +39,7 @@ export default {
     },
     examples: {
       docs: '/framework/docs/',
-      plugins: 'https://github.com/serverless/plugins',
+      plugins: '/plugins/',
       examples: '/examples/',
     },
   },
