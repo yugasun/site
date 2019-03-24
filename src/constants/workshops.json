@@ -1,9 +1,9 @@
 {
   "san-francisco": {
     "name": "San Francisco",
-    "price": "$500",
-    "cta": "learn more",
-    "description": "Join us for a full-day workshop on operationalizing serverless within your team on Friday, March 1, 2019. "
+    "price": "$1095",
+    "cta": "join waitlist",
+    "description": "We’ll work with you privately in a one on one session to empower your team with serverless knowledge. "
   },
   "seattle": {
     "name": "Seattle",

@@ -1,58 +1,42 @@
 import React from 'react'
 
-import {
-  Background,
-  Box,
-  Column,
-  Heading,
-  Image,
-} from 'serverless-design-system'
+import { Box, Column, Image } from 'serverless-design-system'
 
-import { AppContainer } from 'src/components'
+import { AppContainerNewest as AppContainer } from 'src/components'
 import resourcesMeetupMap from 'src/assets/images/resourcesMeetupMap.png'
-import glitchDivider from 'src/assets/images/glitch-divider.png'
+import { Heading, P } from 'src/fragments/DesignSystem'
+import { ExternalLink } from 'src/fragments'
+import styled from 'styled-components'
 
+const StyledLink = styled(ExternalLink)`
+  &:hover {
+    color: #5b5b5b;
+  }
+  color: #5b5b5b;
+  border-bottom: 1px solid red;
+`
 const Introduction = () => (
-  <Column
-    alignItems="center"
-    my={[4, 4, 4, 5]}
-  >
+  <Column alignItems='center' my={[4, 4, 4, 5]}>
     <AppContainer>
-      <Heading.h2
-        fontFamily="SoleilSb"
-        lineHeight={3}
-        letterSpacing="0"
-        align="center"
-      >
-        Find a Serverless event near you.
-      </Heading.h2>
-      <Heading.h6
-        fontFamily="SoleilBk"
-        color="gray.3"
+      <Heading.h2 align='center'>Find a Serverless event near you.</Heading.h2>
+      <P
+        fontFamily='SoleilBk'
+        color='gray.3'
         fontSize={2}
         lineHeight={4}
-        align="center"
+        align='center'
       >
-        Don't see an event in your city ? Contact us and start your own.
-      </Heading.h6>
+        Don't see an event in your city ?{' '}
+        <StyledLink to='mailto:hello@serverless.com'>Contact us</StyledLink> and
+        start your own.
+      </P>
     </AppContainer>
     <Box mt={4} width={1}>
-      <Background
-        background={`url(${glitchDivider})`}
-        backgroundSize="contain"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        width={1}
-      >
-        <AppContainer>
-          <Column alignItems="center">
-            <Image
-              src={resourcesMeetupMap}
-              alt="resources-map"
-            />
-          </Column>
-        </AppContainer>
-      </Background>
+      <AppContainer>
+        <Column alignItems='center'>
+          <Image src={resourcesMeetupMap} alt='resources-map' />
+        </Column>
+      </AppContainer>
     </Box>
   </Column>
 )

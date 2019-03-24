@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { TestimonialNew as Testimonial, Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/framework/Hero'
 import UseCase from 'src/components/pages/framework/UseCase'
 import Features from 'src/components/pages/framework/Features'
 import Compare from 'src/components/pages/framework/Compare'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>

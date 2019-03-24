@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/enterprise/Hero'
 import Features from 'src/components/pages/enterprise/Features'
 import Benefits from 'src/components/pages/enterprise/Benefits'
 import Form from 'src/components/pages/enterprise/Form'
 import Compare from 'src/components/pages/enterprise/Compare'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainerNewest as AppContainer } from 'src/components'
 

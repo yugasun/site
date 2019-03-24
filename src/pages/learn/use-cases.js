@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Prefooter from 'src/components/pages/learn/Prefooter'
 import Hero from 'src/components/pages/learn/use-cases/Hero'
 import UseCaseList from 'src/components/pages/learn/use-cases/List'

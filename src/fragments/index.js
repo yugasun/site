@@ -1,4 +1,5 @@
 export { default as Features } from './Features'
+export { default as Feature } from './Feature'
 export { default as HeroActions } from './HeroActions'
 export { default as HeroWrapper } from './HeroWrapper'
 export { default as Testimonial } from './Testimonial'
@@ -16,7 +17,12 @@ export { default as Helmet } from './Helmet'
 export { default as NewToServerlessPrefooter } from './NewToServerlessPrefooter'
 export { AutoScrollList, AutoScrollMenu } from './AutoscrollMenuList'
 export { default as HeroWrapperNew } from './HeroWrapperNew'
-export { default as NewToServerlessPrefooterNew } from './NewToServerlessPrefooterNew'
+export {
+  default as NewToServerlessPrefooterNew,
+} from './NewToServerlessPrefooterNew'
+export {
+  default as NewToServerlessPrefooterNewest,
+} from './NewToServerlessPrefooterNewest'
 export { default as HeroTabsNew } from './HeroTabsNew'
 export { default as HeroActionsNew } from './HeroActionsNew'
 export { default as TestimonialNew } from './TestimonialNew'
