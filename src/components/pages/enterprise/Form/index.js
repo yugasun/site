@@ -145,7 +145,7 @@ export default class Form extends React.Component {
 
     return (
       <React.Fragment>
-        <Box id={'enterprise-contact-form'} pb={[92, 92, 120]} />
+        <Box id={'enterprise-contact-form'} pb={[92, 92, 120, 120, 150]} />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
             flexDirection={['column', 'column', 'column', 'column', 'row']}
