@@ -24,8 +24,6 @@ const FrameworkHero = () => (
   >
     <Header />
     <Actions />
-    <Benefit />
-    <Points />
     <Form />
   </HeroWrapper>
 )
