@@ -21,7 +21,7 @@ const EnterpriseHeroBenefit = () => (
       </Text>
     </Box>
     <Flex
-      width={[1, 1, 0.69, 0.69, 1]}
+      width={[1, 1, 0.8]}
       mx='auto'
       mt={[0, 0, 0, 0, 105]}
       justifyContent='center'
@@ -30,7 +30,7 @@ const EnterpriseHeroBenefit = () => (
         url={dashboardOverviewVideo}
         playing={true}
         loop={true}
-        width={['90%', '90%', '90%', '90%', '80%']}
+        width={['90%', '90%', '90%', '90%', '60%']}
         muted={true}
         height={['250px', '250px', '300px', '300px', '537px']}
       />
