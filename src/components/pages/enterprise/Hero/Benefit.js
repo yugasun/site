@@ -17,7 +17,7 @@ const EnterpriseHeroBenefit = () => (
         url={dashboardOverviewVideo}
         playing={true}
         loop={true}
-        width={['90%', '90%', '90%', '90%', '60%']}
+        width={['80%', '80%', '90%', '90%', '60%']}
         muted={true}
         height={['250px', '250px', '300px', '300px', '537px']}
         playsinline={true}
