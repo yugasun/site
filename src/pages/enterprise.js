@@ -19,6 +19,9 @@ const Enterprise = ({ location }) => (
       background={[
         'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
         'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
+        'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
+        'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
+        'linear-gradient(150deg,rgb(0,0,0) 77%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 74%,#70221f)`,
       ]}
     >
