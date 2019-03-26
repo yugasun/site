@@ -20,6 +20,7 @@ const EnterpriseHeroBenefit = () => (
         width={['90%', '90%', '90%', '90%', '60%']}
         muted={true}
         height={['250px', '250px', '300px', '300px', '537px']}
+        playsinline={true}
       />
     </Flex>
   </Box>
