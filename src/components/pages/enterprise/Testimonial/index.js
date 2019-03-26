@@ -31,9 +31,8 @@ const TestimonialComponent = () => (
             designation='CTO of Shamrock Trading Corporation'
             alt='Shamrock Trading Corporation'
           >
-            “With Serverless, it’s as easy as — I need this API to be connected
-            to this Lambda, go.The ability for developers to test and experiment
-            and get stuff out there is huge.”
+            “With Serverless Framework Enterprise, our developers were able to
+            focus on building out what was needed. They could just code.”
           </Testimonial>
           <CaseStudyDownload />
         </AppContainer>
