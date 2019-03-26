@@ -47,13 +47,13 @@ const Benefits = () => (
             letterSpacing={['-0.5px']}
             mt={[5, 5, 0, 0]}
           >
-            Plus: 24/7 Support from the team that brought you the Serverless
+            Plus: Support from the team that brought you the Serverless
             Framework
           </Heading.h3>
         </TextWithIcon>
         <P color='white'>
-          Dedicated training and support around CI/CD, serverless DevOps,
-          architecture design, and more.
+          Dedicated support from serverless experts to help you architect,
+          develop, secure and operate your serverless applications.
         </P>
         <ButtonWithZindex href='#enterprise-contact-form'>
           <Button width={208} mt={4}>

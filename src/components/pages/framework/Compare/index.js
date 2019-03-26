@@ -25,19 +25,11 @@ const openSourcePoints = [
 ]
 
 const enterprisePoints = [
-  ['Everything in open source plus…'],
+  ['A hosted or self-hosted console that helps you build more and manage less'],
   [
-    'Serverless Secrets, to help you onboard new developers efficiently and securely',
-    'Enterprise enablement and best practices workshop, led by serverless experts',
+    'Simplifies secrets management, injects best practices, and delivers actionable, troubleshooting insights',
   ],
-  [
-    'Serverless Safeguards, to ensure operational and security best practices are followed',
-    'Custom plugin and use case template development',
-  ],
-  [
-    'Serverless Insights to help you monitor, debug and optimize your applications',
-    'Business hour or 24/7 support options',
-  ],
+  ['Dedicated support and service from serverless experts'],
 ]
 
 const EnterpriseComparisonBox = styled(Background)`

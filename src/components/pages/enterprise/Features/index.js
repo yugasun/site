@@ -27,23 +27,23 @@ const HoverableReactPlayer = styled(ReactPlayer)`
 
 const FeaturesData = [
   {
-    title: '1. Serverless Secrets: onboarding enablement and control',
+    title: '1. Simplify security',
     description:
-      'New team members can start contributing immediately, without needing to set up or maintain cloud credentials.',
+      'With Serverless Secrets, you can easily manage and delegate access to sensitive information your serverless applications require (e.g. access keys).  You can create secrets within the Enterprise console and reference them via the Serverless Framework’s variable system.You can also create a special type of secret that gives your developers and CI/CD systems temporary access to deploy to your cloud accounts.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
   },
   {
-    title: '2. Serverless Safeguards: safer deployments',
+    title: '2. Inject best practices',
     description:
-      'Pre-defined security policies enforce best practices across the team.',
+      'Serverless Framework Enterprise includes its own policy engine called Serverless Safeguards, which comes pre-configured with policies to enforce development, operational and security best practices like, restricted-deploy-times, required-stack-tags, and no-wild-iam-role-statements. We will warn you if your application contains any well known architectural anti-patterns and help you fix the problem.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-safeguards.mp4',
   },
   {
-    title: '3. Serverless Insights: monitor application health',
+    title: '3. Troubleshoot like a boss',
     description:
-      'Our dashboard provides proactive tips so you can make your applications as efficient as possible: real-time cost and performance analysis, actionable operations events, and more.',
+      'Serverless Framework Enterprise includes a complete monitoring and alerting feature-set called Serverless Insights. Automagically upon deployment, your Functions will be instrumented to generate performance information and alerts, like “Deployments,” “Unusual Invocation Rates,” and “New Error Detected”.When a new error is detected in your code, we’ll tell you about it immediately, and we’ll even tell you where it is.',
     videoUrl:
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
   },
