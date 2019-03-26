@@ -6,24 +6,11 @@ const dashboardOverviewVideo =
 import ReactPlayer from 'react-player'
 
 const EnterpriseHeroBenefit = () => (
-  <Box mt={[6, 6, 6, 6, 10]} mb={[0, 0, 0, 0, 48]}>
-    <Box width={[1, 1, 0.69, 0.69, 0.65]} mx='auto'>
-      <Text
-        color='white'
-        align='center'
-        fontSize={[24, 24, 24, 24, 32]}
-        fontFamily='Soleil'
-        letterSpacing={['-0.38px', '-0.38px', '-0.38px', '-0.38px', '-0.5px']}
-        lineHeight={['38px', '38px', '38px', '38px', '44px']}
-        mb={[5, 5, 5, 5, 0]}
-      >
-        The total serverless solution
-      </Text>
-    </Box>
+  <Box mt={[6, 6, 6, 6, 6]} mb={[0, 0, 0, 0, 15]}>
     <Flex
       width={[1, 1, 0.8]}
       mx='auto'
-      mt={[0, 0, 0, 0, 105]}
+      mt={[0, 0, 0, 0, 92]}
       justifyContent='center'
     >
       <ReactPlayer

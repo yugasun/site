@@ -24,7 +24,7 @@ const Header = () => (
       framework enterprise
     </HeroMainTitle>
     <Box width={[1]}>
-      <Heading.h4 align='center'>Develop faster and smarter</Heading.h4>
+      <Heading.h4 align='center'>The total serverless solution</Heading.h4>
     </Box>
   </Flex.horizontallyCenter>
 )
