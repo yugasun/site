@@ -19,7 +19,7 @@ const FrameworkHero = () => (
     }
     backgroundSize={['contain', 'contain', 'cover']}
     backgroundPosition={['top', 'top', 'center']}
-    height={[600, 600, 485, 485, 1359]}
+    height={[450, 450, 615, 720, 1380, 1439]}
     backgroundRepeat='no-repeat'
   >
     <Header />

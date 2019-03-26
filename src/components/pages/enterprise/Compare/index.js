@@ -97,9 +97,9 @@ export default class ComparisonBoxes extends React.Component {
 
   render() {
     return (
-      <Box mt={[62, 62, 92, 92, 132]}>
+      <Box mt={[62, 62, 92, 92, 132]} pb={52}>
         <Heading.h3 align='center'>
-          Prefer to go it alone first? That’s ok!
+          Prefer to go at it alone first? That’s ok!
         </Heading.h3>
         <Heading.h4 align='center' color='black'>
           Install Serverless Framework Open Source.

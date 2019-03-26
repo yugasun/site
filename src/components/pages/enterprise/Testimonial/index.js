@@ -21,7 +21,7 @@ const TestimonialWrapper = styled(Box)`
 `
 
 const TestimonialComponent = () => (
-  <Box mt={[92, 92, 0]}>
+  <Box>
     <TestimonialWrapper>
       <Position pt={[0, 0, 150]}>
         <AppContainer>
