@@ -9,12 +9,16 @@ import CloudProviders from './CloudProviders'
 
 const FrameworkHero = () => (
   <HeroWrapper
-    background={['linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',`linear-gradient(155deg,rgb(0,0,0) 60%,#70221f)`]}
+    background={[
+      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
+      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
+      `linear-gradient(155deg,rgb(0,0,0) 60%,#70221f)`,
+    ]}
   >
     <Header />
     <HeroImage />
-    <Advantage />
     <Actions />
+    <Advantage />
     <CloudProviders />
   </HeroWrapper>
 )

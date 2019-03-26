@@ -93,13 +93,17 @@ export default class ComparisonBoxes extends React.Component {
   render() {
     return (
       <AppContainer>
+        <Heading.h3 align='center' mb={0}>
+          Add Serverless Framework Enterprise
+        </Heading.h3>
         <Heading.h3 align='center'>
-          Easy, open Serverless development.
+          for a complete serverless solution
         </Heading.h3>
         <Flex
           mb={[62, 62, 0, 0, '100px', '100px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
           mt={[62, 62, 92, 92, 46]}
+          pb={52}
         >
           <Box
             display={['none', 'none', 'none', 'none', 'block']}
