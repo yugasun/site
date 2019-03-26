@@ -19,10 +19,8 @@ const Header = () => (
         width={['50px', '50px', '50px', '50px', '44px']}
       />
     </Flex.horizontallyCenter>
-    <HeroTitle>serverless</HeroTitle>
-    <HeroMainTitle mb={[32, 32, 32, 32, 52]}>
-      framework enterprise
-    </HeroMainTitle>
+    <HeroTitle>serverless framework</HeroTitle>
+    <HeroMainTitle mb={[32, 32, 32, 32, 52]}>enterprise</HeroMainTitle>
     <Box width={[1]}>
       <Heading.h4 align='center'>The total serverless solution</Heading.h4>
     </Box>
