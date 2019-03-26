@@ -6,7 +6,7 @@ import Testimonial from './TestimonialComp'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
 import shamrockLogo from 'src/assets/images/shamrock-logo.png'
-import { Button } from 'src/fragments/DesignSystem'
+import CaseStudyDownload from '../CaseStudyDownload'
 
 const TestimonialWrapper = styled(Box)`
   background: #fd5750;
@@ -17,13 +17,6 @@ const TestimonialWrapper = styled(Box)`
   @media screen and (max-width: 414px) {
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-`
-
-const HoverableButton = styled(Button)`
-  &:hover {
-    background-color: white;
-    color: red;
   }
 `
 
@@ -42,11 +35,7 @@ const TestimonialComponent = () => (
             to this Lambda, go.The ability for developers to test and experiment
             and get stuff out there is huge.”
           </Testimonial>
-          <Flex mt={22} justifyContent='center'>
-            <HoverableButton bg='white' color='red' width={280}>
-              download case study
-            </HoverableButton>
-          </Flex>
+          <CaseStudyDownload />
         </AppContainer>
       </Position>
     </TestimonialWrapper>
