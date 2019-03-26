@@ -8,10 +8,10 @@ import { validateEmail } from 'src/utils/validator'
 import EmailField from './EmailField'
 import { Button as ButtonNew } from 'src/fragments/DesignSystem'
 import { ExternalLink } from 'src/fragments'
-const formId = 'whitepaper-download'
+const formId = 'case-study-download'
 import formHandler from 'src/utils/formHandler'
-const whitepaperFile =
-  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'
+const caseStudyFile =
+  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/Serverless_CaseStudy_Shamrock.pdf'
 
 const StyledForm = styled.form`
   display: block;
@@ -90,7 +90,7 @@ class NewsLetterForm extends React.Component {
     return (
       <React.Fragment>
         {this.state.isSubscribed ? (
-          <ExternalLink to={whitepaperFile}>
+          <ExternalLink to={caseStudyFile}>
             <ButtonNew width={[323, 323, 400, 400, 383]} mt={[0, 0, 0, 0, 6]}>
               Download ready, click here.
             </ButtonNew>
@@ -100,7 +100,7 @@ class NewsLetterForm extends React.Component {
             onSubmit={this.handleSubmit}
             style={formStyles}
             id={formId}
-            action={whitepaperFile}
+            action={caseStudyFile}
             method='get'
           >
             <Wrapper

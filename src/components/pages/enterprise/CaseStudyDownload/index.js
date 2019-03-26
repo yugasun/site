@@ -38,8 +38,9 @@ const Title = ({ component: HeadingComp, color }) => (
     align={['left']}
     mt={[5, 5, 0]}
   >
-    Download our white paper to see common Serverless Architecture use cases,
-    architecture diagrams, and cost estimates.
+    Download this case study to see how one company uses Serverless Framework
+    Enterprise to accelerate development and simplify operations of their
+    serverless applications.
     <P color='gray.3'>Enter email to download.</P>
   </HeadingComp>
 )
@@ -155,7 +156,7 @@ class index extends Component {
                   ]}
                 >
                   <Flex
-                    width={[1, 1, 0.83, 0.64, 0.5, 0.4]}
+                    width={[1, 1, 0.83, 0.64, 0.5, 0.5]}
                     pt={[1, 1, 5, 5, '63px']}
                     pb={[1, 1, 3, 4, '63px']}
                     pr={2}
@@ -197,7 +198,7 @@ class index extends Component {
           <HoverableButton
             bg='white'
             color='red'
-            width={[240, 280]}
+            width={[320, 320, 280]}
             onClick={this.handleModalOpen}
           >
             download case study
