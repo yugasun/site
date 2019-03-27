@@ -20,8 +20,8 @@ const HoverableReactPlayer = styled(ReactPlayer)`
     transition: all 1s;
     transform: ${props =>
       props.index === 1
-        ? 'rotateY(25deg) scale(1.4)'
-        : 'rotateY(-25deg) scale(1.4)'};
+        ? 'rotateY(12deg) scale(1.4)'
+        : 'rotateY(-12deg) scale(1.4)'};
   }
 `
 
