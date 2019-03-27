@@ -4,7 +4,7 @@
 const path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
 const repoURL = 'https://github.com/serverless/blog'
-const repoBranch = 'master'
+const repoBranch = 'post-sfe'
 /* uncomment out the line below to work locally with different blog branch
 repoBranch = 'your-custom-repo-branch-here'
 /**/
@@ -18,7 +18,19 @@ module.exports = {
   blogRepoPath: path.join(projectRoot, 'serverless-blog'),
   blogRepoPostPath: path.join(projectRoot, 'serverless-blog/posts/'),
   siteBlogPath: path.join(projectRoot, 'content/blog/'),
-  authorDataPath: path.join(projectRoot, 'src/constants/', 'generated-authors.json'),
-  categoriesDataPath: path.join(projectRoot, 'src/constants', 'categories.json'),
-  featuredBlogsDataPath: path.join(projectRoot, 'src/constants', 'featured-blogs.json'),
+  authorDataPath: path.join(
+    projectRoot,
+    'src/constants/',
+    'generated-authors.json'
+  ),
+  categoriesDataPath: path.join(
+    projectRoot,
+    'src/constants',
+    'categories.json'
+  ),
+  featuredBlogsDataPath: path.join(
+    projectRoot,
+    'src/constants',
+    'featured-blogs.json'
+  ),
 }
