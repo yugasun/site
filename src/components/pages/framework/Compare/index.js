@@ -25,19 +25,11 @@ const openSourcePoints = [
 ]
 
 const enterprisePoints = [
-  ['Everything in open source plus…'],
+  ['A hosted or self-hosted console that helps you build more and manage less'],
   [
-    'Serverless Secrets, to help you onboard new developers efficiently and securely',
-    'Enterprise enablement and best practices workshop, led by serverless experts',
+    'Simplifies secrets management, injects best practices, and delivers actionable, troubleshooting insights',
   ],
-  [
-    'Serverless Safeguards, to ensure operational and security best practices are followed',
-    'Custom plugin and use case template development',
-  ],
-  [
-    'Serverless Insights to help you monitor, debug and optimize your applications',
-    'Business hour or 24/7 support options',
-  ],
+  ['Dedicated support and service from serverless experts'],
 ]
 
 const EnterpriseComparisonBox = styled(Background)`
@@ -101,13 +93,17 @@ export default class ComparisonBoxes extends React.Component {
   render() {
     return (
       <AppContainer>
+        <Heading.h3 align='center' mb={0}>
+          Add Serverless Framework Enterprise
+        </Heading.h3>
         <Heading.h3 align='center'>
-          Easy, open Serverless development.
+          for a complete serverless solution
         </Heading.h3>
         <Flex
           mb={[62, 62, 0, 0, '100px', '100px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
           mt={[62, 62, 92, 92, 46]}
+          pb={52}
         >
           <Box
             display={['none', 'none', 'none', 'none', 'block']}

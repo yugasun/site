@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Image, Box } from 'serverless-design-system'
+import { Flex, Image, Box, Column } from 'serverless-design-system'
 import {
   HeroTitle,
   HeroMainTitle,
@@ -19,15 +19,17 @@ const Header = () => (
         width={['50px', '50px', '50px', '50px', '44px']}
       />
     </Flex.horizontallyCenter>
-    <HeroTitle>serverless</HeroTitle>
-    <HeroMainTitle mb={[32, 32, 32, 32, 52]}>
-      framework enterprise
-    </HeroMainTitle>
-    <Box width={[1]}>
-      <Heading.h4 align='center'>
-        Scale, monitor, and secure cloud applications.
-      </Heading.h4>
-    </Box>
+    <HeroTitle>serverless framework</HeroTitle>
+    <HeroMainTitle mb={[32, 32, 32, 32, 52]}>enterprise</HeroMainTitle>
+    <Column width={[1]} justifyContent='center' alignItems='center'>
+      <Heading.h4>The total serverless solution</Heading.h4>
+      <Box width={[1, 1, 0.5, 0.4, 0.3]}>
+        <Heading.h5 color='#8c8c8c' align='center'>
+          Out-of-the-box monitoring, alerts, secrets, policy enforcement and
+          more.
+        </Heading.h5>
+      </Box>
+    </Column>
   </Flex.horizontallyCenter>
 )
 

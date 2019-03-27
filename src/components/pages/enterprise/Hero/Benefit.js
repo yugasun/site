@@ -1,27 +1,28 @@
 import React from 'react'
 
-import { Box, Text } from 'serverless-design-system'
-import { Heading } from 'src/fragments/DesignSystem'
+import { Box, Text, Flex } from 'serverless-design-system'
+const dashboardOverviewVideo =
+  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-framework-enterprise-dashboard-overview-dark_SMALL.mp4'
+import ReactPlayer from 'react-player'
 
 const EnterpriseHeroBenefit = () => (
-  <Box mt={[6, 6, 6, 6, 10]}>
-    <Box width={[1, 1, 0.69, 0.69, 0.65]} mx='auto'>
-      <Text
-        color='white'
-        align='center'
-        fontSize={[24, 24, 24, 24, 32]}
-        fontFamily='Soleil'
-        letterSpacing={['-0.38px', '-0.38px', '-0.38px', '-0.38px', '-0.5px']}
-        lineHeight={['38px', '38px', '38px', '38px', '44px']}
-      >
-        We make cloud simple
-      </Text>
-    </Box>
-    <Box width={[1, 1, 0.69, 0.69, 0.49]} mx='auto' mt={35}>
-      <Heading.h4 color='#8c8c8c' align='center'>
-        Streamlined tooling and 24/7 support for cloud-based enterprises.
-      </Heading.h4>
-    </Box>
+  <Box mt={[6, 6, 6, 6, 6]} mb={[0, 0, 0, 0, 15]}>
+    <Flex
+      width={[1, 1, 0.8]}
+      mx='auto'
+      mt={[0, 0, 0, 0, 92]}
+      justifyContent='center'
+    >
+      <ReactPlayer
+        url={dashboardOverviewVideo}
+        playing={true}
+        loop={true}
+        width={['80%', '80%', '90%', '90%', '60%']}
+        muted={true}
+        height={['250px', '250px', '300px', '300px', '537px']}
+        playsinline={true}
+      />
+    </Flex>
   </Box>
 )
 

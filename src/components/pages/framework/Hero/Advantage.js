@@ -5,34 +5,32 @@ import { HeroAdvantage } from 'src/fragments/DesignSystem/HeroElements'
 
 const advantages = [
   {
-    title: 'Infrastructure as Code',
+    title: 'Simple Developer Experience',
     description:
-      'With the Serverless Framework you can define your entire Serverless application, utilizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.',
+      'Keep your workflow in the CLI, focus on code, avoid the AWS console.',
   },
   {
-    title: 'Simple Serverless Development',
+    title: 'Amazing Community',
     description:
-      'The Serverless Framework provides a simple, intuitive CLI experience that makes it easy to develop and deploy applications to cloud platforms like AWS, Microsoft Azure, Google Cloud Platform, IBM OpenWhisk, and more.',
+      'Over 28,000 Github stars, 100+ example apps, and 200+ open source plugins. The Serverless Framework has been adopted by thousands of companies worldwide.',
   },
   {
-    title: 'Provider Agnostic',
+    title: 'Vendor Agnostic',
     description:
-      'The Serverless Framework is open source and provider agnostic, meaning you only need one tool to tap in to the power of all the cloud providers.',
+      'The Serverless Framework supports 8 different cloud providers with a single developer experience, giving you the choice to pick the proper tool for the job.',
   },
 ]
 
 const Advantages = () => (
   <ResponsiveStack flexWrap='wrap'>
-    {
-      advantages.map(({ title, description }) => (
-        <HeroAdvantage
-          key={title}
-          title={title}
-          description={description}
-          img={RedRectangeDots}
-        />
-      ))
-    }
+    {advantages.map(({ title, description }) => (
+      <HeroAdvantage
+        key={title}
+        title={title}
+        description={description}
+        img={RedRectangeDots}
+      />
+    ))}
   </ResponsiveStack>
 )
 

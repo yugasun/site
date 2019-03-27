@@ -3,30 +3,26 @@ import { Text } from 'serverless-design-system'
 import PrefooterNew from 'src/components/PrefooterNew'
 
 const sentences = [
-  (
-    <Text.p 
-      color='gray.3'
-      mt={[76, 76, 79]}
-      mb={[0, 0, 0]}
-      fontFamily='SoleilBk'
-      lineHeight={1.63}
-    >
-      To get started, pop open your terminal &amp; run:
-    </Text.p>
-  ),
-  (
-    <Text.p
-      color='gray.2'
-      mt={15}
-      mb={[0,0,0]}
-      fontFamily='Serverless'
-      fontSize={14}
-      letterSpacing={'0.4px'}
-      lineHeight={1.71}
-    >
-      npm install serverless -g
-    </Text.p>
-  ),
+  <Text.p
+    color='gray.3'
+    mt={[76, 76, 79]}
+    mb={[0, 0, 0]}
+    fontFamily='SoleilBk'
+    lineHeight={1.63}
+  >
+    To get started, pop open your terminal &amp; run:
+  </Text.p>,
+  <Text.p
+    color='gray.2'
+    mt={15}
+    mb={[0, 0, 0]}
+    fontFamily='Serverless'
+    fontSize={14}
+    letterSpacing={'0.4px'}
+    lineHeight={1.71}
+  >
+    npm install serverless -g
+  </Text.p>,
 ]
 
 const actions = [
@@ -47,9 +43,8 @@ const actions = [
   {
     name: 'serverless plugins',
     navProps: {
-      to: 'https://github.com/serverless/plugins',
-      crossDomain: true,
-      completed: false,
+      to: '/plugins/',
+      completed: true,
     },
   },
 ]

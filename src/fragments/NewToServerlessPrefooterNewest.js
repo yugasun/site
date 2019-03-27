@@ -38,9 +38,8 @@ const actions = [
   {
     name: 'plugins',
     navProps: {
-      to: 'https://github.com/serverless/plugins',
-      crossDomain: true,
-      completed: false,
+      to: '/plugins/',
+      completed: true,
     },
   },
 ]
