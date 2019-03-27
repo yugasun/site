@@ -103,7 +103,7 @@ export default class ComparisonBoxes extends React.Component {
           mb={[62, 62, 0, 0, '100px', '100px']}
           flexDirection={['column', 'column', 'column', 'column', 'row']}
           mt={[62, 62, 92, 92, 46]}
-          pb={[52, 52, 52, 52, 72]}
+          pb={52}
         >
           <Box
             display={['none', 'none', 'none', 'none', 'block']}
