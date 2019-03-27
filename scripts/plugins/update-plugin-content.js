@@ -68,6 +68,7 @@ function formatTitle(title) {
     'Sqs',
     'Ttl',
     'Spa',
+    'Sdk',
   ]
   const brandWords = {
     dynamodb: 'DynamoDB',

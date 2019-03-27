@@ -140,7 +140,14 @@ const singleExamplePreview = ({ id, frontmatter }) => {
                   </Text>
                 </Row>
 
-                <Heading.h5 mb='8px'>{title}</Heading.h5>
+                <Heading.h5 mb='8px'>
+                  {title.startsWith('Serverless')
+                    ? title
+                        .replace('Serverless ', '')
+                        .replace('Plugin ', '')
+                        .replace('Plugin', '')
+                    : title.replace('Plugin ', '').replace('Plugin', '')}
+                </Heading.h5>
               </Box>
             </InternalLink>
             <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
