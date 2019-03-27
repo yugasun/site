@@ -3,7 +3,7 @@ import { Box, Text, HorizontalRule, P, Flex } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const Point = styled(P)`
-  font-size: 12px;
+  font-size: 16px;
   line-height: 16px;
   letter-spacing: 0;
   color: white;
@@ -33,7 +33,7 @@ const ComparisonBox = ({ points, heading }) => (
             flexDirection={['column', 'column', 'row']}
             justifyContent='space-between'
           >
-            <Box width={[1, 1, 0.5]} pr={[0, 0, 0, 2, 3]}>
+            <Box width={[1, 1, 0.8]} pr={[0, 0, 0, 2, 3]}>
               <Point>{point[0]}</Point>
             </Box>
             <Box
@@ -44,9 +44,6 @@ const ComparisonBox = ({ points, heading }) => (
               ]}
             >
               <HorizontalStyle color='#eaeaea' height='1px' width='100%' />
-            </Box>
-            <Box width={[1, 1, 0.5]}>
-              <Point>{point[1]}</Point>
             </Box>
           </Flex>
         </Fragment>

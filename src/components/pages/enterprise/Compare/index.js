@@ -97,7 +97,7 @@ export default class ComparisonBoxes extends React.Component {
 
   render() {
     return (
-      <Box mt={[62, 62, 92, 92, 132]} pb={52}>
+      <Box mt={[62, 62, 92, 92, 132]} pb={[52, 52, 52, 52, 72]}>
         <Heading.h3 align='center'>
           Prefer to go at it alone first? That’s ok!
         </Heading.h3>
