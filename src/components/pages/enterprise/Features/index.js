@@ -14,14 +14,26 @@ const ButtonWithZindex = styled('a')`
 const FlexWithBackground = styled(Flex)`
   background-image: radial-gradient(circle at 50% 50%, #481f1d 5%, #000 75%);
   perspective: 1000px;
+
+  @media screen and (min-width: 450px) and (max-width: 768px) {
+    background-image: radial-gradient(circle at 51% 50%, #481f1d 5%, #000 65%);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    background-image: radial-gradient(circle at 51% 50%, #481f1d 5%, #000 52%);
+  }
+
+  @media screen and (max-width: 415px) {
+    background-image: radial-gradient(circle at 51% 50%, #481f1d 5%, #000 65%);
+  }
 `
 const HoverableReactPlayer = styled(ReactPlayer)`
   @media screen and (min-width: 1280px) {
     transition: all 1s;
     transform: ${props =>
       props.index === 1
-        ? 'rotateY(12deg) scale(1.4)'
-        : 'rotateY(-12deg) scale(1.4)'};
+        ? 'rotateY(9deg) scale(1.4)'
+        : 'rotateY(-9deg) scale(1.4)'};
   }
 `
 
