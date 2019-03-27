@@ -157,7 +157,7 @@ export default class Form extends React.Component {
                 letterSpacing={'-0.4px'}
                 mb={0}
               >
-                Request enterprise demo
+                Contact us
               </Heading.h4>
 
               <Box mt={2} width={1}>
