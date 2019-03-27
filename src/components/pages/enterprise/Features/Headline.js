@@ -20,7 +20,7 @@ const Headline = () => (
     <Box width={[1, 1, 0.65, 0.5, 0.4]}>
       <Heading.h5 color='#8c8c8c' align='center' mb={0}>
         An end-to-end toolkit for serverless application management that helps
-        your team move fast, safely
+        your team move fast, safely.
       </Heading.h5>
     </Box>
   </Column>

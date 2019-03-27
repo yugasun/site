@@ -39,12 +39,13 @@ const HoverableReactPlayer = styled(ReactPlayer)`
 
 const FeaturesData = [
   {
-    title: '1. Simplify security',
+    title: '1. Troubleshoot like a boss',
     description:
-      'With Serverless Secrets, you can easily manage and delegate access to sensitive information your serverless applications require (e.g. access keys). You can create secrets within the Enterprise console and reference them via the Serverless Framework’s variable system. \n You can also create a special type of secret that gives your developers and CI/CD systems temporary access to deploy to your cloud accounts.',
+      'Serverless Framework Enterprise includes a complete monitoring and alerting feature-set called Serverless Insights. Automagically upon deployment, your Functions will be instrumented to generate performance information and alerts, like "Deployments", "Unusual Invocation Rates" and "New Error Detected". \n When a new error is detected in your code, we’ll tell you about it immediately, and we’ll even tell you where it is.',
     videoUrl:
-      'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
+      'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
   },
+
   {
     title: '2. Inject best practices',
     description:
@@ -53,11 +54,11 @@ const FeaturesData = [
       'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-safeguards.mp4',
   },
   {
-    title: '3. Troubleshoot like a boss',
+    title: '3. Simplify security',
     description:
-      'Serverless Framework Enterprise includes a complete monitoring and alerting feature-set called Serverless Insights. Automagically upon deployment, your Functions will be instrumented to generate performance information and alerts, like "Deployments", "Unusual Invocation Rates" and "New Error Detected". \n When a new error is detected in your code, we’ll tell you about it immediately, and we’ll even tell you where it is.',
+      'With Serverless Secrets, you can easily manage and delegate access to sensitive information your serverless applications require (e.g. access keys). You can create secrets within the Enterprise console and reference them via the Serverless Framework’s variable system. \n You can also create a special type of secret that gives your developers and CI/CD systems temporary access to deploy to your cloud accounts.',
     videoUrl:
-      'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-insights.mp4',
+      'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/serverless-secrets.mp4',
   },
 ]
 
