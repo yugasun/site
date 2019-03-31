@@ -1,19 +1,22 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/Default'
-import Prefooter from 'src/components/pages/learn/case-studies/Prefooter'
+import DefaultLayout from 'src/layouts/DefaultNewest'
+import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
 import Hero from 'src/components/pages/learn/case-studies/Hero'
-import Parallax from 'src/components/pages/learn/case-studies/Parallax'
-import Results from 'src/components/pages/learn/case-studies/Results'
+import Content from 'src/components/pages/learn/case-studies/Content'
 import { Helmet } from 'src/fragments'
 
-const CaseStudy = ({ location }) => (
-  <DefaultLayout prefooter={Prefooter} transparentHeader>
-    <Helmet title='Serverless Case Studies' location={location} />
-    <Hero />
-    <Parallax />
-    <Results />
-  </DefaultLayout>
-)
+const CaseStudies = () => {
+  return (
+    <DefaultLayout
+      prefooter={NewToServerlessPrefooter}
+      transparentHeader={true}
+    >
+      <Helmet title='Serverless Case Studies' />
+      <Hero />
+      <Content />
+    </DefaultLayout>
+  )
+}
 
-export default CaseStudy
+export default CaseStudies

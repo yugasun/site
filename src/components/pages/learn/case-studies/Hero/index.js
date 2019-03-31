@@ -1,37 +1,40 @@
 import React from 'react'
 
-import { Box, Text, ResponsiveStack } from 'serverless-design-system'
-import { HeroWrapper } from 'src/fragments'
+import { Box, ResponsiveStack, Flex } from 'serverless-design-system'
+import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import background from 'src/assets/images/case-studies-background.png'
+import { PL, Heading } from 'src/fragments/DesignSystem'
 
-const UseCasesHero = () => (
-  <HeroWrapper
-    background={`black url(${background})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
-  >
-    <Box mb={[2, 2, 7]}>
-      <HeroTabs selected="case-studies" />
-    </Box>
-
-    <ResponsiveStack
-      mb={[2, 2, 4, 6]}
-      color="white"
+const ExamplesHero = () => {
+  return (
+    <HeroWrapper
+      background={[
+        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+        `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
+      ]}
+      height={[422, 422, 491]}
     >
-      <Box width={[1, 1, 10/12, 11/12]}>
-        <Text.p
-          fontSize={[6, 6, 7, 8]}
-          fontFamily="Soleil"
-          lineHeight={1}
-          letterSpacing={'-0.2'}
-          m={0}
-        >
-          Scaling to millions of requests with the Serverless Framework
-        </Text.p>
+      <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
+        <HeroTabs selected='case-studies' />
       </Box>
-    </ResponsiveStack>
-  </HeroWrapper>
-)
 
-export default UseCasesHero
+      <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
+        <Box width={[1]}>
+          <Heading.h0 m={0} mt={[42, 42, 0, 0]}>
+            Case Studies
+          </Heading.h0>
+        </Box>
+        <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
+          <PL color='white' mt={[22, 22, 1.5]} mb={0}>
+            Hundreds of teams use the Serverless Framework to launch robust
+            applications in a fraction of the time. Read their use cases and
+            stories here.
+          </PL>
+        </Flex.verticallyCenter>
+      </ResponsiveStack>
+    </HeroWrapper>
+  )
+}
+
+export default ExamplesHero
