@@ -22,7 +22,7 @@ const actions = [
   {
     name: 'case studies',
     navProps: {
-      to: '/learn/case-study/',
+      to: '/learn/case-studies/',
       completed: true,
     },
   },

@@ -47,7 +47,7 @@ export default {
     useCases: '/learn/use-cases/',
     why: '/learn/overview/',
     comparisons: '/learn/comparisons/',
-    caseStudy: '/learn/case-study/',
+    caseStudy: '/learn/case-studies/',
   },
   resources: {
     overview: '/resources/overview/',
