@@ -16,7 +16,7 @@ export default [
     thumbnail:
       'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/sqquid/sqquid-serverless-thumb.jpg',
     url: '/blog/sqquid-one-hundred-percent-serverless/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title: 'How Droplr Scales to Millions With The Serverless Framework',
@@ -24,7 +24,7 @@ export default [
       "Droplr is used to share 1000s of screencasts and files every day. Here's how they empowered their growth with the Serverless Framework.",
     thumbnail: 'https://avatars2.githubusercontent.com/u/828077?s=400&v=4',
     url: '/blog/how-droplr-scales-to-millions-serverless-framework/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title: 'Why we switched from docker to serverless',
@@ -33,7 +33,7 @@ export default [
     thumbnail:
       'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/header+images/docker-vs-serverless.jpg',
     url: '/blog/why-we-switched-from-docker-to-serverless/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title:
@@ -43,7 +43,7 @@ export default [
     thumbnail:
       'https://cloud.githubusercontent.com/assets/20538501/24520509/5c4edd80-154e-11e7-825c-600ad2e5e247.png',
     url: '/blog/dept-of-defense-doc-bot/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title: 'How Reuters Replaced WebSockets with Amazon Cognito and SQS',
@@ -51,7 +51,7 @@ export default [
     thumbnail:
       'https://user-images.githubusercontent.com/832852/26854484-5457a7e4-4ae4-11e7-8f71-fc51bc710a6b.jpg',
     url: '/blog/how-reuters-replaced-websockets-with-amazon-cognito-and-sqs/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title:
@@ -61,7 +61,7 @@ export default [
     thumbnail:
       'https://cloud.githubusercontent.com/assets/20538501/24061595/08747a26-0b26-11e7-9faf-52c7e3ae3492.png',
     url: '/blog/abstract-partner-program-announcement/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title:
@@ -71,7 +71,7 @@ export default [
     thumbnail:
       'https://cloud.githubusercontent.com/assets/195404/19552825/d3b728ee-96b1-11e6-85e2-5fd4b8714514.png',
     url: '/blog/going-serverless-at-bandlab/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title: 'Scaling to millions of requests with the Serverless Framework',
@@ -79,7 +79,7 @@ export default [
       'Learn how Parallax built An Infinitely Scalable Online Recording Campaign For David Guetta & UEFA.',
     thumbnail: 'https://serverless.com/static/parallax.8e9c487c.png',
     url: '/blog/introducing-serverless-partners-meet-parallax/',
-    framework: 'open-source',
+    framework: 'open source',
   },
   {
     title:
@@ -89,6 +89,6 @@ export default [
     thumbnail:
       'https://cloud.githubusercontent.com/assets/20538501/24770638/45a78f82-1ad0-11e7-97c5-7cfed24d1e9b.png',
     url: '/blog/sc5-serverless-backend-for-whim/',
-    framework: 'open-source',
+    framework: 'open source',
   },
 ]
