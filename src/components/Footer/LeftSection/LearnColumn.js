@@ -23,6 +23,10 @@ const LearnColumn = () => (
         name: 'case studies',
         navProps: { to: learn.caseStudy, completed: true },
       },
+      {
+        name: 'courses',
+        navProps: { to: learn.courses, completed: true },
+      },
     ]}
   />
 )

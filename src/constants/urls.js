@@ -48,6 +48,7 @@ export default {
     why: '/learn/overview/',
     comparisons: '/learn/comparisons/',
     caseStudy: '/learn/case-studies/',
+    courses: '/learn/courses/',
   },
   resources: {
     overview: '/resources/overview/',
