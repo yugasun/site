@@ -16,7 +16,7 @@ const ExamplesHero = () => {
       height={[422, 422, 491]}
     >
       <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='case-studies' />
+        <HeroTabs selected='courses' />
       </Box>
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
