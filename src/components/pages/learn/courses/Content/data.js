@@ -5,7 +5,7 @@ export default [
       'Serverless Applications with AWS teaches you to build serverless applications using AWS Lambda and other cloud-based services.',
     thumbnail: 'http://i3.ytimg.com/vi/Zf3UgS55J-M/hqdefault.jpg',
     author: 'Marcia Villalba',
-    ratingsStar: '5',
+    ratingsStar: '5.0',
     totalRatings: '1',
     platform: 'Manning',
     level: 'Beginner',
@@ -46,7 +46,7 @@ export default [
     thumbnail:
       'https://res.cloudinary.com/acloud-guru/image/fetch/w_480,h_270,q_auto,f_auto/https%3A%2F%2Facloudguru-content-assets-production.s3-accelerate.amazonaws.com%2Faws-serverless-with-graphql-video-poster.jpg',
     author: 'Ryan Brown',
-    ratingsStar: '5',
+    ratingsStar: '5.0',
     totalRatings: '20',
     platform: 'A Cloud Guru',
     level: 'Intermediate',

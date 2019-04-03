@@ -27,7 +27,8 @@ const ExamplesHero = () => {
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>
-            XYZ
+            Learn from the best. Find all the information that you need to begin
+            using the Serverless Framework.
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>

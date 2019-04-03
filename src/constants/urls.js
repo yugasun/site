@@ -15,6 +15,7 @@ export default {
     plugins: '/plugins/',
     examples: '/examples/',
     quickStarts: '/framework/docs/getting-started/',
+    courses: '/courses/',
   },
   community: {
     partners: '/partners/',
@@ -48,7 +49,6 @@ export default {
     why: '/learn/overview/',
     comparisons: '/learn/comparisons/',
     caseStudy: '/learn/case-studies/',
-    courses: '/learn/courses/',
   },
   resources: {
     overview: '/resources/overview/',
