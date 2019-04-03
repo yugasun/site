@@ -42,6 +42,7 @@ export default {
       docs: '/framework/docs/',
       plugins: '/plugins/',
       examples: '/examples/',
+      courses: '/courses/',
     },
   },
   learn: {

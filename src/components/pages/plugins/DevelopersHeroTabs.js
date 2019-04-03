@@ -24,6 +24,11 @@ const data = [
     value: 'examples',
     navProps: { to: developers.examples.examples },
   },
+  {
+    label: 'courses',
+    value: 'courses',
+    navProps: { to: developers.examples.courses },
+  },
 ]
 
 const AllTabs = ({ selected }) => {
