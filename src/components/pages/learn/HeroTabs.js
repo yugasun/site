@@ -7,25 +7,28 @@ const data = [
   {
     label: 'overview',
     value: 'overview',
-    navProps: { to: learn.why }
+    navProps: { to: learn.why },
   },
   {
     label: 'use cases',
     value: 'use-cases',
-    navProps: { to: learn.useCases }
+    navProps: { to: learn.useCases },
   },
   {
     label: 'comparisons',
     value: 'comparisons',
-    navProps: { to: learn.comparisons }
+    navProps: { to: learn.comparisons },
   },
   {
     label: 'case studies',
     value: 'case-studies',
-    navProps: { to: learn.caseStudy }
-  }
+    navProps: { to: learn.caseStudy },
+  },
+  {
+    label: 'courses',
+    value: 'courses',
+    navProps: { to: learn.courses },
+  },
 ]
 
-export default ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
-)
+export default ({ selected }) => <HeroTabs data={data} selected={selected} />

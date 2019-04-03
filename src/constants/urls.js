@@ -15,6 +15,7 @@ export default {
     plugins: '/plugins/',
     examples: '/examples/',
     quickStarts: '/framework/docs/getting-started/',
+    courses: '/courses/',
   },
   community: {
     partners: '/partners/',
@@ -41,13 +42,14 @@ export default {
       docs: '/framework/docs/',
       plugins: '/plugins/',
       examples: '/examples/',
+      courses: '/courses/',
     },
   },
   learn: {
     useCases: '/learn/use-cases/',
     why: '/learn/overview/',
     comparisons: '/learn/comparisons/',
-    caseStudy: '/learn/case-study/',
+    caseStudy: '/learn/case-studies/',
   },
   resources: {
     overview: '/resources/overview/',
