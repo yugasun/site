@@ -20,6 +20,10 @@ const DevelopersColumn = () => (
         navProps: { to: developers.examples, completed: true },
       },
       {
+        name: 'courses',
+        navProps: { to: developers.courses, completed: true },
+      },
+      {
         name: 'quick starts',
         navProps: { to: developers.quickStarts, completed: true },
       },

@@ -3,7 +3,7 @@ import { Box, Flex, List, ListItem } from 'serverless-design-system'
 
 import SubMenuTitle from './SubMenuTitle'
 import SubMenuItem from './SubMenuItem'
-import { developers } from 'src/constants/urls'
+import { developers, developersMenu as newDevelopers } from 'src/constants/urls'
 
 const SubMenu = ({ title, options }) => (
   <Box>
@@ -57,6 +57,11 @@ const examplesOptions = [
   {
     name: 'examples',
     to: developers.examples.examples,
+    completed: true,
+  },
+  {
+    name: 'courses',
+    to: newDevelopers.courses,
     completed: true,
   },
 ]

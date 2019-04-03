@@ -39,7 +39,7 @@ const Learn = () => (
         comparisons
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: learn.caseStudy,
@@ -48,17 +48,6 @@ const Learn = () => (
         }}
       >
         case studies
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: learn.courses,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        courses
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>
