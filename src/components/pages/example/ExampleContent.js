@@ -5,6 +5,7 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import EditOnGithubSticky from './EditOnGithubSticky'
 import EditOnGithubBottom from './EditOnGithubBottom'
 import ContentHeader from './ContentHeader'
+import CloneThisExample from './CloneThisExample'
 import { PageContainer } from 'src/fragments/DesignSystem'
 
 const ExampleContent = ({ frontmatter, content }) => {
@@ -13,6 +14,7 @@ const ExampleContent = ({ frontmatter, content }) => {
       <EditOnGithubSticky gitLink={frontmatter.gitLink} />
       <AppContainer>
         <ContentHeader {...frontmatter} />
+        <CloneThisExample />
         <ContentWrapper
           width={[1, 1, 1, 1, '800px']}
           mx='auto'
