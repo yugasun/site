@@ -1,5 +1,6 @@
 export { default as TextArea } from './TextArea'
 export { default as Checkbox } from './Checkbox'
+export { default as FilterCheckbox } from './FilterCheckbox'
 export { default as Label } from './Label'
 export { default as RadioButton } from './RadioButton'
 export { default as SelectField } from './SelectField'
