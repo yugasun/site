@@ -10,7 +10,7 @@ export default styled(Checkbox)`
     content: '';
     display: inline-block;
     margin-top: -2px;
-    margin-right: 5px;
+    margin-right: 0px;
     margin-left: -2px;
     width: 16px;
     height: 16px;

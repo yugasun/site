@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex, InlineBlock, Row, Column } from 'serverless-design-system'
-import { Checkbox, Label } from 'src/fragments/DesignSystem/Form'
+import { FilterCheckbox, Label } from 'src/fragments/DesignSystem/Form'
 
 export default class Content extends React.Component {
   constructor(props) {
@@ -35,14 +35,10 @@ export default class Content extends React.Component {
       <Row>
         <Column>
           {this.props.options[0].map(({ id, name, text }, index) => (
-            <Box
-              mt={index == 0 ? 2 : '6px'}
-              key={id}
-              mr={[0, 0, '5px', 22, 22]}
-            >
+            <Box mt={index === 0 ? 1 : '6px'} key={id} mr={[0, 0, 58, 48, 48]}>
               <Label htmlFor={id}>
                 <Flex.verticallyCenter>
-                  <Checkbox
+                  <FilterCheckbox
                     name={name}
                     id={id}
                     onChange={({ target }) =>
@@ -59,33 +55,13 @@ export default class Content extends React.Component {
           {this.props.options[1]
             ? this.props.options[1].map(({ id, name, text }, index) => (
                 <Box
-                  mt={index == 0 ? 2 : '6px'}
+                  mt={index === 0 ? 1 : '6px'}
                   key={id}
-                  mr={[0, 0, '5px', 22, 22]}
+                  mr={[0, 0, 52, 116, 116]}
                 >
                   <Label htmlFor={id}>
                     <Flex.verticallyCenter>
-                      <Checkbox
-                        name={name}
-                        id={id}
-                        onChange={({ target }) =>
-                          this.updateCheckboxes({ text }, target.checked)
-                        }
-                      />
-                      <InlineBlock>{text}</InlineBlock>
-                    </Flex.verticallyCenter>
-                  </Label>
-                </Box>
-              ))
-            : ''}
-        </Column>
-        <Column>
-          {this.props.options[2]
-            ? this.props.options[2].map(({ id, name, text }) => (
-                <Box mt={2} key={id} mr={[0, 0, '32px', 92, 92]}>
-                  <Label htmlFor={id}>
-                    <Flex.verticallyCenter>
-                      <Checkbox
+                      <FilterCheckbox
                         name={name}
                         id={id}
                         onChange={({ target }) =>
