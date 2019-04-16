@@ -1,13 +1,6 @@
 export default [
     {
         "heading": "Growth",
-        "title": "Developer Advocate",
-        "location": "San Francisco/Remote",
-        "status": "Full-time",
-        "link": "https://jobs.lever.co/serverless/efa6e178-29eb-4f92-9d28-49fb393421cc"
-    },
-    {
-        "heading": "Growth",
         "title": "Director of Growth Marketing",
         "location": "San Francisco/Remote",
         "status": "Full-time",
@@ -29,9 +22,9 @@ export default [
     },
     {
         "heading": "Engineering",
-        "title": "Senior Full Stack Engineer",
+        "title": "Senior Platform Engineer",
         "location": "San Francisco/Remote",
         "status": "Full-time",
-        "link": "https://jobs.lever.co/serverless/5a4fe96c-4251-4707-8762-b49f02478f8e"
+        "link": "https://jobs.lever.co/serverless/8386016f-af6d-49e3-b0b6-2ee19a416396"
     }
 ]
