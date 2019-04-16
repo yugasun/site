@@ -42,11 +42,7 @@ export default class Content extends React.Component {
       <Row>
         <Column>
           {this.props.options[0].map(({ id, name, text }, index) => (
-            <Box
-              mt={(index + 1) % 2 === 0 ? '6px' : 1}
-              key={id}
-              mr={[0, 0, 58, 48, 48]}
-            >
+            <Box mt={index === 0 ? 1 : '6px'} key={id} mr={[0, 0, 58, 48, 48]}>
               <Label htmlFor={id}>
                 <Flex.verticallyCenter>
                   <FilterCheckbox
@@ -58,11 +54,11 @@ export default class Content extends React.Component {
                   />
                   <InlineBlock>
                     <Text
-                      fontSize="12px"
-                      fontFamily="Soleil"
-                      lineHeight="16px"
-                      letterSpacing="0"
-                      color="#5b5b5b"
+                      fontSize='12px'
+                      fontFamily='Soleil'
+                      lineHeight='16px'
+                      letterSpacing='0'
+                      color='#5b5b5b'
                     >
                       {text}
                     </Text>
@@ -76,7 +72,7 @@ export default class Content extends React.Component {
           {this.props.options[1]
             ? this.props.options[1].map(({ id, name, text }, index) => (
                 <Box
-                  mt={(index + 1) % 2 === 0 ? '6px' : 1}
+                  mt={index === 0 ? 1 : '6px'}
                   key={id}
                   mr={[0, 0, 52, 116, 116]}
                 >
@@ -91,11 +87,11 @@ export default class Content extends React.Component {
                       />
                       <InlineBlock>
                         <Text
-                          fontSize="12px"
-                          fontFamily="Soleil"
-                          lineHeight="16px"
-                          letterSpacing="0"
-                          color="#5b5b5b"
+                          fontSize='12px'
+                          fontFamily='Soleil'
+                          lineHeight='16px'
+                          letterSpacing='0'
+                          color='#5b5b5b'
                         >
                           {text}
                         </Text>
