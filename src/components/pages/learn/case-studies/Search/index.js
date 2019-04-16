@@ -46,7 +46,7 @@ export default class ExamplesSearch extends React.Component {
           <Box
             color='black'
             mb='62px'
-            pb={['22px', '22px', '62px']}
+            pb={['22px', '22px', '42px']}
             pt={['12px', '12px', 22]}
           >
             <Row>
