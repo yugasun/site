@@ -51,8 +51,10 @@ const sentences = [
     <br />
     <br />
     Or if you’re ready, follow our{' '}
-    <DecoratedLink to='/learn/use-cases/'>step-by-step guide</DecoratedLink> to
-    start building a Serverless Application with your favorite language.
+    <DecoratedLink to='/framework/docs/getting-started/'>
+      step-by-step guide
+    </DecoratedLink>{' '}
+    to start building a Serverless Application with your favorite language.
   </P>,
 ]
 
