@@ -380,7 +380,10 @@ export default class HomeBenefits extends React.Component {
                     Data processing
                   </P>
                 </Row>
-                <InternalLink to='/framework/docs/getting-started/'>
+                <InternalLink
+                  to='/framework/docs/getting-started/'
+                  className='position-content'
+                >
                   <ButtonCTA mt={'50px'}>get started</ButtonCTA>
                 </InternalLink>
               </Box>

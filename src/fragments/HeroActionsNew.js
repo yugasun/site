@@ -9,13 +9,13 @@ import {
 } from 'src/fragments/DesignSystem'
 import { InternalLink } from 'src/fragments'
 
-const FinalLink = ({anchorLink, to, children}) => {
-  return (
-  anchorLink ? 
-    <a href={to}> 
+const FinalLink = ({ anchorLink, to, children, className }) => {
+  return anchorLink ? (
+    <a href={to} className={className}>
       {children}
-    </a> :
-    <InternalLink to={to}>
+    </a>
+  ) : (
+    <InternalLink to={to} className={className}>
       {children}
     </InternalLink>
   )
@@ -28,6 +28,7 @@ const HeroActions = ({
     crossDomain: fcrossDomain = false,
     completed: fCompleted = false,
     anchorLink: fanchorLink = false,
+    className: fClassName = false,
   },
   secondBtn: {
     name: sName,
@@ -35,6 +36,7 @@ const HeroActions = ({
     crossDomain: scrossDomain = false,
     completed: sCompleted = false,
     anchorLink: sanchorLink = false,
+    className: sClassName = false,
   },
   flexDirection,
   justifyContent,
@@ -48,7 +50,7 @@ const HeroActions = ({
     justifyContent={justifyContent}
   >
     <MobileCenteredBox>
-      <FinalLink anchorLink={fanchorLink} to={firstLink}>
+      <FinalLink anchorLink={fanchorLink} to={firstLink} className={fClassName}>
         <Button
           mr={[
             0,
@@ -67,7 +69,11 @@ const HeroActions = ({
     </MobileCenteredBox>
 
     <MobileCenteredBox>
-      <FinalLink anchorLink={sanchorLink} to={secondLink}>
+      <FinalLink
+        anchorLink={sanchorLink}
+        to={secondLink}
+        className={sClassName}
+      >
         <SecondaryButton my={1} width={['200px']}>
           {sName}
         </SecondaryButton>

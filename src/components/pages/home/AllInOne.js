@@ -46,7 +46,7 @@ const HomePlatform = ({ usingSafariDesktop }) => (
           Check the health of your serverless application. Control and secure
           your builds. Scale development across the team.
         </P>
-        <InternalLink to='/enterprise/'>
+        <InternalLink to='/enterprise/' className='position-content'>
           <Button width={[208]}>framework enterprise</Button>
         </InternalLink>
       </Column>
