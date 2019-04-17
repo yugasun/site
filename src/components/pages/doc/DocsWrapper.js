@@ -12,7 +12,8 @@ const Wrapper = styled(Column)`
     font-family: 'SoleilBk';
   }
 
-  p, li {
+  p,
+  li {
     font-family: 'SoleilBk';
     font-size: 16px;
     font-weight: normal;
@@ -55,14 +56,18 @@ const Wrapper = styled(Column)`
   a {
     color: #5b5b5b;
     text-decoration: none;
-    border-bottom: 1px solid #fd5750;
 
     &:hover {
       color: #5b5b5b;
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'SoleilBk';
     color: #000000;
 
@@ -96,7 +101,7 @@ const Wrapper = styled(Column)`
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     max-width: 90%;
     position: relative;
     z-index: 3;
@@ -104,7 +109,7 @@ const Wrapper = styled(Column)`
       border: none !important;
     }
     > div {
-      box-shadow: 0 0 3px rgba(0,0,0,.2);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       margin-right: 20px;
       padding: 10px !important;
       margin-top: 20px;
@@ -124,7 +129,8 @@ const Wrapper = styled(Column)`
     width: 100%;
   }
 
-  .docsSectionHeader, .docsSectionHeader a {
+  .docsSectionHeader,
+  .docsSectionHeader a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +155,7 @@ const Wrapper = styled(Column)`
   }
 
   .docsSection ul li {
-    padding-bottom:3px;
+    padding-bottom: 3px;
   }
   @media (max-width: 768px) {
     .docsSections {
@@ -162,7 +168,8 @@ const Wrapper = styled(Column)`
     .docsSection {
       margin-bottom: 20px;
     }
-    .docsSectionHeader, .docsSectionHeader a {
+    .docsSectionHeader,
+    .docsSectionHeader a {
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -179,10 +186,6 @@ const Wrapper = styled(Column)`
     margin-top: 64px;
     padding-bottom: 0;
     margin-bottom: 0;
-
-    a {
-      border-bottom: 1px solid rgba(0, 0, 0, .2);
-    }
   }
   .docContainer {
     margin-top: 0px;
@@ -200,7 +203,6 @@ const Wrapper = styled(Column)`
     padding-left: 20px;
     background: #f6f6f6;
     a {
-
     }
     a:hover {
       opacity: 0.6;
@@ -208,7 +210,7 @@ const Wrapper = styled(Column)`
   }
   .versionNumber {
     font-size: 12px;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     background: #f6f6f6;
   }
   .sidebar {
@@ -299,13 +301,13 @@ const Wrapper = styled(Column)`
       margin-left: -50px;
       /* line-height: 1.4rem; */
       text-decoration: none;
-      opacity: .2;
+      opacity: 0.2;
       line-height: inherit;
       color: transparent;
-      transition: opacity .3s;
+      transition: opacity 0.3s;
       border-bottom: none !important;
       &:before {
-        content: "#";
+        content: '#';
         transform: none;
         position: absolute;
         top: 0px;
@@ -316,10 +318,10 @@ const Wrapper = styled(Column)`
         visibility: visible;
       }
       &:after {
-        opacity: .4;
+        opacity: 0.4;
         visibility: hidden;
         position: absolute;
-        content: "copy link";
+        content: 'copy link';
         text-align: center;
         height: 20px;
         transform: none;
@@ -337,13 +339,13 @@ const Wrapper = styled(Column)`
         top: 85%;
         left: 8px;
         border-radius: 3px;
-        transition: .25s ease-in-out 0s;
+        transition: 0.25s ease-in-out 0s;
       }
       &:hover {
         opacity: 1;
       }
       &:active:after {
-        content: "copied!" !important;
+        content: 'copied!' !important;
         background-color: #787878;
       }
       &:hover:after {
@@ -363,27 +365,42 @@ const Wrapper = styled(Column)`
         width: 100%;
         height: 1px;
         content: '';
-        transition: all .15s ease-in-out 0s;
+        transition: all 0.15s ease-in-out 0s;
         transition-delay: 0s;
         transform: scaleX(0);
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
-    h1, h2, h3, h4, h5, h6, p {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       max-width: 650px;
       position: relative;
     }
-    p, pre, code, ul, li {
+    p,
+    pre,
+    code,
+    ul,
+    li {
       position: relative;
     }
     ul {
       padding-left: 25px;
       padding-right: 80px;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &:before {
         display: block;
-        content: " ";
+        content: ' ';
         visibility: hidden;
       }
     }
@@ -392,7 +409,7 @@ const Wrapper = styled(Column)`
       &:first-of-type {
         margin-top: 0px;
         .phenomic-HeadingAnchor {
-          display:none;
+          display: none;
         }
       }
     }
@@ -416,7 +433,7 @@ const Wrapper = styled(Column)`
     right: 20px;
     top: 5px;
     &:before {
-      display:none;
+      display: none;
     }
   }
   .editLink {
@@ -460,7 +477,7 @@ const Wrapper = styled(Column)`
     padding: 0;
     margin: 0px 20px;
     margin-bottom: 5px;
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 0px;
     padding-top: 0;
     font-size: 15px;
@@ -486,7 +503,7 @@ const Wrapper = styled(Column)`
       margin-bottom: 5px;
       font-size: 18px;
       font-weight: 500;
-      letter-spacing: -.015rem;
+      letter-spacing: -0.015rem;
       line-height: 1.63;
     }
     p {
@@ -529,7 +546,6 @@ const Wrapper = styled(Column)`
         transition: none;
       }
     }
-
   }
 
   @media (max-width: 1000px) {
@@ -540,7 +556,13 @@ const Wrapper = styled(Column)`
         padding-left: 30px !important;
         padding-right: 30px !important;
       }
-      h1, h2, h3, h4, h5, h6, p {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         padding-right: 25px;
       }
     }
@@ -593,7 +615,10 @@ const Wrapper = styled(Column)`
     .versionNumber {
       display: none;
     }
-    .page, .sidebar, .searchBumper, .searchWrapper {
+    .page,
+    .sidebar,
+    .searchBumper,
+    .searchWrapper {
       max-width: 100%;
       min-width: 100%;
     }
@@ -616,7 +641,8 @@ const Wrapper = styled(Column)`
       .phenomic-HeadingAnchor {
         display: none;
       }
-      ol, ul {
+      ol,
+      ul {
         font-size: 13px;
         padding: 0px 20px;
       }
@@ -626,14 +652,24 @@ const Wrapper = styled(Column)`
       h1 {
         font-size: 22px;
       }
-      h1, h2, h3, h4, h5, h6, p {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         padding-right: 20px;
-
       }
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         &:before {
           display: block;
-          content: " ";
+          content: ' ';
           visibility: hidden;
         }
       }
@@ -642,32 +678,31 @@ const Wrapper = styled(Column)`
       }
     }
 
-    .subPageLink, .subPageLinkHeading {
+    .subPageLink,
+    .subPageLinkHeading {
       font-size: 16px;
     }
-
-
   }
 `
-const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
-const preventDefault = (e) => e.preventDefault()
+const Clipboard = typeof window !== 'undefined' ? require('clipboard') : null
+const preventDefault = e => e.preventDefault()
 
 export default class DocsWrapper extends React.Component {
   componentDidMount() {
     //TODO: hacky - find a better solution for offsetting anchor scroll
-    if(typeof window !== 'undefined' && window.location.hash) {
+    if (typeof window !== 'undefined' && window.location.hash) {
       setTimeout(function() {
         window.scrollBy(0, -80)
       }, 1)
     }
 
     const domNode = ReactDOM.findDOMNode(this.ref)
-    domNode.querySelectorAll("code.hljs").forEach((code) => {
+    domNode.querySelectorAll('code.hljs').forEach(code => {
       let number = 1
       const zero = `<a class="line">${number++}</a>`
-      code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
-        `\n<a class="line">${number++}</a>`
-      ))
+      code.innerHTML =
+        zero +
+        code.innerHTML.replace(/\n/g, () => `\n<a class="line">${number++}</a>`)
     })
 
     this.linkCatcher = new LinkCatcher(domNode, navigateTo)
@@ -676,10 +711,14 @@ export default class DocsWrapper extends React.Component {
     // disable anchor tags until they are removed
     this.attachHandlers()
     setTimeout(() => {
-      this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
-        text(trigger) { // eslint-disable-line
-          return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
-        }
+      this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', {
+        // eslint-disable-line
+        text(trigger) {
+          // eslint-disable-line
+          return `${origin}${pathname.replace(/\/$/, '')}#${
+            trigger.parentNode.id
+          }`
+        },
       })
     }, 10)
   }
@@ -733,7 +772,9 @@ export default class DocsWrapper extends React.Component {
   render() {
     return (
       <Wrapper
-        ref={(ref) => { this.ref = ref }}
+        ref={ref => {
+          this.ref = ref
+        }}
         {...this.props}
       />
     )
