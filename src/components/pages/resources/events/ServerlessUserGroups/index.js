@@ -38,9 +38,9 @@ const items = [
     link: 'https://meetup.com/Serverless-Atlanta',
   },
   {
-    title: 'Serverless Minneapolis',
-    location: 'Minneapolis',
-    link: 'https://meetup.com/Serverless-Minneapolis',
+    title: 'Serverless MN',
+    location: 'Minneapolis/St Paul',
+    link: 'https://meetup.com/Serverless-MN',
   },
   {
     title: 'Serverless LA',
