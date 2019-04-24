@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Card, TextField, ResponsiveStack } from 'serverless-design-system'
 import searchIcon from 'src/assets/images/search-icon.svg'
 
-const ExamplesSearchField = styled(TextField)`
+const StackSearchField = styled(TextField)`
   letter-spacing: 0.4px;
   background: url(${searchIcon}) no-repeat;
   background-position: right 15px center;
@@ -53,8 +53,8 @@ export default class SearchField extends React.Component {
         mr={[15, 15, 22, 22, 32]}
       >
         <ResponsiveStack>
-          <ExamplesSearchField
-            placeholder='Search for an example'
+          <StackSearchField
+            placeholder='Search for a service'
             height={50}
             width='100%'
             border='none'
@@ -63,7 +63,7 @@ export default class SearchField extends React.Component {
             placeholderColor='#8c8c8c'
             px={[1, 1, 2]}
             onChange={this.handQueryFilter}
-            className='examples-search'
+            className='stack-search'
           />
         </ResponsiveStack>
       </Card>
