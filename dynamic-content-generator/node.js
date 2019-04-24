@@ -14,7 +14,7 @@ const algoliasearch = require('algoliasearch')
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
-const kickstartConfig = require('./../scripts/kickstart/config')
+const stackConfig = require('../scripts/stack/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
 const fileReadingOptions = { match: /.md$/ }
@@ -58,12 +58,11 @@ const digestCreator = content =>
     .update(JSON.stringify(content))
     .digest(`hex`)
 
-const sourceKickstart = createNode => (err, content, filename, next) => {
+const sourceStack = createNode => (err, content, filename, next) => {
   if (err) throw err
-
   const { data, content: markdownContent } = matter(content)
   const frontmatter = data.category ? data : { ...data, category: [] }
-  const kickstartId = path.basename(filename, path.extname(filename))
+  const stackId = path.basename(filename, path.extname(filename))
 
   unified()
     .use(markdown)
@@ -71,11 +70,11 @@ const sourceKickstart = createNode => (err, content, filename, next) => {
     .use(html)
     .process(markdownContent, (err, file) => {
       createNode({
-        id: kickstartId,
+        id: stackId,
         parent: null,
         children: [],
         internal: {
-          type: 'Kickstart',
+          type: 'Stack',
           contentDigest: digestCreator(content),
         },
         frontmatter,
@@ -269,9 +268,9 @@ const generator = createNode =>
 
     new Promise((resolve, reject) => {
       dir.readFiles(
-        kickstartConfig.kickstartPagesPath,
+        stackConfig.stackPagesPath,
         fileReadingOptions,
-        sourceKickstart(createNode),
+        sourceStack(createNode),
         resolve
       )
     }),
