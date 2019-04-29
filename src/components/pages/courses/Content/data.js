@@ -3,7 +3,7 @@ export default [
     title: 'Serverless Applications with AWS',
     description:
       'Serverless Applications with AWS teaches you to build serverless applications using AWS Lambda and other cloud-based services.',
-    thumbnail: 'http://i3.ytimg.com/vi/Zf3UgS55J-M/hqdefault.jpg',
+    thumbnail: 'https://i3.ytimg.com/vi/Zf3UgS55J-M/hqdefault.jpg',
     author: 'Marcia Villalba',
     ratingsStar: '5.0',
     totalRatings: '1',
@@ -16,7 +16,7 @@ export default [
     title: 'Production-Ready Serverless',
     description:
       'Production-Ready Serverless: Operational Best Practices introduces you to leading patterns and practices for creating operationally sound serverless applications using AWS Lambda, API Gateway, and Kinesis.',
-    thumbnail: 'http://i3.ytimg.com/vi/LJpbNdRqsc4/hqdefault.jpg',
+    thumbnail: 'https://i3.ytimg.com/vi/LJpbNdRqsc4/hqdefault.jpg',
     author: 'Yan Cui',
     ratingsStar: '4',
     totalRatings: '1',
