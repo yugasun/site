@@ -47,7 +47,7 @@ export default class ExamplesSearch extends React.Component {
               <SearchField refreshSearch={this.sendResultsToProps} />
             </Row>
             <Box display={['none', 'none', 'block']}>
-              <SearchFilters />
+              <SearchFilters refreshFilters={this.sendResultsToProps} />
             </Box>
           </Box>
         </AppContainer>
