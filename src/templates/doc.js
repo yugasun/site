@@ -8,7 +8,7 @@ import {
   Text,
   Box,
 } from 'serverless-design-system'
-import Default from 'src/layouts/DefaultNew'
+import DocsLayout from 'src/layouts/Docs'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
@@ -30,7 +30,7 @@ const FrameworkType = ({ children }) => (
 )
 
 const DocTemplate = ({ data: { doc }, location }) => (
-  <Default footerBackground={false} noPrefooter>
+  <DocsLayout footerBackground={false} noPrefooter>
     <Helmet
       link={[
         {
@@ -114,7 +114,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
         </Column>
       </Row>
     </DocsWrapper>
-  </Default>
+  </DocsLayout>
 )
 
 export default DocTemplate
