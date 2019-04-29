@@ -103,6 +103,9 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         mb={[42, 42, 32]}
       >
         <HoverableColumn>
+          <FlexWithFloat>
+            <Image src={statusBadges[status]} />
+          </FlexWithFloat>
           <Box m={['0px 30px', '0px 30px', '32px']}>
             <InternalLink to={getPluginLink(id)}>
               <Box>
