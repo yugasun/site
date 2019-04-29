@@ -1,15 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Box,
-  Text,
-  Card,
-  Image,
-  Row,
-  Absolute,
-  Relative,
-  Flex,
-} from 'serverless-design-system'
+import { Box, Text, Card, Image, Row, Flex } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
@@ -18,11 +9,16 @@ import starIcon from 'src/assets/images/star-gray.svg'
 import certifiedBadge from 'src/assets/images/pages/plugins/certified.svg'
 import communityBadge from 'src/assets/images/pages/plugins/community.svg'
 import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
+import approvedMobileBadge from 'src/assets/images/pages/plugins/approved-mobile.svg'
 
 const statusBadges = {
   certified: certifiedBadge,
   community: communityBadge,
   approved: approvedBadge,
+}
+
+const statusBadgesMobile = {
+  approved: approvedMobileBadge,
 }
 
 const TextWithWordWrap = styled(P)`
@@ -103,6 +99,21 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         mb={[42, 42, 32]}
       >
         <HoverableColumn>
+          <FlexWithFloat>
+            {//TODO: hacky - fix
+            status === 'approved' ? (
+              <Box>
+                <Box display={['block', 'block', 'none']}>
+                  <Image src={statusBadgesMobile[status]} />
+                </Box>
+                <Box display={['none', 'none', 'block']}>
+                  <Image src={statusBadges[status]} />
+                </Box>
+              </Box>
+            ) : (
+              <Image src={statusBadges[status]} />
+            )}
+          </FlexWithFloat>
           <Box m={['0px 30px', '0px 30px', '32px']}>
             <InternalLink to={getPluginLink(id)}>
               <Box>
