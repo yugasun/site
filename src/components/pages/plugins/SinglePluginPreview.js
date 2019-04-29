@@ -1,15 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Box,
-  Text,
-  Card,
-  Image,
-  Row,
-  Absolute,
-  Relative,
-  Flex,
-} from 'serverless-design-system'
+import { Box, Text, Card, Image, Row, Flex } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
