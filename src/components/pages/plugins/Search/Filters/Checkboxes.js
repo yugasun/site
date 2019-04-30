@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Box,
-  Flex,
-  InlineBlock,
-  Row,
-  Column,
-  Text,
-} from 'serverless-design-system'
+import { Box, Flex, InlineBlock, Row, Column } from 'serverless-design-system'
 import { FilterCheckbox, Label } from 'src/fragments/DesignSystem/Form'
 
 export default class Content extends React.Component {
@@ -52,17 +45,7 @@ export default class Content extends React.Component {
                       this.updateCheckboxes({ text }, target.checked)
                     }
                   />
-                  <InlineBlock>
-                    <Text
-                      fontSize='12px'
-                      fontFamily='Soleil'
-                      lineHeight='16px'
-                      letterSpacing='0'
-                      color='#5b5b5b'
-                    >
-                      {text}
-                    </Text>
-                  </InlineBlock>
+                  <InlineBlock>{text}</InlineBlock>
                 </Flex.verticallyCenter>
               </Label>
             </Box>
@@ -74,7 +57,7 @@ export default class Content extends React.Component {
                 <Box
                   mt={index === 0 ? 1 : '6px'}
                   key={id}
-                  mr={[0, 0, 58, 48, 48]}
+                  mr={[0, 0, 52, 116, 116]}
                 >
                   <Label htmlFor={id}>
                     <Flex.verticallyCenter>
@@ -85,47 +68,7 @@ export default class Content extends React.Component {
                           this.updateCheckboxes({ text }, target.checked)
                         }
                       />
-                      <InlineBlock>
-                        <Text
-                          fontSize='12px'
-                          fontFamily='Soleil'
-                          lineHeight='16px'
-                          letterSpacing='0'
-                          color='#5b5b5b'
-                        >
-                          {text}
-                        </Text>
-                      </InlineBlock>
-                    </Flex.verticallyCenter>
-                  </Label>
-                </Box>
-              ))
-            : ''}
-        </Column>
-        <Column>
-          {this.props.options[2]
-            ? this.props.options[2].map(({ id, name, text }, index) => (
-                <Box mt={index === 0 ? 1 : '6px'} key={id}>
-                  <Label htmlFor={id}>
-                    <Flex.verticallyCenter>
-                      <FilterCheckbox
-                        name={name}
-                        id={id}
-                        onChange={({ target }) =>
-                          this.updateCheckboxes({ text }, target.checked)
-                        }
-                      />
-                      <InlineBlock>
-                        <Text
-                          fontSize='12px'
-                          fontFamily='Soleil'
-                          lineHeight='16px'
-                          letterSpacing='0'
-                          color='#5b5b5b'
-                        >
-                          {text}
-                        </Text>
-                      </InlineBlock>
+                      <InlineBlock>{text}</InlineBlock>
                     </Flex.verticallyCenter>
                   </Label>
                 </Box>

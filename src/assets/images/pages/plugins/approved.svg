@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Untitled</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="approved">
-            <polygon id="Path" fill="#8C8C8C" points="21.728 22.526 21.738 22.536 19.484 24.79 14 19.306 16.254 17.052 19.474 20.272 25.746 14 28 16.254 21.728 22.526"></polygon>
-            <path d="M1.5,0.5 L1.5,38.5" id="Line" stroke="#EAEAEA" fill="#FFFFFF" stroke-linecap="square"></path>
-            <path d="M1.5,38.5 L39.5,38.5" id="Line-2" stroke="#EAEAEA" fill="#FFFFFF" stroke-linecap="square"></path>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" stroke="#EAEAEA" d="M.5.5h38v38H.5z"/>
+        <path fill="#8C8C8C" d="M20.728 22.526l.01.01-2.254 2.254L13 19.306l2.254-2.254 3.22 3.22L24.746 14 27 16.254l-6.272 6.272z"/>
     </g>
 </svg>
