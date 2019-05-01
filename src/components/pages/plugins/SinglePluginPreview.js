@@ -93,105 +93,119 @@ function nFormatter(num) {
   return formattedNumber
 }
 
-const singleExamplePreview = ({ id, frontmatter }) => {
-  const {
-    title,
-    description,
-    gitLink,
-    npmDownloads,
-    status,
-    githubStars,
-  } = frontmatter
+export default class singleExamplePreview extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <React.Fragment>
-      <BoxWithMiddleElementMargin
-        width={[1, 1, 1 / 2, 1 / 3, '22.5%', '280px']}
-        mb={[42, 42, 32]}
-      >
-        <HoverableColumn>
-          <FlexWithFloat>
-            <ToolTipContent id={status} />
-            <React.Fragment>
-              <MediaQuery maxWidth={415}>
-                <Box data-tip='' data-for={status} data-place='right'>
-                  <Image
-                    src={
-                      status === 'approved'
-                        ? statusBadgesMobile[status]
-                        : statusBadges[status]
-                    }
-                  />
-                </Box>
-              </MediaQuery>
-              <MediaQuery minWidth={416}>
-                <Box data-tip='' data-for={status}>
-                  <Image src={statusBadges[status]} />
-                </Box>
-              </MediaQuery>
-            </React.Fragment>
-          </FlexWithFloat>
-          <Box m={['0px 30px', '0px 30px', '32px']}>
-            <InternalLink to={getPluginLink(id)}>
-              <Box>
-                <Row my='8px' pt='5px'>
-                  <Box mt='-2px'>
+    this.state = {
+      pageHasLoaded: false,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ pageHasLoaded: true })
+  }
+
+  render() {
+    const { id, frontmatter } = this.props
+    const {
+      title,
+      description,
+      gitLink,
+      npmDownloads,
+      status,
+      githubStars,
+    } = frontmatter
+
+    return (
+      <React.Fragment>
+        <BoxWithMiddleElementMargin
+          width={[1, 1, 1 / 2, 1 / 3, '22.5%', '280px']}
+          mb={[42, 42, 32]}
+        >
+          <HoverableColumn>
+            <FlexWithFloat>
+              {this.state.pageHasLoaded ? <ToolTipContent id={status} /> : null}
+
+              <React.Fragment>
+                <MediaQuery maxWidth={415}>
+                  <Box data-tip='' data-for={status} data-place='right'>
                     <Image
-                      maxHeight='16px'
-                      src={starIcon}
-                      objectFit='contain'
+                      src={
+                        status === 'approved'
+                          ? statusBadgesMobile[status]
+                          : statusBadges[status]
+                      }
                     />
                   </Box>
-                  &nbsp;
-                  <Text
-                    color='gray.2'
-                    fontSize={[1]}
-                    fontFamily='Soleil'
-                    lineHeight={[1.33]}
-                  >
-                    {nFormatter(githubStars)}
-                  </Text>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <Image
-                    maxHeight='16px'
-                    src={downloadIcon}
-                    objectFit='contain'
-                  />
-                  &nbsp;
-                  <Text
-                    color='gray.2'
-                    fontSize={[1]}
-                    fontFamily='Soleil'
-                    lineHeight={[1.33]}
-                  >
-                    {nFormatter(npmDownloads)}
-                  </Text>
-                </Row>
+                </MediaQuery>
+                <MediaQuery minWidth={416}>
+                  <Box data-tip='' data-for={status}>
+                    <Image src={statusBadges[status]} />
+                  </Box>
+                </MediaQuery>
+              </React.Fragment>
+            </FlexWithFloat>
+            <Box m={['0px 30px', '0px 30px', '32px']}>
+              <InternalLink to={getPluginLink(id)}>
+                <Box>
+                  <Row my='8px' pt='5px'>
+                    <Box mt='-2px'>
+                      <Image
+                        maxHeight='16px'
+                        src={starIcon}
+                        objectFit='contain'
+                      />
+                    </Box>
+                    &nbsp;
+                    <Text
+                      color='gray.2'
+                      fontSize={[1]}
+                      fontFamily='Soleil'
+                      lineHeight={[1.33]}
+                    >
+                      {nFormatter(githubStars)}
+                    </Text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Image
+                      maxHeight='16px'
+                      src={downloadIcon}
+                      objectFit='contain'
+                    />
+                    &nbsp;
+                    <Text
+                      color='gray.2'
+                      fontSize={[1]}
+                      fontFamily='Soleil'
+                      lineHeight={[1.33]}
+                    >
+                      {nFormatter(npmDownloads)}
+                    </Text>
+                  </Row>
 
-                <Heading.h5 mb='8px'>
-                  {title.startsWith('Serverless')
-                    ? title
-                        .replace('Serverless ', '')
-                        .replace('Plugin ', '')
-                        .replace('Plugin', '')
-                    : title.replace('Plugin ', '').replace('Plugin', '')}
-                </Heading.h5>
-              </Box>
-            </InternalLink>
-            <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
-              {description}
-            </TextWithWordWrap>
-            <ReactTooltip />
-            <ExternalLink to={gitLink}>
-              <Text color='#fd5750' mt={16}>
-                go to github >
-              </Text>
-            </ExternalLink>
-          </Box>
-        </HoverableColumn>
-      </BoxWithMiddleElementMargin>
-    </React.Fragment>
-  )
+                  <Heading.h5 mb='8px'>
+                    {title.startsWith('Serverless')
+                      ? title
+                          .replace('Serverless ', '')
+                          .replace('Plugin ', '')
+                          .replace('Plugin', '')
+                      : title.replace('Plugin ', '').replace('Plugin', '')}
+                  </Heading.h5>
+                </Box>
+              </InternalLink>
+              <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
+                {description}
+              </TextWithWordWrap>
+              <ReactTooltip />
+              <ExternalLink to={gitLink}>
+                <Text color='#fd5750' mt={16}>
+                  go to github >
+                </Text>
+              </ExternalLink>
+            </Box>
+          </HoverableColumn>
+        </BoxWithMiddleElementMargin>
+      </React.Fragment>
+    )
+  }
 }
-
-export default singleExamplePreview

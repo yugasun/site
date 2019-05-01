@@ -44,7 +44,12 @@ export default class Content extends React.Component {
     super(props)
     this.state = {
       selectedCheckboxes: [],
+      pageHasLoaded: false,
     }
+  }
+
+  componentDidMount() {
+    this.setState({ pageHasLoaded: true })
   }
 
   updateCheckboxes(fieldName, isChecked) {
@@ -73,7 +78,7 @@ export default class Content extends React.Component {
         <Column>
           {this.props.options[0].map(({ id, name, text }, index) => (
             <Box mt={index === 0 ? 1 : '6px'} key={id} mr={[0, 0, 58, 48, 48]}>
-              <ToolTipContent id={id} />
+              {this.state.pageHasLoaded ? <ToolTipContent id={id} /> : null}
               <Label htmlFor={id}>
                 <Flex.verticallyCenter>
                   <FilterCheckbox
@@ -110,7 +115,7 @@ export default class Content extends React.Component {
                   key={id}
                   mr={[0, 0, 58, 48, 48]}
                 >
-                  <ToolTipContent id={id} />
+                  {this.state.pageHasLoaded ? <ToolTipContent id={id} /> : null}
                   <Label htmlFor={id}>
                     <Flex.verticallyCenter>
                       <FilterCheckbox
@@ -145,7 +150,7 @@ export default class Content extends React.Component {
           {this.props.options[2]
             ? this.props.options[2].map(({ id, name, text }, index) => (
                 <Box mt={index === 0 ? 1 : '6px'} key={id}>
-                  <ToolTipContent id={id} />
+                  {this.state.pageHasLoaded ? <ToolTipContent id={id} /> : null}
                   <Label htmlFor={id}>
                     <Flex.verticallyCenter>
                       <FilterCheckbox
