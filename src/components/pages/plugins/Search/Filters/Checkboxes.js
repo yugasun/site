@@ -19,7 +19,7 @@ import {
 
 const ToolTipContent = ({ id }) => (
   <ReactTooltip
-    id={id}
+    id={id + 'filters'}
     getContent={() => {
       return (
         <Flex.verticallyCenter>
@@ -99,7 +99,12 @@ export default class Content extends React.Component {
                       {text}
                     </Text>
                   </InlineBlock>
-                  <Flex ml={'9px'} data-tip='' data-for={id} data-place='top'>
+                  <Flex
+                    ml={'9px'}
+                    data-tip=''
+                    data-for={id + 'filters'}
+                    data-place='top'
+                  >
                     <Image src={infoBadge} />
                   </Flex>
                 </Flex.verticallyCenter>
@@ -136,7 +141,7 @@ export default class Content extends React.Component {
                           {text}
                         </Text>
                       </InlineBlock>
-                      <Flex ml={'9px'} data-tip='' data-for={id}>
+                      <Flex ml={'9px'} data-tip='' data-for={id + 'filters'}>
                         <Image src={infoBadge} />
                       </Flex>
                     </Flex.verticallyCenter>
@@ -171,7 +176,7 @@ export default class Content extends React.Component {
                           {text}
                         </Text>
                       </InlineBlock>
-                      <Flex ml={'9px'} data-tip='' data-for={id}>
+                      <Flex ml={'9px'} data-tip='' data-for={id + 'filters'}>
                         <Image src={infoBadge} />
                       </Flex>
                     </Flex.verticallyCenter>

@@ -106,6 +106,37 @@ export default class singleExamplePreview extends React.Component {
     this.setState({ pageHasLoaded: true })
   }
 
+  componentDidUpdate() {
+    ReactTooltip.rebuild()
+  }
+
+  createTooltip(id) {
+    return (
+      <ReactTooltip
+        id={id}
+        key={id}
+        getContent={() => {
+          return (
+            <Flex.verticallyCenter>
+              <Image
+                src={
+                  id === 'approved' ? statusBadgesMobile[id] : statusBadges[id]
+                }
+                height={'22px'}
+                width={'22px'}
+              />
+              <Box ml={'9px'}>
+                <Text fontFamily='Soleil'>{statusTooltips[id]}</Text>
+              </Box>
+            </Flex.verticallyCenter>
+          )
+        }}
+      >
+        {}
+      </ReactTooltip>
+    )
+  }
+
   render() {
     const { id, frontmatter } = this.props
     const {
@@ -126,24 +157,28 @@ export default class singleExamplePreview extends React.Component {
           <HoverableColumn>
             <FlexWithFloat>
               {this.state.pageHasLoaded ? <ToolTipContent id={status} /> : null}
-
               <React.Fragment>
-                <MediaQuery maxWidth={415}>
-                  <Box data-tip='' data-for={status} data-place='right'>
-                    <Image
-                      src={
-                        status === 'approved'
-                          ? statusBadgesMobile[status]
-                          : statusBadges[status]
-                      }
-                    />
-                  </Box>
-                </MediaQuery>
-                <MediaQuery minWidth={416}>
-                  <Box data-tip='' data-for={status}>
-                    <Image src={statusBadges[status]} />
-                  </Box>
-                </MediaQuery>
+                <Box
+                  data-tip=''
+                  data-for={status}
+                  data-place='right'
+                  display={['block', 'block', 'none']}
+                >
+                  <Image
+                    src={
+                      status === 'approved'
+                        ? statusBadgesMobile[status]
+                        : statusBadges[status]
+                    }
+                  />
+                </Box>
+                <Box
+                  data-tip=''
+                  data-for={status}
+                  display={['none', 'none', 'block']}
+                >
+                  <Image src={statusBadges[status]} />
+                </Box>
               </React.Fragment>
             </FlexWithFloat>
             <Box m={['0px 30px', '0px 30px', '32px']}>
