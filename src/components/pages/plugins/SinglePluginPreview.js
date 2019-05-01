@@ -6,20 +6,8 @@ import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
-import certifiedBadge from 'src/assets/images/pages/plugins/certified.svg'
-import communityBadge from 'src/assets/images/pages/plugins/community.svg'
-import approvedBadge from 'src/assets/images/pages/plugins/approved.svg'
-import approvedMobileBadge from 'src/assets/images/pages/plugins/approved-mobile.svg'
-
-const statusBadges = {
-  certified: certifiedBadge,
-  community: communityBadge,
-  approved: approvedBadge,
-}
-
-const statusBadgesMobile = {
-  approved: approvedMobileBadge,
-}
+import { statusBadges, statusTooltips, statusBadgesMobile } from './StatusData'
+import ReactTooltip from 'react-tooltip'
 
 const TextWithWordWrap = styled(P)`
   word-wrap: break-word;
@@ -61,6 +49,26 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 `
 
+const ToolTipContent = ({ id }) => (
+  <ReactTooltip
+    id={id}
+    getContent={() => {
+      return (
+        <Flex.verticallyCenter>
+          <Image
+            src={id === 'approved' ? statusBadgesMobile[id] : statusBadges[id]}
+            height={'22px'}
+            width={'22px'}
+          />
+          <Box ml={'9px'}>{statusTooltips[id]}</Box>
+        </Flex.verticallyCenter>
+      )
+    }}
+  >
+    {}
+  </ReactTooltip>
+)
+
 function nFormatter(num) {
   let formattedNumber
   if (num > 999 && num < 999999) {
@@ -100,18 +108,27 @@ const singleExamplePreview = ({ id, frontmatter }) => {
       >
         <HoverableColumn>
           <FlexWithFloat>
+            <ToolTipContent id={status} />
             {//TODO: hacky - fix
             status === 'approved' ? (
               <Box>
-                <Box display={['block', 'block', 'none']}>
+                <Box
+                  display={['block', 'block', 'none']}
+                  data-tip=''
+                  data-for={status}
+                >
                   <Image src={statusBadgesMobile[status]} />
                 </Box>
-                <Box display={['none', 'none', 'block']}>
+                <Box
+                  display={['none', 'none', 'block']}
+                  data-tip=''
+                  data-for={status}
+                >
                   <Image src={statusBadges[status]} />
                 </Box>
               </Box>
             ) : (
-              <Image src={statusBadges[status]} />
+              <Image src={statusBadges[status]} data-tip='' data-for={status} />
             )}
           </FlexWithFloat>
           <Box m={['0px 30px', '0px 30px', '32px']}>
@@ -164,6 +181,7 @@ const singleExamplePreview = ({ id, frontmatter }) => {
             <TextWithWordWrap mt='8px' mb={[0, 0, 3.6]}>
               {description}
             </TextWithWordWrap>
+            <ReactTooltip />
             <ExternalLink to={gitLink}>
               <Text color='#fd5750' mt={16}>
                 go to github >
