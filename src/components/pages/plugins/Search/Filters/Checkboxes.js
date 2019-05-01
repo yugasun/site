@@ -28,7 +28,9 @@ const ToolTipContent = ({ id }) => (
             height={'22px'}
             width={'22px'}
           />
-          <Box ml={'9px'}>{statusTooltips[id]}</Box>
+          <Box ml={'9px'}>
+            <Text fontFamily='Soleil'>{statusTooltips[id]}</Text>
+          </Box>
         </Flex.verticallyCenter>
       )
     }}
@@ -92,7 +94,7 @@ export default class Content extends React.Component {
                       {text}
                     </Text>
                   </InlineBlock>
-                  <Flex ml={'9px'} data-tip='' data-for={id}>
+                  <Flex ml={'9px'} data-tip='' data-for={id} data-place='top'>
                     <Image src={infoBadge} />
                   </Flex>
                 </Flex.verticallyCenter>

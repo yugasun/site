@@ -198,6 +198,12 @@ tfoot td {
   border-top-width: 6px;
 }
 
+.__react_component_tooltip.type-dark.place-right:after {
+  border-right-color: #5b5b5b;
+  border-right-style: solid;
+  border-right-width: 6px;
+}
+
 @font-face {
   font-family: 'Serverless';
   font-weight: normal;

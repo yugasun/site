@@ -8,6 +8,7 @@ import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 import { statusBadges, statusTooltips, statusBadgesMobile } from './StatusData'
 import ReactTooltip from 'react-tooltip'
+import MediaQuery from 'react-responsive'
 
 const TextWithWordWrap = styled(P)`
   word-wrap: break-word;
@@ -60,7 +61,9 @@ const ToolTipContent = ({ id }) => (
             height={'22px'}
             width={'22px'}
           />
-          <Box ml={'9px'}>{statusTooltips[id]}</Box>
+          <Box ml={'9px'}>
+            <Text fontFamily='Soleil'>{statusTooltips[id]}</Text>
+          </Box>
         </Flex.verticallyCenter>
       )
     }}
@@ -109,27 +112,24 @@ const singleExamplePreview = ({ id, frontmatter }) => {
         <HoverableColumn>
           <FlexWithFloat>
             <ToolTipContent id={status} />
-            {//TODO: hacky - fix
-            status === 'approved' ? (
-              <Box>
-                <Box
-                  display={['block', 'block', 'none']}
-                  data-tip=''
-                  data-for={status}
-                >
-                  <Image src={statusBadgesMobile[status]} />
+            <React.Fragment>
+              <MediaQuery maxWidth={415}>
+                <Box data-tip='' data-for={status} data-place='right'>
+                  <Image
+                    src={
+                      status === 'approved'
+                        ? statusBadgesMobile[status]
+                        : statusBadges[status]
+                    }
+                  />
                 </Box>
-                <Box
-                  display={['none', 'none', 'block']}
-                  data-tip=''
-                  data-for={status}
-                >
+              </MediaQuery>
+              <MediaQuery minWidth={416}>
+                <Box data-tip='' data-for={status}>
                   <Image src={statusBadges[status]} />
                 </Box>
-              </Box>
-            ) : (
-              <Image src={statusBadges[status]} data-tip='' data-for={status} />
-            )}
+              </MediaQuery>
+            </React.Fragment>
           </FlexWithFloat>
           <Box m={['0px 30px', '0px 30px', '32px']}>
             <InternalLink to={getPluginLink(id)}>
