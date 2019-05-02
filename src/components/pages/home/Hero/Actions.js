@@ -4,13 +4,13 @@ import { HeroActionsNew as HeroActions } from 'src/fragments'
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'install open source',
+      name: 'use open source',
       to: '/framework/docs/getting-started/',
       completed: true,
       className: 'position-hero',
     }}
     secondBtn={{
-      name: 'framework enterprise',
+      name: 'try enterprise',
       to: '/enterprise/',
       completed: true,
       className: 'position-hero',

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Column } from 'serverless-design-system'
-import { Heading, P, MobileCenteredBox } from 'src/fragments/DesignSystem'
-import HeroGithub from './Github'
+import { Heading, MobileCenteredBox } from 'src/fragments/DesignSystem'
+import HeroGithub from './Logo'
 import styled from 'styled-components'
 
 const MobileCenteredTextBox = styled(MobileCenteredBox)`
@@ -16,12 +16,9 @@ const HeroHeader = () => (
     <MobileCenteredTextBox>
       <HeroGithub />
     </MobileCenteredTextBox>
-    <Heading.h3 color='white' align={['center', 'center', 'left']}>
-      The most widely-adopted toolkit for building serverless applications.
-    </Heading.h3>
-    <P align={['center', 'center', 'left']} m={0} color='gray.2'>
-      Any provider. Same experience.
-    </P>
+    <Heading.h1 color='white' align={['center', 'center', 'left']}>
+      Build apps with radically less overhead and cost
+    </Heading.h1>
   </Column>
 )
 
