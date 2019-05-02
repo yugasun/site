@@ -27,8 +27,8 @@ const ExamplesHero = () => {
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>
-            Add functionality to the Serverless Framework. Search all plugins
-            below.
+            Plugins allow anyone to create new or extend existing commands
+            within the Serverless Framework.
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>
