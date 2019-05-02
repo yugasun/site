@@ -8,30 +8,28 @@ import azureLogo from 'src/assets/images/azure-logo-grey.svg'
 
 const HomeHeroFooter = () => (
   <Box>
-    <Flex.center
-      width={[1, 1, 3 / 4]}
+    <Flex
+      width={[1, 1, 0.45]}
       mt={[4, 4, 0, 0, '113px', '69px']}
-      mx={'auto'}
-      flexDirection="row"
+      flexDirection='row'
     >
       <Text
-        color="white"
+        color='white'
         fontSize={[18]}
         mt={['170px', '170px', '122px', '140px', '180px', '220px']}
         mb={[0, 0, '10px', '10px', '15px']}
         lineHeight={['24px']}
-        align="center"
-        fontFamily="SoleilBk"
+        fontFamily='SoleilBk'
         letterSpacing={['-0.28px']}
       >
-        Supports these serverless backends
+        Start ups and Fortune 500 companies go serverless with us
       </Text>
-    </Flex.center>
+    </Flex>
     <Flex
       justifyContent={['center', 'center', 'space-between']}
-      alignItems="space-between"
-      flexDirection="row"
-      flexWrap="wrap"
+      alignItems='space-between'
+      flexDirection='row'
+      flexWrap='wrap'
       pt={['32px', '32px', '52px']}
       pb={[0, 0, 9]}
       maxWidth={[null, null, null, null, 800]}
