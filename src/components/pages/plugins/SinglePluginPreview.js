@@ -1,15 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Box,
-  Text,
-  Card,
-  Image,
-  Row,
-  Absolute,
-  Relative,
-  Flex,
-} from 'serverless-design-system'
+import { Box, Text, Card, Image, Row, Flex } from 'serverless-design-system'
 import { InternalLink, ExternalLink } from 'src/fragments'
 import { getPluginLink } from 'src/utils/plugins'
 import { Heading, P } from 'src/fragments/DesignSystem'
@@ -17,6 +8,7 @@ import downloadIcon from 'src/assets/images/download-gray.svg'
 import starIcon from 'src/assets/images/star-gray.svg'
 import { statusBadges, statusTooltips, statusBadgesMobile } from './StatusData'
 import ReactTooltip from 'react-tooltip'
+import MediaQuery from 'react-responsive'
 
 const TextWithWordWrap = styled(P)`
   word-wrap: break-word;

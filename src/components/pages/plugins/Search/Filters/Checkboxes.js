@@ -118,7 +118,7 @@ export default class Content extends React.Component {
                 <Box
                   mt={index === 0 ? 1 : '6px'}
                   key={id}
-                  mr={[0, 0, 52, 116, 116]}
+                  mr={[0, 0, 58, 48, 48]}
                 >
                   {this.state.pageHasLoaded ? <ToolTipContent id={id} /> : null}
                   <Label htmlFor={id}>
