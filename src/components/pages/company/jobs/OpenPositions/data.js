@@ -14,6 +14,13 @@ export default [
         "link": "https://jobs.lever.co/serverless/963e85b2-79f4-4b30-affc-37521724f33d"
     },
     {
+        "heading": "Growth",
+        "title": "Lead Solutions Architect",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/efbc8303-9ca2-4b3c-9b57-fea6149807aa"
+    },
+    {
         "heading": "Engineering",
         "title": "Senior Platform Engineer",
         "location": "San Francisco/Remote",
