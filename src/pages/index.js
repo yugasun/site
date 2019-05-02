@@ -8,7 +8,6 @@ import {
 } from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/home/Hero'
-import Benefits from 'src/components/pages/home/Benefits'
 import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
 import AllInOne from 'src/components/pages/home/AllInOne'
 
@@ -48,7 +47,6 @@ export default class Home extends React.Component {
           location={this.props.location}
         />
         <Hero usingSafariDesktop={this.state.usingSafariDesktop} />
-        <Benefits usingSafariDesktop={this.state.usingSafariDesktop} />
         <ServerlessGrowth />
         <Testimonial />
         <AllInOne usingSafariDesktop={this.state.usingSafariDesktop} />
