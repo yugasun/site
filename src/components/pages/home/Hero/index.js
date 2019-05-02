@@ -14,7 +14,7 @@ const HomeHeroComponent = ({ usingSafariDesktop }) => (
       'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
       `linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)`,
     ]}
-    height={[1300, 1250, 877, 841, 1126, 1126]}
+    height={[1300, 1250, 877, 841, 1009]}
   >
     <Flex
       justifyContent={['start', 'start', 'space-around']}
@@ -23,7 +23,7 @@ const HomeHeroComponent = ({ usingSafariDesktop }) => (
       <HeroImage usingSafariDesktop={usingSafariDesktop} />
       <Box width={['auto', 'auto', '300px', '70%', '60%', '696px']}>
         <HeroHeader />
-        <Box mt={[0, 0, 50]}>
+        <Box>
           <HeroActions />
         </Box>
         <HeroBrands />

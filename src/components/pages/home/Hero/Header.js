@@ -16,7 +16,7 @@ const HeroHeader = () => (
     <MobileCenteredTextBox>
       <HeroGithub />
     </MobileCenteredTextBox>
-    <Heading.h1 color='white' align={['center', 'center', 'left']}>
+    <Heading.h1 color='white' align={['center', 'center', 'left']} mb={0}>
       Build apps with radically less overhead and cost
     </Heading.h1>
   </Column>
