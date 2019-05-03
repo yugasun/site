@@ -13,10 +13,15 @@ const MobileCenteredTextBox = styled(MobileCenteredBox)`
 
 const HeroHeader = () => (
   <Column>
-    <MobileCenteredTextBox>
-      <HeroGithub />
-    </MobileCenteredTextBox>
-    <Heading.h1 color='white' align={['center', 'center', 'left']} mb={0}>
+    <HeroGithub />
+    <Heading.h1
+      color='white'
+      align={['left']}
+      mb={0}
+      fontSize={['40px', '40px', '48px']}
+      lineHeight={['50px', '50px', '62px']}
+      letterSpacing={[0, 0, '0.5px']}
+    >
       Build apps with radically less overhead and cost
     </Heading.h1>
   </Column>

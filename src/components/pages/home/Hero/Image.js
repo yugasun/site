@@ -8,19 +8,26 @@ const HeroLinesBackground = styled(Absolute)`
   position: absolute;
   left: 0;
 
-  @media screen and (max-width: 415px) {
-    left: 0px;
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    margin: 0 auto;
   }
 `
 
-const HomeHeroImage = ({ usingSafariDesktop }) => (
+const HomeHeroImage = () => (
   <Flex
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, '55%']}
+    width={[1, 1, 1, 1, '55%']}
     mb={[1, 1, 4]}
   >
-    <HeroLinesBackground mt={['42px', '42px', '67px', '27px', '43px']}>
-      <Image src={homepageHeroPlaceholder} width={[586, 586, 586, 386, 680]} />
+    <HeroLinesBackground
+      mt={[0, 0, 0, 0, '72px']}
+      pt={['92px', '92px', '92px', '92px', 0]}
+    >
+      <Image
+        src={homepageHeroPlaceholder}
+        width={[586, 586, 680, 680, 580, 680]}
+      />
     </HeroLinesBackground>
   </Flex>
 )

@@ -1,14 +1,12 @@
 import React from 'react'
 
 import {
-  TestimonialNew as Testimonial,
-  TrustedClientsNew as TrustedClients,
   Helmet,
   NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
 } from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/home/Hero'
-import ServerlessGrowth from 'src/components/pages/home/ServerlessGrowth'
+import Community from 'src/components/pages/home/Community'
 import AllInOne from 'src/components/pages/home/AllInOne'
 
 export default class Home extends React.Component {
@@ -47,10 +45,8 @@ export default class Home extends React.Component {
           location={this.props.location}
         />
         <Hero usingSafariDesktop={this.state.usingSafariDesktop} />
-        <ServerlessGrowth />
-        <Testimonial />
+        <Community />
         <AllInOne usingSafariDesktop={this.state.usingSafariDesktop} />
-        <TrustedClients />
       </DefaultLayout>
     )
   }

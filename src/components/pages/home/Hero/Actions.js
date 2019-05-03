@@ -15,8 +15,10 @@ const HomeActions = () => (
       completed: true,
       className: 'position-hero',
     }}
-    flexDirection={['column', 'column', 'column', 'column', 'row', 'row']}
+    buttonWidth={['300px', '300px', '176px']}
+    flexDirection={['column', 'column', 'row']}
     justifyContent={['center', 'center', 'left']}
+    tabletRow={true}
   />
 )
 
