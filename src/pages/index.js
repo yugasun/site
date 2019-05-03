@@ -7,7 +7,7 @@ import {
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/home/Hero'
 import Community from 'src/components/pages/home/Community'
-import AllInOne from 'src/components/pages/home/AllInOne'
+import Providers from 'src/components/pages/home/Providers'
 
 export default class Home extends React.Component {
   constructor() {
@@ -44,9 +44,9 @@ export default class Home extends React.Component {
           description='Build web, mobile and IoT applications using AWS Lambda and API Gateway, Azure Functions, Google Cloud Functions, and more.'
           location={this.props.location}
         />
-        <Hero usingSafariDesktop={this.state.usingSafariDesktop} />
+        <Hero />
         <Community />
-        <AllInOne usingSafariDesktop={this.state.usingSafariDesktop} />
+        <Providers />
       </DefaultLayout>
     )
   }
