@@ -1,6 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Column, InlineBlock, P, Flex } from 'serverless-design-system'
+import {
+  Box,
+  Column,
+  InlineBlock,
+  P,
+  Flex,
+  Image,
+} from 'serverless-design-system'
 
 import NavLink from '../NavLink'
 import NewsLetterForm from '../NewNewsLetterForm'
@@ -21,6 +28,7 @@ import instagramWhiteIcon from 'src/assets/images/instagram-white.svg'
 import twitterWhiteIcon from 'src/assets/images/twitter-white.svg'
 import githubWhiteIcon from 'src/assets/images/github-white.svg'
 import linkedinWhiteIcon from 'src/assets/images/linkedin-white.svg'
+import awsPartnerLogo from 'src/assets/images/footer/aws-tech-partner.svg'
 
 const SocialIconWrapper = styled(InlineBlock)`
   & > a > div {
@@ -66,8 +74,8 @@ const Subscribe = () => (
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
     <Flex
-      pt={[62, 62, 42, 42, 100]}
-      pb={[62, 62, 82, 82, 0]}
+      pt={[62, 62, 42, 42, 22]}
+      pb={[62, 62, 82, 82, 51]}
       justifyContent={['space-between', 'space-between', 'normal']}
     >
       <SocialIcon
@@ -96,6 +104,7 @@ const Subscribe = () => (
         hoverIcon={linkedinWhiteIcon}
       />
     </Flex>
+    <Image src={awsPartnerLogo} />
   </Column>
 )
 
