@@ -20,6 +20,7 @@ import maciej from 'src/assets/images/team/maciej-skierkowski.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
 import verne from 'src/assets/images/team/verne.jpg'
 import aj from 'src/assets/images/team/aj.jpg'
+import sam from 'src/assets/images/team/sam.png'
 
 const getLastName = name => name.split(' ').pop()
 
@@ -65,6 +66,7 @@ const teamMembers = [
   { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },
   { image: daniel, name: 'Daniel Schep', position: 'Software Engineer' },
   { image: aj, name: 'AJ Stuyvenberg', position: 'Senior Platform Engineer' },
+  { image: sam, name: 'Sam Alghanmi', position:'Full Stack Developer'}
 ].sort((object1, object2) =>
   getLastName(object1.name).localeCompare(getLastName(object2.name))
 )
