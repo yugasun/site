@@ -5,9 +5,10 @@ import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
 import HeroBrands from './Brands'
-import { Flex, Box } from 'serverless-design-system'
+import { Flex, Box, Column } from 'serverless-design-system'
+import WhiteBlank from './WhiteBlank'
 
-const HomeHeroComponent = ({ usingSafariDesktop }) => (
+const HomeHeroComponent = () => (
   <HeroWrapper
     background={[
       'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
@@ -26,7 +27,8 @@ const HomeHeroComponent = ({ usingSafariDesktop }) => (
         'row',
       ]}
     >
-      <HeroImage usingSafariDesktop={usingSafariDesktop} />
+      <HeroImage />
+      <WhiteBlank />
       <Box width={['auto', 'auto', '90%', '70%', '60%', '696px']}>
         <HeroHeader />
         <Box>

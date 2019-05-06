@@ -37,29 +37,37 @@ const TerminalTextContent = styled(Text.p)`
 const Terminal = () => {
   return (
     <Flex flexDirection={['column', 'column', 'column']} mb={[1, 1, 4]}>
-      <TerminalBackground width={['280px', '320px', '320px', '320px', '386px']}>
+      <TerminalBackground width={['280px', '320px', '320px', '320px', '416px']}>
         <Image src={homepageHeroTerminal} />
       </TerminalBackground>
-      <TerminalText mt={['128px', '128px', '165px', '120px', '20px']}>
+      <TerminalText mt={['128px', '128px', '165px', '120px', '40px']} ml={4}>
         <TerminalTextContent
           color='#727679'
           fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']}
           letterSpacing='0.1px'
         >
-          1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally
-          <br />2 &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;1 &nbsp;&nbsp;# Step 1. Install serverless globally
+          <br />
+          &nbsp;2 &nbsp;&nbsp;
           <Text.span color='#fff'>$ npm install serverless -g</Text.span>
-          <br />3<br />4 &nbsp;&nbsp;&nbsp;&nbsp;# Step 2. Create a serverless
-          function
-          <br />5 &nbsp;&nbsp;&nbsp;&nbsp;
+          <br />
+          &nbsp;3
+          <br />
+          &nbsp;4 &nbsp;&nbsp;# Step 2. Create a serverless function
+          <br />
+          &nbsp;5 &nbsp;&nbsp;
           <Text.span color='#fff'>
             $ serverless create --template hello-world
           </Text.span>
-          <br />6 <br />7 &nbsp;&nbsp;&nbsp;&nbsp;# Step 3. deploy to cloud
-          provider
-          <br />8 &nbsp;&nbsp;&nbsp;&nbsp;
+          <br />
+          &nbsp;6 <br />
+          &nbsp;7 &nbsp;&nbsp;# Step 3. deploy to cloud provider
+          <br />
+          &nbsp;8 &nbsp;&nbsp;
           <Text.span color='#fff'>$ serverless deploy</Text.span>
-          <br />9<br />
+          <br />
+          &nbsp;9
+          <br />
           10 &nbsp;&nbsp;# Your function is deployed!
           <br />
           11 &nbsp;&nbsp;

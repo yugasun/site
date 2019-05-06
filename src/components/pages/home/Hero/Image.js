@@ -7,6 +7,7 @@ import styled from 'styled-components'
 const HeroLinesBackground = styled(Absolute)`
   position: absolute;
   left: 0;
+  z-index: 5;
 
   @media screen and (max-width: 1024px) {
     position: relative;

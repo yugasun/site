@@ -4,10 +4,12 @@ import { Row } from 'serverless-design-system'
 import allTweets from './TwitterData'
 
 const Tweets = () => (
-  <Row>
-    {allTweets.map((tweet, index) => (
-      <Tweet {...tweet} key={index} />
-    ))}
+  <Row justifyContent='space-between'>
+    <Tweet {...allTweets[0]} />
+    <Row>
+      <Tweet {...allTweets[2]} />
+      <Tweet {...allTweets[3]} />
+    </Row>
   </Row>
 )
 
