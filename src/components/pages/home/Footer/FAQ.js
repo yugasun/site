@@ -1,9 +1,8 @@
 import React from 'react'
 import Collapse, { Panel } from 'rc-collapse'
-import { P, Row, Heading, Flex } from 'src/fragments/DesignSystem'
+import { Text, Flex } from 'serverless-design-system'
 import faqData from './faqData'
-require('rc-collapse/assets/index.css')
-import styled from 'styled-components'
+require('./faq.css')
 
 class FAQ extends React.Component {
   state = {
@@ -23,11 +22,19 @@ class FAQ extends React.Component {
       items.push(
         <Panel
           header={faq.question}
-          headerClass='my-header-class'
+          headerClass='accordion-header'
           showArrow={false}
           key={index}
         >
-          <Heading.h5>{faq.answer}</Heading.h5>
+          <Text
+            color='#8c8c8c'
+            fontSize='16px'
+            fontFamily='SoleilBk'
+            lineHeight='26px'
+            letterSpacing='0'
+          >
+            {faq.answer}
+          </Text>
         </Panel>
       )
     )
@@ -48,7 +55,6 @@ class FAQ extends React.Component {
   }
 
   render() {
-    const accordion = this.state.accordion
     const activeKey = this.state.activeKey
     return (
       <Collapse accordion={true} onChange={this.onChange} activeKey={activeKey}>
