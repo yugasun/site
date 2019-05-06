@@ -6,7 +6,7 @@ import cocaColaLogo from 'src/assets/images/home/brands/cocacola.svg'
 import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { Heading } from 'src/fragments/DesignSystem'
 
 const HomeHeroFooter = () => (
@@ -16,7 +16,7 @@ const HomeHeroFooter = () => (
       mt={['92px', '92px', '62px', '62px', '213px', '220px']}
       flexDirection='row'
     >
-      <TitleWithIcon color='white' headingComponent={Heading.h4}>
+      <TitleWithIcon color='white'>
         Startups and Fortune 500 companies go serverless with us
       </TitleWithIcon>
     </Flex>

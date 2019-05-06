@@ -103,7 +103,7 @@ const Providers = () => (
           </Box>
         </Flex>
       </Background>
-      <Box mb={400}>
+      <Box mb={[50, 50, 42, 42, 400]}>
         <Heading.h3 align='center'>
           A developer’s guide to going serverless
         </Heading.h3>

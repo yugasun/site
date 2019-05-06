@@ -7,7 +7,7 @@ import {
   Background,
 } from 'serverless-design-system'
 import { AppContainerNewest as AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import Tweet from './Tweet'
 import Tweets from './Tweets'
@@ -39,9 +39,9 @@ const HomeCommunity = ({ usingSafariDesktop }) => (
         <ResponsiveStack
           flexDirection={['column-reverse', 'column-reverse', 'row']}
         >
-          <Column width={[1, 1, 1 / 2, 1]}>
+          <Column width={[1, 1, 1 / 2, 1]} mt={[242, 242, 476, 476, 0]}>
             <Box width={[0.5]}>
-              <TitleWithIcon headingComponent={Heading.h4} color='black'>
+              <TitleWithIcon color='black'>
                 Backed by a rich and vibrant community
               </TitleWithIcon>
             </Box>
@@ -60,7 +60,9 @@ const HomeCommunity = ({ usingSafariDesktop }) => (
           </Column>
         </ResponsiveStack>
       </AppContainer>
-      <Tweet {...TweetsData[1]} />
+      <Box display={['none', 'none', 'none', 'none', 'block']}>
+        <Tweet {...TweetsData[1]} />
+      </Box>
     </Row>
     <Tweets />
   </React.Fragment>

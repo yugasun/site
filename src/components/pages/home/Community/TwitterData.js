@@ -7,6 +7,7 @@ export default [
   {
     image: tylerImage,
     name: 'Tyler Zey🔥',
+    nameColor: '#000',
     username: '@TylerZey',
     tweet:
       'Built two #Lambda functions today via @goserverless.  One runs daily to update all of our coupons in DynamoDB. And the other is the query function to search DynamoDB for the coupon.  Super duper easy with Serverless framework. Got it live and almost in prod already.',
@@ -14,6 +15,7 @@ export default [
     link: 'https://twitter.com/TylerZey/status/1098691255226298371',
     bgColor: '#eaeaea',
     tweetColor: '#5b5b5b',
+    dateColor: '#8c8c8c',
   },
   {
     image: jasonImage,
@@ -27,6 +29,7 @@ export default [
     date: 'Feb 20th',
     link: 'https://twitter.com/themccallister/status/1098305655830663169',
     bgColor: '#eaeaea',
+    dateColor: '#8c8c8c',
   },
   {
     image: papaImage,
@@ -39,6 +42,7 @@ export default [
     link: 'https://twitter.com/DrPappa/status/1101377275868708864',
     bgColor: '#000',
     tweetColor: '#fff',
+    dateColor: '#8c8c8c',
   },
   {
     image: philippImage,
@@ -52,5 +56,6 @@ export default [
     date: 'Feb 28th',
     link: 'https://twitter.com/lowestdef/status/1101167423577882624',
     bgColor: '#fd5750',
+    dateColor: '#fff',
   },
 ]

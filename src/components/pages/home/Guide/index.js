@@ -30,23 +30,24 @@ const DevelopersGuide = () => (
     <AppContainer>
       <Flex
         flexDirection={['column', 'column', 'column', 'column', 'row']}
-        width={[1, 1, 0.7, 0.7, 1]}
+        width={[1, 1, 1, 1, 1]}
+        alignItems='center'
       >
         {guidesData.map((guide, index) => (
           <Flex
             key={index}
             flexDirection={'column'}
             mb={42}
-            px={index === 1 ? '32px' : 0}
+            px={index === 1 ? [0, 0, 0, 0, '32px'] : 0}
           >
             <Box mt={[0, 0, 0, 0, '-300px']}>
               <Image
                 src={guide.image}
-                maxHeight={[234, 234, 234, 234, 300]}
-                maxWidth={[300, 300, 300, 300, 384]}
+                maxHeight={[234, 234, 446, 446, 300]}
+                maxWidth={[300, 300, 570, 570, 384]}
               />
             </Box>
-            <Background background='white'>
+            <Background background='white' maxWidth={[300, 300, 570, 570, 384]}>
               <Box py={62} px={32}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>
                 <TitleText color={'#000000'}>{guide.title}</TitleText>

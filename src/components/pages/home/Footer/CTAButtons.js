@@ -6,19 +6,23 @@ import { InternalLink } from 'src/fragments'
 const buttonsData = [
   {
     title: 'documentation',
-    link: '',
+    link: '/framework/docs/',
   },
   {
     title: 'examples',
-    link: '',
+    link: '/examples/',
   },
   {
     title: 'courses',
-    link: '',
+    link: '/courses/',
   },
 ]
 const CTAButtons = () => (
-  <Flex justifyContent='space-between' mt={42}>
+  <Flex
+    justifyContent='space-between'
+    mt={42}
+    flexDirection={['column', 'column', 'row']}
+  >
     {buttonsData.map((button, index) => (
       <InternalLink to={button.link} key={index}>
         <Button>{button.title}</Button>
