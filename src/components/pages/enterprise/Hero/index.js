@@ -19,13 +19,12 @@ const FrameworkHero = () => (
     }
     backgroundSize={['contain', 'contain', 'cover']}
     backgroundPosition={['top', 'top', 'center']}
-    height={[325, 325, 620, 735, 1170, 1290]}
+    height={[325, 325, 620, 735, 1070, 1190]}
     backgroundRepeat='no-repeat'
   >
     <Header />
     <Actions />
     <Benefit />
-    <Form />
   </HeroWrapper>
 )
 
