@@ -31,10 +31,11 @@ const Providers = () => (
     <Box mt={-100}>
       <Background
         backgroundImage={`url(${ringBg})`}
+        backgroundRepeat='no-repeat'
         backgroundSize='contain'
         backgroundPosition='center'
-        width='1146px'
-        height='1146px'
+        width={['100%', '100%', '100%', '100%', '1146px']}
+        height={['100%', '100%', '100%', '100%', '1146px']}
       >
         <Flex pt={260}>
           <Box ml={280}>

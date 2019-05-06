@@ -26,9 +26,12 @@ const TitleText = ({ children, color }) => (
 )
 
 const DevelopersGuide = () => (
-  <Background background='#f7f7f7' height={604}>
+  <Background background='#f7f7f7' height={[2079, 2079, 2675, 2675, 604]}>
     <AppContainer>
-      <Row>
+      <Flex
+        flexDirection={['column', 'column', 'column', 'column', 'row']}
+        width={[1, 1, 0.7, 0.7, 1]}
+      >
         {guidesData.map((guide, index) => (
           <Flex
             key={index}
@@ -36,15 +39,22 @@ const DevelopersGuide = () => (
             mb={42}
             px={index === 1 ? '32px' : 0}
           >
-            <Box mt={'-300px'}>
-              <Image src={guide.image} maxHeight={300} maxWidth={384} />
+            <Box mt={[0, 0, 0, 0, '-300px']}>
+              <Image
+                src={guide.image}
+                maxHeight={[234, 234, 234, 234, 300]}
+                maxWidth={[300, 300, 300, 300, 384]}
+              />
             </Box>
             <Background background='white'>
               <Box py={62} px={32}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>
                 <TitleText color={'#000000'}>{guide.title}</TitleText>
                 <P>{guide.content}</P>
-                <Flex.verticallyCenter justifyContent='space-between'>
+                <Flex.verticallyCenter
+                  justifyContent='space-between'
+                  flexDirection={['column', 'column', 'row']}
+                >
                   <InternalLink to={guide.actions[0].link}>
                     <Button>{guide.actions[0].text}</Button>
                   </InternalLink>
@@ -63,7 +73,7 @@ const DevelopersGuide = () => (
             </Background>
           </Flex>
         ))}
-      </Row>
+      </Flex>
     </AppContainer>
   </Background>
 )
