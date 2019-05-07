@@ -1,5 +1,6 @@
 {
-  "name": "Serverless",
+  "name": "@serverless/site",
+  "private": true,
   "description": "Serverless Website",
   "version": "1.0.0",
   "dependencies": {
