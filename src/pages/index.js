@@ -9,7 +9,6 @@ import Hero from 'src/components/pages/home/Hero'
 import Community from 'src/components/pages/home/Community'
 import Providers from 'src/components/pages/home/Providers'
 import Guide from 'src/components/pages/home/Guide'
-import Prefooter from 'src/components/pages/home/Footer/Prefooter'
 
 const Homepage = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
@@ -22,7 +21,6 @@ const Homepage = ({ location }) => (
     <Community />
     <Providers />
     <Guide />
-    <Prefooter />
   </HomeLayout>
 )
 
