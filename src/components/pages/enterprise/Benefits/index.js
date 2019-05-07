@@ -12,7 +12,7 @@ import {
   MobileCenteredBox,
   Button,
 } from 'src/fragments/DesignSystem'
-import { ExternalLink } from 'src/fragments'
+import { InternalLink } from 'src/fragments'
 import dotGrid from 'src/assets/images/dot-grid-new.svg'
 import supportImage from 'src/assets/images/pages/enterprise/support.svg'
 import enterpriseImage from 'src/assets/images/pages/enterprise/enterprise.svg'
@@ -21,7 +21,8 @@ import enterpriseImageAnimated from 'src/assets/images/pages/enterprise/enterpri
 import { isSafari, isMobile } from 'react-device-detect'
 import { WhitepaperModal } from 'src/components'
 import styled from 'styled-components'
-const ButtonWithZindex = styled('a')`
+
+const InternalLinkWithZindex = styled(InternalLink)`
   z-index: 4;
 `
 
@@ -55,11 +56,11 @@ const Benefits = () => (
           Dedicated support from serverless experts to help you architect,
           develop, secure and operate your serverless applications.
         </P>
-        <ButtonWithZindex href='#enterprise-contact-form'>
+        <InternalLinkWithZindex to={'/enterprise/contact/'}>
           <Button width={208} mt={4}>
             get support
           </Button>
-        </ButtonWithZindex>
+        </InternalLinkWithZindex>
       </Column>
       <MobileCenteredBox width={[1, 1, 0.5, 0.4]} mt={[0, 0, 3, 3, 0]}>
         <Image
