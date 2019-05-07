@@ -12,7 +12,7 @@ const advantages = [
   {
     title: 'Amazing Community',
     description:
-      'Over 28,000 Github stars, 100+ example apps, and 200+ open source plugins. The Serverless Framework has been adopted by thousands of companies worldwide.',
+      'Over 29,000 Github stars, 100+ example apps, and 200+ open source plugins. The Serverless Framework has been adopted by thousands of companies worldwide.',
   },
   {
     title: 'Vendor Agnostic',
