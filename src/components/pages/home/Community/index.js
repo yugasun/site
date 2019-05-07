@@ -12,25 +12,7 @@ import { Heading, P } from 'src/fragments/DesignSystem'
 import Tweet from './Tweet'
 import Tweets from './Tweets'
 import TweetsData from './TwitterData'
-
-const communityNumbers = [
-  {
-    title: 'Weekly deployments',
-    number: '5,000,000',
-  },
-  {
-    title: 'Downloads',
-    number: '8,000,000',
-  },
-  {
-    title: 'Plugins',
-    number: '1,230',
-  },
-  {
-    title: 'GitHub stars',
-    number: '5,000,000',
-  },
-]
+import communityNumbers from './CommunityNumbers'
 
 const HomeCommunity = ({ usingSafariDesktop }) => (
   <React.Fragment>
@@ -47,8 +29,8 @@ const HomeCommunity = ({ usingSafariDesktop }) => (
             </Box>
             <Row mt={42}>
               {communityNumbers.map((item, index) => (
-                <Column key={index} mr={32}>
-                  <Heading.h2 pb={0} my={0}>
+                <Column key={index} mr={64}>
+                  <Heading.h2 pb={0} my={0} align='center'>
                     {item.number}
                   </Heading.h2>
                   <P color='#8c8c8c' m={0} align='center'>
