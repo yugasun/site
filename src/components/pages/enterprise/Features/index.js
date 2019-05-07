@@ -120,7 +120,10 @@ const Features = () => (
               )
             })}
 
-            <InternalLinkWithZindex to={'/enterprise/contact/'}>
+            <InternalLinkWithZindex
+              to={'/enterprise/contact/'}
+              className={`position-feature${index + 1}`}
+            >
               <Button width={208} mt={4}>
                 schedule a demo
               </Button>
