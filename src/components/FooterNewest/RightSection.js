@@ -28,7 +28,7 @@ import instagramWhiteIcon from 'src/assets/images/instagram-white.svg'
 import twitterWhiteIcon from 'src/assets/images/twitter-white.svg'
 import githubWhiteIcon from 'src/assets/images/github-white.svg'
 import linkedinWhiteIcon from 'src/assets/images/linkedin-white.svg'
-import awsPartnerLogo from 'src/assets/images/footer/aws-tech-partner.svg'
+import awsPartnerLogo from 'src/assets/images/footer/aws-tech-partner.png'
 
 const SocialIconWrapper = styled(InlineBlock)`
   & > a > div {
