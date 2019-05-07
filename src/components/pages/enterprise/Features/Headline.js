@@ -11,9 +11,8 @@ const Headline = () => (
       color='white'
       align='center'
       fontFamily='Soleil'
-      pt={[0, 0, 32]}
       mb={[0, 0, 0, 0, '10px']}
-      mt={[1640, 1640, 1190, 1120, 660]}
+      mt={[4, 4, 3, 3, 0]}
     >
       Serverless Framework Enterprise features
     </Text>

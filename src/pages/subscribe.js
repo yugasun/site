@@ -2,14 +2,14 @@ import React from 'react'
 import { ThemeProvider, Background } from 'serverless-design-system'
 
 import { Helmet } from 'src/fragments'
-import DefaultNoFooterLayout from 'src/layouts/DefaultNoFooter'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Box } from 'src/fragments/DesignSystem'
 import SubscribeBoxes from 'src/components/pages/subscribe/Boxes'
 import SpinningWheels from 'src/components/pages/subscribe/SpinningWheels'
 
 const SubscribePage = () => (
   <ThemeProvider>
-    <DefaultNoFooterLayout transparentHeader={true}>
+    <DefaultLayout transparentHeader={true} noFooter={true}>
       <Helmet title='Serverless Newsletter Subscription Page' />
       <Box.OnlyMobile mt={'43px'} />
       <Background
@@ -19,11 +19,12 @@ const SubscribePage = () => (
           'linear-gradient(139deg,rgb(0,0,0) 61%,#7d2724)',
         ]}
         height={['100vh', '100vh', '130vh', '130vh', '100vh']}
+        width={1}
       >
         <SpinningWheels />
         <SubscribeBoxes />
       </Background>
-    </DefaultNoFooterLayout>
+    </DefaultLayout>
   </ThemeProvider>
 )
 
