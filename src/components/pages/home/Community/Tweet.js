@@ -25,6 +25,7 @@ const Tweet = ({
   image,
   link,
   dateColor,
+  customTwitterIcon,
 }) => {
   return (
     <StyledBackground
@@ -40,16 +41,16 @@ const Tweet = ({
               <Heading.h5 color={nameColor} ml={'12px'}>
                 {name}
               </Heading.h5>
-              <Text color={usernameColor} ml={'12px'}>
+              <Heading.h5 color={usernameColor} ml={'12px'}>
                 {username}
-              </Text>
+              </Heading.h5>
             </Flex>
           </Flex>
         </ExternalLink>
         <P color={tweetColor}>{tweet}</P>
       </Box>
       <Flex>
-        <Image src={twitterIcon} />
+        <Image src={customTwitterIcon ? customTwitterIcon : twitterIcon} />
         <Text
           ml={'12px'}
           color={dateColor}

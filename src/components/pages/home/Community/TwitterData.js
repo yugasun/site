@@ -2,6 +2,7 @@ import jasonImage from 'src/assets/images/home/tweeters/jason.png'
 import tylerImage from 'src/assets/images/home/tweeters/tyler.png'
 import philippImage from 'src/assets/images/home/tweeters/philipp.png'
 import papaImage from 'src/assets/images/home/tweeters/papa.png'
+import twitterWhiteIcon from 'src/assets/images/home/tweeters/twitter-icon-white.svg'
 
 export default [
   {
@@ -9,6 +10,7 @@ export default [
     name: 'Tyler Zey🔥',
     nameColor: '#000',
     username: '@TylerZey',
+    usernameColor: '#8c8c8c',
     tweet:
       'Built two #Lambda functions today via @goserverless.  One runs daily to update all of our coupons in DynamoDB. And the other is the query function to search DynamoDB for the coupon.  Super duper easy with Serverless framework. Got it live and almost in prod already.',
     date: 'Feb 27th',
@@ -36,6 +38,7 @@ export default [
     name: 'Pappa',
     nameColor: '#ffffff',
     username: '@DrPappa',
+    usernameColor: '#8c8c8c',
     tweet:
       "I didn't realise #serverless was so absurdly quick and easy to use. Thanks @goserverless you've done an excellent job.",
     date: 'Mar 1st',
@@ -57,5 +60,6 @@ export default [
     link: 'https://twitter.com/lowestdef/status/1101167423577882624',
     bgColor: '#fd5750',
     dateColor: '#fff',
+    customTwitterIcon: twitterWhiteIcon,
   },
 ]
