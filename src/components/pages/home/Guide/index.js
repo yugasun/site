@@ -70,6 +70,7 @@ const DevelopersGuide = () => (
             <Background
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
+              minHeight={['auto', 'auto', 'auto', 'auto', '522px', 'auto']}
             >
               <Box py={[42, 42, 52]} px={[26, 26, 118, 118, 32]}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>

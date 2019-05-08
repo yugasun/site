@@ -72,7 +72,7 @@ const Logos = () => (
           height={[24, 24, 30, 30, 37]}
         />
       </LogoBackground>
-      <Column mt={[3, 3, 0, 0, 9, 0]}>
+      <Column mt={[3, 3, 0, 0, 7, 0]}>
         <Heading.h3 align={['center', 'center', 'auto']}>
           With the power of choice
         </Heading.h3>
@@ -97,7 +97,7 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex>
-      <Box ml={[170, 170, 150, 150, 280]} mt={[-120, -120, 0, 0, 9, 0]}>
+      <Box ml={[170, 170, 150, 150, 250, 280]} mt={[-120, -120, 0, 0, 5, 0]}>
         <LogoBackground>
           <Image
             src={openwhiskLogo}
@@ -106,7 +106,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </Box>
-      <Box ml={[-150, -150, 100, 100, 200, 322]} mt={[33, 33, 53]}>
+      <Box ml={[-150, -150, 100, 100, 200, 322]} mt={[33, 33, 53, 53, 153, 53]}>
         <LogoBackground>
           <Image
             src={cloudflareLogo}
