@@ -36,7 +36,7 @@ const LogoBackground = ({ children }) => (
 const Logos = () => (
   <React.Fragment>
     <Flex pt={[0, 0, 50, 50, 180, 260]}>
-      <Box ml={[20, 20, 100, 170, 180, 280]}>
+      <Box ml={[20, 20, 100, 190, 180, 280]}>
         <LogoBackground>
           <Image
             src={awsLogo}
@@ -45,7 +45,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </Box>
-      <Box ml={[30, 30, 200, 300, 360]} mt={[70, 70, 100, 100, 40, 100]}>
+      <Box ml={[30, 30, 200, 280, 360]} mt={[70, 70, 100, 100, 40, 100]}>
         <LogoBackground>
           <Image
             src={gcpLogo}
@@ -97,7 +97,7 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex>
-      <Box ml={[170, 170, 150, 150, 250, 280]} mt={[-120, -120, 0, 0, 5, 0]}>
+      <Box ml={[170, 170, 150, 220, 250, 280]} mt={[-120, -120, 0, -1, 5, 0]}>
         <LogoBackground>
           <Image
             src={openwhiskLogo}
@@ -106,7 +106,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </Box>
-      <Box ml={[-150, -150, 100, 100, 200, 322]} mt={[33, 33, 53, 53, 153, 53]}>
+      <Box ml={[-150, -150, 100, 140, 200, 322]} mt={[33, 33, 53, 33, 153, 53]}>
         <LogoBackground>
           <Image
             src={cloudflareLogo}
