@@ -11,6 +11,13 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import guidesData from './Data'
 import { InternalLink } from 'src/fragments'
 import { P, Button } from 'src/fragments/DesignSystem'
+import styled from 'styled-components'
+
+const FlexWithLaptopWidth = styled(Flex)`
+  @media screen and (min-width: 1200px) and (max-width: 1500px) {
+    width: 30% !important;
+  }
+`
 
 const TitleText = ({ children, color }) => (
   <Text
@@ -31,20 +38,27 @@ const DevelopersGuide = () => (
       <Flex
         flexDirection={['column', 'column', 'column', 'column', 'row']}
         width={[1, 1, 1, 1, 1]}
-        alignItems='center'
+        alignItems={[
+          'center',
+          'center',
+          'center',
+          'center',
+          'normal',
+          'center',
+        ]}
       >
         {guidesData.map((guide, index) => (
-          <Flex
+          <FlexWithLaptopWidth
             key={index}
             flexDirection={['column']}
             mb={42}
-            px={index === 1 ? [0, 0, 0, 0, '32px'] : 0}
+            mx={index === 1 ? [0, 0, 0, 0, '5%', '32px'] : 0}
           >
             <Box
               mt={
                 index == 0
-                  ? ['-234px', '-234px', '-223px', '-223px', '-300px']
-                  : [0, 0, 0, 0, '-300px']
+                  ? ['-234px', '-234px', '-223px', '-223px', '-250px', '-300px']
+                  : [0, 0, 0, 0, '-250px', '-300px']
               }
             >
               <Image
@@ -90,7 +104,7 @@ const DevelopersGuide = () => (
                 </Flex.verticallyCenter>
               </Box>
             </Background>
-          </Flex>
+          </FlexWithLaptopWidth>
         ))}
       </Flex>
     </AppContainer>

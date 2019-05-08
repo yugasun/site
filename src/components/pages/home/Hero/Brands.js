@@ -7,7 +7,6 @@ import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
-import { Heading } from 'src/fragments/DesignSystem'
 
 const HomeHeroFooter = () => (
   <Box>

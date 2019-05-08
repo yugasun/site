@@ -14,7 +14,7 @@ const Providers = () => (
         backgroundSize={['cover', 'cover', 'cover', 'contain', 'contain']}
         backgroundPosition='center'
         width={['100%', '100%', '100%', '100%', '100%', '1146px']}
-        height={['100%', '100%', '100%', '100%', '100%', '1146px']}
+        height={['100%', '100%', '100%', '100%', '1146px']}
       >
         <Logos />
       </Background>
