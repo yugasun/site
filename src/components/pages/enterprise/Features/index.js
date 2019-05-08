@@ -1,13 +1,17 @@
 import React from 'react'
 import { Flex, Text, Column, Box } from 'serverless-design-system'
 import { Heading, Button, P } from 'src/fragments/DesignSystem'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
+import { TitleWithIconNew as TitleWithIcon, InternalLink } from 'src/fragments'
 import ReactPlayer from 'react-player'
 import MediaQuery from 'react-responsive'
 import styled from 'styled-components'
 import Headline from './Headline'
 
 const ButtonWithZindex = styled('a')`
+  z-index: 4;
+`
+
+const InternalLinkWithZindex = styled(InternalLink)`
   z-index: 4;
 `
 
@@ -116,11 +120,14 @@ const Features = () => (
               )
             })}
 
-            <ButtonWithZindex href='#enterprise-contact-form'>
+            <InternalLinkWithZindex
+              to={'/enterprise/contact/'}
+              className={`position-feature${index + 1}`}
+            >
               <Button width={208} mt={4}>
                 schedule a demo
               </Button>
-            </ButtonWithZindex>
+            </InternalLinkWithZindex>
           </Column>
           <FlexWithBackground
             alignItems='center'

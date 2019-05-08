@@ -163,11 +163,14 @@ export default class ComparisonBoxes extends React.Component {
           >
             <CompareBox points={enterprisePoints} heading='enterprise' />
             <MobileCenteredBox pb={'32px'} px={'32px'} pt={'14px'}>
-              <a href='#enterprise-contact-form'>
+              <InternalLink
+                to={'/enterprise/contact/'}
+                className='position-compare'
+              >
                 <Button m='auto' className='enterprise-learn-more'>
                   learn more
                 </Button>
-              </a>
+              </InternalLink>
             </MobileCenteredBox>
           </EnterpriseComparisonBox>
         </Flex>
