@@ -60,9 +60,9 @@ const Subscribe = () => (
     order={['1', '1', '1', '1', '2']}
     pl={[0, 0, 0, 0, 3]}
   >
-    <Box mb={[32, 32, 32, 32, 41]} id='newsletter-box-footer'>
+    <Box mb={[32, 32, 32, 32, 41]} id="newsletter-box-footer">
       <P
-        color='white'
+        color="white"
         align={['center', 'center', 'left']}
         lineHeight={1.63}
         mb={0}
@@ -75,7 +75,7 @@ const Subscribe = () => (
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
     <Flex
       pt={[62, 62, 42, 42, 22]}
-      pb={[62, 62, 82, 82, 51]}
+      pb={[22, 22, 82, 82, 51]}
       justifyContent={['space-between', 'space-between', 'normal']}
     >
       <SocialIcon
@@ -104,7 +104,9 @@ const Subscribe = () => (
         hoverIcon={linkedinWhiteIcon}
       />
     </Flex>
-    <Image src={awsPartnerLogo} />
+    <Box pb={[62, 62, 0]}>
+      <Image src={awsPartnerLogo} />
+    </Box>
   </Column>
 )
 
