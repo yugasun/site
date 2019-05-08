@@ -7,18 +7,18 @@ import Logos from './Logos'
 
 const Providers = () => (
   <AppContainer>
-    <Box mt={[150, 150, -100]}>
+    <Box mt={[150, 150, 0, 0, -100]}>
       <Background
         backgroundImage={`url(${ringBg})`}
         backgroundRepeat='no-repeat'
-        backgroundSize={['cover', 'cover', 'cover', 'cover', 'contain']}
+        backgroundSize={['cover', 'cover', 'cover', 'contain', 'contain']}
         backgroundPosition='center'
         width={['100%', '100%', '100%', '100%', '100%', '1146px']}
         height={['100%', '100%', '100%', '100%', '100%', '1146px']}
       >
         <Logos />
       </Background>
-      <Box mb={[50, 50, 42, 42, 400]}>
+      <Box mb={[283, 283, 309, 309, 400]} mt={[92, 92, 62, 92, 0]}>
         <Heading.h3 align='center'>
           A developer’s guide to going serverless
         </Heading.h3>

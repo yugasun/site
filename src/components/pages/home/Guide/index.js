@@ -15,9 +15,9 @@ import { P, Button } from 'src/fragments/DesignSystem'
 const TitleText = ({ children, color }) => (
   <Text
     color={color}
-    fontFamily='Soleil'
-    fontSize='24px'
-    lineHeight='38px'
+    fontFamily={['SoleilBk', 'SoleilBk', 'Soleil']}
+    fontSize={[18, 18, 24]}
+    lineHeight={['30px', '30px', '38px']}
     letterSpacing='-0.38px'
     align='center'
   >
@@ -26,7 +26,7 @@ const TitleText = ({ children, color }) => (
 )
 
 const DevelopersGuide = () => (
-  <Background background='#f7f7f7' height={[2079, 2079, 2675, 2675, 604]}>
+  <Background background='#f7f7f7' height={[2030, 2030, 2575, 2575, 604]}>
     <AppContainer>
       <Flex
         flexDirection={['column', 'column', 'column', 'column', 'row']}
@@ -40,7 +40,13 @@ const DevelopersGuide = () => (
             mb={42}
             px={index === 1 ? [0, 0, 0, 0, '32px'] : 0}
           >
-            <Box mt={[0, 0, 0, 0, '-300px']}>
+            <Box
+              mt={
+                index == 0
+                  ? ['-234px', '-234px', '-223px', '-223px', '-300px']
+                  : [0, 0, 0, 0, '-300px']
+              }
+            >
               <Image
                 src={guide.image}
                 maxHeight={[234, 234, 446, 446, 300]}
@@ -51,10 +57,10 @@ const DevelopersGuide = () => (
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
             >
-              <Box py={52} px={32}>
+              <Box py={[42, 42, 52]} px={[26, 26, 118, 118, 32]}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>
                 <TitleText color={'#000000'}>{guide.title}</TitleText>
-                <P>{guide.content}</P>
+                <P align={['center']}>{guide.content}</P>
                 <Flex.verticallyCenter
                   justifyContent='space-between'
                   flexDirection={[

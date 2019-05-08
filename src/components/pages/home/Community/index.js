@@ -20,7 +20,7 @@ const HomeCommunity = () => (
     <AppContainer>
       <Row mt={[0, 0, 132, 372, 164]} mb={[62, 62, 62, 62, 0]}>
         <Column width={[1, 1, 1, 1]} mt={[242, 242, 286, 286, 0]}>
-          <Box width={[0.8, 0.8, 0.8, 1, 0.5]}>
+          <Box width={[0.8, 0.8, 0.6, 1, 0.5]}>
             <TitleWithIcon color='black'>
               Backed by a rich and vibrant community
             </TitleWithIcon>

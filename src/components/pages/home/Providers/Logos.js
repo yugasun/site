@@ -35,8 +35,8 @@ const LogoBackground = ({ children }) => (
 
 const Logos = () => (
   <React.Fragment>
-    <Flex pt={[0, 0, 150, 150, 180, 260]}>
-      <Box ml={[20, 20, 100, 100, 180, 280]}>
+    <Flex pt={[0, 0, 50, 50, 180, 260]}>
+      <Box ml={[20, 20, 100, 170, 180, 280]}>
         <LogoBackground>
           <Image
             src={awsLogo}
@@ -45,7 +45,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </Box>
-      <Box ml={[20, 20, 200, 200, 360]} mt={[100, 100, 100, 100, 40, 100]}>
+      <Box ml={[30, 30, 200, 300, 360]} mt={[70, 70, 100, 100, 40, 100]}>
         <LogoBackground>
           <Image
             src={gcpLogo}
@@ -56,19 +56,33 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex
-      justifyContent='space-between'
+      justifyContent={[
+        'space-between',
+        'space-between',
+        'space-between',
+        'space-around',
+        'space-between',
+      ]}
       flexDirection={['column', 'column', 'row']}
     >
       <LogoBackground>
         <Image
           src={azureLogo}
-          width={[75, 75, 100, 100, 125]}
-          height={[22, 22, 30, 30, 37]}
+          width={[85, 85, 100, 100, 125]}
+          height={[24, 24, 30, 30, 37]}
         />
       </LogoBackground>
-      <Column>
-        <Heading.h3>With the power of choice</Heading.h3>
-        <Text fontFamily='SoleilBk' color='#8c8c8c' lineHeight='30px' mx='auto'>
+      <Column mt={[3, 3, 0]}>
+        <Heading.h3 align={['center', 'center', 'auto']}>
+          With the power of choice
+        </Heading.h3>
+        <Text
+          fontFamily='SoleilBk'
+          color='#8c8c8c'
+          lineHeight='30px'
+          mx='auto'
+          align={['center', 'center', 'auto']}
+        >
           Deploy to all major cloud providers
         </Text>
       </Column>
@@ -83,7 +97,7 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex>
-      <Box ml={[20, 20, 150, 150, 280]}>
+      <Box ml={[170, 170, 150, 150, 280]} mt={[-120, -120, 0]}>
         <LogoBackground>
           <Image
             src={openwhiskLogo}
@@ -92,7 +106,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </Box>
-      <Box ml={[20, 20, 100, 100, 322]} mt={53}>
+      <Box ml={[-150, -150, 100, 100, 322]} mt={[33, 33, 53]}>
         <LogoBackground>
           <Image
             src={cloudflareLogo}
