@@ -50,12 +50,16 @@ const HomeHeroImage = () => (
   <Flex
     flexDirection={['column', 'column', 'column']}
     width={[1, 1, 1, 1, '55%']}
-    mt={5}
+    mt={[5]}
   >
-    <Position zIndex='5' left='0' position='absolute'>
+    <Position
+      zIndex='5'
+      left={[null, null, null, '16%', '0']}
+      position={['relative', 'relative', 'absolute']}
+    >
       <Background
-        width={['500px', '500px', '500px', '500px', '600px', '680px']}
-        height={['600px', '500px', '500px', '500px', '600px', '680px']}
+        width={['auto', 'auto', '680px', '680px', '600px', '680px']}
+        height={['auto', 'auto', '680px', '680px', '600px', '680px']}
         background='#EAEAEA'
         backgroundImage={`url(${ringBg})`}
         backgroundRepeat='no-repeat'
@@ -63,20 +67,21 @@ const HomeHeroImage = () => (
         backgroundPosition='center'
       >
         <Flex flexDirection='column' alignItems='center'>
-          <Flex flexDirection='column' alignItems='center' mt='20%'>
-            <P align='left' mr={'220px'} mb={0} pt={1}>
+          <Flex
+            flexDirection='column'
+            alignItems='center'
+            mt={['10%', '10%', '20%']}
+          >
+            <P align='left' mr={['115px', '115px', '220px']} mb={0} pt={[1]}>
               Get started in 3 steps
             </P>
-            <TerminalBackground width={['280px', '320px', '320px', '320px', 1]}>
+            <TerminalBackground width={['280px', '320px', 1]}>
               <Image src={homepageHeroTerminal} />
             </TerminalBackground>
-            <TerminalText
-              ml={['1px', '25px', '90px', '135px', '0px']}
-              mt={['128px', '128px', '165px', '120px', '102px']}
-            >
+            <TerminalText mt={['92px', '92px', '102px']}>
               <TerminalTextContent
                 color='#727679'
-                fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']}
+                fontSize={['10px', '10px', '13.7px']}
                 letterSpacing='0.1px'
               >
                 1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally

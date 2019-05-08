@@ -5,6 +5,7 @@ import allTweets from './TwitterData'
 import Slider from 'react-slick'
 require('slick-carousel/slick/slick.css')
 require('slick-carousel/slick/slick-theme.css')
+require('./MobileCarousel.css')
 
 const Tweets = () => (
   <React.Fragment>
@@ -18,7 +19,10 @@ const Tweets = () => (
     </Box>
 
     <Box display={['none', 'none', 'block', 'block', 'none']}>
-      <Flex flexDirection='column'>
+      <Flex
+        flexDirection="column"
+        alignItems={['normal', 'normal', 'normal', 'center', 'normal']}
+      >
         <Row>
           <Tweet {...allTweets[2]} />
           <Tweet {...allTweets[1]} />
@@ -31,7 +35,7 @@ const Tweets = () => (
     </Box>
 
     <Box display={['none', 'none', 'none', 'none', 'block']}>
-      <Flex justifyContent='space-between'>
+      <Flex justifyContent="space-between">
         <Tweet {...allTweets[0]} />
         <Row>
           <Tweet {...allTweets[2]} />

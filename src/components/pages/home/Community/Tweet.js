@@ -27,7 +27,11 @@ const Tweet = ({
   dateColor,
 }) => {
   return (
-    <StyledBackground background={bgColor} height={384} width={384}>
+    <StyledBackground
+      background={bgColor}
+      height={[384]}
+      width={('100%', '100%', '50%', '80%', '384px')}
+    >
       <Box>
         <ExternalLink to={link}>
           <Flex>
