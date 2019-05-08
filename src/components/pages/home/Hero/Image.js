@@ -46,6 +46,16 @@ const TerminalTextContent = styled(Text.p)`
   }
 `
 
+const BackgroundWithBigScreenCoverage = styled(Background)`
+  @media screen and (min-width: 1920px) {
+    width: 826px;
+  }
+
+  @media screen and (min-width: 2220px) {
+    width: 1026px;
+  }
+`
+
 const HomeHeroImage = () => (
   <Flex
     flexDirection={['column', 'column', 'column']}
@@ -57,7 +67,7 @@ const HomeHeroImage = () => (
       left={[null, null, null, '16%', '0']}
       position={['relative', 'relative', 'absolute']}
     >
-      <Background
+      <BackgroundWithBigScreenCoverage
         width={['auto', 'auto', '680px', '680px', '580px', '680px']}
         height={['auto', 'auto', '680px', '680px', '580px', '680px']}
         background='#EAEAEA'
@@ -108,7 +118,7 @@ const HomeHeroImage = () => (
             </TerminalText>
           </Flex>
         </Flex>
-      </Background>
+      </BackgroundWithBigScreenCoverage>
     </Position>
   </Flex>
 )
