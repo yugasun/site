@@ -10,7 +10,7 @@ const CommunityNumbers = () => (
     <Column
       width={[1, 1, 1, 1]}
       mt={[242, 242, 286, 286, 0]}
-      ml={[0, 0, 0, 0, -6]}
+      ml={[0, 0, 0, 0, 5, -6]}
     >
       <Box width={[0.8, 0.8, 0.6, 1, 0.5]}>
         <TitleWithIcon color='black'>
