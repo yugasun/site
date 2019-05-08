@@ -29,7 +29,7 @@ const HomeHeroComponent = () => (
     >
       <HeroImage />
       <WhiteBlank />
-      <Box width={['auto', 'auto', '90%', '70%', '60%', '696px']}>
+      <Box width={['auto', 'auto', '90%', '70%', '55%', '696px']}>
         <HeroHeader />
         <Box>
           <HeroActions />

@@ -12,8 +12,8 @@ import { Heading } from 'src/fragments/DesignSystem'
 const HomeHeroFooter = () => (
   <Box>
     <Flex
-      width={[0.8, 0.8, 0.6, 0.6, 0.69, 0.6]}
-      mt={['92px', '92px', '62px', '62px', '213px', '220px']}
+      width={[0.8, 0.8, 0.6, 0.6, 0.72, 0.6]}
+      mt={['92px', '92px', '62px', '62px', '162px', '220px']}
       flexDirection='row'
     >
       <TitleWithIcon color='white'>

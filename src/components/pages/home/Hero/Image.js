@@ -58,8 +58,8 @@ const HomeHeroImage = () => (
       position={['relative', 'relative', 'absolute']}
     >
       <Background
-        width={['auto', 'auto', '680px', '680px', '600px', '680px']}
-        height={['auto', 'auto', '680px', '680px', '600px', '680px']}
+        width={['auto', 'auto', '680px', '680px', '580px', '680px']}
+        height={['auto', 'auto', '680px', '680px', '580px', '680px']}
         background='#EAEAEA'
         backgroundImage={`url(${ringBg})`}
         backgroundRepeat='no-repeat'
