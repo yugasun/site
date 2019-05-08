@@ -7,10 +7,14 @@ require('slick-carousel/slick/slick.css')
 require('slick-carousel/slick/slick-theme.css')
 require('./MobileCarousel.css')
 
+const settings = {
+  dots: true,
+}
+
 const Tweets = () => (
   <React.Fragment>
     <Box display={['block', 'block', 'none']}>
-      <Slider dots={true}>
+      <Slider {...settings}>
         <Tweet {...allTweets[0]} />
         <Tweet {...allTweets[2]} />
         <Tweet {...allTweets[1]} />
@@ -20,7 +24,7 @@ const Tweets = () => (
 
     <Box display={['none', 'none', 'block', 'block', 'none']}>
       <Flex
-        flexDirection="column"
+        flexDirection='column'
         alignItems={['normal', 'normal', 'normal', 'center', 'normal']}
       >
         <Row>
@@ -35,7 +39,7 @@ const Tweets = () => (
     </Box>
 
     <Box display={['none', 'none', 'none', 'none', 'block']}>
-      <Flex justifyContent="space-between">
+      <Flex justifyContent='space-between'>
         <Tweet {...allTweets[0]} />
         <Row>
           <Tweet {...allTweets[2]} />

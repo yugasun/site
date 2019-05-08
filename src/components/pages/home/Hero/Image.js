@@ -36,7 +36,7 @@ const TerminalText = styled(Absolute)`
     margin-left: 38px;
   }
   @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-left: 40px;
+    margin-left: 1px;
   }
 `
 

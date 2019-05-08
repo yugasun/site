@@ -12,3 +12,14 @@
   color: #fd5750;
   opacity: 1;
 }
+
+.slick-dots li {
+  margin-right: 5px;
+}
+
+.slick-dots li button:before {
+  font-size: 37px;
+  content: '■';
+  color: #eaeaea;
+  opacity: 1;
+}

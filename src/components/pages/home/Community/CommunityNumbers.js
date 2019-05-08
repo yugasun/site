@@ -4,10 +4,17 @@ import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import communityNumbersData from './CommunityNumbersData'
 import { Column, Box, Row } from 'serverless-design-system'
+import styled from 'styled-components'
+
+const ColumnWithCustomMobileMargin = styled(Column)`
+  @media screen and (min-width: 410px) and (max-width: 420px) {
+    margin-top: 182px;
+  }
+`
 
 const CommunityNumbers = () => (
   <AppContainer>
-    <Column
+    <ColumnWithCustomMobileMargin
       width={[1, 1, 1, 1]}
       mt={[212, 212, 286, 286, 0]}
       ml={[0, 0, 0, 0, 5, -6]}
@@ -51,7 +58,7 @@ const CommunityNumbers = () => (
           </Column>
         ))}
       </Row>
-    </Column>
+    </ColumnWithCustomMobileMargin>
   </AppContainer>
 )
 

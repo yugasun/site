@@ -10,6 +10,10 @@ const StyledBackground = styled(Background)`
   flex-direction: column;
   justify-content: space-between;
   padding: 32px;
+
+  @media screen and (max-width: 415px) {
+    min-width: 100%;
+  }
 `
 
 const Tweet = ({
@@ -30,7 +34,7 @@ const Tweet = ({
   return (
     <StyledBackground
       background={bgColor}
-      height={[384]}
+      minHeight={[384]}
       width={('100%', '100%', '50%', '80%', '384px')}
     >
       <Box>
