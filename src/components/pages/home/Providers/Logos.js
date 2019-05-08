@@ -36,7 +36,7 @@ const LogoBackground = ({ children }) => (
 const Logos = () => (
   <React.Fragment>
     <Flex pt={[0, 0, 50, 50, 180, 260]}>
-      <Box ml={[20, 20, 100, 190, 180, 200]}>
+      <Box ml={[20, 20, 100, 190, 180, 200]} mt={[-3, -3, 0]}>
         <LogoBackground>
           <Image
             src={awsLogo}
