@@ -40,6 +40,7 @@ const LogoBackground = ({ children }) => (
     background='white'
     height={[95, 95, 126, 126, 158]}
     width={[125, 125, 166, 166, 208]}
+    className={'provider-card-bg'}
   >
     {children}
   </BackgroundWithBorder>

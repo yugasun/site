@@ -17,3 +17,9 @@
     margin-left: 235px;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .provider-card-bg:hover img {
+    opacity: 0.6;
+  }
+}
