@@ -25,7 +25,7 @@ const Tweets = () => (
     <Box display={['none', 'none', 'block', 'block', 'none']}>
       <Flex
         flexDirection='column'
-        alignItems={['normal', 'normal', 'normal', 'center', 'normal']}
+        alignItems={['normal', 'normal', 'center', 'center', 'normal']}
       >
         <Row>
           <Tweet {...allTweets[2]} />
