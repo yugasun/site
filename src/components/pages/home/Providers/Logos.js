@@ -16,6 +16,7 @@ import openwhiskLogo from 'src/assets/images/home/providers/openwhisk.svg'
 import azureLogo from 'src/assets/images/home/providers/azure.svg'
 import styled from 'styled-components'
 import { InternalLink } from 'src/fragments'
+require('./Logos.css')
 
 const BackgroundWithBorder = styled(Background)`
   box-shadow: 2px 7px 18px 0 rgba(0, 0, 0, 0.08);
@@ -46,8 +47,8 @@ const LogoBackground = ({ children }) => (
 
 const Logos = () => (
   <React.Fragment>
-    <Flex pt={[0, 0, 50, 50, 180, 260]}>
-      <Box ml={[20, 20, 100, 190, 180, 200]} mt={[-3, -3, 0]}>
+    <Flex pt={[0, 0, 50, 50, 260, 260]}>
+      <Box ml={[20, 20, 100, 190, 200, 200]} mt={[-3, -3, 0]}>
         <InternalLink to={providerLinks.aws}>
           <LogoBackground>
             <Image
@@ -59,9 +60,10 @@ const Logos = () => (
         </InternalLink>
       </Box>
       <Box
-        ml={[30, 30, 200, 280, 360, 390]}
-        mt={[70, 70, 1, 1, 40, 100]}
+        ml={[30, 30, 200, 280, 350, 390]}
+        mt={[70, 70, 1, 1, 100]}
         mb={[0, 0, 57, 57, 0]}
+        className='gcp-provider-laptop-fix'
       >
         <InternalLink to={providerLinks.gcp}>
           <LogoBackground>
@@ -93,7 +95,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </InternalLink>
-      <Column mt={[5, 5, 0, 0, 7, 0]} mb={[3, 3, 0]}>
+      <Column mt={[5, 5, 0]} mb={[3, 3, 0]}>
         <Heading.h3 align={['center', 'center', 'auto']}>
           With the power of choice
         </Heading.h3>
@@ -120,7 +122,7 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex>
-      <Box ml={[170, 170, 150, 220, 250, 280]} mt={[-120, -120, 0, -1, 5, 0]}>
+      <Box ml={[170, 170, 150, 220, 220, 280]} mt={[-120, -120, 0, -1, 0]}>
         <InternalLink to={providerLinks.openWhisk}>
           <LogoBackground>
             <Image
@@ -131,7 +133,11 @@ const Logos = () => (
           </LogoBackground>
         </InternalLink>
       </Box>
-      <Box ml={[-150, -150, 100, 140, 200, 322]} mt={[33, 33, 53, 33, 153, 53]}>
+      <Box
+        ml={[-150, -150, 100, 140, 290, 265]}
+        mt={[33, 33, 53, 33, 53]}
+        className='cloudflare-provider-laptop-fix'
+      >
         <InternalLink to={providerLinks.cloudFlare}>
           <LogoBackground>
             <Image
