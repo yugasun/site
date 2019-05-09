@@ -18,6 +18,10 @@ const FlexWithLaptopWidth = styled(Flex)`
     width: 30% !important;
   }
 `
+const BackgroundWithBoxShadow = styled(Background)`
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  border: solid 1px rgba(234, 234, 234, 0.3);
+`
 
 const TitleText = ({ children, color }) => (
   <Text
@@ -67,7 +71,7 @@ const DevelopersGuide = () => (
                 maxWidth={[300, 300, 570, 570, '100%', 384]}
               />
             </Box>
-            <Background
+            <BackgroundWithBoxShadow
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
               minHeight={['auto', 'auto', 'auto', 'auto', '522px', 'auto']}
@@ -104,7 +108,7 @@ const DevelopersGuide = () => (
                   </InternalLink>
                 </Flex.verticallyCenter>
               </Box>
-            </Background>
+            </BackgroundWithBoxShadow>
           </FlexWithLaptopWidth>
         ))}
       </Flex>
