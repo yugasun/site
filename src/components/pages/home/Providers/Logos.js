@@ -49,7 +49,7 @@ const LogoBackground = ({ children }) => (
 const Logos = () => (
   <React.Fragment>
     <Flex pt={[0, 0, 50, 50, 260, 260]}>
-      <Box ml={[20, 20, 100, 190, 200, 200]} mt={[-3, -3, 0]}>
+      <Box ml={[30, 30, 100, 190, 200, 200]} mt={[-3, -3, 0]}>
         <InternalLink to={providerLinks.aws}>
           <LogoBackground>
             <Image
@@ -87,15 +87,17 @@ const Logos = () => (
       ]}
       flexDirection={['column', 'column', 'row']}
     >
-      <InternalLink to={providerLinks.azure}>
-        <LogoBackground>
-          <Image
-            src={azureLogo}
-            width={[85, 85, 100, 100, 125]}
-            height={[24, 24, 30, 30, 37]}
-          />
-        </LogoBackground>
-      </InternalLink>
+      <Box ml={[3, 3, 0]}>
+        <InternalLink to={providerLinks.azure}>
+          <LogoBackground>
+            <Image
+              src={azureLogo}
+              width={[85, 85, 100, 100, 125]}
+              height={[24, 24, 30, 30, 37]}
+            />
+          </LogoBackground>
+        </InternalLink>
+      </Box>
       <Column mt={[5, 5, 0]} mb={[3, 3, 0]}>
         <Heading.h3 align={['center', 'center', 'auto']}>
           With the power of choice
@@ -110,7 +112,7 @@ const Logos = () => (
           Deploy to all major cloud providers
         </Text>
       </Column>
-      <Box mt={53}>
+      <Box mt={[73, 73, 53]} ml={[3, 3, 0]}>
         <InternalLink to={providerLinks.kubeless}>
           <LogoBackground>
             <Image
@@ -123,7 +125,7 @@ const Logos = () => (
       </Box>
     </Flex>
     <Flex>
-      <Box ml={[170, 170, 150, 220, 220, 280]} mt={[-120, -120, 0, -1, 0]}>
+      <Box ml={[187, 187, 150, 220, 220, 280]} mt={[-145, -145, 0, -1, 0]}>
         <InternalLink to={providerLinks.openWhisk}>
           <LogoBackground>
             <Image
