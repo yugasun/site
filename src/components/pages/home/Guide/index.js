@@ -22,6 +22,7 @@ const FlexWithLaptopWidth = styled(Flex)`
 const BackgroundWithBoxShadow = styled(Background)`
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px rgba(234, 234, 234, 0.3);
+  margin-top: -3px;
 
   @media screen and (min-width: 1200px) and (max-width: 1350px) {
     min-height: 588px;
