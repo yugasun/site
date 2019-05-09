@@ -54,13 +54,18 @@ const Tweet = ({
         <P color={tweetColor}>{tweet}</P>
       </Box>
       <Flex>
-        <Image src={customTwitterIcon ? customTwitterIcon : twitterIcon} />
+        <Image
+          src={customTwitterIcon ? customTwitterIcon : twitterIcon}
+          width={'16px'}
+          height={'13px'}
+        />
         <Text
           ml={'12px'}
           color={dateColor}
           fontSize={'12px'}
           lineHeight='16px'
           letterSpacing='0'
+          fontFamily='Soleil'
         >
           Twitter | {date}
         </Text>
