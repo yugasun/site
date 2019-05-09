@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1200px) and (max-width: 1350px) {
+  .homepage-guides-view-examples {
+    padding-top: 60px;
+  }
+
+  .homepage-guides-try-enterprise {
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1650px) {
+  .homepage-guides-view-examples {
+    padding-top: 33px;
+  }
+}
