@@ -7,7 +7,7 @@ import Logos from './Logos'
 
 const Providers = () => (
   <AppContainer>
-    <Box mt={[150, 150, 0, 0, -100]}>
+    <Box mt={[150, 150, 62, 62, -100]}>
       <Background
         backgroundImage={`url(${ringBg})`}
         backgroundRepeat='no-repeat'
@@ -18,7 +18,7 @@ const Providers = () => (
       >
         <Logos />
       </Background>
-      <Box mb={[283, 283, 309, 309, 400]} mt={[92, 92, 62, 92, 0]}>
+      <Box mb={[283, 283, 309, 309, 400]} mt={[92, 92, 92, 112, 0]}>
         <Heading.h3 align='center'>
           A developer’s guide to going serverless
         </Heading.h3>

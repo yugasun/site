@@ -58,7 +58,11 @@ const Logos = () => (
           </LogoBackground>
         </InternalLink>
       </Box>
-      <Box ml={[30, 30, 200, 280, 360, 390]} mt={[70, 70, 100, 100, 40, 100]}>
+      <Box
+        ml={[30, 30, 200, 280, 360, 390]}
+        mt={[70, 70, 1, 1, 40, 100]}
+        mb={[0, 0, 57, 57, 0]}
+      >
         <InternalLink to={providerLinks.gcp}>
           <LogoBackground>
             <Image
@@ -89,7 +93,7 @@ const Logos = () => (
           />
         </LogoBackground>
       </InternalLink>
-      <Column mt={[3, 3, 0, 0, 7, 0]}>
+      <Column mt={[5, 5, 0, 0, 7, 0]} mb={[3, 3, 0]}>
         <Heading.h3 align={['center', 'center', 'auto']}>
           With the power of choice
         </Heading.h3>
