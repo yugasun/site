@@ -6,10 +6,17 @@ import Slider from 'react-slick'
 require('slick-carousel/slick/slick.css')
 require('slick-carousel/slick/slick-theme.css')
 require('./MobileCarousel.css')
+import styled from 'styled-components'
 
 const settings = {
   dots: true,
 }
+
+const FlexWithSmalliPadFix = styled(Flex)`
+  @media screen and (min-width: 768px) and (max-width: 790px) {
+    align-items: normal;
+  }
+`
 
 const Tweets = () => (
   <React.Fragment>
@@ -23,7 +30,7 @@ const Tweets = () => (
     </Box>
 
     <Box display={['none', 'none', 'block', 'block', 'none']}>
-      <Flex
+      <FlexWithSmalliPadFix
         flexDirection='column'
         alignItems={['normal', 'normal', 'center', 'center', 'normal']}
       >
@@ -35,7 +42,7 @@ const Tweets = () => (
           <Tweet {...allTweets[0]} />
           <Tweet {...allTweets[3]} />
         </Row>
-      </Flex>
+      </FlexWithSmalliPadFix>
     </Box>
 
     <Box display={['none', 'none', 'none', 'none', 'block']}>

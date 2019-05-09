@@ -64,7 +64,7 @@ const HomeHeroImage = () => (
   >
     <Position
       zIndex='5'
-      left={[null, null, null, '16%', '0']}
+      left={[null, null, null, '16.4%', '0']}
       position={['relative', 'relative', 'absolute']}
     >
       <BackgroundWithBigScreenCoverage

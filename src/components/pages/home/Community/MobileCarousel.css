@@ -2,6 +2,10 @@
   display: none !important;
 }
 
+.slick-dots {
+  bottom: -45px;
+}
+
 .slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: #fd5750;
@@ -14,6 +18,7 @@
 }
 
 .slick-dots li {
+  margin-top: 20px;
   margin-right: 5px;
 }
 

@@ -18,7 +18,7 @@ const HeadlineBoxWithLaptopFix = styled(Box)`
 
 const Providers = () => (
   <AppContainer>
-    <Box mt={[150, 150, 62, 62, -100]}>
+    <Box mt={[170, 170, 62, 62, -100]}>
       <Background
         backgroundImage={`url(${ringBg})`}
         backgroundRepeat='no-repeat'
