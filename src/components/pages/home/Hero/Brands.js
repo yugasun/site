@@ -11,12 +11,13 @@ import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 const HomeHeroFooter = () => (
   <Box>
     <Flex
-      width={[0.8, 0.8, 0.6, 0.6, 0.72, 0.6]}
+      width={[1, 1, 0.8, 0.8, 0.92, 0.7]}
       mt={['92px', '92px', '62px', '62px', '162px', '220px']}
       flexDirection='row'
     >
       <TitleWithIcon color='white'>
-        Startup and Fortune 500 companies go serverless with us
+        Startup and Fortune 500 companies go serverless with the Serverless
+        Framework
       </TitleWithIcon>
     </Flex>
     <Flex
