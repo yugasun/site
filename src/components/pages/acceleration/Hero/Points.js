@@ -32,11 +32,7 @@ const PointButton = ({ children }) => (
 
 const PointText = ({ children }) => (
   <Box width={[160, 160, 'auto']} mr={[0, 0, 57, 57, 62]}>
-    <Heading.h5
-      color='black'
-      ml={[44, 44, 22, 22, 36]}
-      mt={[0, 0, 0, 0, '12px']}
-    >
+    <Heading.h5 color='black' ml={[36, 36, 22, 22, 36]} mt={['12px']}>
       {children}
     </Heading.h5>
   </Box>
@@ -52,10 +48,10 @@ const Points = () => (
     id='enterprise-contact-form'
   >
     {pointsData.map((point, index) => (
-      <Row mb={[35, 35, 0]} key={index}>
+      <Flex.verticallyCenter mb={[35, 35, 0]} key={index}>
         <PointButton>{point.buttonText}</PointButton>
         <PointText>{point.titleText}</PointText>
-      </Row>
+      </Flex.verticallyCenter>
     ))}
   </Flex>
 )

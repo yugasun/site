@@ -20,7 +20,7 @@ const YouGet = () => (
   >
     <TitleWithIcon>What you get</TitleWithIcon>
     <Flex
-      width={[1, 1, 0.7, 0.7, 0.4]}
+      width={[0.8, 0.8, 0.7, 0.7, 0.4]}
       justifyContent='center'
       mb={[52, 52, 42, 42, 62]}
     >

@@ -6,7 +6,7 @@ import { P } from 'src/fragments/DesignSystem'
 const Support = () => (
   <Box mr={[0, 0, 15, 15, 32]}>
     <Background background='white' width='100%' height='100%'>
-      <Column py={[42, 42, 45, 45, 62]} px={[45, 45, 58, 58, 104]}>
+      <Column py={[42, 42, 42, 42, 62]} px={[35, 35, 58, 58, 104]}>
         <TitleWithIcon color='black'>Dedicated Support</TitleWithIcon>
         <P>
           The Serverless Acceleration Program includes a 1-year dedicated

@@ -8,7 +8,7 @@ const Workshop = () => (
     <Flex
       flexDirection={['column', 'column', 'row']}
       py={[42, 42, 45, 45, 62]}
-      px={[45, 45, 58, 58, 104]}
+      px={[35, 35, 58, 58, 104]}
       justifyContent='space-between'
     >
       <Flex flexDirection='column' width={[1, 1, 0.5, 0.5, 0.4]}>

@@ -6,17 +6,18 @@ import { AppContainerNewest as AppContainer } from 'src/components'
 import Points from './Points'
 
 const Hero = () => (
-  <Flex>
+  <Flex height={[972]}>
     <Background
       background='white'
       width={'100vw'}
-      height={'972px'}
+      height={['391px', '391px', '100%']}
       backgroundImage={`url(${heroBg})`}
       backgroundRepeat='no-repeat'
+      backgroundSize={['cover', 'cover', 'contain', 'contain', 'cover']}
     >
       <AppContainer>
         <Flex mt={13} alignItems='center' flexDirection='column'>
-          <Box width={[0.5]}>
+          <Box width={[1, 1, 0.5]}>
             <Text
               fontSize={[40, 40, 48]}
               lineHeight={['50px', '50px', '62px', '62px', '62px']}
@@ -26,16 +27,18 @@ const Hero = () => (
               Serverless Acceleration Program
             </Text>
           </Box>
-          <Text
-            fontFamily='SoleilBk'
-            fontSize={'18px'}
-            align='center'
-            lineHeight={'30px'}
-            letterSpacing={'-0.28px'}
-            mt={22}
-          >
-            Everything you need to take Serverless in to produciton.
-          </Text>
+          <Box width={[0.7, 0.7, 1]}>
+            <Text
+              fontFamily='SoleilBk'
+              fontSize={'18px'}
+              align='center'
+              lineHeight={'30px'}
+              letterSpacing={'-0.28px'}
+              mt={22}
+            >
+              Everything you need to take Serverless in to produciton.
+            </Text>
+          </Box>
           <Button mt={22}>get in touch</Button>
           <Points />
         </Flex>

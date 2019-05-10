@@ -14,7 +14,7 @@ const CommunityNumbers = () => (
       'space-between',
       'center',
     ]}
-    alignItems='center'
+    alignItems={['initial', 'initial', 'center']}
   >
     {communityNumbersData.map((item, index) => (
       <Flex

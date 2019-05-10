@@ -7,8 +7,8 @@ const Enterprise = () => (
   <Box>
     <Background background='white' width='100%' height='100%'>
       <Column
-        py={[42, 42, 45, 45, 62]}
-        px={[45, 45, 58, 58, 104]}
+        py={[42, 42, 42, 42, 62]}
+        px={[35, 35, 58, 58, 104]}
         mt={[42, 42, 0]}
       >
         <TitleWithIcon>Serverless Framework Enterprise</TitleWithIcon>

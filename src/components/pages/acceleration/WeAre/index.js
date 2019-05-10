@@ -5,7 +5,7 @@ import { Flex } from 'serverless-design-system'
 import CommunityNumbers from './CommunityNumbers'
 
 const WhoWeAre = () => (
-  <Flex flexDirection='column'>
+  <Flex flexDirection='column' mt={[-82, -82, -228, -228, -228]}>
     <Flex
       width={[1, 1, 0.7, 0.7, 0.5]}
       flexDirection='column'
