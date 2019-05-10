@@ -2,10 +2,16 @@ import React from 'react'
 import { Flex, Background, Box } from 'serverless-design-system'
 import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
+import styled from 'styled-components'
+
+const BackgroundWithShadow = styled(Background)`
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  border: solid 1px rgba(234, 234, 234, 0.3);
+`
 
 const DotAndSpace = () => <P m={0}>•&nbsp;&nbsp;&nbsp;</P>
 const Workshop = () => (
-  <Background background='white' width='100%' height='100%'>
+  <BackgroundWithShadow background='white' width='100%' height='100%'>
     <Flex
       flexDirection={['column', 'column', 'row']}
       py={[42, 42, 42, 42, 62]}
@@ -63,7 +69,7 @@ const Workshop = () => (
       </Flex>
     </Flex>
     <Box id={'support'} />
-  </Background>
+  </BackgroundWithShadow>
 )
 
 export default Workshop
