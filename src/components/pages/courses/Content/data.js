@@ -1,9 +1,13 @@
+import slsAwsImage from 'src/assets/images/pages/courses/sls-with-aws.png'
+import prsImage from 'src/assets/images/pages/courses/production-ready-serverless.png'
+import slsProImage from 'src/assets/images/pages/courses/sls-like-a-pro.png'
+
 export default [
   {
     title: 'Serverless Applications with AWS',
     description:
       'Serverless Applications with AWS teaches you to build serverless applications using AWS Lambda and other cloud-based services.',
-    thumbnail: 'https://i3.ytimg.com/vi/Zf3UgS55J-M/hqdefault.jpg',
+    thumbnail: slsAwsImage,
     author: 'Marcia Villalba',
     ratingsStar: '5.0',
     totalRatings: '1',
@@ -16,7 +20,7 @@ export default [
     title: 'Production-Ready Serverless',
     description:
       'Production-Ready Serverless: Operational Best Practices introduces you to leading patterns and practices for creating operationally sound serverless applications using AWS Lambda, API Gateway, and Kinesis.',
-    thumbnail: 'https://i3.ytimg.com/vi/LJpbNdRqsc4/hqdefault.jpg',
+    thumbnail: prsImage,
     author: 'Yan Cui',
     ratingsStar: '4.5',
     totalRatings: '2',
@@ -98,7 +102,7 @@ export default [
     title: 'The Serverless Framework With AWS: Write It Like A Pro',
     description:
       'Automate your infrastructure provisioning on AWS with the Serverless Framework.',
-    thumbnail: 'https://udemy-images.udemy.com/course/480x270/1990288_d373.jpg',
+    thumbnail: slsProImage,
     author: 'Michael E. Vargas JR',
     ratingsStar: '4.5',
     totalRatings: '2',
