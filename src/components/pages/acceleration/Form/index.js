@@ -145,7 +145,7 @@ export default class Form extends React.Component {
 
     return (
       <React.Fragment>
-        <Box id={'acceleration-contact-form'} />
+        <Box />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
             flexDirection={['column', 'column', 'column', 'column', 'row']}
