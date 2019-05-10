@@ -19,7 +19,7 @@ const Support = () => (
           support contract to ensure that you have the assistance you need to
           evolve and grow your serverless development. Our Serverless experts,
           who built the Serverless Framework, will be available to help with
-          Serverless devlopment issues, Serverless best practices,
+          Serverless development issues, Serverless best practices,
           troubleshooting, configuration and deployment assistance, and AWS
           services inquiries.
         </P>

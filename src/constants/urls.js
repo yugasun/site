@@ -44,6 +44,9 @@ export default {
       examples: '/examples/',
       courses: '/courses/',
     },
+    acceleration: {
+      overview: '/acceleration/',
+    },
   },
   learn: {
     useCases: '/learn/use-cases/',
