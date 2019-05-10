@@ -14,6 +14,7 @@ const Hero = () => (
       backgroundImage={`url(${heroBg})`}
       backgroundRepeat='no-repeat'
       backgroundSize={['cover', 'cover', 'contain', 'contain', 'cover']}
+      backgroundPosition={['0px -68px', '0px -68px', 'initial']}
     >
       <AppContainer>
         <Flex mt={13} alignItems='center' flexDirection='column'>
