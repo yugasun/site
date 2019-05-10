@@ -7,6 +7,10 @@ import styled from 'styled-components'
 const BackgroundWithShadow = styled(Background)`
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px rgba(234, 234, 234, 0.3);
+
+  &:hover {
+    box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
+  }
 `
 
 const Support = () => (

@@ -10,6 +10,10 @@ const BackgroundWithShadow = styled(Background)`
   @media screen and (min-width: 500px) {
     border: solid 1px rgba(234, 234, 234, 0.3);
   }
+
+  &:hover {
+    box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
+  }
 `
 
 const Enterprise = () => (

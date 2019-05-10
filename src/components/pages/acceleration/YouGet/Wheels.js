@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  Flex,
-  Box,
-  Absolute,
-  Image,
-  Background,
-} from 'serverless-design-system'
+import { Flex, Box, Absolute, Background } from 'serverless-design-system'
 import styled from 'styled-components'
 import LeftWheel from 'src/assets/images/acceleration/red-wheel-left.svg'
 import RightWheel from 'src/assets/images/acceleration/red-wheel-right.svg'
@@ -53,29 +47,29 @@ const LeftWheelBg = styled(Background)`
 const Wheels = () => (
   <Flex>
     <Box display={['none', 'none', 'none', 'none', 'block']}>
-      <LeftWheelImage left="0" zIndex="1" width={[0, 0, 0, 0, '40%', '650px']}>
+      <LeftWheelImage left='0' zIndex='1' width={[0, 0, 0, 0, '40%', '650px']}>
         <LeftWheelBg
           backgroundImage={`url(${LeftWheel})`}
-          backgroundRepeat="no-repeat"
-          backgroundSize="contain"
+          backgroundRepeat='no-repeat'
+          backgroundSize='contain'
           height={['740px']}
-          width="100%"
+          width='100%'
         />
       </LeftWheelImage>
     </Box>
     <Box display={['none', 'none', 'none', 'none', 'block']}>
       <RightWheelImage
-        right="0"
-        zIndex="1"
+        right='0'
+        zIndex='1'
         width={[0, 0, 0, 0, '40%', '691px']}
       >
         <RightWheelBg
           backgroundImage={`url(${RightWheel})`}
-          backgroundRepeat="no-repeat"
-          backgroundSize="contain"
-          backgroundPosition="100px"
-          height="740px"
-          width="100%"
+          backgroundRepeat='no-repeat'
+          backgroundSize='contain'
+          backgroundPosition='100px'
+          height='740px'
+          width='100%'
         />
       </RightWheelImage>
     </Box>
