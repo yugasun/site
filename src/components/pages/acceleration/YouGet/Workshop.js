@@ -1,8 +1,9 @@
 import React from 'react'
-import { Flex, Background } from 'serverless-design-system'
+import { Flex, Background, Box } from 'serverless-design-system'
 import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
+const DotAndSpace = () => <P m={0}>•&nbsp;&nbsp;&nbsp;</P>
 const Workshop = () => (
   <Background background='white' width='100%' height='100%'>
     <Flex
@@ -29,22 +30,39 @@ const Workshop = () => (
         width={[1, 1, 0.5, 0.5, 0.7]}
       >
         <Flex flexDirection='column' width={1}>
-          <P m={0}>• &nbsp; Standardizing Serverless tooling</P>
-          <P m={0}>
-            • &nbsp; Serverless development best practices and how-tos
-          </P>
-          <P m={0}>• &nbsp; Custom serverless use case templates</P>
-          <P m={0}>• &nbsp; Architectural reviews and AWS best practices</P>
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>Standardizing Serverless tooling</P>
+          </Flex>
+
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>Serverless development best practices and how-tos</P>
+          </Flex>
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>Custom serverless use case templates</P>
+          </Flex>
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>Architectural reviews and AWS best practices</P>
+          </Flex>
         </Flex>
         <Flex flexDirection='column' width={1}>
-          <P m={0}>
-            • &nbsp; DevOps strategies including CI/CD, security, operations,
-            and more
-          </P>
-          <P m={0}>• &nbsp; Serverless API design patterns</P>
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>
+              DevOps strategies including CI/CD, security, operations, and more
+            </P>
+          </Flex>
+          <Flex>
+            <DotAndSpace />
+            <P m={0}>Serverless API design patterns</P>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
+    <Box id={'support'} />
   </Background>
 )
 

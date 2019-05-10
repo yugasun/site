@@ -24,7 +24,7 @@ const YouGet = () => (
       justifyContent='center'
       mb={[52, 52, 42, 42, 62]}
     >
-      <P align='center' m={0}>
+      <P align='center' m={0} id='workshop'>
         All the training, support, and tooling you need to take Serverless in to
         production.
       </P>

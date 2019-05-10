@@ -4,7 +4,7 @@ import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
 const Enterprise = () => (
-  <Box>
+  <Box id={'tooling'}>
     <Background background='white' width='100%' height='100%'>
       <Column
         py={[42, 42, 42, 42, 62]}

@@ -17,25 +17,30 @@ const pointsData = [
   },
 ]
 
-const PointButton = ({ children }) => (
-  <Button
-    bg='#fd5750'
-    width={['36px']}
-    height={['36px']}
-    fontSize={['16px']}
-    letterSpacing={['-0.25px']}
-    p={0}
-  >
-    {children}
-  </Button>
+const PointButton = ({ children, anchorLink }) => (
+  <a href={'#' + anchorLink}>
+    <Button
+      bg='#fd5750'
+      width={['36px']}
+      height={['36px']}
+      fontSize={['16px']}
+      letterSpacing={['-0.25px']}
+      p={0}
+      style={{ cursor: 'pointer' }}
+    >
+      {children}
+    </Button>
+  </a>
 )
 
 const PointText = ({ children }) => (
-  <Box width={[160, 160, 'auto']} mr={[0, 0, 57, 57, 62]}>
-    <Heading.h5 color='black' ml={[36, 36, 22, 22, 36]} mt={['12px']}>
-      {children}
-    </Heading.h5>
-  </Box>
+  <a href={'#' + children.toLowerCase()}>
+    <Box width={[160, 160, 'auto']} mr={[0, 0, 57, 57, 62]}>
+      <Heading.h5 color='black' ml={[36, 36, 22, 22, 36]} mt={['12px']}>
+        {children}
+      </Heading.h5>
+    </Box>
+  </a>
 )
 
 const Points = () => (
@@ -49,7 +54,9 @@ const Points = () => (
   >
     {pointsData.map((point, index) => (
       <Flex.verticallyCenter mb={[22, 22, 0]} key={index}>
-        <PointButton>{point.buttonText}</PointButton>
+        <PointButton anchorLink={point.titleText.toLowerCase()}>
+          {point.buttonText}
+        </PointButton>
         <PointText>{point.titleText}</PointText>
       </Flex.verticallyCenter>
     ))}
