@@ -9,7 +9,7 @@ import Wheels from './Wheels'
 import styled from 'styled-components'
 
 const FlexWithZIndex = styled(Flex)`
-  z-index: 3;
+  z-index: 15;
 `
 
 const YouGet = () => (
@@ -29,7 +29,7 @@ const YouGet = () => (
         production.
       </P>
     </Flex>
-
+    <Wheels />
     <FlexWithZIndex>
       <Workshop />
     </FlexWithZIndex>

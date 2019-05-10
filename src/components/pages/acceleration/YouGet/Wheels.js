@@ -30,38 +30,52 @@ const RightWheelImage = styled(Absolute)`
   }
 `
 
+const RightWheelBg = styled(Background)`
+  margin-top: -138px;
+`
+
+const LeftWheelBg = styled(Background)`
+  margin-top: 240px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+    margin-top: 550px;
+  }
+
+  @media screen and (min-width: 1351px) and (max-width: 1430px) {
+    margin-top: 440px;
+  }
+
+  @media screen and (min-width: 1431px) and (max-width: 1670px) {
+    margin-top: 380px;
+  }
+`
+
 const Wheels = () => (
   <Flex>
-    <Box
-      display={['none', 'none', 'none', 'none', 'block']}
-      mt={[0, 0, 0, 0, '35%', '30%']}
-    >
-      <LeftWheelImage left='0' zIndex='1' width={[0, 0, 0, 0, '40%', '650px']}>
-        <Background
+    <Box display={['none', 'none', 'none', 'none', 'block']}>
+      <LeftWheelImage left="0" zIndex="1" width={[0, 0, 0, 0, '40%', '650px']}>
+        <LeftWheelBg
           backgroundImage={`url(${LeftWheel})`}
-          backgroundRepeat='no-repeat'
-          backgroundSize='contain'
-          height='740px'
-          width='100%'
+          backgroundRepeat="no-repeat"
+          backgroundSize="contain"
+          height={['740px']}
+          width="100%"
         />
       </LeftWheelImage>
     </Box>
-    <Box
-      display={['none', 'none', 'none', 'none', 'block']}
-      mt={[0, 0, 0, 0, '-10%', 0]}
-    >
+    <Box display={['none', 'none', 'none', 'none', 'block']}>
       <RightWheelImage
-        right='0'
-        zIndex='1'
-        width={[0, 0, 0, 0, '40%', '680px']}
-        top='2'
+        right="0"
+        zIndex="1"
+        width={[0, 0, 0, 0, '40%', '691px']}
       >
-        <Background
+        <RightWheelBg
           backgroundImage={`url(${RightWheel})`}
-          backgroundRepeat='no-repeat'
-          backgroundSize='contain'
-          height='740px'
-          width='100%'
+          backgroundRepeat="no-repeat"
+          backgroundSize="contain"
+          backgroundPosition="100px"
+          height="740px"
+          width="100%"
         />
       </RightWheelImage>
     </Box>
