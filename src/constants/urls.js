@@ -16,6 +16,7 @@ export default {
     examples: '/examples/',
     quickStarts: '/framework/docs/getting-started/',
     courses: '/courses/',
+    acceleration: '/acceleration/',
   },
   community: {
     partners: '/partners/',

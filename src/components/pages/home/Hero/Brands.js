@@ -16,7 +16,7 @@ const HomeHeroFooter = () => (
       flexDirection='row'
     >
       <TitleWithIcon color='white'>
-        Startups and Fortune 500 companies go serverless with us
+        Startup and Fortune 500 companies go serverless with us
       </TitleWithIcon>
     </Flex>
     <Flex
