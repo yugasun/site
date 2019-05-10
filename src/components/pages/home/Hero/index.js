@@ -4,28 +4,39 @@ import HeroWrapper from './Wrapper'
 import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
-import HeroPlatforms from './Platforms'
-import { Flex, Box } from 'serverless-design-system'
+import HeroBrands from './Brands'
+import { Flex, Box, Column } from 'serverless-design-system'
+import WhiteBlank from './WhiteBlank'
 
-const HomeHeroComponent = ({usingSafariDesktop}) => (
+const HomeHeroComponent = () => (
   <HeroWrapper
-    background={['linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',`linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)`]}
-    height={[1300, 1250, 877, 841, 1126, 1126]}
+    background={[
+      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
+      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
+      `linear-gradient(155deg,rgb(0,0,0) 50%,#70221f)`,
+    ]}
+    height={[1150, 1094, 1094, 841, 1009]}
   >
-  <Flex
-    justifyContent={['start', 'start', 'space-around']}
-    flexDirection={['column', 'column', 'row']}
-    
-  >
-    <Box width={['auto', 'auto', '300px', '70%', '60%', '696px']}>
-      <HeroHeader />
-      <Box mt={[0, 0, 50]}>
-        <HeroActions />
+    <Flex
+      justifyContent={['start', 'start', 'space-around']}
+      flexDirection={[
+        'column-reverse',
+        'column-reverse',
+        'column-reverse',
+        'column-reverse',
+        'row',
+      ]}
+    >
+      <HeroImage />
+      <WhiteBlank />
+      <Box width={['auto', 'auto', '90%', '70%', '55%', '696px']}>
+        <HeroHeader />
+        <Box>
+          <HeroActions />
+        </Box>
+        <HeroBrands />
       </Box>
-    </Box>
-    <HeroImage usingSafariDesktop={usingSafariDesktop}/>
-</Flex>
-  <HeroPlatforms />
+    </Flex>
   </HeroWrapper>
 )
 

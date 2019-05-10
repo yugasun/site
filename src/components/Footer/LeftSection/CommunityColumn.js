@@ -1,7 +1,7 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { resources, community } from 'src/constants/urls'
+import { resources, community, company } from 'src/constants/urls'
 
 const ResourceColumn = () => (
   <FooterListColumn
@@ -26,6 +26,10 @@ const ResourceColumn = () => (
       {
         name: 'workshops',
         navProps: { to: resources.workshops, completed: true },
+      },
+      {
+        name: 'champions',
+        navProps: { to: company.champions, completed: true },
       },
     ]}
   />

@@ -4,19 +4,21 @@ import { HeroActionsNew as HeroActions } from 'src/fragments'
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'install open source',
+      name: 'use open source',
       to: '/framework/docs/getting-started/',
       completed: true,
       className: 'position-hero',
     }}
     secondBtn={{
-      name: 'framework enterprise',
+      name: 'try enterprise',
       to: '/enterprise/',
       completed: true,
       className: 'position-hero',
     }}
-    flexDirection={['column', 'column', 'column', 'column', 'row', 'row']}
+    buttonWidth={['300px', '300px', '176px']}
+    flexDirection={['column', 'column', 'row']}
     justifyContent={['center', 'center', 'left']}
+    tabletRow={true}
   />
 )
 

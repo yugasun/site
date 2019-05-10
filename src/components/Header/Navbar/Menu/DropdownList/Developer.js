@@ -66,13 +66,26 @@ const examplesOptions = [
   },
 ]
 
+const accelerationOptions = [
+  {
+    name: 'overview',
+    to: developers.acceleration.overview,
+    completed: true,
+  },
+]
+
 const Developer = () => (
-  <Flex flexWrap='wrap'>
-    <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='resources' options={examplesOptions} />
-    </Box>
-    <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='quick starts' options={quickStartOptions} />
+  <Flex flexDirection={['column']}>
+    <Flex flexWrap='wrap'>
+      <Box width={[1, 1, 0.65]}>
+        <SubMenu title='resources' options={examplesOptions} />
+      </Box>
+      <Box width={[1, 1, 0.35]}>
+        <SubMenu title='quick starts' options={quickStartOptions} />
+      </Box>
+    </Flex>
+    <Box width={[1, 1, 1]} mt={[0, 0, 0, 0, '8px']}>
+      <SubMenu title='acceleration program' options={accelerationOptions} />
     </Box>
   </Flex>
 )

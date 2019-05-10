@@ -2,7 +2,7 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { resources, community } from 'src/constants/urls'
+import { resources, community, company } from 'src/constants/urls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
@@ -50,7 +50,7 @@ const Resource = () => (
         slack
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: resources.workshops,
@@ -59,6 +59,17 @@ const Resource = () => (
         }}
       >
         workshops
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: company.champions,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        champions
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>
