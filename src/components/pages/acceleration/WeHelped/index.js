@@ -1,5 +1,5 @@
 import React from 'react'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { Flex, Box } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
 import Logos from './Logos'
@@ -13,7 +13,7 @@ const WhoWeHaveHelped = () => (
       mx='auto'
       mt={[136, 136, 136, 136, 196]}
     >
-      <TitleWithIcon color='black'>Who we've helped</TitleWithIcon>
+      <TitleWithIcon>Who we've helped</TitleWithIcon>
       <P align='center' mt={0} mb={[42, 42, 42, 42, 62]}>
         We’ve also helped many development organizations evolve from early
         adopters in to some of the most advanced serverless development

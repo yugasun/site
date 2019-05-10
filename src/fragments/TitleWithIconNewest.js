@@ -23,11 +23,11 @@ const TitleWithIconNewest = ({
       backgroundRepeat='no-repeat'
     >
       <Heading.h4
-        {...otherProps}
         fontSize={['18px', '18px', '24px']}
         lineHeight={['30px', '30px', '38px']}
         letterSpacing={['-0.28px', '-0.28px', '-0.38px']}
         align='left'
+        {...otherProps}
       >
         {children}
       </Heading.h4>

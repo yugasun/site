@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Background } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
 const Workshop = () => (
@@ -11,8 +11,8 @@ const Workshop = () => (
       px={[45, 45, 58, 58, 104]}
       justifyContent='space-between'
     >
-      <Flex flexDirection='column' width={[0.5, 0.5, 0.5, 0.5, 0.4]}>
-        <TitleWithIcon color='black'>Customized Workshop</TitleWithIcon>
+      <Flex flexDirection='column' width={[1, 1, 0.5, 0.5, 0.4]}>
+        <TitleWithIcon>Customized Workshop</TitleWithIcon>
         <P>
           The custom 1-day workshop, led by a Serverless expert, is focused on
           helping you solve your most pressing Serverless challenges. Some

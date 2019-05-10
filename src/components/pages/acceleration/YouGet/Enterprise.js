@@ -1,6 +1,6 @@
 import React from 'react'
 import { Column, Background, Box } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
 const Enterprise = () => (
@@ -11,9 +11,7 @@ const Enterprise = () => (
         px={[45, 45, 58, 58, 104]}
         mt={[42, 42, 0]}
       >
-        <TitleWithIcon color='black'>
-          Serverless Framework Enterprise
-        </TitleWithIcon>
+        <TitleWithIcon>Serverless Framework Enterprise</TitleWithIcon>
         <P>
           The Serverless Acceleration Program includes licenses for Serverless
           Framework Enterprise to ensure you have the complete tooling needed to

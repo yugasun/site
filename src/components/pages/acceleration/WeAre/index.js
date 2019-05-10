@@ -1,6 +1,6 @@
 import React from 'react'
 import { P } from 'src/fragments/DesignSystem'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { Flex } from 'serverless-design-system'
 import CommunityNumbers from './CommunityNumbers'
 
@@ -12,7 +12,7 @@ const WhoWeAre = () => (
       alignItems='center'
       mx='auto'
     >
-      <TitleWithIcon color='black'>Who We Are</TitleWithIcon>
+      <TitleWithIcon>Who We Are</TitleWithIcon>
       <P color='#5b5b5b' align='center' mt={0} mb={0}>
         We are developers who live and breath Serverless and are passionate
         about sharing our knowledge with other developers. We created and

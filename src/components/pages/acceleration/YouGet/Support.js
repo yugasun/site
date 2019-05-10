@@ -1,6 +1,6 @@
 import React from 'react'
 import { Column, Background, Box } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 
 const Support = () => (

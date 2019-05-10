@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { P } from 'src/fragments/DesignSystem'
 import Workshop from './Workshop'
 import Support from './Support'
@@ -18,7 +18,7 @@ const YouGet = () => (
     flexDirection='column'
     pt={[136, 136, 136, 136, 196]}
   >
-    <TitleWithIcon color='black'>What you get</TitleWithIcon>
+    <TitleWithIcon>What you get</TitleWithIcon>
     <Flex
       width={[1, 1, 0.7, 0.7, 0.4]}
       justifyContent='center'

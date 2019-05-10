@@ -1,7 +1,7 @@
 import React from 'react'
 import { P } from 'src/fragments/DesignSystem'
 import { Flex, Box } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import TitleWithIcon from '../TitleWithIcon'
 import { AppContainerNewest as AppContainer } from 'src/components'
 
 const WhoIsThisProgramFor = () => (
@@ -13,7 +13,7 @@ const WhoIsThisProgramFor = () => (
       mx='auto'
       pt={[96, 96, 96, 96, 136]}
     >
-      <TitleWithIcon color='black'>Who the program is for</TitleWithIcon>
+      <TitleWithIcon>Who the program is for</TitleWithIcon>
       <Flex flexDirection='row' width={0.85}>
         <Box width={0.75} mr={32}>
           <P color='#5b5b5b' mt={0}>
