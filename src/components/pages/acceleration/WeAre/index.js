@@ -1,17 +1,25 @@
 import React from 'react'
-import { P, Heading } from 'src/fragments/DesignSystem'
-import { Flex, Box } from 'serverless-design-system'
+import { P } from 'src/fragments/DesignSystem'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import { Flex } from 'serverless-design-system'
 import CommunityNumbers from './CommunityNumbers'
 
 const WhoWeAre = () => (
-  <Flex width={[0.5]} flexDirection='column' alignItems='center' mx='auto'>
-    <P>Who We Are</P>
-    <P color='#5b5b5b' align='center'>
-      We are developers who live and breath Serverless and are passionate about
-      sharing our knowledge with other developers. We created and maintain the
-      Serverless Framework alongside one of the largest and most passionate
-      development communities in the world.
-    </P>
+  <Flex flexDirection='column'>
+    <Flex
+      width={[1, 1, 0.7, 0.7, 0.5]}
+      flexDirection='column'
+      alignItems='center'
+      mx='auto'
+    >
+      <TitleWithIcon color='black'>Who We Are</TitleWithIcon>
+      <P color='#5b5b5b' align='center' mt={0} mb={0}>
+        We are developers who live and breath Serverless and are passionate
+        about sharing our knowledge with other developers. We created and
+        maintain the Serverless Framework alongside one of the largest and most
+        passionate development communities in the world.
+      </P>
+    </Flex>
     <CommunityNumbers />
   </Flex>
 )

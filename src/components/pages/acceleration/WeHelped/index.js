@@ -1,14 +1,20 @@
 import React from 'react'
-
-import { Flex } from 'serverless-design-system'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import { Flex, Box } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
 import Logos from './Logos'
 
 const WhoWeHaveHelped = () => (
-  <React.Fragment>
-    <Flex width={[0.5]} flexDirection='column' alignItems='center' mx='auto'>
-      <P>Who we've helped</P>
-      <P align='center'>
+  <Box mb={[92, 92, 92, 92, 132]}>
+    <Flex
+      width={[1, 1, 0.7, 0.7, 0.5]}
+      flexDirection='column'
+      alignItems='center'
+      mx='auto'
+      mt={[136, 136, 136, 136, 196]}
+    >
+      <TitleWithIcon color='black'>Who we've helped</TitleWithIcon>
+      <P align='center' mt={0} mb={[42, 42, 42, 42, 62]}>
         We’ve also helped many development organizations evolve from early
         adopters in to some of the most advanced serverless development
         organizations in the world. We love partnering with development teams
@@ -16,7 +22,7 @@ const WhoWeHaveHelped = () => (
       </P>
     </Flex>
     <Logos />
-  </React.Fragment>
+  </Box>
 )
 
 export default WhoWeHaveHelped

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Column, Background, Box } from 'serverless-design-system'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
 const Support = () => (
-  <Box mr={32}>
+  <Box mr={[0, 0, 15, 15, 32]}>
     <Background background='white' width='100%' height='100%'>
-      <Column py={62} px={104}>
-        <P>Dedicated Support</P>
+      <Column py={[42, 42, 45, 45, 62]} px={[45, 45, 58, 58, 104]}>
+        <TitleWithIcon color='black'>Dedicated Support</TitleWithIcon>
         <P>
           The Serverless Acceleration Program includes a 1-year dedicated
           support contract to ensure that you have the assistance you need to

@@ -1,6 +1,6 @@
 import React from 'react'
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import { Background } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 import { Helmet } from 'src/fragments'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import Hero from 'src/components/pages/acceleration/Hero/'

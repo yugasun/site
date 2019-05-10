@@ -1,12 +1,19 @@
 import React from 'react'
 import { Column, Background, Box } from 'serverless-design-system'
+import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
 const Enterprise = () => (
   <Box>
     <Background background='white' width='100%' height='100%'>
-      <Column py={62} px={104}>
-        <P>Serverless Framework Enterprise</P>
+      <Column
+        py={[42, 42, 45, 45, 62]}
+        px={[45, 45, 58, 58, 104]}
+        mt={[42, 42, 0]}
+      >
+        <TitleWithIcon color='black'>
+          Serverless Framework Enterprise
+        </TitleWithIcon>
         <P>
           The Serverless Acceleration Program includes licenses for Serverless
           Framework Enterprise to ensure you have the complete tooling needed to

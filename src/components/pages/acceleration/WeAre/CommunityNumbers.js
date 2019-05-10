@@ -5,14 +5,16 @@ import communityNumbersData from 'src/components/pages/home/Community/CommunityN
 
 const CommunityNumbers = () => (
   <Flex
-    mt={42}
+    mt={[32, 32, 32, 32, 52]}
     flexWrap={['wrap', 'wrap', 'initial']}
     justifyContent={[
       'space-around',
       'space-around',
       'space-between',
       'space-between',
+      'center',
     ]}
+    alignItems='center'
   >
     {communityNumbersData.map((item, index) => (
       <Flex
