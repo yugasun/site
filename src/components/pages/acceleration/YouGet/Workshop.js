@@ -20,7 +20,7 @@ const Workshop = () => (
         </P>
       </Flex>
       <Flex
-        mt={62}
+        mt={[22, 22, 62]}
         flexDirection={['column', 'column', 'column', 'column', 'row']}
         width={[1, 1, 0.5, 0.5, 0.7]}
       >

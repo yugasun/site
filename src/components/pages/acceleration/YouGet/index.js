@@ -36,7 +36,7 @@ const YouGet = () => (
     <FlexWithZIndex
       mt={42}
       flexDirection={['column', 'column', 'row', 'row', 'row']}
-      mb={[224, 224, 224, 224, 489]}
+      mb={[216, 216, 220, 220, 440]}
     >
       <Support />
       <Enterprise />

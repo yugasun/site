@@ -1,6 +1,6 @@
 import React from 'react'
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import { Background, Box } from 'serverless-design-system'
+import { Background, Box, Absolute } from 'serverless-design-system'
 import { Helmet } from 'src/fragments'
 import { AppContainerNewest as AppContainer } from 'src/components'
 import Hero from 'src/components/pages/acceleration/Hero/'
@@ -25,11 +25,19 @@ const Acceleration = () => {
           <YouGet />
         </AppContainer>
       </Background>
-      <Box mt={[-80, -80, -80, -80, -250]} pb={[132, 132, 132, 132, 192]}>
-        <AppContainer>
-          <EnterpriseContactForm />
-        </AppContainer>
-      </Box>
+      <Background
+        background='#eaeaea'
+        backgroundSize='cover'
+        height={[1526, 1526, 1143, 1143, 490]}
+      >
+        <Absolute left={['0', '0', '0', '13.5%', '13.5%']}>
+          <Box mt={[-80, -80, -80, -80, -250]} pb={[132, 132, 132, 132, 192]}>
+            <AppContainer>
+              <EnterpriseContactForm />
+            </AppContainer>
+          </Box>
+        </Absolute>
+      </Background>
     </DefaultLayout>
   )
 }
