@@ -41,14 +41,14 @@ const PointText = ({ children }) => (
 const Points = () => (
   <Flex
     flexDirection={['column', 'column', 'row']}
-    justifyContent='space-evenly'
+    justifyContent='space-between'
     mt={62}
     mb={[102, 102, 132]}
-    alignItems={['center', 'center', 'auto']}
-    id='enterprise-contact-form'
+    ml={[45, 45, 30]}
+    alignItems={['space-between', 'space-between', 'auto']}
   >
     {pointsData.map((point, index) => (
-      <Flex.verticallyCenter mb={[35, 35, 0]} key={index}>
+      <Flex.verticallyCenter mb={[22, 22, 0]} key={index}>
         <PointButton>{point.buttonText}</PointButton>
         <PointText>{point.titleText}</PointText>
       </Flex.verticallyCenter>

@@ -11,7 +11,7 @@ const CommunityNumbers = () => (
       'space-around',
       'space-around',
       'space-between',
-      'space-between',
+      'space-around',
       'center',
     ]}
     alignItems={['initial', 'initial', 'center']}

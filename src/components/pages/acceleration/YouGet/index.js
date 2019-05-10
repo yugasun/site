@@ -20,7 +20,7 @@ const YouGet = () => (
   >
     <TitleWithIcon>What you get</TitleWithIcon>
     <Flex
-      width={[0.8, 0.8, 0.7, 0.7, 0.4]}
+      width={[0.8, 0.8, 0.7, 0.5, 0.4]}
       justifyContent='center'
       mb={[52, 52, 42, 42, 62]}
     >
@@ -29,14 +29,14 @@ const YouGet = () => (
         production.
       </P>
     </Flex>
-    <Wheels />
+
     <FlexWithZIndex>
       <Workshop />
     </FlexWithZIndex>
     <FlexWithZIndex
       mt={42}
       flexDirection={['column', 'column', 'row', 'row', 'row']}
-      mb={[216, 216, 220, 220, 440]}
+      mb={[132, 132, 132, 132, 192]}
     >
       <Support />
       <Enterprise />

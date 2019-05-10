@@ -23,21 +23,16 @@ const Acceleration = () => {
         <AppContainer>
           <ProgramFor />
           <YouGet />
+          <Box mb={[-1390, -1390, -1010, -960, -350]}>
+            <EnterpriseContactForm />
+          </Box>
         </AppContainer>
       </Background>
       <Background
         background='#eaeaea'
         backgroundSize='cover'
-        height={[1526, 1526, 1143, 1143, 490]}
-      >
-        <Absolute left={['0', '0', '0', '13.5%', '13.5%']}>
-          <Box mt={[-80, -80, -80, -80, -250]} pb={[132, 132, 132, 132, 192]}>
-            <AppContainer>
-              <EnterpriseContactForm />
-            </AppContainer>
-          </Box>
-        </Absolute>
-      </Background>
+        height={[1526, 1526, 1143, 1095, 540]}
+      />
     </DefaultLayout>
   )
 }

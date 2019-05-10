@@ -42,7 +42,7 @@ const Wheels = () => (
           backgroundRepeat='no-repeat'
           backgroundSize='contain'
           height='740px'
-          width='591px'
+          width='100%'
         />
       </LeftWheelImage>
     </Box>
@@ -61,7 +61,7 @@ const Wheels = () => (
           backgroundRepeat='no-repeat'
           backgroundSize='contain'
           height='740px'
-          width='591px'
+          width='100%'
         />
       </RightWheelImage>
     </Box>
