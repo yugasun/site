@@ -15,7 +15,7 @@ const WhoIsThisProgramFor = () => (
     >
       <TitleWithIcon>Who the program is for</TitleWithIcon>
       <Box display={['none', 'none', 'none', 'none', 'block']}>
-        <Flex width={0.85}>
+        <Flex width={0.85} mx='auto'>
           <Box width={0.75} mr={32}>
             <P color='#5b5b5b' mt={0}>
               The Serverless Accelerator Program is designed for development

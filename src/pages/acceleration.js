@@ -19,17 +19,17 @@ const Acceleration = () => {
         <WhoWeAre />
         <WhoWeHelped />
       </AppContainer>
-      <Background background='#f7f7f7'>
+      <Background background='#f7f7f7' backgroundSize='cover'>
         <AppContainer>
           <ProgramFor />
           <YouGet />
         </AppContainer>
       </Background>
-      <Background background='#eaeaea'>
+      <Box mt={[-80, -80, -80, -80, -250]} pb={[132, 132, 132, 132, 192]}>
         <AppContainer>
           <EnterpriseContactForm />
         </AppContainer>
-      </Background>
+      </Box>
     </DefaultLayout>
   )
 }
