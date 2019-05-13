@@ -120,6 +120,8 @@ export default class Form extends React.Component {
 
   sendToHubspot = data => {
     data.lead_source = 'Acceleration Page'
+    data.firstname = data.first_name
+    data.lastname = data.last_name
     data.infrastructure = data.infrastructure.toString()
     hubspotIdentify(null, data)
   }
