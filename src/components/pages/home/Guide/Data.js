@@ -17,7 +17,7 @@ export default [
   {
     metaTitle: 'Try',
     image: tryImage,
-    title: 'Deploy a serverless use use-case in seconds',
+    title: 'Deploy a serverless use-case in seconds',
     content:
       'The Serverless CLI lets you get an app deployed to the cloud platform of choice in seconds rather than days. There’s no quicker way to get a POC up and running.',
     actions: [
