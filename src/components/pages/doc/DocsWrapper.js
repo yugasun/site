@@ -683,6 +683,14 @@ const Wrapper = styled(Column)`
       font-size: 16px;
     }
   }
+
+  p a {
+    border-bottom: 1px solid #fd5750;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
 `
 const Clipboard = typeof window !== 'undefined' ? require('clipboard') : null
 const preventDefault = e => e.preventDefault()

@@ -27,6 +27,10 @@ const DevelopersColumn = () => (
         name: 'quick starts',
         navProps: { to: developers.quickStarts, completed: true },
       },
+      {
+        name: 'acceleration',
+        navProps: { to: developers.acceleration, completed: true },
+      },
     ]}
   />
 )

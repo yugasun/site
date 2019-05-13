@@ -10,6 +10,15 @@ export default [
     framework: 'enterprise',
   },
   {
+    title: 'AO.com: the path to Serverless First',
+    description:
+      'The SCV team at AO.com started with one serverless service. They were so impressed with the turnaround time and low maintenance overhead that the entire team went Serverless First.',
+    thumbnail:
+      'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ao-com-story/ao-serverless-thumbnail.png',
+    url: '/blog/ao-serverless-first/',
+    framework: 'open source',
+  },
+  {
     title: 'SQQUID: a 100% serverless startup',
     description:
       'Sqquid uses AWS Lambda and the Serverless Framework for their core product and marketing website. See what it’s like to be a fully serverless startup.',

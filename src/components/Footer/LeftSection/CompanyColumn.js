@@ -16,10 +16,6 @@ const CompanyColumn = () => (
         navProps: { to: company.jobs, completed: true },
       },
       {
-        name: 'champions',
-        navProps: { to: company.champions, completed: true },
-      },
-      {
         name: 'contact',
         navProps: { to: company.contact, crossDomain: true },
       },
@@ -28,4 +24,3 @@ const CompanyColumn = () => (
 )
 
 export default CompanyColumn
-

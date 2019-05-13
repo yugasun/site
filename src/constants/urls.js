@@ -16,6 +16,7 @@ export default {
     examples: '/examples/',
     quickStarts: '/framework/docs/getting-started/',
     courses: '/courses/',
+    acceleration: '/acceleration/',
   },
   community: {
     partners: '/partners/',
@@ -43,6 +44,9 @@ export default {
       plugins: '/plugins/',
       examples: '/examples/',
       courses: '/courses/',
+    },
+    acceleration: {
+      overview: '/acceleration/',
     },
   },
   learn: {
