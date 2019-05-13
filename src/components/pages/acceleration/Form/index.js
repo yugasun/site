@@ -100,7 +100,7 @@ export default class Form extends React.Component {
     if (!this.state.loading) {
       formHandler(formData)
         .then(res => {
-          //this.sendToHubspot(formData.fields)
+          this.sendToHubspot(formData.fields)
           this.setState({
             success: true,
             loading: false,
