@@ -37,7 +37,7 @@ const Hero = () => (
               letterSpacing={'-0.28px'}
               mt={22}
             >
-              Everything you need to take Serverless in to production.
+              Everything you need to take Serverless into production.
             </Text>
           </Box>
           <a href='#acceleration-contact-form'>
