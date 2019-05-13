@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
+import {
+  Box,
+  Flex,
+  InlineBlock,
+  Heading,
+  Image,
+} from 'serverless-design-system'
 import {
   TextArea,
   Label,
@@ -13,6 +19,8 @@ import { Button } from 'src/fragments/DesignSystem'
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 import hubspotIdentify from 'src/utils/analytics/identify'
+import tickIconBig from 'src/assets/images/tick-icon-big.svg'
+import tickIconSmall from 'src/assets/images/tick-icon-small.svg'
 
 import styled from 'styled-components'
 const formId = 'enterprise-contact-us'
@@ -89,22 +97,25 @@ export default class Form extends React.Component {
       },
     }
 
-    formHandler(formData)
-      .then(res => {
-        this.sendToHubspot(formData.fields)
-        this.setState({
-          success: true,
-          loading: false,
+    if (!this.state.loading) {
+      formHandler(formData)
+        .then(res => {
+          //this.sendToHubspot(formData.fields)
+          this.setState({
+            success: true,
+            loading: false,
+          })
         })
-      })
-      .catch(e => {
-        console.log('ERROR', e)
-        this.setState({
-          success: false,
-          loading: false,
-          error: e,
+        .catch(e => {
+          console.log('ERROR', e)
+          this.setState({
+            success: false,
+            loading: false,
+            error: e,
+          })
         })
-      })
+    }
+
     return false
   }
 
@@ -409,12 +420,29 @@ export default class Form extends React.Component {
 
               <Box mt={3}>
                 <Button
-                  disabled={loading || success}
+                  disabled={success}
                   style={{
-                    cursor: loading || success ? 'not-allowed' : 'pointer',
+                    cursor: success ? 'not-allowed' : 'pointer',
+                    backgroundColor: success ? '#8c8c8c' : '#fd5750',
                   }}
                 >
-                  {submitButtonText}
+                  <Flex justifyContent='center' alignItems='center'>
+                    {success ? (
+                      <Box pr={'9px'}>
+                        <Image
+                          src={tickIconSmall}
+                          width={'16px'}
+                          height={'9.5px'}
+                          pr={2}
+                        />
+                      </Box>
+                    ) : null}
+                    {loading ? (
+                      <Image src={tickIconBig} width={'32px'} />
+                    ) : (
+                      <Box>{submitButtonText}</Box>
+                    )}
+                  </Flex>
                 </Button>
               </Box>
             </Box>
