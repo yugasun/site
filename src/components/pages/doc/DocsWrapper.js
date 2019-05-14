@@ -126,9 +126,46 @@ const Wrapper = styled(Column)`
     }
   }
 
+  .providersSections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    max-width: 70%;
+    position: relative;
+    z-index: 3;
+    a {
+      border: none !important;
+    }
+    > div {
+      margin-right: 20px;
+      padding: 10px !important;
+      margin-top: 20px;
+      &:hover {
+        box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
+        border: solid 1px #eaeaea;
+      }
+      ul {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 30px;
+      }
+    }
+  }
+
   .docsSection {
     max-width: 22rem;
     width: 100%;
+  }
+
+  .providerSection {
+    max-width: 22rem;
+    width: 100%;
+    height: 213px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .docsSectionHeader,
@@ -159,6 +196,36 @@ const Wrapper = styled(Column)`
   .docsSection ul li {
     padding-bottom: 3px;
   }
+
+  .providerSectionHeader,
+  .providerSectionHeader a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .providerSectionHeader a {
+    text-decoration: none;
+    border-bottom: 0px;
+    margin: 10px 0px;
+    &:before {
+      visibility: hidden !important;
+    }
+  }
+
+  .providerSectionHeader img {
+    width: 90%;
+    border-radius: 6px;
+  }
+
+  .providerSection ul {
+    padding-left: 30px;
+  }
+
+  .providerSection ul li {
+    padding-bottom: 3px;
+  }
+
   @media (max-width: 768px) {
     .docsSections {
       width: 100%;
@@ -172,6 +239,23 @@ const Wrapper = styled(Column)`
     }
     .docsSectionHeader,
     .docsSectionHeader a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .providersSections {
+      width: 100%;
+      max-width: 100%;
+    }
+    .providerSection {
+      width: 95%;
+    }
+    .providerSection {
+      margin-bottom: 20px;
+    }
+    .providerSectionHeader,
+    .providerSectionHeader a {
       display: flex;
       align-items: center;
       justify-content: flex-start;
