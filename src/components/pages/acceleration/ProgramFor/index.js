@@ -14,7 +14,7 @@ const WhoIsThisProgramFor = () => (
       pt={[96, 96, 96, 96, 136]}
     >
       <TitleWithIcon>Who the program is for</TitleWithIcon>
-      <Box display={['none', 'none', 'none', 'none', 'block']}>
+      <Box display={['none', 'none', 'none', 'none', 'none']}>
         <Flex width={0.85} mx='auto'>
           <Box width={0.75} mr={32}>
             <P color='#5b5b5b' mt={0}>
@@ -33,8 +33,8 @@ const WhoIsThisProgramFor = () => (
           </Box>
         </Flex>
       </Box>
-      <Box display={['block', 'block', 'block', 'block', 'none']}>
-        <Flex width={[1, 1, 0.7]} justifyContent='center' mx='auto'>
+      <Box display={['block', 'block', 'block', 'block', 'block']}>
+        <Flex width={[1, 1, 0.7, 0.7, 0.5]} justifyContent='center' mx='auto'>
           <P color='#5b5b5b' mt={0} align='center'>
             The Serverless Accelerator Program is designed for development teams
             that are interested in doing Serverless development right. If you've
