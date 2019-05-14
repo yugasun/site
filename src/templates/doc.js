@@ -13,7 +13,11 @@ import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
 import gitHubSvg from 'src/assets/images/github.svg'
-import { Helmet as SEOHelmet, InternalLink } from 'src/fragments'
+import {
+  Helmet as SEOHelmet,
+  InternalLink,
+  HaveQuestionsPrefooter,
+} from 'src/fragments'
 import { Button } from 'src/fragments/DesignSystem'
 import { WhiteButtonNew as WhiteButton } from 'src/components'
 
@@ -111,6 +115,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
             dangerouslySetInnerHTML={{ __html: doc.content }}
             className='content'
           />
+          <HaveQuestionsPrefooter />
         </Column>
       </Row>
     </DocsWrapper>

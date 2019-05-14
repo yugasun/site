@@ -387,7 +387,7 @@ const Wrapper = styled(Column)`
       margin-left: -50px;
       /* line-height: 1.4rem; */
       text-decoration: none;
-      opacity: 0.2;
+      opacity: 1;
       line-height: inherit;
       color: transparent;
       transition: opacity 0.3s;
@@ -402,6 +402,9 @@ const Wrapper = styled(Column)`
         height: auto;
         color: #8c8c8c;
         visibility: visible;
+      }
+      &:hover:before {
+        color: black;
       }
       &:after {
         opacity: 0.4;
