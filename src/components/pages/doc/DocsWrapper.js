@@ -68,7 +68,9 @@ const Wrapper = styled(Column)`
   h4,
   h5,
   h6 {
-    font-family: 'SoleilBk';
+    font-family: 'Soleil';
+    line-height: 44px;
+    letter-spacing: -0.5px;
     color: #000000;
 
     &[id] {
@@ -376,9 +378,12 @@ const Wrapper = styled(Column)`
     h3,
     h4,
     h5,
-    h6,
-    p {
+    h6 {
       max-width: 650px;
+      position: relative;
+    }
+    p {
+      max-width: 500px;
       position: relative;
     }
     p,
