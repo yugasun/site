@@ -109,20 +109,6 @@ export default class Sidebar extends React.Component {
           <Box className='subPages'>
             <List>{items}</List>
           </Box>
-
-          <Box className='forumCta'>
-            <Heading.h2>Have questions?</Heading.h2>
-            <Text.p>
-              Head over to the{' '}
-              <a
-                href='https://forum.serverless.com?utm_source=framework-docs'
-                target='_blank'
-              >
-                forums
-              </a>{' '}
-              to search for your questions and issues or post a new one.
-            </Text.p>
-          </Box>
         </Box>
       </Box>
     )
