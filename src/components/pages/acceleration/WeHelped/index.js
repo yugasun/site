@@ -16,7 +16,7 @@ const WhoWeHaveHelped = () => (
       <TitleWithIcon>Who we've helped</TitleWithIcon>
       <P align='center' mt={0} mb={[42, 42, 42, 42, 62]}>
         We’ve also helped many development organizations evolve from early
-        adopters in to some of the most advanced serverless development
+        adopters into some of the most advanced serverless development
         organizations in the world. We love partnering with development teams
         that are interested in building more and managing less.{' '}
       </P>

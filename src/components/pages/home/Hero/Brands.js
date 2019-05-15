@@ -7,6 +7,7 @@ import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import WhiteBlank from './WhiteBlank'
 
 const HomeHeroFooter = () => (
   <Box>
@@ -15,8 +16,9 @@ const HomeHeroFooter = () => (
       mt={['92px', '92px', '62px', '62px', '162px', '220px']}
       flexDirection='row'
     >
+      <WhiteBlank />
       <TitleWithIcon color='white'>
-        Startup and Fortune 500 companies go serverless with the Serverless
+        Startups and Fortune 500 companies go serverless with the Serverless
         Framework
       </TitleWithIcon>
     </Flex>

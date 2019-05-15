@@ -16,7 +16,7 @@ const YouGet = () => (
   <Flex
     alignItems='center'
     flexDirection='column'
-    pt={[136, 136, 136, 136, 196]}
+    pt={[136, 136, 110, 110, 170]}
   >
     <TitleWithIcon>What you get</TitleWithIcon>
     <Flex
@@ -25,7 +25,7 @@ const YouGet = () => (
       mb={[52, 52, 42, 42, 62]}
     >
       <P align='center' m={0} id='workshop'>
-        All the training, support, and tooling you need to take Serverless in to
+        All the training, support, and tooling you need to take Serverless into
         production.
       </P>
     </Flex>

@@ -6,7 +6,6 @@ import HeroImage from './Image'
 import HeroActions from './Actions'
 import HeroBrands from './Brands'
 import { Flex, Box, Column } from 'serverless-design-system'
-import WhiteBlank from './WhiteBlank'
 
 const HomeHeroComponent = () => (
   <HeroWrapper
@@ -28,7 +27,6 @@ const HomeHeroComponent = () => (
       ]}
     >
       <HeroImage />
-      <WhiteBlank />
       <Box width={['auto', 'auto', '90%', '70%', '55%', '696px']}>
         <HeroHeader />
         <Box>
