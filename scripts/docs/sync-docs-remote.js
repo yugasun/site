@@ -6,7 +6,7 @@ const request = require('sync-request')
 rimraf(config.serverlessRepoPath, () => {
   console.log('Empty serverless docs directory', config.serverlessRepoPath)
   const latestReleaseUrl = getLatestReleaseUrl()
-  download(latestReleaseUrl, config.serverlessRepoPath, error => {
+  download(config.downloadLink, config.serverlessRepoPath, error => {
     if (error) {
       console.log(error)
       console.log('DOWNLOAD ERROR')
