@@ -104,7 +104,7 @@ const Wrapper = styled(Column)`
     flex-direction: row;
     align-items: stretch;
     flex-flow: row wrap;
-    max-width: 90%;
+    max-width: 100%;
     position: relative;
     z-index: 3;
     a {
@@ -132,7 +132,7 @@ const Wrapper = styled(Column)`
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    max-width: 70%;
+    max-width: 100%;
     position: relative;
     z-index: 3;
     a {
@@ -160,8 +160,7 @@ const Wrapper = styled(Column)`
   }
 
   .providerSection {
-    max-width: 22rem;
-    width: 100%;
+    width: 280px;
     height: 213px;
     display: flex;
     justify-content: center;
@@ -245,7 +244,6 @@ const Wrapper = styled(Column)`
     }
 
     .providersSections {
-      width: 100%;
       max-width: 100%;
     }
     .providerSection {
@@ -300,8 +298,8 @@ const Wrapper = styled(Column)`
     background: #f6f6f6;
   }
   .sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 368px;
+    max-width: 368px;
     z-index: 5;
     background: #f6f6f6;
   }
@@ -309,8 +307,8 @@ const Wrapper = styled(Column)`
     margin-left: -10px;
     padding: 10px;
     padding-right: 0px;
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 368px;
+    max-width: 368px;
     border: none;
     box-shadow: none;
   }
@@ -466,11 +464,11 @@ const Wrapper = styled(Column)`
     h4,
     h5,
     h6 {
-      max-width: 650px;
+      max-width: 100%;
       position: relative;
     }
     p {
-      max-width: 500px;
+      max-width: 42%;
       position: relative;
     }
     p,

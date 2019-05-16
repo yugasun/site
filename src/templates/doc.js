@@ -96,20 +96,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
                 </Column>
               </Background>
             </Flex>
-          ) : (
-            <a
-              title='Edit this page on github'
-              rel='noopener noreferrer'
-              href={`https://github.com/serverless/serverless/edit/master${
-                doc.frontmatter.gitLink
-              }`}
-            >
-              <span className='editLink'>
-                <img src={gitHubSvg} />
-                <span className='text'>Edit on github</span>
-              </span>
-            </a>
-          )}
+          ) : null}
 
           <Column
             dangerouslySetInnerHTML={{ __html: doc.content }}
