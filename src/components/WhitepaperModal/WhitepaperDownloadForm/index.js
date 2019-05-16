@@ -10,6 +10,7 @@ import { Button as ButtonNew } from 'src/fragments/DesignSystem'
 import { ExternalLink } from 'src/fragments'
 const formId = 'whitepaper-download'
 import formHandler from 'src/utils/formHandler'
+import addHubspotEvent from 'src/utils/forms/hubspotEvent'
 import hubspotIdentify from 'src/utils/analytics/identify'
 const whitepaperFile =
   'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'
@@ -76,6 +77,7 @@ class NewsLetterForm extends React.Component {
   sendToHubspot = data => {
     data.lead_source = 'Whitepaper Download'
     hubspotIdentify(null, data)
+    addHubspotEvent(data, 'whitepaper')
   }
 
   renderSubmitBtn = () => {

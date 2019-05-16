@@ -21,6 +21,7 @@ import { validateEmail } from 'src/utils/validator'
 import hubspotIdentify from 'src/utils/analytics/identify'
 import tickIconBig from 'src/assets/images/tick-icon-big.svg'
 import tickIconSmall from 'src/assets/images/tick-icon-small.svg'
+import addHubspotEvent from 'src/utils/forms/hubspotEvent'
 
 import styled from 'styled-components'
 const formId = 'acceleration-contact-us'
@@ -124,6 +125,7 @@ export default class Form extends React.Component {
     data.lastname = data.last_name
     data.infrastructure = data.infrastructure.toString()
     hubspotIdentify(null, data)
+    addHubspotEvent(data, 'acceleration')
   }
 
   updateInfrastructure = (fieldName, value) => {
