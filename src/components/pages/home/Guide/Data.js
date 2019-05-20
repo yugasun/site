@@ -33,7 +33,7 @@ export default [
       'Serverless Framework Enterprise helps accelerate and standardize serverless development and operational practices across teams and organizations.',
     actions: [
       { text: 'try enterprise', link: '/enterprise/' },
-      { text: 'support >', link: '/enterprise/' },
+      { text: 'support >', link: '/acceleration/' },
     ],
   },
 ]
