@@ -20,25 +20,18 @@ const Breadcrumbs = ({
   getUrlFromPathSegments,
   onClick,
   className,
-  rightContent
+  rightContent,
 }) => {
   const pathArray = explodePath(path, pathSeparator)
   let renderRight
   if (rightContent) {
-    renderRight = (
-      <Box className='rightContent'>
-        {rightContent}
-      </Box>
-    )
+    renderRight = <Box className='rightContent'>{rightContent}</Box>
   }
   return (
     <BreadcrumbsWrapper>
       <List className={`breadcrumbs ${className}`}>
         {pathRoot ? (
-          <ListItem
-            key='root'
-            className='item basePath'
-          >
+          <ListItem key='root' className='item basePath'>
             <Text.span className='itemInner'>
               <BreadcrumbItem
                 label={pathRoot}
@@ -47,31 +40,28 @@ const Breadcrumbs = ({
               />
             </Text.span>
           </ListItem>
-          ) : null}
+        ) : null}
 
-        {
-          pathArray.map((segment, id) => {
-            const pathSegments = pathArray.map(encodeURIComponent).slice(0, id + 1)
-            const active = (pathArray.length === id + 1) ? "current" : ''
-            return (
-              <ListItem
-                key={id}
-                className={`item ${active}`}
-              >
-                <Text.span className='itemInner'>
-                  <BreadcrumbItem
-                    label={segment}
-                    pathSegments={pathSegments}
-                    {...{ getUrlFromPathSegments, onClick }}
-                  />
-                </Text.span>
-              </ListItem>
-            )
-          })
-        }
+        {pathArray.map((segment, id) => {
+          const pathSegments = pathArray
+            .map(encodeURIComponent)
+            .slice(0, id + 1)
+          const active = pathArray.length === id + 1 ? 'current' : ''
+          return (
+            <ListItem key={id} className={`item ${active}`}>
+              <Text.span className='itemInner'>
+                <BreadcrumbItem
+                  label={segment}
+                  pathSegments={pathSegments}
+                  {...{ getUrlFromPathSegments, onClick }}
+                />
+              </Text.span>
+            </ListItem>
+          )
+        })}
       </List>
       {renderRight}
-  </BreadcrumbsWrapper>
+    </BreadcrumbsWrapper>
   )
 }
 

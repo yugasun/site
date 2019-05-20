@@ -13,25 +13,8 @@ import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
 import gitHubSvg from 'src/assets/images/github.svg'
-import {
-  Helmet as SEOHelmet,
-  InternalLink,
-  HaveQuestionsPrefooter,
-} from 'src/fragments'
-import { Button } from 'src/fragments/DesignSystem'
-import { WhiteButtonNew as WhiteButton } from 'src/components'
-
-const ServerlessFrameworkText = ({ children }) => (
-  <Text fontSize='16px' color='white' letterSpacing='0.67px' mt={(22, 22, 32)}>
-    serverless framework
-  </Text>
-)
-
-const FrameworkType = ({ children }) => (
-  <Text fontSize='36px' color='white' letterSpacing='1.5px'>
-    {children}
-  </Text>
-)
+import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
+import OverviewExtraContent from 'src/components/pages/doc/OverviewExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
   <DocsLayout footerBackground={false} noPrefooter>
@@ -53,11 +36,8 @@ const DocTemplate = ({ data: { doc }, location }) => (
     <DocsWrapper __url={location.pathname}>
       <SEOHelmet {...doc.frontmatter} location={location} />
       <Box
-        display={
-          doc.frontmatter.gitLink == '/docs/README.md'
-            ? ['none', 'none', 'none', 'none', 'block']
-            : 'block'
-        }
+        display={['none', 'none', 'none', 'none', 'block']}
+        style={{ background: '#000' }}
       >
         <LiteHeader url={location.pathname} />
       </Box>
@@ -65,37 +45,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
         <Sidebar head={doc.frontmatter} />
         <Column>
           {doc.frontmatter.gitLink == '/docs/README.md' ? (
-            <Flex
-              flexDirection={['column', 'column', 'row']}
-              mt={['-3px', '-3px', '-3px', 0]}
-            >
-              <Background
-                width={[1, 1, 0.5]}
-                background='#fd5750'
-                height={[164, 164, 184]}
-              >
-                <Column alignItems='center'>
-                  <ServerlessFrameworkText />
-                  <FrameworkType>open source</FrameworkType>
-                  <InternalLink to={'/framework/docs/getting-started/'}>
-                    <WhiteButton mt={22}>get started</WhiteButton>
-                  </InternalLink>
-                </Column>
-              </Background>
-              <Background
-                width={[1, 1, 0.5]}
-                background='black'
-                height={[164, 164, 184]}
-              >
-                <Column alignItems='center'>
-                  <ServerlessFrameworkText />
-                  <FrameworkType>enterprise</FrameworkType>
-                  <InternalLink to={'/enterprise/'}>
-                    <Button mt={22}>schedule a demo</Button>
-                  </InternalLink>
-                </Column>
-              </Background>
-            </Flex>
+            <OverviewExtraContent />
           ) : null}
 
           <Column

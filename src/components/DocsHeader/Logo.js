@@ -15,7 +15,7 @@ const LogoComponent = () => (
   <Link to='/'>
     <LogoWithDesktopTopMargin
       src={logo}
-      height={['21px', '21px', '21px', '32px']}
+      height={['21px', '21px', '21px', '55px']}
       width={['124px', '124px', '124px', '209px']}
       alt='Serverless'
     />

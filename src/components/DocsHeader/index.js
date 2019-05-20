@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  Background,
-  Flex,
-  Transition,
-  Text,
-  HorizontalRule,
-} from 'serverless-design-system'
+import { Background, Flex, Transition } from 'serverless-design-system'
 
 import { HeaderContainer } from 'src/components'
 import Logo from './Logo'
@@ -13,7 +7,6 @@ import Navbar from './Navbar'
 import NavButton from './NavButton'
 import NavbarContext from './NavbarContext'
 import HeaderWrapper from './Wrapper'
-import { Divider } from 'src/fragments'
 
 class Header extends React.Component {
   constructor(props) {
@@ -92,7 +85,6 @@ class Header extends React.Component {
                   <Navbar />
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
-              <hr width='100%' />
             </HeaderContainer>
           </Transition>
         </Background>

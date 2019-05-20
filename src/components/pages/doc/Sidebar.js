@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import { Box, Heading, Text, List, ListItem } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/constants/generated-menu-items'
-import SearchBox from './SearchBox'
 import { ExternalLink } from 'src/fragments'
 
 export default class Sidebar extends React.Component {
@@ -90,21 +89,14 @@ export default class Sidebar extends React.Component {
       parentDisplay = menu.index[0].title
     }
 
-    let searchBox
-
-    if (typeof window !== 'undefined' && window.outerWidth > 600) {
-      searchBox = <SearchBox />
-    }
-
     return (
-      <Box className='sidebar'>
+      <Box className='sidebar' pt={[0, 0, 0, 0, 92]}>
         <Box
           className='sidebarInner'
           ref={ref => {
             this.sidebarRef = ref
           }}
         >
-          <Box>{searchBox}</Box>
           <Box className='pageContext'>{parentDisplay}</Box>
           <Box className='subPages'>
             <List>{items}</List>
