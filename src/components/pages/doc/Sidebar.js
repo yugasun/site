@@ -4,6 +4,74 @@ import { Box, Heading, Text, List, ListItem } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/constants/generated-menu-items'
 import { ExternalLink } from 'src/fragments'
+import MetisMenu from 'react-metismenu'
+require('./Sidebar.css')
+
+const menu = [
+  {
+    label: 'Menu 1',
+    to: 'menu-1',
+  },
+  {
+    label: 'providers',
+    to: 'xyz',
+    content: [
+      {
+        to: '/framework/docs/providers/aws/',
+        label: 'AWS',
+        content: [
+          {
+            to: '/framework/docs/providers/cloudflare/',
+            label: 'Awesome',
+          },
+        ],
+      },
+      {
+        to: '/framework/docs/providers/azure/',
+        label: 'azure',
+      },
+      {
+        to: '/framework/docs/providers/cloudflare/',
+        label: 'cloudflare',
+      },
+      {
+        to: '/framework/docs/providers/fn/',
+        label: 'fn',
+      },
+      {
+        to: '/framework/docs/providers/google/',
+        label: 'Google',
+      },
+      {
+        to: '/framework/docs/providers/kubelesss/',
+        label: 'Kubeless',
+      },
+      {
+        to: '/framework/docs/providers/openwhisk/',
+        label: 'OpenWhisk',
+      },
+      {
+        to: '/framework/docs/providers/spotinst/',
+        label: 'Spotinst',
+      },
+    ],
+  },
+  {
+    label: 'Some',
+    to: 'https://www.google.com',
+  },
+]
+
+const App = props => (
+  <div>
+    <MetisMenu
+      content={menu}
+      iconNameStateVisible='minus'
+      iconNameStateHidden='plus'
+      activeLinkTo={props.activeLinkTo}
+    />
+  </div>
+)
 
 export default class Sidebar extends React.Component {
   constructor(props, context) {
@@ -91,17 +159,7 @@ export default class Sidebar extends React.Component {
 
     return (
       <Box className='sidebar' pt={[0, 0, 0, 0, 92]}>
-        <Box
-          className='sidebarInner'
-          ref={ref => {
-            this.sidebarRef = ref
-          }}
-        >
-          <Box className='pageContext'>{parentDisplay}</Box>
-          <Box className='subPages'>
-            <List>{items}</List>
-          </Box>
-        </Box>
+        <App activeLinkTo={url} />
       </Box>
     )
   }
