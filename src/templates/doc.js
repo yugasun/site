@@ -1,13 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import {
-  Row,
-  Column,
-  Flex,
-  Background,
-  Text,
-  Box,
-} from 'serverless-design-system'
+import { Row, Column, Box } from 'serverless-design-system'
 import DocsLayout from 'src/layouts/Docs'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
@@ -43,7 +36,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
       </Box>
       <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
-        <Column>
+        <Column width={1}>
           {doc.frontmatter.gitLink == '/docs/README.md' ? (
             <OverviewExtraContent />
           ) : null}

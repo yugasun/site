@@ -8,10 +8,6 @@ import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 const Wrapper = styled(Column)`
-  * {
-    font-family: 'SoleilBk';
-  }
-
   input:focus {
     outline: none;
   }
@@ -100,28 +96,48 @@ const Wrapper = styled(Column)`
     }
   }
 
+  .algolia-autocomplete .ds-dropdown-menu:before {
+    width: 0px;
+    height: 0px;
+  }
+
   .algolia-autocomplete {
     width: 100%;
   }
+
+  .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
+    left: 0 !important;
+  }
+
+  .docsProviderBanner {
+    background-color: #eaeaea;
+    width: 112%;
+    margin-top: -30px;
+    margin-left: -70px;
+    height: 232px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 176px;
+      height: 176px;
+    }
+  }
+
   .docsSections {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
-    flex-flow: row wrap;
-    max-width: 100%;
+    max-width: 80%;
     position: relative;
     z-index: 3;
     a {
       border: none !important;
     }
     > div {
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
       margin-right: 20px;
       padding: 10px !important;
       margin-top: 20px;
-      &:hover {
-        background: #f5f7f9;
-      }
       ul {
         width: 100%;
         padding-right: 0px;
@@ -159,8 +175,14 @@ const Wrapper = styled(Column)`
   }
 
   .docsSection {
-    max-width: 22rem;
     width: 100%;
+  }
+
+  .docsProviderItems {
+    column-count: 4;
+    > ul {
+      margin-top: 0;
+    }
   }
 
   .providerSection {
