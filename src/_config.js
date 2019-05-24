@@ -48,7 +48,7 @@ const siteConfig = isProduction => {
     FORMS_API:
       'https://d3ul21vxig.execute-api.us-west-2.amazonaws.com/prod/handle-entry',
     ADD_FORMS_EVENT_API:
-      'https://fvoeyeqq97.execute-api.us-east-1.amazonaws.com/prod/create',
+      'https://3cuvg0to3i.execute-api.us-east-1.amazonaws.com/prod/create',
 
     BRANCH: process.env.BRANCH || gitBranch.sync(),
     DOCS_VERSION: JSON.stringify(serverlessPkg.version),
