@@ -86,15 +86,22 @@
   background: rgba(255, 255, 255, 0.05);
   color: #000;
 }
+.sls-dropdown-icon:after {
+  content: '';
+  background: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/docs/menu-dropdown-icon.svg');
+  background-size: cover;
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  margin-top: 15px;
+}
 .metismenu-link.active {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background: #f7f7f7;
   color: #000 !important;
 }
-.metismenu-link.has-active-child {
-  color: #000 !important;
-}
+
 i.metismenu-icon {
   text-align: center;
   width: 3em;

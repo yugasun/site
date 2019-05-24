@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Box, Heading, Text, List, ListItem } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
-import generatedMenu from 'src/constants/generated-menu-items'
+import generatedMenu from 'src/constants/generated-menu-items-new'
 import { ExternalLink } from 'src/fragments'
 import MetisMenu from 'react-metismenu'
 require('./Sidebar.css')
@@ -65,10 +65,11 @@ const menu = [
 const App = props => (
   <div>
     <MetisMenu
-      content={menu}
-      iconNameStateVisible='minus'
-      iconNameStateHidden='plus'
+      content={generatedMenu}
+      iconNameStateVisible='dropdown-icon'
+      iconNameStateHidden='dropdown-icon'
       activeLinkTo={props.activeLinkTo}
+      iconNamePrefix='sls-'
     />
   </div>
 )

@@ -69,6 +69,9 @@ export default {
     champions: '/company/champions/',
     contact: 'mailto:hello@serverless.com',
   },
+  blog: {
+    tutorials: '/blog/category/guides-and-tutorials/',
+  },
   termsOfService: 'https://dashboard.serverless.com/legal/terms',
   privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',
   facebookHandle: 'https://www.facebook.com/serverless/',
