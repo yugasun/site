@@ -6,6 +6,8 @@ import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
+import redRectangleDotsSmall from 'src/assets/images/redRectangleDotsSmall.svg'
 
 const Wrapper = styled(Column)`
   input:focus {
@@ -24,6 +26,22 @@ const Wrapper = styled(Column)`
 
   li {
     line-height: 1.5;
+  }
+
+  p {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    line-height: 26px;
+    letter-spacing: 0px;
+  }
+
+  .docs-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+    }
   }
 
   blockquote {
@@ -62,9 +80,14 @@ const Wrapper = styled(Column)`
     }
   }
 
+  h3 {
+    font-size: 18px;
+    font-family: 'SoleilBk';
+    font-weight: normal;
+  }
+
   h1,
   h2,
-  h3,
   h4,
   h5,
   h6 {
@@ -75,6 +98,15 @@ const Wrapper = styled(Column)`
 
     &[id] {
       margin-top: 40px;
+    }
+  }
+
+  .hljs {
+    padding-left: 32px;
+    padding-top: 32px;
+
+    &:before {
+      width: 0px;
     }
   }
 
@@ -111,9 +143,10 @@ const Wrapper = styled(Column)`
 
   .docsProviderBanner {
     background-color: #eaeaea;
-    width: 112%;
-    margin-top: -30px;
-    margin-left: -70px;
+    width: 134%;
+    margin-top: -92px;
+    margin-left: -136px;
+    margin-bottom: 70px;
     height: 232px;
     display: flex;
     justify-content: center;
@@ -389,15 +422,13 @@ const Wrapper = styled(Column)`
     display: block;
     flex-grow: 1;
     position: relative;
-    padding-top: 3rem;
+    padding-top: 92px;
     max-width: 100%;
     min-height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 62px;
     overflow: hidden;
-    border-left: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 136px;
+    padding-right: 192px;
     $copyWidth: 45px;
 
     .phenomic-HeadingAnchor {
@@ -406,7 +437,7 @@ const Wrapper = styled(Column)`
       text-align: left;
       margin-right: 0;
       width: 130px;
-      margin-left: -50px;
+      margin-left: -59px;
       /* line-height: 1.4rem; */
       text-decoration: none;
       opacity: 1;
@@ -492,7 +523,7 @@ const Wrapper = styled(Column)`
       position: relative;
     }
     p {
-      max-width: 42%;
+      max-width: 51%;
       position: relative;
     }
     p,
@@ -520,18 +551,30 @@ const Wrapper = styled(Column)`
     }
     h1 {
       font-size: 32px;
+      font-weight: normal;
       &:first-of-type {
         margin-top: 0px;
         .phenomic-HeadingAnchor {
           display: none;
         }
       }
+      &::after {
+        z-index: -1;
+        content: ' ';
+        background-image: url(${redRectangleDots});
+        top: -1px;
+        left: -30px;
+        height: 30px;
+        width: 105px;
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
     h2 {
-      font-size: 24px;
-    }
-    h3 {
-      font-size: 20px;
+      font-size: 32px;
+      font-weight: normal;
     }
     h4 {
       font-size: 18px;
@@ -751,7 +794,9 @@ const Wrapper = styled(Column)`
         line-height: 1.4;
         padding-top: 10px;
         padding-bottom: 10px;
+        padding-left: 32px;
       }
+
       .phenomic-HeadingAnchor {
         display: none;
       }
@@ -819,13 +864,6 @@ export default class DocsWrapper extends React.Component {
     }
 
     const domNode = ReactDOM.findDOMNode(this.ref)
-    domNode.querySelectorAll('code.hljs').forEach(code => {
-      let number = 1
-      const zero = `<a class="line">${number++}</a>`
-      code.innerHTML =
-        zero +
-        code.innerHTML.replace(/\n/g, () => `\n<a class="line">${number++}</a>`)
-    })
 
     this.linkCatcher = new LinkCatcher(domNode, navigateTo)
 
