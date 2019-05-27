@@ -13,8 +13,9 @@ const actions = [
   {
     name: 'go to forum',
     navProps: {
-      to: '/framework/docs/',
-      completed: true,
+      to: 'https://forum.serverless.com/',
+      completed: false,
+      crossDomain: true,
     },
   },
 ]
