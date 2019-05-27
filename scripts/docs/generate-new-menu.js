@@ -23,7 +23,6 @@ const finalMenu = [
 ]
 
 function findChildrenForPath(path) {
-  console.log(`path is ${path}`)
   if (path.endsWith('/')) {
     path = path.substring(0, path.length - 1)
   }
@@ -50,9 +49,18 @@ function addChildren(parent) {
 }
 
 function cleanKeys(obj) {
+  let thisLabel = obj.title.toLowerCase()
+  if (thisLabel.includes('aws')) {
+    thisLabel = thisLabel.replace('aws', 'AWS')
+  }
+
+  if (thisLabel.includes('cli')) {
+    thisLabel = thisLabel.replace('cli', 'CLI')
+  }
+
   const cleanedObj = {
     to: obj.path,
-    label: obj.title,
+    label: thisLabel,
   }
   return cleanedObj
 }

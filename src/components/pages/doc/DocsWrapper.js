@@ -155,6 +155,10 @@ const Wrapper = styled(Column)`
       width: 176px;
       height: 176px;
     }
+    .google-logo {
+      width: 206px;
+      height: 110px;
+    }
   }
 
   .docsSections {

@@ -3,6 +3,8 @@ import { Flex, Image, Column, Text } from 'serverless-design-system'
 import tutorialsIcon from 'src/assets/images/pages/docs/tutorials-icon.svg'
 import examplesIcon from 'src/assets/images/pages/docs/examples-icon.svg'
 import { P } from 'src/fragments/DesignSystem'
+import { blog, developersMenu } from 'src/constants/urls.js'
+import { InternalLink } from 'src/fragments'
 
 const data = [
   {
@@ -11,6 +13,7 @@ const data = [
     content:
       'Search our full examples repository for project examples using all languages and FaaS providers.',
     cta: 'search examples >',
+    link: developersMenu.examples,
   },
   {
     image: tutorialsIcon,
@@ -18,10 +21,11 @@ const data = [
     content:
       'Learn how to create Serverless projects, build and deploy your apps in any provider.',
     cta: 'find tutorials >',
+    link: blog.tutorials,
   },
 ]
 
-const ContentBlock = ({ image, heading, content, cta }) => (
+const ContentBlock = ({ image, heading, content, cta, link }) => (
   <Flex mt={[42, 42, 42, 42, 62]}>
     <Image src={image} width={[62, 62, 72]} height={[62, 62, 72]} mr={32} />
     <Column width={0.55} ml={32}>
@@ -35,13 +39,15 @@ const ContentBlock = ({ image, heading, content, cta }) => (
         {heading}
       </Text>
       <P>{content}</P>
-      <Text
-        fontFamily='Serverless'
-        color='#fd5750
+      <InternalLink to={link}>
+        <Text
+          fontFamily='Serverless'
+          color='#fd5750
 '
-      >
-        {cta}
-      </Text>
+        >
+          {cta}
+        </Text>
+      </InternalLink>
     </Column>
   </Flex>
 )
