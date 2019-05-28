@@ -169,39 +169,7 @@ module.exports = [
           },
           {
             "to": "/framework/docs/providers/aws/examples/",
-            "label": "examples",
-            "content": [
-              {
-                "to": "/framework/docs/providers/aws/examples/hello-world/",
-                "label": "hello world example",
-                "content": [
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/csharp/",
-                    "label": "hello world c# example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/fsharp/",
-                    "label": "hello world f# example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/go/",
-                    "label": "hello world go example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/node/",
-                    "label": "hello world node.js example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/python/",
-                    "label": "hello world python example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/aws/examples/hello-world/ruby/",
-                    "label": "hello world ruby example"
-                  }
-                ]
-              }
-            ]
+            "label": "examples"
           },
           {
             "to": "/framework/docs/providers/aws/guide/",
@@ -381,19 +349,7 @@ module.exports = [
           },
           {
             "to": "/framework/docs/providers/azure/examples/",
-            "label": "examples",
-            "content": [
-              {
-                "to": "/framework/docs/providers/azure/examples/hello-world/",
-                "label": "hello world example",
-                "content": [
-                  {
-                    "to": "/framework/docs/providers/azure/examples/hello-world/node/",
-                    "label": "hello world node.js example"
-                  }
-                ]
-              }
-            ]
+            "label": "examples"
           },
           {
             "to": "/framework/docs/providers/azure/guide/",
@@ -457,7 +413,7 @@ module.exports = [
       },
       {
         "to": "/framework/docs/providers/cloudflare/",
-        "label": "cloudflare workers",
+        "label": "cloudflare",
         "content": [
           {
             "to": "/framework/docs/providers/cloudflare/cli-reference/",
@@ -733,23 +689,7 @@ module.exports = [
           },
           {
             "to": "/framework/docs/providers/google/examples/",
-            "label": "examples",
-            "content": [
-              {
-                "to": "/framework/docs/providers/google/examples/hello-world/",
-                "label": "hello world example",
-                "content": [
-                  {
-                    "to": "/framework/docs/providers/google/examples/hello-world/node/",
-                    "label": "hello world node.js example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/google/examples/hello-world/python/",
-                    "label": "hello world python example"
-                  }
-                ]
-              }
-            ]
+            "label": "examples"
           },
           {
             "to": "/framework/docs/providers/google/guide/",
@@ -1029,35 +969,7 @@ module.exports = [
           },
           {
             "to": "/framework/docs/providers/openwhisk/examples/",
-            "label": "examples",
-            "content": [
-              {
-                "to": "/framework/docs/providers/openwhisk/examples/hello-world/",
-                "label": "hello world example",
-                "content": [
-                  {
-                    "to": "/framework/docs/providers/openwhisk/examples/hello-world/node/",
-                    "label": "hello world node.js example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/openwhisk/examples/hello-world/php/",
-                    "label": "hello world php example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/openwhisk/examples/hello-world/python/",
-                    "label": "hello world python example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/openwhisk/examples/hello-world/ruby/",
-                    "label": "hello world ruby example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/openwhisk/examples/hello-world/swift/",
-                    "label": "hello world swift example"
-                  }
-                ]
-              }
-            ]
+            "label": "examples"
           },
           {
             "to": "/framework/docs/providers/openwhisk/guide/",

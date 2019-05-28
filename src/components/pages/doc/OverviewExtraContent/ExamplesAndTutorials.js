@@ -52,7 +52,7 @@ const ContentBlock = ({ image, heading, content, cta, link }) => (
   </Flex>
 )
 const ExamplesAndTutorials = () => (
-  <Flex width={0.7} mx='auto'>
+  <Flex width={[1, 1, 1, 1, 0.7]} mx={[1, 1, 4, 4, 'auto']}>
     <ContentBlock {...data[0]} />
     <ContentBlock {...data[1]} />
   </Flex>

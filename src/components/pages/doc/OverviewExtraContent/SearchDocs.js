@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Flex, Background } from 'serverless-design-system'
+import { TextField, Flex, Background, Box } from 'serverless-design-system'
 import styled from 'styled-components'
 import searchIcon from 'src/assets/images/search-icon.svg'
 
@@ -22,6 +22,12 @@ const DocsSearchField = styled(TextField)`
 
   @media screen and (max-width: 412px) {
     border: none;
+  }
+`
+
+const DesktopBackground = styled(Background)`
+  @media screen and (max-width: 1025px) {
+    display: none;
   }
 `
 
@@ -48,7 +54,7 @@ export default class SearchBox extends React.Component {
 
   render() {
     return (
-      <Background background='#f7f7f7'>
+      <DesktopBackground background='#f7f7f7'>
         <Flex width={0.79} mx='auto' mt={62} mb={42} pr={'7%'}>
           <DocsSearchField
             placeholder='Search documentation'
@@ -63,7 +69,7 @@ export default class SearchBox extends React.Component {
             className='searchBox'
           />
         </Flex>
-      </Background>
+      </DesktopBackground>
     )
   }
 }
