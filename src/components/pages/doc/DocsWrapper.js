@@ -103,6 +103,27 @@ const Wrapper = styled(Column)`
     padding-right: 192px;
     $copyWidth: 45px;
 
+    .docsSectionSubHeader h4 {
+      font-size: 24px;
+      line-height: 38px;
+      letter-spacing: -0.38px;
+      font-weight: normal;
+
+      &::after {
+        z-index: -1;
+        content: ' ';
+        background-image: url(${redRectangleDotsSmall});
+        top: -7px;
+        left: -70px;
+        height: 30px;
+        width: 105px;
+        position: absolute;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
     h3 {
       font-size: 18px;
       font-family: 'SoleilBk';
@@ -167,6 +188,10 @@ const Wrapper = styled(Column)`
 
         .github {
           color: #fd5750;
+
+          &:before {
+            background-color: white;
+          }
         }
       }
     }
