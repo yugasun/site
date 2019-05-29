@@ -6,19 +6,21 @@ const config = require('./config')
 const finalMenu = [
   {
     to: '/framework/docs/',
-    label: 'overview',
-  },
-  {
-    to: '/framework/docs/getting-started/',
-    label: 'getting started',
-  },
-  {
-    to: '/examples/',
-    label: 'examples',
-  },
-  {
-    to: '/blog/category/guides-and-tutorials/',
-    label: 'tutorials',
+    label: 'framework open-source',
+    content: [
+      {
+        to: '/framework/docs/getting-started/',
+        label: 'getting started',
+      },
+      {
+        to: '/examples/',
+        label: 'examples',
+      },
+      {
+        to: '/blog/category/guides-and-tutorials/',
+        label: 'tutorials',
+      },
+    ],
   },
 ]
 
@@ -86,7 +88,7 @@ function menuWithAllChildren(menuObj) {
   return menuObj
 }
 
-finalMenu.splice(2, 0, menuWithAllChildren(providersMenuObj))
+finalMenu[0].content.splice(1, 0, menuWithAllChildren(providersMenuObj))
 generateDocMenu(finalMenu)
 
 function generateDocMenu(data) {

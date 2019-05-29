@@ -512,8 +512,25 @@ const Wrapper = styled(Column)`
     }
   }
 
-  .providerSectionHeader img {
-    width: 90%;
+  .providerSectionHeader {
+    img {
+      width: 90%;
+      border-radius: 6px;
+    }
+
+    .google-logo,
+    .cloudflare-logo,
+    .kubeless-logo {
+      width: 75%;
+    }
+
+    .fn-logo {
+      width: 60%;
+    }
+  }
+
+  .providerSectionHeader:nth-child(2) img {
+    width: 30%;
     border-radius: 6px;
   }
 

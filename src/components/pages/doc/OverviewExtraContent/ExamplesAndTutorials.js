@@ -26,9 +26,16 @@ const data = [
 ]
 
 const ContentBlock = ({ image, heading, content, cta, link }) => (
-  <Flex mt={[42, 42, 42, 42, 62]}>
+  <Flex
+    mt={[42, 42, 42, 42, 62]}
+    flexDirection={['row', 'row', 'column', 'column', 'row']}
+  >
     <Image src={image} width={[62, 62, 72]} height={[62, 62, 72]} mr={32} />
-    <Column width={0.55} ml={32}>
+    <Column
+      width={[0.55, 0.55, 0.7, 0.7, 0.55]}
+      ml={[32, 32, 0, 0, 32]}
+      mt={[0, 0, 32, 32, 0]}
+    >
       <Text
         fontFamily='Soleil'
         lineHeight='38px'

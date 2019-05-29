@@ -7,12 +7,20 @@ import {
   Flex,
   ListItem,
   Image,
+  Background,
 } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/constants/generated-menu-items-new'
 import { ExternalLink } from 'src/fragments'
 import MetisMenu from 'react-metismenu'
 import githubGrayIcon from 'src/assets/images/github-gray.svg'
+import styled from 'styled-components'
+
+const BoxWithBottomBorder = styled(Box)`
+  border-bottom: 2px solid #e4e2e2;
+  padding-bottom: 32px;
+  width: 80%;
+`
 
 require('./Sidebar.css')
 
@@ -114,6 +122,13 @@ export default class Sidebar extends React.Component {
 
     return (
       <Box className='sidebar' pt={[0, 0, 0, 0, 92]}>
+        <BoxWithBottomBorder ml={60} mb={22}>
+          <ExternalLink to={'https://github.com/serverless/enterprise'}>
+            <Text color='#8c8c8c' fontSize='14px'>
+              framework enterprise
+            </Text>
+          </ExternalLink>
+        </BoxWithBottomBorder>
         <App activeLinkTo={url} />
         <ExternalLink
           to={`https://github.com/serverless/serverless/edit/master${
