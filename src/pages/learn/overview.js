@@ -12,8 +12,8 @@ import prefooter from 'src/components/pages/learn/Prefooter.js'
 const Overview = ({ location }) => (
   <DefaultLayout prefooter={prefooter} transparentHeader>
     <Helmet
-      title='Why Serverless?'
-      description='What is the Serverless movement about and why does it matter?'
+      title='Serverless Computing - The What &amp; Why'
+      description='What is the Serverless computing movement about and why does it matter?'
       location={location}
     />
     <Hero />
