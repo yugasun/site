@@ -33,6 +33,14 @@ const Wrapper = styled(Column)`
     margin-bottom: 32px;
     line-height: 26px;
     letter-spacing: 0px;
+
+    a {
+      border-bottom: 1px solid #fd5750;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
   }
 
   .docs-center {
@@ -346,25 +354,6 @@ const Wrapper = styled(Column)`
     }
   }
 
-  //iPad views
-  @media screen and (max-width: 992px) {
-    blockquote {
-      & > p {
-        padding-left: 40px;
-      }
-
-      &:before {
-        left: 0;
-        top: 0;
-      }
-    }
-
-    iframe {
-      width: 100%;
-      height: 360px;
-    }
-  }
-
   .algolia-autocomplete .ds-dropdown-menu:before {
     width: 0px;
     height: 0px;
@@ -465,6 +454,7 @@ const Wrapper = styled(Column)`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 30%;
   }
 
   .docsSectionHeader,
@@ -579,7 +569,7 @@ const Wrapper = styled(Column)`
   }
 
   //mobile
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 415px) {
     iframe {
       width: 100%;
       height: auto;
@@ -802,7 +792,11 @@ const Wrapper = styled(Column)`
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1025px) {
+    .sidebar {
+      display: none;
+    }
+
     .content {
       padding-left: 30px;
       pre code:global(.hljs) {
@@ -820,9 +814,23 @@ const Wrapper = styled(Column)`
         padding-right: 25px;
       }
     }
-  }
 
-  @media (max-width: 768px) {
+    blockquote {
+      & > p {
+        padding-left: 40px;
+      }
+
+      &:before {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+    }
+
     & {
       margin-top: calc(47px);
     }
@@ -938,14 +946,6 @@ const Wrapper = styled(Column)`
     .subPageLink,
     .subPageLinkHeading {
       font-size: 16px;
-    }
-  }
-
-  p a {
-    border-bottom: 1px solid #fd5750;
-
-    &:hover {
-      border-bottom: none;
     }
   }
 `
