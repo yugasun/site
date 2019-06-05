@@ -1,40 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import {
-  Box,
-  Heading,
-  Text,
-  Flex,
-  ListItem,
-  Image,
-  Background,
-} from 'serverless-design-system'
+import { Box, Text, ListItem, Flex, Image } from 'serverless-design-system'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
-import generatedMenu from 'src/constants/generated-menu-items-new'
 import { ExternalLink } from 'src/fragments'
-import MetisMenu from 'react-metismenu'
+import SidebarMenu from './SidebarMenu'
 import githubGrayIcon from 'src/assets/images/github-gray.svg'
-import styled from 'styled-components'
-
-const BoxWithBottomBorder = styled(Box)`
-  border-bottom: 2px solid #e4e2e2;
-  padding-bottom: 32px;
-  width: 80%;
-`
-
-require('./Sidebar.css')
-
-const App = props => (
-  <div>
-    <MetisMenu
-      content={generatedMenu}
-      iconNameStateVisible='dropdown-icon'
-      iconNameStateHidden='dropdown-icon'
-      activeLinkTo={props.activeLinkTo}
-      iconNamePrefix='sls-'
-    />
-  </div>
-)
 
 export default class Sidebar extends React.Component {
   constructor(props, context) {
@@ -102,34 +72,11 @@ export default class Sidebar extends React.Component {
 
   render() {
     const { __url } = this.props
-    const items = this.renderList()
     const url = getCurrentUrl(__url)
-    const trimmedURL = url.replace(/\/$/, '')
-    const parent = trimmedURL.split('/')
-    const parentName = parent[parent.length - 1]
-    let parentDisplay = parentName
-    let parentURL
-
-    let menu = generatedMenu[__url] || generatedMenu[trimmedURL]
-    if (!menu) {
-      parentURL = getParentUrl(trimmedURL)
-      menu = generatedMenu[parentURL]
-    }
-
-    if (menu && menu.index) {
-      parentDisplay = menu.index[0].title
-    }
 
     return (
-      <Box className='sidebar' pt={[0, 0, 0, 0, 92]}>
-        <BoxWithBottomBorder ml={60} mb={22}>
-          <ExternalLink to={'https://github.com/serverless/enterprise'}>
-            <Text color='#8c8c8c' fontSize='14px'>
-              framework enterprise
-            </Text>
-          </ExternalLink>
-        </BoxWithBottomBorder>
-        <App activeLinkTo={url} />
+      <Box className='sidebar'>
+        <SidebarMenu activeLinkTo={url} />
         <ExternalLink
           to={`https://github.com/serverless/serverless/edit/master${
             this.props.head.gitLink

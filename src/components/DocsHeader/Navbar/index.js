@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Box, List, ListItem } from 'serverless-design-system'
 import NavbarContext from './../NavbarContext'
 import MenuList from './Menu/List'
+import SidebarMenu from 'src/components/pages/doc/SidebarMenu'
 
 const NavListItem = styled(ListItem)`
   list-style-type: none;
@@ -35,11 +36,11 @@ const Navbar = () => (
           'inline-block',
         ]}
       >
-        <List p='0' mt={[4, 3, 4, 3, 0]} ml={[4, 3,4, 3, 0]} mr={0} mb={0}>
+        <List p='0' mt={[0, 0, 0, 0, 0]} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
           {MenuList.map((MenuItem, index) => (
             <NavListItem
               key={index}
-              display={['block', 'block', 'block', 'block', 'inline-block']}
+              display={['none', 'none', 'none', 'none', 'inline-block']}
             >
               <MenuItem />
             </NavListItem>

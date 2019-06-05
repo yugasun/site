@@ -10,7 +10,7 @@ import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
 import OverviewExtraContent from 'src/components/pages/doc/OverviewExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
-  <DocsLayout footerBackground={false} noPrefooter>
+  <DocsLayout footerBackground={false} noPrefooter url={location.pathname}>
     <Helmet
       link={[
         {

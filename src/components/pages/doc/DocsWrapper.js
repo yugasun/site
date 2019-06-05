@@ -28,21 +28,6 @@ const Wrapper = styled(Column)`
     line-height: 1.5;
   }
 
-  p {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    line-height: 26px;
-    letter-spacing: 0px;
-
-    a {
-      border-bottom: 1px solid #fd5750;
-
-      &:hover {
-        border-bottom: none;
-      }
-    }
-  }
-
   .docs-center {
     display: flex;
     flex-direction: column;
@@ -129,6 +114,21 @@ const Wrapper = styled(Column)`
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+      }
+    }
+
+    p {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      line-height: 26px;
+      letter-spacing: 0px;
+
+      a {
+        border-bottom: 1px solid #fd5750;
+
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
 
@@ -532,49 +532,6 @@ const Wrapper = styled(Column)`
     padding-bottom: 3px;
   }
 
-  //tablet
-  @media (max-width: 768px) {
-    .docsSections {
-      width: 100%;
-      max-width: 100%;
-    }
-    .docsSection {
-      width: 95%;
-    }
-    .docsSection {
-      margin-bottom: 20px;
-    }
-    .docsSectionHeader,
-    .docsSectionHeader a {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    .providersSections {
-      max-width: 100%;
-    }
-    .providerSection {
-      width: 95%;
-    }
-    .providerSection {
-      margin-bottom: 20px;
-    }
-    .providerSectionHeader,
-    .providerSectionHeader a {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-  }
-
-  //mobile
-  @media screen and (max-width: 415px) {
-    iframe {
-      width: 100%;
-      height: auto;
-    }
-  }
   & {
     margin-top: 62px;
     padding-bottom: 0;
@@ -792,9 +749,48 @@ const Wrapper = styled(Column)`
     }
   }
 
+  //tablet
   @media (max-width: 1025px) {
     .sidebar {
       display: none;
+    }
+
+    .docsProviderBanner {
+      width: 135%;
+      height: 232px;
+      padding-top: 64px;
+
+      > img {
+        width: 176px;
+        height: 104px;
+      }
+    }
+
+    .docsSections {
+      width: 100%;
+      max-width: 100%;
+    }
+    .docsSection {
+      width: 95%;
+    }
+    .docsSection {
+      margin-bottom: 20px;
+    }
+    .docsSectionHeader,
+    .docsSectionHeader a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .providersSections {
+      max-width: 100%;
+    }
+    .providerSection {
+      width: 95%;
+    }
+    .providerSection {
+      margin-bottom: 20px;
     }
 
     .content {
@@ -811,7 +807,10 @@ const Wrapper = styled(Column)`
       h5,
       h6,
       p {
+        max-width: 70%;
         padding-right: 25px;
+        margin-top: 22px;
+        margin-bottom: 22px;
       }
     }
 
@@ -914,9 +913,7 @@ const Wrapper = styled(Column)`
       li {
         margin-bottom: 5px;
       }
-      h1 {
-        font-size: 22px;
-      }
+
       h1,
       h2,
       h3,
@@ -948,6 +945,46 @@ const Wrapper = styled(Column)`
       font-size: 16px;
     }
   }
+
+  //mobile
+  @media screen and (max-width: 415px) {
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+
+    .docsProviderBanner {
+      width: 150%;
+      padding-left: 80px;
+    }
+
+    .content {
+      h1,
+      h2 {
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: -0.38px;
+        max-width: 90%;
+      }
+
+      p {
+        max-width: 90%;
+      }
+
+      .providerSections {
+        justify-content: space-between;
+      }
+
+      .providerSection {
+        width: 128px;
+        height: 97px;
+      }
+
+      .docsProviderItems {
+        column-count: 2;
+      }
+    }
+  }
 `
 const Clipboard = typeof window !== 'undefined' ? require('clipboard') : null
 const preventDefault = e => e.preventDefault()
@@ -961,7 +998,7 @@ export default class DocsWrapper extends React.Component {
       }, 1)
     }
 
-    const domNode = ReactDOM.findDOMNode(this.ref)
+    const domNode = ReactDOM.findDOMNode(this.ref) //eslint-disable-line
 
     this.linkCatcher = new LinkCatcher(domNode, navigateTo)
 

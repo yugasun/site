@@ -29,6 +29,8 @@ const ContentBlock = ({ image, heading, content, cta, link }) => (
   <Flex
     mt={[42, 42, 42, 42, 62]}
     flexDirection={['row', 'row', 'column', 'column', 'row']}
+    mb={[0, 0, 76, 76, 0]}
+    justifyContent={['center', 'center', 'auto']}
   >
     <Image src={image} width={[62, 62, 72]} height={[62, 62, 72]} mr={32} />
     <Column
@@ -59,7 +61,13 @@ const ContentBlock = ({ image, heading, content, cta, link }) => (
   </Flex>
 )
 const ExamplesAndTutorials = () => (
-  <Flex width={[1, 1, 1, 1, 0.7]} mx={[1, 1, 4, 4, 'auto']}>
+  <Flex
+    width={[1, 1, 1, 1, 0.7]}
+    mx={['auto']}
+    pl={[0, 0, 4, 4, 0]}
+    flexDirection={['column', 'column', 'row']}
+    pb={[62, 62, 0]}
+  >
     <ContentBlock {...data[0]} />
     <ContentBlock {...data[1]} />
   </Flex>

@@ -9,13 +9,14 @@ const DefaultLayout = ({
   transparentHeader,
   prefooterOnlyDesktop,
   noPrefooter,
+  url,
 }) => {
   const prefooterOnlyDesktopBool = prefooterOnlyDesktop ? true : false
   const noPrefooterBool = noPrefooter ? true : false
 
   return (
     <Column width={1}>
-      <Header transparent={transparentHeader} />
+      <Header transparent={transparentHeader} url={url} />
       <Box width={1}>{children}</Box>
       <Footer
         prefooter={prefooter}

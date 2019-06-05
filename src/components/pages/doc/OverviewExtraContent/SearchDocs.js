@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Flex, Background, Box } from 'serverless-design-system'
+import { TextField, Flex, Background } from 'serverless-design-system'
 import styled from 'styled-components'
 import searchIcon from 'src/assets/images/search-icon.svg'
 

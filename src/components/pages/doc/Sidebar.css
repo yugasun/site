@@ -118,3 +118,14 @@ i.metismenu-state-icon.rotate-minus-90 {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
 }
+
+@media screen and (max-width: 1025px) {
+  .metismenu,
+  .metismenu-container .metismenu-container {
+    background: transparent;
+  }
+
+  .metismenu-container .metismenu-container .metismenu-link:hover {
+    color: white;
+  }
+}
