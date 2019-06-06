@@ -7,7 +7,7 @@ import Navbar from './Navbar'
 import NavButton from './NavButton'
 import NavbarContext from './NavbarContext'
 import HeaderWrapper from './Wrapper'
-import SearchBox from 'src/components/pages/doc/SubHeaderSearchBox'
+import SearchBox from './SearchBox'
 import SidebarMenu from 'src/components/pages/doc/SidebarMenu'
 import styled from 'styled-components'
 
