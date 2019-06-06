@@ -130,7 +130,7 @@ function generateDocMenu() {
         if (err) {
           return console.log(err)
         }
-        console.log(`${config.docsMenuPath}${fileName} Docs file generated`)
+        console.log(`${config.docsMenuPath}${fileName} Old docs file generated`)
       })
     })
     .catch(e => {
