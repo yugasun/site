@@ -1,4 +1,3 @@
-const path = require('path')
 const { getFileFromProjectRoot } = require('./utils')
 const graphqlQuery = `
 {
@@ -12,7 +11,7 @@ const graphqlQuery = `
 }
 `
 
-const createDocsPages = (createPage, createRedirect, docs) => (
+const createDocsPages = (createPage, createRedirect, docs) =>
   docs.forEach(({ node }) => {
     const docLink = `/framework${node.id}`
 
@@ -20,7 +19,7 @@ const createDocsPages = (createPage, createRedirect, docs) => (
       path: docLink,
       component: getFileFromProjectRoot(`src/templates/doc.js`),
       context: {
-        docId: node.id
+        docId: node.id,
       },
     })
 
@@ -35,21 +34,18 @@ const createDocsPages = (createPage, createRedirect, docs) => (
       redirectInBrowser: true,
     })
   })
-)
 
-const pageCreator = (graphql, createPage, createRedirect) => (
+const pageCreator = (graphql, createPage, createRedirect) =>
   new Promise((resolve, reject) => {
     try {
       graphql(graphqlQuery).then(result => {
         createDocsPages(createPage, createRedirect, result.data.allDoc.edges)
         resolve()
       })
-    }
-    catch(e) {
+    } catch (e) {
       console.log('error generating docs pages:', e)
       reject(e)
     }
   })
-)
 
 module.exports = pageCreator

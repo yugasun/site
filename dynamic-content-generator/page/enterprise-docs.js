@@ -1,4 +1,3 @@
-const path = require('path')
 const { getFileFromProjectRoot } = require('./utils')
 const graphqlQuery = `
 {
