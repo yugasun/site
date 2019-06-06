@@ -36,7 +36,7 @@ const EnterpriseDocTemplate = ({ data, location }) => (
       </Box>
       <Row className='docWrapper'>
         <Sidebar head={data.Enterprise.frontmatter} />
-        <Column width={1}>
+        <Column>
           <Column
             dangerouslySetInnerHTML={{ __html: data.Enterprise.content }}
             className='content'

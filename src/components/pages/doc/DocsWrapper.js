@@ -88,13 +88,16 @@ const Wrapper = styled(Column)`
     flex-grow: 1;
     position: relative;
     padding-top: 92px;
-    max-width: 100%;
+    max-width: 82.5%;
     min-height: 100vh;
     padding-bottom: 62px;
     overflow: hidden;
     padding-left: 136px;
-    padding-right: 192px;
     $copyWidth: 45px;
+
+    code {
+      max-width: 78%;
+    }
 
     .docsSectionSubHeader h4 {
       font-size: 24px;
@@ -365,26 +368,6 @@ const Wrapper = styled(Column)`
 
   .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
     left: 0 !important;
-  }
-
-  .docsProviderBanner {
-    background-color: #eaeaea;
-    width: 134%;
-    margin-top: -92px;
-    margin-left: -136px;
-    margin-bottom: 70px;
-    height: 232px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    > img {
-      width: 176px;
-      height: 176px;
-    }
-    .google-logo {
-      width: 206px;
-      height: 110px;
-    }
   }
 
   .docsSections {
@@ -755,46 +738,11 @@ const Wrapper = styled(Column)`
       display: none;
     }
 
-    .docsProviderBanner {
-      width: 135%;
-      height: 232px;
-      padding-top: 64px;
-
-      > img {
-        width: 176px;
-        height: 104px;
-      }
-    }
-
-    .docsSections {
-      width: 100%;
-      max-width: 100%;
-    }
-    .docsSection {
-      width: 95%;
-    }
-    .docsSection {
-      margin-bottom: 20px;
-    }
-    .docsSectionHeader,
-    .docsSectionHeader a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .providersSections {
-      max-width: 100%;
-    }
-    .providerSection {
-      width: 95%;
-    }
-    .providerSection {
-      margin-bottom: 20px;
-    }
-
     .content {
-      padding-left: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 62px;
+      max-width: 100%;
       pre code:global(.hljs) {
         margin-left: -30px !important;
         padding-left: 30px !important;
@@ -807,10 +755,37 @@ const Wrapper = styled(Column)`
       h5,
       h6,
       p {
-        max-width: 70%;
+        max-width: 100%;
         padding-right: 25px;
         margin-top: 22px;
         margin-bottom: 22px;
+      }
+
+      .docsSections {
+        width: 100%;
+        max-width: 100%;
+      }
+      .docsSection {
+        width: 95%;
+      }
+      .docsSection {
+        margin-bottom: 20px;
+      }
+      .docsSectionHeader,
+      .docsSectionHeader a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .providersSections {
+        max-width: 100%;
+      }
+      .providerSection {
+        width: 95%;
+      }
+      .providerSection {
+        margin-bottom: 20px;
       }
     }
 
@@ -892,7 +867,6 @@ const Wrapper = styled(Column)`
       flex-flow: column-reverse;
     }
     .content {
-      padding: 20px 13px 0 13px;
       font-size: 14px;
       pre code:global(.hljs) {
         font-size: 11px;
@@ -953,12 +927,9 @@ const Wrapper = styled(Column)`
       height: auto;
     }
 
-    .docsProviderBanner {
-      width: 150%;
-      padding-left: 80px;
-    }
-
     .content {
+      padding-left: 30px;
+      padding-right: 30px;
       h1,
       h2 {
         font-size: 24px;

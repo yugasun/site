@@ -5,9 +5,9 @@ import DocsLayout from 'src/layouts/Docs'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
-import gitHubSvg from 'src/assets/images/github.svg'
 import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
-import OverviewExtraContent from 'src/components/pages/doc/OverviewExtraContent/index.js'
+
+import ExtraContent from 'src/components/pages/doc/ExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
   <DocsLayout footerBackground={false} noPrefooter url={location.pathname}>
@@ -37,10 +37,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
       <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
         <Column width={1}>
-          {doc.frontmatter.gitLink == '/docs/README.md' ? (
-            <OverviewExtraContent />
-          ) : null}
-
+          <ExtraContent gitLink={doc.frontmatter.gitLink} />
           <Column
             dangerouslySetInnerHTML={{ __html: doc.content }}
             className='content'
