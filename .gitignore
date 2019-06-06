@@ -11,6 +11,7 @@ yarn-error.log
 .DS_Store
 
 # blogs
+serverless-enterprise
 serverless-examples
 serverless-plugins
 serverless-blog
@@ -26,6 +27,7 @@ content/examples
 content/framework
 content/example
 content/plugins
+content/enterprise
 
 # dynamic content files
 src/components/pages/company/jobs/OpenPositions/data.js

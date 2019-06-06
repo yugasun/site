@@ -1,8 +1,8 @@
 import React from 'react'
 import MetisMenu from 'react-metismenu'
-import generatedMenu from 'src/constants/generated-menu-items-new'
-import { Text, Box } from 'serverless-design-system'
-import { ExternalLink } from 'src/fragments'
+import generatedDocsMenu from 'src/constants/generated-menu-items-new'
+import generatedEnterpriseDocsMenu from 'src/constants/generated-enterprise-menu-items-new'
+import { Box } from 'serverless-design-system'
 import styled from 'styled-components'
 require('./Sidebar.css')
 
@@ -18,15 +18,16 @@ const BoxWithBottomBorder = styled(Box)`
 
 const SidebarMenu = props => (
   <Box pt={[42, 42, 42, 42, 92]} pr={[28]}>
-    <BoxWithBottomBorder ml={60} mb={22}>
-      <ExternalLink to={'https://github.com/serverless/enterprise'}>
-        <Text color={['#8c8c8c']} fontSize='14px'>
-          framework enterprise
-        </Text>
-      </ExternalLink>
-    </BoxWithBottomBorder>
     <MetisMenu
-      content={generatedMenu}
+      content={generatedEnterpriseDocsMenu}
+      iconNameStateVisible='dropdown-icon'
+      iconNameStateHidden='dropdown-icon'
+      activeLinkTo={props.activeLinkTo}
+      iconNamePrefix='sls-'
+    />
+    <BoxWithBottomBorder ml={60} mb={22} />
+    <MetisMenu
+      content={generatedDocsMenu}
       iconNameStateVisible='dropdown-icon'
       iconNameStateHidden='dropdown-icon'
       activeLinkTo={props.activeLinkTo}
