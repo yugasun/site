@@ -1163,25 +1163,7 @@ module.exports = [
               },
               {
                 "to": "/framework/docs/providers/spotinst/examples/",
-                "label": "hello world example",
-                "content": [
-                  {
-                    "to": "/framework/docs/providers/spotinst/examples/java8/",
-                    "label": "hello world java8 example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/spotinst/examples/node/",
-                    "label": "hello world javascript example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/spotinst/examples/python/",
-                    "label": "hello world python example"
-                  },
-                  {
-                    "to": "/framework/docs/providers/spotinst/examples/ruby/",
-                    "label": "hello world ruby example"
-                  }
-                ]
+                "label": "hello world example"
               }
             ]
           }

@@ -96,7 +96,7 @@ const Wrapper = styled(Column)`
     $copyWidth: 45px;
 
     code {
-      max-width: 78%;
+      max-width: 82.5%;
     }
 
     .docsSectionSubHeader h4 {

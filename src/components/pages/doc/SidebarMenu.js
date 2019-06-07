@@ -1,5 +1,5 @@
 import React from 'react'
-import MetisMenu from 'react-metismenu'
+import { MetisMenu } from 'src/components'
 import generatedDocsMenu from 'src/constants/generated-menu-items-new'
 import generatedEnterpriseDocsMenu from 'src/constants/generated-enterprise-menu-items-new'
 import { Box } from 'serverless-design-system'
@@ -16,13 +16,14 @@ const BoxWithBottomBorder = styled(Box)`
   }
 `
 
-const SidebarMenu = props => (
+const SidebarMenu = ({ activeLinkTo }) => (
   <Box pt={[42, 42, 42, 42, 92]} pr={[28]}>
     <MetisMenu
       content={generatedEnterpriseDocsMenu}
       iconNameStateVisible='dropdown-icon'
       iconNameStateHidden='dropdown-icon'
-      activeLinkTo={props.activeLinkTo}
+      classNameLinkActive='active-menu'
+      activeLinkTo={activeLinkTo}
       iconNamePrefix='sls-'
     />
     <BoxWithBottomBorder ml={60} mb={22} />
@@ -30,7 +31,7 @@ const SidebarMenu = props => (
       content={generatedDocsMenu}
       iconNameStateVisible='dropdown-icon'
       iconNameStateHidden='dropdown-icon'
-      activeLinkTo={props.activeLinkTo}
+      activeLinkTo={activeLinkTo}
       iconNamePrefix='sls-'
     />
   </Box>
