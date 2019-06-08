@@ -1,6 +1,6 @@
 .metismenu {
   background: #f7f7f7;
-  font-family: 'Serverless' !important;
+  font-family: 'Soleil' !important;
   font-size: 14px;
   overflow: hidden;
   position: relative;
@@ -13,7 +13,7 @@
 
 .metismenu-link {
   color: #8c8c8c;
-  font-family: 'Serverless' !important;
+  font-family: 'Soleil' !important;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.58px;
@@ -66,7 +66,7 @@
 }
 
 .metismenu-container .metismenu-container .metismenu-container .metismenu-link {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 .metismenu-container.visible {
   padding: 0.5em 0;
@@ -96,11 +96,15 @@
   height: 6px;
   margin-top: 15px;
 }
+
 .metismenu-link.active {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background: #f7f7f7;
   color: #000 !important;
+}
+
+.metismenu-link.active:not(.sls-root-menu) {
   border-left: 1px solid red;
 }
 

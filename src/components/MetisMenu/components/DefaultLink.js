@@ -31,14 +31,16 @@ var DefaultLink = function DefaultLink(_ref) {
     hasSubMenu = _ref.hasSubMenu,
     toggleSubMenu = _ref.toggleSubMenu,
     activateMe = _ref.activateMe,
-    children = _ref.children
+    children = _ref.children,
+    classRoot = _ref.classRoot
   return _react2.default.createElement(
     'a',
     {
       className: (0, _classnames2.default)(
         className,
         active && classNameActive,
-        hasActiveChild && classNameHasActiveChild
+        hasActiveChild && classNameHasActiveChild,
+        classRoot
       ),
       href: to,
       onClick: hasSubMenu ? toggleSubMenu : activateMe,
@@ -63,6 +65,7 @@ DefaultLink.propTypes = {
   classNameActive: _propTypes2.default.string.isRequired,
   classNameHasActiveChild: _propTypes2.default.string.isRequired,
   active: _propTypes2.default.bool.isRequired,
+  classRoot: _propTypes2.default.string.isRequired,
   hasActiveChild: _propTypes2.default.bool.isRequired,
   to: _propTypes2.default.string.isRequired,
   externalLink: _propTypes2.default.bool,

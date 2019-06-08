@@ -1,19 +1,10 @@
-'use strict'
+'use strict';
 
-Object.defineProperty(exports, '__esModule', {
-  value: true,
-})
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-function _toConsumableArray(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i]
-    }
-    return arr2
-  } else {
-    return Array.from(arr)
-  }
-}
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 /**
  * src/reducers/flattenContent.js
@@ -23,12 +14,12 @@ function _toConsumableArray(arr) {
 
 /* eslint no-param-reassign: ["error", { "props": false }] */
 
-var uid = void 0
+var uid = void 0;
 var flattenLevel = function flattenLevel(content, parentId) {
-  var flatContent = []
-  content.forEach(function(item) {
-    var id = item.id || uid
-    uid += 1
+  var flatContent = [];
+  content.forEach(function (item) {
+    var id = item.id || uid;
+    uid += 1;
 
     flatContent.push({
       id: id,
@@ -39,36 +30,33 @@ var flattenLevel = function flattenLevel(content, parentId) {
       externalLink: item.externalLink,
       active: false,
       hasActiveChild: false,
-      subMenuVisibility: false,
-    })
+      subMenuVisibility: false
+    });
     if (typeof item.content !== 'undefined') {
-      flatContent = [].concat(
-        _toConsumableArray(flatContent),
-        _toConsumableArray(flattenLevel(item.content, id))
-      )
+      flatContent = [].concat(_toConsumableArray(flatContent), _toConsumableArray(flattenLevel(item.content, id)));
     }
-  })
-  return flatContent
-}
+  });
+  return flatContent;
+};
 
-var trace = void 0
+var trace = void 0;
 var mapTrace = function mapTrace(content, parentId) {
-  var subItems = content.filter(function(item) {
-    return item.parentId === parentId
-  })
-  subItems.forEach(function(item) {
-    item.trace = [].concat(_toConsumableArray(trace))
-    trace.push(item.id)
-    item.hasSubMenu = mapTrace(content, item.id)
-    trace.pop()
-  })
-  return subItems.length > 0
-}
+  var subItems = content.filter(function (item) {
+    return item.parentId === parentId;
+  });
+  subItems.forEach(function (item) {
+    item.trace = [].concat(_toConsumableArray(trace));
+    trace.push(item.id);
+    item.hasSubMenu = mapTrace(content, item.id);
+    trace.pop();
+  });
+  return subItems.length > 0;
+};
 
-exports.default = function(content) {
-  uid = 1
-  trace = []
-  var flatContent = flattenLevel(content)
-  mapTrace(flatContent)
-  return flatContent
-}
+exports.default = function (content) {
+  uid = 1;
+  trace = [];
+  var flatContent = flattenLevel(content);
+  mapTrace(flatContent);
+  return flatContent;
+};

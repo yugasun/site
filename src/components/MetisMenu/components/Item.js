@@ -53,6 +53,7 @@ var Item = function Item(_ref, _ref2) {
       LinkComponent,
       {
         className: classStore.classLink,
+        classRoot: icon,
         classNameActive: classStore.classLinkActive,
         classNameHasActiveChild: classStore.classLinkHasActiveChild,
         active: active,
