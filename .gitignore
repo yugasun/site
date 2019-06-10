@@ -36,3 +36,6 @@ src/components/pages/company/jobs/OpenPositions/data.js
 src/constants/featured-blogs.json
 src/constants/generated-authors.json
 src/constants/generated-menu-items.js
+src/constants/generated-menu-items-new.js
+src/constants/generated-enterprise-menu-items.js
+src/constants/generated-enterprise-menu-items-new.js
