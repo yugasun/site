@@ -15,6 +15,7 @@ const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
 const kickstartConfig = require('./../scripts/kickstart/config')
+const customConfig = require('./../scripts/custom/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
 const fileReadingOptions = { match: /.md$/ }
@@ -76,6 +77,33 @@ const sourceKickstart = createNode => (err, content, filename, next) => {
         children: [],
         internal: {
           type: 'Kickstart',
+          contentDigest: digestCreator(content),
+        },
+        frontmatter,
+        content: String(file),
+      })
+      next()
+    })
+}
+
+const sourceCustom = createNode => (err, content, filename, next) => {
+  if (err) throw err
+
+  const { data, content: markdownContent } = matter(content)
+  const frontmatter = data.category ? data : { ...data, category: [] }
+  const customId = path.basename(filename, path.extname(filename))
+
+  unified()
+    .use(markdown)
+    .use(highlight)
+    .use(html)
+    .process(markdownContent, (err, file) => {
+      createNode({
+        id: customId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'Custom',
           contentDigest: digestCreator(content),
         },
         frontmatter,
@@ -272,6 +300,15 @@ const generator = createNode =>
         kickstartConfig.kickstartPagesPath,
         fileReadingOptions,
         sourceKickstart(createNode),
+        resolve
+      )
+    }),
+
+    new Promise((resolve, reject) => {
+      dir.readFiles(
+        customConfig.customPagesPath,
+        fileReadingOptions,
+        sourceCustom(createNode),
         resolve
       )
     }),
