@@ -26,10 +26,14 @@ const PageContent = styled(Box)`
     color: black;
     font-size: 32px;
     margin-top: 30px;
+    font-weight: normal;
   }
 
   h5 {
+    color: black;
+    margin-top: 15px;
     font-size: 24px;
+    font-weight: normal;
   }
 
   table {
