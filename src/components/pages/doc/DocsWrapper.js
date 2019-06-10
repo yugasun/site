@@ -25,7 +25,7 @@ const Wrapper = styled(Column)`
 
   p,
   li {
-    font-family: 'SoleilBk';
+    font-family: 'Soleil';
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -53,7 +53,7 @@ const Wrapper = styled(Column)`
 
     & > p {
       margin-top: 5px;
-      font-family: SoleilBk;
+      font-family: Soleil;
       font-size: 24px;
       font-weight: normal;
       font-style: italic;
@@ -145,7 +145,7 @@ const Wrapper = styled(Column)`
 
     h3 {
       font-size: 18px;
-      font-family: 'SoleilBk';
+      font-family: 'Soleil';
     }
 
     h1,
@@ -193,7 +193,7 @@ const Wrapper = styled(Column)`
           font-size: 18px;
           line-height: 24px;
           letter-spacing: -0.28px;
-          font-family: 'SoleilBk';
+          font-family: 'Soleil';
           font-weight: normal;
           margin-top: 8px;
         }
@@ -306,7 +306,7 @@ const Wrapper = styled(Column)`
       position: relative;
     }
     p {
-      max-width: 51%;
+      max-width: 800px;
       position: relative;
     }
     p,
@@ -408,15 +408,18 @@ const Wrapper = styled(Column)`
     z-index: 3;
     a {
       border: none !important;
+      &:hover {
+        box-shadow: 2px 7px 18px 0 rgba(0, 0, 0, 0.08);
+        border: solid 1px rgba(234, 234, 234, 0.3);
+      }
+      &:before {
+        background-color: white;
+      }
     }
     > div {
       margin-right: 20px;
       padding: 10px !important;
       margin-top: 20px;
-      &:hover {
-        box-shadow: 2px 10px 24px 0 rgba(0, 0, 0, 0.08);
-        border: solid 1px #eaeaea;
-      }
       ul {
         width: 100%;
         padding-right: 0px;
