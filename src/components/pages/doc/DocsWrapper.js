@@ -14,6 +14,15 @@ const Wrapper = styled(Column)`
     outline: none;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
   p,
   li {
     font-family: 'SoleilBk';
@@ -103,7 +112,6 @@ const Wrapper = styled(Column)`
       font-size: 24px;
       line-height: 38px;
       letter-spacing: -0.38px;
-      font-weight: normal;
 
       &::after {
         z-index: -1;
@@ -138,7 +146,6 @@ const Wrapper = styled(Column)`
     h3 {
       font-size: 18px;
       font-family: 'SoleilBk';
-      font-weight: normal;
     }
 
     h1,
@@ -327,7 +334,6 @@ const Wrapper = styled(Column)`
     }
     h1 {
       font-size: 32px;
-      font-weight: normal;
       &:first-of-type {
         margin-top: 0px;
         .phenomic-HeadingAnchor {
@@ -350,7 +356,6 @@ const Wrapper = styled(Column)`
     }
     h2 {
       font-size: 32px;
-      font-weight: normal;
     }
     h4 {
       font-size: 18px;

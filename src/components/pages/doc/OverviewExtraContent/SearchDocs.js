@@ -55,7 +55,7 @@ export default class SearchBox extends React.Component {
   render() {
     return (
       <DesktopBackground background='#f7f7f7'>
-        <Flex width={0.79} mx='auto' mt={62} mb={42} pr={'7%'}>
+        <Flex width={0.79} mx='auto' mt={32} mb={32} pr={'7%'}>
           <DocsSearchField
             placeholder='Search documentation'
             height={50}
