@@ -23,6 +23,10 @@ const Wrapper = styled(Column)`
     font-weight: normal;
   }
 
+  h3 a {
+    color: black;
+  }
+
   p,
   li {
     font-family: 'Soleil';

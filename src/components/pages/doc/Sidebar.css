@@ -98,14 +98,16 @@
 }
 
 .metismenu-link.active {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background: #f7f7f7;
   color: #000 !important;
 }
 
+.metismenu-link.active + ul > li {
+  border-left: 1px solid #fd5750;
+}
+
 .metismenu-link.active:not(.sls-root-menu) {
-  border-left: 1px solid red;
+  border-left: 1px solid #fd5750;
 }
 
 i.metismenu-icon {
