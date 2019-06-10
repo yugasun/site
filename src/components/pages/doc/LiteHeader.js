@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex } from 'serverless-design-system'
+import { Box, Flex, Text } from 'serverless-design-system'
 
 import Breadcrumbs from 'src/components/Breadcrumbs'
 import SearchBox from './SearchBox'
@@ -25,7 +25,7 @@ const SubHeader = ({ url }) => {
   const breadCrumbContent = (
     <Flex alignItems='center'>
       <Box className='versionNumber' width={0.5}>
-        version {process.env.GATSBY_DOCS_VERSION} (current)
+        <Text>version {process.env.GATSBY_DOCS_VERSION} (current)</Text>
       </Box>
       <SubHeaderSearchBox />
     </Flex>
