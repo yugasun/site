@@ -7,6 +7,7 @@ const finalMenu = [
   {
     to: '/framework/docs/',
     label: 'framework open-source',
+    icon: 'sls-root-menu',
     content: [
       {
         to: '/framework/docs/getting-started/',

@@ -51,6 +51,7 @@ function cleanKeys(obj) {
 const enterpriseMenuObj = {
   to: '/enterprise/docs/',
   label: 'framework enterprise',
+  icon: 'sls-root-menu',
 }
 
 function menuWithAllChildren(menuObj) {
