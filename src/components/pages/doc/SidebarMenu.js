@@ -17,7 +17,7 @@ const BoxWithBottomBorder = styled(Box)`
 `
 
 const SidebarMenu = ({ activeLinkTo }) => (
-  <Box pt={[42, 42, 42, 42, 92]} pr={[28]}>
+  <Box pt={[32, 32, 32, 32, 26]} pr={[28]}>
     <MetisMenu
       content={generatedEnterpriseDocsMenu}
       iconNameStateVisible='dropdown-icon'

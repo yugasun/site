@@ -100,7 +100,7 @@ const Wrapper = styled(Column)`
     display: block;
     flex-grow: 1;
     position: relative;
-    padding-top: 92px;
+    padding-top: 32px;
     max-width: 82.5%;
     min-height: 100vh;
     padding-bottom: 62px;
@@ -110,6 +110,7 @@ const Wrapper = styled(Column)`
 
     code {
       max-width: 82.5%;
+      overflow-x: auto;
     }
 
     .docsSectionSubHeader h4 {

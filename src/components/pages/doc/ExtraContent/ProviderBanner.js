@@ -6,7 +6,7 @@ const FlexBackground = styled(Background)`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -25px;
+  margin-bottom: 5px;
 `
 
 const providerLogo = {
