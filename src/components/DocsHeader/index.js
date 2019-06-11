@@ -21,6 +21,7 @@ const SidebarMenuBox = styled(Box)`
 
   @media screen and (max-width: 415px) {
     width: 100%;
+    top: 36px;
   }
 `
 
@@ -97,9 +98,6 @@ class Header extends React.Component {
                   justifyContent='space-between'
                 >
                   <Logo />
-                  <Box display={['block', 'block', 'block', 'block', 'none']}>
-                    <SearchBox />
-                  </Box>
                   <NavbarContext.Provider value={this.state}>
                     <NavButton />
                     <Navbar />
@@ -109,6 +107,7 @@ class Header extends React.Component {
             </Transition>
           </Background>
         </HeaderWrapper>
+        <SearchBox />
         <Box display={['block', 'block', 'block', 'block', 'none']}>
           <SidebarMenuBox
             display={this.state.isNavbarActive ? 'block' : 'none'}

@@ -16,7 +16,10 @@ const NavButton = () => (
         onClick={toggleNavbarActiveness}
       >
         <Box m='auto'>
-          <Image src={isNavbarActive ? closeIcon : mobileMenuIcon} />
+          <Image
+            src={isNavbarActive ? closeIcon : mobileMenuIcon}
+            maxWidth={isNavbarActive ? ['65%', '65%', '100%'] : ['100%']}
+          />
         </Box>
       </Box>
     )}
