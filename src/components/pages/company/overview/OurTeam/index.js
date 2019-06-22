@@ -23,6 +23,7 @@ import aj from 'src/assets/images/team/aj.jpg'
 import chris from 'src/assets/images/team/chris.jpg'
 import sam from 'src/assets/images/team/sam.png'
 import mariusz from 'src/assets/images/team/mariusz.png'
+import sandesh from 'src/assets/images/team/sandesh.png'
 
 const getLastName = name => name.split(' ').pop()
 
