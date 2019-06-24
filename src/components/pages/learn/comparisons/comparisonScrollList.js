@@ -44,7 +44,9 @@ const comparisonData = [
     title: 'SAM',
     image: comparisionSAM,
     body: renderContents([
-      'The Serverless Application Model (SAM) is an extension to CloudFormation within AWS. It provides a way to use CloudFormation syntax to define your Serverless Applications, though it can only be used within the AWS ecosystem.',
+      'The Serverless Application Model (SAM) is an extension to CloudFormation within AWS. It provides a way to use CloudFormation syntax to define your Serverless Applications with the addition of three new CloudFormation resources Function, API, Table, though it can only be used within the AWS ecosystem.',
+      'SAM is a great tool for deploying a serverless architecture in AWS. However, Serverless Framework offers solutions for not only deploying but also testing, monitoring, alerting, and security.  Serverless Framework open source provides over two thousand plugins many of which we offer support for.  With the addition of Serverless Enterprise, you are able to monitor your deployments of seemlessly, as well as gain valuble alerts on how your environment is performing.  Serverless Enterprise also gives you the ability to scan and enforce custom security policies before deployments.',
+      'Both SAM and Serverless offer options for offline development.  SAM requires Docker for offline development, when you want to deploy a function it will create a local Docker container of the Lambda environment based on the code runtime.  Serverless offers a supported plugin for offline development that does not require Docker.',
       'While SAM reduces the boilerplate of defining your serverless application, the other limitations of CloudFormation still apply. The Serverless Framework has a provider-agnostic way to define serverless applications. It manages additional aspects of the serverless application lifecycle. Finally, it has a broader feature set and larger community of plugins, examples, and guides.',
     ]),
   },
