@@ -103,19 +103,8 @@ module.exports = function updatePluginsContent(
   pluginsDirectoryPath,
   callback
 ) {
-  let rawPluginsDataForFeatured = rawPluginsData.filter(thisPlugin => {
-    if (
-      thisPlugin.status !== 'unchecked' &&
-      thisPlugin.status !== 'deprecated'
-    ) {
-      return thisPlugin
-    }
-  })
   featuredPlugins = _.map(
-    _.orderBy(rawPluginsDataForFeatured, ['npmDownloads'], ['desc']).splice(
-      0,
-      15
-    ),
+    _.orderBy(rawPluginsData, ['npmDownloads'], ['desc']).splice(0, 15),
     'repoUrl'
   )
   dir.readFiles(
