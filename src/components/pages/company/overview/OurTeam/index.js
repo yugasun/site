@@ -12,7 +12,6 @@ import eslam from 'src/assets/images/team/eslam.png'
 import alex from 'src/assets/images/team/alex.png'
 import jeremy from 'src/assets/images/team/jeremy.png'
 import steve from 'src/assets/images/team/steve.png'
-import sebastian from 'src/assets/images/team/sebastian.png'
 import andre from 'src/assets/images/team/andre.png'
 import eric from 'src/assets/images/team/eric.png'
 import daniel from 'src/assets/images/team/daniel.png'
@@ -51,15 +50,13 @@ const leaders = [
 const teamMembers = [
   { image: philip, name: 'Philipp Müns', position: 'Framework Core Developer' },
   { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
-  { image: alex, name: 'Alex DeBrie', position: 'Lead Pythonista' },
+  { image: alex, name: 'Alex DeBrie', position: 'Engineering Manager' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
   {
     image: steve,
     name: 'Steve Westergaard',
     position: 'Senior Full Stack Engineer',
   },
-  { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
-
   {
     image: kristin,
     name: 'Kristin Roche',
