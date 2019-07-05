@@ -99,8 +99,6 @@ Basic tests must be in place, which meet the following criteria:
 - 2 Business day response time SLA for reviewing pull requests from Serverless, Inc. employees.
 - Plugin MUST be on the plugin list for at least 30 days to be considered as an approved plugin.
 
-##### Reward
-
 ### Certified Plugins
 
 ##### Response Time SLA
