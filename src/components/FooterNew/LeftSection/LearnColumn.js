@@ -16,7 +16,7 @@ const LearnColumn = () => (
         navProps: { to: learn.useCases, completed: true },
       },
       {
-        name: 'comparisions',
+        name: 'comparisons',
         navProps: { to: learn.comparisons, completed: true },
       },
       {

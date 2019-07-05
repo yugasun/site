@@ -4,7 +4,7 @@ import DefaultLayout from 'src/layouts/DefaultNew'
 import ComparisonScrollList from 'src/components/pages/resources/code-of-conduct/comparisonScrollList'
 import { Helmet } from 'src/fragments'
 
-const Comparisions = ({ location }) => (
+const Comparisons = ({ location }) => (
   <DefaultLayout noPrefooter>
     <Helmet
       title='Comparisons: Serverless vs. other tools'
@@ -15,4 +15,4 @@ const Comparisions = ({ location }) => (
   </DefaultLayout>
 )
 
-export default Comparisions
+export default Comparisons
