@@ -103,7 +103,7 @@ Basic tests must be in place, which meet the following criteria:
 
 ##### Response Time SLA
 
-For enterprise customers on a support SLA, approved plugins will receive the contracted SLA time or 12 hours, whichever is longer.
+For enterprise customers on a support SLA, certified plugins will receive the contracted SLA time or 12 hours, whichever is longer.
 
 ##### Criteria
 
