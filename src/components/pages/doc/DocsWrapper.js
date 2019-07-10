@@ -6,8 +6,6 @@ import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
-import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
-import redRectangleDotsSmall from 'src/assets/images/redRectangleDotsSmall.svg'
 
 const Wrapper = styled(Column)`
   input:focus {
@@ -117,20 +115,6 @@ const Wrapper = styled(Column)`
       font-size: 24px;
       line-height: 38px;
       letter-spacing: -0.38px;
-
-      &::after {
-        z-index: -1;
-        content: ' ';
-        background-image: url(${redRectangleDotsSmall});
-        top: -7px;
-        left: -70px;
-        height: 30px;
-        width: 105px;
-        position: absolute;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
     }
 
     p {
@@ -344,19 +328,6 @@ const Wrapper = styled(Column)`
         .phenomic-HeadingAnchor {
           display: none;
         }
-      }
-      &::after {
-        z-index: -1;
-        content: ' ';
-        background-image: url(${redRectangleDots});
-        top: -1px;
-        left: -30px;
-        height: 30px;
-        width: 105px;
-        position: absolute;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
       }
     }
     h2 {
