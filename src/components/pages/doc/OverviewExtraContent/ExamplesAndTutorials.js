@@ -29,7 +29,7 @@ const ContentBlock = ({ image, heading, content, cta, link }) => (
   <Flex
     mt={[42, 42, 42, 42, 62]}
     flexDirection={['row', 'row', 'column', 'column', 'row']}
-    mb={[0, 0, 76, 76, 0]}
+    mb={[0, 0, 76]}
     justifyContent={['center', 'center', 'auto']}
   >
     <Image src={image} width={[62, 62, 72]} height={[62, 62, 72]} mr={32} />
