@@ -84,7 +84,14 @@ export default class Sidebar extends React.Component {
         >
           <Flex ml={60} mt={92}>
             <Image src={githubGrayIcon} width='22px' height='22px' />
-            <Text color='#8c8c8c' fontSize='14px' ml={'12px'}>
+            <Text
+              color='#8c8c8c'
+              fontSize='14px'
+              lineHeight='24px'
+              letterSpacing='0.44px'
+              ml={'12px'}
+              fontFamily='Soleil'
+            >
               go to github
             </Text>
           </Flex>
