@@ -2,13 +2,13 @@ import React from 'react'
 import { Box, HyperLink } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
 import { AutoScrollList } from 'src/fragments'
-import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
-import comparisionCustomTooling from 'src/assets/images/comparisionCustomTooling.svg'
-import comparisionDocker from 'src/assets/images/comparisionDocker.svg'
-import comparisionHeroku from 'src/assets/images/comparisionHeroku.svg'
-import comparisionSAM from 'src/assets/images/comparisionSAM.png'
-import comparisionTerraForm from 'src/assets/images/comparisionTerraForm.svg'
-import comparisionZampa from 'src/assets/images/comparisionZampa.svg'
+import comparisonCloudFormation from 'src/assets/images/comparisonCloudFormation.png'
+import comparisonCustomTooling from 'src/assets/images/comparisonCustomTooling.svg'
+import comparisonDocker from 'src/assets/images/comparisonDocker.svg'
+import comparisonHeroku from 'src/assets/images/comparisonHeroku.svg'
+import comparisonSAM from 'src/assets/images/comparisonSAM.png'
+import comparisonTerraForm from 'src/assets/images/comparisonTerraForm.svg'
+import comparisonZampa from 'src/assets/images/comparisonZampa.svg'
 
 const renderContents = contents => (
   <React.Fragment>
@@ -23,7 +23,7 @@ const renderContents = contents => (
 const comparisonData = [
   {
     title: 'Docker',
-    image: comparisionDocker,
+    image: comparisonDocker,
     body: renderContents([
       'Docker packages software into standardized units (containers) to make it easier to manage application dependencies and avoid the "works on my machine" problem. Many people use containers so they can control their scaling. It is a serverfull architecture where you run a cluster of VM instances, with a likewise serverful cost model.',
       'Serverless compute services are essentially ephemeral containers, where the start/stop is managed automatically. The Serverless Applications deployed on them are fundamentally zero-administration and scale automatically with demand, which eliminates the need to manage server instances at all. Serverless Applications are also code-centric, and carry other serverless benefits such as pay-per-execution pricing models.',
@@ -31,7 +31,7 @@ const comparisonData = [
   },
   {
     title: 'CloudFormation',
-    image: comparisionCloudFormation,
+    image: comparisonCloudFormation,
     body: renderContents([
       'CloudFormation is an AWS tool for deploying infrastructure. You describe your desired infrastructure in YAML or JSON, then submit your CloudFormation template for deployment. It enables "infrastructure as code".',
       'The Serverless Framework provides a configuration DSL which is designed for serverless applications. It also enables infrastructure as code while removing a lot of the boilerplate required for deploying serverless applications, including permissions, event subscriptions, logging, etc.',
@@ -42,15 +42,17 @@ const comparisonData = [
   },
   {
     title: 'SAM',
-    image: comparisionSAM,
+    image: comparisonSAM,
     body: renderContents([
-      'The Serverless Application Model (SAM) is an extension to CloudFormation within AWS. It provides a way to use CloudFormation syntax to define your Serverless Applications, though it can only be used within the AWS ecosystem.',
+      'The Serverless Application Model (SAM) is an extension to CloudFormation within AWS. It provides a way to use CloudFormation syntax to define your Serverless Applications with the addition of three new CloudFormation resources Function, API, Table, though it can only be used within the AWS ecosystem.',
+      'SAM is a great tool for deploying a serverless architecture in AWS. However, Serverless Framework offers solutions for not only deploying but also testing, monitoring, alerting, and security.  Serverless Framework open source provides over two thousand plugins many of which we offer support for.  With the addition of Serverless Enterprise, you are able to monitor your deployments seamlessly, as well as gain valuble alerts on how your environment is performing.  Serverless Enterprise also gives you the ability to scan and enforce custom security policies before deployments.',
+      'Both SAM and Serverless offer options for offline development.  SAM requires Docker for offline development, when you want to deploy a function it will create a local Docker container of the Lambda environment based on the code runtime.  Serverless offers a supported plugin for offline development that does not require Docker.',
       'While SAM reduces the boilerplate of defining your serverless application, the other limitations of CloudFormation still apply. The Serverless Framework has a provider-agnostic way to define serverless applications. It manages additional aspects of the serverless application lifecycle. Finally, it has a broader feature set and larger community of plugins, examples, and guides.',
     ]),
   },
   {
     title: 'Zappa, Claudia JS, etc',
-    image: comparisionZampa,
+    image: comparisonZampa,
     body: renderContents([
       <React.Fragment>
         There are a number of deployment tools for serverless applications,
@@ -87,7 +89,7 @@ const comparisonData = [
   },
   {
     title: 'Terraform',
-    image: comparisionTerraForm,
+    image: comparisonTerraForm,
     body: renderContents([
       'Terraform is an unopinionated cloud deployment tool. It describes Infrastructure as Code and deploys to multiple clouds and SaaS systems at once. It is comparable to CloudFormation but for multiple clouds.',
       'The Serverless Platform has one strong opinion about how an application is defined, and then is flexible about everything else. It facilitates developing and deploying Serverless Applications, abstracting away the boilerplate required to deploy serverless applications. It also assists with the packaging and monitoring of your serverless applications.',
@@ -96,7 +98,7 @@ const comparisonData = [
   },
   {
     title: 'Rolling your own tooling',
-    image: comparisionCustomTooling,
+    image: comparisonCustomTooling,
     body: renderContents([
       `Rather than using the Serverless Framework, you may be tempted to create your own tooling for managing serverless applications. We get the feeling -- you get to build something! It's why our founder created the Framework in the first place.`,
       `Just be careful about what you're getting into. If your needs are small, you can get away with bash scripts or micro-frameworks. As you start using more and more pieces, you may find that maintaining your tooling is a full-time job in itself. Don't underestimate the benefit of a large community and ecosystem that is adding new features and fixing bugs.`,
@@ -104,7 +106,7 @@ const comparisonData = [
   },
   {
     title: 'Heroku',
-    image: comparisionHeroku,
+    image: comparisonHeroku,
     body: renderContents([
       'Heroku is a service for managing stateless web application using the 12 Factor App approach that they pioneered. It has similarities to serverless applications in that much of work of managing and maintaining servers is done for you.',
       `However, serverless applications have a number of advantages over Heroku. With Heroku, you need to specify the number of "Dynos" (servers) available to handle your web application. With serverless application, this scaling is handled for you, automatically.`,
@@ -114,10 +116,10 @@ const comparisonData = [
   },
 ]
 
-const ComparisionsScrollList = () => (
+const ComparisonsScrollList = () => (
   <Box width={1}>
     <AutoScrollList listData={comparisonData} />
   </Box>
 )
 
-export default ComparisionsScrollList
+export default ComparisonsScrollList

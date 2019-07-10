@@ -47,6 +47,8 @@ const siteConfig = isProduction => {
       'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add',
     FORMS_API:
       'https://d3ul21vxig.execute-api.us-west-2.amazonaws.com/prod/handle-entry',
+    ADD_FORMS_EVENT_API:
+      'https://3cuvg0to3i.execute-api.us-east-1.amazonaws.com/prod/create',
 
     BRANCH: process.env.BRANCH || gitBranch.sync(),
     DOCS_VERSION: JSON.stringify(serverlessPkg.version),

@@ -11,6 +11,7 @@ import { ExternalLink } from 'src/fragments'
 const formId = 'case-study-download'
 import formHandler from 'src/utils/formHandler'
 import hubspotIdentify from 'src/utils/analytics/identify'
+import addHubspotEvent from 'src/utils/forms/hubspotEvent'
 const caseStudyFile =
   'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/enterprise/Serverless_CaseStudy_Shamrock.pdf'
 
@@ -76,6 +77,7 @@ class NewsLetterForm extends React.Component {
   sendToHubspot = data => {
     data.lead_source = 'Case Study Download'
     hubspotIdentify(null, data)
+    addHubspotEvent(data, 'casestudy')
   }
 
   renderSubmitBtn = () => {

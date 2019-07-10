@@ -94,7 +94,7 @@ const comparisonData = [
   },
 ]
 
-const ComparisionsScrollList = () => (
+const ComparisonsScrollList = () => (
   <Box
     width={1}
     mt={[5]}
@@ -104,4 +104,4 @@ const ComparisionsScrollList = () => (
   </Box>
 )
 
-export default ComparisionsScrollList
+export default ComparisonsScrollList

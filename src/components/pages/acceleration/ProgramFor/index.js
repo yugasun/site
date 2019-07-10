@@ -19,9 +19,9 @@ const WhoIsThisProgramFor = () => (
           <P color='#5b5b5b' mt={0} align='center'>
             The Serverless Accelerator Program is designed for development teams
             that are interested in doing Serverless development right. If you've
-            realized the value that Serverless, from faster time to market to
-            lower total cost of ownership, and would like assistance with
-            standardizing tooling, defining best practices, architectural
+            realized the value that Serverless brings, from faster time to
+            market to lower total cost of ownership, and would like assistance
+            with standardizing tooling, defining best practices, architectural
             design, deployment strategies, and training your team then the
             Serverless Accelerator Program is probably right for you.
           </P>

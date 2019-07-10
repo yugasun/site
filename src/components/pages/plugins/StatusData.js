@@ -11,8 +11,8 @@ module.exports = {
   },
   statusTooltips: {
     certified: 'Enterprise customers receive support for these plugins',
-    approved: 'Has been reviewed and verified by Serverless team',
-    community: 'Has not yet been reviewed by Serverless team',
+    approved: 'Enterprise customers receive limited support for these plugins',
+    community: 'Has been reviewed and verified by Serverless team',
   },
   statusBadgesMobile: {
     approved: approvedMobileBadge,

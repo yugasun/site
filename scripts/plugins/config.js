@@ -4,7 +4,7 @@
 const path = require('path')
 const projectRoot = path.join(__dirname, '..', '..')
 const pluginsList =
-  'https://s3.amazonaws.com/serverless-plugins/plugins-with-stats.json'
+  'https://serverless-plugins-data.s3.amazonaws.com/plugins-with-stats.json'
 
 const featuredPlugins = [
   'serverless-build-plugin',

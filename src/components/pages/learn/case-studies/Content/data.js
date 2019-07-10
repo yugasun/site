@@ -1,6 +1,16 @@
 export default [
   {
     title:
+      'How BuildCenter and Serverless Guru Streamlined Their Serverless Development Cycle',
+    description:
+      'BuildCenter makes digital tools for builders. Learn how Serverless Guru helped them streamline their operations using Serverless Framework.',
+    thumbnail:
+      'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-guru-case-study/serverless-guru-case-study-thumb.png',
+    url: '/blog/buildcenter-serverless-development-cycle/',
+    framework: 'enterprise',
+  },
+  {
+    title:
       'How Shamrock transacts billions of dollars with Serverless Framework Enterprise',
     description:
       'See how Shamrock’s serverless invoicing system handles billions of dollars of transactions with no active scaling required. Plus: their multi-cloud approach with AWS and Google.',

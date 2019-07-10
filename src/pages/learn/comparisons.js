@@ -6,7 +6,7 @@ import Hero from 'src/components/pages/learn/comparisons/Hero'
 import ComparisonScrollList from 'src/components/pages/learn/comparisons/comparisonScrollList'
 import { Helmet } from 'src/fragments'
 
-const Comparisions = ({ location }) => (
+const Comparisons = ({ location }) => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Helmet
       title='Comparisons: Serverless vs. other tools'
@@ -18,4 +18,4 @@ const Comparisions = ({ location }) => (
   </DefaultLayout>
 )
 
-export default Comparisions
+export default Comparisons

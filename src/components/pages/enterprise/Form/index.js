@@ -15,7 +15,7 @@ import {
   RadioButton,
 } from 'src/fragments/DesignSystem/Form'
 import { Button } from 'src/fragments/DesignSystem'
-
+import addHubspotEvent from 'src/utils/forms/hubspotEvent'
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 import hubspotIdentify from 'src/utils/analytics/identify'
@@ -125,6 +125,7 @@ export default class Form extends React.Component {
     data.lastname = data.last_name
     data.infrastructure = data.infrastructure.toString()
     hubspotIdentify(null, data)
+    addHubspotEvent(data, 'enterprise')
   }
 
   updateInfrastructure = (fieldName, value) => {
