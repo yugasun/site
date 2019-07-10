@@ -745,6 +745,22 @@ const Wrapper = styled(Column)`
     }
   }
 
+  //small laptop
+  @media (min-width: 1025px) and (max-width: 1398px) {
+    .providerSection {
+      width: 200px;
+      height: 180px;
+    }
+  }
+
+  //normal laptop
+  @media (min-width: 1399px) and (max-width: 1599px) {
+    .providerSection {
+      width: 240px;
+      height: 190px;
+    }
+  }
+
   //tablet
   @media (max-width: 1025px) {
     .sidebar {
