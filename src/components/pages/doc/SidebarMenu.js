@@ -19,18 +19,18 @@ const BoxWithBottomBorder = styled(Box)`
 const SidebarMenu = ({ activeLinkTo }) => (
   <Box pt={[32, 32, 32, 32, 26]} pr={[28]}>
     <MetisMenu
-      content={generatedEnterpriseDocsMenu}
+      content={generatedDocsMenu}
       iconNameStateVisible='dropdown-icon'
       iconNameStateHidden='dropdown-icon'
-      classNameLinkActive='active-menu'
       activeLinkTo={activeLinkTo}
       iconNamePrefix='sls-'
     />
     <BoxWithBottomBorder ml={60} mb={22} />
     <MetisMenu
-      content={generatedDocsMenu}
+      content={generatedEnterpriseDocsMenu}
       iconNameStateVisible='dropdown-icon'
       iconNameStateHidden='dropdown-icon'
+      classNameLinkActive='active-menu'
       activeLinkTo={activeLinkTo}
       iconNamePrefix='sls-'
     />
