@@ -48,10 +48,9 @@ const Tweets = () => (
     <Box display={['none', 'none', 'none', 'none', 'block']}>
       <Flex justifyContent='space-between'>
         <Tweet {...allTweets[0]} />
-        <Row>
-          <Tweet {...allTweets[2]} />
-          <Tweet {...allTweets[3]} />
-        </Row>
+        <Tweet {...allTweets[1]} />
+        <Tweet {...allTweets[2]} />
+        <Tweet {...allTweets[3]} />
       </Flex>
     </Box>
   </React.Fragment>

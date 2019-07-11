@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Column } from 'serverless-design-system'
 import { Heading, MobileCenteredBox } from 'src/fragments/DesignSystem'
-import HeroGithub from './Logo'
 import styled from 'styled-components'
 
 const MobileCenteredTextBox = styled(MobileCenteredBox)`
@@ -12,10 +11,9 @@ const MobileCenteredTextBox = styled(MobileCenteredBox)`
 `
 
 const HeroHeader = () => (
-  <Column>
-    <HeroGithub />
+  <Column width={0.5}>
     <Heading.h1
-      color='white'
+      color='#000000'
       align={['left']}
       mb={0}
       fontSize={['40px', '40px', '48px']}

@@ -17,12 +17,11 @@ const CommunityNumbers = () => (
     <ColumnWithCustomMobileMargin
       width={[1, 1, 1, 1]}
       mt={[212, 212, 286, 286, 0]}
-      ml={[0, 0, 0, 0, 5, -6]}
     >
-      <Box width={[0.8, 0.8, 0.6, 1, 0.5]}>
-        <TitleWithIcon color='black'>
+      <Box width={[0.8, 0.8, 0.6, 1, 1]}>
+        <Heading.h3 color='black' align='center'>
           Backed by a rich and vibrant community
-        </TitleWithIcon>
+        </Heading.h3>
       </Box>
       <Row
         mt={42}
@@ -32,15 +31,15 @@ const CommunityNumbers = () => (
           'space-around',
           'space-between',
           'space-between',
-          'none',
+          'center',
         ]}
       >
         {communityNumbersData.map((item, index) => (
           <Column
             key={index}
-            mr={[0, 0, 0, 0, 64]}
             mt={index > 1 ? [3, 3, 0] : [0]}
             width={[0.5, 0.5, 'auto']}
+            px={4}
           >
             <Heading.h2
               pb={0}

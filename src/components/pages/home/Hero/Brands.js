@@ -7,21 +7,9 @@ import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
-import WhiteBlank from './WhiteBlank'
 
 const HomeHeroFooter = () => (
-  <Box>
-    <Flex
-      width={[1, 1, 0.8, 0.8, 0.92, 0.7]}
-      mt={['92px', '92px', '62px', '62px', '162px', '220px']}
-      flexDirection='row'
-    >
-      <WhiteBlank />
-      <TitleWithIcon color='white'>
-        Startups and Fortune 500 companies go serverless with the Serverless
-        Framework
-      </TitleWithIcon>
-    </Flex>
+  <Flex>
     <Flex
       justifyContent={['normal', 'normal', 'space-between']}
       alignItems='space-between'
@@ -52,7 +40,17 @@ const HomeHeroFooter = () => (
         <Image src={reutersLogo} width={['109px']} height={['28px']} />
       </Box>
     </Flex>
-  </Box>
+    <Flex
+      width={[1, 1, 0.8, 0.8, 0.92, 0.4]}
+      mt={['92px', '92px', '62px', '62px', '162px', '20px']}
+      flexDirection='row'
+    >
+      <TitleWithIcon color='#000000'>
+        Startups and Fortune 500 companies go serverless with the Serverless
+        Framework
+      </TitleWithIcon>
+    </Flex>
+  </Flex>
 )
 
 export default HomeHeroFooter
