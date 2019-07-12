@@ -17,6 +17,9 @@ const FlexWithSmalliPadFix = styled(Flex)`
     align-items: normal;
   }
 `
+const BoxWithBackground = styled(Box)`
+  background-color: #eaeaea;
+`
 
 const Tweets = () => (
   <React.Fragment>
@@ -45,14 +48,14 @@ const Tweets = () => (
       </FlexWithSmalliPadFix>
     </Box>
 
-    <Box display={['none', 'none', 'none', 'none', 'block']}>
+    <BoxWithBackground display={['none', 'none', 'none', 'none', 'block']}>
       <Flex justifyContent='space-between'>
         <Tweet {...allTweets[0]} />
         <Tweet {...allTweets[1]} />
         <Tweet {...allTweets[2]} />
         <Tweet {...allTweets[3]} />
       </Flex>
-    </Box>
+    </BoxWithBackground>
   </React.Fragment>
 )
 

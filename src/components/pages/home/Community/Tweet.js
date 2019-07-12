@@ -16,24 +16,10 @@ const StyledBackground = styled(Background)`
   }
 `
 
-const Tweet = ({
-  bgColor,
-  name,
-  nameColor,
-  author,
-  username,
-  usernameColor,
-  tweet,
-  tweetColor,
-  date,
-  image,
-  link,
-  dateColor,
-  customTwitterIcon,
-}) => {
+const Tweet = ({ name, username, tweet, date, image, link }) => {
   return (
     <StyledBackground
-      background={bgColor}
+      background={'#eaeaea'}
       minHeight={[384]}
       width={('100%', '100%', '50%', '80%', '384px')}
     >
@@ -42,26 +28,22 @@ const Tweet = ({
           <Flex>
             <Image src={image} width={32} height={32} />
             <Flex mt={'6px'}>
-              <Heading.h5 color={nameColor} ml={'12px'}>
+              <Heading.h5 color={'#000'} ml={'12px'}>
                 {name}
               </Heading.h5>
-              <Heading.h5 color={usernameColor} ml={'12px'}>
+              <Heading.h5 color={'#8c8c8c'} ml={'12px'}>
                 {username}
               </Heading.h5>
             </Flex>
           </Flex>
         </ExternalLink>
-        <P color={tweetColor}>{tweet}</P>
+        <P color={'#5b5b5b'}>{tweet}</P>
       </Box>
       <Flex>
-        <Image
-          src={customTwitterIcon ? customTwitterIcon : twitterIcon}
-          width={'16px'}
-          height={'13px'}
-        />
+        <Image src={twitterIcon} width={'16px'} height={'13px'} />
         <Text
           ml={'12px'}
-          color={dateColor}
+          color={'#8c8c8c'}
           fontSize={'12px'}
           lineHeight='16px'
           letterSpacing='0'
