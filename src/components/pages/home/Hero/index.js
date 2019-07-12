@@ -9,7 +9,7 @@ import { Flex, Box, Column } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
   <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>
-    <Column>
+    <Column alignItems='center'>
       <HeroHeader />
       <HeroActions />
     </Column>

@@ -9,7 +9,7 @@ import reutersLogo from 'src/assets/images/home/brands/reuters.png'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 
 const HomeHeroFooter = () => (
-  <Flex>
+  <Flex mt={200} mb={162}>
     <Flex
       justifyContent={['normal', 'normal', 'space-between']}
       alignItems='space-between'
@@ -20,23 +20,23 @@ const HomeHeroFooter = () => (
       maxWidth={[null, null, null, null, 800]}
       m={[null, null, 'auto']}
     >
-      <Box mr={['20px', '20px', '0px']}>
+      <Box mr={['20px', '20px', '32px']}>
         <Image src={eaLogo} width={['56px']} height={['27px']} />
       </Box>
 
-      <Box mr={['10px', '10px', '0px']}>
+      <Box mr={['10px', '10px', '32px']}>
         <Image src={cocaColaLogo} width={['84px']} height={['27px']} />
       </Box>
 
-      <Box mt={['10px', '10px', '0px']}>
+      <Box mt={['10px', '10px', '0px']} mr={32}>
         <Image src={nordstromLogo} width={['115px']} height={['16px']} />
       </Box>
 
-      <Box mt={['20px', '20px', '0px']} mr={['10px', '10px', '0px']}>
+      <Box mt={['20px', '20px', '0px']} mr={['10px', '10px', '32px']}>
         <Image src={expediaLogo} width={['100px']} height={['28px']} />
       </Box>
 
-      <Box mt={['20px', '20px', '0px']}>
+      <Box mt={['20px', '20px', '0px']} mr={32}>
         <Image src={reutersLogo} width={['109px']} height={['28px']} />
       </Box>
     </Flex>

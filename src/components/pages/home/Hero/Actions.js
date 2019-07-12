@@ -17,7 +17,7 @@ const HomeActions = () => (
     }}
     buttonWidth={['300px', '300px', '176px']}
     flexDirection={['column', 'column', 'row']}
-    justifyContent={['center', 'center', 'left']}
+    justifyContent={['center', 'center', 'center']}
     tabletRow={true}
   />
 )
