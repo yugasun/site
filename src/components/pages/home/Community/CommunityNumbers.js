@@ -16,7 +16,7 @@ const CommunityNumbers = () => (
   <AppContainer>
     <ColumnWithCustomMobileMargin
       width={[1, 1, 1, 1]}
-      mt={[212, 212, 286, 286, 0]}
+      my={[212, 212, 286, 286, 162]}
     >
       <Box width={[0.8, 0.8, 0.6, 1, 1]}>
         <Heading.h3 color='black' align='center'>
