@@ -13,7 +13,7 @@ const providers = [
 
 const Options = () => (
   <Flex>
-    <Column>
+    <Column ml={104} mr={136}>
       {providers.map(provider => (
         <Text
           key={provider}
@@ -22,6 +22,7 @@ const Options = () => (
           lineHeight={'30px'}
           letterSpacing={'-0.28px'}
           fontFamily='SoleilBk'
+          mt={'10px'}
         >
           {provider}
         </Text>

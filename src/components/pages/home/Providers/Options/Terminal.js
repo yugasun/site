@@ -1,95 +1,78 @@
 import React from 'react'
 
-import {
-  Flex,
-  Image,
-  Position,
-  Relative,
-  Absolute,
-  Text,
-} from 'serverless-design-system'
+import { Flex, Text } from 'serverless-design-system'
 import styled from 'styled-components'
-import homepageHeroTerminal from 'src/assets/images/homepageHeroTerminal.svg'
 
-const TerminalBackground = styled(Relative)`
-  @media screen and (max-width: 340px) {
-    margin-left: -27px;
-  }
-  @media screen and (min-width: 370px) and (max-width: 380px) {
-    margin-left: 0px;
-  }
-  @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-left: 2px;
-    width: 350px;
-  }
-`
-
-const TerminalText = styled(Absolute)`
-  @media screen and (max-width: 340px) {
-    margin-left: 6px;
-  }
-  @media screen and (min-width: 370px) and (max-width: 380px) {
-    margin-left: 38px;
-  }
-  @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-left: 1px;
-  }
+const TerminalBackground = styled(Flex)`
+  background-color: white;
+  width: 592px;
+  height: 334px;
+  border-radius: 8px;
 `
 
 const TerminalTextContent = styled(Text.p)`
+  margin-left: 32px;
+  margin-top: 32px;
   @media screen and (min-width: 410px) and (max-width: 420px) {
     font-size: 11px;
   }
 `
 
+const PurpleText = styled(Text)`
+  color: #795da3;
+`
+
+const GrayText = styled(Text)`
+  color: #9b9b9b;
+`
+
 const HomeHeroImage = () => (
-  <Flex
+  <TerminalBackground
     flexDirection={['column', 'column', 'column']}
     width={[1, 1, 1, 1, '55%']}
-    mt={[1]}
   >
-    <Position
-      zIndex='5'
-      left={[null, null, null, '16.4%', '0']}
-      position={['relative', 'relative', 'relative']}
-    >
-      <Flex flexDirection='column' alignItems='center'>
-        <Flex flexDirection='column' alignItems='center'>
-          <TerminalBackground width={['280px', '320px', 1]}>
-            <Image src={homepageHeroTerminal} />
-          </TerminalBackground>
-          <TerminalText mt={['92px', '92px', '102px']}>
-            <TerminalTextContent
-              color='#727679'
-              fontSize={['10px', '10px', '13.7px']}
-              letterSpacing='0.1px'
-            >
-              1 &nbsp;&nbsp;&nbsp;&nbsp;# Step 1. Install serverless globally
-              <br />2 &nbsp;&nbsp;&nbsp;&nbsp;
-              <Text.span color='#fff'>$ npm install serverless -g</Text.span>
-              <br />3<br />4 &nbsp;&nbsp;&nbsp;&nbsp;# Step 2. Create a
-              serverless function
-              <br />5 &nbsp;&nbsp;&nbsp;&nbsp;
-              <Text.span color='#fff'>
-                $ serverless create --template hello-world
-              </Text.span>
-              <br />6 <br />7 &nbsp;&nbsp;&nbsp;&nbsp;# Step 3. deploy to cloud
-              provider
-              <br />8 &nbsp;&nbsp;&nbsp;&nbsp;
-              <Text.span color='#fff'>$ serverless deploy</Text.span>
-              <br />9<br />
-              10 &nbsp;&nbsp;# Your function is deployed!
-              <br />
-              11 &nbsp;&nbsp;
-              <Text.span color='#fff'>
-                $ http://xyz.amazonaws.com/hello-world
-              </Text.span>
-            </TerminalTextContent>
-          </TerminalText>
+    <Flex flexDirection='column'>
+      <TerminalTextContent
+        color='#727679'
+        fontSize={['10px', '10px', '13.7px']}
+        letterSpacing='0.1px'
+      >
+        <Flex>
+          <GrayText>1</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;
+          <b>Step #1</b> &nbsp;-&nbsp;{' '}
+          <PurpleText> npm install serverless -g</PurpleText>
         </Flex>
-      </Flex>
-    </Position>
-  </Flex>
+        <Flex>
+          <GrayText>2</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;
+        </Flex>
+        <Flex>
+          <GrayText>3</GrayText>
+          <GrayText>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Create a new Serverless
+            Service/Project
+          </GrayText>
+        </Flex>
+        <Flex>
+          <GrayText>4</GrayText>
+          <PurpleText>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ serverless create --template
+            aws-nodejs --path my-service
+          </PurpleText>
+        </Flex>
+        <Flex>
+          <GrayText>5</GrayText>
+          <GrayText>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Change into the newly created
+            directory
+          </GrayText>
+        </Flex>
+        <Flex>
+          <GrayText>6</GrayText>
+          <PurpleText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd my-service</PurpleText>
+        </Flex>
+      </TerminalTextContent>
+    </Flex>
+  </TerminalBackground>
 )
 
 export default HomeHeroImage
