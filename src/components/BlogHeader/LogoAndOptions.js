@@ -7,7 +7,7 @@ import MobileOptions from './MobileOptions'
 import BlogNavbarContext from './BlogNavbarContext'
 import { Box } from 'src/fragments/DesignSystem'
 import CategoriesPartial from './MobileOptions/CategoriesPartial'
-import EnterpriseSupportButton from 'src/components/Header/EnterpriseSupportButton'
+import HeaderCTAButton from 'src/components/Header/HeaderCTAButton'
 
 const Wrapper = styled(Flex.verticallyCenter)`
   justify-content: space-between;

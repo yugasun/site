@@ -12,6 +12,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      isWhiteHeader: true,
       isNavbarActive: false,
       isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
@@ -42,10 +43,13 @@ class Header extends React.Component {
     }
   }
 
-  toggleNavbarShrinkness = () =>
+  toggleNavbarShrinkness = () => {
+    console.log('shrinkess triggered')
     this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
+      isWhiteHeader: !prevState.isWhiteHeader,
     }))
+  }
 
   toggleNavbarTransparency = () =>
     this.setState(prevState => ({
@@ -79,8 +83,8 @@ class Header extends React.Component {
                 flexWrap='wrap'
                 justifyContent='space-between'
               >
-                <Logo />
                 <NavbarContext.Provider value={this.state}>
+                  <Logo />
                   <NavButton />
                   <Navbar />
                 </NavbarContext.Provider>

@@ -5,7 +5,7 @@ import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
 import HeroBrands from './Brands'
-import { Flex, Box, Column } from 'serverless-design-system'
+import { Flex, Column } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
   <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>

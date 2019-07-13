@@ -2,52 +2,69 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { learn } from 'src/constants/urls'
+import {
+  examples,
+  plugins,
+  blog,
+  caseStudies,
+  courses,
+} from 'src/constants/newUrls'
 
 const Learn = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.why,
+          to: examples,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        why?
+        examples
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.useCases,
+          to: plugins,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        use cases
+        plugins
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.comparisons,
+          to: blog,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        comparisons
+        blog
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.caseStudy,
+          to: caseStudies,
           backgroundOnHover: true,
           completed: true,
         }}
       >
         case studies
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: courses,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        courses
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

@@ -6,7 +6,7 @@ import CategoriesData from 'src/constants/categories.json'
 import { getCategoryNameById } from 'src/utils/blog'
 import closeIcon from 'src/assets/images/icon-close.png'
 import mobileMenuIcon from 'src/assets/images/icon-mobile-menu.png'
-import EnterpriseSupportButton from 'src/components/Header/EnterpriseSupportButton'
+import HeaderCTAButton from 'src/components/Header/HeaderCTAButton'
 import NewsletterOption from './NewsletterOptin'
 
 const Category = ({ children, link }) => (
