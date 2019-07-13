@@ -12,7 +12,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isWhiteHeader: true,
+      isWhiteHeader: props.startWithWhiteHeader ? true : false,
       isNavbarActive: false,
       isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,

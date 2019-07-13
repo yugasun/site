@@ -7,7 +7,7 @@ import Footer from 'src/components/pages/home/Footer/Prefooter'
 const DefaultLayout = ({ children, transparentHeader }) => {
   return (
     <Column width={1}>
-      <Header transparent={transparentHeader} />
+      <Header transparent={transparentHeader} startWithWhiteHeader={true} />
       <Box width={1}>{children}</Box>
       <Footer noPrefooter={true} />
     </Column>
