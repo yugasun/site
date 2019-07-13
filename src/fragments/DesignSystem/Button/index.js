@@ -14,7 +14,6 @@ import {
   minWidth,
 } from 'styled-system'
 
-
 // TODO: Customize hovering color based on props.
 // This will break the header / hero section button hover
 const Button = styled.button`
@@ -31,20 +30,19 @@ const Button = styled.button`
   ${height}
   ${minWidth}
     
-  line-height: 1.2;
-  letter-spacing: 0.8px;
+  border-radius: 4px;
+  line-height: 23px;
+  letter-spacing: 0.5px;
 
   &:disabled {
     opacity: 0.2;
   }
 
   &:hover {
-    background-color: ${
-      (props) => props.disabled ? null : props.theme.colors.secondaryColor
-    };
-    border-color: ${
-      (props) => props.disabled ? null : props.theme.colors.secondaryColor
-    }
+    background-color: ${props =>
+      props.disabled ? null : props.theme.colors.secondaryColor};
+    border-color: ${props =>
+      props.disabled ? null : props.theme.colors.secondaryColor}
     cursor: pointer;
   }
 
@@ -54,11 +52,7 @@ const Button = styled.button`
 
   @media screen and (max-width: 414px) {
     font-size: 14px;
-    width: ${
-      (props) => props.width ? props.width : '176px'
-    };
-    line-height: 24px;
-    letter-spacing: 1.5px;
+    width: ${props => (props.width ? props.width : '176px')};
   }
 `
 
@@ -69,10 +63,10 @@ Button.defaultProps = {
   bg: 'primaryColor',
   border: 'none',
   borderColor: 'primaryColor',
-  fontFamily: 'Serverless',
+  fontFamily: 'Soleil',
   fontSize: '14px',
   letterSpacing: 'primaryBtn',
-  p: '0'
+  p: '0',
 }
 
 Button.displayName = 'Button'

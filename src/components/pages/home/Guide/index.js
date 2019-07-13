@@ -10,7 +10,7 @@ import {
 import { AppContainerNewest as AppContainer } from 'src/components'
 import guidesData from './Data'
 import { InternalLink } from 'src/fragments'
-import { P, Button } from 'src/fragments/DesignSystem'
+import { P, Button, SecondaryButton } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 require('./guides.css')
 
@@ -110,25 +110,19 @@ const DevelopersGuide = () => (
                       'column',
                       'row',
                     ]}
-                    pt={22}
+                    pt={guide.metaTitle == 'Accelerate' ? 48 : 22}
                     className={`homepage-guides-${guide.actions[0].text.replace(
                       ' ',
                       '-'
                     )}`}
                   >
                     <InternalLink to={guide.actions[0].link}>
-                      <Button>{guide.actions[0].text}</Button>
+                      <Button width={144}>{guide.actions[0].text}</Button>
                     </InternalLink>
                     <InternalLink to={guide.actions[1].link}>
-                      <Text
-                        fontSize='16px'
-                        lineHeight='14px'
-                        letterSpacing='0.67px'
-                        color='#fd5750'
-                        mt={[32, 32, 0, 0, 32, 0]}
-                      >
+                      <SecondaryButton width={144}>
                         {guide.actions[1].text}
-                      </Text>
+                      </SecondaryButton>
                     </InternalLink>
                   </Flex.verticallyCenter>
                 </Flex>

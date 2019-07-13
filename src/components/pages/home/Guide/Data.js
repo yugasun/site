@@ -1,6 +1,13 @@
 import learnImage from 'src/assets/images/home/learn-graphic.svg'
 import tryImage from 'src/assets/images/home/try-graphic.svg'
 import accelerateImage from 'src/assets/images/home/accelerate-graphic.svg'
+import {
+  framework,
+  examples,
+  why,
+  docs,
+  enterprise,
+} from 'src/constants/newUrls'
 
 export default [
   {
@@ -10,8 +17,8 @@ export default [
     content:
       'This next-generation cloud architecture auto-scales and charges you only when it runs. No better options exists for building fast and innovating more.',
     actions: [
-      { text: 'get started free', link: '/learn/overview/' },
-      { text: 'view examples', link: '/resources/workshops/' },
+      { text: 'get started free', link: framework },
+      { text: 'view examples', link: examples },
     ],
   },
   {
@@ -21,8 +28,8 @@ export default [
     content:
       'The Serverless CLI lets you get an app deployed to the cloud platform of choice in seconds rather than days. There’s no quicker way to get a POC up and running.',
     actions: [
-      { text: 'why serverless?', link: '/examples/' },
-      { text: 'learn more', link: '/framework/docs/getting-started/' },
+      { text: 'why serverless?', link: why },
+      { text: 'learn more', link: docs },
     ],
   },
   {
@@ -32,8 +39,8 @@ export default [
     content:
       'Let us help you accelerate Serverless adoption the right way with training, support, and standardized tooling.',
     actions: [
-      { text: 'enterprise support', link: '/enterprise/' },
-      { text: 'contact sales', link: '/acceleration/' },
+      { text: 'enterprise support', link: enterprise },
+      { text: 'contact sales', link: enterprise },
     ],
   },
 ]
