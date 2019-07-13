@@ -4,14 +4,14 @@ import { Box } from 'serverless-design-system'
 import MenuTitle from './Title'
 import { ResourcesDropdownList, CommunityDropdownList } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { why, enterprise, docs, product } from 'src/constants/newUrls'
+import { why, enterprise, docs, framework } from 'src/constants/newUrls'
 import HeaderCTAButton from '../../HeaderCTAButton'
 import CommunityMenuDescription from './Descriptions/Community'
 import ResourcesMenuDescription from './Descriptions/Resources'
 
 const ProductMenu = () => (
   <Box>
-    <NavLink to={product} completed className='header-menu-item'>
+    <NavLink to={framework} completed className='header-menu-item'>
       <MenuTitle name={'product'} />
     </NavLink>
   </Box>
