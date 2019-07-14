@@ -1,6 +1,6 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { MeetupCard, TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import meetupData from './data'
 

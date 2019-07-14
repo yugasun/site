@@ -7,7 +7,7 @@ import {
   Text,
   Box,
 } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import guidesData from './Data'
 import { InternalLink } from 'src/fragments'
 import { P, Button, SecondaryButton } from 'src/fragments/DesignSystem'

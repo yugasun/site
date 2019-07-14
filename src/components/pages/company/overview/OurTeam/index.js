@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { TeamMemberImageCard } from 'src/fragments'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'

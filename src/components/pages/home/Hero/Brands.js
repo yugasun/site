@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { Flex, Image, Box } from 'serverless-design-system'
 import eaLogo from 'src/assets/images/home/brands/ea.png'
 import cocaColaLogo from 'src/assets/images/home/brands/cocacola.svg'

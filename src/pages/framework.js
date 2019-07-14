@@ -9,7 +9,7 @@ import Why from 'src/components/pages/framework/Why'
 import UseCases from 'src/components/pages/framework/UseCases'
 import Features from 'src/components/pages/framework/Features'
 import { NewToServerlessPrefooter } from 'src/fragments'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>

@@ -8,7 +8,7 @@ import {
   Column
 } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import Champion1 from 'src/assets/images/champion1.png'
 import Champion2 from 'src/assets/images/champion2.png'
 import Champion3 from 'src/assets/images/champion3.png'

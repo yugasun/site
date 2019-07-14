@@ -9,7 +9,7 @@ import Testimonial from 'src/components/pages/enterprise/Testimonial'
 import Compare from 'src/components/pages/enterprise/Compare'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const Enterprise = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter}>

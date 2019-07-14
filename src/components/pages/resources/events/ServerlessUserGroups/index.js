@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, Box } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import dotsBackground from 'src/assets/images/dots-background.png'
 import { Heading } from 'src/fragments/DesignSystem'
 import ServerlessUserGroupStack from './ServerlessUserGroupStack'

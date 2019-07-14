@@ -1,6 +1,6 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer, SubscribeModal } from 'src/components'
+import { AppContainer, SubscribeModal } from 'src/components'
 
 import Avatar from './Profile/Avatar'
 import Bio from './Profile/Bio'

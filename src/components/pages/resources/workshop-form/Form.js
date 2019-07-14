@@ -11,7 +11,7 @@ import {
   TextWithIcon,
   P,
 } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import formHandler from 'src/utils/formHandler'
 import dotGridGrey from 'src/assets/images/dot-grid-grey.png'
 import {

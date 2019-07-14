@@ -7,7 +7,7 @@ import {
   withBeforeAfter,
 } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P, Heading } from 'src/fragments/DesignSystem'
 
