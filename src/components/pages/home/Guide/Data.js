@@ -40,7 +40,7 @@ export default [
       'Let us help you accelerate Serverless adoption the right way with training, support, and standardized tooling.',
     actions: [
       { text: 'enterprise support', link: enterprise },
-      { text: 'contact sales', link: enterprise },
+      { text: 'contact us', link: enterprise },
     ],
   },
 ]
