@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/company/jobs/Hero'
 import OpenPositions from 'src/components/pages/company/jobs/OpenPositions'
 import HowWeOperate from 'src/components/pages/company/jobs/HowWeOperate'
