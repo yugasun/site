@@ -14,6 +14,7 @@ class Header extends React.Component {
     this.state = {
       isWhiteHeader: props.startWithWhiteHeader ? true : false,
       isNavbarActive: false,
+      isDesktopView: true,
       isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
     }
@@ -22,12 +23,20 @@ class Header extends React.Component {
   componentDidMount() {
     if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
+      if (window.innerWidth < 1025) {
+        this.setState({ isDesktopView: false })
+        console.log(this.state)
+      }
     }
   }
 
   componentWillUnmount() {
     if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
+      if (window.innerWidth < 1025) {
+        this.setState({ isDesktopView: false })
+        console.log(this.state)
+      }
     }
   }
 
@@ -44,7 +53,6 @@ class Header extends React.Component {
   }
 
   toggleNavbarShrinkness = () => {
-    console.log('shrinkess triggered')
     this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
       isWhiteHeader: !prevState.isWhiteHeader,

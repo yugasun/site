@@ -15,10 +15,10 @@ const LogoWithDesktopTopMargin = styled(Logo)`
 
 const LogoComponent = () => (
   <NavbarContext.Consumer>
-    {({ isWhiteHeader }) => (
+    {({ isWhiteHeader, isDesktopView }) => (
       <Link to='/'>
         <LogoWithDesktopTopMargin
-          src={isWhiteHeader ? logoBlack : logo}
+          src={isWhiteHeader && isDesktopView ? logoBlack : logo}
           height={['21px', '21px', '21px', '55px']}
           width={['124px', '124px', '124px', '153px']}
           alt='Serverless'

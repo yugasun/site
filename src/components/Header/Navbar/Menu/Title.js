@@ -37,7 +37,7 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
 const Title = ({ name }) => {
   return (
     <NavbarContext.Consumer>
-      {({ isNavbarShrinked, isWhiteHeader }) => (
+      {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
         <TitleWrapperWithLeadingSlash
           px={[1, 1, '8px', '8px', '1.5rem', '15px']}
           py={[2, 2, '16.5px']}
@@ -56,7 +56,7 @@ const Title = ({ name }) => {
           <Text.span
             fontFamily='Soleil'
             fontSize={14}
-            color={isWhiteHeader ? 'black' : 'white'}
+            color={isWhiteHeader && isDesktopView ? 'black' : 'white'}
             letterSpacing={0.7}
           >
             {name}
