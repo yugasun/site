@@ -5,7 +5,7 @@ import Hero from 'src/components/pages/company/champions/Hero'
 import HowToBeChampion from 'src/components/pages/company/champions/HowToBeChampion'
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 import OurChampions from 'src/components/pages/company/champions/OurChampions'
 

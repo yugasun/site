@@ -5,7 +5,7 @@ import Hero from 'src/components/pages/event-gateway/Hero'
 import UseCase from 'src/components/pages/event-gateway/UseCase'
 import Features from 'src/components/pages/event-gateway/Features'
 import { Divider, Helmet } from 'src/fragments'
-import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 
 const EventGateway = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>

@@ -7,7 +7,7 @@ import ServerlessUserGroups from 'src/components/pages/resources/events/Serverle
 import UpcomingMeetups from 'src/components/pages/resources/events/UpcomingMeetups'
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 
 const ResourcesEvents = ({ location }) => (

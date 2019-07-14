@@ -6,7 +6,7 @@ import Hero from 'src/components/pages/framework/Hero'
 import UseCase from 'src/components/pages/framework/UseCase'
 import Features from 'src/components/pages/framework/Features'
 import Compare from 'src/components/pages/framework/Compare'
-import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>

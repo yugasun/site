@@ -7,7 +7,7 @@ import HowWeOperate from 'src/components/pages/company/jobs/HowWeOperate'
 import OurValues from 'src/components/pages/company/jobs/OurValues'
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 
 const Jobs = ({ location }) => (

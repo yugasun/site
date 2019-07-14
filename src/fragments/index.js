@@ -16,9 +16,7 @@ export { default as TrustedClients } from './TrustedClients'
 export { default as Helmet } from './Helmet'
 export { AutoScrollList, AutoScrollMenu } from './AutoscrollMenuList'
 export { default as HeroWrapperNew } from './HeroWrapperNew'
-export {
-  default as NewToServerlessPrefooterNewest,
-} from './NewToServerlessPrefooterNewest'
+export { default as NewToServerlessPrefooter } from './NewToServerlessPrefooter'
 export { default as HeroTabsNew } from './HeroTabsNew'
 export { default as HeroActionsNew } from './HeroActionsNew'
 export { default as TestimonialNew } from './TestimonialNew'

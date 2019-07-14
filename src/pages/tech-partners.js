@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 import Hero from 'src/components/pages/tech-partners/Hero'
 import Content from 'src/components/pages/tech-partners/Content'
 import { Helmet } from 'src/fragments'

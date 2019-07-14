@@ -5,7 +5,7 @@ import Hero from 'src/components/pages/resources/workshops/Hero'
 import WorkshopList from 'src/components/pages/resources/workshops/WorkshopList'
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 
 const ResourcesWorkshops = ({ location }) => (
