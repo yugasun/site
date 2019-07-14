@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 
 import { Flex, Text, Box } from 'serverless-design-system'
 import tempVideoImage from 'src/assets/images/home/temp-video-image.png'
-import tempVideo from 'src/assets/images/home/homepage-video.mp4'
+const tempVideo =
+  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/homepage-video.mp4'
 import styled from 'styled-components'
 const Features = ['Intro', 'Develop', 'Deploy', 'Test', 'Secure', 'Monitor']
 

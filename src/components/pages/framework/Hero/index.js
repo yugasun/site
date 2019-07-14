@@ -1,26 +1,32 @@
 import React from 'react'
 
-import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import Header from './Header'
-import HeroImage from './HeroImage'
-import Actions from './Actions'
-import Advantage from './Advantage'
-import CloudProviders from './CloudProviders'
+import HeroWrapper from './Wrapper'
+import HeroHeader from './Header'
+import HeroImage from './Image'
+import HeroActions from './Actions'
+import { Flex, Box } from 'serverless-design-system'
 
-const FrameworkHero = () => (
-  <HeroWrapper
-    background={[
-      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
-      'linear-gradient(150deg,rgb(0,0,0) 40%,#70221f)',
-      `linear-gradient(155deg,rgb(0,0,0) 60%,#70221f)`,
-    ]}
-  >
-    <Header />
-    <HeroImage />
-    <Actions />
-    <Advantage />
-    <CloudProviders />
+const HomeHeroComponent = () => (
+  <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>
+    <Flex
+      justifyContent={['start', 'start', 'space-around']}
+      flexDirection={[
+        'column-reverse',
+        'column-reverse',
+        'column-reverse',
+        'column-reverse',
+        'row',
+      ]}
+    >
+      <HeroImage />
+      <Box width={['auto', 'auto', '90%', '70%', '55%', '488px']}>
+        <HeroHeader />
+        <Box>
+          <HeroActions />
+        </Box>
+      </Box>
+    </Flex>
   </HeroWrapper>
 )
 
-export default FrameworkHero
+export default HomeHeroComponent
