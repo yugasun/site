@@ -16,7 +16,7 @@ const CompanyDetails = () => (
           letterSpacing={'0.5px'}
           color='white'
           opacity='0.5'
-          fontFamily='Serverless'
+          fontFamily='Soleil'
         >
           Serverless, Inc. © 2019
         </P>
@@ -29,7 +29,7 @@ const CompanyDetails = () => (
               fontSize={0}
               lineHeight={1.17}
               letterSpacing={'0.5px'}
-              fontFamily='Serverless'
+              fontFamily='Soleil'
               color='white'
               opacity='0.5'
               mt={'6px'}
@@ -44,7 +44,7 @@ const CompanyDetails = () => (
               fontSize={0}
               lineHeight={1.17}
               letterSpacing={'0.5px'}
-              fontFamily='Serverless'
+              fontFamily='Soleil'
               color='white'
               opacity='0.5'
               mt={'6px'}
