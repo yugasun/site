@@ -1,23 +1,22 @@
 import React from 'react'
 
-import HeroWrapper from './Wrapper'
 import HeroHeader from './Header'
-import HeroImage from './Image'
+import HeroFeature from './Feature'
 import HeroActions from './Actions'
 import HeroBrands from './Brands'
 import { Flex, Column } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
-  <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>
+  <React.Fragment>
     <Column alignItems='center'>
       <HeroHeader />
       <HeroActions />
     </Column>
     <Flex>
-      <HeroImage />
+      <HeroFeature />
     </Flex>
     <HeroBrands />
-  </HeroWrapper>
+  </React.Fragment>
 )
 
 export default HomeHeroComponent

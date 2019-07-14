@@ -4,7 +4,7 @@ import { Column } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
 
 const HeroHeader = () => (
-  <Column width={0.5}>
+  <Column width={[1, 1, 0.8, 0.6, 0.5]}>
     <Heading.h1
       color='#000000'
       mb={0}
@@ -12,7 +12,7 @@ const HeroHeader = () => (
       lineHeight={['50px', '50px', '62px']}
       letterSpacing={[0, 0, '0.5px']}
       align='center'
-      mt={3}
+      mt={[90, 90, 90, 110, 132]}
     >
       Build apps with radically less overhead and cost
     </Heading.h1>

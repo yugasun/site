@@ -1,6 +1,6 @@
 import React from 'react'
 import Tweet from './Tweet'
-import { Row, Flex, Box } from 'serverless-design-system'
+import { Flex, Box } from 'serverless-design-system'
 import allTweets from './TwitterData'
 import Slider from 'react-slick'
 require('slick-carousel/slick/slick.css')
@@ -11,6 +11,10 @@ import styled from 'styled-components'
 const settings = {
   dots: true,
 }
+
+const FlexFlex = styled(Flex)`
+  display: flex !important;
+`
 
 const FlexWithSmalliPadFix = styled(Flex)`
   @media screen and (min-width: 768px) and (max-width: 790px) {
@@ -33,19 +37,16 @@ const Tweets = () => (
     </Box>
 
     <Box display={['none', 'none', 'block', 'block', 'none']}>
-      <FlexWithSmalliPadFix
-        flexDirection='column'
-        alignItems={['normal', 'normal', 'center', 'center', 'normal']}
-      >
-        <Row>
+      <Slider {...settings}>
+        <FlexFlex>
           <Tweet {...allTweets[2]} />
           <Tweet {...allTweets[1]} />
-        </Row>
-        <Row>
+        </FlexFlex>
+        <FlexFlex>
           <Tweet {...allTweets[0]} />
           <Tweet {...allTweets[3]} />
-        </Row>
-      </FlexWithSmalliPadFix>
+        </FlexFlex>
+      </Slider>
     </Box>
 
     <BoxWithBackground display={['none', 'none', 'none', 'none', 'block']}>

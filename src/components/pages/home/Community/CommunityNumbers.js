@@ -16,23 +16,24 @@ const CommunityNumbers = () => (
   <AppContainer>
     <ColumnWithCustomMobileMargin
       width={[1, 1, 1, 1]}
-      my={[212, 212, 286, 286, 162]}
+      mb={[212, 212, 62, 62, 162]}
     >
-      <Box width={[0.8, 0.8, 0.6, 1, 1]}>
-        <Heading.h3 color='black' align='center'>
+      <Box width={[1]}>
+        <Heading.h3
+          color='black'
+          align='center'
+          fontFamily='Soleil'
+          fontSize={[24, 24, 32]}
+          lineHeight={['38px', '38px', '44px']}
+          letterSpacing={['-0.38px', '-0.38px', '-0.5px']}
+        >
           Backed by a rich and vibrant community
         </Heading.h3>
       </Box>
       <Row
-        mt={42}
+        mt={63}
         flexWrap={['wrap', 'wrap', 'initial']}
-        justifyContent={[
-          'space-around',
-          'space-around',
-          'space-between',
-          'space-between',
-          'center',
-        ]}
+        justifyContent={['space-around', 'space-around', 'center']}
       >
         {communityNumbersData.map((item, index) => (
           <Column

@@ -54,7 +54,7 @@ const TitleText = ({ children, color }) => (
 
 const DevelopersGuide = () => (
   <BackgroundWithCustomHeight
-    background='#f7f7f7'
+    background='#000'
     height={[2030, 2030, 2575, 2575, 604]}
   >
     <AppContainer>

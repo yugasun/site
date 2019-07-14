@@ -21,7 +21,7 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
     <StyledBackground
       background={'#eaeaea'}
       minHeight={[384]}
-      width={('100%', '100%', '50%', '80%', '384px')}
+      width={('100%', '100%', '40%', '80%', '384px')}
     >
       <Box>
         <ExternalLink to={link}>

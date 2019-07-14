@@ -24,7 +24,7 @@ const Providers = () => (
           <Headline />
           <Options />
           <HeadlineBoxWithLaptopFix
-            mb={[283, 283, 309, 309, 335, 390]}
+            pb={[283, 283, 309, 309, 335, 390]}
             mt={[92, 92, 92, 112, -32, 0]}
           >
             <Heading.h3 align='center'>
