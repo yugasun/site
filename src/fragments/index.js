@@ -14,12 +14,8 @@ export { default as MeetupCard } from './UpcomingMeetupCard'
 export { default as HeadingWithMaxWidth } from './HeadingWithMaxWidth'
 export { default as TrustedClients } from './TrustedClients'
 export { default as Helmet } from './Helmet'
-export { default as NewToServerlessPrefooter } from './NewToServerlessPrefooter'
 export { AutoScrollList, AutoScrollMenu } from './AutoscrollMenuList'
 export { default as HeroWrapperNew } from './HeroWrapperNew'
-export {
-  default as NewToServerlessPrefooterNew,
-} from './NewToServerlessPrefooterNew'
 export {
   default as NewToServerlessPrefooterNewest,
 } from './NewToServerlessPrefooterNewest'

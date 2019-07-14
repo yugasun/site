@@ -1,6 +1,9 @@
 import React from 'react'
 
-import { Helmet, NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import {
+  Helmet,
+  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+} from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/company/overview/Hero'
 import OurStory from 'src/components/pages/company/overview/OurStory'

@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Heading, Box } from 'serverless-design-system'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter, Helmet } from 'src/fragments'
+import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter, Helmet } from 'src/fragments'
 import CategoryData from 'src/constants/categories.json'
 import { SubscribeModal } from 'src/components' 
 

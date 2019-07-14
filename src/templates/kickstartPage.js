@@ -1,7 +1,7 @@
 import React from 'react'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Helmet } from 'src/fragments'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
 import { Box, Heading } from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
@@ -68,18 +68,18 @@ const GuidePage = ({ data }) => (
       <Box width={1} my={10} pb={350}>
         <PageContainer>
           <Heading.h1
-            align="center"
+            align='center'
             fontSize={['38px', '38px', '48px']}
-            fontFamily="SoleilBk"
-            lineHeight="62px"
-            letterSpacing="0.5px"
+            fontFamily='SoleilBk'
+            lineHeight='62px'
+            letterSpacing='0.5px'
           >
             {data.Kickstart.frontmatter.title}
           </Heading.h1>
           <PageContent
             width={1}
             pt={40}
-            mx="auto"
+            mx='auto'
             dangerouslySetInnerHTML={{ __html: data.Kickstart.content }}
           />
         </PageContainer>
