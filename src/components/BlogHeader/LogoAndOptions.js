@@ -24,7 +24,7 @@ const LogoAndOptions = () => (
         >
           <Logo />
           <Box.OnlyTabletAndDesktop>
-            <EnterpriseSupportButton />
+            <HeaderCTAButton />
           </Box.OnlyTabletAndDesktop>
           <MobileOptions />
         </Wrapper>

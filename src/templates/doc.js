@@ -8,7 +8,7 @@ import {
   Text,
   Box,
 } from 'serverless-design-system'
-import Default from 'src/layouts/DefaultNew'
+import Default from 'src/layouts/DefaultNewest'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'

@@ -15,10 +15,10 @@ const BoxWithMobileMargin = styled(Box)`
 
 // Renders each column in the footer list
 const FooterListColumn = ({ header, headerLink, listItems }) => (
-  <BoxWithMobileMargin width={['123px', '123px', '106px']} mr={[0, 0, '22px']}>
+  <BoxWithMobileMargin mr={39}>
     <P
       color={'white'}
-      fontFamily={'Serverless'}
+      fontFamily={'Soleil'}
       fontSize={1}
       lineHeight={1.14}
       letterSpacing='0.6px'

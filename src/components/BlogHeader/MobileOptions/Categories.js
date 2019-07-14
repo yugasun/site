@@ -52,7 +52,7 @@ const MobileCategories = () => (
           </Row>
           <Flex.center flexDirection='column' pt={2} pb={3}>
             <Box mb={'54px'}>
-              <EnterpriseSupportButton />
+              <HeaderCTAButton />
             </Box>
 
             <Category link={`/blog/`}>all</Category>

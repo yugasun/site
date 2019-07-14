@@ -1,23 +1,23 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { company } from 'src/constants/urls'
+import { team, jobs, contact } from 'src/constants/newUrls'
 
 const CompanyColumn = () => (
   <FooterListColumn
-    header='company'
+    header='Company'
     listItems={[
       {
-        name: 'overview',
-        navProps: { to: company.team, completed: true },
+        name: 'Overview',
+        navProps: { to: team, completed: true },
       },
       {
-        name: 'jobs',
-        navProps: { to: company.jobs, completed: true },
+        name: 'Join us',
+        navProps: { to: jobs, completed: true },
       },
       {
-        name: 'contact',
-        navProps: { to: company.contact, crossDomain: true },
+        name: 'Contact',
+        navProps: { to: contact, crossDomain: true },
       },
     ]}
   />

@@ -1,30 +1,10 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { learn } from 'src/constants/urls'
+import { why } from 'src/constants/newUrls'
 
-const LearnColumn = () => (
-  <FooterListColumn
-    header='learn'
-    listItems={[
-      {
-        name: 'why?',
-        navProps: { to: learn.why, completed: true },
-      },
-      {
-        name: 'use cases',
-        navProps: { to: learn.useCases, completed: true },
-      },
-      {
-        name: 'comparisons',
-        navProps: { to: learn.comparisons, completed: true },
-      },
-      {
-        name: 'case studies',
-        navProps: { to: learn.caseStudy, completed: true },
-      },
-    ]}
-  />
+const WhyColumn = () => (
+  <FooterListColumn header='Why' headerLink={why} listItems={[]} />
 )
 
-export default LearnColumn
+export default WhyColumn

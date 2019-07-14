@@ -22,8 +22,8 @@ const FooterListItem = ({ content, color, pt }) => (
     <NavLink {...content.navProps} className='footer-menu-item'>
       <ItemText
         color={color}
-        opacity={ content.defaultOpacity ? 1 : 0.5 }
-        fontFamily={'Serverless'}
+        opacity={content.defaultOpacity ? 1 : 0.5}
+        fontFamily={'Soleil'}
         fontSize={1}
         lineHeight={1}
         letterSpacing='text'

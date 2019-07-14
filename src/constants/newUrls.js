@@ -14,4 +14,7 @@ export default {
   meetups: '/resources/events/',
   partners: '/partners/',
   framework: '/framework/',
+  team: '/company/overview/',
+  jobs: '/company/jobs/',
+  contact: 'mailto:hello@serverless.com',
 }
