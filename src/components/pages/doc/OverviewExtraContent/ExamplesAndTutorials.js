@@ -27,7 +27,7 @@ const data = [
 
 const ContentBlock = ({ image, heading, content, cta, link }) => (
   <Flex
-    mt={[42, 42, 42, 42, 62]}
+    mt={[42, 42, 42, 42, 42]}
     flexDirection={['row', 'row', 'column', 'column', 'row']}
     mb={[0, 0, 76]}
     justifyContent={['center', 'center', 'auto']}

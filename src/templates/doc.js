@@ -6,7 +6,7 @@ import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
 import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
-
+import ExamplesAndTutorials from 'src/components/pages/doc/OverviewExtraContent/ExamplesAndTutorials.js'
 import ExtraContent from 'src/components/pages/doc/ExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
@@ -42,6 +42,9 @@ const DocTemplate = ({ data: { doc }, location }) => (
             dangerouslySetInnerHTML={{ __html: doc.content }}
             className='content'
           />
+          {doc.frontmatter.gitLink == '/docs/README.md' ? (
+            <ExamplesAndTutorials />
+          ) : null}
           <HaveQuestionsPrefooter />
         </Column>
       </Row>
