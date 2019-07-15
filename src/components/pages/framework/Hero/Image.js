@@ -59,14 +59,22 @@ const BackgroundWithBigScreenCoverage = styled(Background)`
 `
 
 const GrayText = ({ children }) => (
-  <Text color='#9b9b9b' fontSize={['8.6px', '8.6px', '10.6px', '14px']}>
+  <Text.span
+    color='#9b9b9b'
+    fontSize={['8.6px', '8.6px', '10.6px', '14px']}
+    lineHeight={['13.5px', '13.5px', '12.5px', '12.5px', '22px']}
+    letterSpacing={['0.09px', '0.09px', '0.08px', '0.08px', '0.15px']}
+  >
     {children}
-  </Text>
+    <br />
+  </Text.span>
 )
 const BlackText = ({ children }) => (
-  <Text color='#000000' fontSize={['8.6px', '8.6px', '10.6px', '14px']}>
+  <Text.span color='#000000' fontSize={['8.6px', '8.6px', '10.6px', '14px']}>
     {children}
-  </Text>
+    <br />
+    <br />{' '}
+  </Text.span>
 )
 
 const HomeHeroImage = () => (
@@ -109,15 +117,12 @@ const HomeHeroImage = () => (
               >
                 <GrayText># Step 1. Install serverless globally</GrayText>
                 <BlackText>$ npm install serverless -g</BlackText>
-                <br />{' '}
                 <GrayText># Step 2. Create a serverless function</GrayText>
                 <BlackText>
                   $ serverless create --template hello-world
                 </BlackText>
-                <br />
                 <GrayText># Step 3. deploy to cloud provider</GrayText>
                 <BlackText>$ serverless deploy</BlackText>
-                <br />
                 <GrayText># Your function is deployed!</GrayText>
                 <BlackText>$ http://xyz.amazonaws.com/hello-world</BlackText>
               </TerminalTextContent>

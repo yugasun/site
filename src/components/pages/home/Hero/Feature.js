@@ -11,6 +11,7 @@ const HR = styled('hr')`
   z-index: -2;
 `
 
+//TODO: create a component for the below 2
 const HoverableText = styled(Text)`
   &:hover {
     cursor: pointer;

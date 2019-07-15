@@ -27,7 +27,7 @@ const whyData = [
 ]
 
 const Why = props => (
-  <Box mb={162}>
+  <Box mb={[92, 92, 92, 92, 162]}>
     <Heading.h3 align='center' mt={[62, 62, 92, 92, 54]} mb={[0, 0, 0, 0, 62]}>
       Why Serverless Framework?
     </Heading.h3>

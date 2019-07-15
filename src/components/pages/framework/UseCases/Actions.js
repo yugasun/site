@@ -6,13 +6,13 @@ import { dashboard, docs } from 'src/constants/newUrls'
 const Actions = props => (
   <HeroActions
     firstBtn={{
-      name: 'begin',
+      name: 'get started free',
       to: dashboard,
       completed: true,
       className: 'position-hero',
     }}
     secondBtn={{
-      name: 'learn more',
+      name: 'visit docs',
       to: docs,
       completed: true,
       className: 'position-hero',
