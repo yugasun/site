@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Image, Text, Column } from 'serverless-design-system'
+import { Flex, Image, Text, Column, Box } from 'serverless-design-system'
 import { P, Heading } from 'src/fragments/DesignSystem'
 import experienceIcon from 'src/assets/images/pages/framework/experience-icon.svg'
 import communityIcon from 'src/assets/images/pages/framework/community-icon.svg'
@@ -27,18 +27,44 @@ const whyData = [
 ]
 
 const Why = props => (
-  <React.Fragment>
-    <Heading.h3>Why Serverless Framework?</Heading.h3>
-    <Flex>
+  <Box mb={162}>
+    <Heading.h3 align='center' mt={[62, 62, 92, 92, 54]} mb={[0, 0, 0, 0, 62]}>
+      Why Serverless Framework?
+    </Heading.h3>
+    <Flex flexDirection={['column', 'column', 'column', 'column', 'row']}>
       {whyData.map(why => (
-        <Column key={why.title}>
-          <Image src={why.image} />
-          <Text>{why.title}</Text>
-          <P>{why.description}</P>
-        </Column>
+        <Flex
+          key={why.title}
+          flexDirection={['column', 'column', 'row', 'row', 'column']}
+          alignItems={['center']}
+          mt={[62, 62, 42, 42, 0]}
+        >
+          <Image src={why.image} width={[132]} height={[132]} />
+          <Flex
+            flexDirection={'column'}
+            width={[1, 1, 0.6, 0.8, 1]}
+            ml={[0, 0, 54, 54, 0]}
+          >
+            <Text
+              align={['center', 'center', 'left', 'left', 'center']}
+              fontSize={'24px'}
+              letterSpacing={'-0.38px'}
+              lineHeight={'38px'}
+              fontFamily='Soleil'
+              mt={[42, 42, 0, 0, 42]}
+            >
+              {why.title}
+            </Text>
+            <Box width={[1, 1, 1, 0.8]} mx={[null, null, null, null, 'auto']}>
+              <P align={['center', 'center', 'left', 'left', 'center']}>
+                {why.description}
+              </P>
+            </Box>
+          </Flex>
+        </Flex>
       ))}
     </Flex>
-  </React.Fragment>
+  </Box>
 )
 
 export default Why

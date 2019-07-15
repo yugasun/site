@@ -7,7 +7,7 @@ import HeroActions from './Actions'
 import { Flex, Box } from 'serverless-design-system'
 
 const HomeHeroComponent = () => (
-  <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>
+  <HeroWrapper height={[1150, 900, 550, 590, 720, 830]}>
     <Flex
       justifyContent={['start', 'start', 'space-around']}
       flexDirection={['column-reverse', 'column-reverse', 'row']}
