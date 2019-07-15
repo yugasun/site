@@ -60,39 +60,7 @@ const DocTemplate = ({ data: { doc }, location }) => (
       <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
         <Column>
-          {doc.frontmatter.gitLink == '/docs/README.md' ? (
-            <Flex
-              flexDirection={['column', 'column', 'row']}
-              mt={['-3px', '-3px', '-3px', 0]}
-            >
-              <Background
-                width={[1, 1, 0.5]}
-                background='#fd5750'
-                height={[164, 164, 184]}
-              >
-                <Column alignItems='center'>
-                  <ServerlessFrameworkText />
-                  <FrameworkType>open source</FrameworkType>
-                  <InternalLink to={'/framework/docs/getting-started/'}>
-                    <WhiteButton mt={22}>get started</WhiteButton>
-                  </InternalLink>
-                </Column>
-              </Background>
-              <Background
-                width={[1, 1, 0.5]}
-                background='black'
-                height={[164, 164, 184]}
-              >
-                <Column alignItems='center'>
-                  <ServerlessFrameworkText />
-                  <FrameworkType>enterprise</FrameworkType>
-                  <InternalLink to={'/enterprise/'}>
-                    <Button mt={22}>schedule a demo</Button>
-                  </InternalLink>
-                </Column>
-              </Background>
-            </Flex>
-          ) : (
+          {doc.frontmatter.gitLink == '/docs/README.md' ? null : (
             <a
               title='Edit this page on github'
               rel='noopener noreferrer'
