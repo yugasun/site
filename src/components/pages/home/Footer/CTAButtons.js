@@ -19,13 +19,22 @@ const buttonsData = [
 ]
 const CTAButtons = () => (
   <Flex
-    justifyContent='space-between'
+    justifyContent={[
+      'space-evenly',
+      'space-evenly',
+      'space-between',
+      'space-evenly',
+      'space-between',
+    ]}
     mt={42}
     flexDirection={['column', 'column', 'row']}
+    alignItems={['center', 'center', 'auto']}
   >
     {buttonsData.map((button, index) => (
       <InternalLink to={button.link} key={index}>
-        <Button>{button.title}</Button>
+        <Button width={[300, 300, 176]} mt={['12px', '12px', 0]}>
+          {button.title}
+        </Button>
       </InternalLink>
     ))}
   </Flex>

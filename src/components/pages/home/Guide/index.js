@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Flex,
-  Background,
-  Row,
-  Image,
-  Text,
-  Box,
-} from 'serverless-design-system'
+import { Flex, Background, Image, Text, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import guidesData from './Data'
 import { InternalLink } from 'src/fragments'
@@ -54,7 +47,7 @@ const TitleText = ({ children, color }) => (
 
 const DevelopersGuide = () => (
   <BackgroundWithCustomHeight
-    background='#000'
+    background={['#f7f7f7', '#f7f7f7', '#f7f7f7', '#f7f7f7', '#000']}
     height={[2030, 2030, 2575, 2575, 604]}
   >
     <AppContainer>
@@ -93,7 +86,7 @@ const DevelopersGuide = () => (
             <BackgroundWithBoxShadow
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
-              minHeight={['auto', 'auto', 'auto', 'auto', '522px', 'auto']}
+              minHeight={['auto', 'auto', 'auto', 'auto', '552px', 'auto']}
             >
               <Box py={[42, 42, 52]} px={[26, 26, 118, 118, 32]}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>
@@ -117,10 +110,15 @@ const DevelopersGuide = () => (
                     )}`}
                   >
                     <InternalLink to={guide.actions[0].link}>
-                      <Button width={144}>{guide.actions[0].text}</Button>
+                      <Button width={[248, 248, 152, 152, 176, 144]}>
+                        {guide.actions[0].text}
+                      </Button>
                     </InternalLink>
                     <InternalLink to={guide.actions[1].link}>
-                      <SecondaryButton width={144}>
+                      <SecondaryButton
+                        width={[248, 248, 152, 152, 176, 144]}
+                        mt={['12px', '12px', 0, 0, '12px', 0]}
+                      >
                         {guide.actions[1].text}
                       </SecondaryButton>
                     </InternalLink>

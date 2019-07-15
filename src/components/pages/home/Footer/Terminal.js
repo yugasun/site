@@ -36,14 +36,18 @@ const TerminalTextContent = styled(Text.p)`
 
 const Terminal = () => {
   return (
-    <Flex flexDirection={['column', 'column', 'column']} mb={[1, 1, 4]}>
-      <TerminalBackground width={['280px', '320px', '320px', '320px', '416px']}>
+    <Flex
+      flexDirection={['column', 'column', 'column']}
+      mb={[1, 1, 4]}
+      alignItems={['auto', 'auto', 'center', 'center', 'auto']}
+    >
+      <TerminalBackground width={['280px', '320px', '416px']}>
         <Image src={homepageHeroTerminal} />
       </TerminalBackground>
-      <TerminalText mt={['128px', '128px', '165px', '120px', '40px']} ml={4}>
+      <TerminalText mt={['40px']} ml={[0, 0, 0, 0, 4]}>
         <TerminalTextContent
           color='#727679'
-          fontSize={['10px', '10px', '9.8px', '9.8px', '13.7px']}
+          fontSize={['10px', '10px', '13.7px']}
           letterSpacing='0.1px'
         >
           &nbsp;1 &nbsp;&nbsp;# Step 1. Install serverless globally
