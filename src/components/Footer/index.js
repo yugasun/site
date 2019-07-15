@@ -28,7 +28,7 @@ const FooterWrapper = ({ prefooter, prefooterOnlyDesktop, noPrefooter }) => {
             'linear-gradient(30deg, rgb(0, 0, 0) 60%, #70221f)',
           ]}
         >
-          <Box pt={[0, 0, 5]} pb={[5, 5, 5, 5, 6]}>
+          <Box pt={[0, 0, 5]} pb={[2, 2, 1, 1, 5]}>
             <Row
               m='auto'
               flexWrap='wrap'

@@ -5,7 +5,7 @@ import LeftSection from 'src/components/Footer/LeftSection'
 import RightSection from 'src/components/Footer/RightSection'
 
 const Footer = () => (
-  <Box pt={[0, 0, 5, 5, 3]} pb={[5, 5, 1, 1, 5]}>
+  <Box pt={[0, 0, 5, 5, 3]} pb={[2, 2, 1, 1, 5]}>
     <Row
       m='auto'
       flexWrap='wrap'
