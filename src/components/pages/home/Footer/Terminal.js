@@ -44,7 +44,7 @@ const Terminal = () => {
       <TerminalBackground width={['280px', '320px', '416px']}>
         <Image src={homepageHeroTerminal} />
       </TerminalBackground>
-      <TerminalText mt={['40px']} ml={[0, 0, 0, 0, 4]}>
+      <TerminalText mt={['40px']}>
         <TerminalTextContent
           color='#727679'
           fontSize={['10px', '10px', '13.7px']}

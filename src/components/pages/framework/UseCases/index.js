@@ -1,5 +1,5 @@
 import React from 'react'
-import { Column, Text, Flex, Image } from 'serverless-design-system'
+import { Column, Text, Flex } from 'serverless-design-system'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import Actions from './Actions'
 import useCasesData from './Data'
