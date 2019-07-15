@@ -17,7 +17,7 @@ const HeadlineBoxWithLaptopFix = styled(Box)`
 `
 
 const Providers = () => (
-  <Box mt={100}>
+  <Box mt={[-169, -169, -62, -62, 100]}>
     <Background background='#f7f7f7'>
       <AppContainer>
         <Box mt={[170, 170, 62, 62, -100]}>
@@ -27,7 +27,7 @@ const Providers = () => (
             pb={[283, 283, 309, 309, 335, 390]}
             mt={[92, 92, 92, 112, -32, 0]}
           >
-            <Heading.h3 align='center'>
+            <Heading.h3 align='center' mb={0}>
               A developer’s guide to going serverless
             </Heading.h3>
           </HeadlineBoxWithLaptopFix>

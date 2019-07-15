@@ -19,6 +19,7 @@ const HomeHeroFooter = () => (
         'column-reverse',
         'row',
       ]}
+      alignItems={['auto', 'auto', 'auto', 'center', 'auto']}
     >
       <Flex
         justifyContent={['normal', 'normal', 'space-between']}
@@ -33,24 +34,33 @@ const HomeHeroFooter = () => (
           <Image src={eaLogo} width={['56px']} height={['27px']} />
         </Box>
 
-        <Box mr={['10px', '10px', '32px']}>
+        <Box mr={['10px', '10px', '42px', '10px', '16px', '32px']}>
           <Image src={cocaColaLogo} width={['84px']} height={['27px']} />
         </Box>
 
-        <Box mt={['10px', '10px', '0px']} mr={32}>
+        <Box
+          mt={['10px', '10px', '0px']}
+          mr={['10px', '10px', '42px', '10px', '16px', '32px']}
+        >
           <Image src={nordstromLogo} width={['115px']} height={['16px']} />
         </Box>
 
-        <Box mt={['20px', '20px', '0px']} mr={['10px', '10px', '32px']}>
+        <Box
+          mt={['20px', '20px', '0px']}
+          mr={['10px', '10px', '42px', '10px', '16px', '32px']}
+        >
           <Image src={expediaLogo} width={['100px']} height={['28px']} />
         </Box>
 
-        <Box mt={['20px', '20px', '0px']} mr={32}>
+        <Box
+          mt={['20px', '20px', '0px']}
+          mr={['10px', '10px', '42px', '10px', '16px', '32px']}
+        >
           <Image src={reutersLogo} width={['109px']} height={['28px']} />
         </Box>
       </Flex>
       <Flex
-        width={[1, 1, 0.8, 0.8, 0.41, 0.4]}
+        width={[1, 1, 0.8, 0.5, 0.41, 0.4]}
         mt={['92px', '92px', '0', '0', '40px', '20px']}
         flexDirection='row'
       >

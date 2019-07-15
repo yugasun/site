@@ -20,6 +20,7 @@ const HomeActions = () => (
     flexDirection={['column', 'column', 'row']}
     justifyContent={['center', 'center', 'center']}
     tabletRow={true}
+    buttonMarginY={'5px'}
   />
 )
 

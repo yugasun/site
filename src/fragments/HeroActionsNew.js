@@ -39,6 +39,7 @@ const HeroActions = ({
     className: sClassName = false,
   },
   buttonWidth,
+  buttonMarginY,
   flexDirection,
   justifyContent,
   tabletRow,
@@ -61,7 +62,7 @@ const HeroActions = ({
             justifyContent === 'center' || tabletRow ? '32px' : 0,
             '32px',
           ]}
-          my={1}
+          my={buttonMarginY ? buttonMarginY : 1}
           border={'2.5px solid'}
           width={buttonWidth ? buttonWidth : ['200px']}
         >
@@ -76,7 +77,10 @@ const HeroActions = ({
         to={secondLink}
         className={sClassName}
       >
-        <SecondaryButton my={1} width={buttonWidth ? buttonWidth : ['200px']}>
+        <SecondaryButton
+          my={buttonMarginY ? buttonMarginY : 1}
+          width={buttonWidth ? buttonWidth : ['200px']}
+        >
           {sName}
         </SecondaryButton>
       </FinalLink>

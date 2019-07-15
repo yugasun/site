@@ -76,9 +76,9 @@ class Options extends Component {
 
   render() {
     return (
-      <Flex mt={92}>
+      <Flex mt={['12px', '12px', 42, 42, 92]}>
         <Box display={['none', 'none', 'block']}>
-          <Column ml={[0, 0, 0, 0, 72]} mr={[0, 0, 16, 16, 136]}>
+          <Column ml={[0, 0, 0, 82, 32, 72]} mr={[0, 0, 16, 16, 82, 136]}>
             {providers.map(provider => (
               <Background
                 key={provider.id}
@@ -115,12 +115,17 @@ class Options extends Component {
           <Box display={['block', 'block', 'none']} mb={22}>
             <StyledSelect>
               {providers.map(provider => (
-                <option key={provider.id}>{provider.name}</option>
+                <option
+                  key={provider.id}
+                  onClick={() => this.updateActiveProvider(provider.id)}
+                >
+                  {provider.name}
+                </option>
               ))}
             </StyledSelect>
           </Box>
           <Terminal templateName={this.state.activeProviderTemplate} />
-          <Flex justifyContent='flex-end' mt={42} mb={162}>
+          <Flex justifyContent='flex-end' mt={42} mb={[0, 0, 0, 0, 162]}>
             <Button width={[300, 300, 176]}>get started free</Button>
           </Flex>
         </Column>

@@ -1,37 +1,19 @@
 import React from 'react'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import communityNumbersData from './CommunityNumbersData'
 import { Column, Box, Row } from 'serverless-design-system'
-import styled from 'styled-components'
-
-const ColumnWithCustomMobileMargin = styled(Column)`
-  @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-top: 182px;
-  }
-`
 
 const CommunityNumbers = () => (
   <AppContainer>
-    <ColumnWithCustomMobileMargin
-      width={[1, 1, 1, 1]}
-      mb={[212, 212, 62, 62, 162]}
-    >
+    <Column width={[1, 1, 1, 1]} mb={[0, 0, 0, 0, 162]}>
       <Box width={[1]}>
-        <Heading.h3
-          color='black'
-          align='center'
-          fontFamily='Soleil'
-          fontSize={[24, 24, 32]}
-          lineHeight={['38px', '38px', '44px']}
-          letterSpacing={['-0.38px', '-0.38px', '-0.5px']}
-        >
+        <Heading.h3 color='black' align='center' fontFamily='Soleil'>
           Backed by a rich and vibrant community
         </Heading.h3>
       </Box>
       <Row
-        mt={63}
+        mt={[42, 42, 42, 42, 62]}
         flexWrap={['wrap', 'wrap', 'initial']}
         justifyContent={['space-around', 'space-around', 'center']}
       >
@@ -40,7 +22,7 @@ const CommunityNumbers = () => (
             key={index}
             mt={index > 1 ? [3, 3, 0] : [0]}
             width={[0.5, 0.5, 'auto']}
-            px={4}
+            px={[2, 2, 3, 4, 4]}
           >
             <Heading.h2
               pb={0}
@@ -58,7 +40,7 @@ const CommunityNumbers = () => (
           </Column>
         ))}
       </Row>
-    </ColumnWithCustomMobileMargin>
+    </Column>
   </AppContainer>
 )
 

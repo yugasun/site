@@ -4,7 +4,6 @@ import { Flex, Text, Box } from 'serverless-design-system'
 import videoPosterImage from 'src/assets/images/home/temp-video-image.png'
 import styled from 'styled-components'
 import featuresData from './FeaturesData'
-const Features = ['Intro', 'Develop', 'Deploy', 'Test', 'Secure', 'Monitor']
 
 const HR = styled('hr')`
   width: 100%;
@@ -30,6 +29,7 @@ const StyledSelect = styled('select')`
   letter-spacing: -0.28px;
   font-family: 'SoleilBk';
   outline: none;
+  margin-top: 25px;
 `
 
 const FeatureVideo = styled('video')`
@@ -66,7 +66,7 @@ class HomeFeatureList extends Component {
       <Flex
         flexDirection={['column', 'column', 'column']}
         width={[1]}
-        mt={[3, 3, 2]}
+        mt={[3, 3, 2, 2, 2]}
         alignItems='center'
       >
         <Box display={['none', 'none', 'block']} mb={52}>
@@ -74,7 +74,7 @@ class HomeFeatureList extends Component {
             {featuresData.map(feature => (
               <HoverableText
                 key={feature.name}
-                mx={25}
+                mx={[25]}
                 fontSize={18}
                 lineHeight={'30px'}
                 letterSpacing={'-0.28px'}
@@ -93,10 +93,14 @@ class HomeFeatureList extends Component {
           </Flex>
           <HR />
         </Box>
-        <Box display={['block', 'block', 'none']} mb={32}>
+        <Box display={['block', 'block', 'none']} mb={[45, 45, 32]}>
           <StyledSelect>
             {featuresData.map(feature => (
-              <option value={feature.name} key={feature.name}>
+              <option
+                value={feature.name}
+                key={feature.name}
+                onClick={() => this.updateActiveFeature(feature)}
+              >
                 {feature.name}
               </option>
             ))}

@@ -14,13 +14,9 @@ const settings = {
 
 const FlexFlex = styled(Flex)`
   display: flex !important;
+  justify-content: center;
 `
 
-const FlexWithSmalliPadFix = styled(Flex)`
-  @media screen and (min-width: 768px) and (max-width: 790px) {
-    align-items: normal;
-  }
-`
 const BoxWithBackground = styled(Box)`
   background-color: #eaeaea;
 `
