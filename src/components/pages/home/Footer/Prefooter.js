@@ -8,26 +8,24 @@ import FAQ from './FAQ'
 import CTAButtons from './CTAButtons'
 
 const HomePreFooter = () => (
-  <Background background='black'>
-    <AppContainer>
-      <Flex
-        pt={166}
-        pb={162}
-        flexDirection={['column', 'column', 'column', 'column', 'row']}
-      >
-        <Column width={[1, 1, 1, 1, 0.5]}>
-          <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
-          <FAQ />
-          <CTAButtons />
-        </Column>
-        <Column ml={8}>
-          <TitleWithIcon color='white'>New to serverless?</TitleWithIcon>
-          <P mt={0}>Get started in 3 steps</P>
-          <Terminal />
-        </Column>
-      </Flex>
-    </AppContainer>
-  </Background>
+  <AppContainer>
+    <Flex
+      pt={166}
+      pb={162}
+      flexDirection={['column', 'column', 'column', 'column', 'row']}
+    >
+      <Column width={[1, 1, 1, 1, 0.5]}>
+        <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
+        <FAQ />
+        <CTAButtons />
+      </Column>
+      <Column ml={8}>
+        <TitleWithIcon color='white'>New to serverless?</TitleWithIcon>
+        <P mt={0}>Get started in 3 steps</P>
+        <Terminal />
+      </Column>
+    </Flex>
+  </AppContainer>
 )
 
 export default HomePreFooter
