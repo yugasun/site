@@ -25,15 +25,6 @@ const SidebarMenu = ({ activeLinkTo }) => (
       activeLinkTo={activeLinkTo}
       iconNamePrefix='sls-'
     />
-    <BoxWithBottomBorder ml={60} mb={22} />
-    <MetisMenu
-      content={generatedEnterpriseDocsMenu}
-      iconNameStateVisible='dropdown-icon'
-      iconNameStateHidden='dropdown-icon'
-      classNameLinkActive='active-menu'
-      activeLinkTo={activeLinkTo}
-      iconNamePrefix='sls-'
-    />
   </Box>
 )
 
