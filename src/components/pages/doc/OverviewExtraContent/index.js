@@ -6,7 +6,6 @@ import SearchDocs from './SearchDocs'
 const OverviewExtraContent = () => (
   <React.Fragment>
     <SearchDocs />
-    <FrameworkOptions />
     <ExamplesAndTutorials />
   </React.Fragment>
 )

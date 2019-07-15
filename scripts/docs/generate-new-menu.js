@@ -6,12 +6,12 @@ const config = require('./config')
 const finalMenu = [
   {
     to: '/framework/docs/',
-    label: 'framework open-source',
+    label: 'Serverless Framework Docs',
     icon: 'sls-root-menu',
     content: [
       {
         to: '/framework/docs/getting-started/',
-        label: 'getting started',
+        label: 'get started',
       },
       {
         to: '/examples/',
@@ -70,7 +70,12 @@ function cleanKeys(obj) {
 
 const providersMenuObj = {
   to: '/framework/docs/providers/',
-  label: 'providers',
+  label: 'provider CLI references',
+}
+
+const dashboardMenuObj = {
+  to: '/framework/docs/dashboard/',
+  label: 'dashboard reference',
 }
 
 function menuWithAllChildren(menuObj) {
@@ -90,6 +95,7 @@ function menuWithAllChildren(menuObj) {
 }
 
 finalMenu[0].content.splice(1, 0, menuWithAllChildren(providersMenuObj))
+finalMenu[0].content.splice(2, 0, menuWithAllChildren(dashboardMenuObj))
 generateDocMenu(finalMenu)
 
 function generateDocMenu(data) {
