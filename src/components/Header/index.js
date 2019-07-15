@@ -12,6 +12,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      defaultIsWhiteHeader: props.startWithWhiteHeader ? true : false,
       isWhiteHeader: props.startWithWhiteHeader ? true : false,
       isNavbarActive: false,
       isDesktopView: true,
@@ -55,8 +56,13 @@ class Header extends React.Component {
   toggleNavbarShrinkness = () => {
     this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
-      isWhiteHeader: !prevState.isWhiteHeader,
     }))
+
+    if (this.state.defaultIsWhiteHeader) {
+      this.setState(prevState => ({
+        isWhiteHeader: !prevState.isWhiteHeader,
+      }))
+    }
   }
 
   toggleNavbarTransparency = () =>
