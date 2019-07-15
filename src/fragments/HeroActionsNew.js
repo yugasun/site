@@ -78,7 +78,7 @@ const HeroActions = ({
         className={sClassName}
       >
         <SecondaryButton
-          my={buttonMarginY ? buttonMarginY : 1}
+          my={buttonMarginY ? buttonMarginY : [0, 0, 1]}
           width={buttonWidth ? buttonWidth : ['200px']}
         >
           {sName}

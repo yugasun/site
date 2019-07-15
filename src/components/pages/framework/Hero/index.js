@@ -10,16 +10,13 @@ const HomeHeroComponent = () => (
   <HeroWrapper height={[1150, 1094, 1094, 841, 1009]}>
     <Flex
       justifyContent={['start', 'start', 'space-around']}
-      flexDirection={[
-        'column-reverse',
-        'column-reverse',
-        'column-reverse',
-        'column-reverse',
-        'row',
-      ]}
+      flexDirection={['column-reverse', 'column-reverse', 'row']}
     >
       <HeroImage />
-      <Box width={['auto', 'auto', '90%', '70%', '55%', '488px']}>
+      <Box
+        width={['auto', 'auto', '37%', '40%', '55%', '488px']}
+        ml={[0, 0, 0, 14, 4, 0]}
+      >
         <HeroHeader />
         <Box>
           <HeroActions />

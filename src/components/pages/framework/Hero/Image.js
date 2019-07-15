@@ -28,13 +28,13 @@ const TerminalBackground = styled(Relative)`
 
 const TerminalText = styled(Absolute)`
   @media screen and (max-width: 340px) {
-    margin-left: 6px;
+    margin-left: 24px;
   }
   @media screen and (min-width: 370px) and (max-width: 380px) {
-    margin-left: 38px;
+    margin-left: 4px;
   }
   @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-left: 1px;
+    margin-left: -20px;
   }
 `
 
@@ -45,6 +45,10 @@ const TerminalTextContent = styled(Text.p)`
 `
 
 const BackgroundWithBigScreenCoverage = styled(Background)`
+  @media screen and (min-width: 1025px) and (max-width: 1366px) {
+    width: 530px;
+  }
+
   @media screen and (min-width: 1920px) {
     width: 826px;
   }
@@ -54,20 +58,31 @@ const BackgroundWithBigScreenCoverage = styled(Background)`
   }
 `
 
+const GrayText = ({ children }) => (
+  <Text color='#9b9b9b' fontSize={['8.6px', '8.6px', '10.6px', '14px']}>
+    {children}
+  </Text>
+)
+const BlackText = ({ children }) => (
+  <Text color='#000000' fontSize={['8.6px', '8.6px', '10.6px', '14px']}>
+    {children}
+  </Text>
+)
+
 const HomeHeroImage = () => (
   <Flex
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, 1, 1, '55%']}
-    mt={[5]}
+    width={[1, 1, 0, 0, '55%']}
+    mt={[0, 0, 48]}
   >
     <Position
       zIndex='5'
-      left={[null, null, null, '16.4%', '0']}
+      left={[null, null, 0, '28px', '78px']}
       position={['relative', 'relative', 'absolute']}
     >
       <BackgroundWithBigScreenCoverage
-        width={['auto', 'auto', '680px', '680px', '580px', '680px']}
-        height={['auto', 'auto', '680px', '680px', '580px', '680px']}
+        width={['360px', '360px', '353px', '458px', '580px', '720px']}
+        height={['382px', '382px', '462px', '472px', '580px', '687px']}
         backgroundImage={`url(${TerminalBgImage})`}
         backgroundRepeat='no-repeat'
         backgroundSize='contain'
@@ -78,34 +93,33 @@ const HomeHeroImage = () => (
             flexDirection='column'
             alignItems='center'
             mt={['10%', '10%', '20%']}
+            ml={['-10px']}
           >
-            <TerminalBackground width={['280px', '320px', 1]}>
+            <TerminalBackground width={['280px', '320px', 1, 1, '488px']}>
               <Image src={TerminalImage} />
             </TerminalBackground>
-            <TerminalText mt={['92px', '92px', '102px']}>
+            <TerminalText
+              mt={['42px', '42px', '32px', '52px', '62px']}
+              ml={['-20px', '-20px', '-20px']}
+            >
               <TerminalTextContent
                 color='#727679'
                 fontSize={['10px', '10px', '13.7px']}
                 letterSpacing='0.1px'
               >
-                # Step 1. Install serverless globally
-                <br />
-                <Text.span color='#000'>$ npm install serverless -g</Text.span>
-                <br /> <br /># Step 2. Create a serverless function
-                <br />
-                <Text.span color='#000'>
+                <GrayText># Step 1. Install serverless globally</GrayText>
+                <BlackText>$ npm install serverless -g</BlackText>
+                <br />{' '}
+                <GrayText># Step 2. Create a serverless function</GrayText>
+                <BlackText>
                   $ serverless create --template hello-world
-                </Text.span>
+                </BlackText>
                 <br />
-                <br /># Step 3. deploy to cloud provider
+                <GrayText># Step 3. deploy to cloud provider</GrayText>
+                <BlackText>$ serverless deploy</BlackText>
                 <br />
-                <Text.span color='#000'>$ serverless deploy</Text.span>
-                <br />
-                <br /># Your function is deployed!
-                <br />
-                <Text.span color='#000'>
-                  $ http://xyz.amazonaws.com/hello-world
-                </Text.span>
+                <GrayText># Your function is deployed!</GrayText>
+                <BlackText>$ http://xyz.amazonaws.com/hello-world</BlackText>
               </TerminalTextContent>
             </TerminalText>
           </Flex>
