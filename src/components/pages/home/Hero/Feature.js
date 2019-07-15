@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 
 import { Flex, Text, Box } from 'serverless-design-system'
-import tempVideoImage from 'src/assets/images/home/temp-video-image.png'
-const tempVideo =
-  'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/homepage-video.mp4'
+import videoPosterImage from 'src/assets/images/home/temp-video-image.png'
 import styled from 'styled-components'
+import featuresData from './FeaturesData'
 const Features = ['Intro', 'Develop', 'Deploy', 'Test', 'Secure', 'Monitor']
 
 const HR = styled('hr')`
@@ -52,10 +51,14 @@ const FeatureVideo = styled('video')`
 class HomeFeatureList extends Component {
   state = {
     activeFeature: 'Intro',
+    activeVideoUrl: featuresData.filter(f => f.name === 'Intro')[0].videoUrl,
   }
 
   updateActiveFeature(feature) {
-    this.setState({ activeFeature: feature })
+    this.setState({
+      activeFeature: feature.name,
+      activeVideoUrl: feature.videoUrl,
+    })
   }
 
   render() {
@@ -68,9 +71,9 @@ class HomeFeatureList extends Component {
       >
         <Box display={['none', 'none', 'block']} mb={52}>
           <Flex mb={67}>
-            {Features.map(feature => (
+            {featuresData.map(feature => (
               <HoverableText
-                key={feature}
+                key={feature.name}
                 mx={25}
                 fontSize={18}
                 lineHeight={'30px'}
@@ -78,13 +81,13 @@ class HomeFeatureList extends Component {
                 fontFamily='SoleilBk'
                 pb={'12px'}
                 style={
-                  this.state.activeFeature === feature
+                  this.state.activeFeature === feature.name
                     ? { borderBottom: '2px solid black' }
                     : null
                 }
                 onClick={() => this.updateActiveFeature(feature)}
               >
-                {feature}
+                {feature.name}
               </HoverableText>
             ))}
           </Flex>
@@ -92,15 +95,15 @@ class HomeFeatureList extends Component {
         </Box>
         <Box display={['block', 'block', 'none']} mb={32}>
           <StyledSelect>
-            {Features.map(feature => (
-              <option value={feature} key={feature}>
-                {feature}
+            {featuresData.map(feature => (
+              <option value={feature.name} key={feature.name}>
+                {feature.name}
               </option>
             ))}
           </StyledSelect>
         </Box>
-        <FeatureVideo controls poster={tempVideoImage}>
-          <source src={tempVideo} type='video/mp4' />
+        <FeatureVideo controls poster={videoPosterImage}>
+          <source src={this.state.activeVideoUrl} type='video/mp4' />
         </FeatureVideo>
       </Flex>
     )
