@@ -62,6 +62,8 @@ class HomeFeatureList extends Component {
       activeVideoUrl: feature.videoUrl,
       videoPlaying: true,
     })
+
+    this.setState({ activeVideoId: feature.id })
   }
 
   autoPlayNextVideo() {
