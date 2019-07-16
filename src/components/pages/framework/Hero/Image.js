@@ -107,7 +107,7 @@ const HomeHeroImage = () => (
               <Image src={TerminalImage} />
             </TerminalBackground>
             <TerminalText
-              mt={['42px', '42px', '32px', '52px', '62px']}
+              mt={['42px', '42px', '22px', '52px', '52px']}
               ml={['-20px', '-20px', '-20px']}
             >
               <TerminalTextContent

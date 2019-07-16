@@ -10,7 +10,7 @@ import UseCases from 'src/components/pages/framework/UseCases'
 import Features from 'src/components/pages/framework/Features'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
-import { Background } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
@@ -25,12 +25,14 @@ const FrameWorks = ({ location }) => (
       <UseCases />
       <Lifecycle />
     </AppContainer>
-    <Background background='#f7f7f7'>
-      <AppContainer>
-        <Features />
-        <Pricing />
-      </AppContainer>
-    </Background>
+    <Box mt={162}>
+      <Background background='#f7f7f7'>
+        <AppContainer>
+          <Features />
+          <Pricing />
+        </AppContainer>
+      </Background>
+    </Box>
   </DefaultLayout>
 )
 
