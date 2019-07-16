@@ -6,7 +6,7 @@ import CommunityNumbers from './CommunityNumbers'
 const HomeCommunity = () => (
   <React.Fragment>
     <Box display={['block', 'block', 'none', 'none', 'block']}>
-      <Row mt={[92, 92, 132, 372, 132]} mb={[62, 62, 62, 62, 0]}>
+      <Row mt={[92, 92, 132, 372, 102]} mb={[62, 62, 62, 62, 0]}>
         <CommunityNumbers />
       </Row>
     </Box>

@@ -4,7 +4,7 @@ import { Heading } from 'src/fragments/DesignSystem'
 require('./Logos.css')
 
 const Logos = () => (
-  <Flex pt={[72, 72, 50, 50, 162]} justifyContent='center'>
+  <Flex pt={[72, 72, 50, 50, 132]} justifyContent='center'>
     <Column mt={[5, 5, 6, 6, 0]} mb={[3, 3, 0]}>
       <Heading.h3 align={['center', 'center', 'center']} mb={0}>
         With the power of choice

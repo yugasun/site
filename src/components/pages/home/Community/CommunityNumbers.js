@@ -6,7 +6,7 @@ import { Column, Box, Row } from 'serverless-design-system'
 
 const CommunityNumbers = () => (
   <AppContainer>
-    <Column width={[1, 1, 1, 1]} mb={[0, 0, 0, 0, 162]}>
+    <Column width={[1, 1, 1, 1]} mb={[0, 0, 0, 0, 62]}>
       <Box width={[1]}>
         <Heading.h3 color='black' align='center' fontFamily='Soleil'>
           Backed by a rich and vibrant community
