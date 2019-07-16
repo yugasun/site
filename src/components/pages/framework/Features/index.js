@@ -6,7 +6,7 @@ import DesktopTable from './DesktopTable'
 import TabletTable from './TabletTable'
 
 const FrameworkFeatures = () => (
-  <Box pb={[0, 0, 50, 50, 104]} mb={[4, 4, 0]}>
+  <Box>
     <Heading.h3 pt={[92, 92, 92, 92, 162]} align='center' pb={22}>
       Serverless Framework Features
     </Heading.h3>
