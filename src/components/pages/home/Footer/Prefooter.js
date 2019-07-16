@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Column, Background, Box } from 'serverless-design-system'
+import { Flex, Column, Box } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { AppContainer } from 'src/components'

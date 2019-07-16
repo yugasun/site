@@ -7,7 +7,6 @@ require('./faq.css')
 class FAQ extends React.Component {
   state = {
     accordion: false,
-    activeKey: ['4'],
   }
 
   onChange = activeKey => {
