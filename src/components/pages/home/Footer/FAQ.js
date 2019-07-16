@@ -48,7 +48,12 @@ class FAQ extends React.Component {
   render() {
     const activeKey = this.state.activeKey
     return (
-      <Collapse accordion={true} onChange={this.onChange} activeKey={activeKey}>
+      <Collapse
+        accordion={true}
+        onChange={this.onChange}
+        activeKey={activeKey}
+        showArrow={true}
+      >
         {this.getItems()}
       </Collapse>
     )

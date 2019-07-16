@@ -3,6 +3,13 @@
   border-radius: 3px;
   border-bottom: 1px solid #8c8c8c;
 }
+
+.rc-collapse-header {
+  background: transparent
+    url('../../../../assets/images/home/dropdown-triangle.svg') right center
+    no-repeat;
+}
+
 .rc-collapse-anim-active {
   transition: height 0.2s ease-out;
 }
@@ -26,7 +33,8 @@
   font-family: 'SoleilBk';
   line-height: 30px;
   letter-spacing: -0.28px;
-  width: 80%;
+  width: 100%;
+  padding-right: 95px;
 }
 .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
   display: inline-block;
