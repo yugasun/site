@@ -4,6 +4,7 @@ import { Flex, Text, Box } from 'serverless-design-system'
 import videoPosterImage from 'src/assets/images/home/temp-video-image.png'
 import styled from 'styled-components'
 import featuresData from './FeaturesData'
+import ReactPlayer from 'react-player'
 
 const HR = styled('hr')`
   width: 100%;
@@ -33,9 +34,7 @@ const StyledSelect = styled('select')`
   margin-top: 25px;
 `
 
-const FeatureVideo = styled('video')`
-  width: 982px;
-  height: 529px;
+const FeatureVideo = styled(ReactPlayer)`
   outline: none;
 
   @media screen and (max-width: 1024px) {
@@ -51,15 +50,26 @@ const FeatureVideo = styled('video')`
 
 class HomeFeatureList extends Component {
   state = {
+    activeVideoId: 1,
     activeFeature: 'Intro',
     activeVideoUrl: featuresData.filter(f => f.name === 'Intro')[0].videoUrl,
+    videoPlaying: true,
   }
 
   updateActiveFeature(feature) {
     this.setState({
       activeFeature: feature.name,
       activeVideoUrl: feature.videoUrl,
+      videoPlaying: true,
     })
+  }
+
+  autoPlayNextVideo() {
+    const nextId =
+      this.state.activeVideoId === 6 ? 1 : this.state.activeVideoId + 1
+    const nextIdFeature = featuresData.filter(f => f.id === nextId)[0]
+    this.updateActiveFeature(nextIdFeature)
+    this.setState({ activeVideoId: nextId })
   }
 
   render() {
@@ -107,9 +117,23 @@ class HomeFeatureList extends Component {
             ))}
           </StyledSelect>
         </Box>
-        <FeatureVideo controls poster={videoPosterImage}>
-          <source src={this.state.activeVideoUrl} type='video/mp4' />
-        </FeatureVideo>
+        <FeatureVideo
+          url={this.state.activeVideoUrl}
+          width={['982px']}
+          height={['529px']}
+          controls
+          muted
+          onEnded={() => this.autoPlayNextVideo()}
+          loop={false}
+          playing={this.state.videoPlaying}
+          config={{
+            file: {
+              attributes: {
+                poster: videoPosterImage,
+              },
+            },
+          }}
+        />
       </Flex>
     )
   }
