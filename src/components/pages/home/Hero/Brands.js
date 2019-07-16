@@ -11,7 +11,7 @@ import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 const HomeHeroFooter = () => (
   <AppContainer>
     <Flex
-      mt={[30, 30, 170, 170, 200]}
+      mt={[0, 0, 132, 132, 162]}
       flexDirection={[
         'column-reverse',
         'column-reverse',
