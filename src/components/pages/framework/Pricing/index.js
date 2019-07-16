@@ -62,7 +62,7 @@ const index = props => (
                 <Flex flexDirection='column'>
                   {featureValues[plan].map((thisPlanFeature, index) => (
                     <P
-                      key={thisPlanFeature}
+                      key={thisPlanFeature + Math.random()}
                       color='black'
                       ml={[0, 0, 32, 32, 0]}
                       mt={index == 0 ? [16, 16, 0, 0, 16] : [16]}
@@ -74,7 +74,10 @@ const index = props => (
                 <Box display={['none', 'none', 'none', 'none', 'block']}>
                   <Flex flexDirection='column'>
                     {featureValues[plan].map((thisPlanFeature, index) => (
-                      <Box key={thisPlanFeature + 'icon'} py={'18.5px'}>
+                      <Box
+                        key={thisPlanFeature + 'icon' + Math.random()}
+                        py={'18.5px'}
+                      >
                         <Image src={pricingSuccessIcon} />
                       </Box>
                     ))}
