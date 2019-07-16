@@ -104,10 +104,9 @@ const DevelopersGuide = () => (
                       'row',
                     ]}
                     pt={guide.metaTitle == 'Accelerate' ? 48 : 22}
-                    className={`homepage-guides-${guide.actions[0].text.replace(
-                      ' ',
-                      '-'
-                    )}`}
+                    className={`homepage-guides-${guide.actions[0].text
+                      .split(' ')
+                      .join('-')}`}
                   >
                     <InternalLink to={guide.actions[0].link}>
                       <Button width={[248, 248, 152, 152, 176, 144]}>
