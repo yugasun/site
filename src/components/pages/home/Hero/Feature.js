@@ -5,6 +5,7 @@ import videoPosterImage from 'src/assets/images/home/temp-video-image.png'
 import styled from 'styled-components'
 import featuresData from './FeaturesData'
 import ReactPlayer from 'react-player'
+require('./responsivePlayer.css')
 
 const HR = styled('hr')`
   width: 100%;
@@ -32,20 +33,6 @@ const StyledSelect = styled('select')`
   font-family: 'SoleilBk';
   outline: none;
   margin-top: 25px;
-`
-
-const FeatureVideo = styled(ReactPlayer)`
-  outline: none;
-
-  @media screen and (max-width: 1024px) {
-    width: 613px;
-    height: 328px;
-  }
-
-  @media screen and (max-width: 415px) {
-    width: 286px;
-    height: 154px;
-  }
 `
 
 class HomeFeatureList extends Component {
@@ -119,23 +106,23 @@ class HomeFeatureList extends Component {
             ))}
           </StyledSelect>
         </Box>
-        <FeatureVideo
-          url={this.state.activeVideoUrl}
-          width={['982px']}
-          height={['529px']}
-          controls
-          muted
-          onEnded={() => this.autoPlayNextVideo()}
-          loop={false}
-          playing={this.state.videoPlaying}
-          config={{
-            file: {
-              attributes: {
-                poster: videoPosterImage,
+        <div className='video-player-wrapper'>
+          <ReactPlayer
+            url={this.state.activeVideoUrl}
+            controls
+            muted
+            onEnded={() => this.autoPlayNextVideo()}
+            loop={false}
+            playing={this.state.videoPlaying}
+            config={{
+              file: {
+                attributes: {
+                  poster: videoPosterImage,
+                },
               },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
       </Flex>
     )
   }
