@@ -5,25 +5,34 @@ import styled from 'styled-components'
 
 const TerminalBackground = styled(Flex)`
   background-color: white;
-  width: 592px;
-  height: 380px;
   border-radius: 8px;
   box-shadow: 2px 7px 18px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px rgba(234, 234, 234, 0.3);
-
   position: absolute;
   right: 400px;
-  margin-top: -140px;
-  margin-right: -200px;
 
-  @media screen and (max-width: 1024px) and (min-width: 420px) {
-    width: 433px;
-    height: 288px;
+  @media screen and (min-width: 1800px) {
+    margin-right: -100px;
   }
 
-  @media screen and (max-width: 419px) {
-    width: 300px;
-    height: 196px;
+  @media screen and (min-width: 1350px) and (max-width: 1439px) {
+    width: 513px;
+    height: 420px;
+    margin-top: -130px;
+    margin-right: -260px;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    width: 493px;
+    height: 420px;
+    margin-top: -130px;
+    margin-right: -270px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    right: 0px;
+    margin-left: 20px;
   }
 `
 
@@ -49,7 +58,10 @@ const GrayText = styled(Text)`
 const HomeHeroImage = ({ createCommand }) => (
   <TerminalBackground
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, '453px', 1, '55%']}
+    width={[300, 300, '333px', '433px', '513px', '592px']}
+    height={[250, 250, '238px', '288px', '400px', '380px']}
+    mr={[0, 0, 0, 0, '-240px', '-200px']}
+    mt={[0, 0, 0, 0, '-130px', '-140px']}
   >
     <TerminalTextContent flexDirection='column'>
       <Flex>
