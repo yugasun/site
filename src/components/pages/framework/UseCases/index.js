@@ -44,6 +44,8 @@ class UseCases extends Component {
     activeUseCaseTitle: useCasesData.filter(f => f.id === 'apis')[0].title,
     activeUseCaseDescription: useCasesData.filter(f => f.id === 'apis')[0]
       .description,
+    activeUseCaseCreateCommand: useCasesData.filter(f => f.id === 'apis')[0]
+      .createCommand,
   }
 
   updateActiveUseCase(useCase) {
@@ -51,6 +53,7 @@ class UseCases extends Component {
       activeUseCase: useCase.id,
       activeUseCaseTitle: useCase.title,
       activeUseCaseDescription: useCase.description,
+      activeUseCaseCreateCommand: useCase.createCommand,
     })
   }
 
@@ -114,7 +117,7 @@ class UseCases extends Component {
                 <Actions />
               </Box>
             </Column>
-            <Terminal />
+            <Terminal createCommand={this.state.activeUseCaseCreateCommand} />
             <MobileCTA />
           </Flex>
         </Column>
