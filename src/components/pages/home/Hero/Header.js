@@ -2,10 +2,9 @@ import React from 'react'
 
 import { Column } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
-import { AppContainer } from 'src/components'
 
 const HeroHeader = () => (
-  <Column width={[0.8, 0.8, 0.8, 0.6, 0.5]}>
+  <Column width={[0.8, 0.8, 0.8, 0.6, 0.5]} maxWidth={'832px'}>
     <Heading.h1
       color='#000000'
       mb={0}

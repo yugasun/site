@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Flex, Text, Box } from 'serverless-design-system'
-import videoPosterImage from 'src/assets/images/home/temp-video-image.png'
+import videoPosterImage from 'src/assets/images/home/video-loading-poster.svg'
 import styled from 'styled-components'
 import featuresData from './FeaturesData'
 import ReactPlayer from 'react-player'
@@ -110,6 +110,7 @@ class HomeFeatureList extends Component {
           <ReactPlayer
             url={this.state.activeVideoUrl}
             controls
+            className='react-player'
             muted
             onEnded={() => this.autoPlayNextVideo()}
             loop={false}
