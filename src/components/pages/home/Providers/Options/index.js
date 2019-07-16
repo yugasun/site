@@ -58,6 +58,14 @@ const HoverableText = styled(Text)`
   }
 `
 
+const BackgroundWithBorderRadius = styled(Background)`
+  border-radius: ${props => (props.active ? '4px' : 'null')};
+  box-shadow: ${props =>
+    props.active ? '2px 2px 8px 0 rgba(0, 0, 0, 0.08)' : 'null'};
+  border: ${props =>
+    props.active ? 'solid 1px rgba(234, 234, 234, 0.3)' : 'null'};
+`
+
 class Options extends Component {
   state = {
     activeProviderId: 'aws',
@@ -80,7 +88,7 @@ class Options extends Component {
         <Box display={['none', 'none', 'block']}>
           <Column ml={[0, 0, 0, 82, 32, 72]} mr={[0, 0, 16, 16, 82, 136]}>
             {providers.map(provider => (
-              <Background
+              <BackgroundWithBorderRadius
                 key={provider.id}
                 background={
                   provider.id === this.state.activeProviderId
@@ -89,6 +97,9 @@ class Options extends Component {
                 }
                 height={42}
                 width={[0, 0, 240, 240, 312]}
+                active={
+                  provider.id === this.state.activeProviderId ? true : false
+                }
               >
                 <HoverableText
                   key={provider.id}
@@ -107,7 +118,7 @@ class Options extends Component {
                 >
                   {provider.name}
                 </HoverableText>
-              </Background>
+              </BackgroundWithBorderRadius>
             ))}
           </Column>
         </Box>
