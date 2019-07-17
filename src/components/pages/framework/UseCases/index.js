@@ -108,7 +108,7 @@ class UseCases extends Component {
           </Text>
           <Flex flexDirection={['column', 'column', 'row']}>
             <Column width={[1, 1, 0.5, 0.5, 0.4, 0.4]}>
-              <Box minHeight={[0, 0, 234, 182, 182, 164]}>
+              <Box minHeight={[0, 0, 234, 182, 192, 174]}>
                 <P mb={0} mt={'8px'}>
                   {this.state.activeUseCaseDescription}
                 </P>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { Flex, Text, Box } from 'serverless-design-system'
-import videoPosterImage from 'src/assets/images/home/video-loading-poster.svg'
+import videoPosterImage from 'src/assets/images/home/video-loading-poster.png'
 import styled from 'styled-components'
 import featuresData from './FeaturesData'
 import ReactPlayer from 'react-player'
@@ -106,7 +106,7 @@ class HomeFeatureList extends Component {
             ))}
           </StyledSelect>
         </Box>
-        <div className='video-player-wrapper'>
+        <div className='homepage-video-player-wrapper'>
           <ReactPlayer
             url={this.state.activeVideoUrl}
             controls

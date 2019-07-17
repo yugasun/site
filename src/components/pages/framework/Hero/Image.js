@@ -90,7 +90,7 @@ const HomeHeroImage = () => (
     >
       <BackgroundWithBigScreenCoverage
         width={['325px', '325px', '353px', '458px', '580px', '720px']}
-        height={['382px', '382px', '462px', '472px', '580px', '687px']}
+        height={['337px', '337px', '462px', '472px', '580px', '687px']}
         backgroundImage={`url(${TerminalBgImage})`}
         backgroundRepeat='no-repeat'
         backgroundSize='contain'
@@ -107,7 +107,7 @@ const HomeHeroImage = () => (
               <Image src={TerminalImage} />
             </TerminalBackground>
             <TerminalText
-              mt={['42px', '42px', '22px', '52px', '52px']}
+              mt={['37px', '37px', '22px', '52px', '52px']}
               ml={['-20px', '-20px', '-20px']}
             >
               <TerminalTextContent

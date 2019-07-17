@@ -6,7 +6,7 @@ import { Button } from 'src/fragments/DesignSystem'
 
 const MobileCTA = props => (
   <ExternalLink to={dashboard}>
-    <Box display={['block', 'block', 'none']} mt={42}>
+    <Box display={['block', 'block', 'none']} mt={232}>
       <Button width={['100%', '100%', 176]}>get started free</Button>
     </Box>
   </ExternalLink>

@@ -6,6 +6,9 @@ import Actions from './Actions'
 import useCasesData from './Data'
 import Terminal from './Terminal'
 import styled from 'styled-components'
+import videoPosterImage from 'src/assets/images/home/video-loading-poster.png'
+import ReactPlayer from 'react-player'
+require('./responsivePlayer.css')
 
 const HR = styled('hr')`
   border-color: #eaeaea;
@@ -44,6 +47,8 @@ class UseCases extends Component {
     activeUseCaseTitle: useCasesData.filter(f => f.id === 'intro')[0].title,
     activeUseCaseDescription: useCasesData.filter(f => f.id === 'intro')[0]
       .description,
+    activeUseCaseVideo: useCasesData.filter(f => f.id === 'intro')[0].videoUrl,
+    videoPlaying: false,
   }
 
   updateActiveUseCase(useCase) {
@@ -51,14 +56,37 @@ class UseCases extends Component {
       activeUseCase: useCase.id,
       activeUseCaseTitle: useCase.title,
       activeUseCaseDescription: useCase.description,
+      activeUseCaseVideo: useCase.videoUrl,
+      videoPlaying: true,
     })
   }
 
   render() {
     return (
       <Flex mt={[92, 92, 52, 52, 122]}>
-        <Column width={1}>
-          <Box width={[1, 1, 1, 1, 0.5]}>
+        <Box width={[0, 0, 0, 0, 0.55]}>
+          <Box>
+            <div className='framework-video-player-wrapper'>
+              <ReactPlayer
+                url={this.state.activeUseCaseVideo}
+                controls
+                className='react-player'
+                muted
+                loop={false}
+                playing={this.state.videoPlaying}
+                config={{
+                  file: {
+                    attributes: {
+                      poster: videoPosterImage,
+                    },
+                  },
+                }}
+              />
+            </div>
+          </Box>
+        </Box>
+        <Column width={[1, 1, 1, 1, 0.55]}>
+          <Box width={[1, 1, 1, 1, 1]}>
             <Heading.h3 mb={46} align={['center', 'center', 'left']}>
               The Serverless Application lifecycle
             </Heading.h3>
@@ -104,8 +132,14 @@ class UseCases extends Component {
             {this.state.activeUseCaseTitle}
           </Text>
           <Flex flexDirection={['column', 'column', 'row']}>
-            <Column width={[1, 1, 0.5, 0.5, 0.4, 0.4]}>
-              <Box>
+            <Column width={[1, 1, 0.5, 0.5, 0.8, 0.8]}>
+              <Box
+                minHeight={
+                  this.state.activeUseCaseTitle === 'Intro'
+                    ? [0]
+                    : [0, 0, 234, 182, 150]
+                }
+              >
                 <P mb={0} mt={'8px'}>
                   {this.state.activeUseCaseDescription}
                 </P>
@@ -114,9 +148,8 @@ class UseCases extends Component {
                 <Actions />
               </Box>
             </Column>
-            <Terminal />
-            <MobileCTA />
           </Flex>
+          <MobileCTA />
         </Column>
       </Flex>
     )
