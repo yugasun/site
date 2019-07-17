@@ -13,7 +13,6 @@ const algoliasearch = require('algoliasearch')
 //TODO : Refactor to use filesystem/remark to do this + refactor to avoid repetition
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
-const enterpriseDocsConfig = require('./../scripts/enterprise-docs/config')
 const exampleConfig = require('./../scripts/example/config')
 const kickstartConfig = require('./../scripts/kickstart/config')
 const customConfig = require('./../scripts/custom/config')
@@ -267,42 +266,6 @@ const sourceDocs = createNode => (err, content, _filename, next) => {
     })
 }
 
-const sourceEnterpriseDocs = createNode => (err, content, _filename, next) => {
-  if (err) throw err
-
-  const { data: frontmatter, content: markdownContent } = matter(content)
-  const url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
-
-  unified()
-    .use(markdown)
-    .use(slug)
-    .use(autoLinkHeadings, {
-      content: {
-        type: 'text',
-        value: '#',
-      },
-      linkProperties: {
-        className: 'phenomic-HeadingAnchor',
-      },
-    })
-    .use(html)
-    .use(highlight)
-    .process(markdownContent, (err, file) => {
-      createNode({
-        id: 'enterprise' + url,
-        parent: null,
-        children: [],
-        internal: {
-          type: `Enterprise`,
-          contentDigest: digestCreator(content),
-        },
-        frontmatter,
-        content: String(file),
-      })
-      next()
-    })
-}
-
 const generator = createNode =>
   Promise.all([
     new Promise((resolve, reject) => {
@@ -355,15 +318,6 @@ const generator = createNode =>
         docsConfig.mainSiteDocsPath,
         fileReadingOptions,
         sourceDocs(createNode),
-        resolve
-      )
-    }),
-
-    new Promise((resolve, reject) => {
-      dir.readFiles(
-        enterpriseDocsConfig.mainSiteDocsPath,
-        fileReadingOptions,
-        sourceEnterpriseDocs(createNode),
         resolve
       )
     }),
