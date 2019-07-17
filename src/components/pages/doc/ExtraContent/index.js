@@ -18,7 +18,7 @@ const ExtraContent = ({ gitLink }) => (
     {providers.map(
       provider =>
         gitLink == `/docs/providers/${provider}/README.md` ? (
-          <ProviderBanner provider={provider} />
+          <ProviderBanner provider={provider} key={provider} />
         ) : null
     )}
 
