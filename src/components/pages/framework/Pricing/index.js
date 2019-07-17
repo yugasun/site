@@ -32,7 +32,7 @@ const index = props => (
           <BackgroundWithSmallLaptopFix
             background='white'
             width={['100%', '100%', '100%', '100%', '340px', '384px']}
-            height={[458, 458, 274, 274, 496]}
+            height={[500, 500, 276, 276, 496]}
           >
             <Flex
               flexDirection={['column', 'column', 'row', 'row', 'column']}
