@@ -8,6 +8,7 @@ import Pricing from 'src/components/pages/framework/Pricing'
 import Why from 'src/components/pages/framework/Why'
 import UseCases from 'src/components/pages/framework/UseCases'
 import Features from 'src/components/pages/framework/Features'
+import WhitepaperDownload from 'src/components/pages/framework/Whitepaper'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
@@ -25,12 +26,13 @@ const FrameWorks = ({ location }) => (
       <UseCases />
       <Lifecycle />
     </AppContainer>
-    <Box mt={162}>
+    <Box mt={[92, 92, 92, 92, 162]}>
       <Background background='#f7f7f7'>
         <AppContainer>
           <Features />
           <Pricing />
         </AppContainer>
+        <WhitepaperDownload />
       </Background>
     </Box>
   </DefaultLayout>
