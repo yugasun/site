@@ -7,18 +7,22 @@ const finalMenu = [
   {
     to: '/framework/docs/',
     label: 'overview',
+    className: 'sls-root-menu',
   },
   {
     to: '/framework/docs/getting-started/',
     label: 'get started',
+    className: 'sls-root-menu',
   },
   {
     to: '/examples/',
     label: 'examples',
+    className: 'sls-root-menu',
   },
   {
     to: '/blog/category/guides-and-tutorials/',
     label: 'tutorials',
+    className: 'sls-root-menu',
   },
 ]
 
@@ -68,11 +72,13 @@ function cleanKeys(obj) {
 const providersMenuObj = {
   to: '/framework/docs/providers/',
   label: 'provider CLI references',
+  icon: 'sls-root-menu',
 }
 
 const dashboardMenuObj = {
   to: '/framework/docs/dashboard/',
   label: 'dashboard reference',
+  icon: 'sls-root-menu',
 }
 
 function menuWithAllChildren(menuObj) {

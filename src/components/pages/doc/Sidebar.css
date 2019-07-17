@@ -111,6 +111,11 @@
   padding-left: 1em;
 }
 
+.sls-root-menu .visible {
+  border-left: 1px solid #fd5750;
+  padding-left: 1em;
+}
+
 i.metismenu-icon {
   text-align: center;
   width: 3em;
