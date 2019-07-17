@@ -44,7 +44,7 @@ const ContactSection = ({ title, contents }) => (
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[500, 500, 430]}>
+    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[42, 42, 0, 0, 92]}>
       <Column alignItems={['center', 'center', 'flex-start']}>
         <TitleWithIcon>Contact Us</TitleWithIcon>
       </Column>

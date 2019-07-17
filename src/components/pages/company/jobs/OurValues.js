@@ -78,7 +78,7 @@ const Feature = ({ header, img, content, rightAligned, action }) => (
 )
 
 const OurValues = () => (
-  <Box pb={[300, 300, 12]} mb={[10, 10, 14, 14, 14]} mt={[3, 3, 4, 4, 5]}>
+  <Box mb={[0, 0, 0, 0, 92]} mt={[3, 3, 4, 4, 5]}>
     <AppContainer>
       <Column px={[0, 0, 0, 45]}>
         <Column alignItems='center'>

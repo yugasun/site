@@ -160,12 +160,11 @@ export default class Content extends React.Component {
       <Box>
         <SearchOptions refreshResults={this.handleRefreshResults} />
         <AppContainer>
-          <Box pb={[300, 300, 12]}>
+          <Box pb={[2, 2, 0, 0, 6]}>
             <Flex
               flexDirection={['column', 'column', 'row']}
               flexWrap='wrap'
               justifyContent='left'
-              mb={[200, 200, 230]}
             >
               {this.state.plugins.map((plugin, index) => (
                 <PluginPreview key={`plugin-${index}`} {...plugin} />

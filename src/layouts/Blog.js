@@ -8,6 +8,7 @@ const BlogLayout = ({
   prefooter,
   transparentHeader,
   prefooterOnlyDesktop,
+  customPb,
 }) => {
   const pbMobile = prefooterOnlyDesktop ? 62 : 300
   const prefooterOnlyDesktopBool = prefooterOnlyDesktop ? true : false
@@ -15,7 +16,10 @@ const BlogLayout = ({
   return (
     <Column width={1}>
       <Header transparent={transparentHeader} />
-      <Box width={1} pb={[pbMobile, pbMobile, pbMobile, pbMobile, 250]}>
+      <Box
+        width={1}
+        pb={customPb ? customPb : [pbMobile, pbMobile, pbMobile, pbMobile, 250]}
+      >
         {children}
       </Box>
       <Footer

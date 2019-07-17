@@ -82,7 +82,7 @@ const GuidePage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
     <Helmet {...data.Custom.frontmatter} />
     <AppContainer>
-      <Box width={1} my={10} pb={350}>
+      <Box width={1} mt={10} mb={[62, 62, 0, 0, 112]}>
         <PageContainer>
           <Heading.h1
             align='center'
