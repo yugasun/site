@@ -2,7 +2,6 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { resources, community, company } from 'src/constants/urls'
 import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
 
 const Resource = () => (
@@ -12,7 +11,7 @@ const Resource = () => (
         navProps={{
           to: github,
           backgroundOnHover: true,
-          completed: true,
+          crossDomain: true,
         }}
       >
         github
@@ -44,7 +43,7 @@ const Resource = () => (
       <SubMenuItem
         navProps={{
           to: meetups,
-          crossDomain: true,
+          completed: true,
           backgroundOnHover: true,
         }}
       >

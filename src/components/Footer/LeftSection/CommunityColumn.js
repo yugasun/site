@@ -21,7 +21,7 @@ const CommunityColumn = () => (
       },
       {
         name: 'Meetups',
-        navProps: { to: meetups },
+        navProps: { to: meetups, completed: true },
       },
       {
         name: 'Partners',

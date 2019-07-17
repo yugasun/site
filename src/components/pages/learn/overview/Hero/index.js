@@ -4,7 +4,6 @@ import { Box, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import Description from './Description'
 import Actions from './Actions'
-import HeroTabs from '../../HeroTabs'
 
 const DashboardHero = () => (
   <HeroWrapper
