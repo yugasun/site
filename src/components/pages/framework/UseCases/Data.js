@@ -11,14 +11,14 @@ export default [
     title: 'Fullstack app',
     description: `The Serverless Framework offers the lowest total cost of ownership for building production scale full stack applications. With support for a wide range of runtimes, databases, and front-end frameworks as well as out of the box testing, monitoring, and security there is no more complete solution for building a serverless full stack application.`,
     createCommand:
-      'serverless install -u https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline -n  aws-node-rest-api-with-dynamodb-and-offline',
+      'serverless install -u https://github.com/serverless/examples/tree/master/aws-node-fullstack -n my-project',
   },
   {
     id: 'dataProcessing',
     title: 'Data processing',
     description: `Transforming data and building data pipelines has never been easier. The Serverless Framework provides easy access to AWS Kinesis, SQS, SNS, DynamoDB, and all the other cloud infrastructure you need to build modern, scalable data pipelines. `,
     createCommand:
-      'serverless install -u https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb-and-offline -n  aws-node-rest-api-with-dynamodb-and-offline',
+      'serverless install -u https://github.com/serverless/examples/tree/master/aws-golang-stream-kinesis-to-elasticsearch -n  aws-golang-stream-kinesis-to-elasticsearch',
   },
   {
     id: 'easyAutomation',

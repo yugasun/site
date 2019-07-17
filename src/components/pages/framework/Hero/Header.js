@@ -36,12 +36,8 @@ const HeroHeader = () => (
     </Text>
 
     <P mb={0} mt={42}>
-      A powerful, unified experience to{' '}
-      <RedBottomBorder>develop</RedBottomBorder>,{' '}
-      <RedBottomBorder>deploy</RedBottomBorder>,{' '}
-      <RedBottomBorder>test</RedBottomBorder>,{' '}
-      <RedBottomBorder>secure</RedBottomBorder>, and{' '}
-      <RedBottomBorder>monitor</RedBottomBorder> your Serverless applications.
+      A powerful, unified experience to develop, deploy, test, secure, and
+      monitor your Serverless applications.
     </P>
   </Column>
 )

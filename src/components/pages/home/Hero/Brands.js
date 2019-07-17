@@ -6,12 +6,11 @@ import cocaColaLogo from 'src/assets/images/home/brands/cocacola.svg'
 import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const HomeHeroFooter = () => (
   <AppContainer>
     <Flex
-      mt={[0, 0, 132, 132, 112, 132]}
       flexDirection={[
         'column-reverse',
         'column-reverse',
@@ -59,15 +58,18 @@ const HomeHeroFooter = () => (
           <Image src={reutersLogo} width={['109px']} height={['28px']} />
         </Box>
       </Flex>
-      <Flex
-        width={[1, 1, 0.8, 0.5, 0.41, 0.4]}
-        mt={['92px', '92px', '0', '0', '40px', '20px']}
-        flexDirection='row'
-      >
-        <TitleWithIcon color='#000000'>
+      <Flex width={[1, 1, 0.8, 0.5, 0.41, 0.4]} flexDirection='row'>
+        <Heading.h4
+          fontSize={['18px', '18px', '24px']}
+          lineHeight={['30px', '30px', '38px']}
+          letterSpacing={['-0.28px', '-0.28px', '-0.38px']}
+          align='left'
+          color='#000'
+          pt={[92, 92, 62, 62, 50]}
+        >
           Startups and Fortune 500 companies go serverless with the Serverless
           Framework
-        </TitleWithIcon>
+        </Heading.h4>
       </Flex>
     </Flex>
   </AppContainer>

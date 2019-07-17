@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { AppContainer } from 'src/components'
 import { Flex, Text, Box } from 'serverless-design-system'
 import videoPosterImage from 'src/assets/images/home/video-loading-poster.png'
 import styled from 'styled-components'
@@ -106,24 +106,28 @@ class HomeFeatureList extends Component {
             ))}
           </StyledSelect>
         </Box>
-        <div className='homepage-video-player-wrapper'>
-          <ReactPlayer
-            url={this.state.activeVideoUrl}
-            controls
-            className='react-player'
-            muted
-            onEnded={() => this.autoPlayNextVideo()}
-            loop={false}
-            playing={this.state.videoPlaying}
-            config={{
-              file: {
-                attributes: {
-                  poster: videoPosterImage,
+        <AppContainer>
+          <div className='homepage-video-player-wrapper'>
+            <ReactPlayer
+              url={this.state.activeVideoUrl}
+              controls
+              className='react-player'
+              muted
+              width='100%'
+              height='529px'
+              onEnded={() => this.autoPlayNextVideo()}
+              loop={false}
+              playing={this.state.videoPlaying}
+              config={{
+                file: {
+                  attributes: {
+                    poster: videoPosterImage,
+                  },
                 },
-              },
-            }}
-          />
-        </div>
+              }}
+            />
+          </div>
+        </AppContainer>
       </Flex>
     )
   }

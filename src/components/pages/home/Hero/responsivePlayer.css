@@ -1,5 +1,5 @@
 .homepage-video-player-wrapper video {
-  width: 982px !important;
+  width: 100% !important;
   height: 529px !important;
   outline: none;
 }
