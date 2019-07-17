@@ -7,22 +7,22 @@ const finalMenu = [
   {
     to: '/framework/docs/',
     label: 'overview',
-    className: 'sls-root-menu',
+    icon: 'sls-root-menu',
   },
   {
     to: '/framework/docs/getting-started/',
     label: 'get started',
-    className: 'sls-root-menu',
+    icon: 'sls-root-menu',
   },
   {
     to: '/examples/',
     label: 'examples',
-    className: 'sls-root-menu',
+    icon: 'sls-root-menu',
   },
   {
     to: '/blog/category/guides-and-tutorials/',
     label: 'tutorials',
-    className: 'sls-root-menu',
+    icon: 'sls-root-menu',
   },
 ]
 
