@@ -9,37 +9,35 @@ export default styled(Row)`
   justify-content: space-between;
   width: 100%;
 
-
-    .breadcrumbs {
-      margin: 0;
-      padding: 0;
+  .breadcrumbs {
+    margin: 0;
+    padding: 0;
+  }
+  .item {
+    display: inline-flex;
+    position: relative;
+    a {
+      text-decoration: none;
+      border: none !important;
     }
-    .item {
+    &:after {
+      content: ' › ';
+      color: #a1a1a1;
+      width: 20px;
+      margin: 0 2px;
       display: inline-flex;
-      position: relative;
-      a {
-        text-decoration: none;
-        border: none !important;
-      }
-      &:after {
-        content: ' › ';
-        color: #a1a1a1;
-        width: 20px;
-        margin: 0 2px;
-        display: inline-flex;
-        justify-content: center;
-      }
-      &:first-of-type {
-        margin-left: 0px;
-      }
-      &:last-of-type:after {
-        content: '';
-      }
+      justify-content: center;
     }
-    .current {
-      a {
-        font-weight: 600;
-      }
+    &:first-of-type {
+      margin-left: 0px;
     }
-
+    &:last-of-type:after {
+      content: '';
+    }
+  }
+  .current {
+    a {
+      font-weight: 600;
+    }
+  }
 `

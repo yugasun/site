@@ -32,7 +32,7 @@ const Breadcrumbs = ({
       <List className={`breadcrumbs ${className}`}>
         {pathRoot ? (
           <ListItem key='root' className='item basePath'>
-            <Text.span className='itemInner'>
+            <Text.span className='itemInner' fontFamily='Soleil'>
               <BreadcrumbItem
                 label={pathRoot}
                 pathSegments={[]}

@@ -514,10 +514,10 @@ const Wrapper = styled(Column)`
 
   .breadcrumbs a {
     font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.58px;
+    line-height: 24px;
+    letter-spacing: 0.44px;
     color: #9b9b9b !important;
-    font-family: 'Serverless';
+    font-family: 'Soleil' !important;
   }
 
   .breadCrumbContainer {
