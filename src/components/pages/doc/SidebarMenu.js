@@ -1,8 +1,7 @@
 import React from 'react'
 import { MetisMenu } from 'src/components'
 import generatedDocsMenu from 'src/constants/generated-menu-items-new'
-import generatedEnterpriseDocsMenu from 'src/constants/generated-enterprise-menu-items-new'
-import { Box } from 'serverless-design-system'
+import { Box, Text } from 'serverless-design-system'
 import styled from 'styled-components'
 require('./Sidebar.css')
 
@@ -17,7 +16,17 @@ const BoxWithBottomBorder = styled(Box)`
 `
 
 const SidebarMenu = ({ activeLinkTo }) => (
-  <Box pt={[32, 32, 32, 32, 26]} pr={[28]}>
+  <Box pt={[32, 32, 32, 32, 32]} pr={[28]}>
+    <Text
+      fontSize='16px'
+      lineHeight='24px'
+      letterSpacing='0.44px'
+      fontFamily='SoleilBk'
+      ml={40}
+      mb={'5px'}
+    >
+      Serverless Framework Docs
+    </Text>
     <MetisMenu
       content={generatedDocsMenu}
       iconNameStateVisible='dropdown-icon'

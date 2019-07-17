@@ -6,22 +6,19 @@ const config = require('./config')
 const finalMenu = [
   {
     to: '/framework/docs/',
-    label: 'Serverless Framework Docs',
-    icon: 'sls-root-menu',
-    content: [
-      {
-        to: '/framework/docs/getting-started/',
-        label: 'get started',
-      },
-      {
-        to: '/examples/',
-        label: 'examples',
-      },
-      {
-        to: '/blog/category/guides-and-tutorials/',
-        label: 'tutorials',
-      },
-    ],
+    label: 'overview',
+  },
+  {
+    to: '/framework/docs/getting-started/',
+    label: 'get started',
+  },
+  {
+    to: '/examples/',
+    label: 'examples',
+  },
+  {
+    to: '/blog/category/guides-and-tutorials/',
+    label: 'tutorials',
   },
 ]
 
@@ -94,8 +91,8 @@ function menuWithAllChildren(menuObj) {
   return menuObj
 }
 
-finalMenu[0].content.splice(1, 0, menuWithAllChildren(providersMenuObj))
-finalMenu[0].content.splice(2, 0, menuWithAllChildren(dashboardMenuObj))
+finalMenu.splice(2, 0, menuWithAllChildren(providersMenuObj))
+finalMenu.splice(3, 0, menuWithAllChildren(dashboardMenuObj))
 generateDocMenu(finalMenu)
 
 function generateDocMenu(data) {
