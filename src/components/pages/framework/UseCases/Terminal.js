@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Text } from 'serverless-design-system'
+import { Flex, Text, Box } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const TerminalBackground = styled(Flex)`
@@ -34,6 +34,10 @@ const TerminalBackground = styled(Flex)`
     right: 0px;
     margin-left: 20px;
   }
+
+  @media screen and (max-width: 415px) {
+    margin-left: 0px;
+  }
 `
 
 const TerminalTextContent = styled(Flex)`
@@ -42,30 +46,38 @@ const TerminalTextContent = styled(Flex)`
   letter-spacing: 0.15px;
   margin-left: 32px;
   margin-top: 32px;
-  @media screen and (min-width: 410px) and (max-width: 420px) {
+
+  @media screen and (min-width: 750px) and (max-width: 1024px) {
+    margin-left: 12px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-left: 12px;
     font-size: 11px;
   }
 `
 
 const PurpleText = styled(Text)`
   color: #795da3;
+  overflow: hidden;
 `
 
-const GrayText = styled(Text)`
-  color: #9b9b9b;
-`
-
+const GrayText = ({ children }) => (
+  <Box mr={[1, 1, 3]}>
+    <Text color='#9b9b9b'>{children}</Text>
+  </Box>
+)
 const HomeHeroImage = ({ createCommand }) => (
   <TerminalBackground
     flexDirection={['column', 'column', 'column']}
-    width={[300, 300, '333px', '433px', '513px', '592px']}
-    height={[250, 250, '238px', '288px', '400px', '380px']}
+    width={['100%', '100%', '333px', '433px', '513px', '592px']}
+    height={['260px', '260px', '318px', '288px', '400px', '380px']}
     mr={[0, 0, 0, 0, '-240px', '-200px']}
-    mt={[0, 0, 0, 0, '-130px', '-140px']}
+    mt={[0, 0, '-50px', '-50px', '-130px', '-140px']}
   >
     <TerminalTextContent flexDirection='column'>
       <Flex>
-        <GrayText>1</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <GrayText>1</GrayText>
         <b>Step #1</b> &nbsp;-&nbsp;{' '}
         <PurpleText> npm install serverless -g</PurpleText>
       </Flex>
@@ -74,25 +86,19 @@ const HomeHeroImage = ({ createCommand }) => (
       </Flex>
       <Flex>
         <GrayText>3</GrayText>
-        <GrayText>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Create a new Serverless
-          Service/Project
-        </GrayText>
+        <GrayText># Create a new Serverless Service/Project</GrayText>
       </Flex>
       <Flex>
         <GrayText>4</GrayText>
-        <PurpleText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ {createCommand}</PurpleText>
+        <PurpleText>$ {createCommand}</PurpleText>
       </Flex>
       <Flex>
         <GrayText>5</GrayText>
-        <GrayText>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Change into the newly created
-          directory
-        </GrayText>
+        <GrayText># Change into the newly created directory</GrayText>
       </Flex>
       <Flex>
         <GrayText>6</GrayText>
-        <PurpleText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd my-service</PurpleText>
+        <PurpleText>$ cd my-service</PurpleText>
       </Flex>
     </TerminalTextContent>
   </TerminalBackground>

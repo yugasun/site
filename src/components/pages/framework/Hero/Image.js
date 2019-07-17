@@ -89,7 +89,7 @@ const HomeHeroImage = () => (
       position={['relative', 'relative', 'absolute']}
     >
       <BackgroundWithBigScreenCoverage
-        width={['360px', '360px', '353px', '458px', '580px', '720px']}
+        width={['325px', '325px', '353px', '458px', '580px', '720px']}
         height={['382px', '382px', '462px', '472px', '580px', '687px']}
         backgroundImage={`url(${TerminalBgImage})`}
         backgroundRepeat='no-repeat'

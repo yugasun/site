@@ -16,7 +16,7 @@ const HomeActions = () => (
       completed: true,
       className: 'position-hero',
     }}
-    buttonWidth={['300px', '335px', '152px', '152px', '176px']}
+    buttonWidth={['300px', '325px', '152px', '152px', '176px']}
     flexDirection={['column', 'column', 'row']}
     justifyContent={['center', 'center', 'left']}
     tabletRow={true}
