@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 const RedBottomBorder = styled(Text.span)`
   border-bottom: 1px solid #fd5750;
+  cursor: pointer;
 `
 
 const HeroHeader = () => (

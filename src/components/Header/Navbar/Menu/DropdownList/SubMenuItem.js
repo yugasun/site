@@ -1,12 +1,25 @@
 import React from 'react'
 import { Heading } from 'serverless-design-system'
 import NavLink from 'src/components/NavLink'
+import styled from 'styled-components'
+
+const HeadingWithHover = styled(Heading.h6)`
+  @media screen and (min-width: 1025px) {
+    &:hover {
+      color: #000;
+    }
+  }
+`
 
 const SubMenuItem = ({ children, navProps, defaultColor }) => (
   <NavLink {...navProps} className='header-menu-item'>
-    <Heading.h6 fontSize={'1.76rem'} fontFamily='Soleil'>
+    <HeadingWithHover
+      fontSize={'1.76rem'}
+      fontFamily='SoleilBk'
+      color={['#fff', '#fff', '#fff', '#fff', '#8c8c8c']}
+    >
       {children}
-    </Heading.h6>
+    </HeadingWithHover>
   </NavLink>
 )
 export default SubMenuItem

@@ -60,7 +60,7 @@ const EnterpriseMenu = () => (
 )
 
 const SupportMenu = () => (
-  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 1]}>
+  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 1]} pb={[2, 2, 2, 2, 0]}>
     <HeaderCTAButton />
   </Box>
 )

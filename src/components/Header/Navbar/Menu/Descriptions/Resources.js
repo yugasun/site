@@ -9,25 +9,18 @@ import {
   withBeforeAfter,
 } from 'serverless-design-system'
 import NavbarContext from '.././../../NavbarContext'
+import styled from 'styled-components'
 
 // TODO: remove hardcoded color
-const MenuWrapper = withBeforeAfter(
-  Position,
-  `&`,
-  `
-    content: ' ';
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 30%;
-    top: -10px;
-    margin-left: -7.5px;
-    border-style: solid;
-    border-color: transparent transparent #090915 transparent;
-  `,
-  ``
-)
+const MenuWrapper = withBeforeAfter(Position, `&`)
 
+const BackgroundWithBorder = styled(Background)`
+  @media screen and (min-width: 1025px) {
+    border-radius: 4px;
+    box-shadow: 2px 7px 18px 0 rgba(0, 0, 0, 0.08);
+    border: solid 1px rgba(234, 234, 234, 0.3);
+  }
+`
 const MenuDescription = ({ wrapperStyles, theme, children }) => (
   <NavbarContext.Consumer>
     {({ isNavbarShrinked }) => (
@@ -37,19 +30,21 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
         position={['relative', 'relative', 'relative', 'relative', 'absolute']}
         top={['0', '0', '0', '0', '52px']}
         left={['0', '0', '0', '0', '-50%']}
-        minWidth={[0, 0, 0, 0, '250px']}
+        minWidth={[0, 0, 0, 0, '176px']}
         beforeBoxBorderWidth={[0, 0, 0, 0, '0 7.5px 13.0px 7.5px']}
       >
-        <Background background={['none', 'none', 'none', 'none', '#151515']}>
+        <BackgroundWithBorder
+          background={['none', 'none', 'none', 'none', 'white']}
+        >
           <Box
-            px={[1, 1, 1, 1, 4]}
+            px={[1, 1, 1, 1, 3]}
             pt={[1, 1, 1, 1, 3]}
-            pb={4}
+            pb={[4, 4, 4, 4, 32]}
             {...wrapperStyles}
           >
             {children}
           </Box>
-        </Background>
+        </BackgroundWithBorder>
       </MenuWrapper>
     )}
   </NavbarContext.Consumer>
