@@ -1,16 +1,14 @@
 import React from 'react'
-import { Flex, Column, Box } from 'serverless-design-system'
-import { P } from 'src/fragments/DesignSystem'
+import { Flex, Column } from 'serverless-design-system'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { AppContainer } from 'src/components'
-import Terminal from './Terminal'
 import FAQ from './FAQ'
 import CTAButtons from './CTAButtons'
 
 const HomePreFooter = ({ frameworkPage }) => (
   <AppContainer>
     <Flex
-      pt={frameworkPage ? [62, 62, 92, 92, 162] : [62, 62, 92, 92, 22]}
+      pt={frameworkPage ? [62, 62, 92, 92, 162] : [62, 62, 92, 92, 162, 22]}
       pb={[30, 30, 30, 30, 92]}
       px={[0, 0, 40, 40, 0]}
       flexDirection={['column', 'column', 'column', 'column', 'row']}
@@ -19,13 +17,8 @@ const HomePreFooter = ({ frameworkPage }) => (
       <Column width={[1, 1, 1, 1, 800]}>
         <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
         <FAQ />
-        <Box display={['none', 'none', 'none', 'none', 'block']}>
-          <CTAButtons />
-        </Box>
-      </Column>
-      <Box display={['block', 'block', 'block', 'block', 'none']}>
         <CTAButtons />
-      </Box>
+      </Column>
     </Flex>
   </AppContainer>
 )
