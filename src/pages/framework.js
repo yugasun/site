@@ -14,7 +14,11 @@ import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
 
 const FrameWorks = ({ location }) => (
-  <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
+  <DefaultLayout
+    prefooter={NewToServerlessPrefooter}
+    transparentHeader={true}
+    frameworkPage={true}
+  >
     <Helmet
       title='Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more'
       description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk, AWS Flourish and more.'

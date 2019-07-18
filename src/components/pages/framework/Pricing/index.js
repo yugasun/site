@@ -19,7 +19,7 @@ const BackgroundWithSmallLaptopFix = styled(Background)`
 `
 
 const index = props => (
-  <Box mt={[62, 62, 62, 62, 122]} pb={[62, 62, 62, 62, 142]}>
+  <Box mt={[82, 82, 62, 62, 122]} pb={[62, 62, 62, 62, 142]}>
     <Heading.h3 align='center' mb={[62, 62, 42, 42, 62]}>
       Pricing
     </Heading.h3>
@@ -87,7 +87,10 @@ const index = props => (
                 </Box>
               </Flex>
               <Flex alignItems='center' flexDirection='column'>
-                <P color='black' mt={[16, 16, 0, 0, 16]}>
+                <P
+                  color={pricing[plan] == 'Enterprise' ? 'white' : 'black'}
+                  mt={[16, 16, 0, 0, 16]}
+                >
                   {pricing[plan]}
                 </P>
                 {cta[plan]['link'] === 'internal' ? (

@@ -11,7 +11,7 @@ export default {
   pricing: {
     free: 'Free',
     unlimited: '$99/month',
-    enterprise: 'enterprise',
+    enterprise: 'Enterprise',
   },
   cta: {
     free: {

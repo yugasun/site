@@ -7,10 +7,10 @@ import Terminal from './Terminal'
 import FAQ from './FAQ'
 import CTAButtons from './CTAButtons'
 
-const HomePreFooter = () => (
+const HomePreFooter = ({ frameworkPage }) => (
   <AppContainer>
     <Flex
-      pt={[62, 62, 92, 92, 22]}
+      pt={frameworkPage ? [62, 62, 92, 92, 162] : [62, 62, 92, 92, 22]}
       pb={[30, 30, 30, 30, 92]}
       px={[0, 0, 40, 40, 0]}
       flexDirection={['column', 'column', 'column', 'column', 'row']}

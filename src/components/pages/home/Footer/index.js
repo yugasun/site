@@ -17,7 +17,7 @@ const HR = styled('hr')`
   }
 `
 
-const HomeFooter = props => (
+const HomeFooter = ({ frameworkPage }) => (
   <Background
     backgroundImage={[
       'linear-gradient(150deg,rgb(0,0,0) 60%,#70221f)',
@@ -28,7 +28,7 @@ const HomeFooter = props => (
     ]}
     zIndex='99'
   >
-    <Prefooter />
+    <Prefooter frameworkPage={frameworkPage} />
     <HR />
     <Footer />
   </Background>
