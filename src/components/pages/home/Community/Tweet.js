@@ -3,13 +3,12 @@ import { Background, Flex, Image, Text, Box } from 'serverless-design-system'
 import { P, Heading } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 import { ExternalLink } from 'src/fragments'
-import twitterIcon from 'src/assets/images/home/tweeters/twitter-icon.svg'
 
 const StyledBackground = styled(Background)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px;
+  padding: 62px 32px;
 
   @media screen and (max-width: 415px) {
     min-width: 100%;
@@ -20,7 +19,7 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
   return (
     <StyledBackground
       background={'#eaeaea'}
-      minHeight={[370]}
+      minHeight={[340, 340, 340, 340, 360]}
       width={('100%', '100%', '40%', '80%', '384px')}
     >
       <Box>
@@ -37,7 +36,9 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
             </Flex>
           </Flex>
         </ExternalLink>
-        <P color={'#5b5b5b'}>{tweet}</P>
+        <P color={'#5b5b5b'} mb={0} mt={25}>
+          {tweet}
+        </P>
       </Box>
     </StyledBackground>
   )
