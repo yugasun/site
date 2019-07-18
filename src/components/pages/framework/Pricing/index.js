@@ -19,7 +19,7 @@ const BackgroundWithSmallLaptopFix = styled(Background)`
 `
 
 const index = props => (
-  <Box mt={[62, 62, 62, 62, 142]} pb={[92, 92, 92, 92, 162]}>
+  <Box mt={[62, 62, 62, 62, 142]} pb={[92, 92, 92, 92, 370]}>
     <Heading.h3 align='center' mb={[62, 62, 42, 42, 62]}>
       Pricing that grows with you
     </Heading.h3>

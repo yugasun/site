@@ -32,6 +32,7 @@ const FrameWorks = ({ location }) => (
           <Features />
           <Pricing />
         </AppContainer>
+        <WhitepaperDownload />
       </Background>
     </Box>
   </DefaultLayout>
