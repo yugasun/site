@@ -1,18 +1,17 @@
 import React from 'react'
-import { HeroActionsNew as HeroActions } from 'src/fragments'
-import { framework, docs } from 'src/constants/newUrls'
+import { HeroActionsNewest as HeroActions } from 'src/fragments'
+import { framework } from 'src/constants/newUrls'
 
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
       name: 'get started free',
-      to: framework,
-      completed: true,
       className: 'position-hero',
+      dashboardLink: true,
     }}
     secondBtn={{
       name: 'learn more',
-      to: docs,
+      to: framework,
       completed: true,
       className: 'position-hero',
     }}

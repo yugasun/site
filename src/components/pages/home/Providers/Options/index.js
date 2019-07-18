@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Flex, Column, Text, Background, Box } from 'serverless-design-system'
 import Terminal from './Terminal'
 import { Button } from 'src/fragments/DesignSystem'
+import { DashboardLink } from 'src/fragments'
 import styled from 'styled-components'
 
 const providers = [
@@ -137,7 +138,9 @@ class Options extends Component {
           </Box>
           <Terminal templateName={this.state.activeProviderTemplate} />
           <Flex justifyContent='flex-end' mt={42} mb={[0, 0, 0, 0, 162]}>
-            <Button width={[300, 300, 176]}>get started free</Button>
+            <DashboardLink>
+              <Button width={[300, 300, 176]}>get started free</Button>
+            </DashboardLink>
           </Flex>
         </Column>
       </Flex>
