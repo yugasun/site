@@ -5,7 +5,7 @@ import {
   framework,
   examples,
   why,
-  docs,
+  contactForm,
   enterprise,
 } from 'src/constants/newUrls'
 
@@ -29,7 +29,7 @@ export default [
       'The Serverless CLI lets you get an app deployed to the cloud platform of choice in seconds rather than days. There’s no quicker way to get a POC up and running.',
     actions: [
       { text: 'why serverless?', link: why },
-      { text: 'learn more', link: docs },
+      { text: 'learn more', link: framework },
     ],
   },
   {
@@ -40,7 +40,7 @@ export default [
       'Let us help you accelerate Serverless adoption the right way with training, support, and standardized tooling.',
     actions: [
       { text: 'enterprise support', link: enterprise },
-      { text: 'contact us', link: enterprise },
+      { text: 'contact us', link: contactForm },
     ],
   },
 ]

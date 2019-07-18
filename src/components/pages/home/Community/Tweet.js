@@ -49,7 +49,7 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
           letterSpacing='0'
           fontFamily='Soleil'
         >
-          Twitter | {date}
+          Twitter
         </Text>
       </Flex>
     </StyledBackground>

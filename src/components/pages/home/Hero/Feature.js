@@ -61,6 +61,10 @@ class HomeFeatureList extends Component {
     this.setState({ activeVideoId: nextId })
   }
 
+  toggleVideoPlaying() {
+    this.setState({ videoPlaying: !this.state.videoPlaying })
+  }
+
   render() {
     return (
       <Flex
@@ -82,8 +86,8 @@ class HomeFeatureList extends Component {
                 pb={'12px'}
                 style={
                   this.state.activeFeature === feature.name
-                    ? { borderBottom: '2px solid black' }
-                    : null
+                    ? { borderBottom: '2px solid black', color: '#000' }
+                    : { color: '#8c8c8c' }
                 }
                 onClick={() => this.updateActiveFeature(feature)}
               >
@@ -110,11 +114,11 @@ class HomeFeatureList extends Component {
           <div className='homepage-video-player-wrapper'>
             <ReactPlayer
               url={this.state.activeVideoUrl}
-              controls
               className='react-player'
               muted
               width='100%'
               height='529px'
+              onClick={() => this.toggleVideoPlaying()}
               onEnded={() => this.autoPlayNextVideo()}
               loop={false}
               playing={this.state.videoPlaying}

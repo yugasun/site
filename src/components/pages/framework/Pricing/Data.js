@@ -1,4 +1,4 @@
-import { dashboard, enterprise } from 'src/constants/newUrls'
+import { dashboard, contactForm } from 'src/constants/newUrls'
 
 export default {
   plans: ['free', 'unlimited', 'enterprise'],
@@ -31,7 +31,7 @@ export default {
     },
     enterprise: {
       label: 'contact us',
-      link: enterprise,
+      link: contactForm,
       linkType: 'internal',
     },
   },

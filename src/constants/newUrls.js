@@ -17,4 +17,6 @@ export default {
   team: '/company/overview/',
   jobs: '/company/jobs/',
   contact: 'mailto:hello@serverless.com',
+  gettingStarted: '/framework/docs/getting-started/',
+  contactForm: '/enterprise/contact/',
 }

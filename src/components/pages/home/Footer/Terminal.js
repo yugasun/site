@@ -57,12 +57,10 @@ const Terminal = () => {
           <br />
           &nbsp;3
           <br />
-          &nbsp;4 &nbsp;&nbsp;# Step 2. Create a serverless function
+          &nbsp;4 &nbsp;&nbsp;# Step 2. Create a service
           <br />
           &nbsp;5 &nbsp;&nbsp;
-          <Text.span color='#fff'>
-            $ serverless create --template hello-world
-          </Text.span>
+          <Text.span color='#fff'>$ serverless</Text.span>
           <br />
           &nbsp;6 <br />
           &nbsp;7 &nbsp;&nbsp;# Step 3. deploy to cloud provider
@@ -72,7 +70,7 @@ const Terminal = () => {
           <br />
           &nbsp;9
           <br />
-          10 &nbsp;&nbsp;# Your function is deployed!
+          10 &nbsp;&nbsp;# Your service is deployed!
           <br />
           11 &nbsp;&nbsp;
           <Text.span color='#fff'>

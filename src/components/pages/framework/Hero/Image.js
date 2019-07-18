@@ -117,10 +117,8 @@ const HomeHeroImage = () => (
               >
                 <GrayText># Step 1. Install serverless globally</GrayText>
                 <BlackText>$ npm install serverless -g</BlackText>
-                <GrayText># Step 2. Create a serverless function</GrayText>
-                <BlackText>
-                  $ serverless create --template hello-world
-                </BlackText>
+                <GrayText># Step 2. Create a service</GrayText>
+                <BlackText>$ serverless</BlackText>
                 <GrayText># Step 3. deploy to cloud provider</GrayText>
                 <BlackText>$ serverless deploy</BlackText>
                 <GrayText># Your function is deployed!</GrayText>

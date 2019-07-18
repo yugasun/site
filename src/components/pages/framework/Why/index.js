@@ -22,7 +22,7 @@ const whyData = [
     image: vendorIcon,
     title: 'Vendor agnostic',
     description:
-      'Supports to 8 different cloud providers with a single developer experience, giving you the freedom to pick the proper tool for the job.',
+      'Supports 8 different cloud providers with a single developer experience, giving you the freedom to pick the proper tool for the job.',
   },
 ]
 
