@@ -24,11 +24,21 @@ const BackgroundWithBoxShadow = styled(Background)`
 
 const BackgroundWithCustomHeight = styled(Background)`
   @media screen and (min-width: 1200px) and (max-width: 1350px) {
-    height: 700px;
+    height: 596px;
   }
 
   @media screen and (min-width: 1351px) and (max-width: 1390px) {
-    height: 700px;
+    height: 558px;
+  }
+`
+
+const BoxWithLaptopMarginFix = styled(Box)`
+  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+    margin-top: -225px;
+  }
+
+  @media screen and (min-width: 1351px) and (max-width: 1390px) {
+    margin-top: -241px;
   }
 `
 
@@ -70,11 +80,11 @@ const DevelopersGuide = () => (
             mb={42}
             mx={index === 1 ? [0, 0, 0, 0, '5%', '32px'] : 0}
           >
-            <Box
+            <BoxWithLaptopMarginFix
               mt={
                 index == 0
-                  ? ['-234px', '-234px', '-223px', '-223px', '-250px', '-300px']
-                  : [0, 0, 0, 0, '-250px', '-300px']
+                  ? ['-234px', '-234px', '-223px', '-223px', '-254px', '-300px']
+                  : [0, 0, 0, 0, '-254px', '-300px']
               }
             >
               <Image
@@ -82,7 +92,7 @@ const DevelopersGuide = () => (
                 maxHeight={[234, 234, 446, 446, 300]}
                 maxWidth={[300, 300, 570, 570, '100%', 384]}
               />
-            </Box>
+            </BoxWithLaptopMarginFix>
             <BackgroundWithBoxShadow
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
