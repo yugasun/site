@@ -7,11 +7,13 @@ import TabletTable from './TabletTable'
 
 const FrameworkFeatures = () => (
   <Box>
-    <Heading.h3 pt={[92, 92, 92, 92, 162]} align='center' pb={22}>
+    <Heading.h3
+      pt={[92, 92, 92, 92, 162]}
+      align='center'
+      pb={[22, 22, 22, 22, 42]}
+    >
       Serverless Framework Features
     </Heading.h3>
-    <MobileTable />
-    <TabletTable />
     <DesktopTable />
   </Box>
 )

@@ -10,7 +10,7 @@ const HomeActions = () => (
       className: 'position-hero',
     }}
     secondBtn={{
-      name: 'learn more',
+      name: 'docs',
       to: gettingStarted,
       completed: true,
       className: 'position-hero',
