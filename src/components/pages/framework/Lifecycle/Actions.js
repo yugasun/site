@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeroActionsNew as HeroActions } from 'src/fragments'
+import { HeroActionsNewest as HeroActions } from 'src/fragments'
 import { dashboard, docs } from 'src/constants/newUrls'
 
 const Actions = props => (
@@ -8,14 +8,12 @@ const Actions = props => (
     firstBtn={{
       name: 'get started free',
       to: dashboard,
-      completed: true,
-      className: 'position-hero',
+      dashboardLink: true,
     }}
     secondBtn={{
       name: 'visit docs',
       to: docs,
       completed: true,
-      className: 'position-hero',
     }}
     buttonWidth={['300px', '300px', '176px']}
     flexDirection={['column', 'column', 'row']}
