@@ -147,8 +147,8 @@ class UseCases extends Component {
                     mb={['-9px']}
                     style={
                       useCase.id === this.state.activeUseCase
-                        ? { borderBottom: '2px solid black' }
-                        : null
+                        ? { borderBottom: '2px solid black', color: '#000' }
+                        : { color: '#8c8c8c' }
                     }
                     onClick={() => this.updateActiveUseCase(useCase)}
                   >
