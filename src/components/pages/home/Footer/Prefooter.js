@@ -16,7 +16,7 @@ const HomePreFooter = () => (
       flexDirection={['column', 'column', 'column', 'column', 'row']}
       justifyContent='center'
     >
-      <Column width={[1, 1, 1, 1, 0.5]}>
+      <Column width={[1, 1, 1, 1, 800]}>
         <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
         <FAQ />
         <Box display={['none', 'none', 'none', 'none', 'block']}>
