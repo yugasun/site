@@ -38,7 +38,7 @@ const HomeHeroFooter = () => (
         </Box>
 
         <Box
-          mt={['10px', '10px', '0px']}
+          mt={['10px', '10px', '6px']}
           mr={['10px', '10px', '42px', '10px', '16px', '32px']}
         >
           <Image src={nordstromLogo} width={['115px']} height={['16px']} />
