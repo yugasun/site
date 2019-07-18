@@ -41,13 +41,56 @@ const StyledSelect = styled('select')`
 `
 
 class UseCases extends Component {
-  state = {
-    activeUseCase: 'intro',
-    activeUseCaseTitle: useCasesData.filter(f => f.id === 'intro')[0].title,
-    activeUseCaseDescription: useCasesData.filter(f => f.id === 'intro')[0]
-      .description,
-    activeUseCaseVideo: useCasesData.filter(f => f.id === 'intro')[0].videoUrl,
-    videoPlaying: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeUseCase: 1,
+      activeUseCaseTitle: useCasesData.filter(f => f.id === 1)[0].title,
+      activeUseCaseDescription: useCasesData.filter(f => f.id === 1)[0]
+        .description,
+      activeUseCaseVideo: useCasesData.filter(f => f.id === 1)[0].videoUrl,
+      videoPlaying: false,
+      isMobile: false,
+    }
+
+    this.onScroll = this.onScroll.bind(this)
+  }
+
+  componentDidMount() {
+    if (window) {
+      const isMobile = window.innerWidth <= 420 ? true : false
+      if (isMobile) {
+        this.setState({ isMobile: true })
+      }
+      window.addEventListener('scroll', this.onScroll, false)
+    }
+  }
+
+  componentWillUnmount() {
+    if (window) {
+      window.removeEventListener('scroll', this.onScroll, false)
+    }
+  }
+
+  onScroll() {
+    const scrollY = window.scrollY
+    if (scrollY > 1587 && !this.state.isMobile) {
+      this.setState({ videoPlaying: true })
+    }
+  }
+
+  autoPlayNextVideo() {
+    const nextId =
+      this.state.activeUseCase === 6 ? 1 : this.state.activeUseCase + 1
+    const nextIdFeature = useCasesData.filter(f => f.id === nextId)[0]
+    this.updateActiveUseCase(nextIdFeature)
+    this.setState({ activeUseCase: nextId })
+  }
+
+  toggleVideoPlaying() {
+    if (!this.state.isMobile) {
+      this.setState({ videoPlaying: !this.state.videoPlaying })
+    }
   }
 
   updateActiveUseCase(useCase) {
@@ -68,7 +111,8 @@ class UseCases extends Component {
             <div className='framework-video-player-wrapper'>
               <ReactPlayer
                 url={this.state.activeUseCaseVideo}
-                controls
+                controls={this.state.isMobile ? true : false}
+                onEnded={() => this.autoPlayNextVideo()}
                 className='react-player'
                 muted
                 loop={false}
@@ -99,6 +143,7 @@ class UseCases extends Component {
                     lineHeight={'30px'}
                     letterSpacing={['-0.28px']}
                     mr={[30, 30, 30, 30, '10px', 36]}
+                    onEnded={() => this.autoPlayNextVideo()}
                     mb={['-9px']}
                     style={
                       useCase.id === this.state.activeUseCase

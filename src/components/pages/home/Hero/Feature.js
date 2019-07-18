@@ -41,6 +41,16 @@ class HomeFeatureList extends Component {
     activeFeature: 'Intro',
     activeVideoUrl: featuresData.filter(f => f.name === 'Intro')[0].videoUrl,
     videoPlaying: true,
+    isMobile: false,
+  }
+
+  componentDidMount() {
+    if (window) {
+      const isMobile = window.innerWidth <= 420 ? true : false
+      if (isMobile) {
+        this.setState({ isMobile: true })
+      }
+    }
   }
 
   updateActiveFeature(feature) {
@@ -62,7 +72,9 @@ class HomeFeatureList extends Component {
   }
 
   toggleVideoPlaying() {
-    this.setState({ videoPlaying: !this.state.videoPlaying })
+    if (!this.state.isMobile) {
+      this.setState({ videoPlaying: !this.state.videoPlaying })
+    }
   }
 
   render() {
@@ -116,6 +128,7 @@ class HomeFeatureList extends Component {
               url={this.state.activeVideoUrl}
               className='react-player'
               muted
+              controls={this.state.isMobile ? true : false}
               width='100%'
               height='529px'
               onClick={() => this.toggleVideoPlaying()}
