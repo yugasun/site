@@ -10,7 +10,7 @@ import CTAButtons from './CTAButtons'
 const HomePreFooter = () => (
   <AppContainer>
     <Flex
-      pt={[62, 62, 92, 92, 162]}
+      pt={[62, 62, 92, 92, 22]}
       pb={[30, 30, 30, 30, 92]}
       px={[0, 0, 40, 40, 0]}
       flexDirection={['column', 'column', 'column', 'column', 'row']}
