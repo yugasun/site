@@ -26,8 +26,8 @@ const TerminalTextContent = styled(Flex)`
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.15px;
-  margin-left: 32px;
   margin-top: 32px;
+  margin-left: 32px;
   @media screen and (min-width: 410px) and (max-width: 420px) {
     font-size: 11px;
   }
@@ -48,37 +48,19 @@ const HomeHeroImage = ({ templateName }) => (
   >
     <TerminalTextContent flexDirection='column'>
       <Flex>
-        <GrayText>1</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <b>Step #1</b> &nbsp;-&nbsp;{' '}
-        <PurpleText> npm install serverless -g</PurpleText>
+        <GrayText># Create a new Serverless Service/Project</GrayText>
       </Flex>
       <Flex>
-        <GrayText>2</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;
-      </Flex>
-      <Flex>
-        <GrayText>3</GrayText>
-        <GrayText>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Create a new Serverless
-          Service/Project
-        </GrayText>
-      </Flex>
-      <Flex>
-        <GrayText>4</GrayText>
         <PurpleText>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ serverless create --template &nbsp;
+          $ serverless create --template &nbsp;
           {templateName} --path my-service
         </PurpleText>
       </Flex>
       <Flex>
-        <GrayText>5</GrayText>
-        <GrayText>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Change into the newly created
-          directory
-        </GrayText>
+        <GrayText># Change into the newly created directory</GrayText>
       </Flex>
       <Flex>
-        <GrayText>6</GrayText>
-        <PurpleText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ cd my-service</PurpleText>
+        <PurpleText>$ cd my-service</PurpleText>
       </Flex>
     </TerminalTextContent>
   </TerminalBackground>

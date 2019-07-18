@@ -77,27 +77,15 @@ const HomeHeroImage = ({ createCommand }) => (
   >
     <TerminalTextContent flexDirection='column'>
       <Flex>
-        <GrayText>1</GrayText>
-        <b>Step #1</b> &nbsp;-&nbsp;{' '}
-        <PurpleText> npm install serverless -g</PurpleText>
-      </Flex>
-      <Flex>
-        <GrayText>2</GrayText> &nbsp;&nbsp;&nbsp;&nbsp;
-      </Flex>
-      <Flex>
-        <GrayText>3</GrayText>
         <GrayText># Create a new Serverless Service/Project</GrayText>
       </Flex>
       <Flex>
-        <GrayText>4</GrayText>
         <PurpleText>$ {createCommand}</PurpleText>
       </Flex>
       <Flex>
-        <GrayText>5</GrayText>
         <GrayText># Change into the newly created directory</GrayText>
       </Flex>
       <Flex>
-        <GrayText>6</GrayText>
         <PurpleText>$ cd my-service</PurpleText>
       </Flex>
     </TerminalTextContent>

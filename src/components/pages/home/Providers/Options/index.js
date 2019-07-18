@@ -118,7 +118,7 @@ class Options extends Component {
             </DashboardLink>
             <InternalLink to={providers}>
               <SecondaryButton
-                ml={[0, 0, 0, 0, 32]}
+                ml={[0, 0, 32, 32, 32]}
                 mt={['12px', '12px', 0]}
                 width={['100%', '100%', 176]}
               >
