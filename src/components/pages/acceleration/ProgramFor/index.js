@@ -2,7 +2,7 @@ import React from 'react'
 import { P } from 'src/fragments/DesignSystem'
 import { Flex, Box } from 'serverless-design-system'
 import TitleWithIcon from '../TitleWithIcon'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const WhoIsThisProgramFor = () => (
   <AppContainer>

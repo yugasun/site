@@ -3,7 +3,9 @@ import Link from 'gatsby-link'
 
 import { Logo } from 'serverless-design-system'
 import logo from 'src/assets/images/logo.svg'
+import logoBlack from 'src/assets/images/logo-black.svg'
 import styled from 'styled-components'
+import NavbarContext from './NavbarContext'
 
 const LogoWithDesktopTopMargin = styled(Logo)`
   @media screen and (min-width: 1200px) {
@@ -12,14 +14,18 @@ const LogoWithDesktopTopMargin = styled(Logo)`
 `
 
 const LogoComponent = () => (
-  <Link to='/'>
-    <LogoWithDesktopTopMargin
-      src={logo}
-      height={['21px', '21px', '21px', '55px']}
-      width={['124px', '124px', '124px', '153px']}
-      alt='Serverless'
-    />
-  </Link>
+  <NavbarContext.Consumer>
+    {({ isWhiteHeader, isDesktopView }) => (
+      <Link to='/'>
+        <LogoWithDesktopTopMargin
+          src={isWhiteHeader && isDesktopView ? logoBlack : logo}
+          height={['21px', '21px', '21px', '55px']}
+          width={['124px', '124px', '124px', '153px']}
+          alt='Serverless'
+        />
+      </Link>
+    )}
+  </NavbarContext.Consumer>
 )
 
 export default LogoComponent

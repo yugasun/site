@@ -7,7 +7,7 @@ import {
   Box
 } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import ServerlessUserGroupStack from '../ServerlessUserGroupStack'
 import dotsBackground from 'src/assets/images/dots-background.png'
 import { Heading } from 'src/fragments/DesignSystem'

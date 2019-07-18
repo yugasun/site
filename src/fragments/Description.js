@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Column, Background } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 

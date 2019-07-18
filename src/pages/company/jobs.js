@@ -1,13 +1,13 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/company/jobs/Hero'
 import OpenPositions from 'src/components/pages/company/jobs/OpenPositions'
 import HowWeOperate from 'src/components/pages/company/jobs/HowWeOperate'
 import OurValues from 'src/components/pages/company/jobs/OurValues'
 import {
   Helmet,
-  NewToServerlessPrefooterNew as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 
 const Jobs = ({ location }) => (

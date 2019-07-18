@@ -1,13 +1,13 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { MeetupCard, TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import meetupData from './data'
 
 const UpcomingMeetups = () => (
   <AppContainer>
     <Column alignItems='center' py={[2, 2, 3, 5]}>
-      <TitleWithIcon fontSize={[4, 4, 6, 7]}>Upcoming Events</TitleWithIcon>
+      <TitleWithIcon fontSize={[4, 4, 6, 7]}>Upcoming Meetups</TitleWithIcon>
       <ResponsiveStack flexWrap='wrap' justifyContent='center'>
         {meetupData.map(({ title, schedule, address, attending }) => (
           <MeetupCard

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { push } from 'gatsby-link'
 
-import DefaultLayout from 'src/layouts/Default'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import Helmet from 'src/fragments/Helmet'
 import Modal from 'src/components/Modal/Modal'
 

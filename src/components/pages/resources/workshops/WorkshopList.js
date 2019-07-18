@@ -11,7 +11,7 @@ import {
   Text,
 } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { company } from 'src/constants/urls'
 import workshops from 'src/constants/workshops.json'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'

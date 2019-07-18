@@ -1,11 +1,11 @@
 import React from 'react'
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Helmet } from 'src/fragments'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 import { Box, Heading } from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const PageContent = styled(Box)`
   font-family: 'Soleil';
@@ -82,7 +82,7 @@ const GuidePage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
     <Helmet {...data.Custom.frontmatter} />
     <AppContainer>
-      <Box width={1} my={10} pb={350}>
+      <Box width={1} mt={10} mb={[62, 62, 0, 0, 112]}>
         <PageContainer>
           <Heading.h1
             align='center'

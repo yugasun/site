@@ -1,16 +1,9 @@
 import React from 'react'
-import {
-  Flex,
-  Background,
-  Row,
-  Image,
-  Text,
-  Box,
-} from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { Flex, Background, Image, Text, Box } from 'serverless-design-system'
+import { AppContainer } from 'src/components'
 import guidesData from './Data'
 import { InternalLink } from 'src/fragments'
-import { P, Button } from 'src/fragments/DesignSystem'
+import { P, Button, SecondaryButton } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 require('./guides.css')
 
@@ -31,11 +24,21 @@ const BackgroundWithBoxShadow = styled(Background)`
 
 const BackgroundWithCustomHeight = styled(Background)`
   @media screen and (min-width: 1200px) and (max-width: 1350px) {
-    height: 700px;
+    height: 596px;
   }
 
   @media screen and (min-width: 1351px) and (max-width: 1390px) {
-    height: 700px;
+    height: 558px;
+  }
+`
+
+const BoxWithLaptopMarginFix = styled(Box)`
+  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+    margin-top: -225px;
+  }
+
+  @media screen and (min-width: 1351px) and (max-width: 1390px) {
+    margin-top: -241px;
   }
 `
 
@@ -54,8 +57,8 @@ const TitleText = ({ children, color }) => (
 
 const DevelopersGuide = () => (
   <BackgroundWithCustomHeight
-    background='#f7f7f7'
-    height={[2030, 2030, 2575, 2575, 604]}
+    background={['#f7f7f7', '#f7f7f7', '#f7f7f7', '#f7f7f7', '#000']}
+    height={[2030, 2030, 2575, 2575, 556]}
   >
     <AppContainer>
       <Flex
@@ -77,11 +80,11 @@ const DevelopersGuide = () => (
             mb={42}
             mx={index === 1 ? [0, 0, 0, 0, '5%', '32px'] : 0}
           >
-            <Box
+            <BoxWithLaptopMarginFix
               mt={
                 index == 0
-                  ? ['-234px', '-234px', '-223px', '-223px', '-250px', '-300px']
-                  : [0, 0, 0, 0, '-250px', '-300px']
+                  ? ['-234px', '-234px', '-223px', '-223px', '-254px', '-300px']
+                  : [0, 0, 0, 0, '-254px', '-300px']
               }
             >
               <Image
@@ -89,11 +92,11 @@ const DevelopersGuide = () => (
                 maxHeight={[234, 234, 446, 446, 300]}
                 maxWidth={[300, 300, 570, 570, '100%', 384]}
               />
-            </Box>
+            </BoxWithLaptopMarginFix>
             <BackgroundWithBoxShadow
               background='white'
               maxWidth={[300, 300, 570, 570, '100%', 384]}
-              minHeight={['auto', 'auto', 'auto', 'auto', '522px', 'auto']}
+              minHeight={['auto', 'auto', 'auto', 'auto', '552px', 'auto']}
             >
               <Box py={[42, 42, 52]} px={[26, 26, 118, 118, 32]}>
                 <TitleText color={'#fd5750'}>{guide.metaTitle}</TitleText>
@@ -110,25 +113,23 @@ const DevelopersGuide = () => (
                       'column',
                       'row',
                     ]}
-                    pt={22}
-                    className={`homepage-guides-${guide.actions[0].text.replace(
-                      ' ',
-                      '-'
-                    )}`}
+                    pt={guide.metaTitle == 'Accelerate' ? 48 : 22}
+                    className={`homepage-guides-${guide.actions[0].text
+                      .split(' ')
+                      .join('-')}`}
                   >
                     <InternalLink to={guide.actions[0].link}>
-                      <Button>{guide.actions[0].text}</Button>
+                      <Button width={[248, 248, 152, 152, 176, 144]}>
+                        {guide.actions[0].text}
+                      </Button>
                     </InternalLink>
                     <InternalLink to={guide.actions[1].link}>
-                      <Text
-                        fontSize='16px'
-                        lineHeight='14px'
-                        letterSpacing='0.67px'
-                        color='#fd5750'
-                        mt={[32, 32, 0, 0, 32, 0]}
+                      <SecondaryButton
+                        width={[248, 248, 152, 152, 176, 144]}
+                        mt={['12px', '12px', 0, 0, '12px', 0]}
                       >
                         {guide.actions[1].text}
-                      </Text>
+                      </SecondaryButton>
                     </InternalLink>
                   </Flex.verticallyCenter>
                 </Flex>

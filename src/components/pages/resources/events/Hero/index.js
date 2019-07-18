@@ -12,10 +12,10 @@ const MeetupsHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[380, 380, 490, 470, 490]}
+    height={[380, 380, 530, 510, 530]}
   >
-    <Box mb={[2, 2, 7]}>
-      <HeroTabs selected='events' />
+    <Box mb={[2, 2, 7]} pt={[0, 0, 4]}>
+      <HeroTabs selected='meetups' />
     </Box>
 
     <ResponsiveStack mb={[2, 2, 4, 7]} color='white'>
@@ -27,14 +27,14 @@ const MeetupsHero = () => (
           letterSpacing={'-0.2'}
           m={0}
         >
-          Events
+          Meetups
         </Text.p>
       </Box>
       <Box width={[1, 1, 4 / 5]} pl={[0, 0, 4]} pr={[0, 0, 0]}>
         <PL mt={[3, 3, 3]} mb={3} color='white'>
-          Serverless events are hosted locally in cities all over the world.
-          Events are a great chance to meet other serverless pros and learn more
-          about the technology.
+          Serverless meetups are hosted locally in cities all over the world.
+          Meetups are a great chance to meet other serverless pros and learn
+          more about the technology.
         </PL>
       </Box>
     </ResponsiveStack>

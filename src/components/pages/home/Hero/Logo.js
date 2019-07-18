@@ -1,11 +1,11 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system'
-import sfoLogo from 'src/assets/images/home/sfo-logo.svg'
+import { Image, Box } from 'serverless-design-system'
+import slsHeroLogo from 'src/assets/images/home/sls-home-logo.svg'
 
-const HomeHeroLogo = () => (
-  <Flex width={[1, 1, 1]} mt={[5, 5, 60, 60, 205]} mb={2} flexWrap='wrap'>
-    <Image src={sfoLogo} />
-  </Flex>
+const Logo = props => (
+  <Box mt={[90, 90, 90, 110, 132]} mb={'16px'}>
+    <Image src={slsHeroLogo} width={[230, 230, 1]} />
+  </Box>
 )
 
-export default HomeHeroLogo
+export default Logo

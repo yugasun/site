@@ -2,7 +2,7 @@ import React from 'react'
 import { Background, Text, Flex, Box } from 'serverless-design-system'
 import { Button } from 'src/fragments/DesignSystem'
 import heroBg from 'src/assets/images/acceleration/sap-hero-bg.svg'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import Points from './Points'
 
 const Hero = () => (

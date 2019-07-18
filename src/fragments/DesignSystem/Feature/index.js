@@ -7,7 +7,7 @@ import {
 } from 'serverless-design-system'
 import FeatureItem from './Item'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { Heading } from 'src/fragments/DesignSystem'
 
 const Features = ({ title, description, features, leadingNumber }) => (

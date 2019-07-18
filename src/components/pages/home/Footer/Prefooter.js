@@ -1,33 +1,26 @@
 import React from 'react'
-import { Flex, Column, Background } from 'serverless-design-system'
-import { P } from 'src/fragments/DesignSystem'
+import { Flex, Column } from 'serverless-design-system'
 import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
-import { AppContainerNewest as AppContainer } from 'src/components'
-import Terminal from './Terminal'
+import { AppContainer } from 'src/components'
 import FAQ from './FAQ'
 import CTAButtons from './CTAButtons'
 
-const HomePreFooter = () => (
-  <Background background='black'>
-    <AppContainer>
-      <Flex
-        pt={166}
-        pb={162}
-        flexDirection={['column', 'column', 'column', 'column', 'row']}
-      >
-        <Column width={[1, 1, 1, 1, 0.5]}>
-          <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
-          <FAQ />
-          <CTAButtons />
-        </Column>
-        <Column ml={8}>
-          <TitleWithIcon color='white'>New to serverless?</TitleWithIcon>
-          <P mt={0}>Get started in 3 steps</P>
-          <Terminal />
-        </Column>
-      </Flex>
-    </AppContainer>
-  </Background>
+const HomePreFooter = ({ frameworkPage }) => (
+  <AppContainer>
+    <Flex
+      pt={frameworkPage ? [62, 62, 92, 92, 162] : [62, 62, 92, 92, 162, 22]}
+      pb={[30, 30, 30, 30, 92]}
+      px={[0, 0, 40, 40, 0]}
+      flexDirection={['column', 'column', 'column', 'column', 'row']}
+      justifyContent='center'
+    >
+      <Column width={[1, 1, 1, 1, 800]}>
+        <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
+        <FAQ />
+        <CTAButtons />
+      </Column>
+    </Flex>
+  </AppContainer>
 )
 
 export default HomePreFooter
