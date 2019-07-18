@@ -1,42 +1,11 @@
 import React, { Component } from 'react'
 import { Flex, Column, Text, Background, Box } from 'serverless-design-system'
 import Terminal from './Terminal'
-import { Button } from 'src/fragments/DesignSystem'
-import { DashboardLink } from 'src/fragments'
+import { Button, SecondaryButton } from 'src/fragments/DesignSystem'
+import { DashboardLink, InternalLink } from 'src/fragments'
 import styled from 'styled-components'
-
-const providers = [
-  {
-    id: 'aws',
-    name: 'AWS',
-    template: 'aws-nodejs',
-  },
-  {
-    id: 'gcp',
-    name: 'Google Cloud Platform',
-    template: 'google-nodejs',
-  },
-  {
-    id: 'azure',
-    name: 'Azure',
-    template: 'azure-nodejs',
-  },
-  {
-    id: 'openwhisk',
-    name: 'OpenWhisk',
-    template: 'openwhisk-nodejs',
-  },
-  {
-    id: 'kubeless',
-    name: 'Kubeless',
-    template: 'kubeless-nodejs',
-  },
-  {
-    id: 'cloudflare',
-    name: 'Cloudflare',
-    template: 'cloudflare-workers',
-  },
-]
+import providersData from './Data'
+import { providers } from 'src/constants/newUrls'
 
 const StyledSelect = styled('select')`
   width: 300px;
@@ -74,8 +43,9 @@ class Options extends Component {
   }
 
   updateActiveProvider(providerId) {
-    const activeProviderTemplate = providers.filter(p => p.id === providerId)[0]
-      .template
+    const activeProviderTemplate = providersData.filter(
+      p => p.id === providerId
+    )[0].template
 
     this.setState({
       activeProviderId: providerId,
@@ -88,7 +58,7 @@ class Options extends Component {
       <Flex mt={['12px', '12px', 42, 42, 92]}>
         <Box display={['none', 'none', 'block']}>
           <Column ml={[0, 0, 0, 82, 32, 72]} mr={[0, 0, 16, 16, 82, 136]}>
-            {providers.map(provider => (
+            {providersData.map(provider => (
               <BackgroundWithBorderRadius
                 key={provider.id}
                 background={
@@ -126,7 +96,7 @@ class Options extends Component {
         <Column mx='auto'>
           <Box display={['block', 'block', 'none']} mb={22}>
             <StyledSelect>
-              {providers.map(provider => (
+              {providersData.map(provider => (
                 <option
                   key={provider.id}
                   onClick={() => this.updateActiveProvider(provider.id)}
@@ -137,10 +107,24 @@ class Options extends Component {
             </StyledSelect>
           </Box>
           <Terminal templateName={this.state.activeProviderTemplate} />
-          <Flex justifyContent='flex-end' mt={42} mb={[0, 0, 0, 0, 162]}>
+          <Flex
+            justifyContent='flex-end'
+            mt={42}
+            mb={[0, 0, 0, 0, 162]}
+            flexDirection={['column', 'column', 'row']}
+          >
             <DashboardLink>
               <Button width={[300, 300, 176]}>get started free</Button>
             </DashboardLink>
+            <InternalLink to={providers}>
+              <SecondaryButton
+                ml={[0, 0, 0, 0, 32]}
+                mt={['12px', '12px', 0]}
+                width={['100%', '100%', 176]}
+              >
+                view all providers
+              </SecondaryButton>
+            </InternalLink>
           </Flex>
         </Column>
       </Flex>

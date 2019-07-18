@@ -20,7 +20,7 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
   return (
     <StyledBackground
       background={'#eaeaea'}
-      minHeight={[384]}
+      minHeight={[370]}
       width={('100%', '100%', '40%', '80%', '384px')}
     >
       <Box>
@@ -39,19 +39,6 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
         </ExternalLink>
         <P color={'#5b5b5b'}>{tweet}</P>
       </Box>
-      <Flex>
-        <Image src={twitterIcon} width={'16px'} height={'13px'} />
-        <Text
-          ml={'12px'}
-          color={'#8c8c8c'}
-          fontSize={'12px'}
-          lineHeight='16px'
-          letterSpacing='0'
-          fontFamily='Soleil'
-        >
-          Twitter
-        </Text>
-      </Flex>
     </StyledBackground>
   )
 }

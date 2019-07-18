@@ -18,7 +18,7 @@ const TerminalBackground = styled(Flex)`
 
   @media screen and (max-width: 419px) {
     width: 300px;
-    height: 196px;
+    height: 246px;
   }
 `
 

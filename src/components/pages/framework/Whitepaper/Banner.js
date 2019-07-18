@@ -18,7 +18,7 @@ const DownloadButton = styled(Button)`
 
   &:hover {
     background-color: white;
-    color: #fd5750;
+    color: #b73833;
   }
 `
 

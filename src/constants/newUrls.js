@@ -19,4 +19,5 @@ export default {
   contact: 'mailto:hello@serverless.com',
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
+  providers: '/framework/docs/providers/',
 }
