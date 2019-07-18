@@ -11,8 +11,7 @@ const HeroHeader = () => (
       fontSize={['40px', '40px', '48px']}
       lineHeight={['50px', '50px', '62px']}
       letterSpacing={[0, 0, '0.5px']}
-      align={['left', 'left', 'center']}
-      mt={[90, 90, 90, 110, 132]}
+      align={['center']}
     >
       Build apps with radically less overhead and cost
     </Heading.h1>
