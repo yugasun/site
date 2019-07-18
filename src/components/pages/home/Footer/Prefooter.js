@@ -10,10 +10,11 @@ import CTAButtons from './CTAButtons'
 const HomePreFooter = () => (
   <AppContainer>
     <Flex
-      pt={[122]}
-      pb={[30, 30, 30, 30, 132]}
+      pt={[62, 62, 92, 92, 162]}
+      pb={[30, 30, 30, 30, 92]}
       px={[0, 0, 40, 40, 0]}
       flexDirection={['column', 'column', 'column', 'column', 'row']}
+      justifyContent='center'
     >
       <Column width={[1, 1, 1, 1, 0.5]}>
         <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
@@ -21,11 +22,6 @@ const HomePreFooter = () => (
         <Box display={['none', 'none', 'none', 'none', 'block']}>
           <CTAButtons />
         </Box>
-      </Column>
-      <Column ml={[0, 0, 0, 0, 8]} mt={[92, 92, 136, 136, 0]}>
-        <TitleWithIcon color='white'>New to serverless?</TitleWithIcon>
-        <P mt={0}>Get started in 3 steps</P>
-        <Terminal />
       </Column>
       <Box display={['block', 'block', 'block', 'block', 'none']}>
         <CTAButtons />
