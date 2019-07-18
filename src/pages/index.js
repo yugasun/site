@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 import HomeLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/home/Hero'

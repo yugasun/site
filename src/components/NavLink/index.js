@@ -9,39 +9,43 @@ const getLinkStyle = ({ backgroundOnHover }) => `
   position: relative;
   text-decoration: none;
 
-  ${
-    backgroundOnHover
-      ? `
-      &:before {
-        content: " ";
-        width: 25px;
-        height: 20px;
-        position: absolute;
-        left: -10px;
-        top: -5px;
-        background: url(${dotGridBacground});
-        background-size: cover;
-        display: none;
-
-        @media screen and (max-width: 768px) {
-          background: none;
-        }
-      }
-
-      &:hover {
+  @media screen and (max-width: 1024px) {
+    ${
+      backgroundOnHover
+        ? `
         &:before {
-          display: inline-block;
+          content: " ";
+          width: 25px;
+          height: 20px;
+          position: absolute;
+          left: -10px;
+          top: -5px;
+          background: url(${dotGridBacground});
+          background-size: cover;
+          display: none;
+
+          @media screen and (max-width: 768px) {
+            background: none;
+          }
         }
-      }
-    `
-      : null
+
+        &:hover {
+          &:before {
+            display: inline-block;
+          }
+        }
+      `
+        : null
+    }
   }
 `
 
-const A = styled(({ backgroundOnHover, ...props }) => (<a {...props} />))`
+const A = styled(({ backgroundOnHover, ...props }) => <a {...props} />)`
   ${getLinkStyle};
 `
-const StyledLink = styled(({ backgroundOnHover, ...props }) => (<Link {...props} />))`
+const StyledLink = styled(({ backgroundOnHover, ...props }) => (
+  <Link {...props} />
+))`
   ${getLinkStyle};
 `
 
@@ -51,7 +55,7 @@ const NavLink = ({
   children,
   completed,
   backgroundOnHover,
-  className
+  className,
 }) => {
   if (!completed) {
     return (
@@ -59,14 +63,18 @@ const NavLink = ({
         href={crossDomain ? to : `https://serverless.com${to}`}
         backgroundOnHover={backgroundOnHover}
         target='_blank' // open incomplete and cross domain links in new page
-        className={ className ? `nav-menu-item ${className}` : 'nav-menu-item'}
+        className={className ? `nav-menu-item ${className}` : 'nav-menu-item'}
       >
         {children}
       </A>
     )
   } else {
     return (
-      <StyledLink to={to} backgroundOnHover={backgroundOnHover} className={ className ? `nav-menu-item ${className}` : 'nav-menu-item'}>
+      <StyledLink
+        to={to}
+        backgroundOnHover={backgroundOnHover}
+        className={className ? `nav-menu-item ${className}` : 'nav-menu-item'}
+      >
         {children}
       </StyledLink>
     )

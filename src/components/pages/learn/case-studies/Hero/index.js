@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import HeroTabs from '../../HeroTabs'
+import HeroTabs from 'src/components/pages/plugins/ResourcesHeroTabs'
 import { PL, Heading } from 'src/fragments/DesignSystem'
 
 const ExamplesHero = () => {
@@ -16,7 +16,7 @@ const ExamplesHero = () => {
       height={[422, 422, 491]}
     >
       <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='case-studies' />
+        <HeroTabs selected='case studies' />
       </Box>
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>

@@ -1,25 +1,44 @@
 import React from 'react'
 
-import { TestimonialNew as Testimonial, Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/DefaultNewest'
+import { Helmet } from 'src/fragments'
+import DefaultLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/framework/Hero'
-import UseCase from 'src/components/pages/framework/UseCase'
+import Lifecycle from 'src/components/pages/framework/Lifecycle'
+import Pricing from 'src/components/pages/framework/Pricing'
+import Why from 'src/components/pages/framework/Why'
+import UseCases from 'src/components/pages/framework/UseCases'
 import Features from 'src/components/pages/framework/Features'
-import Compare from 'src/components/pages/framework/Compare'
-import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
+import WhitepaperDownload from 'src/components/pages/framework/Whitepaper'
+import { NewToServerlessPrefooter } from 'src/fragments'
+import { AppContainer } from 'src/components'
+import { Background, Box } from 'serverless-design-system'
 
 const FrameWorks = ({ location }) => (
-  <DefaultLayout prefooter={NewToServerlessPrefooter} transparentHeader>
+  <DefaultLayout
+    prefooter={NewToServerlessPrefooter}
+    transparentHeader={true}
+    frameworkPage={true}
+  >
     <Helmet
       title='Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more'
       description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk, AWS Flourish and more.'
       location={location}
     />
     <Hero />
-    <UseCase />
-    <Testimonial />
-    <Features />
-    <Compare />
+    <AppContainer>
+      <Why />
+      <UseCases />
+      <Lifecycle />
+    </AppContainer>
+    <Box mt={[92, 92, 92, 92, 162]}>
+      <Background background='#f7f7f7'>
+        <AppContainer>
+          <Features />
+          <Pricing />
+        </AppContainer>
+        <WhitepaperDownload />
+      </Background>
+    </Box>
   </DefaultLayout>
 )
 

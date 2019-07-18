@@ -7,7 +7,7 @@ import { Box } from 'src/fragments/DesignSystem'
 import SubscribeBoxes from 'src/components/pages/subscribe/Boxes'
 import SpinningWheels from 'src/components/pages/subscribe/SpinningWheels'
 import EnterpriseContactForm from 'src/components/pages/enterprise/Form/index.js'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const EnterpriseContact = () => (
   <DefaultLayout transparentHeader={true} noFooter={true}>

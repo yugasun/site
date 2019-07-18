@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Flex, Box, Position } from 'serverless-design-system'
 import Testimonial from './TestimonialComp'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/testimonial-background.svg'
 import shamrockLogo from 'src/assets/images/shamrock-logo.png'
 import CaseStudyDownload from '../CaseStudyDownload'

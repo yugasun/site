@@ -6,7 +6,7 @@ import {
   ResponsiveStack,
   Text,
 } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
@@ -44,7 +44,7 @@ const ContactSection = ({ title, contents }) => (
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[500, 500, 430]}>
+    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[42, 42, 0, 0, 92]}>
       <Column alignItems={['center', 'center', 'flex-start']}>
         <TitleWithIcon>Contact Us</TitleWithIcon>
       </Column>

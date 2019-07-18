@@ -14,6 +14,7 @@ import { Button, P } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/logo.svg'
 import 'src/components/SubscribeModal/modal.css'
 import NewsLetterForm from './WhitepaperDownloadForm'
+import WhitepaperDownloadPrefooterBanner from 'src/components/pages/framework/Whitepaper/Banner'
 
 const SubmitButton = props => (
   <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
@@ -185,14 +186,18 @@ class index extends Component {
             </Container>
           </ReactModal>
         </Box>
-        <Button
-          width={[240, 280]}
-          mt={4}
-          mb={[92, 92, 92, 92, 0]}
-          onClick={this.handleModalOpen}
-        >
-          download whitepaper
-        </Button>
+        {this.props.componentToRender === 'whitepaper' ? (
+          <WhitepaperDownloadPrefooterBanner onClick={this.handleModalOpen} />
+        ) : (
+          <Button
+            width={[240, 280]}
+            mt={4}
+            mb={[92, 92, 92, 92, 0]}
+            onClick={this.handleModalOpen}
+          >
+            download whitepaper
+          </Button>
+        )}
       </React.Fragment>
     )
   }

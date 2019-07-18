@@ -1,26 +1,17 @@
 import React from 'react'
 
 import { Column } from 'serverless-design-system'
-import { Heading, MobileCenteredBox } from 'src/fragments/DesignSystem'
-import HeroGithub from './Logo'
-import styled from 'styled-components'
-
-const MobileCenteredTextBox = styled(MobileCenteredBox)`
-  @media screen and (max-width: 415px) {
-    text-align: center;
-  }
-`
+import { Heading } from 'src/fragments/DesignSystem'
 
 const HeroHeader = () => (
-  <Column>
-    <HeroGithub />
+  <Column width={[0.8, 0.8, 0.8, 0.6, 0.5]} maxWidth={'832px'}>
     <Heading.h1
-      color='white'
-      align={['left']}
+      color='#000000'
       mb={0}
       fontSize={['40px', '40px', '48px']}
       lineHeight={['50px', '50px', '62px']}
       letterSpacing={[0, 0, '0.5px']}
+      align={['center']}
     >
       Build apps with radically less overhead and cost
     </Heading.h1>

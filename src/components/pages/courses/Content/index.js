@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import SingleCoursePreview from './SingleCoursePreview'
 import caseStudies from './data'
 
