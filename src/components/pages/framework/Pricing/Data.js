@@ -6,7 +6,7 @@ export default {
   featureValues: {
     free: ['$0/1m/month', 'SaaS', 'Community', '$0/user/month'],
     unlimited: ['$10/1m/month', 'SaaS', 'Best Effort', '$99/user/month'],
-    enterprise: ['custom', 'SaaS/On-Prem', 'Enterprise SLA', 'custom'],
+    enterprise: ['Custom', 'SaaS/On-Prem', 'Enterprise SLA', 'Custom'],
   },
   pricing: {
     free: 'Free',
