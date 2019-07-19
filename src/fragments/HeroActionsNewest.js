@@ -11,9 +11,11 @@ import { InternalLink, DashboardLink } from 'src/fragments'
 
 const FinalLink = ({ dashboardLink, to, children, className }) => {
   return dashboardLink ? (
-    <DashboardLink className={className}>{children}</DashboardLink>
+    <DashboardLink className={className ? className : null}>
+      {children}
+    </DashboardLink>
   ) : (
-    <InternalLink to={to} className={className}>
+    <InternalLink to={to} className={className ? className : null}>
       {children}
     </InternalLink>
   )
