@@ -18,7 +18,7 @@ const BlogLayout = ({
       <Header transparent={transparentHeader} />
       <Box
         width={1}
-        pb={customPb ? customPb : [pbMobile, pbMobile, pbMobile, pbMobile, 250]}
+        pb={customPb ? customPb : [pbMobile, pbMobile, pbMobile, pbMobile, 192]}
       >
         {children}
       </Box>
