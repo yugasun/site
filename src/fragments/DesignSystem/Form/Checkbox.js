@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Checkbox } from 'serverless-design-system'
 import checkedCheckbox from 'src/assets/images/form/checked-checkbox.png'
-import unCheckedRadio from 'src/assets/images/form/unChecked-checkbox.png'
+import uncheckedCheckbox from 'src/assets/images/form/unchecked-checkbox.png'
 
 export default styled(Checkbox)`
   appearance: none;
@@ -16,7 +16,7 @@ export default styled(Checkbox)`
     height: 16px;
     background-position: center;
     background-size: contain;
-    background-image: url(${unCheckedRadio});
+    background-image: url(${uncheckedCheckbox});
     background-repeat: no-repeat;
   }
 
