@@ -1,29 +1,29 @@
 import React from 'react'
 
-import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import Header from './Header'
-import Actions from './Actions'
-import Benefit from './Benefit'
-import background from 'src/assets/images/pages/enterprise/hero-background.svg'
-import backgroundAnimated from 'src/assets/images/pages/enterprise/hero-background-animated.svg'
-import { isSafari, isMobile } from 'react-device-detect'
+import HeroWrapper from './Wrapper'
+import HeroHeader from './Header'
+import HeroImage from './Image'
+import HeroActions from './Actions'
+import { Flex, Box } from 'serverless-design-system'
 
-const FrameworkHero = () => (
-  <HeroWrapper
-    background={
-      isSafari && !isMobile
-        ? `black url(${background})`
-        : `black url(${backgroundAnimated})`
-    }
-    backgroundSize={['contain', 'contain', 'cover']}
-    backgroundPosition={['top', 'top', 'center']}
-    height={[325, 325, 620, 735, 1070, 1190]}
-    backgroundRepeat='no-repeat'
-  >
-    <Header />
-    <Actions />
-    <Benefit />
+const HomeHeroComponent = () => (
+  <HeroWrapper height={[1150, 900, 550, 590, 720, 830]} background='black'>
+    <Flex
+      justifyContent={['start', 'start', 'space-around']}
+      flexDirection={['column-reverse', 'column-reverse', 'row']}
+    >
+      <HeroImage />
+      <Box
+        width={['auto', 'auto', '37%', '40%', '55%', '488px']}
+        ml={[0, 0, 0, 14, 4, 0]}
+      >
+        <HeroHeader />
+        <Box>
+          <HeroActions />
+        </Box>
+      </Box>
+    </Flex>
   </HeroWrapper>
 )
 
-export default FrameworkHero
+export default HomeHeroComponent
