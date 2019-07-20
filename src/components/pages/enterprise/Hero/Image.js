@@ -26,8 +26,8 @@ const HomeHeroImage = () => (
         ]}
         backgroundSize={['cover', 'cover', 'contain']}
         backgroundRepeat='no-repeat'
-        width={[360, 360, 340, 430, 850]}
-        height={[500, 500, 490, 490, 932]}
+        width={[360, 360, 340, 430, 800, 850]}
+        height={[500, 500, 490, 490, 850, 932]}
       />
     </Position>
   </Flex>
