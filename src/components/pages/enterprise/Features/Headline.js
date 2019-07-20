@@ -9,7 +9,7 @@ const Headline = () => (
     color='white'
     align='center'
     fontFamily='Soleil'
-    mb={[0, 0, 0, 0, '10px']}
+    mb={[0, 0, 0, 0, '50px', '10px']}
   >
     Features
   </Text>
