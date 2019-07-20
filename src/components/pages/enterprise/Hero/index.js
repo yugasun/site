@@ -13,7 +13,10 @@ const HomeHeroComponent = () => (
       flexDirection={['column-reverse', 'column-reverse', 'row']}
     >
       <HeroImage />
-      <Box width={['auto', 'auto', '40%', '40%', '55%', '488px']}>
+      <Box
+        width={['auto', 'auto', '40%', '40%', '55%', '488px']}
+        ml={[0, 0, 0, 0, 130, 98]}
+      >
         <HeroHeader />
         <Box>
           <HeroActions />
