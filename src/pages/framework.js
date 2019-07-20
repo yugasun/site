@@ -18,6 +18,7 @@ const FrameWorks = ({ location }) => (
     prefooter={NewToServerlessPrefooter}
     transparentHeader={true}
     frameworkPage={true}
+    startWithWhiteHeader={true}
   >
     <Helmet
       title='Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more'

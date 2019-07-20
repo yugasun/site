@@ -1,40 +1,29 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/DefaultNewest'
+import HomeLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/enterprise/Hero'
 import Features from 'src/components/pages/enterprise/Features'
-import Benefits from 'src/components/pages/enterprise/Benefits'
-import Testimonial from 'src/components/pages/enterprise/Testimonial'
-import Compare from 'src/components/pages/enterprise/Compare'
+import Brands from 'src/components/pages/enterprise/Brands'
+import Form from 'src/components/pages/enterprise/Form'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
+import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Enterprise = ({ location }) => (
-  <DefaultLayout prefooter={NewToServerlessPrefooter}>
+  <HomeLayout prefooter={NewToServerlessPrefooter} startWithWhiteHeader={false}>
     <Helmet title='Serverless Framework Enterprise' location={location} />
     <Hero />
-    <Background
-      background={[
-        'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 74%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 81%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 85%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 77%,#70221f)',
-        `linear-gradient(132deg,rgb(0,0,0) 79%,#70221f)`,
-      ]}
-    >
+    <Background background={'black'}>
       <AppContainer>
         <Features />
-        <Benefits />
+        <Form />
+        <Brands />
+        <WhitepaperDownloadBanner />
       </AppContainer>
     </Background>
-    <Testimonial />
-    <AppContainer>
-      <Compare />
-    </AppContainer>
-  </DefaultLayout>
+  </HomeLayout>
 )
 
 export default Enterprise
