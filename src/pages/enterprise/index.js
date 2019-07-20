@@ -7,7 +7,7 @@ import Features from 'src/components/pages/enterprise/Features'
 import Brands from 'src/components/pages/enterprise/Brands'
 import Form from 'src/components/pages/enterprise/Form'
 import { NewToServerlessPrefooter } from 'src/fragments'
-import { Background } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
@@ -18,10 +18,15 @@ const Enterprise = ({ location }) => (
     <Background background={'black'}>
       <AppContainer>
         <Features />
-        <Form />
+        <Form customPb={[74, 74, 74, 74, 115]} />
         <Brands />
-        <WhitepaperDownloadBanner />
       </AppContainer>
+    </Background>
+
+    <Background background='black'>
+      <Box pb={[0, 0, 0, 0, 0, 142]}>
+        <WhitepaperDownloadBanner />
+      </Box>
     </Background>
   </HomeLayout>
 )

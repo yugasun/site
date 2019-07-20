@@ -3,15 +3,9 @@ import React from 'react'
 import { Column, Text, Image } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
 import boltImage from 'src/assets/images/pages/framework/framework-bolt.svg'
-import styled from 'styled-components'
-
-const RedBottomBorder = styled(Text.span)`
-  border-bottom: 1px solid #fd5750;
-  cursor: pointer;
-`
 
 const HeroHeader = () => (
-  <Column mt={[36, 36, 52, 72, 132]}>
+  <Column mt={[26, 26, 52, 72, 122]}>
     <Image
       src={boltImage}
       width={[42, 42, 42, 42, 54]}
@@ -36,7 +30,7 @@ const HeroHeader = () => (
       enterprise
     </Text>
 
-    <P mb={0} mt={42} color='white'>
+    <P mb={0} mt={42} color='#8c8c8c'>
       Tooling, training, and support to ensure you do Serverless right.
     </P>
   </Column>

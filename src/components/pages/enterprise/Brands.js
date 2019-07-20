@@ -16,7 +16,7 @@ const Brands = props => (
       align='center'
       fontFamily='Soleil'
       mb={[0, 0, 0, 0, '10px']}
-      mt={[4, 4, 3, 3, 0]}
+      mt={[92, 92, 92, 92, 132]}
     >
       Companies who trust us
     </Text>
@@ -27,8 +27,9 @@ const Brands = props => (
       flexWrap='wrap'
       pt={['32px', '32px', '52px']}
       m={[null, null, 'auto']}
+      pb={[92, 92, 92, 92, 132]}
     >
-      <Box>
+      <Box mr={[3, 3, 0]}>
         <Image
           src={eaLogo}
           width={[53, 53, 65, 65, 95]}
@@ -36,7 +37,7 @@ const Brands = props => (
         />
       </Box>
 
-      <Box>
+      <Box mr={[3, 3, 0]}>
         <Image
           src={cocaColaLogo}
           width={[79, 79, 97, 97, 143]}
@@ -52,7 +53,7 @@ const Brands = props => (
         />
       </Box>
 
-      <Box mt={['20px', '20px', '0px']}>
+      <Box mt={['20px', '20px', '0px']} mx={[4, 4, 0]}>
         <Image
           src={expediaLogo}
           width={[95, 95, 117, 117, 172]}

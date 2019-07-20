@@ -1,22 +1,8 @@
 import React from 'react'
 
 import { Flex, Position, Background } from 'serverless-design-system'
-import TerminalBgImage from 'src/assets/images/pages/framework/terminal-graphics.svg'
-import styled from 'styled-components'
-
-const BackgroundWithBigScreenCoverage = styled(Background)`
-  @media screen and (min-width: 1025px) and (max-width: 1366px) {
-    width: 530px;
-  }
-
-  @media screen and (min-width: 1920px) {
-    width: 826px;
-  }
-
-  @media screen and (min-width: 2220px) {
-    width: 1026px;
-  }
-`
+import providersHeroImage from 'src/assets/images/pages/enterprise/providers-hero.png'
+import providersHeroTabletImage from 'src/assets/images/pages/enterprise/providers-hero-tablet.png'
 
 const HomeHeroImage = () => (
   <Flex
@@ -26,16 +12,22 @@ const HomeHeroImage = () => (
   >
     <Position
       zIndex='5'
-      left={[null, null, 0, '28px', '78px']}
-      position={['relative', 'relative', 'absolute']}
+      left={['15px', '15px', 0, '28px', '0']}
+      top={[null, null, '1%']}
+      position={['absolute', 'absolute', 'relative', 'relative', 'absolute']}
     >
-      <BackgroundWithBigScreenCoverage
-        width={['325px', '325px', '353px', '458px', '580px', '720px']}
-        height={['337px', '337px', '462px', '472px', '580px', '687px']}
-        backgroundImage={`url(${TerminalBgImage})`}
+      <Background
+        backgroundImage={[
+          `url(${providersHeroTabletImage})`,
+          `url(${providersHeroTabletImage})`,
+          `url(${providersHeroTabletImage})`,
+          `url(${providersHeroTabletImage})`,
+          `url(${providersHeroImage})`,
+        ]}
+        backgroundSize={['cover', 'cover', 'contain']}
         backgroundRepeat='no-repeat'
-        backgroundSize='contain'
-        backgroundPosition='center'
+        width={[360, 360, 676, 676, 850]}
+        height={[500, 500, 490, 490, 932]}
       />
     </Position>
   </Flex>
