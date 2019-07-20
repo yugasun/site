@@ -13,8 +13,8 @@ const HomeHeroImage = () => (
     <Position
       zIndex='5'
       left={['15px', '15px', 0, '28px', '0']}
-      top={[null, null, '1%']}
-      position={['absolute', 'absolute', 'relative', 'relative', 'absolute']}
+      top={[null, null, '1%', '0', '1%']}
+      position={['absolute']}
     >
       <Background
         backgroundImage={[
@@ -26,7 +26,7 @@ const HomeHeroImage = () => (
         ]}
         backgroundSize={['cover', 'cover', 'contain']}
         backgroundRepeat='no-repeat'
-        width={[360, 360, 676, 676, 850]}
+        width={[360, 360, 340, 430, 850]}
         height={[500, 500, 490, 490, 932]}
       />
     </Position>
