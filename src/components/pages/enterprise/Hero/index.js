@@ -14,8 +14,8 @@ const HomeHeroComponent = () => (
     >
       <HeroImage />
       <Box
-        width={['auto', 'auto', '40%', '40%', '55%', '488px']}
-        ml={[0, 0, 0, 0, 130, 98]}
+        width={['auto', 'auto', '47%', '40%', '55%', '488px']}
+        ml={[0, 0, 0, 330, 130, 98]}
       >
         <HeroHeader />
         <Box>
