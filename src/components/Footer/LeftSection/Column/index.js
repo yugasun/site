@@ -1,21 +1,17 @@
 import React from 'react'
 
-import { Box, P } from 'serverless-design-system'
+import { Box, P, Flex } from 'serverless-design-system'
 import FooterListItem from './Item'
-import styled from 'styled-components'
 import { InternalLink } from 'src/fragments'
 
-const BoxWithMobileMargin = styled(Box)`
-  @media screen and (max-width: 414px) {
-    :nth-child(odd) {
-      margin-right: 48px;
-    }
-  }
-`
-
 // Renders each column in the footer list
-const FooterListColumn = ({ header, headerLink, listItems }) => (
-  <BoxWithMobileMargin mr={39}>
+const FooterListColumn = ({ header, headerLink, listItems, mobileOrder }) => (
+  <Flex
+    mr={[0, 0, 39]}
+    order={[mobileOrder, mobileOrder, 'initial']}
+    flexDirection='column'
+    width={[0.5, 0.5, 'auto']}
+  >
     <P
       color={'white'}
       fontFamily={'Soleil'}
@@ -39,7 +35,7 @@ const FooterListColumn = ({ header, headerLink, listItems }) => (
         <FooterListItem key={index} color='white' content={listItem} />
       ))}
     </Box>
-  </BoxWithMobileMargin>
+  </Flex>
 )
 
 export default FooterListColumn
