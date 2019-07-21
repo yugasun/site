@@ -19,7 +19,8 @@ const Tweet = ({ name, username, tweet, date, image, link }) => {
   return (
     <StyledBackground
       background={'#eaeaea'}
-      minHeight={[340, 340, 340, 340, 360]}
+      minHeight={[340, 340, 343, 343, 360]}
+      maxHeight={['auto', 'auto', 343, 343, 'auto']}
       width={('100%', '100%', '40%', '80%', '384px')}
     >
       <Box>

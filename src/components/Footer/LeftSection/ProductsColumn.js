@@ -3,8 +3,13 @@ import React from 'react'
 import FooterListColumn from './Column'
 import { framework } from 'src/constants/newUrls'
 
-const ProductsColumn = () => (
-  <FooterListColumn header='Product' headerLink={framework} listItems={[]} />
+const ProductsColumn = ({ mobileOrder }) => (
+  <FooterListColumn
+    header='Product'
+    headerLink={framework}
+    listItems={[]}
+    mobileOrder={mobileOrder}
+  />
 )
 
 export default ProductsColumn

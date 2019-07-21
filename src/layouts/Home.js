@@ -6,10 +6,18 @@ import Footer from 'src/components/pages/home/Footer'
 
 //TODO: frameworkPage prop === dirtyPattern - fix
 
-const DefaultLayout = ({ children, transparentHeader, frameworkPage }) => {
+const DefaultLayout = ({
+  children,
+  transparentHeader,
+  frameworkPage,
+  startWithWhiteHeader,
+}) => {
   return (
     <Column width={1}>
-      <Header transparent={transparentHeader} startWithWhiteHeader={true} />
+      <Header
+        transparent={transparentHeader}
+        startWithWhiteHeader={startWithWhiteHeader ? true : false}
+      />
       <Box width={1}>{children}</Box>
       <Footer noPrefooter={true} frameworkPage={frameworkPage} />
     </Column>

@@ -9,8 +9,9 @@ import {
   courses,
 } from 'src/constants/newUrls'
 
-const ResourcesColumn = () => (
+const ResourcesColumn = ({ mobileOrder }) => (
   <FooterListColumn
+    mobileOrder={mobileOrder}
     header='Resources'
     listItems={[
       {

@@ -3,8 +3,9 @@ import React from 'react'
 import FooterListColumn from './Column'
 import { team, jobs, contact } from 'src/constants/newUrls'
 
-const CompanyColumn = () => (
+const CompanyColumn = ({ mobileOrder }) => (
   <FooterListColumn
+    mobileOrder={mobileOrder}
     header='Company'
     listItems={[
       {

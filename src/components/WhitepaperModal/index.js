@@ -10,7 +10,7 @@ import {
   Heading,
 } from 'serverless-design-system'
 import closeIcon from 'src/assets/images/icon-close.png'
-import { Button, P } from 'src/fragments/DesignSystem'
+import { Button, P, SecondaryButton } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/logo.svg'
 import 'src/components/SubscribeModal/modal.css'
 import NewsLetterForm from './WhitepaperDownloadForm'
@@ -189,14 +189,13 @@ class index extends Component {
         {this.props.componentToRender === 'whitepaper' ? (
           <WhitepaperDownloadPrefooterBanner onClick={this.handleModalOpen} />
         ) : (
-          <Button
-            width={[240, 280]}
-            mt={4}
-            mb={[92, 92, 92, 92, 0]}
+          <SecondaryButton
+            as={SecondaryButton}
+            width={['100%', '100%', 176]}
             onClick={this.handleModalOpen}
           >
             download whitepaper
-          </Button>
+          </SecondaryButton>
         )}
       </React.Fragment>
     )

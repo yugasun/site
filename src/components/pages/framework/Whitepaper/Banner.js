@@ -73,47 +73,42 @@ const FlexWithZIndex = styled(Flex)`
 
 const FrameworkWhitepaperBanner = props => (
   <React.Fragment>
-    <Background background='linear-gradient(to bottom, #f7f7f7 60%, #000 40%);'>
-      <Container
-        maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]}
-        pb={3}
-      >
-        <Background background='#fd5750' style={{ display: 'flex' }}>
-          <LeftSpinningWheel
-            backgroundImage={`url(${bannerWheelLeft})`}
-            width='315px'
-            backgroundRepeat='no-repeat'
-          />
-          <FlexWithZIndex
-            flexDirection='column'
-            alignItems='center'
-            justifyContent='center'
-            width={[1, 1, 1, 1, 0.5]}
-            height={[460, 460, 240]}
-          >
-            <Box width={[0.7, 0.7, 0.7, 0.5, 0.8]}>
-              <Text
-                fontSize={[24]}
-                lineHeight={'38px'}
-                letterSpacing={'-0.38px'}
-                color='#fff'
-                fontFamily='Soleil'
-                align='center'
-              >
-                See full architecture diagrams with time-to-market estimates for
-                use cases.
-              </Text>
-            </Box>
-            <DownloadButton {...props}>download whitepaper</DownloadButton>
-          </FlexWithZIndex>
-          <RightSpinningWheel
-            backgroundImage={`url(${bannerWheelRight})`}
-            width={315}
-            backgroundRepeat='no-repeat'
-          />
-        </Background>
-      </Container>
-    </Background>
+    <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3}>
+      <Background background='#fd5750' style={{ display: 'flex' }}>
+        <LeftSpinningWheel
+          backgroundImage={`url(${bannerWheelLeft})`}
+          width='315px'
+          backgroundRepeat='no-repeat'
+        />
+        <FlexWithZIndex
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+          width={[1, 1, 1, 1, 0.5]}
+          height={[460, 460, 240]}
+        >
+          <Box width={[0.7, 0.7, 0.7, 0.5, 0.8]}>
+            <Text
+              fontSize={[24]}
+              lineHeight={'38px'}
+              letterSpacing={'-0.38px'}
+              color='#fff'
+              fontFamily='Soleil'
+              align='center'
+            >
+              See full architecture diagrams with time-to-market estimates for
+              use cases.
+            </Text>
+          </Box>
+          <DownloadButton {...props}>download whitepaper</DownloadButton>
+        </FlexWithZIndex>
+        <RightSpinningWheel
+          backgroundImage={`url(${bannerWheelRight})`}
+          width={315}
+          backgroundRepeat='no-repeat'
+        />
+      </Background>
+    </Container>
   </React.Fragment>
 )
 
