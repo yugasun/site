@@ -5,13 +5,13 @@ export default {
   featureLabels: ['Transactions', 'Installation', 'Support', 'Team Seats'],
   featureValues: {
     free: ['$0/1m/month', 'SaaS', 'Community', '$0/user/month'],
-    unlimited: ['$10/1m/month', 'SaaS', 'Best Effort', '$99/user/month'],
+    unlimited: ['$10/1m/month', 'SaaS', 'Community', '$99/user/month'],
     enterprise: ['Custom', 'SaaS/On-Prem', 'Enterprise SLA', 'Custom'],
   },
   pricing: {
-    free: 'Free',
-    unlimited: '$99/month',
-    enterprise: 'Enterprise',
+    free: '',
+    unlimited: '',
+    enterprise: '',
   },
   cta: {
     free: {
