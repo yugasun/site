@@ -1,6 +1,7 @@
 import jasonImage from 'src/assets/images/home/tweeters/jason.png'
 import tylerImage from 'src/assets/images/home/tweeters/tyler.png'
 import philippImage from 'src/assets/images/home/tweeters/philipp.png'
+import davidImage from 'src/assets/images/home/tweeters/david.png'
 import papaImage from 'src/assets/images/home/tweeters/papa.png'
 import twitterWhiteIcon from 'src/assets/images/home/tweeters/twitter-icon-white.svg'
 
@@ -48,16 +49,16 @@ export default [
     dateColor: '#8c8c8c',
   },
   {
-    image: philippImage,
-    name: 'Philipp Heuberger',
+    image: davidImage,
+    name: 'David Welch',
     nameColor: '#fff',
-    username: '@lowestdef',
+    username: '@david_welch',
     usernameColor: '#fff',
     tweet:
-      'Doing serverless work for a client right now. Re-built a simple microservice in @goserverless and managed to replace 2 Java instances (staging and production). Operational costs before: $60/mo. Now $0.09/mo. Not too bad.',
+      'Built our platform on @goserverless with 2 engineers working nights and mornings for the first 14 months. Didn’t pay a dime until 16 months in, have scaled to 10+ employees w exp from 0 to senior, very agile w CI/CD, couldn’t have made a better choice',
     tweetColor: '#f7f7f7',
-    date: 'Feb 28th',
-    link: 'https://twitter.com/lowestdef/status/1101167423577882624',
+    date: 'Jul 24th',
+    link: 'https://twitter.com/david_welch/status/1154042781251149824',
     bgColor: '#fd5750',
     dateColor: '#fff',
     customTwitterIcon: twitterWhiteIcon,
