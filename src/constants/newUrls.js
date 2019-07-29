@@ -20,4 +20,6 @@ export default {
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
   providers: '/framework/docs/providers/',
+  championsDeck:
+    'https://docs.google.com/presentation/d/1LaHodp_UKJd5j8hjNkGUhgHpNaQk-30boF_do4CYOxw/edit?usp=sharing',
 }
