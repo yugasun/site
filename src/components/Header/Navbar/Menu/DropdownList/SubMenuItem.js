@@ -4,7 +4,7 @@ import NavLink from 'src/components/NavLink'
 import styled from 'styled-components'
 
 const HeadingWithHover = styled(Heading.h6)`
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1280px) {
     &:hover {
       color: #000;
     }

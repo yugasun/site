@@ -15,7 +15,7 @@ import styled from 'styled-components'
 const MenuWrapper = withBeforeAfter(Position, `&`)
 
 const BackgroundWithBorder = styled(Background)`
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1280px) {
     border-radius: 4px;
     box-shadow: 2px 7px 18px 0 rgba(0, 0, 0, 0.08);
     border: solid 1px rgba(234, 234, 234, 0.3);
