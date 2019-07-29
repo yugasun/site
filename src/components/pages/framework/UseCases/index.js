@@ -39,13 +39,24 @@ const StyledSelect = styled('select')`
 `
 
 class UseCases extends Component {
-  state = {
-    activeUseCase: 'apis',
-    activeUseCaseTitle: useCasesData.filter(f => f.id === 'apis')[0].title,
-    activeUseCaseDescription: useCasesData.filter(f => f.id === 'apis')[0]
-      .description,
-    activeUseCaseCreateCommand: useCasesData.filter(f => f.id === 'apis')[0]
-      .createCommand,
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeUseCase: 'apis',
+      activeUseCaseTitle: useCasesData.filter(f => f.id === 'apis')[0].title,
+      activeUseCaseDescription: useCasesData.filter(f => f.id === 'apis')[0]
+        .description,
+      activeUseCaseCreateCommand: useCasesData.filter(f => f.id === 'apis')[0]
+        .createCommand,
+    }
+    this.updateActiveUseCaseMobile = this.updateActiveUseCaseMobile.bind(this)
+    this.updateActiveUseCase = this.updateActiveUseCase.bind(this)
+  }
+
+  updateActiveUseCaseMobile(event) {
+    const useCaseId = event.target.value
+    const useCase = useCasesData.filter(f => f.id === useCaseId)[0]
+    this.updateActiveUseCase(useCase)
   }
 
   updateActiveUseCase(useCase) {
@@ -90,9 +101,11 @@ class UseCases extends Component {
               <HR />
             </Box>
             <Box display={['block', 'block', 'none']}>
-              <StyledSelect onChange={() => this.updateActiveUseCase()}>
+              <StyledSelect onChange={this.updateActiveUseCaseMobile}>
                 {useCasesData.map(useCase => (
-                  <option key={useCase.id}>{useCase.title}</option>
+                  <option key={useCase.id} value={useCase.id}>
+                    {useCase.title}
+                  </option>
                 ))}
               </StyledSelect>
             </Box>

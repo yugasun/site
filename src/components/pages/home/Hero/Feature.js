@@ -125,11 +125,7 @@ class HomeFeatureList extends Component {
         <Box display={['block', 'block', 'none']} mb={[45, 45, 32]}>
           <StyledSelect onChange={this.updateActiveFeatureMobile}>
             {featuresData.map(feature => (
-              <option
-                value={feature.name}
-                key={feature.name}
-                data-value={feature}
-              >
+              <option value={feature.name} key={feature.name}>
                 {feature.name}
               </option>
             ))}

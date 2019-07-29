@@ -40,6 +40,8 @@ const StyledSelect = styled('select')`
   outline: none;
 `
 
+//TODO: update keys from useCase to lifecycle
+
 class UseCases extends Component {
   constructor(props) {
     super(props)
@@ -54,6 +56,7 @@ class UseCases extends Component {
     }
 
     this.onScroll = this.onScroll.bind(this)
+    this.updateActiveUseCaseMobile = this.updateActiveUseCaseMobile.bind(this)
   }
 
   componentDidMount() {
@@ -91,6 +94,12 @@ class UseCases extends Component {
     if (!this.state.isMobile) {
       this.setState({ videoPlaying: !this.state.videoPlaying })
     }
+  }
+
+  updateActiveUseCaseMobile(event) {
+    const useCaseTitle = event.target.value
+    const useCase = useCasesData.filter(f => f.title === useCaseTitle)[0]
+    this.updateActiveUseCase(useCase)
   }
 
   updateActiveUseCase(useCase) {
@@ -159,9 +168,11 @@ class UseCases extends Component {
               <HR />
             </Box>
             <Box display={['block', 'block', 'none']}>
-              <StyledSelect onChange={() => this.updateActiveUseCase()}>
+              <StyledSelect onChange={this.updateActiveUseCaseMobile}>
                 {useCasesData.map(useCase => (
-                  <option key={useCase.id}>{useCase.title}</option>
+                  <option key={useCase.id} value={useCase.title}>
+                    {useCase.title}
+                  </option>
                 ))}
               </StyledSelect>
             </Box>
