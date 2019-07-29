@@ -24,7 +24,7 @@ class Header extends React.Component {
   componentDidMount() {
     if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
-      if (window.innerWidth < 1025) {
+      if (window.innerWidth < 1280) {
         this.setState({ isDesktopView: false })
       }
     }
@@ -33,7 +33,7 @@ class Header extends React.Component {
   componentWillUnmount() {
     if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
-      if (window.innerWidth < 1025) {
+      if (window.innerWidth < 1280) {
         this.setState({ isDesktopView: false })
       }
     }
