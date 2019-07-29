@@ -14,7 +14,7 @@ const HeadingWithHover = styled(Heading.h6)`
 const SubMenuItem = ({ children, navProps, defaultColor }) => (
   <NavLink {...navProps} className='header-menu-item'>
     <HeadingWithHover
-      fontSize={'1.76rem'}
+      fontSize={'16px'}
       fontFamily='SoleilBk'
       color={['#fff', '#fff', '#fff', '#fff', '#8c8c8c']}
     >
