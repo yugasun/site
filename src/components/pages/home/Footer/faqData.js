@@ -1,5 +1,7 @@
 import React from 'react'
 import { P } from 'serverless-design-system'
+import { ExternalLink } from 'src/fragments'
+import { championsDeck } from 'src/constants/newUrls'
 
 const renderContents = contents => (
   <React.Fragment>
@@ -57,7 +59,17 @@ export default [
   {
     question: 'How can I convince my organization to adopt Serverless?',
     answer: renderContents([
-      'The best way to convince your organization to adopt to Serverless is to show them the results. Sign up for a free Serverless Framework account and build a POC showing the power of Serverless. You can also download our Serverless Champions Deck to give an internal presentation on the business value that Serverless delivers. ',
+      <React.Fragment>
+        The best way to convince your organization to adopt to Serverless is to
+        show them the results. Sign up for a free Serverless Framework account
+        and build a POC showing the power of Serverless. You can also download
+        our{' '}
+        <ExternalLink to={championsDeck}>
+          Serverless Champions Deck
+        </ExternalLink>{' '}
+        to give an internal presentation on the business value that Serverless
+        delivers.{' '}
+      </React.Fragment>,
     ]),
   },
 ]

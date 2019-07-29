@@ -36,12 +36,19 @@ const StyledSelect = styled('select')`
 `
 
 class HomeFeatureList extends Component {
-  state = {
-    activeVideoId: 1,
-    activeFeature: 'Intro',
-    activeVideoUrl: featuresData.filter(f => f.name === 'Intro')[0].videoUrl,
-    videoPlaying: true,
-    isMobile: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeVideoId: 1,
+      activeFeature: 'Intro',
+      activeVideoUrl: featuresData.filter(f => f.name === 'Intro')[0].videoUrl,
+      videoPlaying: true,
+      isMobile: false,
+    }
+    this.updateActiveFeatureMobile = this.updateActiveFeatureMobile.bind(this)
+    this.updateActiveFeature = this.updateActiveFeature.bind(this)
+    this.autoPlayNextVideo = this.autoPlayNextVideo.bind(this)
+    this.toggleVideoPlaying = this.toggleVideoPlaying.bind(this)
   }
 
   componentDidMount() {
@@ -51,6 +58,12 @@ class HomeFeatureList extends Component {
         this.setState({ isMobile: true })
       }
     }
+  }
+
+  updateActiveFeatureMobile(event) {
+    const featureName = event.target.value
+    const featureObj = featuresData.filter(f => f.name === featureName)[0]
+    this.updateActiveFeature(featureObj)
   }
 
   updateActiveFeature(feature) {
@@ -110,13 +123,9 @@ class HomeFeatureList extends Component {
           <HR />
         </Box>
         <Box display={['block', 'block', 'none']} mb={[45, 45, 32]}>
-          <StyledSelect>
+          <StyledSelect onChange={this.updateActiveFeatureMobile}>
             {featuresData.map(feature => (
-              <option
-                value={feature.name}
-                key={feature.name}
-                onClick={() => this.updateActiveFeature(feature)}
-              >
+              <option value={feature.name} key={feature.name}>
                 {feature.name}
               </option>
             ))}

@@ -37,9 +37,19 @@ const BackgroundWithBorderRadius = styled(Background)`
 `
 
 class Options extends Component {
-  state = {
-    activeProviderId: 'aws',
-    activeProviderTemplate: 'aws-nodejs',
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeProviderId: 'aws',
+      activeProviderTemplate: 'aws-nodejs',
+    }
+    this.updateActiveProviderMobile = this.updateActiveProviderMobile.bind(this)
+    this.updateActiveProvider = this.updateActiveProvider.bind(this)
+  }
+
+  updateActiveProviderMobile(event) {
+    const providerId = event.target.value
+    this.updateActiveProvider(providerId)
   }
 
   updateActiveProvider(providerId) {
@@ -95,10 +105,11 @@ class Options extends Component {
         </Box>
         <Column mx='auto'>
           <Box display={['block', 'block', 'none']} mb={22}>
-            <StyledSelect>
+            <StyledSelect onChange={this.updateActiveProviderMobile}>
               {providersData.map(provider => (
                 <option
                   key={provider.id}
+                  value={provider.id}
                   onClick={() => this.updateActiveProvider(provider.id)}
                 >
                   {provider.name}
@@ -114,7 +125,7 @@ class Options extends Component {
             flexDirection={['column', 'column', 'row']}
           >
             <DashboardLink>
-              <Button width={[300, 300, 176]}>get started free</Button>
+              <Button width={['100%', '100%', 176]}>get started free</Button>
             </DashboardLink>
             <InternalLink to={providers}>
               <SecondaryButton
