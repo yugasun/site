@@ -125,7 +125,7 @@ class Options extends Component {
             flexDirection={['column', 'column', 'row']}
           >
             <DashboardLink>
-              <Button width={[300, 300, 176]}>get started free</Button>
+              <Button width={['100%', '100%', 176]}>get started free</Button>
             </DashboardLink>
             <InternalLink to={providers}>
               <SecondaryButton

@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import Options from './Options/index'
 
 const HeadlineBoxWithLaptopFix = styled(Box)`
-  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+  @media screen and (min-width: 1280px) and (max-width: 1350px) {
     margin-top: -90px;
   }
 

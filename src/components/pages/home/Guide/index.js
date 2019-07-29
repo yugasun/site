@@ -8,7 +8,7 @@ import styled from 'styled-components'
 require('./guides.css')
 
 const FlexWithLaptopWidth = styled(Flex)`
-  @media screen and (min-width: 1200px) and (max-width: 1500px) {
+  @media screen and (min-width: 1280px) and (max-width: 1500px) {
     width: 30% !important;
   }
 `
@@ -17,13 +17,13 @@ const BackgroundWithBoxShadow = styled(Background)`
   border: solid 1px rgba(234, 234, 234, 0.3);
   margin-top: -3px;
 
-  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+  @media screen and (min-width: 1280px) and (max-width: 1350px) {
     min-height: 588px;
   }
 `
 
 const BackgroundWithCustomHeight = styled(Background)`
-  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+  @media screen and (min-width: 1280px) and (max-width: 1350px) {
     height: 596px;
   }
 
@@ -33,7 +33,7 @@ const BackgroundWithCustomHeight = styled(Background)`
 `
 
 const BoxWithLaptopMarginFix = styled(Box)`
-  @media screen and (min-width: 1200px) and (max-width: 1350px) {
+  @media screen and (min-width: 1280px) and (max-width: 1350px) {
     margin-top: -225px;
   }
 
