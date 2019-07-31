@@ -76,6 +76,12 @@ const Wrapper = styled(Column)`
     }
   }
 
+  .content {
+    span.hljs-attr {
+      font-family: 'Serverless' !important;
+    }
+  }
+
   @media screen and (max-width: 992px) {
     blockquote {
       & > p {
