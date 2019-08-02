@@ -71,7 +71,6 @@ const teamMembers = [
     name: 'Chris McLeod',
     position: 'Senior Full Stack Engineer',
   },
-  { image: sam, name: 'Sam Alghanmi', position: 'Full Stack Developer' },
   {
     image: mariusz,
     name: 'Mariusz Nowak',
