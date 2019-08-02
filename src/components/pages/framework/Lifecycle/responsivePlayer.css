@@ -30,3 +30,11 @@
     left: 20px !important;
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  .framework-video-player-wrapper video {
+    width: 100% !important;
+    position: relative !important;
+    left: -62px !important;
+  }
+}

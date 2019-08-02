@@ -38,6 +38,12 @@ const TerminalBackground = styled(Flex)`
   @media screen and (max-width: 415px) {
     margin-left: 0px;
   }
+
+  @media screen and (min-width: 1920px) {
+    right: 0px;
+    position: relative;
+    margin-left: 140px;
+  }
 `
 
 const TerminalTextContent = styled(Flex)`

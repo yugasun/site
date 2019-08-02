@@ -44,6 +44,19 @@ const TerminalTextContent = styled(Text.p)`
   }
 `
 
+const StyledPosition = styled(Position)`
+  @media screen and (min-width: 1920px) {
+    position: relative;
+    left: 0;
+  }
+`
+
+const StyledFlex = styled(Flex)`
+  @media screen and (min-width: 1920px) {
+    margin-top: 31%;
+  }
+`
+
 const BackgroundWithBigScreenCoverage = styled(Background)`
   @media screen and (min-width: 1025px) and (max-width: 1366px) {
     width: 530px;
@@ -53,8 +66,8 @@ const BackgroundWithBigScreenCoverage = styled(Background)`
     width: 826px;
   }
 
-  @media screen and (min-width: 2220px) {
-    width: 1026px;
+  @media screen and (min-width: 1920px) {
+    width: 600px;
   }
 `
 
@@ -83,7 +96,7 @@ const HomeHeroImage = () => (
     width={[1, 1, 0, 0, '55%']}
     mt={[0, 0, 48]}
   >
-    <Position
+    <StyledPosition
       zIndex='5'
       left={[null, null, 0, '28px', '78px']}
       position={['relative', 'relative', 'absolute']}
@@ -97,7 +110,7 @@ const HomeHeroImage = () => (
         backgroundPosition='center'
       >
         <Flex flexDirection='column' alignItems='center'>
-          <Flex
+          <StyledFlex
             flexDirection='column'
             alignItems='center'
             mt={['10%', '10%', '20%']}
@@ -125,10 +138,10 @@ const HomeHeroImage = () => (
                 <BlackText>$ http://xyz.amazonaws.com/hello-world</BlackText>
               </TerminalTextContent>
             </TerminalText>
-          </Flex>
+          </StyledFlex>
         </Flex>
       </BackgroundWithBigScreenCoverage>
-    </Position>
+    </StyledPosition>
   </Flex>
 )
 
