@@ -22,14 +22,14 @@ const TerminalBackground = styled(Flex)`
     margin-right: -260px;
   }
 
-  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+  @media screen and (min-width: 1280px) and (max-width: 1350px) {
     width: 493px;
     height: 420px;
     margin-top: -130px;
     margin-right: -270px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1279px) {
     position: relative;
     right: 0px;
     margin-left: 20px;
@@ -53,7 +53,7 @@ const TerminalTextContent = styled(Flex)`
   margin-left: 32px;
   margin-top: 32px;
 
-  @media screen and (min-width: 750px) and (max-width: 1024px) {
+  @media screen and (min-width: 750px) and (max-width: 1279px) {
     margin-left: 12px;
   }
 
