@@ -1,14 +1,25 @@
 import React from 'react'
 
 import { Box, Column } from 'serverless-design-system'
-import { Header, FooterNewest as Footer } from 'src/components'
+import { Header } from 'src/components'
+import Footer from 'src/components/pages/home/Footer'
 
-const DefaultLayout = ({ children, transparentHeader }) => {
+//TODO: frameworkPage prop === dirtyPattern - fix
+
+const DefaultLayout = ({
+  children,
+  transparentHeader,
+  frameworkPage,
+  startWithWhiteHeader,
+}) => {
   return (
     <Column width={1}>
-      <Header transparent={transparentHeader} />
+      <Header
+        transparent={transparentHeader}
+        startWithWhiteHeader={startWithWhiteHeader ? true : false}
+      />
       <Box width={1}>{children}</Box>
-      <Footer noPrefooter={true} />
+      <Footer noPrefooter={true} frameworkPage={frameworkPage} />
     </Column>
   )
 }

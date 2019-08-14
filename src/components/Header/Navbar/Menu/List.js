@@ -2,57 +2,35 @@ import React from 'react'
 import { Box } from 'serverless-design-system'
 
 import MenuTitle from './Title'
-import MenuDescription from './Description'
-import {
-  ProductDropdownList,
-  DeveloperDropdownList,
-  LearnDropdownList,
-  CommunityDropdownList,
-} from './DropdownList'
+import { ResourcesDropdownList, CommunityDropdownList } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { resources } from 'src/constants/urls'
-import EnterpriseSupportButton from '../../EnterpriseSupportButton'
-import ProductMenuDescription from './Descriptions/Products'
-import DevelopersMenuDescription from './Descriptions/Developers'
+import { why, enterprise, docs, framework } from 'src/constants/newUrls'
+import HeaderCTAButton from '../../HeaderCTAButton'
 import CommunityMenuDescription from './Descriptions/Community'
-import LearnMenuDescription from './Descriptions/Learn'
+import ResourcesMenuDescription from './Descriptions/Resources'
 
 const ProductMenu = () => (
   <Box>
-    <MenuTitle name={'products'} />
-    <ProductMenuDescription
-      wrapperStyles={{
-        minWidth: [0, 0, 0, 0, '412px'],
-        px: [0],
-        pb: [0],
-        pt: [0],
-      }}
-    >
-      <ProductDropdownList />
-    </ProductMenuDescription>
+    <NavLink to={framework} completed className='header-menu-item'>
+      <MenuTitle name={'product'} />
+    </NavLink>
   </Box>
 )
 
-const DeveloperMenu = () => (
+const DocsMenu = () => (
   <Box>
-    <MenuTitle name={'developers'} />
-    <DevelopersMenuDescription
-      wrapperStyles={{
-        minWidth: [0, 0, '498px'],
-        px: 5,
-      }}
-    >
-      <DeveloperDropdownList />
-    </DevelopersMenuDescription>
+    <NavLink to={docs} completed className='header-menu-item'>
+      <MenuTitle name={'docs'} />
+    </NavLink>
   </Box>
 )
 
-const LearnMenu = () => (
+const ResourcesMenu = () => (
   <Box>
-    <MenuTitle name={'learn'} />
-    <LearnMenuDescription>
-      <LearnDropdownList />
-    </LearnMenuDescription>
+    <MenuTitle name={'resources'} />
+    <ResourcesMenuDescription>
+      <ResourcesDropdownList />
+    </ResourcesMenuDescription>
   </Box>
 )
 
@@ -65,25 +43,34 @@ const CommunityMenu = () => (
   </Box>
 )
 
-const BlogMenu = () => (
+const WhyMenu = () => (
   <Box>
-    <NavLink to={resources.blog} completed className='header-menu-item'>
-      <MenuTitle name={'blog'} />
+    <NavLink to={why} completed className='header-menu-item'>
+      <MenuTitle name={'why'} />
+    </NavLink>
+  </Box>
+)
+
+const EnterpriseMenu = () => (
+  <Box>
+    <NavLink to={enterprise} completed className='header-menu-item'>
+      <MenuTitle name={'enterprise'} />
     </NavLink>
   </Box>
 )
 
 const SupportMenu = () => (
-  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 3]}>
-    <EnterpriseSupportButton />
+  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 1]} pb={[2, 2, 2, 2, 0]}>
+    <HeaderCTAButton />
   </Box>
 )
 
 export default [
   ProductMenu,
-  DeveloperMenu,
+  DocsMenu,
+  ResourcesMenu,
   CommunityMenu,
-  LearnMenu,
-  BlogMenu,
+  WhyMenu,
+  EnterpriseMenu,
   SupportMenu,
 ]

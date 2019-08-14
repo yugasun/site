@@ -1,46 +1,28 @@
 import React from 'react'
-import { AppContainerNewest as AppContainer } from 'src/components'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
+import { AppContainer } from 'src/components'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import communityNumbersData from './CommunityNumbersData'
 import { Column, Box, Row } from 'serverless-design-system'
-import styled from 'styled-components'
-
-const ColumnWithCustomMobileMargin = styled(Column)`
-  @media screen and (min-width: 410px) and (max-width: 420px) {
-    margin-top: 182px;
-  }
-`
 
 const CommunityNumbers = () => (
   <AppContainer>
-    <ColumnWithCustomMobileMargin
-      width={[1, 1, 1, 1]}
-      mt={[212, 212, 286, 286, 0]}
-      ml={[0, 0, 0, 0, 5, -6]}
-    >
-      <Box width={[0.8, 0.8, 0.6, 1, 0.5]}>
-        <TitleWithIcon color='black'>
+    <Column width={[1, 1, 1, 1]} mb={[0, 0, 0, 0, 62]}>
+      <Box width={[1]}>
+        <Heading.h3 color='black' align='center' fontFamily='Soleil'>
           Backed by a rich and vibrant community
-        </TitleWithIcon>
+        </Heading.h3>
       </Box>
       <Row
-        mt={42}
+        mt={[42, 42, 42, 42, 62]}
         flexWrap={['wrap', 'wrap', 'initial']}
-        justifyContent={[
-          'space-around',
-          'space-around',
-          'space-between',
-          'space-between',
-          'none',
-        ]}
+        justifyContent={['space-around', 'space-around', 'center']}
       >
         {communityNumbersData.map((item, index) => (
           <Column
             key={index}
-            mr={[0, 0, 0, 0, 64]}
             mt={index > 1 ? [3, 3, 0] : [0]}
             width={[0.5, 0.5, 'auto']}
+            px={[2, 2, 3, 4, 4]}
           >
             <Heading.h2
               pb={0}
@@ -58,7 +40,7 @@ const CommunityNumbers = () => (
           </Column>
         ))}
       </Row>
-    </ColumnWithCustomMobileMargin>
+    </Column>
   </AppContainer>
 )
 

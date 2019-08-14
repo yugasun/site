@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Background, Box, Flex, Image } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import eaLogo from 'src/assets/images/fragments/trusted-clients/ea-logo-gray.png'
 import cocacolaLogo from 'src/assets/images/fragments/trusted-clients/cocacola-logo-gray.png'
 import nordstromLogo from 'src/assets/images/fragments/trusted-clients/nordstrom-logo-gray.png'

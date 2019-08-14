@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import UseCaseList from './UseCaseList'
 
 const UseCasesNew = ({ useCaseHeader, useCaseSubHeader, cases }) => (

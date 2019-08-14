@@ -10,10 +10,11 @@ import {
   Heading,
 } from 'serverless-design-system'
 import closeIcon from 'src/assets/images/icon-close.png'
-import { Button, P } from 'src/fragments/DesignSystem'
+import { Button, P, SecondaryButton } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/logo.svg'
 import 'src/components/SubscribeModal/modal.css'
 import NewsLetterForm from './WhitepaperDownloadForm'
+import WhitepaperDownloadPrefooterBanner from 'src/components/pages/framework/Whitepaper/Banner'
 
 const SubmitButton = props => (
   <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
@@ -185,14 +186,17 @@ class index extends Component {
             </Container>
           </ReactModal>
         </Box>
-        <Button
-          width={[240, 280]}
-          mt={4}
-          mb={[92, 92, 92, 92, 0]}
-          onClick={this.handleModalOpen}
-        >
-          download whitepaper
-        </Button>
+        {this.props.componentToRender === 'whitepaper' ? (
+          <WhitepaperDownloadPrefooterBanner onClick={this.handleModalOpen} />
+        ) : (
+          <SecondaryButton
+            as={SecondaryButton}
+            width={['100%', '100%', 176]}
+            onClick={this.handleModalOpen}
+          >
+            download whitepaper
+          </SecondaryButton>
+        )}
       </React.Fragment>
     )
   }

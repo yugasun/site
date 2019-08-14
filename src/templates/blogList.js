@@ -4,7 +4,7 @@ import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import {
   Helmet,
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
 } from 'src/fragments'
 import { Pagination, SubscribeModal } from 'src/components'
 import HighlightedBlogList from 'src/constants/featured-blogs.json'

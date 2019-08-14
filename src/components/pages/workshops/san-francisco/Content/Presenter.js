@@ -7,7 +7,7 @@ import twitterIcon from 'src/assets/images/twitter-black.svg'
 import githubIcon from 'src/assets/images/github.svg'
 import jared from 'src/assets/images/pages/workshops/jared.png'
 import styled from 'styled-components'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const ImageWithMarginX = styled(Image)`
   margin: 0 42px;

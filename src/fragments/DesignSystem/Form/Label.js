@@ -2,15 +2,18 @@ import React from 'react'
 
 import { Label } from 'serverless-design-system'
 
-export default ({ children }) => (
+const FormLabel = ({ children, ...rest }) => (
   <Label
-    fontFamily="Serverless"
-    fontWeight="normal"
+    fontFamily='Soleil'
+    fontWeight='normal'
     lineHeight={'24px'}
-    color="gray.2"
+    color='#5b5b5b'
     fontSize={'14px'}
     letterSpacing={'0.4px'}
+    {...rest}
   >
     {children}
   </Label>
 )
+
+export default FormLabel
