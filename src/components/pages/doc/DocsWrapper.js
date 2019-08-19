@@ -718,6 +718,10 @@ const Wrapper = styled(Column)`
 
   //small laptop
   @media (min-width: 1025px) and (max-width: 1398px) {
+    .breadCrumbContainer {
+      max-width: 76%;
+    }
+
     .providerSection {
       width: 200px;
       height: 180px;
@@ -729,6 +733,10 @@ const Wrapper = styled(Column)`
     .providerSection {
       width: 240px;
       height: 190px;
+    }
+
+    .breadCrumbContainer {
+      max-width: 76%;
     }
   }
 
