@@ -91,6 +91,7 @@ export default class Sidebar extends React.Component {
               letterSpacing='0.44px'
               ml={'12px'}
               fontFamily='Soleil'
+              pb={62}
             >
               go to github
             </Text>
