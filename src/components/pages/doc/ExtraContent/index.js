@@ -21,8 +21,6 @@ const ExtraContent = ({ gitLink }) => (
           <ProviderBanner provider={provider} key={provider} />
         ) : null
     )}
-
-    {gitLink == '/docs/README.md' ? <OverviewExtraContent /> : null}
   </React.Fragment>
 )
 
