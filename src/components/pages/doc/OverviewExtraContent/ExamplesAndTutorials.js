@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, Image, Column, Text } from 'serverless-design-system'
 import tutorialsIcon from 'src/assets/images/pages/docs/tutorials-icon.svg'
 import examplesIcon from 'src/assets/images/pages/docs/examples-icon.svg'
-import { P } from 'src/fragments/DesignSystem'
+import { P, SecondaryButton } from 'src/fragments/DesignSystem'
 import { blog, developersMenu } from 'src/constants/urls.js'
 import { InternalLink } from 'src/fragments'
 
@@ -49,13 +49,7 @@ const ContentBlock = ({ image, heading, content, cta, link }) => (
       </Text>
       <P>{content}</P>
       <InternalLink to={link}>
-        <Text
-          fontFamily='Serverless'
-          color='#fd5750
-'
-        >
-          {cta}
-        </Text>
+        <SecondaryButton width={['100%', '100%', 176]}>{cta}</SecondaryButton>
       </InternalLink>
     </Column>
   </Flex>

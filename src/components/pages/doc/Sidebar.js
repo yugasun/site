@@ -82,7 +82,7 @@ export default class Sidebar extends React.Component {
             this.props.head.gitLink
           }`}
         >
-          <Flex ml={60} mt={92}>
+          <Flex ml={22} mt={72}>
             <Image src={githubGrayIcon} width='22px' height='22px' />
             <Text
               color='#8c8c8c'
