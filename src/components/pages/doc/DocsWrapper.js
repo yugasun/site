@@ -520,6 +520,12 @@ const Wrapper = styled(Column)`
     font-family: 'Soleil' !important;
   }
 
+  .current {
+    a {
+      color: white !important;
+    }
+  }
+
   .breadCrumbContainer {
     margin: 0 auto;
     display: flex;

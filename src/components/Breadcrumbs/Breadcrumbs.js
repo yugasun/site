@@ -22,11 +22,16 @@ const Breadcrumbs = ({
   className,
   rightContent,
 }) => {
-  let pathArray = explodePath(path, pathSeparator)
+  const pathArray = explodePath(path, pathSeparator)
+  let moreThan4Paths = false
+  let useOnlyAfterId = 0
   if (pathArray.length > 4) {
-    pathArray = pathArray.slice(-4)
+    moreThan4Paths = true
+    useOnlyAfterId = pathArray.length - pathArray.slice(-4).length
+  } else {
+    useOnlyAfterId = 0
   }
-  console.log(pathArray)
+
   let renderRight
   if (rightContent) {
     renderRight = <Box className='rightContent'>{rightContent}</Box>
@@ -46,22 +51,36 @@ const Breadcrumbs = ({
           </ListItem>
         ) : null}
 
+        {moreThan4Paths ? (
+          <ListItem key={'root-docs'} className={`item`}>
+            <Text.span className='itemInner'>
+              <BreadcrumbItem
+                label={'...'}
+                pathSegments={['framework', 'docs']}
+                {...{ getUrlFromPathSegments, onClick }}
+              />
+            </Text.span>
+          </ListItem>
+        ) : null}
         {pathArray.map((segment, id) => {
           const pathSegments = pathArray
             .map(encodeURIComponent)
             .slice(0, id + 1)
+
           const active = pathArray.length === id + 1 ? 'current' : ''
-          return (
-            <ListItem key={id} className={`item ${active}`}>
-              <Text.span className='itemInner'>
-                <BreadcrumbItem
-                  label={segment}
-                  pathSegments={pathSegments}
-                  {...{ getUrlFromPathSegments, onClick }}
-                />
-              </Text.span>
-            </ListItem>
-          )
+          if (useOnlyAfterId <= id) {
+            return (
+              <ListItem key={id} className={`item ${active}`}>
+                <Text.span className='itemInner'>
+                  <BreadcrumbItem
+                    label={segment}
+                    pathSegments={pathSegments}
+                    {...{ getUrlFromPathSegments, onClick }}
+                  />
+                </Text.span>
+              </ListItem>
+            )
+          }
         })}
       </List>
       {renderRight}

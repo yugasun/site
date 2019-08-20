@@ -36,9 +36,4 @@ export default styled(Row)`
       content: '';
     }
   }
-  .current {
-    a {
-      color: white !important;
-    }
-  }
 `
