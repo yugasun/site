@@ -100,10 +100,9 @@ const Wrapper = styled(Column)`
     position: relative;
     padding-top: 32px;
     max-width: 82.5%;
-    min-height: 100vh;
     padding-bottom: 62px;
     overflow: hidden;
-    padding-left: 136px;
+    padding-left: 104px;
     $copyWidth: 45px;
 
     code {
@@ -550,8 +549,8 @@ const Wrapper = styled(Column)`
     color: #9b9b9b;
   }
   .sidebar {
-    min-width: 368px;
-    max-width: 368px;
+    min-width: 296px;
+    max-width: 296px;
     z-index: 5;
     background: #f6f6f6;
   }
@@ -559,8 +558,8 @@ const Wrapper = styled(Column)`
     margin-left: -10px;
     padding: 10px;
     padding-right: 0px;
-    min-width: 368px;
-    max-width: 368px;
+    min-width: 296px;
+    max-width: 296px;
     border: none;
     box-shadow: none;
   }

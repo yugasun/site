@@ -13,13 +13,15 @@ import styled from 'styled-components'
 
 const SidebarMenuBox = styled(Box)`
   position: absolute;
-  background-color: black;
+  background-color: #f7f7f7;
   z-index: 5;
   width: 52%;
   top: 50px;
   right: 0;
+  height: 100vh;
 
   @media screen and (max-width: 415px) {
+    background-color: black;
     width: 100%;
     top: 36px;
   }

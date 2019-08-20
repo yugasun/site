@@ -4,7 +4,7 @@
   font-size: 14px;
   overflow: hidden;
   position: relative;
-  padding-left: 60px;
+  padding-left: 44px;
 }
 .metismenu > .metismenu-container > .metismenu-item > .metismenu-link {
   color: #8c8c8c;
@@ -138,8 +138,11 @@ i.metismenu-state-icon.rotate-minus-90 {
   .metismenu-container .metismenu-container {
     background: transparent;
   }
+}
 
-  .metismenu-container .metismenu-container .metismenu-link:hover {
-    color: white;
+@media screen and (max-width: 415px) {
+  .metismenu-link.active {
+    background: black;
+    color: #fff !important;
   }
 }

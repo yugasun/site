@@ -18,11 +18,11 @@ const BoxWithBottomBorder = styled(Box)`
 const SidebarMenu = ({ activeLinkTo }) => (
   <Box pt={[32, 32, 32, 32, 32]} pr={[28]}>
     <Text
-      fontSize='16px'
+      fontSize='14px'
       lineHeight='24px'
       letterSpacing='0.44px'
-      fontFamily='SoleilBk'
-      ml={40}
+      fontFamily='Soleil'
+      ml={22}
       mb={'5px'}
     >
       Serverless Framework Docs
