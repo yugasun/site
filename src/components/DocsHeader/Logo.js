@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import { Logo, Row, Box } from 'serverless-design-system'
+import { Logo, Row } from 'serverless-design-system'
 import logo from 'src/assets/images/logo.svg'
 import docsLogo from 'src/assets/images/docs-logo.svg'
 import styled from 'styled-components'

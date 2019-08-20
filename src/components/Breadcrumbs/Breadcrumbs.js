@@ -22,7 +22,11 @@ const Breadcrumbs = ({
   className,
   rightContent,
 }) => {
-  const pathArray = explodePath(path, pathSeparator)
+  let pathArray = explodePath(path, pathSeparator)
+  if (pathArray.length > 4) {
+    pathArray = pathArray.slice(-4)
+  }
+  console.log(pathArray)
   let renderRight
   if (rightContent) {
     renderRight = <Box className='rightContent'>{rightContent}</Box>

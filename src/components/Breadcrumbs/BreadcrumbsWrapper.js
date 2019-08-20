@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Row } from 'serverless-design-system'
+import breadcrumbArrow from 'src/assets/images/pages/docs/breadcrumb-arrow.svg'
 
 export default styled(Row)`
   margin: 0;
@@ -21,10 +22,10 @@ export default styled(Row)`
       border: none !important;
     }
     &:after {
-      content: ' › ';
+      content: url(${breadcrumbArrow});
       color: #a1a1a1;
       width: 20px;
-      margin: 0 2px;
+      margin: 2px 2px;
       display: inline-flex;
       justify-content: center;
     }
@@ -37,7 +38,7 @@ export default styled(Row)`
   }
   .current {
     a {
-      font-weight: 600;
+      color: white !important;
     }
   }
 `

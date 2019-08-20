@@ -516,7 +516,7 @@ const Wrapper = styled(Column)`
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.44px;
-    color: #9b9b9b !important;
+    color: #8c8c8c !important;
     font-family: 'Soleil' !important;
   }
 

@@ -3,7 +3,7 @@ import { Background, Flex, Transition, Box } from 'serverless-design-system'
 
 import { HeaderContainer } from 'src/components'
 import Logo from './Logo'
-import Navbar from './Navbar'
+import Navbar from '../Header/Navbar'
 import NavButton from './NavButton'
 import NavbarContext from './NavbarContext'
 import HeaderWrapper from './Wrapper'
