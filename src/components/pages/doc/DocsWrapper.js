@@ -6,8 +6,26 @@ import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
+import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
 
 const Wrapper = styled(Column)`
+  input#algolia-top-search {
+    &:focus,
+    &:active {
+      background: url(${searchActiveIcon}) no-repeat !important;
+      background-position: right 15px center !important;
+      background-size: 17.5px !important;
+      box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08) !important;
+      background-color: #333 !important;
+      color: white !important;
+      border-radius: 4px !important;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
   input:focus {
     outline: none;
   }
@@ -526,11 +544,12 @@ const Wrapper = styled(Column)`
   }
 
   .breadCrumbContainer {
+    border-top: 2.5px solid #5b5b5b;
     margin: 0 auto;
     display: flex;
     max-width: 1216px;
     justify-content: space-between;
-    padding: 10px 0px;
+    padding: 10px 0px 5px 0px;
     font-size: 15px;
     background: #000;
     a {

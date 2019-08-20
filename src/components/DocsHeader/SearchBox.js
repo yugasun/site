@@ -2,6 +2,7 @@ import React from 'react'
 import { TextField, Box } from 'serverless-design-system'
 import styled from 'styled-components'
 import searchIcon from 'src/assets/images/search-icon.svg'
+import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
 
 const DocHeaderSearchBox = styled(Box)`
   .algolia-autocomplete {
@@ -12,13 +13,16 @@ const DocHeaderSearchBox = styled(Box)`
   }
 
   .searchBox {
+    color: white !important;
+    &::placeholder {
+      color: white !important;
+    }
+
     &:focus,
     &:active {
       width: 313px;
-      border-left: 2px solid #fd5750;
       outline: none !important;
       background-color: #333 !important;
-      color: #8c8c8c !important;
     }
   }
 
@@ -26,6 +30,12 @@ const DocHeaderSearchBox = styled(Box)`
     .algolia-autocomplete {
       right: 70px !important;
       top: 6px !important;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .searchBox {
+      width: 275px !important;
     }
   }
 `
@@ -39,15 +49,19 @@ const DocsSearchField = styled(TextField)`
   background: url(${searchIcon}) no-repeat;
   background-position: right 15px center;
   background-size: 17.5px;
-  boxShadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08) 
-  
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+
   &:focus,
   &:active {
+    background: url(${searchActiveIcon}) no-repeat;
+    background-position: right 15px center;
+    background-size: 17.5px;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
     outline: none !important;
   }
 
   @media screen and (max-width: 415px) {
-    height: 24px;
+    height: 34px;
   }
 `
 
@@ -80,16 +94,16 @@ export default class SearchBox extends React.Component {
       >
         <DocsSearchField
           placeholder='Search documentation'
-          height={24}
+          height={[36, 36, 24]}
           width='100%'
           border='none'
           fontSize={14}
           fontFamily='Soleil'
-          placeholderColor='#8c8c8c'
+          placeholderColor='#fff'
           px={[1, 1, 2]}
           id='algolia-docs-header-search'
           className='searchBox'
-          color='#8c8c8c'
+          color='#fff'
         />
       </DocHeaderSearchBox>
     )
