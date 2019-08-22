@@ -105,6 +105,7 @@ const Wrapper = styled(Column)`
   .hljs {
     padding-left: 32px;
     padding-top: 32px;
+    padding-bottom: 32px;
 
     &:before {
       width: 0px;
