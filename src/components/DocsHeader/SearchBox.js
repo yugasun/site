@@ -60,6 +60,10 @@ const DocsSearchField = styled(TextField)`
     outline: none !important;
   }
 
+  @media screen and (min-width: 992px) and (max-width: 1280px) {
+    margin-top: 5px;
+  }
+
   @media screen and (max-width: 415px) {
     height: 34px;
   }

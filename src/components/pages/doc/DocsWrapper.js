@@ -731,6 +731,14 @@ const Wrapper = styled(Column)`
     }
   }
 
+  @media (max-width: 1315px) {
+    .breadCrumbContainer {
+      .rightContent {
+        width: 626px;
+      }
+    }
+  }
+
   //small laptop
   @media (min-width: 1025px) and (max-width: 1398px) {
     .breadCrumbContainer {
