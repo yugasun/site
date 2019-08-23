@@ -24,11 +24,6 @@ const SubHeader = ({ url }) => {
   }
   const breadCrumbContent = (
     <Flex alignItems='center'>
-      <Box className='versionNumber' width={0.5}>
-        <Text fontFamily='Soleil'>
-          version {process.env.GATSBY_DOCS_VERSION} (current)
-        </Text>
-      </Box>
       <SubHeaderSearchBox />
     </Flex>
   )
