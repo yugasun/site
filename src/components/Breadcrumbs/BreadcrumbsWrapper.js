@@ -13,6 +13,7 @@ export default styled(Row)`
   .breadcrumbs {
     margin: 0;
     padding: 0;
+    margin-top: 6px;
   }
   .item {
     display: inline-flex;

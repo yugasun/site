@@ -10,6 +10,10 @@ const DocsSearchField = styled(TextField)`
   background-position: right 15px center;
   background-size: 17.5px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  background-color: white;
+  border-radius: 4px;
+  background-position-y: 10px;
+  padding-top: 6px;
 
   @media screen and (max-width: 767px) {
     border-left: none;
@@ -43,7 +47,7 @@ export default class SearchBox extends React.Component {
 
   render() {
     return (
-      <Flex width={0.79}>
+      <Flex width={1}>
         <DocsSearchField
           placeholder='Search documentation'
           height={36}
