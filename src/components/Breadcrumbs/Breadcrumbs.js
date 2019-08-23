@@ -25,11 +25,15 @@ const Breadcrumbs = ({
   const pathArray = explodePath(path, pathSeparator)
   let moreThan4Paths = false
   let useOnlyAfterId = 0
+  let onOverviewPage = false
   if (pathArray.length > 4) {
     moreThan4Paths = true
     useOnlyAfterId = pathArray.length - pathArray.slice(-4).length
+  } else if (pathArray.length == 2) {
+    onOverviewPage = true
+    console.log(`on overview page`)
   } else {
-    useOnlyAfterId = 0
+    useOnlyAfterId = 1
   }
 
   let renderRight
@@ -62,26 +66,49 @@ const Breadcrumbs = ({
             </Text.span>
           </ListItem>
         ) : null}
-        {pathArray.map((segment, id) => {
-          const pathSegments = pathArray
-            .map(encodeURIComponent)
-            .slice(0, id + 1)
+        {onOverviewPage ? (
+          <React.Fragment>
+            <ListItem key={'root-docs'} className={`item`}>
+              <Text.span className='itemInner'>
+                <BreadcrumbItem
+                  label={'docs'}
+                  pathSegments={['framework', 'docs']}
+                  {...{ getUrlFromPathSegments, onClick }}
+                />
+              </Text.span>
+            </ListItem>
+            <ListItem key={'root-docs-overview'} className={`item current`}>
+              <Text.span className='itemInner'>
+                <BreadcrumbItem
+                  label={'overview'}
+                  pathSegments={['framework', 'docs']}
+                  {...{ getUrlFromPathSegments, onClick }}
+                />
+              </Text.span>
+            </ListItem>
+          </React.Fragment>
+        ) : (
+          pathArray.map((segment, id) => {
+            const pathSegments = pathArray
+              .map(encodeURIComponent)
+              .slice(0, id + 1)
 
-          const active = pathArray.length === id + 1 ? 'current' : ''
-          if (useOnlyAfterId <= id) {
-            return (
-              <ListItem key={id} className={`item ${active}`}>
-                <Text.span className='itemInner'>
-                  <BreadcrumbItem
-                    label={segment}
-                    pathSegments={pathSegments}
-                    {...{ getUrlFromPathSegments, onClick }}
-                  />
-                </Text.span>
-              </ListItem>
-            )
-          }
-        })}
+            const active = pathArray.length === id + 1 ? 'current' : ''
+            if (useOnlyAfterId <= id) {
+              return (
+                <ListItem key={id} className={`item ${active}`}>
+                  <Text.span className='itemInner'>
+                    <BreadcrumbItem
+                      label={segment}
+                      pathSegments={pathSegments}
+                      {...{ getUrlFromPathSegments, onClick }}
+                    />
+                  </Text.span>
+                </ListItem>
+              )
+            }
+          })
+        )}
       </List>
       {renderRight}
     </BreadcrumbsWrapper>
