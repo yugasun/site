@@ -1,15 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Row, Column, Box } from 'serverless-design-system'
-import Default from 'src/layouts/DefaultNewest'
+import DocsLayout from 'src/layouts/Docs'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
-import gitHubSvg from 'src/assets/images/github.svg'
-import { Helmet as SEOHelmet } from 'src/fragments'
+import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
+import ExamplesAndTutorials from 'src/components/pages/doc/OverviewExtraContent/ExamplesAndTutorials.js'
+import ExtraContent from 'src/components/pages/doc/ExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
-  <Default footerBackground={false} noPrefooter>
+  <DocsLayout footerBackground={false} noPrefooter url={location.pathname}>
     <Helmet
       link={[
         {
@@ -28,38 +29,27 @@ const DocTemplate = ({ data: { doc }, location }) => (
     <DocsWrapper __url={location.pathname}>
       <SEOHelmet {...doc.frontmatter} location={location} />
       <Box
-        display={
-          doc.frontmatter.gitLink == '/docs/README.md'
-            ? ['none', 'none', 'none', 'none', 'block']
-            : 'block'
-        }
+        display={['none', 'none', 'none', 'none', 'block']}
+        style={{ background: '#000' }}
       >
         <LiteHeader url={location.pathname} />
       </Box>
       <Row className='docWrapper'>
         <Sidebar head={doc.frontmatter} />
-        <Column>
-          <a
-            title='Edit this page on github'
-            rel='noopener noreferrer'
-            href={`https://github.com/serverless/serverless/edit/master${
-              doc.frontmatter.gitLink
-            }`}
-          >
-            <span className='editLink'>
-              <img src={gitHubSvg} />
-              <span className='text'>Edit on github</span>
-            </span>
-          </a>
-
+        <Column width={1}>
+          <ExtraContent gitLink={doc.frontmatter.gitLink} />
           <Column
             dangerouslySetInnerHTML={{ __html: doc.content }}
             className='content'
           />
+          {doc.frontmatter.gitLink == '/docs/README.md' ? (
+            <ExamplesAndTutorials />
+          ) : null}
+          <HaveQuestionsPrefooter />
         </Column>
       </Row>
     </DocsWrapper>
-  </Default>
+  </DocsLayout>
 )
 
 export default DocTemplate
