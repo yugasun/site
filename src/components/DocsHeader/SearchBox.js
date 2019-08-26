@@ -28,9 +28,9 @@ const DocHeaderSearchBox = styled(Box)`
     }
   }
 
-  @media screen and (max-width: 415px) and (min-width: 381px) {
+  @media screen and (max-width: 415px) and (min-width: 390px) {
     .searchBox {
-      width: 335px;
+      width: 355px;
     }
 
     .algolia-autocomplete {
