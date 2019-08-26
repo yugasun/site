@@ -93,13 +93,13 @@ class Header extends React.Component {
               this.state.isNavbarShrinked ? 'black' : 'transparent',
             ]}
           >
-            <Transition py={['13px', '13px', 1, 0, 0]}>
+            <Transition py={['6px', '6px', 1, 0, 0]}>
               <HeaderContainer>
                 <Flex.verticallyCenter
                   flexWrap='wrap'
                   justifyContent='space-between'
                 >
-                  <Logo />
+                  <Logo isNavbarActive={this.state.isNavbarActive} />
                   <NavbarContext.Provider value={this.state}>
                     <NavButton />
                     <Navbar />

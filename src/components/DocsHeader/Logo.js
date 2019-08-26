@@ -20,7 +20,7 @@ const NonMobileLink = styled(Link)`
   }
 `
 
-const LogoComponent = () => (
+const LogoComponent = ({ isNavbarActive }) => (
   <Row alignItems='center'>
     <Link to='/'>
       <LogoWithDesktopTopMargin

@@ -13,7 +13,7 @@ const DocHeaderSearchBox = styled(Box)`
 
   .searchBox {
     color: #8c8c8c !important;
-    width: 310px;
+    width: 320px;
     background-color: white;
     border-radius: 4px;
     &::placeholder {
@@ -27,9 +27,9 @@ const DocHeaderSearchBox = styled(Box)`
     }
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 415px) and (min-width: 381px) {
     .searchBox {
-      width: 323px;
+      width: 335px;
     }
 
     .algolia-autocomplete {
@@ -38,9 +38,9 @@ const DocHeaderSearchBox = styled(Box)`
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 380px) {
     .searchBox {
-      width: 275px !important;
+      width: 320px;
     }
   }
 `
