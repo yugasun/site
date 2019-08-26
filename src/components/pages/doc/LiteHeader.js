@@ -10,11 +10,7 @@ const DocsBreadcrumbs = styled(Breadcrumbs)`
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.58px;
-  color: #9b9b9b !important;
-
-  &:hover {
-    color: #9b9b9b;
-  }
+  color: #8c8c8c !important;
 `
 
 const SubHeader = ({ url }) => {

@@ -538,7 +538,7 @@ const Wrapper = styled(Column)`
     a {
     }
     a:hover {
-      opacity: 0.6;
+      opacity: 1;
     }
     .rightContent {
       width: 688px;
