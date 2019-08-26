@@ -1,8 +1,7 @@
 import React from 'react'
 import { TextField, Box } from 'serverless-design-system'
 import styled from 'styled-components'
-import searchIcon from 'src/assets/images/search-icon.svg'
-import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
+import searchIcon from 'src/assets/images/search-icon-gray.svg'
 
 const DocHeaderSearchBox = styled(Box)`
   .algolia-autocomplete {
@@ -13,22 +12,28 @@ const DocHeaderSearchBox = styled(Box)`
   }
 
   .searchBox {
-    color: white !important;
+    color: #8c8c8c !important;
+    width: 310px;
+    background-color: white;
+    border-radius: 4px;
     &::placeholder {
-      color: white !important;
+      color: #8c8c8c !important;
     }
+  }
 
-    &:focus,
-    &:active {
-      width: 313px;
-      outline: none !important;
-      background-color: #333 !important;
+  @media screen and (max-width: 1280px) and (min-width: 1026px) {
+    .algolia-autocomplete {
+      right: 60px !important;
     }
   }
 
   @media screen and (max-width: 415px) {
+    .searchBox {
+      width: 323px;
+    }
+
     .algolia-autocomplete {
-      right: 70px !important;
+      right: 50px !important;
       top: 6px !important;
     }
   }
@@ -50,15 +55,6 @@ const DocsSearchField = styled(TextField)`
   background-position: right 15px center;
   background-size: 17.5px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
-
-  &:focus,
-  &:active {
-    background: url(${searchActiveIcon}) no-repeat;
-    background-position: right 15px center;
-    background-size: 17.5px;
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
-    outline: none !important;
-  }
 
   @media screen and (min-width: 992px) and (max-width: 1280px) {
     margin-top: 5px;
@@ -93,7 +89,11 @@ export default class SearchBox extends React.Component {
   render() {
     return (
       <DocHeaderSearchBox
-        display={['block', 'block', 'block', 'block', 'none']}
+        display={
+          this.props.isNavbarActive
+            ? ['block', 'block', 'block', 'block', 'none']
+            : ['none', 'none', 'block', 'block', 'none']
+        }
         className={'doc-search-box'}
       >
         <DocsSearchField

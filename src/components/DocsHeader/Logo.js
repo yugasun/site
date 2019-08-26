@@ -22,14 +22,14 @@ const NonMobileLink = styled(Link)`
 
 const LogoComponent = () => (
   <Row alignItems='center'>
-    <NonMobileLink to='/'>
+    <Link to='/'>
       <LogoWithDesktopTopMargin
         src={logo}
         height={['21px', '21px', '21px', '55px']}
         width={['112px', '112px', '112px', '153px']}
         alt='Serverless'
       />
-    </NonMobileLink>
+    </Link>
     <NonMobileLink to='/framework/docs/'>
       <LogoWithDesktopLeftMargin
         src={docsLogo}

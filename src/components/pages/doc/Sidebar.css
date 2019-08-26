@@ -145,6 +145,10 @@ i.metismenu-state-icon.rotate-minus-90 {
 }
 
 @media screen and (max-width: 415px) {
+  .metismenu {
+    padding-left: 16px;
+  }
+
   .metismenu-link.active {
     background: black;
     color: #fff !important;

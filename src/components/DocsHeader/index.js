@@ -109,7 +109,7 @@ class Header extends React.Component {
             </Transition>
           </Background>
         </HeaderWrapper>
-        <SearchBox />
+        <SearchBox isNavbarActive={this.state.isNavbarActive} />
         <Box display={['block', 'block', 'block', 'block', 'none']}>
           <SidebarMenuBox
             display={this.state.isNavbarActive ? 'block' : 'none'}
