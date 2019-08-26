@@ -22,6 +22,13 @@ const sentences = [
 
 const actions = [
   {
+    name: 'get started',
+    navProps: {
+      to: 'https://dashboard.serverless.com/',
+      crossDomain: true,
+    },
+  },
+  {
     name: 'documentation',
     navProps: {
       to: '/framework/docs/',
@@ -32,13 +39,6 @@ const actions = [
     name: 'examples',
     navProps: {
       to: '/examples/',
-      completed: true,
-    },
-  },
-  {
-    name: 'plugins',
-    navProps: {
-      to: '/plugins/',
       completed: true,
     },
   },

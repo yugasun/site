@@ -65,6 +65,13 @@ const languageOptions = [
       text: 'PHP',
     },
   ],
+  [
+    {
+      id: 'ruby',
+      name: 'language',
+      text: 'Ruby',
+    },
+  ],
 ]
 
 const frameworkOptions = [
