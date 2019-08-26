@@ -2,6 +2,7 @@ import React from 'react'
 import { TextField, Box } from 'serverless-design-system'
 import styled from 'styled-components'
 import searchIcon from 'src/assets/images/search-icon-gray.svg'
+import searchActiveIcon from 'src/assets/images/search-icon-black.svg'
 
 const DocHeaderSearchBox = styled(Box)`
   .algolia-autocomplete {
@@ -56,6 +57,34 @@ const DocsSearchField = styled(TextField)`
   background-size: 17.5px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
 
+  &:focus,
+  &:active {
+    outline: none !important;
+    color: #000 !important;
+    background: url(${searchActiveIcon}) no-repeat;
+    background-position: right 15px center;
+    background-size: 17.5px;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #000 !important;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #000 !important;
+    }
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #000 !important;
+    }
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: #000 !important;
+    }
+  }
+
   @media screen and (min-width: 992px) and (max-width: 1280px) {
     margin-top: 5px;
   }
@@ -103,11 +132,11 @@ export default class SearchBox extends React.Component {
           border='none'
           fontSize={14}
           fontFamily='Soleil'
-          placeholderColor='#fff'
+          placeholderColor='#000'
           px={[1, 1, 2]}
           id='algolia-docs-header-search'
           className='searchBox'
-          color='#fff'
+          color='#000'
         />
       </DocHeaderSearchBox>
     )

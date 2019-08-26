@@ -1,7 +1,7 @@
 import React from 'react'
 import { TextField, Flex, Background } from 'serverless-design-system'
 import styled from 'styled-components'
-import searchIcon from 'src/assets/images/search-icon.svg'
+import searchIcon from 'src/assets/images/search-icon-gray.svg'
 
 const DocsSearchField = styled(TextField)`
   letter-spacing: 0.4px;

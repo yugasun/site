@@ -1,19 +1,46 @@
 import React from 'react'
-import { TextField, Flex, Background } from 'serverless-design-system'
+import { TextField, Flex } from 'serverless-design-system'
 import styled from 'styled-components'
-import searchIcon from 'src/assets/images/search-icon.svg'
-import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
+import searchIcon from 'src/assets/images/search-icon-gray.svg'
+import searchActiveIcon from 'src/assets/images/search-icon-black.svg'
 
 const DocsSearchField = styled(TextField)`
   letter-spacing: 0.4px;
   background: url(${searchIcon}) no-repeat;
   background-position: right 15px center;
   background-size: 17.5px;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  background-position-y: 11px;
   background-color: white;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border-radius: 4px;
-  background-position-y: 10px;
   padding-top: 6px;
+
+  &:focus,
+  &:active {
+    color: #000;
+    background: url(${searchActiveIcon}) no-repeat;
+    background-position: right 15px center;
+    background-size: 17.5px;
+    background-position-y: 11px;
+    background-color: white;
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #000;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #000;
+    }
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #000;
+    }
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: #000;
+    }
+  }
 
   @media screen and (max-width: 767px) {
     border-left: none;
