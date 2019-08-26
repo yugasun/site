@@ -11,7 +11,7 @@ import {
   ResponsiveStack,
 } from 'serverless-design-system'
 
-import NavLink from '../NavLink'
+import NavLink from './NavLink'
 import { Heading, Button, P } from 'src/fragments/DesignSystem'
 import prefooterLeftImage from 'src/assets/images/prefooter-new-left.svg'
 import prefooterRightImage from 'src/assets/images/prefooter-new-right.svg'
