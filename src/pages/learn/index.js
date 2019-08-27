@@ -35,14 +35,14 @@ const FrameWorks = ({ location }) => (
           <CommunityCourses />
         </AppContainer>
       </Background>
-      <Background background='#fff'>
+      <Box>
         <AppContainer>
           <ExamplesAndCaseStudies />
         </AppContainer>
-        <Background background='linear-gradient(to bottom, #f7f7f7 60%, #000 40%);'>
+        <Background background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
           <WhitepaperDownload />
         </Background>
-      </Background>
+      </Box>
     </Box>
   </DefaultLayout>
 )

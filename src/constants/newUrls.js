@@ -16,6 +16,7 @@ export default {
   framework: '/framework/',
   team: '/company/overview/',
   jobs: '/company/jobs/',
+  tutorials: '/blog/category/guides-and-tutorials/',
   contact: 'mailto:hello@serverless.com',
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
