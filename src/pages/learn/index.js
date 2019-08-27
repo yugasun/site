@@ -2,13 +2,12 @@ import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Home'
-import Hero from 'src/components/pages/framework/Hero'
-import Lifecycle from 'src/components/pages/framework/Lifecycle'
-import Pricing from 'src/components/pages/framework/Pricing'
-import Why from 'src/components/pages/framework/Why'
-import UseCases from 'src/components/pages/framework/UseCases'
-import Features from 'src/components/pages/framework/Features'
-import WhitepaperDownload from 'src/components/pages/framework/Whitepaper'
+import Hero from 'src/components/pages/learn/main/Hero'
+import Courses from 'src/components/pages/learn/main/Courses'
+import MoreResources from 'src/components/pages/learn/main/MoreResources'
+import CommunityCourses from 'src/components/pages/learn/main/CommunityCourses'
+import ExamplesAndCaseStudies from 'src/components/pages/learn/main/ExamplesAndCaseStudies'
+import WhitepaperDownload from 'src/components/pages/learn/main/Whitepaper'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
@@ -27,15 +26,18 @@ const FrameWorks = ({ location }) => (
     />
     <Hero />
     <AppContainer>
-      <Why />
-      <UseCases />
-      <Lifecycle />
+      <Courses />
+      <MoreResources />
     </AppContainer>
     <Box mt={[92, 92, 92, 92, 162]}>
       <Background background='#f7f7f7'>
         <AppContainer>
-          <Features />
-          <Pricing />
+          <CommunityCourses />
+        </AppContainer>
+      </Background>
+      <Background background='#fff'>
+        <AppContainer>
+          <ExamplesAndCaseStudies />
         </AppContainer>
         <Background background='linear-gradient(to bottom, #f7f7f7 60%, #000 40%);'>
           <WhitepaperDownload />
