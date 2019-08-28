@@ -106,10 +106,6 @@
   color: #000 !important;
 }
 
-.metismenu-link.active:not(.sls-root-menu) + ul > li {
-  border-left: 1px solid #fd5750;
-}
-
 .metismenu-link.active:not(.sls-root-menu) {
   border-left: 1px solid #fd5750;
   padding-left: 1em;
