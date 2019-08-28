@@ -1,18 +1,25 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
-import { Heading } from 'src/fragments/DesignSystem'
-import DesktopTable from './DesktopTable'
+import { Box, Flex } from 'serverless-design-system'
+import { Heading, Button } from 'src/fragments/DesignSystem'
+import CourseList from './List'
 
 const FrameworkFeatures = () => (
   <Box>
     <Heading.h3
-      pt={[92, 92, 92, 92, 162]}
+      pt={[62, 62, 92, 92, 132]}
       align='center'
-      pb={[22, 22, 22, 22, 42]}
+      pb={[32, 32, 42, 42, 62]}
     >
       Courses from our community
     </Heading.h3>
-    <DesktopTable />
+    <CourseList />
+    <Flex
+      justifyContent='center'
+      pt={[32, 32, 42, 42, 62]}
+      pb={[62, 62, 92, 92, 132]}
+    >
+      <Button>view full list</Button>
+    </Flex>
   </Box>
 )
 
