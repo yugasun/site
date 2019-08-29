@@ -1,4 +1,4 @@
-import experienceIcon from '/Users/Pravin/Desktop/courseImage.png'
+import experienceIcon from 'src/assets/images/temp/courses.png'
 
 module.exports = [
   {

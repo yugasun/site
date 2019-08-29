@@ -20,11 +20,6 @@ const data = [
     navProps: { to: learn.comparisons },
   },
   {
-    label: 'courses',
-    value: 'courses',
-    navProps: { to: learn.caseStudy },
-  },
-  {
     label: 'use cases',
     value: 'use-cases',
     navProps: { to: learn.courses },

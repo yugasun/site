@@ -38,7 +38,7 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
         <Tabs
           data={data}
           labelStyle={{
-            color: 'white',
+            color: '#8c8c8c',
             fontFamily: 'serverless',
             fontSize: 1,
             lineHeight: 1,
@@ -56,6 +56,7 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
             backgroundSize: 'cover',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'center',
+            color: 'white',
             minWidth:
               tabWidth && tabWidth.selected ? tabWidth.selected : '75px',
             mx: '0px',

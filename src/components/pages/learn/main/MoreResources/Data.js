@@ -1,4 +1,4 @@
-import developIcon from 'src/assets/images/pages/framework/icon-develop.svg'
+import developIcon from 'src/assets/images/temp/resources.png'
 
 export default [
   {
