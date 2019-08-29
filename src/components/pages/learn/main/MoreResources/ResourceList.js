@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Text, Image, Row, Column } from 'serverless-design-system'
-import coursesData from 'src/components/pages/courses/Content/data.js'
+import coursesData from './Data'
 import Stars from 'src/components/pages/courses/Content/Stars.js'
 import styled from 'styled-components'
 
@@ -34,7 +34,7 @@ const DesktopTable = props => (
         mb={[32, 32, 42, 42, 0]}
         mx={index === 1 || index === 4 ? [0, 0, 0, 0, 32] : '0'}
       >
-        <ResponsiveImage src={feature.thumbnail} width={72} height={72} />
+        <ResponsiveImage src={feature.image} width={72} height={72} />
         <Flex
           flexDirection='column'
           alignItems='left'
@@ -51,16 +51,6 @@ const DesktopTable = props => (
             {feature.title}
           </Text>
           <Column>
-            <Row justifyContent='flex-start'>
-              <Stars stars={feature.ratingsStar} />
-              <SmallText align='left'>
-                ({feature.totalRatings} ratings)
-              </SmallText>
-            </Row>
-
-            <SmallText mt={['3px']} align='left'>
-              {feature.duration} | {feature.level} | {feature.platform}
-            </SmallText>
             <SmallText mt={['3px']} align='left'>
               Created by {feature.author}
             </SmallText>

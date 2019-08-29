@@ -8,7 +8,7 @@ const FrameworkFeatures = () => (
     <Heading.h3
       pt={[62, 62, 92, 92, 132]}
       align='center'
-      pb={[32, 32, 42, 42, 62]}
+      mb={[32, 32, 42, 42, 62]}
     >
       Courses from our community
     </Heading.h3>
