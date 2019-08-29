@@ -23,13 +23,19 @@ const ResponsiveImage = styled(Image)`
 
 const DesktopTable = props => (
   <Flex
-    justifyContent={['center', 'center', 'auto']}
+    justifyContent={[
+      'center',
+      'center',
+      'space-between',
+      'space-between',
+      'auto',
+    ]}
     flexWrap={['wrap', 'wrap', 'wrap']}
   >
     {coursesData.slice(0, 6).map((feature, index) => (
       <Flex
         key={index}
-        width={[1, 1, 0.45, 0.42, 0.3]}
+        width={[1, 1, 0.47, 0.42, 0.3]}
         mt={index > 2 ? [0, 0, 0, 0, 62] : '0'}
         mb={[32, 32, 42, 42, 0]}
         mx={index === 1 || index === 4 ? [0, 0, 0, 0, 32] : '0'}

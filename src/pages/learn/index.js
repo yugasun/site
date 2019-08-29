@@ -37,7 +37,7 @@ const FrameWorks = ({ location }) => (
       <Courses />
       <MoreResources />
     </AppContainer>
-    <Box mt={[92, 92, 92, 92, 162]}>
+    <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#f7f7f7'>
         <AppContainer>
           <CommunityCourses />
