@@ -35,7 +35,7 @@ const ContentBlock = ({ image, heading, content, cta, link, id }) => (
   >
     <Image src={image} width={[62, 62, 72]} height={[62, 62, 72]} />
     <Column
-      width={[1, 1, 0.7, 0.7, 0.5]}
+      width={[1, 1, 0.7, 0.7, 0.65, 0.5]}
       ml={[0, 0, 0, 0, 32]}
       mt={[32, 32, 32, 32, 0]}
     >

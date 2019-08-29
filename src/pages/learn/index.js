@@ -14,7 +14,8 @@ import { Background, Box } from 'serverless-design-system'
 import styled from 'styled-components'
 
 const BackgroundWithPaddingBottom = styled(Background)`
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1601px) {
+    background: linear-gradient(to bottom, #fff 40%, #000 40%);
     padding-bottom: 115px;
   }
 `
@@ -46,7 +47,7 @@ const FrameWorks = ({ location }) => (
         <AppContainer>
           <ExamplesAndCaseStudies />
         </AppContainer>
-        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 40%, #000 40%);'>
+        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
           <WhitepaperDownload />
         </BackgroundWithPaddingBottom>
       </Box>

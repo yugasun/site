@@ -14,7 +14,7 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[422, 422, 540]}
+      height={[433, 433, 480, 540, 540]}
     >
       <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
         <HeroTabs selected='learn' />
@@ -26,8 +26,17 @@ const ExamplesHero = () => {
             <Image src={learnLogo} />
           </Heading.h0>
         </Box>
-        <Flex.verticallyCenter width={[1, 1, 1, 0.7]} px={[0, 0, 2, 7]}>
-          <PL color='white' mt={[22, 22, 1.5]} mb={0}>
+        <Flex.verticallyCenter
+          width={[1, 1, 1, 0.6, 0.9, 0.7]}
+          px={[0, 0, 0, 5, 7]}
+          ml={[0, 0, 4, 0, 0]}
+        >
+          <PL
+            color='white'
+            mt={[22, 22, 1.5]}
+            mb={0}
+            align={['center', 'center', 'left']}
+          >
             Your guide to channeling the power of Serverless for good.
           </PL>
         </Flex.verticallyCenter>

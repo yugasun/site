@@ -4,18 +4,34 @@ import { P, PS, Heading, SecondaryButton } from 'src/fragments/DesignSystem'
 import coursesList from './Data'
 
 const Courses = props => (
-  <Box mb={[92, 92, 92, 92, 132]} mt={[62, 62, 92, 92, 132]}>
-    <Heading.h3 align='center' mb={[0, 0, 0, 0, 62]}>
+  <Box mb={[92, 92, 92, 92, 132]}>
+    <Heading.h3
+      align='center'
+      mt={[62, 62, 62, 62, 132]}
+      mb={[32, 32, 42, 42, 62]}
+    >
       Courses
     </Heading.h3>
-    <Flex flexDirection={['column', 'column', 'column', 'column', 'row']}>
+    <Flex
+      flexDirection={['column', 'column', 'row', 'row', 'row']}
+      flexWrap={['initial', 'initial', 'wrap', 'wrap', 'initial']}
+      justifyContent={[
+        'initial',
+        'initial',
+        'space-between',
+        'space-between',
+        'initial',
+      ]}
+    >
       {coursesList.map((course, index) => (
         <Flex
           key={course.title}
-          flexDirection={['column', 'column', 'row', 'row', 'column']}
+          flexDirection={['column', 'column', 'column', 'column', 'column']}
           alignItems={['center']}
-          mt={[62, 62, 42, 42, 0]}
-          mx={index == 1 ? [0, 0, 0, 0, '32px'] : ['0px']}
+          mx={index == 1 ? [0, 0, 0, 0, 32] : ['0px']}
+          ml={index == 2 ? [0, 0, '28%', '28%', 0] : ['0px']}
+          width={[1, 1, 0.45, 0.45, 1]}
+          mb={'62px'}
         >
           <Image
             src={course.image}
@@ -25,8 +41,7 @@ const Courses = props => (
           <Flex
             flexDirection={'column'}
             width={[1, 1, 1, 1, 1]}
-            ml={[0, 0, 54, 54, 0]}
-            mt={[42, 42, 0, 0, 42]}
+            mt={[42, 42, 32, 32, 42]}
           >
             <Text
               fontFamily='SoleilBk'
@@ -51,7 +66,7 @@ const Courses = props => (
                 {course.description}
               </P>
               <PS align={['left']}>by {course.author}</PS>
-              <P color='#fd5750' mb={0}>
+              <P color='#fd5750' mb={0} mt={[32, 32, 32, 32, 42]}>
                 watch course >
               </P>
             </Box>
@@ -59,7 +74,7 @@ const Courses = props => (
         </Flex>
       ))}
     </Flex>
-    <Flex justifyContent='center' mt={'42px'}>
+    <Flex justifyContent='center'>
       <SecondaryButton>view courses list</SecondaryButton>
     </Flex>
   </Box>

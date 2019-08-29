@@ -53,11 +53,11 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
           }}
           selectedTabContainerStyle={{
             background: `url(${selectedTabBackground})`,
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'center',
             minWidth:
-              tabWidth && tabWidth.selected ? tabWidth.selected : '80px',
+              tabWidth && tabWidth.selected ? tabWidth.selected : '75px',
             mx: '0px',
           }}
           selectedValue={selected}
@@ -75,7 +75,7 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
         value={selected}
         fieldContainerProps={{
           background: `url(${selectedTabBackground})`,
-          backgroundSize: 'contain',
+          backgroundSize: ['contain', 'contain', 'contain', 'contain'],
           backgroundRepeat: 'no-repeat',
           border: '1px solid rgba(255, 255, 255, 0.2)',
         }}
