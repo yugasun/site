@@ -1,6 +1,6 @@
 import React from 'react'
-import { WhitepaperModal } from 'src/components'
 
-const index = props => <WhitepaperModal componentToRender={'whitepaper'} />
+import Banner from './Banner'
+const index = props => <Banner />
 
 export default index

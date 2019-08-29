@@ -96,8 +96,7 @@ const FrameworkWhitepaperBanner = props => (
               fontFamily='Soleil'
               align='center'
             >
-              See full architecture diagrams with time-to-market estimates for
-              use cases.
+              Get updated when new guide content is released
             </Text>
           </Box>
           <DownloadButton {...props}>download whitepaper</DownloadButton>
