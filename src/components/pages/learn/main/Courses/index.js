@@ -15,12 +15,16 @@ const Courses = props => (
           flexDirection={['column', 'column', 'row', 'row', 'column']}
           alignItems={['center']}
           mt={[62, 62, 42, 42, 0]}
-          mx={index == 1 ? ['32px'] : ['0px']}
+          mx={index == 1 ? [0, 0, 0, 0, '32px'] : ['0px']}
         >
-          <Image src={course.image} width={['100%']} height={[217]} />
+          <Image
+            src={course.image}
+            width={['100%']}
+            height={[200, 200, 217, 200, 217]}
+          />
           <Flex
             flexDirection={'column'}
-            width={[1, 1, 0.6, 0.8, 1]}
+            width={[1, 1, 1, 1, 1]}
             ml={[0, 0, 54, 54, 0]}
             mt={[42, 42, 0, 0, 42]}
           >
