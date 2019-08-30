@@ -32,7 +32,9 @@ const CoursesList = props => (
             >
               <Flex width={[1, 1, 1, 1, 0.8]}>
                 <Image src={playVideoIcon} />
-                <P ml={32}>{item.title}</P>
+                <P ml={32} color='#5b5b5b'>
+                  {item.title}
+                </P>
               </Flex>
               <P>{item.playTime}</P>
             </FlexWithBorderTop>

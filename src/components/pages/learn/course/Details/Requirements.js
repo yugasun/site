@@ -1,6 +1,9 @@
 import React from 'react'
-import { Heading, P } from 'src/fragments/DesignSystem'
+import { Heading, P, Flex } from 'src/fragments/DesignSystem'
 import { Box } from 'serverless-design-system'
+import { ExternalLink } from 'src/fragments'
+import { dashboard } from 'src/constants/newUrls.js'
+
 const Requirements = props => (
   <React.Fragment>
     <Box>
@@ -11,7 +14,7 @@ const Requirements = props => (
       >
         Requirements
       </Heading.h3>
-      <P m={0}>• Serverless Framework. Sign up for free</P>
+      <P m={0}> • Serverless Framework. Sign up for free</P>
       <P m={0}>• Text and source code editor</P>
       <P m={0}>• Chrome or Safari browser</P>
     </Box>
