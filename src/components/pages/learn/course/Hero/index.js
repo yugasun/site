@@ -20,7 +20,7 @@ const ExamplesHero = () => {
       </Box>
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
-        <Box width={[1, 1, 1, 1, 0.7]}>
+        <Box width={[1, 1, 1, 1, 0.5]}>
           <Text
             color='#fd5750'
             fontSize={['14px']}
@@ -35,13 +35,20 @@ const ExamplesHero = () => {
             lineHeight={['30px', '30px', '30px', '30px', '50px']}
             letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '0px']}
             my={'12px'}
+            fontFamily='Soleil'
           >
             Serverless Full Stack Application on AWS
           </Text>
           <PS>by Gareth McCumskey</PS>
         </Box>
-        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.65]}>
-          <P color='white' mt={[32, 32, 1.5]} mb={0} align={['left']}>
+        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.55]}>
+          <P
+            color='white'
+            mt={[32, 32, 1.5]}
+            mb={0}
+            align={['left']}
+            mx={[0, 0, 0, 0, 5]}
+          >
             Serverless services only cost you when they are actually executing.
             This is important. To be a truly serverless service, there needs to
             be no idle running cost.

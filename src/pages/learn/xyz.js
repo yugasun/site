@@ -3,10 +3,8 @@ import React from 'react'
 import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/learn/course/Hero'
-import Courses from 'src/components/pages/learn/course/Courses'
+import Details from 'src/components/pages/learn/course/Details'
 import MoreCourses from 'src/components/pages/learn/course/MoreCourses'
-import CommunityCourses from 'src/components/pages/learn/course/CommunityCourses'
-import ExamplesAndCaseStudies from 'src/components/pages/learn/course/ExamplesAndCaseStudies'
 import WhitepaperDownload from 'src/components/pages/learn/course/Whitepaper'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
@@ -34,7 +32,7 @@ const FrameWorks = ({ location }) => (
     />
     <Hero />
     <AppContainer>
-      <Courses />
+      <Details />
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#f7f7f7'>
