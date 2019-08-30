@@ -16,20 +16,25 @@ const FlexWithBorderTop = styled(Flex)`
 
 const CourseBox = props => (
   <Card
-    height='638px'
-    width='592px'
+    height={[474, 474, 462, 462, 638]}
+    width={[1, 1, 278, 278, 592]}
     flexDirection='column'
-    mt={[32, 32, 62, 62, 92]}
-    mx='auto'
+    mt={[-135, -135, 62, 62, 92]}
+    ml={[0, 0, 55, 55, 136]}
     borderRadius='4px'
     boxShadow='2px 7px 18px 0 rgba(0, 0, 0, 0.08)'
   >
     <Background
       background={`url(${courseBgImage}) no-repeat`}
+      backgroundSize={['cover', 'cover', 'contain']}
       width='100%'
-      height='334px'
+      height={[169, 189, 156, 156, 334]}
     >
-      <Flex justifyContent='center' alignItems='center' height='334px'>
+      <Flex
+        justifyContent='center'
+        alignItems='center'
+        height={[179, 199, 166, 166, 290, 334]}
+      >
         <Button>start course</Button>
       </Flex>
     </Background>

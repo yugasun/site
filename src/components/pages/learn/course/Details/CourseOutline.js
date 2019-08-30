@@ -30,7 +30,7 @@ const CoursesList = props => (
               key={item.title}
               justifyContent={'space-between'}
             >
-              <Flex width={[1, 1, 1, 1, 0.8]}>
+              <Flex width={[1, 1, 0.8, 0.8, 0.8]}>
                 <Image src={playVideoIcon} />
                 <P ml={32} color='#5b5b5b'>
                   {item.title}

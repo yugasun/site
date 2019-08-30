@@ -6,8 +6,8 @@ import { Flex, Box } from 'serverless-design-system'
 
 const Courses = props => (
   <Box mb={[92, 92, 92, 92, 132]}>
-    <Flex>
-      <Flex flexDirection='column'>
+    <Flex flexDirection={['column-reverse', 'column-reverse', 'row']}>
+      <Flex flexDirection='column' width={[1, 1, 0.5, 0.5]}>
         <Requirements />
         <CourseOutline />
       </Flex>
