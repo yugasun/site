@@ -20,7 +20,7 @@ const ExamplesHero = () => {
       </Box>
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
-        <Box width={[1, 1, 1, 1, 0.5]}>
+        <Box width={[1, 1, 1, 1, 0.45]}>
           <Text
             color='#fd5750'
             fontSize={['14px']}
@@ -41,7 +41,7 @@ const ExamplesHero = () => {
           </Text>
           <PS>by Gareth McCumskey</PS>
         </Box>
-        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.55]}>
+        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.5]}>
           <P
             color='white'
             mt={[32, 32, 1.5]}
