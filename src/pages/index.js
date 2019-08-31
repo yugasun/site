@@ -3,8 +3,9 @@ import React from 'react'
 import { Helmet, NewToServerlessPrefooter } from 'src/fragments'
 import HomeLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/home/Hero'
-import Community from 'src/components/pages/home/Community'
-import Providers from 'src/components/pages/home/Providers'
+import Users from 'src/components/pages/home/Users'
+import Paradigm from 'src/components/pages/home/Paradigm'
+import Framework from 'src/components/pages/home/Framework'
 import Guide from 'src/components/pages/home/Guide'
 
 const Homepage = ({ location }) => (
@@ -19,8 +20,9 @@ const Homepage = ({ location }) => (
       location={location}
     />
     <Hero />
-    <Community />
-    <Providers />
+    <Users />
+    <Paradigm />
+    <Framework />
     <Guide />
   </HomeLayout>
 )

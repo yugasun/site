@@ -1,0 +1,80 @@
+/*
+* Motion: Hover Fades
+*/
+
+.hoverWhite {
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+
+  &:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+/*
+* Motion: Fades
+*/
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+.fadeInMed {
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+.fadeInSlow {
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fadeInUp {
+  -webkit-animation: fadeInUp 1s;
+  -moz-animation: fadeInUp 1s;
+  animation: fadeInUp 1s;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*
+* Motion: Width
+*/
+
+.fadeInWidth {
+  -webkit-animation: fadeInWidth 4s;
+  -moz-animation: fadeInWidth 4s;
+  animation: fadeInWidth 4s;
+}
+@keyframes fadeInWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1;
+  }
+}

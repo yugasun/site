@@ -1,24 +1,190 @@
 import React from 'react'
+import { Box, Row } from 'serverless-design-system'
+import imgBolt from 'src/assets/images/icon-bolt.svg'
+import imgLogoEa from 'src/assets/images/logo-ea.png'
+import imgLogoNordstrom from 'src/assets/images/logo-nordstrom.png'
+import imgLogoCocaCola from 'src/assets/images/logo-coca-cola.png'
+import imgLogoExpedia from 'src/assets/images/logo-expedia.png'
+import imgLogoReuters from 'src/assets/images/logo-reuters.png'
+import './Hero.css'
 
-import Logo from './Logo'
-import HeroHeader from './Header'
-import HeroFeature from './Feature'
-import HeroActions from './Actions'
-import HeroBrands from './Brands'
-import { Flex, Column } from 'serverless-design-system'
+export default class Hero extends React.Component {
 
-const HomeHeroComponent = () => (
-  <React.Fragment>
-    <Column alignItems='center'>
-      <Logo />
-      <HeroHeader />
-      <HeroActions />
-    </Column>
-    <Flex>
-      <HeroFeature />
-    </Flex>
-    <HeroBrands />
-  </React.Fragment>
-)
+  constructor(props) {
+    super(props)
 
-export default HomeHeroComponent
+    this.state = {}
+
+    this.state.chapter = 'develop'
+
+    this.state.stats = {}
+    this.state.stats.downloads = 11898291
+    this.state.stats.deployments = 534134
+    this.state.stats.stars = 31271
+    this.state.stats.plugins = 302
+
+    this.state.timers = {}
+
+    this.toggleChapter = this.toggleChapter.bind(this)
+  }
+
+  /**
+   * Component Did Mount
+   */
+
+  componentDidMount() {
+
+    const self = this
+
+    // Start stats timer
+    this.state.timers.stats = setInterval(() => {
+      const newState = Object.assign(self.state, {
+        stats: {
+          downloads: self.state.stats.downloads + 33,
+          deployments: self.state.stats.deployments + 13,
+          stars: self.state.stats.stars,
+          plugins: self.state.stats.plugins,
+      }})
+      self.setState(newState)
+    }, 3000)
+
+  }
+
+  /**
+   * Toggle Chapter
+   */
+
+  toggleChapter(chapter) {
+    this.setState({ chapter })
+  }
+
+  /**
+   * Render
+   */
+
+  render() {
+    return (
+      <Box
+        display={['block', 'block', 'none', 'none', 'block']}
+        className='hero-container'>
+
+        <Row className='hero'
+        mt={[92, 92, 132, 372, 102]} mb={[62, 62, 62, 62, 0]}>
+
+          <div className='logo row'>
+            <div className='logo-bolt'>
+              <img src={imgBolt} />
+            </div>
+            <div className='logo-serverless'>
+              serverless
+            </div>
+            <div className='logo-framework'>
+              framework
+            </div>
+          </div>
+
+          <div className='tagline row'>
+            The complete solution for building & operating serverless applications
+          </div>
+
+          <div className='video-container row'>
+            <div className='video-chapters row'>
+              <div
+                className={`video-chapter ${ this.state.chapter === 'develop' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('develop') }}>
+                Develop
+              </div>
+              <div
+                className={`video-chapter ${ this.state.chapter === 'deploy' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('deploy') }}>
+                Deploy
+              </div>
+              <div
+                className={`video-chapter ${ this.state.chapter === 'test' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('test') }}>
+                Test
+              </div>
+              <div
+                className={`video-chapter ${ this.state.chapter === 'monitor' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('monitor') }}>
+                Monitor
+              </div>
+              <div
+                className={`video-chapter ${ this.state.chapter === 'secure' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('secure') }}>
+                Secure
+              </div>
+            </div>
+          </div>
+
+          <div className='actions row'>
+            <div className='button buttonPrimary'>
+              Begin
+            </div>
+            <div className='button buttonSecondary'>
+              Learn More
+            </div>
+          </div>
+
+          <div className='info row'>
+
+            <div className='customers'>
+              <div className='customer'>
+                <img src={imgLogoEa} draggable={false} />
+              </div>
+              <div className='customer'>
+                <img src={imgLogoNordstrom} draggable={false} />
+              </div>
+              <div className='customer'>
+                <img src={imgLogoCocaCola} draggable={false} />
+              </div>
+              <div className='customer'>
+                <img src={imgLogoExpedia} draggable={false} />
+              </div>
+              <div className='customer'>
+                <img src={imgLogoReuters} draggable={false} />
+              </div>
+            </div>
+
+            <div className='stats'>
+              <div className='stat'>
+                <div className='stat-number'>
+                  { this.state.stats.downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
+                </div>
+                <div className='stat-category'>
+                  Downloads
+                </div>
+              </div>
+              <div className='stat'>
+                <div className='stat-number'>
+                  { this.state.stats.deployments.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
+                </div>
+                <div className='stat-category'>
+                  Weekly Deployments
+                </div>
+              </div>
+              <div className='stat'>
+                <div className='stat-number'>
+                  { this.state.stats.stars.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
+                </div>
+                <div className='stat-category'>
+                  Github Stars
+                </div>
+              </div>
+              <div className='stat'>
+                <div className='stat-number'>
+                  { this.state.stats.plugins }
+                </div>
+                <div className='stat-category'>
+                  Plugins
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </Row>
+      </Box>
+    )
+  }
+}
