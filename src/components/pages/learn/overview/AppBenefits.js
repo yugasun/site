@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system'
 import { Features } from 'src/fragments'
 import zeroAdmin from 'src/assets/images/icon-circle.svg'
 import autoScaling from 'src/assets/images/icon-vol-light.svg'
@@ -32,13 +32,15 @@ const featureItemsData = [
 ]
 
 const OverviewFeatures = () => (
-  <Features
-    title='What makes an application serverless?'
-    description='These are the 4 key properties of Serverless Applications you should know about'
-    features={featureItemsData}
-    leadingNumber={false}
-    headingStyle={{ my: [4] }}
-  />
+  <Box mt={[2, 2, 4, 4, 6]}>
+    <Features
+      title='What makes an application serverless?'
+      description='These are the 4 key properties of Serverless Applications you should know about'
+      features={featureItemsData}
+      leadingNumber={false}
+      headingStyle={{ my: [4] }}
+    />
+  </Box>
 )
 
 export default OverviewFeatures
