@@ -64,14 +64,10 @@ export default class Hero extends React.Component {
 
   render() {
     return (
-      <Box
-        display={['block', 'block', 'none', 'none', 'block']}
-        className='hero-container'>
+      <div className='container hero'>
+        <div className='container-inner hero-inner'>
 
-        <Row className='hero'
-        mt={[92, 92, 132, 372, 102]} mb={[62, 62, 62, 62, 0]}>
-
-          <div className='logo row'>
+          <div className='logo container'>
             <div className='logo-bolt'>
               <img src={imgBolt} />
             </div>
@@ -83,12 +79,12 @@ export default class Hero extends React.Component {
             </div>
           </div>
 
-          <div className='tagline row'>
+          <div className='tagline container'>
             The complete solution for building & operating serverless applications
           </div>
 
-          <div className='video-container row'>
-            <div className='video-chapters row'>
+          <div className='video-container container'>
+            <div className='video-chapters container'>
               <div
                 className={`video-chapter ${ this.state.chapter === 'develop' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('develop') }}>
@@ -117,7 +113,7 @@ export default class Hero extends React.Component {
             </div>
           </div>
 
-          <div className='actions row'>
+          <div className='actions container'>
             <div className='button buttonPrimary'>
               Begin
             </div>
@@ -126,8 +122,7 @@ export default class Hero extends React.Component {
             </div>
           </div>
 
-          <div className='info row'>
-
+          <div className='info container'>
             <div className='customers'>
               <div className='customer'>
                 <img src={imgLogoEa} draggable={false} />
@@ -180,11 +175,9 @@ export default class Hero extends React.Component {
                 </div>
               </div>
             </div>
-
           </div>
-
-        </Row>
-      </Box>
+        </div>
+      </div>
     )
   }
 }

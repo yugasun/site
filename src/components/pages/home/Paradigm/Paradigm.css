@@ -19,24 +19,3 @@
   margin-top: 80px!important;
   border-bottom: 2px solid rgba(255,255,255,0.2);
 }
-
-.header-label {
-  color: #fd5750;
-  font-size: 18px;
-  font-family: 'SoleilBk';
-  user-select: none;
-  margin-bottom: 24px;
-}
-
-.header {
-  font-size: 32px;
-  font-family: 'SoleilBk';
-  user-select: none;
-  margin-bottom: 30px;
-}
-
-.subheader {
-  font-size: 22px;
-  font-family: 'SoleilBk';
-  user-select: none;
-}

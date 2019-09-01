@@ -9,8 +9,8 @@ import './index.css'
 
 class Layout extends React.Component {
 
-   // Initial App mount. Happens once
-   componentDidMount() {
+  // Initial App mount. Happens once
+  componentDidMount() {
     initializeAnalytics()
   }
 

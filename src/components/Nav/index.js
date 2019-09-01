@@ -25,8 +25,8 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <div className='nav'>
-        <div className='nav-inner'>
+      <div className='container nav'>
+        <div className='container-inner nav-inner'>
 
           <div className='nav-logo'>
             <img src={imgLogo} draggable={false} />
@@ -51,10 +51,10 @@ export default class Nav extends React.Component {
             <div className='nav-item'>
               More
             </div>
-            <div className='nav-item sign-in'>
+            <div className='nav-item nav-sign-in'>
               Sign-in
             </div>
-            <div className='nav-item sign-up'>
+            <div className='nav-item nav-sign-up'>
               Start Free
             </div>
           </div>
