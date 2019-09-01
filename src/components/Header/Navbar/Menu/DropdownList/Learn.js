@@ -3,12 +3,13 @@ import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
 import {
-  github,
-  forum,
-  slack,
-  meetups,
-  partners,
-  courses,
+  learn,
+  what,
+  why,
+  useCases,
+  examples,
+  caseStudies,
+  comparisons,
 } from 'src/constants/newUrls'
 
 const Resource = () => (
@@ -16,67 +17,78 @@ const Resource = () => (
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: github,
+          to: learn,
           backgroundOnHover: true,
           crossDomain: true,
         }}
       >
-        github
+        courses
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: forum,
+          to: what,
           crossDomain: true,
           backgroundOnHover: true,
         }}
       >
-        forum
+        what
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: slack,
+          to: why,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        slack
+        why
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: meetups,
+          to: useCases,
           completed: true,
           backgroundOnHover: true,
         }}
       >
-        meetups
+        use cases
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: partners,
+          to: examples,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        partners
+        examples
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
+      <SubMenuItem
+        navProps={{
+          to: caseStudies,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        case studies
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
-          to: courses,
+          to: comparisons,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        community courses
+        comparisons
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

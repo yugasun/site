@@ -31,7 +31,7 @@ const MenuDescription = ({ wrapperStyles, theme, children }) => (
         position={['relative', 'relative', 'relative', 'relative', 'absolute']}
         top={['0', '0', '0', '0', '52px']}
         left={['0', '0', '0', '0', '-50%']}
-        minWidth={[0, 0, 0, 0, '212px']}
+        minWidth={[0, 0, 0, 0, '176px']}
         beforeBoxBorderWidth={[0, 0, 0, 0, '0 7.5px 13.0px 7.5px']}
       >
         <BackgroundWithBorder
