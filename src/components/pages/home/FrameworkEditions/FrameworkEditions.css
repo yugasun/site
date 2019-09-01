@@ -24,12 +24,12 @@
   min-height: 396px;
   width: 33%;
   background: #ffffff;
-  margin: 50px 20px 20px 20px;
+  margin: 50px 14px 20px 14px;
   padding: 24px 24px 42px 24px;
   border-radius: 2px;
   border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
-  transition: all 0.2s linear;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
   user-select: none;
 }
 
@@ -47,7 +47,7 @@
 
 .framework-edition:hover {
   cursor: pointer;
-  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
   transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
 }
 
@@ -112,7 +112,7 @@
 }
 
 .framework-edition-detail-title {
-  font-family: 'SoleilBk';
+  font-family: 'SoleilSB';
   text-transform: capitalize;
   font-size: 18px;
   margin-bottom: 16px;
@@ -130,7 +130,7 @@
 
 .framework-edition-detail-price {
   font-size: 20px;
-  font-family: 'SoleilBk';
+  font-family: 'SoleilSB';
   letter-spacing: -0.1px;
   color: #fd5750;
   transition: all 0.2s linear;
@@ -146,7 +146,7 @@
   text-align: center;
   font-family: 'SoleilLt';
   font-size: 15px;
-  color: rgba(0,0,0,0.45);
+  color: rgba(0,0,0,0.55);
   padding: 20px 0 0 0;
   transition: all 0.2s ease;
 }

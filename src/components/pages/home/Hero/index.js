@@ -124,20 +124,25 @@ export default class Hero extends React.Component {
 
           <div className='info container'>
             <div className='customers'>
-              <div className='customer'>
-                <img src={imgLogoEa} draggable={false} />
-              </div>
-              <div className='customer'>
-                <img src={imgLogoNordstrom} draggable={false} />
-              </div>
-              <div className='customer'>
-                <img src={imgLogoCocaCola} draggable={false} />
-              </div>
-              <div className='customer'>
-                <img src={imgLogoExpedia} draggable={false} />
-              </div>
-              <div className='customer'>
-                <img src={imgLogoReuters} draggable={false} />
+            <div className='customers-meta'>
+              Trusted by
+            </div>
+              <div className='customers-list'>
+                <div className='customer'>
+                  <img src={imgLogoEa} draggable={false} />
+                </div>
+                <div className='customer'>
+                  <img src={imgLogoNordstrom} draggable={false} />
+                </div>
+                <div className='customer'>
+                  <img src={imgLogoCocaCola} draggable={false} />
+                </div>
+                <div className='customer'>
+                  <img src={imgLogoExpedia} draggable={false} />
+                </div>
+                <div className='customer'>
+                  <img src={imgLogoReuters} draggable={false} />
+                </div>
               </div>
             </div>
 

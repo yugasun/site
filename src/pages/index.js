@@ -22,7 +22,6 @@ const Homepage = ({ location }) => (
     <FrameworkEditions />
     <Users />
     <Paradigm />
-    <Guide />
   </HomeLayout>
 )
 

@@ -52,10 +52,13 @@ export default class Nav extends React.Component {
               More
             </div>
             <div className='nav-item nav-sign-in'>
-              Sign-in
+              Register
             </div>
             <div className='nav-item nav-sign-up'>
-              Register
+              Sign-in
+            </div>
+            <div className='nav-item nav-contact-sales'>
+              Contact Sales
             </div>
           </div>
 

@@ -1,21 +1,27 @@
 .paradigm-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 101vh;
-  max-height: 1160px;
-  width: 100%;
-  padding: 10px 10px 0 10px;
+  height: auto;
+  min-height: 300px;
+  user-select: none;
+  padding: 68px 10px;
   background: #ffffff;
   color: #000000;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.paradigm {
-  display: flex;
+.paradigm-inner {
   flex-direction: column;
+}
+
+.paradigm-manifesto {
+
+}
+
+.paradigm-manifesto p {
   width: 100%;
-  max-width: 1200px;
-  min-height: 700px;
-  margin-top: 80px!important;
-  border-bottom: 2px solid rgba(255,255,255,0.2);
+  text-align: left;
+  font-family: 'SoleilLt';
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0 0 26px 0;
+  letter-spacing: -0.1px;
 }

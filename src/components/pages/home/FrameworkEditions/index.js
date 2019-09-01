@@ -30,7 +30,7 @@ export default class FrameworkEditions extends React.Component {
           </div>
 
           <div className='header container'>
-            Everything you need, at any scale
+            Everything you need, at any scale.
           </div>
 
           <div className='framework-editions-list container'>
@@ -139,7 +139,7 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='framework-edition-detail-link'>
                   <div>Start for Free</div>
-                  <div>Contact Us</div>
+                  <div>Contact Sales</div>
                 </div>
               </div>
 
@@ -274,7 +274,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='framework-edition-action'>
                 <div className='framework-edition-action-button'>
-                  Contact Us
+                  Contact Sales
                 </div>
               </div>
             </div>

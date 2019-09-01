@@ -30,11 +30,11 @@ export default class Users extends React.Component {
         <div className='container-inner user-tweets-inner'>
 
           <div className='container header-label'>
-            Community
+            Serverless Architects
           </div>
 
           <div className='container header'>
-            Empowering Next Generation Developers
+            Empowering a new generation of developers.
           </div>
 
           <div className='container user-tweets-tweets'>
