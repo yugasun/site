@@ -1,43 +1,51 @@
 import React from 'react'
 
 import { HeroTabsNewest as HeroTabs } from 'src/fragments'
-import { learn } from 'src/constants/urls'
+import {
+  learn,
+  what,
+  why,
+  useCases,
+  examples,
+  caseStudies,
+  comparisons,
+} from 'src/constants/newUrls'
 
 const data = [
   {
     label: 'learn',
     value: 'learn',
-    navProps: { to: learn.why },
+    navProps: { to: learn },
   },
   {
     label: 'what?',
     value: 'what',
-    navProps: { to: learn.useCases },
+    navProps: { to: what },
   },
   {
     label: 'why?',
     value: 'why',
-    navProps: { to: learn.comparisons },
+    navProps: { to: why },
   },
   {
     label: 'use cases',
     value: 'use-cases',
-    navProps: { to: learn.courses },
+    navProps: { to: useCases },
   },
   {
     label: 'examples',
     value: 'examples',
-    navProps: { to: learn.courses },
+    navProps: { to: examples },
   },
   {
     label: 'case studies',
     value: 'case-studies',
-    navProps: { to: learn.courses },
+    navProps: { to: caseStudies },
   },
   {
     label: 'comparisons',
     value: 'comparisons',
-    navProps: { to: learn.courses },
+    navProps: { to: comparisons },
   },
 ]
 
