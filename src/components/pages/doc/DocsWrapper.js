@@ -541,7 +541,7 @@ const Wrapper = styled(Column)`
       opacity: 1;
     }
     .rightContent {
-      width: 688px;
+      width: 698px;
     }
   }
   .versionNumber {
@@ -726,7 +726,7 @@ const Wrapper = styled(Column)`
   @media (max-width: 1600px) {
     .breadCrumbContainer {
       .rightContent {
-        width: 696px;
+        width: 706px;
       }
     }
   }
