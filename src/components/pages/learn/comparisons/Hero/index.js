@@ -7,20 +7,21 @@ import { PL } from 'src/fragments/DesignSystem'
 
 const UseCasesHero = () => (
   <HeroWrapper
-  background={['linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)', 'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',`linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`]}
-  height={[340, 340, 450, 450, 493]}
+    background={[
+      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+      `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
+    ]}
+    height={[340, 340, 450, 450, 493]}
   >
-    <Box mb={[2, 2, 7, 7, 8]}>
+    <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
       <HeroTabs selected='comparisons' />
     </Box>
 
-    <ResponsiveStack
-      mb={[2, 2, 4, 7]}
-      color='white'
-    >
-      <Box width={[1, 1, 1/2]}>
+    <ResponsiveStack mb={[2, 2, 4, 7]} color='white'>
+      <Box width={[1, 1, 1 / 2]}>
         <Text.p
-          fontSize={[6, 6, 7, 8]}
+          fontSize={[6, 6, 7, '70px', '80px', 8]}
           fontFamily='Soleil'
           lineHeight={1}
           letterSpacing={'-0.2'}
@@ -29,16 +30,10 @@ const UseCasesHero = () => (
           Comparisons
         </Text.p>
       </Box>
-      <Box
-        width={[1, 1, 1/2]}
-        pl={[0, 0, 4]}
-      >
-        <PL
-          color='white'
-          mt={[3, 3, 1, 1, 3]}
-          mb={3}
-        >
-          Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation.
+      <Box width={[1, 1, 1 / 2]} pl={[0, 0, 4]}>
+        <PL color='white' mt={[3, 3, 1, 1, 3]} mb={3}>
+          Serverless Architectures are enabling a wide range of use cases, but
+          they're not right for every situation.
         </PL>
       </Box>
     </ResponsiveStack>
