@@ -115,7 +115,7 @@ export default class Hero extends React.Component {
 
           <div className='actions container'>
             <div className='button buttonPrimary'>
-              Begin
+              Start Free
             </div>
             <div className='button buttonSecondary'>
               Learn More

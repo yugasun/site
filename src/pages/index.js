@@ -4,7 +4,7 @@ import HomeLayout from 'src/layouts/Home'
 import Hero from 'src/components/pages/home/Hero'
 import Users from 'src/components/pages/home/Users'
 import Paradigm from 'src/components/pages/home/Paradigm'
-import Framework from 'src/components/pages/home/Framework'
+import FrameworkEditions from 'src/components/pages/home/FrameworkEditions'
 import Guide from 'src/components/pages/home/Guide'
 
 const Homepage = ({ location }) => (
@@ -19,9 +19,9 @@ const Homepage = ({ location }) => (
       location={location}
     />
     <Hero />
+    <FrameworkEditions />
     <Users />
     <Paradigm />
-    <Framework />
     <Guide />
   </HomeLayout>
 )

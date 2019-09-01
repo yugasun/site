@@ -278,6 +278,7 @@ tfoot td {
 
 .header-label {
   color: rgba(0,0,0,0.3);
+  color: #fd5750;
   font-size: 18px;
   font-family: 'Soleil';
   user-select: none;
@@ -286,10 +287,11 @@ tfoot td {
 
 .header {
   color: rgba(0,0,0,1);
-  font-size: 32px;
-  font-family: 'SoleilSB';
+  font-size: 36px;
+  font-family: 'SoleilBk';
   user-select: none;
   margin-bottom: 40px;
+  letter-spacing: -0.1px;
 }
 
 /*

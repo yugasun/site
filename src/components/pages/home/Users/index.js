@@ -26,66 +26,66 @@ export default class Users extends React.Component {
 
   render() {
     return (
-      <div className='container users'>
-        <div className='container-inner users-inner'>
+      <div className='container user-tweets'>
+        <div className='container-inner user-tweets-inner'>
 
           <div className='container header-label'>
             Community
           </div>
 
           <div className='container header'>
-            Empowering Developers Every Day
+            Empowering Next Generation Developers
           </div>
 
-          <div className='container users-tweets'>
-            <div className='users-tweet'>
-              <div className='users-tweet-icon'>
+          <div className='container user-tweets-tweets'>
+            <div className='user-tweets-tweet'>
+              <div className='user-tweets-tweet-icon'>
                 <img src={imgTwitter} />
               </div>
-              <div className='users-tweet-name'>
+              <div className='user-tweets-tweet-name'>
                 <img src={imgTweeterTwo} />
                 @david_welch
               </div>
-              <div className='users-tweet-text'>
+              <div className='user-tweets-tweet-text'>
                 Built our platform on @goserverless with 2 engineers working nights and mornings for the first 14 months. Didn’t pay a dime until 16 months in, have scaled to 10+ employees w exp from 0 to senior, very agile w CI/CD, couldn’t have made a better choice.
               </div>
             </div>
 
-            <div className='users-tweet'>
-              <div className='users-tweet-icon'>
+            <div className='user-tweets-tweet'>
+              <div className='user-tweets-tweet-icon'>
                 <img src={imgTwitter} />
               </div>
-              <div className='users-tweet-name'>
+              <div className='user-tweets-tweet-name'>
                 <img src={imgTweeterOne} />
                 @DrPappa
               </div>
-              <div className='users-tweet-text'>
+              <div className='user-tweets-tweet-text'>
                 I didn't realise #serverless was so absurdly quick and easy to use. Thanks @goserverless you've done an excellent job.
               </div>
             </div>
 
-            <div className='users-tweet'>
-              <div className='users-tweet-icon'>
+            <div className='user-tweets-tweet'>
+              <div className='user-tweets-tweet-icon'>
                 <img src={imgTwitter} />
               </div>
-              <div className='users-tweet-name'>
+              <div className='user-tweets-tweet-name'>
                 <img src={imgTweeterThree} />
                 @themccallister
               </div>
-              <div className='users-tweet-text'>
+              <div className='user-tweets-tweet-text'>
                 I’m still a huge fan of @Docker but man this @goserverless stuff is purely amazing, I'm fully onboard with managing infrastructure from code... Just moved an existing API and supporting app to Lambda functions in one day...
               </div>
             </div>
 
-            <div className='users-tweet'>
-              <div className='users-tweet-icon'>
+            <div className='user-tweets-tweet'>
+              <div className='user-tweets-tweet-icon'>
                 <img src={imgTwitter} />
               </div>
-              <div className='users-tweet-name'>
+              <div className='user-tweets-tweet-name'>
                 <img src={imgTweeterFour} />
                 @TylerZey
               </div>
-              <div className='users-tweet-text'>
+              <div className='user-tweets-tweet-text'>
                 Built two #Lambda functions today via @goserverless. One runs daily to update all of our coupons in DynamoDB. And the other is the query function to search DynamoDB for the coupon. Super duper easy with Serverless framework. Got it live and almost in prod already.
               </div>
             </div>
