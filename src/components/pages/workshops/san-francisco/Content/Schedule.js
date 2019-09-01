@@ -3,7 +3,7 @@ import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { Flex, Box, Text } from 'serverless-design-system'
 import styled from 'styled-components'
 import { P } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const FlexWithBottomBorder = styled(Flex)`
   border-bottom: 1px solid #9b9b9b;

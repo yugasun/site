@@ -1,34 +1,35 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { resources, community } from 'src/constants/urls'
+import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
 
-const ResourceColumn = () => (
+const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn
-    header='community'
+    mobileOrder={mobileOrder}
+    header='Community'
     listItems={[
       {
-        name: 'partners',
-        navProps: { to: community.partners, completed: true },
+        name: 'GitHub',
+        navProps: { to: github, crossDomain: true },
       },
       {
-        name: 'forum',
-        navProps: { to: resources.forum, crossDomain: true },
+        name: 'Forum',
+        navProps: { to: forum, crossDomain: true },
       },
       {
-        name: 'events',
-        navProps: { to: resources.events, completed: true },
+        name: 'Slack',
+        navProps: { to: slack, completed: true },
       },
       {
-        name: 'slack',
-        navProps: { to: resources.slack, crossDomain: true },
+        name: 'Meetups',
+        navProps: { to: meetups, completed: true },
       },
       {
-        name: 'workshops',
-        navProps: { to: resources.workshops, completed: true },
+        name: 'Partners',
+        navProps: { to: partners, completed: true },
       },
     ]}
   />
 )
 
-export default ResourceColumn
+export default CommunityColumn

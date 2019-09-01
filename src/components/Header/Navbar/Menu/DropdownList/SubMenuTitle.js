@@ -17,6 +17,7 @@ const SubMenuTitle = ({ children }) => (
       color={'white'}
       fontSize={'1.9rem'}
       letterSpacing={'text'}
+      fontFamily='Soleil'
     >
       {children}
     </Heading.h5>

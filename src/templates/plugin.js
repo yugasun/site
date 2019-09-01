@@ -1,8 +1,8 @@
 import React from 'react'
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import PluginContent from 'src/components/pages/plugin/PluginContent'
 import { Helmet } from 'src/fragments'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 
 const PluginPage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>

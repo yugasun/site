@@ -1,29 +1,20 @@
 import React from 'react'
 
 import { Column } from 'serverless-design-system'
-import DesktopUpArrows from './DesktopUpArrows'
-import { Heading, P, MobileCenteredBox } from 'src/fragments/DesignSystem'
-import HeroGithub from './Github'
-import styled from 'styled-components'
-
-const MobileCenteredTextBox = styled(MobileCenteredBox)`
-  @media screen and (max-width: 415px) {
-    text-align: center;
-  }
-`
+import { Heading } from 'src/fragments/DesignSystem'
 
 const HeroHeader = () => (
-  <Column>
-    <DesktopUpArrows />
-    <MobileCenteredTextBox>
-        <HeroGithub />
-    </MobileCenteredTextBox>
-    <Heading.h3 color='white' align={['center', 'center', 'left']}>
-      The most widely-adopted toolkit for building serverless applications.
-    </Heading.h3>
-    <P align={['center', 'center', 'left']} m={0} color='gray.2'>
-      Any provider. Same experience.
-    </P>
+  <Column width={[0.8, 0.8, 0.8, 0.6, 0.5]} maxWidth={'832px'}>
+    <Heading.h1
+      color='#000000'
+      mb={0}
+      fontSize={['40px', '40px', '48px']}
+      lineHeight={['50px', '50px', '62px']}
+      letterSpacing={[0, 0, '0.5px']}
+      align={['center']}
+    >
+      Build apps with radically less overhead and cost
+    </Heading.h1>
   </Column>
 )
 

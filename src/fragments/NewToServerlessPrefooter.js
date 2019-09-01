@@ -1,46 +1,51 @@
 import React from 'react'
 import { Text } from 'serverless-design-system'
-import Prefooter from 'src/components/Prefooter'
+import PrefooterNewest from 'src/components/PrefooterNewest'
+import { P } from 'src/fragments/DesignSystem'
 
 const sentences = [
-  'To get started, pop open your terminal & run:',
-  (
-    <Text.p
-      color='white'
-      fontFamily='Serverless'
-    >
-      npm install serverless -g
-    </Text.p>
-  ),
+  <P color='gray.3' mt={[0, 0, 0]} mb={[0, 0, 0]}>
+    To get started, pop open your terminal &amp; run:
+  </P>,
+  <P
+    color='gray.2'
+    mt={0}
+    fontFamily='Serverless'
+    fontSize={16}
+    letterSpacing={0}
+    lineHeight={1.71}
+    mb={0}
+  >
+    npm install serverless -g
+  </P>,
 ]
 
 const actions = [
   {
+    name: 'get started',
+    navProps: {
+      to: 'https://dashboard.serverless.com/',
+      crossDomain: true,
+    },
+  },
+  {
     name: 'documentation',
     navProps: {
       to: '/framework/docs/',
-      completed: false,
+      completed: true,
     },
   },
   {
-    name: 'serverless examples',
+    name: 'examples',
     navProps: {
-      to: '/framework/docs/providers/aws/examples/',
-      completed: false,
-    },
-  },
-  {
-    name: 'serverless plugins',
-    navProps: {
-      to: 'https://github.com/serverless/serverless',
-      crossDomain: true,
-      completed: false,
+      to: '/examples/',
+      completed: true,
     },
   },
 ]
 
 const NewToServerlessPrefooter = () => (
-  <Prefooter
+  <PrefooterNewest
     heading='New to serverless?'
     sentences={sentences}
     actions={actions}

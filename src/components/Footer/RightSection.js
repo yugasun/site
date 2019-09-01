@@ -5,16 +5,18 @@ import {
   Column,
   InlineBlock,
   P,
+  Flex,
+  Image,
 } from 'serverless-design-system'
 
 import NavLink from '../NavLink'
-import NewsLetterForm from '../NewsLetterForm'
+import NewsLetterForm from '../NewNewsLetterForm'
 import {
   facebookHandle,
   instagramHandle,
   twitterHandle,
   githubHandle,
-  linkedinHandle
+  linkedinHandle,
 } from 'src/constants/urls'
 import facebookGrayIcon from 'src/assets/images/facebook.svg'
 import instagramGrayIcon from 'src/assets/images/instagram.svg'
@@ -26,28 +28,25 @@ import instagramWhiteIcon from 'src/assets/images/instagram-white.svg'
 import twitterWhiteIcon from 'src/assets/images/twitter-white.svg'
 import githubWhiteIcon from 'src/assets/images/github-white.svg'
 import linkedinWhiteIcon from 'src/assets/images/linkedin-white.svg'
+import awsPartnerLogo from 'src/assets/images/footer/aws-tech-partner.png'
 
 const SocialIconWrapper = styled(InlineBlock)`
   & > a > div {
     height: 20px;
     width: 20px;
-    background-image: url(${(props) => (props.icon)});
+    background-image: url(${props => props.icon});
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   & > a:hover > div {
-    background-image: url(${(props) => (props.hoverIcon)});
+    background-image: url(${props => props.hoverIcon});
   }
 `
 
 const SocialIcon = ({ to, icon, hoverIcon }) => (
-  <SocialIconWrapper
-    icon={icon}
-    hoverIcon={hoverIcon}
-    mr={24}
-  >
+  <SocialIconWrapper icon={icon} hoverIcon={hoverIcon} mr={[0, 0, 24]}>
     <NavLink to={to} crossDomain>
       <InlineBlock />
     </NavLink>
@@ -57,17 +56,28 @@ const SocialIcon = ({ to, icon, hoverIcon }) => (
 // Renders the subscribe column
 const Subscribe = () => (
   <Column
-    width={[1, 1, 0.35]}
-    order={['1', '1', '2']}
-    pl={[0, 0, 3]}
+    width={[1, 1, 2.5 / 4, 3 / 4, 0.35]}
+    order={['1', '1', '1', '1', '2']}
+    pl={[0, 0, 0, 0, 3]}
   >
-    <Box mb={4}>
-      <P color='white'>
-      Join our monthly newsletter to get the latest Serverless news, updates and happenings.
+    <Box mb={[32, 32, 32, 32, 41]} id='newsletter-box-footer'>
+      <P
+        color='white'
+        align={['center', 'center', 'left']}
+        lineHeight={1.63}
+        mb={0}
+        mt={[42, 42, 0, 0, '12px']}
+      >
+        Join our monthly newsletter to get the latest Serverless news, updates
+        and happenings.
       </P>
     </Box>
     <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
-    <Box py={3}>
+    <Flex
+      pt={[62, 62, 42, 42, 22]}
+      pb={[22, 22, 22, 22, 51]}
+      justifyContent={['space-between', 'space-between', 'normal']}
+    >
       <SocialIcon
         to={facebookHandle}
         icon={facebookGrayIcon}
@@ -93,6 +103,9 @@ const Subscribe = () => (
         icon={linkedinGrayIcon}
         hoverIcon={linkedinWhiteIcon}
       />
+    </Flex>
+    <Box pb={[62, 62, 62, 62, 0]}>
+      <Image src={awsPartnerLogo} />
     </Box>
   </Column>
 )

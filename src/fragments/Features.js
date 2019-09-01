@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Column, Row } from 'serverless-design-system'
 import { Heading, P } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { Feature as FeatureItem } from 'src/fragments'
 
 const Features = ({

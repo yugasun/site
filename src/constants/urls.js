@@ -16,6 +16,7 @@ export default {
     examples: '/examples/',
     quickStarts: '/framework/docs/getting-started/',
     courses: '/courses/',
+    acceleration: '/acceleration/',
   },
   community: {
     partners: '/partners/',
@@ -44,6 +45,9 @@ export default {
       examples: '/examples/',
       courses: '/courses/',
     },
+    acceleration: {
+      overview: '/acceleration/',
+    },
   },
   learn: {
     useCases: '/learn/use-cases/',
@@ -64,6 +68,9 @@ export default {
     jobs: '/company/jobs/',
     champions: '/company/champions/',
     contact: 'mailto:hello@serverless.com',
+  },
+  blog: {
+    tutorials: '/blog/category/guides-and-tutorials/',
   },
   termsOfService: 'https://dashboard.serverless.com/legal/terms',
   privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',

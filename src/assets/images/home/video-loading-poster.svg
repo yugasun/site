@@ -1,0 +1,22 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 77 77" style="enable-background:new 0 0 77 77;" xml:space="preserve" id="el__0Jr7DEdL"><style>@-webkit-keyframes kf_el_eIOHGWbPO3_an_dNoL9xNqd{0%{-webkit-transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);}100%{-webkit-transform: translate(38.5px, 38.5px) rotate(360deg) translate(-38.5px, -38.5px);transform: translate(38.5px, 38.5px) rotate(360deg) translate(-38.5px, -38.5px);}}@keyframes kf_el_eIOHGWbPO3_an_dNoL9xNqd{0%{-webkit-transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);}100%{-webkit-transform: translate(38.5px, 38.5px) rotate(360deg) translate(-38.5px, -38.5px);transform: translate(38.5px, 38.5px) rotate(360deg) translate(-38.5px, -38.5px);}}#el__0Jr7DEdL *{-webkit-animation-duration: 3s;animation-duration: 3s;-webkit-animation-iteration-count: 1;animation-iteration-count: 1;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}#el_GUT_mD_2yP{fill: none;stroke: #FD5750;stroke-width: 2;stroke-miterlimit: 10;}#el_4804dA-ViH{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;}#el_Ox9iwq0shC{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;stroke-dasharray: 2.02,2.02;}#el_id_QKu4xAr{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;}#el_fc3tDDoWre{fill: none;stroke: #FD5750;stroke-width: 2;stroke-miterlimit: 10;}#el_TWz2YZnCk6{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;}#el_ZEtGd_dogZ{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;stroke-dasharray: 2.02,2.02;}#el_9fzA8rjylx{fill: none;stroke: #FD5750;stroke-width: 2;stroke-linejoin: round;}#el_GtCkTxDwnc{fill: #FD5750;}#el_ZJovIeNWyn{fill: #FD5750;}#el__IoANHJVYh{fill: #FD5750;}#el_8XkJiKcjX0{fill: #FD5750;}#el_eIOHGWbPO3_an_dNoL9xNqd{-webkit-animation-fill-mode: backwards;animation-fill-mode: backwards;-webkit-transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);transform: translate(38.5px, 38.5px) rotate(0deg) translate(-38.5px, -38.5px);-webkit-animation-name: kf_el_eIOHGWbPO3_an_dNoL9xNqd;animation-name: kf_el_eIOHGWbPO3_an_dNoL9xNqd;-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);animation-timing-function: cubic-bezier(0, 0, 1, 1);}</style>
+
+<g id="el_eIOHGWbPO3_an_dNoL9xNqd" data-animator-group="true" data-animator-type="1"><g id="el_eIOHGWbPO3">
+	<title>SF_loader</title>
+	<path d="M38.5,2.5c19.9,0,36,16.1,36,36" id="el_GUT_mD_2yP"/>
+	<path d="M2.5,38.5c0-0.3,0-0.7,0-1" id="el_4804dA-ViH"/>
+	<path d="M2.6,35.5c1.5-17.9,16-31.9,33.9-32.9" id="el_Ox9iwq0shC"/>
+	<path d="M37.5,2.5h1" id="el_id_QKu4xAr"/>
+	<path d="M38.5,74.5c-19.9,0-36-16.1-36-36" id="el_fc3tDDoWre"/>
+	<path d="M74.5,38.5c0,0.3,0,0.7,0,1" id="el_TWz2YZnCk6"/>
+	<path d="M74.4,41.5c-1.5,17.9-16,31.9-33.9,32.9" id="el_ZEtGd_dogZ"/>
+	<path d="M39.5,74.5h-1" id="el_9fzA8rjylx"/>
+</g></g>
+<g id="el_wF5WX9dpHt">
+	<g id="el_85TOa5HBvW">
+		<path d="M21,58.8c-0.5-0.6-0.5-0.6,2-4.5l10.2-15.9l-15.5,2.4l-0.3-2l19.9-3l-1.2,1.9l-13.5,21l-0.8-0.5L21,58.8z" id="el_GtCkTxDwnc"/>
+		<path d="M21.8,59.2h-0.1l0.1-1l-0.6-0.8c0.4-0.3,34.2-28.6,34.5-28.9l1.3,1.5L27.9,54.5&#10;&#9;&#9;&#9;C22.7,58.8,22.2,59.2,21.8,59.2z" id="el_ZJovIeNWyn"/>
+		<polygon points="20.8,69.8 20.7,58.1 22.8,54.9 24.5,56 22.7,58.7 22.7,65.5 55.4,37.9 55.3,30.5 37.9,32.3 54.2,9 &#10;&#9;&#9;&#9;55.8,10.1 42.1,29.8 57.3,28.2 57.5,38.8 &#9;&#9;" id="el__IoANHJVYh"/>
+		<polygon points="16.6,46.1 16.6,39.4 56,7.4 56,19.5 48.7,30.8 47.1,29.7 54,18.9 54,11.7 18.6,40.4 18.6,43.8 &#10;&#9;&#9;&#9;31.5,41.8 31.8,43.8 &#9;&#9;" id="el_8XkJiKcjX0"/>
+	</g>
+</g>
+</svg>

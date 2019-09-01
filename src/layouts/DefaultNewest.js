@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Column } from 'serverless-design-system'
-import { Header, FooterNewest as Footer } from 'src/components'
+import { Header, Footer } from 'src/components'
 
 const DefaultLayout = ({
   children,
@@ -9,6 +9,7 @@ const DefaultLayout = ({
   transparentHeader,
   prefooterOnlyDesktop,
   noPrefooter,
+  noFooter,
 }) => {
   const prefooterOnlyDesktopBool = prefooterOnlyDesktop ? true : false
   const noPrefooterBool = noPrefooter ? true : false
@@ -17,11 +18,13 @@ const DefaultLayout = ({
     <Column width={1}>
       <Header transparent={transparentHeader} />
       <Box width={1}>{children}</Box>
-      <Footer
-        prefooter={prefooter}
-        prefooterOnlyDesktop={prefooterOnlyDesktopBool}
-        noPrefooter={noPrefooterBool}
-      />
+      {noFooter ? null : (
+        <Footer
+          prefooter={prefooter}
+          prefooterOnlyDesktop={prefooterOnlyDesktopBool}
+          noPrefooter={noPrefooterBool}
+        />
+      )}
     </Column>
   )
 }

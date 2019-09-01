@@ -1,14 +1,25 @@
 import React from 'react'
-import { InternalLink } from 'src/fragments'
-import { SecondaryButton } from 'src/fragments/DesignSystem'
-import { Flex } from 'serverless-design-system'
+import { HeroActionsNewest as HeroActions } from 'src/fragments'
+import { gettingStarted } from 'src/constants/newUrls'
 
-const FrameworkHeroActions = () => (
-  <Flex justifyContent='center' mb={4} mt={2}>
-    <InternalLink to={'/framework/docs/getting-started/'}>
-      <SecondaryButton>quick start</SecondaryButton>
-    </InternalLink>
-  </Flex>
+const HomeActions = () => (
+  <HeroActions
+    firstBtn={{
+      name: 'begin',
+      dashboardLink: true,
+      className: 'position-hero',
+    }}
+    secondBtn={{
+      name: 'docs',
+      to: gettingStarted,
+      completed: true,
+      className: 'position-hero',
+    }}
+    buttonWidth={['300px', '325px', '152px', '152px', '176px']}
+    flexDirection={['column', 'column', 'row']}
+    justifyContent={['center', 'center', 'left']}
+    tabletRow={true}
+  />
 )
 
-export default FrameworkHeroActions
+export default HomeActions

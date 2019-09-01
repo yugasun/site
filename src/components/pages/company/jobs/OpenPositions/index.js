@@ -7,7 +7,7 @@ import {
   ResponsiveStack,
 } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import ServerlessUserGroupStack from '../ServerlessUserGroupStack'
 import Vacancies from './data'
 import JobDetail from './JobDetail'

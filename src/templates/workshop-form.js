@@ -4,7 +4,7 @@ import DefaultLayout from 'src/layouts/DefaultNewest'
 import Hero from 'src/components/pages/resources/workshop-form/Hero'
 import Form from 'src/components/pages/resources/workshop-form/Form'
 import {
-  NewToServerlessPrefooterNewest as NewToServerlessPrefooter,
+  NewToServerlessPrefooter,
   Helmet,
 } from 'src/fragments'
 import workshops from 'src/constants/workshops.json'

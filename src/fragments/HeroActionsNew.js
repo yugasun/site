@@ -38,8 +38,11 @@ const HeroActions = ({
     anchorLink: sanchorLink = false,
     className: sClassName = false,
   },
+  buttonWidth,
+  buttonMarginY,
   flexDirection,
   justifyContent,
+  tabletRow,
 }) => (
   <ResponsiveStack
     width={[1, 1, 1]}
@@ -55,13 +58,13 @@ const HeroActions = ({
           mr={[
             0,
             0,
-            justifyContent === 'center' ? '32px' : 0,
-            justifyContent === 'center' ? '32px' : 0,
+            justifyContent === 'center' || tabletRow ? '32px' : 0,
+            justifyContent === 'center' || tabletRow ? '32px' : 0,
             '32px',
           ]}
-          my={1}
+          my={buttonMarginY ? buttonMarginY : 1}
           border={'2.5px solid'}
-          width={['200px']}
+          width={buttonWidth ? buttonWidth : ['200px']}
         >
           {fName}
         </Button>
@@ -74,7 +77,10 @@ const HeroActions = ({
         to={secondLink}
         className={sClassName}
       >
-        <SecondaryButton my={1} width={['200px']}>
+        <SecondaryButton
+          my={buttonMarginY ? buttonMarginY : [0, 0, 1]}
+          width={buttonWidth ? buttonWidth : ['200px']}
+        >
           {sName}
         </SecondaryButton>
       </FinalLink>

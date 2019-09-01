@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppContainerNewest as AppContainer }  from 'src/components'
+import { AppContainer }  from 'src/components'
 import { Box, Heading, Column, Image, Text, Flex } from 'serverless-design-system'
 
 //TODO: specific for the /framework page for now, make universal?

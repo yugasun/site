@@ -15,6 +15,7 @@ const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
 const stackConfig = require('../scripts/stack/config')
+const customConfig = require('./../scripts/custom/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
 const fileReadingOptions = { match: /.md$/ }
@@ -75,6 +76,33 @@ const sourceStack = createNode => (err, content, filename, next) => {
         children: [],
         internal: {
           type: 'Stack',
+          contentDigest: digestCreator(content),
+        },
+        frontmatter,
+        content: String(file),
+      })
+      next()
+    })
+}
+
+const sourceCustom = createNode => (err, content, filename, next) => {
+  if (err) throw err
+
+  const { data, content: markdownContent } = matter(content)
+  const frontmatter = data.category ? data : { ...data, category: [] }
+  const customId = path.basename(filename, path.extname(filename))
+
+  unified()
+    .use(markdown)
+    .use(highlight)
+    .use(html)
+    .process(markdownContent, (err, file) => {
+      createNode({
+        id: customId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'Custom',
           contentDigest: digestCreator(content),
         },
         frontmatter,
@@ -271,6 +299,15 @@ const generator = createNode =>
         stackConfig.stackPagesPath,
         fileReadingOptions,
         sourceStack(createNode),
+        resolve
+      )
+    }),
+
+    new Promise((resolve, reject) => {
+      dir.readFiles(
+        customConfig.customPagesPath,
+        fileReadingOptions,
+        sourceCustom(createNode),
         resolve
       )
     }),

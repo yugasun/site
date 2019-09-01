@@ -1,9 +1,15 @@
+import slsAwsImage from 'src/assets/images/pages/courses/sls-with-aws.png'
+import prsImage from 'src/assets/images/pages/courses/production-ready-serverless.png'
+import slsProImage from 'src/assets/images/pages/courses/sls-like-a-pro.png'
+import kinesisImage from 'src/assets/images/pages/courses/data-driven-kinesis.jpeg'
+import stepFunctionsImage from 'src/assets/images/pages/courses/stepfunctions.png'
+
 export default [
   {
     title: 'Serverless Applications with AWS',
     description:
       'Serverless Applications with AWS teaches you to build serverless applications using AWS Lambda and other cloud-based services.',
-    thumbnail: 'http://i3.ytimg.com/vi/Zf3UgS55J-M/hqdefault.jpg',
+    thumbnail: slsAwsImage,
     author: 'Marcia Villalba',
     ratingsStar: '5.0',
     totalRatings: '1',
@@ -16,10 +22,10 @@ export default [
     title: 'Production-Ready Serverless',
     description:
       'Production-Ready Serverless: Operational Best Practices introduces you to leading patterns and practices for creating operationally sound serverless applications using AWS Lambda, API Gateway, and Kinesis.',
-    thumbnail: 'http://i3.ytimg.com/vi/LJpbNdRqsc4/hqdefault.jpg',
+    thumbnail: prsImage,
     author: 'Yan Cui',
-    ratingsStar: '4',
-    totalRatings: '1',
+    ratingsStar: '4.5',
+    totalRatings: '2',
     platform: 'Manning',
     level: 'Intermediate',
     duration: '9.2 hours',
@@ -54,6 +60,21 @@ export default [
     url: 'https://acloud.guru/learn/serverless-with-graphql',
   },
   {
+    title:
+      'Data-Driven Serverless Applications with Kinesis (using Serverless Framework)',
+    description:
+      'Learn how to design an event-driven application, integrate AWS Lambda with Kinesis streams, setup permissions and how to leverage CloudFormation, API Gateway, SES, SNS, and SQS, and more.',
+    thumbnail: kinesisImage,
+    author: 'Marcia Villalba',
+    ratingsStar: '5',
+    totalRatings: '8',
+    platform: 'LinkedIn',
+    level: 'Intermediate',
+    duration: '2.5 hours',
+    url:
+      'https://www.linkedin.com/learning/aws-for-developers-data-driven-serverless-applications-with-kinesis/aws-and-serverless-applications',
+  },
+  {
     title: 'Using the Serverless Framework with Node.js on AWS',
     description:
       "The Serverless Framework is the world's leading development framework for building serverless applications. This course teaches you the basics of the framework and how to use it to build event-driven microservice applications that auto-scale.",
@@ -67,6 +88,20 @@ export default [
     duration: '1.5 hours',
     url:
       'https://www.pluralsight.com/courses/aws-nodejs-serverless-framework-using',
+  },
+  {
+    title: 'Complete guide to AWS Step Functions (using Serverless Framework)',
+    description:
+      'Upgrade your AWS and serverless skill. Learn all about workflow orchestration with AWS Step Functions in 2 hours.',
+    thumbnail: stepFunctionsImage,
+    author: 'Yan Cui',
+    ratingsStar: '5',
+    totalRatings: '6',
+    platform: "Yan's School",
+    level: 'Intermediate',
+    duration: '2 hours',
+    url:
+      'https://theburningmonk.thinkific.com/courses/complete-guide-to-aws-step-functions',
   },
   {
     title: 'Practical beginners course to Serverless Applications',
@@ -98,7 +133,7 @@ export default [
     title: 'The Serverless Framework With AWS: Write It Like A Pro',
     description:
       'Automate your infrastructure provisioning on AWS with the Serverless Framework.',
-    thumbnail: 'https://udemy-images.udemy.com/course/480x270/1990288_d373.jpg',
+    thumbnail: slsProImage,
     author: 'Michael E. Vargas JR',
     ratingsStar: '4.5',
     totalRatings: '2',

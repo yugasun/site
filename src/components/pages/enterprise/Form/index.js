@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { Box, Flex, InlineBlock, Heading } from 'serverless-design-system'
+import {
+  Box,
+  Flex,
+  InlineBlock,
+  Heading,
+  Image,
+} from 'serverless-design-system'
 import {
   TextArea,
   Label,
@@ -9,12 +15,15 @@ import {
   RadioButton,
 } from 'src/fragments/DesignSystem/Form'
 import { Button } from 'src/fragments/DesignSystem'
-
+import addHubspotEvent from 'src/utils/forms/hubspotEvent'
 import formHandler from 'src/utils/formHandler'
 import { validateEmail } from 'src/utils/validator'
 import hubspotIdentify from 'src/utils/analytics/identify'
+import tickIconBig from 'src/assets/images/tick-icon-big.svg'
+import tickIconSmall from 'src/assets/images/tick-icon-small.svg'
 
 import styled from 'styled-components'
+import { Column } from 'serverless-design-system/dist/atoms'
 const formId = 'enterprise-contact-us'
 
 const StyledForm = styled(Flex)`
@@ -89,29 +98,35 @@ export default class Form extends React.Component {
       },
     }
 
-    formHandler(formData)
-      .then(res => {
-        this.sendToHubspot(formData.fields)
-        this.setState({
-          success: true,
-          loading: false,
+    if (!this.state.loading) {
+      formHandler(formData)
+        .then(res => {
+          this.sendToHubspot(formData.fields)
+          this.setState({
+            success: true,
+            loading: false,
+          })
         })
-      })
-      .catch(e => {
-        console.log('ERROR', e)
-        this.setState({
-          success: false,
-          loading: false,
-          error: e,
+        .catch(e => {
+          console.log('ERROR', e)
+          this.setState({
+            success: false,
+            loading: false,
+            error: e,
+          })
         })
-      })
+    }
+
     return false
   }
 
   sendToHubspot = data => {
     data.lead_source = 'Enterprise Page'
+    data.firstname = data.first_name
+    data.lastname = data.last_name
     data.infrastructure = data.infrastructure.toString()
     hubspotIdentify(null, data)
+    addHubspotEvent(data, 'enterprise')
   }
 
   updateInfrastructure = (fieldName, value) => {
@@ -145,7 +160,12 @@ export default class Form extends React.Component {
 
     return (
       <React.Fragment>
-        <Box id={'enterprise-contact-form'} pb={[92, 92, 120, 120, 150]} />
+        <Box
+          id={'enterprise-contact-form'}
+          pb={
+            this.props.customPb ? this.props.customPb : [92, 92, 120, 120, 150]
+          }
+        />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
             flexDirection={['column', 'column', 'column', 'column', 'row']}
@@ -161,8 +181,9 @@ export default class Form extends React.Component {
               </Heading.h4>
 
               <Box mt={2} width={1}>
+                <Label color='#8c8c8c'>Work e-mail</Label>
                 <TextField
-                  placeholder='Company E-mail'
+                  placeholder='jane.doe@business.com'
                   name='email'
                   onChange={({ target }) =>
                     this.setState({ email: target.value, success: false })
@@ -171,30 +192,38 @@ export default class Form extends React.Component {
                 />
               </Box>
 
-              <Flex.spaceBetween mt={1}>
-                <TextField
-                  width={49 / 100}
-                  placeholder='First Name'
-                  name='first_name'
-                  onChange={({ target }) =>
-                    this.setState({ first_name: target.value, success: false })
-                  }
-                  required
-                />
-                <TextField
-                  width={49 / 100}
-                  placeholder='Last Name'
-                  name='last_name'
-                  onChange={({ target }) =>
-                    this.setState({ last_name: target.value, success: false })
-                  }
-                  required
-                />
+              <Flex.spaceBetween mt={2}>
+                <Column width={49 / 100}>
+                  <Label color='#8c8c8c'>First name</Label>
+                  <TextField
+                    placeholder='Jane'
+                    name='first_name'
+                    onChange={({ target }) =>
+                      this.setState({
+                        first_name: target.value,
+                        success: false,
+                      })
+                    }
+                    required
+                  />
+                </Column>
+                <Column width={49 / 100}>
+                  <Label color='#8c8c8c'>Last name</Label>
+                  <TextField
+                    placeholder='Doe'
+                    name='last_name'
+                    onChange={({ target }) =>
+                      this.setState({ last_name: target.value, success: false })
+                    }
+                    required
+                  />
+                </Column>
               </Flex.spaceBetween>
 
-              <Box mt={1}>
+              <Box mt={2}>
+                <Label color='#8c8c8c'>Company name</Label>
                 <TextField
-                  placeholder='Company Name'
+                  placeholder='Business.com'
                   name='company'
                   onChange={({ target }) =>
                     this.setState({ company: target.value, success: false })
@@ -203,12 +232,12 @@ export default class Form extends React.Component {
                 />
               </Box>
 
-              <Box mt={3}>
+              <Box mt={2}>
                 <Label>
                   How is your company currently using the Serverless Framework?
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='five-to-fifteen'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -220,7 +249,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='in-development'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -232,7 +261,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='not-at-all'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -247,13 +276,13 @@ export default class Form extends React.Component {
                 </Flex>
               </Box>
 
-              <Box mt={3}>
+              <Box mt={2}>
                 <Label>
                   How many developers in your organization plan on doing
                   serverless development?
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='less-than-five'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -267,7 +296,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='five-to-fifteen'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -279,7 +308,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='fifteen-to-thirty'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -293,7 +322,7 @@ export default class Form extends React.Component {
                   </Box>
                 </Flex>
                 <Flex flexDirection={['column', 'column', 'row']}>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='thirty-to-hundred'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -305,7 +334,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 3]}>
+                  <Box mt={1} width={[1, 1, 1 / 3]}>
                     <Label htmlFor='more-than-hundred'>
                       <Flex.verticallyCenter>
                         <RadioButton
@@ -323,13 +352,13 @@ export default class Form extends React.Component {
               </Box>
             </Box>
             <Box pl={[0, 0, 0, 0, 32]}>
-              <Box mt={[3, 3, 3, 3, '45px']}>
+              <Box mt={[3, 3, 3, 3, 6]}>
                 <Label>
                   Which infrastructure providers are you utilizing with the
                   Serverless Framework?
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
-                  <Box mt={2} width={[1, 1, 1 / 2]}>
+                  <Box mt={1} width={[1, 1, 1 / 2]}>
                     <Label htmlFor='aws'>
                       <Flex.verticallyCenter>
                         <Checkbox
@@ -343,7 +372,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 2]}>
+                  <Box mt={1} width={[1, 1, 1 / 2]}>
                     <Label htmlFor='google-cloud-platform'>
                       <Flex.verticallyCenter>
                         <Checkbox
@@ -362,7 +391,7 @@ export default class Form extends React.Component {
                   </Box>
                 </Flex>
                 <Flex flexDirection={['column', 'column', 'row']}>
-                  <Box mt={2} width={[1, 1, 1 / 2]}>
+                  <Box mt={1} width={[1, 1, 1 / 2]}>
                     <Label htmlFor='azure'>
                       <Flex.verticallyCenter>
                         <Checkbox
@@ -379,7 +408,7 @@ export default class Form extends React.Component {
                       </Flex.verticallyCenter>
                     </Label>
                   </Box>
-                  <Box mt={2} width={[1, 1, 1 / 2]}>
+                  <Box mt={1} width={[1, 1, 1 / 2]}>
                     <Label htmlFor='other'>
                       <Flex.verticallyCenter>
                         <Checkbox
@@ -396,7 +425,8 @@ export default class Form extends React.Component {
                 </Flex>
               </Box>
 
-              <Box mt={3}>
+              <Box mt={2}>
+                <Label>Anything else?</Label>
                 <TextArea
                   placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
                   name='message'
@@ -407,16 +437,33 @@ export default class Form extends React.Component {
                 />
               </Box>
 
-              <Box mt={3}>
+              <Flex mt={3} justifyContent={'flex-end'}>
                 <Button
-                  disabled={loading || success}
+                  disabled={success}
                   style={{
-                    cursor: loading || success ? 'not-allowed' : 'pointer',
+                    cursor: success ? 'not-allowed' : 'pointer',
+                    backgroundColor: success ? '#8c8c8c' : '#fd5750',
                   }}
                 >
-                  {submitButtonText}
+                  <Flex justifyContent='center' alignItems='center'>
+                    {success ? (
+                      <Box pr={'9px'}>
+                        <Image
+                          src={tickIconSmall}
+                          width={'16px'}
+                          height={'9.5px'}
+                          pr={2}
+                        />
+                      </Box>
+                    ) : null}
+                    {loading ? (
+                      <Image src={tickIconBig} width={'32px'} />
+                    ) : (
+                      <Box>{submitButtonText}</Box>
+                    )}
+                  </Flex>
                 </Button>
-              </Box>
+              </Flex>
             </Box>
           </StyledForm>
         </form>

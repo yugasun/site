@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Column, Image } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import resourcesMeetupMap from 'src/assets/images/resourcesMeetupMap.png'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { ExternalLink } from 'src/fragments'
@@ -18,7 +18,7 @@ const StyledLink = styled(ExternalLink)`
 const Introduction = () => (
   <Column alignItems='center' my={[4, 4, 4, 5]}>
     <AppContainer>
-      <Heading.h2 align='center'>Find a Serverless event near you.</Heading.h2>
+      <Heading.h2 align='center'>Find a Serverless meetup near you.</Heading.h2>
       <P
         fontFamily='SoleilBk'
         color='gray.3'
@@ -26,7 +26,7 @@ const Introduction = () => (
         lineHeight={4}
         align='center'
       >
-        Don't see an event in your city ?{' '}
+        Don't see an meetup in your city ?{' '}
         <StyledLink to='mailto:hello@serverless.com'>Contact us</StyledLink> and
         start your own.
       </P>

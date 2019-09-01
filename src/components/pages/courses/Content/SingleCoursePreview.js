@@ -7,17 +7,24 @@ import {
   Column,
   Text,
   Flex,
+  Image,
 } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { getLinkComponent } from 'src/components/BlockLink'
 import ImagePlaceholder from 'src/components/pages/blog/ImagePlaceholder'
 import { Heading } from 'src/fragments/DesignSystem'
 import Stars from './Stars'
+import styled from 'styled-components'
 
 //TODO: Heading and P tag don't conform to usual sizing pattern - revisit
 
 const HyperLinkBackground = getLinkComponent(Background)
 const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
+
+const ResponsiveImage = styled(Image)`
+  object-fit: cover;
+  object-position: center;
+`
 
 const SmallText = ({ children, ...otherProps }) => (
   <Text
@@ -57,15 +64,9 @@ const SingleCoursePreview = ({
     >
       <Row justifyContent='left' width={[1, 1, 0.35, 0.3, 0.3]}>
         {thumbnail ? (
-          <HyperLinkBackground
-            height={[200, 200, 200, 180, 180]}
-            width={[1]}
-            background={`black url(${JSON.stringify(thumbnail)})`}
-            backgroundSize='cover'
-            backgroundPosition='center'
-            backgroundRepeat='no-repeat'
-            to={url}
-          />
+          <ExternalLink to={url}>
+            <ResponsiveImage height={[200]} width={[1]} src={thumbnail} />
+          </ExternalLink>
         ) : (
           <HyperLinkImagePlaceholder
             size='small'

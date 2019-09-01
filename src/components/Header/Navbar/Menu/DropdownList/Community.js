@@ -2,25 +2,25 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { resources, community } from 'src/constants/urls'
+import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: community.partners,
+          to: github,
           backgroundOnHover: true,
-          completed: true,
+          crossDomain: true,
         }}
       >
-        partners
+        github
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: resources.forum,
+          to: forum,
           crossDomain: true,
           backgroundOnHover: true,
         }}
@@ -31,34 +31,34 @@ const Resource = () => (
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: resources.events,
+          to: slack,
           backgroundOnHover: true,
           completed: true,
-        }}
-      >
-        events
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: resources.slack,
-          crossDomain: true,
-          backgroundOnHover: true,
         }}
       >
         slack
       </SubMenuItem>
     </ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
+      <SubMenuItem
+        navProps={{
+          to: meetups,
+          completed: true,
+          backgroundOnHover: true,
+        }}
+      >
+        meetups
+      </SubMenuItem>
+    </ListItem.noStyleType>
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
-          to: resources.workshops,
+          to: partners,
           backgroundOnHover: true,
           completed: true,
         }}
       >
-        workshops
+        partners
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

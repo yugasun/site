@@ -12,7 +12,10 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      defaultIsWhiteHeader: props.startWithWhiteHeader ? true : false,
+      isWhiteHeader: props.startWithWhiteHeader ? true : false,
       isNavbarActive: false,
+      isDesktopView: true,
       isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
     }
@@ -21,12 +24,18 @@ class Header extends React.Component {
   componentDidMount() {
     if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
+      if (window.innerWidth < 1280) {
+        this.setState({ isDesktopView: false })
+      }
     }
   }
 
   componentWillUnmount() {
     if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
+      if (window.innerWidth < 1280) {
+        this.setState({ isDesktopView: false })
+      }
     }
   }
 
@@ -42,10 +51,17 @@ class Header extends React.Component {
     }
   }
 
-  toggleNavbarShrinkness = () =>
+  toggleNavbarShrinkness = () => {
     this.setState(prevState => ({
       isNavbarShrinked: !prevState.isNavbarShrinked,
     }))
+
+    if (this.state.defaultIsWhiteHeader) {
+      this.setState(prevState => ({
+        isWhiteHeader: !prevState.isWhiteHeader,
+      }))
+    }
+  }
 
   toggleNavbarTransparency = () =>
     this.setState(prevState => ({
@@ -79,8 +95,8 @@ class Header extends React.Component {
                 flexWrap='wrap'
                 justifyContent='space-between'
               >
-                <Logo />
                 <NavbarContext.Provider value={this.state}>
+                  <Logo />
                   <NavButton />
                   <Navbar />
                 </NavbarContext.Provider>

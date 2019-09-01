@@ -6,7 +6,7 @@ import {
   ResponsiveStack,
   Text,
 } from 'serverless-design-system'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 
@@ -14,30 +14,37 @@ const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
   { title: 'Analysts', contents: ['analysts@serverless.com'] },
   { title: 'Careers', contents: ['careers@serverless.com'] },
-  { title: 'Write to us', contents: ['Serverless, Inc', '325 9th Street', 'San Francisco, CA 94013']  }
+  {
+    title: 'Write to us',
+    contents: [
+      'Serverless, Inc',
+      '548 Market Street #47111',
+      'San Francisco, CA 94104',
+    ],
+  },
 ]
 
 const ContactSection = ({ title, contents }) => (
   <Column
-    width={[1, 1, 4/10, 22/100]}
+    width={[1, 1, 4 / 10, 22 / 100]}
     my={2}
     mx={[0, 0, 1]}
     alignItems={['center', 'center', 'flex-start']}
   >
-    <Heading.h4
-      fontFamily='SoleilBk'
-      align='left'
-      lineHeight={4}
-    >
+    <Heading.h4 fontFamily='SoleilBk' align='left' lineHeight={4}>
       {title}:
     </Heading.h4>
-    {contents.map(content => <P key={title} fontSize={0} m={0} align='left'>{content}</P>)}
+    {contents.map(content => (
+      <P key={title} fontSize={0} m={0} align='left'>
+        {content}
+      </P>
+    ))}
   </Column>
 )
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[500, 500, 430]}>
+    <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[42, 42, 0, 0, 92]}>
       <Column alignItems={['center', 'center', 'flex-start']}>
         <TitleWithIcon>Contact Us</TitleWithIcon>
       </Column>
@@ -55,15 +62,9 @@ const OurStory = () => (
         </Text.p>
       </Box>
       <ResponsiveStack flexWrap='wrap'>
-        {
-          contactUsContent.map(({ title, contents }) => (
-            <ContactSection
-              key={title}
-              title={title}
-              contents={contents}
-            />
-          ))
-        }
+        {contactUsContent.map(({ title, contents }) => (
+          <ContactSection key={title} title={title} contents={contents} />
+        ))}
       </ResponsiveStack>
     </Column>
   </AppContainer>

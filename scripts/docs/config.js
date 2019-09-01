@@ -20,5 +20,5 @@ module.exports = {
   siteDocsPath: path.join(projectRoot, 'content/framework/docs/'),
   docsMenuPath: path.join(projectRoot, 'src/constants/'),
   // comment out downloadLink to use latest release
-  downloadLink: `${repoURL}/archive/${repoBranch}/.zip`
+  downloadLink: `${repoURL}/archive/${repoBranch}/.zip`,
 }
