@@ -17,7 +17,6 @@ const UseCasesHero = () => (
     <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
       <HeroTabs selected='use-cases' />
     </Box>
-
     <ResponsiveStack mb={[2, 2, 4, 5]} color='white'>
       <Box width={[1, 1, 1 / 2]}>
         <Text.p

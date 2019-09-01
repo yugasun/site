@@ -1,7 +1,7 @@
 export default {
   docs: '/framework/docs/',
   why: '/learn/why/',
-  what: '/learn/what/',
+  what: '/learn/manifesto/',
   learn: '/learn/',
   useCases: '/learn/use-cases/',
   comparisons: '/learn/comparisons/',
