@@ -1,6 +1,10 @@
 export default {
   docs: '/framework/docs/',
-  why: '/learn/overview/',
+  why: '/learn/why/',
+  what: '/learn/what/',
+  learn: '/learn/',
+  useCases: '/learn/use-cases/',
+  comparisons: '/learn/comparisons/',
   enterprise: '/enterprise/',
   dashboard: 'https://dashboard.serverless.com',
   examples: '/examples/',
