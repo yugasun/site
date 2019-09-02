@@ -8,8 +8,10 @@ import playVideoIconActive from 'src/assets/images/pages/courses/play-video-icon
 import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
 
-const FlexWithBorderTop = styled(Flex)`
-  border-top: 1px solid #9b9b9b;
+const HoverableText = styled(P)`
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 class CoursesList extends React.Component {
@@ -17,7 +19,26 @@ class CoursesList extends React.Component {
     super(props)
     this.state = {
       activeId: 1,
+      activeVideoLink: this.findActiveVideoLink(1),
     }
+  }
+
+  playThisVideo(videoNumber) {
+    const activeVideoLink = this.findActiveVideoLink(videoNumber)
+    this.setState({
+      activeId: videoNumber,
+      activeVideoLink,
+    })
+  }
+
+  findActiveVideoLink(activeId) {
+    let allItems = []
+    courseData.forEach(data => {
+      allItems = allItems.concat(data.items)
+    })
+    const videoLink = allItems.filter(item => item.videoNumber === activeId)[0]
+      .videoLink
+    return videoLink
   }
 
   render() {
@@ -26,7 +47,7 @@ class CoursesList extends React.Component {
         <Box width={0.7}>
           <div className='course-video-player-wrapper'>
             <ReactPlayer
-              url='https://www.youtube.com/watch?v=ts26BVuX3j0'
+              url={this.state.activeVideoLink}
               controls={true}
               className='react-player'
               width={'100%'}
@@ -59,25 +80,33 @@ class CoursesList extends React.Component {
                   {course.title}
                 </Text>
                 {course.items.map((item, index) => (
-                  <FlexWithBorderTop
+                  <Flex
                     key={item.title}
                     justifyContent={'space-between'}
+                    style={{ borderTop: '1px solid #9b9b9b' }}
                   >
                     <Flex width={[1, 1, 0.8, 0.8, 0.8]}>
-                      <Image src={playVideoIcon} />
-                      <P
+                      <Image
+                        src={
+                          item.videoNumber == this.state.activeId
+                            ? playVideoIconActive
+                            : playVideoIcon
+                        }
+                      />
+                      <HoverableText
                         ml={22}
                         color={
                           item.videoNumber == this.state.activeId
                             ? 'white'
                             : '#5b5b5b'
                         }
+                        onClick={() => this.playThisVideo(item.videoNumber)}
                       >
                         {item.title}
-                      </P>
+                      </HoverableText>
                     </Flex>
                     <P>{item.playTime}</P>
-                  </FlexWithBorderTop>
+                  </Flex>
                 ))}
               </Box>
             )
