@@ -6,10 +6,8 @@ import Hero from 'src/components/pages/stack/Hero'
 import Content from 'src/components/pages/stack/Content'
 import { Helmet } from 'src/fragments'
 
-const stacks = ({ data: examples }) => {
-  const edges = examples.allExample.edges.filter(
-    examples => examples.node.frontmatter.title !== ''
-  )
+const stacks = ({ data: stacks }) => {
+  const edges = stacks.allStacks.edges.filter(stack => stack.node.name !== '')
 
   return (
     <DefaultLayout
@@ -18,28 +16,23 @@ const stacks = ({ data: examples }) => {
     >
       <Helmet title='Serverless Stack Explorer' />
       <Hero />
-      <Content examples={edges.map(({ node }) => node)} />
+      <Content stacks={edges.map(({ node }) => node)} />
     </DefaultLayout>
   )
 }
 
 export const query = graphql`
   query Stacks {
-    allExample(
-      limit: 15
-      sort: { fields: [frontmatter___highlighted], order: ASC }
-    ) {
+    allStacks(limit: 13, filter: { highlighted: { eq: true } }) {
       totalCount
       edges {
         node {
           id
-          frontmatter {
-            title
-            platform
-            language
-            description
-            gitLink
-          }
+          name
+          provider
+          category
+          otherFallbackCategory
+          link
         }
       }
     }

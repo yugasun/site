@@ -9,7 +9,7 @@ const autoLinkHeadings = require('remark-autolink-headings')
 const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
-
+const stacksData = require('../content/stack/listData')
 //TODO : Refactor to use filesystem/remark to do this + refactor to avoid repetition
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
@@ -30,6 +30,8 @@ const examplesIndex = client.initIndex(
 )
 const pluginsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_PLUGINS_INDEX)
 
+const stackIndex = client.initIndex(process.env.GATSBY_ALGOLIA_STACK_INDEX)
+
 //TODO: rename highlighted attribute to featured
 examplesIndex.setSettings({
   attributesForFaceting: [
@@ -43,6 +45,10 @@ examplesIndex.setSettings({
 
 pluginsIndex.setSettings({
   attributesForFaceting: ['status', 'title', 'highlighted'],
+})
+
+stackIndex.setSettings({
+  attributesForFaceting: ['provider', 'title', 'category'],
 })
 
 function lengthInUtf8Bytes(str) {
@@ -292,6 +298,50 @@ const generator = createNode =>
         sourcePlugins(createNode),
         resolve
       )
+    }),
+
+    new Promise((resolve, reject) => {
+      stacksData.forEach(stackObj => {
+        const {
+          name,
+          provider,
+          category,
+          link,
+          slug,
+          otherFallbackCategory,
+          highlighted,
+        } = stackObj
+
+        stackIndex.saveObject({
+          name,
+          provider,
+          category,
+          link,
+          otherFallbackCategory,
+          objectID: slug,
+          highlighted,
+        })
+
+        createNode({
+          id: slug,
+          parent: null,
+          children: [],
+          internal: {
+            type: `Stacks`,
+            contentDigest: digestCreator(name),
+          },
+          name,
+          provider,
+          category,
+          link,
+          otherFallbackCategory,
+          highlighted,
+        })
+      })
+      //TODO: hacky, do this properly
+      setTimeout(() => {
+        resolve()
+      }, 2000)
     }),
 
     new Promise((resolve, reject) => {

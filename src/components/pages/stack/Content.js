@@ -9,9 +9,7 @@ const client = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
-const examplesIndex = client.initIndex(
-  process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX
-)
+const stackIndex = client.initIndex(process.env.GATSBY_ALGOLIA_STACK_INDEX)
 
 const paginationLimit = 15
 
@@ -19,7 +17,7 @@ export default class Content extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      examples: this.props.examples,
+      stacks: this.props.stacks,
       initState: true,
       noMoreResults: false,
       isLoading: false,
@@ -72,27 +70,26 @@ export default class Content extends React.Component {
     this.refreshResults(searchObj)
   }
 
-  parseExamplesFromAlgolia = content => {
-    const examples = content.hits.map(hit => {
+  parseStackFromAlgolia = content => {
+    const stacks = content.hits.map(hit => {
+      const { name, provider, category, link } = hit
+
       return {
         id: hit.objectID,
-        frontmatter: {
-          title: hit.title,
-          description: hit.description,
-          language: hit.language,
-          platform: hit.platform,
-          gitLink: hit.gitLink,
-        },
+        name,
+        provider,
+        category,
+        link,
       }
     })
 
-    return examples
+    return stacks
   }
 
   refreshResults = searchObj => {
-    examplesIndex.search(searchObj, (err, content) => {
+    stackIndex.search(searchObj, (err, content) => {
       if (err) console.error(err)
-      const examples = this.parseExamplesFromAlgolia(content)
+      const examples = this.parseStackFromAlgolia(content)
       this.setState({
         examples,
       })
@@ -138,18 +135,18 @@ export default class Content extends React.Component {
 
     searchObj.hitsPerPage = paginationLimit
     searchObj.page = currentPageNum
-    examplesIndex.search(searchObj, (err, content) => {
+    stackIndex.search(searchObj, (err, content) => {
       if (err) console.error(err)
       const nextPageNum = currentPageNum + 1
       this.setState({ pageNum: nextPageNum, isLoading: false })
 
-      const examples = this.parseExamplesFromAlgolia(content)
-      if (examples.length < paginationLimit) {
+      const stacks = this.parseStackFromAlgolia(content)
+      if (stacks.length < paginationLimit) {
         this.setState({ noMoreResults: true })
       }
 
-      const allExamples = this.state.examples.concat(examples)
-      this.setState({ examples: allExamples })
+      const allStacks = this.state.stacks.concat(stacks)
+      this.setState({ stacks: allStacks })
     })
   }
 
@@ -165,8 +162,8 @@ export default class Content extends React.Component {
               justifyContent='left'
               mb={[20, 20, 0, 0, 80]}
             >
-              {this.state.examples.map((example, index) => (
-                <StackPreview key={`example-${index}`} {...example} />
+              {this.state.stacks.map((stack, index) => (
+                <StackPreview key={`stack-${index}`} {...stack} />
               ))}
             </Flex>
           </Box>
