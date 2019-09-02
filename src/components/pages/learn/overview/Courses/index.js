@@ -2,6 +2,7 @@ import React from 'react'
 import { Flex, Image, Text, Box } from 'serverless-design-system'
 import { P, PS, Heading, SecondaryButton } from 'src/fragments/DesignSystem'
 import coursesList from './Data'
+import { InternalLink } from 'src/fragments'
 
 const Courses = props => (
   <Box mb={[92, 92, 92, 92, 132]}>
@@ -66,9 +67,11 @@ const Courses = props => (
                 {course.description}
               </P>
               <PS align={['left']}>by {course.author}</PS>
-              <P color='#fd5750' mb={0} mt={[32, 32, 32, 32, 42]}>
-                watch course >
-              </P>
+              <InternalLink to={'/learn/xyz/'}>
+                <P color='#fd5750' mb={0} mt={[32, 32, 32, 32, 42]}>
+                  watch course >
+                </P>
+              </InternalLink>
             </Box>
           </Flex>
         </Flex>
