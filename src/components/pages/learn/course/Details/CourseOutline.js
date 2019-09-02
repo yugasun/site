@@ -1,48 +1,91 @@
 import React from 'react'
 import { Box, Text, Image, Flex } from 'serverless-design-system'
-import { P, Heading } from 'src/fragments/DesignSystem'
+import { P } from 'src/fragments/DesignSystem'
 import courseData from './Data'
 import styled from 'styled-components'
 import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
+import playVideoIconActive from 'src/assets/images/pages/courses/play-video-icon-active.svg'
+import ReactPlayer from 'react-player'
+import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
 
 const FlexWithBorderTop = styled(Flex)`
   border-top: 1px solid #9b9b9b;
 `
 
-const CoursesList = props => (
-  <Box>
-    <Heading.h3 mt={[62, 62, 62, 62, 92]}>Course outline</Heading.h3>
-    {courseData.map((course, index) => {
-      return (
-        <Box key={index}>
-          <Text
-            fontFamily='SoleilBk'
-            fontSize='18px'
-            lineHeight='1.33'
-            letterSpacing='-0.28px'
-            mb={16}
-            mt={[22, 22, 22, 22, 32]}
-          >
-            {course.title}
-          </Text>
-          {course.items.map((item, index) => (
-            <FlexWithBorderTop
-              key={item.title}
-              justifyContent={'space-between'}
-            >
-              <Flex width={[1, 1, 0.8, 0.8, 0.8]}>
-                <Image src={playVideoIcon} />
-                <P ml={32} color='#5b5b5b'>
-                  {item.title}
-                </P>
-              </Flex>
-              <P>{item.playTime}</P>
-            </FlexWithBorderTop>
-          ))}
+class CoursesList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      activeId: 1,
+    }
+  }
+
+  render() {
+    return (
+      <Flex style={{ backgroundColor: 'black', maxHeight: '452px' }} mt={-62}>
+        <Box width={0.7}>
+          <div className='course-video-player-wrapper'>
+            <ReactPlayer
+              url='https://www.youtube.com/watch?v=ts26BVuX3j0'
+              controls={true}
+              className='react-player'
+              width={'100%'}
+              height={'452px'}
+              muted
+              loop={false}
+              config={{
+                file: {
+                  attributes: {
+                    poster: videoPosterImage,
+                  },
+                },
+              }}
+            />
+          </div>
         </Box>
-      )
-    })}
-  </Box>
-)
+        <Box width={0.3} style={{ overflowY: 'scroll' }}>
+          {courseData.map((course, index) => {
+            return (
+              <Box key={index} mx={32}>
+                <Text
+                  fontFamily='SoleilBk'
+                  fontSize='18px'
+                  lineHeight='1.33'
+                  letterSpacing='-0.28px'
+                  mb={16}
+                  mt={[22, 22, 22, 22, 32]}
+                  color='#8c8c8c'
+                >
+                  {course.title}
+                </Text>
+                {course.items.map((item, index) => (
+                  <FlexWithBorderTop
+                    key={item.title}
+                    justifyContent={'space-between'}
+                  >
+                    <Flex width={[1, 1, 0.8, 0.8, 0.8]}>
+                      <Image src={playVideoIcon} />
+                      <P
+                        ml={22}
+                        color={
+                          item.videoNumber == this.state.activeId
+                            ? 'white'
+                            : '#5b5b5b'
+                        }
+                      >
+                        {item.title}
+                      </P>
+                    </Flex>
+                    <P>{item.playTime}</P>
+                  </FlexWithBorderTop>
+                ))}
+              </Box>
+            )
+          })}
+        </Box>
+      </Flex>
+    )
+  }
+}
 
 export default CoursesList

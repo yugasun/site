@@ -19,7 +19,7 @@ const Resource = () => (
         navProps={{
           to: learn,
           backgroundOnHover: true,
-          crossDomain: true,
+          completed: true,
         }}
       >
         courses
@@ -29,7 +29,7 @@ const Resource = () => (
       <SubMenuItem
         navProps={{
           to: what,
-          crossDomain: true,
+          completed: true,
           backgroundOnHover: true,
         }}
       >

@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, ResponsiveStack, Flex, Text } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import { P, PS } from 'src/fragments/DesignSystem'
+import { PS } from 'src/fragments/DesignSystem'
 
 const ExamplesHero = () => {
   return (
@@ -13,7 +13,7 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[570, 570, 391, 391, 494]}
+      height={[496, 496, 437, 437, 566]}
     >
       <Box mb={[2, 2, 42, 42, 6]} pt={[0, 0, 0, 0, 4]}>
         <HeroTabs selected='learn' />
@@ -41,19 +41,7 @@ const ExamplesHero = () => {
           </Text>
           <PS>by Gareth McCumskey</PS>
         </Box>
-        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.5]}>
-          <P
-            color='white'
-            mt={[32, 32, 1.5]}
-            mb={0}
-            align={['left']}
-            mx={[0, 0, 0, 0, 5]}
-          >
-            Serverless services only cost you when they are actually executing.
-            This is important. To be a truly serverless service, there needs to
-            be no idle running cost.
-          </P>
-        </Flex.verticallyCenter>
+        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.5]} />
       </ResponsiveStack>
     </HeroWrapper>
   )
