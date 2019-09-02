@@ -27,7 +27,7 @@
   margin: 70px 14px 20px 14px;
   padding: 24px 24px 42px 24px;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.18);
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
   transition: all 0.3s ease;
   user-select: none;
@@ -144,16 +144,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: 'SoleilLt';
-  font-size: 15px;
+  font-family: 'Soleil';
+  font-size: 16px;
   color: rgba(0,0,0,0.55);
   padding: 20px 0 0 0;
   transition: all 0.2s ease;
 }
 
 .framework-edition-detail-link div:first-child {
-  padding-right: 15px;
-  margin-right: 15px;
+  padding-right: 12px;
+  margin-right: 12px;
   border-right: 1px solid rgba(0,0,0,0.1);
 }
 

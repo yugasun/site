@@ -27,6 +27,8 @@ export default class Paradigm extends React.Component {
       <div className='container paradigm-container'>
         <div className='container-inner paradigm-inner'>
 
+          <div className='paradigm-icon container'>ß</div>
+
           <div className='header-label container'>
             Serverless Movement
           </div>
@@ -42,7 +44,6 @@ export default class Paradigm extends React.Component {
             <p>The Serverless Paradigm is the natural evolution of software efficiency.  It yields a competitive advantage for today's practitioners and will be a deciding factor in tomorrow's software industry leaders.</p>
             <p><b>Join us!  Together, we'll build more & manage less.</b></p>
           </div>
-
 
           <div className='paradigm-guide-title container'>
             <div className='header-label container'>
