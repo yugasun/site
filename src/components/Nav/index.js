@@ -68,6 +68,11 @@ export default class Nav extends React.Component {
                 <div
                   className='nav-item'
                   onMouseEnter={() => { this.hideDropdown() }}>
+                  Pricing
+                </div>
+                <div
+                  className='nav-item'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Learn
                 </div>
                 <div
