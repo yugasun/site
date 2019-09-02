@@ -54,7 +54,7 @@ export default class FrameworkEditions extends React.Component {
                   Free
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Our vast open-source ecosystem is available to everyone and every team for free.
+                  Downloaded over 1 million times per month. Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
                 </div>
                 <div className='framework-edition-detail-link'>
                   Download
@@ -78,7 +78,7 @@ export default class FrameworkEditions extends React.Component {
                   plugins
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Access 1,000+ plugins that extend the Framework to customize your workflow.
+                  Access 1000+ plugins that extend the Framework CLI to customize your workflow.
                 </div>
                 <div className='framework-edition-detail-link'>
                   View all plugins
@@ -135,7 +135,7 @@ export default class FrameworkEditions extends React.Component {
                   Free Tier + Pay-Per-Use
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Perfect for small teams who want to be production-ready.  It extends the open-source edition, includes a large free tier & pricing that scales with you.  Contact us for pricing information.
+                  Perfect for small teams who want to be production ready. Integrates and extends the open-source projects. Includes a large free tier and pricing that scales with you.
                 </div>
                 <div className='framework-edition-detail-link'>
                   <div>Start for Free</div>
@@ -172,7 +172,7 @@ export default class FrameworkEditions extends React.Component {
                   alerts
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Zero-config, real-time alerting upon deployment, featuring errors, unusual error rates, unusual durations, timeouts & more.
+                  Zero-config, real-time alerts for deployments, new errors, approaching out of memory, unusual durations, timeouts & more.
                 </div>
                 <div className='framework-edition-detail-link'>
                   View all Alerting features
@@ -217,7 +217,7 @@ export default class FrameworkEditions extends React.Component {
                   Contact Sales
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Includes all other features and is ideal for large teams that need hands-on help, standardized workflows and integrations with operations' standards.
+                  Additional features, training and support. Designed for large teams that need hands-on help, standardized workflows and integrations with Ops processes and tools.
                 </div>
                 <div className='framework-edition-detail-link'>
                   Contact Sales
@@ -253,7 +253,7 @@ export default class FrameworkEditions extends React.Component {
                   Training
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Training and workshop packages for teams by our industry-leading experts that are new to serverless, need to move quickly and want to start right.
+                  Training and workshop packages for teams that are new to serverless, need to move quickly and want to start right, delivered by our industry-leading experts.
                 </div>
                 <div className='framework-edition-detail-link'>
                   View our Training Packages

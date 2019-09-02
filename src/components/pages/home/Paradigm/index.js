@@ -27,24 +27,6 @@ export default class Paradigm extends React.Component {
       <div className='container paradigm-container'>
         <div className='container-inner paradigm-inner'>
 
-          <div className='paradigm-icon container'>ß</div>
-
-          <div className='header-label container'>
-            Serverless Movement
-          </div>
-
-          <div className='header container'>
-            The future of software is serverless.
-          </div>
-
-          <div className='paradigm-manifesto container'>
-            <p>Software is eating the world...  Unfortunately, most businesses still can't deliver software successfully, much less do so at the rapid pace needed to stay competitive.  For those who wish to keep up, let alone lead, <b>software delivery & operation must be radically simplified.</b></p>
-            <p>This is what the <b>Serverless Architecture</b> offers — It's built on next-generation public cloud services that auto-scale and charge only when used.  When scale, capacity planning & cost management are automated, the result is software that's easier to build, maintain, and often up to 99% cheaper.</p>
-            <p>Serverless Architectures are 10x more efficient, but they are new and therefore require a shift in how we previously thought about architectures & workflows. Our goal at <b>Serverless Inc.</b> is to give developers, teams and orgs all of the tools they need to build and operate serverless applications immediately, in one simple, powerful & elegant experience... <b>The Serverless Framework</b>.</p>
-            <p>The Serverless Paradigm is the natural evolution of software efficiency.  It yields a competitive advantage for today's practitioners and will be a deciding factor in tomorrow's software industry leaders.</p>
-            <p><b>Join us!  Together, we'll build more & manage less.</b></p>
-          </div>
-
           <div className='paradigm-guide-title container'>
             <div className='header-label container'>
               Serverless Guide
@@ -114,6 +96,25 @@ export default class Paradigm extends React.Component {
               <div className='paradigm-guide-step-action'>
                 Review support plans
               </div>
+            </div>
+          </div>
+
+          <div className='paradigm-mission container'>
+            <div className='paradigm-mission-icon container'>ß</div>
+
+            <div className='header-label container'>
+              Serverless Movement
+            </div>
+
+            <div className='header container'>
+              The future of software is serverless.
+            </div>
+
+            <div className='paradigm-mission-statement container'>
+              <p>Software is eating the world...  Unfortunately, most businesses still can't deliver software successfully, much less do so at the pace needed to stay competitive.  For those who wish to keep up, let alone lead, <b>software delivery & operation must be radically simplified.</b></p>
+              <p>This is what the <b>Serverless Architecture</b> offers — It's built on next-generation public cloud services that auto-scale and charge only when used.  When scale, capacity planning & cost management are automated, the result is software that's easier to build, maintain, and often up to 99% cheaper.</p>
+              <p>Serverless Architectures are new and therefore require a shift in how we previously thought about architectures & workflows. Our goal at <b>Serverless Inc.</b> is to give developers, teams and orgs all of the tools they need to build and operate serverless applications, in one simple, powerful & elegant experience... <b>The Serverless Framework</b>.</p>
+              <p>Together, we'll enable everyone to build more & manage less.</p>
             </div>
           </div>
         </div>

@@ -188,10 +188,10 @@ export default class Nav extends React.Component {
                     What & Why
                   </div>
                   <div className='nav-dropdown-column-item'>
-                    What is "serverless"
+                    What is serverless
                   </div>
                   <div className='nav-dropdown-column-item'>
-                    Why is "serverless" important?
+                    Why is serverless important?
                   </div>
                 </div>
               </div>

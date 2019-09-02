@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Default'
-import FrameworkEditions from 'src/components/pages/home/FrameworkEditions'
+import Pricing from 'src/components/pages/Pricing'
 
 const PricingPage = ({ location }) => (
   <DefaultLayout>
@@ -10,7 +10,7 @@ const PricingPage = ({ location }) => (
       description='Build web, mobile and IoT applications using AWS Lambda and API Gateway, Azure Functions, Google Cloud Functions, and more.'
       location={location}
     />
-    <FrameworkEditions />
+    <Pricing />
   </DefaultLayout>
 )
 

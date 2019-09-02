@@ -1,0 +1,43 @@
+.pricing-page {
+  padding-top: 72px;
+  background: #000000;
+}
+
+.pricing-page-inner {
+  flex-direction: column;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  margin: 0;
+  padding: 26px 0 24px 0;
+}
+
+.header-subtitle {}
+
+.header-framework-logo {
+  margin: 0 0 20px 0;
+}
+
+.header-framework-logo img {
+  height: auto;
+  max-height: 42px;
+}
+
+.header-subtitle {
+  font-family: 'Soleil';
+  font-size: 34px;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+}
+
+.pricing-page .pricing-content {
+  padding: 50px 0;
+  background: #f2f2f2;
+}

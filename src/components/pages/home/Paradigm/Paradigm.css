@@ -1,7 +1,7 @@
 .paradigm-container {
   height: auto;
   min-height: 300px;
-  padding: 68px 10px 100px 10px;
+  padding: 68px 10px 40px 10px;
   background: #ffffff;
   color: #000000;
 }
@@ -10,24 +10,30 @@
   flex-direction: column;
 }
 
-.paradigm-manifesto p {
+.paradigm-mission {
+  margin: 80px 0;
+  padding: 60px 0 0 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.paradigm-mission-icon {
+  margin: 0 0 10px 0;
+  color: #fd5750;
+  font-size: 42px;
+}
+
+.paradigm-mission-statement p {
   width: 100%;
   text-align: left;
   font-family: 'SoleilLt';
-  font-size: 20px;
+  font-size: 19px;
   line-height: 40px;
   margin: 0 0 26px 0;
-  letter-spacing: -0.1px;
+  letter-spacing: 0px;
 }
 
-.paradigm-manifesto b {
+.paradigm-mission-statement b {
   font-family: 'SoleilLt';
-}
-
-.paradigm-icon {
-  margin: 0 0 18px 0;
-  color: #fd5750;
-  font-size: 42px;
 }
 
 .paradigm-guide {
@@ -36,9 +42,7 @@
 }
 
 .paradigm-guide-title {
-  margin: 40px 0 0 0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  padding: 60px 0 0 0;
+  padding: 0;
 }
 
 .paradigm-guide-step  {
