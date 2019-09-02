@@ -23,9 +23,9 @@ const categoryOptions = [
       text: 'Auth',
     },
     {
-      id: 'communication',
+      id: 'integration',
       name: 'category',
-      text: 'Communication',
+      text: 'Integration',
     },
     {
       id: 'machine-learning',
@@ -40,14 +40,14 @@ const categoryOptions = [
       text: 'API',
     },
     {
-      id: 'big-data-analytics',
+      id: 'analytics',
       name: 'category',
-      text: 'Big Data & Analytics',
+      text: 'Analytics',
     },
     {
-      id: 'payment',
+      id: 'other',
       name: 'category',
-      text: 'Payment',
+      text: 'Other',
     },
   ],
 ]

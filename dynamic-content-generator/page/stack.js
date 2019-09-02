@@ -28,8 +28,8 @@ const pageCreator = (graphql, createPage) =>
   new Promise((resolve, reject) => {
     graphql(graphqlQuery).then(result => {
       try {
-        const stackPAges = result.data.allStack.edges
-        createStackPages(createPage, stackPAges)
+        const stackPages = result.data.allStack.edges
+        createStackPages(createPage, stackPages)
         resolve()
       } catch (e) {
         console.log('error generating stack pages:', e)

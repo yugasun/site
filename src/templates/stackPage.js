@@ -1,11 +1,11 @@
 import React from 'react'
-import DefaultLayout from 'src/layouts/DefaultNew'
+import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
 import { Box, Heading } from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 
 const PageContent = styled(Box)`
   font-family: 'Soleil';
@@ -61,7 +61,7 @@ const PageContent = styled(Box)`
   }
 `
 
-const GuidePage = ({ data }) => (
+const StackPage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
     <Helmet {...data.Stack.frontmatter} />
     <AppContainer>
@@ -88,7 +88,7 @@ const GuidePage = ({ data }) => (
   </DefaultLayout>
 )
 
-export default GuidePage
+export default StackPage
 
 export const query = graphql`
   query StackPage($stackId: String!) {

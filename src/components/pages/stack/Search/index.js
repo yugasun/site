@@ -1,11 +1,11 @@
 import React from 'react'
 import { Box, Background, Row } from 'serverless-design-system'
 
-import { AppContainerNewest as AppContainer } from 'src/components'
+import { AppContainer } from 'src/components'
 import SearchField from './Field'
 import SearchFilters from './Filters'
 
-export default class ExamplesSearch extends React.Component {
+export default class StackSearch extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

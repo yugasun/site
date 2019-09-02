@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Box, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
-import HeroTabs from '../../plugins/DevelopersHeroTabs'
 import { PL, Heading } from 'src/fragments/DesignSystem'
+import HeroTabs from 'src/components/pages/plugins/ResourcesHeroTabs'
 
 const ExamplesHero = () => {
   return (
