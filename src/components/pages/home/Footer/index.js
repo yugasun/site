@@ -1,14 +1,8 @@
 import React from 'react'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import styled from 'styled-components'
 import Prefooter from './Prefooter'
 import Footer from './Footer'
-
-const HR = styled('hr')`
-  width: 100%;
-  border-color: #8c8c8c;
-`
 
 const HomeFooter = ({ frameworkPage }) => (
   <Background
@@ -23,7 +17,7 @@ const HomeFooter = ({ frameworkPage }) => (
   >
     <Prefooter frameworkPage={frameworkPage} />
     <AppContainer>
-      <HR />
+      <hr style={{ borderColor: '#8c8c8c' }} />
     </AppContainer>
     <Footer />
   </Background>
