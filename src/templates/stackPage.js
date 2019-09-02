@@ -1,7 +1,7 @@
 import React from 'react'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Helmet } from 'src/fragments'
-import { NewToServerlessPrefooterNew as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 import { Box, Heading } from 'serverless-design-system'
 import styled from 'styled-components'
 import { PageContainer } from 'src/fragments/DesignSystem'
@@ -65,7 +65,7 @@ const StackPage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
     <Helmet {...data.Stack.frontmatter} />
     <AppContainer>
-      <Box width={1} my={10} pb={350}>
+      <Box width={1} mt={[7, 7, 8, 8, 10]} mb={[7]}>
         <PageContainer>
           <Heading.h1
             align='center'
