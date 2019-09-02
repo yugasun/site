@@ -25,19 +25,19 @@ export default class Paradigm extends React.Component {
   render() {
     return (
       <div className='container paradigm-container'>
-        <div className='container-inner paradigm-inner'>
 
-          <div className='paradigm-guide-title container'>
-            <div className='header-label container'>
-              Serverless Guide
-            </div>
+        { /* Paradigm Guide */ }
 
-            <div className='header container'>
-              The guide to going serverless.
-            </div>
+        <div className='paradigm-guide container'>
+          <div className='header-label container'>
+            Serverless Guide
           </div>
 
-          <div className='paradigm-guide container'>
+          <div className='header container'>
+            The guide to going serverless.
+          </div>
+
+          <div className='paradigm-guide-steps container-inner'>
             <div className='paradigm-guide-step'>
               <div className='paradigm-guide-step-title'>
                 Learn
@@ -98,8 +98,12 @@ export default class Paradigm extends React.Component {
               </div>
             </div>
           </div>
+        </div>
 
-          <div className='paradigm-mission container'>
+        { /* Paradigm Mission */ }
+
+        <div className='container paradigm-mission'>
+          <div className='container-inner paradigm-mission-inner'>
             <div className='paradigm-mission-icon container'>ß</div>
 
             <div className='header-label container'>
