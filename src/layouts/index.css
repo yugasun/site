@@ -277,11 +277,12 @@ tfoot td {
 }
 
 .header-label {
-  color: rgba(0,0,0,0.7);
+  color: rgba(0,0,0,1);
   font-size: 21px;
   font-family: 'Soleil';
   user-select: none;
-  margin: 10px 0 20px 0;
+  margin: 20px 0 20px 0;
+  letter-spacing: -0.1px;
 }
 
 .header {
