@@ -7,6 +7,7 @@ import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import playVideoIconActive from 'src/assets/images/pages/courses/play-video-icon-active.svg'
 import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
+require('./responsivePlayer.css')
 
 const HoverableText = styled(P)`
   &:hover {
@@ -72,7 +73,6 @@ class CoursesList extends React.Component {
               controls={true}
               className='react-player'
               width={'100%'}
-              height={['181px', '181px', '452px']}
               muted
               loop={false}
               config={{
