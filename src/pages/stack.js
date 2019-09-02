@@ -1,12 +1,12 @@
 import React from 'react'
 
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import { NewToServerlessPrefooterNewest as NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter } from 'src/fragments'
 import Hero from 'src/components/pages/stack/Hero'
 import Content from 'src/components/pages/stack/Content'
 import { Helmet } from 'src/fragments'
 
-const Stack = ({ data: examples }) => {
+const stacks = ({ data: examples }) => {
   const edges = examples.allExample.edges.filter(
     examples => examples.node.frontmatter.title !== ''
   )
@@ -16,7 +16,7 @@ const Stack = ({ data: examples }) => {
       prefooter={NewToServerlessPrefooter}
       transparentHeader={true}
     >
-      <Helmet title='Serverless Stack Explorer | Serverless Functions Directory' />
+      <Helmet title='Serverless Stack Explorer' />
       <Hero />
       <Content examples={edges.map(({ node }) => node)} />
     </DefaultLayout>
@@ -24,7 +24,7 @@ const Stack = ({ data: examples }) => {
 }
 
 export const query = graphql`
-  query Stack {
+  query Stacks {
     allExample(
       limit: 15
       sort: { fields: [frontmatter___highlighted], order: ASC }
@@ -46,4 +46,4 @@ export const query = graphql`
   }
 `
 
-export default Stack
+export default stacks
