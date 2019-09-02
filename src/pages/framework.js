@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/Home'
+import DefaultLayout from 'src/layouts/Default'
 import Hero from 'src/components/pages/framework/Hero'
 import Lifecycle from 'src/components/pages/framework/Lifecycle'
 import Pricing from 'src/components/pages/framework/Pricing'

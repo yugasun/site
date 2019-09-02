@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
+import DefaultLayout from 'src/layouts/Default'
 import Hero from 'src/components/pages/enterprise/Hero'
 import Features from 'src/components/pages/enterprise/Features'
 import Brands from 'src/components/pages/enterprise/Brands'
@@ -12,7 +12,7 @@ import { AppContainer } from 'src/components'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Enterprise = ({ location }) => (
-  <HomeLayout prefooter={NewToServerlessPrefooter} startWithWhiteHeader={false}>
+  <DefaultLayout prefooter={NewToServerlessPrefooter} startWithWhiteHeader={false}>
     <Helmet title='Serverless Framework Enterprise' location={location} />
     <Hero />
     <Background background={'black'}>
@@ -28,7 +28,7 @@ const Enterprise = ({ location }) => (
         <WhitepaperDownloadBanner />
       </Box>
     </Background>
-  </HomeLayout>
+  </DefaultLayout>
 )
 
 export default Enterprise

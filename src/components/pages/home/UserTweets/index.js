@@ -5,9 +5,9 @@ import imgTweeterOne from 'src/assets/images/home/tweeters/papa.png'
 import imgTweeterTwo from 'src/assets/images/home/tweeters/david.png'
 import imgTweeterThree from 'src/assets/images/home/tweeters/jason.png'
 import imgTweeterFour from 'src/assets/images/home/tweeters/tyler.png'
-import './Users.css'
+import './UserTweets.css'
 
-export default class Users extends React.Component {
+export default class UserTweets extends React.Component {
 
   constructor(props) {
     super(props)
