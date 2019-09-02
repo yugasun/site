@@ -14,6 +14,15 @@ const HoverableText = styled(P)`
   }
 `
 
+const NoScrollbarBox = styled(Box)`
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+`
+
 class CoursesList extends React.Component {
   constructor(props) {
     super(props)
@@ -64,7 +73,7 @@ class CoursesList extends React.Component {
             />
           </div>
         </Box>
-        <Box width={0.3} style={{ overflowY: 'scroll' }}>
+        <NoScrollbarBox width={0.3} style={{ overflowY: 'scroll' }}>
           {courseData.map((course, index) => {
             return (
               <Box key={index} mx={32}>
@@ -111,7 +120,7 @@ class CoursesList extends React.Component {
               </Box>
             )
           })}
-        </Box>
+        </NoScrollbarBox>
       </Flex>
     )
   }
