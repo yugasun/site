@@ -5,15 +5,10 @@
   padding: 68px 10px;
   background: #ffffff;
   color: #000000;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .paradigm-inner {
   flex-direction: column;
-}
-
-.paradigm-manifesto {
-
 }
 
 .paradigm-manifesto p {
@@ -24,4 +19,80 @@
   line-height: 40px;
   margin: 0 0 26px 0;
   letter-spacing: -0.1px;
+}
+
+.paradigm-manifesto b {
+  font-family: 'SoleilLt';
+}
+
+.paradigm-guide {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.paradigm-guide-title {
+  margin: 50px 0 0 0;
+}
+
+.paradigm-guide-step  {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 396px;
+  width: 33%;
+  background: #ffffff;
+  margin: 10px 14px 20px 14px;
+  padding: 36px 32px 42px 32px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.paradigm-guide-step:hover {
+  cursor: pointer;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
+  transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
+}
+
+.paradigm-guide-step:first-child {
+  margin-left: 0;
+}
+
+.paradigm-guide-step:last-child {
+  margin-right: 0;
+}
+
+.paradigm-guide-step-title {
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 26px;
+  padding: 10px 0 20px 0;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.paradigm-guide-step-description {
+  text-align: left;
+  font-family: 'SoleilLt';
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0,0,0,1);
+  padding: 10px 0 20px 0;
+}
+
+.paradigm-guide-step-action {
+  display: flex;
+  padding: 26px 0 0 0;
+  margin: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fd5750;
+}
+
+.paradigm-guide-step-action:hover {
+  text-decoration: underline;
 }

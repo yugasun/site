@@ -123,14 +123,14 @@
 .framework-edition-detail-text {
   text-align: center;
   font-family: 'SoleilLt';
-  font-size: 15px;
+  font-size: 16px;
   line-height: 26px;
   color: rgba(0,0,0,1);
 }
 
 .framework-edition-detail-price {
   font-size: 20px;
-  font-family: 'SoleilSB';
+  font-family: 'SoleilBk';
   letter-spacing: -0.1px;
   color: #fd5750;
   transition: all 0.2s linear;

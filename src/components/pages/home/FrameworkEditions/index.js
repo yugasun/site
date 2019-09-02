@@ -54,7 +54,7 @@ export default class FrameworkEditions extends React.Component {
                   Free
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Our vast open-source ecosystem is available to everyone and every team.
+                  Our vast open-source ecosystem is available to everyone and every team for free.
                 </div>
                 <div className='framework-edition-detail-link'>
                   Download
@@ -135,7 +135,7 @@ export default class FrameworkEditions extends React.Component {
                   Free Tier + Pay-Per-Use
                 </div>
                 <div className='framework-edition-detail-text'>
-                  Perfect for small teams ready to go into production and pricing that scales with them.  Contact us for pricing information.
+                  Perfect for small teams who want to be production-ready.  It extends the open-source edition, includes a large free tier & pricing that scales with you.  Contact us for pricing information.
                 </div>
                 <div className='framework-edition-detail-link'>
                   <div>Start for Free</div>

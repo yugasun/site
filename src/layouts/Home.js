@@ -16,7 +16,7 @@ const DefaultLayout = ({
     <div className='container'>
       <Nav />
       {children}
-      <Footer noPrefooter={true} frameworkPage={frameworkPage} />
+      <Footer />
     </div>
   )
 }

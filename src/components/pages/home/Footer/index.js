@@ -18,18 +18,7 @@ const HR = styled('hr')`
 `
 
 const HomeFooter = ({ frameworkPage }) => (
-  <Background
-    backgroundImage={[
-      'linear-gradient(150deg,rgb(0,0,0) 60%,#70221f)',
-      'linear-gradient(150deg,rgb(0,0,0) 60%,#70221f)',
-      'linear-gradient(150deg, rgb(0, 0, 0) 45%, #70221f)',
-      'linear-gradient(150deg, rgb(0, 0, 0) 45%, #70221f)',
-      'linear-gradient(150deg, rgb(0, 0, 0) 60%, #70221f)',
-    ]}
-    zIndex='99'
-  >
-    <Prefooter frameworkPage={frameworkPage} />
-    <HR />
+  <Background className='container' background={'#000000'} zIndex='99'>
     <Footer />
   </Background>
 )
