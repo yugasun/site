@@ -1,19 +1,30 @@
 .nav {
   position: fixed;
   z-index: 1000;
-  flex-direction: row;
-  justify-content: center;
-  min-height: 72px;
+  flex-direction: column;
   background: #000000;
   color: #ffffff;
   user-select: none;
+  transition: all 0.2s ease;
+  overflow: auto;
 }
 
 .nav-inner {
+  height: auto;
   -webkit-animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
   animation-fill-mode: backwards;
+}
+
+.nav-main {
+  display: flex;
+  z-index: 1000;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding: 22px 0 20px 0;
+  background: #000000;
 }
 
 .nav-logo {
@@ -46,7 +57,7 @@
   font-family: 'SoleilSB';
   font-size: 15px;
   color: rgba(255,255,255,0.5);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-item:last-child {
@@ -63,6 +74,10 @@
   color: rgba(255,255,255,0.5);
 }
 
+.nav-item-active {
+  color: rgba(255,255,255,1);
+}
+
 .nav-sign-in {
   padding-left: 24px;
   margin-left: 16px;
@@ -76,4 +91,68 @@
 
 .nav-contact-sales{
   color: #fd5750;
+}
+
+.nav-dropdown {
+  position: fixed;
+  z-index: 999;
+  flex-direction: column;
+  min-height: 300px;
+  padding-top: 74px;
+  background: #000000;
+  color: #ffffff;
+  user-select: none;
+  overflow: auto;
+  transition: all 0.2s linear;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation-fill-mode: backwards;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-dropdown-active {
+  opacity: 1;
+}
+
+.nav-dropdown .container-inner {
+  justify-content: flex-end;
+}
+
+.nav-dropdown-product {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 60%;
+  padding: 14px 0 40px 0;
+  transition: all 0.2s ease;
+  animation-fill-mode: backwards;
+}
+
+.nav-dropdown-product.nav-dropdown-active {
+  opacity: 1;
+}
+
+.nav-dropdown-product-category {
+  padding: 0 0 0 26px;
+  margin: 0 60px 0 0;
+}
+
+.nav-dropdown-product-category-title {
+  padding: 0 0 10px 0;
+  font-family: 'SoleilSB';
+  font-size: 17px;
+  color: rgba(255,255,255,1);
+}
+
+.nav-dropdown-product-category-item {
+  padding: 8px 0;
+  font-family: 'SoleilSB';
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown-product-category-item:hover {
+  cursor: pointer;
+  color: rgba(255,255,255,1);
 }
