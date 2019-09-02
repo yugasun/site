@@ -28,7 +28,7 @@ const Icon = styled.span`
 
 Icon.defaultProps = { isOpen: false }
 
-const HeroTabs = ({ data, selected, tabWidth }) => (
+const HeroTabs = ({ data, selected, tabWidth, highlightedWidth }) => (
   <Box>
     <Box display={['none', 'none', 'none', 'none', 'block']}>
       <Card
@@ -58,7 +58,7 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
             backgroundPosition: 'center',
             color: 'white',
             minWidth:
-              tabWidth && tabWidth.selected ? tabWidth.selected : '75px',
+              tabWidth && tabWidth.selected ? tabWidth.selected : '110px',
             mx: '0px',
           }}
           selectedValue={selected}
