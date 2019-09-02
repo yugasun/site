@@ -60,28 +60,39 @@ export default class Nav extends React.Component {
                   onMouseEnter={() => { this.showDropdown('product') }}>
                   Product
                 </div>
-                <div className='nav-item'>
+                <div
+                  className='nav-item'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Docs
                 </div>
-                <div className='nav-item'>
-                  Pricing
-                </div>
-                <div className='nav-item'>
+                <div
+                  className='nav-item'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Learn
                 </div>
-                <div className='nav-item'>
+                <div
+                  className={`nav-item ${this.state.dropdown === 'services' ? 'nav-item-active' : ''}`}
+                  onMouseEnter={() => { this.showDropdown('services') }}>
                   Services
                 </div>
-                <div className='nav-item'>
+                <div
+                  className={`nav-item ${this.state.dropdown === 'more' ? 'nav-item-active' : ''}`}
+                  onMouseEnter={() => { this.showDropdown('more') }}>
                   More
                 </div>
-                <div className='nav-item nav-sign-in'>
+                <div
+                  className='nav-item nav-sign-in'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Register
                 </div>
-                <div className='nav-item nav-sign-up'>
+                <div
+                  className='nav-item nav-sign-up'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Sign-in
                 </div>
-                <div className='nav-item nav-contact-sales'>
+                <div
+                  className='nav-item nav-contact-sales'
+                  onMouseEnter={() => { this.hideDropdown() }}>
                   Contact Sales
                 </div>
               </div>
@@ -94,7 +105,7 @@ export default class Nav extends React.Component {
 
             { this.state.dropdown === 'product' && (
 
-              <div className={`nav-dropdown-product`}>
+              <div className={`nav-dropdown-content nav-dropdown-product`}>
                 <div className='nav-dropdown-product-category'>
                   <div className='nav-dropdown-product-category-title'>
                     Open-Source
@@ -149,8 +160,20 @@ export default class Nav extends React.Component {
                   </div>
                 </div>
               </div>
-
             )}
+
+            { this.state.dropdown === 'services' && (
+              <div className={`nav-dropdown-content nav-dropdown-services`}>
+
+              </div>
+            )}
+
+            { this.state.dropdown === 'more' && (
+              <div className={`nav-dropdown-content nav-dropdown-more`}>
+
+              </div>
+            )}
+
           </div>
         </div>
       </div>

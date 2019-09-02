@@ -277,9 +277,8 @@ tfoot td {
 }
 
 .header-label {
-  color: rgba(0,0,0,0.3);
-  color: #fd5750;
-  font-size: 22px;
+  color: rgba(0,0,0,0.5);
+  font-size: 21px;
   font-family: 'Soleil';
   user-select: none;
   margin: 10px 0 20px 0;
