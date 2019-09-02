@@ -19,7 +19,7 @@ const CourseBox = props => (
     height={[304]}
     width={[1, 1, 278, 278, 592]}
     flexDirection='column'
-    mt={[-135, -135, 62, 62, 92]}
+    mt={[62, 62, 62, 62, 92]}
     ml={[0, 0, 55, 55, 136]}
     borderRadius='4px'
     boxShadow='2px 7px 18px 0 rgba(0, 0, 0, 0.08)'

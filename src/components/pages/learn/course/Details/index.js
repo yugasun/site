@@ -8,7 +8,7 @@ import { Flex } from 'serverless-design-system'
 const Courses = props => (
   <React.Fragment>
     <CourseOutline />
-    <Flex>
+    <Flex flexDirection={['column-reverse', 'column-reverse', 'row']}>
       <Flex flexDirection='column' width={[1, 1, 0.5, 0.5]}>
         <Description />
         <Requirements />

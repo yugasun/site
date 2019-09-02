@@ -23,6 +23,13 @@ const NoScrollbarBox = styled(Box)`
   -ms-overflow-style: none;
 `
 
+const CourseBox = styled(Flex)`
+  background-color: black;
+  @media only screen and (min-width: 1025px) {
+    max-height: 452px;
+  }
+`
+
 class CoursesList extends React.Component {
   constructor(props) {
     super(props)
@@ -52,15 +59,20 @@ class CoursesList extends React.Component {
 
   render() {
     return (
-      <Flex style={{ backgroundColor: 'black', maxHeight: '452px' }} mt={-62}>
-        <Box width={0.7}>
+      <CourseBox
+        mt={-62}
+        flexDirection={['column', 'column', 'column', 'column', 'row']}
+        width={[1, 1, 0.85, 0.85, 1]}
+        mx={'auto'}
+      >
+        <Box width={[1, 1, 1, 1, 0.7]}>
           <div className='course-video-player-wrapper'>
             <ReactPlayer
               url={this.state.activeVideoLink}
               controls={true}
               className='react-player'
               width={'100%'}
-              height={'452px'}
+              height={['181px', '181px', '452px']}
               muted
               loop={false}
               config={{
@@ -73,10 +85,13 @@ class CoursesList extends React.Component {
             />
           </div>
         </Box>
-        <NoScrollbarBox width={0.3} style={{ overflowY: 'scroll' }}>
+        <NoScrollbarBox
+          width={[1, 1, 1, 1, 0.3]}
+          style={{ overflowY: 'scroll' }}
+        >
           {courseData.map((course, index) => {
             return (
-              <Box key={index} mx={32}>
+              <Box key={index} mx={['12px', '12px', 42, 42, 32]}>
                 <Text
                   fontFamily='SoleilBk'
                   fontSize='18px'
@@ -121,7 +136,7 @@ class CoursesList extends React.Component {
             )
           })}
         </NoScrollbarBox>
-      </Flex>
+      </CourseBox>
     )
   }
 }

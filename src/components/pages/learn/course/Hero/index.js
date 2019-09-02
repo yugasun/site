@@ -13,7 +13,7 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[496, 496, 437, 437, 566]}
+      height={[396, 396, 437, 437, 566]}
     >
       <Box mb={[2, 2, 42, 42, 6]} pt={[0, 0, 0, 0, 4]}>
         <HeroTabs selected='learn' />
