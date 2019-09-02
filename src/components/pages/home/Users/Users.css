@@ -81,3 +81,25 @@
   margin-bottom: 10px;
   opacity: 0.3;
 }
+
+.user-tweets-actions {
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  user-select: none;
+  margin-top: 50px;
+  color: #000000;
+  font-family: 'Soleil';
+  font-size: 18px;
+}
+
+.user-tweets-actions a {
+  color: #fd5750;
+  margin-left: 3px;
+  font-family: 'SoleilBk';
+}
+
+.user-tweets-actions a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

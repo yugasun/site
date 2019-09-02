@@ -90,6 +90,11 @@ export default class Users extends React.Component {
               </div>
             </div>
           </div>
+
+          <div className='user-tweets-actions container'>
+            Serverless Architects are a fast growing role - <a>Learn the Serverless Architecture here</a>
+          </div>
+
         </div>
       </div>
     )
