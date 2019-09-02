@@ -1,20 +1,13 @@
 import React from 'react'
 import { Background } from 'serverless-design-system'
+import { AppContainer } from 'src/components'
 import styled from 'styled-components'
 import Prefooter from './Prefooter'
 import Footer from './Footer'
 
 const HR = styled('hr')`
-  width: 76%;
+  width: 100%;
   border-color: #8c8c8c;
-
-  @media screen and (min-width: 770px) and (max-width: 1024px) {
-    width: 93%;
-  }
-
-  @media screen and (max-width: 769px) {
-    width: 90%;
-  }
 `
 
 const HomeFooter = ({ frameworkPage }) => (
@@ -29,7 +22,9 @@ const HomeFooter = ({ frameworkPage }) => (
     zIndex='99'
   >
     <Prefooter frameworkPage={frameworkPage} />
-    <HR />
+    <AppContainer>
+      <HR />
+    </AppContainer>
     <Footer />
   </Background>
 )
