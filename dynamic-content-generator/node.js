@@ -48,7 +48,7 @@ pluginsIndex.setSettings({
 })
 
 stackIndex.setSettings({
-  attributesForFaceting: ['provider', 'title', 'category'],
+  attributesForFaceting: ['provider', 'title', 'category', 'highlighted'],
 })
 
 function lengthInUtf8Bytes(str) {
