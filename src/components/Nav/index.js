@@ -182,6 +182,11 @@ export default class Nav extends React.Component {
                   <div className='nav-dropdown-column-item'>
                     Examples
                   </div>
+                </div>
+                <div className='nav-dropdown-column'>
+                  <div className='nav-dropdown-column-title'>
+                    What & Why
+                  </div>
                   <div className='nav-dropdown-column-item'>
                     What is "serverless"
                   </div>
@@ -212,23 +217,6 @@ export default class Nav extends React.Component {
               <div className={`nav-dropdown-content nav-dropdown-more`}>
                 <div className='nav-dropdown-column'>
                   <div className='nav-dropdown-column-title'>
-                    Company
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Blog
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Partners
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Job Listings
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Contact
-                  </div>
-                </div>
-                <div className='nav-dropdown-column'>
-                  <div className='nav-dropdown-column-title'>
                     Community
                   </div>
                   <div className='nav-dropdown-column-item'>
@@ -242,6 +230,23 @@ export default class Nav extends React.Component {
                   </div>
                   <div className='nav-dropdown-column-item'>
                     Meetups
+                  </div>
+                </div>
+                <div className='nav-dropdown-column'>
+                  <div className='nav-dropdown-column-title'>
+                    Company
+                  </div>
+                  <div className='nav-dropdown-column-item'>
+                    Blog
+                  </div>
+                  <div className='nav-dropdown-column-item'>
+                    Partners
+                  </div>
+                  <div className='nav-dropdown-column-item'>
+                    Job Listings
+                  </div>
+                  <div className='nav-dropdown-column-item'>
+                    Contact
                   </div>
                 </div>
               </div>
