@@ -118,9 +118,9 @@
 .nav-dropdown-content {
   display: flex;
   flex-direction: row;
-  height: 250px;
+  height: auto;
   width: 60%;
-  padding: 20px 0 0 0;
+  padding: 20px 0 58px 0;
   -webkit-animation: fadeIn 0.7s;
   -moz-animation: fadeIn 0.7s;
   animation: fadeIn 0.7s;
@@ -129,19 +129,19 @@
 
 .nav-dropdown-product {}
 
-.nav-dropdown-product-category {
+.nav-dropdown-column {
   padding: 0 0 0 26px;
   margin: 0 60px 0 0;
 }
 
-.nav-dropdown-product-category-title {
+.nav-dropdown-column-title {
   padding: 0 0 10px 0;
   font-family: 'SoleilSB';
   font-size: 17px;
   color: rgba(255,255,255,1);
 }
 
-.nav-dropdown-product-category-item {
+.nav-dropdown-column-item {
   padding: 8px 0;
   font-family: 'SoleilSB';
   font-size: 16px;
@@ -149,12 +149,12 @@
   transition: all 0.2s ease;
 }
 
-.nav-dropdown-product-category-item:hover {
+.nav-dropdown-column-item:hover {
   cursor: pointer;
   color: rgba(255,255,255,1);
 }
 
-.nav-dropdown-product-category-item:active {
+.nav-dropdown-column-item:active {
   cursor: pointer;
   color: rgba(255,255,255,0.5);
 }

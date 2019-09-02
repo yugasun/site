@@ -50,7 +50,7 @@ export default class Paradigm extends React.Component {
             </div>
 
             <div className='header container'>
-              How to go serverless.
+              The guide to going serverless.
             </div>
           </div>
 
