@@ -89,9 +89,9 @@ export default class Content extends React.Component {
   refreshResults = searchObj => {
     stackIndex.search(searchObj, (err, content) => {
       if (err) console.error(err)
-      const examples = this.parseStackFromAlgolia(content)
+      const stacks = this.parseStackFromAlgolia(content)
       this.setState({
-        examples,
+        stacks,
       })
     })
   }
