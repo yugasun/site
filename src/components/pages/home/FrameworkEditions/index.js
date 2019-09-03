@@ -51,7 +51,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Free
+                  Open-Source
                 </div>
                 <div className='home-edition-detail-text'>
                   Downloaded over 1 million times per month. Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
@@ -132,14 +132,13 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Free Tier + Pay-Per-Use
+                  Free
                 </div>
                 <div className='home-edition-detail-text'>
                   Perfect for small teams who want to be production ready. Integrates and extends the open-source projects. Includes a large free tier and pricing that scales with you.
                 </div>
                 <div className='home-edition-detail-link'>
-                  <div>Start for Free</div>
-                  <div>Contact Sales</div>
+                  Get Started For Free
                 </div>
               </div>
 
@@ -193,7 +192,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-action'>
                 <div className='home-edition-action-button'>
-                  Start Free
+                  Get Started For Free
                 </div>
               </div>
             </div>
