@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Row } from 'serverless-design-system'
+import Link from 'gatsby-link'
 import imgLogo from 'src/assets/images/logo.svg'
 import './Nav.css'
 
@@ -18,9 +18,7 @@ export default class Nav extends React.Component {
    * Component Did Mount
    */
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   /**
    * Show Dropdown
@@ -50,31 +48,35 @@ export default class Nav extends React.Component {
         <div className='container nav'>
           <div className='container-inner nav-inner'>
             <div className='nav-main'>
-              <div className='nav-logo'>
+              <Link className='nav-logo' to='/'>
                 <img src={imgLogo} draggable={false} />
-              </div>
+              </Link>
 
               <div className='nav-items'>
-                <div
+                <Link
                   className={`nav-item ${this.state.dropdown === 'product' ? 'nav-item-active' : ''}`}
+                  to='/'
                   onMouseEnter={() => { this.showDropdown('product') }}>
                   Product
-                </div>
-                <div
+                </Link>
+                <Link
                   className='nav-item'
+                  to='/framework/docs'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Docs
-                </div>
-                <div
+                </Link>
+                <Link
                   className='nav-item'
+                  to='/pricing'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Pricing
-                </div>
-                <div
+                </Link>
+                <Link
                   className={`nav-item ${this.state.dropdown === 'learn' ? 'nav-item-active' : ''}`}
+                  to='/learn'
                   onMouseEnter={() => { this.showDropdown('learn') }}>
                   Learn
-                </div>
+                </Link>
                 <div
                   className={`nav-item ${this.state.dropdown === 'services' ? 'nav-item-active' : ''}`}
                   onMouseEnter={() => { this.showDropdown('services') }}>
@@ -85,16 +87,18 @@ export default class Nav extends React.Component {
                   onMouseEnter={() => { this.showDropdown('more') }}>
                   More
                 </div>
-                <div
+                <a
                   className='nav-item nav-sign-in'
+                  href='https://dashboard.serverless.com'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Register
-                </div>
-                <div
+                </a>
+                <a
                   className='nav-item nav-sign-up'
+                  href='https://dashboard.serverless.com'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Sign-in
-                </div>
+                </a>
                 <div
                   className='nav-item nav-contact-sales'
                   onMouseEnter={() => { this.hideDropdown() }}>

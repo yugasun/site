@@ -11,11 +11,16 @@
   padding: 0;
 }
 
-.paradigm-guide-step  {
+.paradigm-guide-steps  {
+  display: flex;
+  flex-direction: row;
+}
+
+.paradigm-guide-step {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 396px;
+  min-height: 560px;
   width: 33%;
   background: #ffffff;
   margin: 10px 14px 20px 14px;

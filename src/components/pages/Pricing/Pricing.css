@@ -1,43 +1,326 @@
 .pricing-page {
-  padding-top: 72px;
-  background: #000000;
-}
-
-.pricing-page-inner {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding-top: 72px;
+  background: #f7f7f7;
 }
 
-.header-title {
+.pricing-page .pricing-title {
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 60px 0;
+}
+
+.pricing-page .header {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.pricing-page .description {
+  text-align: center;
+  max-width: 800px;
+}
+
+/**
+ * Pricing Summary - Desktop
+ */
+
+.pricing-page .pricing-summary {
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.pricing-page .pricing-summary-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 396px;
+  width: 33%;
+  background: #ffffff;
+  margin: 0px 14px 20px 14px;
+  padding: 24px 32px 20px 32px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.pricing-page .pricing-summary-tile:hover {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
+  transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
+}
+
+.pricing-page .pricing-summary-tile:first-child {
+  margin-left: 0px;
+}
+
+.pricing-page .pricing-summary-tile:last-child {
+  margin-right: 0px;
+}
+
+.pricing-page .pricing-summary-edition-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  background: #000000;
+  border-radius: 3px;
+  padding: 20px 10px;
+}
+
+.pricing-page .pricing-summary-edition-logo-serverless {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+
+.pricing-page .pricing-summary-edition-logo-framework {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36px;
+  margin-top: -6px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.pricing-page .pricing-summary-edition-logo-edition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'SoleilSB';
+  color: #fd5750;
+  margin-top: 6px;
+  letter-spacing: -0.1px;
+}
+
+.pricing-page .pricing-summary-detail {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+
+.pricing-page .pricing-summary-detail:last-child {
+  border-bottom: none;
+}
+
+.pricing-page .pricing-summary-detail-price {
+  font-size: 21px;
+  font-family: 'SoleilSB';
+  letter-spacing: -0.1px;
+  color: #fd5750;
+  transition: all 0.2s linear;
+  text-align: center;
+  padding: 14px 0 10px 0;
+}
+
+.pricing-page .pricing-summary-detail-text {
+  font-family: 'SoleilLt';
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  padding: 8px 0 0 0;
+}
+
+.pricing-page .pricing-summary-detail-title {
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.pricing-page .pricing-summary-detail-action {
+  padding: 16px 20px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: 'SoleilSB';
+  font-size: 18px;
+  min-width: 200px;
+  text-align: center;
+  user-select: none;
+  transition: all 0.25s ease;
+  background: #fd5750;
+  border: 3px #fd5750 solid;
+}
+
+.pricing-page .pricing-summary-detail-action:hover {
+  cursor: pointer;
+}
+
+.pricing-page .pricing-summary-detail-action:active {
+  transform: scale(0.96);
+}
+
+/**
+ * Pricing Summary - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+   .pricing-page .pricing-summary {
+     flex-direction: column;
+     box-sizing: border-box;
+   }
+
+   .pricing-page .pricing-summary-tile {
+     margin: 20px 0;
+     width: 100%;
+   }
+ }
+
+/**
+ * Pricing Table - Desktop
+ */
+
+.pricing-page .pricing-table-desktop {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  margin: 0 0 120px 0;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+
+.pricing-page .pricing-table-desktop .pricing-table-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pricing-page .pricing-table-desktop .pricing-table-row {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  margin: 0;
-  padding: 26px 0 24px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
-.header-subtitle {}
-
-.header-framework-logo {
-  margin: 0 0 20px 0;
+.pricing-page .pricing-table-desktop .pricing-table-row:last-child {
+  border-bottom: none;
 }
 
-.header-framework-logo img {
-  height: auto;
-  max-height: 42px;
+.pricing-page .pricing-table-desktop .pricing-table-column {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  padding: 20px 0 10px 0;
+  text-align: center;
 }
 
-.header-subtitle {
-  font-family: 'Soleil';
-  font-size: 34px;
-  color: #FFFFFF;
-  letter-spacing: -1px;
+.pricing-page .pricing-table-desktop .pricing-table-editions .pricing-table-column {
+  padding: 30px 0;
 }
 
-.pricing-page .pricing-content {
-  padding: 50px 0;
+.pricing-page .pricing-table-desktop .pricing-table-row-category {
+  font-family: 'SoleilSB';
+  font-size: 18px;
   background: #f2f2f2;
+  border-bottom: none;
+}
+
+.pricing-page .pricing-table-desktop .pricing-table-row-category .pricing-table-column-feature  {
+  font-family: 'SoleilSB';
+  font-size: 18px;
+  line-height: auto;
+}
+
+.pricing-page .pricing-table-desktop .pricing-table-column-feature {
+  width: 52%;
+  font-family: 'Soleil';
+  font-size: 16px;
+  text-align: left;
+  padding: 24px 0 14px 40px;
+}
+
+.pricing-page .pricing-table-desktop .pricing-table-editions {
+  font-family: 'SoleilSB';
+  font-size: 18px;
+}
+
+/**
+ * Pricing Table - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+   .pricing-page .pricing-table-desktop  {
+     display: none;
+   }
+   .pricing-page .pricing-table-mobile  {
+     display: flex!important;
+   }
+ }
+
+.pricing-page .pricing-table-mobile {
+  display: none;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  margin: 0 0 120px 0;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+}
+
+.pricing-page .pricing-table-mobile .pricing-table-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pricing-page .pricing-table-mobile .pricing-table-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-family: 'SoleilSB';
+  font-size: 17px;
+}
+
+.pricing-page .pricing-table-mobile .pricing-table-row .pricing-table-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.pricing-page .pricing-table-mobile .pricing-table-column-category {
+  font-family: 'SoleilSB';
+  font-size: 18px;
+  background: #f2f2f2;
+}
+
+.pricing-page .pricing-table-column .pricing-check {
+  color: #fd5750;
+  font-size: 22px;
+}
+
+.pricing-page .pricing-table-column .pricing-cross {
+  color: rgba(0,0,0,0.2);
+  font-size: 28px;
+  font-family: 'SoleilLt';
+}
+
+.pricing-page .pricing-table-column .pricing-limit {
+  color: #fd5750;
+  font-size: 18px;
+  font-family: 'SoleilSB';
+  letter-spacing: -0.5px;
 }

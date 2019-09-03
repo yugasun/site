@@ -8,6 +8,191 @@ export default class Pricing extends React.Component {
     super(props)
 
     this.state = {}
+
+    this.state.features = [
+      {
+        category: 'CLI',
+        features: [
+          {
+            feature: 'Easy CLI + YAML development & deployment',
+            one: true,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Local development & emulation',
+            one: true,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Deploy to AWS, Google, Azure & more',
+            one: true,
+            two: true,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Plugins',
+        features: [
+          {
+            feature: 'Extend the Framework with 1,000+ plugins',
+            one: true,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Get support for certified plugins',
+            one: false,
+            two: false,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Components',
+        features: [
+          {
+            feature: 'Rapidly deploy common serverless use-cases via Serverless Components',
+            one: true,
+            two: true,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Registry',
+        features: [
+          {
+            feature: 'Publish, Share & Discover Serverless Components',
+            one: true,
+            two: true,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Dashboard',
+        features: [
+          {
+            feature: 'View your serverless applications & configuration',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Share application state & outputs',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Share stage-specific configuration and credentials',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'View deployments, metrics, alerts & logs',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Share and manage secrets across stages',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Included team members',
+            one: false,
+            two: '3',
+            three: 'Custom',
+          }
+        ]
+      },
+      {
+        category: 'Monitoring',
+        features: [
+          {
+            feature: 'Out-of-the-box metrics on usage, performance & errors',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Data retention',
+            one: false,
+            two: '7 days',
+            three: 'Custom',
+          },
+          {
+            feature: 'Included monthly invocations',
+            one: false,
+            two: '1,000,000',
+            three: 'Custom',
+          },
+        ]
+      },
+      {
+        category: 'Alerts',
+        features: [
+          {
+            feature: 'Zero configuration set-up of alerts',
+            one: false,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Errors, Performance, Warnings & more',
+            one: false,
+            two: true,
+            three: true,
+          },
+        ]
+      },
+      {
+        category: 'Debugging',
+        features: [
+          {
+            feature: 'Invocation Explorer',
+            one: false,
+            two: true,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Integrations',
+        features: [
+          {
+            feature: 'Email, Slack, AWS SNS, Webhooks & more',
+            one: false,
+            two: false,
+            three: true,
+          }
+        ]
+      },
+      {
+        category: 'Policies',
+        features: [
+          {
+            feature: 'Use dozens of pre-made policies & best practices',
+            one: false,
+            two: false,
+            three: true,
+          },
+          {
+            feature: 'Write custom policies in javascript',
+            one: false,
+            two: false,
+            three: true,
+          },
+        ]
+      }
+    ]
   }
 
   /**
@@ -24,264 +209,303 @@ export default class Pricing extends React.Component {
     return (
       <div className='container pricing-page'>
 
-          <div className='header-title'>
-            <div className='container-inner header-subtitle'>
-              Pricing
+        <div className='container-inner'>
+          <div className='pricing-title'>
+            <div className='header'>
+              Serverless Framework Pricing
+            </div>
+
+            <div className='description'>
+              Deploy serverless apps in seconds with our open-source edition, get production-ready with our free developer edition and pay as you scale with the enterprise edition.
             </div>
           </div>
+        </div>
 
-          <div className='container pricing-content'>
-            <div className='container-inner pricing-table-inner'>
+        <div className='container-inner pricing-summary'>
 
-              <div className='framework-editions-list container'>
+          <div className='pricing-summary-tile'>
+            <div className='pricing-summary-edition-logo'>
+              <div className='pricing-summary-edition-logo-serverless'>
+                serverless
+              </div>
+              <div className='pricing-summary-edition-logo-framework'>
+                framework
+              </div>
+              <div className='pricing-summary-edition-logo-edition'>
+                open-source
+              </div>
+            </div>
 
-                <div className='framework-edition'>
-
-                  <div className='framework-edition-title'>
-                    <div className='framework-edition-title-serverless'>
-                      serverless
-                    </div>
-                    <div className='framework-edition-title-framework'>
-                      framework
-                    </div>
-                    <div className='framework-edition-title-edition'>
-                      open-source
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-price'>
-                      Free
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Our vast open-source ecosystem is available to everyone and every team for free.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      Download
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      CLI
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Easy YAML + CLI development and deployment of serverless applications across AWS, Azure, Google Cloud & more.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all CLI features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      plugins
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Access 1,000+ plugins that extend the Framework to customize your workflow.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all plugins
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      components
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Deploy common serverless use-cases more easily and quickly with these simpler abstractions.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all components
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      registry
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Easily discover, deploy & share Serverless Components.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View the registry
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-action'>
-                    <div className='framework-edition-action-button'>
-                      Download
-                    </div>
-                  </div>
-                </div>
-
-                <div className='framework-edition framework-edition-main'>
-
-                  <div className='framework-edition-title'>
-                    <div className='framework-edition-title-serverless'>
-                      serverless
-                    </div>
-                    <div className='framework-edition-title-framework'>
-                      framework
-                    </div>
-                    <div className='framework-edition-title-edition'>
-                      developer
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-price'>
-                      Free Tier + Pay-Per-Use
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Perfect for small teams who want to be production-ready.  It extends the open-source edition, includes a large free tier & pricing that scales with you.  Contact us for pricing information.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      <div>Start for Free</div>
-                      <div>Contact Sales</div>
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      dashboard
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      A shared view for your team's apps, metrics, alerts, deployments, secrets, activity & more.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Dashboard features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      monitoring
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Instant, powerful metrics, featuring usage, performance, errors & more across all of your serverless applications.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Monitoring features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      alerts
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Zero-config, real-time alerting upon deployment, featuring errors, unusual error rates, unusual durations, timeouts & more.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Alerting features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      debugging
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Query across every transaction with our invocation explorer to find past issues, performance insights & more.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Debugging features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-action'>
-                    <div className='framework-edition-action-button'>
-                      Start Free
-                    </div>
-                  </div>
-                </div>
-
-                <div className='framework-edition framework-edition'>
-
-                  <div className='framework-edition-title'>
-                    <div className='framework-edition-title-serverless'>
-                      serverless
-                    </div>
-                    <div className='framework-edition-title-framework'>
-                      framework
-                    </div>
-                    <div className='framework-edition-title-edition'>
-                      enterprise
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-price'>
-                      Contact Sales
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Includes all other features and is ideal for large teams that need hands-on help, standardized workflows and integrations with operations' standards.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      Contact Sales
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      integrations
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks & the standard tooling your operations team uses.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Integrations
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      Policies
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Set and automate policy enforcement upon every deployment, to ensure developer teams follow organizational standards and best practices.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View all Policy Features
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      Training
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      Training and workshop packages for teams by our industry-leading experts that are new to serverless, need to move quickly and want to start right.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View our Training Packages
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-detail'>
-                    <div className='framework-edition-detail-title'>
-                      Support
-                    </div>
-                    <div className='framework-edition-detail-text'>
-                      24/7 access to our serverless team.  We'll help review your architecture, fix bugs, solve outages and prioritize your feature requests.
-                    </div>
-                    <div className='framework-edition-detail-link'>
-                      View our Support Packages
-                    </div>
-                  </div>
-
-                  <div className='framework-edition-action'>
-                    <div className='framework-edition-action-button'>
-                      Contact Sales
-                    </div>
-                  </div>
-                </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-price'>Open-Source</div>
+              <div className='pricing-summary-detail-text'>
+                Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>CLI</div>
+              <div className='pricing-summary-detail-text'>
+                Open-Source & Free
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Plugins</div>
+              <div className='pricing-summary-detail-text'>
+                Open-Source & Free
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Components</div>
+              <div className='pricing-summary-detail-text'>
+                Open-Source & Free
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Registry</div>
+              <div className='pricing-summary-detail-text'>
+                Open-Source & Free
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-action'>
+                Download
               </div>
             </div>
           </div>
 
+          <div className='pricing-summary-tile'>
+            <div className='pricing-summary-edition-logo'>
+              <div className='pricing-summary-edition-logo-serverless'>
+                serverless
+              </div>
+              <div className='pricing-summary-edition-logo-framework'>
+                framework
+              </div>
+              <div className='pricing-summary-edition-logo-edition'>
+                developer
+              </div>
+            </div>
+
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-price'>Free</div>
+              <div className='pricing-summary-detail-text'>
+                Integrates and extends the open-source projects and adds free features for production-ready teams.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Dashboard</div>
+              <div className='pricing-summary-detail-text'>
+                Up to 3 users.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Monitoring</div>
+              <div className='pricing-summary-detail-text'>
+                Up to 1 million invocations a month.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Alerts</div>
+              <div className='pricing-summary-detail-text'>
+                Up to 1 million invocations a month.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Debugging</div>
+              <div className='pricing-summary-detail-text'>
+                Up to 1 million invocations a month.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-action'>
+                Sign-Up For Free
+              </div>
+            </div>
+          </div>
+
+          <div className='pricing-summary-tile'>
+            <div className='pricing-summary-edition-logo'>
+              <div className='pricing-summary-edition-logo-serverless'>
+                serverless
+              </div>
+              <div className='pricing-summary-edition-logo-framework'>
+                framework
+              </div>
+              <div className='pricing-summary-edition-logo-edition'>
+                enterprise
+              </div>
+            </div>
+
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-price'>Contact Sales</div>
+              <div className='pricing-summary-detail-text'>
+                Includes the developer edition, with increased limits, more features, training & support for scaling serverless teams.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Integrations</div>
+              <div className='pricing-summary-detail-text'>
+                Unlimited integrations.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Policies</div>
+              <div className='pricing-summary-detail-text'>
+                Unlimited policies.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Training</div>
+              <div className='pricing-summary-detail-text'>
+                Workshops for your team.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Support</div>
+              <div className='pricing-summary-detail-text'>
+                3 support tiers available.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-action'>
+                Contact Sales
+              </div>
+            </div>
+          </div>
+        </div>
+
+        { /* Pricing Table — Title */ }
+
+        <div className='container-inner'>
+          <div className='pricing-title'>
+            <div className='header'>
+              Serverless Framework Edition Details
+            </div>
+
+            <div className='description'>
+              A breakdown of all features in every Serverless Framework Edition.
+            </div>
+          </div>
+        </div>
+
+        { /* Pricing Table — Desktop */ }
+
+        <div className='container-inner'>
+          <div className='container pricing-table-desktop'>
+
+            <div className='pricing-table-section'>
+              <div className='pricing-table-row pricing-table-editions'>
+                <div className='pricing-table-column pricing-table-column-feature'>
+                </div>
+                <div className='pricing-table-column'>
+                  Open-Source
+                </div>
+                <div className='pricing-table-column'>
+                  Developer
+                </div>
+                <div className='pricing-table-column'>
+                  Enterprise
+                </div>
+              </div>
+            </div>
+
+            { this.state.features.map((category, index) => (
+              <div className='pricing-table-section' key={index}>
+                <div className='pricing-table-row pricing-table-row-category'>
+                  <div className='pricing-table-column pricing-table-column-feature'>
+                    { category.category }
+                  </div>
+                  <div className='pricing-table-column'></div>
+                  <div className='pricing-table-column'></div>
+                  <div className='pricing-table-column'></div>
+                </div>
+
+                { category.features.map((feature, index2) => (
+                  <div className='pricing-table-row' key={index2}>
+                    <div className='pricing-table-column pricing-table-column-feature'>
+                      { feature.feature }.
+                    </div>
+                    <div className='pricing-table-column'>
+                      { feature.one === true && (<span className='pricing-check'>✔</span>)}
+                      { feature.one === false && (<span className='pricing-cross'>x</span>) }
+                      { typeof feature.one === 'string' && (<span className='pricing-limit'>{feature.one}</span>) }
+                    </div>
+                    <div className='pricing-table-column'>
+                      { feature.two === true && (<span className='pricing-check'>✔</span>) }
+                      { feature.two === false && (<span className='pricing-cross'>x</span>) }
+                      { typeof feature.two === 'string' && (<span className='pricing-limit'>{feature.two}</span>) }
+                    </div>
+                    <div className='pricing-table-column'>
+                      { feature.three === true && (<span className='pricing-check'>✔</span>) }
+                      { feature.three === false && (<span className='pricing-cross'>x</span>) }
+                      { typeof feature.three === 'string' && (<span className='pricing-limit'>{feature.three}</span>) }
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        { /* Pricing Table — Mobile */ }
+
+        <div className='container-inner'>
+          <div className='container pricing-table-mobile'>
+
+            <div className='pricing-table-section'>
+              <div className='pricing-table-row'>
+                <div className='pricing-table-column'>
+                  Open-Source
+                </div>
+                <div className='pricing-table-column'>
+                  Developer
+                </div>
+                <div className='pricing-table-column'>
+                  Enterprise
+                </div>
+              </div>
+            </div>
+
+            { this.state.features.map((category, index) => (
+
+              <div class='pricing-table-section' key={index}>
+                <div className='pricing-table-row'>
+                  <div class='pricing-table-column pricing-table-column-category'>
+                    { category.category }
+                  </div>
+                </div>
+
+                { category.features.map((feature, index2) => (
+                  <div class='pricing-table-section' key={index2}>
+                    <div className='pricing-table-row'>
+                      <div class='pricing-table-column pricing-table-column-feature'>
+                        { feature.feature }.
+                      </div>
+                    </div>
+                    <div className='pricing-table-row'>
+                      <div class='pricing-table-column'>
+                        { feature.one === true && (<span className='pricing-check'>✔</span>)}
+                        { feature.one === false && (<span className='pricing-cross'>x</span>) }
+                        { typeof feature.one === 'string' && (<span className='pricing-limit'>{feature.one}</span>) }
+                      </div>
+                      <div class='pricing-table-column'>
+                        { feature.two === true && (<span className='pricing-check'>✔</span>) }
+                        { feature.two === false && (<span className='pricing-cross'>x</span>) }
+                        { typeof feature.two === 'string' && (<span className='pricing-limit'>{feature.two}</span>) }
+                      </div>
+                      <div class='pricing-table-column'>
+                        { feature.three === true && (<span className='pricing-check'>✔</span>) }
+                        { feature.three === false && (<span className='pricing-cross'>x</span>) }
+                        { typeof feature.three === 'string' && (<span className='pricing-limit'>{feature.three}</span>) }
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )) }
+          </div>
+
+        </div>
       </div>
     )
   }
