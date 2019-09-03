@@ -115,7 +115,7 @@ export default class Hero extends React.Component {
             <div className='hero-video-content container-inner'>
               <div className='hero-video-content-develop'>
                 <div className='hero-video-content-develop-text'>
-                  <span>Easily build serverless <b>REST APIs</b>.</span>
+                  <span>Easily build serverless <REST APIs, GraphQL APIs, Data Processors and more.</span>
                 </div>
                 <div className='hero-video-content-develop-graphic'>
                   <div className='hero-video-content-develop-cli'>
