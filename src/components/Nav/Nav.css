@@ -108,14 +108,14 @@
 }
 
 .nav-dropdown .container-inner {
-  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .nav-dropdown-content {
   display: flex;
   flex-direction: row;
   height: auto;
-  width: 60%;
+  width: 58.5%;
   padding: 20px 0 58px 0;
   -webkit-animation: fadeIn 0.7s;
   -moz-animation: fadeIn 0.7s;
