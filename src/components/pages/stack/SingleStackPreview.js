@@ -32,7 +32,14 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 `
 
-const singleExamplePreview = ({ id, name, provider, link, category }) => {
+const singleExamplePreview = ({
+  id,
+  name,
+  provider,
+  link,
+  category,
+  otherFallbackCategory,
+}) => {
   return (
     <BoxWithMiddleElementMargin
       width={[1, 1, 1 / 2, 1 / 3, '22.5%', '280px']}
@@ -53,7 +60,7 @@ const singleExamplePreview = ({ id, name, provider, link, category }) => {
               </Text>
               <Heading.h5>{name}</Heading.h5>
               <P color='#5b5b5b' mt={'8px'}>
-                {category}
+                {otherFallbackCategory || category}
               </P>
             </Box>
           </ExternalLink>

@@ -72,13 +72,14 @@ export default class Content extends React.Component {
 
   parseStackFromAlgolia = content => {
     const stacks = content.hits.map(hit => {
-      const { name, provider, category, link } = hit
+      const { name, provider, category, link, otherFallbackCategory } = hit
 
       return {
         id: hit.objectID,
         name,
         provider,
         category,
+        otherFallbackCategory,
         link,
       }
     })
