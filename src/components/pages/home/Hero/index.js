@@ -64,118 +64,141 @@ export default class Hero extends React.Component {
 
   render() {
     return (
-      <div className='container hero'>
-        <div className='container-inner hero-inner'>
+      <div className='hero-component container'>
+        <div className='hero-inner container-inner'>
 
-          <div className='logo container'>
-            <div className='logo-bolt'>
+          <div className='hero-logo container'>
+            <div className='hero-logo-bolt'>
               <img src={imgBolt} />
             </div>
-            <div className='logo-serverless'>
+            <div className='hero-logo-serverless'>
               serverless
             </div>
-            <div className='logo-framework'>
+            <div className='hero-logo-framework'>
               framework
             </div>
           </div>
 
-          <div className='tagline container'>
+          <div className='hero-tagline container'>
             The complete solution for building & operating serverless applications
           </div>
 
-          <div className='video-container container'>
-            <div className='video-chapters container'>
+          <div className='hero-video-container container'>
+            <div className='hero-video-chapters container'>
               <div
-                className={`video-chapter ${ this.state.chapter === 'develop' ? 'active' : '' }`}
+                className={`hero-video-chapter ${ this.state.chapter === 'develop' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('develop') }}>
                 Develop
               </div>
               <div
-                className={`video-chapter ${ this.state.chapter === 'deploy' ? 'active' : '' }`}
+                className={`hero-video-chapter ${ this.state.chapter === 'deploy' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('deploy') }}>
                 Deploy
               </div>
               <div
-                className={`video-chapter ${ this.state.chapter === 'test' ? 'active' : '' }`}
+                className={`hero-video-chapter ${ this.state.chapter === 'test' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('test') }}>
                 Test
               </div>
               <div
-                className={`video-chapter ${ this.state.chapter === 'monitor' ? 'active' : '' }`}
+                className={`hero-video-chapter ${ this.state.chapter === 'monitor' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('monitor') }}>
                 Monitor
               </div>
               <div
-                className={`video-chapter ${ this.state.chapter === 'secure' ? 'active' : '' }`}
+                className={`hero-video-chapter ${ this.state.chapter === 'secure' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('secure') }}>
                 Secure
               </div>
             </div>
+
+            <div className='hero-video-content container-inner'>
+              <div className='hero-video-content-develop'>
+                <div className='hero-video-content-develop-text'>
+                  <span>Easily build serverless <b>REST APIs</b>.</span>
+                </div>
+                <div className='hero-video-content-develop-graphic'>
+                  <div className='hero-video-content-develop-cli'>
+                    <p>name: my-api</p>
+                    <p></p>
+                    <p>functions:</p>
+                    <p style={{ 'marginLeft': '12px' }}>usersList:</p>
+                    <p style={{ 'marginLeft': '24px' }}>handler: index.list</p>
+                    <p style={{ 'marginLeft': '24px' }}>runtime: nodejs10</p>
+                    <p style={{ 'marginLeft': '24px' }}>events:</p>
+                    <p style={{ 'marginLeft': '36px' }}>- http:</p>
+                    <p style={{ 'marginLeft': '62px' }}>path: /users/list</p>
+                    <p style={{ 'marginLeft': '62px' }}>method: get</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div className='actions container'>
-            <div className='button buttonPrimary'>
+          <div className='hero-actions container'>
+            <div className='hero-button hero-button-primary'>
               Start Free
             </div>
-            <div className='button buttonSecondary'>
+            <div className='hero-button hero-button-secondary'>
               Learn More
             </div>
           </div>
 
-          <div className='info container'>
-            <div className='customers'>
-            <div className='customers-meta'>
+          <div className='hero-info container'>
+            <div className='hero-customers'>
+            <div className='hero-customers-meta'>
               Trusted by
             </div>
-              <div className='customers-list'>
-                <div className='customer'>
+              <div className='hero-customers-list'>
+                <div className='hero-customer'>
                   <img src={imgLogoEa} draggable={false} />
                 </div>
-                <div className='customer'>
+                <div className='hero-customer'>
                   <img src={imgLogoNordstrom} draggable={false} />
                 </div>
-                <div className='customer'>
+                <div className='hero-customer'>
                   <img src={imgLogoCocaCola} draggable={false} />
                 </div>
-                <div className='customer'>
+                <div className='hero-customer'>
                   <img src={imgLogoExpedia} draggable={false} />
                 </div>
-                <div className='customer'>
+                <div className='hero-customer'>
                   <img src={imgLogoReuters} draggable={false} />
                 </div>
               </div>
             </div>
 
-            <div className='stats'>
-              <div className='stat'>
-                <div className='stat-number'>
+            <div className='hero-stats'>
+              <div className='hero-stat'>
+                <div className='hero-stat-number'>
                   { this.state.stats.downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
                 </div>
-                <div className='stat-category'>
+                <div className='hero-stat-category'>
                   Downloads
                 </div>
               </div>
-              <div className='stat'>
-                <div className='stat-number'>
+              <div className='hero-stat'>
+                <div className='hero-stat-number'>
                   { this.state.stats.deployments.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
                 </div>
-                <div className='stat-category'>
+                <div className='hero-stat-category'>
                   Weekly Deployments
                 </div>
               </div>
-              <div className='stat'>
-                <div className='stat-number'>
+              <div className='hero-stat'>
+                <div className='hero-stat-number'>
                   { this.state.stats.stars.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
                 </div>
-                <div className='stat-category'>
+                <div className='hero-stat-category'>
                   Github Stars
                 </div>
               </div>
-              <div className='stat'>
-                <div className='stat-number'>
+              <div className='hero-stat'>
+                <div className='hero-stat-number'>
                   { this.state.stats.plugins }
                 </div>
-                <div className='stat-category'>
+                <div className='hero-stat-category'>
                   Plugins
                 </div>
               </div>

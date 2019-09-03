@@ -14,9 +14,7 @@ export default class Paradigm extends React.Component {
    * Component Did Mount
    */
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   /**
    * Render
@@ -24,7 +22,7 @@ export default class Paradigm extends React.Component {
 
   render() {
     return (
-      <div className='container paradigm-container'>
+      <div className='container paradigm-component'>
 
         { /* Paradigm Guide */ }
 

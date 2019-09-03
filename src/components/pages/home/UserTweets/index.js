@@ -26,7 +26,7 @@ export default class UserTweets extends React.Component {
 
   render() {
     return (
-      <div className='container user-tweets'>
+      <div className='container user-tweets-component'>
         <div className='container-inner user-tweets-inner'>
 
           <div className='container header-label'>

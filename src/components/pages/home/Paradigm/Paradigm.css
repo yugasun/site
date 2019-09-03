@@ -1,22 +1,22 @@
-.paradigm-container {}
+.paradigm-component {}
 
-.paradigm-guide {
+.paradigm-component .paradigm-guide {
   flex-direction: column;
   align-items: center;
   padding: 68px 10px 100px 10px;
   background: #f2f2f2;
 }
 
-.paradigm-guide-title {
+.paradigm-component .paradigm-guide-title {
   padding: 0;
 }
 
-.paradigm-guide-steps  {
+.paradigm-component .paradigm-guide-steps  {
   display: flex;
   flex-direction: row;
 }
 
-.paradigm-guide-step {
+.paradigm-component .paradigm-guide-step {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -32,21 +32,21 @@
   user-select: none;
 }
 
-.paradigm-guide-step:hover {
+.paradigm-component .paradigm-guide-step:hover {
   cursor: pointer;
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
   transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
 }
 
-.paradigm-guide-step:first-child {
+.paradigm-component .paradigm-guide-step:first-child {
   margin-left: 0;
 }
 
-.paradigm-guide-step:last-child {
+.paradigm-component .paradigm-guide-step:last-child {
   margin-right: 0;
 }
 
-.paradigm-guide-step-title {
+.paradigm-component .paradigm-guide-step-title {
   font-family: 'SoleilSB';
   text-transform: capitalize;
   font-size: 26px;
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-.paradigm-guide-step-description {
+.paradigm-component .paradigm-guide-step-description {
   text-align: left;
   font-family: 'SoleilLt';
   font-size: 18px;
@@ -64,7 +64,7 @@
   padding: 10px 0 20px 0;
 }
 
-.paradigm-guide-step-action {
+.paradigm-component .paradigm-guide-step-action {
   display: flex;
   padding: 26px 0 0 0;
   margin: 10px 0;
@@ -75,30 +75,30 @@
   color: #fd5750;
 }
 
-.paradigm-guide-step-action:hover {
+.paradigm-component .paradigm-guide-step-action:hover {
   text-decoration: underline;
 }
 
-.paradigm-mission {
+.paradigm-component .paradigm-mission {
   flex-direction: column;
   align-items: center;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.paradigm-mission-inner {
+.paradigm-component .paradigm-mission-inner {
   max-width: 1000px;
   flex-direction: column;
   align-items: center;
   padding: 68px 0 100px 0;
 }
 
-.paradigm-mission-icon {
+.paradigm-component .paradigm-mission-icon {
   margin: 0 0 10px 0;
   color: #fd5750;
   font-size: 42px;
 }
 
-.paradigm-mission-statement p {
+.paradigm-component .paradigm-mission-statement p {
   width: 100%;
   text-align: left;
   font-family: 'SoleilLt';
@@ -108,6 +108,6 @@
   letter-spacing: 0px;
 }
 
-.paradigm-mission-statement b {
+.paradigm-component .paradigm-mission-statement b {
   font-family: 'SoleilLt';
 }

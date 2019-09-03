@@ -44,8 +44,8 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <div className='container' onMouseLeave={() => { this.hideDropdown() }}>
-        <div className='container nav'>
+      <div className='container nav-component' onMouseLeave={() => { this.hideDropdown() }}>
+        <div className='container'>
           <div className='container-inner nav-inner'>
             <div className='nav-main'>
               <Link className='nav-logo' to='/'>

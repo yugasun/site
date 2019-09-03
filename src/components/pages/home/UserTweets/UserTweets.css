@@ -1,4 +1,4 @@
-.user-tweets {
+.user-tweets-component {
   height: auto;
   min-height: 300px;
   user-select: none;
@@ -8,23 +8,23 @@
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.user-tweets-inner {
+.user-tweets-component .user-tweets-inner {
   flex-direction: column;
 }
 
-.user-tweets-tweets {
+.user-tweets-component .user-tweets-tweets {
   flex-direction: row;
 }
 
-.user-tweets-tweet:first-child {
+.user-tweets-component .user-tweets-tweet:first-child {
   margin-left: 0;
 }
 
-.user-tweets-tweet:last-child {
+.user-tweets-component .user-tweets-tweet:last-child {
   margin-right: 0;
 }
 
-.user-tweets-tweet {
+.user-tweets-component .user-tweets-tweet {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -39,17 +39,17 @@
   transition: all 0.3s ease;
 }
 
-.user-tweets-tweet:hover {
+.user-tweets-component .user-tweets-tweet:hover {
   cursor: pointer;
   transform: scale(1.03) translate3d( 0, 0, 0) perspective(1px);
 }
 
-.user-tweets-tweet:active {
+.user-tweets-component .user-tweets-tweet:active {
   cursor: pointer;
   transform: scale(1) translate3d( 0, 0, 0) perspective(1px);
 }
 
-.user-tweets-tweet-name {
+.user-tweets-component .user-tweets-tweet-name {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,20 +61,20 @@
   font-size: 18px;
 }
 
-.user-tweets-tweet-name img {
+.user-tweets-component .user-tweets-tweet-name img {
   height: auto;
   width: 30px;
   margin-right: 12px;
 }
 
-.user-tweets-tweet-text {
+.user-tweets-component .user-tweets-tweet-text {
   padding: 0 12px;
   font-size: 16px;
   font-family: 'SoleilLt';
   line-height: 26px;
 }
 
-.user-tweets-tweet-icon {
+.user-tweets-component .user-tweets-tweet-icon {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -82,7 +82,7 @@
   opacity: 0.3;
 }
 
-.user-tweets-actions {
+.user-tweets-component .user-tweets-actions {
   flex-direction: row;
   justify-content: center;
   height: auto;
@@ -93,13 +93,13 @@
   font-size: 18px;
 }
 
-.user-tweets-actions a {
+.user-tweets-component .user-tweets-actions a {
   color: #fd5750;
   margin-left: 3px;
   font-family: 'SoleilBk';
 }
 
-.user-tweets-actions a:hover {
+.user-tweets-component .user-tweets-actions a:hover {
   cursor: pointer;
   text-decoration: underline;
 }

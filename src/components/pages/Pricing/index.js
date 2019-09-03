@@ -207,7 +207,7 @@ export default class Pricing extends React.Component {
 
   render() {
     return (
-      <div className='container pricing-page'>
+      <div className='container pricing-component'>
 
         <div className='container-inner'>
           <div className='pricing-title'>

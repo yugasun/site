@@ -1,4 +1,4 @@
-.framework-editions {
+.home-editions-component {
   height: auto;
   min-height: 300px;
   user-select: none;
@@ -8,16 +8,16 @@
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.framework-editions-inner {
+.home-editions-component .home-editions-inner {
   flex-direction: column;
 }
 
-.framework-editions-list {
+.home-editions-component .home-editions-list {
   flex-direction: row;
   align-items: flex-start;
 }
 
-.framework-edition {
+.home-editions-component .home-edition {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -33,25 +33,25 @@
   user-select: none;
 }
 
-.framework-edition-main {
+.home-editions-component .home-edition-main {
   margin-top: 20px;
 }
 
-.framework-edition:first-child {
+.home-editions-component .home-edition:first-child {
   margin-left: 0;
 }
 
-.framework-edition:last-child {
+.home-editions-component .home-edition:last-child {
   margin-right: 0;
 }
 
-.framework-edition:hover {
+.home-editions-component .home-edition:hover {
   cursor: pointer;
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
   transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
 }
 
-.framework-edition-title {
+.home-editions-component .home-edition-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@
   padding: 32px 10px;
 }
 
-.framework-edition-title-serverless {
+.home-editions-component .home-edition-title-serverless {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@
   color: #FFFFFF;
 }
 
-.framework-edition-title-framework {
+.home-editions-component .home-edition-title-framework {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +81,7 @@
   color: #FFFFFF;
 }
 
-.framework-edition-title-edition {
+.home-editions-component .home-edition-title-edition {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,26 +92,26 @@
   letter-spacing: -0.1px;
 }
 
-.framework-edition-detail {
+.home-editions-component .home-edition-detail {
   padding: 30px 0;
   border-top: 1px solid rgba(0,0,0,0.07);
 }
 
-.framework-edition-detail:hover {
+.home-editions-component .home-edition-detail:hover {
   background: rgba(0,0,0,0.025);
 }
 
-.framework-edition-detail:nth-child(2) {
+.home-editions-component .home-edition-detail:nth-child(2) {
   margin-top: 10px;
   padding-top: 10px;
   border-top: none;
 }
 
-.framework-edition-detail:last-child {
+.home-editions-component .home-edition-detail:last-child {
   border-bottom: none;
 }
 
-.framework-edition-detail-title {
+.home-editions-component .home-edition-detail-title {
   font-family: 'SoleilSB';
   text-transform: capitalize;
   font-size: 18px;
@@ -120,7 +120,7 @@
   text-align: center;
 }
 
-.framework-edition-detail-text {
+.home-editions-component .home-edition-detail-text {
   text-align: center;
   font-family: 'SoleilLt';
   font-size: 15.5px;
@@ -128,7 +128,7 @@
   color: rgba(0,0,0,1);
 }
 
-.framework-edition-detail-price {
+.home-editions-component .home-edition-detail-price {
   font-size: 20px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
@@ -138,7 +138,7 @@
   padding: 20px 0;
 }
 
-.framework-edition-detail-link {
+.home-editions-component .home-edition-detail-link {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -151,17 +151,17 @@
   transition: all 0.2s ease;
 }
 
-.framework-edition-detail-link div:first-child {
+.home-editions-component .home-edition-detail-link div:first-child {
   padding-right: 12px;
   margin-right: 12px;
   border-right: 1px solid rgba(0,0,0,0.1);
 }
 
-.framework-edition-detail-link:hover {
+.home-editions-component .home-edition-detail-link:hover {
   color: rgba(0,0,0,1);
 }
 
-.framework-edition-action {
+.home-editions-component .home-edition-action {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +169,7 @@
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.framework-edition-action-button {
+.home-editions-component .home-edition-action-button {
   padding: 16px 20px;
   border-radius: 3px;
   color: #ffffff;
@@ -183,10 +183,10 @@
   border: 3px #fd5750 solid;
 }
 
-.framework-edition-action-button:hover {
+.home-editions-component .home-edition-action-button:hover {
   cursor: pointer;
 }
 
-.framework-edition-action-button:active {
+.home-editions-component .home-edition-action-button:active {
   transform: scale(0.96);
 }
