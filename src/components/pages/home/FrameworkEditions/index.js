@@ -192,7 +192,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-action'>
                 <div className='home-edition-action-button'>
-                  Get Started For Free
+                  Sign Up For Free
                 </div>
               </div>
             </div>
