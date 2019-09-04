@@ -116,9 +116,6 @@ export default class Nav extends React.Component {
 
               <div className={`nav-dropdown-content nav-dropdown-product`}>
                 <div className='nav-dropdown-column'>
-                  <div className='nav-dropdown-column-title'>
-                    Open-Source
-                  </div>
                   <div className='nav-dropdown-column-item'>
                     CLI
                   </div>
@@ -134,9 +131,6 @@ export default class Nav extends React.Component {
                 </div>
 
                 <div className='nav-dropdown-column'>
-                  <div className='nav-dropdown-column-title'>
-                    Developer
-                  </div>
                   <div className='nav-dropdown-column-item'>
                     Dashboard
                   </div>
@@ -152,20 +146,11 @@ export default class Nav extends React.Component {
                 </div>
 
                 <div className='nav-dropdown-column'>
-                  <div className='nav-dropdown-column-title'>
-                    Enterprise
-                  </div>
                   <div className='nav-dropdown-column-item'>
                     Integrations
                   </div>
                   <div className='nav-dropdown-column-item'>
                     Policies
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Training
-                  </div>
-                  <div className='nav-dropdown-column-item'>
-                    Support
                   </div>
                 </div>
               </div>

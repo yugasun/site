@@ -54,10 +54,7 @@ export default class FrameworkEditions extends React.Component {
                   Open-Source
                 </div>
                 <div className='home-edition-detail-text'>
-                  Downloaded over 1 million times per month. Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
-                </div>
-                <div className='home-edition-detail-link'>
-                  Download
+                  Downloaded over 1 million times per month. Our vast open-source ecosystem simplifies serveless, and is available to everyone for free.
                 </div>
               </div>
 
@@ -68,9 +65,6 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail-text'>
                   Easy YAML + CLI development and deployment of serverless applications across AWS, Azure, Google Cloud & more.
                 </div>
-                <div className='home-edition-detail-link'>
-                  View all CLI features
-                </div>
               </div>
 
               <div className='home-edition-detail'>
@@ -79,9 +73,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Access 1000+ plugins that extend the Framework CLI to customize your workflow.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View all plugins
                 </div>
               </div>
 
@@ -92,9 +83,6 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail-text'>
                   Deploy common serverless use-cases more easily and quickly with these simpler abstractions.
                 </div>
-                <div className='home-edition-detail-link'>
-                  View all components
-                </div>
               </div>
 
               <div className='home-edition-detail'>
@@ -103,9 +91,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Easily discover, deploy & share Serverless Components.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View the registry
                 </div>
               </div>
 
@@ -135,10 +120,7 @@ export default class FrameworkEditions extends React.Component {
                   Free
                 </div>
                 <div className='home-edition-detail-text'>
-                  Perfect for small teams who want to be production ready. Integrates and extends the open-source projects. Includes a large free tier and pricing that scales with you.
-                </div>
-                <div className='home-edition-detail-link'>
-                  Get Started For Free
+                  Perfect for teams going into production. Integrates and extends the open-source projects with several new features for free.
                 </div>
               </div>
 
@@ -149,9 +131,6 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail-text'>
                   A shared view for your team's apps, metrics, alerts, deployments, secrets, activity & more.
                 </div>
-                <div className='home-edition-detail-link'>
-                  View all Dashboard features
-                </div>
               </div>
 
               <div className='home-edition-detail'>
@@ -160,9 +139,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Instant, powerful metrics, featuring usage, performance, errors & more across all of your serverless applications.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View all Monitoring features
                 </div>
               </div>
 
@@ -173,9 +149,6 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail-text'>
                   Zero-config, real-time alerts for deployments, new errors, approaching out of memory, unusual durations, timeouts & more.
                 </div>
-                <div className='home-edition-detail-link'>
-                  View all Alerting features
-                </div>
               </div>
 
               <div className='home-edition-detail'>
@@ -184,9 +157,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Query across every transaction with our invocation explorer to find past issues, performance insights & more.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View all Debugging features
                 </div>
               </div>
 
@@ -216,10 +186,7 @@ export default class FrameworkEditions extends React.Component {
                   Contact Sales
                 </div>
                 <div className='home-edition-detail-text'>
-                  Additional features, training and support. Designed for large teams that need hands-on help, standardized workflows and integrations with Ops processes and tools.
-                </div>
-                <div className='home-edition-detail-link'>
-                  Contact Sales
+                  Ideal for scaling teams.  Includes unlimited use and additional features to standardize workflows and integrate with Ops tooling.
                 </div>
               </div>
 
@@ -230,9 +197,6 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail-text'>
                   Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks & the standard tooling your operations team uses.
                 </div>
-                <div className='home-edition-detail-link'>
-                  View all Integrations
-                </div>
               </div>
 
               <div className='home-edition-detail'>
@@ -241,33 +205,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Set and automate policy enforcement upon every deployment, to ensure developer teams follow organizational standards and best practices.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View all Policy Features
-                </div>
-              </div>
-
-              <div className='home-edition-detail'>
-                <div className='home-edition-detail-title'>
-                  Training
-                </div>
-                <div className='home-edition-detail-text'>
-                  Training and workshop packages for teams that are new to serverless, need to move quickly and want to start right, delivered by our industry-leading experts.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View our Training Packages
-                </div>
-              </div>
-
-              <div className='home-edition-detail'>
-                <div className='home-edition-detail-title'>
-                  Support
-                </div>
-                <div className='home-edition-detail-text'>
-                  24/7 access to our serverless team.  We'll help review your architecture, fix bugs, solve outages and prioritize your feature requests.
-                </div>
-                <div className='home-edition-detail-link'>
-                  View our Support Packages
                 </div>
               </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Row } from 'serverless-design-system'
+import Link from 'gatsby-link'
 import imgBolt from 'src/assets/images/icon-bolt.svg'
 import imgLogoEa from 'src/assets/images/logo-ea.png'
 import imgLogoNordstrom from 'src/assets/images/logo-nordstrom.png'
@@ -137,9 +137,9 @@ export default class Hero extends React.Component {
           </div>
 
           <div className='hero-actions container'>
-            <div className='hero-button hero-button-primary'>
+            <a href='https://dashboard.serverless.com' className='hero-button hero-button-primary'>
               Start Free
-            </div>
+            </a>
             <div className='hero-button hero-button-secondary'>
               Learn More
             </div>

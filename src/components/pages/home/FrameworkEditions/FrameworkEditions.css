@@ -24,17 +24,13 @@
   min-height: 396px;
   width: 33%;
   background: #ffffff;
-  margin: 70px 14px 20px 14px;
+  margin: 14px 14px 20px 14px;
   padding: 24px 24px 42px 24px;
   border-radius: 2px;
   border: 1px solid rgba(0,0,0,0.18);
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
   transition: all 0.3s ease;
   user-select: none;
-}
-
-.home-editions-component .home-edition-main {
-  margin-top: 20px;
 }
 
 .home-editions-component .home-edition:first-child {
@@ -59,7 +55,7 @@
   letter-spacing: -0.3px;
   background: #000000;
   border-radius: 3px;
-  padding: 32px 10px;
+  padding: 22px 10px;
 }
 
 .home-editions-component .home-edition-title-serverless {
@@ -101,6 +97,11 @@
   background: rgba(0,0,0,0.025);
 }
 
+.home-editions-component .home-edition-detail:hover .home-edition-detail-title {
+  text-decoration: underline;
+}
+
+
 .home-editions-component .home-edition-detail:nth-child(2) {
   margin-top: 10px;
   padding-top: 10px;
@@ -129,36 +130,13 @@
 }
 
 .home-editions-component .home-edition-detail-price {
-  font-size: 20px;
+  font-size: 21px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
   color: #fd5750;
   transition: all 0.2s linear;
   text-align: center;
   padding: 20px 0;
-}
-
-.home-editions-component .home-edition-detail-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: 'Soleil';
-  font-size: 16px;
-  color: rgba(0,0,0,0.55);
-  padding: 20px 0 0 0;
-  transition: all 0.2s ease;
-}
-
-.home-editions-component .home-edition-detail-link div:first-child {
-  padding-right: 12px;
-  margin-right: 12px;
-  border-right: 1px solid rgba(0,0,0,0.1);
-}
-
-.home-editions-component .home-edition-detail-link:hover {
-  color: rgba(0,0,0,1);
 }
 
 .home-editions-component .home-edition-action {

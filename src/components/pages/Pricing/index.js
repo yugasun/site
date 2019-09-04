@@ -343,6 +343,12 @@ export default class Pricing extends React.Component {
               </div>
             </div>
             <div className='pricing-summary-detail'>
+              <div className='pricing-summary-detail-title'>Unlimited Invocations & Users</div>
+              <div className='pricing-summary-detail-text'>
+                Flexible plans to meet your needs.
+              </div>
+            </div>
+            <div className='pricing-summary-detail'>
               <div className='pricing-summary-detail-title'>Integrations</div>
               <div className='pricing-summary-detail-text'>
                 Unlimited integrations.
@@ -352,18 +358,6 @@ export default class Pricing extends React.Component {
               <div className='pricing-summary-detail-title'>Policies</div>
               <div className='pricing-summary-detail-text'>
                 Unlimited policies.
-              </div>
-            </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Training</div>
-              <div className='pricing-summary-detail-text'>
-                Workshops for your team.
-              </div>
-            </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Support</div>
-              <div className='pricing-summary-detail-text'>
-                3 support tiers available.
               </div>
             </div>
             <div className='pricing-summary-detail'>
