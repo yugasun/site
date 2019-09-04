@@ -165,6 +165,7 @@ export default class Form extends React.Component {
           pb={
             this.props.customPb ? this.props.customPb : [92, 92, 120, 120, 150]
           }
+          style={{ zIndex: '15' }}
         />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
@@ -177,13 +178,13 @@ export default class Form extends React.Component {
                 letterSpacing={'-0.4px'}
                 mb={0}
               >
-                Contact us
+                Request more info
               </Heading.h4>
 
               <Box mt={2} width={1}>
                 <Label color='#8c8c8c'>Work e-mail</Label>
                 <TextField
-                  placeholder='jane.doe@business.com'
+                  placeholder='mary.smith@business.com'
                   name='email'
                   onChange={({ target }) =>
                     this.setState({ email: target.value, success: false })
@@ -196,7 +197,7 @@ export default class Form extends React.Component {
                 <Column width={49 / 100}>
                   <Label color='#8c8c8c'>First name</Label>
                   <TextField
-                    placeholder='Jane'
+                    placeholder='Mary'
                     name='first_name'
                     onChange={({ target }) =>
                       this.setState({
@@ -210,7 +211,7 @@ export default class Form extends React.Component {
                 <Column width={49 / 100}>
                   <Label color='#8c8c8c'>Last name</Label>
                   <TextField
-                    placeholder='Doe'
+                    placeholder='Smith'
                     name='last_name'
                     onChange={({ target }) =>
                       this.setState({ last_name: target.value, success: false })
