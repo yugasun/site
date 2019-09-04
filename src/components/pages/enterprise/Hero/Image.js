@@ -4,20 +4,41 @@ import { Flex, Position, Background } from 'serverless-design-system'
 import providersHeroImage from 'src/assets/images/pages/enterprise/providers-hero.png'
 import providersHeroMobileImage from 'src/assets/images/pages/enterprise/providers-hero-mobile.png'
 import providersHeroTabletImage from 'src/assets/images/pages/enterprise/providers-hero-tablet.png'
+import styled from 'styled-components'
+
+const BackgroundWithBigDesktopFix = styled(Background)`
+  @media only screen and (min-width: 1919px) {
+    height: 650px;
+    width: 650px;
+  }
+`
+
+const PositionWithBigDesktopFix = styled(Position)`
+  @media only screen and (min-width: 1919px) {
+    position: relative;
+  }
+`
 
 const HomeHeroImage = () => (
   <Flex
     flexDirection={['column', 'column', 'column']}
-    width={[1, 1, 0, 0, '55%']}
+    width={[1, 1, '40%', '40%', '55%']}
     mt={[0, 0, 48]}
   >
-    <Position
-      zIndex='5'
-      left={['15px', '15px', 0, '28px', '0']}
-      top={[null, null, '12%', '12%', '1%']}
-      position={['absolute']}
+    <PositionWithBigDesktopFix
+      zIndex='0'
+      left={[0, 0, 0, '28px', '0']}
+      top={[null, null, '1%', '1%', '1%']}
+      position={[
+        'relative',
+        'relative',
+        'absolute',
+        'absolute',
+        'absolute',
+        'absolute',
+      ]}
     >
-      <Background
+      <BackgroundWithBigDesktopFix
         backgroundImage={[
           `url(${providersHeroMobileImage})`,
           `url(${providersHeroMobileImage})`,
@@ -25,12 +46,12 @@ const HomeHeroImage = () => (
           `url(${providersHeroTabletImage})`,
           `url(${providersHeroImage})`,
         ]}
-        backgroundSize={['cover', 'cover', 'contain']}
+        backgroundSize={['contain', 'contain', 'contain']}
         backgroundRepeat='no-repeat'
-        width={[360, 360, 340, 600, 750, 932]}
-        height={[500, 500, 490, 600, 850, 932]}
+        width={[360, 360, 424, 600, 750, 932]}
+        height={[266, 266, 490, 600, 850, 932]}
       />
-    </Position>
+    </PositionWithBigDesktopFix>
   </Flex>
 )
 

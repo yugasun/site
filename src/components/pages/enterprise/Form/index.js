@@ -165,6 +165,7 @@ export default class Form extends React.Component {
           pb={
             this.props.customPb ? this.props.customPb : [92, 92, 120, 120, 150]
           }
+          style={{ zIndex: '15' }}
         />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
@@ -177,7 +178,7 @@ export default class Form extends React.Component {
                 letterSpacing={'-0.4px'}
                 mb={0}
               >
-                Contact us
+                Request more info
               </Heading.h4>
 
               <Box mt={2} width={1}>
