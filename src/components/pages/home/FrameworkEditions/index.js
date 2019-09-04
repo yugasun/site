@@ -63,7 +63,7 @@ export default class FrameworkEditions extends React.Component {
                   CLI
                 </div>
                 <div className='home-edition-detail-text'>
-                  Easy YAML + CLI development and deployment of serverless applications across AWS, Azure, Google Cloud & more.
+                  Easy YAML + CLI development and deployment to AWS, Azure, Google Cloud & more.
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ export default class FrameworkEditions extends React.Component {
                   monitoring
                 </div>
                 <div className='home-edition-detail-text'>
-                  Instant, powerful metrics, featuring usage, performance, errors & more across all of your serverless applications.
+                  Instant, powerful metrics for your serverless apps covering usage, performance, errors & more.
                 </div>
               </div>
 
@@ -147,7 +147,7 @@ export default class FrameworkEditions extends React.Component {
                   alerts
                 </div>
                 <div className='home-edition-detail-text'>
-                  Zero-config, real-time alerts for deployments, new errors, approaching out of memory, unusual durations, timeouts & more.
+                  Zero-config, real-time alerts for deployments, new errors, unusual durations, timeouts & more.
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ export default class FrameworkEditions extends React.Component {
                   debugging
                 </div>
                 <div className='home-edition-detail-text'>
-                  Query across every transaction with our invocation explorer to find past issues, performance insights & more.
+                  Query across every invocation with our explorer to find issues, performance insights & more.
                 </div>
               </div>
 
@@ -195,7 +195,7 @@ export default class FrameworkEditions extends React.Component {
                   integrations
                 </div>
                 <div className='home-edition-detail-text'>
-                  Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks & the standard tooling your operations team uses.
+                  Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks and other Ops tools.
                 </div>
               </div>
 
@@ -204,7 +204,7 @@ export default class FrameworkEditions extends React.Component {
                   Policies
                 </div>
                 <div className='home-edition-detail-text'>
-                  Set and automate policy enforcement upon every deployment, to ensure developer teams follow organizational standards and best practices.
+                  Set and automate policy enforcement of standards and best practices across teams.
                 </div>
               </div>
 
