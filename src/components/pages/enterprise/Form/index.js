@@ -184,7 +184,7 @@ export default class Form extends React.Component {
               <Box mt={2} width={1}>
                 <Label color='#8c8c8c'>Work e-mail</Label>
                 <TextField
-                  placeholder='jane.doe@business.com'
+                  placeholder='mary.smith@business.com'
                   name='email'
                   onChange={({ target }) =>
                     this.setState({ email: target.value, success: false })
@@ -197,7 +197,7 @@ export default class Form extends React.Component {
                 <Column width={49 / 100}>
                   <Label color='#8c8c8c'>First name</Label>
                   <TextField
-                    placeholder='Jane'
+                    placeholder='Mary'
                     name='first_name'
                     onChange={({ target }) =>
                       this.setState({
@@ -211,7 +211,7 @@ export default class Form extends React.Component {
                 <Column width={49 / 100}>
                   <Label color='#8c8c8c'>Last name</Label>
                   <TextField
-                    placeholder='Doe'
+                    placeholder='Smith'
                     name='last_name'
                     onChange={({ target }) =>
                       this.setState({ last_name: target.value, success: false })
