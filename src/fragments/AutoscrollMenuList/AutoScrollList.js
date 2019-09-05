@@ -14,10 +14,20 @@ import {
   Transition,
   withBeforeAfter,
 } from 'serverless-design-system'
-
+import styled from 'styled-components'
 import { AppContainer } from 'src/components'
-import sidebarBackground from 'src/assets/images/sidebar-background.png'
 import { Heading } from 'src/fragments/DesignSystem'
+
+const SidebarWithBigDesktopFix = styled(Absolute)`
+  @media only screen and (min-width: 1919px) {
+    width: 35vw;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    width: 39vw;
+  }
+`
+
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
   `&`,
@@ -110,9 +120,9 @@ class AutoScrollList extends React.Component {
           this.container = ref
         }}
       >
-        <Absolute
+        <SidebarWithBigDesktopFix
           height='100vh'
-          width={[0, 0, 0, '34vw', '32vw']}
+          width={[0, 0, 0, '34vw', '36vw', '34vw']}
           top='0'
           zIndex='-1'
           left={-25}
@@ -120,13 +130,8 @@ class AutoScrollList extends React.Component {
             this.sidebarBackground = ref
           }}
         >
-          <Background
-            height='fullHeight'
-            width={1}
-            background={`url(${sidebarBackground})`}
-            backgroundSize='cover'
-          />
-        </Absolute>
+          <Background height='fullHeight' width={1} background={`#f7f7f7`} />
+        </SidebarWithBigDesktopFix>
 
         <AppContainer>
           <ResponsiveStack>
@@ -163,9 +168,10 @@ class AutoScrollList extends React.Component {
                         beforeBoxLeft={[0, 0, 0, '-18px']}
                       >
                         <Text.span
-                          fontSize={1}
-                          lineHeight={'22px'}
-                          letterSpacing='0.58px'
+                          fontFamily='SoleilBk'
+                          fontSize={'14px'}
+                          lineHeight={'24px'}
+                          letterSpacing='0.44px'
                           opacity='0.4'
                         >
                           {title}

@@ -15,7 +15,6 @@ import {
 } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
 import { AppContainer } from 'src/components'
-import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
@@ -117,12 +116,7 @@ class AutoScrollList extends React.Component {
             this.sidebarBackground = ref
           }}
         >
-          <Background
-            height='fullHeight'
-            width={1}
-            background={`url(${sidebarBackground})`}
-            backgroundSize='cover'
-          />
+          <Background height='fullHeight' width={1} background={`#f7f7f7`} />
         </Absolute>
 
         <AppContainer>
