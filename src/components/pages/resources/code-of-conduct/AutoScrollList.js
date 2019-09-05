@@ -15,7 +15,6 @@ import {
 } from 'serverless-design-system'
 import { Heading } from 'src/fragments/DesignSystem'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
@@ -50,21 +49,15 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
 
 class AutoScrollListItem extends React.Component {
   render() {
-    const { title, body, titleWithIcon } = this.props
-    const FinalHeadingComponent = titleWithIcon ? TitleWithIcon: Heading.h3
+    const { title, body } = this.props
+    const FinalHeadingComponent = Heading.h2
     return (
-      <Flex.column
-        mb={[4, 4, '52px']}
-        px={[0, 0, 3]}
-      >
+      <Flex.column mb={[4, 4, '52px']} px={[0, 0, 3]}>
         <Box>
           <FinalHeadingComponent>{title}</FinalHeadingComponent>
         </Box>
-        <Box
-          width={1}
-        >
-        </Box>
-        { body }
+        <Box width={1} />
+        {body}
       </Flex.column>
     )
   }
@@ -82,17 +75,24 @@ class AutoScrollList extends React.Component {
     if (container && lastItem) {
       const sidebarNode = ReactDOM.findDOMNode(this.sidebar)
       const sidebarBackgroundNode = ReactDOM.findDOMNode(this.sidebarBackground)
-      const lastItemOffsetTop = (container.offsetTop + lastItem.offsetTop + sidebarNode.offsetHeight - 150)
-      const crossedHero = (container.offsetTop < window.pageYOffset)
-      const crossedLastItem = (lastItemOffsetTop < window.pageYOffset)
+      const lastItemOffsetTop =
+        container.offsetTop +
+        lastItem.offsetTop +
+        sidebarNode.offsetHeight -
+        150
+      const crossedHero = container.offsetTop < window.pageYOffset
+      const crossedLastItem = lastItemOffsetTop < window.pageYOffset
 
       sidebarBackgroundNode.style.position = crossedHero ? 'fixed' : 'absolute'
-      sidebarNode.style.position = crossedHero && !crossedLastItem ? 'fixed' : 'relative'
-      sidebarNode.style.top = crossedLastItem ? `${lastItemOffsetTop - sidebarNode.offsetHeight - 250}px` : 0
+      sidebarNode.style.position =
+        crossedHero && !crossedLastItem ? 'fixed' : 'relative'
+      sidebarNode.style.top = crossedLastItem
+        ? `${lastItemOffsetTop - sidebarNode.offsetHeight - 250}px`
+        : 0
     }
   }
 
-  scrollToListItem = (scrollToIndex) => {
+  scrollToListItem = scrollToIndex => {
     const { offsetTop: containerOffset } = ReactDOM.findDOMNode(this.container)
     const { offsetTop: topicOffset } = ReactDOM.findDOMNode(this[scrollToIndex])
     window.scrollTo(0, containerOffset + topicOffset - 100)
@@ -101,14 +101,21 @@ class AutoScrollList extends React.Component {
   render() {
     const { listData } = this.props
     return (
-      <Relative width={1} ref={(ref) => { this.container = ref }}>
+      <Relative
+        width={1}
+        ref={ref => {
+          this.container = ref
+        }}
+      >
         <Absolute
           height='100vh'
-          width={[0, 0, 0, "34vw", "32vw"]}
+          width={[0, 0, 0, '34vw', '32vw']}
           top='0'
           zIndex='-1'
           left={-25}
-          ref={(ref) => { this.sidebarBackground = ref }}
+          ref={ref => {
+            this.sidebarBackground = ref
+          }}
         >
           <Background
             height='fullHeight'
@@ -122,75 +129,62 @@ class AutoScrollList extends React.Component {
           <ResponsiveStack>
             <Box
               display={['none', 'none', 'none', 'block']}
-              width={1/3}
+              width={1 / 3}
               pr={2}
             >
               <Relative
                 width={1}
                 top={0}
                 maxWidth='300px'
-                ref={(ref) => { this.sidebar = ref }}
+                ref={ref => {
+                  this.sidebar = ref
+                }}
               >
-                <List
-                  my={0}
-                  py={[4, 4, 6, 8]}
-                  px={0}
-                >
-                  {
-                    listData.map(({ title }, index) => (
-                      <ListItem
-                        key={title}
-                        pb={2}
-                        px={0}
-                        styleType='none'
-                        onClick={() => this.scrollToListItem(index)}
+                <List my={0} py={[4, 4, 6, 8]} px={0}>
+                  {listData.map(({ title }, index) => (
+                    <ListItem
+                      key={title}
+                      pb={2}
+                      px={0}
+                      styleType='none'
+                      onClick={() => this.scrollToListItem(index)}
+                    >
+                      <TitleWrapperWithLeadingSlash
+                        transition={['none', 'none', 'none', 'padding 0.5s']}
+                        beforeBoxBackgroundColor={[
+                          'transparent',
+                          'transparent',
+                          'transparent',
+                          'primaryColor',
+                        ]}
+                        beforeBoxLeft={[0, 0, 0, '-18px']}
                       >
-                        <TitleWrapperWithLeadingSlash
-                          transition={[
-                            'none',
-                            'none',
-                            'none',
-                            'padding 0.5s',
-                          ]}
-                          beforeBoxBackgroundColor={[
-                            'transparent',
-                            'transparent',
-                            'transparent',
-                            'primaryColor',
-                          ]}
-                          beforeBoxLeft={[0, 0, 0, '-18px']}
+                        <Text.span
+                          fontSize={1}
+                          lineHeight={'22px'}
+                          letterSpacing='0.58px'
+                          opacity='0.4'
                         >
-                          <Text.span
-                            fontSize={1}
-                            lineHeight={'22px'}
-                            letterSpacing='0.58px'
-                            opacity='0.4'
-                          >
-                            {title}
-                          </Text.span>
-                        </TitleWrapperWithLeadingSlash>
-                      </ListItem>
-                    ))
-                  }
+                          {title}
+                        </Text.span>
+                      </TitleWrapperWithLeadingSlash>
+                    </ListItem>
+                  ))}
                 </List>
               </Relative>
             </Box>
-            <Box
-              width={[1, 1, 1, 2/3]}
-              py={[4, 4, 6, 8]}
-            >
-              {
-                listData.map((item, index) => (
-                  <AutoScrollListItem
-                    key={index}
-                    title={item.title}
-                    body={item.body}
-                    image={item.image}
-                    ref={ ref => { this[index] = ref } }
-                    titleWithIcon={item.titleWithIcon}
-                  />
-                ))
-              }
+            <Box width={[1, 1, 1, 2 / 3]} py={[4, 4, 6, 8]}>
+              {listData.map((item, index) => (
+                <AutoScrollListItem
+                  key={index}
+                  title={item.title}
+                  body={item.body}
+                  image={item.image}
+                  ref={ref => {
+                    this[index] = ref
+                  }}
+                />
+              ))}
             </Box>
           </ResponsiveStack>
         </AppContainer>

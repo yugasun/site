@@ -1,14 +1,7 @@
 import React from 'react'
-import {
-  Box,
-  Column,
-  Heading,
-  ResponsiveStack,
-  Text,
-} from 'serverless-design-system'
+import { Box, Column, ResponsiveStack, Text } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 
 const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
@@ -46,7 +39,7 @@ const OurStory = () => (
   <AppContainer>
     <Column px={[1, 1, 2, 3]} pt={[4, 4, 7, 10]} pb={[42, 42, 0, 0, 92]}>
       <Column alignItems={['center', 'center', 'flex-start']}>
-        <TitleWithIcon>Contact Us</TitleWithIcon>
+        <Heading.h2>Contact Us</Heading.h2>
       </Column>
       <Box>
         <Text.p

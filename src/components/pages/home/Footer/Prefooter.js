@@ -1,10 +1,9 @@
 import React from 'react'
 import { Flex, Column } from 'serverless-design-system'
-import { TitleWithIconNewest as TitleWithIcon } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import FAQ from './FAQ'
 import CTAButtons from './CTAButtons'
-
+import { Heading } from 'src/fragments/DesignSystem'
 const HomePreFooter = ({ frameworkPage }) => (
   <AppContainer>
     <Flex
@@ -15,7 +14,7 @@ const HomePreFooter = ({ frameworkPage }) => (
       justifyContent='center'
     >
       <Column width={[1, 1, 1, 1, 800]}>
-        <TitleWithIcon color='white'>Have a question?</TitleWithIcon>
+        <Heading.h4 color='white'>Have a question?</Heading.h4>
         <FAQ />
         <CTAButtons />
       </Column>

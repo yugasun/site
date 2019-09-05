@@ -16,9 +16,8 @@ import {
 } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import sidebarBackground from 'src/assets/images/sidebar-background.png'
-
+import { Heading } from 'src/fragments/DesignSystem'
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
   `&`,
@@ -56,7 +55,7 @@ class AutoScrollListItem extends React.Component {
     return (
       <Flex.column mb={[4, 4, 5, 8]} px={[0, 0, 3]}>
         <Box>
-          <TitleWithIcon>{title}</TitleWithIcon>
+          <Heading.h2>{title}</Heading.h2>
         </Box>
         <Box width={1} mb={2}>
           <Image src={image} alt={title} width={1} height='auto' />

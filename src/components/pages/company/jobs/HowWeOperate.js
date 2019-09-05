@@ -14,8 +14,6 @@ import {
   Overflow,
 } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
-import team from 'src/assets/images/team.png'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import benefitsBackground from 'src/assets/images/benefits-dots-background.png'
 import { P, Heading } from 'src/fragments/DesignSystem'
@@ -36,12 +34,18 @@ const HowWeOperate = () => (
   <Overflow ox='hidden'>
     <Column pt={[3, 3, 3, 5, 8]} pb={[3, 3, 3, 5]}>
       <AppContainer>
-        <TitleWithIcon>How We Operate</TitleWithIcon>
+        <Heading.h2>How We Operate</Heading.h2>
 
         <ResponsiveStack>
           <Box width={[1, 1, 0.55]}>
             <P mt={0}>
-              We are a group of self-motivated hackers and creatives who believe that there is a better way to build cloud applications. Our end goal is to make software development accessible to everyone, and we are starting by making it easier for software engineers. Our open source Serverless Framework is a massively popular open source project, and the go-to way developers deploy modern cloud applications.
+              We are a group of self-motivated hackers and creatives who believe
+              that there is a better way to build cloud applications. Our end
+              goal is to make software development accessible to everyone, and
+              we are starting by making it easier for software engineers. Our
+              open source Serverless Framework is a massively popular open
+              source project, and the go-to way developers deploy modern cloud
+              applications.
             </P>
             <P>
               At Serverless, we strongly believe in the power of community. We

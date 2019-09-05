@@ -1,6 +1,5 @@
 import React from 'react'
-import { P } from 'src/fragments/DesignSystem'
-import TitleWithIcon from '../TitleWithIcon'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import { Flex } from 'serverless-design-system'
 import CommunityNumbers from './CommunityNumbers'
 
@@ -12,7 +11,14 @@ const WhoWeAre = () => (
       alignItems='center'
       mx='auto'
     >
-      <TitleWithIcon>Who We Are</TitleWithIcon>
+      <Heading.h4
+        color='black'
+        fontSize={[18, 18, 18, 18, 24]}
+        lineHeight={['24px', '24px', '30px', '30px', '38px']}
+        letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '-0.38px']}
+      >
+        Who We Are
+      </Heading.h4>
       <P color='#5b5b5b' align='center' mt={0} mb={0}>
         We are developers who live and breath Serverless and are passionate
         about sharing our knowledge with other developers. We created and
