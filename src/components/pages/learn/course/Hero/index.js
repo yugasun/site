@@ -4,6 +4,7 @@ import { Box, ResponsiveStack, Flex, Text } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import { PS } from 'src/fragments/DesignSystem'
+import Share from './Share'
 
 const ExamplesHero = () => {
   return (
@@ -19,9 +20,15 @@ const ExamplesHero = () => {
         <HeroTabs selected='learn' />
       </Box>
 
-      <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
+      <Flex
+        mb={[2, 2, 4, 9]}
+        color='white'
+        justifyContent='space-between'
+        width={1}
+      >
         <Box width={[1, 1, 1, 1, 0.45]}>
           <Text
+            fontFamily='SoleilBk'
             color='#fd5750'
             fontSize={['14px']}
             lineHeight={['24px']}
@@ -34,15 +41,17 @@ const ExamplesHero = () => {
             fontSize={[18, 18, 18, 18, 40]}
             lineHeight={['30px', '30px', '30px', '30px', '50px']}
             letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '0px']}
-            my={'12px'}
+            mb={'12px'}
             fontFamily='Soleil'
           >
             Serverless Full Stack Application on AWS
           </Text>
           <PS>by Gareth McCumskey</PS>
         </Box>
-        <Flex.verticallyCenter width={[1, 1, 1, 1, 0.5]} />
-      </ResponsiveStack>
+        <Box>
+          <Share />
+        </Box>
+      </Flex>
     </HeroWrapper>
   )
 }

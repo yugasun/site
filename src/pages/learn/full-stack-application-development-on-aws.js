@@ -13,7 +13,7 @@ import styled from 'styled-components'
 
 const BackgroundWithPaddingBottom = styled(Background)`
   @media only screen and (min-width: 1601px) {
-    background: linear-gradient(to bottom, #f7f7f7 40%, #000 40%);
+    background: linear-gradient(to bottom, #fff 40%, #000 40%);
     padding-bottom: 115px;
   }
 `
@@ -26,8 +26,8 @@ const FrameWorks = ({ location }) => (
     startWithWhiteHeader={false}
   >
     <Helmet
-      title='Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more'
-      description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk, AWS Flourish and more.'
+      title='Full Stack AWS Application Development (Free Course)'
+      description='Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
       location={location}
     />
     <Hero />
@@ -35,11 +35,8 @@ const FrameWorks = ({ location }) => (
       <Details />
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
-      <Background background='#f7f7f7'>
-        <AppContainer>
-          <MoreCourses />
-        </AppContainer>
-        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #f7f7f7 60%, #000 40%);'>
+      <Background background='#fff'>
+        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
           <WhitepaperDownload />
         </BackgroundWithPaddingBottom>
       </Background>
