@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, ResponsiveStack, Flex, Text } from 'serverless-design-system'
+import { Box, Flex, Text } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import { PS } from 'src/fragments/DesignSystem'
@@ -14,9 +14,9 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[396, 396, 437, 437, 566]}
+      height={[396, 396, 437, 437, 532]}
     >
-      <Box mb={[2, 2, 42, 42, 6]} pt={[0, 0, 0, 0, 4]}>
+      <Box mb={[2, 2, 42, 42, 5]}>
         <HeroTabs selected='learn' />
       </Box>
 
@@ -25,8 +25,9 @@ const ExamplesHero = () => {
         color='white'
         justifyContent='space-between'
         width={1}
+        flexDirection={['column', 'column', 'row']}
       >
-        <Box width={[1, 1, 1, 1, 0.45]}>
+        <Box width={[1, 1, 0.45, 0.45, 0.45]}>
           <Text
             fontFamily='SoleilBk'
             color='#fd5750'
@@ -48,7 +49,7 @@ const ExamplesHero = () => {
           </Text>
           <PS>by Gareth McCumskey</PS>
         </Box>
-        <Box>
+        <Box mt={[22, 22, 1]}>
           <Share />
         </Box>
       </Flex>

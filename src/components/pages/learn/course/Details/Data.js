@@ -47,6 +47,7 @@ module.exports = [
         title: 'Deploying via Dashboard profile',
         playTime: '5:50',
         videoNumber: 7,
+        videoLink: 'https://www.youtube.com/watch?v=KTsWDCXvxqU',
       },
       {
         title: 'What happens when we deploy',

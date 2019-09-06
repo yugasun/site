@@ -67,7 +67,9 @@ const Courses = props => (
                 {course.description}
               </P>
               <PS align={['left']}>by {course.author}</PS>
-              <InternalLink to={'/learn/xyz/'}>
+              <InternalLink
+                to={'/learn/full-stack-application-development-on-aws/'}
+              >
                 <P color='#fd5750' mb={0} mt={[32, 32, 32, 32, 42]}>
                   watch course >
                 </P>

@@ -26,6 +26,7 @@ const NoScrollbarBox = styled(Box)`
 
 const CourseBox = styled(Flex)`
   background-color: black;
+  border-radius: 4px;
   @media only screen and (min-width: 1025px) {
     max-height: 452px;
   }
@@ -61,7 +62,7 @@ class CoursesList extends React.Component {
   render() {
     return (
       <CourseBox
-        mt={-62}
+        mt={[-62, -62, -62, -62, -110]}
         flexDirection={['column', 'column', 'column', 'column', 'row']}
         width={[1, 1, 0.85, 0.85, 1]}
         mx={'auto'}
