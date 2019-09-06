@@ -39,11 +39,12 @@ const HeroTabs = ({ data, selected, tabWidth, highlightedWidth }) => (
           data={data}
           labelStyle={{
             color: '#8c8c8c',
-            fontFamily: 'serverless',
+            fontFamily: 'SoleilBk',
             fontSize: 1,
-            lineHeight: 1,
-            letterSpacing: '0.4px',
+            lineHeight: '24px',
+            letterSpacing: '0.44px',
             align: 'center',
+            mt: '3px',
           }}
           tabContainerStyle={{
             height: '46px',

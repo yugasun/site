@@ -22,7 +22,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        courses
+        Courses
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -33,7 +33,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        what
+        What
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -44,7 +44,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        why
+        Why
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -55,7 +55,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        use cases
+        Use cases
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -66,7 +66,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        examples
+        Examples
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -77,7 +77,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        case studies
+        Case studies
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
@@ -88,7 +88,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        comparisons
+        Comparisons
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

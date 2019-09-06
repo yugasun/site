@@ -14,7 +14,7 @@ const Learn = () => (
           completed: true,
         }}
       >
-        plugins
+        Plugins
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
@@ -25,7 +25,7 @@ const Learn = () => (
           completed: true,
         }}
       >
-        blog
+        Blog
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

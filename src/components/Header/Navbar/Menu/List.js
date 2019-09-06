@@ -17,7 +17,7 @@ import ResourcesMenuDescription from './Descriptions/Resources'
 const ProductMenu = () => (
   <Box>
     <NavLink to={framework} completed className='header-menu-item'>
-      <MenuTitle name={'product'} />
+      <MenuTitle name={'Product'} />
     </NavLink>
   </Box>
 )
@@ -25,14 +25,14 @@ const ProductMenu = () => (
 const DocsMenu = () => (
   <Box>
     <NavLink to={docs} completed className='header-menu-item'>
-      <MenuTitle name={'docs'} />
+      <MenuTitle name={'Docs'} />
     </NavLink>
   </Box>
 )
 
 const ResourcesMenu = () => (
   <Box>
-    <MenuTitle name={'resources'} />
+    <MenuTitle name={'Resources'} />
     <ResourcesMenuDescription>
       <ResourcesDropdownList />
     </ResourcesMenuDescription>
@@ -41,7 +41,7 @@ const ResourcesMenu = () => (
 
 const CommunityMenu = () => (
   <Box>
-    <MenuTitle name={'community'} />
+    <MenuTitle name={'Community'} />
     <CommunityMenuDescription>
       <CommunityDropdownList />
     </CommunityMenuDescription>
@@ -50,7 +50,7 @@ const CommunityMenu = () => (
 
 const LearnMenu = () => (
   <Box>
-    <MenuTitle name={'learn'} />
+    <MenuTitle name={'Learn'} />
     <LearnMenuDescription>
       <LearnDropdownList />
     </LearnMenuDescription>
@@ -60,7 +60,7 @@ const LearnMenu = () => (
 const EnterpriseMenu = () => (
   <Box>
     <NavLink to={enterprise} completed className='header-menu-item'>
-      <MenuTitle name={'enterprise'} />
+      <MenuTitle name={'Enterprise'} />
     </NavLink>
   </Box>
 )

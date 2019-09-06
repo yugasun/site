@@ -21,7 +21,7 @@ const Resource = () => (
           crossDomain: true,
         }}
       >
-        github
+        GitHub
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -32,7 +32,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        forum
+        Forum
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -43,7 +43,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        slack
+        Slack
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -54,7 +54,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        meetups
+        Meetups
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -65,7 +65,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        partners
+        Partners
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
@@ -76,7 +76,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        community courses
+        Community courses
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

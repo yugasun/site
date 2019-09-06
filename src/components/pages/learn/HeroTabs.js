@@ -13,37 +13,37 @@ import {
 
 const data = [
   {
-    label: 'learn',
+    label: 'Learn',
     value: 'learn',
     navProps: { to: learn },
   },
   {
-    label: 'what?',
+    label: 'What?',
     value: 'what',
     navProps: { to: what },
   },
   {
-    label: 'why?',
+    label: 'Why?',
     value: 'why',
     navProps: { to: why },
   },
   {
-    label: 'use cases',
+    label: 'Use cases',
     value: 'use-cases',
     navProps: { to: useCases },
   },
   {
-    label: 'examples',
+    label: 'Examples',
     value: 'examples',
     navProps: { to: examples },
   },
   {
-    label: 'case studies',
+    label: 'Case studies',
     value: 'case-studies',
     navProps: { to: caseStudies },
   },
   {
-    label: 'comparisons',
+    label: 'Comparisons',
     value: 'comparisons',
     navProps: { to: comparisons },
   },
