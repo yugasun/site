@@ -1,7 +1,14 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
+import {
+  github,
+  forum,
+  slack,
+  meetups,
+  partners,
+  courses,
+} from 'src/constants/newUrls'
 
 const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn

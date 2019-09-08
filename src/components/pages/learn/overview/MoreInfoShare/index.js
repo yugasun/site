@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { P } from 'src/fragments/DesignSystem'
-import { ExternalLink } from 'src/fragments'
+import { InternalLink } from 'src/fragments'
 import Share from 'src/components/pages/learn/course/Details/Share.js'
 
 const MoreInfoShare = props => (
@@ -12,9 +12,9 @@ const MoreInfoShare = props => (
     mx={['inherit', 'inherit', 'auto']}
     flexDirection={['column-reverse', 'column-reverse', 'row']}
   >
-    <ExternalLink to={'/learn/full-stack-application-development-on-aws/'}>
+    <InternalLink to={'/learn/full-stack-application-development-on-aws/'}>
       <P color='#fd5750'>more info ></P>
-    </ExternalLink>
+    </InternalLink>
     <Flex alignItems='center'>
       <Share />
     </Flex>
