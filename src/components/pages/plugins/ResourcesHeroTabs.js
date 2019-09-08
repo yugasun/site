@@ -11,11 +11,6 @@ import {
 
 const data = [
   {
-    label: 'examples',
-    value: 'examples',
-    navProps: { to: examples },
-  },
-  {
     label: 'plugins',
     value: 'plugins',
     navProps: { to: plugins },
@@ -24,16 +19,6 @@ const data = [
     label: 'blog',
     value: 'blog',
     navProps: { to: blog },
-  },
-  {
-    label: 'case studies',
-    value: 'case studies',
-    navProps: { to: caseStudies },
-  },
-  {
-    label: 'courses',
-    value: 'courses',
-    navProps: { to: courses },
   },
 ]
 
