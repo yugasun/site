@@ -10,6 +10,7 @@ import { Button } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 import bannerWheelLeft from 'src/assets/images/pages/framework/banner-wheel-left.svg'
 import bannerWheelRight from 'src/assets/images/pages/framework/banner-wheel-right.svg'
+import { NewsletterFormPrefooter as NewsletterForm } from 'src/components'
 
 const DownloadButton = styled(Button)`
   background-color: white;
@@ -71,7 +72,7 @@ const FlexWithZIndex = styled(Flex)`
   z-index: 5;
 `
 
-const FrameworkWhitepaperBanner = props => (
+const GuideUpdatesPrefooter = props => (
   <React.Fragment>
     <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3}>
       <Background background='#fd5750' style={{ display: 'flex' }}>
@@ -87,7 +88,7 @@ const FrameworkWhitepaperBanner = props => (
           width={[1, 1, 1, 1, 0.5]}
           height={[460, 460, 240]}
         >
-          <Box width={[0.7, 0.7, 0.7, 0.5, 0.8]}>
+          <Box width={[0.8, 0.8, 0.7, 0.5, 1]}>
             <Text
               fontSize={[24]}
               lineHeight={'38px'}
@@ -96,10 +97,12 @@ const FrameworkWhitepaperBanner = props => (
               fontFamily='Soleil'
               align='center'
             >
-              Get updated when new guide content is released
+              Get updated when a new course is released
             </Text>
           </Box>
-          <DownloadButton {...props}>download whitepaper</DownloadButton>
+          <Box width={[0.6]} mt={42}>
+            <NewsletterForm />
+          </Box>
         </FlexWithZIndex>
         <RightSpinningWheel
           backgroundImage={`url(${bannerWheelRight})`}
@@ -111,4 +114,4 @@ const FrameworkWhitepaperBanner = props => (
   </React.Fragment>
 )
 
-export default FrameworkWhitepaperBanner
+export default GuideUpdatesPrefooter

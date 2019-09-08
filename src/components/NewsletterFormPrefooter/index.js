@@ -17,7 +17,7 @@ const ButtonWithLineHeight = styled(Button)`
   line-height: 0.88;
 `
 
-const newsletterSubscribeAPI = process.env.GATSBY_NEWSLETTER_API
+const newsletterSubscribeAPI = process.env.GATSBY_COURSE_UPDATES_NEWSLETTER_API
 
 class NewsLetterForm extends React.Component {
   constructor(props, context) {
@@ -49,6 +49,7 @@ class NewsLetterForm extends React.Component {
       error: false,
     })
     const that = this
+    console.log(newsletterSubscribeAPI, email)
     axios({
       method: 'post',
       url: newsletterSubscribeAPI,
@@ -58,33 +59,25 @@ class NewsLetterForm extends React.Component {
       },
     })
       .then(response => {
-        if (response && response.data && response.data.created) {
-          console.info('Newsletter subscription creation succeed') // eslint-disable-line
-          // Customer.io
-          // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
-          that.setState(
-            {
-              isSubscribed: true,
-              isFetching: false,
-            },
-            () => {
-              // trigger callback
-              that.emailField.value = ''
-              if (onSubmit) {
-                onSubmit()
-              }
+        // eslint-disable-line
+        // Customer.io
+        // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
+        that.setState(
+          {
+            isSubscribed: true,
+            isFetching: false,
+          },
+          () => {
+            // trigger callback
+            that.emailField.value = ''
+            if (onSubmit) {
+              onSubmit()
             }
-          )
-          setItemSync('newsletterSubscribed', true)
-          that.container.innerHTML = '<p>Thank you for subscribing!</p>'
-        } else {
-          console.error(
-            'Newsletter subscription failed creation',
-            response && response.data && response.data.message
-              ? response.data.message
-              : ''
-          )
-        }
+          }
+        )
+        setItemSync('newsletterSubscribed', true)
+        that.container.innerHTML =
+          "<p style='margin: 0 auto; font-family: SoleilBk'>Thank you for subscribing!</p>"
       })
       .catch(error => {
         console.error(error) // eslint-disable-line
@@ -106,6 +99,9 @@ class NewsLetterForm extends React.Component {
         width={['100%', '100%', '30%']}
         disabled={this.state.isFetching}
         {...submitBtnProps}
+        color='red'
+        style={{ backgroundColor: 'white' }}
+        ml={'12px'}
       >
         subscribe
       </ButtonWithLineHeight>
@@ -133,6 +129,7 @@ class NewsLetterForm extends React.Component {
             ref={ref => {
               this.emailField = ReactDOM.findDOMNode(ref)
             }}
+            placeholder='email address'
           />
           {this.renderSubmitBtn()}
         </Wrapper>
