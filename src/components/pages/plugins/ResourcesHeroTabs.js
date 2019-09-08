@@ -11,12 +11,12 @@ import {
 
 const data = [
   {
-    label: 'plugins',
+    label: 'Plugins',
     value: 'plugins',
     navProps: { to: plugins },
   },
   {
-    label: 'blog',
+    label: 'Blog',
     value: 'blog',
     navProps: { to: blog },
   },
