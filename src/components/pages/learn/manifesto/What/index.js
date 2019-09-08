@@ -9,7 +9,7 @@ const paragraphs = [
 ]
 
 const WhatIsServerless = props => (
-  <Flex mt={[62, 62, 92, 92, 132]} flexDirection={['column', 'column', 'row']}>
+  <Flex mt={[62, 62, 62, 62, 92]} flexDirection={['column', 'column', 'row']}>
     <Box width={[1, 1, 0.45]}>
       <Heading.h3>What is Serverless?</Heading.h3>
     </Box>

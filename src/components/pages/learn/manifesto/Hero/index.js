@@ -12,11 +12,9 @@ const DashboardHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[260, 260, 415, 450, 480, 480]}
+    height={[220, 220, 335, 365, 345]}
   >
-    <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-      <HeroTabs selected='what' />
-    </Box>
+    <HeroTabs selected='what' />
     <Flex
       flexDirection={['column', 'column', 'row']}
       justifyContent='space-between'

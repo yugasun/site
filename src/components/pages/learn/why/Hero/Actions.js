@@ -14,7 +14,7 @@ const RightSection = () => (
       fontFamily='SoleilLt'
       lineHeight={3}
       letterSpacing={0}
-      mt={[3, 3, 5]}
+      mt={[3, 3, 0]}
       mb={3}
       color='white'
     >

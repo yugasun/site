@@ -13,17 +13,13 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[422, 422, 491]}
+      height={[370, 370, 390, 370, 390, 360]}
     >
-      <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='case-studies' />
-      </Box>
+      <HeroTabs selected='case-studies' />
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
         <Box width={[1]}>
-          <Heading.h0 m={0} mt={[42, 42, 0, 0]}>
-            Case Studies
-          </Heading.h0>
+          <Heading.h0 m={0}>Case Studies</Heading.h0>
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import Description from './Description'
 import Actions from './Actions'
@@ -13,11 +13,9 @@ const DashboardHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[460, 460, 735, 709, 689, 619]}
+    height={[410, 410, 600, 594, 509, 449]}
   >
-    <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-      <HeroTabs selected='why' />
-    </Box>
+    <HeroTabs selected='why' />
     <Flex
       flexDirection={['column', 'column', 'row']}
       justifyContent='space-between'

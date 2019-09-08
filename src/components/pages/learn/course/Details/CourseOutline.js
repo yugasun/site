@@ -62,7 +62,7 @@ class CoursesList extends React.Component {
   render() {
     return (
       <CourseBox
-        mt={[-62, -62, -62, -62, -110]}
+        mt={[-62, -62, -92, -92, -110]}
         flexDirection={['column', 'column', 'column', 'column', 'row']}
         width={[1, 1, 0.85, 0.85, 1]}
         mx={'auto'}

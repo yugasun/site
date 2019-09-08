@@ -148,7 +148,7 @@ class AutoScrollList extends React.Component {
                   this.sidebar = ref
                 }}
               >
-                <List my={0} py={[4, 4, 6, 8]} px={0}>
+                <List my={0} pb={[4, 4, 6, 8]} pt={[5, 5, 6, 5, 7]} px={0}>
                   {listData.map(({ title }, index) => (
                     <ListItem
                       key={title}
@@ -182,7 +182,7 @@ class AutoScrollList extends React.Component {
                 </List>
               </Relative>
             </Box>
-            <Box width={[1, 1, 1, 2 / 3]} pt={[4, 4, 6, 8]}>
+            <Box width={[1, 1, 1, 2 / 3]} pt={[5, 5, 5, 5, 7]}>
               {listData.map((item, index) => (
                 <AutoScrollListItem
                   key={index}

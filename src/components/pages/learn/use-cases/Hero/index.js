@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Text, ResponsiveStack } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import { PL } from 'src/fragments/DesignSystem'
+import { PL, Heading } from 'src/fragments/DesignSystem'
 
 const UseCasesHero = () => (
   <HeroWrapper
@@ -12,22 +12,12 @@ const UseCasesHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[600, 600, 700, 600, 717]}
+    height={[580, 570, 645, 570, 647, 617]}
   >
-    <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-      <HeroTabs selected='use-cases' />
-    </Box>
+    <HeroTabs selected='use-cases' />
     <ResponsiveStack mb={[2, 2, 4, 5]} color='white'>
       <Box width={[1, 1, 1 / 2]}>
-        <Text.p
-          fontSize={[6, 6, 7, 8]}
-          fontFamily='Soleil'
-          lineHeight={1}
-          letterSpacing={'-0.2'}
-          m={0}
-        >
-          Use Cases
-        </Text.p>
+        <Heading.h0>Use Cases</Heading.h0>
       </Box>
       <Box width={[1, 1, 1 / 2]} pl={[0, 0, 4]}>
         <PL color='white' mt={[3, 3, 1]} mb={3}>
