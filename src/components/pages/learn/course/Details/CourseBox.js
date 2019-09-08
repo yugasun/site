@@ -5,11 +5,7 @@ import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import courseLevelIcon from 'src/assets/images/pages/courses/course-level-icon.svg'
 import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg'
 import styled from 'styled-components'
-import facebookIcon from 'src/assets/images/pages/courses/share/facebook.svg'
-import twitterIcon from 'src/assets/images/pages/courses/share/twitter.svg'
-import linkedinIcon from 'src/assets/images/pages/courses/share/linkedin.svg'
-import slackIcon from 'src/assets/images/pages/courses/share/slack-black.svg'
-import { ExternalLink } from 'src/fragments'
+import Share from './Share'
 
 const FlexWithBorderTop = styled(Flex)`
   border-top: 1px solid #9b9b9b;
@@ -45,41 +41,7 @@ const CourseBox = props => (
         </P>
       </FlexWithBorderTop>
       <FlexWithBorderTop alignItems='center'>
-        <P mr={42} color='#8c8c8c'>
-          Share
-        </P>
-        <ExternalLink
-          to={
-            'https://www.facebook.com/sharer/sharer.php?u=http://serverless.com/learn/full-stack-application-development-on-aws/'
-          }
-        >
-          <Flex mr={22}>
-            <Image src={facebookIcon} />
-          </Flex>
-        </ExternalLink>
-        <ExternalLink
-          to={
-            'https://twitter.com/home?status=http://serverless.com/learn/full-stack-application-development-on-aws/ '
-          }
-        >
-          <Flex mr={22}>
-            <Image src={twitterIcon} />
-          </Flex>
-        </ExternalLink>
-        <ExternalLink
-          to={
-            'https://www.linkedin.com/shareArticle?mini=true&url=http://serverless.com/learn/full-stack-application-development-on-aws/&title=&summary=&source='
-          }
-        >
-          <Flex mr={22}>
-            <Image src={linkedinIcon} />
-          </Flex>
-        </ExternalLink>
-        <ExternalLink to={'https://facebook.com'}>
-          <Flex mr={22}>
-            <Image src={slackIcon} />
-          </Flex>
-        </ExternalLink>
+        <Share />
       </FlexWithBorderTop>
     </Flex>
   </Card>

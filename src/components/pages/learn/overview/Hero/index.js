@@ -16,7 +16,7 @@ const ExamplesHero = () => {
       ]}
       height={[433, 433, 480, 540, 540]}
     >
-      <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
+      <Box mb={[2, 2, 5]} pt={[0, 0, 4, 4, 0]}>
         <HeroTabs selected='learn' />
       </Box>
 
@@ -27,7 +27,7 @@ const ExamplesHero = () => {
           </Heading.h0>
         </Box>
         <Flex.verticallyCenter
-          width={[1, 1, 1, 0.6, 0.9, 0.7]}
+          width={[1, 1, 1, 0.6, 0.9, 0.9]}
           px={[0, 0, 0, 5, 7]}
           ml={[0, 0, 4, 0, 0]}
         >
@@ -37,7 +37,7 @@ const ExamplesHero = () => {
             mb={0}
             align={['center', 'center', 'left']}
           >
-            Your guide to channeling the power of Serverless for good.
+            Free courses for building and operating Serverless applications.
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>

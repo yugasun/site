@@ -12,6 +12,8 @@ import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
 import styled from 'styled-components'
+import CourseOutline from 'src/components/pages/learn/course/Details/CourseOutline.js'
+import MoreInfoShare from 'src/components/pages/learn/overview/MoreInfoShare/'
 
 const BackgroundWithPaddingBottom = styled(Background)`
   @media only screen and (min-width: 1601px) {
@@ -28,25 +30,18 @@ const FrameWorks = ({ location }) => (
     startWithWhiteHeader={false}
   >
     <Helmet
-      title='Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more'
-      description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk, AWS Flourish and more.'
+      title='Free Serverless Courses &amp; Training'
+      description='These free courses show you how to utilize the power of serverless offerings from AWS, Azure, Google Cloud using Serverless Framework'
       location={location}
     />
     <Hero />
     <AppContainer>
-      <Courses />
-      <MoreResources />
+      <CourseOutline />
+      <MoreInfoShare />
     </AppContainer>
+
     <Box mt={[72, 72, 92, 92, 132]}>
-      <Background background='#f7f7f7'>
-        <AppContainer>
-          <CommunityCourses />
-        </AppContainer>
-      </Background>
       <Box>
-        <AppContainer>
-          <ExamplesAndCaseStudies />
-        </AppContainer>
         <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
           <WhitepaperDownload />
         </BackgroundWithPaddingBottom>
