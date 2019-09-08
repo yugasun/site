@@ -12,11 +12,9 @@ const MeetupsHero = () => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
-    height={[380, 380, 530, 510, 530]}
+    height={[370, 370, 450, 400, 420, 390]}
   >
-    <Box mb={[2, 2, 7]} pt={[0, 0, 4]}>
-      <HeroTabs selected='meetups' />
-    </Box>
+    <HeroTabs selected='meetups' />
 
     <ResponsiveStack mb={[2, 2, 4, 7]} color='white'>
       <Box width={[1, 1, 0.75]}>

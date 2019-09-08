@@ -16,7 +16,7 @@ const StyledLink = styled(ExternalLink)`
   border-bottom: 1px solid red;
 `
 const Introduction = () => (
-  <Column alignItems='center' my={[4, 4, 4, 5]}>
+  <Column alignItems='center' mb={[4, 4, 4, 5]} mt={[62, 62, 62, 62, 92]}>
     <AppContainer>
       <Heading.h2 align='center'>Find a Serverless meetup near you.</Heading.h2>
       <P
