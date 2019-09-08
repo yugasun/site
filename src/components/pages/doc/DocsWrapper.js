@@ -6,7 +6,6 @@ import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
-import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
 
 const Wrapper = styled(Column)`
   input:focus {
