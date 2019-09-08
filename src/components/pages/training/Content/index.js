@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, Flex, Text, Box } from 'serverless-design-system'
 import slsHeroLogo from 'src/assets/images/home/sls-home-logo.svg'
-import Plans from './Plans'
+import Types from './Types'
 
 const SupportContent = props => (
   <Flex
@@ -19,9 +19,9 @@ const SupportContent = props => (
       fontSize={['59.8px', '59.8px', '59.8px', '59.8px', '76.5px']}
       letterSpacing={['0.93px', '0.93px', '0.93px', '0.93px', '-1.2px']}
     >
-      support
+      training
     </Text>
-    <Box mt={[32, 32, 32, 32, 42]} width={[1, 1, 0.45, 0.45, 0.9, 0.8]}>
+    <Box mt={[32, 32, 32, 32, 42]} width={[1, 1, 0.5, 0.5, 0.9, 0.9]}>
       <Text
         fontFamily={[
           'SoleilBk',
@@ -36,10 +36,11 @@ const SupportContent = props => (
         color='#5b5b5b'
         align={['center', 'center', 'left']}
       >
-        Support and guidance from the team behind the Serverless Framework
+        Expert led workshops to get your team up to speed and ensure you do
+        Serverless right the first time.
       </Text>
     </Box>
-    <Plans />
+    <Types />
   </Flex>
 )
 
