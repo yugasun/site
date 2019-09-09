@@ -50,12 +50,12 @@ module.exports = [
         videoLink: 'https://www.youtube.com/watch?v=KTsWDCXvxqU',
       },
       {
-        title: 'What happens when we deploy',
+        title: '[coming soon] What happens when we deploy',
         playTime: '5:50',
         videoNumber: 8,
       },
       {
-        title: 'Removing our service',
+        title: '[coming soon] Removing our service',
         playTime: '5:50',
         videoNumber: 9,
       },
@@ -65,37 +65,37 @@ module.exports = [
     title: 'Intro to AWS and what we are building',
     items: [
       {
-        title: 'What is Cloud Computing?',
+        title: '[coming soon] What is Cloud Computing?',
         playTime: '5:50',
         videoNumber: 10,
       },
       {
-        title: 'AWS Lambda',
+        title: '[coming soon] AWS Lambda',
         playTime: '5:50',
         videoNumber: 11,
       },
       {
-        title: 'API Gateway',
+        title: '[coming soon] API Gateway',
         playTime: '5:50',
         videoNumber: 12,
       },
       {
-        title: 'DynamoDB Basics',
+        title: '[coming soon] DynamoDB Basics',
         playTime: '5:50',
         videoNumber: 13,
       },
       {
-        title: 'SNS',
+        title: '[coming soon] SNS',
         playTime: '5:50',
         videoNumber: 14,
       },
       {
-        title: 'SQS',
+        title: '[coming soon] SQS',
         playTime: '5:50',
         videoNumber: 15,
       },
       {
-        title: 'S3',
+        title: '[coming soon] S3',
         playTime: '5:50',
         videoNumber: 16,
       },
@@ -105,27 +105,27 @@ module.exports = [
     title: 'Building our first service',
     items: [
       {
-        title: 'Introduction to our first service',
+        title: '[coming soon] Introduction to our first service',
         playTime: '5:50',
         videoNumber: 17,
       },
       {
-        title: 'Local Development',
+        title: '[coming soon] Local Development',
         playTime: '5:50',
         videoNumber: 18,
       },
       {
-        title: 'Authentication/Authorisation',
+        title: '[coming soon] Authentication/Authorisation',
         playTime: '5:50',
         videoNumber: 19,
       },
       {
-        title: 'User Creation',
+        title: '[coming soon] User Creation',
         playTime: '5:50',
         videoNumber: 20,
       },
       {
-        title: 'Deploy and Integration test',
+        title: '[coming soon] Deploy and Integration test',
         playTime: '5:50',
         videoNumber: 21,
       },
