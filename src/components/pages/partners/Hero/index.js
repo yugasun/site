@@ -3,8 +3,9 @@ import React from 'react'
 import { Box, Text, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from 'src/components/pages/resources/HeroTabs.js'
+import { Heading } from 'src/fragments/DesignSystem'
 
-const ExamplesHero = () => {
+const PartnersHero = () => {
   return (
     <HeroWrapper
       background={[
@@ -18,15 +19,7 @@ const ExamplesHero = () => {
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
         <Box width={[1]}>
-          <Text.p
-            fontSize={[8, 7, 8]}
-            fontFamily='SoleilLt'
-            lineHeight={[1.29, 1.29, 1.1]}
-            letterSpacing={['0.5px', '0.5px', '-2px']}
-            m={0}
-          >
-            Partners
-          </Text.p>
+          <Heading.h0 m={0}>Partners</Heading.h0>
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <Text.p
@@ -49,4 +42,4 @@ const ExamplesHero = () => {
   )
 }
 
-export default ExamplesHero
+export default PartnersHero
