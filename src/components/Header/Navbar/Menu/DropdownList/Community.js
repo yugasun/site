@@ -2,7 +2,14 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
+import {
+  github,
+  forum,
+  slack,
+  meetups,
+  partners,
+  courses,
+} from 'src/constants/newUrls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
@@ -14,7 +21,7 @@ const Resource = () => (
           crossDomain: true,
         }}
       >
-        github
+        GitHub
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -25,7 +32,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        forum
+        Forum
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -36,7 +43,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        slack
+        Slack
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType mb={2}>
@@ -47,10 +54,10 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        meetups
+        Meetups
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: partners,
@@ -58,7 +65,18 @@ const Resource = () => (
           completed: true,
         }}
       >
-        partners
+        Partners
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: courses,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        Community courses
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

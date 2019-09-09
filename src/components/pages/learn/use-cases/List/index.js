@@ -44,16 +44,16 @@ const comparisonData = [
             <TechBox
               upperImage={nodeJSImage}
               lowerImage={expressImage}
-              to="/blog/serverless-express-rest-api/"
+              to='/blog/serverless-express-rest-api/'
             />
             <TechBox
               upperImage={pythonImage}
               lowerImage={flaskImage}
-              to="/blog/flask-python-rest-api-serverless-lambda-dynamodb/"
+              to='/blog/flask-python-rest-api-serverless-lambda-dynamodb/'
             />
             <TechBox
               upperImage={graphqlImage}
-              to="/blog/make-serverless-graphql-api-using-lambda-dynamodb/"
+              to='/blog/make-serverless-graphql-api-using-lambda-dynamodb/'
             />
           </ResponsiveStack>
         </Box>

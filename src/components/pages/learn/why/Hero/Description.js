@@ -2,7 +2,7 @@ import React from 'react'
 import { Column, Text } from 'serverless-design-system'
 
 const LeftSection = () => (
-  <Column width={[1, 1, 0.75]} pt={2} color='white'>
+  <Column width={[1, 1, 0.75]} color='white'>
     <Text.p
       fontSize={[6, 6, 7, 8]}
       fontFamily='SoleilLt'

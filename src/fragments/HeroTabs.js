@@ -5,21 +5,20 @@ import { Box, Card, DropDown } from 'serverless-design-system'
 import { Tabs } from 'src/components'
 import selectedTabBackground from 'src/assets/images/active-marker.png'
 
-const onTabSelect = ({ navProps: { to, crossDomain } }) => (
+const onTabSelect = ({ navProps: { to, crossDomain } }) =>
   (crossDomain ? window.open : push)(to)
-)
 
-export default ({ data, selected }) => (
+const HeroTabs = ({ data, selected }) => (
   <Box>
-    <Box display={[ 'none', 'none', 'block' ]}>
+    <Box display={['none', 'none', 'block']}>
       <Card
-        display="inline-block"
-        border={"1px solid rgba(255, 255, 255, 0.2)"}
+        display='inline-block'
+        border={'1px solid rgba(255, 255, 255, 0.2)'}
       >
         <Tabs
           data={data}
           labelStyle={{
-            color: 'white',
+            color: '#8c8c8c',
             fontFamily: 'serverless',
             fontSize: 1,
             lineHeight: 1,
@@ -45,10 +44,7 @@ export default ({ data, selected }) => (
       </Card>
     </Box>
 
-    <Box
-      display={[ 'block', 'block', 'none' ]}
-      maxWidth="320px"
-    >
+    <Box display={['block', 'block', 'none']} maxWidth='320px'>
       <DropDown
         options={data}
         value={selected}
@@ -56,16 +52,20 @@ export default ({ data, selected }) => (
           background: `url(${selectedTabBackground})`,
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
-          border: '1px solid rgba(255, 255, 255, 0.2)'
+          border: '1px solid rgba(255, 255, 255, 0.2)',
         }}
         placeholderProps={{ color: 'white' }}
-        onChange={({ value }) => (
-          data.every((tabData) => {
-            if (value !== tabData.value) { return true }
+        onChange={({ value }) =>
+          data.every(tabData => {
+            if (value !== tabData.value) {
+              return true
+            }
             onTabSelect(tabData)
           })
-        )}
+        }
       />
     </Box>
   </Box>
 )
+
+export default HeroTabs

@@ -1,7 +1,6 @@
 import React from 'react'
-import TitleWithIcon from '../TitleWithIcon'
 import { Flex, Box } from 'serverless-design-system'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import Logos from './Logos'
 
 const WhoWeHaveHelped = () => (
@@ -13,7 +12,14 @@ const WhoWeHaveHelped = () => (
       mx='auto'
       mt={[136, 136, 136, 136, 196]}
     >
-      <TitleWithIcon>Who we've helped</TitleWithIcon>
+      <Heading.h4
+        color='black'
+        fontSize={[18, 18, 18, 18, 24]}
+        lineHeight={['24px', '24px', '30px', '30px', '38px']}
+        letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '-0.38px']}
+      >
+        Who we've helped
+      </Heading.h4>
       <P align='center' mt={0} mb={[42, 42, 42, 42, 62]}>
         We’ve also helped many development organizations evolve from early
         adopters into some of the most advanced serverless development

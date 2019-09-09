@@ -6,10 +6,8 @@ import { Tabs } from 'src/components'
 import selectedTabBackground from 'src/assets/images/active-marker-new.png'
 import mobileDropdownDoubleTriangle from 'src/assets/images/mobileDropdownDoubleTriangle.svg'
 
-const onTabSelect = ({ navProps: { to, crossDomain } }) => (
+const onTabSelect = ({ navProps: { to, crossDomain } }) =>
   (crossDomain ? window.open : push)(to)
-)
-
 
 import styled from 'styled-components'
 const Icon = styled.span`
@@ -25,23 +23,22 @@ const Icon = styled.span`
   right: 10px;
   top: 24px;
   width: 0;
-  background: url(${mobileDropdownDoubleTriangle}) no-repeat center right;;
+  background: url(${mobileDropdownDoubleTriangle}) no-repeat center right;
 `
 
 Icon.defaultProps = { isOpen: false }
 
-
 const HeroTabs = ({ data, selected, tabWidth }) => (
   <Box>
-    <Box display={[ 'none', 'none', 'none', 'none', 'block' ]}>
+    <Box display={['none', 'none', 'none', 'none', 'block']}>
       <Card
         display='inline-block'
-        border={"1px solid rgba(255, 255, 255, 0.2)"}
+        border={'1px solid rgba(255, 255, 255, 0.2)'}
       >
         <Tabs
           data={data}
           labelStyle={{
-            color: 'white',
+            color: '#8c8c8c',
             fontFamily: 'serverless',
             fontSize: 1,
             lineHeight: 1,
@@ -49,7 +46,8 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
             align: 'center',
           }}
           tabContainerStyle={{
-            minWidth: tabWidth && tabWidth.notSelected ? tabWidth.notSelected: '140px',
+            minWidth:
+              tabWidth && tabWidth.notSelected ? tabWidth.notSelected : '140px',
             height: '46px',
             justifyContent: 'center',
             alignItems: 'center',
@@ -60,7 +58,8 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
             backgroundSize: 'contain',
             backgroundRepeat: 'repeat-x',
             backgroundPosition: 'center',
-            minWidth: tabWidth && tabWidth.selected ? tabWidth.selected: '167px',
+            minWidth:
+              tabWidth && tabWidth.selected ? tabWidth.selected : '167px',
           }}
           selectedValue={selected}
           onTabSelect={onTabSelect}
@@ -69,25 +68,27 @@ const HeroTabs = ({ data, selected, tabWidth }) => (
     </Box>
 
     <Box
-      display={[ 'block', 'block', 'block', 'block', 'none' ]}
+      display={['block', 'block', 'block', 'block', 'none']}
       maxWidth='320px'
     >
-        <DropDown
+      <DropDown
         options={data}
         value={selected}
         fieldContainerProps={{
           background: `url(${selectedTabBackground})`,
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
-          border: '1px solid rgba(255, 255, 255, 0.2)'
+          border: '1px solid rgba(255, 255, 255, 0.2)',
         }}
         placeholderProps={{ color: 'white' }}
-        onChange={({ value }) => (
-          data.every((tabData) => {
-            if (value !== tabData.value) { return true }
+        onChange={({ value }) =>
+          data.every(tabData => {
+            if (value !== tabData.value) {
+              return true
+            }
             onTabSelect(tabData)
           })
-        )}
+        }
       />
     </Box>
   </Box>

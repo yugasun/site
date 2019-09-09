@@ -1,7 +1,6 @@
 import React from 'react'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Box } from 'serverless-design-system'
-import TitleWithIcon from '../TitleWithIcon'
 import { AppContainer } from 'src/components'
 
 const WhoIsThisProgramFor = () => (
@@ -13,7 +12,14 @@ const WhoIsThisProgramFor = () => (
       mx='auto'
       pt={[96, 96, 96, 96, 136]}
     >
-      <TitleWithIcon>Who the program is for</TitleWithIcon>
+      <Heading.h4
+        color='black'
+        fontSize={[18, 18, 18, 18, 24]}
+        lineHeight={['24px', '24px', '30px', '30px', '38px']}
+        letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '-0.38px']}
+      >
+        Who the program is for
+      </Heading.h4>
       <Box display={['block', 'block', 'block', 'block', 'block']}>
         <Flex width={[1, 1, 0.7, 0.7, 0.5]} justifyContent='center' mx='auto'>
           <P color='#5b5b5b' mt={0} align='center'>

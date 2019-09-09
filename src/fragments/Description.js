@@ -1,8 +1,7 @@
 import React from 'react'
 import { Box, Column, Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 
 const Description = ({
   title,
@@ -34,7 +33,7 @@ const Description = ({
             pt={['95%', '95%', 2, 8, '7vw']}
           >
             <Box mb={[2, 2, 4, 5]}>
-              <TitleWithIcon>{title}</TitleWithIcon>
+              <Heading.h2>{title}</Heading.h2>
             </Box>
             {descriptions.map((description, index) => (
               <P key={`description-${index}`}>{description}</P>

@@ -1,8 +1,5 @@
 import React from 'react'
-import { push } from 'gatsby-link'
-import { Flex, Box, Text } from 'serverless-design-system'
-import { learn } from 'src/constants/urls'
-import { Button } from 'src/fragments/DesignSystem'
+import { Flex, Text } from 'serverless-design-system'
 
 const RightSection = () => (
   <Flex.column
@@ -17,7 +14,7 @@ const RightSection = () => (
       fontFamily='SoleilLt'
       lineHeight={3}
       letterSpacing={0}
-      mt={[3, 3, 5]}
+      mt={[3, 3, 0]}
       mb={3}
       color='white'
     >
@@ -28,19 +25,6 @@ const RightSection = () => (
       What ‘serverless’ really means is that, as a developer you don’t have to
       think about those servers. You just focus on code.
     </Text.p>
-    <Flex width={1} flexDirection={['column', 'column', 'column', 'row']}>
-      <Button onClick={() => push(learn.useCases)} mb={3} mr={[0, 0, '32px']}>
-        use cases
-      </Button>
-      <Button
-        onClick={() => push(learn.comparisons)}
-        mb={3}
-        mr={[0, 0, '32px']}
-      >
-        comparisons
-      </Button>
-      <Button onClick={() => push(learn.caseStudy)}>case studies</Button>
-    </Flex>
   </Flex.column>
 )
 

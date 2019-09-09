@@ -15,24 +15,12 @@ const ResourcesColumn = ({ mobileOrder }) => (
     header='Resources'
     listItems={[
       {
-        name: 'Examples',
-        navProps: { to: examples, completed: true },
-      },
-      {
         name: 'Plugins',
         navProps: { to: plugins, completed: true },
       },
       {
         name: 'Blog',
         navProps: { to: blog, completed: true },
-      },
-      {
-        name: 'Case studies',
-        navProps: { to: caseStudies, completed: true },
-      },
-      {
-        name: 'Courses',
-        navProps: { to: courses, completed: true },
       },
     ]}
   />

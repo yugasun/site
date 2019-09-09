@@ -1,7 +1,6 @@
 import React from 'react'
 import { Column, Background, Box } from 'serverless-design-system'
-import TitleWithIcon from '../TitleWithIcon'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 
 const BackgroundWithShadow = styled(Background)`
@@ -24,7 +23,20 @@ const Enterprise = () => (
         px={[35, 35, 58, 58, 104]}
         mt={[42, 42, 0]}
       >
-        <TitleWithIcon>Serverless Framework Enterprise</TitleWithIcon>
+        <Heading.h4
+          color='black'
+          fontSize={[18, 18, 18, 18, 24]}
+          lineHeight={['24px', '24px', '30px', '30px', '38px']}
+          letterSpacing={[
+            '-0.28px',
+            '-0.28px',
+            '-0.28px',
+            '-0.28px',
+            '-0.38px',
+          ]}
+        >
+          Serverless Framework Enterprise
+        </Heading.h4>
         <P>
           The Serverless Acceleration Program includes licenses for Serverless
           Framework Enterprise to ensure you have the complete tooling needed to
