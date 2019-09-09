@@ -1,6 +1,7 @@
 import React from 'react'
-import { Image, Background, Box } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 import policiesHeroImage from 'src/assets/images/pages/policies/policies-hero.jpg'
+import Image from '../ImageWithShadows'
 
 const HeroImage = props => (
   <Background

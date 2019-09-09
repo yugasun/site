@@ -1,7 +1,8 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 import customPoliciesImage from 'src/assets/images/pages/policies/custom-policies.jpg'
 import Content from './Content'
+import Image from '../ImageWithShadows'
 
 const CustomPolicies = props => (
   <Flex

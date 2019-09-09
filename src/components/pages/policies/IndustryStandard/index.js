@@ -1,8 +1,8 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system'
-import { Heading, P0 } from 'src/fragments/DesignSystem'
+import { Flex } from 'serverless-design-system'
 import industryStandardImage from 'src/assets/images/pages/policies/industry-standard.jpg'
 import Content from './Content'
+import Image from '../ImageWithShadows'
 
 const PoliciesIndustryStandard = props => (
   <Flex

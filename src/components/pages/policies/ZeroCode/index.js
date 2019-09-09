@@ -1,7 +1,8 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 import zeroCodeImage from 'src/assets/images/pages/policies/zero-code.jpg'
 import Content from './Content'
+import Image from '../ImageWithShadows'
 
 const CustomPolicies = props => (
   <Flex
