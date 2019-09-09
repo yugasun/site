@@ -9,12 +9,6 @@ import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
 require('./responsivePlayer.css')
 
-const HoverableText = styled(P)`
-  &:hover {
-    cursor: pointer;
-  }
-`
-
 const NoScrollbarBox = styled(Box)`
   &::-webkit-scrollbar {
     width: 0 !important;
@@ -118,7 +112,7 @@ class CoursesList extends React.Component {
                             : playVideoIcon
                         }
                       />
-                      <HoverableText
+                      <P
                         ml={22}
                         color={
                           item.videoNumber == this.state.activeId
@@ -126,9 +120,14 @@ class CoursesList extends React.Component {
                             : '#5b5b5b'
                         }
                         onClick={() => this.playThisVideo(item.videoNumber)}
+                        style={
+                          item.title.indexOf('coming soon') > -1
+                            ? { cursor: 'default' }
+                            : { cursor: 'pointer' }
+                        }
                       >
                         {item.title}
-                      </HoverableText>
+                      </P>
                     </Flex>
                     <P>{item.playTime}</P>
                   </Flex>
