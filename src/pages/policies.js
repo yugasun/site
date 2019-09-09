@@ -5,6 +5,10 @@ import HomeLayout from 'src/layouts/Home'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box, Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
+import Hero from 'src/components/pages/policies/Hero'
+import IndustryStandard from 'src/components/pages/policies/IndustryStandard'
+import CustomPolicies from 'src/components/pages/policies/CustomPolicies'
+import ZeroCode from 'src/components/pages/policies/ZeroCode'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Policies = ({ location }) => (
@@ -16,11 +20,10 @@ const Policies = ({ location }) => (
     <Helmet title='Serverless Training' location={location} />
     <Background background={'#f7f7f7'}>
       <AppContainer>
-        <Flex
-          pt={[138, 138, 138, 138, 156]}
-          justifyContent='space-between'
-          flexDirection={['column', 'column', 'column', 'column', 'row']}
-        />
+        <Hero />
+        <IndustryStandard />
+        <CustomPolicies />
+        <ZeroCode />
       </AppContainer>
     </Background>
 
