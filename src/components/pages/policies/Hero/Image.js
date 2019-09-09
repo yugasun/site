@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, Box } from 'serverless-design-system'
 import policiesHeroImage from 'src/assets/images/pages/policies/policies-hero.png'
-import Image from '../ImageWithShadows'
+import { ImageWithShadow as Image } from 'src/fragments'
 
 const HeroImage = props => (
   <Background

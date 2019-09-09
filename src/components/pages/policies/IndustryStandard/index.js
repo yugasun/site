@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from 'serverless-design-system'
 import industryStandardImage from 'src/assets/images/pages/policies/industry-standard.png'
 import Content from './Content'
-import Image from '../ImageWithShadows'
+import { ImageWithShadow as Image } from 'src/fragments'
 
 const PoliciesIndustryStandard = props => (
   <Flex

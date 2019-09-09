@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from 'serverless-design-system'
 import zeroCodeImage from 'src/assets/images/pages/policies/zero-code.png'
 import Content from './Content'
-import Image from '../ImageWithShadows'
+import { ImageWithShadow as Image } from 'src/fragments'
 
 const CustomPolicies = props => (
   <Flex
