@@ -16,7 +16,7 @@ const Support = ({ location }) => (
     transparentHeader={true}
     startWithWhiteHeader={true}
   >
-    <Helmet title='Serverless Support' location={location} />
+    <Helmet title='Serverless Training' location={location} />
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Flex
