@@ -17,7 +17,7 @@ const Policies = ({ location }) => (
     transparentHeader={true}
     startWithWhiteHeader={true}
   >
-    <Helmet title='Serverless Training' location={location} />
+    <Helmet title='Serverless Policies' location={location} />
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Hero />
