@@ -8,7 +8,7 @@ import slsHeroLogo from 'src/assets/images/home/sls-home-logo.svg'
 const HeroContent = props => (
   <Flex
     flexDirection='column'
-    width={[1, 1, 0.5, 0.5, 0.5]}
+    width={[1, 1, 0.55, 0.5, 0.5]}
     mt={[58, 58, 58, 72, 0]}
     mb={[62, 62, 50, 50, 0]}
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
