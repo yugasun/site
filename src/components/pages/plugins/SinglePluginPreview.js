@@ -41,12 +41,12 @@ const BoxWithMiddleElementMargin = styled(Box)`
   }
 
   @media screen and (min-width: 415px) and (max-width: 769px) {
-    padding: 0 20px;
+    padding-right: 40px;
   }
 
   @media screen and (min-width: 769px) and (max-width: 1229px) {
     width: 33%;
-    padding: 0 20px;
+    padding-right: 40px;
   }
 `
 

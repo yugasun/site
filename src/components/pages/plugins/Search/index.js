@@ -37,12 +37,7 @@ export default class ExamplesSearch extends React.Component {
     return (
       <Background background='#f7f7f7'>
         <AppContainer>
-          <Box
-            color='black'
-            mb='62px'
-            pb={['22px', '22px', '42px']}
-            pt={['12px', '12px', 22]}
-          >
+          <Box color='black' pb={['22px', '22px', '92px']}>
             <Row>
               <SearchField refreshSearch={this.sendResultsToProps} />
             </Row>
