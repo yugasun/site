@@ -6,7 +6,7 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const DevelopDeploy = props => (
   <Flex
-    pt={[162, 162, 132, 132, 132]}
+    pt={[142, 142, 112, 112, 132]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >
