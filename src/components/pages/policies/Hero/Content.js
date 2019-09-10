@@ -9,7 +9,7 @@ const HeroContent = props => (
   <Flex
     flexDirection='column'
     width={[1, 1, 0.5, 0.5, 0.4]}
-    mt={[58, 58, 58, 72, 58]}
+    mt={[58, 58, 48, 58, 28]}
     mb={[62, 62, 50, 50, 0]}
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
   >
