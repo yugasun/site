@@ -8,7 +8,7 @@ const AllSignal = props => (
   <Flex
     pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
-    flexDirection={['column', 'column', 'row']}
+    flexDirection={['column', 'column', 'row-reverse']}
   >
     <Content />
     <Image

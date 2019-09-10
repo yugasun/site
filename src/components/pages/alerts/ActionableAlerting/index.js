@@ -8,7 +8,7 @@ const CustomPolicies = props => (
   <Flex
     py={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
-    flexDirection={['column', 'column', 'row-reverse']}
+    flexDirection={['column', 'column', 'row']}
   >
     <Content />
     <Image

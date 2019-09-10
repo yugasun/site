@@ -6,7 +6,6 @@ import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/alerts/Hero'
-import OptimumPerformance from 'src/components/pages/alerts/OptimumPerformance'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 import DevelopDeployMonitor from 'src/components/pages/alerts/DevelopDeploy'
 import NoFirehoses from 'src/components/pages/alerts/NoFirehoses'
@@ -22,7 +21,6 @@ const Alerts = ({ location }) => (
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Hero />
-        <OptimumPerformance />
         <DevelopDeployMonitor />
         <NoFirehoses />
         <ActionableAlerting />

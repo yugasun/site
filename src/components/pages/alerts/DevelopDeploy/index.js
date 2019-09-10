@@ -6,12 +6,12 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const CustomPolicies = props => (
   <Flex
-    pt={[92, 92, 92, 92, 132]}
+    pt={[132, 132, 132, 132, 132]}
     justifyContent='space-between'
-    flexDirection={['column', 'column', 'row-reverse']}
+    flexDirection={['column', 'column', 'row']}
   >
     <Content />
-    <Flex pl={[0, 0, 0, 100, 100, 150]}>
+    <Flex mx={'auto'}>
       <Image
         src={developDeployImage}
         width={['100%', '100%', 300, 300, 300, 308]}

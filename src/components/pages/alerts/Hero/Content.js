@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Button } from 'src/fragments/DesignSystem'
+import { Heading, Button, P0 } from 'src/fragments/DesignSystem'
 import { Flex, Text, Image } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { dashboard } from 'src/constants/newUrls.js'
@@ -8,7 +8,7 @@ import slsHeroLogo from 'src/assets/images/home/sls-home-logo.svg'
 const HeroContent = props => (
   <Flex
     flexDirection='column'
-    width={[1, 1, 0.55, 0.5, 0.5]}
+    width={[1, 1, 0.55, 0.5, 0.45]}
     mt={[58, 58, 58, 72, 0]}
     mb={[62, 62, 50, 50, 0]}
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
@@ -28,19 +28,19 @@ const HeroContent = props => (
       mt={[32]}
       align={['left', 'left', 'center', 'center', 'left']}
     >
-      Zero-config, real-time alerts for deployments, new errors, unusual
-      durations, timeouts & more.
+      Maintain Optimum Performance with Serverless Alerts
     </Text>
-    <Flex
-      justifyContent={[
-        'space-between',
-        'space-between',
-        'center',
-        'center',
-        'flex-start',
-      ]}
-      mt={42}
+    <P0
+      mt={[22, 22, 32]}
+      mb={[32, 32, 42]}
+      align={['left', 'left', 'center', 'center', 'left']}
     >
+      Serverless Framework Alerts help you catch errors and performance issues
+      as they occur, letting you resolve issues quickly. You can even set your
+      favorite communication channels to receive a custom set of alert
+      notifications.
+    </P0>
+    <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
       <ExternalLink to={dashboard}>
         <Button>Sign-up for free</Button>
       </ExternalLink>
