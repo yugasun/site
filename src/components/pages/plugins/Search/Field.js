@@ -59,7 +59,7 @@ export default class SearchField extends React.Component {
             width='100%'
             border='none'
             fontSize={14}
-            fontFamily='Serverless'
+            fontFamily='SoleilBk'
             placeholderColor='#8c8c8c'
             px={[1, 1, 2]}
             onChange={this.handQueryFilter}
