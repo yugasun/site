@@ -4,9 +4,9 @@ import developDeployImage from 'src/assets/images/pages/alerts/develop-deploy-mo
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 
-const CustomPolicies = props => (
+const DevelopDeploy = props => (
   <Flex
-    pt={[132, 132, 132, 132, 132]}
+    pt={[162, 162, 132, 132, 132]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >
@@ -21,4 +21,4 @@ const CustomPolicies = props => (
   </Flex>
 )
 
-export default CustomPolicies
+export default DevelopDeploy
