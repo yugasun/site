@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex, Background, Box } from 'serverless-design-system'
-import TitleWithIcon from '../TitleWithIcon'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 
 const BackgroundWithShadow = styled(Background)`
@@ -27,7 +26,20 @@ const Workshop = () => (
         width={[1, 1, 0.5, 0.5, 0.4]}
         mr={[0, 0, '15px', '15px', 0]}
       >
-        <TitleWithIcon>Customized Workshop</TitleWithIcon>
+        <Heading.h4
+          color='black'
+          fontSize={[18, 18, 18, 18, 24]}
+          lineHeight={['24px', '24px', '30px', '30px', '38px']}
+          letterSpacing={[
+            '-0.28px',
+            '-0.28px',
+            '-0.28px',
+            '-0.28px',
+            '-0.38px',
+          ]}
+        >
+          Customized Workshop
+        </Heading.h4>
         <P>
           The custom 1-day workshop, led by a Serverless expert, is focused on
           helping you solve your most pressing Serverless challenges. Some

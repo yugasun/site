@@ -14,10 +14,19 @@ import {
   Transition,
   withBeforeAfter,
 } from 'serverless-design-system'
-
+import styled from 'styled-components'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
-import sidebarBackground from 'src/assets/images/sidebar-background.png'
+import { Heading } from 'src/fragments/DesignSystem'
+
+const SidebarWithBigDesktopFix = styled(Absolute)`
+  @media only screen and (min-width: 1919px) {
+    width: 35vw;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    width: 39vw;
+  }
+`
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
@@ -56,7 +65,7 @@ class AutoScrollListItem extends React.Component {
     return (
       <Flex.column mb={[4, 4, 5, 8]} px={[0, 0, 3]}>
         <Box>
-          <TitleWithIcon>{title}</TitleWithIcon>
+          <Heading.h2>{title}</Heading.h2>
         </Box>
         <Box width={1} mb={2}>
           <Image src={image} alt={title} width={1} height='auto' />
@@ -111,9 +120,9 @@ class AutoScrollList extends React.Component {
           this.container = ref
         }}
       >
-        <Absolute
+        <SidebarWithBigDesktopFix
           height='100vh'
-          width={[0, 0, 0, '34vw', '32vw']}
+          width={[0, 0, 0, '34vw', '36vw', '34vw']}
           top='0'
           zIndex='-1'
           left={-25}
@@ -121,13 +130,8 @@ class AutoScrollList extends React.Component {
             this.sidebarBackground = ref
           }}
         >
-          <Background
-            height='fullHeight'
-            width={1}
-            background={`url(${sidebarBackground})`}
-            backgroundSize='cover'
-          />
-        </Absolute>
+          <Background height='fullHeight' width={1} background={`#f7f7f7`} />
+        </SidebarWithBigDesktopFix>
 
         <AppContainer>
           <ResponsiveStack>
@@ -144,7 +148,7 @@ class AutoScrollList extends React.Component {
                   this.sidebar = ref
                 }}
               >
-                <List my={0} py={[4, 4, 6, 8]} px={0}>
+                <List my={0} pb={[4, 4, 6, 8]} pt={[5, 5, 6, 5, 7]} px={0}>
                   {listData.map(({ title }, index) => (
                     <ListItem
                       key={title}
@@ -164,9 +168,10 @@ class AutoScrollList extends React.Component {
                         beforeBoxLeft={[0, 0, 0, '-18px']}
                       >
                         <Text.span
-                          fontSize={1}
-                          lineHeight={'22px'}
-                          letterSpacing='0.58px'
+                          fontFamily='SoleilBk'
+                          fontSize={'14px'}
+                          lineHeight={'24px'}
+                          letterSpacing='0.44px'
                           opacity='0.4'
                         >
                           {title}
@@ -177,7 +182,7 @@ class AutoScrollList extends React.Component {
                 </List>
               </Relative>
             </Box>
-            <Box width={[1, 1, 1, 2 / 3]} pt={[4, 4, 6, 8]}>
+            <Box width={[1, 1, 1, 2 / 3]} pt={[5, 5, 5, 5, 7]}>
               {listData.map((item, index) => (
                 <AutoScrollListItem
                   key={index}

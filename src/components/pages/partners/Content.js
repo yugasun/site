@@ -30,18 +30,18 @@ const PartnersContent = () => (
               isEvenItem ? 'row' : 'row-reverse',
             ]}
             key={index}
-            pt={[92, 92, 162]}
+            pt={index == 0 ? [62, 62, 62, 62, 92] : [92, 92, 162]}
           >
             <Column width={['auto', 'auto', '40%']}>
-              <Heading.h2 fontFamily="Soleil">{partner.name}</Heading.h2>
-              <Heading.h4 fontFamily="Soleil">{partner.location}</Heading.h4>
-              <Text.p fontFamily="SoleilBk" lineHeight="26px" color="gray.3">
+              <Heading.h2 fontFamily='Soleil'>{partner.name}</Heading.h2>
+              <Heading.h4 fontFamily='Soleil'>{partner.location}</Heading.h4>
+              <Text.p fontFamily='SoleilBk' lineHeight='26px' color='gray.3'>
                 {partner.description}
               </Text.p>
             </Column>
             <FlexWithBoxShadow
-              alignItems="center"
-              justifyContent="center"
+              alignItems='center'
+              justifyContent='center'
               width={['auto', 'auto', '40%']}
               height={['auto', 'auto', partner.logo.bgHeight]}
               p={'32px'}

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import TitleWithIcon from '../TitleWithIcon'
-import { P } from 'src/fragments/DesignSystem'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import Workshop from './Workshop'
 import Support from './Support'
 import Enterprise from './Enterprise'
@@ -18,7 +17,14 @@ const YouGet = () => (
     flexDirection='column'
     pt={[136, 136, 110, 110, 170]}
   >
-    <TitleWithIcon>What you get</TitleWithIcon>
+    <Heading.h4
+      color='black'
+      fontSize={[18, 18, 18, 18, 24]}
+      lineHeight={['24px', '24px', '30px', '30px', '38px']}
+      letterSpacing={['-0.28px', '-0.28px', '-0.28px', '-0.28px', '-0.38px']}
+    >
+      What you get
+    </Heading.h4>
     <Flex
       width={[0.8, 0.8, 0.7, 0.5, 0.4]}
       justifyContent='center'

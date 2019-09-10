@@ -2,17 +2,22 @@ import React from 'react'
 import { Box } from 'serverless-design-system'
 
 import MenuTitle from './Title'
-import { ResourcesDropdownList, CommunityDropdownList } from './DropdownList'
+import {
+  ResourcesDropdownList,
+  CommunityDropdownList,
+  LearnDropdownList,
+} from './DropdownList'
 import NavLink from 'src/components/NavLink'
 import { why, enterprise, docs, framework } from 'src/constants/newUrls'
 import HeaderCTAButton from '../../HeaderCTAButton'
 import CommunityMenuDescription from './Descriptions/Community'
+import LearnMenuDescription from './Descriptions/Learn'
 import ResourcesMenuDescription from './Descriptions/Resources'
 
 const ProductMenu = () => (
   <Box>
     <NavLink to={framework} completed className='header-menu-item'>
-      <MenuTitle name={'product'} />
+      <MenuTitle name={'Product'} />
     </NavLink>
   </Box>
 )
@@ -20,14 +25,14 @@ const ProductMenu = () => (
 const DocsMenu = () => (
   <Box>
     <NavLink to={docs} completed className='header-menu-item'>
-      <MenuTitle name={'docs'} />
+      <MenuTitle name={'Docs'} />
     </NavLink>
   </Box>
 )
 
 const ResourcesMenu = () => (
   <Box>
-    <MenuTitle name={'resources'} />
+    <MenuTitle name={'Resources'} />
     <ResourcesMenuDescription>
       <ResourcesDropdownList />
     </ResourcesMenuDescription>
@@ -36,25 +41,26 @@ const ResourcesMenu = () => (
 
 const CommunityMenu = () => (
   <Box>
-    <MenuTitle name={'community'} />
+    <MenuTitle name={'Community'} />
     <CommunityMenuDescription>
       <CommunityDropdownList />
     </CommunityMenuDescription>
   </Box>
 )
 
-const WhyMenu = () => (
+const LearnMenu = () => (
   <Box>
-    <NavLink to={why} completed className='header-menu-item'>
-      <MenuTitle name={'why'} />
-    </NavLink>
+    <MenuTitle name={'Learn'} />
+    <LearnMenuDescription>
+      <LearnDropdownList />
+    </LearnMenuDescription>
   </Box>
 )
 
 const EnterpriseMenu = () => (
   <Box>
     <NavLink to={enterprise} completed className='header-menu-item'>
-      <MenuTitle name={'enterprise'} />
+      <MenuTitle name={'Enterprise'} />
     </NavLink>
   </Box>
 )
@@ -70,7 +76,7 @@ export default [
   DocsMenu,
   ResourcesMenu,
   CommunityMenu,
-  WhyMenu,
+  LearnMenu,
   EnterpriseMenu,
   SupportMenu,
 ]

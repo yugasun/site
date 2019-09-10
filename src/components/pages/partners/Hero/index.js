@@ -3,8 +3,9 @@ import React from 'react'
 import { Box, Text, ResponsiveStack, Flex } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import HeroTabs from 'src/components/pages/resources/HeroTabs.js'
+import { Heading } from 'src/fragments/DesignSystem'
 
-const ExamplesHero = () => {
+const PartnersHero = () => {
   return (
     <HeroWrapper
       background={[
@@ -12,24 +13,13 @@ const ExamplesHero = () => {
         'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
         `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
       ]}
-      height={[422, 555, 540, 665]}
+      height={[450, 490, 480, 570, 515, 485]}
     >
-      <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='partners' />
-      </Box>
+      <HeroTabs selected='partners' />
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
         <Box width={[1]}>
-          <Text.p
-            fontSize={[8, 7, 8]}
-            fontFamily='SoleilLt'
-            lineHeight={[1.29, 1.29, 1.1]}
-            letterSpacing={['0.5px', '0.5px', '-2px']}
-            m={0}
-            mt={[42, 42, 0, 0]}
-          >
-            Partners
-          </Text.p>
+          <Heading.h0 m={0}>Partners</Heading.h0>
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <Text.p
@@ -52,4 +42,4 @@ const ExamplesHero = () => {
   )
 }
 
-export default ExamplesHero
+export default PartnersHero

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
+import { Heading } from 'src/fragments/DesignSystem'
 import { TeamMemberImageCard } from 'src/fragments'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'
 import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
@@ -89,7 +89,7 @@ const OurTeam = () => (
   <AppContainer>
     <Flex flexDirection='column'>
       <Flex justifyContent='center' mt={[3, 3, 5, 6]} mb={[0, 0, 1, 2]}>
-        <TitleWithIcon>Our Team</TitleWithIcon>
+        <Heading.h2>Our Team</Heading.h2>
       </Flex>
       <Flex flexWrap='wrap' justifyContent='center'>
         {[...leaders, ...teamMembers].map(({ image, name, position }) => (

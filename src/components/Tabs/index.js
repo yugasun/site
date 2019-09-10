@@ -3,60 +3,58 @@ import styled from 'styled-components'
 import { InlineFlex, Column, Text } from 'serverless-design-system'
 
 const TabWrapper = styled(Column)`
-  background: ${({ background }) => (background)};
-  background-size: ${({ backgroundSize }) => (backgroundSize)};
-  background-position: ${({ backgroundPosition }) => (backgroundPosition)};
-  background-repeat: ${({ backgroundRepeat }) => (backgroundRepeat)};
-  cursor: ${({ selected }) => selected ? 'default'  :  'pointer'};
+  background: ${({ background }) => background};
+  background-size: ${({ backgroundSize }) => backgroundSize};
+  background-position: ${({ backgroundPosition }) => backgroundPosition};
+  background-repeat: ${({ backgroundRepeat }) => backgroundRepeat};
+  cursor: ${({ selected }) => (selected ? 'default' : 'pointer')};
+  span {
+    color: ${({ selected }) => (selected ? 'white' : '#8c8c8c')};
+  }
 
   &:hover {
     span {
-      color: ${({ selected, theme: { colors } }) => selected ? colors.white  : colors.gray[3]};
+      color: white;
     }
   }
 `
 
 const Tab = ({ datum, onClick, selected, ...styles }) => {
-  const containerStyles = !selected ? styles.tabContainerStyle : {
-    ...styles.tabContainerStyle,
-    ...styles.selectedTabContainerStyle,
-  }
+  const containerStyles = !selected
+    ? styles.tabContainerStyle
+    : {
+        ...styles.tabContainerStyle,
+        ...styles.selectedTabContainerStyle,
+      }
 
-  const labelStyles = !selected ? styles.labelStyle : {
-    ...styles.labelStyle,
-    ...styles.selectedLabelStyle,
-  }
+  const labelStyles = !selected
+    ? styles.labelStyle
+    : {
+        ...styles.labelStyle,
+        ...styles.selectedLabelStyle,
+      }
 
   return (
     <TabWrapper
       onClick={() => onClick(datum)}
       selected={selected}
-      { ...containerStyles }
+      {...containerStyles}
     >
-      <Text.span {...labelStyles}>
-        {datum.label}
-      </Text.span>
+      <Text.span {...labelStyles}>{datum.label}</Text.span>
     </TabWrapper>
   )
 }
 
-export default ({
-  data,
-  selectedValue,
-  onTabSelect,
-  ...styleProps
-}) => (
+export default ({ data, selectedValue, onTabSelect, ...styleProps }) => (
   <InlineFlex flexDirection={['column', 'column', 'row']}>
-    {
-      data.map((datum) => (
-        <Tab
-          datum={datum}
-          key={datum.value}
-          selected={datum.value === selectedValue}
-          onClick={onTabSelect}
-          { ...styleProps }
-        />
-      ))
-    }
+    {data.map(datum => (
+      <Tab
+        datum={datum}
+        key={datum.value}
+        selected={datum.value === selectedValue}
+        onClick={onTabSelect}
+        {...styleProps}
+      />
+    ))}
   </InlineFlex>
 )

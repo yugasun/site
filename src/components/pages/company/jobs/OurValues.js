@@ -8,7 +8,6 @@ import {
 } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import { P, Heading } from 'src/fragments/DesignSystem'
 
 const ourValuesContent = [
@@ -82,7 +81,7 @@ const OurValues = () => (
     <AppContainer>
       <Column px={[0, 0, 0, 45]}>
         <Column alignItems='center'>
-          <TitleWithIcon>Our Values</TitleWithIcon>
+          <Heading.h2>Our Values</Heading.h2>
         </Column>
         <Row flexWrap='wrap' mt={3}>
           {ourValuesContent.map(({ header, img, content, action }, index) => (

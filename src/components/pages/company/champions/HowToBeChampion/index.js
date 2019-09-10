@@ -14,7 +14,6 @@ import {
   Overflow,
 } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import { TitleWithIconNew as TitleWithIcon } from 'src/fragments'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
 import benefitsBackground from 'src/assets/images/benefits-dots-background.png'
@@ -51,40 +50,24 @@ const HowToBeChampion = () => (
         <Flex flexDirection={['column', 'column', 'column', 'row']}>
           <Box width={[1, 1, 1, 0.65]} px={[0, 0, 0, 2]}>
             <Box mb={[4, 4, 3, 5]}>
-              <TitleWithIcon>
+              <Heading.h2>
                 What does it take to become a Serverless Champion?
-              </TitleWithIcon>
+              </Heading.h2>
             </Box>
-            <Heading.h4 color='black'>
-              Our Serverless Champions are:
-            </Heading.h4>
-            {
-              serverlessChampions.map((champion, index) => (
-                <Row
-                  mt={3}
-                  key={index}
-                  alignItems='center'
-                >
-                  <InlineBlock mr={2}>
-                    <Image src={checkmarkIcon} height='20px' width='20px' />
-                  </InlineBlock>
-                  <P
-                    key={index}
-                    my={0}
-                    fontFamily='Soleilbk'
-                  >
-                    {champion}
-                  </P>
-                </Row>
-              ))
-            }
+            <Heading.h4 color='black'>Our Serverless Champions are:</Heading.h4>
+            {serverlessChampions.map((champion, index) => (
+              <Row mt={3} key={index} alignItems='center'>
+                <InlineBlock mr={2}>
+                  <Image src={checkmarkIcon} height='20px' width='20px' />
+                </InlineBlock>
+                <P key={index} my={0} fontFamily='Soleilbk'>
+                  {champion}
+                </P>
+              </Row>
+            ))}
           </Box>
 
-          <Box
-            width={[1, 1, 1, 0.40]}
-            mt={[5, 5, 6, 8]}
-            mb={[2, 2, 3, 0]}
-          >
+          <Box width={[1, 1, 1, 0.4]} mt={[5, 5, 6, 8]} mb={[2, 2, 3, 0]}>
             <RelativeCard
               width={1}
               boxShadow='2px 2px 8px 0 #eaeaea'
@@ -96,7 +79,7 @@ const HowToBeChampion = () => (
               <Absolute
                 height='fullHeight'
                 width='100vw'
-                top={["-30px", "-30px", "-40px", "-50px"]}
+                top={['-30px', '-30px', '-40px', '-50px']}
                 zIndex={-1}
               >
                 <Background
@@ -106,32 +89,19 @@ const HowToBeChampion = () => (
                   width={1}
                 />
               </Absolute>
-              <Heading.h5
-                color='black'
-              >
-                Nominated members receive:
-              </Heading.h5>
-              <HorizontalRule
-                height='1px'
-                color='#eaeaea'
-              />
+              <Heading.h5 color='black'>Nominated members receive:</Heading.h5>
+              <HorizontalRule height='1px' color='#eaeaea' />
 
-              {
-                memberReceivals.map((benefit, index) => (
-                  <Row mt={3} alignItems='center'>
-                    <Box mr={2}>
-                      <Image src={lionIcon} height='40px' minWidth='40px' />
-                    </Box>
-                    <P
-                      key={index}
-                      my={0}
-                      fontFamily='Soleilbk'
-                    >
-                      {benefit}
-                    </P>
-                  </Row>
-                ))
-              }
+              {memberReceivals.map((benefit, index) => (
+                <Row mt={3} alignItems='center'>
+                  <Box mr={2}>
+                    <Image src={lionIcon} height='40px' minWidth='40px' />
+                  </Box>
+                  <P key={index} my={0} fontFamily='Soleilbk'>
+                    {benefit}
+                  </P>
+                </Row>
+              ))}
             </RelativeCard>
           </Box>
         </Flex>
