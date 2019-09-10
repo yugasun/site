@@ -10,7 +10,11 @@ const HeroImage = props => (
     height={[300, 300, 382, 382, 520, 590]}
     style={{ borderRadius: '50%', alignSelf: 'center' }}
   >
-    <Flex justifyContent={['center']} mt={22} mb={[62, 62, 50, 50, 0]}>
+    <Flex
+      justifyContent={['center']}
+      mt={[0, 0, 0, 0, 22]}
+      mb={[62, 62, 50, 50, 0]}
+    >
       <Image
         src={alertsHeroImage}
         width={['100%', '100%', 350, 350, 420, 488]}
