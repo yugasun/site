@@ -5,25 +5,27 @@ import HomeLayout from 'src/layouts/Home'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import Hero from 'src/components/pages/policies/Hero'
-import IndustryStandard from 'src/components/pages/policies/IndustryStandard'
-import CustomPolicies from 'src/components/pages/policies/CustomPolicies'
-import ZeroCode from 'src/components/pages/policies/ZeroCode'
+import Hero from 'src/components/pages/components/Hero'
+import Simplicity from 'src/components/pages/components/Simplicity'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
+import Reusability from 'src/components/pages/components/Reusability'
+import Agnostic from 'src/components/pages/components/Agnostic'
+import Fast from 'src/components/pages/components/Fast'
 
-const Policies = ({ location }) => (
+const Components = ({ location }) => (
   <HomeLayout
     prefooter={NewToServerlessPrefooter}
     transparentHeader={true}
     startWithWhiteHeader={true}
   >
-    <Helmet title='Serverless Policies' location={location} />
+    <Helmet title='Serverless Components' location={location} />
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Hero />
-        <IndustryStandard />
-        <CustomPolicies />
-        <ZeroCode />
+        <Simplicity />
+        <Reusability />
+        <Agnostic />
+        <Fast />
       </AppContainer>
     </Background>
 
@@ -35,4 +37,4 @@ const Policies = ({ location }) => (
   </HomeLayout>
 )
 
-export default Policies
+export default Components
