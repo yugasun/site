@@ -237,9 +237,12 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-price'>Open-Source</div>
+              <div className='pricing-summary-detail-edition'>Open-Source Edition</div>
               <div className='pricing-summary-detail-text'>
                 Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
+              </div>
+              <div className='pricing-summary-detail-price'>
+                Price -  Free
               </div>
             </div>
             <div className='pricing-summary-detail'>
@@ -287,9 +290,12 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-price'>Free</div>
+              <div className='pricing-summary-detail-edition'>Developer Edition</div>
               <div className='pricing-summary-detail-text'>
                 Integrates and extends the open-source projects and adds free features for production-ready teams.
+              </div>
+              <div className='pricing-summary-detail-price'>
+                Price -  Free
               </div>
             </div>
             <div className='pricing-summary-detail'>
@@ -337,15 +343,18 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-price'>Contact Sales</div>
+              <div className='pricing-summary-detail-edition'>Enterprise Edition</div>
               <div className='pricing-summary-detail-text'>
                 Includes the developer edition, with increased limits, more features, training & support for scaling serverless teams.
               </div>
+              <div className='pricing-summary-detail-price'>
+                Price -  Contact Sales
+              </div>
             </div>
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Unlimited Invocations & Users</div>
+              <div className='pricing-summary-detail-title'>Increased Usage</div>
               <div className='pricing-summary-detail-text'>
-                Flexible plans to meet your needs.
+                Increased invocations, team seats & more.
               </div>
             </div>
             <div className='pricing-summary-detail'>

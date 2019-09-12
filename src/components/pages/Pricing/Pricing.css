@@ -116,7 +116,7 @@
   border-bottom: none;
 }
 
-.pricing-component .pricing-summary-detail-price {
+.pricing-component .pricing-summary-detail-edition {
   font-size: 21px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
@@ -124,6 +124,16 @@
   transition: all 0.2s linear;
   text-align: center;
   padding: 14px 0 10px 0;
+}
+
+.pricing-component .pricing-summary-detail-price {
+  font-size: 24px;
+  font-family: 'SoleilSB';
+  letter-spacing: -0.1px;
+  color: #000000;
+  transition: all 0.2s linear;
+  text-align: center;
+  padding: 24px 0 10px 0;
 }
 
 .pricing-component .pricing-summary-detail-text {
