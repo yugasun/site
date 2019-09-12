@@ -144,6 +144,7 @@
   font-size: 18px;
   line-height: 26px;
   color: rgba(0,0,0,1);
+  letter-spacing: -0.1px;
 }
 
 .home-editions-component .home-edition-action {
