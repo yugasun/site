@@ -127,8 +127,8 @@ export default class Hero extends React.Component {
               )}
 
               { this.state.chapter === 'develop' && (
-                <video autoPlay muted>
-                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                <video autoPlay muted loop>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_develop_2_2.mp4' type='video/mp4' />
                 </video>
               )}
 
