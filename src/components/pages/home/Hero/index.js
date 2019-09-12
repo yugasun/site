@@ -112,7 +112,13 @@ export default class Hero extends React.Component {
               </div>
             </div>
 
-            <div className='hero-video-content container-inner'>
+            <div className='hero-video-content'>
+              <video autoPlay muted>
+                <source src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_0.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              { /*
               <div className='hero-video-content-develop'>
                 <div className='hero-video-content-develop-text'>
                   <span>Easily build serverless REST APIs, GraphQL APIs, Data Processors & more.</span>
@@ -132,6 +138,7 @@ export default class Hero extends React.Component {
                   </div>
                 </div>
               </div>
+              */ }
             </div>
 
           </div>
