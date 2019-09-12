@@ -51,7 +51,7 @@ export default class Hero extends React.Component {
     setTimeout(() => {
       const containter = document.getElementById('hero-video-container')
       self.setState({ chapter: 'intro' })
-    }, 800)
+    }, 700)
 
   }
 
