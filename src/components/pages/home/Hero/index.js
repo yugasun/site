@@ -48,11 +48,11 @@ export default class Hero extends React.Component {
       self.setState(newState)
     }, 3000)
 
+    // Start Fade In Timer of video
     setTimeout(() => {
       const containter = document.getElementById('hero-video-container')
       self.setState({ chapter: 'intro' })
     }, 700)
-
   }
 
   /**
@@ -121,31 +121,31 @@ export default class Hero extends React.Component {
             <div className='hero-video-content'>
 
               { this.state.chapter === 'intro' && (
-                <video autoPlay muted>
-                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                <video autoPlay muted onEnded={() => { this.toggleChapter('develop') }}>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_4.mp4' type='video/mp4' />
                 </video>
               )}
 
               { this.state.chapter === 'develop' && (
-                <video autoPlay muted loop>
+                <video autoPlay muted onEnded={() => { this.toggleChapter('deploy') }}>
                   <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_develop_2_2.mp4' type='video/mp4' />
                 </video>
               )}
 
               { this.state.chapter === 'deploy' && (
-                <video autoPlay muted>
+                <video autoPlay muted onEnded={() => { this.toggleChapter('monitor') }}>
                   <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
                 </video>
               )}
 
               { this.state.chapter === 'monitor' && (
-                <video autoPlay muted>
+                <video autoPlay muted onEnded={() => { this.toggleChapter('secure') }}>
                   <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
                 </video>
               )}
 
               { this.state.chapter === 'secure' && (
-                <video autoPlay muted>
+                <video autoPlay muted onEnded={() => { this.toggleChapter('intro') }}>
                   <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
                 </video>
               )}
