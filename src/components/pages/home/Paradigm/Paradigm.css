@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 68px 10px 100px 10px;
-  background: #f2f2f2;
+  background: #f7f7f7;
 }
 
 .paradigm-component .paradigm-guide-title {
@@ -82,7 +82,7 @@
 .paradigm-component .paradigm-mission {
   flex-direction: column;
   align-items: center;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  /* border-top: 1px solid rgba(0,0,0,0.1); */
 }
 
 .paradigm-component .paradigm-mission-inner {

@@ -2,14 +2,15 @@
   height: auto;
   min-height: 300px;
   user-select: none;
-  padding: 68px 10px;
+  padding: 68px 10px 0 10px;
   background: #f7f7f7;
   color: #000000;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .user-tweets-component .user-tweets-inner {
   flex-direction: column;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 100px;
 }
 
 .user-tweets-component .user-tweets-tweets {

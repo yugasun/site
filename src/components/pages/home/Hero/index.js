@@ -15,7 +15,7 @@ export default class Hero extends React.Component {
 
     this.state = {}
 
-    this.state.chapter = 'develop'
+    this.state.chapter = null
 
     this.state.stats = {}
     this.state.stats.downloads = 11898291
@@ -47,6 +47,11 @@ export default class Hero extends React.Component {
       }})
       self.setState(newState)
     }, 3000)
+
+    setTimeout(() => {
+      const containter = document.getElementById('hero-video-container')
+      self.setState({ chapter: 'intro' })
+    }, 2000)
 
   }
 
@@ -86,6 +91,11 @@ export default class Hero extends React.Component {
           <div className='hero-video-container container'>
             <div className='hero-video-chapters container'>
               <div
+                className={`hero-video-chapter ${ this.state.chapter === 'intro' ? 'active' : '' }`}
+                onClick={() => { this.toggleChapter('intro') }}>
+                Intro
+              </div>
+              <div
                 className={`hero-video-chapter ${ this.state.chapter === 'develop' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('develop') }}>
                 Develop
@@ -94,11 +104,6 @@ export default class Hero extends React.Component {
                 className={`hero-video-chapter ${ this.state.chapter === 'deploy' ? 'active' : '' }`}
                 onClick={() => { this.toggleChapter('deploy') }}>
                 Deploy
-              </div>
-              <div
-                className={`hero-video-chapter ${ this.state.chapter === 'test' ? 'active' : '' }`}
-                onClick={() => { this.toggleChapter('test') }}>
-                Test
               </div>
               <div
                 className={`hero-video-chapter ${ this.state.chapter === 'monitor' ? 'active' : '' }`}
@@ -114,8 +119,9 @@ export default class Hero extends React.Component {
 
             <div className='hero-video-content'>
               <video autoPlay muted>
-                <source src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_0.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                { this.state.chapter === 'intro' &&
+                  <source src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_0.mp4" type="video/mp4" />
+                }
               </video>
 
               { /*

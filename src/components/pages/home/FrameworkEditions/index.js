@@ -51,7 +51,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Open-Source
+                  Open-Source Edition
                 </div>
                 <div className='home-edition-detail-text'>
                   Downloaded over 1 million times per month. Our vast open-source ecosystem simplifies serveless, and is available to everyone for free.
@@ -117,7 +117,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Free
+                  Developer Edition
                 </div>
                 <div className='home-edition-detail-text'>
                   Perfect for teams going into production. Integrates and extends the open-source projects with several new features for free.
@@ -183,7 +183,7 @@ export default class FrameworkEditions extends React.Component {
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Contact Sales
+                  Enterprise Edition
                 </div>
                 <div className='home-edition-detail-text'>
                   Ideal for scaling teams.  Includes unlimited use and additional features to standardize workflows and integrate with Ops tooling.
