@@ -64,7 +64,7 @@
   -webkit-animation: fadeIn 0.7s;
   -moz-animation: fadeIn 0.7s;
   animation: fadeIn 0.7s;
-  animation-delay: 0.5s;
+  animation-delay: 0.8s;
   animation-fill-mode: backwards;
 }
 
@@ -189,7 +189,6 @@
   -webkit-animation: fadeIn 0.7s;
   -moz-animation: fadeIn 0.7s;
   animation: fadeIn 0.7s;
-  animation-delay: 1s;
   animation-fill-mode: backwards;
 }
 
@@ -237,7 +236,6 @@
   -webkit-animation: fadeIn 0.7s;
   -moz-animation: fadeIn 0.7s;
   animation: fadeIn 0.7s;
-  animation-delay: 1.5s;
   animation-fill-mode: backwards;
 }
 

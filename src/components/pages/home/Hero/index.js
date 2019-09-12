@@ -51,7 +51,7 @@ export default class Hero extends React.Component {
     setTimeout(() => {
       const containter = document.getElementById('hero-video-container')
       self.setState({ chapter: 'intro' })
-    }, 2000)
+    }, 1600)
 
   }
 
@@ -61,6 +61,7 @@ export default class Hero extends React.Component {
 
   toggleChapter(chapter) {
     this.setState({ chapter })
+    console.log(chapter)
   }
 
   /**
@@ -118,33 +119,37 @@ export default class Hero extends React.Component {
             </div>
 
             <div className='hero-video-content'>
-              <video autoPlay muted>
-                { this.state.chapter === 'intro' &&
-                  <source src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_0.mp4" type="video/mp4" />
-                }
-              </video>
 
-              { /*
-              <div className='hero-video-content-develop'>
-                <div className='hero-video-content-develop-text'>
-                  <span>Easily build serverless REST APIs, GraphQL APIs, Data Processors & more.</span>
-                </div>
-                <div className='hero-video-content-develop-graphic'>
-                  <div className='hero-video-content-develop-cli'>
-                    <p>name: my-api</p>
-                    <p></p>
-                    <p>functions:</p>
-                    <p style={{ 'marginLeft': '12px' }}>usersList:</p>
-                    <p style={{ 'marginLeft': '24px' }}>handler: index.list</p>
-                    <p style={{ 'marginLeft': '24px' }}>runtime: nodejs10</p>
-                    <p style={{ 'marginLeft': '24px' }}>events:</p>
-                    <p style={{ 'marginLeft': '36px' }}>- http:</p>
-                    <p style={{ 'marginLeft': '62px' }}>path: /users/list</p>
-                    <p style={{ 'marginLeft': '62px' }}>method: get</p>
-                  </div>
-                </div>
-              </div>
-              */ }
+              { this.state.chapter === 'intro' && (
+                <video autoPlay muted>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                </video>
+              )}
+
+              { this.state.chapter === 'develop' && (
+                <video autoPlay muted>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                </video>
+              )}
+
+              { this.state.chapter === 'deploy' && (
+                <video autoPlay muted>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                </video>
+              )}
+
+              { this.state.chapter === 'monitor' && (
+                <video autoPlay muted>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                </video>
+              )}
+
+              { this.state.chapter === 'secure' && (
+                <video autoPlay muted>
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                </video>
+              )}
+
             </div>
 
           </div>
