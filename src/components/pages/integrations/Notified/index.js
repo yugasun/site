@@ -6,7 +6,7 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const DevelopDeploy = props => (
   <Flex
-    pt={[142, 142, 112, 112, 132]}
+    pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >
@@ -14,8 +14,8 @@ const DevelopDeploy = props => (
     <Flex mx={'auto'}>
       <Image
         src={slackNotificationsImage}
-        width={['100%', '100%', 300, 300, 300, 591]}
-        height={[400, 400, 400, 400, 420, 302]}
+        width={['100%', '100%', 430, 450, 500, 591]}
+        height={[200, 200, 220, 250, 270, 302]}
       />
     </Flex>
   </Flex>

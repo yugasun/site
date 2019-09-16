@@ -4,7 +4,7 @@ import configureNotificationsImage from 'src/assets/images/pages/integrations/co
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 
-const CustomPolicies = props => (
+const CustomPolicies = () => (
   <Flex
     py={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
@@ -13,8 +13,8 @@ const CustomPolicies = props => (
     <Content />
     <Image
       src={configureNotificationsImage}
-      width={['100%', '100%', 336, 450, 520, 592]}
-      height={[400, 400, 450, 500, 600, 392]}
+      width={['100%', '100%', 380, 450, 520, 592]}
+      height={[250, 250, 280, 300, 350, 392]}
     />
   </Flex>
 )

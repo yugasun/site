@@ -8,6 +8,7 @@ import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/integrations/Hero'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 import Notified from 'src/components/pages/integrations/Notified'
+import Extend from 'src/components/pages/integrations/Extend'
 import CustomIntegrations from 'src/components/pages/integrations/CustomIntegrations'
 import Notifications from 'src/components/pages/integrations/Notifications'
 
@@ -24,6 +25,7 @@ const Integrations = ({ location }) => (
         <Notified />
         <CustomIntegrations />
         <Notifications />
+        <Extend />
       </AppContainer>
     </Background>
 

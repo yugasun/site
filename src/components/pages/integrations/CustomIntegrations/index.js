@@ -13,8 +13,8 @@ const CustomIntegrations = props => (
     <Content />
     <Image
       src={customIntegrationsImage}
-      width={['100%', '100%', 370, 436, 500, 487]}
-      height={[290, 290, 300, 300, 300, 302]}
+      width={['100%', '100%', 350, 400, 430, 487]}
+      height={[200, 200, 230, 250, 280, 302]}
     />
   </Flex>
 )

@@ -3,15 +3,11 @@ import { Flex, Image } from 'serverless-design-system'
 import integrationsHeroImage from 'src/assets/images/pages/integrations/integrations-hero.png'
 
 const HeroImage = props => (
-  <Flex
-    justifyContent={['center']}
-    mt={[0, 0, 0, 0, 22]}
-    mb={[62, 62, 50, 50, 0]}
-  >
+  <Flex justifyContent={['center']} mt={[0, 0, 0, 0, 22]}>
     <Image
       src={integrationsHeroImage}
-      width={['100%', '100%', 350, 350, 420, 592]}
-      height={[350, 350, 400, 400, 470, 392]}
+      width={['100%', '100%', 470, 470, 470, 592]}
+      height={[200, 230, 300, 300, 330, 392]}
     />
   </Flex>
 )
