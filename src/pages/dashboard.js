@@ -3,12 +3,13 @@ import React from 'react'
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Home'
 import { NewToServerlessPrefooter } from 'src/fragments'
-import { Background, Box, Flex } from 'serverless-design-system'
+import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import Hero from 'src/components/pages/policies/Hero'
-import IndustryStandard from 'src/components/pages/policies/IndustryStandard'
-import CustomPolicies from 'src/components/pages/policies/CustomPolicies'
-import ZeroCode from 'src/components/pages/policies/ZeroCode'
+import Hero from 'src/components/pages/dashboard/Hero'
+import SinglePane from 'src/components/pages/dashboard/SinglePane'
+import StageSpecific from 'src/components/pages/dashboard/StageSpecific'
+import SecurelyManaged from 'src/components/pages/dashboard/SecurelyManaged'
+import ForTeams from 'src/components/pages/dashboard/ForTeams'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Policies = ({ location }) => (
@@ -21,9 +22,10 @@ const Policies = ({ location }) => (
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Hero />
-        <IndustryStandard />
-        <CustomPolicies />
-        <ZeroCode />
+        <SinglePane />
+        <StageSpecific />
+        <SecurelyManaged />
+        <ForTeams />
       </AppContainer>
     </Background>
 
