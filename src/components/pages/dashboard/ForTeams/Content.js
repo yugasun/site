@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P0 } from 'src/fragments/DesignSystem'
+import { InternalLinkText } from 'src/fragments'
 
 const CustomPoliciesContent = props => (
   <Flex flexDirection='column' width={[1, 1, 0.4]}>
@@ -12,10 +13,13 @@ const CustomPoliciesContent = props => (
       every feature of the Dashboard.
       <br />
       <br />
-      For example, shared output variables enable developers to easily share
-      state across independent services in a microservices architecture and the
-      deep Github integration enables developers to work seamlessly across
-      Github and the Serverless Framework.
+      For example,{' '}
+      <InternalLinkText to={'/framework/docs/dashboard/output-variables/'}>
+        shared output variables
+      </InternalLinkText>{' '}
+      enable developers to easily share state across independent services in a
+      microservices architecture and the deep Github integration enables
+      developers to work seamlessly across Github and the Serverless Framework.
     </P0>
   </Flex>
 )

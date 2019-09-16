@@ -1,9 +1,10 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P0 } from 'src/fragments/DesignSystem'
+import { InternalLinkText } from 'src/fragments'
 
 const CustomPoliciesContent = props => (
-  <Flex flexDirection='column' width={[1, 1, 0.4]}>
+  <Flex flexDirection='column' width={[1, 1, 0.45]}>
     <Heading.h3 mb={22}>
       Add custom integrations with Webhooks and SNS Topics
     </Heading.h3>
@@ -15,8 +16,11 @@ const CustomPoliciesContent = props => (
       Framework to custom API endpoints or SNS Topics.
       <br />
       <br />
-      See how easy it is to build a custom integration with this Simple HTTP
-      Endpoint example built with the Serverless Framework.
+      See how easy it is to build a custom integration with this{' '}
+      <InternalLinkText to={'/examples/aws-node-simple-http-endpoint/'}>
+        Simple HTTP Endpoint
+      </InternalLinkText>{' '}
+      example built with the Serverless Framework.
     </P0>
   </Flex>
 )

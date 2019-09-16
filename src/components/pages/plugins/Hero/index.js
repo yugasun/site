@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, Image } from 'serverless-design-system'
+import { Flex, Image } from 'serverless-design-system'
 import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
 import { PL, Heading } from 'src/fragments/DesignSystem'
 import slsHeroLogo from 'src/assets/images/home/sls-home-logo.svg'
@@ -9,7 +9,7 @@ const PluginsHero = () => {
   return (
     <HeroWrapper background={['#f7f7f7']}>
       <Flex flexDirection={'column'} width={[1, 1, 0.5]}>
-        <Flex mb={22}>
+        <Flex mb={22} mt={[32, 32, '-10px', 0, 26]}>
           <Image src={slsHeroLogo} />
         </Flex>
         <Heading.h0 m={0}>Serverless Plugins</Heading.h0>
