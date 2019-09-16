@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import zeroCodeImage from 'src/assets/images/pages/policies/zero-code.png'
+import forTeamsImage from 'src/assets/images/pages/dashboard/for-teams.png'
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 
@@ -12,9 +12,9 @@ const CustomPolicies = props => (
   >
     <Content />
     <Image
-      src={zeroCodeImage}
-      width={['100%', '100%', 336, 436, 594]}
-      height={[306, 306, 342, 442, 603]}
+      src={forTeamsImage}
+      width={['100%', '100%', 380, 450, 550, 592]}
+      height={[300, 300, 380, 442, 480, 508]}
     />
   </Flex>
 )

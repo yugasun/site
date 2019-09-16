@@ -1,10 +1,10 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import customPoliciesImage from 'src/assets/images/pages/policies/custom-policies.png'
+import stageSpecificImage from 'src/assets/images/pages/dashboard/stage-specific.png'
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 
-const CustomPolicies = props => (
+const CustomPolicies = () => (
   <Flex
     pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
@@ -12,9 +12,9 @@ const CustomPolicies = props => (
   >
     <Content />
     <Image
-      src={customPoliciesImage}
-      width={['100%', '100%', 336, 450, 520, 592]}
-      height={[110, 110, 123, 170, 200, 217]}
+      src={stageSpecificImage}
+      width={['100%', '100%', 380, 450, 520, 590]}
+      height={[250, 250, 280, 320, 350, 378]}
     />
   </Flex>
 )
