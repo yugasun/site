@@ -10,7 +10,9 @@ const PoliciesHero = props => (
     flexDirection={['column', 'column', 'column', 'column', 'row']}
   >
     <Content />
-    <Image />
+    <Flex mt={[0, 0, 0, 0, 54]} justifyContent={['center']}>
+      <Image />
+    </Flex>
   </Flex>
 )
 
