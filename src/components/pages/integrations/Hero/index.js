@@ -5,7 +5,7 @@ import Image from './Image'
 
 const PoliciesHero = props => (
   <Flex
-    pt={[48, 48, 48, 48, 136]}
+    pt={[48, 48, 48, 48, 126]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'column', 'column', 'row']}
   >
