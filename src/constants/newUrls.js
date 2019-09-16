@@ -2,6 +2,8 @@ export default {
   docs: '/framework/docs/',
   why: '/learn/why/',
   what: '/learn/manifesto/',
+  cli: '/cli/',
+  components: '/components/',
   learn: '/learn/',
   useCases: '/learn/use-cases/',
   comparisons: '/learn/comparisons/',
