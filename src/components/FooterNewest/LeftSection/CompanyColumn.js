@@ -9,7 +9,7 @@ const CompanyColumn = ({ mobileOrder }) => (
     header='Company'
     listItems={[
       {
-        name: 'Overview',
+        name: 'About us',
         navProps: { to: team, completed: true },
       },
       {

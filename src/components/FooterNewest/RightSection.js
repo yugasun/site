@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Column, P } from 'serverless-design-system'
-import NewsLetterForm from '../NewNewsLetterForm'
+import NewsLetterForm from './NewsletterForm'
 
 // Renders the subscribe column
 const Subscribe = () => (
@@ -9,7 +9,7 @@ const Subscribe = () => (
     order={['1', '1', '1', '1', '2']}
     pl={[0, 0, 0, 0, 3]}
   >
-    <Box mb={[32, 32, 32, 32, 41]} id='newsletter-box-footer'>
+    <Box id='newsletter-box-footer'>
       <P
         color='#8c8c8c'
         fontFamily='SoleilBk'
