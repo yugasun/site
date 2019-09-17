@@ -66,7 +66,7 @@ const Resource = () => (
           navProps={{
             to: slack,
             backgroundOnHover: true,
-            completed: true,
+            crossDomain: true,
           }}
         >
           Slack
@@ -111,7 +111,7 @@ const Resource = () => (
           navProps={{
             to: about,
             backgroundOnHover: true,
-            crossDomain: true,
+            completed: true,
           }}
         >
           About us
@@ -121,7 +121,7 @@ const Resource = () => (
         <SubMenuItem
           navProps={{
             to: jobs,
-            crossDomain: true,
+            completed: true,
             backgroundOnHover: true,
           }}
         >
