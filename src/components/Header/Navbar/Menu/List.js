@@ -28,7 +28,7 @@ const ProductMenu = () => (
 
 const DocsMenu = () => (
   <Box>
-    <NavLink to={docs} completed className="header-menu-item">
+    <NavLink to={docs} completed className='header-menu-item'>
       <MenuTitle name={'Docs'} />
     </NavLink>
   </Box>
@@ -36,7 +36,7 @@ const DocsMenu = () => (
 
 const PricingMenu = () => (
   <Box>
-    <NavLink to={pricing} completed className="header-menu-item">
+    <NavLink to={pricing} completed className='header-menu-item'>
       <MenuTitle name={'Pricing'} />
     </NavLink>
   </Box>
@@ -71,16 +71,16 @@ const MoreMenu = () => (
 
 const EnterpriseMenu = () => (
   <Box>
-    <NavLink to={enterprise} completed className="header-menu-item">
-      <MenuTitle name={'Contact Sales'} color="#fd5750" />
+    <NavLink to={enterprise} completed className='header-menu-item'>
+      <MenuTitle name={'Contact Sales'} color='#fd5750' />
     </NavLink>
   </Box>
 )
 
 const LoginMenu = () => (
   <Box>
-    <NavLink to={dashboard} completed className="header-menu-item">
-      <MenuTitle name={'Login'} color="#fd5750" />
+    <NavLink to={dashboard} crossDomain className='header-menu-item'>
+      <MenuTitle name={'Login'} color='#fd5750' />
     </NavLink>
   </Box>
 )
