@@ -33,7 +33,7 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        What
+        What?
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
@@ -44,7 +44,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        Why
+        Why?
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>

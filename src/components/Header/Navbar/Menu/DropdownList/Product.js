@@ -6,7 +6,7 @@ import {
   cli,
   plugins,
   components,
-  dashboard,
+  dashboardPage,
   monitoring,
   alerts,
   policies,
@@ -52,8 +52,8 @@ const Resource = () => (
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
-          to: dashboard,
-          crossDomain: true,
+          to: dashboardPage,
+          completed: true,
         }}
       >
         Dashboard
