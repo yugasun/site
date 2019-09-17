@@ -13,6 +13,7 @@ export default {
   comparisons: '/learn/comparisons/',
   enterprise: '/enterprise/',
   dashboard: 'https://dashboard.serverless.com',
+  dashboardPage: '/dashboard/',
   examples: '/examples/',
   plugins: '/plugins/',
   blog: '/blog/',
@@ -41,4 +42,6 @@ export default {
   policies: '/policies/',
   debugging: '/debugging/',
   integrations: '/integrations/',
+  termsOfService: 'https://dashboard.serverless.com/legal/terms',
+  privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',
 }

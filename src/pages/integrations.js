@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
+import HomeLayout from 'src/layouts/Newest'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
