@@ -6,7 +6,7 @@ import { training, support } from 'src/constants/newUrls'
 
 const Learn = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: training,

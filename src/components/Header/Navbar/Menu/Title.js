@@ -3,6 +3,7 @@
 import React from 'react'
 import { Transition, Text, withBeforeAfter } from 'serverless-design-system'
 import NavbarContext from '../../NavbarContext'
+import dropdownMenuIcon from 'src/assets/images/dropdown-menu-header-icon.svg'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
@@ -24,17 +25,12 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
     position: relative;
 
     &:hover {
-      &:before {
-        opacity: 1;
-        height: 25px;
-        width: 5px;
-        transform: rotateZ(200deg);
-      }
+      opacity: 0.6;
     }
   `
 )
 
-const Title = ({ name }) => {
+const Title = ({ name, color }) => {
   return (
     <NavbarContext.Consumer>
       {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
@@ -56,7 +52,9 @@ const Title = ({ name }) => {
           <Text.span
             fontFamily='Soleil'
             fontSize={14}
-            color={isWhiteHeader && isDesktopView ? 'black' : 'white'}
+            color={
+              color ? color : isWhiteHeader && isDesktopView ? 'black' : 'white'
+            }
             letterSpacing={0.7}
           >
             {name}

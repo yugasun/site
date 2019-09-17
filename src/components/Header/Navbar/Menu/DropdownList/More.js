@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, ListItem } from 'serverless-design-system'
+import { List, ListItem, Flex, Heading } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
 import {
@@ -9,77 +9,134 @@ import {
   meetups,
   partners,
   courses,
+  blog,
 } from 'src/constants/newUrls'
 
+//TODO: break this into components
 const Resource = () => (
-  <List m={0} ml={[4, 4, 0]} p={0}>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: github,
-          backgroundOnHover: true,
-          crossDomain: true,
-        }}
+  <Flex>
+    <List m={0} ml={[4, 4, 0]} p={0}>
+      <Heading
+        fontSize={'16px'}
+        lineHeight='38px'
+        letterSpacing='0'
+        fontFamily='SoleilBk'
+        color={['#fff', '#fff', '#fff', '#fff', '#000']}
       >
-        GitHub
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: forum,
-          crossDomain: true,
-          backgroundOnHover: true,
-        }}
+        Community
+      </Heading>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: blog,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          Blog
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: github,
+            backgroundOnHover: true,
+            crossDomain: true,
+          }}
+        >
+          GitHub
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: forum,
+            crossDomain: true,
+            backgroundOnHover: true,
+          }}
+        >
+          Forum
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: slack,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          Slack
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: meetups,
+            completed: true,
+            backgroundOnHover: true,
+          }}
+        >
+          Meetups
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: partners,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          Partners
+        </SubMenuItem>
+      </ListItem.noStyleType>
+    </List>
+    <List m={0} ml={[4, 4, 0, 0, 92]} p={0} style={{ width: '80px' }}>
+      <Heading
+        fontSize={'16px'}
+        lineHeight='38px'
+        letterSpacing='0'
+        fontFamily='SoleilBk'
+        color={['#fff', '#fff', '#fff', '#fff', '#000']}
       >
-        Forum
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: slack,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        Slack
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: meetups,
-          completed: true,
-          backgroundOnHover: true,
-        }}
-      >
-        Meetups
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
-      <SubMenuItem
-        navProps={{
-          to: partners,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        Partners
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: courses,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        Community courses
-      </SubMenuItem>
-    </ListItem.noStyleType>
-  </List>
+        Company
+      </Heading>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: github,
+            backgroundOnHover: true,
+            crossDomain: true,
+          }}
+        >
+          About Us
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: forum,
+            crossDomain: true,
+            backgroundOnHover: true,
+          }}
+        >
+          Jobs
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: slack,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          Contact us
+        </SubMenuItem>
+      </ListItem.noStyleType>
+    </List>
+  </Flex>
 )
 
 export default Resource

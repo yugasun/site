@@ -6,25 +6,23 @@ import {
   ServicesDropdownList,
   MoreDropdownList,
   LearnDropdownList,
+  ProductDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import {
-  enterprise,
-  docs,
-  framework,
-  pricing,
-  dashboard,
-} from 'src/constants/newUrls'
+import { enterprise, docs, pricing, dashboard } from 'src/constants/newUrls'
+//TODO: double-up - clean this to one file
 import HeaderCTAButton from '../../HeaderCTAButton'
 import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
 import ServicesMenuDescription from './Descriptions/Services'
+import ProductMenuDescription from './Descriptions/Product'
 
 const ProductMenu = () => (
   <Box>
-    <NavLink to={framework} completed className='header-menu-item'>
-      <MenuTitle name={'Product'} />
-    </NavLink>
+    <MenuTitle name={'Product'} />
+    <ProductMenuDescription>
+      <ProductDropdownList />
+    </ProductMenuDescription>
   </Box>
 )
 
@@ -74,7 +72,7 @@ const LearnMenu = () => (
 const EnterpriseMenu = () => (
   <Box>
     <NavLink to={enterprise} completed className='header-menu-item'>
-      <MenuTitle name={'Contact Sales'} />
+      <MenuTitle name={'Contact Sales'} color='#fd5750' />
     </NavLink>
   </Box>
 )
@@ -82,7 +80,7 @@ const EnterpriseMenu = () => (
 const LoginMenu = () => (
   <Box>
     <NavLink to={dashboard} completed className='header-menu-item'>
-      <MenuTitle name={'Login'} />
+      <MenuTitle name={'Login'} color='#fd5750' />
     </NavLink>
   </Box>
 )
