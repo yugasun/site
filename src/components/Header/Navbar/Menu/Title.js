@@ -64,12 +64,12 @@ const Title = ({ name, color, showDropdown }) => {
           beforeBoxLeft={[0, 0, '-1px', '3px', '4px', '3px']}
         >
           <TitleWithDropdown
-            fontFamily='Soleil'
+            fontFamily='SoleilBk'
             fontSize={14}
             color={
               color ? color : isWhiteHeader && isDesktopView ? 'black' : 'white'
             }
-            letterSpacing={0.7}
+            letterSpacing={0.8}
             showDropdown={showDropdown}
           >
             {name}
