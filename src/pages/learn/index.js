@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import DefaultLayout from 'src/layouts/Home'
+import DefaultLayout from 'src/layouts/Newest'
 import Hero from 'src/components/pages/learn/overview/Hero'
 import Courses from 'src/components/pages/learn/overview/Courses'
 import MoreResources from 'src/components/pages/learn/overview/MoreResources'
@@ -17,8 +17,7 @@ import MoreInfoShare from 'src/components/pages/learn/overview/MoreInfoShare/'
 
 const BackgroundWithPaddingBottom = styled(Background)`
   @media only screen and (min-width: 1601px) {
-    background: linear-gradient(to bottom, #fff 40%, #000 40%);
-    padding-bottom: 115px;
+    background: linear-gradient(to bottom, #fff 40%, #f7f7f7 40%);
   }
 `
 
@@ -42,7 +41,7 @@ const FrameWorks = ({ location }) => (
 
     <Box mt={[72, 72, 92, 92, 132]}>
       <Box>
-        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
+        <BackgroundWithPaddingBottom background='#f7f7f7'>
           <WhitepaperDownload />
         </BackgroundWithPaddingBottom>
       </Box>

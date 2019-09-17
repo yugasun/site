@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Column } from 'serverless-design-system'
-import { DocsHeader as Header, Footer } from 'src/components'
+import { DocsHeader as Header, FooterNewest as Footer } from 'src/components'
 
 const DefaultLayout = ({
   children,

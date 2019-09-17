@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
+import HomeLayout from 'src/layouts/Newest'
 import Brands from 'src/components/pages/support/Brands'
 import Content from 'src/components/pages/support/Content'
 import Form from 'src/components/pages/support/Form'
@@ -31,10 +31,8 @@ const Support = ({ location }) => (
       </AppContainer>
     </Background>
 
-    <Background background='linear-gradient(to bottom, #f7f7f7 30%, #000 30%);'>
-      <Box pb={[0, 0, 0, 0, 0, 142]}>
-        <WhitepaperDownloadBanner />
-      </Box>
+    <Background background='#f7f7f7'>
+      <WhitepaperDownloadBanner />
     </Background>
   </HomeLayout>
 )

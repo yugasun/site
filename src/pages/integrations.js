@@ -29,10 +29,8 @@ const Integrations = ({ location }) => (
       </AppContainer>
     </Background>
 
-    <Background background='linear-gradient(to bottom, #f7f7f7 30%, #000 30%);'>
-      <Box pb={[0, 0, 0, 0, 0, 142]}>
-        <WhitepaperDownloadBanner />
-      </Box>
+    <Background background='#f7f7f7'>
+      <WhitepaperDownloadBanner />
     </Background>
   </HomeLayout>
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
+import HomeLayout from 'src/layouts/Newest'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
@@ -29,10 +29,8 @@ const Components = ({ location }) => (
       </AppContainer>
     </Background>
 
-    <Background background='linear-gradient(to bottom, #f7f7f7 30%, #000 30%);'>
-      <Box pb={[0, 0, 0, 0, 0, 142]}>
-        <WhitepaperDownloadBanner />
-      </Box>
+    <Background background='#f7f7f7'>
+      <WhitepaperDownloadBanner />
     </Background>
   </HomeLayout>
 )

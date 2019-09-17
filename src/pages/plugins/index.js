@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DefaultLayout from 'src/layouts/Home'
+import DefaultLayout from 'src/layouts/Newest'
 import Hero from 'src/components/pages/plugins/Hero'
 import Content from 'src/components/pages/plugins/Content'
 import { Helmet } from 'src/fragments'
@@ -17,10 +17,8 @@ const Plugins = ({ data: plugins }) => {
       <Helmet title='Plugins Explorer | Serverless Plugins Directory' />
       <Hero />
       <Content plugins={edges.reverse().map(({ node }) => node)} />
-      <Background background='linear-gradient(to bottom, #f7f7f7 30%, #000 30%);'>
-        <Box pb={[0, 0, 0, 0, 0, 142]}>
-          <WhitepaperDownloadBanner />
-        </Box>
+      <Background background='#f7f7f7'>
+        <WhitepaperDownloadBanner />
       </Background>
     </DefaultLayout>
   )
