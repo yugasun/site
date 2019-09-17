@@ -53,8 +53,7 @@ const Resource = () => (
       <SubMenuItem
         navProps={{
           to: dashboard,
-          completed: true,
-          backgroundOnHover: true,
+          crossDomain: true,
         }}
       >
         Dashboard

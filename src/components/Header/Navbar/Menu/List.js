@@ -19,7 +19,7 @@ import ProductMenuDescription from './Descriptions/Product'
 
 const ProductMenu = () => (
   <Box>
-    <MenuTitle name={'Product'} />
+    <MenuTitle name={'Product'} showDropdown />
     <ProductMenuDescription>
       <ProductDropdownList />
     </ProductMenuDescription>
@@ -28,7 +28,7 @@ const ProductMenu = () => (
 
 const DocsMenu = () => (
   <Box>
-    <NavLink to={docs} completed className='header-menu-item'>
+    <NavLink to={docs} completed className="header-menu-item">
       <MenuTitle name={'Docs'} />
     </NavLink>
   </Box>
@@ -36,7 +36,7 @@ const DocsMenu = () => (
 
 const PricingMenu = () => (
   <Box>
-    <NavLink to={pricing} completed className='header-menu-item'>
+    <NavLink to={pricing} completed className="header-menu-item">
       <MenuTitle name={'Pricing'} />
     </NavLink>
   </Box>
@@ -44,43 +44,43 @@ const PricingMenu = () => (
 
 const ServicesMenu = () => (
   <Box>
-    <MenuTitle name={'Services'} />
+    <MenuTitle name={'Services'} showDropdown />
     <ServicesMenuDescription>
       <ServicesDropdownList />
     </ServicesMenuDescription>
   </Box>
 )
 
-const MoreMenu = () => (
-  <Box>
-    <MenuTitle name={'More'} />
-    <MoreMenuDescription>
-      <MoreDropdownList />
-    </MoreMenuDescription>
-  </Box>
-)
-
 const LearnMenu = () => (
   <Box>
-    <MenuTitle name={'Learn'} />
+    <MenuTitle name={'Learn'} showDropdown />
     <LearnMenuDescription>
       <LearnDropdownList />
     </LearnMenuDescription>
   </Box>
 )
 
+const MoreMenu = () => (
+  <Box>
+    <MenuTitle name={'More'} showDropdown />
+    <MoreMenuDescription>
+      <MoreDropdownList />
+    </MoreMenuDescription>
+  </Box>
+)
+
 const EnterpriseMenu = () => (
   <Box>
-    <NavLink to={enterprise} completed className='header-menu-item'>
-      <MenuTitle name={'Contact Sales'} color='#fd5750' />
+    <NavLink to={enterprise} completed className="header-menu-item">
+      <MenuTitle name={'Contact Sales'} color="#fd5750" />
     </NavLink>
   </Box>
 )
 
 const LoginMenu = () => (
   <Box>
-    <NavLink to={dashboard} completed className='header-menu-item'>
-      <MenuTitle name={'Login'} color='#fd5750' />
+    <NavLink to={dashboard} completed className="header-menu-item">
+      <MenuTitle name={'Login'} color="#fd5750" />
     </NavLink>
   </Box>
 )

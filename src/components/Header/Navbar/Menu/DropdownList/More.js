@@ -8,7 +8,9 @@ import {
   slack,
   meetups,
   partners,
-  courses,
+  about,
+  jobs,
+  contact,
   blog,
 } from 'src/constants/newUrls'
 
@@ -22,6 +24,7 @@ const Resource = () => (
         letterSpacing='0'
         fontFamily='SoleilBk'
         color={['#fff', '#fff', '#fff', '#fff', '#000']}
+        mb={0}
       >
         Community
       </Heading>
@@ -99,24 +102,25 @@ const Resource = () => (
         letterSpacing='0'
         fontFamily='SoleilBk'
         color={['#fff', '#fff', '#fff', '#fff', '#000']}
+        mb={0}
       >
         Company
       </Heading>
       <ListItem.noStyleType>
         <SubMenuItem
           navProps={{
-            to: github,
+            to: about,
             backgroundOnHover: true,
             crossDomain: true,
           }}
         >
-          About Us
+          About us
         </SubMenuItem>
       </ListItem.noStyleType>
       <ListItem.noStyleType>
         <SubMenuItem
           navProps={{
-            to: forum,
+            to: jobs,
             crossDomain: true,
             backgroundOnHover: true,
           }}
@@ -127,9 +131,9 @@ const Resource = () => (
       <ListItem.noStyleType>
         <SubMenuItem
           navProps={{
-            to: slack,
+            to: contact,
             backgroundOnHover: true,
-            completed: true,
+            crossDomain: true,
           }}
         >
           Contact us

@@ -6,6 +6,7 @@ export default {
   components: '/components/',
   training: '/training/',
   pricing: '/pricing/',
+  about: '/company/overview/',
   support: '/support/',
   learn: '/learn/',
   useCases: '/learn/use-cases/',
@@ -35,4 +36,9 @@ export default {
   docPages: {
     monitoring: '/framework/docs/dashboard/insights/',
   },
+  monitoring: '/monitoring/',
+  alerts: '/alerts/',
+  policies: '/policies/',
+  debugging: '/debugging/',
+  integrations: '/integrations/',
 }

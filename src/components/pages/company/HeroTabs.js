@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
+import { Box } from 'serverless-design-system'
+import { HeroTabsNewest as HeroTabs } from 'src/fragments'
 import { company } from 'src/constants/urls'
 
 const data = [
@@ -22,10 +22,12 @@ const data = [
   {
     label: 'contact',
     value: 'contact',
-    navProps: { to: company.contact, crossDomain: true }
-  }
+    navProps: { to: company.contact, crossDomain: true },
+  },
 ]
 
 export default ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
+  <Box mb={[3, 3, 5]}>
+    <HeroTabs data={data} selected={selected} />
+  </Box>
 )
