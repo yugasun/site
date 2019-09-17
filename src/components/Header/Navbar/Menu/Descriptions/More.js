@@ -8,7 +8,7 @@ import {
   Position,
   withBeforeAfter,
 } from 'serverless-design-system'
-import NavbarContext from '.././../../NavbarContext'
+import NavbarContext from '../../../NavbarContext'
 import styled from 'styled-components'
 
 // TODO: remove hardcoded color

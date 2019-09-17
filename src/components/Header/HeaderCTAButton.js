@@ -1,11 +1,11 @@
 import React from 'react'
-import { SecondaryButton } from 'src/fragments/DesignSystem'
+import { Button } from 'src/fragments/DesignSystem'
 import { dashboard } from 'src/constants/newUrls'
 import { ExternalLink } from 'src/fragments'
 
 const HeaderCTAButton = () => (
   <ExternalLink to={dashboard} className='header-menu-item'>
-    <SecondaryButton>get started free</SecondaryButton>
+    <Button width={109}>sign-up free</Button>
   </ExternalLink>
 )
 
