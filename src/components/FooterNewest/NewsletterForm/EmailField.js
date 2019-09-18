@@ -9,10 +9,6 @@ const TextFieldWithNoOutline = styled(TextField)`
   background-position: left;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: 414px) {
-    text-align: center;
-  }
-
   &:focus {
     outline: none;
   }
@@ -37,7 +33,7 @@ export default class EmailField extends React.Component {
         border='none'
         letterSpacing='0'
         lineHeight={'26px'}
-        px={[1, 1, 1]}
+        px={[2]}
         py={15}
         m={0}
         width={[1, 1, 0.7]}

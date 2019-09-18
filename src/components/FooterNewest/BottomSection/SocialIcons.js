@@ -26,7 +26,7 @@ const SocialIconWrapper = styled(InlineBlock)`
   }
 `
 const SocialIcon = ({ to, icon }) => (
-  <SocialIconWrapper icon={icon} mr={[0, 0, 24]}>
+  <SocialIconWrapper icon={icon} mr={[24]}>
     <NavLink to={to} crossDomain>
       <InlineBlock />
     </NavLink>
@@ -34,7 +34,7 @@ const SocialIcon = ({ to, icon }) => (
 )
 
 const SocialIcons = props => (
-  <Flex justifyContent={['space-between', 'space-between', 'normal']}>
+  <Flex>
     <SocialIcon to={twitterHandle} icon={twitterGrayIcon} />
     <SocialIcon to={githubHandle} icon={githubGrayIcon} />
     <SocialIcon to={linkedinHandle} icon={linkedinGrayIcon} />

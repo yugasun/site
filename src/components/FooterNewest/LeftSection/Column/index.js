@@ -8,9 +8,11 @@ import { InternalLink } from 'src/fragments'
 const FooterListColumn = ({ header, headerLink, listItems, mobileOrder }) => (
   <Flex
     mr={[0, 0, 39]}
-    order={[mobileOrder, mobileOrder, 'initial']}
+    order={[mobileOrder, mobileOrder, mobileOrder, 'initial']}
     flexDirection='column'
-    width={[0.5, 0.5, 'auto']}
+    width={[0.3, 0.3, 'auto']}
+    mt={[32, 32, 32, 32, 0]}
+    mb={[0, 0, 0, 0, 32, 0]}
   >
     <P
       color={'black'}
