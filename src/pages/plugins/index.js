@@ -4,7 +4,7 @@ import DefaultLayout from 'src/layouts/Newest'
 import Hero from 'src/components/pages/plugins/Hero'
 import Content from 'src/components/pages/plugins/Content'
 import { Helmet } from 'src/fragments'
-import { Background, Box } from 'serverless-design-system'
+import { Background } from 'serverless-design-system'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Plugins = ({ data: plugins }) => {
@@ -13,7 +13,7 @@ const Plugins = ({ data: plugins }) => {
     .reverse()
 
   return (
-    <DefaultLayout transparentHeader={true} startWithWhiteHeader={true}>
+    <DefaultLayout transparentHeader={true}>
       <Helmet title='Plugins Explorer | Serverless Plugins Directory' />
       <Hero />
       <Content plugins={edges.reverse().map(({ node }) => node)} />
