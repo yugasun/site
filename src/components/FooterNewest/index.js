@@ -5,10 +5,7 @@ import Footer from './Footer'
 const HomeFooter = ({ prefooter, frameworkPage }) => (
   <React.Fragment>
     {prefooter ? prefooter() : null}
-    <Background
-      background='#f7f7f7'
-      style={prefooter ? { zIndex: '9999' } : { zIndex: '-1' }}
-    >
+    <Background background='#f7f7f7' style={{ zIndex: '9999' }}>
       <Footer />
     </Background>
   </React.Fragment>
