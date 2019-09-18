@@ -21,7 +21,7 @@ const Subscribe = () => (
         Join our monthly newsletter
       </P>
     </Box>
-    <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
+    <NewsLetterForm emailFieldProps={{ placeholder: 'e-mail address' }} />
   </Column>
 )
 

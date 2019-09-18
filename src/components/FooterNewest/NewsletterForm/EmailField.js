@@ -33,18 +33,18 @@ export default class EmailField extends React.Component {
     return (
       <TextFieldWithNoOutline
         color='#8c8c8c'
-        bg='rgba(255, 255, 2555, 0.2)'
+        bg='#f7f7f7'
         border='none'
-        letterSpacing='0.4px'
-        lineHeight={1.71}
+        letterSpacing='0'
+        lineHeight={'26px'}
         px={[1, 1, 1]}
         py={15}
         m={0}
         width={[1, 1, 0.7]}
         height={'37px'}
         borderRadius={0}
-        fontSize={1}
-        fontFamily='Serverless'
+        fontSize={'16px'}
+        fontFamily='SoleilBk'
         placeholderColor='#8c8c8c'
         required
         {...this.props}
