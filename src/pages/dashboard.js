@@ -12,9 +12,9 @@ import SecurelyManaged from 'src/components/pages/dashboard/SecurelyManaged'
 import ForTeams from 'src/components/pages/dashboard/ForTeams'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
-const Policies = ({ location }) => (
+const Dashboard = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Policies' location={location} />
+    <Helmet title='Serverless Dashboard' location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
@@ -31,4 +31,4 @@ const Policies = ({ location }) => (
   </HomeLayout>
 )
 
-export default Policies
+export default Dashboard
