@@ -13,15 +13,11 @@ import CustomIntegrations from 'src/components/pages/integrations/CustomIntegrat
 import Notifications from 'src/components/pages/integrations/Notifications'
 
 const Integrations = ({ location }) => (
-  <HomeLayout
-    prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
-    startWithWhiteHeader={true}
-  >
+  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet title='Serverless Integrations' location={location} />
+    <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
-        <Hero />
         <Notified />
         <CustomIntegrations />
         <Notifications />

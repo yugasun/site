@@ -6,7 +6,6 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const SinglePane = props => (
   <Flex
-    pt={92}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >

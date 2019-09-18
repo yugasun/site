@@ -13,15 +13,11 @@ import Agnostic from 'src/components/pages/components/Agnostic'
 import Fast from 'src/components/pages/components/Fast'
 
 const Components = ({ location }) => (
-  <HomeLayout
-    prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
-    startWithWhiteHeader={true}
-  >
+  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet title='Serverless Components' location={location} />
+    <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
-        <Hero />
         <Simplicity />
         <Reusability />
         <Agnostic />

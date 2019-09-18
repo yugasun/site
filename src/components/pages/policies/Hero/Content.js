@@ -13,7 +13,11 @@ const HeroContent = props => (
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
   >
     <Flex mb={22} justifyContent={['left', 'left', 'center', 'center', 'left']}>
-      <Image src={slsHeroLogo} width={280} height={45} />
+      <Image
+        src={slsHeroLogo}
+        width={[197, 197, 219, 219, 280]}
+        height={[32, 32, 35, 35, 45]}
+      />
     </Flex>
     <Heading.h0
       align={['left', 'left', 'center', 'center', 'left']}

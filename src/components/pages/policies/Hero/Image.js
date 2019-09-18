@@ -4,7 +4,7 @@ import policiesHeroImage from 'src/assets/images/pages/policies/policies-hero.pn
 import { ImageWithShadow as Image } from 'src/fragments'
 
 const HeroImage = props => (
-  <Box mt={[0, 0, 0, 0, 105]}>
+  <Box mb={[0, 0, 0, 0, 0, -102]}>
     <Image
       src={policiesHeroImage}
       width={['100%', '100%', 488, 488, 488, 592]}

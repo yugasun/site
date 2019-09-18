@@ -12,15 +12,11 @@ import NoMoreCloudWatch from 'src/components/pages/debugging/NoMoreCloudWatch'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Debugging = ({ location }) => (
-  <HomeLayout
-    prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
-    startWithWhiteHeader={true}
-  >
+  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet title='Serverless Debugging' location={location} />
+    <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
-        <Hero />
         <InvocationsExplorer />
         <StraightToCode />
         <NoMoreCloudWatch />

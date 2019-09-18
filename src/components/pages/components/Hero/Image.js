@@ -3,7 +3,7 @@ import { Image, Flex } from 'serverless-design-system'
 import componentsHeroImage from 'src/assets/images/pages/components/components-hero.png'
 
 const HeroImage = props => (
-  <Flex mt={[0, 0, 0, 0, 92]} mx={['auto']} justifyContent={'center'}>
+  <Flex mt={[0, 0, 0, 0, 72]} mx={['auto']} justifyContent={'center'}>
     <Image
       src={componentsHeroImage}
       width={['70%', '70%', 280, 280, 300, 353]}

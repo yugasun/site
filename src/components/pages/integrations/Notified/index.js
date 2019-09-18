@@ -4,9 +4,8 @@ import slackNotificationsImage from 'src/assets/images/pages/integrations/slack-
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 
-const DevelopDeploy = props => (
+const IntegrationsNotified = () => (
   <Flex
-    pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >
@@ -21,4 +20,4 @@ const DevelopDeploy = props => (
   </Flex>
 )
 
-export default DevelopDeploy
+export default IntegrationsNotified
