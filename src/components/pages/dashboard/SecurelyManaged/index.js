@@ -3,6 +3,7 @@ import { Flex, Image, Box } from 'serverless-design-system'
 import securelyManage1Image from 'src/assets/images/pages/dashboard/securely-manage-1.png'
 import securelyManage2Image from 'src/assets/images/pages/dashboard/securely-manage-2.png'
 import Content from './Content'
+import { ImageWithShadow } from 'src/fragments'
 
 const CustomPolicies = props => (
   <Flex
@@ -18,7 +19,7 @@ const CustomPolicies = props => (
         height={[226, 226, 226, 336, 336, 336]}
       />
       <Box ml={[75, 75, 100, 131]} mt={[-52, -52, -52, -72]}>
-        <Image
+        <ImageWithShadow
           src={securelyManage2Image}
           width={['100%', '100%', 326, 426, 435, 435]}
           height={[300, 300, 326, 426, 426, 426]}
