@@ -3,13 +3,13 @@ import { withTheme } from 'styled-components'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 
-const HeroWrapper = ({ children, theme, ...otherProps }) => (
+const HeroWrapper = ({ children, customPb, theme, ...otherProps }) => (
   <React.Fragment>
     <Background {...otherProps}>
       <Box
         width={1}
         pt={[106, 106, 112, 112, 130, 126]}
-        pb={[62, 62, 62, 62, 92]}
+        pb={customPb ? customPb : [62, 62, 62, 62, 92]}
       >
         <AppContainer>
           <Box color='white'>{children}</Box>

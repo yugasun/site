@@ -4,7 +4,7 @@ import dashboardHeroImage from 'src/assets/images/pages/dashboard/dashboard-hero
 import { ImageWithShadow as Image } from 'src/fragments'
 
 const HeroImage = props => (
-  <Box mt={[0, 0, 0, 0, 58]}>
+  <Box mb={[0, 0, 0, 0, -92, -112]}>
     <Image
       src={dashboardHeroImage}
       width={['100%', '100%', 488, 488, 488, 543]}

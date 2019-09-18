@@ -11,15 +11,15 @@ const AlertsHero = props => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
+    customPb={[62, 62, 62, 62, 92, 139]}
   >
     <Flex
       justifyContent='space-between'
       flexDirection={['column', 'column', 'column', 'column', 'row']}
+      alignItems={'center'}
     >
       <Content />
-      <Flex mt={[0, 0, 0, 0, 54]} justifyContent={['center']}>
-        <Image />
-      </Flex>
+      <Image />
     </Flex>
   </HeroWrapper>
 )

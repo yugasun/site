@@ -15,6 +15,7 @@ const IntegrationsHero = props => (
     <Flex
       justifyContent='space-between'
       flexDirection={['column', 'column', 'column', 'column', 'row']}
+      alignItems={'center'}
     >
       <Content />
       <Image />

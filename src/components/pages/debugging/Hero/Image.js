@@ -4,7 +4,7 @@ import debuggingHeroImage from 'src/assets/images/pages/debugging/debugging-hero
 import { ImageWithShadow as Image } from 'src/fragments'
 
 const HeroImage = props => (
-  <Box mt={[0, 0, 0, 0, 58]}>
+  <Box mt={[0, 0, 0, 0, '-20px', 0]}>
     <Image
       src={debuggingHeroImage}
       width={['100%', '100%', 592, 592, 512, 592]}

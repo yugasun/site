@@ -11,10 +11,12 @@ const DashboardHero = props => (
       'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
       `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
     ]}
+    customPb={[62, 62, 62, 62, 112, 134]}
   >
     <Flex
       justifyContent='space-between'
       flexDirection={['column', 'column', 'column', 'column', 'row']}
+      alignItems={'center'}
     >
       <Content />
       <Image />
