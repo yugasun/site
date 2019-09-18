@@ -5,7 +5,18 @@ import { AppContainer } from 'src/components'
 
 const HeroWrapper = ({ children, customPb, theme, ...otherProps }) => (
   <React.Fragment>
-    <Background {...otherProps}>
+    <Background
+      {...otherProps}
+      background={
+        otherProps.background
+          ? otherProps.background
+          : [
+              'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+              'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+              `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
+            ]
+      }
+    >
       <Box
         width={1}
         pt={[106, 106, 112, 112, 130, 126]}
