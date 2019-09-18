@@ -5,14 +5,7 @@ import Image from './Image'
 import { HeroWrapperNewest as HeroWrapper } from 'src/fragments'
 
 const AlertsHero = props => (
-  <HeroWrapper
-    background={[
-      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-      'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-      `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
-    ]}
-    customPb={[62, 62, 62, 62, 92, 139]}
-  >
+  <HeroWrapper customPb={[62, 62, 62, 62, 92, 139]}>
     <Flex
       justifyContent='space-between'
       flexDirection={['column', 'column', 'column', 'column', 'row']}
