@@ -4,7 +4,7 @@ import { statusOptions } from './Data'
 import { Box, P, Row, InlineBlock } from 'serverless-design-system'
 
 const SearchFilterOptions = ({ refreshFilters }) => (
-  <Box>
+  <Box mt={[0, 0, 0, 0, -70]}>
     <InlineBlock>
       <P m={0}>status</P>
       <Row>
