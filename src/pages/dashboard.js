@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'
-import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/dashboard/Hero'
@@ -13,7 +11,7 @@ import ForTeams from 'src/components/pages/dashboard/ForTeams'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Dashboard = ({ location }) => (
-  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
+  <HomeLayout transparentHeader={true}>
     <Helmet title='Serverless Dashboard' location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>

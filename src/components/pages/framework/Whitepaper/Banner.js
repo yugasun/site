@@ -73,8 +73,19 @@ const FlexWithZIndex = styled(Flex)`
 
 const FrameworkWhitepaperBanner = props => (
   <React.Fragment>
-    <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3}>
-      <Background background='#fd5750' style={{ display: 'flex' }}>
+    <Container
+      maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]}
+      pb={3}
+      style={{
+        boxShadow: '0 20px 50px 0 rgba(0, 0, 0, 0.15)',
+      }}
+    >
+      <Background
+        background='#fd5750'
+        style={{
+          display: 'flex',
+        }}
+      >
         <LeftSpinningWheel
           backgroundImage={`url(${bannerWheelLeft})`}
           width='315px'
