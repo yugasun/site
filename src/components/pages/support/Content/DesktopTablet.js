@@ -30,12 +30,8 @@ const repIcon = {
 }
 
 const SupportPlansDesktopView = props => (
-  <Box display={['none', 'none', 'block']}>
-    <Flex
-      mt={[62, 62, 62, 62, 92]}
-      justifyContent='space-between'
-      width={[1, 1, 1, 1, 1, 0.9]}
-    >
+  <Box display={['none', 'none', 'block']} width={[1, 1, 1, 1, 0.4]}>
+    <Flex justifyContent='space-between' width={[1, 1, 1, 1, 1, 1]}>
       {Data.map((column, index) => (
         <Flex
           flexDirection='column'
@@ -57,7 +53,7 @@ const SupportPlansDesktopView = props => (
       ))}
     </Flex>
     <Box
-      width={[0, 0, 1, 1, 1, 0.91]}
+      width={[0, 0, 1, 1, 1, 1]}
       mt={[-118]}
       style={{ borderTop: '1px solid #9b9b9b' }}
       pb={[0, 0, 115, 115, 0]}

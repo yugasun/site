@@ -4,6 +4,7 @@ import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'
 import Brands from 'src/components/pages/support/Brands'
 import Content from 'src/components/pages/support/Content'
+import Hero from 'src/components/pages/support/Hero'
 import Form from 'src/components/pages/support/Form'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background, Box, Flex } from 'serverless-design-system'
@@ -11,18 +12,15 @@ import { AppContainer } from 'src/components'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Support = ({ location }) => (
-  <HomeLayout
-    prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
-    startWithWhiteHeader={true}
-  >
+  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet title='Serverless Support' location={location} />
+    <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <Flex
-          pt={[138, 138, 138, 138, 156]}
           justifyContent='space-between'
           flexDirection={['column', 'column', 'column', 'column', 'row']}
+          width={1}
         >
           <Content />
           <Form customPb={[74, 74, 74, 74, 115]} />

@@ -42,12 +42,9 @@ const SupportPlansMobileView = props => (
         display={['block', 'block', 'none']}
         width={[0.9]}
         key={plansIndex + 'root'}
+        mt={plansIndex !== 0 ? [52, 52, 0] : [0]}
       >
-        <Flex
-          mt={[62, 62, 62, 62, 92]}
-          justifyContent='space-between'
-          width={[1, 1, 1, 1, 1, 0.9]}
-        >
+        <Flex justifyContent='space-between' width={[1, 1, 1, 1, 1, 0.9]}>
           {dataArr.map((column, index) => (
             <Flex
               flexDirection='column'
