@@ -18,7 +18,11 @@ const SmallGrayText = ({ children }) => (
 )
 
 const BottomSection = () => (
-  <Flex justifyContent='space-between' width={1}>
+  <Flex
+    justifyContent='space-between'
+    width={1}
+    flexDirection={['column', 'column', 'column', 'column', 'row']}
+  >
     <Image src={logoBlack} width={153} height={26} />
     <Flex>
       <ExternalLink to={termsOfService}>
