@@ -6,7 +6,6 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const PoliciesIndustryStandard = props => (
   <Flex
-    pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
     flexDirection={['column', 'column', 'row']}
   >

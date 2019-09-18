@@ -12,7 +12,7 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
         pb={[62, 62, 62, 62, 92]}
       >
         <AppContainer>
-          <Box>{children}</Box>
+          <Box color='white'>{children}</Box>
         </AppContainer>
       </Box>
     </Background>
