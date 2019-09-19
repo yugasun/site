@@ -37,7 +37,7 @@ const TerminalTextContent = styled(Text.p)`
 const Terminal = () => {
   return (
     <Flex
-      flexDirection={['column', 'column', 'column']}
+      flexDirection={['column']}
       mb={[1, 1, 4]}
       alignItems={['auto', 'auto', 'center', 'center', 'auto']}
     >
