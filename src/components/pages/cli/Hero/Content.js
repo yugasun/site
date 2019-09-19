@@ -16,7 +16,7 @@ const HeroContent = props => (
       <FrameworkLogo />
     </Flex>
     <Heading.h0 align={['left', 'left', 'center', 'center', 'left']}>
-      Serverless CLI
+      Serverless <br /> CLI
     </Heading.h0>
     <Text
       fontSize='24px'
@@ -33,7 +33,7 @@ const HeroContent = props => (
       justifyContent={['left', 'left', 'center', 'center', 'flex-start']}
       mt={42}
     >
-      <ExternalLink to={dashboard}>
+      <ExternalLink to={'/framework/docs/getting-started/'}>
         <Button>download</Button>
       </ExternalLink>
     </Flex>

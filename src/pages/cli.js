@@ -10,7 +10,7 @@ import Build from 'src/components/pages/cli/Build'
 import Deploy from 'src/components/pages/cli/Deploy'
 import Run from 'src/components/pages/cli/Run'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
-import CommunityNumbers from 'src/components/pages/home/Community/CommunityNumbers'
+import CommunityNumbers from 'src/components/pages/cli/Community/index.js'
 
 const CLI = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>

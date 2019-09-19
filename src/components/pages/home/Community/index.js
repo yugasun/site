@@ -3,6 +3,8 @@ import { Box, Row } from 'serverless-design-system'
 import Tweets from './Tweets'
 import CommunityNumbers from './CommunityNumbers'
 
+//TODO: delete this because another version is used elsewhere and we're using another alternative in the homepage
+
 const HomeCommunity = () => (
   <React.Fragment>
     <Box display={['block', 'block', 'none', 'none', 'block']}>
