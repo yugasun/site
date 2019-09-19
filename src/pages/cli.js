@@ -5,21 +5,23 @@ import HomeLayout from 'src/layouts/Newest'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import Hero from 'src/components/pages/debugging/Hero'
-import InvocationsExplorer from 'src/components/pages/debugging/InvocationsExplorer'
-import StraightToCode from 'src/components/pages/debugging/StraightToCode'
-import NoMoreCloudWatch from 'src/components/pages/debugging/NoMoreCloudWatch'
+import Hero from 'src/components/pages/cli/Hero'
+import Build from 'src/components/pages/cli/Build'
+import Deploy from 'src/components/pages/cli/Deploy'
+import Run from 'src/components/pages/cli/Run'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
+import CommunityNumbers from 'src/components/pages/home/Community/CommunityNumbers'
 
-const Debugging = ({ location }) => (
+const CLI = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Debugging' location={location} />
+    <Helmet title='Serverless CLI' location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
-        <InvocationsExplorer />
-        <StraightToCode />
-        <NoMoreCloudWatch />
+        <CommunityNumbers />
+        <Build />
+        <Deploy />
+        <Run />
       </AppContainer>
     </Background>
 
@@ -29,4 +31,4 @@ const Debugging = ({ location }) => (
   </HomeLayout>
 )
 
-export default Debugging
+export default CLI
