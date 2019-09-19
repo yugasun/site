@@ -7,7 +7,7 @@ const CustomPoliciesContent = props => (
     <Heading.h3 mb={22}>Go straight to the code</Heading.h3>
     <P0 mb={[42, 42, 0]}>
       Along with the Invocations explorer, use our most popular tool for
-      debugging code: The Stack Trace. It takes you straight to the line of code
+      debugging code: the stack trace. It takes you straight to the line of code
       which caused the error.
     </P0>
   </Flex>

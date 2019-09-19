@@ -12,7 +12,7 @@ const CustomPoliciesContent = props => (
       <br />• Unusual function durations <br />• Timeouts
       <br />• Out of memory occurrences
       <br />• Escalating invocations: at 3 PM, that might be a positive spike in
-      use, but at 3 AM it might mean an attack.
+      use, but at 3 AM, it might mean an attack.
       <br />• new error types, and escalating error rates
     </P0>
   </Flex>

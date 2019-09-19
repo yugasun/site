@@ -7,7 +7,7 @@ const CustomPoliciesContent = props => (
     <Heading.h3 mb={22}>No more pouring through Cloud Watch logs</Heading.h3>
     <P0 mb={[42, 42, 0]}>
       Invocation details also include the relevant debugging sections from your
-      Cloud Watch logs- so you see only the log data you need.
+      Cloud Watch logs, so you see only the log data you need.
       <br /> <br />
       Additionally, every call to AWS services like S3, DynamoDB, SES, and more,
       is automatically instrumented and visualized, so you can see when the call

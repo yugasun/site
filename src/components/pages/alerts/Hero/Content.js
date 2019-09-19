@@ -27,7 +27,7 @@ const HeroContent = props => (
       mt={[32]}
       align={['left', 'left', 'center', 'center', 'left']}
     >
-      Maintain Optimum Performance with Serverless Alerts
+      Maintain Performance with Serverless Alerts
     </Text>
     <P0
       mt={[22, 22, 32]}
@@ -36,9 +36,8 @@ const HeroContent = props => (
       color='white'
     >
       Serverless Framework Alerts help you catch errors and performance issues
-      as they occur, letting you resolve issues quickly. You can even set your
-      favorite communication channels to receive a custom set of alert
-      notifications.
+      as they occur, letting you resolve issues quickly. Set your favorite
+      communication channels to receive customized notifications.
     </P0>
     <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
       <ExternalLink to={dashboard}>
