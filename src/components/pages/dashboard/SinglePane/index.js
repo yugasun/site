@@ -1,7 +1,8 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system'
+import { Flex } from 'serverless-design-system'
 import singlePaneImage from 'src/assets/images/pages/dashboard/single-pane.png'
 import Content from './Content'
+import { ImageWithShadow as Image } from 'src/fragments'
 
 const SinglePane = props => (
   <Flex
