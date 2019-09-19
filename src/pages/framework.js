@@ -37,9 +37,7 @@ const FrameWorks = ({ location }) => (
           <Features />
           <Pricing />
         </AppContainer>
-        <Background background='linear-gradient(to bottom, #f7f7f7 60%, #000 40%);'>
-          <WhitepaperDownload />
-        </Background>
+        <WhitepaperDownload />
       </Background>
     </Box>
   </DefaultLayout>
