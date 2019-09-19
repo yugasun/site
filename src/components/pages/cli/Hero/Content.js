@@ -1,11 +1,10 @@
 import React from 'react'
 import { Heading, Button } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
-import { ExternalLink } from 'src/fragments'
-import { dashboard } from 'src/constants/newUrls.js'
+import { InternalLink } from 'src/fragments'
 import FrameworkLogo from 'src/components/pages/features-common/FrameworkLogo'
 
-const HeroContent = props => (
+const HeroContent = () => (
   <Flex
     flexDirection='column'
     width={[1, 1, 0.6, 0.6, 0.47]}
@@ -33,9 +32,9 @@ const HeroContent = props => (
       justifyContent={['left', 'left', 'center', 'center', 'flex-start']}
       mt={42}
     >
-      <ExternalLink to={'/framework/docs/getting-started/'}>
+      <InternalLink to={'/framework/docs/getting-started/'}>
         <Button>download</Button>
-      </ExternalLink>
+      </InternalLink>
     </Flex>
   </Flex>
 )
