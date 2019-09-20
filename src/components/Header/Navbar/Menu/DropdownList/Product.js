@@ -54,6 +54,7 @@ const Resource = () => (
         navProps={{
           to: dashboardPage,
           completed: true,
+          backgroundOnHover: true,
         }}
       >
         Dashboard
