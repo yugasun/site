@@ -3,10 +3,9 @@ import { Heading, P0 } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { dashboard } from 'src/constants/newUrls.js'
-import FrameworkLogo from 'src/components/pages/features-common/FrameworkLogo'
-import HeroButton from 'src/components/pages/features-common/HeroButton'
+import { HeroButton, HeroFrameworkLogo } from 'src/components'
 
-const HeroContent = props => (
+const HeroContent = () => (
   <Flex
     flexDirection='column'
     width={[1, 1, 0.55, 0.5, 0.45]}
@@ -15,7 +14,7 @@ const HeroContent = props => (
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
   >
     <Flex mb={22} justifyContent={['left', 'left', 'center', 'center', 'left']}>
-      <FrameworkLogo />
+      <HeroFrameworkLogo />
     </Flex>
     <Heading.h0 align={['left', 'left', 'center', 'center', 'left']}>
       Serverless Alerts

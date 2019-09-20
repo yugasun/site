@@ -2,8 +2,7 @@ import React from 'react'
 import { Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
-import FrameworkLogo from 'src/components/pages/features-common/FrameworkLogo'
-import HeroButton from 'src/components/pages/features-common/HeroButton'
+import { HeroButton, HeroFrameworkLogo } from 'src/components'
 
 const HeroContent = () => (
   <Flex
@@ -13,7 +12,7 @@ const HeroContent = () => (
     mx={['auto', 'auto', 'auto', 'auto', 'inherit']}
   >
     <Flex mb={22} justifyContent={['left', 'left', 'center', 'center', 'left']}>
-      <FrameworkLogo />
+      <HeroFrameworkLogo />
     </Flex>
     <Heading.h0 align={['left', 'left', 'center', 'center', 'left']}>
       Serverless <br /> CLI
