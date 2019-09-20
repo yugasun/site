@@ -49,7 +49,7 @@ const Title = ({ name, color, showDropdown }) => {
     <NavbarContext.Consumer>
       {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
         <TitleWrapperWithLeadingSlash
-          px={[1, 1, '8px', '8px', '1.5rem', '15px']}
+          px={[1, 1, '8px', '8px', '1rem', '15px']}
           py={[2, 2, '16.5px']}
           transition={[
             'none',
