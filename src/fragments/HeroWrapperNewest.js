@@ -13,7 +13,7 @@ const HeroWrapper = ({ children, customPb, theme, ...otherProps }) => (
           : [
               'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
               'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-              `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
+              `linear-gradient(132deg,rgb(0,0,0) 62%,#70221f)`,
             ]
       }
     >
