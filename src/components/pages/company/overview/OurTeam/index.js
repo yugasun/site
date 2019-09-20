@@ -8,7 +8,7 @@ import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
 import bill from 'src/assets/images/team/bill.png'
 import philip from 'src/assets/images/team/philip.png'
-import eslam from 'src/assets/images/team/eslam.png'
+import eslam from 'src/assets/images/team/eslam.jpg'
 import alex from 'src/assets/images/team/alex.png'
 import jeremy from 'src/assets/images/team/jeremy.png'
 import steve from 'src/assets/images/team/steve.png'
@@ -49,7 +49,7 @@ const leaders = [
 
 const teamMembers = [
   { image: philip, name: 'Philipp Müns', position: 'Framework Core Developer' },
-  { image: eslam, name: 'Eslam Hefnawy', position: 'Framework Core Developer' },
+  { image: eslam, name: 'Eslam Hefnawy', position: 'Senior Software Engineer' },
   { image: alex, name: 'Alex DeBrie', position: 'Engineering Manager' },
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
   {
@@ -87,11 +87,11 @@ const teamMembers = [
 
 const OurTeam = () => (
   <AppContainer>
-    <Flex flexDirection='column'>
-      <Flex justifyContent='center' mt={[3, 3, 5, 6]} mb={[0, 0, 1, 2]}>
+    <Flex flexDirection="column">
+      <Flex justifyContent="center" mt={[3, 3, 5, 6]} mb={[0, 0, 1, 2]}>
         <Heading.h2>Our Team</Heading.h2>
       </Flex>
-      <Flex flexWrap='wrap' justifyContent='center'>
+      <Flex flexWrap="wrap" justifyContent="center">
         {[...leaders, ...teamMembers].map(({ image, name, position }) => (
           <TeamMemberImageCard
             key={name}
