@@ -94,9 +94,9 @@ const CTAMenu = () => (
 export default [
   ProductMenu,
   DocsMenu,
-  ServicesMenu,
   PricingMenu,
   LearnMenu,
+  ServicesMenu,
   MoreMenu,
   EnterpriseMenu,
   LoginMenu,
