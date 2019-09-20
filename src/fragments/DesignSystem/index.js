@@ -5,7 +5,6 @@ import { default as P0 } from './Text/P0'
 import { default as PS } from './Text/PS'
 import { default as PL } from './Text/PL'
 import { default as Button } from './Button'
-import { default as HeroButton } from './HeroButton'
 import { default as PageContainer } from './PageContainer'
 import { default as MobileCenteredBox } from './Box/MobileCentered'
 import { default as Box } from './Box'
@@ -18,7 +17,6 @@ export default {
   PS,
   PL,
   Button,
-  HeroButton,
   PageContainer,
   MobileCenteredBox,
   Box,
