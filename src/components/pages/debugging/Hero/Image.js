@@ -8,7 +8,7 @@ const HeroImage = props => (
     <Image
       src={debuggingHeroImage}
       width={['100%', '100%', 592, 592, 512, 592]}
-      height={[280, 280, 347, 347, 347, 347]}
+      height={[250, 250, 347, 347, 347, 347]}
     />
   </Box>
 )

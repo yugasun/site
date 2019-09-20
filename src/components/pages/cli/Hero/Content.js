@@ -1,8 +1,9 @@
 import React from 'react'
-import { Heading, Button } from 'src/fragments/DesignSystem'
+import { Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 import FrameworkLogo from 'src/components/pages/features-common/FrameworkLogo'
+import HeroButton from 'src/components/pages/features-common/HeroButton'
 
 const HeroContent = () => (
   <Flex
@@ -33,7 +34,7 @@ const HeroContent = () => (
       mt={42}
     >
       <InternalLink to={'/framework/docs/getting-started/'}>
-        <Button>download</Button>
+        <HeroButton>download</HeroButton>
       </InternalLink>
     </Flex>
   </Flex>

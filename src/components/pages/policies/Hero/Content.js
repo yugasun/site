@@ -1,9 +1,10 @@
 import React from 'react'
-import { P0, Heading, Button } from 'src/fragments/DesignSystem'
+import { P0, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { dashboard } from 'src/constants/newUrls.js'
 import FrameworkLogo from 'src/components/pages/features-common/FrameworkLogo'
+import HeroButton from 'src/components/pages/features-common/HeroButton'
 
 const HeroContent = props => (
   <Flex
@@ -39,7 +40,7 @@ const HeroContent = props => (
     </P0>
     <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
       <ExternalLink to={dashboard}>
-        <Button>Sign-up for free</Button>
+        <HeroButton>Sign-up for free</HeroButton>
       </ExternalLink>
     </Flex>
   </Flex>
