@@ -12,7 +12,7 @@ import {
 } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
-import { company } from 'src/constants/urls'
+import { contact } from 'src/constants/newUrls'
 import workshops from 'src/constants/workshops.json'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'
 import SeattleImage from 'src/assets/images/seattle.png'
@@ -87,9 +87,7 @@ const WorkshopListItem = ({
           <TertiaryButton
             width={1}
             onClick={() => {
-              isContactUs
-                ? window.open(company.contact)
-                : push(`/workshops/${keyName}`)
+              isContactUs ? window.open(contact) : push(`/workshops/${keyName}`)
             }}
           >
             {cta}

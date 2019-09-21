@@ -23,6 +23,7 @@ export default {
   forum: 'https://forum.serverless.com/',
   slack: '/slack',
   meetups: '/resources/events/',
+  acceleration: '/acceleration/',
   partners: '/partners/',
   framework: '/framework/',
   team: '/company/overview/',
@@ -32,6 +33,8 @@ export default {
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
   providers: '/framework/docs/providers/',
+  workshops: '/resources/workshops/',
+  champions: '/company/champions/',
   championsDeck:
     'https://docs.google.com/presentation/d/1LaHodp_UKJd5j8hjNkGUhgHpNaQk-30boF_do4CYOxw/edit?usp=sharing',
   docPages: {
@@ -44,4 +47,9 @@ export default {
   integrations: '/integrations/',
   termsOfService: 'https://dashboard.serverless.com/legal/terms',
   privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',
+  facebookHandle: 'https://www.facebook.com/serverless/',
+  instagramHandle: 'https://www.instagram.com/serverlessinc/',
+  githubHandle: 'https://github.com/serverless/',
+  linkedinHandle: 'https://www.linkedin.com/company/serverless/',
+  twitterHandle: 'https://twitter.com/goserverless/',
 }

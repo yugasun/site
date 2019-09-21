@@ -1,28 +1,28 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
 import { HeroTabsNewest as HeroTabs } from 'src/fragments'
-import { company } from 'src/constants/urls'
+import { team, jobs, champions, contact } from 'src/constants/newUrls'
 
 const data = [
   {
     label: 'overview',
     value: 'overview',
-    navProps: { to: company.team },
+    navProps: { to: team },
   },
   {
     label: 'jobs',
     value: 'jobs',
-    navProps: { to: company.jobs },
+    navProps: { to: jobs },
   },
   {
     label: 'champions',
     value: 'champions',
-    navProps: { to: company.champions },
+    navProps: { to: champions },
   },
   {
     label: 'contact',
     value: 'contact',
-    navProps: { to: company.contact, crossDomain: true },
+    navProps: { to: contact, crossDomain: true },
   },
 ]
 

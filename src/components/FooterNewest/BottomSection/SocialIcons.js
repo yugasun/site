@@ -1,11 +1,12 @@
 import React from 'react'
-import { twitterHandle, githubHandle, linkedinHandle } from 'src/constants/urls'
+import {
+  twitterHandle,
+  githubHandle,
+  linkedinHandle,
+} from 'src/constants/newUrls'
 import twitterGrayIcon from 'src/assets/images/twitter.svg'
 import githubGrayIcon from 'src/assets/images/github-gray.svg'
 import linkedinGrayIcon from 'src/assets/images/linkedin-gray.svg'
-import twitterWhiteIcon from 'src/assets/images/twitter-white.svg'
-import githubWhiteIcon from 'src/assets/images/github-white.svg'
-import linkedinWhiteIcon from 'src/assets/images/linkedin-white.svg'
 //TODO: removed unused image files from source
 import { NavLink } from 'src/components'
 import styled from 'styled-components'

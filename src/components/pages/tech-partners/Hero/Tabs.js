@@ -1,45 +1,49 @@
 import React from 'react'
 
 import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { resources, community } from 'src/constants/urls'
+import {
+  partners,
+  forum,
+  meetups,
+  slack,
+  workshops,
+} from 'src/constants/newUrls'
 
 const data = [
   {
     label: 'partners',
     value: 'partners',
-    navProps: { to: community.partners }
+    navProps: { to: partners },
   },
   {
     label: 'forum',
     value: 'forum',
-    navProps: { to: resources.forum, crossDomain: true }
+    navProps: { to: forum, crossDomain: true },
   },
   {
     label: 'events',
     value: 'events',
-    navProps: { to: community.events },
+    navProps: { to: meetups },
   },
   {
     label: 'slack',
     value: 'slack',
-    navProps: { to: community.slack, crossDomain: true },
+    navProps: { to: slack, crossDomain: true },
   },
   {
     label: 'workshops',
     value: 'workshops',
-    navProps: { to: community.workshops },
-  }
+    navProps: { to: workshops },
+  },
 ]
 
 const tabWidth = {
   selected: '126px',
-  notSelected: '96px'
+  notSelected: '96px',
 }
 
-const AllTabs = ({selected}) => {
-  return (
-    <HeroTabs data={data} selected={selected} tabWidth={tabWidth} />
-  )
+const AllTabs = ({ selected }) => {
+  return <HeroTabs data={data} selected={selected} tabWidth={tabWidth} />
 }
 
 export default AllTabs
