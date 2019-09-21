@@ -24,24 +24,15 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
   `
     cursor: pointer;
     position: relative;
-
-    &:hover {
-      opacity: 0.6;
-    }
   `
 )
 
 const TitleWithDropdown = styled(Text.span)`
-  ${({ showDropdown }) =>
-    showDropdown &&
-    `
-    @media only screen and (min-width : 1025px) {
-      &:before {
-        content: url(${dropdownMenuIcon});
-        margin-right: 9px;
-      }
-    }
-  `};
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+  }
 `
 
 const Title = ({ name, color, showDropdown }) => {
@@ -50,7 +41,8 @@ const Title = ({ name, color, showDropdown }) => {
       {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
         <TitleWrapperWithLeadingSlash
           px={[1, 1, '8px', '8px', '1rem', '15px']}
-          py={[2, 2, '16.5px']}
+          pt={[2, 2, '16.5px']}
+          pb={[2, 2, '16.5px']}
           transition={[
             'none',
             'none',
@@ -65,12 +57,22 @@ const Title = ({ name, color, showDropdown }) => {
         >
           <TitleWithDropdown
             fontFamily='SoleilSb'
-            fontSize={14}
+            fontSize={'15px'}
             color={
-              color ? color : isWhiteHeader && isDesktopView ? 'black' : 'white'
+              color
+                ? color
+                : isWhiteHeader && isDesktopView
+                  ? 'black'
+                  : 'rgba(255, 255, 255, .5)'
             }
-            letterSpacing={0.8}
-            showDropdown={showDropdown}
+            style={
+              name == 'Register'
+                ? {
+                    borderLeft: '1px solid rgba(255,255,255,0.4)',
+                    paddingLeft: '24px',
+                  }
+                : {}
+            }
           >
             {name}
           </TitleWithDropdown>
