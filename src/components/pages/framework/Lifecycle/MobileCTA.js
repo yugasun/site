@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
-import { dashboard } from 'src/constants/newUrls'
+import { dashboard } from 'src/constants/urls'
 import { Button } from 'src/fragments/DesignSystem'
 
 const MobileCTA = props => (

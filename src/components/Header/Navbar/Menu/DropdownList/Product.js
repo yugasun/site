@@ -12,7 +12,7 @@ import {
   policies,
   debugging,
   integrations,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>

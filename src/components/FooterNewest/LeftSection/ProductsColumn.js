@@ -11,7 +11,7 @@ import {
   cli,
   debugging,
   integrations,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const ProductsColumn = ({ mobileOrder }) => (
   <FooterListColumn

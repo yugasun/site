@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { InternalLinkText } from 'src/fragments'
-import { plugins, cli, components } from 'src/constants/newUrls'
+import { plugins, cli, components } from 'src/constants/urls'
 
 const ExtendServerless = props => (
   <Flex

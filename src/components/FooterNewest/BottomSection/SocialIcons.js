@@ -3,7 +3,7 @@ import {
   twitterHandle,
   githubHandle,
   linkedinHandle,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 import twitterGrayIcon from 'src/assets/images/twitter.svg'
 import githubGrayIcon from 'src/assets/images/github-gray.svg'
 import linkedinGrayIcon from 'src/assets/images/linkedin-gray.svg'

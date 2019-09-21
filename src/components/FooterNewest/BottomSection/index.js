@@ -3,7 +3,7 @@ import { Flex, Image, Text, Box } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import SocialIcons from './SocialIcons'
 import logoBlack from 'src/assets/images/logo-black.svg'
-import { contact } from 'src/constants/newUrls'
+import { contact } from 'src/constants/urls'
 import styled from 'styled-components'
 
 const SpaceBetweenMobileBox = styled(Box)`

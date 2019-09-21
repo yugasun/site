@@ -2,7 +2,7 @@ import React from 'react'
 import { P0, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
-import { dashboard } from 'src/constants/newUrls.js'
+import { dashboard } from 'src/constants/urls.js'
 import { HeroButton, HeroFrameworkLogo } from 'src/components'
 
 const HeroContent = props => (

@@ -2,7 +2,7 @@ import React from 'react'
 import { List, ListItem } from 'serverless-design-system'
 
 import SubMenuItem from './SubMenuItem'
-import { training, support } from 'src/constants/newUrls'
+import { training, support } from 'src/constants/urls'
 
 const Learn = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>

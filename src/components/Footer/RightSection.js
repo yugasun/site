@@ -17,7 +17,7 @@ import {
   twitterHandle,
   githubHandle,
   linkedinHandle,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 import facebookGrayIcon from 'src/assets/images/facebook.svg'
 import instagramGrayIcon from 'src/assets/images/instagram.svg'
 import twitterGrayIcon from 'src/assets/images/twitter.svg'

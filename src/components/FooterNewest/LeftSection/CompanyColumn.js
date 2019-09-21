@@ -7,7 +7,7 @@ import {
   contact,
   termsOfService,
   privacyPolicy,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const CompanyColumn = ({ mobileOrder }) => (
   <FooterListColumn

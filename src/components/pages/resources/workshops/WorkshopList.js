@@ -12,7 +12,7 @@ import {
 } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
-import { contact } from 'src/constants/newUrls'
+import { contact } from 'src/constants/urls'
 import workshops from 'src/constants/workshops.json'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'
 import SeattleImage from 'src/assets/images/seattle.png'

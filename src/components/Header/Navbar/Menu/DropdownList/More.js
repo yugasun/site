@@ -12,7 +12,7 @@ import {
   jobs,
   contact,
   blog,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 //TODO: break this into components
 const Resource = () => (

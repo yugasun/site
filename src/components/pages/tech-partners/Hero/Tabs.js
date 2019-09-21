@@ -7,7 +7,7 @@ import {
   meetups,
   slack,
   workshops,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const data = [
   {

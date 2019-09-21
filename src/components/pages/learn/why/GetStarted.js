@@ -10,7 +10,7 @@ import {
   TertiaryButton,
 } from 'serverless-design-system'
 
-import { gettingStarted } from 'src/constants/newUrls'
+import { gettingStarted } from 'src/constants/urls'
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'
 
 const GetStarted = () => (

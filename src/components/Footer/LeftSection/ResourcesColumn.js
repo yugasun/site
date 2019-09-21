@@ -7,7 +7,7 @@ import {
   blog,
   caseStudies,
   courses,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const ResourcesColumn = ({ mobileOrder }) => (
   <FooterListColumn

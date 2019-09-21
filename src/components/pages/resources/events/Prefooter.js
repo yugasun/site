@@ -1,6 +1,6 @@
 import React from 'react'
 import Prefooter from 'src/components/Prefooter'
-import { contact } from 'src/constants/newUrls'
+import { contact } from 'src/constants/urls'
 
 const sentences = ['Contact us to get started']
 

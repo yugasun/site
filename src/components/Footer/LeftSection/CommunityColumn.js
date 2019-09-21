@@ -8,7 +8,7 @@ import {
   meetups,
   partners,
   courses,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn

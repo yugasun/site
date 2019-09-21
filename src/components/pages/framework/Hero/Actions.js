@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeroActionsNewest as HeroActions } from 'src/fragments'
-import { gettingStarted } from 'src/constants/newUrls'
+import { gettingStarted } from 'src/constants/urls'
 
 const HomeActions = () => (
   <HeroActions

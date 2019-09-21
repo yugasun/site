@@ -7,7 +7,7 @@ import {
   why,
   contactForm,
   enterprise,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 export default [
   {

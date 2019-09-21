@@ -5,7 +5,7 @@ import { Button, SecondaryButton } from 'src/fragments/DesignSystem'
 import { DashboardLink, InternalLink } from 'src/fragments'
 import styled from 'styled-components'
 import providersData from './Data'
-import { providers } from 'src/constants/newUrls'
+import { providers } from 'src/constants/urls'
 
 const StyledSelect = styled('select')`
   width: 300px;

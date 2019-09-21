@@ -9,7 +9,7 @@ import {
   caseStudies,
   comparisons,
   courses,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const LearnColumn = ({ mobileOrder }) => (
   <FooterListColumn

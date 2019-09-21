@@ -5,7 +5,7 @@ import { Logo, Row } from 'serverless-design-system'
 import logo from 'src/assets/images/logo.svg'
 import blogLogo from 'src/assets/images/blog-logo.svg'
 import styled from 'styled-components'
-import { blog } from 'src/constants/newUrls'
+import { blog } from 'src/constants/urls'
 
 const LogoWithDesktopLeftMargin = styled(Logo)`
   @media screen and (min-width: 1000px) {

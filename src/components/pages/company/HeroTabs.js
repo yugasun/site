@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
 import { HeroTabsNewest as HeroTabs } from 'src/fragments'
-import { team, jobs, champions, contact } from 'src/constants/newUrls'
+import { team, jobs, champions, contact } from 'src/constants/urls'
 
 const data = [
   {

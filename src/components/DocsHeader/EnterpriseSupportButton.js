@@ -1,7 +1,7 @@
 import React from 'react'
 import NavLink from 'src/components/NavLink'
 import { SecondaryButton } from 'src/fragments/DesignSystem'
-import { acceleration } from 'src/constants/newUrls'
+import { acceleration } from 'src/constants/urls'
 
 const EnterpriseSupportButton = () => (
   <NavLink to={acceleration} completed className='header-menu-item'>

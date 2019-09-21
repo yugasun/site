@@ -1,4 +1,4 @@
-import { dashboard, contactForm } from 'src/constants/newUrls'
+import { dashboard, contactForm } from 'src/constants/urls'
 
 export default {
   plans: ['free', 'unlimited', 'enterprise'],

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'src/fragments/DesignSystem'
-import { dashboard } from 'src/constants/newUrls'
+import { dashboard } from 'src/constants/urls'
 import { ExternalLink } from 'src/fragments'
 
 const HeaderCTAButton = () => (

@@ -9,7 +9,7 @@ import {
   examples,
   caseStudies,
   comparisons,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const data = [
   {
