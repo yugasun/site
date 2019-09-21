@@ -21,11 +21,11 @@ const LearnColumn = ({ mobileOrder }) => (
         navProps: { to: courses, crossDomain: true },
       },
       {
-        name: 'What',
+        name: 'What?',
         navProps: { to: what, crossDomain: true },
       },
       {
-        name: 'Why',
+        name: 'Why?',
         navProps: { to: why, completed: true },
       },
       {

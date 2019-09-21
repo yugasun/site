@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Column } from 'serverless-design-system'
 import { Header } from 'src/components'
-import { FooterNewest as Footer } from 'src/components'
+import { Footer } from 'src/components'
 
 //TODO: frameworkPage prop === dirtyPattern - fix
 

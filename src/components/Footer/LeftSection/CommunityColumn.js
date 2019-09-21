@@ -7,7 +7,7 @@ import {
   slack,
   meetups,
   partners,
-  courses,
+  blog,
 } from 'src/constants/urls'
 
 const CommunityColumn = ({ mobileOrder }) => (
@@ -15,6 +15,10 @@ const CommunityColumn = ({ mobileOrder }) => (
     mobileOrder={mobileOrder}
     header='Community'
     listItems={[
+      {
+        name: 'Blog',
+        navProps: { to: blog, completed: true },
+      },
       {
         name: 'GitHub',
         navProps: { to: github, crossDomain: true },

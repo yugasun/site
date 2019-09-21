@@ -1,7 +1,13 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { team, jobs, contact } from 'src/constants/urls'
+import {
+  team,
+  jobs,
+  contact,
+  termsOfService,
+  privacyPolicy,
+} from 'src/constants/urls'
 
 const CompanyColumn = ({ mobileOrder }) => (
   <FooterListColumn
@@ -9,7 +15,7 @@ const CompanyColumn = ({ mobileOrder }) => (
     header='Company'
     listItems={[
       {
-        name: 'Overview',
+        name: 'About us',
         navProps: { to: team, completed: true },
       },
       {
@@ -19,6 +25,14 @@ const CompanyColumn = ({ mobileOrder }) => (
       {
         name: 'Contact',
         navProps: { to: contact, crossDomain: true },
+      },
+      {
+        name: 'Terms of service',
+        navProps: { to: termsOfService, crossDomain: true },
+      },
+      {
+        name: 'Privacy Policy',
+        navProps: { to: privacyPolicy, completed: true },
       },
     ]}
   />
