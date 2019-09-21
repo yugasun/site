@@ -19,7 +19,7 @@ import ProductMenuDescription from './Descriptions/Product'
 
 const ProductMenu = () => (
   <Box>
-    <MenuTitle name={'Product'} showDropdown />
+    <MenuTitle name={'Product'} />
     <ProductMenuDescription>
       <ProductDropdownList />
     </ProductMenuDescription>
@@ -44,7 +44,7 @@ const PricingMenu = () => (
 
 const ServicesMenu = () => (
   <Box>
-    <MenuTitle name={'Services'} showDropdown />
+    <MenuTitle name={'Services'} />
     <ServicesMenuDescription>
       <ServicesDropdownList />
     </ServicesMenuDescription>
@@ -53,7 +53,7 @@ const ServicesMenu = () => (
 
 const LearnMenu = () => (
   <Box>
-    <MenuTitle name={'Learn'} showDropdown />
+    <MenuTitle name={'Learn'} />
     <LearnMenuDescription>
       <LearnDropdownList />
     </LearnMenuDescription>
@@ -62,14 +62,14 @@ const LearnMenu = () => (
 
 const MoreMenu = () => (
   <Box>
-    <MenuTitle name={'More'} showDropdown />
+    <MenuTitle name={'More'} />
     <MoreMenuDescription>
       <MoreDropdownList />
     </MoreMenuDescription>
   </Box>
 )
 
-const EnterpriseMenu = () => (
+const ContactSalesMenu = () => (
   <Box>
     <NavLink to={enterprise} completed className='header-menu-item'>
       <MenuTitle name={'Contact Sales'} color='#fd5750' />
@@ -80,14 +80,16 @@ const EnterpriseMenu = () => (
 const LoginMenu = () => (
   <Box>
     <NavLink to={dashboard} crossDomain className='header-menu-item'>
-      <MenuTitle name={'Login'} color='#fd5750' />
+      <MenuTitle name={'Sign-in'} color='#fd5750' />
     </NavLink>
   </Box>
 )
 
-const CTAMenu = () => (
-  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 1]} pb={[2, 2, 2, 2, 0]}>
-    <HeaderCTAButton />
+const RegisterMenu = () => (
+  <Box>
+    <NavLink to={dashboard} crossDomain className='header-menu-item'>
+      <MenuTitle name={'Register'} color='#fd5750' />
+    </NavLink>
   </Box>
 )
 
@@ -98,7 +100,7 @@ export default [
   LearnMenu,
   ServicesMenu,
   MoreMenu,
-  EnterpriseMenu,
+  RegisterMenu,
   LoginMenu,
-  CTAMenu,
+  ContactSalesMenu,
 ]
