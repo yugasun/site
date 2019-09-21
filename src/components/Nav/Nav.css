@@ -1,0 +1,156 @@
+.nav-component {
+  position: fixed;
+  z-index: 1000;
+  flex-direction: column;
+  background: #000000;
+  color: #ffffff;
+  user-select: none;
+  transition: all 0.2s ease;
+  overflow: auto;
+}
+
+.nav-component .nav-inner {
+  height: auto;
+}
+
+.nav-component .nav-main {
+  display: flex;
+  z-index: 1000;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding: 22px 0 20px 0;
+  background: #000000;
+}
+
+.nav-component .nav-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  padding-top: 2px;
+}
+
+.nav-component .nav-logo img {
+  height: 24px;
+}
+
+.nav-component .nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100%;
+  width: 70%;
+  padding-top: px;
+  font-family: 'SoleilBk';
+}
+
+.nav-component .nav-item {
+  display: flex;
+  padding: 6px 12px;
+  font-family: 'SoleilSB';
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.3s ease;
+}
+
+.nav-component .nav-item:last-child {
+  padding-right: 0px;
+}
+
+.nav-component .nav-item:hover {
+  cursor: pointer;
+  color: rgba(255,255,255,1);
+}
+
+.nav-component .nav-item:active {
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+}
+
+.nav-component .nav-item-active {
+  color: rgba(255,255,255,1);
+}
+
+.nav-component .nav-sign-in {
+  padding-left: 24px;
+  margin-left: 16px;
+  color: #fd5750;
+  border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.nav-component .nav-sign-up {
+  color: #fd5750;
+}
+
+.nav-component .nav-contact-sales{
+  color: #fd5750;
+}
+
+.nav-component .nav-dropdown {
+  position: fixed;
+  z-index: 999;
+  flex-direction: column;
+  padding-top: 74px;
+  background: #000000;
+  color: #ffffff;
+  user-select: none;
+  overflow: auto;
+  opacity: 0;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-component .nav-dropdown-active {
+  opacity: 1;
+}
+
+.nav-component .nav-dropdown .container-inner {
+  align-items: flex-end;
+}
+
+.nav-component .nav-dropdown-content {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 58.5%;
+  padding: 0 0 58px 0;
+  -webkit-animation: fadeIn 0.7s;
+  -moz-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+  animation-fill-mode: backwards;
+}
+
+.nav-component .nav-dropdown-product {}
+
+.nav-component .nav-dropdown-column {
+  padding: 0 0 0 26px;
+  margin: 0 60px 0 0;
+}
+
+.nav-component .nav-dropdown-column-title {
+  padding: 0 0 10px 0;
+  font-family: 'SoleilSB';
+  font-size: 17px;
+  color: rgba(255,255,255,1);
+}
+
+.nav-component .nav-dropdown-column-item {
+  padding: 8px 0;
+  font-family: 'SoleilSB';
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.2s ease;
+}
+
+.nav-component .nav-dropdown-column-item:hover {
+  cursor: pointer;
+  color: rgba(255,255,255,1);
+}
+
+.nav-component .nav-dropdown-column-item:active {
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+}
