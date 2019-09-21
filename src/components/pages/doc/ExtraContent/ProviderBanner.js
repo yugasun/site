@@ -26,14 +26,16 @@ const providerLogo = {
     'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/docs/openwhisk-logo.svg',
   spotinst:
     'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/images/docs/spotinst-logo.svg',
+  aliyun:
+    'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/docs/alibaba-cloud-logo-gray.png',
 }
 
 const ExtraContent = ({ provider }) => (
   <FlexBackground background='#eaeaea' width='100%' height='232px'>
     <Image
       src={providerLogo[provider]}
-      width={provider === 'google' ? [206] : [176]}
-      height={provider === 'google' ? [110] : [176]}
+      width={provider === 'google' || provider === 'aliyun' ? [206] : [176]}
+      height={provider === 'google' || provider === 'aliyun' ? [110] : [176]}
     />
   </FlexBackground>
 )

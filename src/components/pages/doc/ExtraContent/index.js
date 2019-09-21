@@ -11,6 +11,7 @@ const providers = [
   'spotinst',
   'fn',
   'cloudflare',
+  'aliyun',
 ]
 
 const ExtraContent = ({ gitLink }) => (
