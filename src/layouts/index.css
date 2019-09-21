@@ -241,7 +241,8 @@ tfoot td {
  */
 
 /* Single Breakpoint */
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
 .container {
   display: flex;
@@ -260,12 +261,11 @@ tfoot td {
   flex-shrink: 0;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1280px;
-  padding: 0 20px;
+  max-width: 1216px;
 }
 
 .header-label {
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-size: 21px;
   font-family: 'Soleil';
   user-select: none;
@@ -274,7 +274,7 @@ tfoot td {
 }
 
 .header {
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-size: 33px;
   font-family: 'SoleilSB';
   user-select: none;
@@ -283,7 +283,7 @@ tfoot td {
 }
 
 .description {
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-size: 19px;
   font-family: 'Soleil';
   letter-spacing: -0.2px;
@@ -414,35 +414,47 @@ code.hljs > a.line:hover:before {
  * Design for tooltips
  */
 
- .__react_component_tooltip.type-dark {
-   background-color: #5b5b5b !important;
- }
+.__react_component_tooltip.type-dark {
+  background-color: #5b5b5b !important;
+}
 
- .__react_component_tooltip.type-dark.place-top:after {
-   border-top-color: #5b5b5b;
-   border-top-style: solid;
-   border-top-width: 6px;
- }
+.__react_component_tooltip.type-dark.place-top:after {
+  border-top-color: #5b5b5b;
+  border-top-style: solid;
+  border-top-width: 6px;
+}
 
- .__react_component_tooltip.type-dark.place-right:after {
-   border-right-color: #5b5b5b;
-   border-right-style: solid;
-   border-right-width: 6px;
- }
+.__react_component_tooltip.type-dark.place-right:after {
+  border-right-color: #5b5b5b;
+  border-right-style: solid;
+  border-right-width: 6px;
+}
 
 /**
 * Animations
 */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @-moz-keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
