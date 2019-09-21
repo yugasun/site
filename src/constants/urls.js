@@ -1,4 +1,5 @@
 export default {
+  homepage: '/',
   docs: '/framework/docs/',
   why: '/learn/why/',
   what: '/learn/manifesto/',

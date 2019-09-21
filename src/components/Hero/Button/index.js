@@ -1,6 +1,10 @@
 import React from 'react'
 import { Button } from 'src/fragments/DesignSystem'
 
-const HeroButton = ({ children }) => <Button height={'44px'}>{children}</Button>
+const HeroButton = ({ children, ...otherProps }) => (
+  <Button height={'44px'} {...otherProps}>
+    {children}
+  </Button>
+)
 
 export default HeroButton

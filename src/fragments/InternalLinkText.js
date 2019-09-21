@@ -8,6 +8,8 @@ function ensureLinkFormat(to) {
   return finalLink
 }
 
+//TODO: remove this and enable underLine props for InternalLink + ExternalLink
+
 const InternalLinkText = ({ to, children, ...otherProps }) => {
   return (
     <Link
