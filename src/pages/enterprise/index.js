@@ -34,7 +34,7 @@ const Enterprise = ({ location }) => (
     <Background background='#f7f7f7'>
       <WhitepaperDownloadBanner />
     </Background>
-  </DefaultLayout>
+  </HomeLayout>
 )
 
 export default Enterprise
