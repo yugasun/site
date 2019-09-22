@@ -1,13 +1,7 @@
 import React from 'react'
 
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import {
-  partners,
-  forum,
-  meetups,
-  slack,
-  workshops,
-} from 'src/constants/urls'
+import { HeroTabsNewest as HeroTabs } from 'src/fragments'
+import { partners, forum, meetups, slack, workshops } from 'src/constants/urls'
 
 const data = [
   {
