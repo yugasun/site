@@ -4,6 +4,8 @@ import { Background, Box } from 'serverless-design-system'
 
 import { AppContainer } from 'src/components'
 
+//TODO: consolidate so there's just 1 HeroWrapper
+
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
   <Background {...otherProps}>
     <Box

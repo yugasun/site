@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, ResponsiveStack } from 'serverless-design-system'
-import { HeroWrapperNew as HeroWrapper, ExternalLink } from 'src/fragments'
+import { HeroWrapperWithTabs as HeroWrapper, ExternalLink } from 'src/fragments'
 import { P, Button } from 'src/fragments/DesignSystem'
 import background from 'src/assets/images/san-francisco-workshop-hero.png'
 import slsSanFranLogo from 'src/assets/images/san-francisco-workshop-logo.svg'
