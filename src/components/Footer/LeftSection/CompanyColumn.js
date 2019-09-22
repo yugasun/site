@@ -32,7 +32,7 @@ const CompanyColumn = ({ mobileOrder }) => (
       },
       {
         name: 'Privacy Policy',
-        navProps: { to: privacyPolicy, completed: true },
+        navProps: { to: privacyPolicy, crossDomain: true },
       },
     ]}
   />
