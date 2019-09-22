@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from 'serverless-design-system'
 import Content from './Content'
 import Image from './Image'
-import { HeroWrapperNewest as HeroWrapper } from 'src/fragments'
+import { HeroWrapper } from 'src/fragments'
 
 const ComponentsHero = props => (
   <HeroWrapper>

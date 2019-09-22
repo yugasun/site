@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Text, Box } from 'serverless-design-system'
-import { HeroWrapperNewest as HeroWrapper } from 'src/fragments'
+import {  HeroWrapper } from 'src/fragments'
 import { HeroFrameworkLogo } from 'src/components'
 
 const TrainingHero = props => (

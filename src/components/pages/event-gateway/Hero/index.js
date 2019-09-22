@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeroWrapperNewest as HeroWrapper } from 'src/fragments'
+import { HeroWrapper } from 'src/fragments'
 import GatewayPageHeroSectionBackground from 'src/assets/images/gateway.png'
 import Header from './Header'
 import HeroImage from './HeroImage'
@@ -10,8 +10,8 @@ import Actions from './Actions'
 const EventGatewayHero = () => (
   <HeroWrapper
     backgroundImage={`url(${GatewayPageHeroSectionBackground})`}
-    backgroundSize='cover'
-    backgroundPosition='center'
+    backgroundSize="cover"
+    backgroundPosition="center"
     ignoreBottomMargin={true}
   >
     <Header />
