@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeroActionsNewest as HeroActions } from 'src/fragments'
+import { HeroActions } from 'src/fragments'
 import { dashboard, docs } from 'src/constants/urls'
 
 const Actions = props => (

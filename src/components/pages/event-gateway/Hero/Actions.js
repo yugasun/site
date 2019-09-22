@@ -13,6 +13,7 @@ const EventGatewayActions = () => (
       to: '/enterprise/',
       completed: true,
     }}
+    justifyContent="center"
   />
 )
 
