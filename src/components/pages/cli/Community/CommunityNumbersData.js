@@ -1,11 +1,11 @@
 export default [
   {
     title: 'Downloads',
-    number: '10,434,251',
+    number: '12,796,866',
   },
   {
     title: 'Weekly deployments',
-    number: '163,425',
+    number: '658,719',
   },
   {
     title: 'Plugins',
@@ -13,6 +13,6 @@ export default [
   },
   {
     title: 'GitHub stars',
-    number: '31,090',
+    number: '32,015',
   },
 ]
