@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import imgBolt from 'src/assets/images/icon-bolt.svg'
 import imgLogoEa from 'src/assets/images/logo-ea.png'
 import imgLogoNordstrom from 'src/assets/images/logo-nordstrom.png'
