@@ -14,7 +14,11 @@ import CommunityNumbers from 'src/components/pages/cli/Community/index.js'
 
 const CLI = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless CLI' location={location} />
+    <Helmet
+      title='Serverless Framework CLI - Deploy applications on AWS Lambda, Google CloudFunctions, Azure Functions &amp; more'
+      description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk &amp; more.'
+      location={location}
+    />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
