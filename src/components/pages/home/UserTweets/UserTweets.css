@@ -9,7 +9,7 @@
 
 .user-tweets-component .user-tweets-inner {
   flex-direction: column;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 100px;
 }
 
@@ -35,19 +35,19 @@
   margin: 20px 8px;
   padding: 22px 22px 42px 22px;
   border-radius: 2px;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .user-tweets-component .user-tweets-tweet:hover {
   cursor: pointer;
-  transform: scale(1.03) translate3d( 0, 0, 0) perspective(1px);
+  transform: scale(1.03) translate3d(0, 0, 0) perspective(1px);
 }
 
 .user-tweets-component .user-tweets-tweet:active {
   cursor: pointer;
-  transform: scale(1) translate3d( 0, 0, 0) perspective(1px);
+  transform: scale(1) translate3d(0, 0, 0) perspective(1px);
 }
 
 .user-tweets-component .user-tweets-tweet-name {
@@ -94,13 +94,13 @@
   font-size: 18px;
 }
 
-.user-tweets-component .user-tweets-actions a {
+.user-tweets-component .user-tweets-actions span {
   color: #fd5750;
   margin-left: 3px;
   font-family: 'SoleilBk';
 }
 
-.user-tweets-component .user-tweets-actions a:hover {
+.user-tweets-component .user-tweets-actions span:hover {
   cursor: pointer;
   text-decoration: underline;
 }
