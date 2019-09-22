@@ -3,7 +3,13 @@ import { withTheme } from 'styled-components'
 import { Background, Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 
-const HeroWrapper = ({ children, customPb, theme, ...otherProps }) => (
+const HeroWrapper = ({
+  children,
+  customPb,
+  theme,
+  ignoreBottomMargin,
+  ...otherProps
+}) => (
   <React.Fragment>
     <Background
       {...otherProps}
@@ -27,7 +33,9 @@ const HeroWrapper = ({ children, customPb, theme, ...otherProps }) => (
         </AppContainer>
       </Box>
     </Background>
-    <Background background='#f7f7f7' height={[62, 62, 62, 62, 92]} />
+    {ignoreBottomMargin ? null : (
+      <Background background={'#f7f7f7'} height={[62, 62, 62, 62, 92]} />
+    )}
   </React.Fragment>
 )
 
