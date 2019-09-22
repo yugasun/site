@@ -11,15 +11,8 @@ import WhitepaperDownload from 'src/components/pages/learn/guide-prefooter/index
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
-import styled from 'styled-components'
 import CourseOutline from 'src/components/pages/learn/course/Details/CourseOutline.js'
 import MoreInfoShare from 'src/components/pages/learn/overview/MoreInfoShare/'
-
-const BackgroundWithPaddingBottom = styled(Background)`
-  @media only screen and (min-width: 1601px) {
-    background: linear-gradient(to bottom, #fff 40%, #f7f7f7 40%);
-  }
-`
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout
@@ -41,9 +34,17 @@ const FrameWorks = ({ location }) => (
 
     <Box mt={[72, 72, 92, 92, 132]}>
       <Box>
-        <BackgroundWithPaddingBottom background='#f7f7f7'>
+        <Background
+          background={[
+            '#f7f7f7',
+            '#f7f7f7',
+            '#f7f7f7',
+            '#f7f7f7',
+            'linear-gradient(to bottom, #fff 40%, #f7f7f7 40%)',
+          ]}
+        >
           <WhitepaperDownload />
-        </BackgroundWithPaddingBottom>
+        </Background>
       </Box>
     </Box>
   </DefaultLayout>
