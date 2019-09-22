@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P0 } from 'src/fragments/DesignSystem'
-import { InternalLinkText } from 'src/fragments'
+import { InternalLink } from 'src/fragments'
 
 const CustomPoliciesContent = props => (
   <Flex flexDirection='column' width={[1, 1, 0.45]}>
@@ -17,9 +17,9 @@ const CustomPoliciesContent = props => (
       <br />
       <br />
       See how easy it is to build a custom integration with this{' '}
-      <InternalLinkText to={'/examples/aws-node-simple-http-endpoint/'}>
+      <InternalLink to={'/examples/aws-node-simple-http-endpoint/'} underline>
         Simple HTTP Endpoint
-      </InternalLinkText>{' '}
+      </InternalLink>{' '}
       example built with the Serverless Framework.
     </P0>
   </Flex>

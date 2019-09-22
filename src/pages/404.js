@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, ThemeProvider } from 'serverless-design-system'
 
-import { Helmet, ExternalLink, InternalLinkText } from 'src/fragments'
+import { Helmet, ExternalLink, InternalLink } from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Flex, Text, Box } from 'serverless-design-system'
 import { P0 } from 'src/fragments/DesignSystem'
@@ -50,7 +50,10 @@ const NotFoundPage = () => (
             </Flex>
             <P0 color='white' align='center' mt={22}>
               …or get more info{' '}
-              <InternalLinkText to={homepage}>here</InternalLinkText>.
+              <InternalLink to={homepage} underline>
+                here
+              </InternalLink>
+              .
             </P0>
           </Box>
         </Flex>

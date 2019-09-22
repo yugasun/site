@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P } from 'src/fragments/DesignSystem'
-import { InternalLinkText } from 'src/fragments'
+import { InternalLink } from 'src/fragments'
 import { plugins, cli, components } from 'src/constants/urls'
 
 const ExtendServerless = props => (
@@ -17,11 +17,18 @@ const ExtendServerless = props => (
     <P align={['left', 'left', 'center']}>
       If you need to setup even deeper integration with Serverless Framework,
       you can also use{' '}
-      <InternalLinkText to={plugins}>Serverless Plugins</InternalLinkText> to
-      integrate with the{' '}
-      <InternalLinkText to={cli}>Serverless CLI</InternalLinkText>, and use{' '}
-      <InternalLinkText to={components}>Components</InternalLinkText> to
-      integrate with other service providers.
+      <InternalLink to={plugins} underline>
+        Serverless Plugins
+      </InternalLink>{' '}
+      to integrate with the{' '}
+      <InternalLink to={cli} underline>
+        Serverless CLI
+      </InternalLink>
+      , and use{' '}
+      <InternalLink to={components} underline>
+        Components
+      </InternalLink>{' '}
+      to integrate with other service providers.
     </P>
   </Flex>
 )

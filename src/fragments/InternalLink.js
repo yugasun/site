@@ -8,11 +8,15 @@ function ensureLinkFormat(to) {
   return finalLink
 }
 
-const InternalLink = ({ to, children, ...otherProps }) => {
+const InternalLink = ({ to, children, underline, ...otherProps }) => {
   return (
     <Link
       to={ensureLinkFormat(to)}
-      style={{ color: 'inherit' }}
+      style={
+        underline
+          ? { color: 'inherit', borderBottom: '1px solid #fd5750' }
+          : { color: 'inherit' }
+      }
       {...otherProps}
     >
       {children}
