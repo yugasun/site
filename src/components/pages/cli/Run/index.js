@@ -1,8 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import noMoreCloudWatchImage from 'src/assets/images/pages/debugging/no-more-cloudwatch.png'
 import Content from './Content'
-import { ImageWithShadow as Image } from 'src/fragments'
 
 const NoMoreCloudWatch = props => (
   <Flex
@@ -11,11 +9,12 @@ const NoMoreCloudWatch = props => (
     flexDirection={['column', 'column', 'row']}
   >
     <Content />
-    <Image
-      src={noMoreCloudWatchImage}
-      width={['100%', '100%', 336, 436, 592]}
-      height={[110, 110, 123, 170, 160, 180]}
-    />
+    <video autoPlay muted className='cli-video' controls>
+      <source
+        src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/cli/CLI04.mp4'
+        type='video/mp4'
+      />
+    </video>
   </Flex>
 )
 

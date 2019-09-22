@@ -1,16 +1,16 @@
 import React from 'react'
 import { Box } from 'serverless-design-system'
-import debuggingHeroImage from 'src/assets/images/pages/debugging/debugging-hero.png'
-import { ImageWithShadow as Image } from 'src/fragments'
+import '../video.css'
 
-const HeroImage = props => (
-  <Box mt={[0, 0, 0, 0, '-20px', 0]}>
-    <Image
-      src={debuggingHeroImage}
-      width={['100%', '100%', 592, 592, 512, 592]}
-      height={[235, 235, 298, 298, 298, 298]}
-    />
+const HeroVideo = props => (
+  <Box mt={[0, 0, 0, 0, '-20px', 23]} width={'592px'} height={'333px'}>
+    <video autoPlay muted className='cli-video' controls>
+      <source
+        src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/cli/CLI-hero.mp4'
+        type='video/mp4'
+      />
+    </video>
   </Box>
 )
 
-export default HeroImage
+export default HeroVideo

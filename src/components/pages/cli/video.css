@@ -1,0 +1,29 @@
+.cli-video {
+  width: 592px;
+  height: 333px;
+  outline: none;
+}
+
+@media screen and (max-width: 992px) {
+  .cli-video {
+    width: 592px;
+    height: 333px;
+    outline: none;
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 1024px) {
+  .cli-video {
+    width: 592px;
+    height: 298px;
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .cli-video {
+    width: '100%';
+    height: 235px;
+    outline: none;
+  }
+}
