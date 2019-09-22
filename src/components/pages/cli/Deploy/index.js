@@ -9,7 +9,7 @@ const StraightToCode = props => (
     flexDirection={['column', 'column', 'row-reverse']}
   >
     <Content />
-    <video autoPlay muted className='cli-video' controls>
+    <video muted className='cli-video' controls>
       <source
         src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/cli/CLI02.mp4'
         type='video/mp4'
