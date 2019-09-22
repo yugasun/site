@@ -12,7 +12,7 @@ const Partners = () => {
       prefooter={NewToServerlessPrefooter}
       transparentHeader={true}
     >
-      <Helmet title='AWS Lambda &amp; Cloud Computing Agencies | Serverless Partners' />
+      <Helmet title='Serverless Development &amp; Consulting Companies | Serverless Partners' />
       <Hero />
       <Content />
     </DefaultLayout>
