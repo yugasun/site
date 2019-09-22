@@ -20,7 +20,7 @@ const CLI = ({ location }) => (
       location={location}
     />
     <Hero />
-    <Background background={'#f7f7f7'}>
+    <Background background={'#fff'}>
       <AppContainer>
         <CommunityNumbers />
         <Build />
@@ -29,7 +29,15 @@ const CLI = ({ location }) => (
       </AppContainer>
     </Background>
 
-    <Background background='#f7f7f7'>
+    <Background
+      background={[
+        '#f7f7f7',
+        '#f7f7f7',
+        '#f7f7f7',
+        '#f7f7f7',
+        'linear-gradient(to bottom, #fff 40%, #f7f7f7 40%)',
+      ]}
+    >
       <WhitepaperDownloadBanner />
     </Background>
   </HomeLayout>

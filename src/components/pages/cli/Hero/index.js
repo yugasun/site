@@ -5,7 +5,7 @@ import Image from './Image'
 import { HeroWrapper } from 'src/fragments'
 
 const PoliciesHero = props => (
-  <HeroWrapper>
+  <HeroWrapper bottomMarginBg='white'>
     <Flex
       justifyContent='space-between'
       flexDirection={['column', 'column', 'column', 'column', 'row']}

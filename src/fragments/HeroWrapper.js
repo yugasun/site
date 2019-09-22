@@ -8,6 +8,7 @@ const HeroWrapper = ({
   customPb,
   theme,
   ignoreBottomMargin,
+  bottomMarginBg,
   ...otherProps
 }) => (
   <React.Fragment>
@@ -34,7 +35,10 @@ const HeroWrapper = ({
       </Box>
     </Background>
     {ignoreBottomMargin ? null : (
-      <Background background={'#f7f7f7'} height={[62, 62, 62, 62, 92]} />
+      <Background
+        background={bottomMarginBg ? bottomMarginBg : '#f7f7f7'}
+        height={[62, 62, 62, 62, 92]}
+      />
     )}
   </React.Fragment>
 )
