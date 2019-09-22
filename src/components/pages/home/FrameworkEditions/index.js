@@ -14,7 +14,6 @@ import {
   gettingStarted,
   enterprise,
   dashboard,
-  learn,
 } from 'src/constants/urls.js'
 
 export default class FrameworkEditions extends React.Component {
