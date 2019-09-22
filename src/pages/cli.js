@@ -9,6 +9,7 @@ import Hero from 'src/components/pages/cli/Hero'
 import Build from 'src/components/pages/cli/Build'
 import Deploy from 'src/components/pages/cli/Deploy'
 import Run from 'src/components/pages/cli/Run'
+import MultipleCloudProviders from 'src/components/pages/cli/MultipleCloudProviders'
 import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 import CommunityNumbers from 'src/components/pages/cli/Community/index.js'
 
@@ -25,6 +26,7 @@ const CLI = ({ location }) => (
         <CommunityNumbers />
         <Build />
         <Deploy />
+        <MultipleCloudProviders />
         <Run />
       </AppContainer>
     </Background>
