@@ -373,16 +373,31 @@
 
   .hero-component .hero-customers-list {
     padding: 0px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
   }
 
   .hero-component .hero-customers {
     align-self: center;
-    width: 80%;
     padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-component .hero-customer {
+    max-height: 51px;
+    max-width: 130px;
+    margin-bottom: 20px;
+  }
+
+  .hero-component .hero-customer:nth-child(1) {
+    max-width: 48px;
   }
 
   .hero-component .hero-stats {
-    margin-top: 62px;
+    margin-top: 42px;
     align-self: center;
     justify-content: space-between;
     flex-wrap: wrap;
