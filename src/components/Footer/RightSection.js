@@ -6,7 +6,7 @@ import logoBlack from 'src/assets/images/logo-black.svg'
 // Renders the subscribe column
 const Subscribe = () => (
   <Column
-    width={[1, 1, 2.5 / 4, 3 / 4, 0.35]}
+    width={[1, 1, 2.5 / 4, 3 / 4, 0.28, 0.35]}
     order={['1', '1', '1', '1', '2']}
     pl={[0, 0, 0, 0, 3]}
     mb={['14px', '14px', 0, 0, 0]}

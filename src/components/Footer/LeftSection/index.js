@@ -13,7 +13,7 @@ import PricingColumn from './PricingColumn'
 // Renders the entire footer list items
 const LeftSection = () => (
   <Column
-    width={[1, 1, 0.7, 1, 0.65]}
+    width={[1, 1, 0.7, 1, 0.72, 0.65]}
     order={['2', '2', '2', '2', '1']}
     justifyContent={['space-between', 'space-between', 'initial']}
   >
