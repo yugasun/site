@@ -7,7 +7,7 @@ const CustomPoliciesContent = props => (
     <Heading.h3 mb={22}>Fast deployments</Heading.h3>
     <P0 mb={[42, 42, 0]}>
       Most Serverless Components deploy 20x faster than traditional cloud
-      provisioning tools. Our intention is to design Serverless Components' that
+      provisioning tools. Our intention is to design Serverless Components that
       deploy almost instantly, removing the need to emulate cloud services
       locally.
     </P0>
