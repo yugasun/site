@@ -87,7 +87,7 @@ const LoginMenu = () => (
 const RegisterMenu = () => (
   <Box>
     <NavLink to={dashboard} crossDomain className='header-menu-item'>
-      <MenuTitle name={'Register'} color='#fd5750' />
+      <MenuTitle name={'Sign-Up Free'} color='#fd5750' />
     </NavLink>
   </Box>
 )
@@ -99,7 +99,8 @@ export default [
   LearnMenu,
   ServicesMenu,
   MoreMenu,
-  RegisterMenu,
-  LoginMenu,
   ContactSalesMenu,
+  LoginMenu,
+  RegisterMenu,
+  
 ]
