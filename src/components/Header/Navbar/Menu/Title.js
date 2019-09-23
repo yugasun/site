@@ -29,6 +29,15 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
 const TitleWithDropdown = styled(Text.span)`
   transition: all 0.3s ease;
 
+  @media only screen and (min-width: 1024px) {
+    ${({ name }) =>
+      name == 'Register' &&
+      `
+    border-left: 1px solid rgba(255,255,255,0.4);
+    padding-left: 24px;
+  `};
+  }
+
   &:hover {
     color: white;
   }
@@ -73,14 +82,7 @@ const Title = ({ name, color, showDropdown }) => {
                   ? 'black'
                   : 'rgba(255, 255, 255, .5)'
             }
-            style={
-              name == 'Register'
-                ? {
-                    borderLeft: '1px solid rgba(255,255,255,0.4)',
-                    paddingLeft: '24px',
-                  }
-                : {}
-            }
+            name={name}
           >
             {name}
           </TitleWithDropdown>
