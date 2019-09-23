@@ -2,7 +2,7 @@ import React from 'react'
 import { P0, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
-import { dashboard } from 'src/constants/urls.js'
+import { componentsGithub } from 'src/constants/urls.js'
 import { HeroButton, HeroFrameworkLogo } from 'src/components'
 
 const HeroContent = props => (
@@ -39,8 +39,8 @@ const HeroContent = props => (
       cloud infrastructure configurations.
     </P0>
     <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
-      <ExternalLink to={dashboard}>
-        <HeroButton>Sign-up for free</HeroButton>
+      <ExternalLink to={componentsGithub}>
+        <HeroButton>Try now</HeroButton>
       </ExternalLink>
     </Flex>
   </Flex>
