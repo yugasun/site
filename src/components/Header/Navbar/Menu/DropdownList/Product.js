@@ -30,28 +30,6 @@ const Resource = () => (
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
-          to: plugins,
-          completed: true,
-          backgroundOnHover: true,
-        }}
-      >
-        Plugins
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: components,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        Components
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
           to: dashboardPage,
           completed: true,
           backgroundOnHover: true,
@@ -113,6 +91,28 @@ const Resource = () => (
         }}
       >
         Integrations
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: plugins,
+          completed: true,
+          backgroundOnHover: true,
+        }}
+      >
+        Plugins
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: components,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        Components
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>
