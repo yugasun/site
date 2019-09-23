@@ -34,6 +34,20 @@
   user-select: none;
 }
 
+/**
+ * Editions - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .home-editions-component .home-editions-list {
+    flex-direction: column;
+  }
+
+  .home-editions-component .home-edition {
+    width: 100%;
+  }
+}
+
 .home-editions-component .home-edition:first-child {
   margin-left: 0;
 }

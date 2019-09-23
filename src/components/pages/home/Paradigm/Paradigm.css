@@ -32,6 +32,20 @@
   user-select: none;
 }
 
+/**
+ * Guide Steps - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .paradigm-component .paradigm-guide-steps {
+    flex-direction: column;
+  }
+
+  .paradigm-component .paradigm-guide-step {
+    width: 100%;
+  }
+}
+
 .paradigm-component .paradigm-guide-step:hover {
   cursor: pointer;
   box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
