@@ -33,13 +33,22 @@ const TitleWithDropdown = styled(Text.span)`
     color: white;
   }
 `
-
+//TODO: pl + pr execution is really hacky - fix
 const Title = ({ name, color, showDropdown }) => {
   return (
     <NavbarContext.Consumer>
       {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
         <TitleWrapperWithLeadingSlash
-          px={[1, 1, '8px', '8px', '1rem', '15px']}
+          pl={
+            name == 'Register'
+              ? [1, 1, '8px', '8px', '16px']
+              : [1, 1, '8px', '8px', '12px']
+          }
+          pr={
+            name == 'Contact Sales'
+              ? [1, 1, '8px', '8px', '0px']
+              : [1, 1, '8px', '8px', '12px']
+          }
           pt={[2, 2, '16.5px']}
           pb={[2, 2, '16.5px']}
           transition={[
