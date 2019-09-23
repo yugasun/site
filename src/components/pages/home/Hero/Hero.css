@@ -7,6 +7,26 @@
   color: #ffffff;
 }
 
+/**
+ * Hero Macro - Laptop
+ */
+
+ @media screen and (max-width: 1500px) {
+  .hero-component {
+    height: 110vh;
+  }
+}
+
+/**
+ * Hero Macro - Mobile
+ */
+
+@media screen and (max-width: 992px) {
+  .hero-component {
+    height: 130vh;
+  }
+}
+
 .hero-component .hero-inner {
   flex-direction: column;
   min-height: 700px;
@@ -53,6 +73,17 @@
   -moz-animation: fadeIn 0.6s;
   animation: fadeIn 0.6s;
   animation-fill-mode: backwards;
+}
+
+/**
+ * Hero Tagline - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .hero-component .hero-tagline {
+    width: 76%;
+    text-align: center;
+  }
 }
 
 .hero-component .hero-video-container {
@@ -227,6 +258,16 @@
 }
 
 /**
+ * Hero Actions - Mobile
+ */
+ @media screen and (max-width: 992px) {
+  .hero-component .hero-button-secondary {
+    display: none;
+  }
+}
+
+
+/**
  * Hero Info
  */
 
@@ -329,4 +370,25 @@
   user-select: none;
   font-size: 13px;
   font-family: 'SoleilSB';
+}
+
+/**
+ * Hero Info - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .hero-component .hero-info {
+    flex-direction: column;
+  }
+
+  .hero-component .hero-customers {
+    align-self: center;
+    width: 80%;
+    padding-right: 0px;
+  }
+
+  .hero-component .hero-stats {
+    margin-top: 62px;
+    align-self: center;
+  }
 }

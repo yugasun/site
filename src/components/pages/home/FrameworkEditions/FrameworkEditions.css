@@ -34,20 +34,6 @@
   user-select: none;
 }
 
-/**
- * Editions - Mobile
- */
-
- @media screen and (max-width: 992px) {
-  .home-editions-component .home-editions-list {
-    flex-direction: column;
-  }
-
-  .home-editions-component .home-edition {
-    width: 100%;
-  }
-}
-
 .home-editions-component .home-edition:first-child {
   margin-left: 0;
 }
@@ -190,4 +176,22 @@
 
 .home-editions-component .home-edition-action-button:active {
   transform: scale(0.96);
+}
+
+/**
+ * Editions - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .home-editions-component .home-editions-list {
+    flex-direction: column;
+  }
+
+  .home-editions-component .home-edition {
+    width: 100%;
+  }
+
+  .home-editions-inner .header {
+    text-align: center;
+  }
 }
