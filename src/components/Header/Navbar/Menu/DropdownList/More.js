@@ -17,17 +17,7 @@ import {
 //TODO: break this into components
 const Resource = () => (
   <Flex>
-    <List m={0} ml={[4, 4, 0]} p={0}>
-      <Heading
-        fontSize={'16px'}
-        lineHeight='38px'
-        letterSpacing='0'
-        fontFamily='SoleilBk'
-        color={['#fff', '#fff', '#fff', '#fff', '#000']}
-        mb={0}
-      >
-        Community
-      </Heading>
+    <List m={0, 0, 0, 0} ml={[4, 4, 0]} p={0} style={{ width: '100px' }}>
       <ListItem.noStyleType>
         <SubMenuItem
           navProps={{
@@ -95,17 +85,7 @@ const Resource = () => (
         </SubMenuItem>
       </ListItem.noStyleType>
     </List>
-    <List m={0} ml={[4, 4, 0, 0, 92]} p={0} style={{ width: '80px' }}>
-      <Heading
-        fontSize={'16px'}
-        lineHeight='38px'
-        letterSpacing='0'
-        fontFamily='SoleilBk'
-        color={['#fff', '#fff', '#fff', '#fff', '#000']}
-        mb={0}
-      >
-        Company
-      </Heading>
+    <List m={0} ml={[4, 4, 0, 0, 30]} p={0} style={{ width: '100px' }}>
       <ListItem.noStyleType>
         <SubMenuItem
           navProps={{
