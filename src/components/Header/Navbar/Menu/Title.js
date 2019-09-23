@@ -31,7 +31,7 @@ const TitleWithDropdown = styled(Text.span)`
 
   @media only screen and (min-width: 1024px) {
     ${({ name }) =>
-      name == 'Register' &&
+      name == 'Contact Sales' &&
       `
     border-left: 1px solid rgba(255,255,255,0.4);
     padding-left: 24px;
@@ -49,12 +49,12 @@ const Title = ({ name, color, showDropdown }) => {
       {({ isNavbarShrinked, isWhiteHeader, isDesktopView }) => (
         <TitleWrapperWithLeadingSlash
           pl={
-            name == 'Register'
+            name == 'Contact Sales'
               ? [1, 1, '8px', '8px', '16px']
               : [1, 1, '8px', '8px', '12px']
           }
           pr={
-            name == 'Contact Sales'
+            name == 'Sign-Up Free'
               ? [1, 1, '8px', '8px', '0px']
               : [1, 1, '8px', '8px', '12px']
           }
