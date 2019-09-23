@@ -11,7 +11,6 @@ import {
 import NavLink from 'src/components/NavLink'
 import { enterprise, docs, pricing, dashboard } from 'src/constants/urls'
 //TODO: double-up - clean this to one file
-import HeaderCTAButton from '../../HeaderCTAButton'
 import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
 import ServicesMenuDescription from './Descriptions/Services'
