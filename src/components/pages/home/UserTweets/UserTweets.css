@@ -110,6 +110,10 @@
  */
 
  @media screen and (max-width: 992px) {
+  .user-tweets-component {
+    padding: 68px 0px 0 0px
+  }
+
   .user-tweets-component .user-tweets-actions {
     width: 80%;
     flex-direction: column;

@@ -129,4 +129,8 @@
   .paradigm-mission-inner .header, .paradigm-guide .header {
     text-align: center;
   }
+
+  .paradigm-component .paradigm-guide {
+    padding: 68px 0px 100px 0px;
+  }
 }
