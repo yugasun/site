@@ -75,18 +75,18 @@
 }
 
 .nav-component .nav-sign-in {
-  padding-left: 24px;
-  margin-left: 16px;
   color: #fd5750;
-  border-left: 1px solid rgba(255,255,255,0.4);
 }
 
 .nav-component .nav-sign-up {
   color: #fd5750;
 }
 
-.nav-component .nav-contact-sales{
+.nav-component .nav-contact-sales {
+  padding-left: 24px;
+  margin-left: 16px;
   color: #fd5750;
+  border-left: 1px solid rgba(255,255,255,0.4);
 }
 
 .nav-component .nav-dropdown {

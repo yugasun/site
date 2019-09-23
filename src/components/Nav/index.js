@@ -87,23 +87,23 @@ export default class Nav extends React.Component {
                   onMouseEnter={() => { this.showDropdown('more') }}>
                   More
                 </div>
-                <a
-                  className='nav-item nav-sign-in'
-                  href='https://dashboard.serverless.com'
+                <div
+                  className='nav-item nav-contact-sales'
                   onMouseEnter={() => { this.hideDropdown() }}>
-                  Register
-                </a>
+                  Contact Sales
+                </div>
                 <a
                   className='nav-item nav-sign-up'
                   href='https://dashboard.serverless.com'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Sign-in
                 </a>
-                <div
-                  className='nav-item nav-contact-sales'
+                <a
+                  className='nav-item nav-sign-in'
+                  href='https://dashboard.serverless.com'
                   onMouseEnter={() => { this.hideDropdown() }}>
-                  Contact Sales
-                </div>
+                  Sign-Up Free
+                </a>
               </div>
             </div>
           </div>

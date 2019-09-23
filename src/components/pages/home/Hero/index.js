@@ -111,11 +111,6 @@ export default class Hero extends React.Component {
                 onClick={() => { this.toggleChapter('monitor') }}>
                 Monitor
               </div>
-              <div
-                className={`hero-video-chapter ${ this.state.chapter === 'secure' ? 'active' : '' }`}
-                onClick={() => { this.toggleChapter('secure') }}>
-                Secure
-              </div>
             </div>
 
             <div className='hero-video-content'>
@@ -139,14 +134,8 @@ export default class Hero extends React.Component {
               )}
 
               { this.state.chapter === 'monitor' && (
-                <video autoPlay muted onEnded={() => { this.toggleChapter('secure') }}>
-                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
-                </video>
-              )}
-
-              { this.state.chapter === 'secure' && (
                 <video autoPlay muted onEnded={() => { this.toggleChapter('intro') }}>
-                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_intro_2_1.mp4' type='video/mp4' />
+                  <source src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/home/lifecycle_monitor_2_4.mp4' type='video/mp4' />
                 </video>
               )}
 
