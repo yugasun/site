@@ -128,7 +128,7 @@ class NewsLetterForm extends React.Component {
           ref={ref => {
             this.container = ReactDOM.findDOMNode(ref)
           }}
-          flexDirection='column'
+          style={{ flexDirection: 'column' }}
         >
           <EmailField
             {...emailFieldProps}
