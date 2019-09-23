@@ -1,9 +1,10 @@
 import React from 'react'
 import imgLogo from 'src/assets/images/logo-sidebolt.png'
 import './Pricing.css'
+import { InternalLink, ExternalLink } from 'src/fragments'
+import { gettingStarted, dashboard, enterprise } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
-
   constructor(props) {
     super(props)
 
@@ -30,8 +31,8 @@ export default class Pricing extends React.Component {
             one: true,
             two: true,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Plugins',
@@ -47,19 +48,20 @@ export default class Pricing extends React.Component {
             one: false,
             two: false,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Components',
         features: [
           {
-            feature: 'Rapidly deploy common serverless use-cases via Serverless Components',
+            feature:
+              'Rapidly deploy common serverless use-cases via Serverless Components',
             one: true,
             two: true,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Registry',
@@ -69,8 +71,8 @@ export default class Pricing extends React.Component {
             one: true,
             two: true,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Dashboard',
@@ -110,8 +112,8 @@ export default class Pricing extends React.Component {
             one: false,
             two: '3',
             three: 'Custom',
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Monitoring',
@@ -134,7 +136,7 @@ export default class Pricing extends React.Component {
             two: '1,000,000',
             three: 'Custom',
           },
-        ]
+        ],
       },
       {
         category: 'Alerts',
@@ -151,7 +153,7 @@ export default class Pricing extends React.Component {
             two: true,
             three: true,
           },
-        ]
+        ],
       },
       {
         category: 'Debugging',
@@ -161,8 +163,8 @@ export default class Pricing extends React.Component {
             one: false,
             two: true,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Integrations',
@@ -172,8 +174,8 @@ export default class Pricing extends React.Component {
             one: false,
             two: false,
             three: true,
-          }
-        ]
+          },
+        ],
       },
       {
         category: 'Policies',
@@ -190,8 +192,8 @@ export default class Pricing extends React.Component {
             two: false,
             three: true,
           },
-        ]
-      }
+        ],
+      },
     ]
   }
 
@@ -208,21 +210,19 @@ export default class Pricing extends React.Component {
   render() {
     return (
       <div className='container pricing-component'>
-
         <div className='container-inner'>
           <div className='pricing-title'>
-            <div className='header'>
-              Serverless Framework Pricing
-            </div>
+            <div className='header'>Serverless Framework Pricing</div>
 
             <div className='description'>
-              Deploy serverless apps in seconds with our open-source edition, get production-ready with our free developer edition and pay as you scale with the enterprise edition.
+              Deploy serverless apps in seconds with our open-source edition,
+              get production-ready with our free developer edition and pay as
+              you scale with the enterprise edition.
             </div>
           </div>
         </div>
 
         <div className='container-inner pricing-summary'>
-
           <div className='pricing-summary-tile'>
             <div className='pricing-summary-edition-logo'>
               <div className='pricing-summary-edition-logo-serverless'>
@@ -237,13 +237,14 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>Open-Source Edition</div>
+              <div className='pricing-summary-detail-edition'>
+                Open-Source Edition
+              </div>
               <div className='pricing-summary-detail-text'>
-                Our vast open-source ecosystem simplifies serveless, and is available to everyone and every team for free.
+                Our vast open-source ecosystem simplifies serveless, and is
+                available to everyone and every team for free.
               </div>
-              <div className='pricing-summary-detail-price'>
-                Price -  Free
-              </div>
+              <div className='pricing-summary-detail-price'>Price - Free</div>
             </div>
             <div className='pricing-summary-detail'>
               <div className='pricing-summary-detail-title'>CLI</div>
@@ -269,11 +270,11 @@ export default class Pricing extends React.Component {
                 Open-Source & Free
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-action'>
-                Download
+            <InternalLink to={gettingStarted}>
+              <div className='pricing-summary-detail'>
+                <div className='pricing-summary-detail-action'>Download</div>
               </div>
-            </div>
+            </InternalLink>
           </div>
 
           <div className='pricing-summary-tile'>
@@ -290,19 +291,18 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>Developer Edition</div>
+              <div className='pricing-summary-detail-edition'>
+                Developer Edition
+              </div>
               <div className='pricing-summary-detail-text'>
-                Integrates and extends the open-source projects and adds free features for production-ready teams.
+                Integrates and extends the open-source projects and adds free
+                features for production-ready teams.
               </div>
-              <div className='pricing-summary-detail-price'>
-                Price -  Free
-              </div>
+              <div className='pricing-summary-detail-price'>Price - Free</div>
             </div>
             <div className='pricing-summary-detail'>
               <div className='pricing-summary-detail-title'>Dashboard</div>
-              <div className='pricing-summary-detail-text'>
-                Up to 3 users.
-              </div>
+              <div className='pricing-summary-detail-text'>Up to 3 users.</div>
             </div>
             <div className='pricing-summary-detail'>
               <div className='pricing-summary-detail-title'>Monitoring</div>
@@ -322,11 +322,13 @@ export default class Pricing extends React.Component {
                 Up to 1 million invocations a month.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-action'>
-                Sign-Up For Free
+            <ExternalLink to={dashboard}>
+              <div className='pricing-summary-detail'>
+                <div className='pricing-summary-detail-action'>
+                  Sign-Up For Free
+                </div>
               </div>
-            </div>
+            </ExternalLink>
           </div>
 
           <div className='pricing-summary-tile'>
@@ -343,16 +345,21 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>Enterprise Edition</div>
+              <div className='pricing-summary-detail-edition'>
+                Enterprise Edition
+              </div>
               <div className='pricing-summary-detail-text'>
-                Includes the developer edition, with increased limits, more features, training & support for scaling serverless teams.
+                Includes the developer edition, with increased limits, more
+                features, training & support for scaling serverless teams.
               </div>
               <div className='pricing-summary-detail-price'>
-                Price -  Contact Sales
+                Price - Contact Sales
               </div>
             </div>
             <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Increased Usage</div>
+              <div className='pricing-summary-detail-title'>
+                Increased Usage
+              </div>
               <div className='pricing-summary-detail-text'>
                 Increased invocations, team seats & more.
               </div>
@@ -369,21 +376,21 @@ export default class Pricing extends React.Component {
                 Unlimited policies.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-action'>
-                Contact Sales
+            <InternalLink to={enterprise}>
+              <div className='pricing-summary-detail'>
+                <div className='pricing-summary-detail-action'>
+                  Contact Sales
+                </div>
               </div>
-            </div>
+            </InternalLink>
           </div>
         </div>
 
-        { /* Pricing Table — Title */ }
+        {/* Pricing Table — Title */}
 
         <div className='container-inner'>
           <div className='pricing-title'>
-            <div className='header'>
-              Serverless Framework Edition Details
-            </div>
+            <div className='header'>Serverless Framework Edition Details</div>
 
             <div className='description'>
               A breakdown of all features in every Serverless Framework Edition.
@@ -391,57 +398,67 @@ export default class Pricing extends React.Component {
           </div>
         </div>
 
-        { /* Pricing Table — Desktop */ }
+        {/* Pricing Table — Desktop */}
 
         <div className='container-inner'>
           <div className='container pricing-table-desktop'>
-
             <div className='pricing-table-section'>
               <div className='pricing-table-row pricing-table-editions'>
-                <div className='pricing-table-column pricing-table-column-feature'>
-                </div>
-                <div className='pricing-table-column'>
-                  Open-Source
-                </div>
-                <div className='pricing-table-column'>
-                  Developer
-                </div>
-                <div className='pricing-table-column'>
-                  Enterprise
-                </div>
+                <div className='pricing-table-column pricing-table-column-feature' />
+                <div className='pricing-table-column'>Open-Source</div>
+                <div className='pricing-table-column'>Developer</div>
+                <div className='pricing-table-column'>Enterprise</div>
               </div>
             </div>
 
-            { this.state.features.map((category, index) => (
+            {this.state.features.map((category, index) => (
               <div className='pricing-table-section' key={index}>
                 <div className='pricing-table-row pricing-table-row-category'>
                   <div className='pricing-table-column pricing-table-column-feature'>
-                    { category.category }
+                    {category.category}
                   </div>
-                  <div className='pricing-table-column'></div>
-                  <div className='pricing-table-column'></div>
-                  <div className='pricing-table-column'></div>
+                  <div className='pricing-table-column' />
+                  <div className='pricing-table-column' />
+                  <div className='pricing-table-column' />
                 </div>
 
-                { category.features.map((feature, index2) => (
+                {category.features.map((feature, index2) => (
                   <div className='pricing-table-row' key={index2}>
                     <div className='pricing-table-column pricing-table-column-feature'>
-                      { feature.feature }.
+                      {feature.feature}.
                     </div>
                     <div className='pricing-table-column'>
-                      { feature.one === true && (<span className='pricing-check'>✔</span>)}
-                      { feature.one === false && (<span className='pricing-cross'>x</span>) }
-                      { typeof feature.one === 'string' && (<span className='pricing-limit'>{feature.one}</span>) }
+                      {feature.one === true && (
+                        <span className='pricing-check'>✔</span>
+                      )}
+                      {feature.one === false && (
+                        <span className='pricing-cross'>x</span>
+                      )}
+                      {typeof feature.one === 'string' && (
+                        <span className='pricing-limit'>{feature.one}</span>
+                      )}
                     </div>
                     <div className='pricing-table-column'>
-                      { feature.two === true && (<span className='pricing-check'>✔</span>) }
-                      { feature.two === false && (<span className='pricing-cross'>x</span>) }
-                      { typeof feature.two === 'string' && (<span className='pricing-limit'>{feature.two}</span>) }
+                      {feature.two === true && (
+                        <span className='pricing-check'>✔</span>
+                      )}
+                      {feature.two === false && (
+                        <span className='pricing-cross'>x</span>
+                      )}
+                      {typeof feature.two === 'string' && (
+                        <span className='pricing-limit'>{feature.two}</span>
+                      )}
                     </div>
                     <div className='pricing-table-column'>
-                      { feature.three === true && (<span className='pricing-check'>✔</span>) }
-                      { feature.three === false && (<span className='pricing-cross'>x</span>) }
-                      { typeof feature.three === 'string' && (<span className='pricing-limit'>{feature.three}</span>) }
+                      {feature.three === true && (
+                        <span className='pricing-check'>✔</span>
+                      )}
+                      {feature.three === false && (
+                        <span className='pricing-cross'>x</span>
+                      )}
+                      {typeof feature.three === 'string' && (
+                        <span className='pricing-limit'>{feature.three}</span>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -450,64 +467,73 @@ export default class Pricing extends React.Component {
           </div>
         </div>
 
-        { /* Pricing Table — Mobile */ }
+        {/* Pricing Table — Mobile */}
 
         <div className='container-inner'>
           <div className='container pricing-table-mobile'>
-
             <div className='pricing-table-section'>
               <div className='pricing-table-row'>
-                <div className='pricing-table-column'>
-                  Open-Source
-                </div>
-                <div className='pricing-table-column'>
-                  Developer
-                </div>
-                <div className='pricing-table-column'>
-                  Enterprise
-                </div>
+                <div className='pricing-table-column'>Open-Source</div>
+                <div className='pricing-table-column'>Developer</div>
+                <div className='pricing-table-column'>Enterprise</div>
               </div>
             </div>
 
-            { this.state.features.map((category, index) => (
-
-              <div class='pricing-table-section' key={index}>
+            {this.state.features.map((category, index) => (
+              <div className='pricing-table-section' key={index}>
                 <div className='pricing-table-row'>
-                  <div class='pricing-table-column pricing-table-column-category'>
-                    { category.category }
+                  <div className='pricing-table-column pricing-table-column-category'>
+                    {category.category}
                   </div>
                 </div>
 
-                { category.features.map((feature, index2) => (
-                  <div class='pricing-table-section' key={index2}>
+                {category.features.map((feature, index2) => (
+                  <div className='pricing-table-section' key={index2}>
                     <div className='pricing-table-row'>
-                      <div class='pricing-table-column pricing-table-column-feature'>
-                        { feature.feature }.
+                      <div className='pricing-table-column pricing-table-column-feature'>
+                        {feature.feature}.
                       </div>
                     </div>
                     <div className='pricing-table-row'>
-                      <div class='pricing-table-column'>
-                        { feature.one === true && (<span className='pricing-check'>✔</span>)}
-                        { feature.one === false && (<span className='pricing-cross'>x</span>) }
-                        { typeof feature.one === 'string' && (<span className='pricing-limit'>{feature.one}</span>) }
+                      <div className='pricing-table-column'>
+                        {feature.one === true && (
+                          <span className='pricing-check'>✔</span>
+                        )}
+                        {feature.one === false && (
+                          <span className='pricing-cross'>x</span>
+                        )}
+                        {typeof feature.one === 'string' && (
+                          <span className='pricing-limit'>{feature.one}</span>
+                        )}
                       </div>
-                      <div class='pricing-table-column'>
-                        { feature.two === true && (<span className='pricing-check'>✔</span>) }
-                        { feature.two === false && (<span className='pricing-cross'>x</span>) }
-                        { typeof feature.two === 'string' && (<span className='pricing-limit'>{feature.two}</span>) }
+                      <div className='pricing-table-column'>
+                        {feature.two === true && (
+                          <span className='pricing-check'>✔</span>
+                        )}
+                        {feature.two === false && (
+                          <span className='pricing-cross'>x</span>
+                        )}
+                        {typeof feature.two === 'string' && (
+                          <span className='pricing-limit'>{feature.two}</span>
+                        )}
                       </div>
-                      <div class='pricing-table-column'>
-                        { feature.three === true && (<span className='pricing-check'>✔</span>) }
-                        { feature.three === false && (<span className='pricing-cross'>x</span>) }
-                        { typeof feature.three === 'string' && (<span className='pricing-limit'>{feature.three}</span>) }
+                      <div className='pricing-table-column'>
+                        {feature.three === true && (
+                          <span className='pricing-check'>✔</span>
+                        )}
+                        {feature.three === false && (
+                          <span className='pricing-cross'>x</span>
+                        )}
+                        {typeof feature.three === 'string' && (
+                          <span className='pricing-limit'>{feature.three}</span>
+                        )}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            )) }
+            ))}
           </div>
-
         </div>
       </div>
     )
