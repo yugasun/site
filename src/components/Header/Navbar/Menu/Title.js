@@ -17,8 +17,7 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
     opacity: 0;
     margin-top: -12.5px;
     top: 50%;
-    transition: all .2s;
-    transition-property: height, width;
+    transition: all .2s ease;
   `,
   ``,
   `
