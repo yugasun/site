@@ -1,30 +1,8 @@
 .hero-component {
   flex-direction: column;
-  height: 100vh;
-  max-height: 1050px;
   padding-top: 86px;
   background: #000000;
   color: #ffffff;
-}
-
-/**
- * Hero Macro - Laptop
- */
-
- @media screen and (max-width: 1500px) {
-  .hero-component {
-    height: 110vh;
-  }
-}
-
-/**
- * Hero Macro - Mobile
- */
-
-@media screen and (max-width: 992px) {
-  .hero-component {
-    height: 130vh;
-  }
 }
 
 .hero-component .hero-inner {
@@ -278,6 +256,7 @@
   -moz-animation: fadeIn 0.7s;
   animation: fadeIn 0.7s;
   animation-fill-mode: backwards;
+  margin-bottom: 82px;
 }
 
 .hero-component .hero-customers {
@@ -379,6 +358,7 @@
  @media screen and (max-width: 992px) {
   .hero-component .hero-info {
     flex-direction: column;
+    height: auto;
   }
 
   .hero-component .hero-customers-list {
@@ -395,12 +375,23 @@
     margin-top: 62px;
     align-self: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     padding: 0px;
-    width: 65%;
+    width: 80%;
+  }
+
+  .hero-component .hero-stat {
+    width: 50%;
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 
   .hero-component .hero-stat-category {
     text-align: center;
+  }
+
+  .hero-component .hero-stat:last-child {
+    margin-bottom: 20px;
   }
 }
