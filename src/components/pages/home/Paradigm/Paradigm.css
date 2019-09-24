@@ -111,3 +111,26 @@
 .paradigm-component .paradigm-mission-statement b {
   font-family: 'SoleilLt';
 }
+
+/**
+ * Guide Steps - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .paradigm-component .paradigm-guide-steps {
+    flex-direction: column;
+  }
+
+  .paradigm-component .paradigm-guide-step {
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .paradigm-mission-inner .header, .paradigm-guide .header {
+    text-align: center;
+  }
+
+  .paradigm-component .paradigm-guide {
+    padding: 68px 0px 100px 0px;
+  }
+}

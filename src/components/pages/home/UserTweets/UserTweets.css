@@ -94,13 +94,58 @@
   font-size: 18px;
 }
 
-.user-tweets-component .user-tweets-actions span {
+.user-tweets-component .user-tweets-actions a span {
   color: #fd5750;
   margin-left: 3px;
   font-family: 'SoleilBk';
 }
 
-.user-tweets-component .user-tweets-actions span:hover {
+.user-tweets-component .user-tweets-actions a span:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/**
+ * User Tweets - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .user-tweets-component {
+    padding: 68px 0px 0 0px
+  }
+
+  .user-tweets-component .user-tweets-actions {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-tweets-component .user-tweets-actions span:nth-child(2) {
+    display: none;
+  }
+
+  .user-tweets-component .user-tweets-actions a {
+    margin-top: 20px;
+  }
+
+  .user-tweets-component .user-tweets-tweets  {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .user-tweets-component .user-tweets-tweets::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .user-tweets-component .user-tweets-tweet {
+    min-width: 400px;
+    min-height: 325px;
+    margin: 0px 8px;
+  }
+
+  .user-tweets-inner .header {
+    text-align: center;
+  }
 }

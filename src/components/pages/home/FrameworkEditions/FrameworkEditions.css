@@ -177,3 +177,26 @@
 .home-editions-component .home-edition-action-button:active {
   transform: scale(0.96);
 }
+
+/**
+ * Editions - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .home-editions-component .home-editions-list {
+    flex-direction: column;
+  }
+
+  .home-editions-component .home-edition {
+    width: 100%;
+    margin: 14px 0px 20px 0px;
+  }
+
+  .home-editions-inner .header {
+    text-align: center;
+  }
+
+  .home-editions-component {
+    padding: 68px 0px 0 0px;
+  }
+}

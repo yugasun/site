@@ -98,9 +98,11 @@ export default class UserTweets extends React.Component {
               </div>
             </div>
           </div>
-
+          {/** TODO: className naming hacky - streamline and fix */}
           <div className='user-tweets-actions container'>
-            Serverless Architects are a new and fast growing role -{' '}
+            <span>
+            Serverless Architects are a new and fast growing role</span>
+            <span >&nbsp;-{' '}</span>
             <InternalLink to={learn}>
               <span>Learn how to build Serverless Applications here</span>
             </InternalLink>

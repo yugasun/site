@@ -132,7 +132,7 @@ export default class Paradigm extends React.Component {
               The future of software is serverless.
             </div>
 
-            <div className='paradigm-mission-statement container'>
+            <div className='paradigm-mission-statement container-inner'>
               <p>
                 Software is eating the world... Unfortunately, most businesses
                 still can't deliver software successfully, much less do so at

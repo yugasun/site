@@ -5,6 +5,7 @@ export default {
   what: '/learn/manifesto/',
   cli: '/cli/',
   components: '/components/',
+  componentsGithub: 'https://github.com/serverless/components',
   training: '/training/',
   pricing: '/pricing/',
   about: '/company/overview/',
