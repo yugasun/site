@@ -6,10 +6,9 @@ import Brands from 'src/components/pages/training/Brands'
 import Content from 'src/components/pages/training/Content'
 import Hero from 'src/components/pages/training/Hero'
 import Form from 'src/components/pages/training/Form'
-import { NewToServerlessPrefooter } from 'src/fragments'
-import { Background, Flex, Box } from 'serverless-design-system'
+import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
+import { Background, Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Support = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>

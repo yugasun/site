@@ -6,10 +6,9 @@ import Brands from 'src/components/pages/enterprise/Brands'
 import Content from 'src/components/pages/enterprise/Content'
 import Hero from 'src/components/pages/enterprise/Hero'
 import Form from 'src/components/pages/enterprise/Form'
-import { NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background, Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Enterprise = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>

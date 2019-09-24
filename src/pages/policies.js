@@ -2,14 +2,13 @@ import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'
-import { NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/policies/Hero'
 import IndustryStandard from 'src/components/pages/policies/IndustryStandard'
 import CustomPolicies from 'src/components/pages/policies/CustomPolicies'
 import ZeroCode from 'src/components/pages/policies/ZeroCode'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Policies = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>

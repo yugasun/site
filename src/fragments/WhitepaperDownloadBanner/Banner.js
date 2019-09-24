@@ -10,7 +10,6 @@ import { Button } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
 import bannerWheelLeft from 'src/assets/images/banner-wheel-left.svg'
 import bannerWheelRight from 'src/assets/images/banner-wheel-right.svg'
-import { NewsletterFormPrefooter as NewsletterForm } from 'src/components'
 
 const DownloadButton = styled(Button)`
   background-color: white;
@@ -72,10 +71,21 @@ const FlexWithZIndex = styled(Flex)`
   z-index: 5;
 `
 
-const GuideUpdatesPrefooter = props => (
+const FrameworkWhitepaperBanner = props => (
   <React.Fragment>
-    <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3}>
-      <Background background='#fd5750' style={{ display: 'flex' }}>
+    <Container
+      maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]}
+      pb={3}
+      style={{
+        boxShadow: '0 20px 50px 0 rgba(0, 0, 0, 0.15)',
+      }}
+    >
+      <Background
+        background='#fd5750'
+        style={{
+          display: 'flex',
+        }}
+      >
         <LeftSpinningWheel
           backgroundImage={`url(${bannerWheelLeft})`}
           width='315px'
@@ -88,7 +98,7 @@ const GuideUpdatesPrefooter = props => (
           width={[1, 1, 1, 1, 0.5]}
           height={[460, 460, 240]}
         >
-          <Box width={[0.8, 0.8, 0.7, 0.5, 1]}>
+          <Box width={[0.7, 0.7, 0.7, 0.5, 0.8]}>
             <Text
               fontSize={[24]}
               lineHeight={'38px'}
@@ -97,12 +107,11 @@ const GuideUpdatesPrefooter = props => (
               fontFamily='Soleil'
               align='center'
             >
-              Get updated when a new course is released
+              See full architecture diagrams with time-to-market estimates for
+              use cases.
             </Text>
           </Box>
-          <Box width={[0.6]} mt={42}>
-            <NewsletterForm />
-          </Box>
+          <DownloadButton {...props}>download whitepaper</DownloadButton>
         </FlexWithZIndex>
         <RightSpinningWheel
           backgroundImage={`url(${bannerWheelRight})`}
@@ -114,4 +123,4 @@ const GuideUpdatesPrefooter = props => (
   </React.Fragment>
 )
 
-export default GuideUpdatesPrefooter
+export default FrameworkWhitepaperBanner

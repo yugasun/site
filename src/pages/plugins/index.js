@@ -3,9 +3,8 @@ import React from 'react'
 import DefaultLayout from 'src/layouts/Newest'
 import Hero from 'src/components/pages/plugins/Hero'
 import Content from 'src/components/pages/plugins/Content'
-import { Helmet } from 'src/fragments'
+import { Helmet, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background } from 'serverless-design-system'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Plugins = ({ data: plugins }) => {
   const edges = plugins.allPlugin.edges

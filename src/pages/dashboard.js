@@ -8,7 +8,7 @@ import SinglePane from 'src/components/pages/dashboard/SinglePane'
 import StageSpecific from 'src/components/pages/dashboard/StageSpecific'
 import SecurelyManaged from 'src/components/pages/dashboard/SecurelyManaged'
 import ForTeams from 'src/components/pages/dashboard/ForTeams'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
+import { WhitepaperDownloadBanner } from 'src/fragments'
 
 const Dashboard = ({ location }) => (
   <HomeLayout transparentHeader={true}>

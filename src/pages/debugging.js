@@ -2,14 +2,13 @@ import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'
-import { NewToServerlessPrefooter } from 'src/fragments'
+import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/debugging/Hero'
 import InvocationsExplorer from 'src/components/pages/debugging/InvocationsExplorer'
 import StraightToCode from 'src/components/pages/debugging/StraightToCode'
 import NoMoreCloudWatch from 'src/components/pages/debugging/NoMoreCloudWatch'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Debugging = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
