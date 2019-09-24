@@ -8,7 +8,7 @@ const CustomPoliciesContent = props => (
       Securely manage and use secrets and AWS accounts
     </Heading.h3>
     <P0 mb={[42, 42, 0]}>
-      Serverless Framework provides two powerful ways to enable admins to
+      The Serverless Framework provides two powerful ways to enable admins to
       securely manage and share secrets like API keys and AWS accounts without
       having to distribute or copy any sensitive data.
       <br />

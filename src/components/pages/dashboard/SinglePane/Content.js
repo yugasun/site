@@ -8,9 +8,9 @@ const IndustryStandardContent = props => (
       A single pane for your applications & services
     </Heading.h3>
     <P0 mb={[42, 42, 0]}>
-      With the Serverless Framework Dashboard you get a single of all your
+      With the Serverless Framework Dashboard you get a single view of all your
       applications and services across your organization. All deployed services
-      are organized into applications, services, instances so you can see what
+      are organized into applications, services, and instances so you can see what
       is deployed across stages and regions.
       <br />
       <br />

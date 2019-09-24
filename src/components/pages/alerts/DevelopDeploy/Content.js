@@ -7,7 +7,7 @@ const CustomPoliciesContent = props => (
     <Heading.h3 mb={22}>Develop, Deploy, Monitor</Heading.h3>
     <P0 mb={[42, 42, 0]}>
       The Serverless Framework generates a set of pre-configured alerts from
-      automatically collected CloudWatch log data. An alerts stream helps catch
+      automatically collected data. An alerts stream helps catch
       performance issues caused by a new deployment. Just open your dashboard,
       deploy and monitor the stream. You’ll see errors and performance hits
       caused by your deployment, both immediately after the deployment, and
