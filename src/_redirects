@@ -47,7 +47,6 @@
 /community/meetups /resources/events/ 301
 /resources/meetups /resources/events/ 301
 /community/champions /company/champions/ 301
-/workshops /resources/workshops/ 301
 /learn/overview/ /learn/ 301
 /company/team/ /company/overview/ 301
 /learn/event-gateway/ /event-gateway/ 301
@@ -71,3 +70,8 @@
 /resources/overview/ /learn/ 301
 /learn/case-study/ /learn/case-studies/ 301
 /blog/deploy_hybrid_serverless_cluster_workflows/ /blog/deploy-hybrid-serverless-cluster-workflows/ 301
+/workshops/* /training/ 301
+/workshops /training/ 301
+/acceleration /support/ 301
+/tech-partners /partners/ 301
+/framework/ /cli/ 301
