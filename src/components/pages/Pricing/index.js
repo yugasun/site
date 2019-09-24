@@ -1,8 +1,9 @@
 import React from 'react'
+import Button from '../../Button'
 import imgLogo from 'src/assets/images/logo-sidebolt.png'
-import './Pricing.css'
+import styles from './Pricing.module.css'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { gettingStarted, dashboard, enterprise } from 'src/constants/urls'
+import { gettingStarted, dashboard, enterprise, training, support } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
   constructor(props) {
@@ -209,12 +210,15 @@ export default class Pricing extends React.Component {
 
   render() {
     return (
-      <div className='container pricing-component'>
-        <div className='container-inner'>
-          <div className='pricing-title'>
-            <div className='header'>Serverless Framework Pricing</div>
+      <div className={`container ${styles.wrapper}`}>
 
-            <div className='description'>
+        <div className={`container-inner`}>
+          <div className={`${styles.title}`}>
+            <div className={`${styles.header}`} style={{ 'margin':'20px 0 20px 0' }}>
+              Serverless Framework Pricing
+            </div>
+
+            <div className={`${styles.description}`}>
               Deploy serverless apps in seconds with our open-source edition,
               get production-ready with our free developer edition and pay as
               you scale with the enterprise edition.
@@ -222,177 +226,221 @@ export default class Pricing extends React.Component {
           </div>
         </div>
 
-        <div className='container-inner pricing-summary'>
-          <div className='pricing-summary-tile'>
-            <div className='pricing-summary-edition-logo'>
-              <div className='pricing-summary-edition-logo-serverless'>
+        <div className={`container-inner ${styles.pricingSummary}`}>
+          <div className={`${styles.pricingSummaryTile}`}>
+            <div className={`${styles.pricingSummaryLogo}`}>
+              <div className={`${styles.pricingSummaryLogoServerless}`}>
                 serverless
               </div>
-              <div className='pricing-summary-edition-logo-framework'>
+              <div className={`${styles.pricingSummaryLogoFramework}`}>
                 framework
               </div>
-              <div className='pricing-summary-edition-logo-edition'>
+              <div className={`${styles.pricingSummaryLogoEdition}`}>
                 open-source
               </div>
             </div>
 
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailEdition}`}>
                 Open-Source Edition
               </div>
-              <div className='pricing-summary-detail-text'>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Our vast open-source ecosystem simplifies serveless, and is
                 available to everyone and every team for free.
               </div>
-              <div className='pricing-summary-detail-price'>Price - Free</div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>CLI</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>CLI</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Plugins</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Plugins</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Components</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Components</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Registry</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Registry</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
             <InternalLink to={gettingStarted}>
-              <div className='pricing-summary-detail'>
-                <div className='pricing-summary-detail-action'>Download</div>
+              <div className={`${styles.pricingSummaryDetail}`}>
+                <Button type={'primary'} text={'Download'}/>
               </div>
             </InternalLink>
           </div>
 
-          <div className='pricing-summary-tile'>
-            <div className='pricing-summary-edition-logo'>
-              <div className='pricing-summary-edition-logo-serverless'>
+          <div className={`${styles.pricingSummaryTile}`}>
+            <div className={`${styles.pricingSummaryLogo}`}>
+              <div className={`${styles.pricingSummaryLogoServerless}`}>
                 serverless
               </div>
-              <div className='pricing-summary-edition-logo-framework'>
+              <div className={`${styles.pricingSummaryLogoFramework}`}>
                 framework
               </div>
-              <div className='pricing-summary-edition-logo-edition'>
+              <div className={`${styles.pricingSummaryLogoEdition}`}>
                 developer
               </div>
             </div>
 
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailEdition}`}>
                 Developer Edition
               </div>
-              <div className='pricing-summary-detail-text'>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Integrates and extends the open-source projects and adds free
                 features for production-ready teams.
               </div>
-              <div className='pricing-summary-detail-price'>Price - Free</div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Dashboard</div>
-              <div className='pricing-summary-detail-text'>Up to 3 users.</div>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Dashboard</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>Up to 3 users.</div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Monitoring</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Alerts</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Alerts</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Debugging</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Debugging</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
             <ExternalLink to={dashboard}>
-              <div className='pricing-summary-detail'>
-                <div className='pricing-summary-detail-action'>
-                  Sign-Up For Free
-                </div>
+              <div className={`${styles.pricingSummaryDetail}`}>
+                <Button type={'primary'} text={'Sign Up For Free'}/>
               </div>
             </ExternalLink>
           </div>
 
-          <div className='pricing-summary-tile'>
-            <div className='pricing-summary-edition-logo'>
-              <div className='pricing-summary-edition-logo-serverless'>
+          <div className={`${styles.pricingSummaryTile}`}>
+            <div className={`${styles.pricingSummaryLogo}`}>
+              <div className={`${styles.pricingSummaryLogoServerless}`}>
                 serverless
               </div>
-              <div className='pricing-summary-edition-logo-framework'>
+              <div className={`${styles.pricingSummaryLogoFramework}`}>
                 framework
               </div>
-              <div className='pricing-summary-edition-logo-edition'>
+              <div className={`${styles.pricingSummaryLogoEdition}`}>
                 enterprise
               </div>
             </div>
 
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-edition'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailEdition}`}>
                 Enterprise Edition
               </div>
-              <div className='pricing-summary-detail-text'>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Includes the developer edition, with increased limits, more
                 features, training & support for scaling serverless teams.
               </div>
-              <div className='pricing-summary-detail-price'>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>
                 Price - Contact Sales
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>
                 Increased Usage
               </div>
-              <div className='pricing-summary-detail-text'>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Increased invocations, team seats & more.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Integrations</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Integrations</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Unlimited integrations.
               </div>
             </div>
-            <div className='pricing-summary-detail'>
-              <div className='pricing-summary-detail-title'>Policies</div>
-              <div className='pricing-summary-detail-text'>
+            <div className={`${styles.pricingSummaryDetail}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Policies</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
                 Unlimited policies.
               </div>
             </div>
             <InternalLink to={enterprise}>
-              <div className='pricing-summary-detail'>
-                <div className='pricing-summary-detail-action'>
-                  Contact Sales
-                </div>
+              <div className={`${styles.pricingSummaryDetail}`}>
+                <Button type={'primary'} text={'Contact Sales'}/>
               </div>
             </InternalLink>
           </div>
         </div>
 
+        {/* Pricing — Add-Ons */}
+
+        <div className={`container-inner`}>
+          <div className={`${styles.title}`}>
+            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>
+              Add-Ons
+            </div>
+            <div className={`${styles.description}`}>
+              Additional offerings for new and large teams.
+            </div>
+          </div>
+        </div>
+
+        <div className={`container-inner ${styles.addOns}`}>
+          <div className={`${styles.addOnTile}`}>
+            <div className={`${styles.addOnTileServerless}`}>
+              serverless
+            </div>
+            <div className={`${styles.addOnTileAddOn}`}>
+              training
+            </div>
+            <div className={`${styles.addOnTileDescription}`}>
+              Expert led workshops to get your team up to speed and ensure you do Serverless right the first time.
+            </div>
+            <div className={`${styles.addOnTileAction}`}>
+              <InternalLink to={training}>
+                <Button type={'primary'} text={'Learn About Training'}/>
+              </InternalLink>
+            </div>
+          </div>
+          <div className={`${styles.addOnTile}`}>
+            <div className={`${styles.addOnTileServerless}`}>
+              serverless
+            </div>
+            <div className={`${styles.addOnTileAddOn}`}>
+              support
+            </div>
+            <div className={`${styles.addOnTileDescription}`}>
+              24/7 support and architectural reviews from the team behind the Serverless Framework.
+            </div>
+            <div className={`${styles.addOnTileAction}`}>
+              <InternalLink to={support}>
+                <Button type={'primary'} text={'Learn About Support'}/>
+              </InternalLink>
+            </div>
+          </div>
+        </div>
+
         {/* Pricing Table — Title */}
 
-        <div className='container-inner'>
-          <div className='pricing-title'>
-            <div className='header'>Serverless Framework Edition Details</div>
+        <div className={`container-inner`}>
+          <div className={`${styles.title}`}>
+            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>Serverless Framework Edition Details</div>
 
-            <div className='description'>
+            <div className={`${styles.description}`}>
               A breakdown of all features in every Serverless Framework Edition.
             </div>
           </div>
@@ -400,64 +448,64 @@ export default class Pricing extends React.Component {
 
         {/* Pricing Table — Desktop */}
 
-        <div className='container-inner'>
-          <div className='container pricing-table-desktop'>
-            <div className='pricing-table-section'>
-              <div className='pricing-table-row pricing-table-editions'>
-                <div className='pricing-table-column pricing-table-column-feature' />
-                <div className='pricing-table-column'>Open-Source</div>
-                <div className='pricing-table-column'>Developer</div>
-                <div className='pricing-table-column'>Enterprise</div>
+        <div className={`container-inner`}>
+          <div className={`container ${styles.tableDesktop}`}>
+            <div className={`${styles.tableSection}`}>
+              <div className={`${styles.tableEditions}`}>
+                <div className={`${styles.tableColumn} ${styles.tableFeature}`} />
+                <div className={`${styles.tableColumn}`}>Open-Source</div>
+                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>
 
             {this.state.features.map((category, index) => (
-              <div className='pricing-table-section' key={index}>
-                <div className='pricing-table-row pricing-table-row-category'>
-                  <div className='pricing-table-column pricing-table-column-feature'>
+              <div className={`${styles.tableSection}`} key={index}>
+                <div className={`${styles.tableRow} ${styles.tableRowCategory}`}>
+                  <div className={`${styles.tableColumn} ${styles.tableFeature}`}>
                     {category.category}
                   </div>
-                  <div className='pricing-table-column' />
-                  <div className='pricing-table-column' />
-                  <div className='pricing-table-column' />
+                  <div className={`${styles.tableColumn}`} />
+                  <div className={`${styles.tableColumn}`} />
+                  <div className={`${styles.tableColumn}`} />
                 </div>
 
                 {category.features.map((feature, index2) => (
-                  <div className='pricing-table-row' key={index2}>
-                    <div className='pricing-table-column pricing-table-column-feature'>
+                  <div className={`${styles.tableRow}`} key={index2}>
+                    <div className={`${styles.tableColumn} ${styles.tableFeature}`}>
                       {feature.feature}.
                     </div>
-                    <div className='pricing-table-column'>
+                    <div className={`${styles.tableColumn}`}>
                       {feature.one === true && (
-                        <span className='pricing-check'>✔</span>
+                        <span className={`${styles.check}`}>✔</span>
                       )}
                       {feature.one === false && (
-                        <span className='pricing-cross'>x</span>
+                        <span className={`${styles.cross}`}>x</span>
                       )}
                       {typeof feature.one === 'string' && (
-                        <span className='pricing-limit'>{feature.one}</span>
+                        <span className={`${styles.limit}`}>{feature.one}</span>
                       )}
                     </div>
-                    <div className='pricing-table-column'>
+                    <div className={`${styles.tableColumn}`}>
                       {feature.two === true && (
-                        <span className='pricing-check'>✔</span>
+                        <span className={`${styles.check}`}>✔</span>
                       )}
                       {feature.two === false && (
-                        <span className='pricing-cross'>x</span>
+                        <span className={`${styles.cross}`}>x</span>
                       )}
                       {typeof feature.two === 'string' && (
-                        <span className='pricing-limit'>{feature.two}</span>
+                        <span className={`${styles.limit}`}>{feature.two}</span>
                       )}
                     </div>
-                    <div className='pricing-table-column'>
+                    <div className={`${styles.tableColumn}`}>
                       {feature.three === true && (
-                        <span className='pricing-check'>✔</span>
+                        <span className={`${styles.check}`}>✔</span>
                       )}
                       {feature.three === false && (
-                        <span className='pricing-cross'>x</span>
+                        <span className={`${styles.cross}`}>x</span>
                       )}
                       {typeof feature.three === 'string' && (
-                        <span className='pricing-limit'>{feature.three}</span>
+                        <span className={`${styles.limit}`}>{feature.three}</span>
                       )}
                     </div>
                   </div>
@@ -469,63 +517,63 @@ export default class Pricing extends React.Component {
 
         {/* Pricing Table — Mobile */}
 
-        <div className='container-inner'>
-          <div className='container pricing-table-mobile'>
-            <div className='pricing-table-section'>
-              <div className='pricing-table-row'>
-                <div className='pricing-table-column'>Open-Source</div>
-                <div className='pricing-table-column'>Developer</div>
-                <div className='pricing-table-column'>Enterprise</div>
+        <div className={`container-inner`}>
+          <div className={`${styles.tableMobile}`}>
+            <div className={`${styles.tableSection}`}>
+              <div className={`${styles.tableRow}`}>
+                <div className={`${styles.tableColumn}`}>Open-Source</div>
+                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>
 
             {this.state.features.map((category, index) => (
-              <div className='pricing-table-section' key={index}>
-                <div className='pricing-table-row'>
-                  <div className='pricing-table-column pricing-table-column-category'>
+              <div className={`${styles.tableSection}`} key={index}>
+                <div className={`${styles.tableRow}`}>
+                  <div className={`${styles.tableColumn} ${styles.tableColumnCategory}`}>
                     {category.category}
                   </div>
                 </div>
 
                 {category.features.map((feature, index2) => (
-                  <div className='pricing-table-section' key={index2}>
-                    <div className='pricing-table-row'>
-                      <div className='pricing-table-column pricing-table-column-feature'>
+                  <div className={`${styles.tableSection}`} key={index2}>
+                    <div className={`${styles.tableRow}`}>
+                      <div className={`${styles.tableColumn} ${styles.tableFeature}`}>
                         {feature.feature}.
                       </div>
                     </div>
-                    <div className='pricing-table-row'>
-                      <div className='pricing-table-column'>
+                    <div className={`${styles.tableRow}`}>
+                      <div className={`${styles.tableColumn}`}>
                         {feature.one === true && (
-                          <span className='pricing-check'>✔</span>
+                          <span className={`${styles.check}`}>✔</span>
                         )}
                         {feature.one === false && (
-                          <span className='pricing-cross'>x</span>
+                          <span className={`${styles.cross}`}>x</span>
                         )}
                         {typeof feature.one === 'string' && (
-                          <span className='pricing-limit'>{feature.one}</span>
+                          <span className={`${styles.limit}`}>{feature.one}</span>
                         )}
                       </div>
-                      <div className='pricing-table-column'>
+                      <div className={`${styles.tableColumn}`}>
                         {feature.two === true && (
-                          <span className='pricing-check'>✔</span>
+                          <span className={`${styles.check}`}>✔</span>
                         )}
                         {feature.two === false && (
-                          <span className='pricing-cross'>x</span>
+                          <span className={`${styles.cross}`}>x</span>
                         )}
                         {typeof feature.two === 'string' && (
-                          <span className='pricing-limit'>{feature.two}</span>
+                          <span className={`${styles.limit}`}>{feature.two}</span>
                         )}
                       </div>
-                      <div className='pricing-table-column'>
+                      <div className={`${styles.tableColumn}`}>
                         {feature.three === true && (
-                          <span className='pricing-check'>✔</span>
+                          <span className={`${styles.check}`}>✔</span>
                         )}
                         {feature.three === false && (
-                          <span className='pricing-cross'>x</span>
+                          <span className={`${styles.cross}`}>x</span>
                         )}
                         {typeof feature.three === 'string' && (
-                          <span className='pricing-limit'>{feature.three}</span>
+                          <span className={`${styles.limit}`}>{feature.three}</span>
                         )}
                       </div>
                     </div>

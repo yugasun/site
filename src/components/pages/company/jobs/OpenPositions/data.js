@@ -24,7 +24,7 @@ export default [
         "heading": "Growth",
         "title": "Growth Marketing Manager",
         "location": "San Francisco/Remote",
-        "status": "Full-time",
+        "status": "Contract",
         "link": "https://jobs.lever.co/serverless/59b12b01-6052-407d-9bf8-cc019a65eafc"
     },
     {

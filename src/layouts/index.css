@@ -241,7 +241,10 @@ tfoot td {
  */
 
 /* Single Breakpoint */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1280px) {
+  .container-inner {
+    padding: 0 20px;
+  }
 }
 
 .container {
@@ -261,7 +264,7 @@ tfoot td {
   flex-shrink: 0;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1216px;
+  max-width: 1280px;
 }
 
 .header-label {

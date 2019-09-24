@@ -102,5 +102,5 @@ export default [
   ContactSalesMenu,
   LoginMenu,
   RegisterMenu,
-  
+
 ]
