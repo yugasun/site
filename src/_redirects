@@ -70,8 +70,13 @@
 /resources/overview/ /learn/ 301
 /learn/case-study/ /learn/case-studies/ 301
 /blog/deploy_hybrid_serverless_cluster_workflows/ /blog/deploy-hybrid-serverless-cluster-workflows/ 301
-/workshops/* /training/ 301
 /workshops /training/ 301
+/resources/workshops/ /training/ 301
+/workshops/san-francisco/ /training/ 301
+/workshops/seattle/ /training/ 301
+/workshops/new-york/ /training/ 301
+/workshops/atlanta/ /training/ 301
+/workshops/london/ /training/ 301
 /acceleration /support/ 301
 /tech-partners /partners/ 301
 /framework/ /cli/ 301
