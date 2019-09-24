@@ -3,7 +3,7 @@ import { P0, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { dashboard } from 'src/constants/urls.js'
-import { HeroButton, HeroFrameworkLogo } from 'src/components'
+import { Button, HeroFrameworkLogo } from 'src/components'
 
 const HeroContent = props => (
   <Flex
@@ -26,21 +26,11 @@ const HeroContent = props => (
       mt={[32]}
       align={['left', 'left', 'center', 'center', 'left']}
     >
-      Forget infrastructure
+      Deploy serverless use-cases, not infrastructure with these simpler, faster, and more powerful abstractions.
     </Text>
-    <P0
-      mt={[22, 22, 32]}
-      mb={[32, 32, 42]}
-      align={['left', 'left', 'center', 'center', 'left']}
-      color='white'
-    >
-      Deploy entire serverless use-cases, like a blog, a user registration
-      system, a payment system or an entire application without managing complex
-      cloud infrastructure configurations.
-    </P0>
-    <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
-      <ExternalLink to={dashboard}>
-        <HeroButton>Sign-up for free</HeroButton>
+    <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']} style={{ 'marginTop': '50px' }}>
+      <ExternalLink to={'https://github.com/serverless/components/tree/master/templates'}>
+        <Button type='primary' text='View Examples'/>
       </ExternalLink>
     </Flex>
   </Flex>

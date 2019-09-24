@@ -8,7 +8,7 @@ const InvocationsExplorer = props => (
     flexDirection={['column', 'column', 'row']}
   >
     <Content />
-    <video muted className='cli-video' controls>
+    <video muted className='cli-video' autoPlay loop>
       <source
         src='https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/cli/CLI01.mp4'
         type='video/mp4'

@@ -3,7 +3,7 @@ import { P0, Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
 import { dashboard } from 'src/constants/urls.js'
-import { HeroButton, HeroFrameworkLogo } from 'src/components'
+import { Button, HeroFrameworkLogo } from 'src/components'
 
 const HeroContent = props => (
   <Flex
@@ -39,7 +39,7 @@ const HeroContent = props => (
     </P0>
     <Flex justifyContent={['left', 'left', 'center', 'center', 'flex-start']}>
       <ExternalLink to={dashboard}>
-        <HeroButton>Sign-up for free</HeroButton>
+        <Button type='primary' text='Sign up for free'/>
       </ExternalLink>
     </Flex>
   </Flex>

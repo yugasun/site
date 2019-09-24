@@ -1,8 +1,13 @@
 module.exports = [
   {
+    title: 'Custom Usage Plans',
+    description:
+      `Custom usage plans for large teams and organizations.`,
+  },
+  {
     title: 'Integrations',
     description:
-      'Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks and other Ops tools.',
+      'Send alerts, metrics and more to Slack, Email, AWS SNS, Webhooks and other Operations tools.',
   },
   {
     title: 'Policies',

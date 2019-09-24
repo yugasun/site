@@ -64,17 +64,17 @@ export default class Pricing extends React.Component {
           },
         ],
       },
-      {
-        category: 'Registry',
-        features: [
-          {
-            feature: 'Publish, Share & Discover Serverless Components',
-            one: true,
-            two: true,
-            three: true,
-          },
-        ],
-      },
+      // {
+      //   category: 'Registry',
+      //   features: [
+      //     {
+      //       feature: 'Publish, share & discover Serverless Components',
+      //       one: true,
+      //       two: true,
+      //       three: true,
+      //     },
+      //   ],
+      // },
       {
         category: 'Dashboard',
         features: [
@@ -149,7 +149,7 @@ export default class Pricing extends React.Component {
             three: true,
           },
           {
-            feature: 'Errors, Performance, Warnings & more',
+            feature: 'Errors, performance, warnings & more',
             one: false,
             two: true,
             three: true,
@@ -171,7 +171,7 @@ export default class Pricing extends React.Component {
         category: 'Integrations',
         features: [
           {
-            feature: 'Email, Slack, AWS SNS, Webhooks & more',
+            feature: 'Email, Slack, AWS SNS, webhooks & more',
             one: false,
             two: false,
             three: true,
@@ -268,12 +268,14 @@ export default class Pricing extends React.Component {
                 Open-Source & Free
               </div>
             </div>
+            {/*
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Registry</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
+            */}
             <InternalLink to={gettingStarted}>
               <div className={`${styles.pricingSummaryDetail}`}>
                 <Button type={'primary'} text={'Download'}/>

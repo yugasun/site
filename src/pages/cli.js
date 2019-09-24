@@ -26,8 +26,8 @@ const CLI = ({ location }) => (
         <CommunityNumbers />
         <Build />
         <Deploy />
-        <MultipleCloudProviders />
         <Run />
+        <MultipleCloudProviders />
       </AppContainer>
     </Background>
 
