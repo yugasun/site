@@ -14,6 +14,7 @@ import {
   gettingStarted,
   enterprise,
   dashboard,
+  pricing,
 } from 'src/constants/urls.js'
 
 export default class FrameworkEditions extends React.Component {
@@ -66,7 +67,7 @@ export default class FrameworkEditions extends React.Component {
               </div>
 
               <InternalLink to={cli}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>CLI</div>
                   <div className='home-edition-detail-text'>
                     Easy YAML + CLI development and deployment to AWS, Azure,
@@ -76,7 +77,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={plugins}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>plugins</div>
                   <div className='home-edition-detail-text'>
                     Access 1000+ plugins that extend the Framework CLI to
@@ -86,7 +87,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={components}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>components</div>
                   <div className='home-edition-detail-text'>
                     Deploy common serverless use-cases more easily and quickly
@@ -94,13 +95,6 @@ export default class FrameworkEditions extends React.Component {
                   </div>
                 </div>
               </InternalLink>
-
-              <div className='home-edition-detail'>
-                <div className='home-edition-detail-title'>registry</div>
-                <div className='home-edition-detail-text'>
-                  Easily discover, deploy & share Serverless Components.
-                </div>
-              </div>
 
               <InternalLink to={gettingStarted}>
                 <div className='home-edition-action'>
@@ -131,7 +125,7 @@ export default class FrameworkEditions extends React.Component {
               </div>
 
               <InternalLink to={dashboardPage}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>dashboard</div>
                   <div className='home-edition-detail-text'>
                     A shared view for your team's apps, metrics, alerts,
@@ -141,7 +135,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={monitoring}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>monitoring</div>
                   <div className='home-edition-detail-text'>
                     Instant, powerful metrics for your serverless apps covering
@@ -151,7 +145,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={alerts}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>alerts</div>
                   <div className='home-edition-detail-text'>
                     Zero-config, real-time alerts for deployments, new errors,
@@ -161,7 +155,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={debugging}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>debugging</div>
                   <div className='home-edition-detail-text'>
                     Query across every invocation with our explorer to find
@@ -200,16 +194,18 @@ export default class FrameworkEditions extends React.Component {
                 </div>
               </div>
 
-              <div className='home-edition-detail'>
-                <div className='home-edition-detail-title'>Increased Usage</div>
-                <div className='home-edition-detail-text'>
-                  All features from developer & open-source editions are
-                  included with increased usage limits.
+              <InternalLink to={pricing}>
+                <div className='home-edition-detail home-edition-detail-clickable'>
+                  <div className='home-edition-detail-title'>Increased Usage</div>
+                  <div className='home-edition-detail-text'>
+                    All features from developer & open-source editions are
+                    included with increased usage limits.
+                  </div>
                 </div>
-              </div>
+              </InternalLink>
 
               <InternalLink to={integrations}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>integrations</div>
                   <div className='home-edition-detail-text'>
                     Send alerts, metrics and more to Slack, Email, AWS SNS,
@@ -219,7 +215,7 @@ export default class FrameworkEditions extends React.Component {
               </InternalLink>
 
               <InternalLink to={policies}>
-                <div className='home-edition-detail'>
+                <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>Policies</div>
                   <div className='home-edition-detail-text'>
                     Set and automate policy enforcement of standards and best
