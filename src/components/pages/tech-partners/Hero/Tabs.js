@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { HeroTabs } from 'src/fragments'
-import { partners, forum, meetups, slack, workshops } from 'src/constants/urls'
+import { partners, forum, meetups, slack } from 'src/constants/urls'
 
 const data = [
   {
@@ -23,11 +23,6 @@ const data = [
     label: 'slack',
     value: 'slack',
     navProps: { to: slack, crossDomain: true },
-  },
-  {
-    label: 'workshops',
-    value: 'workshops',
-    navProps: { to: workshops },
   },
 ]
 

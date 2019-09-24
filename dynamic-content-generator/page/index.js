@@ -2,7 +2,6 @@ const blogPagesGenerator = require('./blog')
 const docsPagesGenerator = require('./docs')
 const examplePagesGenerator = require('./example')
 const pluginPagesGenerator = require('./plugin')
-const workshopPagesGenerator = require('./workshop')
 const kickstartPagesGenerator = require('./kickstart')
 
 const pageCreator = (graphql, createPage, createRedirect) =>
@@ -12,7 +11,6 @@ const pageCreator = (graphql, createPage, createRedirect) =>
     pluginPagesGenerator(graphql, createPage),
     kickstartPagesGenerator(graphql, createPage),
     docsPagesGenerator(graphql, createPage, createRedirect),
-    workshopPagesGenerator(createPage),
   ])
 
 module.exports = pageCreator
