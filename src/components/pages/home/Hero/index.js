@@ -51,6 +51,9 @@ export default class Hero extends React.Component {
       const containter = document.getElementById('hero-video-container')
       self.setState({ chapter: 'intro' })
     }, 700)
+
+    // Learn More Scroller
+    this.heroSection = React.createRef()
   }
 
   /**
@@ -68,7 +71,7 @@ export default class Hero extends React.Component {
 
   render() {
     return (
-      <div className='hero-component container'>
+      <div className='hero-component container' ref={this.heroSection}>
         <div className='hero-inner container-inner'>
           <div className='hero-logo container'>
             <div className='hero-logo-bolt'>
@@ -197,7 +200,13 @@ export default class Hero extends React.Component {
             >
               Start Free
             </a>
-            <div className='hero-button hero-button-secondary'>Learn More</div>
+            <div className='hero-button hero-button-secondary'
+            onClick={() => {
+              var elmnt = document.getElementById('homeEditions')
+              elmnt.scrollIntoView({ behavior: 'smooth' })
+            }}>
+              Learn More
+            </div>
           </div>
 
           <div className='hero-info container'>

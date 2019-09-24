@@ -35,7 +35,7 @@ export default class FrameworkEditions extends React.Component {
 
   render() {
     return (
-      <div className='container home-editions-component'>
+      <div id='homeEditions' className='container home-editions-component'>
         <div className='container-inner home-editions-inner'>
           <div className='header-label container'>Serverless Framework</div>
 
