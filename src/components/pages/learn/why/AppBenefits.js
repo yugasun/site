@@ -35,7 +35,7 @@ const OverviewFeatures = () => (
   <Box mt={['10px', '10px', '10px', '10px', 40]}>
     <Features
       title='What makes an application serverless?'
-      description='These are the 4 key properties of Serverless Applications you should know about'
+      description='4 key properties of Serverless Applications you should know about'
       features={featureItemsData}
       leadingNumber={false}
       headingStyle={{ my: [4] }}
