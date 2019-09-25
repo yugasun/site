@@ -249,6 +249,11 @@
  * Hero Actions - Mobile
  */
  @media screen and (max-width: 992px) {
+  .hero-component .hero-actions .hero-button-primary {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   .hero-component .hero-button-secondary {
     display: none;
   }
