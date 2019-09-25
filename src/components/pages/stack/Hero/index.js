@@ -1,25 +1,15 @@
 import React from 'react'
 
 import { Box, ResponsiveStack, Flex } from 'serverless-design-system'
-import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
+import { HeroWrapperWithTabs as HeroWrapper } from 'src/fragments'
 import { PL, Heading } from 'src/fragments/DesignSystem'
-import HeroTabs from 'src/components/pages/plugins/ResourcesHeroTabs'
+import HeroTabs from 'src/components/pages/learn/HeroTabs.js'
 
-const ExamplesHero = () => {
+const StackExplorerHero = () => {
   return (
-    <HeroWrapper
-      background={[
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
-      ]}
-      height={[422, 422, 491]}
-    >
-      <Box mb={[2, 2, 6]} pt={[0, 0, 4]}>
-        <HeroTabs selected='examples' />
-      </Box>
-
-      <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
+    <HeroWrapper>
+      <HeroTabs selected='examples' />
+      <ResponsiveStack mb={[2, 2, 2, 0]} color='white'>
         <Box width={[1]}>
           <Heading.h0 m={0} mt={[42, 42, 0, 0]}>
             Stack
@@ -35,4 +25,4 @@ const ExamplesHero = () => {
   )
 }
 
-export default ExamplesHero
+export default StackExplorerHero
