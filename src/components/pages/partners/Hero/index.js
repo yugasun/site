@@ -8,11 +8,6 @@ import { Heading } from 'src/fragments/DesignSystem'
 const PartnersHero = () => {
   return (
     <HeroWrapper
-      background={[
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
-      ]}
       height={[450, 490, 480, 570, 515, 485]}
     >
       <HeroTabs selected='partners' />

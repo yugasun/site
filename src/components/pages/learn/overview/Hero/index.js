@@ -9,11 +9,6 @@ import learnLogo from 'src/assets/images/pages/learn/learn-logo.svg'
 const ExamplesHero = () => {
   return (
     <HeroWrapper
-      background={[
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
-      ]}
       height={[433, 433, 500, 540, 540]}
     >
       <Box mb={[2, 2, 5]}>
