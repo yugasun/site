@@ -52,9 +52,11 @@ export default class Paradigm extends React.Component {
                   Watch the overview video
                 </div>
               </ExternalLink>
+              <ExternalLink to={'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/whitepapers/serverless-architecture-use-cases.pdf'}>
               <div className='paradigm-guide-step-action'>
                 Read the whitepaper
               </div>
+              </ExternalLink>
               <InternalLink to={meetups}>
                 <div className='paradigm-guide-step-action'>Join A meetup</div>
               </InternalLink>
