@@ -14,13 +14,6 @@ const CustomPoliciesContent = props => (
       tools or other services not yet supported out of the box (e.g. PagerDuty).
       Use the webhooks or SNS Topic integration to send alerts from Serverless
       Framework to custom API endpoints or SNS Topics.
-      <br />
-      <br />
-      See how easy it is to build a custom integration with this{' '}
-      <InternalLink to={'/examples/aws-node-simple-http-endpoint/'} underline>
-        Simple HTTP Endpoint
-      </InternalLink>{' '}
-      example built with the Serverless Framework.
     </P0>
   </Flex>
 )
