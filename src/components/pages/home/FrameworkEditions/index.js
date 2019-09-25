@@ -58,7 +58,7 @@ export default class FrameworkEditions extends React.Component {
                 </div>
                 <div className='home-edition-detail-text'>
                   Downloaded over 1 million times per month. Our vast
-                  open-source ecosystem simplifies serveless, and is available
+                  open-source ecosystem simplifies serverless, and is available
                   to everyone for free.
                 </div>
                 <div className='home-edition-detail-features'>

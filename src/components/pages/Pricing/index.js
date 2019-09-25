@@ -245,7 +245,7 @@ export default class Pricing extends React.Component {
                 Open-Source Edition
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Our vast open-source ecosystem simplifies serveless, and is
+                Our vast open-source ecosystem simplifies serverless, and is
                 available to everyone and every team for free.
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
