@@ -134,6 +134,15 @@
   border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
+.pricingSummaryDetailClickable:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.025);
+}
+
+.pricingSummaryDetailClickable:hover .pricingSummaryDetailTitle {
+  text-decoration: underline;
+}
+
 .pricingSummaryDetail:last-child {
   border-bottom: none;
 }

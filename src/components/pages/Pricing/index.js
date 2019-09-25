@@ -3,7 +3,7 @@ import Button from '../../Button'
 import imgLogo from 'src/assets/images/logo-sidebolt.png'
 import styles from './Pricing.module.css'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { gettingStarted, dashboard, enterprise, training, support } from 'src/constants/urls'
+import { cli, gettingStarted, dashboard, enterprise, training, support, plugins, components, dashboardPage, monitoring, alerts, debugging, pricing, integrations, policies } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
   constructor(props) {
@@ -250,24 +250,30 @@ export default class Pricing extends React.Component {
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            <InternalLink to={cli}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>CLI</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+            <InternalLink to={plugins}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Plugins</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+            <InternalLink to={components}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Components</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Open-Source & Free
               </div>
             </div>
+            </InternalLink>
             {/*
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Registry</div>
@@ -306,28 +312,38 @@ export default class Pricing extends React.Component {
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            <InternalLink to={dashboardPage}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Dashboard</div>
               <div className={`${styles.pricingSummaryDetailText}`}>Up to 3 users.</div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+
+            <InternalLink to={monitoring}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+
+            <InternalLink to={alerts}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Alerts</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+            <InternalLink to={debugging}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Debugging</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Up to 1 million invocations a month.
               </div>
             </div>
+            </InternalLink>
             <ExternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail}`}>
                 <Button type={'primary'} text={'Sign Up For Free'}/>
@@ -360,7 +376,8 @@ export default class Pricing extends React.Component {
                 Price - Contact Sales
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            <InternalLink to={pricing}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>
                 Increased Usage
               </div>
@@ -368,18 +385,23 @@ export default class Pricing extends React.Component {
                 Increased invocations, team seats & more.
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+            <InternalLink to={integrations}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Integrations</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Unlimited integrations.
               </div>
             </div>
-            <div className={`${styles.pricingSummaryDetail}`}>
+            </InternalLink>
+            <InternalLink to={policies}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>Policies</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Unlimited policies.
               </div>
             </div>
+            </InternalLink>
             <InternalLink to={enterprise}>
               <div className={`${styles.pricingSummaryDetail}`}>
                 <Button type={'primary'} text={'Contact Sales'}/>
