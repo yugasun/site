@@ -8,10 +8,20 @@ import styled from 'styled-components'
 
 const LogoWithDesktopTopMargin = styled(Logo)`
   margin-top: 6px;
+
+  @media screen and (min-width: 992px) and (max-width: 1280px) {
+    margin: 15.5px 0;
+  }
 `
 
 const LogoWithDesktopLeftMargin = styled(Logo)`
   margin-left: 8px;
+  @media screen and (min-width: 992px) and (max-width: 1280px) {
+    margin-bottom: 2px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1px;
+  }
 `
 
 const NonMobileLink = styled(Link)`
@@ -21,20 +31,19 @@ const NonMobileLink = styled(Link)`
 `
 
 const LogoComponent = ({ isNavbarActive }) => (
-  <Row alignItems='center'>
+  <Row alignItems='center' py={[0, 0, 0, 0, '15.5px']}>
     <Link to='/'>
       <LogoWithDesktopTopMargin
         src={logo}
-        height={['21px', '21px', '21px', '55px']}
-        width={['112px', '112px', '112px', '153px']}
+        height={['21px', '21px', '21px', '24px']}
         alt='Serverless'
+        
       />
     </Link>
     <NonMobileLink to='/framework/docs/'>
       <LogoWithDesktopLeftMargin
         src={docsLogo}
-        height={['15px', '15px', '15px', '17px']}
-        width={['36px', '36px', '36px', '45px']}
+        height={['11px', '11px', '12px', '14px']}
         alt='Serverless'
         ml={'8px'}
       />

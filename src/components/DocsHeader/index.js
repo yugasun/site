@@ -98,6 +98,7 @@ class Header extends React.Component {
                 <Flex.verticallyCenter
                   flexWrap='wrap'
                   justifyContent='space-between'
+                  py={[0, 0, 0, 0, 2.5]}
                 >
                   <Logo isNavbarActive={this.state.isNavbarActive} />
                   <NavbarContext.Provider value={this.state}>
