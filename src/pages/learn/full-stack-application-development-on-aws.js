@@ -13,7 +13,7 @@ import styled from 'styled-components'
 
 const BackgroundWithPaddingBottom = styled(Background)`
   @media only screen and (min-width: 1601px) {
-    background: linear-gradient(to bottom, #fff 40%, #000 40%);
+    background: linear-gradient(to bottom, #fff 40%, #f7f7f7 40%);
     padding-bottom: 115px;
   }
 `
@@ -36,7 +36,7 @@ const FrameWorks = ({ location }) => (
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#fff'>
-        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #000 40%);'>
+        <BackgroundWithPaddingBottom background='linear-gradient(to bottom, #fff 60%, #f7f7f7 40%);'>
           <WhitepaperDownload />
         </BackgroundWithPaddingBottom>
       </Background>
