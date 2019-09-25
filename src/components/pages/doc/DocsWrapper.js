@@ -540,7 +540,7 @@ const Wrapper = styled(Column)`
       opacity: 1;
     }
     .rightContent {
-      width: 706px;
+      width: 735px;
     }
   }
   .versionNumber {
@@ -718,14 +718,6 @@ const Wrapper = styled(Column)`
         left: -10px;
         transform: none;
         transition: none;
-      }
-    }
-  }
-
-  @media (max-width: 1600px) {
-    .breadCrumbContainer {
-      .rightContent {
-        width: 717px;
       }
     }
   }
