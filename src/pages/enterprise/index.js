@@ -1,32 +1,37 @@
 import React from 'react'
 
 import { Helmet } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
-import Hero from 'src/components/pages/enterprise/Hero'
-import Features from 'src/components/pages/enterprise/Features'
+import HomeLayout from 'src/layouts/Newest'
 import Brands from 'src/components/pages/enterprise/Brands'
+import Content from 'src/components/pages/enterprise/Content'
+import Hero from 'src/components/pages/enterprise/Hero'
 import Form from 'src/components/pages/enterprise/Form'
-import { NewToServerlessPrefooter } from 'src/fragments'
-import { Background, Box } from 'serverless-design-system'
+import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
+import { Background, Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import WhitepaperDownloadBanner from 'src/components/pages/framework/Whitepaper'
 
 const Enterprise = ({ location }) => (
-  <HomeLayout prefooter={NewToServerlessPrefooter} startWithWhiteHeader={false}>
-    <Helmet title='Serverless Framework Enterprise' location={location} />
+  <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
+    <Helmet
+      title='Serverless Framework Enterprise | Contact Us'
+      location={location}
+    />
     <Hero />
-    <Background background={'black'}>
+    <Background background={'#f7f7f7'}>
       <AppContainer>
-        <Features />
-        <Form customPb={[74, 74, 74, 74, 115]} />
+        <Flex
+          justifyContent='space-between'
+          flexDirection={['column', 'column', 'column', 'column', 'row']}
+        >
+          <Content />
+          <Form customPb={[74, 74, 74, 74, 115]} />
+        </Flex>
         <Brands />
       </AppContainer>
     </Background>
 
-    <Background background='black'>
-      <Box pb={[0, 0, 0, 0, 0, 142]}>
-        <WhitepaperDownloadBanner />
-      </Box>
+    <Background background='#f7f7f7'>
+      <WhitepaperDownloadBanner />
     </Background>
   </HomeLayout>
 )

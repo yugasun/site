@@ -2,75 +2,105 @@ import React from 'react'
 import { Box } from 'serverless-design-system'
 
 import MenuTitle from './Title'
-import { ResourcesDropdownList, CommunityDropdownList } from './DropdownList'
+import {
+  ServicesDropdownList,
+  MoreDropdownList,
+  LearnDropdownList,
+  ProductDropdownList,
+} from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { why, enterprise, docs, framework } from 'src/constants/newUrls'
-import HeaderCTAButton from '../../HeaderCTAButton'
-import CommunityMenuDescription from './Descriptions/Community'
-import ResourcesMenuDescription from './Descriptions/Resources'
+import { enterprise, docs, pricing, dashboard } from 'src/constants/urls'
+//TODO: double-up - clean this to one file
+import MoreMenuDescription from './Descriptions/More'
+import LearnMenuDescription from './Descriptions/Learn'
+import ServicesMenuDescription from './Descriptions/Services'
+import ProductMenuDescription from './Descriptions/Product'
 
 const ProductMenu = () => (
   <Box>
-    <NavLink to={framework} completed className='header-menu-item'>
-      <MenuTitle name={'product'} />
-    </NavLink>
+    <MenuTitle name={'Product'} />
+    <ProductMenuDescription>
+      <ProductDropdownList />
+    </ProductMenuDescription>
   </Box>
 )
 
 const DocsMenu = () => (
   <Box>
     <NavLink to={docs} completed className='header-menu-item'>
-      <MenuTitle name={'docs'} />
+      <MenuTitle name={'Docs'} />
     </NavLink>
   </Box>
 )
 
-const ResourcesMenu = () => (
+const PricingMenu = () => (
   <Box>
-    <MenuTitle name={'resources'} />
-    <ResourcesMenuDescription>
-      <ResourcesDropdownList />
-    </ResourcesMenuDescription>
-  </Box>
-)
-
-const CommunityMenu = () => (
-  <Box>
-    <MenuTitle name={'community'} />
-    <CommunityMenuDescription>
-      <CommunityDropdownList />
-    </CommunityMenuDescription>
-  </Box>
-)
-
-const WhyMenu = () => (
-  <Box>
-    <NavLink to={why} completed className='header-menu-item'>
-      <MenuTitle name={'why'} />
+    <NavLink to={pricing} completed className='header-menu-item'>
+      <MenuTitle name={'Pricing'} />
     </NavLink>
   </Box>
 )
 
-const EnterpriseMenu = () => (
+const ServicesMenu = () => (
+  <Box>
+    <MenuTitle name={'Services'} />
+    <ServicesMenuDescription>
+      <ServicesDropdownList />
+    </ServicesMenuDescription>
+  </Box>
+)
+
+const LearnMenu = () => (
+  <Box>
+    <MenuTitle name={'Learn'} />
+    <LearnMenuDescription>
+      <LearnDropdownList />
+    </LearnMenuDescription>
+  </Box>
+)
+
+const MoreMenu = () => (
+  <Box>
+    <MenuTitle name={'More'} />
+    <MoreMenuDescription>
+      <MoreDropdownList />
+    </MoreMenuDescription>
+  </Box>
+)
+
+const ContactSalesMenu = () => (
   <Box>
     <NavLink to={enterprise} completed className='header-menu-item'>
-      <MenuTitle name={'enterprise'} />
+      <MenuTitle name={'Contact Sales'} color='#fd5750' />
     </NavLink>
   </Box>
 )
 
-const SupportMenu = () => (
-  <Box pt={[2, 2, 2, 2, 0]} pl={[1, 1, 1, 1, 2, 1]} pb={[2, 2, 2, 2, 0]}>
-    <HeaderCTAButton />
+const LoginMenu = () => (
+  <Box>
+    <NavLink to={dashboard} crossDomain className='header-menu-item'>
+      <MenuTitle name={'Sign-in'} color='#fd5750' />
+    </NavLink>
+  </Box>
+)
+
+const RegisterMenu = () => (
+  <Box>
+    <NavLink to={dashboard} crossDomain className='header-menu-item'>
+      <MenuTitle name={'Sign-Up Free'} color='#fd5750' />
+    </NavLink>
   </Box>
 )
 
 export default [
   ProductMenu,
   DocsMenu,
-  ResourcesMenu,
-  CommunityMenu,
-  WhyMenu,
-  EnterpriseMenu,
-  SupportMenu,
+  PricingMenu,
+  LearnMenu,
+  ServicesMenu,
+  MoreMenu,
+  ContactSalesMenu,
+  LoginMenu,
+  RegisterMenu,
+
 ]

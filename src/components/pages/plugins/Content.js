@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex } from 'serverless-design-system'
+import { Box, Flex, Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import PluginPreview from './SinglePluginPreview'
 import algoliasearch from 'algoliasearch/lite'
@@ -159,19 +159,21 @@ export default class Content extends React.Component {
     return (
       <Box>
         <SearchOptions refreshResults={this.handleRefreshResults} />
-        <AppContainer>
-          <Box pb={[2, 2, 0, 0, 6]}>
-            <Flex
-              flexDirection={['column', 'column', 'row']}
-              flexWrap='wrap'
-              justifyContent='left'
-            >
-              {this.state.plugins.map((plugin, index) => (
-                <PluginPreview key={`plugin-${index}`} {...plugin} />
-              ))}
-            </Flex>
-          </Box>
-        </AppContainer>
+        <Box style={{ backgroundColor: '#f7f7f7' }}>
+          <AppContainer>
+            <Box pb={[72, 72, 72, 72, 112]}>
+              <Flex
+                flexDirection={['column', 'column', 'row']}
+                flexWrap='wrap'
+                justifyContent='left'
+              >
+                {this.state.plugins.map((plugin, index) => (
+                  <PluginPreview key={`plugin-${index}`} {...plugin} />
+                ))}
+              </Flex>
+            </Box>
+          </AppContainer>
+        </Box>
       </Box>
     )
   }

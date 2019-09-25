@@ -1,13 +1,24 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
+import {
+  github,
+  forum,
+  slack,
+  meetups,
+  partners,
+  blog,
+} from 'src/constants/urls'
 
 const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
     header='Community'
     listItems={[
+      {
+        name: 'Blog',
+        navProps: { to: blog, completed: true },
+      },
       {
         name: 'GitHub',
         navProps: { to: github, crossDomain: true },

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Background, Absolute } from 'serverless-design-system'
-import spinningWheel from 'src/assets/images/pages/framework/spinning-wheel.svg'
-import spinningWheelAnimation from 'src/assets/images/pages/framework/spinning-wheel-animation.svg'
+import spinningWheel from 'src/assets/images/spinning-wheel.svg'
+import spinningWheelAnimation from 'src/assets/images/spinning-wheel-animation.svg'
 
 class SpinningWheels extends Component {
   constructor() {

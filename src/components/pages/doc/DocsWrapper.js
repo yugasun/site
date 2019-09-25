@@ -6,7 +6,6 @@ import { Column } from 'serverless-design-system'
 
 import LinkCatcher from './LinkCatcher'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
-import searchActiveIcon from 'src/assets/images/search-icon-active.svg'
 
 const Wrapper = styled(Column)`
   input:focus {
@@ -541,7 +540,7 @@ const Wrapper = styled(Column)`
       opacity: 1;
     }
     .rightContent {
-      width: 688px;
+      width: 735px;
     }
   }
   .versionNumber {
@@ -719,14 +718,6 @@ const Wrapper = styled(Column)`
         left: -10px;
         transform: none;
         transition: none;
-      }
-    }
-  }
-
-  @media (max-width: 1600px) {
-    .breadCrumbContainer {
-      .rightContent {
-        width: 696px;
       }
     }
   }

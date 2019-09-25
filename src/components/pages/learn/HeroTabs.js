@@ -1,34 +1,56 @@
 import React from 'react'
-
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { learn } from 'src/constants/urls'
+import { Box } from 'serverless-design-system'
+import { HeroTabs } from 'src/fragments'
+import {
+  learn,
+  what,
+  why,
+  useCases,
+  examples,
+  caseStudies,
+  comparisons,
+} from 'src/constants/urls'
 
 const data = [
   {
-    label: 'overview',
-    value: 'overview',
-    navProps: { to: learn.why },
+    label: 'Learn',
+    value: 'learn',
+    navProps: { to: learn },
   },
   {
-    label: 'use cases',
+    label: 'What?',
+    value: 'what',
+    navProps: { to: what },
+  },
+  {
+    label: 'Why?',
+    value: 'why',
+    navProps: { to: why },
+  },
+  {
+    label: 'Use cases',
     value: 'use-cases',
-    navProps: { to: learn.useCases },
+    navProps: { to: useCases },
   },
   {
-    label: 'comparisons',
-    value: 'comparisons',
-    navProps: { to: learn.comparisons },
+    label: 'Examples',
+    value: 'examples',
+    navProps: { to: examples },
   },
   {
-    label: 'case studies',
+    label: 'Case studies',
     value: 'case-studies',
-    navProps: { to: learn.caseStudy },
+    navProps: { to: caseStudies },
   },
   {
-    label: 'courses',
-    value: 'courses',
-    navProps: { to: learn.courses },
+    label: 'Comparisons',
+    value: 'comparisons',
+    navProps: { to: comparisons },
   },
 ]
 
-export default ({ selected }) => <HeroTabs data={data} selected={selected} />
+export default ({ selected }) => (
+  <Box mb={[3, 3, 5]}>
+    <HeroTabs data={data} selected={selected} />
+  </Box>
+)

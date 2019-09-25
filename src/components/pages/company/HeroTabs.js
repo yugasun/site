@@ -1,31 +1,33 @@
 import React from 'react'
-
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { company } from 'src/constants/urls'
+import { Box } from 'serverless-design-system'
+import { HeroTabs } from 'src/fragments'
+import { team, jobs, champions, contact } from 'src/constants/urls'
 
 const data = [
   {
     label: 'overview',
     value: 'overview',
-    navProps: { to: company.team },
+    navProps: { to: team },
   },
   {
     label: 'jobs',
     value: 'jobs',
-    navProps: { to: company.jobs },
+    navProps: { to: jobs },
   },
   {
     label: 'champions',
     value: 'champions',
-    navProps: { to: company.champions },
+    navProps: { to: champions },
   },
   {
     label: 'contact',
     value: 'contact',
-    navProps: { to: company.contact, crossDomain: true }
-  }
+    navProps: { to: contact, crossDomain: true },
+  },
 ]
 
 export default ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
+  <Box mb={[3, 3, 5]}>
+    <HeroTabs data={data} selected={selected} />
+  </Box>
 )

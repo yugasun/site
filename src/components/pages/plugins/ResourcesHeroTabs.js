@@ -1,39 +1,18 @@
 import React from 'react'
 
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import {
-  examples,
-  plugins,
-  blog,
-  caseStudies,
-  courses,
-} from 'src/constants/newUrls'
+import { HeroTabs } from 'src/fragments'
+import { plugins, blog } from 'src/constants/urls'
 
 const data = [
   {
-    label: 'examples',
-    value: 'examples',
-    navProps: { to: examples },
-  },
-  {
-    label: 'plugins',
+    label: 'Plugins',
     value: 'plugins',
     navProps: { to: plugins },
   },
   {
-    label: 'blog',
+    label: 'Blog',
     value: 'blog',
     navProps: { to: blog },
-  },
-  {
-    label: 'case studies',
-    value: 'case studies',
-    navProps: { to: caseStudies },
-  },
-  {
-    label: 'courses',
-    value: 'courses',
-    navProps: { to: courses },
   },
 ]
 

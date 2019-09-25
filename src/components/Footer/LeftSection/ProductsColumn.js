@@ -1,14 +1,60 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { framework } from 'src/constants/newUrls'
+import {
+  plugins,
+  components,
+  dashboardPage,
+  monitoring,
+  alerts,
+  policies,
+  cli,
+  debugging,
+  integrations,
+} from 'src/constants/urls'
 
 const ProductsColumn = ({ mobileOrder }) => (
   <FooterListColumn
-    header='Product'
-    headerLink={framework}
-    listItems={[]}
     mobileOrder={mobileOrder}
+    header='Product'
+    listItems={[
+      {
+        name: 'CLI',
+        navProps: { to: cli, completed: true },
+      },
+      {
+        name: 'Plugins',
+        navProps: { to: plugins, completed: true },
+      },
+      {
+        name: 'Components',
+        navProps: { to: components, completed: true },
+      },
+      {
+        name: 'Dashboard',
+        navProps: { to: dashboardPage, completed: true },
+      },
+      {
+        name: 'Monitoring',
+        navProps: { to: monitoring, completed: true },
+      },
+      {
+        name: 'Alerts',
+        navProps: { to: alerts, completed: true },
+      },
+      {
+        name: 'Policies',
+        navProps: { to: policies, completed: true },
+      },
+      {
+        name: 'Debugging',
+        navProps: { to: debugging, completed: true },
+      },
+      {
+        name: 'Integrations',
+        navProps: { to: integrations, completed: true },
+      },
+    ]}
   />
 )
 

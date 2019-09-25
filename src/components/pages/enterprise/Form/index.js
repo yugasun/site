@@ -5,6 +5,7 @@ import {
   Flex,
   InlineBlock,
   Heading,
+  Text,
   Image,
 } from 'serverless-design-system'
 import {
@@ -155,7 +156,7 @@ export default class Form extends React.Component {
     } else if (success) {
       submitButtonText = 'request sent'
     } else {
-      submitButtonText = 'submit'
+      submitButtonText = 'send request'
     }
 
     return (
@@ -165,26 +166,29 @@ export default class Form extends React.Component {
           pb={
             this.props.customPb ? this.props.customPb : [92, 92, 120, 120, 150]
           }
+          style={{ zIndex: '15' }}
         />
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
             flexDirection={['column', 'column', 'column', 'column', 'row']}
+            mt={[0, 0, 0, 0, -459]}
           >
             <Box>
-              <Heading.h4
-                fontFamily='Soleil'
-                lineHeight={'32px'}
-                letterSpacing={'-0.4px'}
+              <Text
+                fontFamily="SoleilBk"
+                fontSize="18px"
+                lineHeight={'30px'}
+                letterSpacing={'-0.28px'}
                 mb={0}
               >
-                Contact us
-              </Heading.h4>
+                Request more information
+              </Text>
 
               <Box mt={2} width={1}>
-                <Label color='#8c8c8c'>Work e-mail</Label>
+                <Label color="#8c8c8c">Work e-mail</Label>
                 <TextField
-                  placeholder='jane.doe@business.com'
-                  name='email'
+                  placeholder="mary.smith@business.com"
+                  name="email"
                   onChange={({ target }) =>
                     this.setState({ email: target.value, success: false })
                   }
@@ -194,10 +198,10 @@ export default class Form extends React.Component {
 
               <Flex.spaceBetween mt={2}>
                 <Column width={49 / 100}>
-                  <Label color='#8c8c8c'>First name</Label>
+                  <Label color="#8c8c8c">First name</Label>
                   <TextField
-                    placeholder='Jane'
-                    name='first_name'
+                    placeholder="Mary"
+                    name="first_name"
                     onChange={({ target }) =>
                       this.setState({
                         first_name: target.value,
@@ -208,10 +212,10 @@ export default class Form extends React.Component {
                   />
                 </Column>
                 <Column width={49 / 100}>
-                  <Label color='#8c8c8c'>Last name</Label>
+                  <Label color="#8c8c8c">Last name</Label>
                   <TextField
-                    placeholder='Doe'
-                    name='last_name'
+                    placeholder="Smith"
+                    name="last_name"
                     onChange={({ target }) =>
                       this.setState({ last_name: target.value, success: false })
                     }
@@ -221,10 +225,10 @@ export default class Form extends React.Component {
               </Flex.spaceBetween>
 
               <Box mt={2}>
-                <Label color='#8c8c8c'>Company name</Label>
+                <Label color="#8c8c8c">Company name</Label>
                 <TextField
-                  placeholder='Business.com'
-                  name='company'
+                  placeholder="Business.com"
+                  name="company"
                   onChange={({ target }) =>
                     this.setState({ company: target.value, success: false })
                   }
@@ -238,11 +242,11 @@ export default class Form extends React.Component {
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='five-to-fifteen'>
+                    <Label htmlFor="five-to-fifteen">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='poi'
-                          id='five-to-fifteen'
+                          name="poi"
+                          id="five-to-fifteen"
                           onChange={() => this.updatePoi('In Production')}
                         />
                         <InlineBlock>in production</InlineBlock>
@@ -250,11 +254,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='in-development'>
+                    <Label htmlFor="in-development">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='poi'
-                          id='in-development'
+                          name="poi"
+                          id="in-development"
                           onChange={() => this.updatePoi('In Development')}
                         />
                         <InlineBlock>in development</InlineBlock>
@@ -262,11 +266,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='not-at-all'>
+                    <Label htmlFor="not-at-all">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='poi'
-                          id='not-at-all'
+                          name="poi"
+                          id="not-at-all"
                           onChange={() => this.updatePoi('Not at all')}
                         />
                         <InlineBlock>not at all</InlineBlock>
@@ -283,11 +287,11 @@ export default class Form extends React.Component {
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='less-than-five'>
+                    <Label htmlFor="less-than-five">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='developer-count'
-                          id='less-than-five'
+                          name="developer-count"
+                          id="less-than-five"
                           onChange={() =>
                             this.updateDeveloperCount('Less than 5')
                           }
@@ -297,11 +301,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='five-to-fifteen'>
+                    <Label htmlFor="five-to-fifteen">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='developer-count'
-                          id='five-to-fifteen'
+                          name="developer-count"
+                          id="five-to-fifteen"
                           onChange={() => this.updateDeveloperCount('5 - 15')}
                         />
                         <InlineBlock>5-15</InlineBlock>
@@ -309,11 +313,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='fifteen-to-thirty'>
+                    <Label htmlFor="fifteen-to-thirty">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='developer-count'
-                          id='fifteen-to-thirty'
+                          name="developer-count"
+                          id="fifteen-to-thirty"
                           onChange={() => this.updateDeveloperCount('15 - 30')}
                         />
                         <InlineBlock>15-30</InlineBlock>
@@ -323,11 +327,11 @@ export default class Form extends React.Component {
                 </Flex>
                 <Flex flexDirection={['column', 'column', 'row']}>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='thirty-to-hundred'>
+                    <Label htmlFor="thirty-to-hundred">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='developer-count'
-                          id='thirty-to-hundred'
+                          name="developer-count"
+                          id="thirty-to-hundred"
                           onChange={() => this.updateDeveloperCount('30 - 100')}
                         />
                         <InlineBlock>30-100</InlineBlock>
@@ -335,11 +339,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 3]}>
-                    <Label htmlFor='more-than-hundred'>
+                    <Label htmlFor="more-than-hundred">
                       <Flex.verticallyCenter>
                         <RadioButton
-                          name='developer-count'
-                          id='more-than-hundred'
+                          name="developer-count"
+                          id="more-than-hundred"
                           onChange={() =>
                             this.updateDeveloperCount('More than 100')
                           }
@@ -350,20 +354,18 @@ export default class Form extends React.Component {
                   </Box>
                 </Flex>
               </Box>
-            </Box>
-            <Box pl={[0, 0, 0, 0, 32]}>
-              <Box mt={[3, 3, 3, 3, 6]}>
+              <Box mt={[2]}>
                 <Label>
                   Which infrastructure providers are you utilizing with the
                   Serverless Framework?
                 </Label>
                 <Flex flexDirection={['column', 'column', 'row']}>
                   <Box mt={1} width={[1, 1, 1 / 2]}>
-                    <Label htmlFor='aws'>
+                    <Label htmlFor="aws">
                       <Flex.verticallyCenter>
                         <Checkbox
-                          name='infrastructure'
-                          id='aws'
+                          name="infrastructure"
+                          id="aws"
                           onChange={({ target }) =>
                             this.updateInfrastructure('AWS', target.checked)
                           }
@@ -373,11 +375,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 2]}>
-                    <Label htmlFor='google-cloud-platform'>
+                    <Label htmlFor="google-cloud-platform">
                       <Flex.verticallyCenter>
                         <Checkbox
-                          name='infrastructure'
-                          id='google-cloud-platform'
+                          name="infrastructure"
+                          id="google-cloud-platform"
                           onChange={({ target }) =>
                             this.updateInfrastructure(
                               'Google Cloud Platform',
@@ -392,11 +394,11 @@ export default class Form extends React.Component {
                 </Flex>
                 <Flex flexDirection={['column', 'column', 'row']}>
                   <Box mt={1} width={[1, 1, 1 / 2]}>
-                    <Label htmlFor='azure'>
+                    <Label htmlFor="azure">
                       <Flex.verticallyCenter>
                         <Checkbox
-                          name='infrastructure'
-                          id='azure'
+                          name="infrastructure"
+                          id="azure"
                           onChange={({ target }) =>
                             this.updateInfrastructure(
                               'Microsoft Azure',
@@ -409,11 +411,11 @@ export default class Form extends React.Component {
                     </Label>
                   </Box>
                   <Box mt={1} width={[1, 1, 1 / 2]}>
-                    <Label htmlFor='other'>
+                    <Label htmlFor="other">
                       <Flex.verticallyCenter>
                         <Checkbox
-                          name='infrastructure'
-                          id='other'
+                          name="infrastructure"
+                          id="other"
                           onChange={({ target }) =>
                             this.updateInfrastructure('Other', target.checked)
                           }
@@ -428,8 +430,8 @@ export default class Form extends React.Component {
               <Box mt={2}>
                 <Label>Anything else?</Label>
                 <TextArea
-                  placeholder='Please describe your Serverless use-case and any goals your team has with Serverless.'
-                  name='message'
+                  placeholder="Please describe your Serverless use-case and any goals your team has with Serverless."
+                  name="message"
                   onChange={({ target }) =>
                     this.setState({ message: target.value, success: false })
                   }
@@ -445,7 +447,7 @@ export default class Form extends React.Component {
                     backgroundColor: success ? '#8c8c8c' : '#fd5750',
                   }}
                 >
-                  <Flex justifyContent='center' alignItems='center'>
+                  <Flex justifyContent="center" alignItems="center">
                     {success ? (
                       <Box pr={'9px'}>
                         <Image

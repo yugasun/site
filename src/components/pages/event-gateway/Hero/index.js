@@ -10,8 +10,9 @@ import Actions from './Actions'
 const EventGatewayHero = () => (
   <HeroWrapper
     backgroundImage={`url(${GatewayPageHeroSectionBackground})`}
-    backgroundSize="cover"
-    backgroundPosition="center"
+    backgroundSize='cover'
+    backgroundPosition='center'
+    ignoreBottomMargin={true}
   >
     <Header />
     <HeroImage />

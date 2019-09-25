@@ -1,7 +1,7 @@
 import React from 'react'
 import { P } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
-import { championsDeck } from 'src/constants/newUrls'
+import { championsDeck } from 'src/constants/urls'
 
 const renderContents = contents => (
   <React.Fragment>

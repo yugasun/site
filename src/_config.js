@@ -46,6 +46,8 @@ const siteConfig = isProduction => {
       'https://kuen1ml0f0.execute-api.us-west-2.amazonaws.com/prod/report',
     NEWSLETTER_API:
       'https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe',
+    COURSE_UPDATES_NEWSLETTER_API:
+      'https://aj3hmikwz3.execute-api.us-west-2.amazonaws.com/prod/course-updates/signup',
     ADD_CONTACT_API:
       'https://5kihmnzdb7.execute-api.us-west-2.amazonaws.com/prod/hubspot/add',
     FORMS_API:

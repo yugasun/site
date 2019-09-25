@@ -1,16 +1,14 @@
 import React from 'react'
 import Prefooter from 'src/components/Prefooter'
-import { company } from 'src/constants/urls'
+import { contact } from 'src/constants/urls'
 
-const sentences = [
-  'Contact us to get started',
-]
+const sentences = ['Contact us to get started']
 
 const actions = [
   {
     name: 'host your own event',
     navProps: {
-      to: company.contact,
+      to: contact,
       crossDomain: true,
       completed: false,
     },

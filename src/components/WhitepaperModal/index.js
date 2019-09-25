@@ -14,7 +14,7 @@ import { Button, P, SecondaryButton } from 'src/fragments/DesignSystem'
 import logo from 'src/assets/images/logo.svg'
 import 'src/components/SubscribeModal/modal.css'
 import NewsLetterForm from './WhitepaperDownloadForm'
-import WhitepaperDownloadPrefooterBanner from 'src/components/pages/framework/Whitepaper/Banner'
+import WhitepaperDownloadBanner from 'src/fragments/WhitepaperDownloadBanner/Banner.js'
 
 const SubmitButton = props => (
   <Button width={[1, 1, '228px', '228px', '123px']} {...props}>
@@ -187,7 +187,7 @@ class index extends Component {
           </ReactModal>
         </Box>
         {this.props.componentToRender === 'whitepaper' ? (
-          <WhitepaperDownloadPrefooterBanner onClick={this.handleModalOpen} />
+          <WhitepaperDownloadBanner onClick={this.handleModalOpen} />
         ) : (
           <SecondaryButton
             as={SecondaryButton}

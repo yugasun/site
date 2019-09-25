@@ -188,22 +188,6 @@ tfoot td {
   color: #8a97a0;
 }
 
-.__react_component_tooltip.type-dark {
-  background-color: #5b5b5b !important;
-}
-
-.__react_component_tooltip.type-dark.place-top:after {
-  border-top-color: #5b5b5b;
-  border-top-style: solid;
-  border-top-width: 6px;
-}
-
-.__react_component_tooltip.type-dark.place-right:after {
-  border-right-color: #5b5b5b;
-  border-right-style: solid;
-  border-right-width: 6px;
-}
-
 @font-face {
   font-family: 'Serverless';
   font-weight: normal;
@@ -252,9 +236,73 @@ tfoot td {
     url('../assets/fonts/soleil-lt.otf') format('opentype');
 }
 
+/**
+ * Defaults
+ */
+
+/* Single Breakpoint */
+@media screen and (max-width: 1280px) {
+  .container-inner {
+    padding: 0 20px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: auto;
+  width: 100%;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+}
+
+@media screen and (max-width: 1300px) {
+  .container-inner {
+    padding: 0 20px;
+  }
+}
+
+.header-label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 21px;
+  font-family: 'Soleil';
+  user-select: none;
+  margin: 20px 0 20px 0;
+  letter-spacing: -0.1px;
+}
+
+.header {
+  color: rgba(0, 0, 0, 1);
+  font-size: 33px;
+  font-family: 'SoleilSB';
+  user-select: none;
+  margin-bottom: 50px;
+  letter-spacing: -0.2px;
+}
+
+.description {
+  color: rgba(0, 0, 0, 1);
+  font-size: 19px;
+  font-family: 'Soleil';
+  letter-spacing: -0.2px;
+  line-height: 30px;
+}
+
 /*
 * Design for code block
 */
+
 code.hljs {
   display: inline-block;
   width: 100%;
@@ -369,4 +417,53 @@ code.hljs > a.line:hover:before {
 
 .ais-InstantSearch__root {
   width: 100%;
+}
+
+/**
+ * Design for tooltips
+ */
+
+.__react_component_tooltip.type-dark {
+  background-color: #5b5b5b !important;
+}
+
+.__react_component_tooltip.type-dark.place-top:after {
+  border-top-color: #5b5b5b;
+  border-top-style: solid;
+  border-top-width: 6px;
+}
+
+.__react_component_tooltip.type-dark.place-right:after {
+  border-right-color: #5b5b5b;
+  border-right-style: solid;
+  border-right-width: 6px;
+}
+
+/**
+* Animations
+*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

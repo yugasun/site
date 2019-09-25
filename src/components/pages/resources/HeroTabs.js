@@ -1,38 +1,53 @@
 import React from 'react'
 
-import { HeroTabsNew as HeroTabs } from 'src/fragments'
-import { github, forum, slack, meetups, partners } from 'src/constants/newUrls'
+import { HeroTabs } from 'src/fragments'
+import { Box } from 'serverless-design-system'
+import {
+  github,
+  forum,
+  slack,
+  meetups,
+  partners,
+  courses,
+} from 'src/constants/urls'
 
 const data = [
   {
-    label: 'github',
+    label: 'Github',
     value: 'github',
     navProps: { to: github, crossDomain: true },
   },
   {
-    label: 'forum',
+    label: 'Forum',
     value: 'forum',
     navProps: { to: forum, crossDomain: true },
   },
   {
-    label: 'slack',
+    label: 'Slack',
     value: 'slack',
     navProps: { to: slack, completed: true },
   },
   {
-    label: 'meetups',
+    label: 'Meetups',
     value: 'meetups',
     navProps: { to: meetups, completed: true },
   },
   {
-    label: 'partners',
+    label: 'Partners',
     value: 'partners',
     navProps: { to: partners, completed: true },
+  },
+  {
+    label: 'Training',
+    value: 'community-courses',
+    navProps: { to: courses, completed: true },
   },
 ]
 
 const WorkshopsTabs = ({ selected }) => (
-  <HeroTabs data={data} selected={selected} />
+  <Box mb={[3, 3, 5]}>
+    <HeroTabs data={data} selected={selected} />
+  </Box>
 )
 
 export default WorkshopsTabs

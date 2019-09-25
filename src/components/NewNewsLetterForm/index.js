@@ -13,7 +13,7 @@ const StyledForm = styled.form`
   width: 100%;
 `
 
-const ButtonWithLineHeight = styled(Button) `
+const ButtonWithLineHeight = styled(Button)`
   line-height: 0.88;
 `
 
@@ -24,7 +24,7 @@ class NewsLetterForm extends React.Component {
     super(props, context)
     this.state = {
       isSubscribed: getItemSync('newsletterSubscribed') === true,
-      isFetching: false
+      isFetching: false,
     }
   }
 
@@ -35,7 +35,7 @@ class NewsLetterForm extends React.Component {
     }
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault()
     if (this.state.isFetching) return
     const { onSubmit } = this.props
@@ -46,7 +46,7 @@ class NewsLetterForm extends React.Component {
     }
     this.setState({
       isFetching: true,
-      error: false
+      error: false,
     })
     const that = this
     axios({
@@ -54,42 +54,51 @@ class NewsLetterForm extends React.Component {
       url: newsletterSubscribeAPI,
       data: {
         email: email,
-        name: ''
+        name: '',
       },
-    }).then((response) => {
-      if (response && response.data && response.data.created) {
-        console.info('Newsletter subscription creation succeed') // eslint-disable-line
-        // Customer.io
-        // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
-        that.setState({
-          isSubscribed: true,
-          isFetching: false
-        }, () => {
-          // trigger callback
-          that.emailField.value = ''
-          if (onSubmit) {
-            onSubmit()
-          }
-        })
-        setItemSync('newsletterSubscribed', true)
-        that.container.innerHTML = '<p>Thank you for subscribing!</p>'
-      } else {
-        console.error('Newsletter subscription failed creation',
-            (response && response.data && response.data.message) ? response.data.message : '')
-      }
-    }).catch((error) => {
-      console.error(error) // eslint-disable-line
-      that.setState({
-        error: 'serviceDown'
-      })
     })
+      .then(response => {
+        if (response && response.data && response.data.created) {
+          console.info('Newsletter subscription creation succeed') // eslint-disable-line
+          // Customer.io
+          // https://segment.com/academy/collecting-data/naming-conventions-for-clean-data/
+          that.setState(
+            {
+              isSubscribed: true,
+              isFetching: false,
+            },
+            () => {
+              // trigger callback
+              that.emailField.value = ''
+              if (onSubmit) {
+                onSubmit()
+              }
+            }
+          )
+          setItemSync('newsletterSubscribed', true)
+          that.container.innerHTML = '<p>Thank you for subscribing!</p>'
+        } else {
+          console.error(
+            'Newsletter subscription failed creation',
+            response && response.data && response.data.message
+              ? response.data.message
+              : ''
+          )
+        }
+      })
+      .catch(error => {
+        console.error(error) // eslint-disable-line
+        that.setState({
+          error: 'serviceDown',
+        })
+      })
   }
 
   renderSubmitBtn = () => {
     const { submitBtnProps, btnComponent: ButtonComponent } = this.props
 
     if (ButtonComponent) {
-      return (<ButtonComponent disabled={this.state.isFetching} />)
+      return <ButtonComponent disabled={this.state.isFetching} />
     }
 
     return (
@@ -103,7 +112,7 @@ class NewsLetterForm extends React.Component {
     )
   }
 
-  render () {
+  render() {
     const {
       emailFieldProps,
       wrapperComponent: Wrapper,
@@ -112,23 +121,20 @@ class NewsLetterForm extends React.Component {
     } = this.props
 
     return (
-      <StyledForm
-        onSubmit={this.handleSubmit}
-        style={formStyles}
-      >
+      <StyledForm onSubmit={this.handleSubmit} style={formStyles}>
         <Wrapper
           {...wrapperProps}
-          ref={(ref) => {
+          ref={ref => {
             this.container = ReactDOM.findDOMNode(ref)
           }}
         >
           <EmailField
             {...emailFieldProps}
-            ref={(ref) => {
+            ref={ref => {
               this.emailField = ReactDOM.findDOMNode(ref)
             }}
           />
-          { this.renderSubmitBtn() }
+          {this.renderSubmitBtn()}
         </Wrapper>
       </StyledForm>
     )
