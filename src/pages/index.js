@@ -1,28 +1,23 @@
 import React from 'react'
-
-import { Helmet, NewToServerlessPrefooter } from 'src/fragments'
-import HomeLayout from 'src/layouts/Home'
+import { Helmet } from 'src/fragments'
+import DefaultLayout from 'src/layouts/Default'
 import Hero from 'src/components/pages/home/Hero'
-import Community from 'src/components/pages/home/Community'
-import Providers from 'src/components/pages/home/Providers'
-import Guide from 'src/components/pages/home/Guide'
+import UserTweets from 'src/components/pages/home/UserTweets'
+import Paradigm from 'src/components/pages/home/Paradigm'
+import FrameworkEditions from 'src/components/pages/home/FrameworkEditions'
 
 const Homepage = ({ location }) => (
-  <HomeLayout
-    prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
-    startWithWhiteHeader={true}
-  >
+  <DefaultLayout>
     <Helmet
       title='Serverless - The Serverless Application Framework powered by AWS Lambda, API Gateway, and more'
       description='Build web, mobile and IoT applications using AWS Lambda and API Gateway, Azure Functions, Google Cloud Functions, and more.'
       location={location}
     />
     <Hero />
-    <Community />
-    <Providers />
-    <Guide />
-  </HomeLayout>
+    <FrameworkEditions />
+    <UserTweets />
+    <Paradigm />
+  </DefaultLayout>
 )
 
 export default Homepage

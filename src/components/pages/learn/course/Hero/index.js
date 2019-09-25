@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Flex, Text } from 'serverless-design-system'
-import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
+import { HeroWrapperWithTabs as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import { PS } from 'src/fragments/DesignSystem'
 import Share from './Share'

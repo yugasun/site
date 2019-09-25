@@ -4,12 +4,14 @@ import styled from 'styled-components'
 import { Card, TextField, ResponsiveStack } from 'serverless-design-system'
 import searchIcon from 'src/assets/images/search-icon.svg'
 
-const ExamplesSearchField = styled(TextField)`
+const PluginsSearchField = styled(TextField)`
   letter-spacing: 0.4px;
   background: url(${searchIcon}) no-repeat;
   background-position: right 15px center;
   background-color: white;
   background-size: 17.5px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
+  border: solid 1px rgba(234, 234, 234, 0.3);
 
   &:focus,
   &:active {
@@ -46,20 +48,19 @@ export default class SearchField extends React.Component {
     return (
       <Card
         boxShadow='2px 2px 8px 0 rgba(0, 0, 0, 0.08)'
-        mt={[22, 22, 2]}
         mb={['8px', '8px', 22]}
         ml={[15, 15, 0]}
         width={[1]}
         mr={[15, 15, 22, 22, 32]}
       >
-        <ResponsiveStack>
-          <ExamplesSearchField
+        <ResponsiveStack mt={[0, 0, 0, 0, -118]}>
+          <PluginsSearchField
             placeholder='Search for a plugin'
             height={50}
             width='100%'
             border='none'
             fontSize={14}
-            fontFamily='Serverless'
+            fontFamily='SoleilBk'
             placeholderColor='#8c8c8c'
             px={[1, 1, 2]}
             onChange={this.handQueryFilter}

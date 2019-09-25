@@ -1,25 +1,22 @@
 import React from 'react'
-import { Flex, Image, Box, Text } from 'serverless-design-system'
+import { Flex, Image, Box } from 'serverless-design-system'
 import eaLogo from 'src/assets/images/home/brands/ea.png'
 import cocaColaLogo from 'src/assets/images/home/brands/cocacola.svg'
 import nordstromLogo from 'src/assets/images/home/brands/nordstrom.png'
 import expediaLogo from 'src/assets/images/home/brands/expedia.png'
 import reutersLogo from 'src/assets/images/home/brands/reuters.png'
+import { Heading } from 'src/fragments/DesignSystem'
 
 const Brands = props => (
   <React.Fragment>
-    <Text
-      fontSize={[24, 24, 24, 24, 32]}
-      lineHeight={['38px', '38px', '38px', '38px', '44px']}
-      letterSpacing={['-0.38px', '-0.38px', '-0.38px', '-0.38px', '-0.5px']}
-      color='white'
+    <Heading.h3
+      color='black'
       align='center'
-      fontFamily='Soleil'
       mb={[0, 0, 0, 0, '10px']}
       mt={[92, 92, 92, 92, 132]}
     >
       Companies who trust us
-    </Text>
+    </Heading.h3>
     <Flex
       justifyContent={['normal', 'normal', 'space-evenly']}
       alignItems='space-between'

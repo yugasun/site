@@ -19,6 +19,7 @@ const NoScrollbarBox = styled(Box)`
 `
 
 const CourseBox = styled(Flex)`
+  border: solid 1px rgba(247, 247, 247, 0.3);
   background-color: black;
   border-radius: 4px;
   @media only screen and (min-width: 1025px) {

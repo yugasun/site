@@ -1,0 +1,21 @@
+.buttonPrimary {
+  padding: 16px 20px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: 'SoleilSB';
+  font-size: 18px;
+  width: 280px;
+  text-align: center;
+  user-select: none;
+  transition: all 0.25s ease;
+  background: #fd5750;
+  border: 3px #fd5750 solid;
+}
+
+.buttonPrimary:hover {
+  cursor: pointer;
+}
+
+.buttonPrimary:active {
+  transform: scale(0.96);
+}

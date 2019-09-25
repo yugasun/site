@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="457px" height="121px" viewBox="0 0 457 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-side</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="artwork" transform="translate(-296.000000, -2509.000000)">
+            <g id="logo-side" transform="translate(301.000000, 2511.000000)">
+                <g id="title" transform="translate(103.000000, 0.000000)" fill="#FFFFFF" font-family="Serverless-Regular, Serverless" font-weight="normal">
+                    <text id="framework" opacity="0.949999988" font-size="72" letter-spacing="-2.66666675">
+                        <tspan x="0" y="108">framewor</tspan>
+                        <tspan x="306.698666" y="108" letter-spacing="-2.37037039">k</tspan>
+                    </text>
+                    <text id="serverless" font-size="40" letter-spacing="-0.5">
+                        <tspan x="2" y="40">serverle</tspan>
+                        <tspan x="166.4" y="40" letter-spacing="-3">s</tspan>
+                        <tspan x="187.4" y="40">s</tspan>
+                    </text>
+                </g>
+                <g id="bolt" transform="translate(0.000000, 2.000000)" stroke="#F15953" stroke-width="5">
+                    <path d="M53.8187374,40.0089785 L67.1967828,17.5792364 L67.3822214,0.181911163 C67.2607973,0.0764429216 67.2940956,0.105468241 67.1726715,0 C46.0695674,17.9902381 21.1245395,39.5491436 0.0214354108,57.5390944 C0.0526286746,57.6074907 0.0454835376,61.0678258 0,67.9200998 L24.9437709,63.8413193 C16.3301243,77.9729141 7.30301509,93.4175086 7.30301509,93.4175086 L7.35821861,111 L69,55.4242478 L68.8106049,38.3275038 C68.8106049,38.3275038 57.6948353,39.5552064 53.8187374,40.0089785 Z" id="Stroke-1"></path>
+                    <path d="M40.8104791,42.9095676 C49.0810091,41.9326196 66,39.7997341 66,39.9343295 C66,40.0675112 27.2620728,75.3838306 8.01166755,93 C7.90556692,92.911495 7.9358014,92.936661 7.82998072,92.8478732 C16.230407,78.943541 24.6305533,65.0392088 33.0309795,51.1348766 C32.9509141,51.0130055 32.9399961,50.996888 32.8599307,50.8750169 C23.2397672,52.3527393 13.6198836,53.8301788 4,55.3079011 C24.4936583,37.4137752 65.0610717,3 65.0610717,3 C65.1022242,3.10716739 48.5507859,29.8580503 40.5985578,42.5694031 C40.6973798,42.7277507 40.7116572,42.7509373 40.8104791,42.9095676 Z" id="Stroke-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

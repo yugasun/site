@@ -1,0 +1,202 @@
+.home-editions-component {
+  height: auto;
+  min-height: 300px;
+  user-select: none;
+  padding: 68px 10px 0 10px;
+  background: #f7f7f7;
+  color: #000000;
+}
+
+.home-editions-component .home-editions-inner {
+  flex-direction: column;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.home-editions-component .home-editions-list {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.home-editions-component .home-edition {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 396px;
+  width: 33%;
+  background: #ffffff;
+  margin: 14px 14px 20px 14px;
+  padding: 24px 24px 42px 24px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.home-editions-component .home-edition:first-child {
+  margin-left: 0;
+}
+
+.home-editions-component .home-edition:last-child {
+  margin-right: 0;
+}
+
+.home-editions-component .home-edition:hover {
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
+  transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
+}
+
+.home-editions-component .home-edition-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  background: #000000;
+  border-radius: 3px;
+  padding: 22px 10px;
+}
+
+.home-editions-component .home-edition-title-serverless {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.home-editions-component .home-edition-title-framework {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  margin-top: -2px;
+  color: #FFFFFF;
+}
+
+.home-editions-component .home-edition-title-edition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Serverless';
+  color: #fd5750;
+  margin-top: 3px;
+}
+
+.home-editions-component .home-edition-detail {
+  padding: 30px 0;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+
+.home-editions-component .home-edition-detail-clickable:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.025);
+}
+
+.home-editions-component .home-edition-detail:hover .home-edition-detail-title {
+  text-decoration: underline;
+}
+
+
+.home-editions-component .home-edition-detail:nth-child(2) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: none;
+}
+
+.home-editions-component .home-edition-detail:last-child {
+  border-bottom: none;
+}
+
+.home-editions-component .home-edition-detail-title {
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.home-editions-component .home-edition-detail-text {
+  text-align: center;
+  font-family: 'SoleilLt';
+  font-size: 15.5px;
+  line-height: 26px;
+  color: rgba(0,0,0,1);
+}
+
+.home-editions-component .home-edition-detail-price {
+  font-size: 21px;
+  font-family: 'SoleilSB';
+  letter-spacing: -0.1px;
+  color: #fd5750;
+  transition: all 0.2s linear;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.home-editions-component .home-edition-detail-features {
+  margin-top: 30px;
+  text-align: center;
+  font-family: 'Soleil';
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0,0,0,1);
+  letter-spacing: -0.1px;
+}
+
+.home-editions-component .home-edition-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 10px 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.home-editions-component .home-edition-action-button {
+  padding: 16px 20px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: 'SoleilSB';
+  font-size: 18px;
+  min-width: 200px;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  transition: all 0.25s ease;
+  background: #fd5750;
+  border: 3px #fd5750 solid;
+}
+
+.home-editions-component .home-edition-action-button:hover {
+  cursor: pointer;
+}
+
+.home-editions-component .home-edition-action-button:active {
+  transform: scale(0.96);
+}
+
+/**
+ * Editions - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .home-editions-component .home-editions-list {
+    flex-direction: column;
+  }
+
+  .home-editions-component .home-edition {
+    width: 100%;
+    margin: 14px 0px 20px 0px;
+  }
+
+  .home-editions-inner .header {
+    text-align: center;
+  }
+
+  .home-editions-component {
+    padding: 68px 0px 0 0px;
+  }
+}

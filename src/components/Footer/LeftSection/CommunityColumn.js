@@ -7,14 +7,18 @@ import {
   slack,
   meetups,
   partners,
-  courses,
-} from 'src/constants/newUrls'
+  blog,
+} from 'src/constants/urls'
 
 const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
     header='Community'
     listItems={[
+      {
+        name: 'Blog',
+        navProps: { to: blog, completed: true },
+      },
       {
         name: 'GitHub',
         navProps: { to: github, crossDomain: true },

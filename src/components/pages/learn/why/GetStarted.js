@@ -10,7 +10,7 @@ import {
   TertiaryButton,
 } from 'serverless-design-system'
 
-import { developers } from 'src/constants/urls'
+import { gettingStarted } from 'src/constants/urls'
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'
 
 const GetStarted = () => (
@@ -23,17 +23,17 @@ const GetStarted = () => (
         <Column
           justifyContent='center'
           alignItems='center'
-          minHeight="280px"
+          minHeight='280px'
           width={[1, 1, 1, 0.65]}
           px={25}
           py={4}
-          m="auto"
+          m='auto'
         >
           <Heading.h2
-            align="center"
-            fontFamily="SoleilSb"
-            lineHeight="1.4"
-            color="white"
+            align='center'
+            fontFamily='SoleilSb'
+            lineHeight='1.4'
+            color='white'
             m={0}
           >
             The Serverless Platform
@@ -43,13 +43,15 @@ const GetStarted = () => (
             align='center'
             color='white'
             lineHeight={4}
-            letterSpacing="0.3px"
+            letterSpacing='0.3px'
             mt={1}
             mb={3}
           >
-            The Serverless Platform is a three-part toolkit that enables developers build, operate, and integrate their serverless applications on any cloud provider.
+            The Serverless Platform is a three-part toolkit that enables
+            developers build, operate, and integrate their serverless
+            applications on any cloud provider.
           </Text.p>
-          <TertiaryButton onClick={() => push(developers.documentation.gettingStarted)}>
+          <TertiaryButton onClick={() => push(gettingStarted)}>
             get started
           </TertiaryButton>
         </Column>

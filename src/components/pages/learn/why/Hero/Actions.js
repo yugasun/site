@@ -22,7 +22,7 @@ const RightSection = () => (
       still have servers somewhere.
       <br />
       <br />
-      What ‘serverless’ really means is that, as a developer you don’t have to
+      What ‘serverless’ really means is that as a developer you don’t have to
       think about those servers. You just focus on code.
     </Text.p>
   </Flex.column>

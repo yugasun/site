@@ -3,7 +3,7 @@ import { Flex, Image, Column, Text } from 'serverless-design-system'
 import tutorialsIcon from 'src/assets/images/pages/docs/tutorials-icon.svg'
 import examplesIcon from 'src/assets/images/pages/docs/examples-icon.svg'
 import { P, SecondaryButton } from 'src/fragments/DesignSystem'
-import { examples, caseStudies } from 'src/constants/newUrls.js'
+import { examples, caseStudies } from 'src/constants/urls.js'
 import { InternalLink } from 'src/fragments'
 
 const data = [

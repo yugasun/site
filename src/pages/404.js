@@ -1,67 +1,63 @@
 import React from 'react'
 import { Background, ThemeProvider } from 'serverless-design-system'
 
-import { Helmet } from 'src/fragments'
-import Prefooter from 'src/components/PrefooterNew'
+import { Helmet, ExternalLink, InternalLink } from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import notFoundBackground from 'src/assets/images/404-background.jpg'
-import { P, Box } from 'src/fragments/DesignSystem'
-import styled from 'styled-components'
-
-const BackgroundWithFilter = styled(Background)`
-  -webkit-filter: brightness(0.4);
-  filter: brightness(0.4);
-`
-
-const sentences = [
-  <P key="message404" color="gray.3" mt={[76, 76, 79]}>
-    It’s ok. You’re not the first one. Try any of the links on this page to get
-    back on the right track.
-  </P>,
-]
-
-const actions = [
-  {
-    name: 'go home',
-    navProps: {
-      to: '/',
-      completed: true,
-    },
-  },
-  {
-    name: 'about serverless',
-    navProps: {
-      to: '/learn/overview',
-      completed: true,
-    },
-  },
-  {
-    name: 'signup',
-    navProps: {
-      to: 'https://dashboard.serverless.com',
-      crossDomain: true,
-    },
-  },
-]
-
-const prefooter = () => (
-  <Prefooter
-    heading="It looks like you’re lost."
-    sentences={sentences}
-    actions={actions}
-  />
-)
+import { Flex, Text, Box } from 'serverless-design-system'
+import { P0 } from 'src/fragments/DesignSystem'
+import { HeroButton } from 'src/components'
+import { dashboard, homepage } from 'src/constants/urls'
 
 const NotFoundPage = () => (
   <ThemeProvider>
-    <DefaultLayout prefooter={prefooter} transparentHeader={true}>
-      <Helmet title="404 - Page not found" />
-      <Box.OnlyMobile mt={'43px'} />
-      <BackgroundWithFilter
-        backgroundImage={`url(${notFoundBackground})`}
-        backgroundSize={['contain', 'contain', 'cover']}
-        height={['650px', '650px', '850px']}
-      />
+    <DefaultLayout transparentHeader={true} noFooter={true}>
+      <Helmet title='404 - Page not found' />
+      <Background
+        background={[
+          'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+          'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
+          `linear-gradient(132deg,rgb(0,0,0) 62%,#70221f)`,
+        ]}
+        height={['100vh']}
+      >
+        <Flex
+          flexDirection={['column']}
+          color='white'
+          alignItems='center'
+          pt={['40%', '40%', '40%', '25%', '18%']}
+          width={1}
+        >
+          <Box width={[1, 1, 0.5, 0.5, 0.25, 0.2]}>
+            <Text
+              fontSize='32px'
+              lineHeight='44px'
+              letterSpacing='-0.5px'
+              fontFamily='Soleil'
+              align='center'
+            >
+              Get started with the Serverless Framework
+            </Text>
+            <P0 color='white' align='center' mt={22}>
+              The complete solution for building and operating serverless
+              applications
+            </P0>
+            <Flex justifyContent='center' mt={62}>
+              <ExternalLink to={dashboard}>
+                <HeroButton style={{ alignSelf: 'center' }}>
+                  Sign-up for free
+                </HeroButton>
+              </ExternalLink>
+            </Flex>
+            <P0 color='white' align='center' mt={22}>
+              …or get more info{' '}
+              <InternalLink to={homepage} underline>
+                here
+              </InternalLink>
+              .
+            </P0>
+          </Box>
+        </Flex>
+      </Background>
     </DefaultLayout>
   </ThemeProvider>
 )

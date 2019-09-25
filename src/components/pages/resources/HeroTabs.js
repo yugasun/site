@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HeroTabsNewest as HeroTabs } from 'src/fragments'
+import { HeroTabs } from 'src/fragments'
 import { Box } from 'serverless-design-system'
 import {
   github,
@@ -9,7 +9,7 @@ import {
   meetups,
   partners,
   courses,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const data = [
   {

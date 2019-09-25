@@ -8,8 +8,8 @@ import {
 } from 'serverless-design-system'
 import { Button } from 'src/fragments/DesignSystem'
 import styled from 'styled-components'
-import bannerWheelLeft from 'src/assets/images/pages/framework/banner-wheel-left.svg'
-import bannerWheelRight from 'src/assets/images/pages/framework/banner-wheel-right.svg'
+import bannerWheelLeft from 'src/assets/images/banner-wheel-left.svg'
+import bannerWheelRight from 'src/assets/images/banner-wheel-right.svg'
 import { NewsletterFormPrefooter as NewsletterForm } from 'src/components'
 
 const DownloadButton = styled(Button)`

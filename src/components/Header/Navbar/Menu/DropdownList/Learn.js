@@ -10,11 +10,11 @@ import {
   examples,
   caseStudies,
   comparisons,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: learn,
@@ -25,7 +25,7 @@ const Resource = () => (
         Courses
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: what,
@@ -33,10 +33,10 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        What
+        What?
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: why,
@@ -44,10 +44,10 @@ const Resource = () => (
           completed: true,
         }}
       >
-        Why
+        Why?
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: useCases,
@@ -58,7 +58,7 @@ const Resource = () => (
         Use cases
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: examples,
@@ -69,7 +69,7 @@ const Resource = () => (
         Examples
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType mb={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: caseStudies,

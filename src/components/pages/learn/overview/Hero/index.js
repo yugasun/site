@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, ResponsiveStack, Flex, Image } from 'serverless-design-system'
-import { HeroWrapperNew as HeroWrapper } from 'src/fragments'
+import { HeroWrapperWithTabs as HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import { PL, Heading } from 'src/fragments/DesignSystem'
 import learnLogo from 'src/assets/images/pages/learn/learn-logo.svg'

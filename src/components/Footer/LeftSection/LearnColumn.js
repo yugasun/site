@@ -9,7 +9,7 @@ import {
   caseStudies,
   comparisons,
   courses,
-} from 'src/constants/newUrls'
+} from 'src/constants/urls'
 
 const LearnColumn = ({ mobileOrder }) => (
   <FooterListColumn
@@ -21,11 +21,11 @@ const LearnColumn = ({ mobileOrder }) => (
         navProps: { to: courses, crossDomain: true },
       },
       {
-        name: 'What',
-        navProps: { to: what, crossDomain: true },
+        name: 'What?',
+        navProps: { to: what, completed: true },
       },
       {
-        name: 'Why',
+        name: 'Why?',
         navProps: { to: why, completed: true },
       },
       {

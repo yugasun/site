@@ -2,7 +2,7 @@ import React from 'react'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { Box, Flex } from 'serverless-design-system'
 import { ExternalLink } from 'src/fragments'
-import { dashboard } from 'src/constants/newUrls.js'
+import { dashboard } from 'src/constants/urls.js'
 
 const Requirements = props => (
   <React.Fragment>
