@@ -299,7 +299,6 @@
   opacity: 0.5;
   user-select: none;
   max-height: 30px;
-  overflow: auto;
 }
 
 .hero-component .hero-customer img {

@@ -12,15 +12,23 @@ const PageContent = styled(Box)`
   line-height: 1.63;
   color: #5b5b5b;
 
+  h3 {
+    padding-top: 70px; 
+    margin-top: -70px;
+  }
+
   a {
     color: #5b5b5b;
     border-bottom: 1px solid #fd5750;
+
+    &:hover {
+      color: #5b5b5b;
+    }
   }
 
   h3 {
     color: black;
     font-size: 32px;
-    margin-top: 20px;
   }
 
   table {
@@ -61,11 +69,11 @@ const PageContent = styled(Box)`
   }
 `
 
-const GuidePage = ({ data }) => (
+const StackPage = ({ data }) => (
   <DefaultLayout prefooter={NewToServerlessPrefooter} footerBackground={false}>
-    <Helmet {...data.Kickstart.frontmatter} />
+    <Helmet {...data.Stack.frontmatter} />
     <AppContainer>
-      <Box width={1} mt={10} mb={[42, 42, 0, 0, 112]}>
+      <Box width={1} mt={[7, 7, 8, 8, 10]} mb={[7]}>
         <PageContainer>
           <Heading.h1
             align='center'
@@ -74,13 +82,13 @@ const GuidePage = ({ data }) => (
             lineHeight='62px'
             letterSpacing='0.5px'
           >
-            {data.Kickstart.frontmatter.title}
+            {data.Stack.frontmatter.title}
           </Heading.h1>
           <PageContent
             width={1}
             pt={40}
             mx='auto'
-            dangerouslySetInnerHTML={{ __html: data.Kickstart.content }}
+            dangerouslySetInnerHTML={{ __html: data.Stack.content }}
           />
         </PageContainer>
       </Box>
@@ -88,11 +96,11 @@ const GuidePage = ({ data }) => (
   </DefaultLayout>
 )
 
-export default GuidePage
+export default StackPage
 
 export const query = graphql`
-  query KickstartPage($kickstartId: String!) {
-    Kickstart: kickstart(id: { eq: $kickstartId }) {
+  query StackPage($stackId: String!) {
+    Stack: stack(id: { eq: $stackId }) {
       id
       frontmatter {
         title

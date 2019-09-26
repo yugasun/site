@@ -8,11 +8,6 @@ import { PL, Heading } from 'src/fragments/DesignSystem'
 const ExamplesHero = () => {
   return (
     <HeroWrapper
-      background={[
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-        `linear-gradient(132deg,rgb(0,0,0) 70%,#70221f)`,
-      ]}
       height={[345, 345, 370, 350, 365]}
     >
       <HeroTabs selected='examples' />

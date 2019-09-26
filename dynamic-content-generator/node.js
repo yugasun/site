@@ -9,12 +9,12 @@ const autoLinkHeadings = require('remark-autolink-headings')
 const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
-
+const stacksData = require('../content/stack/listData')
 //TODO : Refactor to use filesystem/remark to do this + refactor to avoid repetition
 const blogConfig = require('./../scripts/blog/config')
 const docsConfig = require('./../scripts/docs/config')
 const exampleConfig = require('./../scripts/example/config')
-const kickstartConfig = require('./../scripts/kickstart/config')
+const stackConfig = require('../scripts/stack/config')
 const customConfig = require('./../scripts/custom/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
@@ -29,6 +29,8 @@ const examplesIndex = client.initIndex(
   process.env.GATSBY_ALGOLIA_EXAMPLES_INDEX
 )
 const pluginsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_PLUGINS_INDEX)
+
+const stackIndex = client.initIndex(process.env.GATSBY_ALGOLIA_STACK_INDEX)
 
 //TODO: rename highlighted attribute to featured
 examplesIndex.setSettings({
@@ -45,6 +47,10 @@ pluginsIndex.setSettings({
   attributesForFaceting: ['status', 'title', 'highlighted'],
 })
 
+stackIndex.setSettings({
+  attributesForFaceting: ['provider', 'title', 'category', 'highlighted'],
+})
+
 function lengthInUtf8Bytes(str) {
   // Matches only the 10.. bytes that are non-initial characters in a multi-byte sequence.
   var m = encodeURIComponent(str).match(/%[89ABab]/g)
@@ -59,12 +65,11 @@ const digestCreator = content =>
     .update(JSON.stringify(content))
     .digest(`hex`)
 
-const sourceKickstart = createNode => (err, content, filename, next) => {
+const sourceStack = createNode => (err, content, filename, next) => {
   if (err) throw err
-
   const { data, content: markdownContent } = matter(content)
   const frontmatter = data.category ? data : { ...data, category: [] }
-  const kickstartId = path.basename(filename, path.extname(filename))
+  const stackId = path.basename(filename, path.extname(filename))
 
   unified()
     .use(markdown)
@@ -72,11 +77,11 @@ const sourceKickstart = createNode => (err, content, filename, next) => {
     .use(html)
     .process(markdownContent, (err, file) => {
       createNode({
-        id: kickstartId,
+        id: stackId,
         parent: null,
         children: [],
         internal: {
-          type: 'Kickstart',
+          type: 'Stack',
           contentDigest: digestCreator(content),
         },
         frontmatter,
@@ -296,10 +301,54 @@ const generator = createNode =>
     }),
 
     new Promise((resolve, reject) => {
+      stacksData.forEach(stackObj => {
+        const {
+          name,
+          provider,
+          category,
+          link,
+          slug,
+          otherFallbackCategory,
+          highlighted,
+        } = stackObj
+
+        stackIndex.saveObject({
+          name,
+          provider,
+          category,
+          link,
+          otherFallbackCategory,
+          objectID: slug,
+          highlighted,
+        })
+
+        createNode({
+          id: slug,
+          parent: null,
+          children: [],
+          internal: {
+            type: `Stacks`,
+            contentDigest: digestCreator(name),
+          },
+          name,
+          provider,
+          category,
+          link,
+          otherFallbackCategory,
+          highlighted,
+        })
+      })
+      //TODO: hacky, do this properly
+      setTimeout(() => {
+        resolve()
+      }, 2000)
+    }),
+
+    new Promise((resolve, reject) => {
       dir.readFiles(
-        kickstartConfig.kickstartPagesPath,
+        stackConfig.stackPagesPath,
         fileReadingOptions,
-        sourceKickstart(createNode),
+        sourceStack(createNode),
         resolve
       )
     }),

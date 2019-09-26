@@ -1,5 +1,4 @@
 import React from 'react'
-import { Text } from 'serverless-design-system'
 import PrefooterNewest from 'src/components/PrefooterNewest'
 import { P } from 'src/fragments/DesignSystem'
 
