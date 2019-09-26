@@ -1,6 +1,6 @@
 ---
 title: 'DynamoDB and Serverless - The Ultimate Guide'
-description: 'What is the importance of DynamoDB within Serverless?'
+description: 'Learn what Amazon DynamoDB is &amp; how to get started. We also cover how it works with other AWS services, drawbacks, benefits, pricing + compare it with RDS, MongoDB, Cassandra etc.'
 layout: Learn
 useLearnNav: false
 ---
