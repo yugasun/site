@@ -12,15 +12,23 @@ const PageContent = styled(Box)`
   line-height: 1.63;
   color: #5b5b5b;
 
+  h3 {
+    padding-top: 70px; 
+    margin-top: -70px;
+  }
+
   a {
     color: #5b5b5b;
     border-bottom: 1px solid #fd5750;
+
+    &:hover {
+      color: #5b5b5b;
+    }
   }
 
   h3 {
     color: black;
     font-size: 32px;
-    margin-top: 20px;
   }
 
   table {

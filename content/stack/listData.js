@@ -99,7 +99,7 @@ module.exports = [
     name: 'AWS Appsync',
     provider: 'AWS',
     category: 'API',
-    link: '/stack/appsync/',
+    link: '/appsync/',
     slug: 'stack-aws-appsync',
     highlighted: true,
   },
@@ -123,7 +123,7 @@ module.exports = [
     name: 'AWS Step Functions',
     provider: 'AWS',
     category: 'Integration',
-    link: '/stack/step-functions/',
+    link: '/step-functions/',
     slug: 'stack-step-functions',
   },
   {

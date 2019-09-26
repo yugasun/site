@@ -15,7 +15,7 @@ const graphqlQuery = `
 const createStackPages = (createPage, stackPages) => {
   stackPages.forEach(({ node }, index, records) => {
     createPage({
-      path: `stack/${node.id}`,
+      path: `${node.id}`,
       component: getFileFromProjectRoot(`src/templates/stackPage.js`),
       context: {
         stackId: node.id,
