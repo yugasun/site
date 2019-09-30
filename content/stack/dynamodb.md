@@ -277,7 +277,7 @@ A good mental model for choosing between RDS and DynamoDB could be this: if you�
 
 Cloud Bigtable is a NoSQL wide-column datastore from Google. It differs from DynamoDB in a number of ways.
 
-**Data blob****s** **vs** **c****olumns.** DynamoDB stores a given item as a single blob of data. If you query for an item in DynamoDB using the primary key or a secondary index, you get the entire item back. You can only update an entire blob at a time. Each secondary index takes up additional storage space.
+**Data blobs vs columns.** DynamoDB stores a given item as a single blob of data. If you query for an item in DynamoDB using the primary key or a secondary index, you get the entire item back. You can only update an entire blob at a time. Each secondary index takes up additional storage space.
 
 In contrast, Bigtable stores the attributes of an item in columns; columns group into column families. You can query individual column families without needing to fetch entire items. In Bigtable, you can also filter on column values without building additional indices (and because of this, Bigtable doesn’t even support secondary indices).
 
@@ -342,7 +342,7 @@ See [the Amazon Lambda docs](https://docs.aws.amazon.com/lambda/latest/dg/with-d
 
 **What are DynamoDB streams and what are they for?** DynamoDB streams store the activity from a DynamoDB table and provide you with an easy way to act on your database updates. For example, you may wish to use DynamoDB streams with Amazon Lambda in order to run automation in your system whenever a new user is created in your DynamoDB table.
 
-**Can DynamoDB sort key****s** **be null?** Not if your DynamoDB table has a composed index, which requires a partition key and a sort key. Creating an entry without a sort key in this case will fail with a schema validation error.
+**Can DynamoDB sort keys be null?** Not if your DynamoDB table has a composed index, which requires a partition key and a sort key. Creating an entry without a sort key in this case will fail with a schema validation error.
 
 **Where are DynamoDB backups stored?** The backups for DynamoDB tables are stored within AWS, but this data is not publicly available. You can’t download a DynamoDB backup; all you can do is restore it into a DynamoDB table.
 
