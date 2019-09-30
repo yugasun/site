@@ -12,7 +12,7 @@ import { AppContainer } from 'src/components'
 
 const Support = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Training' location={location} />
+    <Helmet title='Serverless Training &amp; Workshops' location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
