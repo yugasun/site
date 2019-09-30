@@ -5,7 +5,6 @@ import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Box } from 'src/fragments/DesignSystem'
 import SubscribeBoxes from 'src/components/pages/subscribe/Boxes'
-import SpinningWheels from 'src/components/pages/subscribe/SpinningWheels'
 
 const SubscribePage = () => (
   <ThemeProvider>
@@ -21,7 +20,6 @@ const SubscribePage = () => (
         height={['100vh', '100vh', '130vh', '130vh', '100vh']}
         width={1}
       >
-        <SpinningWheels />
         <SubscribeBoxes />
       </Background>
     </DefaultLayout>
