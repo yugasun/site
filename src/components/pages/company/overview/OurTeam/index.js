@@ -4,7 +4,7 @@ import { AppContainer } from 'src/components'
 import { Heading } from 'src/fragments/DesignSystem'
 import { TeamMemberImageCard } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'
-import nick from 'src/assets/images/team/nick.jpg'
+import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
 import bill from 'src/assets/images/team/bill.jpg'
 import philipp from 'src/assets/images/team/philipp.jpg'
@@ -23,6 +23,7 @@ import chris from 'src/assets/images/team/chris.jpg'
 import mariusz from 'src/assets/images/team/mariusz.png'
 import sandesh from 'src/assets/images/team/sandesh.jpg'
 import rowell from 'src/assets/images/team/rowell.jpg'
+import pravin from 'src/assets/images/team/pravin.jpg'
 
 const getLastName = name => name.split(' ').pop()
 
@@ -85,6 +86,11 @@ const teamMembers = [
     image: rowell,
     name: 'Rowell Belen',
     position: 'Senior Platform Engineer',
+  },
+  {
+    image: pravin,
+    name: 'Pravin Daryani',
+    position: 'Growth Engineer',
   },
 ].sort((object1, object2) =>
   getLastName(object1.name).localeCompare(getLastName(object2.name))
