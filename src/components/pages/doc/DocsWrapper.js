@@ -106,6 +106,11 @@ const Wrapper = styled(Column)`
     padding-left: 104px;
     $copyWidth: 45px;
 
+    table {
+      display: block;
+      overflow-x: scroll;
+    }
+
     code {
       max-width: 82.5%;
       overflow-x: auto;
