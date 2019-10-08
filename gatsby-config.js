@@ -18,7 +18,47 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-root-import',
     'gatsby-plugin-styled-components',
-    `gatsby-plugin-sitemap`,
+    
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+        output: `/sitemap.xml`,
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+          `/blog/page/*`,
+          `/blog/index`
+        ],
+        createLinkInHead: true,
+        serialize: ({ site, allSitePage }) => 
+          allSitePage.edges.map(edge => {
+            const url = (site.siteMetadata.siteUrl + edge.node.path).toLowerCase();
+            const finalUrl = url.endsWith('/') ? url : `${url}/`
+            return {
+              url: finalUrl,
+              changefreq: `daily`,
+              priority: 0.7,
+            }
+          })
+      }
+    },
 
     {
       resolve: 'gatsby-plugin-robots-txt',
