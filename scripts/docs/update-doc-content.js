@@ -53,7 +53,7 @@ ${updatedFrontmatter}---`
 
 function fixYamlContent(content, filename) {
   // fix links for website
-  let fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
+  let fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')').replace(/.md#/g, '/#')
   // fix Yaml frontmatter
   fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
   // replace /README)
