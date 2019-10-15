@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
-    <defs>
-        <path id="a" d="M0 0h72v72H0z"/>
-        <path id="c" d="M0 72h72V0H0z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <path fill="#FD5750" d="M36 0C16.118 0 0 16.118 0 36c0 19.883 16.118 36 36 36s36-16.117 36-36C72 16.118 55.882 0 36 0m0 2c18.748 0 34 15.253 34 34 0 18.748-15.252 34-34 34C17.252 70 2 54.748 2 36 2 17.253 17.252 2 36 2" mask="url(#b)"/>
-        <path fill="#FD5750" d="M61.383 60.94h-2v-36.6a3.756 3.756 0 0 0-3.75-3.75H16.366a3.756 3.756 0 0 0-3.75 3.75v36.6h-2v-36.6a5.758 5.758 0 0 1 5.75-5.75h39.265a5.758 5.758 0 0 1 5.751 5.75v36.6z"/>
-        <mask id="d" fill="#fff">
-            <use xlink:href="#c"/>
-        </mask>
-        <path fill="#FD5750" d="M18.908 29.27h32.015v-2H18.908zM18.907 34.09h33.657v-2H18.907zM18.908 38.908h24.627v-2H18.908zM20.173 48.216V46.1l8.318 4.14v2.857l-8.318 3.815v-2.08l6.745-3.145zM29.518 59.444h9.149v-1.826h-9.149z" mask="url(#d)"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72"><defs><path id="a" d="M0 0h72v72H0z"/><path id="c" d="M0 72h72V0H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path fill="#FD5750" d="M36 0C16.118 0 0 16.118 0 36c0 19.883 16.118 36 36 36s36-16.117 36-36C72 16.118 55.882 0 36 0m0 2c18.748 0 34 15.253 34 34 0 18.748-15.252 34-34 34C17.252 70 2 54.748 2 36 2 17.253 17.252 2 36 2" mask="url(#b)"/><path fill="#FD5750" d="M61.383 60.94h-2v-36.6a3.756 3.756 0 0 0-3.75-3.75H16.366a3.756 3.756 0 0 0-3.75 3.75v36.6h-2v-36.6a5.758 5.758 0 0 1 5.75-5.75h39.265a5.758 5.758 0 0 1 5.751 5.75v36.6z"/><mask id="d" fill="#fff"><use xlink:href="#c"/></mask><path fill="#FD5750" d="M18.908 29.27h32.015v-2H18.908zm-.001 4.82h33.657v-2H18.907zm.001 4.818h24.627v-2H18.908zm1.265 9.308V46.1l8.318 4.14v2.857l-8.318 3.815v-2.08l6.745-3.145zm9.345 11.228h9.149v-1.826h-9.149z" mask="url(#d)"/></g></svg>
