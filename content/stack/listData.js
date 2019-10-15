@@ -99,7 +99,7 @@ module.exports = [
     name: 'AWS Appsync',
     provider: 'AWS',
     category: 'API',
-    link: '/appsync/',
+    link: '/aws-appsync/',
     slug: 'stack-aws-appsync',
     highlighted: true,
   },
