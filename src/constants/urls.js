@@ -39,7 +39,7 @@ export default {
   championsDeck:
     'https://docs.google.com/presentation/d/1LaHodp_UKJd5j8hjNkGUhgHpNaQk-30boF_do4CYOxw/edit?usp=sharing',
   docPages: {
-    monitoring: '/framework/docs/dashboard/insights/',
+    monitoring: '/framework/docs/dashboard/monitoring/',
   },
   monitoring: '/monitoring/',
   alerts: '/alerts/',

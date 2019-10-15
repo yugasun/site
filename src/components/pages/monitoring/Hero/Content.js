@@ -1,7 +1,7 @@
 import React from 'react'
 import { Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
-import { ExternalLink } from 'src/fragments'
+import { InternalLink, ExternalLink } from 'src/fragments'
 import { dashboard, docPages } from 'src/constants/urls.js'
 import { Button, HeroFrameworkLogo } from 'src/components'
 
@@ -42,7 +42,7 @@ const HeroContent = props => (
       <ExternalLink to={dashboard}>
         <Button type='primary' text='Sign up for free'/>
       </ExternalLink>
-      <ExternalLink to={docPages.monitoring} style={{ alignSelf: 'center' }}>
+      <InternalLink to={docPages.monitoring} style={{ alignSelf: 'center' }}>
         <Text
           color='#fd5750'
           fontSize='16px'
@@ -53,7 +53,7 @@ const HeroContent = props => (
         >
           learn more >
         </Text>
-      </ExternalLink>
+      </InternalLink>
     </Flex>
   </Flex>
 )
