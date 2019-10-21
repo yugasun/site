@@ -606,8 +606,8 @@ export default class Pricing extends React.Component {
           <div className={`${styles.tableMobile}`}>
             <div className={`${styles.tableSection}`}>
               <div className={`${styles.tableRow}`}>
-                <div className={`${styles.tableColumn}`}>Open-Source</div>
-                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Free</div>
+                <div className={`${styles.tableColumn}`}>Team</div>
                 <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>
