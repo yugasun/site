@@ -256,13 +256,11 @@ export default class Pricing extends React.Component {
         <div className={`container-inner`}>
           <div className={`${styles.title}`}>
             <div className={`${styles.header}`} style={{ 'margin':'20px 0 20px 0' }}>
-              Serverless Framework Pricing
+              Serverless Framework Pro Pricing
             </div>
 
             <div className={`${styles.description}`}>
-              Deploy serverless apps in seconds with our open-source edition,
-              get production-ready with our free developer edition and pay as
-              you scale with the enterprise edition.
+              Pricing for every stage of Serverless adoption. 
             </div>
           </div>
         </div>
@@ -277,16 +275,16 @@ export default class Pricing extends React.Component {
                 framework
               </div>
               <div className={`${styles.pricingSummaryLogoEdition}`}>
-                developer
+                pro
               </div>
             </div>
 
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Developer Edition
+                Free
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                The open-source CLI you know and love plus free monitoring and CI/CD.
+                Everything you need to start Serverless development. 
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>$0/month</div>
             </div>
@@ -349,13 +347,13 @@ export default class Pricing extends React.Component {
                 framework
               </div>
               <div className={`${styles.pricingSummaryLogoEdition}`}>
-                professional
+                pro
               </div>
             </div>
 
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Professional Edition
+                Team
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Everything you need to scale your Serverless development.
@@ -413,13 +411,13 @@ export default class Pricing extends React.Component {
                 framework
               </div>
               <div className={`${styles.pricingSummaryLogoEdition}`}>
-                enterprise
+                pro
               </div>
             </div>
 
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Enterprise Edition
+                Enterprise
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Standardize and secure Serverless development and operations.
