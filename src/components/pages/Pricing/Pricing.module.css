@@ -14,7 +14,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 40px 0;
+  color: #000000;
 }
 
 .header {
@@ -27,8 +28,6 @@
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   width: 100%;
   max-width: 800px;
@@ -36,6 +35,21 @@
   font-family: 'Soleil';
   letter-spacing: -.2px;
   line-height: 30px;
+}
+
+.description a {
+  font-family: 'Soleil';
+  color: #000000;
+  text-decoration: underline;
+}
+
+.logoPro {
+  margin: 0 0 30px 0;
+}
+
+.logoPro img {
+  user-select: none;
+  height: 170px;
 }
 
 /**
@@ -46,29 +60,53 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
   box-sizing: border-box;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .pricingSummaryTile {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 840px;
   width: 33%;
-  background: #ffffff;
-  margin: 0px 14px 20px 14px;
-  padding: 24px 32px 20px 32px;
+  margin: 0 0 20px 0;
+  padding: 30px 32px 20px 32px;
+  user-select: none;
+  background: #fff;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease;
-  user-select: none;
 }
 
-.pricingSummaryTile:hover {
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
-  transform: scale(1.005) translate3d(0, 0, 0) perspective(1px);
+.freeTile {
+  margin-right: -20px;
+  margin-top: 50px;
+}
+
+.enterpriseTile {
+  margin-left: -20px;
+  margin-top: 50px;
+}
+
+.teamTile {
+  z-index: 100;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.teamTile .pricingHeader {
+  height: 274px;
+}
+
+.pricingSummaryTile a {
+  color: #000000;
+}
+
+.pricingHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px 0;
 }
 
 .pricingSummaryTile:first-child {
@@ -77,51 +115,6 @@
 
 .pricingSummaryTile:last-child {
   margin-right: 0px;
-}
-
-.pricingSummaryLogo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  font-family: 'Serverless';
-  font-size: 18px;
-  letter-spacing: -0.3px;
-  background: #000000;
-  border-radius: 3px;
-  padding: 20px 10px;
-}
-
-.pricingSummaryLogoServerless {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Serverless';
-  font-size: 20px;
-  letter-spacing: -0.3px;
-  color: #ffffff;
-}
-
-.pricingSummaryLogoFramework {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Serverless';
-  font-size: 32px;
-  margin-top: -2px;
-  letter-spacing: -0.5px;
-  color: #ffffff;
-}
-
-.pricingSummaryLogoEdition {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-  font-family: 'Serverless';
-  color: #fd5750;
-  margin-top: 3px;
-  letter-spacing: -0.1px;
 }
 
 .pricingSummaryDetail {
@@ -134,6 +127,10 @@
   border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
+.pricingSummaryDetailClickable {
+  transition: all 0.25s ease;
+}
+
 .pricingSummaryDetailClickable:hover {
   cursor: pointer;
   background: rgba(0,0,0,0.025);
@@ -143,34 +140,51 @@
   text-decoration: underline;
 }
 
-.pricingSummaryDetail:last-child {
-  border-bottom: none;
-}
-
 .pricingSummaryDetailEdition {
-  font-size: 21px;
+  font-size: 26px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
   color: #fd5750;
-  transition: all 0.2s linear;
   text-align: center;
-  padding: 14px 0 10px 0;
+  padding: 14px 0 0 0;
 }
 
 .pricingSummaryDetailPrice {
-  font-size: 20px;
+  font-size: 52px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
   color: #000000;
-  transition: all 0.2s linear;
   text-align: center;
   padding: 24px 0 10px 0;
+}
+
+.pricingSummaryDetailPrice span {
+  font-size: 20px;
+  font-family: 'SoleilSB';
+  margin-top: 20px;
+}
+
+.pricingSummaryDetailPriceEnterprise {
+  font-size: 22px;
+  font-family: 'SoleilSB';
+  letter-spacing: -0.1px;
+  color: #000000;
+  text-align: center;
+  padding: 24px 0 10px 0;
+}
+
+.pricingSummaryDetailPrice,
+.pricingSummaryDetailPriceEnterprise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
 }
 
 .pricingSummaryDetailText {
   font-family: 'SoleilLt';
   font-size: 16px;
-  line-height: 25px;
+  line-height: 32px;
   letter-spacing: -0.1px;
   text-align: center;
   padding: 8px 0 0 0;
@@ -184,6 +198,27 @@
   text-align: center;
   padding-top: 3px;
 }
+
+/**
+ * Pricing Summary - Mobile
+ */
+
+@media screen and (max-width: 1280px) {
+  .teamTile {
+    z-index: 0;
+    box-shadow: none;
+  }
+  .pricingSummary {
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .pricingSummaryTile {
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
 
 /**
  * Pricing Addons
@@ -287,22 +322,6 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-}
-
-/**
- * Pricing Summary - Mobile
- */
-
-@media screen and (max-width: 1280px) {
-  .pricingSummary {
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-
-  .pricingSummaryTile {
-    margin: 20px 0;
-    width: 100%;
-  }
 }
 
 /**
@@ -422,7 +441,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  font-family: 'SoleilSB';
+  font-family: 'SoleilBk';
   font-size: 17px;
 }
 
@@ -430,6 +449,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
   padding: 20px 5px;
 }
@@ -442,7 +462,7 @@
 
 .check {
   color: #fd5750;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .cross {
@@ -453,7 +473,35 @@
 
 .limit {
   color: #fd5750;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'SoleilSB';
   letter-spacing: -0.5px;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fadeInUp {
+  -webkit-animation: fadeInUp 1s;
+  -moz-animation: fadeInUp 1s;
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
