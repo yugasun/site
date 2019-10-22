@@ -83,5 +83,3 @@
 /enterprise/contact /enterprise/ 301
 /blog/python-dashboard-support/ /blog/aws-lambda-python-monitoring/ 301
 /learn/graphql-and-serverless/ /blog/running-scalable-reliable-graphql-endpoint-with-serverless/ 301
-/blog/best-tools-serverless-observability/ /monitoring/ 301
-/blog/serverless-monitoring-the-good-the-bad-and-the-ugly/ /monitoring/ 301 
