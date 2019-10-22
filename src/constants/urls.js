@@ -24,7 +24,7 @@ export default {
   github: 'https://github.com/serverless/',
   forum: 'https://forum.serverless.com/',
   slack: '/slack',
-  meetups: '/resources/events/',
+  meetups: 'https://www.meetup.com/pro/serverless/',
   acceleration: '/acceleration/',
   partners: '/partners/',
   framework: '/framework/',
