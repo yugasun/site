@@ -3,6 +3,7 @@ import { Heading } from 'src/fragments/DesignSystem'
 import { Flex, Text } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 import { Button, HeroFrameworkLogo } from 'src/components'
+// import styles from './HeroCLI.module.css'
 
 const HeroContent = () => (
   <Flex
@@ -15,7 +16,7 @@ const HeroContent = () => (
       <HeroFrameworkLogo />
     </Flex>
     <Heading.h0 align={['left', 'left', 'center', 'center', 'left']}>
-      Serverless <br /> CLI
+      Command line interface
     </Heading.h0>
     <Text
       fontSize='24px'
