@@ -16,7 +16,8 @@ const Examples = ({ data: examples }) => {
       prefooter={NewToServerlessPrefooter}
       transparentHeader={true}
     >
-      <Helmet title='Examples Explorer | Serverless Functions Directory' />
+      <Helmet title='Serverless Examples Directory (90+ Examples w/ Filters)'
+      description='Serverless Examples Explorer is a directory with 90+ examples of serverless applications &amp; architectures built using Serverless Framework filterable by cloud platforms &amp; programming languages' />
       <Hero />
       <Content examples={edges.map(({ node }) => node)} />
     </DefaultLayout>
