@@ -305,7 +305,7 @@ export default class Pricing extends React.Component {
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
                 <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
-                  1,000,000 / events / month
+                  10,000,000 / events / month
                 </div>
               </div>
             </InternalLink>
