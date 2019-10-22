@@ -328,7 +328,7 @@ export default class Pricing extends React.Component {
               </div>
             </InternalLink>
 
-            <InternalLink to={alerts}>
+            <InternalLink to={integrations}>
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
                 <div className={`${styles.pricingSummaryDetailTitle}`}>Integrations</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
