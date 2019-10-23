@@ -35,35 +35,35 @@ export default class Pricing extends React.Component {
           },
         ],
       },
-      {
-        category: 'Plugins',
-        features: [
-          {
-            feature: 'Extend the Framework with 1,000+ plugins',
-            one: true,
-            two: true,
-            three: true,
-          },
-          {
-            feature: 'Get support for certified plugins',
-            one: false,
-            two: false,
-            three: true,
-          },
-        ],
-      },
-      {
-        category: 'Components',
-        features: [
-          {
-            feature:
-              'Rapidly deploy common serverless use-cases via Serverless Components',
-            one: true,
-            two: true,
-            three: true,
-          },
-        ],
-      },
+      // {
+      //   category: 'Plugins',
+      //   features: [
+      //     {
+      //       feature: 'Extend the Framework with 1,000+ plugins',
+      //       one: true,
+      //       two: true,
+      //       three: true,
+      //     },
+      //     {
+      //       feature: 'Get support for certified plugins',
+      //       one: false,
+      //       two: false,
+      //       three: true,
+      //     },
+      //   ],
+      // },
+      // {
+      //   category: 'Components',
+      //   features: [
+      //     {
+      //       feature:
+      //         'Rapidly deploy common serverless use-cases via Serverless Components',
+      //       one: true,
+      //       two: true,
+      //       three: true,
+      //     },
+      //   ],
+      // },
       // {
       //   category: 'Registry',
       //   features: [
@@ -103,15 +103,21 @@ export default class Pricing extends React.Component {
             three: true,
           },
           {
-            feature: 'Share and manage secrets across stages',
+            feature: 'Share and manage secrets across stages.',
             one: false,
             two: true,
             three: true,
           },
           {
-            feature: 'Included team members',
+            feature: 'Included team members.',
             one: false,
             two: '3',
+            three: 'Custom',
+          },
+          {
+            feature: 'Additional team members.',
+            one: false,
+            two: '$20/month',
             three: 'Custom',
           },
         ],
@@ -137,47 +143,82 @@ export default class Pricing extends React.Component {
             two: '1,000,000',
             three: 'Custom',
           },
-        ],
-      },
-      {
-        category: 'Alerts',
-        features: [
           {
-            feature: 'Zero configuration set-up of alerts',
+            feature: 'Additional monthly invocations.',
             one: false,
-            two: true,
-            three: true,
-          },
-          {
-            feature: 'Errors, performance, warnings & more',
-            one: false,
-            two: true,
-            three: true,
+            two: '$10/million',
+            three: 'Custom',
           },
         ],
       },
       {
-        category: 'Debugging',
+        category: 'CI/CD',
         features: [
           {
-            feature: 'Invocation Explorer',
-            one: false,
+            feature: 'Out-of-the-box CI/CD.',
+            one: true,
             two: true,
             three: true,
           },
-        ],
-      },
-      {
-        category: 'Integrations',
-        features: [
           {
-            feature: 'Email, Slack, AWS SNS, webhooks & more',
-            one: false,
-            two: false,
+            feature: 'Deploy previews.',
+            one: true,
+            two: true,
             three: true,
+          },
+          {
+            feature: 'Included concurrent builds.',
+            one: '1',
+            two: '2',
+            three: 'Custom',
+          },
+          {
+            feature: 'Additional concurrent builds.',
+            one: false,
+            two: '$25/month',
+            three: 'Custom',
           },
         ],
       },
+      // {
+      //   category: 'Alerts',
+      //   features: [
+      //     {
+      //       feature: 'Zero configuration set-up of alerts',
+      //       one: false,
+      //       two: true,
+      //       three: true,
+      //     },
+      //     {
+      //       feature: 'Errors, performance, warnings & more',
+      //       one: false,
+      //       two: true,
+      //       three: true,
+      //     },
+      //   ],
+      // },
+      // {
+      //   category: 'Debugging',
+      //   features: [
+      //     {
+      //       feature: 'Invocation Explorer',
+      //       one: false,
+      //       two: true,
+      //       three: true,
+      //     },
+      //   ],
+      // },
+      // {
+      //   category: 'Integrations',
+      //   features: [
+      //     {
+      //       feature: 'Email, Slack, AWS SNS, webhooks & more',
+      //       one: false,
+      //       two: false,
+      //       three: true,
+      //     },
+      //   ],
+      // },
       {
         category: 'Policies',
         features: [
@@ -236,41 +277,51 @@ export default class Pricing extends React.Component {
                 framework
               </div>
               <div className={`${styles.pricingSummaryLogoEdition}`}>
-                open-source
+                developer
               </div>
             </div>
 
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Open-Source Edition
+                Developer Edition
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Our vast open-source ecosystem simplifies serverless, and is
-                available to everyone and every team for free.
+                The open-source CLI you know and love plus free monitoring and CI/CD.
               </div>
-              <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>$0/month</div>
             </div>
             <InternalLink to={cli}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>CLI</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Open-Source & Free
+                Serverless CLI
               </div>
             </div>
             </InternalLink>
             <InternalLink to={plugins}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Plugins</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Open-Source & Free
+                Unlimited Applications
               </div>
             </div>
             </InternalLink>
             <InternalLink to={components}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Components</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Open-Source & Free
+                Serverless Dashboard - 3 users
+              </div>
+            </div>
+            </InternalLink>
+            <InternalLink to={components}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Serverless Monitoring - 1m events/month
+              </div>
+            </div>
+            </InternalLink>
+             <InternalLink to={components}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Serverless CI/CD - 1 concurrent build
               </div>
             </div>
             </InternalLink>
@@ -284,7 +335,7 @@ export default class Pricing extends React.Component {
             */}
             <InternalLink to={gettingStarted}>
               <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Download'}/>
+                <Button type={'primary'} text={'Start Free'}/>
               </div>
             </InternalLink>
           </div>
@@ -298,55 +349,57 @@ export default class Pricing extends React.Component {
                 framework
               </div>
               <div className={`${styles.pricingSummaryLogoEdition}`}>
-                developer
+                professional
               </div>
             </div>
 
             <div className={`${styles.pricingSummaryDetail}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Developer Edition
+                Professional Edition
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Integrates and extends the open-source projects and adds free
-                features for production-ready teams.
+                Everything you need to scale your Serverless development.
               </div>
-              <div className={`${styles.pricingSummaryDetailPrice}`}>Price - Free</div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>$99/month</div>
             </div>
             <InternalLink to={dashboardPage}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Dashboard</div>
-              <div className={`${styles.pricingSummaryDetailText}`}>Up to 3 users.</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>Serverless CLI</div>
             </div>
             </InternalLink>
 
             <InternalLink to={monitoring}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Up to 1 million invocations a month.
+                Unlimited Applications
               </div>
             </div>
             </InternalLink>
 
             <InternalLink to={alerts}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Alerts</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Up to 1 million invocations a month.
+                Serverless Dashboard - 5 users
               </div>
             </div>
             </InternalLink>
             <InternalLink to={debugging}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Debugging</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Up to 1 million invocations a month.
+                Serverless Monitoring - 10m events/month
+              </div>
+            </div>
+            </InternalLink>
+            <InternalLink to={debugging}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Serverless CI/CD - 2 concurrent builds
               </div>
             </div>
             </InternalLink>
             <ExternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Sign Up For Free'}/>
+                <Button type={'primary'} text={'Start Free'}/>
               </div>
             </ExternalLink>
           </div>
@@ -369,36 +422,46 @@ export default class Pricing extends React.Component {
                 Enterprise Edition
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Includes the developer edition, with increased limits, more
-                features, training & support for scaling serverless teams.
+                Standardize and secure Serverless development and operations.
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>
-                Price - Contact Sales
+                Contact Sales
               </div>
             </div>
             <InternalLink to={pricing}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
               <div className={`${styles.pricingSummaryDetailTitle}`}>
-                Increased Usage
               </div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Increased invocations, team seats & more.
+                All features from Professional Edition
               </div>
             </div>
             </InternalLink>
             <InternalLink to={integrations}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Integrations</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Unlimited integrations.
+                Serverless Policies
               </div>
             </div>
             </InternalLink>
             <InternalLink to={policies}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Policies</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Unlimited policies.
+                Serverless Operations Console
+              </div>
+            </div>
+            </InternalLink>
+            <InternalLink to={policies}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Full Audit Logs
+              </div>
+            </div>
+            </InternalLink>
+            <InternalLink to={policies}>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Enterprise Support
               </div>
             </div>
             </InternalLink>

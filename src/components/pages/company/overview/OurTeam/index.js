@@ -13,7 +13,6 @@ import eslam from 'src/assets/images/team/eslam.jpg'
 import alex from 'src/assets/images/team/alex.jpg'
 import jeremy from 'src/assets/images/team/jeremy.jpg'
 import steve from 'src/assets/images/team/steve.jpg'
-import eric from 'src/assets/images/team/eric.jpg'
 import daniel from 'src/assets/images/team/daniel.jpg'
 import maciej from 'src/assets/images/team/maciej.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
@@ -64,7 +63,6 @@ const teamMembers = [
     position: 'HR Coordinator/Recruitment Coordinator',
   },
   { image: gareth, name: 'Gareth McCumskey', position: 'Solutions Architect' },
-  { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },
   { image: daniel, name: 'Daniel Schep', position: 'Software Engineer' },
   { image: aj, name: 'AJ Stuyvenberg', position: 'Senior Platform Engineer' },
   {
