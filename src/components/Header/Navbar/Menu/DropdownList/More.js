@@ -66,7 +66,7 @@ const Resource = () => (
         <SubMenuItem
           navProps={{
             to: meetups,
-            completed: true,
+            crossDomain: true,
             backgroundOnHover: true,
           }}
         >
