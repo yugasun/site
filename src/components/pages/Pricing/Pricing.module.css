@@ -90,13 +90,11 @@
 }
 
 .teamTile {
-  z-index: 100;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+  margin-left: -20px;
+  margin-top: 50px;
 }
 
-.teamTile .pricingHeader {
-  height: 274px;
-}
+
 
 .pricingSummaryTile a {
   color: #000000;
@@ -125,6 +123,7 @@
   width: 100%;
   padding: 20px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
+  min-height: 105px;
 }
 
 .pricingSummaryDetailClickable {

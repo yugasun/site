@@ -179,7 +179,7 @@ export default class Pricing extends React.Component {
         category: 'Debugging',
         features: [
           {
-            feature: 'Invocation Explorer',
+            feature: 'Event Explorer',
             one: true,
             two: true,
             three: true,
@@ -277,15 +277,21 @@ export default class Pricing extends React.Component {
             </div>
             <ExternalLink to={dashboard}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Team</div>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 3 included members
               </div>
             </div>
             </ExternalLink>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}></div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+             
+              </div>
+            </div>
             <InternalLink to={gettingStarted}>
               <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Download'}/>
+                <Button type={'primary'} text={'Sign Up Free'}/>
               </div>
             </InternalLink>
           </div>
@@ -297,7 +303,7 @@ export default class Pricing extends React.Component {
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>$99<span>/month</span></div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Ideal for teams bringing serverless apps into production and scaling them.  Includes all free features plus...
+                Ideal for teams bringing serverless apps into production and scaling them.
               </div>
             </div>
 
@@ -321,7 +327,7 @@ export default class Pricing extends React.Component {
 
             <InternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-                <div className={`${styles.pricingSummaryDetailTitle}`}>Team</div>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
                   5 included members
                 </div>
@@ -339,7 +345,7 @@ export default class Pricing extends React.Component {
 
             <ExternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Sign Up For Free'}/>
+                <Button type={'primary'} text={'Sign Up Free'}/>
               </div>
             </ExternalLink>
           </div>
@@ -351,7 +357,7 @@ export default class Pricing extends React.Component {
               </div>
               <div className={`${styles.pricingSummaryDetailPriceEnterprise}`}>Contact Sales</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Custom packages designed for the needs of your company.  Includes all features plus...
+                Advanced feature set designed for enterprise needs. 
               </div>
             </div>
 
@@ -375,6 +381,15 @@ export default class Pricing extends React.Component {
 
             <div>
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Operations Console</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  Cloud access control, audit logging, and more.
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
                 <div className={`${styles.pricingSummaryDetailTitle}`}>Self Hosted</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
                   Host everything on your own AWS account.
@@ -384,7 +399,7 @@ export default class Pricing extends React.Component {
 
             <ExternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Sign Up For Free'}/>
+                <Button type={'primary'} text={'Contact Sales'}/>
               </div>
             </ExternalLink>
           </div>

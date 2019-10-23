@@ -14,7 +14,6 @@ const Homepage = ({ location }) => (
       location={location}
     />
     <Hero />
-    <FrameworkEditions />
     <UserTweets />
     <Paradigm />
   </DefaultLayout>

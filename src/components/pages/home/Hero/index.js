@@ -1,5 +1,6 @@
 import React from 'react'
 import imgBolt from 'src/assets/images/icon-bolt.svg'
+import imgLogoPro from 'src/assets/images/logo-serverless-framework-pro-centered-dark.png'
 import imgLogoEa from 'src/assets/images/logo-ea.png'
 import imgLogoNordstrom from 'src/assets/images/logo-nordstrom.png'
 import imgLogoCocaCola from 'src/assets/images/logo-coca-cola.png'
@@ -75,10 +76,8 @@ export default class Hero extends React.Component {
         <div className='hero-inner container-inner'>
           <div className='hero-logo container'>
             <div className='hero-logo-bolt'>
-              <img src={imgBolt} />
+              <img src={imgLogoPro} />
             </div>
-            <div className='hero-logo-serverless'>serverless</div>
-            <div className='hero-logo-framework'>framework</div>
           </div>
 
           <div className='hero-tagline container'>
