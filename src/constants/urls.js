@@ -40,12 +40,14 @@ export default {
     'https://docs.google.com/presentation/d/1LaHodp_UKJd5j8hjNkGUhgHpNaQk-30boF_do4CYOxw/edit?usp=sharing',
   docPages: {
     monitoring: '/framework/docs/dashboard/monitoring/',
+    cicd: '/framework/docs/dashboard/cicd/'
   },
   monitoring: '/monitoring/',
   alerts: '/alerts/',
   policies: '/policies/',
   debugging: '/debugging/',
   integrations: '/integrations/',
+  cicd: '/cicd/',
   termsOfService: 'https://dashboard.serverless.com/legal/terms',
   privacyPolicy: 'https://dashboard.serverless.com/legal/privacy',
   facebookHandle: 'https://www.facebook.com/serverless/',
