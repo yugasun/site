@@ -1,15 +1,21 @@
 import React from 'react'
 
-import { Box, Flex } from 'serverless-design-system'
+import { Box, Flex, Image } from 'serverless-design-system'
 import { PL, Heading } from 'src/fragments/DesignSystem'
+import serverlessLogo from 'src/assets/images/pages/enterprise/serverless-logo-white-bg.svg'
 
-const ExamplesHero = () => {
+const LearnHomepageHero = () => {
   return (
-      <Flex mb={[2, 2, 4, 9]} color='black' flexDirection='column' alignItems='center' mt={132}>
+      <Flex color='black' flexDirection='column' alignItems='center' mt={152}>
         <Box width={[1]}>
           <Heading.h0 mt={[42, 42, 0, 0]} align='center' fontFamily='SoleilSB'>
             Learn
           </Heading.h0>
+          <Flex>
+            <Heading.h3>by</Heading.h3>
+            <Image src={serverlessLogo} width='200px' height='40px'/>
+          </Flex>
+          
         </Box>
         <Flex.verticallyCenter
           width={[1, 1, 1, 0.6, 0.6]}
@@ -28,4 +34,4 @@ const ExamplesHero = () => {
   )
 }
 
-export default ExamplesHero
+export default LearnHomepageHero

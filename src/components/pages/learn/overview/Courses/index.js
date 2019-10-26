@@ -3,6 +3,7 @@ import { Flex, Image, Text, Box } from 'serverless-design-system'
 import { P, PS, Heading, SecondaryButton } from 'src/fragments/DesignSystem'
 import coursesList from './Data'
 import { InternalLink } from 'src/fragments'
+import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg'
 
 const Courses = props => (
   <Box mb={[92, 92, 92, 92, 132]}>
@@ -21,8 +22,10 @@ const Courses = props => (
         'initial',
         'space-between',
         'space-between',
-        'initial',
+        'center',
       ]}
+      width={0.60}
+      mx='auto'
     >
       {coursesList.map((course, index) => (
         <Flex
@@ -33,26 +36,16 @@ const Courses = props => (
           ml={index == 2 ? [0, 0, '28%', '28%', 0] : ['0px']}
           width={[1, 1, 0.45, 0.45, 1]}
           mb={'62px'}
+          style={{border: '1px solid #eaeaea',
+            boxShadow: '2px 2px 8px 0 rgba(0, 0, 0, 0.08)'}}
         >
           <Image
             src={course.image}
-            width={['100%']}
-            height={[200, 200, 217, 200, 217]}
           />
           <Flex
             flexDirection={'column'}
-            width={[1, 1, 1, 1, 1]}
-            mt={[42, 42, 32, 32, 42]}
+            p={'10px'}
           >
-            <Text
-              fontFamily='SoleilBk'
-              fontSize='14px'
-              lineHeight='1.71'
-              letterSpacing='0.44px'
-              color='#fd5750'
-            >
-              {course.videoCount} videos
-            </Text>
             <Text
               align={['left']}
               fontSize={'24px'}
@@ -66,21 +59,23 @@ const Courses = props => (
               <P align={['left']} my={'12px'}>
                 {course.description}
               </P>
-              <PS align={['left']}>by {course.author}</PS>
-              <InternalLink
-                to={'/learn/full-stack-application-development-on-aws/'}
-              >
-                <P color='#fd5750' mb={0} mt={[32, 32, 32, 32, 42]}>
-                  watch course >
-                </P>
-              </InternalLink>
+              <Flex justifyContent='space-between'>
+                <Flex>
+                  <Image src={course.authorImage} height='38px' width='38px'/>
+                  <Flex flexDirection='column' ml={1}>
+                    <PS align={['left']}>Created by</PS>
+                    <PS align={['left']} mt={'5px'}>{course.author}</PS>
+                  </Flex>
+                </Flex>
+                <Flex>
+                  <Image src={courseTimeIcon} />
+                  <PS>{course.courseTime}</PS>
+                </Flex>
+              </Flex>
             </Box>
           </Flex>
         </Flex>
       ))}
-    </Flex>
-    <Flex justifyContent='center'>
-      <SecondaryButton>view courses list</SecondaryButton>
     </Flex>
   </Box>
 )

@@ -1,5 +1,7 @@
 import fullStackCourseImage from 'src/assets/images/pages/learn/home/full-stack-app-on-aws-course.svg'
 import frontendCourseImage from 'src/assets/images/pages/learn/home/serverless-frontend-course.svg'
+import garethImg from 'src/assets/images/team/gareth.jpg'
+import fernandoImage from 'src/assets/images/team/fernando.png'
 
 module.exports = [
   {
@@ -8,8 +10,8 @@ module.exports = [
     description:
       'Serverless services only cost you when they are actually executing. This is important. To be a truly…',
     author: 'Gareth McCumskey',
-    authorImage: '',
-    courseTime: '',
+    authorImage: garethImg,
+    courseTime: '1 hr 45 min',
     videoCount: 8,
   },
   {
@@ -18,8 +20,8 @@ module.exports = [
     description:
       'Serverless services only cost you when they are actually executing. This is important. To be a truly…',
     author: 'Fernando Corey',
-    authorImage: '',
-    courseTime: '',
+    authorImage: fernandoImage,
+    courseTime: '1 hr 45 min',
     videoCount: 8,
   },
 ]
