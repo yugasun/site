@@ -11,9 +11,9 @@ const LearnHomepageHero = () => {
           <Heading.h0 mt={[42, 42, 0, 0]} align='center' fontFamily='SoleilSB'>
             Learn
           </Heading.h0>
-          <Flex>
-            <Heading.h3>by</Heading.h3>
-            <Image src={serverlessLogo} width='200px' height='40px'/>
+          <Flex justifyContent='center'>
+            <Heading.h4 color='black' mb={0}>by &nbsp;&nbsp;</Heading.h4>
+            <Image src={serverlessLogo} />
           </Flex>
           
         </Box>
@@ -21,6 +21,7 @@ const LearnHomepageHero = () => {
           width={[1, 1, 1, 0.6, 0.6]}
           px={[0, 0, 0, 5, 7]}
           ml={[0, 0, 4, 0, 0]}
+          mt={32}
         >
           <PL
             mt={[22, 22, 1.5]}

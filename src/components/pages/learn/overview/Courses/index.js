@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Image, Text, Box } from 'serverless-design-system'
-import { P, PS, Heading, SecondaryButton } from 'src/fragments/DesignSystem'
+import { P, PS, Heading } from 'src/fragments/DesignSystem'
 import coursesList from './Data'
 import { InternalLink } from 'src/fragments'
 import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg'
@@ -44,7 +44,7 @@ const Courses = props => (
           />
           <Flex
             flexDirection={'column'}
-            p={'10px'}
+            p={'20px'}
           >
             <Text
               align={['left']}
@@ -56,9 +56,9 @@ const Courses = props => (
               {course.title}
             </Text>
             <Box width={[1]}>
-              <P align={['left']} my={'12px'}>
+              <PS align={['left']} my={'12px'} fontSize='14px'>
                 {course.description}
-              </P>
+              </PS>
               <Flex justifyContent='space-between'>
                 <Flex>
                   <Image src={course.authorImage} height='38px' width='38px'/>
@@ -67,9 +67,9 @@ const Courses = props => (
                     <PS align={['left']} mt={'5px'}>{course.author}</PS>
                   </Flex>
                 </Flex>
-                <Flex>
+                <Flex alignItems='center'>
                   <Image src={courseTimeIcon} />
-                  <PS>{course.courseTime}</PS>
+                  <PS ml={'10px'}>{course.courseTime}</PS>
                 </Flex>
               </Flex>
             </Box>

@@ -1,40 +1,24 @@
-import developIcon from 'src/assets/images/temp/resources.png'
+import awsLambdaImage from 'src/assets/images/learn/aws-lambda-guide.svg'
+import dynamoDBImage from 'src/assets/images/learn/amazon-dynamodb-guide.svg'
+import stepFunctionsImage from 'src/assets/images/learn/aws-step-functions-guide.svg'
 
 export default [
   {
     id: 1,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
+    image: dynamoDBImage,
+    title: 'DynamoDB',
+    link: '/dynamodb/',
   },
   {
     id: 2,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
+    image: awsLambdaImage,
+    title: 'AWS Lambda',
+    link: '/aws-lambda/',
   },
   {
     id: 3,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
-  },
-  {
-    id: 4,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
-  },
-  {
-    id: 5,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
-  },
-  {
-    id: 6,
-    image: developIcon,
-    title: 'Fast, Cheap, Global React Apps via Serverless Components',
-    author: 'Austen Collins',
+    image: stepFunctionsImage,
+    title: 'Step Functions',
+    link: '/step-functions/',
   },
 ]

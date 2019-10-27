@@ -13,15 +13,17 @@ module.exports = [
     authorImage: garethImg,
     courseTime: '1 hr 45 min',
     videoCount: 8,
+    link: '/learn/courses/full-stack-application-development-on-aws/',
   },
   {
     image: frontendCourseImage,
     title: 'Serverless for Frontend Developers',
     description:
       'Serverless services only cost you when they are actually executing. This is important. To be a truly…',
-    author: 'Fernando Corey',
+    author: 'Fernando Medina Corey',
     authorImage: fernandoImage,
     courseTime: '1 hr 45 min',
     videoCount: 8,
+    link: '/learn/courses/serverless-for-frontend-developers/',
   },
 ]
