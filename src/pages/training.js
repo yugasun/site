@@ -12,7 +12,9 @@ import { AppContainer } from 'src/components'
 
 const Support = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Training &amp; Workshops' location={location} />
+    <Helmet title='Serverless Training - AWS Lambda Workshops &amp; More' 
+    description='Accelerate your serverless adoption via our training - our workshops cover AWS Lambda, API Gateway, Amazon DynamoDB & other serverless related technologies.'
+    location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
