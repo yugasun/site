@@ -10,7 +10,7 @@ const Description = props => (
         mt={[62, 62, 62, 62, 92]}
         mb={[22, 22, 22, 22, 32]}
       >
-        Description
+        About this course
       </Heading.h3>
       <P m={0}>
         Serverless services only cost you when they are actually executing. This
