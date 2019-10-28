@@ -39,22 +39,26 @@ const Courses = props => (
           style={{border: '1px solid #eaeaea',
             boxShadow: '2px 2px 8px 0 rgba(0, 0, 0, 0.08)'}}
         >
-          <Image
-            src={course.image}
-          />
+          <InternalLink to={course.link}>
+            <Image
+              src={course.image}
+            />
+          </InternalLink>
           <Flex
             flexDirection={'column'}
             p={'20px'}
           >
-            <Text
-              align={['left']}
-              fontSize={'24px'}
-              letterSpacing={'-0.38px'}
-              lineHeight={'38px'}
-              fontFamily='Soleil'
-            >
-              {course.title}
-            </Text>
+            <InternalLink to={course.link}>
+              <Text
+                align={['left']}
+                fontSize={'24px'}
+                letterSpacing={'-0.38px'}
+                lineHeight={'38px'}
+                fontFamily='Soleil'
+              >
+                {course.title}
+              </Text>
+            </InternalLink>
             <Box width={[1]}>
               <PS align={['left']} my={'12px'} fontSize='14px'>
                 {course.description}

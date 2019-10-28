@@ -7,18 +7,20 @@ import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg
 import styled from 'styled-components'
 import Share from './Share'
 import fullStackCourseImage from 'src/assets/images/pages/learn/home/full-stack-app-on-aws-course.svg'
+import { InternalLink } from 'src/fragments'
 
 const FlexWithBorderTop = styled(Flex)`
-  border-top: 1px solid #D8D8D8;
+  border-top: 1px solid #eaeaea;
 `
 
 const CourseBox = props => (
   <Card
-    height={[460]}
+    height={[480]}
     width={[1, 1, 278, 278, 379]}
     flexDirection='column'
     mt={[62, 62, 62, 62, -162]}
     ml={[0, 0, 55, 55, 136]}
+    border='1px solid rgba(255,255,255,0.2)'
     borderRadius='4px'
     boxShadow='2px 7px 18px 0 rgba(0, 0, 0, 0.08)'
   >
@@ -43,7 +45,9 @@ const CourseBox = props => (
         </P>
       </FlexWithBorderTop>
       <FlexWithBorderTop justifyContent='center'>
-        <Button mt={16}>Start Course</Button>
+        <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
+          <Button mt={16} height='60px' fontSize='18px' pt={'6px'}>&#9658; &nbsp; Start Course</Button>
+        </InternalLink>
       </FlexWithBorderTop>
     </Flex>
   </Card>

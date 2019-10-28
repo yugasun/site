@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>email</title>
+    <desc>Created with Sketch.</desc>
+    <g id="WIP-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="/learn/tutorial/getting-setup-with-aws/" transform="translate(-1238.000000, -121.000000)" fill="#8C8C8C" fill-rule="nonzero">
+            <g id="email" transform="translate(1238.000000, 121.000000)">
+                <path d="M21.890625,0 L2.109375,0 C0.94771875,0 0,0.932123077 0,2.07692308 L0,15.9230769 C0,17.064 0.9435,18 2.109375,18 L21.890625,18 C23.049375,18 24,17.0710154 24,15.9230769 L24,2.07692308 C24,0.936 23.0565,0 21.890625,0 Z M21.5993438,1.38461538 L12.0447188,10.7922923 L2.40745312,1.38461538 L21.5993438,1.38461538 Z M1.40625,15.6363692 L1.40625,2.35703077 L8.17870313,8.96810769 L1.40625,15.6363692 Z M2.40060938,16.6153846 L9.17732813,9.94292308 L11.551875,12.2608615 C11.82675,12.5292 12.2703281,12.5283231 12.5440781,12.2587385 L14.859375,9.97906154 L21.5993906,16.6153846 L2.40060938,16.6153846 Z M22.59375,15.6363231 L15.8537344,9 L22.59375,2.36363077 L22.59375,15.6363231 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

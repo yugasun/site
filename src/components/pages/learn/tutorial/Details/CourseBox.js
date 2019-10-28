@@ -1,20 +1,12 @@
 import React from 'react'
-import { Heading, P } from 'src/fragments/DesignSystem'
-import { Box, Flex, Card, Image } from 'serverless-design-system'
-import courseOutlineData from './Data'
+import { Flex, Image, Card, Box } from 'serverless-design-system'
+import { P, Heading } from 'src/fragments/DesignSystem'
 import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import { InternalLink } from 'src/fragments'
+import courseOutlineData from './Data'
 
-const CourseOutline = props => (
-    <Box>
-      <Heading.h3
-        align='left'
-        mt={[62, 62, 62, 62, 62]}
-        mb={[22, 22, 22, 22, 32]}
-      >
-        Course outline
-      </Heading.h3>
-      <Card border='1px solid #eaeaea'>
+const CourseBox = props => (
+  <Card border='1px solid #eaeaea' ml={22}>
       {
         courseOutlineData.map((course, index) => (
           <Flex key={index} flexDirection='column'>
@@ -29,7 +21,9 @@ const CourseOutline = props => (
                     <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
                       <Flex>
                         <Image src={playVideoIcon} />
-                        <P>&nbsp;&nbsp;{item.title}</P>  
+                        <Box width={0.95}>
+                          <P ml={'12px'} align='left'>{item.title}</P>  
+                        </Box>
                       </Flex>
                     </InternalLink>
                     <P>{item.playTime}</P>
@@ -40,7 +34,6 @@ const CourseOutline = props => (
         ))
       }
       </Card>
-    </Box>
 )
 
-export default CourseOutline
+export default CourseBox
