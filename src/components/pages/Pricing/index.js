@@ -4,7 +4,7 @@ import imgLogoOS from 'src/assets/images/logo-serverless-framework-open-source-s
 import imgLogoPro from 'src/assets/images/logo-serverless-framework-pro-centered-light.png'
 import styles from './Pricing.module.css'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { cli, gettingStarted, dashboard, enterprise, training, support, plugins, components, dashboardPage, monitoring, alerts, debugging, pricing, integrations, policies } from 'src/constants/urls'
+import { cli, gettingStarted, dashboard, contactSales, training, support, plugins, components, dashboardPage, monitoring, alerts, debugging, pricing, integrations, policies } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
   constructor(props) {
@@ -179,7 +179,7 @@ export default class Pricing extends React.Component {
         category: 'Debugging',
         features: [
           {
-            feature: 'Invocation Explorer',
+            feature: 'Query across all requests, invocations & more',
             one: true,
             two: true,
             three: true,
@@ -238,7 +238,7 @@ export default class Pricing extends React.Component {
             </div>
 
             <div className={`${styles.description}`}>
-              Deploy serverless applications in seconds with <ExternalLink to={`https://www.github.com/serverless/serverless`}>Serverless Framework Open-Source</ExternalLink>.  <br/>Bring your apps & teams into production with Serverless Framework Pro.
+              Deploy serverless applications in seconds with <ExternalLink to={`https://www.github.com/serverless/serverless`}>Serverless Framework Open-Source</ExternalLink>.  <br/>Bring those apps into production with Serverless Framework Pro, which includes out-of-the-box collaboration, monitoring,  debugging, & more.
             </div>
           </div>
         </div>
@@ -258,6 +258,11 @@ export default class Pricing extends React.Component {
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Enable monitoring, debugging, secrets & more for your serverless apps, for free!
               </div>
+              <InternalLink to={gettingStarted}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Sign up for free'}/>
+                </div>
+              </InternalLink>
             </div>
             <InternalLink to={monitoring}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
@@ -283,11 +288,6 @@ export default class Pricing extends React.Component {
               </div>
             </div>
             </ExternalLink>
-            <InternalLink to={gettingStarted}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Download'}/>
-              </div>
-            </InternalLink>
           </div>
 
           <div className={`${styles.pricingSummaryTile} ${styles.teamTile} ${styles.fadeInUp}`}>
@@ -299,6 +299,16 @@ export default class Pricing extends React.Component {
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Ideal for teams bringing serverless apps into production and scaling them.  Includes all free features plus...
               </div>
+              <ExternalLink to={dashboard}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Sign up for free'}/>
+                </div>
+              </ExternalLink>
+              <InternalLink to={contactSales}>
+                <div className={`${styles.salesLink}`}>
+                  Contact sales to purchase
+                </div>
+              </InternalLink>
             </div>
 
             <InternalLink to={monitoring}>
@@ -336,12 +346,6 @@ export default class Pricing extends React.Component {
                 </div>
               </div>
             </InternalLink>
-
-            <ExternalLink to={dashboard}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Sign Up For Free'}/>
-              </div>
-            </ExternalLink>
           </div>
 
           <div className={`${styles.pricingSummaryTile} ${styles.enterpriseTile} ${styles.fadeInUp}`}>
@@ -353,6 +357,11 @@ export default class Pricing extends React.Component {
               <div className={`${styles.pricingSummaryDetailText}`}>
                 Custom packages designed for the needs of your company.  Includes all features plus...
               </div>
+              <InternalLink to={contactSales}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Request a demo'}/>
+                </div>
+              </InternalLink>
             </div>
 
             <InternalLink to={monitoring}>
@@ -375,18 +384,12 @@ export default class Pricing extends React.Component {
 
             <div>
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-                <div className={`${styles.pricingSummaryDetailTitle}`}>Self Hosted</div>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Self Hosted Option</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
                   Host everything on your own AWS account.
                 </div>
               </div>
             </div>
-
-            <ExternalLink to={dashboard}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Sign Up For Free'}/>
-              </div>
-            </ExternalLink>
           </div>
         </div>
 
@@ -477,8 +480,8 @@ export default class Pricing extends React.Component {
           <div className={`${styles.tableMobile}`}>
             <div className={`${styles.tableSection}`}>
               <div className={`${styles.tableRow}`}>
-                <div className={`${styles.tableColumn}`}>Open-Source</div>
-                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Free</div>
+                <div className={`${styles.tableColumn}`}>Team</div>
                 <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>

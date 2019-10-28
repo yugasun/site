@@ -30,7 +30,7 @@
 .description {
   text-align: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   font-size: 19px;
   font-family: 'Soleil';
   letter-spacing: -.2px;
@@ -95,7 +95,7 @@
 }
 
 .teamTile .pricingHeader {
-  height: 274px;
+  height: 378px;
 }
 
 .pricingSummaryTile a {
@@ -115,6 +115,17 @@
 
 .pricingSummaryTile:last-child {
   margin-right: 0px;
+}
+
+.pricingSummaryButtonWrapper {
+  margin: 20px 0;
+}
+
+.salesLink {
+  font-family: 'SoleilSB';
+  letter-spacing: -0.1px;
+  color: #fd5750;
+  text-align: center;
 }
 
 .pricingSummaryDetail {
@@ -473,6 +484,7 @@
 }
 
 .limit {
+  margin-top: 5px;
   color: #000;
   font-size: 16px;
   font-family: 'SoleilSB';

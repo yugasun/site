@@ -25,7 +25,7 @@ import tickIconSmall from 'src/assets/images/tick-icon-small.svg'
 
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system/dist/atoms'
-const formId = 'sales-contact-us'
+const formId = 'enterprise-contact-us'
 
 const StyledForm = styled(Flex)`
   position: relative;
@@ -46,7 +46,7 @@ export default class Form extends React.Component {
       success: false,
       contact_purpose: this.props.formHeadline
         ? this.props.formHeadline
-        : 'Sales form submission',
+        : 'Request enterprise demo',
       email: '',
       first_name: '',
       last_name: '',
@@ -122,12 +122,12 @@ export default class Form extends React.Component {
   }
 
   sendToHubspot = data => {
-    data.lead_source = 'Sales Page'
+    data.lead_source = 'Enterprise Page'
     data.firstname = data.first_name
     data.lastname = data.last_name
     data.infrastructure = data.infrastructure.toString()
     hubspotIdentify(null, data)
-    addHubspotEvent(data, 'sales')
+    addHubspotEvent(data, 'enterprise')
   }
 
   updateInfrastructure = (fieldName, value) => {

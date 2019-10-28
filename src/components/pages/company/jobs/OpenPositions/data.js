@@ -8,6 +8,13 @@ export default [
     },
     {
         "heading": "Growth",
+        "title": "Director of Growth Marketing",
+        "location": "San Francisco/Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/ec1a3ae3-3b51-4d1c-9709-696b6fab7970"
+    },
+    {
+        "heading": "Growth",
         "title": "Enterprise Account Executive",
         "location": "San Francisco/Remote",
         "status": "Full-time",
@@ -26,5 +33,12 @@ export default [
         "location": "San Francisco/Remote",
         "status": "Full-time",
         "link": "https://jobs.lever.co/serverless/43775278-aaca-4056-9a4a-90124141e30c"
+    },
+    {
+        "heading": "Product",
+        "title": "UI Designer",
+        "location": "Remote",
+        "status": "Full-time",
+        "link": "https://jobs.lever.co/serverless/5c202a31-6701-4f5f-919a-ff677cb4f279"
     }
 ]
