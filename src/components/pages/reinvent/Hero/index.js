@@ -9,19 +9,20 @@ const TrainingHero = props => (
     <Flex
       flexDirection={'column'}
       alignItems={['center', 'center', 'inherit']}
-      width={[1, 1, 1, 1, 0.4, 0.45]}
+      width={[1, 1, 0.7, 0.5, 0.4, 0.45]}
       mr={[0, 0, 0, 0, 62, 0]}
     >
       <Box>
         <Image src={slsLogo} />
       </Box>
       <Text
-        fontSize={['59.8px', '59.8px', '59.8px', '59.8px', '76.5px']}
+        fontSize={['49.8px', '49.8px', '59.8px', '59.8px', '68.5px']}
         letterSpacing={['0.93px', '0.93px', '0.93px', '0.93px', '-1.2px']}
+        align={['center', 'center', 'left']}
       >
-        at AWS re:Invent
+        at AWS re:Invent 2019
       </Text>
-      <Box mt={[32, 32, 32, 32, 42]} width={[1, 1, 0.5, 0.5, 0.9, 0.9]} mb={32}>
+      <Box mt={[32, 32, 32, 32, 42]} width={[1, 1, 0.8, 0.8, 0.8, 0.9]} mb={32}>
         <Text
           fontFamily={[
             'SoleilBk',
@@ -38,7 +39,7 @@ const TrainingHero = props => (
           Meet with us to get a demo of our latest Serverless Framework functionality and explore how we can help with your Serverless adoption.
         </Text>
       </Box>
-      <Image src={'https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1024/https://modopayments.com/wp-content/uploads/2019/04/logo_aws_partner.png'} height='200px' width='200px'/>
+      <Image src={awsTechPartnerImage} height='200px' width='200px'/>
     </Flex>
   </HeroWrapper>
 )

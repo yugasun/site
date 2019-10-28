@@ -171,7 +171,7 @@ export default class Form extends React.Component {
         <form onSubmit={this.onSubmit} id={formId}>
           <StyledForm
             flexDirection={['column', 'column', 'column', 'column', 'row']}
-            mt={[0, 0, 0, 0, -802]}
+            mt={[0, 0, 0, 0, -892 , -786]}
           >
             <Box>
               <Text
