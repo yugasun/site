@@ -2,19 +2,20 @@ import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'
-import Brands from 'src/components/pages/training/Brands'
-import Content from 'src/components/pages/training/Content'
-import Hero from 'src/components/pages/training/Hero'
-import Form from 'src/components/pages/training/Form'
+import Brands from 'src/components/pages/contact-sales/Brands'
+import Content from 'src/components/pages/contact-sales/Content'
+import Hero from 'src/components/pages/contact-sales/Hero'
+import Form from 'src/components/pages/contact-sales/Form'
 import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background, Flex } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 
-const Support = ({ location }) => (
+const ContactSales = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Training - AWS Lambda Workshops &amp; More' 
-    description='Accelerate your serverless adoption via our training - our workshops cover AWS Lambda, API Gateway, Amazon DynamoDB & other serverless related technologies.'
-    location={location} />
+    <Helmet
+      title='Serverless Framework Pro – Sales Form'
+      location={location}
+    />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
@@ -22,7 +23,7 @@ const Support = ({ location }) => (
           justifyContent='space-between'
           flexDirection={['column', 'column', 'column', 'column', 'row']}
         >
-          <Content />
+          <Content/>
           <Form customPb={[74, 74, 74, 74, 115]} />
         </Flex>
         <Brands />
@@ -35,4 +36,4 @@ const Support = ({ location }) => (
   </HomeLayout>
 )
 
-export default Support
+export default ContactSales

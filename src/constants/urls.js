@@ -35,6 +35,7 @@ export default {
   contact: 'mailto:hello@serverless.com',
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
+  contactSales: '/contact-sales/',
   providers: '/framework/docs/providers/',
   champions: '/company/champions/',
   championsDeck:

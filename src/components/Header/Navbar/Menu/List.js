@@ -9,7 +9,7 @@ import {
   ProductDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { enterprise, docs, pricing, dashboard } from 'src/constants/urls'
+import { contactSales, docs, pricing, dashboard } from 'src/constants/urls'
 //TODO: double-up - clean this to one file
 import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
@@ -70,7 +70,7 @@ const MoreMenu = () => (
 
 const ContactSalesMenu = () => (
   <Box>
-    <NavLink to={enterprise} completed className='header-menu-item'>
+    <NavLink to={contactSales} completed className='header-menu-item'>
       <MenuTitle name={'Contact Sales'} color='#fd5750' />
     </NavLink>
   </Box>

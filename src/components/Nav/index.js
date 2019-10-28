@@ -99,11 +99,12 @@ export default class Nav extends React.Component {
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Sign-in
                 </a>
-                <div
+                <Link
                   className='nav-item nav-contact-sales'
+                  to='/contact-sales'
                   onMouseEnter={() => { this.hideDropdown() }}>
                   Contact Sales
-                </div>
+                </Link>
               </div>
             </div>
           </div>

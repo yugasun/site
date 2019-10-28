@@ -41,13 +41,7 @@
 }
 
 .user-tweets-component .user-tweets-tweet:hover {
-  cursor: pointer;
   transform: scale(1.03) translate3d(0, 0, 0) perspective(1px);
-}
-
-.user-tweets-component .user-tweets-tweet:active {
-  cursor: pointer;
-  transform: scale(1) translate3d(0, 0, 0) perspective(1px);
 }
 
 .user-tweets-component .user-tweets-tweet-name {

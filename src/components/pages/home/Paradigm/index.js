@@ -4,7 +4,7 @@ import {
   meetups,
   training,
   gettingStarted,
-  enterprise,
+  contactSales,
   support,
   dashboard,
   github,
@@ -70,9 +70,8 @@ export default class Paradigm extends React.Component {
             <div className='paradigm-guide-step'>
               <div className='paradigm-guide-step-title'>Try</div>
               <div className='paradigm-guide-step-description'>
-                Deploy a serverless use-case in seconds and the Serverless
-                Framework Developer Edition will automatically set up metrics,
-                alerts & more...
+                Deploy a serverless use-case in seconds and Serverless Framework Pro will set up metrics,
+                alerts & more automatically...
               </div>
               <InternalLink to={gettingStarted}>
                 <div className='paradigm-guide-step-action'>
@@ -86,7 +85,7 @@ export default class Paradigm extends React.Component {
               </InternalLink>
               <ExternalLink to={dashboard}>
                 <div className='paradigm-guide-step-action'>
-                  Sign up for the developer edition
+                  Try Serverless Framework Pro for Free
                 </div>
               </ExternalLink>
               <ExternalLink to={github}>
@@ -103,9 +102,9 @@ export default class Paradigm extends React.Component {
                 Framework's policy engine, integrations, workshops and support
                 plans...
               </div>
-              <InternalLink to={enterprise}>
+              <InternalLink to={contactSales}>
                 <div className='paradigm-guide-step-action'>
-                  Demo the Enterprise Edition
+                  Demo Serverless Framework Pro
                 </div>
               </InternalLink>
               <InternalLink to={training}>

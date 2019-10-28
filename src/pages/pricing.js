@@ -6,8 +6,8 @@ import Pricing from 'src/components/pages/Pricing'
 const PricingPage = ({ location }) => (
   <DefaultLayout>
     <Helmet
-      title='Serverless Framework Pricing'
-      description='Deploy serverless apps in seconds with our open-source edition, get production-ready with our free developer edition and pay as you scale with the enterprise edition.'
+      title='Serverless Framework Pro – Pricing'
+      description='Pricing information and included features for Serverless Framework Pro, as well as our serverless support offering, workshops and more.'
       location={location}
     />
     <Pricing />

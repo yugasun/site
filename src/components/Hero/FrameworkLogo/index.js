@@ -1,12 +1,12 @@
 import React from 'react'
-import slsHeroLogo from 'src/assets/images/serverless-framework-white-logo.svg'
+import slsHeroLogo from 'src/assets/images/logo-serverless-framework-centered-dark.svg'
 import { Image } from 'serverless-design-system'
 
 const FeaturePagesFrameworkLogo = () => (
   <Image
     src={slsHeroLogo}
-    width={[197, 197, 219, 219, 280]}
-    height={[32, 32, 35, 35, 45]}
+    width={[197, 197, 219, 219, 320]}
+    height={[50, 50, 60, 60, 65]}
   />
 )
 
