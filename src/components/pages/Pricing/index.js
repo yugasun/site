@@ -1,10 +1,9 @@
 import React from 'react'
 import Button from '../../Button'
-import imgLogoOS from 'src/assets/images/logo-serverless-framework-open-source-side.png'
 import imgLogoPro from 'src/assets/images/logo-serverless-framework-pro-centered-light.png'
 import styles from './Pricing.module.css'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { cli, gettingStarted, dashboard, contactSales, training, support, plugins, components, dashboardPage, monitoring, alerts, debugging, pricing, integrations, policies } from 'src/constants/urls'
+import { gettingStarted, dashboard, contactSales, training, support, monitoring, integrations, policies } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
   constructor(props) {
