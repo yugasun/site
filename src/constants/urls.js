@@ -11,6 +11,7 @@ export default {
   about: '/company/overview/',
   support: '/support/',
   learn: '/learn/',
+  reinvent: '/reinvent/',
   useCases: '/learn/use-cases/',
   comparisons: '/learn/comparisons/',
   enterprise: '/enterprise/',
