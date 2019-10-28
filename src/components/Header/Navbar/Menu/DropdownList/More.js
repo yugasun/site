@@ -11,6 +11,7 @@ import {
   about,
   jobs,
   contact,
+  reinvent,
   blog,
 } from 'src/constants/urls'
 
@@ -66,7 +67,7 @@ const Resource = () => (
         <SubMenuItem
           navProps={{
             to: meetups,
-            completed: true,
+            crossDomain: true,
             backgroundOnHover: true,
           }}
         >
@@ -117,6 +118,17 @@ const Resource = () => (
           }}
         >
           Contact us
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: reinvent,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          re:Invent 
         </SubMenuItem>
       </ListItem.noStyleType>
     </List>

@@ -13,7 +13,6 @@ import eslam from 'src/assets/images/team/eslam.jpg'
 import alex from 'src/assets/images/team/alex.jpg'
 import jeremy from 'src/assets/images/team/jeremy.jpg'
 import steve from 'src/assets/images/team/steve.jpg'
-import eric from 'src/assets/images/team/eric.jpg'
 import daniel from 'src/assets/images/team/daniel.jpg'
 import maciej from 'src/assets/images/team/maciej.jpg'
 import kristin from 'src/assets/images/team/kristin.jpg'
@@ -24,6 +23,8 @@ import mariusz from 'src/assets/images/team/mariusz.png'
 import sandesh from 'src/assets/images/team/sandesh.jpg'
 import rowell from 'src/assets/images/team/rowell.jpg'
 import pravin from 'src/assets/images/team/pravin.jpg'
+import mike from 'src/assets/images/team/mike.png'
+import fernando from 'src/assets/images/team/fernando.png'
 
 const getLastName = name => name.split(' ').pop()
 
@@ -61,11 +62,10 @@ const teamMembers = [
   {
     image: kristin,
     name: 'Kristin Roche',
-    position: 'HR Coordinator/Recruitment Coordinator',
+    position: 'People Operations Manager',
   },
   { image: gareth, name: 'Gareth McCumskey', position: 'Solutions Architect' },
-  { image: eric, name: 'Eric Scher', position: 'Enterprise Account Executive' },
-  { image: daniel, name: 'Daniel Schep', position: 'Software Engineer' },
+  { image: daniel, name: 'Daniel Schep', position: 'Senior Software Engineer' },
   { image: aj, name: 'AJ Stuyvenberg', position: 'Senior Platform Engineer' },
   {
     image: chris,
@@ -75,7 +75,7 @@ const teamMembers = [
   {
     image: mariusz,
     name: 'Mariusz Nowak',
-    position: 'Framework Core Developer',
+    position: 'Senior Software Engineer, Open Source Tools',
   },
   {
     image: sandesh,
@@ -90,8 +90,18 @@ const teamMembers = [
   {
     image: pravin,
     name: 'Pravin Daryani',
-    position: 'Growth Engineer',
+    position: 'Senior Growth Engineer',
   },
+  {
+    image: mike,
+    name: 'Mike Hujet',
+    position: 'Enterprise Account Executive',
+  },
+  {
+    image: fernando,
+    name: 'Fernando Corey',
+    position: 'Solutions Architect',
+  }
 ].sort((object1, object2) =>
   getLastName(object1.name).localeCompare(getLastName(object2.name))
 )

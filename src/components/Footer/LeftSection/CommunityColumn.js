@@ -33,7 +33,7 @@ const CommunityColumn = ({ mobileOrder }) => (
       },
       {
         name: 'Meetups',
-        navProps: { to: meetups, completed: true },
+        navProps: { to: meetups, crossDomain: true },
       },
       {
         name: 'Partners',
