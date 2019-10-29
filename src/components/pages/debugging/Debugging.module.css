@@ -45,12 +45,12 @@
 
 .frameworkLogo {
   max-width: 280px;
-  margin: 0 0 5px 0;
+  margin: 0 0 0 0;
 }
 
 .productName {
   font-family: 'Serverless';
-  font-size: 90px;
+  font-size: 80px;
   line-height: 74px;
   margin: 0 0 70px -10px;
   letter-spacing: -2px;
