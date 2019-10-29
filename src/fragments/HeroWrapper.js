@@ -18,9 +18,9 @@ const HeroWrapper = ({
         otherProps.background
           ? otherProps.background
           : [
-              'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-              'linear-gradient(150deg,rgb(0,0,0) 50%,#70221f)',
-              `linear-gradient(132deg,rgb(0,0,0) 62%,#70221f)`,
+              'linear-gradient(150deg,rgb(0,0,0) 80%, #540F0C)',
+              'linear-gradient(150deg,rgb(0,0,0) 80%, #540F0C)',
+              `linear-gradient(150deg,rgb(0,0,0) 52%, #540F0C)`,
             ]
       }
     >

@@ -6,12 +6,13 @@ import searchIcon from 'src/assets/images/search-icon.svg'
 
 const PluginsSearchField = styled(TextField)`
   letter-spacing: 0.4px;
-  background: url(${searchIcon}) no-repeat;
-  background-position: right 15px center;
-  background-color: white;
-  background-size: 17.5px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.08);
   border: solid 1px rgba(234, 234, 234, 0.3);
+  font-size: 28px;
+  height: 90px;
+  padding: 10px 30px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.2);
 
   &:focus,
   &:active {
@@ -53,9 +54,9 @@ export default class SearchField extends React.Component {
         width={[1]}
         mr={[15, 15, 22, 22, 32]}
       >
-        <ResponsiveStack mt={[0, 0, 0, 0, -118]}>
+        <ResponsiveStack mt={[0, 0, 0, 0, -140]}>
           <PluginsSearchField
-            placeholder='Search for a plugin'
+            placeholder='Search plugins...'
             height={50}
             width='100%'
             border='none'
