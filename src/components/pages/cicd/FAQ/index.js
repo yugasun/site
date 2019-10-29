@@ -16,21 +16,52 @@ const FAQ = props => (
     </Heading.h3>
 
     <Heading.h5>
-      Can I deploy anything other than Serverless Framework services?
+      Is there a free tier?
     </Heading.h5>
     <P>
-      No. Serverless CI/CD only supports running tests and deploying Serverless
-      Framework services. If you need to deploy other services, we recommend
-      using a general CI/CD service like Travis or CircleCI and using the
-      <code>serverless deploy</code> command. 
+      Yes, up to 1 concurrent build with the Free tier. No credit card required, just sign up.
     </P>
     <br/><br/>
     <Heading.h5>
-      What runtimes are supported?
+      How much does it cost if I need more?
     </Heading.h5>
     <P>
-      Node and Python are the only two runtimes currently supported by
-      Serverless CI/CD.
+      You get one free concurrent deployment with the Free tier. The Team tier
+      includes 2 concurrent builds and you can buy more for $25/mo/concurrent
+      build. 
+    </P>
+    <br/><br/>
+    <Heading.h5>
+      Is it just for Serverless Framework?
+    </Heading.h5>
+    <P>
+      Yes! Serverless CI/CD is designed around the Serverless Framework to
+      provide a seamless experience for developers. Anything you can deploy with
+      the Serverless Framework you can deploy with Serverless CI/CD. The
+      Serverless Framework is extensible with {' '}
+      <InternalLink
+        to={'/plugins/'}
+        underline
+      >
+        Plugins
+      </InternalLink>{' '}, so it works with a broad range of services.
+    </P>
+    <br/><br/>
+    <Heading.h5>
+      Is Serverless CI/CD also available for Enterprise?
+    </Heading.h5>
+    <P>
+      Yes, Serverless CI/CD works with the Enterprise tier and it is available
+      for self-hosting.
+    </P>
+    <br/><br/>
+    <Heading.h5>
+      Are all runtimes supported?
+    </Heading.h5>
+    <P>
+      Only the most popular runtimes, Node and Python, are currently
+      supported. These two runtimes account for about 90% of all serverless
+      services. Support for other runtimes is coming soon.
     </P>
     <br/><br/>
     <Heading.h5>
@@ -42,23 +73,14 @@ const FAQ = props => (
     </P>
     <br/><br/>
     <Heading.h5>
-      Do I need to add a config file to my repository?
+      Do I need to host, manage, or operate any agents?
     </Heading.h5>
     <P>
-      No. Serverless CI/CD inspects your existing serverless.yml to setup the
-      CI/CD settings in the Dashboard. Branch deployments and preview
-      deployments are configured in the Dashboard. Deployment credentials are
-      setup using AWS Access Roles, and secrets to other services are managed
-      using parameters. No other settings or configuration is required.
+      Nope! Serverless CI/CD is a 100% SaaS and managed for you. If you
+      prefer to self-host, that is available as an option with the Enterprise
+      tier.
     </P>
-    <br/><br/>
-    <Heading.h5>
-      Can I run custom scripts before/after deployment?
-    </Heading.h5>
-    <P>
-      No. Scripts before and after deployment are not yet supported; however,
-      this is coming soon.
-    </P>
+
   </Flex>
 )
 
