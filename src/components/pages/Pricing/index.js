@@ -281,7 +281,7 @@ export default class Pricing extends React.Component {
             </div>
             <ExternalLink to={dashboard}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Team</div>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
                 3 included members
               </div>
@@ -330,7 +330,7 @@ export default class Pricing extends React.Component {
 
             <InternalLink to={dashboard}>
               <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-                <div className={`${styles.pricingSummaryDetailTitle}`}>Team</div>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
                 <div className={`${styles.pricingSummaryDetailText}`}>
                   5 included members
                 </div>
