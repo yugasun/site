@@ -6,6 +6,9 @@ import { NewToServerlessPrefooter, WhitepaperDownloadBanner } from 'src/fragment
 import { Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import Hero from 'src/components/pages/cicd/Hero'
+import PreviewDeploys from '../components/pages/cicd/PreviewDeploys'
+import SecurityBuiltIn from '../components/pages/cicd/SecurityBuiltIn'
+import EasySetup from '../components/pages/cicd/EasySetup'
 
 const CiCd = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
@@ -13,6 +16,9 @@ const CiCd = ({ location }) => (
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
+        <EasySetup/>
+        <PreviewDeploys/>
+        <SecurityBuiltIn/>
       </AppContainer>
     </Background>
 

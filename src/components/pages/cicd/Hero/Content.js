@@ -26,8 +26,7 @@ const HeroContent = props => (
       mt={[32]}
       align={['left', 'left', 'center', 'center', 'left']}
     >
-      Instant, powerful metrics for your serverless apps, covering usage,
-      performance, errors & more.
+      Test and deploy your serverless apps with ease!
     </Text>
     <Flex
       justifyContent={[
