@@ -16,6 +16,8 @@ import {
   dashboard,
   pricing,
 } from 'src/constants/urls.js'
+import FrameworkLogoOpenSource from 'src/assets/images/logo-serverless-framework-open-source-centered.png'
+import FrameworkLogoPro from 'src/assets/images/logo-serverless-framework-pro-centered.png'
 
 export default class FrameworkEditions extends React.Component {
   constructor(props) {
@@ -41,15 +43,13 @@ export default class FrameworkEditions extends React.Component {
           <div className='header-label container'>Serverless Framework</div>
 
           <div className='header container'>
-            Everything you need, at any scale.
+            Two editions... for total power and control.
           </div>
 
           <div className='home-editions-list container'>
             <div className='home-edition'>
               <div className='home-edition-title'>
-                <div className='home-edition-title-serverless'>serverless</div>
-                <div className='home-edition-title-framework'>framework</div>
-                <div className='home-edition-title-edition'>open-source</div>
+                <img src={FrameworkLogoOpenSource} alt={'serverless framework open source edition'} draggable={false} />
               </div>
 
               <div className='home-edition-detail'>
@@ -57,9 +57,7 @@ export default class FrameworkEditions extends React.Component {
                   Open-Source Edition
                 </div>
                 <div className='home-edition-detail-text'>
-                  Downloaded over 1 million times per month. Our vast
-                  open-source ecosystem simplifies serverless, and is available
-                  to everyone for free.
+                  Develop & deploy serverless applications in seconds with Serverless Framework Open-Source and its vast ecosystem, for free.
                 </div>
                 <div className='home-edition-detail-features'>
                   Included Features:
@@ -90,7 +88,7 @@ export default class FrameworkEditions extends React.Component {
                 <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>components</div>
                   <div className='home-edition-detail-text'>
-                    Deploy common serverless use-cases more easily and quickly
+                    Deploy common serverless use-cases more easily
                     with these simpler abstractions.
                   </div>
                 </div>
@@ -105,19 +103,15 @@ export default class FrameworkEditions extends React.Component {
 
             <div className='home-edition home-edition-main'>
               <div className='home-edition-title'>
-                <div className='home-edition-title-serverless'>serverless</div>
-                <div className='home-edition-title-framework'>framework</div>
-                <div className='home-edition-title-edition'>developer</div>
+                <img src={FrameworkLogoPro} alt={'serverless framework pro edition'} draggable={false} />
               </div>
 
               <div className='home-edition-detail'>
                 <div className='home-edition-detail-price'>
-                  Developer Edition
+                  Pro Edition
                 </div>
                 <div className='home-edition-detail-text'>
-                  Perfect for teams going into production. Integrates and
-                  extends the open-source projects with several new features for
-                  free.
+                  Bring serverless apps into production with Serverless Framework Pro, featuring out-of-the-box CI/CD, monitoring, debugging & more
                 </div>
                 <div className='home-edition-detail-features'>
                   Included Features:
@@ -164,46 +158,6 @@ export default class FrameworkEditions extends React.Component {
                 </div>
               </InternalLink>
 
-              <ExternalLink to={dashboard}>
-                <div className='home-edition-action'>
-                  <div className='home-edition-action-button'>
-                    Sign Up For Free
-                  </div>
-                </div>
-              </ExternalLink>
-            </div>
-
-            <div className='home-edition home-edition'>
-              <div className='home-edition-title'>
-                <div className='home-edition-title-serverless'>serverless</div>
-                <div className='home-edition-title-framework'>framework</div>
-                <div className='home-edition-title-edition'>enterprise</div>
-              </div>
-
-              <div className='home-edition-detail'>
-                <div className='home-edition-detail-price'>
-                  Enterprise Edition
-                </div>
-                <div className='home-edition-detail-text'>
-                  Ideal for scaling teams. Includes unlimited use and additional
-                  features to standardize workflows and integrate with Ops
-                  tooling.
-                </div>
-                <div className='home-edition-detail-features'>
-                  Included Features:
-                </div>
-              </div>
-
-              <InternalLink to={pricing}>
-                <div className='home-edition-detail home-edition-detail-clickable'>
-                  <div className='home-edition-detail-title'>Increased Usage</div>
-                  <div className='home-edition-detail-text'>
-                    All features from developer & open-source editions are
-                    included with increased usage limits.
-                  </div>
-                </div>
-              </InternalLink>
-
               <InternalLink to={integrations}>
                 <div className='home-edition-detail home-edition-detail-clickable'>
                   <div className='home-edition-detail-title'>integrations</div>
@@ -224,13 +178,13 @@ export default class FrameworkEditions extends React.Component {
                 </div>
               </InternalLink>
 
-              <InternalLink to={enterprise}>
+              <ExternalLink to={dashboard}>
                 <div className='home-edition-action'>
                   <div className='home-edition-action-button'>
-                    Contact Sales
+                    Sign Up For Free
                   </div>
                 </div>
-              </InternalLink>
+              </ExternalLink>
             </div>
           </div>
         </div>

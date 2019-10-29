@@ -1,7 +1,8 @@
 import React from 'react'
 import { Flex, Text, Box } from 'serverless-design-system'
 import {  HeroWrapper } from 'src/fragments'
-import { HeroFrameworkLogo } from 'src/components'
+import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
+import styles from '../Support.module.css'
 
 const SupportHero = props => (
   <HeroWrapper>
@@ -11,7 +12,10 @@ const SupportHero = props => (
       width={[1, 1, 1, 1, 0.4, 0.45]}
       mr={[0, 0, 0, 0, 62, 0]}
     >
-      <HeroFrameworkLogo />
+      <img
+        className={styles.logoFramework}
+        src={FrameworkLogo}
+        alt={'Serverless Framework'}/>
       <Text
         fontSize={['59.8px', '59.8px', '59.8px', '59.8px', '76.5px']}
         letterSpacing={['0.93px', '0.93px', '0.93px', '0.93px', '-1.2px']}

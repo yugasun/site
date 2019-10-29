@@ -12,8 +12,12 @@ import ActionableAlerting from 'src/components/pages/alerts/ActionableAlerting'
 
 const Alerts = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Alerts' location={location} />
+    <Helmet
+      title='Serverless Framework – Alerts'
+      location={location} />
+
     <Hero />
+
     <Background background={'#f7f7f7'}>
       <AppContainer>
         <DevelopDeployMonitor />

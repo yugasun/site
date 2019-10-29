@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from '../../Button'
-import imgLogo from 'src/assets/images/logo-sidebolt.png'
+import imgLogoPro from 'src/assets/images/logo-serverless-framework-pro-centered-light.png'
 import styles from './Pricing.module.css'
 import { InternalLink, ExternalLink } from 'src/fragments'
-import { cli, gettingStarted, dashboard, enterprise, training, support, plugins, components, dashboardPage, monitoring, alerts, debugging, pricing, integrations, policies } from 'src/constants/urls'
+import { gettingStarted, dashboard, contactSales, training, support, monitoring, integrations, policies } from 'src/constants/urls'
 
 export default class Pricing extends React.Component {
   constructor(props) {
@@ -35,89 +35,78 @@ export default class Pricing extends React.Component {
           },
         ],
       },
-      // {
-      //   category: 'Plugins',
-      //   features: [
-      //     {
-      //       feature: 'Extend the Framework with 1,000+ plugins',
-      //       one: true,
-      //       two: true,
-      //       three: true,
-      //     },
-      //     {
-      //       feature: 'Get support for certified plugins',
-      //       one: false,
-      //       two: false,
-      //       three: true,
-      //     },
-      //   ],
-      // },
-      // {
-      //   category: 'Components',
-      //   features: [
-      //     {
-      //       feature:
-      //         'Rapidly deploy common serverless use-cases via Serverless Components',
-      //       one: true,
-      //       two: true,
-      //       three: true,
-      //     },
-      //   ],
-      // },
-      // {
-      //   category: 'Registry',
-      //   features: [
-      //     {
-      //       feature: 'Publish, share & discover Serverless Components',
-      //       one: true,
-      //       two: true,
-      //       three: true,
-      //     },
-      //   ],
-      // },
+      {
+        category: 'Plugins',
+        features: [
+          {
+            feature: 'Extend the Framework with 1,000+ plugins',
+            one: true,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Get support for certified plugins',
+            one: false,
+            two: false,
+            three: true,
+          },
+        ],
+      },
+      {
+        category: 'Components',
+        features: [
+          {
+            feature:
+              'Rapidly deploy common serverless use-cases via Serverless Components',
+            one: true,
+            two: true,
+            three: true,
+          },
+        ],
+      },
       {
         category: 'Dashboard',
         features: [
           {
             feature: 'View your serverless applications & configuration',
-            one: false,
+            one: true,
             two: true,
             three: true,
           },
           {
             feature: 'Share application state & outputs',
-            one: false,
+            one: true,
             two: true,
             three: true,
           },
           {
             feature: 'Share stage-specific configuration and credentials',
-            one: false,
+            one: true,
             two: true,
             three: true,
           },
           {
             feature: 'View deployments, metrics, alerts & logs',
-            one: false,
+            one: true,
             two: true,
             three: true,
           },
           {
-            feature: 'Share and manage secrets across stages.',
-            one: false,
+            feature: 'Share and manage secrets across stages',
+            one: true,
             two: true,
             three: true,
           },
           {
-            feature: 'Included team members.',
-            one: false,
-            two: '3',
+            feature: 'Included team members',
+            one: '3',
+            two: '5',
             three: 'Custom',
           },
           {
-            feature: 'Additional team members.',
+            feature: 'Additional team members',
             one: false,
-            two: '$20/month',
+            two: '$20 / per user',
             three: 'Custom',
           },
         ],
@@ -127,26 +116,26 @@ export default class Pricing extends React.Component {
         features: [
           {
             feature: 'Out-of-the-box metrics on usage, performance & errors',
-            one: false,
+            one: true,
             two: true,
             three: true,
           },
           {
             feature: 'Data retention',
-            one: false,
+            one: '7 days',
             two: '7 days',
             three: 'Custom',
           },
           {
-            feature: 'Included monthly invocations',
-            one: false,
-            two: '1,000,000',
+            feature: 'Included monthly monitoring events',
+            one: '1,000,000',
+            two: '10,000,000',
             three: 'Custom',
           },
           {
-            feature: 'Additional monthly invocations.',
+            feature: 'Additional monthly monitoring events',
             one: false,
-            two: '$10/million',
+            two: '$0.00001 / per event',
             three: 'Custom',
           },
         ],
@@ -155,70 +144,58 @@ export default class Pricing extends React.Component {
         category: 'CI/CD',
         features: [
           {
-            feature: 'Out-of-the-box CI/CD.',
-            one: true,
-            two: true,
-            three: true,
-          },
-          {
-            feature: 'Deploy previews.',
-            one: true,
-            two: true,
-            three: true,
-          },
-          {
-            feature: 'Included concurrent builds.',
+            feature: 'Concurrent Builds',
             one: '1',
             two: '2',
             three: 'Custom',
           },
           {
-            feature: 'Additional concurrent builds.',
+            feature: 'Additional concurrent builds',
             one: false,
-            two: '$25/month',
+            two: '$25 / concurrent build',
             three: 'Custom',
           },
         ],
       },
-      // {
-      //   category: 'Alerts',
-      //   features: [
-      //     {
-      //       feature: 'Zero configuration set-up of alerts',
-      //       one: false,
-      //       two: true,
-      //       three: true,
-      //     },
-      //     {
-      //       feature: 'Errors, performance, warnings & more',
-      //       one: false,
-      //       two: true,
-      //       three: true,
-      //     },
-      //   ],
-      // },
-      // {
-      //   category: 'Debugging',
-      //   features: [
-      //     {
-      //       feature: 'Invocation Explorer',
-      //       one: false,
-      //       two: true,
-      //       three: true,
-      //     },
-      //   ],
-      // },
-      // {
-      //   category: 'Integrations',
-      //   features: [
-      //     {
-      //       feature: 'Email, Slack, AWS SNS, webhooks & more',
-      //       one: false,
-      //       two: false,
-      //       three: true,
-      //     },
-      //   ],
-      // },
+      {
+        category: 'Alerts',
+        features: [
+          {
+            feature: 'Zero configuration set-up of alerts',
+            one: true,
+            two: true,
+            three: true,
+          },
+          {
+            feature: 'Errors, performance, warnings & more',
+            one: true,
+            two: true,
+            three: true,
+          },
+        ],
+      },
+      {
+        category: 'Debugging',
+        features: [
+          {
+            feature: 'Query across all requests, invocations & more',
+            one: true,
+            two: true,
+            three: true,
+          },
+        ],
+      },
+      {
+        category: 'Integrations',
+        features: [
+          {
+            feature: 'Email, Slack, AWS SNS, webhooks & more',
+            one: false,
+            two: true,
+            three: true,
+          },
+        ],
+      },
       {
         category: 'Policies',
         features: [
@@ -256,267 +233,161 @@ export default class Pricing extends React.Component {
         <div className={`container-inner`}>
           <div className={`${styles.title}`}>
             <div className={`${styles.header}`} style={{ 'margin':'20px 0 20px 0' }}>
-              Serverless Framework Pricing
+              Plans for teams of all sizes.
             </div>
 
             <div className={`${styles.description}`}>
-              Deploy serverless apps in seconds with our open-source edition,
-              get production-ready with our free developer edition and pay as
-              you scale with the enterprise edition.
+              Deploy serverless applications in seconds with <ExternalLink to={`https://www.github.com/serverless/serverless`}>Serverless Framework Open-Source</ExternalLink>.  <br/>Bring those apps into production with Serverless Framework Pro, which includes out-of-the-box collaboration, monitoring,  debugging, & more.
             </div>
           </div>
+        </div>
+
+        <div className={`container-inner ${styles.logoPro} ${styles.fadeIn}`}>
+          <img src={imgLogoPro} draggable={false} />
         </div>
 
         <div className={`container-inner ${styles.pricingSummary}`}>
-          <div className={`${styles.pricingSummaryTile}`}>
-            <div className={`${styles.pricingSummaryLogo}`}>
-              <div className={`${styles.pricingSummaryLogoServerless}`}>
-                serverless
-              </div>
-              <div className={`${styles.pricingSummaryLogoFramework}`}>
-                framework
-              </div>
-              <div className={`${styles.pricingSummaryLogoEdition}`}>
-                developer
-              </div>
-            </div>
 
-            <div className={`${styles.pricingSummaryDetail}`}>
+          <div className={`${styles.pricingSummaryTile} ${styles.freeTile} ${styles.fadeInUp}`}>
+            <div className={`${styles.pricingHeader}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Developer Edition
+                Free
               </div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>$0<span>/month</span></div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                The open-source CLI you know and love plus free monitoring and CI/CD.
+                Enable monitoring, debugging, secrets & more for your serverless apps, for free!
               </div>
-              <div className={`${styles.pricingSummaryDetailPrice}`}>$0/month</div>
+              <InternalLink to={gettingStarted}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Sign up for free'}/>
+                </div>
+              </InternalLink>
             </div>
-            <InternalLink to={cli}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless CLI
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={plugins}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Unlimited Applications
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={components}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Dashboard - 3 users
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={components}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Monitoring - 1m events/month
-              </div>
-            </div>
-            </InternalLink>
-             <InternalLink to={components}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless CI/CD - 1 concurrent build
-              </div>
-            </div>
-            </InternalLink>
-            {/*
-            <div className={`${styles.pricingSummaryDetail}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>Registry</div>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Open-Source & Free
-              </div>
-            </div>
-            */}
-            <InternalLink to={gettingStarted}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Start Free'}/>
-              </div>
-            </InternalLink>
-          </div>
-
-          <div className={`${styles.pricingSummaryTile}`}>
-            <div className={`${styles.pricingSummaryLogo}`}>
-              <div className={`${styles.pricingSummaryLogoServerless}`}>
-                serverless
-              </div>
-              <div className={`${styles.pricingSummaryLogoFramework}`}>
-                framework
-              </div>
-              <div className={`${styles.pricingSummaryLogoEdition}`}>
-                professional
-              </div>
-            </div>
-
-            <div className={`${styles.pricingSummaryDetail}`}>
-              <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Professional Edition
-              </div>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Everything you need to scale your Serverless development.
-              </div>
-              <div className={`${styles.pricingSummaryDetailPrice}`}>$99/month</div>
-            </div>
-            <InternalLink to={dashboardPage}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>Serverless CLI</div>
-            </div>
-            </InternalLink>
-
             <InternalLink to={monitoring}>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Unlimited Applications
+                1,000,000 / events / month
               </div>
             </div>
             </InternalLink>
-
-            <InternalLink to={alerts}>
+            <div>
             <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>CI/CD</div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Dashboard - 5 users
+                1 concurrent build
               </div>
             </div>
-            </InternalLink>
-            <InternalLink to={debugging}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Monitoring - 10m events/month
-              </div>
             </div>
-            </InternalLink>
-            <InternalLink to={debugging}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless CI/CD - 2 concurrent builds
-              </div>
-            </div>
-            </InternalLink>
             <ExternalLink to={dashboard}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Start Free'}/>
+            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+              <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                3 included members
               </div>
+            </div>
             </ExternalLink>
           </div>
 
-          <div className={`${styles.pricingSummaryTile}`}>
-            <div className={`${styles.pricingSummaryLogo}`}>
-              <div className={`${styles.pricingSummaryLogoServerless}`}>
-                serverless
-              </div>
-              <div className={`${styles.pricingSummaryLogoFramework}`}>
-                framework
-              </div>
-              <div className={`${styles.pricingSummaryLogoEdition}`}>
-                enterprise
-              </div>
-            </div>
-
-            <div className={`${styles.pricingSummaryDetail}`}>
+          <div className={`${styles.pricingSummaryTile} ${styles.teamTile} ${styles.fadeInUp}`}>
+            <div className={`${styles.pricingHeader}`}>
               <div className={`${styles.pricingSummaryDetailEdition}`}>
-                Enterprise Edition
+                Team
               </div>
+              <div className={`${styles.pricingSummaryDetailPrice}`}>$99<span>/month</span></div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Standardize and secure Serverless development and operations.
+                Ideal for teams bringing serverless apps into production and scaling them.  Includes all free features plus...
               </div>
-              <div className={`${styles.pricingSummaryDetailPrice}`}>
-                Contact Sales
-              </div>
+              <ExternalLink to={dashboard}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Sign up for free'}/>
+                </div>
+              </ExternalLink>
+              <InternalLink to={contactSales}>
+                <div className={`${styles.salesLink}`}>
+                  Contact sales to purchase
+                </div>
+              </InternalLink>
             </div>
-            <InternalLink to={pricing}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailTitle}`}>
+
+            <InternalLink to={monitoring}>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Monitoring</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  10,000,000 / events / month
+                </div>
               </div>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                All features from Professional Edition
-              </div>
-            </div>
             </InternalLink>
+
+            <div>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>CI/CD</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  2 concurrent builds
+                </div>
+              </div>
+            </div>
+
+            <InternalLink to={dashboard}>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Team Collaboration</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  5 included members
+                </div>
+              </div>
+            </InternalLink>
+
             <InternalLink to={integrations}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Policies
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={policies}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Serverless Operations Console
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={policies}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Full Audit Logs
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={policies}>
-            <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
-              <div className={`${styles.pricingSummaryDetailText}`}>
-                Enterprise Support
-              </div>
-            </div>
-            </InternalLink>
-            <InternalLink to={enterprise}>
-              <div className={`${styles.pricingSummaryDetail}`}>
-                <Button type={'primary'} text={'Contact Sales'}/>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Integrations</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  Email, Slack, SNS, Webhooks
+                </div>
               </div>
             </InternalLink>
           </div>
-        </div>
 
-        {/* Pricing — Add-Ons */}
-
-        <div className={`container-inner`}>
-          <div className={`${styles.title}`}>
-            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>
-              Add-Ons
-            </div>
-            <div className={`${styles.description}`}>
-              Additional offerings for new and large teams.
-            </div>
-          </div>
-        </div>
-
-        <div className={`container-inner ${styles.addOns}`}>
-          <div className={`${styles.addOnTile}`}>
-            <div className={`${styles.addOnTileServerless}`}>
-              serverless
-            </div>
-            <div className={`${styles.addOnTileAddOn}`}>
-              training
-            </div>
-            <div className={`${styles.addOnTileDescription}`}>
-              Expert led workshops to get your team up to speed and ensure you do Serverless right the first time.
-            </div>
-            <div className={`${styles.addOnTileAction}`}>
-              <InternalLink to={training}>
-                <Button type={'primary'} text={'Learn About Training'}/>
+          <div className={`${styles.pricingSummaryTile} ${styles.enterpriseTile} ${styles.fadeInUp}`}>
+            <div className={`${styles.pricingHeader}`}>
+              <div className={`${styles.pricingSummaryDetailEdition}`}>
+                Enterprise
+              </div>
+              <div className={`${styles.pricingSummaryDetailPriceEnterprise}`}>Contact Sales</div>
+              <div className={`${styles.pricingSummaryDetailText}`}>
+                Custom packages designed for the needs of your company.  Includes all features plus...
+              </div>
+              <InternalLink to={contactSales}>
+                <div className={`${styles.pricingSummaryButtonWrapper}`}>
+                  <Button type={'primary'} text={'Request a demo'}/>
+                </div>
               </InternalLink>
             </div>
-          </div>
-          <div className={`${styles.addOnTile}`}>
-            <div className={`${styles.addOnTileServerless}`}>
-              serverless
-            </div>
-            <div className={`${styles.addOnTileAddOn}`}>
-              support
-            </div>
-            <div className={`${styles.addOnTileDescription}`}>
-              24/7 support and architectural reviews from the team behind the Serverless Framework.
-            </div>
-            <div className={`${styles.addOnTileAction}`}>
-              <InternalLink to={support}>
-                <Button type={'primary'} text={'Learn About Support'}/>
-              </InternalLink>
+
+            <InternalLink to={monitoring}>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>All Features</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  All features in Free & Team.
+                </div>
+              </div>
+            </InternalLink>
+
+            <InternalLink to={policies}>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Policies</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  Auto-enforce policies on every deployment.
+                </div>
+              </div>
+            </InternalLink>
+
+            <div>
+              <div className={`${styles.pricingSummaryDetail} ${styles.pricingSummaryDetailClickable}`}>
+                <div className={`${styles.pricingSummaryDetailTitle}`}>Self Hosted Option</div>
+                <div className={`${styles.pricingSummaryDetailText}`}>
+                  Host everything on your own AWS account.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -525,10 +396,10 @@ export default class Pricing extends React.Component {
 
         <div className={`container-inner`}>
           <div className={`${styles.title}`}>
-            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>Serverless Framework Edition Details</div>
+            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>Serverless Framework Pro Details</div>
 
             <div className={`${styles.description}`}>
-              A breakdown of all features in every Serverless Framework Edition.
+              A breakdown of all features in every Serverless Framework Pro Tier.
             </div>
           </div>
         </div>
@@ -540,8 +411,8 @@ export default class Pricing extends React.Component {
             <div className={`${styles.tableSection}`}>
               <div className={`${styles.tableEditions}`}>
                 <div className={`${styles.tableColumn} ${styles.tableFeature}`} />
-                <div className={`${styles.tableColumn}`}>Open-Source</div>
-                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Free</div>
+                <div className={`${styles.tableColumn}`}>Team</div>
                 <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>
@@ -608,8 +479,8 @@ export default class Pricing extends React.Component {
           <div className={`${styles.tableMobile}`}>
             <div className={`${styles.tableSection}`}>
               <div className={`${styles.tableRow}`}>
-                <div className={`${styles.tableColumn}`}>Open-Source</div>
-                <div className={`${styles.tableColumn}`}>Developer</div>
+                <div className={`${styles.tableColumn}`}>Free</div>
+                <div className={`${styles.tableColumn}`}>Team</div>
                 <div className={`${styles.tableColumn}`}>Enterprise</div>
               </div>
             </div>
@@ -670,6 +541,55 @@ export default class Pricing extends React.Component {
             ))}
           </div>
         </div>
+
+        {/* Pricing — Add-Ons */}
+
+        <div className={`container-inner`}>
+          <div className={`${styles.title}`}>
+            <div className={`${styles.header}`} style={{ 'margin':'40px 0 20px 0' }}>
+              Add-Ons
+            </div>
+            <div className={`${styles.description}`}>
+              Additional offerings for new and large teams.
+            </div>
+          </div>
+        </div>
+
+        <div className={`container-inner ${styles.addOns}`}>
+          <div className={`${styles.addOnTile}`}>
+            <div className={`${styles.addOnTileServerless}`}>
+              serverless
+            </div>
+            <div className={`${styles.addOnTileAddOn}`}>
+              training
+            </div>
+            <div className={`${styles.addOnTileDescription}`}>
+              Expert led workshops to get your team up to speed and ensure you do Serverless right the first time.
+            </div>
+            <div className={`${styles.addOnTileAction}`}>
+              <InternalLink to={training}>
+                <Button type={'primary'} text={'Learn About Training'}/>
+              </InternalLink>
+            </div>
+          </div>
+          <div className={`${styles.addOnTile}`}>
+            <div className={`${styles.addOnTileServerless}`}>
+              serverless
+            </div>
+            <div className={`${styles.addOnTileAddOn}`}>
+              support
+            </div>
+            <div className={`${styles.addOnTileDescription}`}>
+              24/7 support and architectural reviews from the team behind the Serverless Framework.
+            </div>
+            <div className={`${styles.addOnTileAction}`}>
+              <InternalLink to={support}>
+                <Button type={'primary'} text={'Learn About Support'}/>
+              </InternalLink>
+            </div>
+          </div>
+        </div>
+
       </div>
     )
   }

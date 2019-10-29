@@ -16,6 +16,7 @@
 .home-editions-component .home-editions-list {
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 .home-editions-component .home-edition {
@@ -23,7 +24,7 @@
   flex-direction: column;
   height: 100%;
   min-height: 396px;
-  width: 33%;
+  width: 43%;
   background: #ffffff;
   margin: 14px 14px 20px 14px;
   padding: 24px 24px 42px 24px;
@@ -58,21 +59,8 @@
   padding: 22px 10px;
 }
 
-.home-editions-component .home-edition-title-serverless {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-  color: #FFFFFF;
-}
-
-.home-editions-component .home-edition-title-framework {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 32px;
-  margin-top: -2px;
-  color: #FFFFFF;
+.home-editions-component .home-edition-title img {
+  max-width: 160px;
 }
 
 .home-editions-component .home-edition-title-edition {
@@ -111,9 +99,9 @@
 }
 
 .home-editions-component .home-edition-detail-title {
-  font-family: 'SoleilSB';
+  font-family: 'SoleilBk';
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 16px;
   letter-spacing: -0.3px;
   text-align: center;
@@ -128,7 +116,7 @@
 }
 
 .home-editions-component .home-edition-detail-price {
-  font-size: 21px;
+  font-size: 24px;
   font-family: 'SoleilSB';
   letter-spacing: -0.1px;
   color: #fd5750;
