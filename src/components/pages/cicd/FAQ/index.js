@@ -26,7 +26,7 @@ const FAQ = props => (
     </P>
     <br/><br/>
     <Heading.h5>
-      What runtimes are support?
+      What runtimes are supported?
     </Heading.h5>
     <P>
       Node and Python are the only two runtimes currently supported by
@@ -42,11 +42,11 @@ const FAQ = props => (
     </P>
     <br/><br/>
     <Heading.h5>
-      Do I need to add config file to my repository?
+      Do I need to add a config file to my repository?
     </Heading.h5>
     <P>
       No. Serverless CI/CD inspects your existing serverless.yml to setup the
-      CI/CD settings in the dashboard. Branch deployments and preview
+      CI/CD settings in the Dashboard. Branch deployments and preview
       deployments are configured in the Dashboard. Deployment credentials are
       setup using AWS Access Roles, and secrets to other services are managed
       using parameters. No other settings or configuration is required.
