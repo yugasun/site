@@ -43,6 +43,18 @@
   margin-top: 80px;
 }
 
+@media only screen and (max-width : 600px) {
+  .productHeroColumnRight img {
+    max-width: 370px;
+  }
+}
+
+@media only screen and (max-width : 380px) {
+  .productHeroColumnRight img {
+    max-width: 310px;
+  }
+}
+
 .frameworkLogo {
   max-width: 280px;
   margin: 0 0 0px 0;
@@ -87,4 +99,20 @@
   font-family: 'SoleilSB';
   margin-left: 5px;
   text-decoration: underline;
+}
+
+.cliVideo {
+  height: 400px;
+}
+
+@media only screen and (max-width : 1024px) {
+  .cliVideo {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width : 669px) and (max-width : 769px){
+  .cliVideo {
+    height: 215px;
+  }
 }

@@ -9,7 +9,9 @@ import styles from '../CLI.module.css'
 
 const CLIHero = props => (
   <HeroWrapper
-    customPb={[62, 62, 62, 62, 92, 139]}>
+    customPb={[62, 62, 62, 62, 92, 139]}
+    bottomMarginBg='white'
+    >
     <div className={styles.productHeroContainer}>
       <div className={styles.productHeroColumnLeft}>
         <img
