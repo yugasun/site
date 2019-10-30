@@ -57,6 +57,18 @@
 }
 
 @media only screen and (max-width : 600px) {
+  .productHeroColumnRight img {
+    max-width: 370px;
+  }
+}
+
+@media only screen and (max-width : 380px) {
+  .productHeroColumnRight img {
+    max-width: 310px;
+  }
+}
+
+@media only screen and (max-width : 600px) {
   .productName {
     font-size: 70px;
   }
