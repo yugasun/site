@@ -37,7 +37,7 @@ const BottomSection = () => (
       mb={[32, 32, 0]}
     >
       <Image src={logoBlack} width={153} height={26} />
-      <Box display={['block', 'block', 'none']}>
+      <Box display={['block', 'block', 'none']} ml={32}>
         <SocialIcons />
       </Box>
     </SpaceBetweenMobileBox>
