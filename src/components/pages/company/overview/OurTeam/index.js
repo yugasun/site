@@ -62,10 +62,10 @@ const teamMembers = [
   {
     image: kristin,
     name: 'Kristin Roche',
-    position: 'HR Coordinator/Recruitment Coordinator',
+    position: 'People Operations Manager',
   },
   { image: gareth, name: 'Gareth McCumskey', position: 'Solutions Architect' },
-  { image: daniel, name: 'Daniel Schep', position: 'Software Engineer' },
+  { image: daniel, name: 'Daniel Schep', position: 'Senior Software Engineer' },
   { image: aj, name: 'AJ Stuyvenberg', position: 'Senior Platform Engineer' },
   {
     image: chris,
@@ -75,7 +75,7 @@ const teamMembers = [
   {
     image: mariusz,
     name: 'Mariusz Nowak',
-    position: 'Framework Core Developer',
+    position: 'Senior Software Engineer, Open Source Tools',
   },
   {
     image: sandesh,

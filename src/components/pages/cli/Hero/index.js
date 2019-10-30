@@ -1,20 +1,50 @@
 import React from 'react'
-import { Flex } from 'serverless-design-system'
-import Content from './Content'
-import Image from './Image'
 import { HeroWrapper } from 'src/fragments'
+import { ExternalLink, InternalLink } from 'src/fragments'
+import { dashboard, gettingStarted } from 'src/constants/urls.js'
+import { Button } from 'src/components'
+import HeroImage from 'src/assets/images/pages/cli/CLI-hero.gif'
+import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
+import styles from '../CLI.module.css'
 
-const PoliciesHero = props => (
-  <HeroWrapper bottomMarginBg='white'>
-    <Flex
-      justifyContent='space-between'
-      flexDirection={['column', 'column', 'column', 'column', 'row']}
-      alignItems={'center'}
-    >
-      <Content />
-      <Image />
-    </Flex>
+const CLIHero = props => (
+  <HeroWrapper
+    customPb={[62, 62, 62, 62, 92, 139]}>
+    <div className={styles.productHeroContainer}>
+      <div className={styles.productHeroColumnLeft}>
+        <img
+          src={FrameworkLogo}
+          alt={'Serverless Framework'}
+          className={styles.frameworkLogo} />
+        <div className={styles.productName}>
+          command line interface
+        </div>
+        <div className={styles.productTagline}>
+        Easy YAML + CLI development and deployment to AWS, Azure, Google Cloud &
+        more.
+        </div>
+        <div className={styles.productCTA}>
+          <ExternalLink to={gettingStarted}>
+            <Button type='primary' text='Download'/>
+          </ExternalLink>
+        </div>
+        <div className={styles.productEdition}>
+          Available now in
+          <InternalLink
+            className={styles.editionLink}
+            to={gettingStarted}>
+            Serverless Framework Open-Source.
+          </InternalLink>
+        </div>
+      </div>
+      <div className={styles.productHeroColumnRight}>
+        <img
+          src={HeroImage}
+          alt={'Serverless Framework Alerts'}
+          className={styles.productHeroImage} />
+      </div>
+    </div>
   </HeroWrapper>
 )
 
-export default PoliciesHero
+export default CLIHero

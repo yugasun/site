@@ -11,6 +11,7 @@ export default {
   about: '/company/overview/',
   support: '/support/',
   learn: '/learn/',
+  reinvent: '/reinvent/',
   useCases: '/learn/use-cases/',
   comparisons: '/learn/comparisons/',
   enterprise: '/enterprise/',
@@ -34,6 +35,7 @@ export default {
   contact: 'mailto:hello@serverless.com',
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
+  contactSales: '/contact-sales/',
   providers: '/framework/docs/providers/',
   champions: '/company/champions/',
   championsDeck:

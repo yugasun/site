@@ -1,25 +1,28 @@
 import React from 'react'
-
-import { Flex } from 'serverless-design-system'
 import { HeroWrapper } from 'src/fragments'
-import { PL, Heading } from 'src/fragments/DesignSystem'
-import { HeroFrameworkLogo } from 'src/components'
+import { ExternalLink, InternalLink } from 'src/fragments'
+import { dashboard, pricing } from 'src/constants/urls.js'
+import { Button } from 'src/components'
+import HeroImage from 'src/assets/images/pages/monitoring/monitoring-hero.png'
+import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
+import styles from '../Plugins.module.css'
 
-const PluginsHero = () => {
-  return (
-    <HeroWrapper>
-      <Flex flexDirection={'column'} width={[1, 1, 0.5]}>
-        <Flex mb={22}>
-          <HeroFrameworkLogo />
-        </Flex>
-        <Heading.h0 m={0}>Serverless Plugins</Heading.h0>
-        <PL mt={[22, 22, 32]} mb={0} color="white">
-          Add functionality to the Serverless Framework. Search all plugins
-          below.
-        </PL>
-      </Flex>
-    </HeroWrapper>
-  )
-}
+const Hero = props => (
+  <HeroWrapper
+    customPb={[62, 62, 62, 62, 92, 139]}>
+    <div className={styles.productHeroContainer}>
+      <img
+        src={FrameworkLogo}
+        alt={'Serverless Framework'}
+        className={styles.frameworkLogo} />
+      <div className={styles.productName}>
+        plugins
+      </div>
+      <div className={styles.productTagline}>
+        Add functionality to the Serverless Framework via 1,000+ plugins.
+      </div>
+    </div>
+  </HeroWrapper>
+)
 
-export default PluginsHero
+export default Hero
