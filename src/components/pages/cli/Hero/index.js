@@ -26,9 +26,9 @@ const CLIHero = props => (
         more.
         </div>
         <div className={styles.productCTA}>
-          <ExternalLink to={gettingStarted}>
+          <InternalLink to={gettingStarted}>
             <Button type='primary' text='Download'/>
-          </ExternalLink>
+          </InternalLink>
         </div>
         <div className={styles.productEdition}>
           Available now in
