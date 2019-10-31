@@ -39,8 +39,21 @@
 }
 
 .productHeroColumnRight img {
-  max-width: 500px;
-  margin-top: 80px;
+  max-width: 550px;
+  margin-top: 50px;
+}
+
+.frameworkLogo {
+  max-width: 280px;
+  margin: 0 0 5px 0;
+}
+
+.productName {
+  font-family: 'Serverless';
+  font-size: 80px;
+  line-height: 74px;
+  margin: 0 0 70px -10px;
+  letter-spacing: -2px;
 }
 
 @media only screen and (max-width : 600px) {
@@ -55,29 +68,15 @@
   }
 }
 
-.frameworkLogo {
-  max-width: 280px;
-  margin: 0 0 0px 0;
-}
-
-.productName {
-  font-family: 'Serverless';
-  font-size: 66px;
-  line-height: 76px;
-  margin: 0 0 60px -10px;
-  letter-spacing: -2px;
-}
-
 @media only screen and (max-width : 600px) {
   .productName {
-    font-size: 60px;
-    line-height: 66px;
+    font-size: 70px;
   }
 }
 
 .productTagline {
   display: flex;
-  margin: 0 0 70px 0;
+  margin: 0 0 80px 0;
   font-family: 'Soleil';
   font-size: 24px;
   line-height: 36px;
@@ -99,20 +98,4 @@
   font-family: 'SoleilSB';
   margin-left: 5px;
   text-decoration: underline;
-}
-
-.cliVideo {
-  height: 400px;
-}
-
-@media only screen and (max-width : 1024px) {
-  .cliVideo {
-    height: 245px;
-  }
-}
-
-@media only screen and (min-width : 669px) and (max-width : 769px){
-  .cliVideo {
-    height: 215px;
-  }
 }

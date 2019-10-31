@@ -1,17 +1,15 @@
 import React from 'react'
 import { HeroWrapper } from 'src/fragments'
 import { ExternalLink, InternalLink } from 'src/fragments'
-import { dashboard, gettingStarted } from 'src/constants/urls.js'
+import { dashboard, pricing } from 'src/constants/urls.js'
 import { Button } from 'src/components'
-import HeroImage from 'src/assets/images/pages/cli/CLI-hero.gif'
+import HeroImage from 'src/assets/images/pages/cicd/cicd-hero.png'
 import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
-import styles from '../CLI.module.css'
+import styles from '../CICD.module.css'
 
-const CLIHero = props => (
+const CiCdHero = props => (
   <HeroWrapper
-    customPb={[62, 62, 62, 62, 92, 139]}
-    bottomMarginBg='white'
-    >
+    customPb={[62, 62, 62, 62, 92, 139]}>
     <div className={styles.productHeroContainer}>
       <div className={styles.productHeroColumnLeft}>
         <img
@@ -19,34 +17,33 @@ const CLIHero = props => (
           alt={'Serverless Framework'}
           className={styles.frameworkLogo} />
         <div className={styles.productName}>
-          command line interface
+          CI/CD
         </div>
         <div className={styles.productTagline}>
-        Easy YAML + CLI development and deployment to AWS, Azure, Google Cloud &
-        more.
+          Test and deploy your serverless apps with ease!
         </div>
         <div className={styles.productCTA}>
-          <InternalLink to={gettingStarted}>
-            <Button type='primary' text='Download'/>
-          </InternalLink>
+          <ExternalLink to={dashboard}>
+            <Button type='primary' text='Sign up for free'/>
+          </ExternalLink>
         </div>
         <div className={styles.productEdition}>
           Available now in
           <InternalLink
             className={styles.editionLink}
-            to={gettingStarted}>
-            Serverless Framework Open-Source.
+            to={pricing}>
+          Serverless Framework Pro.
           </InternalLink>
         </div>
       </div>
       <div className={styles.productHeroColumnRight}>
         <img
           src={HeroImage}
-          alt={'Serverless Framework Alerts'}
+          alt={'Serverless Framework CI/CD'}
           className={styles.productHeroImage} />
       </div>
     </div>
   </HeroWrapper>
 )
 
-export default CLIHero
+export default CiCdHero

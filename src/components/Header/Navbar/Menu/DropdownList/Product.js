@@ -5,6 +5,7 @@ import SubMenuItem from './SubMenuItem'
 import {
   cli,
   plugins,
+  cicd,
   components,
   dashboardPage,
   monitoring,
@@ -47,6 +48,17 @@ const Resource = () => (
         }}
       >
         Monitoring
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: cicd,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        CI/CD
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>
