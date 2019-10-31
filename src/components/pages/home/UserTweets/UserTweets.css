@@ -114,6 +114,10 @@
     text-align: center;
   }
 
+  .user-tweets-component .user-tweets-tweets {
+    flex-direction: column;
+  }
+
   .user-tweets-component .user-tweets-actions span:nth-child(2) {
     display: none;
   }
@@ -123,8 +127,8 @@
   }
 
   .user-tweets-component .user-tweets-tweets  {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -134,9 +138,9 @@
   }
 
   .user-tweets-component .user-tweets-tweet {
-    min-width: 400px;
-    min-height: 325px;
-    margin: 0px 8px;
+    min-width: 300px;
+    min-height: 370px;
+    margin: 10px 0px;
   }
 
   .user-tweets-inner .header {
