@@ -27,9 +27,9 @@ const CourseOutline = props => (
                   
                   >
                     <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
-                      <Flex>
-                        <Image src={playVideoIcon} />
-                        <P>&nbsp;&nbsp;{item.title}</P>  
+                      <Flex mt={'16px'}>
+                        <Image src={playVideoIcon} style={{alignSelf: 'flex-start', marginTop: '3px'}} />
+                        <P mt={0} pl={'12px'}>{item.title}</P>  
                       </Flex>
                     </InternalLink>
                     <P>{item.playTime}</P>
