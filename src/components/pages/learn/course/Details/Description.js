@@ -13,9 +13,7 @@ const Description = props => (
         About this course
       </Heading.h3>
       <P m={0}>
-        Serverless services only cost you when they are actually executing. This
-        is important. To be a truly serverless service, there needs to be no
-        idle running cost.{' '}
+      The aim of this course is to take you from being new to Serverless to building a multi-service, fully production ready application on AWS. We will cover the full life-cycle, from developing locally, setting up the interactions between multiple services, getting ready for production, monitoring, CI/CD and a lot more. It assumes no previous knowledge of Serverless, just that you understand the basics around developing web applications. The course is also very modular, so if you all you need is a reference to specific sections you can access those as well to answer those questions you may have.{' '}
       </P>
     </Box>
   </React.Fragment>
