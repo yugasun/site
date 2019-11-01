@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  padding: 0 30px 0 0;
 }
 
 .productHeroColumnRight {
@@ -32,12 +33,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
-  padding: 10px 30px;
+  height: 100%;
 }
 
 .productHeroColumnRight img {
-  max-width: 450px;
+  max-width: 550px;
+  margin-top: 50px;
+}
+
+.frameworkLogo {
+  max-width: 280px;
+  margin: 0 0 5px 0;
+}
+
+.productName {
+  font-family: 'Serverless';
+  font-size: 80px;
+  line-height: 74px;
+  margin: 0 0 70px -10px;
+  letter-spacing: -2px;
 }
 
 @media only screen and (max-width : 600px) {
@@ -52,17 +68,10 @@
   }
 }
 
-.frameworkLogo {
-  max-width: 280px;
-  margin: 0 0 0px 0;
-}
-
-.productName {
-  font-family: 'Serverless';
-  font-size: 90px;
-  line-height: 90px;
-  margin: 0 0 80px -10px;
-  letter-spacing: -4px;
+@media only screen and (max-width : 600px) {
+  .productName {
+    font-size: 70px;
+  }
 }
 
 .productTagline {

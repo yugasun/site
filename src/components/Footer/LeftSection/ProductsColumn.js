@@ -9,6 +9,7 @@ import {
   alerts,
   policies,
   cli,
+  cicd,
   debugging,
   integrations,
 } from 'src/constants/urls'
@@ -37,6 +38,10 @@ const ProductsColumn = ({ mobileOrder }) => (
       {
         name: 'Monitoring',
         navProps: { to: monitoring, completed: true },
+      },
+      {
+        name: 'CI/CD',
+        navProps: { to: cicd, completed: true },
       },
       {
         name: 'Alerts',

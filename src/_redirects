@@ -85,3 +85,4 @@
 /learn/graphql-and-serverless/ /blog/running-scalable-reliable-graphql-endpoint-with-serverless/ 301
 /resources/events/ /training/ 301
 /learn/full-stack-application-development-on-aws/ /learn/courses/full-stack-application-development-on-aws/ 301
+/stack / 302

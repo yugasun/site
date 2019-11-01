@@ -43,6 +43,18 @@
   margin-top: 50px;
 }
 
+@media only screen and (max-width : 600px) {
+  .productHeroColumnRight img {
+    max-width: 370px;
+  }
+}
+
+@media only screen and (max-width : 380px) {
+  .productHeroColumnRight img {
+    max-width: 310px;
+  }
+}
+
 .frameworkLogo {
   max-width: 280px;
   margin: 0 0 0 0;
