@@ -8,7 +8,7 @@ import Share from './Share'
 
 const ExamplesHero = () => {
   return (
-    <HeroWrapper>
+    <HeroWrapper customPb={[32, 32, 32, 32, 62]}>
       <HeroTabs />
       <Flex
         color='white'

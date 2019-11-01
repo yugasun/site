@@ -6,7 +6,7 @@ import { AppContainer } from 'src/components'
 
 //TODO: consolidate so there's just 1 HeroWrapper
 
-const HeroWrapper = ({ children, theme, ...otherProps }) => (
+const HeroWrapper = ({ children, theme, customPb, ...otherProps }) => (
   <Background 
   {...otherProps}
   background={
@@ -29,7 +29,7 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
       ]}
     >
       <AppContainer>
-        <Box pb={['14px', '14px', 4]} pt={['14px', '14px', 4, 4, '15px']}>
+        <Box pb={customPb ? customPb : ['14px', '14px', 4]} pt={['14px', '14px', 4, 4, '15px']}>
           {children}
         </Box>
       </AppContainer>
