@@ -8,8 +8,8 @@ import { Flex } from 'serverless-design-system'
 
 const Courses = ({content}) => (
   <React.Fragment>
-    <Flex flexDirection={['column-reverse', 'column-reverse', 'row']} mt={92}>
-      <Flex flexDirection='column' width={[1, 1, 0.7]}>
+    <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} mt={92}>
+      <Flex flexDirection='column' width={[1, 1, 1, 1, 0.7]}>
         <Video link={content.videoLink} />
         <PrevNext prevVideo={content.prevVideo} nextVideo={content.nextVideo}/>
         <Info lessonInfo={content.lessonInfo} />

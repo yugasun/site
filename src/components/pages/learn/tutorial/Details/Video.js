@@ -6,15 +6,6 @@ import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
 require('./responsivePlayer.css')
 
-const NoScrollbarBox = styled(Box)`
-  &::-webkit-scrollbar {
-    width: 0 !important;
-  }
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-`
-
 const CourseBox = styled(Flex)`
   border: solid 1px rgba(247, 247, 247, 0.3);
   background-color: black;
@@ -24,35 +15,7 @@ const CourseBox = styled(Flex)`
   }
 `
 
-class CoursesList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activeId: 1,
-      activeVideoLink: props.link,
-    }
-  }
-
-  playThisVideo(videoNumber) {
-    const activeVideoLink = this.findActiveVideoLink(videoNumber)
-    this.setState({
-      activeId: videoNumber,
-      activeVideoLink,
-    })
-  }
-
-  findActiveVideoLink(activeId) {
-    let allItems = []
-    courseData.forEach(data => {
-      allItems = allItems.concat(data.items)
-    })
-    const videoLink = allItems.filter(item => item.videoNumber === activeId)[0]
-      .videoLink
-    return videoLink
-  }
-
-  render() {
-    return (
+const CoursesList = ({link}) => (
       <CourseBox
         flexDirection={['column', 'column', 'column', 'column', 'row']}
         width={[1, 1, 0.85, 0.85, 1]}
@@ -61,7 +24,7 @@ class CoursesList extends React.Component {
         <Box width={[1, 1, 1, 1, 1]}>
           <div className='course-video-player-wrapper'>
             <ReactPlayer
-              url={this.state.activeVideoLink}
+              url={link}
               controls={true}
               className='react-player'
               width={'100%'}
@@ -78,8 +41,6 @@ class CoursesList extends React.Component {
           </div>
         </Box>
       </CourseBox>
-    )
-  }
-}
+)
 
 export default CoursesList

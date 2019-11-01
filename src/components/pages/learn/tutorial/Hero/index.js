@@ -10,10 +10,10 @@ const ExamplesHero = ({title}) => {
         color='black'
         justifyContent='space-between'
         width={1}
-        flexDirection={['column', 'column', 'row']}
+        flexDirection={['column', 'column', 'column', 'column', 'row']}
         pt={92}
       >
-        <Box width={0.6}>
+        <Box width={[1, 1, 1, 1, 0.6]}>
           <Heading.h3
             mb={'12px'}
             fontFamily='Soleil'

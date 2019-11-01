@@ -4,9 +4,19 @@ import { P, Heading } from 'src/fragments/DesignSystem'
 import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import { InternalLink } from 'src/fragments'
 import courseOutlineData from 'src/components/pages/learn/course/Details/Data.js'
+import styled from 'styled-components'
+
+const CourseOutlineBox = styled(Card)`
+  overflow-y: scroll;
+  max-height: 600px;
+
+  @media screen and (min-width: 962px) {
+    min-width: 450px; 
+  }
+`
 
 const CourseBox = props => (
-  <Card border='1px solid #eaeaea' ml={22} style={{minWidth: '450px', maxHeight: '600px', overflowY: 'scroll'}}>
+  <CourseOutlineBox border='1px solid #eaeaea' ml={[0, 0, 0, 0, 22]} mt={[92, 92, 92, 92, 0]}>
       {
         courseOutlineData.map((course, metaIndex) => (
           <Flex key={metaIndex} flexDirection='column'>
@@ -32,7 +42,7 @@ const CourseBox = props => (
           </Flex>
         ))
       }
-      </Card>
+      </CourseOutlineBox>
 )
 
 export default CourseBox
