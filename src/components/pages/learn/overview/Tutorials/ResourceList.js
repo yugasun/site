@@ -19,11 +19,6 @@ const SmallText = ({ children, ...otherProps }) => (
   </Text>
 )
 
-const ResponsiveImage = styled(Image)`
-  object-fit: cover;
-  object-position: center;
-`
-
 const DesktopTable = props => (
   <Flex
     justifyContent={[

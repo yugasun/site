@@ -27,7 +27,7 @@ const CourseBox = props => (
                 course.items.map((item, index) => (
                   <Flex key={item.videoNumber} justifyContent='space-between' px={'22px'}
                   >
-                    <InternalLink to={`/learn/tutorial/${item.slug}/`}>
+                    <InternalLink to={item.title.indexOf('[coming soon]') > -1 ? `#course-updates`: `/learn/tutorial/${item.slug}/`} anchorLink={item.title.indexOf('[coming soon]') > -1 ? true: false}>
                       <Flex mt={'16px'}>
                         <Image src={playVideoIcon} style={{alignSelf: 'flex-start', marginTop: '3px'}}/>
                         <Box width={0.95}>

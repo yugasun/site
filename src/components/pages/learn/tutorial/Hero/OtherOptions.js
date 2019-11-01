@@ -16,7 +16,7 @@ const TutorialOtherOptions = (props) => (
         </Flex>
         <Flex alignItems='center' ml={32}>
             <Image src={subscribeImage} width='24px' height='24px'/>
-            <AnchorLink to={'#subscribe'}>
+            <AnchorLink to={'#course-updates'}>
                 <P ml={'10px'} color='#8c8c8c'>Subscribe for updates</P>
             </AnchorLink>
         </Flex>

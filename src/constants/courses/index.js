@@ -6,9 +6,10 @@ module.exports = [
         numOfLessons: '21',
         level: 'Beginner - Intermediate',
         time: '1 hr 34 min',
+        startingCourseLink: '/learn/tutorial/full-stack-aws-course-purpose/',
         slug: 'full-stack-application-development-on-aws',
-        metaTitle: '',
-        metaDescription: ''
+        metaTitle: 'Full-Stack Application Development on AWS (Free Video Course)',
+    metaDescription: 'Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
     },
     {
         title: 'Serverless for Frontend Developers',
@@ -23,8 +24,9 @@ module.exports = [
         numOfLessons: '16',
         level: 'Beginner - Intermediate',
         time: '1 hr 15 min',
+        startingCourseLink: '/learn/tutorial/full-stack-aws-course-purpose/',
         slug: 'serverless-for-frontend-developers',
-        metaTitle: '',
-        metaDescription: ''
+        metaTitle: 'Serverless For Frontend Developers (Free Video Course)',
+        metaDescription: 'Learn variety of ways you can use the Serverless Framework, and serverless technologies generally, in your frontend...'
     }
 ]

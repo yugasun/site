@@ -74,7 +74,7 @@ const FlexWithZIndex = styled(Flex)`
 
 const GuideUpdatesPrefooter = props => (
   <React.Fragment>
-    <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3}>
+    <Container maxWidth={['100%', '100%', '100%', '100%', '76%', 1216]} pb={3} id='course-updates'>
       <Background background='#fd5750' style={{ display: 'flex' }}>
         <LeftSpinningWheel
           backgroundImage={`url(${bannerWheelLeft})`}

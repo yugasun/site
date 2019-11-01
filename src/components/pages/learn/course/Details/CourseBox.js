@@ -17,7 +17,7 @@ const FlexWithBorderTop = styled(Flex)`
   border-top: 1px solid #eaeaea;
 `
 
-const CourseBox = ({numOfLessons, level, time, image, slug}) => (
+const CourseBox = ({numOfLessons, level, time, image, slug, startingCourseLink}) => (
   <Card
     height={[480]}
     width={[1, 1, 278, 278, 379]}
@@ -49,7 +49,7 @@ const CourseBox = ({numOfLessons, level, time, image, slug}) => (
         </P>
       </FlexWithBorderTop>
       <FlexWithBorderTop justifyContent='center'>
-        <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
+        <InternalLink to={startingCourseLink}>
           <Button mt={16} height='60px' fontSize='18px' pt={'6px'}>&#9658; &nbsp; Start Course</Button>
         </InternalLink>
       </FlexWithBorderTop>

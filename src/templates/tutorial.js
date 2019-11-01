@@ -25,8 +25,8 @@ const TutorialPage = ({location, pathContext}) => {
     startWithWhiteHeader={false}
   >
     <Helmet
-      title='Full Stack AWS Application Development (Free Course)'
-      description='Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
+      title={`${pathContext.tutorial.title} (Free Video Tutorial)`}
+      description={`${pathContext.tutorial.lessonInfo}`}
       location={location}
     />
     <Background background='#f7f7f7'>
