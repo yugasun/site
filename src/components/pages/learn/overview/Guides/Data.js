@@ -19,6 +19,6 @@ export default [
     id: 3,
     image: stepFunctionsImage,
     title: 'Step Functions',
-    link: '/step-functions/',
+    link: '/aws-step-functions/',
   },
 ]
