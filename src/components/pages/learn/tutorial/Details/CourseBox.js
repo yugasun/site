@@ -6,17 +6,16 @@ import { InternalLink } from 'src/fragments'
 import courseOutlineData from './Data'
 
 const CourseBox = props => (
-  <Card border='1px solid #eaeaea' ml={22}>
+  <Card border='1px solid #eaeaea' ml={22} style={{minWidth: '450px', maxHeight: '600px', overflowY: 'scroll'}}>
       {
-        courseOutlineData.map((course, index) => (
-          <Flex key={index} flexDirection='column'>
+        courseOutlineData.map((course, metaIndex) => (
+          <Flex key={metaIndex} flexDirection='column'>
             <Flex style={{backgroundColor: '#f7f7f7'}} p={22}>
               <Heading.h5 color='black' mb={0} fontFamily='Soleil'>{course.title}</Heading.h5>
             </Flex>
             {
                 course.items.map((item, index) => (
                   <Flex key={item.videoNumber} justifyContent='space-between' px={'22px'}
-                  
                   >
                     <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
                       <Flex>

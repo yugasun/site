@@ -9,7 +9,7 @@ const Courses = props => (
   <Box mb={[92, 92, 92, 92, 132]}>
     <Heading.h3
       align='center'
-      mt={[62, 62, 62, 62, 132]}
+      mt={[62, 62, 62, 62, 92]}
       mb={[32, 32, 42, 42, 62]}
     >
       Courses
@@ -24,7 +24,7 @@ const Courses = props => (
         'space-between',
         'center',
       ]}
-      width={0.60}
+      width={[1, 1, 0.95, 0.75, 0.80, 0.60]}
       mx='auto'
     >
       {coursesList.map((course, index) => (
@@ -34,8 +34,8 @@ const Courses = props => (
           alignItems={['center']}
           mx={index == 1 ? [0, 0, 0, 0, 32] : ['0px']}
           ml={index == 2 ? [0, 0, '28%', '28%', 0] : ['0px']}
-          width={[1, 1, 0.45, 0.45, 1]}
-          mb={'62px'}
+          width={[1, 1, 300, 320, 332]}
+          mb={[32, 32, 0]}
           style={{border: '1px solid #eaeaea',
             boxShadow: '2px 2px 8px 0 rgba(0, 0, 0, 0.08)'}}
         >

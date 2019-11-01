@@ -47,7 +47,7 @@ const DesktopTable = props => (
         <Flex
           flexDirection='column'
           alignItems='left'
-          width={[0.7, 0.7, 'auto']}
+          width={[1, 1, 'auto']}
           py={30}
           px={20}
         >

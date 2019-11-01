@@ -6,7 +6,7 @@ import serverlessLogo from 'src/assets/images/pages/enterprise/serverless-logo-w
 
 const LearnHomepageHero = () => {
   return (
-      <Flex color='black' flexDirection='column' alignItems='center' mt={152}>
+      <Flex color='black' flexDirection='column' alignItems='center' mt={[62, 62, 102, 102, 152]}>
         <Box width={[1]}>
           <Heading.h0 mt={[42, 42, 0, 0]} align='center' fontFamily='SoleilSB'>
             Learn
@@ -18,7 +18,7 @@ const LearnHomepageHero = () => {
           
         </Box>
         <Flex.verticallyCenter
-          width={[1, 1, 1, 0.6, 0.6]}
+          width={[1, 1, 0.6, 0.6, 0.6]}
           px={[0, 0, 0, 5, 7]}
           ml={[0, 0, 4, 0, 0]}
           mt={32}
