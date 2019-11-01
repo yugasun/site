@@ -16,7 +16,7 @@ const BackgroundWithPaddingBottom = styled(Background)`
   }
 `
 
-const FrameWorks = ({ location }) => (
+const Courses = ({ location, pathContext: {course} }) => (
   <DefaultLayout
     prefooter={NewToServerlessPrefooter}
     transparentHeader={true}
@@ -28,9 +28,9 @@ const FrameWorks = ({ location }) => (
       description='Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
       location={location}
     />
-    <Hero />
+    <Hero {...course} />
     <AppContainer>
-      <Details />
+      <Details {...course} />
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#fff'>
@@ -42,4 +42,4 @@ const FrameWorks = ({ location }) => (
   </DefaultLayout>
 )
 
-export default FrameWorks
+export default Courses

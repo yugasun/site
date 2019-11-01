@@ -6,14 +6,18 @@ import courseLevelIcon from 'src/assets/images/pages/courses/course-level-icon.s
 import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg'
 import styled from 'styled-components'
 import Share from './Share'
-import fullStackCourseImage from 'src/assets/images/pages/learn/home/full-stack-app-on-aws-course.svg'
 import { InternalLink } from 'src/fragments'
-
+import fullStackAwsImage from 'src/assets/images/pages/learn/home/full-stack-app-on-aws-course.svg'
+import serverlessFrontendImage from 'src/assets/images/pages/learn/home/serverless-frontend-course.svg'
+const courseImage = {
+    'full-stack-application-development-on-aws': fullStackAwsImage,
+    'serverless-for-frontend-developers': serverlessFrontendImage
+}
 const FlexWithBorderTop = styled(Flex)`
   border-top: 1px solid #eaeaea;
 `
 
-const CourseBox = props => (
+const CourseBox = ({numOfLessons, level, time, image, slug}) => (
   <Card
     height={[480]}
     width={[1, 1, 278, 278, 379]}
@@ -24,24 +28,24 @@ const CourseBox = props => (
     borderRadius='4px'
     boxShadow='2px 7px 18px 0 rgba(0, 0, 0, 0.08)'
   >
-    <Image src={fullStackCourseImage} width={1} />
+    <Image src={courseImage[slug]} width={1} />
     <Flex flexDirection='column'>
         <Flex px={[32, 32, 20, 20, 32]} >
         <Image src={playVideoIcon} />
         <P ml={22} color='#8c8c8c'>
-          21 video lessons
+          {numOfLessons} video lessons
         </P>
         </Flex>
       <FlexWithBorderTop px={[32, 32, 20, 20, 32]}>
         <Image src={courseLevelIcon} />
         <P ml={22} color='#8c8c8c'>
-          Beginner - Intermediate
+          {level}
         </P>
       </FlexWithBorderTop>
       <FlexWithBorderTop px={[32, 32, 20, 20, 32]}>
         <Image src={courseTimeIcon} />
         <P ml={22} color='#8c8c8c'>
-          1hr 34min
+          {time}
         </P>
       </FlexWithBorderTop>
       <FlexWithBorderTop justifyContent='center'>

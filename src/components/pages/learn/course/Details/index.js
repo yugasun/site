@@ -5,17 +5,17 @@ import Outline from './Outline'
 import CourseBox from './CourseBox'
 import { Flex } from 'serverless-design-system'
 
-const Courses = props => (
+const CourseDetails = (props) => (
   <React.Fragment>
     <Flex flexDirection={['column-reverse', 'column-reverse', 'row']}>
       <Flex flexDirection='column' width={[1, 1, 0.5, 0.5]}>
-        <Description />
+        <Description {...props}/>
         <Requirements />
         <Outline />
       </Flex>
-      <CourseBox />
+      <CourseBox {...props}/>
     </Flex>
   </React.Fragment>
 )
 
-export default Courses
+export default CourseDetails

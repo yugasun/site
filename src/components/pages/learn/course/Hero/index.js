@@ -4,9 +4,8 @@ import { Box, Flex, Text } from 'serverless-design-system'
 import { HeroWrapperWithTabs as HeroWrapper } from 'src/fragments'
 import HeroTabs from './Tab'
 import { PS } from 'src/fragments/DesignSystem'
-import Share from './Share'
 
-const ExamplesHero = () => {
+const CoursesHero = ({title, author}) => {
   return (
     <HeroWrapper customPb={[32, 32, 32, 32, 62]}>
       <HeroTabs />
@@ -24,13 +23,13 @@ const ExamplesHero = () => {
             mb={'12px'}
             fontFamily='Soleil'
           >
-            Serverless Full Stack Application on AWS
+            {title}
           </Text>
-          <PS>by Gareth McCumskey</PS>
+          <PS>by {author} </PS>
         </Box>
       </Flex>
     </HeroWrapper>
   )
 }
 
-export default ExamplesHero
+export default CoursesHero
