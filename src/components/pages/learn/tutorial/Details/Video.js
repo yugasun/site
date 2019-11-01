@@ -1,7 +1,6 @@
 import React from 'react'
-import { Box, Text, Image, Flex } from 'serverless-design-system'
-import { P } from 'src/fragments/DesignSystem'
-import courseData from './Data'
+import { Box, Flex } from 'serverless-design-system'
+import courseData from 'src/components/pages/learn/course/Details/Data.js'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'
@@ -30,7 +29,7 @@ class CoursesList extends React.Component {
     super(props)
     this.state = {
       activeId: 1,
-      activeVideoLink: this.findActiveVideoLink(1),
+      activeVideoLink: props.link,
     }
   }
 

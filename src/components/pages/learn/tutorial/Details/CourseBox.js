@@ -17,11 +17,11 @@ const CourseBox = props => (
                 course.items.map((item, index) => (
                   <Flex key={item.videoNumber} justifyContent='space-between' px={'22px'}
                   >
-                    <InternalLink to={'/learn/tutorial/create-an-aws-account/'}>
-                      <Flex>
-                        <Image src={playVideoIcon} />
+                    <InternalLink to={`/learn/tutorial/${item.slug}/`}>
+                      <Flex mt={'16px'}>
+                        <Image src={playVideoIcon} style={{alignSelf: 'flex-start', marginTop: '3px'}}/>
                         <Box width={0.95}>
-                          <P ml={'12px'} align='left'>{item.title}</P>  
+                          <P mt={0} pl={'12px'}>{item.title}</P>  
                         </Box>
                       </Flex>
                     </InternalLink>

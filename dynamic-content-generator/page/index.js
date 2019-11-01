@@ -3,6 +3,7 @@ const docsPagesGenerator = require('./docs')
 const examplePagesGenerator = require('./example')
 const pluginPagesGenerator = require('./plugin')
 const stackPagesGenerator = require('./stack')
+const tutorialPagesGenerator = require('./tutorial')
 
 const pageCreator = (graphql, createPage, createRedirect) =>
   Promise.all([
@@ -11,6 +12,7 @@ const pageCreator = (graphql, createPage, createRedirect) =>
     pluginPagesGenerator(graphql, createPage),
     stackPagesGenerator(graphql, createPage),
     docsPagesGenerator(graphql, createPage, createRedirect),
+    tutorialPagesGenerator(createPage)
   ])
 
 module.exports = pageCreator

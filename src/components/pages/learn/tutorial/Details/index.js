@@ -6,11 +6,11 @@ import PrevNext from './PrevNext'
 import Video from './Video'
 import { Flex } from 'serverless-design-system'
 
-const Courses = props => (
+const Courses = ({content}) => (
   <React.Fragment>
     <Flex flexDirection={['column-reverse', 'column-reverse', 'row']} mt={92}>
       <Flex flexDirection='column' width={[1, 1, 0.7]}>
-        <Video />
+        <Video link={content.videoLink} />
         <PrevNext />
         <Info />
         <Transcript />
