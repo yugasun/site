@@ -3,7 +3,7 @@ import { Flex, Image, Card, Box } from 'serverless-design-system'
 import { P, Heading } from 'src/fragments/DesignSystem'
 import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import { InternalLink } from 'src/fragments'
-import courseOutlineData from './Data'
+import courseOutlineData from 'src/components/pages/learn/course/Details/Data.js'
 
 const CourseBox = props => (
   <Card border='1px solid #eaeaea' ml={22} style={{minWidth: '450px', maxHeight: '600px', overflowY: 'scroll'}}>

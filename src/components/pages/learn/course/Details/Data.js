@@ -67,19 +67,22 @@ module.exports = [
     title: 'Intro to AWS and what we are building',
     items: [
       {
-        title: '[coming soon] What is Cloud Computing?',
-        playTime: '0:00',
+        title: 'What is Cloud Computing?',
+        playTime: '3:41',
         videoNumber: 10,
+        videoLink: 'https://www.youtube.com/watch?v=NtvvqhS11fo'
       },
       {
-        title: '[coming soon] AWS Lambda',
-        playTime: '0:00',
+        title: 'AWS Lambda',
+        playTime: '4:41',
         videoNumber: 11,
+        videoLink: 'https://www.youtube.com/watch?v=yBHuF3A-dIQ'
       },
       {
-        title: '[coming soon] API Gateway',
-        playTime: '0:00',
+        title: 'API Gateway',
+        playTime: '1:46',
         videoNumber: 12,
+        videoLink: 'https://www.youtube.com/watch?v=oFhmRYh2mUY'
       },
       {
         title: '[coming soon] DynamoDB Basics',
