@@ -11,9 +11,9 @@ const Courses = ({content}) => (
     <Flex flexDirection={['column-reverse', 'column-reverse', 'row']} mt={92}>
       <Flex flexDirection='column' width={[1, 1, 0.7]}>
         <Video link={content.videoLink} />
-        <PrevNext />
-        <Info />
-        <Transcript />
+        <PrevNext prevVideo={content.prevVideo} nextVideo={content.nextVideo}/>
+        <Info lessonInfo={content.lessonInfo} />
+        <Transcript transcript={content.transcript} />
       </Flex>
       <CourseBox />
     </Flex>

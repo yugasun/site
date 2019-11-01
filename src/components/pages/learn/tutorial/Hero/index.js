@@ -13,7 +13,7 @@ const ExamplesHero = ({title}) => {
         flexDirection={['column', 'column', 'row']}
         pt={92}
       >
-        <Box >
+        <Box width={0.6}>
           <Heading.h3
             mb={'12px'}
             fontFamily='Soleil'

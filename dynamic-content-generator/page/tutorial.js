@@ -1,6 +1,29 @@
 const { getFileFromProjectRoot } = require('./utils')
 const dataFile =  require('../../src/components/pages/learn/course/Details/Data.js')
 
+function addPrevNextToTutorials(allTutorials) {
+    const allTutorialsWithPrevNext = allTutorials.map((tutorial, index) => {
+        const previousVideo = allTutorials[index - 1]
+        const nextVideo = allTutorials[index + 1]
+        if(previousVideo) {
+            tutorial.prevVideo = {
+                title: previousVideo.title,
+                slug: previousVideo.slug
+            }
+        }
+
+        if(nextVideo) {
+            tutorial.nextVideo = {
+                title: nextVideo.title,
+                slug: nextVideo.slug
+            }
+        }
+
+        return tutorial
+    })
+    return allTutorialsWithPrevNext
+}
+
 function getAllTutorialsFromData() {
     const allTutorials = []
 
@@ -11,14 +34,12 @@ function getAllTutorialsFromData() {
             }
         })
     })
-    
-    return allTutorials
+    const tutorialsWithPrevNext = addPrevNextToTutorials(allTutorials)
+    return tutorialsWithPrevNext
 }
 
 const createTutorialPages = (createPage) => {
     getAllTutorialsFromData().forEach(tutorial => {
-        console.log(tutorial)
-        delete tutorial.videoNumber
         createPage({
         path: `learn/tutorial/${tutorial.slug}`,
         component: getFileFromProjectRoot(`src/templates/tutorial.js`),

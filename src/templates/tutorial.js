@@ -17,7 +17,6 @@ const BackgroundWithPaddingBottom = styled(Background)`
 `
 
 const TutorialPage = ({location, pathContext}) => {
-
   return (
   <DefaultLayout
     prefooter={NewToServerlessPrefooter}
@@ -32,11 +31,11 @@ const TutorialPage = ({location, pathContext}) => {
     />
     <Background background='#f7f7f7'>
         <AppContainer>
-            <Hero title={pathContext.title} />
+            <Hero title={pathContext.tutorial.title} />
         </AppContainer>
     </Background>
     <AppContainer>
-      <Details  content={pathContext}/>
+      <Details  content={pathContext.tutorial}/>
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#fff'>
