@@ -24,8 +24,8 @@ const Courses = ({ location, pathContext: {course} }) => (
     startWithWhiteHeader={false}
   >
     <Helmet
-      title='Full Stack AWS Application Development (Free Course)'
-      description='Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
+      title={course.metaTitle}
+      description={course.metaDescription}
       location={location}
     />
     <Hero {...course} />

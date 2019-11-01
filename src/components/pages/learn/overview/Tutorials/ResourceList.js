@@ -1,9 +1,10 @@
 import React from 'react'
 import { Flex, Text, Image } from 'serverless-design-system'
-import coursesData from './Data'
+import tutorialsData from './Data'
 import styled from 'styled-components'
 import courseTimeIcon from 'src/assets/images/pages/courses/course-time-icon.svg'
 import { PS } from 'src/fragments/DesignSystem'
+import { InternalLink } from 'src/fragments'
 
 const SmallText = ({ children, ...otherProps }) => (
   <Text
@@ -34,7 +35,7 @@ const DesktopTable = props => (
     ]}
     flexWrap={['wrap', 'wrap', 'wrap']}
   >
-    {coursesData.slice(0, 6).map((feature, index) => (
+    {tutorialsData.slice(0, 6).map((tutorial, index) => (
       <Flex
         key={index}
         width={[1, 1, 0.48, 0.48, 0.3]}
@@ -51,23 +52,25 @@ const DesktopTable = props => (
           py={30}
           px={20}
         >
-          <Text
-            fontSize='18px'
-            lineHeight='24px'
-            letterSpacing='-0.28px'
-            fontFamily='SoleilBk'
-            align='left'
-          >
-            {feature.title}
-          </Text>
+          <InternalLink to={tutorial.link}>
+            <Text
+              fontSize='18px'
+              lineHeight='24px'
+              letterSpacing='-0.28px'
+              fontFamily='SoleilBk'
+              align='left'
+            >
+              {tutorial.title}
+            </Text>
+          </InternalLink>
           <Flex py={'10px'}>
             <SmallText mt={['3px']} align='left'>
-              {feature.description}
+              {tutorial.description}
             </SmallText>
           </Flex>
           <Flex alignItems='center' style={{alignSelf: 'flex-end'}}>
               <Image src={courseTimeIcon} />
-              <PS ml={'10px'}>{feature.playTime}</PS>
+              <PS ml={'10px'}>{tutorial.playTime}</PS>
           </Flex>
         </Flex>
       </Flex>

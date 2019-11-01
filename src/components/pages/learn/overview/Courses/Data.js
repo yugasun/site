@@ -8,22 +8,26 @@ module.exports = [
     image: fullStackCourseImage,
     title: 'Full-Stack Application Development on AWS',
     description:
-      'Serverless services only cost you when they are actually executing. This is important. To be a truly…',
+      'The aim of this course is to take you from being new to Serverless to building a multi-service, fully production ...',
     author: 'Gareth McCumskey',
     authorImage: garethImg,
     courseTime: '1 hr 45 min',
     videoCount: 8,
     link: '/learn/courses/full-stack-application-development-on-aws/',
+    metaTitle: 'Full-Stack Application Development on AWS (Free Video Course)',
+    metaDescription: 'Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
   },
   {
     image: frontendCourseImage,
     title: 'Serverless for Frontend Developers',
     description:
-      'Serverless services only cost you when they are actually executing. This is important. To be a truly…',
+      'Learn variety of ways you can use the Serverless Framework, and serverless technologies generally, in your frontend...',
     author: 'Fernando Medina Corey',
     authorImage: fernandoImage,
     courseTime: '1 hr 45 min',
     videoCount: 8,
     link: '/learn/courses/serverless-for-frontend-developers/',
+    metaTitle: 'Serverless For Frontend Developers (Free Video Course)',
+    metaDescription: 'Learn variety of ways you can use the Serverless Framework, and serverless technologies generally, in your frontend...'
   },
 ]
