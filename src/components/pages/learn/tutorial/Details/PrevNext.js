@@ -4,7 +4,7 @@ import { Flex, Box } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 
 const PrevNext = ({prevVideo, nextVideo}) => (
-    <Flex px={22} justifyContent='space-between' style={{border: '2px solid #eaeaea'}} width={1} flexDirection={['column', 'column', 'row']}>
+    <Flex px={22} justifyContent='space-between' style={{border: '2px solid #eaeaea'}} width={[1, 1, 0.85, 0.85, 1]} flexDirection={['column', 'column', 'row']} mx={['none', 'none', 'auto', 'auto', 'none']}>
       <Flex width={[1, 1, 0.50]} justifyContent='flex-start'>
           {
               prevVideo ? 

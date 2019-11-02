@@ -45,7 +45,7 @@ export default [
     id: 5,
     image: developIcon,
     title: 'Using Serverless Components to deploy frontend applications',
-    link: '/learn/tutorial/serverless-components-for-frontend-apps/',
+    link: '/learn/tutorial/what-are-serverless-components/',
     description: "Learn about the different low-configuration Serverless Components you can use to deploy your frontend application.",
     playTime: '3:33 min'
   },
