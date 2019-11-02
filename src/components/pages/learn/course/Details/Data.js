@@ -53,7 +53,7 @@ module.exports = [
         playTime: '7:14',
         videoNumber: 4,
         videoLink: 'https://www.youtube.com/watch?v=0_NcB2Sw15k',
-        slug: 'building-endpoint-inside-aws-console'
+        slug: 'building-api-inside-aws-console'
       },
       {
         title: 'Installing the Serverless Framework',
@@ -89,7 +89,7 @@ module.exports = [
         playTime: '6:05',
         videoNumber: 7,
         videoLink: 'https://www.youtube.com/watch?v=KTsWDCXvxqU',
-        slug: 'using-serverless-dashboard-profile'
+        slug: 'using-profiles-in-serverless-dashboard'
       },
       {
         title: 'What happens on deployment',
@@ -101,7 +101,7 @@ module.exports = [
         playTime: '2:16',
         videoNumber: 8,
         videoLink: 'https://www.youtube.com/watch?v=Z0fkps64wfg',
-        slug: 'what-happens-after-deploying-with-serverless'
+        slug: 'what-happens-on-deployment'
       },
       {
         title: 'Removing our service',

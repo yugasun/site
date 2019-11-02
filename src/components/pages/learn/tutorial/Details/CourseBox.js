@@ -22,9 +22,8 @@ class CourseBox extends React.Component {
 
   componentDidMount() {
     const thisNode = ReactDOM.findDOMNode(this.refs['videoNumber' + this.state.activeVideoNumber])
-    const thisNodeOffsetTop = thisNode.offsetTop;
-    console.log(thisNodeOffsetTop)
-    document.getElementById("course-outline-box").scrollTop = thisNodeOffsetTop - 285;
+    const thisNodeOffsetTop = thisNode.offsetTop
+    document.getElementById("course-outline-box").scrollTop = thisNodeOffsetTop - 285
   }
 
   render() {
@@ -40,9 +39,8 @@ class CourseBox extends React.Component {
                 course.items.map((item, index) => (
                   <Flex 
                   key={item.videoNumber} 
-                  justifyContent='space-between' px={'22px'} ref={item.videoNumber} 
+                  justifyContent='space-between' px={'22px'} 
                   style={item.videoNumber === this.state.activeVideoNumber ? {backgroundColor: '#D4E9EE'}: {}}
-                  id={`videoNumber${item.videoNumber}`}
                   ref={`videoNumber${item.videoNumber}`}
                   >
                     <InternalLink to={item.title.indexOf('[coming soon]') > -1 ? `#course-updates`: `/learn/tutorial/${item.slug}/`} anchorLink={item.title.indexOf('[coming soon]') > -1 ? true: false}>
