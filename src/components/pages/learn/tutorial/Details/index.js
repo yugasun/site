@@ -6,7 +6,7 @@ import PrevNext from './PrevNext'
 import Video from './Video'
 import { Flex } from 'serverless-design-system'
 
-const Courses = ({content}) => (
+const Courses = ({content, outline}) => (
   <React.Fragment>
     <Flex flexDirection={['column', 'column', 'column', 'column', 'row']} mt={92}>
       <Flex flexDirection='column' width={[1, 1, 1, 1, 0.7]}>
@@ -15,7 +15,7 @@ const Courses = ({content}) => (
         <Info lessonInfo={content.lessonInfo} />
         <Transcript transcript={content.transcript} />
       </Flex>
-      <CourseBox activeVideoNumber={content.videoNumber}/>
+      <CourseBox activeVideoNumber={content.videoNumber} outline={outline}/>
     </Flex>
   </React.Fragment>
 )

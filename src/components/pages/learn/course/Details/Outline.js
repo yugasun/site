@@ -1,9 +1,15 @@
 import React from 'react'
 import { Heading, P } from 'src/fragments/DesignSystem'
 import { Box, Flex, Card, Image } from 'serverless-design-system'
-import courseOutlineData from './Data'
 import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import { InternalLink } from 'src/fragments'
+import awsCourseOutline from 'src/constants/courses/fullStackAws.js'
+import serverlessFrontendOutline from 'src/constants/courses/serverlessForFrontend.js'
+
+const courseOutlineData = {
+  'full-stack-application-development-on-aws': awsCourseOutline,
+  'serverless-for-frontend-developers': serverlessFrontendOutline
+}
 
 const CourseOutline = props => (
     <Box>
@@ -16,7 +22,7 @@ const CourseOutline = props => (
       </Heading.h3>
       <Card border='1px solid #eaeaea'>
       {
-        courseOutlineData.map((course, index) => (
+        courseOutlineData[props.slug].map((course, index) => (
           <Flex key={index} flexDirection='column'>
             <Flex style={{backgroundColor: '#f7f7f7'}} p={22}>
               <Heading.h5 color='black' mb={0} fontFamily='Soleil'>{course.title}</Heading.h5>

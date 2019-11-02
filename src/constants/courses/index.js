@@ -24,7 +24,7 @@ module.exports = [
         numOfLessons: '16',
         level: 'Beginner - Intermediate',
         time: '1 hr 15 min',
-        startingCourseLink: '/learn/tutorial/full-stack-aws-course-purpose/',
+        startingCourseLink: '/learn/tutorial/serverless-frontend-aws-introduction/',
         slug: 'serverless-for-frontend-developers',
         metaTitle: 'Serverless For Frontend Developers (Free Video Course)',
         metaDescription: 'Learn variety of ways you can use the Serverless Framework, and serverless technologies generally, in your frontend...'

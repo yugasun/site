@@ -31,11 +31,14 @@ const TutorialPage = ({location, pathContext}) => {
     />
     <Background background='#f7f7f7'>
         <AppContainer>
-            <Hero title={pathContext.tutorial.title} />
+            <Hero title={pathContext.tutorial.title} 
+            courseName={pathContext.courseName} 
+            courseLink={pathContext.courseLink}
+            />
         </AppContainer>
     </Background>
     <AppContainer>
-      <Details  content={pathContext.tutorial}/>
+      <Details  content={pathContext.tutorial} outline={pathContext.outline}/>
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#fff'>

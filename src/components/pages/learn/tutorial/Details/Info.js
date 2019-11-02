@@ -12,9 +12,13 @@ const Description = ({lessonInfo}) => (
       >
         Lesson Info
       </Heading.h3>
-      <P m={0}>
-        {lessonInfo}
-      </P>
+      {
+        lessonInfo.split(/\n/g).map((part, index) => (
+          <P mb={0} key={index}>
+          {part}
+          </P>
+        ))
+      }
     </Box>
   </React.Fragment>
 )

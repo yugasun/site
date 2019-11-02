@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex } from 'serverless-design-system'
-import courseData from 'src/components/pages/learn/course/Details/Data.js'
+import courseData from 'src/constants/courses/fullStackAws.js'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import videoPosterImage from 'src/assets/images/pages/courses/videoPosterImage.png'

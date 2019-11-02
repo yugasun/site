@@ -11,7 +11,7 @@ const CourseDetails = (props) => (
       <Flex flexDirection='column' width={[1, 1, 0.5, 0.5]}>
         <Description {...props}/>
         <Requirements />
-        <Outline />
+        <Outline slug={props.slug}/>
       </Flex>
       <CourseBox {...props}/>
     </Flex>

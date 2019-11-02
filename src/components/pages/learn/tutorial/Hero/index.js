@@ -4,7 +4,7 @@ import { Box, Flex, Heading } from 'serverless-design-system'
 import OtherOptions from './OtherOptions'
 import { InternalLink } from 'src/fragments'
 
-const ExamplesHero = ({title}) => {
+const ExamplesHero = ({title, courseName, courseLink}) => {
   return (
       <Flex
         color='black'
@@ -20,8 +20,8 @@ const ExamplesHero = ({title}) => {
           >
             Watching: {title} 
           </Heading.h3>
-          <InternalLink to={'/learn/courses/full-stack-application-development-on-aws/'}>
-            <Heading.h5 color='#8c8c8c' fontFamily='Soleil' pb={'8px'}>From: Serverless Full Stack Application on AWS Course</Heading.h5>
+          <InternalLink to={courseLink}>
+            <Heading.h5 color='#8c8c8c' fontFamily='Soleil' pb={'8px'}>From: {courseName}</Heading.h5>
           </InternalLink>
         </Box>
         <OtherOptions />

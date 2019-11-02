@@ -37,7 +37,7 @@ export default [
     id: 4,
     image: developIcon,
     title: 'Different options for building serverless frontends',
-    link: '/learn/tutorial/options-for-building-serverless-frontends/',
+    link: '/learn/tutorial/serverless-frontend-options/',
     description: "In this video, you'll learn a few of the options for developing and deploying frontend applications on AWS.",
     playTime: '2:55 min'
   },
