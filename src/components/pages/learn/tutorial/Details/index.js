@@ -15,7 +15,7 @@ const Courses = ({content}) => (
         <Info lessonInfo={content.lessonInfo} />
         <Transcript transcript={content.transcript} />
       </Flex>
-      <CourseBox />
+      <CourseBox activeVideoNumber={content.videoNumber}/>
     </Flex>
   </React.Fragment>
 )

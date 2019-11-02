@@ -5,6 +5,7 @@ import playVideoIcon from 'src/assets/images/pages/courses/play-video-icon.svg'
 import { InternalLink } from 'src/fragments'
 import courseOutlineData from 'src/components/pages/learn/course/Details/Data.js'
 import styled from 'styled-components'
+import ReactDOM from 'react-dom'
 
 const CourseOutlineBox = styled(Card)`
   overflow-y: scroll;
@@ -15,8 +16,20 @@ const CourseOutlineBox = styled(Card)`
   }
 `
 
-const CourseBox = props => (
-  <CourseOutlineBox border='1px solid #eaeaea' ml={[0, 0, 0, 0, 22]} mt={[92, 92, 92, 92, 0]}>
+class CourseBox extends React.Component {
+  state = { activeVideoNumber: this.props.activeVideoNumber, 
+    myRef: React.createRef() }
+
+  componentDidMount() {
+    const thisNode = ReactDOM.findDOMNode(this.refs['videoNumber' + this.state.activeVideoNumber])
+    const thisNodeOffsetTop = thisNode.offsetTop;
+    console.log(thisNodeOffsetTop)
+    document.getElementById("course-outline-box").scrollTop = thisNodeOffsetTop - 300;
+  }
+
+  render() {
+    return (
+      <CourseOutlineBox border='1px solid #eaeaea' ml={[0, 0, 0, 0, 22]} mt={[92, 92, 92, 92, 0]} id='course-outline-box'>
       {
         courseOutlineData.map((course, metaIndex) => (
           <Flex key={metaIndex} flexDirection='column'>
@@ -25,7 +38,12 @@ const CourseBox = props => (
             </Flex>
             {
                 course.items.map((item, index) => (
-                  <Flex key={item.videoNumber} justifyContent='space-between' px={'22px'}
+                  <Flex 
+                  key={item.videoNumber} 
+                  justifyContent='space-between' px={'22px'} ref={item.videoNumber} 
+                  style={item.videoNumber === this.state.activeVideoNumber ? {backgroundColor: '#D4E9EE'}: {}}
+                  id={`videoNumber${item.videoNumber}`}
+                  ref={`videoNumber${item.videoNumber}`}
                   >
                     <InternalLink to={item.title.indexOf('[coming soon]') > -1 ? `#course-updates`: `/learn/tutorial/${item.slug}/`} anchorLink={item.title.indexOf('[coming soon]') > -1 ? true: false}>
                       <Flex mt={'16px'}>
@@ -43,6 +61,8 @@ const CourseBox = props => (
         ))
       }
       </CourseOutlineBox>
-)
+    )
+  }
+}
 
 export default CourseBox
