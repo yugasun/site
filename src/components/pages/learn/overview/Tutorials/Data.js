@@ -14,7 +14,7 @@ export default [
     image: developIcon,
     title: 'Deploying to AWS via Serverless Dashboard',
     description: 'Learn how to create Serverless account to help manage your deployments.',
-    link: '/learn/tutorial/using-serverless-dashboard-profile/',
+    link: '/learn/tutorial/using-profiles-in-serverless-dashboard/',
     playTime: '6:06 min'
   },
   {
@@ -29,7 +29,7 @@ export default [
     id: 3,
     image: developIcon,
     title: 'What happens when you execute "serverless deploy"?',
-    link: '/learn/tutorial/what-happens-after-deploying-with-serverless/',
+    link: '/learn/tutorial/what-happens-on-deployment/',
     description: 'When we use the "serverless deploy" command, what actually happens behind the scenes? We cover that in this tutorial.',
     playTime: '2:16 min'
   },
