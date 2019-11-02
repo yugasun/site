@@ -24,7 +24,7 @@ class CourseBox extends React.Component {
     const thisNode = ReactDOM.findDOMNode(this.refs['videoNumber' + this.state.activeVideoNumber])
     const thisNodeOffsetTop = thisNode.offsetTop;
     console.log(thisNodeOffsetTop)
-    document.getElementById("course-outline-box").scrollTop = thisNodeOffsetTop - 300;
+    document.getElementById("course-outline-box").scrollTop = thisNodeOffsetTop - 285;
   }
 
   render() {
