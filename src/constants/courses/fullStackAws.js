@@ -4,7 +4,6 @@ module.exports = [
       items: [
         {
           title: 'Purpose of the course',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `Welcome to the serverless way and the serverless full stack application course. My name is Gareth McCumskey. I am a solutions architect at serverless and I have spent almost four years now building serverless applications of various types and for various organizations and I now work with serverless customers to develop their solutions and support their serverless development efforts.
           
           This course is intended for anyone who wants to learn more about serverless development. If you are new to this way of building web applications, you can go through the entire course from start to finish. It makes no assumptions about your current understanding of serverless development. Alternatively, you may be someone who has already used the serverless framework to some degree and now just looking to fill the gaps. In either case, this course is for you.
@@ -35,7 +34,6 @@ module.exports = [
       items: [
         {
           title: 'What is Serverless Development?',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `There's a lot of misunderstanding about what it means to build serverless applications and this is video aims to help clear up some of those misconceptions and if you have no conceptions at all and are brand new to serverless development, great, then let's get started.
           
           Let's start by taking a quick history lesson as to how web applications have been built. Back in the late nineties web applications were only beginning to make their entrance onto the software development world. Frontend and backend as two separate concepts didn't really feature the backend code that spoke to a data store of some kind was intermingled with that front end code. 
@@ -81,7 +79,6 @@ module.exports = [
         },
         {
           title: 'Getting setup with AWS',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '2:24',
           transcript: `In this video, we're gonna walk through the process of signing up for an AWS account. To start with we go to the URL aws.amazon.com and when we're there we click on the orange Create an AWS Account button. 
           
@@ -104,7 +101,6 @@ module.exports = [
         },
         {
           title: 'Build Serverless Endpoint Manually',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `In order to really appreciate what the serverless framework does for us, in this video, we're going to be developing our own API Gateway endpoint manually by using the AWS console to put together this API endpoints that will trigger a Lambda function. 
           
           So let's log into our AWS console and let's go find the API Gateway service. Once you open the API Gateway service, if you have never deployed a a API Gateway endpoint before, you'll see a screen like this. We'll just click the get started button to get us started and I'm just going to accept this as a default demonstration that API Gateway gives us just so we can move on and create our own. 
@@ -146,7 +142,6 @@ module.exports = [
         },
         {
           title: 'Installing the Serverless Framework',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '2:22',
           metaTitle: `Installing the Serverless Framework via NPM`,
           transcript: `The Serverless Framework is the tool we are going to be using to help us build these API endpoints and lambda functions amongst other services and features that we want to use to help build our application to make it a lot easier so we don't have to manually configure things within the AWS console constantly. 
@@ -165,7 +160,6 @@ module.exports = [
         },
         {
           title: 'Build Serverless Endpoint using Serverless Framework',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `Let's go ahead and create our first serverless service using the Serverless Framework. To get started, I've already cd'ed into a project folder of mine and now I want to create a new folder for my first service project and we are going to essentially copy what we did manually inside the API Gateway, a console and Lambda console, but building it using the Serverless Framework instead. So I'm just going to create a hello folder here for myself. I then cd into hello and at this point I'm just going to create a new serverless service using the serverless create command. 
           
           The command I'm going to use is serverless create --templates aws-nodejs. What this tells the serverless framework is to bootstrap a very small service for me geared towards being deployed into AWS using the node JS runtime. After a second or two my boilerplate is created and now I'm going to get take a look inside my text editor to continue editing my configuration for my service. 
@@ -203,7 +197,6 @@ module.exports = [
         },
         {
           title: 'Deploying via Dashboard profile',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `The Serverless Framework gives us the means to monitor our services after we've deployed them. But to do this, we do need to set up a serverless account on the serverless dashboard; from our command line within the service we've been creating, we can just use SLS login. This should now open up our browser. 
           
           Once within our browser we get the option to sign up, I'm just going to click the sign-up link at the top there, and then I can choose how to sign up, I can either enter in email and password manually or I can sign up through GitHub or Google. In my case, I'm going to sign up with Google. 
@@ -242,7 +235,6 @@ module.exports = [
         },
         {
           title: 'What happens on deployment',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `We should now have our service connected to our serverless account and our serverless account connected to our AWS account. 
           
           Now that our service has been created, we need to deploy it, but what actually happens through the deployment process? The moment you run the serverless deploy command, the Serverless Framework will check whether there is an app and an org setting in your serverless.yml file. It will then confirm you have valid credentials. In other words, you used serverless login and that the Oregon app have valid for the serverless account in those credentials. 
@@ -263,7 +255,6 @@ module.exports = [
         },
         {
           title: 'Removing our service',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '0:45',
           transcript: `In order to remove a service that we've deployed, we can use these serverless remove command. This will now actually go and remove as much of the AWS stack as it can from our AWS account. However, it won't be able to remove every single entity that we've created. 
           
@@ -279,7 +270,6 @@ module.exports = [
       items: [
         {
           title: 'What is Cloud Computing?',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '3:41',
           transcript: `In the 90s the web as we know it began to explode into popularity. However, all sites had to initially be hosted by individuals or organizations in their own data centers if they wanted to be online and sites going down for hours and sometimes days at a time due to outages or just upgrades were not unheard of. 
           
@@ -306,7 +296,6 @@ module.exports = [
         },
         {
           title: 'AWS Lambda',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           transcript: `Let's start by taking a closer look at the AWS Lambda service since this is the one that people think of the most when you talk about serverless. In short, AWS Lambda is a managed compute service that will auto scale and execute your code when they specific pre-configured event triggers that execution. 
           
           But how does that look in practice? Let's take a look at the small example of code. All it does is log some data out and return true. It is wrapped in a function that has two parameters, event and context.
@@ -341,7 +330,6 @@ module.exports = [
         },
         {
           title: 'API Gateway',
-          lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '1:46',
           transcript: `Combining API Gateway with Lambda is perhaps the most common and useful pairing of event and code that you can get. API Gateway is in essence, a way for you to create a publicly available endpoints that can handle a fair number of requests per second, 10,000 per second per endpoint, by default. 
           
