@@ -148,13 +148,54 @@ module.exports = [
           title: 'Installing the Serverless Framework',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '2:22',
+          metaTitle: `Installing the Serverless Framework via NPM`,
+          transcript: `The Serverless Framework is the tool we are going to be using to help us build these API endpoints and lambda functions amongst other services and features that we want to use to help build our application to make it a lot easier so we don't have to manually configure things within the AWS console constantly. 
+          
+          It also gives us a way to build applications in a reproducible, portable way that we can share with other developers on our team. Potentially we can even save these configurations onto places like GitHub to share with the world and just makes things a lot more flexible for us to handle. So with that, if you do want to find more information, you can go to serverless.com which is the homepage of the Serverless Framework. 
+          
+          What we want to do though is we want to get started with actually building some services in the Serverless Framework and for that we need to make sure we have node installed on our local machines. So if you go to nodejs.org and If you don't have node installed already, you can just click the downloads link on nodejs.org and make sure that you install what's required for your system here. Otherwise we basically just need node 10 as a minimum so that's an easy minimum to remember. So as long as you have node 10 installed on your local machine, then we should be fine to continue.
+
+          So at this point we want to go ahead and install the Serverless Framework. And if you see the documentation here for the Serverless Framework, it's as easy as installing a node module globally. NPM install -g, serverless. So let's go ahead and do that right now. So now we want to install the Serverless Framework globally and I'm going to do this by typing in NPM install -g serverless. In my case with my system, I need to also sudo in front of it because it is installed in protected directories. For a lot of users, using sudo will not be necessary, but this just press enter and continue the installation. 
+          
+          Once completed, you should see some instruction on how to get started with your first serverless project, which we will do in the next video. But let's just take a look at some of the commands. If I just use serverless --help. Here we can see some of the commands available to us as part of the Serverless Framework and we will be using a lot of these, but some to consider is the deploy function here, which allows us to deploy our configured services into our AWS account and other ones like create, which lets us create a brand new serverless service. But in the next video we'll be doing exactly that. So let's continue.
+          `,
           videoNumber: 5,
           videoLink: 'https://www.youtube.com/watch?v=NjZaXwNU08Q',
-          slug: 'installing-serverless-framework'
+          slug: 'installing-serverless-framework-via-npm'
         },
         {
           title: 'Build Serverless Endpoint using Serverless Framework',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          transcript: `Let's go ahead and create our first serverless service using the Serverless Framework. To get started, I've already cd'ed into a project folder of mine and now I want to create a new folder for my first service project and we are going to essentially copy what we did manually inside the API Gateway, a console and Lambda console, but building it using the Serverless Framework instead. So I'm just going to create a hello folder here for myself. I then cd into hello and at this point I'm just going to create a new serverless service using the serverless create command. 
+          
+          The command I'm going to use is serverless create --templates aws-nodejs. What this tells the serverless framework is to bootstrap a very small service for me geared towards being deployed into AWS using the node JS runtime. After a second or two my boilerplate is created and now I'm going to get take a look inside my text editor to continue editing my configuration for my service. 
+          
+          I've opened up my text editor within that folder that I created and I can see that I've got three folders sitting here. Please ignore the coverage folder here as this is just a part of the extensions I have installed in my IDE, but let's take a look at the other files that are created automatically for me here.  
+          
+          gitignore is something we may use later and we can ignore this for now, but this just helps me when I want to use git to store the configuration of my servers to ignore the specific temporary directories that are created either by node or by serverless
+
+          handler.js; that sounds slightly familiar to us and this is where we will be writing our lambda function code and the serverless.yml file is probably the most important file to consider here and this is where we will be configuring our service to create the API endpoints and someone that we need in a portable and a reliable way. So let's continue with the serverless.yml. 
+          
+          You can see here there's a lot of commented sections here. I'm just going to skip to the first important line which is the service Hello. This is where we can name our service. I'm going to leave this as a hello as that is unique enough for our purposes and continue. In the provider section here, we named the provider that we are deploying to. In this case we are going to be deploying to AWS and what the Lambda runtime is going to be for our code, which is nodejs 10 in this case. 
+          
+          Continuing down, there's a section in the serverless.yml file where I can start specifying details about the functions that I'm going to be running. In our case, we really have a handler.js file with the dot hello function. The naming here links to the name of the file itself and I could put this inside directories as well. For example if I had defined in this way, that means I could have a folder, cold source, I could have another folder within that and I could have this handler file sitting in that functions folder itself. And then this would match. I know I'm going to leave it relatively simple, so I'm going to take it back out of there, but I could have it that way if I chose to just delete those folders, the dot hello portion links to the actual function name itself, the hello function here.
+
+          What you may not see here is how does AWS know how to run the code inside my function? And that is what we're going to add right now. We need to attach an event to our Lambda functions so that AWS knows, or the Serverless Framework knows how to instruct AWS on how to trigger the code in our lambda function. So to do that, we just going to add some additional configuration here and that's all we need. 
+          
+          Just bear in mind, this is yaml and if you're not familiar with yaml, just be careful of the indentation as yaml gets very specific on how you indent the items within it. 
+          
+          Remember with the API gateway that we set up manually previously, we could define the path that we wanted the Lambda function to execute under as well as the method that would affect it. So you can see here we are already duplicating the configuration we had before. 
+          
+          Now if I want to actually deploy this into AWS, I can run a serverless command. But first let's go ahead and edit our Lambda function behind the .hello file is where we're going to do that. So I'm going to open up my handler.js here and find my hello function, which is right here. And I'm just gonna edit this body to make it similar to what we had previously. Somehow take out the default values all the way to there. And I'm just going to add, just like we had before, hello from serverless, now we have everything configured for us to deploy. But before we do that in the next video, I'm just going to take a look at some of these events that I've been talking about in our serverless.yml file. 
+
+          Obviously here you can see we have an HTTP event linked to our Lambda function here, but in the commented section below you can see there is reference to a lot more events that we could potentially be using. This is important to realize with developing services with the Serverless Framework and serverless in general. 
+          
+          Using all the events available to you in your cloud provider is a very powerful way to build serverless applications and we will be using a mixture of these in our own application that we will be building. 
+          
+          But just remember that this is a core premise of how serverless applications work is that we have code sitting within Lambda functions that are triggered by events caused within the cloud vendor that we use and obviously the HTTP events that come through. 
+          
+          So thinking of Lambda as a glue for all of these various services within the cloud vendor that we may be using is a very good way of thinking about how code works and how we reduce our dependency on having to write so much code.
+          `,
           playTime: '5:33',
           videoNumber: 6,
           videoLink: 'https://www.youtube.com/watch?v=nwG9fIRnIDY',
@@ -163,6 +204,37 @@ module.exports = [
         {
           title: 'Deploying via Dashboard profile',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          transcript: `The Serverless Framework gives us the means to monitor our services after we've deployed them. But to do this, we do need to set up a serverless account on the serverless dashboard; from our command line within the service we've been creating, we can just use SLS login. This should now open up our browser. 
+          
+          Once within our browser we get the option to sign up, I'm just going to click the sign-up link at the top there, and then I can choose how to sign up, I can either enter in email and password manually or I can sign up through GitHub or Google. In my case, I'm going to sign up with Google. 
+
+          Once you have registered, you should get to a screen that starts walking you through our process to sign up. So on here, we just going to click next. It's asking us to choose a username for us to use. I'm just gonna stick to the default that it's given me because that'll be unique. Once it's created the user, it's asking us to create a default application name and we can name this whatever we like. I'm just going to leave this to the default called my-app, but you can name this whatever you like. 
+          
+          Once you've continued, you should get to the screen about deploying a sample service. You can feel free to go through this if you like, but we are going to be doing this ourselves so I'm just going to close this right now and just continue to the next screen. This is where we should see applications and my-app. 
+          
+          At this point we want to go take a look at some profiles and profiles are a feature that help us control how our services that we're going to be built get deployed into our AWS account. So let's click on profiles at the top and we are going to be just using the default profile. In future we'll be going into more detail about what profiles are and how they affect our ability to deploy and manage our AWS services. But for now, let's just open up the default profile.
+          
+          Once it opens, you'll see it asks us about AWS credential access role and you should have a link here to create a role wizard. When you click this, this will open up the AWS account in your browser. So let's just go ahead and click that link. 
+          
+          When you click that link, you should see the creator roll screen here with the account ID for the serverless framework. And we're just going to click next to permissions. By default it will ask us to set up an administrator access for this user or we are going to leave it at administrator access, but later we will be able to look at setting up a custom profiles and so on. 
+          
+          So I'm just going to go next to tags. Tags is where you would go ahead and configure a certain values that you want to propagate through, any resources you create in AWS for like the department that you might be in or so on. In our case, we're just going to leave this blank and continue to the review page. On the review page, let's see everything that we're going to be setting up the role name needs to be unique, which it will be in my case. And once I'm happy with this, I'm just going to click create role. 
+          
+          Once I've created the role, I should see a message about the role being created. I'm going to open up the role I just created because we need to copy something from it. And I'm gonna click the little clipboard icon here to  copy this ARN for my role. Once I've copied it, I'm going to return to my profile and I'm going to paste that ARN into this, input box And then save and exit. 
+          
+          Now we've returned to our editor and I need to go to the top of the serverless.yml file. I'm just gonna scroll all the way back up and up here we want to add in two new properties to link the service we've just created with our new, the organization and application we've set up in our dashboard account. So to do that, I'm going to add app and if you remember, I named my app, my-app, and then I'm going to add an org property here as well. 
+          
+          If I go back to my dashboard, I should be able to see what my org property is and that would be the username that I've set up. I could create an additional organizations if I wanted to separate this out better, but I'm just going to use what was already created for me and that is garethmccumskey2 in my case. Once I've got that in, I'm going to save my file. 
+          
+          When I used a serverless log in previously, it opened up my default browser for me to register my new account and then it should have come back with a, you successfully logged in message. If not just use SLS login again. Now that we finished registering, log in and make sure you select the correct account that you created with previously. And now we should be logged into our serverless account on our command line as well. 
+          
+          At this point, it means that we can also run a deployment. So let us go ahead and deploy our service that we've just created. 
+          
+          The first time we deploy a service in this way, it may take a couple of minutes because it will be the first time that the service is being created on our AWS account, so this may take a little bit of extra time. Once deployment completes, we should see a message about publishing our service to the serverless dashboard as well as successfully publishing it, which should also see is a URL to an endpoint that we can use to run our Lambda function so let's go ahead and control-click that to open up in our browser. If you run that in your browser, you should see the message that we put in our Lambda function hello from serverless. 
+          
+          What's cool about this is that in no way did we have to do any of this manually within our AWS console. We could just set this up in our Serverless Framework, use the deploy command to deploy this into our AWS account, and now we have a working API endpoint that is returning the data from our Lambda function that we wanted. There are alternative ways for us to have done this deployment, on the serverless.com website, in our documentation, there is a demonstration of many different ways that we could authenticate into our AWS account if we didn't want to do so through our dashboard. 
+          
+          Go through to docs, AWS, credentials and this page shows with how to sign up for an AWS account, creating a specific user in AWS for us to use, and then setting these access keys on our local machine instead of using a role through our dashboard account. So if you prefer to use this method, feel free to read through the documentation here on how to set that up.`,
           playTime: '6:05',
           videoNumber: 7,
           videoLink: 'https://www.youtube.com/watch?v=KTsWDCXvxqU',
@@ -171,6 +243,19 @@ module.exports = [
         {
           title: 'What happens on deployment',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          transcript: `We should now have our service connected to our serverless account and our serverless account connected to our AWS account. 
+          
+          Now that our service has been created, we need to deploy it, but what actually happens through the deployment process? The moment you run the serverless deploy command, the Serverless Framework will check whether there is an app and an org setting in your serverless.yml file. It will then confirm you have valid credentials. In other words, you used serverless login and that the Oregon app have valid for the serverless account in those credentials. 
+          
+          If this does not match, then you will receive an error telling you so. f they do match, the Serverless Framework will then request temporary AWS credentials from your serverless account, which can do so using the role ARN that we configured earlier. These credentials exist for a short time and are only used for this specific deployment. 
+
+          Once those are received, the framework will then retrieve the current safeguards configured under your profile and apply them to your serverless.yml configuration. If any rules are set to error, the deployment on a failed check, it will do that here and deployment will end with an error message. 
+          
+          Rules that to warn on fail the checks will just explain orange warning, but otherwise deployment will continue. If all the safeguards pass, the framework will then request any secrets configured with the profile. It will then search for any references to the secrets in your serverless.yml file, which we'll look at in detail later and replace those references with the actual values required prior to deployment. 
+          
+          At this stage, all the checks related to your service account are completed. The framework will now continue with the process of bundling your Lambda functions, executing any plugin code needed during the various life cycle stages of the deployment process, as well as generating a CloudFormation template and then uploading a zip file of all your Lambda functions and the dependencies to an S3 bucket especially created for in your account for this purpose. The prepared CloudFormation template is then passed to your AWS account and the framework will then listen to feedback from the CloudFormation stack creation or update process on the current state of deployment. 
+          
+          Once completed, we get a summary of the details of our deployment as well as an indication that the deployment data was updated within our serverless account and should be visible in the dashboard.`,
           playTime: '2:16',
           videoNumber: 8,
           videoLink: 'https://www.youtube.com/watch?v=Z0fkps64wfg',
@@ -180,6 +265,9 @@ module.exports = [
           title: 'Removing our service',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '0:45',
+          transcript: `In order to remove a service that we've deployed, we can use these serverless remove command. This will now actually go and remove as much of the AWS stack as it can from our AWS account. However, it won't be able to remove every single entity that we've created. 
+          
+          Depending on the resources that you've deployed within your AWS service, you may need to come to the CloudFormation service in the AWS console and just finalize removing some portions of the stack item. In this case, the service that we deployed should remove itself entirely since we haven't deployed any other resources in AWS, but in some cases, you will need to manually go ahead and clear out the stack and any additional resources that were deployed.`,
           videoNumber: 9,
           videoLink: 'https://www.youtube.com/watch?v=AgNTi79mY48',
           slug: 'removing-our-serverless-service'
@@ -193,6 +281,25 @@ module.exports = [
           title: 'What is Cloud Computing?',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '3:41',
+          transcript: `In the 90s the web as we know it began to explode into popularity. However, all sites had to initially be hosted by individuals or organizations in their own data centers if they wanted to be online and sites going down for hours and sometimes days at a time due to outages or just upgrades were not unheard of. 
+          
+          Very quickly, however, companies that specialize in allowing you to install your hardware into their data center arrived on the scene so at least you didn't have to worry about provisioning power, air conditioning, permanent connections to the internet and a secure location. 
+          
+          However, you still had to handle hardware upgrades yourself. These co-located data centers didn't just expand your hardware capabilities automatically for you. You still had to source upgraded parts, get quotes, workout special deals with the suppliers, sign contracts, get the machines shipped to the location. All the while, your users may already be suffering from bad performance on your older hardware. 
+
+          This meant that organizations that really wanted to make sure that they were available for the users would have to over-provision extensively. In other words, they would need to far more capacity serving customers. And then really needed in order to not have to upgrade so often and to handle any potential traffic spikes. 
+          
+          All of this hassle had some other significant downsides. Marketing and sales teams trying to sell a digital product were hamstrung by how much capacity was available in the data center. You can't push hard to sign up new customers and make sales targets when your server is about to run out of capacity. There's also meant that developers in these organizations spent a lot of time trying to optimize code. It might sound fun as an engineer working on solving performance issues, but it's not so much fun for business owners who get value out of selling product features to users. 
+          
+          Users don't care about how well optimized your product is. They care about what it can do for them. Developers, content enhance products features if they're always trying to optimize speed. Thankfully some radical changes were forthcoming. 
+          
+          The ability to create virtual machines in the early two thousands was a large step into the future, allowing organizations to more cleanly separate workloads on the same bare metal and make better use of the machines resources. 
+          
+          But the real game changer happened in 2006 when AWS made three services generally available S3, SQS and EC2. EC2 probably had the biggest impact as it finally allowed organizations to easily create and destroy virtual machines and only pay for what you used. This meant no more worrying about purchase agreements for hardware when upgrade time came. You could just create a new virtual machine to add to your fleet or just swap existing virtual machines with machines with the highest specifications as needed. 
+          
+          As time marched on, so did AWS, releasing service after service SNS, a pub sub system, DynamoDB, API Gateway and Lambda. All services we will be using throughout this course were added and all of these services were deliberately created in response to customer needs. 
+          
+          Instead of having to configure, deploy and develop similar services yourself, you just use the already available services provided by AWS and focus on what is important to your business instead because resources and services on now so easily available, developers no longer need to focus quite so much on performance of their application. They can spend more of their time on making sure that their organizations and user's needs are met. This is often far more valuable today, and this is what makes serverless development so powerful.`,
           videoNumber: 10,
           videoLink: 'https://www.youtube.com/watch?v=NtvvqhS11fo',
           slug: 'what-is-cloud-computing'
@@ -200,6 +307,33 @@ module.exports = [
         {
           title: 'AWS Lambda',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          transcript: `Let's start by taking a closer look at the AWS Lambda service since this is the one that people think of the most when you talk about serverless. In short, AWS Lambda is a managed compute service that will auto scale and execute your code when they specific pre-configured event triggers that execution. 
+          
+          But how does that look in practice? Let's take a look at the small example of code. All it does is log some data out and return true. It is wrapped in a function that has two parameters, event and context.
+          
+          As our definition said, AWS Lambda will execute my code when an event triggers that execution, which event that is entirely depends on the configuration. Previously we triggered our Lambda using an HTTP event from API gateway. Lambda functions can have a whole host of possible events that trigger their execution. Putting objects into three buckets, schedule events that just happen every however many minutes, hours or days. Inserting or updating data into a DynamoDB table and a lot lot more and this event driven nature of serverless applications is core to understanding how we can build the solutions we want. 
+          
+          This also means that the event parameter passed to our lambda function will be unique depending on the event type, S3 looks different to API Gateway which looks different to SNS for example.
+          
+          The context parameter you see is not always required and is only needed if you need additional information about the environment your Lambda function is executing in, such as the performance values selected amongst others. 
+          
+          Within our function, we can do whatever it is we need with the data passed to us by the event objects such as write or read from a database. If this was also triggered by API Gateway, we could return data, format for it specifically for an HTTP response just as we did in our previous example. 
+          
+          However, not all events require a response and most just need to know if the lambda was successful or failed with an error object. Some services have different retry characteristics depending on whether an error was returned or not. 
+          
+          So now we have this code, it's been uploaded to AWS Lambda and it's going to get executed. What happens when we have a lot of traffic? Well, let's walk through an example. 
+          
+          My Lambda is triggered for the first time since deploying it. AWS in the background will automatically retrieve my function code and the code runtime I choose to write it in. It will then create what is called a micro VM and this is similar in most ways to a regular virtual machine except it is designed to be much smaller and much faster to instantiate. As fast as it is, it still does take some time and this process is known as a cold start. 
+          
+          Now that my execution environment has been started, my function is run by passing it the event object for me to work with however while all of this is happening, another event arrived to trigger the same function. We already have one Lambda function still busy executing, so AWS again automatically and in the background begins another cold start process. 
+          
+          So while the second event is busy executing within the second micro VM, the original event in the first micro VM has now finished execution. However, it is not removed or destroyed. This micro VM remains available and active and just as well, because now we have a third event coming in, but instead of this trigger causing the start of another cold start procedure and the creation of a third micro VM, this time the already available yet ideal micro VM is used instead. This is called a hot start, so there's no additional time taken to get the micro VM created as before. 
+          
+          The function can begin executing pretty quickly. What this also means is that the third request will execute faster as there was less time spent getting everything set up. Well, AWS is always working to reduce the time it takes for a cold start,it will always be at least a little slower than a hot start. 
+          
+          However, our example has shown that Lambda functions automatically execute in parallel, and this limited example, we only had two in parallel at one point, but by default, AWS has configured Lambda to execute 1000 functions in parallel, and if you find that ends up not being enough, you can just ask them and they will increase this limit. 
+          
+          One other important characteristic to bear in mind is execution times, Lambda functions can only run for at maximum 15 minutes. If you need to run code for longer than that, then there are alternative options out there and there are ways to just restructure what you need to do. Now that we've taken this time to get to know AWS Lambda, let's move on to our next topic.`,
           playTime: '4:41',
           videoNumber: 11,
           videoLink: 'https://www.youtube.com/watch?v=yBHuF3A-dIQ',
@@ -209,6 +343,15 @@ module.exports = [
           title: 'API Gateway',
           lessonInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
           playTime: '1:46',
+          transcript: `Combining API Gateway with Lambda is perhaps the most common and useful pairing of event and code that you can get. API Gateway is in essence, a way for you to create a publicly available endpoints that can handle a fair number of requests per second, 10,000 per second per endpoint, by default. 
+          
+          If you have already built web applications yourself using some of the more popular MVC style frameworks, you will be familiar with the concept of having to manage routes. Routes in an application is the configuration of URL paths to actual code that has to execute that path. Well, that is what API Gateway does for you, but API Gateway is more than just a glorified HTTP router. It offers a lot of other very useful features. 
+          
+          For one, you can either have your endpoints be standard HTTP endpoints for a REST API, or you can create a WebSocket endpoint so that you can send data back and forth between the front-end and back-end. 
+
+          You may also need some way to authenticate users and then authorize their API calls from that point on to make sure that you just can only do what they're allowed to. API Gateway allows you to configure ways of handling these authorizations. Once a user has some form of authentication token by passing the request to an authorizer Lambda and waiting for an alarm response before sending the request to the actual Lambda. Very convenient. 
+          
+          And there are a lot more we will see as well, such as being able to specify the expected schema for POST requests, API keys, throttling of requests, and more.`,
           videoNumber: 12,
           videoLink: 'https://www.youtube.com/watch?v=oFhmRYh2mUY',
           slug: 'api-gateway-basics'
