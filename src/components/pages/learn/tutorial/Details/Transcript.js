@@ -12,9 +12,15 @@ const Requirements = ({transcript}) => (
       >
         Transcript
       </Heading.h3>
-      <Flex style={{backgroundColor: '#f7f7f7', maxHeight: '300px', overflowY: 'scroll'}} p={20}>
-        <P fontFamily='Soleil'>{transcript}
-      </P>
+      <Flex style={{backgroundColor: '#f7f7f7', maxHeight: '300px', overflowY: 'scroll'}} p={20} flexDirection='column'>
+          {
+            transcript &&
+          transcript.split(/\n/g).map((part, index) => (
+            <P mb={0} key={index} fontFamily='Soleil'>
+            {part}
+            </P>
+          ))
+        }
       </Flex>
     </Box>
   </React.Fragment>
