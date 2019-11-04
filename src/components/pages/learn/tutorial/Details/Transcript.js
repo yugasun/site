@@ -12,7 +12,7 @@ const Requirements = ({transcript}) => (
       >
         Transcript
       </Heading.h3>
-      <Flex style={{backgroundColor: '#f7f7f7', maxHeight: '300px', overflowY: 'scroll'}} p={20} flexDirection='column'>
+      <Flex style={{backgroundColor: '#f7f7f7'}} p={20} flexDirection='column'>
           {
             transcript &&
           transcript.split(/\n/g).map((part, index) => (
