@@ -326,7 +326,7 @@ module.exports = [
           playTime: '4:41',
           videoNumber: 11,
           videoLink: 'https://www.youtube.com/watch?v=yBHuF3A-dIQ',
-          slug: 'aws-lambda-basics'
+          slug: 'what-is-lambda-in-aws'
         },
         {
           title: 'API Gateway',
@@ -342,12 +342,14 @@ module.exports = [
           And there are a lot more we will see as well, such as being able to specify the expected schema for POST requests, API keys, throttling of requests, and more.`,
           videoNumber: 12,
           videoLink: 'https://www.youtube.com/watch?v=oFhmRYh2mUY',
-          slug: 'api-gateway-basics'
+          slug: 'what-is-amazon-api-gateway'
         },
         {
-          title: '[coming soon] DynamoDB Basics',
-          playTime: '0:00',
+          title: 'DynamoDB',
+          playTime: '4:24',
           videoNumber: 13,
+          videoLink: 'https://www.youtube.com/watch?v=lVJXehUvYew',
+          slug: 'what-is-dynamodb'
         },
         {
           title: '[coming soon] SNS',
