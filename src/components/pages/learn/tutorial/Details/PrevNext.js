@@ -15,7 +15,9 @@ const PrevNext = ({prevVideo, nextVideo}) => (
                   <P ml={'12px'} my={22}>{prevVideo.title}</P>
               </React.Fragment> : 
               
-              <Button my={22}>Subscribe</Button>
+              <InternalLink to={'#course-updates'} anchorLink>
+                <Button my={22}>Subscribe</Button>
+              </InternalLink>
           }
           
       </Flex>
@@ -30,7 +32,9 @@ const PrevNext = ({prevVideo, nextVideo}) => (
                   </InternalLink>
               </React.Fragment> : 
 
-              <Button my={22}>Subscribe</Button>
+              <InternalLink to={'#course-updates'} anchorLink>
+                <Button my={22}>Subscribe</Button>
+              </InternalLink>
           }
           
       </Flex>
