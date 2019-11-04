@@ -4,6 +4,8 @@ import { Box, Flex } from 'serverless-design-system'
 
 const Requirements = ({transcript}) => (
   <React.Fragment>
+    {
+      transcript && 
     <Box>
       <Heading.h3
         align='left'
@@ -20,9 +22,10 @@ const Requirements = ({transcript}) => (
             {part}
             </P>
           ))
-        }
+          }
       </Flex>
     </Box>
+    }
   </React.Fragment>
 )
 
