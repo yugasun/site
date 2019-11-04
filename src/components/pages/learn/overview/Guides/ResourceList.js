@@ -1,26 +1,16 @@
 import React from 'react'
-import { Flex, Text, Image, Column } from 'serverless-design-system'
+import { Flex, Text, Image, Heading } from 'serverless-design-system'
 import coursesData from './Data'
 import styled from 'styled-components'
-
-const SmallText = ({ children, ...otherProps }) => (
-  <Text
-    fontSize={'12px'}
-    lineHeight={'16px'}
-    letterSpacing='0'
-    color='#8c8c8c'
-    {...otherProps}
-  >
-    {children}
-  </Text>
-)
+import { InternalLink } from 'src/fragments'
 
 const ResponsiveImage = styled(Image)`
-  object-fit: cover;
   object-position: center;
+  display: grid;
+  margin: 0 auto;
 `
 
-const DesktopTable = props => (
+const ServiceGuidesList = props => (
   <Flex
     justifyContent={[
       'center',
@@ -38,32 +28,30 @@ const DesktopTable = props => (
         mt={index > 2 ? [0, 0, 0, 0, 62] : '0'}
         mb={[32, 32, 42, 42, 0]}
         mx={index === 1 || index === 4 ? [0, 0, 0, 0, 32] : '0'}
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        style={{border: '1px solid #eaeaea',
+            boxShadow: '2px 2px 8px 0 rgba(0, 0, 0, 0.08)'}}
+        py={40}
       >
+        <InternalLink to={feature.link}>
         <ResponsiveImage src={feature.image} width={72} height={72} />
         <Flex
           flexDirection='column'
           alignItems='left'
-          width={[0.7, 0.7, 'auto']}
-          ml={['8px', '8px', 22, 22, 32]}
+          width={[1, 1, 'auto']}
+          mt={20}
         >
-          <Text
-            fontSize='18px'
-            lineHeight='24px'
-            letterSpacing='-0.28px'
-            fontFamily='SoleilBk'
-            align='left'
+          <Heading.h4 fontFamily='Soleil'
           >
             {feature.title}
-          </Text>
-          <Column>
-            <SmallText mt={['3px']} align='left'>
-              Created by {feature.author}
-            </SmallText>
-          </Column>
+          </Heading.h4>
         </Flex>
+        </InternalLink>
       </Flex>
     ))}
   </Flex>
 )
 
-export default DesktopTable
+export default ServiceGuidesList

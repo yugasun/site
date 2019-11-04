@@ -2,9 +2,8 @@ import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Newest'
-import Hero from 'src/components/pages/learn/course/Hero'
-import Details from 'src/components/pages/learn/course/Details'
-import MoreCourses from 'src/components/pages/learn/course/MoreCourses'
+import Hero from 'src/components/pages/learn/tutorial/Hero'
+import Details from 'src/components/pages/learn/tutorial/Details'
 import WhitepaperDownload from 'src/components/pages/learn/guide-prefooter/index.js'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
@@ -14,25 +13,32 @@ import styled from 'styled-components'
 const BackgroundWithPaddingBottom = styled(Background)`
   @media only screen and (min-width: 1601px) {
     background: linear-gradient(to bottom, #fff 40%, #f7f7f7 40%);
-    padding-bottom: 115px;
   }
 `
 
-const FrameWorks = ({ location }) => (
+const TutorialPage = ({location, pathContext}) => {
+  return (
   <DefaultLayout
     prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
+    transparentHeader={false}
     frameworkPage={false}
     startWithWhiteHeader={false}
   >
     <Helmet
-      title='Full Stack AWS Application Development (Free Course)'
-      description='Learn how you can use the power of Serverless Framework along with AWS Lambda, DynamoDB, API Gateway, SNS, SQS & S3 to build a full-stack application.'
+      title={`${pathContext.tutorial.title} (Free Video Tutorial)`}
+      description={`${pathContext.tutorial.lessonInfo}`}
       location={location}
     />
-    <Hero />
+    <Background background='#f7f7f7'>
+        <AppContainer>
+            <Hero title={pathContext.tutorial.title} 
+            courseName={pathContext.courseName} 
+            courseLink={pathContext.courseLink}
+            />
+        </AppContainer>
+    </Background>
     <AppContainer>
-      <Details />
+      <Details  content={pathContext.tutorial} outline={pathContext.outline}/>
     </AppContainer>
     <Box mt={[72, 72, 92, 92, 132]}>
       <Background background='#fff'>
@@ -42,6 +48,7 @@ const FrameWorks = ({ location }) => (
       </Background>
     </Box>
   </DefaultLayout>
-)
+  )
+}
 
-export default FrameWorks
+export default TutorialPage

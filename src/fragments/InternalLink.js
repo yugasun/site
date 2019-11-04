@@ -8,20 +8,27 @@ function ensureLinkFormat(to) {
   return finalLink
 }
 
-const InternalLink = ({ to, children, underline, ...otherProps }) => {
-  return (
-    <Link
-      to={ensureLinkFormat(to)}
-      style={
-        underline
-          ? { color: 'inherit', borderBottom: '1px solid #fd5750' }
-          : { color: 'inherit' }
-      }
-      {...otherProps}
-    >
-      {children}
-    </Link>
+const InternalLink = ({ to, children, anchorLink, underline, ...otherProps }) => (
+  <React.Fragment>
+    {
+      anchorLink ?
+      <a href={to} {...otherProps}>
+        {children}
+      </a>
+      :
+        <Link
+        to={ensureLinkFormat(to)}
+        style={
+          underline
+            ? { color: 'inherit', borderBottom: '1px solid #fd5750' }
+            : { color: 'inherit' }
+        }
+        {...otherProps}
+      >
+        {children}
+      </Link>
+    }
+    </React.Fragment>
   )
-}
 
 export default InternalLink

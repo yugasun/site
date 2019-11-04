@@ -1,43 +1,38 @@
 import React from 'react'
 
-import { Box, ResponsiveStack, Flex, Image } from 'serverless-design-system'
-import { HeroWrapperWithTabs as HeroWrapper } from 'src/fragments'
-import HeroTabs from '../../HeroTabs'
+import { Box, Flex, Image } from 'serverless-design-system'
 import { PL, Heading } from 'src/fragments/DesignSystem'
-import learnLogo from 'src/assets/images/pages/learn/learn-logo.svg'
+import serverlessLogo from 'src/assets/images/pages/enterprise/serverless-logo-white-bg.svg'
 
-const ExamplesHero = () => {
+const LearnHomepageHero = () => {
   return (
-    <HeroWrapper
-      height={[433, 433, 500, 540, 540]}
-    >
-      <Box mb={[2, 2, 5]}>
-        <HeroTabs selected='learn' />
-      </Box>
-
-      <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
+      <Flex color='black' flexDirection='column' alignItems='center' mt={[62, 62, 102, 102, 152]}>
         <Box width={[1]}>
-          <Heading.h0 m={0} mt={[42, 42, 0, 0]}>
-            <Image src={learnLogo} />
+          <Heading.h0 mt={[42, 42, 0, 0]} align='center' fontFamily='SoleilSB'>
+            Learn
           </Heading.h0>
+          <Flex justifyContent='center'>
+            <Heading.h4 color='black' mb={0}>by &nbsp;&nbsp;</Heading.h4>
+            <Image src={serverlessLogo} />
+          </Flex>
+          
         </Box>
         <Flex.verticallyCenter
-          width={[1, 1, 1, 0.6, 0.9, 0.9]}
+          width={[1, 1, 0.6, 0.6, 0.6]}
           px={[0, 0, 0, 5, 7]}
           ml={[0, 0, 4, 0, 0]}
+          mt={32}
         >
           <PL
-            color='white'
             mt={[22, 22, 1.5]}
             mb={0}
-            align={['center', 'center', 'left']}
+            align={['center', 'center', 'center']}
           >
-            Free courses for building and operating Serverless applications.
+            Free courses, tutorials, and guides for developers who want to harness the power of Serverless.
           </PL>
         </Flex.verticallyCenter>
-      </ResponsiveStack>
-    </HeroWrapper>
+      </Flex>
   )
 }
 
-export default ExamplesHero
+export default LearnHomepageHero

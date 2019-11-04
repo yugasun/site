@@ -22,7 +22,7 @@ const Resource = () => (
           completed: true,
         }}
       >
-        Courses
+        Free Courses
       </SubMenuItem>
     </ListItem.noStyleType>
     <ListItem.noStyleType>

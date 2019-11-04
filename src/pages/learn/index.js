@@ -4,19 +4,16 @@ import { Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Newest'
 import Hero from 'src/components/pages/learn/overview/Hero'
 import Courses from 'src/components/pages/learn/overview/Courses'
-import MoreResources from 'src/components/pages/learn/overview/MoreResources'
-import ExamplesAndCaseStudies from 'src/components/pages/learn/overview/ExamplesAndCaseStudies'
+import Tutorials from 'src/components/pages/learn/overview/Tutorials'
+import Guides from 'src/components/pages/learn/overview/Guides'
 import WhitepaperDownload from 'src/components/pages/learn/guide-prefooter/index.js'
 import { NewToServerlessPrefooter } from 'src/fragments'
 import { AppContainer } from 'src/components'
 import { Background, Box } from 'serverless-design-system'
-import CourseOutline from 'src/components/pages/learn/course/Details/CourseOutline.js'
-import MoreInfoShare from 'src/components/pages/learn/overview/MoreInfoShare/'
 
 const FrameWorks = ({ location }) => (
   <DefaultLayout
     prefooter={NewToServerlessPrefooter}
-    transparentHeader={true}
     frameworkPage={false}
     startWithWhiteHeader={false}
   >
@@ -25,10 +22,11 @@ const FrameWorks = ({ location }) => (
       description='These free courses show you how to utilize the power of serverless offerings from AWS, Azure, Google Cloud using Serverless Framework'
       location={location}
     />
-    <Hero />
     <AppContainer>
-      <CourseOutline />
-      <MoreInfoShare />
+      <Hero />
+      <Courses />
+      <Tutorials />
+      <Guides />
     </AppContainer>
 
     <Box mt={[72, 72, 92, 92, 132]}>
