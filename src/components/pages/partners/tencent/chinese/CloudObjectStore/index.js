@@ -15,7 +15,7 @@ const CustomPolicies = props => (
     <Flex flexDirection='column' width={[1, 1, 0.4, 0.5, 0.4]}>
         <Content />
         <div className={styles.contentCTA}>
-          <ExternalLink to={'https://github.com/serverless-components/tencent-website'}>
+          <ExternalLink to={'https://github.com/serverless-components/tencent-website/blob/master/README_CN.md'}>
             <Button type='primary' text='现在试试'/>
           </ExternalLink>
         </div>

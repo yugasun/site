@@ -10,12 +10,11 @@ const ExpressJSTencent = props => (
   <Flex
     justifyContent='space-between'
     flexDirection={['column-reverse', 'column-reverse', 'row']}
-    id='expressjs-tencent'
   >
     <Flex flexDirection='column' width={[1, 1, 0.4, 0.5, 0.4]}>
         <Content />
         <div className={styles.contentCTA}>
-          <ExternalLink to={'https://github.com/serverless-components/tencent-express'}>
+          <ExternalLink to={'https://github.com/serverless-components/tencent-express/blob/master/README_CN.md'}>
             <Button type='primary' text='现在试试'/>
           </ExternalLink>
         </div>

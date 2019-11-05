@@ -15,7 +15,7 @@ const AllSignal = props => (
     <Flex flexDirection='column' width={[1, 1, 0.4, 0.5, 0.4]}>
         <Content />
         <div className={styles.contentCTA}>
-          <ExternalLink to={'https://github.com/serverless-tencent/serverless-tencent-scf'}>
+          <ExternalLink to={'https://github.com/serverless-tencent/serverless-tencent-scf/tree/master/docs/zh'}>
             <Button type='primary' text='现在试试'/>
           </ExternalLink>
         </div>
