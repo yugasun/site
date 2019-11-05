@@ -99,7 +99,7 @@ const teamMembers = [
   },
   {
     image: fernando,
-    name: 'Fernando Corey',
+    name: 'Fernando Medina Corey',
     position: 'Solutions Architect',
   }
 ].sort((object1, object2) =>
