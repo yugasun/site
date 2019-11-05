@@ -9,6 +9,7 @@ const HeroWrapper = ({
   theme,
   ignoreBottomMargin,
   bottomMarginBg,
+  bottomMarginId,
   ...otherProps
 }) => (
   <React.Fragment>
@@ -38,6 +39,7 @@ const HeroWrapper = ({
       <Background
         background={bottomMarginBg ? bottomMarginBg : '#f7f7f7'}
         height={[62, 62, 62, 62, 92]}
+        id={bottomMarginId ? bottomMarginId : null}
       />
     )}
   </React.Fragment>
