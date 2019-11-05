@@ -10,7 +10,7 @@ const CustomPolicies = props => (
   <Flex
     pt={[92, 92, 92, 92, 132]}
     justifyContent='space-between'
-    flexDirection={['column', 'column', 'row-reverse']}
+    flexDirection={['column-reverse', 'column-reverse', 'row-reverse']}
   >
     <Flex flexDirection='column' width={[1, 1, 0.4, 0.5, 0.4]}>
         <Content />
@@ -22,8 +22,8 @@ const CustomPolicies = props => (
     </Flex>
     <Image
       src={serverlessWebsiteImage}
-      width={['100%', '100%', 336, 450, 500, 500]}
-      height={[260, 260, 300, 340, 333, 333]}
+      width={['100%', '100%', 350, 400, 450, 500]}
+      height={[200, 200, 233, 266, 300, 333]}
     />
   </Flex>
 )

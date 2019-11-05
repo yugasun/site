@@ -6,10 +6,11 @@ import { ImageWithShadow as Image, ExternalLink } from 'src/fragments'
 import { Button } from 'src/components'
 import styles from '../Tencent.module.css'
 
-const PoliciesIndustryStandard = props => (
+const ExpressJSTencent = props => (
   <Flex
     justifyContent='space-between'
-    flexDirection={['column', 'column', 'row']}
+    flexDirection={['column-reverse', 'column-reverse', 'row']}
+    id='expressjs-tencent'
   >
     <Flex flexDirection='column' width={[1, 1, 0.4, 0.5, 0.4]}>
         <Content />
@@ -21,10 +22,10 @@ const PoliciesIndustryStandard = props => (
     </Flex>
     <Image
       src={expressJsImage}
-      width={['100%', '100%', 336, 432, 500, 500]}
-      height={[200, 200, 235, 270, 300, 300]}
+      width={['100%', '100%', 350, 400, 450, 500]}
+      height={[200, 200, 233, 266, 300, 333]}
     />
   </Flex>
 )
 
-export default PoliciesIndustryStandard
+export default ExpressJSTencent

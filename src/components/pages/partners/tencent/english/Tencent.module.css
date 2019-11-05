@@ -17,9 +17,25 @@
   to   { opacity: 1; }
 }
 
+.heroPreHeadlineContent {
+  display: flex;
+  justify-content: space-between;
+}
+
 .viewInChineseTab {
   border: 3px solid #8c8c8c;
   padding: 10px;
+  max-width: 110px;
+}
+
+@media only screen and (max-width : 600px) {
+  .heroPreHeadlineContent {
+    flex-direction: column-reverse;
+  }
+
+  .viewInChineseTab {
+    margin-bottom: 22px;
+  }
 }
 
 .productHeroColumnLeft {
@@ -74,9 +90,9 @@
 }
 
 .productHeadline {
-  font-family: 'SoleilLt';
-  font-size: 82px;
-  line-height: 100px;
+  font-family: 'Soleil';
+  font-size: 66px;
+  line-height: 80px;
   margin: 42px 0 32px -10px;
   letter-spacing: -2px;
 }
@@ -84,6 +100,11 @@
 @media only screen and (max-width : 600px) {
   .productName {
     font-size: 60px;
+  }
+
+  .productHeadline {
+    font-size: 60px;
+    line-height: 66px;
   }
 }
 
@@ -103,6 +124,12 @@
 .contentCTA {
   display: flex;
   margin-top: 32px;
+}
+
+@media only screen and (max-width : 600px) {
+  .contentCTA {
+    align-self: center;
+  }
 }
 
 .productEdition {
