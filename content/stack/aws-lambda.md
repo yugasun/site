@@ -227,22 +227,22 @@ In this section we cover the steps needed to create, deploy and secure AWS Lambd
 
 If you wish, you can use the AWS Lambda console to create your first function. In the AWS console, choose Lambda:
 
-![](https://paper-attachments.dropbox.com/s_E0E84BD8FD8F7068412D464DE3E6F2CB6E3AE0C9E21534CAC98A37D6C19382CB_1569577410802_88blp1orikz3otv.png)
+![](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/aws-lambda/aws-lambda-console.png)
 
 
 Once in the Lambda management console, click Create Function:
 
-![](https://paper-attachments.dropbox.com/s_E0E84BD8FD8F7068412D464DE3E6F2CB6E3AE0C9E21534CAC98A37D6C19382CB_1569577457504_sl7nnu858gnp6m0.png)
+![](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/aws-lambda/aws-lambda-create-function.png)
 
 
 Add a name for your new function and choose the desired runtime. After that, click “Create function” to confirm the settings:
 
-![](https://paper-attachments.dropbox.com/s_E0E84BD8FD8F7068412D464DE3E6F2CB6E3AE0C9E21534CAC98A37D6C19382CB_1569577586659_oavpua2ahiplgg8.png)
+![](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/aws-lambda/aws-lambda-author-from-scratch.png)
 
 
 That’s it: the function is created, and you can now work on the function code and deploy the function directly in the Lambda console.
 
-![](https://paper-attachments.dropbox.com/s_E0E84BD8FD8F7068412D464DE3E6F2CB6E3AE0C9E21534CAC98A37D6C19382CB_1569577660340_cub55zea9iy8dvq.png)
+![](https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/guides/aws-lambda/aws-lambda-sample-function.png)
 
 
 We don’t recommend creating production Lambda functions via the management console for a two reasons:
