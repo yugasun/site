@@ -12,7 +12,8 @@ const providers = [
   'fn',
   'cloudflare',
   'aliyun',
-  'tencent'
+  'tencent',
+  'knative'
 ]
 
 const ExtraContent = ({ gitLink }) => (
