@@ -15,8 +15,9 @@ import CommunityNumbers from 'src/components/pages/cli/Community/index.js'
 const CLI = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet
-      title='Serverless Framework CLI - Deploy applications on AWS Lambda, Google CloudFunctions, Azure Functions &amp; more'
-      description='The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk &amp; more.'
+      title='Serverless CLI | Develop Serverless REST APIs, GraphQL APIs, Data Processing, Websites &amp; more'
+      description='The most powerful CLI for building serverless architectures.  Develop AWS Lambda, API Gateway, AppSync, S3 based applications.  Develop AWS Lambda locally, deploy instantly, extend with plugins with the Serverless Framework CLI.'
+      keywords='aws lambda, aws lambda development, aws lambda local, serverless rest apis, graphql'
       location={location}
     />
     <Hero />

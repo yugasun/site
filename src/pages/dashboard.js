@@ -12,7 +12,11 @@ import { WhitepaperDownloadBanner } from 'src/fragments'
 
 const Dashboard = ({ location }) => (
   <HomeLayout transparentHeader={true}>
-    <Helmet title='Serverless Dashboard' location={location} />
+    <Helmet 
+    title='Serverless Dashboard | Visualize, Monitor & Collaborate on Serverless Architectures' 
+    description='A comprehensive dashboard for your serverless architectures, featuring charts, alerts, functions, APIs, invocations, deployments of AWS Lambda, API Gateway, S3, DynamoDB and more.'
+    keywords='serverless dashboard, serverless architecture, monitor serverless architectures, aws lambda dashboard'
+    location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>

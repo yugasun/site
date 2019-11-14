@@ -13,7 +13,9 @@ import ActionableAlerting from 'src/components/pages/alerts/ActionableAlerting'
 const Alerts = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet
-      title='Serverless Framework – Alerts'
+      title='Serverless Alerts | Real-time Alerts for AWS Lambda, API Gateway, AppSync & Serverless Architectures'
+      description='Zero-config, smart alerts for serverless architectures running on AWS Lambda, API Gateway, AppSync in real-time.  Detect errors, timeouts, increased transactions, cost information, unusual error rates, approaching timeout limits and much more.'
+      keywords='aws lambda alerts, aws lambda errors, aws lambda timeouts, aws lambda cost'
       location={location} />
 
     <Hero />

@@ -12,8 +12,9 @@ import AllSignal from 'src/components/pages/monitoring/AllSignal'
 
 const Monitoring = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Monitoring - #1 AWS Lambda Monitoring &amp; Observability Tool' 
-    description='Zero-config serverless monitoring &amp; observability tool for your AWS Lambda powered serverless application.'
+    <Helmet title='Serverless Monitoring | Monitor AWS Lambda, API Gateway, AppSync, Azure Functions & more' 
+    description='Easily monitor everything in your serverless architecture, from AWS Lambda, S3, API Gateway, DynamoDB and more with the Serverless Framework.'
+    keywords='aws lambda, aws lambda monitoring, serverless monitoring, serverless architecture'
     location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>

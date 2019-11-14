@@ -13,7 +13,10 @@ import FAQ from '../components/pages/cicd/FAQ'
 
 const CiCd = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless CI/CD' location={location} />
+    <Helmet title='Serverless CI/CD | Continuous Deployment Optimized for Serverless Architectures using AWS Lambda, S3, API Gateway & more.' 
+    description='Easy, zero-maintenance continuous delivery designed for serverless architectures.  Easily connect your AWS, Github accounts and instantly deploy AWS Lambda, API Gateway, AWS S3 and more in a standardized deployment pipeline helping teams move fast, safely.'
+    keywords='aws lambda deployment, serverless ci/cd, serverless continuous delivery'
+    location={location} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
