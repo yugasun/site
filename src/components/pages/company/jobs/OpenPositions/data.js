@@ -33,12 +33,5 @@ export default [
         "location": "San Francisco/Remote",
         "status": "Full-time",
         "link": "https://jobs.lever.co/serverless/43775278-aaca-4056-9a4a-90124141e30c"
-    },
-    {
-        "heading": "Product",
-        "title": "UI Designer",
-        "location": "Remote",
-        "status": "Full-time",
-        "link": "https://jobs.lever.co/serverless/5c202a31-6701-4f5f-919a-ff677cb4f279"
     }
 ]

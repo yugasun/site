@@ -1,4 +1,5 @@
 import awsLambdaImage from 'src/assets/images/learn/aws-lambda-guide.svg'
+import cicdImage from 'src/assets/images/learn/cicd-guide.svg'
 import dynamoDBImage from 'src/assets/images/learn/amazon-dynamodb-guide.svg'
 import stepFunctionsImage from 'src/assets/images/learn/aws-step-functions-guide.svg'
 import apiGatewayImage from 'src/assets/images/learn/amazon-api-gateway-guide.svg'
@@ -35,4 +36,10 @@ export default [
     title: 'AppSync',
     link: '/aws-appsync/',
   },
+  {
+    id: 6,
+    image: cicdImage,
+    title: 'CI/CD',
+    link: '/cicd-guide/'
+  }
 ]
