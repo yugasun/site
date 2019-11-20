@@ -1,12 +1,14 @@
 import React from 'react'
 
 import DefaultLayout from 'src/layouts/DefaultNewest'
-import Content from 'src/components/pages/learn/guides/cicd/Content'
 import { Helmet } from 'src/fragments'
 import prefooter from 'src/components/pages/learn/Prefooter.js'
+import { AppContainer } from 'src/components'
+import Content from 'src/components/pages/learn/guides/cicd/Content'
 
 const Overview = ({ location }) => (
   <DefaultLayout prefooter={prefooter}>
+    <AppContainer>
     <Helmet
       title='Serverless CI/CD Workflow'
       description='In this guide we define what we consider to be best practices for serverless development workflows,
@@ -15,6 +17,8 @@ const Overview = ({ location }) => (
       location={location}
     />
     <Content />
+    </AppContainer>
+
   </DefaultLayout>
 )
 
