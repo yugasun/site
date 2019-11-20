@@ -40,6 +40,6 @@ export default [
     id: 6,
     image: cicdImage,
     title: 'CI/CD',
-    link: '/cicd-guide/'
+    link: '/learn/guides/cicd/'
   }
 ]
