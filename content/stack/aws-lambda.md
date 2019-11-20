@@ -93,21 +93,23 @@ As of now, AWS Lambda doesn’t support all programming languages, but it does s
 
 - Node.js 8.10
 - Node.js 10.x (normally the latest LTS version from the 10.x series)
+- Node.js 12.x (normally the latest LTS version from the 12.x series)
 - Python 2.7
 - Python 3.6
 - Python 3.7
+- Python 3.8
 - Ruby 2.5
 - Java 8
     - This includes JVM-based languages that can run on Java 8’s JVM — the latest Clojure 1.10 and Scala 2.12 both run on Java 8 so can be used with AWS Lambda
+- Java 11
 - Go 1.x (latest release)
 - C# — .NET Core 1.0
 - C# — .NET Core 2.1
 - PowerShell Core 6.0
 
-All these runtimes are maintained by AWS and are provided in an Amazon Linux environment. For each of the supported languages, AWS provides an SDK that makes it easier for you to write your Lambda functions and integrate them with other AWS services.
+All these runtimes are maintained by AWS and are provided in an Amazon Linux or Amazon Linux 2 environment. For each of the supported languages, AWS provides an SDK that makes it easier for you to write your Lambda functions and integrate them with other AWS services.
 
 A few additional runtimes are still in the pre-release stage. These runtimes are being developed as a part of AWS Labs and are not mentioned in the official documentation:
-
 
 - [Rust 1.31](https://github.com/awslabs/aws-lambda-rust-runtime)
 - [C++](https://github.com/awslabs/aws-lambda-cpp) 
