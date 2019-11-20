@@ -165,12 +165,12 @@ const Content = props => (
 
       <P0>In our workshop example we’ve defined two parameters, endpoint and endpoint_api_key, the former is a URL and the latter is an API Key which we should consider to be sensitive. In a real-world case, you would have parameters to store parameters for your dependent services, like a API keys, endpoint addresses, database URIs, etc.</P0>
 
-      <code><pre>
-      provider:
-        environment:
-          url: ${'{param:endpoint}'}
-          api_key: ${'{param:endpoint_api_key}'}
-      </pre></code>
+      <pre><code>
+      {"provider:"}<br/>
+      {"  environment:"}<br/>
+      {"    url: ${'{param:endpoint}'}"}<br/>
+      {"    api_key: ${'{param:endpoint_api_key}'}"}<br/>
+      </code></pre>
 
 
       <P0>
@@ -236,17 +236,16 @@ const Content = props => (
 
       <P0>First we need to setup <strong>fullstack-database</strong> to publish the outputs when it is deployed. This is a snippet from the <code>serverless.yml</code> which shows how <strong>fullstack-database</strong> defines the outputs <code>database_submissions_name</code> and database_submissions_region. </P0>
 
-      <code><pre>
-      custom: # Centralize variables here
-        stage: ${'{opt:stage, self:provider.stage}'}
-        database_submissions_name: submissions-${'{self:custom.stage}'}
-        database_submissions_region: submissions-${'{self:provider.region}'}
-
-
-      outputs:
-        database_submissions_name: ${'{self:custom.database_submissions_name}'}
-        database_submissions_region: ${'{self:custom.database_submissions_region}'}
-      </pre></code>
+      <pre><code>
+      {"custom: # Centralize variables here"}<br/>
+      {"  stage: ${'{opt:stage, self:provider.stage}'}"}<br/>
+      {"  database_submissions_name: submissions-${'{self:custom.stage}'}"}<br/>
+      {"  database_submissions_region: submissions-${'{self:provider.region}'}"}<br/>
+      <br/>
+      {"outputs:"}<br/>
+      {"  database_submissions_name: ${'{self:custom.database_submissions_name}'}"}<br/>
+      {"  database_submissions_region: ${'{self:custom.database_submissions_region}'}"}<br/>
+      </code></pre>
 
       <P0>When <strong>fullstack-restapi</strong> is deployed, it identifies the values from fullstack-database, and sets them at deployment time. Upon deployment, you’ll see these in the service instance view in the dashboard. </P0>
 
@@ -255,12 +254,12 @@ const Content = props => (
 
       <P0>Now that <strong>fullstack-database</strong> is deployed, the outputs are published to the dashboard, and made available to all other services. In <strong>fullstack-restapi</strong> we can now use the ${'{output}'} variable to get the values of those outputs from <strong>fullstack-database</strong> and set them as environment variables on our lambda functions.</P0>
 
-      <code><pre>
-      provider:
-        environment:
-          database_submissions_name: ${'{output:fullstack-database.database_submissions_name}'}
-          database_submissions_region: ${'{output:fullstack-database.database_submissions_region}'}
-      </pre></code>
+      <pre><code>
+      {"provider:"}<br/>
+      {"  environment:"}<br/>
+      {"    database_submissions_name: ${'{output:fullstack-database.database_submissions_name}'}"}<br/>
+      {"    database_submissions_region: ${'{output:fullstack-database.database_submissions_region}'}"}<br/>
+      </code></pre>
 
       <P0>Once both services are deployed, this is how the values of the outputs are passed within the <code>serverless.yml</code> and across services.</P0>
 
@@ -274,21 +273,21 @@ const Content = props => (
 
       <P0>This is the original default syntax we use to reference the output <code>database_submissions_name</code> from fullstack-database.</P0>
 
-      <code><pre>
+      <pre><code>
         ${'{output:fullstack-database.database_submissions_name}'}
-      </pre></code>
+      </code></pre>
 
       <P0>We’ll replace it the extended syntax which allows us to reference outputs from different applications, stages, and regions.</P0>
 
-      <code><pre>
+      <pre><code>
         ${'{output:<app>:<stage>:<region>:<service>.<output_key>}'}
-      </pre></code>
+      </code></pre>
 
       <P0>We will now use our ${'{param:env}'}, which we previously defined in our deployment profiles, to replace the value of the stage in the ${'{output}'} variable.</P0>
 
-      <code><pre>
+      <pre><code>
         ${'{output::${param:env}::fullstack-database.database_submissions_name}'}
-      </pre></code>
+      </code></pre>
 
       <P0>Now when we deploy, the value of <code>${'{param:env}'}</code> is replaced with the value we defined in our deployment profile parameter.</P0>
 
@@ -302,13 +301,13 @@ const Content = props => (
 
       <P0>When deploying during development, we want to make sure that one developer doesn’t overwrite the changes of another developer and their services should have access to other shared services. </P0>
 
-      <code><pre>
-        serverless deploy --stage skierkowski
-      </pre></code>
+      <pre><code>
+        serverless deploy --stage developer
+      </code></pre>
 
       <P0>One way to achieve this is to use the username as the stage name. This ensures that each developer deploys to a stage which doesn’t conflict with anybody else’s stage.</P0>
 
-      <P0>The stage <code>skierkowski</code> is not pre-configured in the <strong>stages</strong> section of the application, therefore the deployment will use the default deployment profile. The <code>development</code> deployment profile is used, therefore it is deployed to the development AWS account, and all the parameters associated with the <code>development</code> deployment profile are used.</P0>
+      <P0>The stage <code>developer</code> is not pre-configured in the <strong>stages</strong> section of the application, therefore the deployment will use the default deployment profile. The <code>development</code> deployment profile is used, therefore it is deployed to the development AWS account, and all the parameters associated with the <code>development</code> deployment profile are used.</P0>
 
       <Heading.h4>Preview: automatic deployments & clean up</Heading.h4>
 
