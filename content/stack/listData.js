@@ -104,6 +104,14 @@ module.exports = [
     highlighted: true,
   },
   {
+    name: 'Serverless CI/CD Workflow Guide',
+    provider: 'AWS',
+    category: 'API',
+    link: '/cicd-guide/',
+    slug: 'stack-cicd-guide',
+    highlighted: false,
+  },
+  {
     name: 'Amazon SQS',
     provider: 'AWS',
     category: 'Integration',
