@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex } from 'serverless-design-system'
 import { Heading, P0 } from 'src/fragments/DesignSystem'
 import styles from './content.module.css'
-import { ExternalLink } from 'src/fragments'
+import { InternalLink, ExternalLink } from 'src/fragments'
 
 
 const Content = props => (
@@ -12,7 +12,21 @@ const Content = props => (
 
       <P0>There are many options for creating a CI/CD workflow for a Serverless Framework project, and there are countless services and tools that can help. In this guide we define what we consider to be best practices for serverless development workflows, based on our own, internal practices and learnings, and detail how these practices can be easily set up using the Serverless CI/CD solution available in Serverless Framework Pro.</P0>
 
-      <Heading.h2>About Serverless CI/CD</Heading.h2>
+
+      <Heading.h4>Table of content</Heading.h4>
+      <P0 id="toc">
+        <ul>
+          <li><a href="#about" style={{color: 'inherit'}}>About Serverless CI/CD</a></li>
+          <li><a href="#requirements" style={{color: 'inherit'}}>Requirements</a></li>
+          <li><a href="#solution" style={{color: 'inherit'}}>Solution overview</a></li>
+          <li><a href="#example" style={{color: 'inherit'}}>Example application - workshop full-stack app</a></li>
+          <li><a href="#workflow" style={{color: 'inherit'}}>Four-step development workflow</a></li>
+          <li><a href="#organizing" style={{color: 'inherit'}}>Organizing your repo, apps and services</a></li>
+          <li><a href="#implementing" style={{color: 'inherit'}}>Implementing the recommended workflow</a></li>
+        </ul>
+      </P0>
+
+      <Heading.h2 id="about">About Serverless CI/CD</Heading.h2>
 
       <P0>Serverless CI/CD is a service built into Serverless Framework Pro. Like traditional CI/CD services, you can use it to run tests and deploy Serverless Framework services. Unlike traditional CI/CD services,  Serverless CI/CD is optimized for serverless architectures and requires little configuration.</P0>
       
@@ -24,7 +38,7 @@ const Content = props => (
         </strong>
       </P0>
 
-      <Heading.h2>Requirements</Heading.h2>
+      <Heading.h2 id="requirements">Requirements</Heading.h2>
 
       <P0>These are the things we want from our CI/CD Workflow:</P0>
 
@@ -37,7 +51,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2>Solution overview</Heading.h2>
+      <Heading.h2 id="solution">Solution overview</Heading.h2>
 
       <P0>We’ll dive into all the details of the entire workflow end to end, but before we do, let's have a look at a high level how we will address the requirements listed above.</P0>
 
@@ -50,7 +64,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2>Example application - workshop full-stack app</Heading.h2>
+      <Heading.h2 id="example">Example application - workshop full-stack app</Heading.h2>
 
       <P0>To illustrate the four steps of the CI/CD workflow and the related concepts, we’ll use the workshop full-stack application as an example. The workshop app is open source and available on Github at https://github.com/skierkowski/workshop.</P0>
 
@@ -64,7 +78,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2>Four-step development workflow</Heading.h2>
+      <Heading.h2 id="workflow">Four-step development workflow</Heading.h2>
 
       <P0>The workflow is split into four steps of the deployment lifecycle. To describe this workflow we will use the <strong>fullstack-restapi</strong> services from the workshop fullstack app as an example.</P0>
 
@@ -90,7 +104,7 @@ const Content = props => (
 
       <P0>Finally we want to take the service live by releasing it. We will promote our changes from staging to production by merging our changes from the master branch to the prod branch. The prod branch will be configured to automatically deploy to the prod AWS account and stage. It might be tempting to do bulk deployments on a cadence that matches our sprints, e.g. every two weeks, but we encourage frequent promotions from staging to production. In conjunction to frequent promotions from staging to production we also encourage using feature flagging, testing in production, then releasing by switching a feature flag.</P0>
 
-      <Heading.h2>Organizing your repo, apps and services</Heading.h2>
+      <Heading.h2 id="organizing">Organizing your repo, apps and services</Heading.h2>
 
       <P0>In a growing serverless team it can be difficult to figure out how your applications, services and repositories should be organized for collaboration and growth. Here are a few guidelines you can follow to help organize your repos, apps and services. These are just rules-of-thumb, so you will need to evaluate your organization and consider the trade-offs. If needed, Serverless, Inc. provides architectural reviews, and we also have trusted partners who can help too.</P0>
 
@@ -113,7 +127,7 @@ const Content = props => (
       </P0>
 
 
-      <Heading.h2>Implementing the recommended workflow</Heading.h2>
+      <Heading.h2 id="implementing">Implementing the recommended workflow</Heading.h2>
 
       <Heading.h3>Setup deployment environments</Heading.h3>
 
