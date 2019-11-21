@@ -4,6 +4,16 @@ import { Heading, P0 } from 'src/fragments/DesignSystem'
 import styles from './content.module.css'
 import { ExternalLink } from 'src/fragments'
 
+import outputsImage from 'src/assets/images/pages/learn/guides/cicd/outputs.png'
+import outputsScreenImage from 'src/assets/images/pages/learn/guides/cicd/outputs-screen.png'
+import previewScreenImage from 'src/assets/images/pages/learn/guides/cicd/preview-screen.png'
+import workflowSimpleImage from 'src/assets/images/pages/learn/guides/cicd/workflow-single.png'
+import sharedImage from 'src/assets/images/pages/learn/guides/cicd/shared.png'
+import profilesImage from 'src/assets/images/pages/learn/guides/cicd/profiles.png'
+import stagesImage from 'src/assets/images/pages/learn/guides/cicd/stages.png'
+import envsImage from 'src/assets/images/pages/learn/guides/cicd/envs.png'
+import workflowSingleSimpleImage from 'src/assets/images/pages/learn/guides/cicd/workflow-single-simple.png'
+import { ImageWithShadow as Image } from 'src/fragments'
 
 const Content = props => (
   <Flex flexDirection='column'>
@@ -135,6 +145,8 @@ const Content = props => (
 
       <Heading.h2 id="workflow">Four-step development workflow</Heading.h2>
 
+      <Image src={workflowSingleSimpleImage} />
+
       <P0>The workflow is split into four steps of the deployment lifecycle. To describe this workflow we will use the
         <strong>fullstack-restapi</strong> services from the workshop fullstack app as an example.</P0>
 
@@ -230,6 +242,8 @@ const Content = props => (
 
       <Heading.h2 id="implementing">Implementing the recommended workflow</Heading.h2>
 
+      <Image src={envsImage} />
+
       <Heading.h3>Setup deployment environments</Heading.h3>
 
       <P0>Before we define and automate our workflow, we must first create all of our deployment environments and setup
@@ -281,6 +295,8 @@ const Content = props => (
         each environment (e.g. <code>myservice-dev</code>).</P0>
 
       <Heading.h4>Use deployment profiles to manage environments</Heading.h4>
+
+      <Image src={profilesImage} />
 
       <P0>Deployment Profiles is a feature of Serverless Framework Pro which enables us to associate AWS accounts,
         safeguards and parameters with different environments. We will create three Deployment Profiles, one for each
@@ -357,6 +373,8 @@ const Content = props => (
 
       <Heading.h5>Add stages to applications using the deployment profiles</Heading.h5>
 
+      <Image src={stagesImage} />
+
       <P0>Now that we have the deployment profiles configured, we need to configure the applications and stages to use
         those profiles.</P0>
 
@@ -369,6 +387,8 @@ const Content = props => (
 
       
       <Heading.h3>Using stages for developing changes</Heading.h3>
+
+      <Image src={workflowSimpleImage} width={['90%', '90%', '90%', '60%', '60%', '60%']}/>
 
       <P0>Serverless Framework stages enable us to namespace our deployments such that we can deploy a service
         side-by-side in the same AWS Account and region without conflicting the names. We’ll use unique stage names
@@ -425,6 +445,7 @@ const Content = props => (
       sets them at deployment time. Upon deployment, you’ll see these in the service instance view in the
       dashboard.</P0>
 
+      <Image src={outputsScreenImage}/>
 
       <Heading.h4>Consuming outputs in fullstack-restapi</Heading.h4>
 
@@ -443,7 +464,11 @@ const Content = props => (
       <P0>Once both services are deployed, this is how the values of the outputs are passed within the
         <code>serverless.yml</code> and across services.</P0>
 
+      <Image src={sharedImage} width={['90%', '90%', '90%', '60%', '60%', '60%']}/>
+
       <Heading.h4>Consuming outputs in <strong>fullstack-restapi</strong> across stages</Heading.h4>
+
+      <Image src={outputsImage}/>
 
       <P0>By default, when the ${'{output}'} variable is used, it gets the value from the dependent service in the same
       app, stage, and region as the current service. In our stage and prod environments this will work as-is; however,
@@ -519,7 +544,7 @@ const Content = props => (
       <P0>For each service in your application, go to the <strong>CI/CD Settings</strong> tab, and add this
       configuration to the <strong>Preview Deployments</strong> section.</P0>
 
-
+      <Image src={previewScreenImage}/>
 
       <P0>Once this is configured and saved, we’ll have an automated review workflow. Each pull request will then run
         unit tests in Serverless CI/CD and then it will be deployed. Since we have the <strong>use branch name as

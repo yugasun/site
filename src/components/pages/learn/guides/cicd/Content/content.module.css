@@ -36,3 +36,8 @@
 .guideContainer p#toc a{
   color: blue;
 }
+
+.guideContainer img {
+  margin: 20px 50px 50px 50px;
+  text-align: center;
+}
