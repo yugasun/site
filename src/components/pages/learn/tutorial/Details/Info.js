@@ -9,7 +9,7 @@ const Description = ({lessonInfo}) => (
       <Box>
         <Heading.h3
           align='left'
-          mt={[62, 62, 62, 62, 92]}
+          mt={[62, 62, 62, 62, 62]}
           mb={[22, 22, 22, 22, 32]}
         >
           Lesson Info
