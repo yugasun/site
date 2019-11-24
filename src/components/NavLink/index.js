@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import { dashboard } from 'src/constants/urls'
 
 import styled from 'styled-components'
 import dotGridBacground from 'src/assets/images/dot-grid.png'
@@ -64,6 +65,7 @@ const NavLink = ({
         backgroundOnHover={backgroundOnHover}
         target='_blank' // open incomplete and cross domain links in new page
         className={className ? `nav-menu-item ${className}` : 'nav-menu-item'}
+        rel={to === dashboard ? 'noopener noreferrer nofollow' : 'noopener noreferrer'}
       >
         {children}
       </A>
