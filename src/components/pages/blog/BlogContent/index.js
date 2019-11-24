@@ -10,6 +10,7 @@ import ContentWrapper from './ContentWrapper'
 import Frontmatter from './Frontmatter'
 import HeroImage from './HeroImage'
 import ShareOptions from './ShareOptions'
+import DashboardCTA from './DashboardCTA'
 
 const BlogContent = ({ id, frontmatter, content }) => {
   const author = getAuthorById((frontmatter.authors || [])[0]) || {}
@@ -23,6 +24,10 @@ const BlogContent = ({ id, frontmatter, content }) => {
         )}
 
         <ShareOptions id={id} title={frontmatter.title} />
+        {
+          frontmatter.category && frontmatter.category.indexOf('guides-and-tutorials') > -1 ?
+          <DashboardCTA />: null
+        }
         <ContentWrapper
           width={[1, 1, 1, 0.65]}
           mx='auto'
