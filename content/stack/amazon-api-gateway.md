@@ -82,7 +82,7 @@ You can also connect an HTTP endpoint created in API Gateway with a service that
 <br/>
 <br/>
 
-<h3 id='serverless'>## How does API Gateway work with the Serverless Framework?</h3>
+<h3 id='serverless'>How does API Gateway work with the Serverless Framework?</h3>
 
 The [Serverless Framework](https://serverless.com/) uses a [Lambda Proxy integration](https://serverless.com/framework/docs/providers/aws/events/apigateway/#lambda-proxy-integration) to make API Gateway events easily available to your Serverless functions. For example, for a simple HTTP API you would specify the API Gateway endpoint that you want attached to your Serverless function right in the `serverless.yml` file:
 
