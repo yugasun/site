@@ -1,6 +1,6 @@
 import React from 'react'
 import imgBolt from 'src/assets/images/icon-bolt.svg'
-import imgLogoEa from 'src/assets/images/logo-ea.png'
+import imgLogoEa from 'src/assets/images/logo-ea.svg'
 import imgLogoNordstrom from 'src/assets/images/logo-nordstrom.png'
 import imgLogoCocaCola from 'src/assets/images/logo-coca-cola.png'
 import imgLogoExpedia from 'src/assets/images/logo-expedia.png'
