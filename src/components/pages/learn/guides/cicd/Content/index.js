@@ -242,9 +242,9 @@ const Content = props => (
 
       <Heading.h2 id="implementing">Implementing the recommended workflow</Heading.h2>
 
-      <Image src={envsImage} />
-
       <Heading.h3>Setup deployment environments</Heading.h3>
+
+      <Image src={envsImage} />
 
       <P0>Before we define and automate our workflow, we must first create all of our deployment environments and setup
         the corresponding service accounts for each environment. As per our requirements, we want to isolate our staging
@@ -296,11 +296,11 @@ const Content = props => (
 
       <Heading.h4>Use deployment profiles to manage environments</Heading.h4>
 
-      <Image src={profilesImage} />
-
       <P0>Deployment Profiles is a feature of Serverless Framework Pro which enables us to associate AWS accounts,
         safeguards and parameters with different environments. We will create three Deployment Profiles, one for each
         environment, and we’ll use that to associate our AWS accounts and parameters with each.</P0>
+
+      <Image src={profilesImage} />
 
       <Heading.h5>Add AWS access role for each AWS account</Heading.h5>
 
@@ -468,8 +468,6 @@ const Content = props => (
 
       <Heading.h4>Consuming outputs in <strong>fullstack-restapi</strong> across stages</Heading.h4>
 
-      <Image src={outputsImage}/>
-
       <P0>By default, when the ${'{output}'} variable is used, it gets the value from the dependent service in the same
       app, stage, and region as the current service. In our stage and prod environments this will work as-is; however,
       this default behavior will not work if the stages do not match.</P0>
@@ -478,6 +476,8 @@ const Content = props => (
       when deploying in review we use the branch name as stage name. In both of these cases the stage of
       <strong>fullstack-restapi</strong> (e.g. <code>developer-name</code> and <code>new-feature-one</code>) will not
       match the stage of <strong>fullstack-database</strong> (<code>dev</code>). </P0>
+
+      <Image src={outputsImage}/>
 
       <P0>Luckily, there is a nice solution. Earlier we defined a parameter called <code>env</code> in our three
       different deployment profiles. This means we can use the <code>${'{param:env}'}</code> variable to get the values
@@ -567,6 +567,23 @@ const Content = props => (
 
       <P0>In your application go to the <strong>CI/CD Settings</strong> tab. For each service add the following
       configuration to the <strong>Branch Deployments</strong> section and save your changes.</P0>
+
+      <P0>
+        <table>
+          <tr>
+            <th>branch</th>
+            <th>stage</th>
+          </tr>
+          <tr>
+            <td>master</td>
+            <td>staging (profile: staging)</td>
+          </tr>
+          <tr>
+            <td>prod</td>
+            <td>prod (profile: prod)</td>
+          </tr>
+        </table>
+      </P0>
 
 
       <P0>Every commit to master and prod will be deployed to the staging and prod stages with the staging and prod 
