@@ -9,6 +9,7 @@ import Hero from 'src/components/pages/cicd/Hero'
 import PreviewDeploys from '../components/pages/cicd/PreviewDeploys'
 import SecurityBuiltIn from '../components/pages/cicd/SecurityBuiltIn'
 import EasySetup from '../components/pages/cicd/EasySetup'
+import WorkflowGuide from '../components/pages/cicd/WorkflowGuide'
 import FAQ from '../components/pages/cicd/FAQ'
 
 const CiCd = ({ location }) => (
@@ -23,6 +24,7 @@ const CiCd = ({ location }) => (
         <EasySetup/>
         <PreviewDeploys/>
         <SecurityBuiltIn/>
+        <WorkflowGuide/>
         <FAQ/>
       </AppContainer>
     </Background>
