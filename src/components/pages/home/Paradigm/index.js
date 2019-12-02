@@ -57,9 +57,9 @@ export default class Paradigm extends React.Component {
                 Read the whitepaper
               </div>
               </ExternalLink>
-              <InternalLink to={meetups}>
+              <ExternalLink to={meetups}>
                 <div className='paradigm-guide-step-action'>Join A meetup</div>
-              </InternalLink>
+              </ExternalLink>
               <InternalLink to={training}>
                 <div className='paradigm-guide-step-action'>
                   Attend a workshop
