@@ -9,7 +9,7 @@ import {
 const CategoryDetail = ({ id, renderComma, textStyleProps }) => (
   <React.Fragment>
     <Text.span
-      fontFamily='Serverless'
+      fontFamily='Soleil'
       fontSize={1}
       opacity={0.4}
       { ...textStyleProps }

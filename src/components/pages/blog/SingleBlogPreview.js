@@ -40,6 +40,7 @@ export default ({ id, frontmatter }) => {
             lineHeight={4}
             opacity={0.4}
             letterSpacing='text'
+            fontFamily='Soleil'
             mt={0}
           >
             {

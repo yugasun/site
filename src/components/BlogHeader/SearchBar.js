@@ -141,8 +141,8 @@ class SearchBar extends React.Component {
                   >
                     <InlineBlock px={[1, 1, "5px", 1]}>
                       <LinkText
-                        fontSize={[1, 1, 0, 1]}
-                        fontFamily='Serverless'
+                        fontSize={[1, 1, '13px', 15]}
+                        fontFamily='Soleil'
                         lineHeight={1}
                         color='white'
                         selected={isAllPage}
@@ -157,10 +157,10 @@ class SearchBar extends React.Component {
                         key={`category-tab-${index}`}
                         to={getCategoryLink(tab)}
                       >
-                        <InlineBlock px={[1, 1, "5px", 2]}>
+                        <InlineBlock px={[1, 1, '12px', 25]}>
                           <LinkText
-                            fontSize={[1, 1, 0, 1]}
-                            fontFamily='Serverless'
+                            fontSize={[1, 1, '13px', 15]}
+                            fontFamily='Soleil'
                             lineHeight={1}
                             color='white'
                             selected={pathname === getCategoryLink(tab)}
