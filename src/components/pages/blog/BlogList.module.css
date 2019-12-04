@@ -1,0 +1,17 @@
+.recentlyPublishedTitle {
+    margin-top: 132px;
+}
+
+.newsletterOptin {
+    margin-top: 132px;
+}
+
+@media screen and (max-width: 962px) {
+    .recentlyPublishedTitle {
+        margin-top: 92px;
+    }
+    
+    .newsletterOptin {
+        margin-top: 92px;
+    }
+}

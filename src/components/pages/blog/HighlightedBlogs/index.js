@@ -1,11 +1,15 @@
 import React from 'react'
-import Carousel from './Carousel'
-import Item from './Item'
+import Featured from './Featured'
+import OtherHighlighted from './OtherHighlighted'
+import { AppContainer } from 'src/components'
 
 const HighlightedBlogs = ({ blogs }) => (
-  <Carousel>
-    { blogs.map((blog, index) => (<Item {...blog} key={`highlighted-${index}`} />)) }
-  </Carousel>
+  <AppContainer>
+    <div style={{flexDirection: 'row', marginTop: '92px', display: 'flex'}}>
+      <Featured blog={blogs[0]}/>
+      <OtherHighlighted blogs={blogs}/>
+    </div>
+  </AppContainer>
 )
 
 export default HighlightedBlogs

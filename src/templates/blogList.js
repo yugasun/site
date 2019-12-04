@@ -2,13 +2,15 @@ import React from 'react'
 import BlogLayout from 'src/layouts/BlogNewest'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
+import NewsletterOptin from 'src/components/pages/blog/Home/NewsletterOptin'
 import {
   Helmet,
   NewToServerlessPrefooter,
 } from 'src/fragments'
-import { Pagination, SubscribeModal } from 'src/components'
+import { Pagination, SubscribeModal, AppContainer } from 'src/components'
 import HighlightedBlogList from 'src/constants/featured-blogs.json'
 import { Box } from 'serverless-design-system'
+import Guides from 'src/components/pages/learn/overview/Guides'
 
 const BlogList = ({
   data: {
@@ -40,14 +42,24 @@ const BlogList = ({
       />
       <SubscribeModal />
       {currentPage === 0 && <HighlightedBlogs blogs={highlightedBlogs} />}
-      <BlogPreview
-        blogs={edges.map(({ node }) => node)}
-        currentPage={currentPage}
-      />
+      <AppContainer>
+        <BlogPreview
+          blogs={edges.map(({ node }) => node)}
+          currentPage={currentPage}
+        />
 
-      <Box mt={['62px', '62px', '62px', '62px', '120px']}>
-        <Pagination total={totalPages} current={currentPage} />
-      </Box>
+        <Box mt={['10px']}>
+          <Pagination total={totalPages} current={currentPage} />
+        </Box>
+        {
+        currentPage === 0 ?
+         <React.Fragment>
+          <NewsletterOptin /> 
+          <Guides />
+         </React.Fragment>
+          : null
+        }
+      </AppContainer>
     </BlogLayout>
   )
 }

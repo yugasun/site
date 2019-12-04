@@ -1,0 +1,16 @@
+.featuredBox {
+    width: 90%; 
+    margin-right: 62px;
+}
+
+.headline {
+    margin-top: 32px;
+}
+
+.description {
+    color: #5b5b5b;
+}
+
+.author {
+  color: #8c8c8c;
+}
