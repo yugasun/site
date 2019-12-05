@@ -14,7 +14,10 @@ const FeaturedBlog = ({blog}) => {
 
     return (
         <div className={styles.mainFeaturedBox}>
+            <InternalLink to={getBlogLink(blog.id)}>
             <img src={thumbnail} />
+            </InternalLink>
+            
             <InternalLink to={getBlogLink(blog.id)}>
                 <div className={`sls-h4 ${styles.headline}`}>{title}</div>
             </InternalLink>
