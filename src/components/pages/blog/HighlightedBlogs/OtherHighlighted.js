@@ -4,16 +4,22 @@ import {
     getBlogLink,
     getAuthorLink
 } from 'src/utils/blog'
+import styles from './HighlightedBlogs.module.css'
 
 const OtherHighlighted = ({blogs}) => {
+    delete blogs[0]
+    
     return (
-       <div style={{display: 'flex', flexDirection: 'column'}}>
-           <h4>Featured reads</h4>
+       <div className={styles.otherFeaturedBox}>
+           <h4 className='sls-h4'>Featured reads</h4>
            {
                blogs.map((blog, index) => {
                 const { title, date, description, category: categoryIds, thumbnail } = blog.frontmatter
                 return (
-                    <p key={index}>{title}</p>
+                    <React.Fragment key={title}>
+                        <div className={styles.featuredListDate}>{date}</div>
+                        <h5 key={index} className='sls-h5'>{title}</h5>
+                    </React.Fragment>
                 )
             })
            }

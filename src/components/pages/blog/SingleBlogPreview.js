@@ -2,10 +2,6 @@ import React from 'react'
 import {
   Background,
   Box,
-  Row,
-  Text,
-  Heading,
-  P,
   Flex
 } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
@@ -19,7 +15,7 @@ import {
 } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
 import ImagePlaceholder from './ImagePlaceholder'
-import { Column } from 'serverless-design-system/dist/atoms'
+import styles from './BlogList.module.css'
 
 //TODO: Heading and P tag don't conform to usual sizing pattern - revisit
 
@@ -49,14 +45,7 @@ export default ({ id, frontmatter }) => {
         pr={['10px', '10px', '10px', '10%']}
       >
         <Box>
-          <Text.span
-            fontSize={[0, 0, 0, 1]}
-            lineHeight={4}
-            opacity={0.4}
-            letterSpacing='text'
-            fontFamily='Soleil'
-            mt={0}
-          >
+          <div className={styles.singleBlogCategoryAndDate}>
             {
               categoryIds.map((categoryId, index) => (
                 <React.Fragment key={`${id}-${categoryId}`}>
@@ -81,11 +70,11 @@ export default ({ id, frontmatter }) => {
               ) : null
             }
             { formatDate(date, 'dd.mm.yy') }
-          </Text.span>
+          </div>
         </Box>
         <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
-            <h4 className='sls-h4'>
+            <h4 className='sls-h5'>
               { title }
             </h4>
           </Box>

@@ -1,13 +1,12 @@
 import React from 'react'
 import { Box, Flex } from 'serverless-design-system'
 import BlogPreview from './SingleBlogPreview'
-import BlogSignup from 'src/components/pages/blog/FirstBlogListMidSignup'
 import styles from './BlogList.module.css'
 
 const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
   return (
-    <React.Fragment>
-      <div className={styles.recentlyPublishedTitle}>Recently Published</div>
+    <div style={{fontFamily: 'Soleil'}}>
+      <h3 className={`sls-h3 ${styles.recentlyPublishedTitle}`}>Recently Published</h3>
       <Flex width={1} flexWrap='wrap'>
         { 
         blogs.map((blog, index) => (
@@ -23,7 +22,7 @@ const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
         
         }
       </Flex>
-    </React.Fragment>
+    </div>
   )
 }
 

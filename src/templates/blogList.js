@@ -41,25 +41,26 @@ const BlogList = ({
         location={location}
       />
       <SubscribeModal />
-      {currentPage === 0 && <HighlightedBlogs blogs={highlightedBlogs} />}
-      <AppContainer>
-        <BlogPreview
-          blogs={edges.map(({ node }) => node)}
-          currentPage={currentPage}
-        />
-
-        <Box mt={['10px']}>
-          <Pagination total={totalPages} current={currentPage} />
-        </Box>
-        {
-        currentPage === 0 ?
-         <React.Fragment>
-          <NewsletterOptin /> 
-          <Guides />
-         </React.Fragment>
-          : null
-        }
-      </AppContainer>
+      <div style={{fontFamily: 'Soleil'}}>
+        <AppContainer>
+        {currentPage === 0 && <HighlightedBlogs blogs={highlightedBlogs} />}
+          <BlogPreview
+            blogs={edges.map(({ node }) => node)}
+            currentPage={currentPage}
+          />
+          <Box mt={['10px']}>
+            <Pagination total={totalPages} current={currentPage} />
+          </Box>
+          {
+          currentPage === 0 ?
+          <React.Fragment>
+            <NewsletterOptin /> 
+            <Guides />
+          </React.Fragment>
+            : null
+          }
+        </AppContainer>
+      </div>
     </BlogLayout>
   )
 }

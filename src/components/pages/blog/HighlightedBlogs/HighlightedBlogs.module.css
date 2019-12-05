@@ -11,6 +11,24 @@
     color: #5b5b5b;
 }
 
-.author {
-  color: #8c8c8c;
+.metaInfo {
+    color: #8c8c8c;
+}
+
+.featuredListDate {
+    color: #8c8c8c;
+    margin-bottom: 12px;
+    border-top:1px solid #EAEAEA;
+    padding-top: 12px;
+}
+
+.otherFeaturedBox {
+    display: 'flex'; 
+    flex-direction: 'column';
+    border: 1px solid #EAEAEA;
+    padding: 12px 22px;
+}
+
+.otherFeaturedBox > h4{
+    margin-bottom: 1rem;
 }

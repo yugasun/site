@@ -67,7 +67,7 @@ video {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Soleil';
+  font-family: 'Serverless';
 }
 h1,
 h2,
@@ -475,8 +475,23 @@ code.hljs > a.line:hover:before {
   font-weight: 400;
 }
 
+.sls-h4 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.38px;
+  font-weight: 400;
+}
+
+.sls-h5 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  font-family: 'SoleilBk';
+}
+
 .sls-p {
-  font-family: SoleilBk;
+  font-family: 'SoleilBk';
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -488,5 +503,11 @@ code.hljs > a.line:hover:before {
     font-size: 24px;
     line-height: 38px;
     letter-spacing: -0.38px;
+  }
+
+  .sls-h4 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
   }
 }
