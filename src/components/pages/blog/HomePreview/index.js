@@ -12,7 +12,7 @@ const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
         blogs.map((blog, index) => (
           <React.Fragment key={`blog-${index}`}>
             <Box
-              width={[1, 1, 0.33]}
+              width={[1, 1, 0.33 ]}
               mx='auto'
             >
               <BlogPreview {...blog} />

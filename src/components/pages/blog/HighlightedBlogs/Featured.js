@@ -10,7 +10,7 @@ const FeaturedBlog = ({blog}) => {
     const { title, description, thumbnail, date} = blog.frontmatter
 
     return (
-        <div className={styles.featuredBox}>
+        <div className={styles.mainFeaturedBox}>
             <img src={thumbnail} />
             <h3 className={`sls-h4 ${styles.headline}`}>{title}</h3>
             <p className={`sls-p ${styles.description}`}>{description}</p>

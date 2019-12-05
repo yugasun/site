@@ -30,7 +30,7 @@ export default ({ id, frontmatter }) => {
     <Flex mb={[62]} flexWrap='wrap' flexDirection='column'>
           {
             thumbnail ? (
-              <img src={thumbnail} style={{width: '365px'}}/>
+              <img src={thumbnail} style={{width: '95%'}}/>
             ) : (
               <HyperLinkImagePlaceholder
                 size='small'
