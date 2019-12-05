@@ -1,20 +1,19 @@
 import React from 'react'
-import { Box } from 'serverless-design-system'
-import { AppContainer } from 'src/components'
+import { Box, Flex } from 'serverless-design-system'
 import BlogPreview from './SingleBlogPreview'
-import BlogSignup from 'src/components/pages/blog/FirstBlogListMidSignup'
+import styles from '../BlogList.module.css'
 
 const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
   return (
-    <AppContainer>
+    <div style={{fontFamily: 'Soleil'}}>
+      <h3 className={`sls-h3 ${styles.recentlyPublishedTitle}`}>Recently Published</h3>
+      <Flex width={1} flexWrap='wrap'>
         { 
         blogs.map((blog, index) => (
           <React.Fragment key={`blog-${index}`}>
             <Box
-              width={[1, 1, 0.8]}
+              width={[1, 1, 0.33]}
               mx='auto'
-              mt={ index === 0 ? mtFirstBlog || ['62px', '62px', '62px', '62px', '132px']: 0}
-              mb={ index === 3 && currentPage === 0? ['122px', '122px', '102px', '102px', '122px'] : 0 }
             >
               <BlogPreview {...blog} />
             </Box>
@@ -22,7 +21,8 @@ const Preview = ({ blogs, currentPage, mtFirstBlog }) => {
         )) 
         
         }
-    </AppContainer>
+      </Flex>
+    </div>
   )
 }
 

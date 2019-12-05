@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogLayout from 'src/layouts/BlogNewest'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
+import BlogHomePreview from 'src/components/pages/blog/HomePreview'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import NewsletterOptin from 'src/components/pages/blog/Home/NewsletterOptin'
 import {
@@ -44,10 +45,16 @@ const BlogList = ({
       <div style={{fontFamily: 'Soleil'}}>
         <AppContainer>
         {currentPage === 0 && <HighlightedBlogs blogs={highlightedBlogs} />}
+        {currentPage === 0 ? 
+          <BlogHomePreview
+          blogs={edges.map(({ node }) => node)}
+            currentPage={currentPage}
+          /> :
           <BlogPreview
             blogs={edges.map(({ node }) => node)}
             currentPage={currentPage}
           />
+        }
           <Box mt={['10px']}>
             <Pagination total={totalPages} current={currentPage} />
           </Box>
