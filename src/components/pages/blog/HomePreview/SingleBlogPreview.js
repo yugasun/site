@@ -30,7 +30,9 @@ export default ({ id, frontmatter }) => {
     <Flex mb={[62]} flexWrap='wrap' flexDirection='column'>
           {
             thumbnail ? (
-              <img src={thumbnail} style={{width: '95%'}}/>
+              <InternalLink to={getBlogLink(id)}>
+                <img src={thumbnail} style={{width: '95%'}}/>
+              </InternalLink>
             ) : (
               <HyperLinkImagePlaceholder
                 size='small'
@@ -74,9 +76,9 @@ export default ({ id, frontmatter }) => {
         </Box>
         <InternalLink to={getBlogLink(id)}>
           <Box pt={1}>
-            <h4 className='sls-h5'>
+            <div className={`sls-h5`}>
               { title }
-            </h4>
+            </div>
           </Box>
         </InternalLink>
       </Box>

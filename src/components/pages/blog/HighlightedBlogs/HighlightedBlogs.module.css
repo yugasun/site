@@ -36,7 +36,11 @@
     padding: 12px 22px;
 }
 
-.otherFeaturedBox > h4{
+.otherFeaturedBoxTitle {
+    margin-bottom: 2rem;
+}
+
+.featuredReads {
     margin-bottom: 1rem;
 }
 

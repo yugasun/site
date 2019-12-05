@@ -12,7 +12,7 @@ const OtherHighlighted = ({blogs}) => {
     
     return (
        <div className={styles.otherFeaturedBox}>
-           <h4 className='sls-h4'>Featured reads</h4>
+           <div className={`sls-h4 ${styles.featuredReads}`}>Featured reads</div>
            {
                blogs.map((blog, index) => {
                 const { title, date, description, category: categoryIds, thumbnail } = blog.frontmatter
@@ -20,7 +20,7 @@ const OtherHighlighted = ({blogs}) => {
                     <React.Fragment key={title}>
                         <div className={styles.featuredListDate}>{date}</div>
                         <InternalLink to={getBlogLink(blog.id)}>
-                            <h5 key={index} className='sls-h5'>{title}</h5>
+                            <div key={index} className={`sls-h5 ${styles.otherFeaturedBoxTitle}`}>{title}</div>
                         </InternalLink>
                     </React.Fragment>
                 )
