@@ -233,7 +233,7 @@ const Content = props => (
           services and both must be deployed.</li>
           <li><strong>Use a mono repo with multiple services, if they share a common code base</strong>. For example, if
           you have a REST API service and an AppSync service both of which use the same client libraries, they should be
-          organized in the same repository with three different, one for the AppSync service(e.g.
+          organized in the same repository with three different directories, one for the AppSync service(e.g.
           <code>/appsync-service</code>), one for the REST API Service (e.g. <code>/restapi-service</code>), and one for
           the shared libraries (e.g. <code>/shared</code>)</li>
         </ul>
