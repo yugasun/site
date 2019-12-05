@@ -467,3 +467,47 @@ code.hljs > a.line:hover:before {
     opacity: 1;
   }
 }
+
+.sls-h3 {
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+
+.sls-h4 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.38px;
+  font-weight: 400;
+}
+
+.sls-h5 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+  font-weight: 500;
+  font-family: 'SoleilBk';
+}
+
+.sls-p {
+  font-family: 'SoleilBk';
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sls-h3 {
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: -0.38px;
+  }
+
+  .sls-h4 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+  }
+}

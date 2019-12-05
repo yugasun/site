@@ -1,11 +1,13 @@
 import React from 'react'
-import Carousel from './Carousel'
-import Item from './Item'
+import Featured from './Featured'
+import OtherHighlighted from './OtherHighlighted'
+import styles from './HighlightedBlogs.module.css'
 
 const HighlightedBlogs = ({ blogs }) => (
-  <Carousel>
-    { blogs.map((blog, index) => (<Item {...blog} key={`highlighted-${index}`} />)) }
-  </Carousel>
+    <div className={styles.featuredBox}>
+      <Featured blog={blogs[0]}/>
+      <OtherHighlighted blogs={blogs}/>
+    </div>
 )
 
 export default HighlightedBlogs

@@ -1,0 +1,22 @@
+.recentlyPublishedTitle {
+    margin-top: 132px;
+}
+
+.newsletterOptin {
+    margin-top: 132px;
+}
+
+.singleBlogCategoryAndDate {
+    margin-top: 12px;
+    color: #8C8C8C;
+}
+
+@media screen and (max-width: 962px) {
+    .recentlyPublishedTitle {
+        margin-top: 92px;
+    }
+    
+    .newsletterOptin {
+        margin-top: 92px;
+    }
+}

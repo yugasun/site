@@ -10,7 +10,7 @@ const highlightedBlogs = require(getFileFromProjectRoot(
   'src/constants/featured-blogs.json'
 ))
 
-const blogsPerPage = 7
+const blogsPerPage = 9
 const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join('|'), 'gi')
 const graphqlQuery = `
 {
