@@ -5,6 +5,7 @@ import {
     getAuthorLink
 } from 'src/utils/blog'
 import styles from './HighlightedBlogs.module.css'
+import { InternalLink } from 'src/fragments'
 
 const OtherHighlighted = ({blogs}) => {
     delete blogs[0]
@@ -18,7 +19,9 @@ const OtherHighlighted = ({blogs}) => {
                 return (
                     <React.Fragment key={title}>
                         <div className={styles.featuredListDate}>{date}</div>
-                        <h5 key={index} className='sls-h5'>{title}</h5>
+                        <InternalLink to={getBlogLink(blog.id)}>
+                            <h5 key={index} className='sls-h5'>{title}</h5>
+                        </InternalLink>
                     </React.Fragment>
                 )
             })
