@@ -13,17 +13,6 @@ const BlogTemplate = ({
 }) => (
   <BlogLayout prefooter={Prefooter} prefooterOnlyDesktop>
     <Helmet {...currentBlog.frontmatter} location={location} />
-    {
-      schema.blogs[location.pathname] &&
-      <script
-      type='application/ld+json'
-      dangerouslySetInnerHTML={{
-        __html: `
-              ${schema.blogs[location.pathname]}
-            `,
-      }}
-    />
-    }
     <BlogContent {...currentBlog} />
     <RelativeBlogs blogs={[previousBlog, nextBlog]} />
     <Comments />
