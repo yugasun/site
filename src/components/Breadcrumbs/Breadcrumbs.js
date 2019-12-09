@@ -31,7 +31,6 @@ const Breadcrumbs = ({
     useOnlyAfterId = pathArray.length - pathArray.slice(-4).length
   } else if (pathArray.length == 2) {
     onOverviewPage = true
-    console.log(`on overview page`)
   } else {
     useOnlyAfterId = 1
   }

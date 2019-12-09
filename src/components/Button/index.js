@@ -20,7 +20,6 @@ class Button extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.props.type === 'primary') {
       return this.renderButtonPrimary()
     } else {
