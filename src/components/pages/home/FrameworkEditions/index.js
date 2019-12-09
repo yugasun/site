@@ -11,6 +11,7 @@ import {
   debugging,
   integrations,
   policies,
+  cicd,
   gettingStarted,
   enterprise,
   dashboard,
@@ -134,6 +135,15 @@ export default class FrameworkEditions extends React.Component {
                   <div className='home-edition-detail-text'>
                     Instant, powerful metrics for your serverless apps covering
                     usage, performance, errors & more.
+                  </div>
+                </div>
+              </InternalLink>
+
+              <InternalLink to={cicd}>
+                <div className='home-edition-detail home-edition-detail-clickable'>
+                  <div className='home-edition-detail-title'>CI/CD</div>
+                  <div className='home-edition-detail-text'>
+                    Test and deploy your serverless apps with ease!
                   </div>
                 </div>
               </InternalLink>
