@@ -11,6 +11,7 @@ import SecurityBuiltIn from '../components/pages/cicd/SecurityBuiltIn'
 import EasySetup from '../components/pages/cicd/EasySetup'
 import WorkflowGuide from '../components/pages/cicd/WorkflowGuide'
 import FAQ from '../components/pages/cicd/FAQ'
+import Optimized from '../components/pages/cicd/Optimized'
 
 const CiCd = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
@@ -21,6 +22,7 @@ const CiCd = ({ location }) => (
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
+        <Optimized />
         <EasySetup/>
         <PreviewDeploys/>
         <SecurityBuiltIn/>

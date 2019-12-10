@@ -5,7 +5,7 @@ import { InternalLink } from 'src/fragments'
 import styles from '../CICD.module.css'
 
 const WorkflowGuideContent = props => (
-  <Flex flexDirection='column' style={{backgroundColor: '#FFF', padding: "20px 50px 50px 50px", borderRadius: 4, boxShadow:"2px 30px 50px 9 rgba(0,0,0,0.1)"}}>
+  <Flex flexDirection='column' style={{backgroundColor: '#FFF', padding: "20px 50px 50px 50px", marginBottom: 80, borderRadius: 4, boxShadow:"2px 30px 50px 9 rgba(0,0,0,0.1)"}}>
     <Heading.h3 align={['left', 'left', 'center']}>
       Serverless CI/CD Workflow Guide
     </Heading.h3>
