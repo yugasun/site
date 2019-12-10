@@ -30,7 +30,7 @@ const data = [
   {
     label: 'Meetups',
     value: 'meetups',
-    navProps: { to: meetups, completed: true },
+    navProps: { to: meetups, crossDomain: true },
   },
   {
     label: 'Partners',
