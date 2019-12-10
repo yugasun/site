@@ -18,7 +18,7 @@ import { ImageWithShadow as Image } from 'src/fragments'
 const Content = props => (
   <Flex flexDirection='column'>
     <div className={styles.guideContainer}>
-      <Heading.h1> Serverless CI/CD Workflow</Heading.h1>
+      <Heading.h1 className={styles.heading1}> Serverless CI/CD Workflow</Heading.h1>
 
       <P0>There are many options for creating a CI/CD workflow for a Serverless Framework project, and there are
         countless services and tools that can help. In this guide we define what we consider to be best practices for
@@ -26,20 +26,20 @@ const Content = props => (
         practices can be easily set up using the Serverless CI/CD solution available in Serverless Framework Pro.</P0>
 
 
-      <Heading.h4>Table of content</Heading.h4>
-      <P0 id="toc">
+      <Heading.h4 className={styles.heading4}>Table of content</Heading.h4>
+      <P0 id='toc'>
         <ul>
-          <li><a href="#about" style={{color: 'inherit'}}>About Serverless CI/CD</a></li>
-          <li><a href="#requirements" style={{color: 'inherit'}}>Requirements</a></li>
-          <li><a href="#solution" style={{color: 'inherit'}}>Solution overview</a></li>
-          <li><a href="#example" style={{color: 'inherit'}}>Example application - workshop full-stack app</a></li>
-          <li><a href="#workflow" style={{color: 'inherit'}}>Four-step development workflow</a></li>
-          <li><a href="#organizing" style={{color: 'inherit'}}>Organizing your repo, apps and services</a></li>
-          <li><a href="#implementing" style={{color: 'inherit'}}>Implementing the recommended workflow</a></li>
+          <li><a href='#about' style={{color: 'inherit'}}>About Serverless CI/CD</a></li>
+          <li><a href='#requirements' style={{color: 'inherit'}}>Requirements</a></li>
+          <li><a href='#solution' style={{color: 'inherit'}}>Solution overview</a></li>
+          <li><a href='#example' style={{color: 'inherit'}}>Example application - workshop full-stack app</a></li>
+          <li><a href='#workflow' style={{color: 'inherit'}}>Four-step development workflow</a></li>
+          <li><a href='#organizing' style={{color: 'inherit'}}>Organizing your repo, apps and services</a></li>
+          <li><a href='#implementing' style={{color: 'inherit'}}>Implementing the recommended workflow</a></li>
         </ul>
       </P0>
 
-      <Heading.h2 id="about">About Serverless CI/CD</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='about'>About Serverless CI/CD</Heading.h2>
 
       <P0>Serverless CI/CD is a service built into Serverless Framework Pro. Like traditional CI/CD services, you can
         use it to run tests and deploy Serverless Framework services. Unlike traditional CI/CD services,  Serverless
@@ -55,7 +55,7 @@ const Content = props => (
         </strong>
       </P0>
 
-      <Heading.h2 id="requirements">Requirements</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='requirements'>Requirements</Heading.h2>
 
       <P0>These are the things we want from our CI/CD Workflow:</P0>
 
@@ -84,7 +84,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2 id="solution">Solution overview</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='solution'>Solution overview</Heading.h2>
 
       <P0>We’ll dive into all the details of the entire workflow end to end, but before we do, let's have a look at a
         high level how we will address the requirements listed above.</P0>
@@ -112,7 +112,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2 id="example">Example application - workshop full-stack app</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='example'>Example application - workshop full-stack app</Heading.h2>
 
       <P0>To illustrate the four steps of the CI/CD workflow and the related concepts, we’ll use the workshop full-stack
         application as an example. The workshop app is open source and available on Github at
@@ -143,7 +143,7 @@ const Content = props => (
         </ul>
       </P0>
 
-      <Heading.h2 id="workflow">Four-step development workflow</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='workflow'>Four-step development workflow</Heading.h2>
 
       <Image src={workflowSingleSimpleImage} />
 
@@ -153,7 +153,7 @@ const Content = props => (
       <P0>In order to meet the requirements we’ve laid out for our team, this is the workflow we’ll design to meet those
         requirements:</P0>
 
-      <Heading.h3>Develop</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Develop</Heading.h3>
 
       <P0>While a developer is working locally in their terminal and IDE, they will use local emulators when feasible.
         However, they should be encouraged to deploy to real cloud services often to get a more realistic view of their
@@ -163,13 +163,13 @@ const Content = props => (
         before committing their code or making a pull request. They’ll likely run integration tests on the deployed
         services before committing the code.</P0>
 
-      <Heading.h3>Review</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Review</Heading.h3>
 
       <P0>Once the developer is happy with their code they will commit it and open a pull request in Github. As a part
         of the review process, it is helpful for other developers to see the test results and get a live preview of the
         new feature. Therefore we’ll setup Serverless CI/CD to automatically test and deploy pull requests.</P0>
 
-      <Heading.h3>Stage</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Stage</Heading.h3>
 
       <P0>Once the pull request is reviewed and approved, it’ll be merged into the master branch and the pull request
         branch will be deleted. Given that we have a traditional model of deploying to staging before production, we’ll
@@ -183,7 +183,7 @@ const Content = props => (
         review cycle again. If the changes can’t be deployed to production safely behind a feature flag, only then,
         should they be reverted.</P0>
 
-      <Heading.h3>Release</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Release</Heading.h3>
 
       <P0>Finally we want to take the service live by releasing it. We will promote our changes from staging to
         production by merging our changes from the master branch to the prod branch. The prod branch will be configured
@@ -192,7 +192,7 @@ const Content = props => (
         production. In conjunction to frequent promotions from staging to production we also encourage using feature
         flagging, testing in production, then releasing by switching a feature flag.</P0>
 
-      <Heading.h2 id="organizing">Organizing your repo, apps and services</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='organizing'>Organizing your repo, apps and services</Heading.h2>
 
       <P0>In a growing serverless team it can be difficult to figure out how your applications, services and
         repositories should be organized for collaboration and growth. Here are a few guidelines you can follow to help
@@ -240,9 +240,9 @@ const Content = props => (
       </P0>
 
 
-      <Heading.h2 id="implementing">Implementing the recommended workflow</Heading.h2>
+      <Heading.h2 className={styles.heading2} id='implementing'>Implementing the recommended workflow</Heading.h2>
 
-      <Heading.h3>Setup deployment environments</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Setup deployment environments</Heading.h3>
 
       <Image src={envsImage} />
 
@@ -270,7 +270,7 @@ const Content = props => (
       </P0>
 
 
-      <Heading.h4>Create AWS account per environment</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Create AWS account per environment</Heading.h4>
 
       <P0>We will create one AWS account for each environment, so the AWS accounts will be development, staging, and
         prod. Each AWS Account requires billing information which can be cumbersome to manage. To make this a little
@@ -280,7 +280,7 @@ const Content = props => (
       <P0>Follow these steps provided by AWS for creating the three AWS Accounts for each environment.</P0>
       <P0>https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html#orgs_manage_accounts_create-new</P0>
 
-      <Heading.h4>Create other service accounts per environment</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Create other service accounts per environment</Heading.h4>
 
       <P0>While AWS provides a broad range of services, it is also likely that your service depends on other third party
         services like Stripe for payments, SendGrid for email delivery, Sentry for exception tracking and much more.</P0>
@@ -294,7 +294,7 @@ const Content = props => (
         separate accounts aren’t feasible, consider using a naming scheme to the provisioned resources with a prefix for
         each environment (e.g. <code>myservice-dev</code>).</P0>
 
-      <Heading.h4>Use deployment profiles to manage environments</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Use deployment profiles to manage environments</Heading.h4>
 
       <P0>Deployment Profiles is a feature of Serverless Framework Pro which enables us to associate AWS accounts,
         safeguards and parameters with different environments. We will create three Deployment Profiles, one for each
@@ -302,7 +302,7 @@ const Content = props => (
 
       <Image src={profilesImage} />
 
-      <Heading.h5>Add AWS access role for each AWS account</Heading.h5>
+      <Heading.h5 className={styles.heading5}>Add AWS access role for each AWS account</Heading.h5>
 
       <P0>Follow these instructions to link your AWS Account to the deployment profiles. Generate one AWS Access Role
         per AWS Account, and link it to the corresponding deployment profile.</P0>
@@ -311,7 +311,7 @@ const Content = props => (
         credentials expire after one hour. This enables you to deploy from the CLI without having to manage the AWS
         credentials and it enables Serverless CI/CD to deploy to your AWS account.</P0>
 
-      <Heading.h5>Add parameters for each 3rd-party account</Heading.h5>
+      <Heading.h5 className={styles.heading5}>Add parameters for each 3rd-party account</Heading.h5>
 
       <P0>The parameters documentation provides instructions for associating key/value pairs with a deployment profile.
         For each third party account generate the credentials and save them in Parameters. If you are familiar with AWS
@@ -365,13 +365,13 @@ const Content = props => (
         <code>${'{param:endpoint_api_key}'}</code> will resolve to <code>54325-staging</code> and when you deploy to
         production it’ll resolve to <code>23569-prod</code>.</P0>
 
-      <Heading.h5>Add env parameter to deployment profiles</Heading.h5>
+      <Heading.h5 className={styles.heading5}>Add env parameter to deployment profiles</Heading.h5>
 
       <P0>In each of the three deployment profiles, add a parameter named <code>env</code> and give it the corresponding
       names <code>dev</code>, <code>staging</code>, and <code>prod</code>. We will use this later when accessing outputs
       across different stages.</P0>
 
-      <Heading.h5>Add stages to applications using the deployment profiles</Heading.h5>
+      <Heading.h5 className={styles.heading5}>Add stages to applications using the deployment profiles</Heading.h5>
 
       <Image src={stagesImage} />
 
@@ -386,7 +386,7 @@ const Content = props => (
       <code>dev</code>, <code>staging</code>, <code>prod</code>, then the default profile will be used. </P0>
 
       
-      <Heading.h3>Using stages for developing changes</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Using stages for developing changes</Heading.h3>
 
       <Image src={workflowSimpleImage} width={['90%', '90%', '90%', '60%', '60%', '60%']}/>
 
@@ -399,7 +399,7 @@ const Content = props => (
         preview deployment. In both cases, they are deployed using the same deployment profile and therefore using the
         same AWS Access Role and parameters.</P0>
 
-      <Heading.h3>Sharing resources using outputs</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Sharing resources using outputs</Heading.h3>
 
       <P0>When developing Serverless Framework applications, we often have a set of shared resources we use across other
         services. In our example workshop app we have a service called <strong>fullstack-database</strong> which
@@ -424,7 +424,7 @@ const Content = props => (
         <strong>fullstack-restapi</strong> will be deployed using the same deployment profile and AWS account; however,
         the stage names will be different.</P0>
 
-      <Heading.h4>Publishing outputs from fullstack-database</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Publishing outputs from fullstack-database</Heading.h4>
 
       <P0>First we need to setup <strong>fullstack-database</strong> to publish the outputs when it is deployed. This is
       a snippet from the <code>serverless.yml</code> which shows how <strong>fullstack-database</strong> defines the
@@ -447,7 +447,7 @@ const Content = props => (
 
       <Image src={outputsScreenImage}/>
 
-      <Heading.h4>Consuming outputs in fullstack-restapi</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Consuming outputs in fullstack-restapi</Heading.h4>
 
       <P0>Now that <strong>fullstack-database</strong> is deployed, the outputs are published to the dashboard, and made
       available to all other services. In <strong>fullstack-restapi</strong> we can now use the ${'{output}'} variable
@@ -466,7 +466,7 @@ const Content = props => (
 
       <Image src={sharedImage} width={['90%', '90%', '90%', '60%', '60%', '60%']}/>
 
-      <Heading.h4>Consuming outputs in <strong>fullstack-restapi</strong> across stages</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Consuming outputs in <strong>fullstack-restapi</strong> across stages</Heading.h4>
 
       <P0>By default, when the ${'{output}'} variable is used, it gets the value from the dependent service in the same
       app, stage, and region as the current service. In our stage and prod environments this will work as-is; however,
@@ -513,9 +513,9 @@ const Content = props => (
         which will also use the deployment profile associated with the default stage, and resolve
         <code>${'{param:env}'}</code> to <code>dev</code>.</P0>
 
-      <Heading.h3>Deploying</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Deploying</Heading.h3>
 
-      <Heading.h4>Development: deploying from the CLI</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Development: deploying from the CLI</Heading.h4>
       
       <P0>As each developer works on a new feature locally, they should be encouraged to deploy their work frequently so
         they can test it with real cloud resources before making a commit. Once everything checks out, they can commit
@@ -536,7 +536,7 @@ const Content = props => (
       deployment profile is used, therefore it is deployed to the development AWS account, and all the parameters
       associated with the <code>development</code> deployment profile are used.</P0>
 
-      <Heading.h4>Preview: automatic deployments & clean up</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Preview: automatic deployments & clean up</Heading.h4>
 
       <P0>The second step on our workflow is to create a pull request of our feature branch against the master branch.
         We want to automatically run the unit tests and deploy a preview of this service.</P0>
@@ -560,7 +560,7 @@ const Content = props => (
       the pull request is reviewed and approved, it’ll be merged and deleted. When the branch is deleted, Serverless
       CI/CD will automatically destroy the deployment. Self clean up!</P0>
 
-      <Heading.h4>Staging & Production: Branch deployments</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Staging & Production: Branch deployments</Heading.h4>
 
       <P0>Setting up automatic deployments to staging and production is one of the easiest parts of the entire
         process.</P0>
@@ -589,25 +589,25 @@ const Content = props => (
       <P0>Every commit to master and prod will be deployed to the staging and prod stages with the staging and prod 
         eployment profiles respectively after running the unit tests.</P0>
 
-      <Heading.h3>Promotion & rollback with git</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Promotion & rollback with git</Heading.h3>
 
       <P0>The entire CI/CD workflow is tied to our activity in Github, this includes the workflow for promoting changes
         from one stage to the next, and rolling back a change in case of failure.</P0>
 
-      <Heading.h4>Promoting from staging to production</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Promoting from staging to production</Heading.h4>
 
       <P0>If everything in staging looks ok and ready to promote to production, we’ll use our git workflow to merge the
         desired commit from master to the prod branch. Since we already configured branch deployments for the prod
         branch, it will automatically run the tests and deploy to the prod stage.</P0>
 
-      <Heading.h4>Handling roll-backs</Heading.h4>
+      <Heading.h4 className={styles.heading4}>Handling roll-backs</Heading.h4>
 
       <P0>Just as before, we’ll use the git workflow to roll back a change. If you need to roll back a service, this too
         should be tied to the git flow. The roll back to a previous commit, you should create a new PR that reverts the
         initial merge commit. This is conveniently handled with the <code>revert</code> button in the Github Desktop
         app.</P0>
 
-      <Heading.h3>Frequent releases with feature flags</Heading.h3>
+      <Heading.h3 className={styles.heading3}>Frequent releases with feature flags</Heading.h3>
 
       <P0>In our workflow we have a traditional model in which we stage changes in the staging environment before we
         push changes to production. In such a case it may be tempting to stack up changes in the staging environment
@@ -631,9 +631,9 @@ const Content = props => (
 
       <P0>
         <ul>
-          <li><a href="https://launchdarkly.com/" style={{color: 'inherit'}}>https://launchdarkly.com/</a> - used by Serverless Framework Pro</li>
-          <li><a href="https://www.split.io/" style={{color: 'inherit'}}>https://www.split.io/</a></li>
-          <li><a href="https://vwo.com/fullstack/" style={{color: 'inherit'}}>https://vwo.com/fullstack/</a></li>
+          <li><a href='https://launchdarkly.com/' style={{color: 'inherit'}}>https://launchdarkly.com/</a> - used by Serverless Framework Pro</li>
+          <li><a href='https://www.split.io/' style={{color: 'inherit'}}>https://www.split.io/</a></li>
+          <li><a href='https://vwo.com/fullstack/' style={{color: 'inherit'}}>https://vwo.com/fullstack/</a></li>
         </ul>
       </P0>
 
