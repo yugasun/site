@@ -352,9 +352,11 @@ module.exports = [
           slug: 'what-is-dynamodb'
         },
         {
-          title: '[coming soon] SNS',
-          playTime: '0:00',
+          title: 'SNS',
+          playTime: '1:45',
           videoNumber: 14,
+          videoLink: 'https://www.youtube.com/watch?v=KkMPT4GprS8',
+          slug: 'what-is-sns'
         },
         {
           title: '[coming soon] SQS',
