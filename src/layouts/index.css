@@ -498,6 +498,9 @@ code.hljs > a.line:hover:before {
   line-height: 26px;
 }
 
+/* .youtube-embed-container makes youtube embeds responsive*/
+.youtube-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .youtube-embed-container iframe, .youtube-embed-container object, .youtube-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 @media screen and (max-width: 1024px) {
   .sls-h3 {
     font-size: 24px;
