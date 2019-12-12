@@ -255,7 +255,7 @@ export default class Pricing extends React.Component {
               </div>
               <div className={`${styles.pricingSummaryDetailPrice}`}>$0<span>/month</span></div>
               <div className={`${styles.pricingSummaryDetailText}`}>
-                Enable monitoring, debugging, secrets & more for your serverless apps, for free!
+                Enable monitoring, debugging, CI/CD, secrets & more for your serverless apps, for free!
               </div>
               <InternalLink to={gettingStarted}>
                 <div className={`${styles.pricingSummaryButtonWrapper}`}>
