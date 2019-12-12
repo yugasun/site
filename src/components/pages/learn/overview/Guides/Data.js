@@ -4,6 +4,8 @@ import dynamoDBImage from 'src/assets/images/learn/amazon-dynamodb-guide.svg'
 import stepFunctionsImage from 'src/assets/images/learn/aws-step-functions-guide.svg'
 import apiGatewayImage from 'src/assets/images/learn/amazon-api-gateway-guide.svg'
 import appsyncImage from 'src/assets/images/learn/aws-appsync-guide.svg'
+import cloudfrontImage from 'src/assets/images/learn/amazon-cloudfront-guide.svg'
+import s3Image from 'src/assets/images/learn/amazon-s3-guide.svg'
 
 export default [
   {
@@ -38,6 +40,18 @@ export default [
   },
   {
     id: 6,
+    image: s3Image,
+    title: 'Amazon S3',
+    link: '/amazon-s3/',
+  },
+  {
+    id: 6,
+    image: cloudfrontImage,
+    title: 'CloudFront',
+    link: '/amazon-cloudfront/',
+  },
+  {
+    id: 7,
     image: cicdImage,
     title: 'CI/CD',
     link: '/learn/guides/cicd/'
