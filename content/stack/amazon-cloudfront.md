@@ -5,7 +5,7 @@ layout: Learn
 useLearnNav: false
 ---
 
-Are you considering using a content delivery network (CDN) solution like Amazon CloudFront with your Serverless applications or websites? Looking to learn more about the pros and cons of CloudFront and understand its alternatives? Well, you’re in the right place—this guide addresses exactly those considerations.
+Are you considering using a content delivery network (CDN) solution like Amazon CloudFront with your Serverless applications or websites? Looking to learn more about the pros and cons of CloudFront and understand its alternatives? Well, you’re in the right place — this guide addresses exactly those considerations.
 
 In this guide, we’ll cover what Amazon CloudFront is, discuss why it’s an important part of the Serverless ecosystem, and walk you through the advantages and disadvantages of using CloudFront in your Serverless applications.
 
@@ -139,7 +139,7 @@ A full list of CloudFront locations, including edge locations and edge caches, i
 
 CloudFront core service limits are flexible: the default limits on total network throughput per distribution and number of requests per second can be increased by contacting AWS Support.
 
-When using a Lambda@Edge function with origin requests and responses, that is, when a function is executed coupled with a request to the origin, the limits are similar to [the](https://serverless.com/aws-lambda/#limitations) [standard](https://serverless.com/aws-lambda/#limitations) [AWS Lambda limits](https://serverless.com/aws-lambda/#limitations).
+When using a Lambda@Edge function with origin requests and responses, that is, when a function is executed coupled with a request to the origin, the limits are similar to [the standard AWS Lambda limits](https://serverless.com/aws-lambda/#limitations).
 
 The only exception is the function timeout—by default 30 seconds for Lambda@Edge rather than 15 minutes—but this timeout can be increased on request. However, note that Lambda@Edge functions that run on **viewer** requests and responses will execute at a very high frequency—potentially every time a user requests a file from any edge location.
 

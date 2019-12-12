@@ -35,6 +35,8 @@ Amazon DynamoDB is a fully managed NoSQL database service offered by Amazon Web 
 
 DynamoDB is a NoSQL key-value store. This means it doesn’t store data in a structured, relational mapping; instead, it stores JSON objects in a simple key-value format. DynamoDB is proprietary to AWS and is based on the principles of Dynamo, a storage system that Amazon developed for its own internal needs between 2004 and 2007.
 
+<div class='youtube-embed-container'><iframe src='https://www.youtube.com/embed/lVJXehUvYew' frameborder='0' allowfullscreen></iframe></div>
+
 <br/>
 <br/>
 
