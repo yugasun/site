@@ -18,7 +18,7 @@ export default class Hero extends React.Component {
     this.state.stats = {}
     this.state.stats.downloads = 15796866
     this.state.stats.deployments = 758719
-    this.state.stats.stars = 32515
+    this.state.stats.stars = 33437
     this.state.stats.plugins = 215
 
     this.state.timers = {}

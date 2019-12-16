@@ -13,6 +13,6 @@ export default [
   },
   {
     title: 'GitHub stars',
-    number: '32,015',
+    number: '33,437',
   },
 ]
