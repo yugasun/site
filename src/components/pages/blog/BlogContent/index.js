@@ -7,7 +7,7 @@ import {
 import { getAuthorById } from 'src/utils/blog'
 import AuthorCard from './AuthorCard'
 import ContentWrapper from './ContentWrapper'
-import Frontmatter from './Frontmatter'
+import Frontmatter from './Frontmatter/index.js'
 import HeroImage from './HeroImage'
 import ShareOptions from './ShareOptions'
 import DashboardCTA from './DashboardCTA'

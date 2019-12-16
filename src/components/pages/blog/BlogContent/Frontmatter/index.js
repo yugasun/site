@@ -6,10 +6,12 @@ import {
   Heading,
   Row,
   Image,
+  Flex
 } from 'serverless-design-system'
 import { getAuthorById, getAuthorLink } from 'src/utils/blog'
-import Categories from '../Categories'
+import Categories from 'src/components/pages/blog/Categories.js'
 import { InternalLink } from 'src/fragments'
+import LastUpdatedDate from './LastUpdatedDate'
 
 const WrittenByText = ({ children }) => (
   <Text
@@ -23,7 +25,7 @@ const WrittenByText = ({ children }) => (
 )
 
 const BlogFrontmatter = ({ frontmatter }) => {
-  const { category: categoryIds, authors, title, scripts } = frontmatter
+  const { category: categoryIds, authors, title, scripts, date } = frontmatter
   const author = getAuthorById((authors || [])[0])
 
   return (
@@ -39,7 +41,13 @@ const BlogFrontmatter = ({ frontmatter }) => {
           <Helmet script={scripts.map((src) => ({ type: "text/javascript", src }))} />
         )
       }
-      <Categories categoryIds={categoryIds} />
+      <Flex justifyContent='center' alignItems='center'>
+        <Categories categoryIds={categoryIds} />
+        {
+          title == 'All the Serverless announcements at re:Invent 2019' ?
+          <LastUpdatedDate date={date} /> : null
+        }
+      </Flex>
       <Heading.h1
         fontSize={[4, 4, 6, 7]}
         lineHeight={['38px', '38px', '52px', '62px']}
