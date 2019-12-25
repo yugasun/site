@@ -11,7 +11,7 @@ export default class CustomHelmet extends React.Component {
     let meta = []
     let link = []
 
-    const { location = {}, description, thumbnail, rss, prefetches, keywords } = this.props
+    const { location = {}, description, thumbnail, rss, prefetches, keywords, canonical, noIndex } = this.props
     const uri = `https://serverless.com${location.pathname}`
     const metaTitle = this.props.metaTitle || this.props.title
 
@@ -27,6 +27,14 @@ export default class CustomHelmet extends React.Component {
       { name: 'twitter:description', content: description },
       { name: 'description', content: description },
     ]
+
+    if(!noIndex && canonical) {
+      link.push({rel: 'canonical', href: canonical})
+    }
+
+    if(noIndex) {
+      meta.push({name: 'robots', content: 'noindex'})
+    }
 
     if (keywords) {
       meta.push({name: 'keywords', content: keywords})

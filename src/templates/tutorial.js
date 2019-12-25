@@ -28,6 +28,8 @@ const TutorialPage = ({location, pathContext}) => {
       title={`${pathContext.tutorial.title} (Free Video Tutorial)`}
       description={`${pathContext.tutorial.lessonInfo}`}
       location={location}
+      canonical={pathContext.tutorial.canonical ? pathContext.tutorial.canonical : `https://serverless.com${location.pathname}`}
+      noIndex={pathContext.tutorial.noIndex ? true : null}
     />
     <Background background='#f7f7f7'>
         <AppContainer>
