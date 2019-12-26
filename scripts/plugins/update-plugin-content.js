@@ -14,9 +14,13 @@ function isFileFeatured(repoUrl) {
   }
 }
 
-function fixYamlContent(content, filename) {
+function fixYamlContent(content, filename, gitLink) {
   // fix links for website
-  let fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
+  let fixedContent = content.replace(/([0-9]{2})-/g, '')
+
+  //convert relative path to absolute github path
+  fixedContent = fixedContent.replace(/]\((?:(?!http|#))/g, `](${gitLink}/blob/master/`)
+
   // fix Yaml frontmatter
   fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
 
@@ -126,7 +130,7 @@ module.exports = function updatePluginsContent(
           return false
         }
       })[0]
-      const fixedContent = fixYamlContent(content, filename)
+      const fixedContent = fixYamlContent(content, filename, pluginMetaData.repoUrl)
       const item = matter(fixedContent).data
       item.title = formatTitle(_.startCase(pluginName))
       item.description = pluginMetaData.description
