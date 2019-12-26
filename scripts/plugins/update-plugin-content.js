@@ -19,6 +19,10 @@ function fixYamlContent(content, filename) {
   let fixedContent = content.replace(/([0-9]{2})-/g, '').replace(/.md\)/g, ')')
   // fix Yaml frontmatter
   fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
+
+  //replace v3 badge to HTTPs version (resolve mixed content issue)
+  fixedContent = fixedContent.replace("http://public.serverless.com/badges/v3.svg", "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/plugins/sls-v3-badge.svg")
+
   // replace /README)
   fixedContent = fixedContent.replace(/\/README\)/g, ')')
   // fix paths of links that are not index.md('README.md')
