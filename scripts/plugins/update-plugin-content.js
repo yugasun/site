@@ -21,11 +21,21 @@ function fixYamlContent(content, filename, gitLink) {
   //convert relative path to absolute github path
   fixedContent = fixedContent.replace(/]\((?:(?!http|#))/g, `](${gitLink}/blob/master/`)
 
+  //HTTP -> HTTPS for serverless links
+  fixedContent = fixedContent.replace("http://www.serverless.com", "https://www.serverless.com")
+
   // fix Yaml frontmatter
   fixedContent = fixedContent.replace('<!--', '---').replace('-->', '---')
 
   //replace v3 badge to HTTPs version (resolve mixed content issue)
   fixedContent = fixedContent.replace("http://public.serverless.com/badges/v3.svg", "https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/plugins/sls-v3-badge.svg")
+
+  //tmp LICENSE fixes
+  fixedContent = fixedContent.replace("[link-license]: ./blob/master/LICENSE", `[link-license]: ${gitLink}/blob/master/LICENSE`)
+
+  fixedContent = fixedContent.replace("[link-license]: ./LICENSE", `[link-license]: ${gitLink}/blob/master/LICENSE`)
+
+  fixedContent = fixedContent.replace("[link-license]: ./LICENSE.txt", `[link-license]: ${gitLink}/blob/master/LICENSE.txt`)
 
   // replace /README)
   fixedContent = fixedContent.replace(/\/README\)/g, ')')
