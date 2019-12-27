@@ -370,6 +370,7 @@ const generator = createNode =>
         resolve
       )
     }),
+
   ])
 
 module.exports = generator
