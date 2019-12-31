@@ -1,7 +1,7 @@
 const { getFileFromProjectRoot } = require('./utils')
 const graphqlQuery = `
 {
-  allDoc (filter: {docLanguage:{eq:"english"}}) {
+  allDoc (filter: {docLanguage:{eq:"chinese"}}) {
     edges {
       node {
         id
@@ -11,9 +11,9 @@ const graphqlQuery = `
 }
 `
 
-const createDocsPages = (createPage, createRedirect, docs) =>
+const createDocsPagesChinese = (createPage, createRedirect, docs) =>
   docs.forEach(({ node }) => {
-    const docLink = `/framework${node.id}`
+    const docLink = `/cn/framework${node.id.replace('/cn', '')}`
 
     createPage({
       path: docLink,
@@ -39,7 +39,7 @@ const pageCreator = (graphql, createPage, createRedirect) =>
   new Promise((resolve, reject) => {
     try {
       graphql(graphqlQuery).then(result => {
-        createDocsPages(createPage, createRedirect, result.data.allDoc.edges)
+        createDocsPagesChinese(createPage, createRedirect, result.data.allDoc.edges)
         resolve()
       })
     } catch (e) {

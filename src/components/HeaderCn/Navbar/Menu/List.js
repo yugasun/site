@@ -10,7 +10,7 @@ import {
   LanguageDropdownList
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
-import { contactSales, docs, pricing, dashboard, cn } from 'src/constants/urls'
+import { contactSales, docsCn, pricing, dashboard, cn } from 'src/constants/urls'
 //TODO: double-up - clean this to one file
 import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
@@ -30,7 +30,7 @@ const ProductMenu = () => (
 
 const DocsMenu = () => (
   <Box>
-    <NavLink to={docs} completed className='header-menu-item'>
+    <NavLink to={docsCn} completed className='header-menu-item'>
       <MenuTitle name={'文档'} />
     </NavLink>
   </Box>
