@@ -18,6 +18,7 @@ class Header extends React.Component {
       isDesktopView: true,
       isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness,
+      pathName: props.pathName
     }
   }
 
@@ -98,7 +99,7 @@ class Header extends React.Component {
                 <NavbarContext.Provider value={this.state}>
                   <Logo />
                   <NavButton />
-                  <Navbar />
+                  <Navbar pathName={this.state.pathName}/>
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
             </HeaderContainer>

@@ -97,9 +97,9 @@ const MoreMenu = () => (
 
 
 // <img src={imgLanguage} style={{display:'float'}} />
-const LanguageMenu = () => (
+const LanguageMenu = ({pathName}) => (
   <Box>
-    <MenuTitle name={location.pathname.indexOf('/'+cn) === 0 ? "简体中文" : "English"} />
+    <MenuTitle name={pathName.indexOf('/'+cn) === 0 ? "简体中文" : "English"} />
       <MoreMenuDescription>
       <LanguageDropdownList />
     </MoreMenuDescription>

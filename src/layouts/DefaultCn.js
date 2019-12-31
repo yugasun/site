@@ -5,11 +5,11 @@ import { Flex } from 'serverless-design-system'
 
 //TODO: frameworkPage prop === dirtyPattern - fix
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ pathName, children }) => {
   return (
     <div style={{ width: '100%' }}>
       <div className='container'>
-        <HeaderCn />
+        <HeaderCn pathName={pathName}/>
         {children}
       </div>
       <FooterCn />

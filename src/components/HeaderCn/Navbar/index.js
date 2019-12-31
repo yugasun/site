@@ -27,7 +27,7 @@ const NavListItem = styled(ListItem)`
 
 const smallScreenNavbarVisibility = active => (active ? 'inline-block' : 'none')
 
-const Navbar = () => (
+const Navbar = ({pathName}) => (
   <NavbarContext.Consumer>
     {({ isNavbarActive }) => (
       <Box
@@ -46,7 +46,7 @@ const Navbar = () => (
               key={index}
               display={['block', 'block', 'block', 'block', 'inline-block']}
             >
-              <MenuItem />
+              <MenuItem pathName={pathName}/>
             </NavListItem>
           ))}
         </List>
