@@ -168,42 +168,6 @@ module.exports = {
             output: "blog/feed.xml",
             title: "Serverless Blog RSS Feed",
           },
-          {
-            serialize: ({ query: { site, allBlog } }) => {
-              return allBlog.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  url: site.siteMetadata.siteUrl + "/cn/" + edge.node.id + "/",
-                  guid: site.siteMetadata.siteUrl + "/cn/" + edge.node.id + "/",
-                  custom_elements: [{ "content:encoded": edge.node.content }],
-                })
-              })
-            },
-            query: `
-              {
-                allDocCn(
-                  filter: {
-                    frontmatter: { date: { ne: null } }
-                  },
-                  limit: 50,
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                ) {
-                  edges {
-                    node {
-                      id
-                      content
-                      frontmatter {
-                        description
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: "blog/feed.xml",
-            title: "Serverless Blog RSS Feed",
-          },
         ],
       },
     }
