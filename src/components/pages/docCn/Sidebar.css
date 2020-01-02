@@ -1,0 +1,160 @@
+.metismenu {
+  background: #f7f7f7;
+  font-family: 'Soleil' !important;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+  padding-left: 44px;
+}
+.metismenu > .metismenu-container > .metismenu-item > .metismenu-link {
+  color: #8c8c8c;
+  line-height: 2.5em;
+}
+
+.metismenu-link {
+  color: #8c8c8c;
+  font-family: 'Soleil' !important;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.58px;
+}
+.metismenu
+  > .metismenu-container
+  > .metismenu-item
+  > .metismenu-link
+  .metismenu-state-icon {
+  color: #8c8c8c;
+  line-height: 2.5em;
+}
+.metismenu::after {
+  box-shadow: none;
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.metismenu-container,
+.metismenu-item {
+  color: #8c8c8c;
+  margin: 0;
+  padding: 0;
+}
+.metismenu-container {
+  list-style: none;
+}
+.metismenu-container .metismenu-container {
+  box-shadow: none;
+  transition: padding 0.3s;
+  -webkit-transition: padding 0.3s;
+  background: #f7f7f7;
+}
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link {
+  height: 0;
+  overflow: hidden;
+}
+.metismenu-container .metismenu-container .metismenu-link {
+  color: #8c8c8c;
+  padding-left: 1em;
+}
+
+.metismenu-container .metismenu-container .metismenu-link:hover {
+  color: black;
+  padding-left: 1em;
+}
+
+.metismenu-container .metismenu-container .metismenu-container .metismenu-link {
+  padding-left: 1em;
+}
+.metismenu-container.visible {
+  padding: 0.5em 0;
+  padding-left: 1em;
+}
+.sls-root-menu + ul.visible {
+  padding: 0 !important;
+  padding-left: 1em !important;
+}
+.metismenu-container.visible > .metismenu-item > .metismenu-link {
+  height: 2.5em;
+}
+.metismenu-link {
+  color: #8c8c8c;
+  transition: height 0.3s, color 0.3s, background-color 0.3s;
+  -webkit-transition: height 0.3s, color 0.3s, background-color 0.3s;
+  display: block;
+  line-height: 2.5em;
+  text-decoration: none;
+}
+.metismenu-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #000;
+}
+.sls-dropdown-icon:after {
+  content: '';
+  background: url('https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/docs/menu-dropdown-icon.svg');
+  background-size: cover;
+  position: absolute;
+  width: 8px;
+  height: 6px;
+  margin-top: 15px;
+}
+
+.metismenu-link.active {
+  background: #f7f7f7;
+  color: #000 !important;
+}
+
+.metismenu-link.active:not(.sls-root-menu) {
+  border-left: 1px solid #fd5750;
+  padding-left: 1em;
+}
+
+.sls-root-menu .visible {
+  border-left: 1px solid #fd5750;
+  padding-left: 1em;
+}
+
+i.metismenu-icon {
+  text-align: center;
+  width: 3em;
+}
+i.metismenu-state-icon {
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  float: right;
+  line-height: 2.5em;
+  text-align: center;
+  width: 2em;
+}
+i.metismenu-state-icon.rotate-minus-90 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 1025px) {
+  .metismenu,
+  .metismenu-container .metismenu-container {
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .metismenu {
+    padding-left: 38px;
+  }
+
+  .metismenu-link:hover {
+    color: #8c8c8c;
+  }
+
+  .metismenu-container .metismenu-container .metismenu-link:hover {
+    color: #8c8c8c;
+  }
+
+  .metismenu-link.active {
+    background: black;
+    color: #fff !important;
+  }
+}

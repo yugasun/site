@@ -1,7 +1,7 @@
 const { getFileFromProjectRoot } = require('./utils')
 const graphqlQuery = `
 {
-  allDoc {
+  allDoc (filter: {docLanguage:{eq:"english"}}) {
     edges {
       node {
         id

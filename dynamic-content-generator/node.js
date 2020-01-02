@@ -239,7 +239,8 @@ const sourceDocs = createNode => (err, content, _filename, next) => {
   if (err) throw err
 
   const { data: frontmatter, content: markdownContent } = matter(content)
-  const url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
+  let url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
+  const docLanguage = url.startsWith('/docs/cn/') ? "chinese": "english"
 
   unified()
     .use(markdown)
@@ -264,6 +265,7 @@ const sourceDocs = createNode => (err, content, _filename, next) => {
           type: `Doc`,
           contentDigest: digestCreator(content),
         },
+        docLanguage,
         frontmatter,
         content: String(file),
       })
@@ -370,6 +372,7 @@ const generator = createNode =>
         resolve
       )
     }),
+
   ])
 
 module.exports = generator

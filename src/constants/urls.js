@@ -57,4 +57,5 @@ export default {
   githubHandle: 'https://github.com/serverless/',
   linkedinHandle: 'https://www.linkedin.com/company/serverless/',
   twitterHandle: 'https://twitter.com/goserverless/',
+  docsCn: '/cn/framework/docs/',
 }

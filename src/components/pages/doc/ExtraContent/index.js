@@ -1,9 +1,8 @@
 import React from 'react'
 import ProviderBanner from './ProviderBanner'
-import OverviewExtraContent from 'src/components/pages/doc/OverviewExtraContent/index.js'
 
 const providers = [
-  'aws',
+  'AWS',
   'azure',
   'openwhisk',
   'google',

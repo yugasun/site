@@ -1,0 +1,136 @@
+.paradigm-component {}
+
+.paradigm-component .paradigm-guide {
+  flex-direction: column;
+  align-items: center;
+  padding: 68px 10px 100px 10px;
+  background: #f7f7f7;
+}
+
+.paradigm-component .paradigm-guide-title {
+  padding: 0;
+}
+
+.paradigm-component .paradigm-guide-steps  {
+  display: flex;
+  flex-direction: row;
+}
+
+.paradigm-component .paradigm-guide-step {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 560px;
+  width: 33%;
+  background: #ffffff;
+  margin: 10px 14px 20px 14px;
+  padding: 36px 32px 42px 32px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.paradigm-component .paradigm-guide-step:hover {
+  cursor: pointer;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.15);
+  transform: scale(1.005) translate3d( 0, 0, 0) perspective(1px);
+}
+
+.paradigm-component .paradigm-guide-step:first-child {
+  margin-left: 0;
+}
+
+.paradigm-component .paradigm-guide-step:last-child {
+  margin-right: 0;
+}
+
+.paradigm-component .paradigm-guide-step-title {
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 26px;
+  padding: 10px 0 20px 0;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.paradigm-component .paradigm-guide-step-description {
+  text-align: left;
+  font-family: 'SoleilLt';
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0,0,0,1);
+  padding: 10px 0 20px 0;
+}
+
+.paradigm-component .paradigm-guide-step-action {
+  display: flex;
+  padding: 26px 0 0 0;
+  margin: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-family: 'SoleilSB';
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fd5750;
+}
+
+.paradigm-component .paradigm-guide-step-action:hover {
+  text-decoration: underline;
+}
+
+.paradigm-component .paradigm-mission {
+  flex-direction: column;
+  align-items: center;
+  /* border-top: 1px solid rgba(0,0,0,0.1); */
+}
+
+.paradigm-component .paradigm-mission-inner {
+  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  padding: 68px 0 100px 0;
+}
+
+.paradigm-component .paradigm-mission-icon {
+  margin: 0 0 10px 0;
+  color: #fd5750;
+  font-size: 42px;
+}
+
+.paradigm-component .paradigm-mission-statement p {
+  width: 100%;
+  text-align: left;
+  font-family: 'SoleilLt';
+  font-size: 19px;
+  line-height: 40px;
+  margin: 0 0 26px 0;
+  letter-spacing: 0px;
+}
+
+.paradigm-component .paradigm-mission-statement b {
+  font-family: 'SoleilLt';
+}
+
+/**
+ * Guide Steps - Mobile
+ */
+
+ @media screen and (max-width: 992px) {
+  .paradigm-component .paradigm-guide-steps {
+    flex-direction: column;
+  }
+
+  .paradigm-component .paradigm-guide-step {
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .paradigm-mission-inner .header, .paradigm-guide .header {
+    text-align: center;
+  }
+
+  .paradigm-component .paradigm-guide {
+    padding: 68px 0px 100px 0px;
+  }
+}

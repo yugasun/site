@@ -90,13 +90,5 @@
 /blog/serverless-guide-aws-reinvent-2017/ /blog/reinvent-2019-serverless-announcements/ 301
 /blog/reinvent-2018-serverless-announcements/ /blog/reinvent-2019-serverless-announcements/ 301
 /blog/ultimate-list-serverless-announcements-reinvent/ /blog/reinvent-2019-serverless-announcements/ 301
-/  /partners/cloud/tencent/chinese/   302  Country=cn
-/learn/*  /partners/cloud/tencent/chinese/   302  Country=cn
-/blog/*  /partners/cloud/tencent/chinese/   302  Country=cn
-/learn/*  /partners/cloud/tencent/chinese/   302  Country=cn
-/examples/*  /partners/cloud/tencent/chinese/   302  Country=cn
-/cli  /partners/cloud/tencent/chinese/   302  Country=cn
-/components  /partners/cloud/tencent/chinese/   302  Country=cn
-/debugging  /partners/cloud/tencent/chinese/   302  Country=cn
-/partners  /partners/cloud/tencent/chinese/   302  Country=cn
 /reinvent/ /contact-sales/ 301
+/  /cn/   302  Country=cn
