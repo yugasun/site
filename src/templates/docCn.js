@@ -24,6 +24,12 @@ const DocTemplate = ({ data: { doc }, location }) => (
           type: 'text/javascript',
         },
       ]}
+      meta={[
+        {
+          name: 'robots',
+          content: 'noindex'
+        }
+      ]}
     />
 
     <DocsWrapper __url={location.pathname}>

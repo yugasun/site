@@ -25,7 +25,7 @@ const SubHeader = ({ url }) => {
   )
   return (
     <Box className='breadCrumbContainer docs-breadcrumbs'>
-      <DocsBreadcrumbs path={url} rightContent={breadCrumbContent} />
+      <DocsBreadcrumbs path={url} />
       {searchBox}
     </Box>
   )
