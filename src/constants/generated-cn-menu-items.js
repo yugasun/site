@@ -12,23 +12,8 @@ module.exports = {
         "title": "快速开始"
       },
       {
-        "path": "/cn/framework/docs/providers/",
-        "title": "CLI 命令行工具"
-      }
-    ]
-  },
-  "/cn/framework/docs/providers": {
-    "index": [
-      {
-        "path": "/cn/framework/docs/providers/index/",
-        "title": "CLI 命令行工具"
-      }
-    ],
-    "children": [
-      {
         "path": "/cn/framework/docs/providers/tencent/",
-        "title": "Tencent",
-        "order": 3
+        "title": "Tencent"
       }
     ]
   },
