@@ -117,7 +117,11 @@ const Breadcrumbs = ({
 Breadcrumbs.defaultProps = {
   pathSeparator: '/',
   getUrlFromPathSegments: pathSegments => {
-    const link = `/${pathSegments.join('/')}/`
+    let link = `/${pathSegments.join('/')}/`
+    //TODO: hacky implementation, fix
+    if(link === '/cn/framework/') {
+      link = '/framework/'
+    }
     return link
   },
 }
