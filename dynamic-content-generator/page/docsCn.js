@@ -17,7 +17,7 @@ const createDocsPagesChinese = (createPage, createRedirect, docs) =>
 
     createPage({
       path: docLink,
-      component: getFileFromProjectRoot(`src/templates/doc.js`),
+      component: getFileFromProjectRoot(`src/templates/docCn.js`),
       context: {
         docId: node.id,
       },
