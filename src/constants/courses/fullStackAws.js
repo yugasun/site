@@ -326,7 +326,8 @@ module.exports = [
           playTime: '4:41',
           videoNumber: 11,
           videoLink: 'https://www.youtube.com/watch?v=yBHuF3A-dIQ',
-          slug: 'what-is-lambda-in-aws'
+          slug: 'what-is-lambda-in-aws',
+          noIndex: true
         },
         {
           title: 'API Gateway',
@@ -342,21 +343,24 @@ module.exports = [
           And there are a lot more we will see as well, such as being able to specify the expected schema for POST requests, API keys, throttling of requests, and more.`,
           videoNumber: 12,
           videoLink: 'https://www.youtube.com/watch?v=oFhmRYh2mUY',
-          slug: 'what-is-amazon-api-gateway'
+          slug: 'what-is-amazon-api-gateway',
+          canonical: 'https://serverless.com/amazon-api-gateway/'
         },
         {
           title: 'DynamoDB',
           playTime: '4:24',
           videoNumber: 13,
           videoLink: 'https://www.youtube.com/watch?v=lVJXehUvYew',
-          slug: 'what-is-dynamodb'
+          slug: 'what-is-dynamodb',
+          canonical: 'https://serverless.com/dynamodb/',
         },
         {
           title: 'SNS',
           playTime: '1:45',
           videoNumber: 14,
           videoLink: 'https://www.youtube.com/watch?v=KkMPT4GprS8',
-          slug: 'what-is-sns'
+          slug: 'what-is-sns',
+          noIndex: true
         },
         {
           title: '[coming soon] SQS',

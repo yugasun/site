@@ -4,7 +4,6 @@ import { AppContainer } from 'src/components'
 import { Heading } from 'src/fragments/DesignSystem'
 import { TeamMemberImageCard } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'
-import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
 import bill from 'src/assets/images/team/bill.jpg'
 import philipp from 'src/assets/images/team/philipp.jpg'
@@ -29,7 +28,6 @@ const getLastName = name => name.split(' ').pop()
 
 const leaders = [
   { image: austin, name: 'Austen Collins', position: 'Founder & CEO' },
-  { image: nick, name: 'Nick Gottlieb', position: 'VP of Growth' },
   {
     image: ganesh,
     name: 'Ganesh Radhakrishnan',
