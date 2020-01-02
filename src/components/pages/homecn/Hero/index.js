@@ -172,6 +172,8 @@ export default class Hero extends React.Component {
             <a
               href='https://github.com/serverless/serverless/blob/master/README_CN.md#quick-start'
               className='hero-button hero-button-primary'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               快速开始
             </a>
