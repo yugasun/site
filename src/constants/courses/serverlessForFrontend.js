@@ -405,17 +405,17 @@ module.exports = [
           slug: "",
         },
         {
-          title: '[coming soon] Integrating the API In Our Frontend',
-          lessonInfo: "",
+          title: 'Integrating the API In Our Frontend',
+          lessonInfo: "In this video, you'll learn how to integrate API endpoints in your frontend application and redeploy the service. For all the code used in the frontend and backend you can take a look at section 4.5 here: https://github.com/fernando-mc/serverless-learn-serverlessjams",
           transcript: ``,
-          playTime: '0:00',
+          playTime: '13:26',
           videoNumber: 16,
-          videoLink: '',
+          videoLink: 'https://www.youtube.com/watch?v=GqEwootua2g',
           slug: "",
         },
       ],
     },
-      {
+    {
       title: 'Adding Authentication and Authorization',
       items: [
         {
