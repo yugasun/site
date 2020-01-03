@@ -55,8 +55,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && mv public dist && cp src/assets-root/* dist",
-    "buildprod": "npm run syncProd && npm run prepareContent && gatsby build && mv public dist && cp src/assets-root/* dist",
+    "build": "export NODE_OPTIONS=--max_old_space_size=4096 gatsby build && mv public dist && cp src/assets-root/* dist",
+    "buildprod": "npm run syncProd && npm run prepareContent && npm run build",
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",
