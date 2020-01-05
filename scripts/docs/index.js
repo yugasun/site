@@ -15,7 +15,28 @@ const siteDocsPath = config.siteDocsPath
 // replace numbers in 00-name-of-dir
 const replacePattern = /([0-9]{2})-/g
 
+const fs = require('fs');
+const Path = require('path');
+const deleteFolderRecursive = function(path) {
+  if (fs.existsSync(path)) {
+    fs.readdirSync(path).forEach((file, index) => {
+      const curPath = Path.join(path, file);
+      if (fs.lstatSync(curPath).isDirectory()) { // recurse
+        deleteFolderRecursive(curPath);
+      } else { // delete file
+        fs.unlinkSync(curPath);
+      }
+    });
+    fs.rmdirSync(path);
+  }
+};
+
 asyncLib.waterfall([
+  function(next) {
+    //TODO: this is temp - since this new example is breaking the whole website build: https://github.com/serverless/serverless/tree/master/docs/providers/openwhisk/examples/hello-world/java
+    deleteFolderRecursive(config.serverlessDocsPath + 'providers/openwhisk/examples/hello-world/java')
+    next();
+  },
   function (next) {
     emptyDirectory(siteDocsPath, (err) => {
       if (err) return next(err)
