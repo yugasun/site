@@ -6,6 +6,7 @@ import apiGatewayImage from 'src/assets/images/learn/amazon-api-gateway-guide.sv
 import appsyncImage from 'src/assets/images/learn/aws-appsync-guide.svg'
 import cloudfrontImage from 'src/assets/images/learn/amazon-cloudfront-guide.svg'
 import s3Image from 'src/assets/images/learn/amazon-s3-guide.svg'
+import sqsImage from 'src/assets/images/learn/aws-sqs.svg'
 
 export default [
   {
@@ -52,6 +53,12 @@ export default [
   },
   {
     id: 7,
+    image: sqsImage,
+    title: 'Amazon SQS',
+    link: '/amazon-sqs/',
+  },
+  {
+    id: 8,
     image: cicdImage,
     title: 'CI/CD',
     link: '/learn/guides/cicd/'
