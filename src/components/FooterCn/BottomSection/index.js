@@ -49,7 +49,7 @@ const BottomSection = () => (
       <Flex ml={[0, 0, 0, 0, 22]}>
         <ExternalLink to={contact}>
           <SmallGrayText>
-             版权所有 © 2019 Serverless, Inc. 保留所有权利。
+             版权所有 © 2020 Serverless, Inc. 保留所有权利。
           </SmallGrayText>
         </ExternalLink>
       </Flex>
