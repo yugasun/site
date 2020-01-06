@@ -16,8 +16,6 @@ import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
 import ServicesMenuDescription from './Descriptions/Services'
 import ProductMenuDescription from './Descriptions/Product'
-console.log('LanguageSelect', LanguageSelect)
-
 
 const ProductMenu = () => (
   <Box>
