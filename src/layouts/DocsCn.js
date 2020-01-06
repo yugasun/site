@@ -11,7 +11,6 @@ const DefaultLayout = ({
   noPrefooter,
   url,
 }) => {
-  console.log(JSON.stringify(url))
   const prefooterOnlyDesktopBool = prefooterOnlyDesktop ? true : false
   const noPrefooterBool = noPrefooter ? true : false
 
