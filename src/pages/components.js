@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 
 import { Helmet } from 'src/fragments'
 import HomeLayout from 'src/layouts/Newest'

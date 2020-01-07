@@ -9,6 +9,7 @@ import {
   ProductDropdownList,
 } from './DropdownList'
 import NavLink from 'src/components/NavLink'
+import LanguageSelect from 'src/components/LanguageSelect'
 import { contactSales, docs, pricing, dashboard } from 'src/constants/urls'
 //TODO: double-up - clean this to one file
 import MoreMenuDescription from './Descriptions/More'
@@ -102,5 +103,4 @@ export default [
   ContactSalesMenu,
   LoginMenu,
   RegisterMenu,
-
 ]
