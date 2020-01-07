@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex } from 'serverless-design-system'
-import allSignalImage from 'src/assets/images/pages/monitoring/all-signal-monitoring.png'
+import allSignalImage from 'src/assets/images/pages/cn/monitoring/all-signal-monitoring.png'
 import Content from './Content'
 import { ImageWithShadow as Image } from 'src/fragments'
 

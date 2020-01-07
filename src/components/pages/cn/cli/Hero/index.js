@@ -3,7 +3,7 @@ import { HeroWrapper } from 'src/fragments'
 import { ExternalLink, InternalLink } from 'src/fragments'
 import { dashboard, gettingStarted } from 'src/constants/urls.cn'
 import { Button } from 'src/components'
-import HeroImage from 'src/assets/images/pages/cli/CLI-hero.gif'
+import HeroImage from 'src/assets/images/pages/cn/cli/CLI-hero.gif'
 import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
 import styles from '../CLI.module.css'
 

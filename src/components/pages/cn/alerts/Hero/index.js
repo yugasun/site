@@ -3,7 +3,7 @@ import { HeroWrapper } from 'src/fragments'
 import { ExternalLink, InternalLink } from 'src/fragments'
 import { dashboard, pricing } from 'src/constants/urls.js'
 import { Button } from 'src/components'
-import HeroImage from 'src/assets/images/pages/alerts/optimum-performance.png'
+import HeroImage from 'src/assets/images/pages/cn/alerts/optimum-performance.png'
 import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
 import styles from '../Alerts.module.css'
 
