@@ -103,5 +103,4 @@ export default [
   ContactSalesMenu,
   LoginMenu,
   RegisterMenu,
-  LanguageSelect,
 ]
