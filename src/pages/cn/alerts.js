@@ -24,6 +24,7 @@ const Alerts = ({ location }) => (
       description='Serverless 会根据自动收集的数据生成一组预配置的告警信息。只需打开 Dashboard，部署并监控程序，无论是在部署之后，还是部署中的应用都可以看到由部署引起的错误和性能下降。'
       keywords='Serverless告警,Serverless告警解决方案,Serverless告警方案, Serverless应用告警'
       location={location}
+      noIndex={true}
     />
 
     <Hero />

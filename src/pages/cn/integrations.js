@@ -25,6 +25,7 @@ const Integrations = ({ location }) => (
       description='在潜在问题影响服务质量之前获取通知。通过信息整理渠道，可以将报错，内存使用率，异常持续时间等信息高效下发到企业微信，电子邮箱等。'
       keywords='Serverless信息整合,Serverlessintegrations,Serverless 信息整合方案'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <Background background={'#f7f7f7'}>

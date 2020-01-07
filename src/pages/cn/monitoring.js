@@ -24,6 +24,7 @@ const Monitoring = ({ location }) => (
       description='针对 Serverless 应用程序即时强大的指标监控，包括资源使用率，性能，报错等。'
       keywords='Serverless监控,Serverless监控解决方案,Serverless监控方案, Serverless应用监控'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <Background background={'#f7f7f7'}>

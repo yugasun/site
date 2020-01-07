@@ -17,6 +17,7 @@ const Dashboard = ({ location }) => (
       description='Serverless 组件是为比较高阶的用例（例如Express，Koa，Vue）构建的。开发者无需关系底层基础设备，提供更加简单，便捷的serverless部署体验。'
       keywords='Serverless组件,ServerlessExpress,ServerlessKoa, ServerlessVue, ServerlessLaravel'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <Background background={'#f7f7f7'}>

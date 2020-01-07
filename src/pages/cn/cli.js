@@ -17,6 +17,7 @@ const CLI = ({ location }) => (
     prefooter={NewToServerlessPrefooter}
     transparentHeader={true}
     pathName={location.pathname}
+    noIndex={true}
   >
     <Helmet
       title='Serverless 命令行工具 | Serverless CLI'

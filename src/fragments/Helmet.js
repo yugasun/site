@@ -33,7 +33,7 @@ export default class CustomHelmet extends React.Component {
     }
 
     if(noIndex) {
-      meta.push({name: 'robots', content: 'noindex'})
+      meta.push({name: 'googlebot', content: 'noindex'})
     }
 
     if (keywords) {

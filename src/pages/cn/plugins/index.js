@@ -16,6 +16,7 @@ const Plugins = ({ location, data: plugins }) => {
       <Helmet
         title='Serverless Plugins Directory (210+ Plugins w/ Download Count + Filters)'
         description='This serverless plugins explorer contains an option to filter by status so you know which serverless plugins are approved &amp; certified '
+        noIndex={true}
       />
       <Hero />
       <Content plugins={edges.reverse().map(({ node }) => node)} />

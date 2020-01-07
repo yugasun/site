@@ -24,6 +24,7 @@ const Policies = ({ location }) => (
       description='Easily set and enforce organizational policies for serverless architectures.  Verify policies before each deployment to ensure safe deployments to the cloud.  Prevent common AWS Lambda security concerns, set best practices and more.'
       keywords='aws lambda security, aws lambda policies, serverless policies, serverless best practices, aws lambda best practices'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <Background background={'#f7f7f7'}>
