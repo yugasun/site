@@ -1,11 +1,13 @@
 const blogPagesGenerator = require('./blog')
 const docsPagesGenerator = require('./docs')
-const chineseDocsPagesGenerator = require('./docsCn')
 const examplePagesGenerator = require('./example')
 const pluginPagesGenerator = require('./plugin')
 const stackPagesGenerator = require('./stack')
 const tutorialPagesGenerator = require('./tutorial')
 const coursesPagesGenerator = require('./courses')
+
+// cn pages
+const cnDocsPagesGenerator = require('./cn/docs')
 
 const pageCreator = (graphql, createPage, createRedirect) =>
   Promise.all([
@@ -14,9 +16,10 @@ const pageCreator = (graphql, createPage, createRedirect) =>
     pluginPagesGenerator(graphql, createPage),
     stackPagesGenerator(graphql, createPage),
     docsPagesGenerator(graphql, createPage, createRedirect),
-    chineseDocsPagesGenerator(graphql, createPage, createRedirect),
     tutorialPagesGenerator(createPage),
-    coursesPagesGenerator(createPage)
+    coursesPagesGenerator(createPage),
+
+    cnDocsPagesGenerator(graphql, createPage, createRedirect),
   ])
 
 module.exports = pageCreator

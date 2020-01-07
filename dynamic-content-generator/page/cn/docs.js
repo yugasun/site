@@ -1,4 +1,4 @@
-const { getFileFromProjectRoot } = require('./utils')
+const { getFileFromProjectRoot } = require('../utils')
 const graphqlQuery = `
 {
   allDoc (filter: {docLanguage:{eq:"chinese"}}) {
@@ -17,7 +17,7 @@ const createDocsPagesChinese = (createPage, createRedirect, docs) =>
 
     createPage({
       path: docLink,
-      component: getFileFromProjectRoot(`src/templates/docCn.js`),
+      component: getFileFromProjectRoot(`src/templates/cn/doc.js`),
       context: {
         docId: node.id,
       },

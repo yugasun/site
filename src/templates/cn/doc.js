@@ -2,12 +2,12 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Row, Column, Box } from 'serverless-design-system'
 import DocsLayout from 'src/layouts/cn/Docs'
-import DocsWrapper from '../components/pages/docCn/DocsWrapper'
-import Sidebar from '../components/pages/docCn/Sidebar'
-import LiteHeader from '../components/pages/docCn/LiteHeader'
+import DocsWrapper from 'src/components/pages/cn/doc/DocsWrapper'
+import Sidebar from 'src/components/pages/cn/doc/Sidebar'
+import LiteHeader from 'src/components/pages/cn/doc/LiteHeader'
 import { Helmet as SEOHelmet, HaveQuestionsPrefooter } from 'src/fragments'
-import ExamplesAndTutorials from 'src/components/pages/docCn/OverviewExtraContent/ExamplesAndTutorials.js'
-import ExtraContent from 'src/components/pages/docCn/ExtraContent/index.js'
+import ExamplesAndTutorials from 'src/components/pages/cn/doc/OverviewExtraContent/ExamplesAndTutorials.js'
+import ExtraContent from 'src/components/pages/cn/doc/ExtraContent/index.js'
 
 const DocTemplate = ({ data: { doc }, location }) => (
   <DocsLayout footerBackground={false} noPrefooter url={location.pathname}>
