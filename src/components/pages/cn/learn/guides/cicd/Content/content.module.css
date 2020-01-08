@@ -1,0 +1,43 @@
+.guideContainer {
+  margin-top: 160px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.guideContainer p{
+  margin-bottom: 20px;
+}
+
+.guideContainer ul li {
+  margin-bottom: 16px;
+}
+
+.heading2, .heading3, .heading4, .heading5 {
+  margin-top: 32px;
+  color: #000 !important;
+}
+
+.heading1 {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 56px;
+}
+
+.guideContainer pre {
+  border: solid 1px #CCC;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.guideContainer p#toc a{
+  color: blue;
+}
+
+.guideContainer img {
+  margin: 20px 50px 50px 50px;
+  text-align: center;
+}

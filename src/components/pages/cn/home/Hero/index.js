@@ -84,8 +84,8 @@ export default class Hero extends React.Component {
             <div className='hero-logo-framework'>framework</div>
           </div>
 
-          <div className='hero-tagline container'>
-            立即使用Serverless，只需三步 !
+          <div className='hero-tagline container hero-tagline-cn'>
+            立即使用Serverless，只需三步!
           </div>
 
           <div className='hero-video-container container'>
