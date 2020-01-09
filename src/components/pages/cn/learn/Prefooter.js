@@ -5,7 +5,7 @@ import { InternalLink } from 'src/fragments'
 import { P } from 'src/fragments/DesignSystem'
 import {
   gettingStarted,
-  caseStudies,
+  useCases,
   comparisons,
 } from 'src/constants/urls.cn'
 
@@ -20,7 +20,7 @@ const actions = [
   {
     name: '应用场景',
     navProps: {
-      to: caseStudies,
+      to: useCases,
       completed: true,
     },
   },
