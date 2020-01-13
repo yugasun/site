@@ -121,7 +121,7 @@ module.exports = function updateExamplesContent(examplesDirectoryPath) {
             if (err) console.error(err)
             const folderName = path.parse(filename).base.replace('.md', '')
             const fixedContent = fixYamlContent(content, filename)
-            const item = matter(fixedContent).data 
+            const item = matter(fixedContent).data
             item.gitLink = makeGitLink(folderName)
             item.title = makeTitle(folderName)
             item.platformSEOName = makePlatformSEOName(item.title, item.platform)
@@ -135,10 +135,10 @@ module.exports = function updateExamplesContent(examplesDirectoryPath) {
 ${yaml}---`
             const finalNewContent = fixedContent.replace(/^---(\s*?.*?)*?---/, newYamlContent)
             fs.writeFileSync(filename, finalNewContent)
-            
+
             next()
         },
         function (err) {
-            
+
         })
 }

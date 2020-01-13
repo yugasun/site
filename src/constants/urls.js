@@ -33,6 +33,7 @@ export default {
   jobs: '/company/jobs/',
   tutorials: '/blog/category/guides-and-tutorials/',
   contact: 'mailto:hello@serverless.com',
+  affiliates: 'mailto:hello@serverless.com?subject=Serverless Framework PRO Affiliate Application',
   gettingStarted: '/framework/docs/getting-started/',
   contactForm: '/enterprise/contact/',
   contactSales: '/contact-sales/',

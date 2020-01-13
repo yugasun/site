@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Row, Column, Box } from 'serverless-design-system'
-import DocsLayout from 'src/layouts/DocsCn'
+import DocsLayout from 'src/layouts/cn/Docs'
 import DocsWrapper from '../components/pages/docCn/DocsWrapper'
 import Sidebar from '../components/pages/docCn/Sidebar'
 import LiteHeader from '../components/pages/docCn/LiteHeader'

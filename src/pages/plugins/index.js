@@ -13,7 +13,7 @@ const Plugins = ({ data: plugins }) => {
 
   return (
     <DefaultLayout transparentHeader={true}>
-      <Helmet title='Serverless Plugins Directory (210+ Plugins w/ Download Count + Filters)' 
+      <Helmet title='Serverless Plugins Directory (210+ Plugins w/ Download Count + Filters)'
       description='This serverless plugins explorer contains an option to filter by status so you know which serverless plugins are approved &amp; certified '/>
       <Hero />
       <Content plugins={edges.reverse().map(({ node }) => node)} />

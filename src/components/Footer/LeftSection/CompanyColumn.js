@@ -7,6 +7,7 @@ import {
   contact,
   termsOfService,
   privacyPolicy,
+  affiliates
 } from 'src/constants/urls'
 
 const CompanyColumn = ({ mobileOrder }) => (
@@ -25,6 +26,10 @@ const CompanyColumn = ({ mobileOrder }) => (
       {
         name: 'Contact',
         navProps: { to: contact, crossDomain: true },
+      },
+      {
+        name: 'Affiliates',
+        navProps: { to: affiliates, crossDomain: true },
       },
       {
         name: 'Terms of service',

@@ -13,6 +13,10 @@ const ContentWrapper = styled(Column)`
     white-space: nowrap;
   }
 
+  pre {
+    overflow-x: auto;
+  }
+
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;
