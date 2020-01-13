@@ -143,7 +143,7 @@ module.exports = [
         {
           title: 'Installing the Serverless Framework',
           playTime: '2:22',
-          metaTitle: `Installing the Serverless Framework via NPM`,
+          metaTitle: `Installing the Serverless Framework via NPM (Video Tutorial)`,
           transcript: `The Serverless Framework is the tool we are going to be using to help us build these API endpoints and lambda functions amongst other services and features that we want to use to help build our application to make it a lot easier so we don't have to manually configure things within the AWS console constantly. 
           
           It also gives us a way to build applications in a reproducible, portable way that we can share with other developers on our team. Potentially we can even save these configurations onto places like GitHub to share with the world and just makes things a lot more flexible for us to handle. So with that, if you do want to find more information, you can go to serverless.com which is the homepage of the Serverless Framework. 
