@@ -25,7 +25,7 @@ const TutorialPage = ({location, pathContext}) => {
     startWithWhiteHeader={false}
   >
     <Helmet
-      title={`${pathContext.tutorial.title} (Free Video Tutorial)`}
+      title={pathContext.tutorial.metaTitle ? pathContext.tutorial.metaTitle : `${pathContext.tutorial.title} (Free Video Tutorial)`}
       description={`${pathContext.tutorial.lessonInfo}`}
       location={location}
       canonical={pathContext.tutorial.canonical ? pathContext.tutorial.canonical : `https://serverless.com${location.pathname}`}

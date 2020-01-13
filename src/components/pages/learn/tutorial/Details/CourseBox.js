@@ -12,6 +12,7 @@ const CourseOutlineBox = styled(Card)`
 
   @media screen and (min-width: 962px) {
     min-width: 450px; 
+    max-width: 450px;
   }
 `
 
