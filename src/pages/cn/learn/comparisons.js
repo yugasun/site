@@ -13,6 +13,7 @@ const Comparisons = ({ location }) => (
       description='Serverless 部署代码时无需提前配置或运维管理。没有集群，实例甚至操作系统的概念，让服务供应商应对扩缩容策略，无需触发警报或编写脚本来对服务器集群做扩缩容。'
       keywords='Serverless功能对比,Serverless优势'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <ComparisonScrollList />

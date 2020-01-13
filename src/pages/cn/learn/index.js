@@ -21,6 +21,7 @@ const FrameWorks = ({ location }) => (
       title='Free Serverless Courses &amp; Training'
       description='These free courses show you how to utilize the power of serverless offerings from AWS, Azure, Google Cloud using Serverless Framework'
       location={location}
+      noIndex={true}
     />
     <AppContainer>
       <Hero />

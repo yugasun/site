@@ -15,6 +15,7 @@ const Overview = ({ location }) => (
         based on our own, internal practices and learnings, and detail how these practices can be easily set up using
         the Serverless CI/CD solution available in Serverless Framework Pro. '
       location={location}
+      noIndex={true}
     />
     <Content />
     </AppContainer>

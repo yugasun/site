@@ -15,6 +15,7 @@ const Overview = ({ location }) => (
       description='Serverless 是开发者和企业用户共同推动的,它可以使开发者在构建和运行应用时无需管理服务器等基础设施，将构建应用的成本进一步降低，函数是部署和运行的基本单位。'
       keywords='Serverless概述,Serverless简介,Serverles是什么, Serverless概念'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <AppContainer>

@@ -12,7 +12,7 @@ const CaseStudies = () => {
       prefooter={NewToServerlessPrefooter}
       transparentHeader={true}
     >
-      <Helmet title='Serverless Case Studies' />
+      <Helmet title='Serverless Case Studies' noIndex={true}/>
       <Hero />
       <Content />
     </DefaultLayout>

@@ -13,6 +13,7 @@ const UseCases = ({ location }) => (
       description='Serverless的一些常见应用场景。Serverless 非常灵活，可用于解决各种应用程序问题。它也是可扩展的，可以轻松构建各种用例。'
       keywords='Serverless应用场景,Serverless使用场景,为什么用Serverles'
       location={location}
+      noIndex={true}
     />
     <Hero />
     <UseCaseList />
