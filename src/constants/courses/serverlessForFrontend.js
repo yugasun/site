@@ -375,7 +375,7 @@ module.exports = [
           playTime: '9:06',
           videoNumber: 12,
           videoLink: 'https://www.youtube.com/watch?v=ZyvbxavpvOw',
-          slug: "",
+          slug: "dynamodb-create-table",
         },
         {
           title: 'Adding a Lambda Function to Our Service to Record Votes',
@@ -384,7 +384,7 @@ module.exports = [
           playTime: '12:23',
           videoNumber: 13,
           videoLink: 'https://www.youtube.com/watch?v=C5v5EBOWNpI',
-          slug: "",
+          slug: "aws-lambda-write-to-dynamodb",
         },
         {
           title: 'Adding a Lambda Function to Get Vote Counts from DynamoDB',
@@ -393,7 +393,7 @@ module.exports = [
           playTime: '7:02',
           videoNumber: 14,
           videoLink: 'https://www.youtube.com/watch?v=r2qZrKfV-aU',
-          slug: "",
+          slug: "querying-dynamodb-data-from-aws-lambda",
         },
         {
           title: 'Adding an HTTP API Endpoint',
@@ -402,7 +402,7 @@ module.exports = [
           playTime: '4:44',
           videoNumber: 15,
           videoLink: 'https://www.youtube.com/watch?v=DHsA24oBIJs',
-          slug: "",
+          slug: "create-http-endpoint-with-api-gateway",
         },
         {
           title: 'Integrating the API In Our Frontend',
@@ -411,7 +411,7 @@ module.exports = [
           playTime: '13:26',
           videoNumber: 16,
           videoLink: 'https://www.youtube.com/watch?v=GqEwootua2g',
-          slug: "",
+          slug: "how-to-add-api-to-website",
         },
       ],
     },
@@ -419,14 +419,22 @@ module.exports = [
       title: 'Adding Authentication and Authorization',
       items: [
         {
-          title: '[coming soon] Different Options for Auth',
-          playTime: '0:00',
+          title: 'Different Options for Serverless Auth',
+          lessonInfo: "In this video, you'll learn about different options you could use to add authentication and authorization into your serverless applications. In future videos, you'll integrate one of those options - Auth0.",
+          playTime: '3:37',
           videoNumber: 17,
+          videoLink: "https://www.youtube.com/watch?v=0lMh4cKfkPE",
+          slug: "serverless-authentication-options",
+          noIndex: true
         },
         {
-          title: '[coming soon] Integrating Auth0 into a Frontend',
-          playTime: '0:00',
+          title: 'Integrating Auth0 into a Frontend',
+          lessonInfo: "In this video, you'll learn how to integrate Auth0 into your frontend application to allow users to sign in and out. This will give your frontend access to user data and allow you to manipulate your frontend code to conditionally load different UI components based on if a user is signed in. For all the code, you can take a look at section 5.2 here: https://github.com/fernando-mc/serverless-learn-serverlessjams",
+          playTime: '14:36',
           videoNumber: 18,
+          videoLink: "https://www.youtube.com/watch?v=m2dxSCZWSY0",
+          slug: "integrate-auth0-into-frontend",
+          metaTitle: `How To Integrate Auth0 To Your Website (Video Tutorial w/ Example)`
         },
         {
           title: '[coming soon] Adding Lambda Authorizers to Our APIs',
