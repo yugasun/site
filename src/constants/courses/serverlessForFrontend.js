@@ -437,14 +437,25 @@ module.exports = [
           metaTitle: `How To Integrate Auth0 To Your Website (Video Tutorial w/ Example)`
         },
         {
-          title: '[coming soon] Adding Lambda Authorizers to Our APIs',
-          playTime: '0:00',
+          title: 'Adding Lambda Authorizers - Setting up Your Frontend',
+          lessonInfo: "In this video, you'll learn how to setup your Frontend to send JSON Web Tokens along with API requests. This will give your frontend the ability to make requests against protected API endpoints. For all the code, you can take a look at section 5.3 here: https://github.com/fernando-mc/serverless-learn-serverlessjams",
+          playTime: '14:57',
           videoNumber: 19,
+          videoLink: "https://www.youtube.com/watch?v=NKW9Tw3bqvY",
+          slug: "aws-lambda-authorizers-frontend-setup"
+        },
+        {
+          title: 'Adding Lambda Authorizers in Your Serverless Backend',
+          lessonInfo: "In this video, you'll learn how to setup your Serverless backend to receive and process JSON Web Tokens along with API requests. You'll also learn how to setup a protected API endpoint that requires a Lambda Authorizer. This will give you the ability to create API endpoints that can't be accessed unless they pass your authorizers. For all the code, you can take a look at section 5.3 here: https://github.com/fernando-mc/serverless-learn-serverlessjams",
+          playTime: '15:16',
+          videoNumber: 20,
+          videoLink: "https://www.youtube.com/watch?v=2jiJg52lEDw",
+          slug: "aws-lambda-authorizers-backend-setup"
         },
         {
           title: '[coming soon] Securing our Serverless APIs with Scopes',
           playTime: '0:00',
-          videoNumber: 20,
+          videoNumber: 21,
         },
       ],
     },
