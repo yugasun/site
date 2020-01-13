@@ -1,0 +1,22 @@
+.course-video-player-wrapper > div {
+  height: 451px !important;
+  outline: none;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1500px) {
+  .course-video-player-wrapper > div {
+    height: 343px !important;
+  }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1024px) {
+  .course-video-player-wrapper > div {
+    height: 328px !important;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .course-video-player-wrapper > div {
+    height: 181px !important;
+  }
+}

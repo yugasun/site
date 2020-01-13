@@ -16,7 +16,13 @@ export default {
   components: '/cn/components/',
 
   // learn dropdown links
-  what: '/learn/manifesto/',
+  learn: '/cn/learn/',
+  what: '/cn/learn/manifesto/',
+  why: '/cn/learn/why/',
+  useCases: '/cn/learn/use-cases/',
+  examples: '/cn/examples/',
+  caseStudies: '/cn/learn/case-studies/',
+  comparisons: '/cn/learn/comparisons/',
 
   community: 'https://serverlesscloud.cn/',
 
@@ -43,17 +49,11 @@ export default {
   // footer learn links
   courses: '/courses/',
   overview: 'https://www.youtube.com/watch?v=-Nf0ui3qP2E',
-  why: '/learn/why/',
-  useCases: '/learn/use-cases/',
-  examples: '/examples/',
-  caseStudies: '/learn/case-studies/',
-  comparisons: '/learn/comparisons/',
 
   componentsGithub: 'https://github.com/serverless/components',
   training: '/training/',
   pricing: '/pricing/',
   support: '/support/',
-  learn: '/learn/',
   reinvent: '/reinvent/',
   enterprise: '/enterprise/',
   dashboard: 'https://dashboard.serverless.com',

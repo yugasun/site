@@ -72,6 +72,20 @@
     width: 100%;
     text-align: center;
   }
+
+  .hero-component .hero-tagline.hero-tagline-cn {
+    font-size: 22px;
+  }
+
+  .container-inner {
+    padding: 0 10px;
+  }
+}
+
+ @media screen and (max-width: 750px) {
+  .hero-component .hero-tagline.hero-tagline-cn {
+    font-size: 20px;
+  }
 }
 
 .hero-component .hero-video-container {

@@ -14,7 +14,7 @@ import {
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
-    <ListItem.noStyleType>
+    {/*<ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: learn,
@@ -25,6 +25,7 @@ const Resource = () => (
         课程
       </SubMenuItem>
     </ListItem.noStyleType>
+     */}
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
@@ -55,31 +56,33 @@ const Resource = () => (
           backgroundOnHover: true,
         }}
       >
-        使用用例
+        应用场景
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: examples,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        案例介绍
-      </SubMenuItem>
-    </ListItem.noStyleType>
-    <ListItem.noStyleType>
-      <SubMenuItem
-        navProps={{
-          to: caseStudies,
-          backgroundOnHover: true,
-          completed: true,
-        }}
-      >
-        实例操作
-      </SubMenuItem>
-    </ListItem.noStyleType>
+    {/*
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: examples,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          案例介绍
+        </SubMenuItem>
+      </ListItem.noStyleType>
+      <ListItem.noStyleType>
+        <SubMenuItem
+          navProps={{
+            to: caseStudies,
+            backgroundOnHover: true,
+            completed: true,
+          }}
+        >
+          应用场景
+        </SubMenuItem>
+      </ListItem.noStyleType>
+     */}
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{

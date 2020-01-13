@@ -16,10 +16,10 @@ const LearnColumn = ({ mobileOrder }) => (
     mobileOrder={mobileOrder}
     header='学习'
     listItems={[
-      {
-        name: '课程',
-        navProps: { to: courses, crossDomain: true },
-      },
+      // {
+      //   name: '课程',
+      //   navProps: { to: courses, crossDomain: true },
+      // },
       {
         name: '概述',
         navProps: { to: what, completed: true },
@@ -29,17 +29,17 @@ const LearnColumn = ({ mobileOrder }) => (
         navProps: { to: why, completed: true },
       },
       {
-        name: '使用用例',
+        name: '应用场景',
         navProps: { to: useCases, completed: true },
       },
-      {
-        name: '案例介绍',
-        navProps: { to: examples, completed: true },
-      },
-      {
-        name: '实例操作',
-        navProps: { to: caseStudies, completed: true },
-      },
+      // {
+      //   name: '案例介绍',
+      //   navProps: { to: examples, completed: true },
+      // },
+      // {
+      //   name: '实例操作',
+      //   navProps: { to: caseStudies, completed: true },
+      // },
       {
         name: '功能对比',
         navProps: { to: comparisons, completed: true },

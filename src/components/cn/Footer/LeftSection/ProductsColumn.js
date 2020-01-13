@@ -2,8 +2,6 @@ import React from 'react'
 
 import FooterListColumn from './Column'
 import {
-  plugins,
-  components,
   dashboardPage,
   monitoring,
   alerts,
@@ -13,6 +11,10 @@ import {
   debugging,
   integrations,
 } from 'src/constants/urls.cn'
+import {
+  plugins,
+  components,
+} from 'src/constants/urls'
 
 const ProductsColumn = ({ mobileOrder }) => (
   <FooterListColumn
@@ -47,10 +49,10 @@ const ProductsColumn = ({ mobileOrder }) => (
         name: '警告',
         navProps: { to: alerts, completed: true },
       },
-      {
-        name: '规范',
-        navProps: { to: policies, completed: true },
-      },
+      // {
+      //   name: '规范',
+      //   navProps: { to: policies, completed: true },
+      // },
       {
         name: '调试',
         navProps: { to: debugging, completed: true },

@@ -12,14 +12,11 @@ const Optimized = props => (
     pb={[92, 92, 92, 92, 132]}
   >
     <Heading.h3 align={['left', 'left', 'center']}>
-      Optimized for Serverless Workflows
+      针对Serverless的CI/CD全流程
     </Heading.h3>
 
     <P>
-      Serverless CI/CD is a new type of testing and deployment automation service laser focused on Serverless Framework
-      development workflows. It is easily configured using concepts familiar to Serverless Framework developers like
-      NPM package scripts, variables, and stages. Preview deployments, promotions and rollbacks are handled using the
-      gitflow you already know and love.
+      Serverless CI/CD是一套针对Serverless应用开发的工作流,它包括自动化测试和自动化部署。如果您是Serverless用户,只需简单配置,即可轻松使用该CI/CD工作流。
     </P>
 
   </Flex>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import FooterListColumn from './Column'
-import { docs } from 'src/constants/urls'
+import { docs } from 'src/constants/urls.cn'
 
 const DocsColumn = ({ mobileOrder }) => (
   <FooterListColumn

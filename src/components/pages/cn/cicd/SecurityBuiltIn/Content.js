@@ -5,8 +5,7 @@ import { Heading, P0 } from 'src/fragments/DesignSystem'
 const SecurityBuiltInContent = props => (
   <Flex flexDirection='column' width={[1, 1, 0.4]}>
     <Heading.h3 mb={22}>
-    安全性
-
+      安全性
     </Heading.h3>
     <P0 mb={[42, 42, 0]}>
       No more copying and pasting your AWS account keys or other account credentials into scripts or environment variables.
