@@ -53,6 +53,7 @@ export default class ExamplesSearch extends React.Component {
               <SearchField refreshSearch={this.sendResultsToProps} />
             </Row>
 
+            {/*
             <Box
               display={
                 this.state.showFilters ? ['none', 'none', 'block'] : 'none'
@@ -60,6 +61,7 @@ export default class ExamplesSearch extends React.Component {
             >
               <SearchFilters refreshFilters={this.sendResultsToProps} />
             </Box>
+             */}
           </Box>
         </AppContainer>
       </Background>

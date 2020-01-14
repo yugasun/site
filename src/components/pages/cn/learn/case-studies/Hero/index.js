@@ -14,13 +14,11 @@ const ExamplesHero = () => {
 
       <ResponsiveStack mb={[2, 2, 4, 9]} color='white'>
         <Box width={[1]}>
-          <Heading.h0 m={0}>Case Studies</Heading.h0>
+          <Heading.h0 m={0}>最佳实践</Heading.h0>
         </Box>
         <Flex.verticallyCenter width={[1, 1, 1, 1]} px={[0, 0, 2]}>
           <PL color='white' mt={[22, 22, 1.5]} mb={0}>
-            Hundreds of teams use the Serverless Framework to launch robust
-            applications in a fraction of the time. Read their use cases and
-            stories here.
+            使用 Serverless 框架可以在很短的时间内开发和部署应用程序，这里可以找到很多最佳实践案例。
           </PL>
         </Flex.verticallyCenter>
       </ResponsiveStack>

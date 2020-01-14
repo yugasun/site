@@ -36,10 +36,10 @@ const LearnColumn = ({ mobileOrder }) => (
       //   name: '案例介绍',
       //   navProps: { to: examples, completed: true },
       // },
-      // {
-      //   name: '实例操作',
-      //   navProps: { to: caseStudies, completed: true },
-      // },
+      {
+        name: '最佳实践',
+        navProps: { to: caseStudies, completed: true },
+      },
       {
         name: '功能对比',
         navProps: { to: comparisons, completed: true },

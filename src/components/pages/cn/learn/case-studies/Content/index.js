@@ -2,15 +2,15 @@ import React from 'react'
 import { Box } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
 import SingleCaseStudyPreview from './SingleCaseStudyPreview'
-import caseStudies from './data'
 import SearchOptions from '../Search/index'
 
 export default class CaseStudiesContent extends React.Component {
   constructor(props) {
     super(props)
+    const { casestudies } = this.props;
     this.state = {
-      caseStudiesRaw: caseStudies,
-      caseStudies: caseStudies,
+      caseStudiesRaw: casestudies,
+      caseStudies: casestudies,
     }
   }
 
@@ -18,7 +18,7 @@ export default class CaseStudiesContent extends React.Component {
     let filteredCaseStudies = this.state.caseStudiesRaw
 
     if (filterObj.search) {
-      filteredCaseStudies = filteredCaseStudies.filter(x => {
+      filteredCaseStudies = filteredCaseStudies.filter(({id, frontmatter: x}) => {
         return x.title.toLowerCase().includes(filterObj.search)
       })
     }
@@ -32,7 +32,9 @@ export default class CaseStudiesContent extends React.Component {
     this.setState({ caseStudies: filteredCaseStudies })
   }
 
+
   render() {
+    console.log('caseStudies', this.state.caseStudies);
     return (
       <React.Fragment>
         <SearchOptions refreshResults={this.handleRefreshResults} />

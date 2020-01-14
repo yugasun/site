@@ -37,11 +37,11 @@ const data = [
   //   value: 'examples',
   //   navProps: { to: examples },
   // },
-  // {
-  //   label: '企业案例',
-  //   value: 'case-studies',
-  //   navProps: { to: caseStudies },
-  // },
+  {
+    label: '最佳实践',
+    value: 'case-studies',
+    navProps: { to: caseStudies },
+  },
   {
     label: '功能对比',
     value: 'comparisons',

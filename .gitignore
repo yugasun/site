@@ -15,8 +15,9 @@ serverless-enterprise
 serverless-examples
 serverless-plugins
 serverless-blog
-cn-serverless-components
 serverless
+cn-serverless-components
+cn-serverless-casestudies
 
 # dynamic config
 .env.development
@@ -30,6 +31,7 @@ content/example
 content/plugins
 content/enterprise
 content/cn/components
+content/cn/casestudies
 
 # dynamic content files
 src/components/pages/company/jobs/OpenPositions/data.js

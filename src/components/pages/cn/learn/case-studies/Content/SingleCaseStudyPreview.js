@@ -3,17 +3,18 @@ import { Background, Box, Row, Heading, P } from 'serverless-design-system'
 import { InternalLink } from 'src/fragments'
 import { getLinkComponent } from 'src/components/BlockLink'
 import ImagePlaceholder from 'src/components/pages/blog/ImagePlaceholder'
+import { getCaseStudiesLink } from 'src/utils/cn/case-studies'
 
 //TODO: Heading and P tag don't conform to usual sizing pattern - revisit
 
 const HyperLinkBackground = getLinkComponent(Background)
 const HyperLinkImagePlaceholder = getLinkComponent(ImagePlaceholder)
 
-const SingleCaseStudyPreview = ({ title, description, thumbnail, url }) => {
+const SingleCaseStudyPreview = ({ id, frontmatter: {title, description, thumbnail, gitLink} }) => {
   return (
     <Row mb={[3, 3, 4, 6]} pt={2}>
       <Box width={[1, 1, 1, 1, 0.6]} pr={['10px', '10px', '10px', '10%']}>
-        <InternalLink to={url}>
+        <InternalLink to={getCaseStudiesLink(id)}>
           <Box pt={1}>
             <Heading.h3
               fontFamily='Soleil'
@@ -55,7 +56,7 @@ const SingleCaseStudyPreview = ({ title, description, thumbnail, url }) => {
             backgroundSize='cover'
             backgroundPosition='center'
             backgroundRepeat='no-repeat'
-            to={url}
+            to={getCaseStudiesLink(id)}
           />
         ) : (
           <HyperLinkImagePlaceholder

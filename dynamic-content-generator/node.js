@@ -19,7 +19,8 @@ const customConfig = require('./../scripts/custom/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
 // cn config
-const cnComponentsConfig = require('./../scripts/cn/components/config')
+const cnComponentsConfig = require('../scripts/cn/components/config')
+const cnCaseStudiesConfig = require('../scripts/cn/caseStudies/config')
 
 const fileReadingOptions = { match: /.md$/ }
 
@@ -37,6 +38,7 @@ const stackIndex = client.initIndex(process.env.GATSBY_ALGOLIA_STACK_INDEX)
 
 // cn index
 const cnComponentsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_CN_COMPONENTS_INDEX)
+const cnCaseStudiesIndex = client.initIndex(process.env.GATSBY_ALGOLIA_CN_CASE_STUDIES_INDEX)
 
 //TODO: rename highlighted attribute to featured
 examplesIndex.setSettings({
@@ -319,6 +321,49 @@ const sourceCnComponents = createNode => (err, content, filename, next) => {
     })
 }
 
+const sourceCaseStudies = createNode => (err, content, filename, next) => {
+  if (err) throw err
+
+  const { data, content: markdownContent } = matter(content)
+  const frontmatter = data.category ? data : { ...data, category: [] }
+  const caseStudiesId = path.basename(filename, path.extname(filename))
+
+  const contentUTFLength = lengthInUtf8Bytes(markdownContent)
+  
+  let caseStudiesObjForAlgolia = {
+    date: frontmatter.date,
+    title: frontmatter.title,
+    description: frontmatter.description,
+    objectID: caseStudiesId,
+  }
+
+  if (contentUTFLength < algoliaMaxBytesLength) {
+    caseStudiesObjForAlgolia.content = markdownContent
+  }
+
+  cnCaseStudiesIndex.saveObject(caseStudiesObjForAlgolia)
+
+  unified()
+    .use(markdown)
+    .use(slug)
+    .use(highlight)
+    .use(html)
+    .process(markdownContent, (err, file) => {
+      createNode({
+        id: caseStudiesId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'CaseStudies',
+          contentDigest: digestCreator(content),
+        },
+        frontmatter,
+        content: String(file),
+      })
+      next()
+    })
+}
+
 const generator = createNode =>
   Promise.all([
     new Promise((resolve, reject) => {
@@ -425,6 +470,15 @@ const generator = createNode =>
         cnComponentsConfig.siteComponentPath,
         fileReadingOptions,
         sourceCnComponents(createNode),
+        resolve
+      )
+    }),
+
+    new Promise((resolve, reject) => {
+      dir.readFiles(
+        cnCaseStudiesConfig.siteCaseStudiesPath,
+        fileReadingOptions,
+        sourceCaseStudies(createNode),
         resolve
       )
     }),

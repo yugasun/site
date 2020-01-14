@@ -71,18 +71,18 @@ const Resource = () => (
           案例介绍
         </SubMenuItem>
       </ListItem.noStyleType>
-      <ListItem.noStyleType>
-        <SubMenuItem
-          navProps={{
-            to: caseStudies,
-            backgroundOnHover: true,
-            completed: true,
-          }}
-        >
-          应用场景
+     */}
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: caseStudies,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        最佳实践
         </SubMenuItem>
       </ListItem.noStyleType>
-     */}
     <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
