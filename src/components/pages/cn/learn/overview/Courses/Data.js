@@ -22,8 +22,8 @@ module.exports = [
       'Learn variety of ways you can use the Serverless Framework, and serverless technologies generally, in your frontend...',
     author: 'Fernando Medina Corey',
     authorImage: fernandoImage,
-    courseTime: '1 hr 15 min',
-    videoCount: 8,
+    courseTime: '2 hr 51 min',
+    videoCount: 22,
     link: '/learn/courses/serverless-for-frontend-developers/',
   },
 ]
