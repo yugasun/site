@@ -4,7 +4,7 @@ import { dashboard } from 'src/constants/urls'
 import { ExternalLink } from 'src/fragments'
 
 const HeaderCTAButton = () => (
-  <ExternalLink to={dashboard} className='header-menu-item'>
+  <ExternalLink to={dashboard} className="header-menu-item">
     <Button width={109}>sign-up free</Button>
   </ExternalLink>
 )

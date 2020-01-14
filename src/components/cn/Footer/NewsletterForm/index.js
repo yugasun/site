@@ -107,8 +107,7 @@ class NewsLetterForm extends React.Component {
         disabled={this.state.isFetching}
         {...submitBtnProps}
         mt={'16px'}
-      >
-      </ButtonWithLineHeight>
+      />
     )
   }
 
@@ -122,7 +121,6 @@ class NewsLetterForm extends React.Component {
 
     return (
       <StyledForm onSubmit={this.handleSubmit} style={formStyles}>
-     
         <Wrapper
           {...wrapperProps}
           ref={ref => {
@@ -130,7 +128,6 @@ class NewsLetterForm extends React.Component {
           }}
           style={{ flexDirection: 'column' }}
         >
-       
           <EmailField
             {...emailFieldProps}
             ref={ref => {

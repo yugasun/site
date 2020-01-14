@@ -1,36 +1,39 @@
 import React from 'react'
-
+import graphql from 'graphql'
 import DefaultLayout from 'src/layouts/cn/Newest'
 import Hero from 'src/components/pages/cn/components/Hero'
 import Content from 'src/components/pages/cn/components/Content'
 import { Helmet, WhitepaperDownloadBanner } from 'src/fragments'
 import { Background } from 'serverless-design-system'
 
-const Plugins = ({ location, data: plugins }) => {
-  const edges = plugins.allPlugin.edges
-    .filter(plugins => plugins.node.frontmatter.title !== '')
+const Components = ({ location, data: components }) => {
+  const edges = components.allCnComponent.edges
+    .filter(components => components.node.frontmatter.title !== '')
     .reverse()
 
   return (
     <DefaultLayout transparentHeader={true} pathName={location.pathname}>
       <Helmet
-        title='Serverless Plugins Directory (210+ Plugins w/ Download Count + Filters)'
-        description='This serverless plugins explorer contains an option to filter by status so you know which serverless plugins are approved &amp; certified '
+        title='Serverless 组件 |  Serverless components'
+        description='Serverless 组件是为比较高阶的用例（例如Express，Koa，Vue）构建的。开发者无需关系底层基础设备，提供更加简单，便捷的serverless部署体验。'
+        keywords='Serverless组件,ServerlessExpress,ServerlessKoa, ServerlessVue, ServerlessLaravel'
         noIndex={true}
       />
       <Hero />
-      <Content plugins={edges.reverse().map(({ node }) => node)} />
+      <Content components={edges.reverse().map(({ node }) => node)} />
+      {/*
       <Background background='#f7f7f7'>
         <WhitepaperDownloadBanner />
       </Background>
+       */}
     </DefaultLayout>
   )
 }
 
 export const query = graphql`
   query CnComponents {
-    allPlugin(
-      limit: 15
+    allCnComponent(
+      limit: 12
       sort: { fields: [frontmatter___npmDownloads], order: DESC }
     ) {
       totalCount
@@ -38,6 +41,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            avatar
             title
             description
             gitLink
@@ -51,4 +55,4 @@ export const query = graphql`
   }
 `
 
-export default Plugins
+export default Components

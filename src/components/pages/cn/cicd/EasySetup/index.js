@@ -6,7 +6,7 @@ import { ImageWithShadow as Image } from 'src/fragments'
 
 const EasySetup = () => (
   <Flex
-    justifyContent='space-between'
+    justifyContent="space-between"
     flexDirection={['column', 'column', 'row']}
   >
     <Content />

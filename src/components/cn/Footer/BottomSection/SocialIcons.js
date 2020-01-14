@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  twitterHandle,
-  githubHandle,
-  linkedinHandle,
-} from 'src/constants/urls'
+import { twitterHandle, githubHandle, linkedinHandle } from 'src/constants/urls'
 import twitterGrayIcon from 'src/assets/images/twitter.svg'
 import githubGrayIcon from 'src/assets/images/github-gray.svg'
 import linkedinGrayIcon from 'src/assets/images/linkedin-gray.svg'
@@ -36,7 +32,10 @@ const SocialIcon = ({ to, icon }) => (
 
 const SocialIcons = props => (
   <Flex>
-    <SocialIcon to={'https://github.com/serverless/serverless/blob/master/README_CN.md'} icon={githubGrayIcon} />
+    <SocialIcon
+      to={'https://github.com/serverless/serverless/blob/master/README_CN.md'}
+      icon={githubGrayIcon}
+    />
   </Flex>
 )
 

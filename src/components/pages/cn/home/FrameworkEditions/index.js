@@ -10,12 +10,12 @@ import {
   integrations,
   cicd,
   gettingStarted,
+  components,
 } from 'src/constants/urls.cn'
 
 // TODO: change to cn after complete
 import {
   plugins,
-  components,
 } from 'src/constants/urls'
 import FrameworkLogoOpenSource from 'src/assets/images/logo-serverless-framework.png'
 

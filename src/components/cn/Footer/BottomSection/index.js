@@ -14,11 +14,11 @@ const SpaceBetweenMobileBox = styled(Box)`
 
 const SmallGrayText = ({ children }) => (
   <Text
-    fontFamily='SoleilBk'
-    lineHeight='24px'
-    letterSpacing='0.44px'
-    color='#8c8c8c'
-    fontSize='14px'
+    fontFamily="SoleilBk"
+    lineHeight="24px"
+    letterSpacing="0.44px"
+    color="#8c8c8c"
+    fontSize="14px"
     align={['center', 'center', 'left']}
   >
     {children}
@@ -49,7 +49,7 @@ const BottomSection = () => (
       <Flex ml={[0, 0, 0, 0, 22]}>
         <ExternalLink to={contact}>
           <SmallGrayText>
-             版权所有 © 2020 Serverless, Inc. 保留所有权利。
+            版权所有 © 2020 Serverless, Inc. 保留所有权利。
           </SmallGrayText>
         </ExternalLink>
       </Flex>

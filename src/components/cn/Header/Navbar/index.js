@@ -27,7 +27,7 @@ const NavListItem = styled(ListItem)`
 
 const smallScreenNavbarVisibility = active => (active ? 'inline-block' : 'none')
 
-const Navbar = ({pathName}) => (
+const Navbar = ({ pathName }) => (
   <NavbarContext.Consumer>
     {({ isNavbarActive }) => (
       <Box
@@ -40,13 +40,13 @@ const Navbar = ({pathName}) => (
           'inline-block',
         ]}
       >
-        <List p='0' mt={[4, 3, 4, 3, 0]} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
+        <List p="0" mt={[4, 3, 4, 3, 0]} ml={[4, 3, 4, 3, 0]} mr={0} mb={0}>
           {MenuList.map((MenuItem, index) => (
             <NavListItem
               key={index}
               display={['block', 'block', 'block', 'block', 'inline-block']}
             >
-              <MenuItem pathName={pathName}/>
+              <MenuItem pathName={pathName} />
             </NavListItem>
           ))}
         </List>

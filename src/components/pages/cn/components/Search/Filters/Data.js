@@ -1,23 +1,16 @@
 const statusOptions = [
   [
     {
-      id: 'certified',
+      id: 'official',
       name: 'status',
-      text: 'certified',
-    },
-  ],
-  [
-    {
-      id: 'approved',
-      name: 'status',
-      text: 'approved',
+      text: '官方',
     },
   ],
   [
     {
       id: 'community',
       name: 'status',
-      text: 'community',
+      text: '社区',
     },
   ],
 ]

@@ -78,10 +78,10 @@ class Header extends React.Component {
     return (
       <HeaderWrapper
         width={1}
-        maxHeight='100%'
+        maxHeight="100%"
         oy={['auto', 'auto', 'auto', 'auto', 'visible']}
       >
-        <Mta/>
+        <Mta />
 
         <Background
           background={[
@@ -95,8 +95,8 @@ class Header extends React.Component {
           <Transition py={[1, 1, 1, 1, '7px']}>
             <HeaderContainer>
               <Flex.verticallyCenter
-                flexWrap='wrap'
-                justifyContent='space-between'
+                flexWrap="wrap"
+                justifyContent="space-between"
               >
                 <NavbarContext.Provider value={this.state}>
                   <Logo />

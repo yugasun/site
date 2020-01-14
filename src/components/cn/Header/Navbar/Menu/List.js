@@ -15,7 +15,6 @@ import MoreMenuDescription from './Descriptions/More'
 import LearnMenuDescription from './Descriptions/Learn'
 import ProductMenuDescription from './Descriptions/Product'
 
-
 const ProductMenu = () => (
   <Box>
     <MenuTitle name={'产品'} />
@@ -27,7 +26,7 @@ const ProductMenu = () => (
 
 const DocsMenu = () => (
   <Box>
-    <NavLink to={docsCn} completed className='header-menu-item'>
+    <NavLink to={docsCn} completed className="header-menu-item">
       <MenuTitle name={'文档'} />
     </NavLink>
   </Box>
@@ -64,7 +63,7 @@ const CommunityMenu = () => (
     <NavLink
       to={community}
       completed={false}
-      className='header-menu-item'
+      className="header-menu-item"
       crossDomain={true}
     >
       <MenuTitle name={'社区'} />

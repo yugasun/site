@@ -5,7 +5,7 @@ import { pricing } from 'src/constants/urls'
 
 const PricingColumn = ({ mobileOrder }) => (
   <FooterListColumn
-    header='Pricing'
+    header="Pricing"
     headerLink={pricing}
     listItems={[]}
     mobileOrder={mobileOrder}

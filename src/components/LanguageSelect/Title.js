@@ -30,7 +30,7 @@ const TitleWithDropdown = styled(Text.span)`
   transition: all 0.3s ease;
 
   @media only screen and (min-width: 1024px) {
-    border-left: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
     padding-left: 20px;
   }
 
@@ -69,7 +69,7 @@ const Title = ({ name, color, children }) => {
           beforeBoxLeft={[0, 0, '-1px', '3px', '4px', '3px']}
         >
           <TitleWithDropdown
-            fontFamily='SoleilSb'
+            fontFamily="SoleilSb"
             fontSize={'15px'}
             color={
               color

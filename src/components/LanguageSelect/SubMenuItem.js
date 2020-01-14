@@ -12,12 +12,12 @@ const HeadingWithHover = styled(Heading.h6)`
 `
 
 const SubMenuItem = ({ children, navProps, defaultColor }) => (
-  <NavLink {...navProps} className='header-menu-item'>
+  <NavLink {...navProps} className="header-menu-item">
     <HeadingWithHover
       fontSize={'16px'}
-      lineHeight='38px'
-      letterSpacing='0'
-      fontFamily='SoleilBk'
+      lineHeight="38px"
+      letterSpacing="0"
+      fontFamily="SoleilBk"
       color={['#fff', '#fff', '#fff', '#fff', '#8c8c8c']}
     >
       {children}

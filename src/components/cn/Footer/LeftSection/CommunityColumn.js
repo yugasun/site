@@ -15,7 +15,7 @@ import {
 const CommunityColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
-    header='社区'
+    header="社区"
     listItems={[
       {
         name: '博客',

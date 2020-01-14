@@ -57,7 +57,7 @@
 /framework/docs/providers/azure/guide/quickstart/ /framework/docs/providers/azure/guide/quick-start/ 301
 /framework/docs/platform/commands/run/ /framework/docs/platform/commands/ 301
 /framework/docs/platform/commands/emit/ /framework/docs/platform/commands/ 301
-/getting-started/ /framework/docs/getting-started/ 301 
+/getting-started/ /framework/docs/getting-started/ 301
 /framework/docs/providers/aws/vpc/ /framework/docs/providers/aws/guide/functions/ 301
 /framework/status/ /framework/ 301
 /developers/guides/dynamodb/ /dynamodb/ 301
@@ -92,3 +92,4 @@
 /blog/ultimate-list-serverless-announcements-reinvent/ /blog/reinvent-2019-serverless-announcements/ 301
 /reinvent/ /contact-sales/ 301
 /  /cn/   302  Country=cn
+/partners/cloud/tencent/chinese/  /cn/  302  Country=cn

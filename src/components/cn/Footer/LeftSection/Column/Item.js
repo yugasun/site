@@ -19,14 +19,14 @@ const ItemText = styled(P)`
 // Renders Each item in the footer list
 const FooterListItem = ({ content, color, pt }) => (
   <ItemWrapper>
-    <NavLink {...content.navProps} className='footer-menu-item'>
+    <NavLink {...content.navProps} className="footer-menu-item">
       <ItemText
         color={color}
         opacity={1}
         fontFamily={'SoleilBk'}
         fontSize={'14px'}
         lineHeight={'24px'}
-        letterSpacing='text'
+        letterSpacing="text"
         my={0}
       >
         {content.name}

@@ -42,7 +42,7 @@ export default {
   forum: 'https://serverlesscloud.cn/forum',
   sharon: 'https://serverlesscloud.cn',
   partners: 'https://serverlesscloud.cn',
-  about: '/partners/cloud/tencent/chinese/',
+  about: '/cn/about',
   feedback: 'https://github.com/serverless-tencent/serverless-tencent-scf/issues',
   contact: 'https://github.com/ServerlessCN/serverlesscloud.cn/blob/master/content/about/index.md',
 

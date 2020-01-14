@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex, Background } from 'serverless-design-system'
 import { AppContainer } from 'src/components'
-import PluginPreview from './SinglePluginPreview'
+import ComponentPreview from './SingleComponentPreview'
 import algoliasearch from 'algoliasearch/lite'
 import SearchOptions from './Search/index'
 
@@ -9,15 +9,18 @@ const client = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
-const pluginsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_PLUGINS_INDEX)
+const cnComponentsIndex = client.initIndex(
+  process.env.GATSBY_ALGOLIA_CN_COMPONENTS_INDEX
+)
 
-const paginationLimit = 15
+const paginationLimit = 12
 
 export default class Content extends React.Component {
   constructor(props) {
     super(props)
+    const { components } = this.props
     this.state = {
-      plugins: this.props.plugins,
+      components:  components,
       initState: true,
       noMoreResults: false,
       isLoading: false,
@@ -73,11 +76,12 @@ export default class Content extends React.Component {
     this.refreshResults(searchObj)
   }
 
-  parsePluginsFromAlgolia = content => {
-    const plugins = content.hits.map(hit => {
+  parseComponentsFromAlgolia = (content = {hits: []}) => {
+    const components = content.hits.map(hit => {
       return {
         id: hit.objectID,
         frontmatter: {
+          avatar: hit.avatar,
           title: hit.title,
           description: hit.description,
           gitLink: hit.gitLink,
@@ -87,23 +91,27 @@ export default class Content extends React.Component {
         },
       }
     })
+    // .sort(
+    //   (a, b) => {
+    //     return b.frontmatter.npmDownloads - a.frontmatter.npmDownloads
+    //   }
+    // )
 
-    return plugins
+    return components
   }
 
   refreshResults = searchObj => {
-    pluginsIndex.search(searchObj, (err, content) => {
+    cnComponentsIndex.search(searchObj, (err, content) => {
       if (err) console.error(err)
-      const plugins = this.parsePluginsFromAlgolia(content)
+      const components = this.parseComponentsFromAlgolia(content)
       this.setState({
-        plugins,
+        components,
       })
     })
   }
 
   makeFilterQuery = filter => {
     const searchQuery = filter.search
-
     let filtersQuery = "NOT status:'deprecated' AND NOT status:'unchecked'"
     Object.keys(filter).map(key => {
       //skipping 'search' key since algolia has query parameter specifically for search text, deleting it before forming filterQuery
@@ -140,18 +148,30 @@ export default class Content extends React.Component {
 
     searchObj.hitsPerPage = paginationLimit
     searchObj.page = currentPageNum
-    pluginsIndex.search(searchObj, (err, content) => {
+
+    cnComponentsIndex.search(searchObj, (err, content) => {
       if (err) console.error(err)
       const nextPageNum = currentPageNum + 1
       this.setState({ pageNum: nextPageNum, isLoading: false })
 
-      const plugins = this.parsePluginsFromAlgolia(content)
-      if (plugins.length < paginationLimit) {
+      const components = this.parseComponentsFromAlgolia(content)
+
+      if (components.length < paginationLimit) {
         this.setState({ noMoreResults: true })
       }
 
-      const allPlugins = this.state.plugins.concat(plugins)
-      this.setState({ plugins: allPlugins })
+      const allCnComponents = this.state.components.concat(components)
+      allCnComponents.sort((a, b) => b.npmDownloads - a.npmDownloads)
+      // filter same components
+      const newList = []
+      const existIds = []
+      allCnComponents.forEach((item) => {
+        if (existIds.indexOf(item.id) === -1) {
+          newList.push(item)
+          existIds.push(item.id)
+        }
+      })
+      this.setState({ components: newList })
     })
   }
 
@@ -165,10 +185,13 @@ export default class Content extends React.Component {
               <Flex
                 flexDirection={['column', 'column', 'row']}
                 flexWrap='wrap'
-                justifyContent='left'
+                justifyContent='flex-start'
               >
-                {this.state.plugins.map((plugin, index) => (
-                  <PluginPreview key={`plugin-${index}`} {...plugin} />
+                {this.state.components.map((component, index) => (
+                  <ComponentPreview
+                    key={`component-${component.id}`}
+                    {...component}
+                  />
                 ))}
               </Flex>
             </Box>

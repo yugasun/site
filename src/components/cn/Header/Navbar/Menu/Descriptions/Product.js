@@ -26,8 +26,8 @@ const ProductDescription = ({ wrapperStyles, theme, children }) => (
   <NavbarContext.Consumer>
     {({ isNavbarShrinked }) => (
       <MenuWrapper
-        zIndex='999'
-        boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
+        zIndex="999"
+        boxShadow="0 10px 50px 0 rgba(0, 0, 0, 0.15)"
         position={['relative', 'relative', 'relative', 'relative', 'absolute']}
         top={['0', '0', '0', '0', '52px']}
         left={['0', '0', '0', '0', '-50%']}

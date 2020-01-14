@@ -73,7 +73,7 @@ const Title = ({ name, color, showDropdown }) => {
           beforeBoxLeft={[0, 0, '-1px', '3px', '4px', '3px']}
         >
           <TitleWithDropdown
-            fontFamily='SoleilSb'
+            fontFamily="SoleilSb"
             fontSize={'15px'}
             color={
               color

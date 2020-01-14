@@ -33,6 +33,9 @@ const siteConfig = isProduction => {
     ALGOLIA_STACK_INDEX: isProduction
       ? 'prod_STACK_SEARCH'
       : 'dev_STACK_SEARCH',
+    ALGOLIA_CN_COMPONENTS_INDEX: isProduction
+      ? 'prod_CN_COMPONENTS_SEARCH'
+      : 'dev_CN_COMPONENTS_SEARCH',
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID || 'V3VM7IN3TH',
     ALGOLIA_SEARCH_KEY:
       process.env.ALGOLIA_SEARCH_KEY || 'd2dac557d1fd151223e78f3597d59e78',

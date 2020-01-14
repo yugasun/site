@@ -3,7 +3,7 @@ import { Heading } from 'src/fragments/DesignSystem'
 
 const SearchHeading = () => (
   <Heading.h2 align='center' pt={[6, 6, 92]}>
-    All the plugins
+    所有组件
   </Heading.h2>
 )
 

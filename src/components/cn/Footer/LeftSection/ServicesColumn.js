@@ -6,7 +6,7 @@ import { training, support } from 'src/constants/urls'
 const ServicesColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
-    header='Services'
+    header="Services"
     listItems={[
       {
         name: 'Training',

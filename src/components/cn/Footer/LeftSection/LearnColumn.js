@@ -14,7 +14,7 @@ import {
 const LearnColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
-    header='学习'
+    header="学习"
     listItems={[
       // {
       //   name: '课程',

@@ -25,7 +25,7 @@ const LanguageDropdownList = () => (
           completed: true,
         }}
       >
-         简体中文
+        简体中文
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

@@ -7,7 +7,7 @@ import { ImageWithShadow as Image } from 'src/fragments'
 const AllSignal = props => (
   <Flex
     pt={[92, 92, 92, 92, 132]}
-    justifyContent='space-between'
+    justifyContent="space-between"
     flexDirection={['column', 'column', 'row-reverse']}
   >
     <Content />

@@ -46,34 +46,34 @@ const Terminal = () => {
       </TerminalBackground>
       <TerminalText mt={['40px']}>
         <TerminalTextContent
-          color='#727679'
+          color="#727679"
           fontSize={['10px', '10px', '13.7px']}
-          letterSpacing='0.1px'
+          letterSpacing="0.1px"
         >
           &nbsp;1 &nbsp;&nbsp;# Step 1. Install serverless globally
           <br />
           &nbsp;2 &nbsp;&nbsp;
-          <Text.span color='#fff'>$ npm install serverless -g</Text.span>
+          <Text.span color="#fff">$ npm install serverless -g</Text.span>
           <br />
           &nbsp;3
           <br />
           &nbsp;4 &nbsp;&nbsp;# Step 2. Create a service
           <br />
           &nbsp;5 &nbsp;&nbsp;
-          <Text.span color='#fff'>$ serverless</Text.span>
+          <Text.span color="#fff">$ serverless</Text.span>
           <br />
           &nbsp;6 <br />
           &nbsp;7 &nbsp;&nbsp;# Step 3. deploy to cloud provider
           <br />
           &nbsp;8 &nbsp;&nbsp;
-          <Text.span color='#fff'>$ serverless deploy</Text.span>
+          <Text.span color="#fff">$ serverless deploy</Text.span>
           <br />
           &nbsp;9
           <br />
           10 &nbsp;&nbsp;# Your service is deployed!
           <br />
           11 &nbsp;&nbsp;
-          <Text.span color='#fff'>
+          <Text.span color="#fff">
             $ http://xyz.amazonaws.com/hello-world
           </Text.span>
         </TerminalTextContent>

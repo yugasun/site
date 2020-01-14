@@ -1,4 +1,5 @@
 import React from 'react'
+import graphql from 'graphql'
 import DefaultLayout from 'src/layouts/DefaultNewest'
 import { Helmet } from 'src/fragments'
 import { NewToServerlessPrefooter } from 'src/fragments'

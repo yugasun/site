@@ -24,7 +24,7 @@ const ToolTipContent = ({ id }) => (
       return (
         <Flex.verticallyCenter>
           <Image
-            src={id === 'approved' ? statusBadgesMobile[id] : statusBadges[id]}
+            src={id === 'official' ? statusBadgesMobile[id] : statusBadges[id]}
             height={'22px'}
             width={'22px'}
           />
@@ -54,10 +54,8 @@ export default class Content extends React.Component {
 
   updateCheckboxes(fieldName, isChecked) {
     let selectedCheckboxes = this.state.selectedCheckboxes
-    let selectValue = fieldName.text
-    if (selectValue === 'version 1') {
-      selectValue = 'v1'
-    } //TODO: refactor
+    let selectValue = fieldName.id
+
     if (isChecked) {
       selectedCheckboxes.push(selectValue)
     } else {
@@ -85,7 +83,7 @@ export default class Content extends React.Component {
                     name={name}
                     id={id}
                     onChange={({ target }) =>
-                      this.updateCheckboxes({ text }, target.checked)
+                      this.updateCheckboxes({ id }, target.checked)
                     }
                   />
                   <InlineBlock>
@@ -127,7 +125,7 @@ export default class Content extends React.Component {
                         name={name}
                         id={id}
                         onChange={({ target }) =>
-                          this.updateCheckboxes({ text }, target.checked)
+                          this.updateCheckboxes({ id }, target.checked)
                         }
                       />
                       <InlineBlock>
@@ -162,7 +160,7 @@ export default class Content extends React.Component {
                         name={name}
                         id={id}
                         onChange={({ target }) =>
-                          this.updateCheckboxes({ text }, target.checked)
+                          this.updateCheckboxes({ id }, target.checked)
                         }
                       />
                       <InlineBlock>

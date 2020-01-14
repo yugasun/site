@@ -3,7 +3,7 @@ import { Flex } from 'serverless-design-system'
 import { Heading, P0 } from 'src/fragments/DesignSystem'
 
 const CustomPoliciesContent = props => (
-  <Flex flexDirection='column' width={[1, 1, 0.4]}>
+  <Flex flexDirection="column" width={[1, 1, 0.4]}>
     <Heading.h3 mb={22}>开发 部署 监控</Heading.h3>
     <P0 mb={[42, 42, 0]}>
       Serverless Framework

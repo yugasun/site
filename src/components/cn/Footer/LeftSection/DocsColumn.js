@@ -5,7 +5,7 @@ import { docs } from 'src/constants/urls.cn'
 
 const DocsColumn = ({ mobileOrder }) => (
   <FooterListColumn
-    header='文档'
+    header="文档"
     headerLink={docs}
     listItems={[]}
     mobileOrder={mobileOrder}

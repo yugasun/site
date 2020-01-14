@@ -10,16 +10,14 @@ import {
   cicd,
   debugging,
   integrations,
-} from 'src/constants/urls.cn'
-import {
-  plugins,
   components,
-} from 'src/constants/urls'
+} from 'src/constants/urls.cn'
+import { plugins } from 'src/constants/urls'
 
 const ProductsColumn = ({ mobileOrder }) => (
   <FooterListColumn
     mobileOrder={mobileOrder}
-    header='产品'
+    header="产品"
     listItems={[
       {
         name: 'CLI',

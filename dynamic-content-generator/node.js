@@ -18,6 +18,9 @@ const stackConfig = require('../scripts/stack/config')
 const customConfig = require('./../scripts/custom/config')
 const pluginsConfig = require('./../scripts/plugins/config')
 
+// cn config
+const cnComponentsConfig = require('./../scripts/cn/components/config')
+
 const fileReadingOptions = { match: /.md$/ }
 
 const client = algoliasearch(
@@ -31,6 +34,9 @@ const examplesIndex = client.initIndex(
 const pluginsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_PLUGINS_INDEX)
 
 const stackIndex = client.initIndex(process.env.GATSBY_ALGOLIA_STACK_INDEX)
+
+// cn index
+const cnComponentsIndex = client.initIndex(process.env.GATSBY_ALGOLIA_CN_COMPONENTS_INDEX)
 
 //TODO: rename highlighted attribute to featured
 examplesIndex.setSettings({
@@ -273,6 +279,46 @@ const sourceDocs = createNode => (err, content, _filename, next) => {
     })
 }
 
+
+const sourceCnComponents = createNode => (err, content, filename, next) => {
+  if (err) throw err
+
+  const { data, content: markdownContent } = matter(content)
+  const frontmatter = data.category ? data : { ...data, category: [] }
+  const componentId = path.basename(filename, path.extname(filename))
+
+  cnComponentsIndex.saveObject({
+    avatar: frontmatter.avatar,
+    title: frontmatter.title,
+    description: frontmatter.description,
+    npmDownloads: frontmatter.npmDownloads,
+    status: frontmatter.status,
+    githubStars: frontmatter.githubStars,
+    gitLink: frontmatter.gitLink,
+    highlighted: frontmatter.highlighted,
+    objectID: componentId,
+  })
+
+  unified()
+    .use(markdown)
+    .use(highlight)
+    .use(html)
+    .process(markdownContent, (err, file) => {
+      createNode({
+        id: componentId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'CnComponent',
+          contentDigest: digestCreator(content),
+        },
+        frontmatter,
+        content: String(file),
+      })
+      next()
+    })
+}
+
 const generator = createNode =>
   Promise.all([
     new Promise((resolve, reject) => {
@@ -369,6 +415,16 @@ const generator = createNode =>
         docsConfig.mainSiteDocsPath,
         fileReadingOptions,
         sourceDocs(createNode),
+        resolve
+      )
+    }),
+
+    // cn nodes
+    new Promise((resolve, reject) => {
+      dir.readFiles(
+        cnComponentsConfig.siteComponentPath,
+        fileReadingOptions,
+        sourceCnComponents(createNode),
         resolve
       )
     }),

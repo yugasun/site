@@ -15,6 +15,7 @@ serverless-enterprise
 serverless-examples
 serverless-plugins
 serverless-blog
+cn-serverless-components
 serverless
 
 # dynamic config
@@ -23,11 +24,12 @@ serverless
 
 # dynamic content folders
 content/blog
-content/examples 
+content/examples
 content/framework
 content/example
 content/plugins
 content/enterprise
+content/cn/components
 
 # dynamic content files
 src/components/pages/company/jobs/OpenPositions/data.js

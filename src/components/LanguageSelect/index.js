@@ -10,13 +10,17 @@ import './language.css'
 
 const LanguageSelect = ({ pathName }) => (
   <Box>
-    <MenuTitle name={pathName && pathName.indexOf('/cn') === 0 ? '简体中文' : 'English'}>
-      <img src={imgLanguage} className='lang-icon'/>
+    <MenuTitle
+      name={pathName && pathName.indexOf('/cn') === 0 ? '简体中文' : 'English'}
+    >
+      <img src={imgLanguage} className="lang-icon" />
     </MenuTitle>
-    <MenuDescription wrapperStyles={{
-      display: 'block',
-      backgroundColor: 'red'
-    }}>
+    <MenuDescription
+      wrapperStyles={{
+        display: 'block',
+        backgroundColor: 'red',
+      }}
+    >
       <List m={0} ml={[4, 4, 0]} p={0}>
         <ListItem.noStyleType>
           <SubMenuItem

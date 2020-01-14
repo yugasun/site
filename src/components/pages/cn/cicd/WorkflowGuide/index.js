@@ -5,8 +5,6 @@ import securelyManage2Image from 'src/assets/images/pages/cicd/securely-manage-2
 import Content from './Content'
 import { ImageWithShadow } from 'src/fragments'
 
-const WorkflowGuide = () => (
-  <Content />
-)
+const WorkflowGuide = () => <Content />
 
 export default WorkflowGuide

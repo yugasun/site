@@ -21,7 +21,7 @@ const CiCdHero = props => (
           轻松测试和部署Serverless应用
         </div>
         <div className={styles.productCTA}>
-          <Button type='primary' text='敬请期待' />
+          <Button type="primary" text="敬请期待" />
           {/*
             <ExternalLink to={dashboard}>
             <Button type='primary' text='免费注册' />

@@ -28,10 +28,10 @@ export default class EmailField extends React.Component {
   render() {
     return (
       <TextFieldWithNoOutline
-        color='#8c8c8c'
-        bg='#f7f7f7'
-        border='none'
-        letterSpacing='0'
+        color="#8c8c8c"
+        bg="#f7f7f7"
+        border="none"
+        letterSpacing="0"
         lineHeight={'26px'}
         px={[2]}
         py={15}
@@ -40,14 +40,14 @@ export default class EmailField extends React.Component {
         height={'37px'}
         borderRadius={0}
         fontSize={'16px'}
-        fontFamily='SoleilBk'
-        placeholderColor='#8c8c8c'
+        fontFamily="SoleilBk"
+        placeholderColor="#8c8c8c"
         required
         {...this.props}
         onFocus={this.clearPlaceholder}
         onBlur={this.restorePlaceholder}
         placeholder={this.state.placeholder}
-        className='newsletter-email'
+        className="newsletter-email"
       />
     )
   }

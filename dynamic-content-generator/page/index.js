@@ -8,6 +8,7 @@ const coursesPagesGenerator = require('./courses')
 
 // cn pages
 const cnDocsPagesGenerator = require('./cn/docs')
+const cnComponentPagesGenerator = require('./cn/component')
 
 const pageCreator = (graphql, createPage, createRedirect) =>
   Promise.all([
@@ -20,6 +21,7 @@ const pageCreator = (graphql, createPage, createRedirect) =>
     coursesPagesGenerator(createPage),
 
     cnDocsPagesGenerator(graphql, createPage, createRedirect),
+    cnComponentPagesGenerator(graphql, createPage),
   ])
 
 module.exports = pageCreator

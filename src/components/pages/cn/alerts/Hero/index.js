@@ -21,7 +21,7 @@ const AlertsHero = props => (
           自动配置的高级告警功能，可实时捕获错误信息及性能问题反馈
         </div>
         <div className={styles.productCTA}>
-          <Button type='primary' text='敬请期待' />
+          <Button type="primary" text="敬请期待" />
           {/*
             <ExternalLink to={dashboard}>
             <Button type='primary' text='免费注册' />

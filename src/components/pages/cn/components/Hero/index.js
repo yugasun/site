@@ -3,9 +3,9 @@ import { HeroWrapper } from 'src/fragments'
 import { ExternalLink, InternalLink } from 'src/fragments'
 import { dashboard, pricing } from 'src/constants/urls.js'
 import { Button } from 'src/components'
-import HeroImage from 'src/assets/images/pages/monitoring/monitoring-hero.png'
+import HeroImage from 'src/assets/images/pages/cn/monitoring/monitoring-hero.png'
 import FrameworkLogo from 'src/assets/images/logo-serverless-framework-center-horizontal-dark.png'
-import styles from '../Plugins.module.css'
+import styles from '../Components.module.css'
 
 const Hero = props => (
   <HeroWrapper

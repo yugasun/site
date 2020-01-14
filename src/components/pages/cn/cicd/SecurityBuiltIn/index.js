@@ -8,11 +8,11 @@ import { ImageWithShadow } from 'src/fragments'
 const SecurityBuiltIn = () => (
   <Flex
     py={[92, 92, 92, 92, 132]}
-    justifyContent='space-between'
+    justifyContent="space-between"
     flexDirection={['column', 'column', 'row']}
   >
     <Content />
-    <Flex flexDirection='column'>
+    <Flex flexDirection="column">
       <Image
         src={securelyManage1Image}
         width={['100%', '100%', 350, 450, 463, 463]}
