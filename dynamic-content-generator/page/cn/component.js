@@ -15,7 +15,7 @@ const graphqlQuery = `
 const createComponentPages = (createPage, components) => {
   components.forEach(({ node }, index, records) => {
     createPage({
-      path: `components/${node.id}`,
+      path: `cn/components/${node.id}`,
       component: getFileFromProjectRoot(`src/templates/cn/component.js`),
       context: {
         componentId: node.id,

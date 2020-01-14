@@ -1,3 +1,3 @@
-const getComponentLink = id => `/components/${id}`
+const getComponentLink = id => `/cn/components/${id}`
 
 export { getComponentLink }
