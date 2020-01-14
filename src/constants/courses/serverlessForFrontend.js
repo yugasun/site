@@ -453,10 +453,22 @@ module.exports = [
           slug: "aws-lambda-authorizers-backend-setup"
         },
         {
-          title: '[coming soon] Securing our Serverless APIs with Scopes',
-          playTime: '0:00',
+          title: 'Securing our Serverless APIs with Scopes',
+          lessonInfo: "In this video, you'll learn how to use scopes to verify the permissions of an Auth0 user that is accessing your APIs. You'll setup API scopes in the Auth0 dashboard and also look at how to check them in your Lambda functions. For all the code, you can take a look at section 5.4 here: https://github.com/fernando-mc/serverless-learn-serverlessjams",
+          playTime: '18:41',
           videoNumber: 21,
+          videoLink: "https://www.youtube.com/watch?v=iCa3MCPm1mY",
+          slug: "securing-aws-lambda-api-with-auth0-scopes"
         },
+        {
+          title: "What's Next?",
+          lessonInfo: "Congratulations! If you're watching this you've probably finished the entire Serverless for Frontend Developers course! Make sure to comment on the videos if you have questions or get in touch with the instructor on Twitter (@fmc_sea).",
+          playTime: '2:06',
+          videoNumber: 22,
+          videoLink: "https://www.youtube.com/watch?v=Pq86PqevXFE",
+          slug: "whats-next-after-serverless-frontend-course",
+          noIndex: true
+        }
       ],
     },
   ]
