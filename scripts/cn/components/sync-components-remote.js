@@ -44,7 +44,7 @@ function downloadTheseRepos(allRepos) {
       if (err) {
         console.log('error downloading components', err)
       } else {
-        console.log('PLUGINS SUCCESSFULLY DOWNLOADED')
+        console.log('COMPONENTS SUCCESSFULLY DOWNLOADED')
       }
     }
   )
