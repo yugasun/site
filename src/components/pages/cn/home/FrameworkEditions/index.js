@@ -11,12 +11,8 @@ import {
   cicd,
   gettingStarted,
   components,
-} from 'src/constants/urls.cn'
-
-// TODO: change to cn after complete
-import {
   plugins,
-} from 'src/constants/urls'
+} from 'src/constants/urls.cn'
 import FrameworkLogoOpenSource from 'src/assets/images/logo-serverless-framework.png'
 
 export default class FrameworkEditions extends React.Component {

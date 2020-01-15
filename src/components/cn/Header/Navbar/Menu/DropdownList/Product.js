@@ -11,10 +11,8 @@ import {
   debugging,
   integrations,
   components,
+  plugins,
 } from 'src/constants/urls.cn'
-
-// TODO: change to cn after complete
-import { plugins } from 'src/constants/urls'
 
 const Resource = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>

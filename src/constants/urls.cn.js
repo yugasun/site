@@ -49,6 +49,8 @@ export default {
   // footer learn links
   courses: '/courses/',
   overview: 'https://www.youtube.com/watch?v=-Nf0ui3qP2E',
+  startUsePluginsGithub: 'https://github.com/tencentyun/serverless-tencent-scf/blob/master/README.zh-hans.md',
+  pluginsGithub: 'https://github.com/serverless/plugins',
 
   componentsGithub: 'https://github.com/serverless/components',
   training: '/training/',
