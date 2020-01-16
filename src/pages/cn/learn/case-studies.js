@@ -16,7 +16,7 @@ const CaseStudies = ({ location, data: caseStudies }) => {
     >
       <Helmet title='Serverless Case Studies' noIndex={true}/>
       <Hero />
-      <Content casestudies={edges.reverse().map(({ node }) => node)} />
+      <Content casestudies={edges.map(({ node }) => node)} />
     </DefaultLayout>
   )
 }
@@ -32,6 +32,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            date
             title
             description
             thumbnail
