@@ -52,7 +52,6 @@ export default class SearchField extends React.Component {
         mb={['8px', '8px', 22]}
         ml={[15, 15, 0]}
         width={[1]}
-        mr={[15, 15, 22, 22, 32]}
       >
         <ResponsiveStack mt={[0, 0, 0, 0, -140]}>
           <ComponentsSearchField

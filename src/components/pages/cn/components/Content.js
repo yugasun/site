@@ -185,7 +185,7 @@ export default class Content extends React.Component {
               <Flex
                 flexDirection={['column', 'column', 'row']}
                 flexWrap='wrap'
-                justifyContent='flex-start'
+                justifyContent='space-between'
               >
                 {this.state.components.map((component, index) => (
                   <ComponentPreview

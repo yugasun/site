@@ -37,19 +37,8 @@ const FlexWithFloat = styled(Flex)`
 `
 
 const BoxWithMiddleElementMargin = styled(Box)`
-  @media screen and (min-width: 1230px) {
-    :not(:nth-child(3n + 3)) {
-      margin-right: 20px;
-    }
-  }
-
-  @media screen and (min-width: 415px) and (max-width: 769px) {
-    padding-right: 20px;
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1229px) {
-    width: 33%;
-    padding-right: 20px;
+  :not(:nth-child(3n + 3)) {
+    margin-right: 0px;
   }
 `
 
@@ -154,8 +143,8 @@ export default class singleExamplePreview extends React.Component {
     return (
       <React.Fragment>
         <BoxWithMiddleElementMargin
-          width={[1, 1, 1 / 2, 1 / 3, '33%', '380px']}
-          mb={[20, 40, 32]}
+          width={[1, 1, '32%', '’32%', '32%', '380px']}
+          mb={[20, 20, 20, 20]}
         >
           <HoverableColumn>
             {
@@ -201,7 +190,7 @@ export default class singleExamplePreview extends React.Component {
                   {
                     avatar && <Image
                       style={{border: '1px solid #eaeaea'}}
-                      width='348px'
+                      width='100%'
                       src={avatar}
                     />
                   }
