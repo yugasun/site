@@ -11,8 +11,10 @@ import HeroImage from './HeroImage'
 
 const CaseStudiesContent = ({ id, frontmatter, content }) => {
   return (
-    <Box pb={[2, 2, 3, 3, 6]} mt="150px">
-      <SubscribeModal includeDesktop={true} />
+    <Box pb={[2, 2, 3, 3, 6]} mt='150px'>
+      {/*
+        <SubscribeModal includeDesktop={true} />
+       */}
       <AppContainer>
         <Frontmatter frontmatter={frontmatter} />
         <ContentWrapper
