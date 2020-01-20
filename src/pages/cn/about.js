@@ -13,7 +13,7 @@ import RestAPI from 'src/components/pages/cn/about/RestAPI'
 const TencentPartnerPageChinese = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
     <Helmet title='下一代无服务器 —— Serverless Cloud | Tencent + Serverless Framework'
-    location={location} />
+    location={location} noIndex={true} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>

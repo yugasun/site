@@ -12,7 +12,7 @@ import Agnostic from 'src/components/pages/cn/plugins/Agnostic'
 
 const Components = ({ location }) => (
   <HomeLayout prefooter={NewToServerlessPrefooter} transparentHeader={true}>
-    <Helmet title='Serverless Components' location={location} />
+    <Helmet title='Serverless Components' location={location} noIndex={true} />
     <Hero />
     <Background background={'#f7f7f7'}>
       <AppContainer>
